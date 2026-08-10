@@ -95,59 +95,16 @@ final class oj extends jg implements vo {
     }
 
     public final void a(qm param0, int param1, int param2, int param3, int param4) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (this.field_Q.a(1).a((byte) 69) != qk.field_g) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                ui.a(123, this.field_Q.e((byte) 83), this.field_Q.c(true), this.field_Q.l(25));
-                if (param2 == 11) {
-                  break L1;
-                } else {
-                  field_R = (String) null;
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("oj.Q(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
-          }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        if (!(this.field_Q.a(1).a((byte) 69) == qk.field_g)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            ui.a(123, this.field_Q.e((byte) 83), this.field_Q.c(true), this.field_Q.l(25));
+            if (param2 != 11) {
+                field_R = (String) null;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) ((Object) runtimeException), "oj.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

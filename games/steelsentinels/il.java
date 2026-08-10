@@ -94,7 +94,17 @@ final class il {
           }
         }
         L2: {
-          if (-2 != (param1 ^ -1)) {
+          if (-2 == (param1 ^ -1)) {
+            L3: {
+              if (param0 != pm.field_Z) {
+                pm.field_Z = param0;
+                cn.field_l = true;
+                b.a(param2, (byte) -96);
+                break L3;
+              } else {
+                break L3;
+              }
+            }
             if (param1 != 2) {
               break L2;
             } else {

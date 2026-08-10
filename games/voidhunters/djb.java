@@ -557,16 +557,40 @@ final class djb extends qc {
                     var4 = this.field_p.l(-14453);
                     var5 = this.field_p.j(0);
                     if (var6 == 0) {
-                      if (var6 == 0) {
-                        if (var7 != 0) {
-                          break L13;
-                        } else {
-                          if (param1 != 34) {
+                      if (var7 == 0) {
+                        if (param1 == 40) {
+                          this.field_p.a(-1, param2 ^ 39, ')');
+                          this.field_p.a(var5, 31401, var5);
+                          if (var6 != 0) {
                             break L13;
                           } else {
-                            this.field_p.a(-1, param2 + 39, '"');
-                            this.field_p.a(var5, 31401, var5);
+                            if (var7 != 0) {
+                              break L13;
+                            } else {
+                              if (param1 != 34) {
+                                break L13;
+                              } else {
+                                this.field_p.a(-1, param2 + 39, '"');
+                                this.field_p.a(var5, 31401, var5);
+                                break L13;
+                              }
+                            }
+                          }
+                        } else {
+                          if (var6 != 0) {
                             break L13;
+                          } else {
+                            if (var7 != 0) {
+                              break L13;
+                            } else {
+                              if (param1 != 34) {
+                                break L13;
+                              } else {
+                                this.field_p.a(-1, param2 + 39, '"');
+                                this.field_p.a(var5, 31401, var5);
+                                break L13;
+                              }
+                            }
                           }
                         }
                       } else {

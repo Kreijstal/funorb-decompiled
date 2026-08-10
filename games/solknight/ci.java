@@ -146,26 +146,29 @@ class ci extends gf implements ka {
                 }
               }
               L11: {
-                if (mi.field_l > param1) {
-                  break L11;
-                } else {
-                  if (mi.field_e > var6) {
-                    var11 = (1 & var6 + -param1) + (var7 + var6 * mi.field_a);
-                    var12 = var9 + (1 - var7) >> 292616513;
-                    L12: while (true) {
-                      var12--;
-                      if (var12 < 0) {
-                        break L11;
-                      } else {
-                        mi.field_f[var11] = 16777215;
-                        var11 += 2;
-                        continue L12;
-                      }
-                    }
+                L12: {
+                  if (mi.field_l > param1) {
+                    break L12;
                   } else {
-                    break L11;
+                    if (mi.field_e > var6) {
+                      var11 = (1 & var6 + -param1) + (var7 + var6 * mi.field_a);
+                      var12 = var9 + (1 - var7) >> 292616513;
+                      L13: while (true) {
+                        var12--;
+                        if (var12 < 0) {
+                          break L12;
+                        } else {
+                          mi.field_f[var11] = 16777215;
+                          var11 += 2;
+                          continue L13;
+                        }
+                      }
+                    } else {
+                      break L11;
+                    }
                   }
                 }
+                break L11;
               }
               decompiledRegionSelector0 = 1;
               break L0;

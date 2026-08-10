@@ -63,117 +63,34 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = fleas.field_A ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
+        RuntimeException decompiledCaughtException = null;
+        var3 = fleas.field_A ? 1 : 0;
+        try {
+          L0: {
+            var1 = ud.field_b;
+            L1: while (true) {
+              if (!hd.a(-101)) {
+                if (param0 == -41) {
+                  break L0;
+                } else {
+                  bj.e((byte) -119);
+                  return;
                 }
-                case 1: {
-                    try {
-                        var1 = ud.field_b;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (!hd.a(-101)) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var1.e(8, 8);
-                        fieldTemp$1 = var1.field_i + 1;
-                        var1.field_i = var1.field_i + 1;
-                        var2 = fieldTemp$1;
-                        ec.a(var1, false);
-                        ud.field_b.c((byte) -80, var1.field_i - var2);
-                        if (var3 != 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var3 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (param0 == -41) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        bj.e((byte) -119);
-                        return;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var1_ref = (RuntimeException) ((Object) caughtException);
-                    throw pf.a((Throwable) ((Object) var1_ref), "bj.K(" + param0 + ')');
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                var1.e(8, 8);
+                fieldTemp$1 = var1.field_i + 1;
+                var1.field_i = var1.field_i + 1;
+                var2 = fieldTemp$1;
+                ec.a(var1, false);
+                ud.field_b.c((byte) -80, var1.field_i - var2);
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw pf.a((Throwable) ((Object) var1_ref), "bj.K(" + param0 + ')');
         }
     }
 
@@ -182,7 +99,6 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
 
     final static ob a(int param0, String param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -190,14 +106,14 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
         ob stackIn_6_0 = null;
         ob stackIn_15_0 = null;
         ob stackIn_19_0 = null;
-        Object stackIn_22_0 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var5 = fleas.field_A ? 1 : 0;
         try {
           L0: {
@@ -235,13 +151,7 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
                       }
                     }
                     var3++;
-                    if (var5 == 0) {
-                      continue L1;
-                    } else {
-                      stackIn_22_0 = null;
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    }
+                    continue L1;
                   } else {
                     return null;
                   }
@@ -261,23 +171,23 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var2);
+            stackIn_24_0 = (RuntimeException) (var2);
 
-            stackIn_25_1 = new StringBuilder().append("bj.I(").append(param0).append(',');
+            stackIn_24_1 = new StringBuilder().append("bj.I(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L4;
             } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L4;
             }
           }
-          throw pf.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0;
@@ -288,11 +198,7 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
             if (decompiledRegionSelector0 == 2) {
               return stackIn_15_0;
             } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_19_0;
-              } else {
-                return (ob) ((Object) stackIn_22_0);
-              }
+              return stackIn_19_0;
             }
           }
         }
@@ -302,46 +208,12 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (this.field_k != param0) {
-                break L1;
-              } else {
+            if (this.field_k == param0) {
                 this.field_k = null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("bj.removeConsumer(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw pf.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) ((Object) runtimeException), "bj.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

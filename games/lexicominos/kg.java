@@ -110,78 +110,59 @@ final class kg extends nb implements ue, jk {
     public final void a(int param0, bc param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 > 50) {
-                break L1;
-              } else {
-                field_C = 110;
-                break L1;
-              }
+            if (param0 > 50) {
+              break L0;
+            } else {
+              field_C = 110;
+              break L0;
             }
-            L2: {
-              if (param2 == 0) {
-                break L2;
-              } else {
-                L3: {
-                  L4: {
-                    if ((param2 ^ -1) != -2) {
-                      break L4;
-                    } else {
-                      jl.a("privacy.ws", (byte) 102);
-                      if (var6 == 0) {
-                        break L3;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                  if (-3 == (param2 ^ -1)) {
-                    jl.a("conduct.ws", (byte) 127);
-                    if (var6 == 0) {
-                      break L3;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-                break L0;
-              }
-            }
+          }
+          if (param2 == 0) {
             jl.a("terms.ws", (byte) -95);
             return;
+          } else {
+            if ((param2 ^ -1) != -2) {
+              if (-3 == (param2 ^ -1)) {
+                jl.a("conduct.ws", (byte) 127);
+                return;
+              } else {
+                return;
+              }
+            } else {
+              jl.a("privacy.ws", (byte) 102);
+              return;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L1: {
             var5 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var5);
+            stackIn_13_0 = (RuntimeException) (var5);
 
-            stackIn_14_1 = new StringBuilder().append("kg.IA(").append(param0).append(',');
+            stackIn_13_1 = new StringBuilder().append("kg.IA(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L5;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
+              break L1;
             } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L5;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
+              break L1;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ',' + param3 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

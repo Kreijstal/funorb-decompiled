@@ -102,63 +102,66 @@ final class em extends eh implements hh {
               }
             }
             L4: {
-              if (!this.field_I.field_C) {
-                break L4;
-              } else {
-                if (1 != this.field_I.field_z) {
-                  break L4;
+              L5: {
+                if (!this.field_I.field_C) {
+                  break L5;
                 } else {
-                  if (!this.field_Q) {
-                    if (this.field_X) {
-                      if ((this.field_F.field_i >> -1533195295) + param3 - -this.field_F.field_k >= ha.field_b) {
-                        this.b(-this.field_V + this.field_D, -4218);
-                        break L4;
-                      } else {
-                        this.b(this.field_V + this.field_D, -4218);
-                        break L4;
-                      }
-                    } else {
-                      break L4;
-                    }
+                  if (1 != this.field_I.field_z) {
+                    break L5;
                   } else {
-                    if (!this.field_X) {
-                      if (ei.field_K > (this.field_F.field_n >> 248845537) + (param2 - -this.field_F.field_j)) {
-                        this.b(this.field_M + this.field_E, (byte) -121);
-                        break L4;
-                      } else {
-                        this.b(-this.field_M + this.field_E, (byte) -121);
-                        break L4;
-                      }
-                    } else {
-                      var6 = -(this.field_F.field_i >> 1827929537) + -this.field_F.field_k + -this.field_k + (-param3 + ha.field_b);
-                      var7 = -this.field_j + ei.field_K + (-param2 - (this.field_F.field_n >> 1526471969) - this.field_F.field_j);
-                      if (Math.abs(var7) <= Math.abs(var6)) {
-                        if (0 >= var6) {
-                          this.b(this.field_D + -this.field_V, -4218);
+                    if (!this.field_Q) {
+                      if (this.field_X) {
+                        if ((this.field_F.field_i >> -1533195295) + param3 - -this.field_F.field_k >= ha.field_b) {
+                          this.b(-this.field_V + this.field_D, -4218);
                           break L4;
                         } else {
-                          this.b(this.field_D + this.field_V, -4218);
+                          this.b(this.field_V + this.field_D, -4218);
                           break L4;
                         }
                       } else {
-                        if (-1 <= (var7 ^ -1)) {
-                          this.b(this.field_E - this.field_M, (byte) -121);
-                          break L4;
-                        } else {
+                        break L4;
+                      }
+                    } else {
+                      if (!this.field_X) {
+                        if (ei.field_K > (this.field_F.field_n >> 248845537) + (param2 - -this.field_F.field_j)) {
                           this.b(this.field_M + this.field_E, (byte) -121);
                           break L4;
+                        } else {
+                          this.b(-this.field_M + this.field_E, (byte) -121);
+                          break L4;
+                        }
+                      } else {
+                        var6 = -(this.field_F.field_i >> 1827929537) + -this.field_F.field_k + -this.field_k + (-param3 + ha.field_b);
+                        var7 = -this.field_j + ei.field_K + (-param2 - (this.field_F.field_n >> 1526471969) - this.field_F.field_j);
+                        if (Math.abs(var7) <= Math.abs(var6)) {
+                          if (0 >= var6) {
+                            this.b(this.field_D + -this.field_V, -4218);
+                            break L4;
+                          } else {
+                            this.b(this.field_D + this.field_V, -4218);
+                            break L4;
+                          }
+                        } else {
+                          if (-1 <= (var7 ^ -1)) {
+                            this.b(this.field_E - this.field_M, (byte) -121);
+                            break L4;
+                          } else {
+                            this.b(this.field_M + this.field_E, (byte) -121);
+                            break L4;
+                          }
                         }
                       }
                     }
                   }
                 }
               }
+              break L4;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var5 = decompiledCaughtException;
             stackIn_39_0 = (RuntimeException) (var5);
 
@@ -168,12 +171,12 @@ final class em extends eh implements hh {
               stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
               stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
               stackIn_40_2 = "null";
-              break L5;
+              break L6;
             } else {
               stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
               stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
               stackIn_40_2 = "{...}";
-              break L5;
+              break L6;
             }
           }
           throw sh.a((Throwable) ((Object) stackIn_40_0), stackIn_40_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');

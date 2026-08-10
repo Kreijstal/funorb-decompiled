@@ -940,6 +940,7 @@ class td extends al implements je {
     }
 
     void a(int param0, int param1, byte param2, al param3) {
+        RuntimeException runtimeException = null;
         ue var5 = null;
         al var6 = null;
         int var7 = 0;
@@ -949,7 +950,6 @@ class td extends al implements je {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
@@ -976,8 +976,8 @@ class td extends al implements je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("td.EA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 

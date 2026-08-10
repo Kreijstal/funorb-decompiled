@@ -70,15 +70,15 @@ final class ok extends wi {
     }
 
     final void d(int param0) {
-        Object stackIn_37_0 = null;
-        Object stackIn_38_0 = null;
-        int stackIn_38_1 = 0;
-        Object stackIn_53_0 = null;
-        Object stackIn_54_0 = null;
-        int stackIn_54_1 = 0;
-        Object stackIn_81_0 = null;
-        Object stackIn_82_0 = null;
-        int stackIn_82_1 = 0;
+        Object stackIn_27_0 = null;
+        Object stackIn_28_0 = null;
+        int stackIn_28_1 = 0;
+        Object stackIn_39_0 = null;
+        Object stackIn_40_0 = null;
+        int stackIn_40_1 = 0;
+        Object stackIn_61_0 = null;
+        Object stackIn_62_0 = null;
+        int stackIn_62_1 = 0;
         if (!this.field_k) {
           this.field_c = false;
           this.field_J = 0;
@@ -90,37 +90,37 @@ final class ok extends wi {
             } else {
               if (!this.field_A) {
                 L1: {
-                  stackIn_53_0 = this;
+                  stackIn_39_0 = this;
 
                   if (this.field_J >= 0) {
-                    stackIn_54_0 = this;
-                    stackIn_54_1 = this.field_J;
+                    stackIn_40_0 = this;
+                    stackIn_40_1 = this.field_J;
                     break L1;
                   } else {
-                    stackIn_54_0 = this;
-                    stackIn_54_1 = -50;
+                    stackIn_40_0 = this;
+                    stackIn_40_1 = -50;
                     break L1;
                   }
                 }
-                ((ok) (this)).field_J = stackIn_54_1;
+                ((ok) (this)).field_J = stackIn_40_1;
                 break L0;
               } else {
                 if (this.field_A) {
                   if (!this.a((byte) 71)) {
                     L2: {
-                      stackIn_37_0 = this;
+                      stackIn_27_0 = this;
 
                       if (-51 <= (this.field_J ^ -1)) {
-                        stackIn_38_0 = this;
-                        stackIn_38_1 = this.field_J;
+                        stackIn_28_0 = this;
+                        stackIn_28_1 = this.field_J;
                         break L2;
                       } else {
-                        stackIn_38_0 = this;
-                        stackIn_38_1 = 50;
+                        stackIn_28_0 = this;
+                        stackIn_28_1 = 50;
                         break L2;
                       }
                     }
-                    ((ok) (this)).field_J = stackIn_38_1;
+                    ((ok) (this)).field_J = stackIn_28_1;
                     if (!this.a((byte) 77)) {
                       this.field_J = this.field_J - 1;
                       if (param0 < 63) {
@@ -131,21 +131,11 @@ final class ok extends wi {
                       }
                     } else {
                       this.field_J = this.field_J + 1;
-                      if (!fleas.field_A) {
-                        if (param0 >= 63) {
-                          this.field_A = this.a((byte) 112);
-                          return;
-                        } else {
-                          return;
-                        }
+                      if (param0 < 63) {
+                        return;
                       } else {
-                        this.field_J = this.field_J - 1;
-                        if (param0 < 63) {
-                          return;
-                        } else {
-                          this.field_A = this.a((byte) 112);
-                          return;
-                        }
+                        this.field_A = this.a((byte) 112);
+                        return;
                       }
                     }
                   } else {
@@ -159,21 +149,11 @@ final class ok extends wi {
                       }
                     } else {
                       this.field_J = this.field_J + 1;
-                      if (!fleas.field_A) {
-                        if (param0 < 63) {
-                          return;
-                        } else {
-                          this.field_A = this.a((byte) 112);
-                          return;
-                        }
+                      if (param0 < 63) {
+                        return;
                       } else {
-                        this.field_J = this.field_J - 1;
-                        if (param0 < 63) {
-                          return;
-                        } else {
-                          this.field_A = this.a((byte) 112);
-                          return;
-                        }
+                        this.field_A = this.a((byte) 112);
+                        return;
                       }
                     }
                   }
@@ -188,21 +168,11 @@ final class ok extends wi {
                     }
                   } else {
                     this.field_J = this.field_J + 1;
-                    if (!fleas.field_A) {
-                      if (param0 < 63) {
-                        return;
-                      } else {
-                        this.field_A = this.a((byte) 112);
-                        return;
-                      }
+                    if (param0 < 63) {
+                      return;
                     } else {
-                      this.field_J = this.field_J - 1;
-                      if (param0 < 63) {
-                        return;
-                      } else {
-                        this.field_A = this.a((byte) 112);
-                        return;
-                      }
+                      this.field_A = this.a((byte) 112);
+                      return;
                     }
                   }
                 }
@@ -212,19 +182,19 @@ final class ok extends wi {
           if (this.field_A) {
             if (!this.a((byte) 71)) {
               L3: {
-                stackIn_81_0 = this;
+                stackIn_61_0 = this;
 
                 if (-51 <= (this.field_J ^ -1)) {
-                  stackIn_82_0 = this;
-                  stackIn_82_1 = this.field_J;
+                  stackIn_62_0 = this;
+                  stackIn_62_1 = this.field_J;
                   break L3;
                 } else {
-                  stackIn_82_0 = this;
-                  stackIn_82_1 = 50;
+                  stackIn_62_0 = this;
+                  stackIn_62_1 = 50;
                   break L3;
                 }
               }
-              ((ok) (this)).field_J = stackIn_82_1;
+              ((ok) (this)).field_J = stackIn_62_1;
               if (!this.a((byte) 77)) {
                 this.field_J = this.field_J - 1;
                 if (param0 >= 63) {
@@ -235,21 +205,11 @@ final class ok extends wi {
                 }
               } else {
                 this.field_J = this.field_J + 1;
-                if (!fleas.field_A) {
-                  if (param0 >= 63) {
-                    this.field_A = this.a((byte) 112);
-                    return;
-                  } else {
-                    return;
-                  }
+                if (param0 >= 63) {
+                  this.field_A = this.a((byte) 112);
+                  return;
                 } else {
-                  this.field_J = this.field_J - 1;
-                  if (param0 >= 63) {
-                    this.field_A = this.a((byte) 112);
-                    return;
-                  } else {
-                    return;
-                  }
+                  return;
                 }
               }
             } else {
@@ -263,50 +223,30 @@ final class ok extends wi {
                 }
               } else {
                 this.field_J = this.field_J + 1;
-                if (!fleas.field_A) {
-                  if (param0 >= 63) {
-                    this.field_A = this.a((byte) 112);
-                    return;
-                  } else {
-                    return;
-                  }
+                if (param0 >= 63) {
+                  this.field_A = this.a((byte) 112);
+                  return;
                 } else {
-                  this.field_J = this.field_J - 1;
-                  if (param0 >= 63) {
-                    this.field_A = this.a((byte) 112);
-                    return;
-                  } else {
-                    return;
-                  }
+                  return;
                 }
               }
             }
           } else {
             if (!this.a((byte) 77)) {
               this.field_J = this.field_J - 1;
-              if (param0 >= 63) {
-                this.field_A = this.a((byte) 112);
+              if (param0 < 63) {
                 return;
               } else {
+                this.field_A = this.a((byte) 112);
                 return;
               }
             } else {
               this.field_J = this.field_J + 1;
-              if (!fleas.field_A) {
-                if (param0 >= 63) {
-                  this.field_A = this.a((byte) 112);
-                  return;
-                } else {
-                  return;
-                }
+              if (param0 < 63) {
+                return;
               } else {
-                this.field_J = this.field_J - 1;
-                if (param0 >= 63) {
-                  this.field_A = this.a((byte) 112);
-                  return;
-                } else {
-                  return;
-                }
+                this.field_A = this.a((byte) 112);
+                return;
               }
             }
           }

@@ -54,170 +54,61 @@ final class oe {
 
     final void b(int param0) {
         int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
         if (null == ba.field_f) {
-          if ((af.field_c ^ -1) < -1) {
-            if (!this.field_n) {
-              L0: {
-                if (this.field_j <= ub.field_b) {
-                  if ((this.field_j ^ -1) < -1) {
-                    ue.field_D = 0;
-                    break L0;
-                  } else {
-                    if (ub.field_b == this.field_p) {
-                      if (this.field_q != lb.field_z) {
-                        this.field_r.a(this.field_q, this.field_p, -116);
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      this.field_r.a(this.field_q, this.field_p, -116);
-                      return;
-                    }
-                  }
-                } else {
-                  ue.field_D = (-ub.field_b + this.field_j) / 2;
-                  if (!MonkeyPuzzle2.field_F) {
-                    break L0;
-                  } else {
-                    L1: {
-                      if ((this.field_j ^ -1) < -1) {
-                        ue.field_D = 0;
-                        break L1;
-                      } else {
-                        break L1;
-                      }
-                    }
-                    if (ub.field_b == this.field_p) {
-                      if (this.field_q != lb.field_z) {
-                        this.field_r.a(this.field_q, this.field_p, -116);
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      this.field_r.a(this.field_q, this.field_p, -116);
-                      return;
-                    }
-                  }
-                }
-              }
-              if (ub.field_b == this.field_p) {
-                if (this.field_q != lb.field_z) {
-                  this.field_r.a(this.field_q, this.field_p, -116);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                this.field_r.a(this.field_q, this.field_p, -116);
-                return;
-              }
+          L0: {
+            if ((af.field_c ^ -1) < -1) {
+              break L0;
             } else {
-              if (param0 < -40) {
-                fieldTemp$0 = this.field_k - 1;
-                this.field_k = this.field_k - 1;
-                if (fieldTemp$0 <= 0) {
-                  this.field_k = this.field_c;
-                  if (this.field_h > gb.field_i) {
-                    this.field_n = false;
-                    return;
-                  } else {
-                    this.a(363);
-                    return;
-                  }
+              this.field_n = false;
+              break L0;
+            }
+          }
+          if (!this.field_n) {
+            L1: {
+              if (this.field_j <= ub.field_b) {
+                if ((this.field_j ^ -1) < -1) {
+                  ue.field_D = 0;
+                  break L1;
                 } else {
-                  return;
+                  break L1;
                 }
               } else {
-                return;
+                ue.field_D = (-ub.field_b + this.field_j) / 2;
+                break L1;
               }
             }
-          } else {
-            this.field_n = false;
-            if (!this.field_n) {
-              if (this.field_j > ub.field_b) {
-                ue.field_D = (-ub.field_b + this.field_j) / 2;
-                if (MonkeyPuzzle2.field_F) {
-                  L2: {
-                    if ((this.field_j ^ -1) < -1) {
-                      ue.field_D = 0;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  if (ub.field_b == this.field_p) {
-                    if (this.field_q != lb.field_z) {
-                      this.field_r.a(this.field_q, this.field_p, -116);
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    this.field_r.a(this.field_q, this.field_p, -116);
-                    return;
-                  }
+            L2: {
+              if (ub.field_b != this.field_p) {
+                this.field_r.a(this.field_q, this.field_p, -116);
+                break L2;
+              } else {
+                if (this.field_q == lb.field_z) {
+                  break L2;
                 } else {
-                  L3: {
-                    if (ub.field_b != this.field_p) {
-                      this.field_r.a(this.field_q, this.field_p, -116);
-                      break L3;
-                    } else {
-                      if (this.field_q == lb.field_z) {
-                        break L3;
-                      } else {
-                        this.field_r.a(this.field_q, this.field_p, -116);
-                        break L3;
-                      }
-                    }
-                  }
+                  this.field_r.a(this.field_q, this.field_p, -116);
+                  break L2;
+                }
+              }
+            }
+            return;
+          } else {
+            if (param0 < -40) {
+              fieldTemp$0 = this.field_k - 1;
+              this.field_k = this.field_k - 1;
+              if (fieldTemp$0 <= 0) {
+                this.field_k = this.field_c;
+                if (this.field_h > gb.field_i) {
+                  this.field_n = false;
+                  return;
+                } else {
+                  this.a(363);
                   return;
                 }
               } else {
-                L4: {
-                  if ((this.field_j ^ -1) < -1) {
-                    ue.field_D = 0;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                L5: {
-                  if (ub.field_b != this.field_p) {
-                    this.field_r.a(this.field_q, this.field_p, -116);
-                    break L5;
-                  } else {
-                    if (this.field_q == lb.field_z) {
-                      break L5;
-                    } else {
-                      this.field_r.a(this.field_q, this.field_p, -116);
-                      break L5;
-                    }
-                  }
-                }
                 return;
               }
             } else {
-              if (param0 < -40) {
-                fieldTemp$1 = this.field_k - 1;
-                this.field_k = this.field_k - 1;
-                if (fieldTemp$1 <= 0) {
-                  this.field_k = this.field_c;
-                  if (this.field_h > gb.field_i) {
-                    this.field_n = false;
-                    return;
-                  } else {
-                    this.a(363);
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
+              return;
             }
           }
         } else {
@@ -226,219 +117,53 @@ final class oe {
     }
 
     final boolean c(int param0) {
+        int stackIn_6_0 = 0;
         if (param0 == -1) {
-          if (this.field_h <= gb.field_i) {
-            if (-1 <= (af.field_c ^ -1)) {
-              return false;
-            } else {
-              return true;
+          L0: {
+            L1: {
+              if (this.field_h > gb.field_i) {
+                break L1;
+              } else {
+                if (-1 <= (af.field_c ^ -1)) {
+                  break L1;
+                } else {
+                  stackIn_6_0 = 1;
+                  break L0;
+                }
+              }
             }
-          } else {
-            return false;
+            stackIn_6_0 = 0;
+            break L0;
           }
+          return stackIn_6_0 != 0;
         } else {
           return false;
         }
     }
 
     final static void a(byte param0) {
-        RuntimeException runtimeException = null;
         int var1_int = 0;
-        int var2 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var2 = MonkeyPuzzle2.field_F ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        ne.field_c.a(true);
-                        var1_int = 0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if ((var1_int ^ -1) <= -33) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        dl.field_a[var1_int] = 0L;
-                        var1_int++;
-                        if (var2 != 0) {
-                            statePc = 8;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var2 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (param0 > 100) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        oe.d(-61);
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        var1_int = 0;
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        if (var1_int >= 32) {
-                            statePc = 13;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        ve.field_w[var1_int] = 0L;
-                        var1_int++;
-                        if (var2 != 0) {
-                            statePc = 16;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        if (var2 == 0) {
-                            statePc = 9;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        bg.field_E = 0;
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    runtimeException = (RuntimeException) ((Object) caughtException);
-                    throw la.a((Throwable) ((Object) runtimeException), "oe.F(" + param0 + ')');
-                }
-                case 16: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int var2 = MonkeyPuzzle2.field_F ? 1 : 0;
+        try {
+            ne.field_c.a(true);
+            for (var1_int = 0; (var1_int ^ -1) > -33; var1_int++) {
+                dl.field_a[var1_int] = 0L;
             }
+            if (param0 <= 100) {
+                oe.d(-61);
+            }
+            for (var1_int = 0; var1_int < 32; var1_int++) {
+                ve.field_w[var1_int] = 0L;
+            }
+            bg.field_E = 0;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) ((Object) runtimeException), "oe.F(" + param0 + ')');
         }
     }
 
     public static void d(int param0) {
         if (param0 != -12248) {
             field_d = true;
-            field_o = null;
-            field_l = null;
-            return;
         }
         field_o = null;
         field_l = null;
@@ -447,306 +172,91 @@ final class oe {
     private final void a(int param0) {
         int var2;
         int var3;
-        int var4;
         int var5;
-        var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-        var2 = this.field_j;
-        var3 = this.field_f;
-        if (param0 != 363) {
-          this.field_r = (rg) null;
-          if (this.c(-1)) {
-            L0: {
-              L1: {
-                if (var3 > this.field_e) {
-                  break L1;
-                } else {
-                  if (var3 < this.field_s) {
-                    var3 = this.field_s;
-                    if (var5 == 0) {
-                      break L0;
-                    } else {
-                      break L1;
-                    }
-                  } else {
-                    break L0;
-                  }
-                }
-              }
+        int var4;
+        L0: {
+          var5 = MonkeyPuzzle2.field_F ? 1 : 0;
+          var2 = this.field_j;
+          var3 = this.field_f;
+          if (param0 == 363) {
+            break L0;
+          } else {
+            this.field_r = (rg) null;
+            break L0;
+          }
+        }
+        if (this.c(-1)) {
+          L1: {
+            if (var3 > this.field_e) {
               var3 = this.field_e;
-              break L0;
-            }
-            L2: {
-              L3: {
-                if (this.field_g < var2) {
-                  break L3;
-                } else {
-                  if (var2 >= this.field_a) {
-                    break L2;
-                  } else {
-                    var2 = this.field_a;
-                    if (var5 == 0) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
+              break L1;
+            } else {
+              if (var3 < this.field_s) {
+                var3 = this.field_s;
+                break L1;
+              } else {
+                break L1;
               }
+            }
+          }
+          L2: {
+            if (this.field_g < var2) {
               var2 = this.field_g;
               break L2;
-            }
-            if (this.field_m > 0.0f) {
-              L4: {
-                L5: {
-                  var4 = (int)(0.5f + (float)var3 * this.field_m);
-                  if (var4 > var2) {
-                    break L5;
-                  } else {
-                    if (var2 > var4) {
-                      var2 = var4;
-                      if (var5 == 0) {
-                        break L4;
-                      } else {
-                        break L5;
-                      }
-                    } else {
-                      if (ub.field_b == var2) {
-                        if (var3 == lb.field_z) {
-                          if ((this.field_j ^ -1) < -1) {
-                            ue.field_D = (-ub.field_b + this.field_j) / 2;
-                            return;
-                          } else {
-                            return;
-                          }
-                        } else {
-                          L6: {
-                            this.field_r.a(var3, var2, -121);
-                            if ((this.field_j ^ -1) >= -1) {
-                              break L6;
-                            } else {
-                              ue.field_D = (-ub.field_b + this.field_j) / 2;
-                              break L6;
-                            }
-                          }
-                          return;
-                        }
-                      } else {
-                        L7: {
-                          this.field_r.a(var3, var2, -121);
-                          if ((this.field_j ^ -1) >= -1) {
-                            break L7;
-                          } else {
-                            ue.field_D = (-ub.field_b + this.field_j) / 2;
-                            break L7;
-                          }
-                        }
-                        return;
-                      }
-                    }
-                  }
-                }
-                var3 = (int)((float)var2 / this.field_m);
-                break L4;
+            } else {
+              if (var2 >= this.field_a) {
+                break L2;
+              } else {
+                var2 = this.field_a;
+                break L2;
               }
-              if (ub.field_b != var2) {
-                this.field_r.a(var3, var2, -121);
-                if ((this.field_j ^ -1) < -1) {
-                  ue.field_D = (-ub.field_b + this.field_j) / 2;
-                  return;
+            }
+          }
+          L3: {
+            if (this.field_m > 0.0f) {
+              var4 = (int)(0.5f + (float)var3 * this.field_m);
+              if (var4 > var2) {
+                var3 = (int)((float)var2 / this.field_m);
+                break L3;
+              } else {
+                if (var2 > var4) {
+                  var2 = var4;
+                  break L3;
                 } else {
-                  return;
+                  break L3;
                 }
+              }
+            } else {
+              break L3;
+            }
+          }
+          L4: {
+            L5: {
+              if (ub.field_b != var2) {
+                break L5;
               } else {
                 if (var3 != lb.field_z) {
-                  this.field_r.a(var3, var2, -121);
-                  if ((this.field_j ^ -1) < -1) {
-                    ue.field_D = (-ub.field_b + this.field_j) / 2;
-                    return;
-                  } else {
-                    return;
-                  }
+                  break L5;
                 } else {
-                  if ((this.field_j ^ -1) < -1) {
-                    ue.field_D = (-ub.field_b + this.field_j) / 2;
-                    return;
-                  } else {
-                    return;
-                  }
+                  break L4;
                 }
-              }
-            } else {
-              L8: {
-                if (ub.field_b != var2) {
-                  this.field_r.a(var3, var2, -121);
-                  break L8;
-                } else {
-                  if (var3 != lb.field_z) {
-                    this.field_r.a(var3, var2, -121);
-                    break L8;
-                  } else {
-                    break L8;
-                  }
-                }
-              }
-              if ((this.field_j ^ -1) >= -1) {
-                return;
-              } else {
-                ue.field_D = (-ub.field_b + this.field_j) / 2;
-                return;
               }
             }
-          } else {
-            this.field_n = false;
-            return;
+            this.field_r.a(var3, var2, -121);
+            break L4;
           }
+          L6: {
+            if ((this.field_j ^ -1) >= -1) {
+              break L6;
+            } else {
+              ue.field_D = (-ub.field_b + this.field_j) / 2;
+              break L6;
+            }
+          }
+          return;
         } else {
-          if (this.c(-1)) {
-            L9: {
-              L10: {
-                if (var3 > this.field_e) {
-                  break L10;
-                } else {
-                  if (var3 < this.field_s) {
-                    var3 = this.field_s;
-                    if (var5 == 0) {
-                      break L9;
-                    } else {
-                      break L10;
-                    }
-                  } else {
-                    break L9;
-                  }
-                }
-              }
-              var3 = this.field_e;
-              break L9;
-            }
-            L11: {
-              L12: {
-                if (this.field_g < var2) {
-                  break L12;
-                } else {
-                  if (var2 >= this.field_a) {
-                    break L11;
-                  } else {
-                    var2 = this.field_a;
-                    if (var5 == 0) {
-                      break L11;
-                    } else {
-                      break L12;
-                    }
-                  }
-                }
-              }
-              var2 = this.field_g;
-              break L11;
-            }
-            if (this.field_m > 0.0f) {
-              L13: {
-                L14: {
-                  var4 = (int)(0.5f + (float)var3 * this.field_m);
-                  if (var4 > var2) {
-                    break L14;
-                  } else {
-                    if (var2 > var4) {
-                      var2 = var4;
-                      if (var5 == 0) {
-                        break L13;
-                      } else {
-                        break L14;
-                      }
-                    } else {
-                      L15: {
-                        if (ub.field_b != var2) {
-                          this.field_r.a(var3, var2, -121);
-                          break L15;
-                        } else {
-                          if (var3 != lb.field_z) {
-                            this.field_r.a(var3, var2, -121);
-                            break L15;
-                          } else {
-                            break L15;
-                          }
-                        }
-                      }
-                      L16: {
-                        if ((this.field_j ^ -1) >= -1) {
-                          break L16;
-                        } else {
-                          ue.field_D = (-ub.field_b + this.field_j) / 2;
-                          break L16;
-                        }
-                      }
-                      return;
-                    }
-                  }
-                }
-                var3 = (int)((float)var2 / this.field_m);
-                break L13;
-              }
-              if (ub.field_b == var2) {
-                if (var3 == lb.field_z) {
-                  L17: {
-                    if ((this.field_j ^ -1) >= -1) {
-                      break L17;
-                    } else {
-                      ue.field_D = (-ub.field_b + this.field_j) / 2;
-                      break L17;
-                    }
-                  }
-                  return;
-                } else {
-                  L18: {
-                    this.field_r.a(var3, var2, -121);
-                    if ((this.field_j ^ -1) >= -1) {
-                      break L18;
-                    } else {
-                      ue.field_D = (-ub.field_b + this.field_j) / 2;
-                      break L18;
-                    }
-                  }
-                  return;
-                }
-              } else {
-                L19: {
-                  this.field_r.a(var3, var2, -121);
-                  if ((this.field_j ^ -1) >= -1) {
-                    break L19;
-                  } else {
-                    ue.field_D = (-ub.field_b + this.field_j) / 2;
-                    break L19;
-                  }
-                }
-                return;
-              }
-            } else {
-              L20: {
-                if (ub.field_b != var2) {
-                  this.field_r.a(var3, var2, -121);
-                  break L20;
-                } else {
-                  if (var3 != lb.field_z) {
-                    this.field_r.a(var3, var2, -121);
-                    break L20;
-                  } else {
-                    break L20;
-                  }
-                }
-              }
-              L21: {
-                if ((this.field_j ^ -1) >= -1) {
-                  break L21;
-                } else {
-                  ue.field_D = (-ub.field_b + this.field_j) / 2;
-                  break L21;
-                }
-              }
-              return;
-            }
-          } else {
-            this.field_n = false;
-            return;
-          }
+          this.field_n = false;
+          return;
         }
     }
 

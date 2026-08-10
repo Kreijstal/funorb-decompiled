@@ -126,100 +126,21 @@ final class sd extends hh {
 
     sd(wl param0, qe param1) {
         super(param0);
-        RuntimeException runtimeException = null;
-        aq var3 = null;
-        aq var4 = null;
         aq var5 = null;
-        Object stackIn_6_0 = null;
-        Object stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        aq var4 = null;
         this.field_f = false;
         this.field_g = false;
         try {
-          L0: {
-            L1: {
-              this.field_i = param1;
-              if (this.field_i.field_b == null) {
-                break L1;
-              } else {
-                if (!this.field_a.field_v) {
-                  break L1;
-                } else {
-                  if (!this.field_a.field_lc) {
-                    break L1;
-                  } else {
-                    L2: {
-                      var5 = kg.a("uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = 1.0-clamp((gl_Fog.end+ecVertex.z)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n", 35633, true, this.field_a);
-                      var3 = var5;
-                      var4 = kg.a("varying vec3 wvVertex;\nvarying float waterDepth;\nuniform vec3 sunDir;\nuniform vec4 sunColour;\nuniform float sunExponent;\nuniform float breakWaterDepth;\nuniform float breakWaterOffset;\nuniform sampler3D normalSampler;\nuniform samplerCube envMapSampler;\nvoid main() {\nvec4 wnNormal = texture3D(normalSampler, gl_TexCoord[0].xyz).rbga;\nwnNormal.xyz = 2.0*wnNormal.xyz-1.0;\nvec3 wnVector = normalize(wvVertex);\nvec3 wnReflection = reflect(wnVector, wnNormal.xyz);\nvec3 envColour = textureCube(envMapSampler, wnReflection).rgb;\nvec4 specularColour = sunColour*pow(clamp(-dot(sunDir, wnReflection), 0.0, 1.0), sunExponent);\nfloat shoreFactor = clamp(waterDepth/breakWaterDepth-breakWaterOffset*wnNormal.w, 0.0, 1.0);\nfloat ndote = dot(wnVector, wnNormal.xyz);\nfloat fresnel = pow(1.0-abs(ndote), 2.0);\nvec4 surfaceColour = vec4(envColour, fresnel*shoreFactor)+specularColour*shoreFactor;\ngl_FragColor = vec4(mix(surfaceColour.rgb, gl_Fog.color.rgb, gl_FogFragCoord), surfaceColour.a);\n}\n", 35632, true, this.field_a);
-                      this.field_l = br.a(this.field_a, new aq[]{var5, var4}, (byte) -121);
-                      stackIn_6_0 = this;
-
-                      if (null == this.field_l) {
-                        stackIn_7_0 = this;
-                        stackIn_7_1 = 0;
-                        break L2;
-                      } else {
-                        stackIn_7_0 = this;
-                        stackIn_7_1 = 1;
-                        break L2;
-                      }
-                    }
-                    ((sd) (this)).field_f = stackIn_7_1 != 0;
-                    break L1;
-                  }
-                }
-              }
+            this.field_i = param1;
+            if (this.field_i.field_b != null && this.field_a.field_v && this.field_a.field_lc) {
+                var5 = kg.a("uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = 1.0-clamp((gl_Fog.end+ecVertex.z)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n", 35633, true, this.field_a);
+                aq var3 = var5;
+                var4 = kg.a("varying vec3 wvVertex;\nvarying float waterDepth;\nuniform vec3 sunDir;\nuniform vec4 sunColour;\nuniform float sunExponent;\nuniform float breakWaterDepth;\nuniform float breakWaterOffset;\nuniform sampler3D normalSampler;\nuniform samplerCube envMapSampler;\nvoid main() {\nvec4 wnNormal = texture3D(normalSampler, gl_TexCoord[0].xyz).rbga;\nwnNormal.xyz = 2.0*wnNormal.xyz-1.0;\nvec3 wnVector = normalize(wvVertex);\nvec3 wnReflection = reflect(wnVector, wnNormal.xyz);\nvec3 envColour = textureCube(envMapSampler, wnReflection).rgb;\nvec4 specularColour = sunColour*pow(clamp(-dot(sunDir, wnReflection), 0.0, 1.0), sunExponent);\nfloat shoreFactor = clamp(waterDepth/breakWaterDepth-breakWaterOffset*wnNormal.w, 0.0, 1.0);\nfloat ndote = dot(wnVector, wnNormal.xyz);\nfloat fresnel = pow(1.0-abs(ndote), 2.0);\nvec4 surfaceColour = vec4(envColour, fresnel*shoreFactor)+specularColour*shoreFactor;\ngl_FragColor = vec4(mix(surfaceColour.rgb, gl_Fog.color.rgb, gl_FogFragCoord), surfaceColour.a);\n}\n", 35632, true, this.field_a);
+                this.field_l = br.a(this.field_a, new aq[]{var5, var4}, (byte) -121);
+                this.field_f = null != this.field_l ? true : false;
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (runtimeException);
-
-            stackIn_11_1 = new StringBuilder().append("sd.<init>(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
-          }
-          L4: {
-
-
-            stackIn_14_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
-          }
-          throw pn.a((Throwable) ((Object) stackIn_12_0), stackIn_15_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

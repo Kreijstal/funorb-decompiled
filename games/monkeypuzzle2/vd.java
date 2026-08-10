@@ -29,53 +29,26 @@ final class vd {
     }
 
     final bf b(int param0) {
-        bf var2;
-        bf var3;
-        int var4;
-        int stackIn_10_0 = 0;
-        var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (this.field_d != null) {
-          var2 = this.field_c[(int)(this.field_f & (long)(this.field_b + -1))];
-          L0: while (true) {
-            L1: {
-              L2: {
-                if (var2 == this.field_d) {
-                  break L2;
-                } else {
-                  stackIn_10_0 = ((this.field_f ^ -1L) < (this.field_d.field_f ^ -1L) ? -1 : ((this.field_f ^ -1L) == (this.field_d.field_f ^ -1L) ? 0 : 1));
-
-                  if (var4 != 0) {
-                    break L1;
-                  } else {
-                    if (stackIn_10_0 == 0) {
-                      var3 = this.field_d;
-                      this.field_d = this.field_d.field_g;
-                      return var3;
-                    } else {
-                      this.field_d = this.field_d.field_g;
-                      if (var4 == 0) {
-                        continue L0;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                }
-              }
-              this.field_d = null;
-              stackIn_10_0 = param0;
-              break L1;
-            }
-            if (stackIn_10_0 < -28) {
-              return null;
-            } else {
-              vd.a(true);
-              return null;
-            }
-          }
-        } else {
-          return null;
+        bf var3 = null;
+        int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
+        if (this.field_d == null) {
+            return null;
         }
+        bf var2 = this.field_c[(int)(this.field_f & (long)(this.field_b + -1))];
+        while (var2 != this.field_d) {
+            if (!((this.field_f ^ -1L) != (this.field_d.field_f ^ -1L))) {
+                var3 = this.field_d;
+                this.field_d = this.field_d.field_g;
+                return var3;
+            }
+            this.field_d = this.field_d.field_g;
+        }
+        this.field_d = null;
+        if (param0 < -28) {
+            return null;
+        }
+        vd.a(true);
+        return null;
     }
 
     final static String a(CharSequence[] param0, byte param1) {
@@ -135,27 +108,18 @@ final class vd {
           var4 = this.field_c[(int)((long)(-1 + this.field_b) & param0)];
           this.field_d = var4.field_g;
           L0: while (true) {
-            if (var4 != this.field_d) {
-              if (var6 == 0) {
-                if ((param0 ^ -1L) != (this.field_d.field_f ^ -1L)) {
-                  this.field_d = this.field_d.field_g;
-                  if (var6 == 0) {
-                    continue L0;
-                  } else {
-                    this.field_d = null;
-                    return null;
-                  }
-                } else {
-                  var5 = this.field_d;
-                  this.field_d = this.field_d.field_g;
-                  return var5;
-                }
-              } else {
-                return null;
-              }
-            } else {
+            if (var4 == this.field_d) {
               this.field_d = null;
               return null;
+            } else {
+              if ((param0 ^ -1L) != (this.field_d.field_f ^ -1L)) {
+                this.field_d = this.field_d.field_g;
+                continue L0;
+              } else {
+                var5 = this.field_d;
+                this.field_d = this.field_d.field_g;
+                return var5;
+              }
             }
           }
         } else {
@@ -164,27 +128,18 @@ final class vd {
           var4 = this.field_c[(int)((long)(-1 + this.field_b) & param0)];
           this.field_d = var4.field_g;
           L1: while (true) {
-            if (var4 != this.field_d) {
-              if (var6 == 0) {
-                if ((param0 ^ -1L) != (this.field_d.field_f ^ -1L)) {
-                  this.field_d = this.field_d.field_g;
-                  if (var6 == 0) {
-                    continue L1;
-                  } else {
-                    this.field_d = null;
-                    return null;
-                  }
-                } else {
-                  var5 = this.field_d;
-                  this.field_d = this.field_d.field_g;
-                  return var5;
-                }
-              } else {
-                return null;
-              }
-            } else {
+            if (var4 == this.field_d) {
               this.field_d = null;
               return null;
+            } else {
+              if ((param0 ^ -1L) != (this.field_d.field_f ^ -1L)) {
+                this.field_d = this.field_d.field_g;
+                continue L1;
+              } else {
+                var5 = this.field_d;
+                this.field_d = this.field_d.field_g;
+                return var5;
+              }
             }
           }
         }
@@ -315,59 +270,17 @@ final class vd {
     }
 
     vd(int param0) {
-        bf dupTemp$1 = null;
         int var2 = 0;
+        bf dupTemp$0 = null;
         bf var3 = null;
-        int var4 = 0;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-                    this.field_c = new bf[param0];
-                    this.field_b = param0;
-                    var2 = 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (var2 >= param0) {
-                        statePc = 5;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    dupTemp$1 = new bf();
-                    var3 = dupTemp$1;
-                    this.field_c[var2] = dupTemp$1;
-                    var3.field_e = var3;
-                    var3.field_g = var3;
-                    var2++;
-                    if (var4 == 0) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    if (var4 == 0) {
-                        statePc = 1;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        this.field_c = new bf[param0];
+        this.field_b = param0;
+        for (var2 = 0; var2 < param0; var2++) {
+            dupTemp$0 = new bf();
+            var3 = dupTemp$0;
+            this.field_c[var2] = dupTemp$0;
+            var3.field_e = var3;
+            var3.field_g = var3;
         }
     }
 

@@ -12,95 +12,21 @@ final class efa extends td {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, ht param4, int param5, java.awt.Component param6, jp param7) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        StringBuilder stackIn_8_1 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        StringBuilder stackIn_11_1 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              pb.a(param0, param3, 10);
-              lc.field_l = pb.a(param4, param6, 0, param1);
-              nia.field_m = pb.a(param4, param6, 1, param2);
-              saa.field_a = new hn();
-              ud.field_p = 1000 * param2 / param0;
-              nia.field_m.a(saa.field_a);
-              uf.field_c = param7;
-              uf.field_c.a(23679, bs.field_k);
-              lc.field_l.a(uf.field_c);
-              if (param5 == 19299) {
-                break L1;
-              } else {
+            pb.a(param0, param3, 10);
+            lc.field_l = pb.a(param4, param6, 0, param1);
+            nia.field_m = pb.a(param4, param6, 1, param2);
+            saa.field_a = new hn();
+            ud.field_p = 1000 * param2 / param0;
+            nia.field_m.a(saa.field_a);
+            uf.field_c = param7;
+            uf.field_c.a(23679, bs.field_k);
+            lc.field_l.a(uf.field_c);
+            if (param5 != 19299) {
                 field_p = true;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("efa.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          L3: {
-
-
-            stackIn_8_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',').append(param5).append(',');
-
-            if (param6 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
-          }
-          L4: {
-
-
-            stackIn_11_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
-
-            if (param7 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L4;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L4;
-            }
-          }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), stackIn_12_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) ((Object) runtimeException), "efa.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 

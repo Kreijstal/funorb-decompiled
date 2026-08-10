@@ -563,38 +563,41 @@ final class bf {
               }
             }
             L5: {
-              if (this.field_f == null) {
-                break L5;
-              } else {
-                if (2 != sd.field_e) {
-                  break L5;
+              L6: {
+                if (this.field_f == null) {
+                  break L6;
                 } else {
-                  if (0 >= g.field_s[this.field_Q]) {
-                    break L5;
+                  if (2 != sd.field_e) {
+                    break L6;
                   } else {
-                    L6: {
-                      if (0 == (1 & this.field_e)) {
-                        this.field_f = gm.a(this.field_f, fb.field_c[this.field_Q], g.field_s[this.field_Q], ff.field_Q[this.field_Q][this.field_E], fk.field_t[this.field_Q], true);
+                    if (0 >= g.field_s[this.field_Q]) {
+                      break L6;
+                    } else {
+                      L7: {
+                        if (0 == (1 & this.field_e)) {
+                          this.field_f = gm.a(this.field_f, fb.field_c[this.field_Q], g.field_s[this.field_Q], ff.field_Q[this.field_Q][this.field_E], fk.field_t[this.field_Q], true);
+                          break L7;
+                        } else {
+                          break L7;
+                        }
+                      }
+                      if (this.field_f != null) {
+                        this.field_f.a((int)this.field_o, (int)this.field_N, 382);
                         break L6;
                       } else {
-                        break L6;
+                        break L5;
                       }
-                    }
-                    if (this.field_f != null) {
-                      this.field_f.a((int)this.field_o, (int)this.field_N, 382);
-                      break L5;
-                    } else {
-                      break L5;
                     }
                   }
                 }
               }
+              break L5;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var3 = decompiledCaughtException;
             stackIn_25_0 = (RuntimeException) (var3);
 
@@ -604,12 +607,12 @@ final class bf {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw ie.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');

@@ -243,11 +243,11 @@ final class pk extends ta implements jb, ai {
     public final void a(byte param0, int param1, int param2, s param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         var7 = OrbDefence.field_D ? 1 : 0;
@@ -255,58 +255,32 @@ final class pk extends ta implements jb, ai {
           L0: {
             L1: {
               L2: {
-                if (param3 != this.field_I) {
-                  L3: {
-                    if (this.field_K == param3) {
-                      break L3;
-                    } else {
-                      if (param3 == this.field_A) {
-                        L4: {
-                          if (this.field_M) {
-                            break L4;
-                          } else {
-                            L5: {
-                              if (!this.field_D) {
-                                break L5;
-                              } else {
-                                qd.a((byte) 127);
-                                if (var7 == 0) {
-                                  break L2;
-                                } else {
-                                  break L5;
-                                }
-                              }
-                            }
-                            dk.a((byte) 19);
-                            if (var7 == 0) {
-                              break L2;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                        pa.a(true);
-                        if (var7 == 0) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        var6_int = -47 % ((-3 - param0) / 62);
-                        break L1;
-                      }
-                    }
-                  }
-                  d.c((byte) -66);
-                  if (var7 == 0) {
-                    break L2;
-                  } else {
-                    this.k(35);
-                    break L2;
-                  }
-                } else {
+                if (param3 == this.field_I) {
                   this.k(35);
                   break L2;
+                } else {
+                  if (this.field_K == param3) {
+                    d.c((byte) -66);
+                    break L2;
+                  } else {
+                    if (param3 == this.field_A) {
+                      if (this.field_M) {
+                        pa.a(true);
+                        break L2;
+                      } else {
+                        if (!this.field_D) {
+                          dk.a((byte) 19);
+                          break L2;
+                        } else {
+                          qd.a((byte) 127);
+                          break L2;
+                        }
+                      }
+                    } else {
+                      var6_int = -47 % ((-3 - param0) / 62);
+                      break L1;
+                    }
+                  }
                 }
               }
               var6_int = -47 % ((-3 - param0) / 62);
@@ -316,25 +290,25 @@ final class pk extends ta implements jb, ai {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L3: {
             var6 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var6);
+            stackIn_16_0 = (RuntimeException) (var6);
 
-            stackIn_21_1 = new StringBuilder().append("pk.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_16_1 = new StringBuilder().append("pk.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
             if (param3 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L6;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
+              break L3;
             } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L6;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
+              break L3;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param4 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param4 + ')');
         }
     }
 
@@ -355,46 +329,12 @@ final class pk extends ta implements jb, ai {
     }
 
     public final void a(vi param0, int param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 > 27) {
-                break L1;
-              } else {
+            if (param1 <= 27) {
                 this.field_K = (s) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("pk.N(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) ((Object) runtimeException), "pk.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -432,10 +372,8 @@ final class pk extends ta implements jb, ai {
         kc var7 = null;
         String var8 = null;
         df var9 = null;
-        int var11 = 0;
         h var12 = null;
         h var13 = null;
-        var11 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
             L1: {
@@ -500,143 +438,115 @@ final class pk extends ta implements jb, ai {
               }
             }
             L6: {
-              L7: {
-                this.field_N = (vi) ((Object) new oc(param0, (ag) (this), 100));
-                this.field_C = (vi) ((Object) new oc("", (ag) (this), 20));
-                if (this.field_M) {
-                  break L7;
-                } else {
-                  L8: {
-                    this.field_I = new s(q.field_a, (ag) null);
-                    stackIn_17_0 = this;
+              this.field_N = (vi) ((Object) new oc(param0, (ag) (this), 100));
+              this.field_C = (vi) ((Object) new oc("", (ag) (this), 20));
+              if (this.field_M) {
+                this.field_I = new s(tk.field_l, (ag) null);
+                this.field_A = new s(ld.field_d, (ag) null);
+                this.field_N.field_F = false;
+                break L6;
+              } else {
+                L7: {
+                  this.field_I = new s(q.field_a, (ag) null);
+                  stackIn_17_0 = this;
 
-                    stackIn_17_1 = null;
+                  stackIn_17_1 = null;
 
-                    stackIn_17_2 = null;
+                  stackIn_17_2 = null;
 
-                    if (this.field_D) {
-                      stackIn_18_0 = this;
-                      stackIn_18_1 = null;
-                      stackIn_18_2 = null;
-                      stackIn_18_3 = gl.field_k;
-                      break L8;
-                    } else {
-                      stackIn_18_0 = this;
-                      stackIn_18_1 = null;
-                      stackIn_18_2 = null;
-                      stackIn_18_3 = vc.field_i;
-                      break L8;
-                    }
-                  }
-                  ((pk) (this)).field_A = new s(stackIn_18_3, (ag) null);
-                  if (!this.field_J) {
-                    break L6;
+                  if (this.field_D) {
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = null;
+                    stackIn_18_2 = null;
+                    stackIn_18_3 = gl.field_k;
+                    break L7;
                   } else {
-                    this.field_K = new s(ki.field_h, (ag) (this));
-                    if (var11 == 0) {
-                      break L6;
-                    } else {
-                      break L7;
-                    }
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = null;
+                    stackIn_18_2 = null;
+                    stackIn_18_3 = vc.field_i;
+                    break L7;
                   }
                 }
+                ((pk) (this)).field_A = new s(stackIn_18_3, (ag) null);
+                if (!this.field_J) {
+                  break L6;
+                } else {
+                  this.field_K = new s(ki.field_h, (ag) (this));
+                  break L6;
+                }
               }
-              this.field_I = new s(tk.field_l, (ag) null);
-              this.field_A = new s(ld.field_d, (ag) null);
-              this.field_N.field_F = false;
-              break L6;
             }
-            L9: {
+            L8: {
               this.field_N.field_j = (td) ((Object) new fg(10000536));
               this.field_C.field_j = (td) ((Object) new eg(10000536));
               var6 = new vk();
               this.field_I.field_j = (td) ((Object) var6);
               if (this.field_A == null) {
-                break L9;
+                break L8;
               } else {
                 this.field_A.field_j = (td) ((Object) var6);
+                break L8;
+              }
+            }
+            L9: {
+              this.field_N.field_i = rl.field_b;
+              if (this.field_K == null) {
+                break L9;
+              } else {
+                this.field_K.field_j = (td) ((Object) var6);
                 break L9;
               }
             }
             L10: {
-              this.field_N.field_i = rl.field_b;
               if (this.field_K == null) {
                 break L10;
               } else {
-                this.field_K.field_j = (td) ((Object) var6);
+                this.field_K.field_i = ec.field_J;
                 break L10;
               }
             }
             L11: {
-              if (this.field_K == null) {
-                break L11;
+              if (!this.field_M) {
+                if (this.field_D) {
+                  this.field_A.field_i = og.field_j;
+                  this.field_A.field_j = (td) ((Object) new qc());
+                  break L11;
+                } else {
+                  this.field_A.field_j = (td) ((Object) new qc());
+                  break L11;
+                }
               } else {
-                this.field_K.field_i = ec.field_J;
+                this.field_A.field_i = ql.field_d;
                 break L11;
               }
             }
             L12: {
-              L13: {
-                if (!this.field_M) {
-                  break L13;
-                } else {
-                  this.field_A.field_i = ql.field_d;
-                  if (var11 == 0) {
-                    break L12;
-                  } else {
-                    break L13;
-                  }
-                }
-              }
-              L14: {
-                if (this.field_D) {
-                  break L14;
-                } else {
-                  this.field_A.field_j = (td) ((Object) new qc());
-                  if (var11 == 0) {
-                    break L12;
-                  } else {
-                    break L14;
-                  }
-                }
-              }
-              this.field_A.field_i = og.field_j;
-              this.field_A.field_j = (td) ((Object) new qc());
-              break L12;
-            }
-            L15: {
               this.field_n = 15;
               var7 = lm.field_f;
               if (null == this.field_L) {
-                break L15;
+                break L12;
               } else {
                 this.field_n = this.field_n + (var7.a(this.field_L, -40 + this.field_m, var7.field_H) + 5);
-                break L15;
+                break L12;
               }
             }
-            L16: {
-              L17: {
-                var8 = le.field_d;
-                var9 = oa.a(true, uj.b((byte) -120));
-                if (mj.field_l == var9) {
-                  break L17;
+            L13: {
+              var8 = le.field_d;
+              var9 = oa.a(true, uj.b((byte) -120));
+              if (mj.field_l == var9) {
+                var8 = gl.field_h;
+                break L13;
+              } else {
+                if (var9 != vh.field_s) {
+                  break L13;
                 } else {
-                  if (var9 != vh.field_s) {
-                    break L16;
-                  } else {
-                    var8 = wd.field_k;
-                    if (var11 == 0) {
-                      break L16;
-                    } else {
-                      break L17;
-                    }
-                  }
+                  var8 = wd.field_k;
+                  break L13;
                 }
               }
-              var8 = gl.field_h;
-              break L16;
             }
-            L18: {
+            L14: {
               dupTemp$0 = new h(10, this.field_n, -20 + this.field_m, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
               var12 = dupTemp$0;
               this.a(dupTemp$0, (byte) 74);
@@ -647,96 +557,85 @@ final class pk extends ta implements jb, ai {
               this.field_n = this.field_n + (((pj) ((Object) var13)).field_r - -5);
               this.field_I.field_h = (ag) (this);
               if (this.field_K == null) {
-                break L18;
+                break L14;
               } else {
                 this.field_K.field_h = (ag) (this);
-                break L18;
+                break L14;
               }
             }
-            L19: {
+            L15: {
               if (null == this.field_A) {
-                break L19;
+                break L15;
               } else {
                 this.field_A.field_h = (ag) (this);
-                break L19;
+                break L15;
               }
             }
-            L20: {
-              L21: {
-                if (this.field_K != null) {
-                  break L21;
-                } else {
-                  this.field_I.a(8, this.field_n, 30, (byte) -90, -6 + this.field_m - 10);
-                  this.field_n = this.field_n + 35;
-                  if (var11 == 0) {
-                    break L20;
-                  } else {
-                    break L21;
-                  }
-                }
+            L16: {
+              if (this.field_K != null) {
+                this.field_I.a(85, this.field_n, 30, (byte) -90, -95 + this.field_m);
+                this.field_n = this.field_n + 60;
+                break L16;
+              } else {
+                this.field_I.a(8, this.field_n, 30, (byte) -90, -6 + this.field_m - 10);
+                this.field_n = this.field_n + 35;
+                break L16;
               }
-              this.field_I.a(85, this.field_n, 30, (byte) -90, -95 + this.field_m);
-              this.field_n = this.field_n + 60;
-              break L20;
             }
-            L22: {
+            L17: {
               if (this.field_K == null) {
-                break L22;
+                break L17;
               } else {
                 this.field_K.a(8, this.field_n, 30, (byte) -90, this.field_m - 6 + -10);
                 this.field_n = this.field_n + 35;
-                break L22;
+                break L17;
               }
             }
-            L23: {
+            L18: {
               if (null == this.field_A) {
-                break L23;
+                break L18;
               } else {
-                L24: {
+                L19: {
                   if (this.field_M) {
-                    break L24;
+                    break L19;
                   } else {
                     if (this.field_D) {
-                      break L24;
+                      break L19;
                     } else {
                       this.field_A.a(8, this.field_n, 20, (byte) -90, 40);
                       this.field_n = this.field_n + 25;
-                      if (var11 == 0) {
-                        break L23;
-                      } else {
-                        break L24;
-                      }
+                      break L18;
                     }
                   }
                 }
                 this.field_A.a(8, this.field_n, 30, (byte) -90, -6 + (this.field_m - 10));
                 this.field_n = this.field_n + 35;
-                break L23;
+                break L18;
               }
             }
-            L25: {
+            L20: {
               this.a(0, 0, 3 + this.field_n, (byte) -90, this.field_m);
               this.a(this.field_I, (byte) 74);
               if (null == this.field_K) {
-                break L25;
+                break L20;
               } else {
                 this.a(this.field_K, (byte) 74);
-                break L25;
+                break L20;
               }
             }
-            L26: {
+            L21: {
               if (null == this.field_A) {
-                break L26;
+                break L21;
               } else {
                 this.a(this.field_A, (byte) 74);
-                break L26;
+                break L21;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L27: {
+          L22: {
             var6_ref = decompiledCaughtException;
             stackIn_59_0 = (RuntimeException) (var6_ref);
 
@@ -746,15 +645,15 @@ final class pk extends ta implements jb, ai {
               stackIn_60_0 = (RuntimeException) ((Object) stackIn_59_0);
               stackIn_60_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackIn_60_2 = "null";
-              break L27;
+              break L22;
             } else {
               stackIn_60_0 = (RuntimeException) ((Object) stackIn_59_0);
               stackIn_60_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackIn_60_2 = "{...}";
-              break L27;
+              break L22;
             }
           }
-          L28: {
+          L23: {
 
 
             stackIn_62_1 = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_60_2).append(',');
@@ -763,12 +662,12 @@ final class pk extends ta implements jb, ai {
               stackIn_60_0 = (RuntimeException) ((Object) stackIn_60_0);
               stackIn_63_1 = (StringBuilder) ((Object) stackIn_62_1);
               stackIn_63_2 = "null";
-              break L28;
+              break L23;
             } else {
               stackIn_60_0 = (RuntimeException) ((Object) stackIn_60_0);
               stackIn_63_1 = (StringBuilder) ((Object) stackIn_62_1);
               stackIn_63_2 = "{...}";
-              break L28;
+              break L23;
             }
           }
           throw dd.a((Throwable) ((Object) stackIn_60_0), stackIn_63_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

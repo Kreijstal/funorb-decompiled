@@ -15,7 +15,8 @@ final class na implements Iterator {
     public final Object next() {
         int fieldTemp$1 = 0;
         int var2;
-        lh var3;
+        Object var3;
+        lh var3_ref;
         lh var4;
         var2 = fleas.field_A ? 1 : 0;
         if (this.field_g.field_f[-1 + this.field_d] == this.field_a) {
@@ -23,17 +24,13 @@ final class na implements Iterator {
             if (this.field_g.field_g > this.field_d) {
               fieldTemp$1 = this.field_d;
               this.field_d = this.field_d + 1;
-              var3 = this.field_g.field_f[fieldTemp$1].field_h;
-              if (var3 == this.field_g.field_f[this.field_d + -1]) {
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  return null;
-                }
+              var3_ref = this.field_g.field_f[fieldTemp$1].field_h;
+              if (var3_ref == this.field_g.field_f[this.field_d + -1]) {
+                continue L0;
               } else {
-                this.field_e = var3;
-                this.field_a = var3.field_h;
-                return var3;
+                this.field_e = var3_ref;
+                this.field_a = var3_ref.field_h;
+                return var3_ref;
               }
             } else {
               return null;
@@ -82,11 +79,7 @@ final class na implements Iterator {
               this.field_d = this.field_d + 1;
               if (this.field_g.field_f[fieldTemp$1].field_h == this.field_g.field_f[-1 + this.field_d]) {
                 this.field_a = this.field_g.field_f[this.field_d - 1];
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  return false;
-                }
+                continue L0;
               } else {
                 this.field_a = this.field_g.field_f[-1 + this.field_d].field_h;
                 return true;

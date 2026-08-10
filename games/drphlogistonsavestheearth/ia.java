@@ -8,53 +8,26 @@ final class ia {
 
     final static void a(byte param0) {
         ml var1 = null;
-        int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
-        var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        int var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              el.field_sb.a();
-              k.field_J.a();
-              vb.field_k = vb.field_k - 1;
-              if (param0 >= 4) {
-                break L1;
-              } else {
+            el.field_sb.a();
+            k.field_J.a();
+            vb.field_k = vb.field_k - 1;
+            if (param0 < 4) {
                 field_c = -62;
-                break L1;
-              }
             }
-            L2: {
-              if (-1 != (vb.field_k ^ -1)) {
-                break L2;
-              } else {
+            if (-1 == (vb.field_k ^ -1)) {
                 vb.field_k = 200;
                 var1 = (ml) ((Object) ff.field_O.h(-11151));
-                L3: while (true) {
-                  if (var1 == null) {
-                    break L2;
-                  } else {
-                    L4: {
-                      if (var1.field_o.c(-1387)) {
-                        break L4;
-                      } else {
+                while (var1 != null) {
+                    if (!var1.field_o.c(-1387)) {
                         var1.a(-16175);
-                        break L4;
-                      }
                     }
                     var1 = (ml) ((Object) ff.field_O.e(0));
-                    continue L3;
-                  }
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1_ref), "ia.D(" + param0 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) ((Object) runtimeException), "ia.D(" + param0 + ')');
         }
     }
 

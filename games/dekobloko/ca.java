@@ -560,32 +560,35 @@ abstract class ca extends t {
             }
             L2: {
               L3: {
-                this.field_sb = param0;
-                if (fh.field_e != this.field_pb) {
-                  break L3;
-                } else {
-                  this.b(this.field_sb.field_t + 12, this.field_tb, this.field_sb.field_y + this.field_nb + 12, 194);
-                  this.field_rb = 0;
-                  if (!client.field_A) {
-                    break L2;
+                L4: {
+                  this.field_sb = param0;
+                  if (fh.field_e != this.field_pb) {
+                    break L4;
                   } else {
-                    break L3;
+                    this.b(this.field_sb.field_t + 12, this.field_tb, this.field_sb.field_y + this.field_nb + 12, 194);
+                    this.field_rb = 0;
+                    if (!client.field_A) {
+                      break L3;
+                    } else {
+                      break L4;
+                    }
                   }
                 }
+                if (da.field_b == this.field_pb) {
+                  break L3;
+                } else {
+                  this.field_pb = da.field_b;
+                  this.field_rb = 0;
+                  break L2;
+                }
               }
-              if (da.field_b == this.field_pb) {
-                break L2;
-              } else {
-                this.field_pb = da.field_b;
-                this.field_rb = 0;
-                break L2;
-              }
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var3 = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (var3);
 
@@ -595,12 +598,12 @@ abstract class ca extends t {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');

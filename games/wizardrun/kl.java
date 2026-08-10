@@ -408,7 +408,7 @@ final class kl {
                           break L10;
                         }
                       }
-                      throw bd.a((Throwable) ((Object) stackIn_39_0), (stackIn_39_2 != 0) + " " + param2 + " " + param1.length + " " + bi.a(var9, 10510, param1.length) + " " + bi.a(var9, 10510, -2 + param1.length) + " " + this.field_d.field_q[param2] + " " + this.field_d.field_i);
+                      throw bd.a((Throwable) ((Object) stackIn_39_0), (stackIn_39_2 != 0) + " " + param2 + " " + var9.length + " " + bi.a(var9, 10510, var9.length) + " " + bi.a(var9, 10510, -2 + var9.length) + " " + this.field_d.field_q[param2] + " " + this.field_d.field_i);
                     }
                     L11: {
                       if (this.field_a) {

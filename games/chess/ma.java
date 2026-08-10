@@ -244,6 +244,7 @@ class ma extends mf implements ra {
     }
 
     final void a(int param0, mf param1, int param2, int param3, int param4, int param5) {
+        RuntimeException runtimeException = null;
         qj var7 = null;
         mf var8 = null;
         int var9 = 0;
@@ -254,7 +255,6 @@ class ma extends mf implements ra {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
         var9 = Chess.field_G;
         try {
           L0: {
@@ -286,8 +286,8 @@ class ma extends mf implements ra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var7_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var7_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
 
             stackIn_10_1 = new StringBuilder().append("ma.VA(").append(param0).append(',');
 
@@ -324,6 +324,7 @@ class ma extends mf implements ra {
     }
 
     void a(int param0, int param1, mf param2, int param3) {
+        RuntimeException runtimeException = null;
         qj var5 = null;
         mf var6 = null;
         int var7 = 0;
@@ -334,7 +335,6 @@ class ma extends mf implements ra {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = Chess.field_G;
         try {
           L0: {
@@ -367,8 +367,8 @@ class ma extends mf implements ra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_9_0 = (RuntimeException) (runtimeException);
 
             stackIn_9_1 = new StringBuilder().append("ma.G(").append(param0).append(',').append(param1).append(',');
 

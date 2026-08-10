@@ -193,7 +193,7 @@ final class rh {
                           break L9;
                         }
                       }
-                      throw pf.a((Throwable) ((Object) stackIn_36_0), (stackIn_36_2 != 0) + " " + param1 + " " + param0.length + " " + ia.a(true, var9, param0.length) + " " + ia.a(true, var9, param0.length + -2) + " " + this.field_m.field_u[param1] + " " + this.field_m.field_p);
+                      throw pf.a((Throwable) ((Object) stackIn_36_0), (stackIn_36_2 != 0) + " " + param1 + " " + var9.length + " " + ia.a(true, var9, var9.length) + " " + ia.a(true, var9, var9.length + -2) + " " + this.field_m.field_u[param1] + " " + this.field_m.field_p);
                     }
                     L10: {
                       if (this.field_d) {

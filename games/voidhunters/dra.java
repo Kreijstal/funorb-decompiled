@@ -214,55 +214,58 @@ final class dra extends f {
                 }
               }
               L13: {
-                if (this.field_w == null) {
-                  break L13;
-                } else {
-                  if (0 != this.field_u) {
-                    L14: {
+                L14: {
+                  if (this.field_w == null) {
+                    break L14;
+                  } else {
+                    if (0 != this.field_u) {
                       L15: {
-                        if (null == this.field_r) {
-                          break L15;
-                        } else {
-                          if (this.field_r.length < var6) {
-                            break L15;
+                        L16: {
+                          if (null == this.field_r) {
+                            break L16;
                           } else {
-                            cua.a(this.field_r, 0, var6);
-                            break L14;
+                            if (this.field_r.length < var6) {
+                              break L16;
+                            } else {
+                              cua.a(this.field_r, 0, var6);
+                              break L15;
+                            }
                           }
                         }
+                        this.field_p = new int[var6];
+                        this.field_r = new int[var6];
+                        break L15;
                       }
-                      this.field_p = new int[var6];
-                      this.field_r = new int[var6];
-                      break L14;
-                    }
-                    L16: {
-                      this.field_l.a(this.field_r, 0, param2);
-                      if (vka.field_r) {
-                        param1 = param1 << 1;
-                        stackIn_63_0 = param1 << 1;
-                        break L16;
-                      } else {
-                        stackIn_63_0 = param1;
-                        break L16;
+                      L17: {
+                        this.field_l.a(this.field_r, 0, param2);
+                        if (vka.field_r) {
+                          param1 = param1 << 1;
+                          stackIn_63_0 = param1 << 1;
+                          break L17;
+                        } else {
+                          stackIn_63_0 = param1;
+                          break L17;
+                        }
                       }
-                    }
-                    var7 = stackIn_63_0;
-                    var8 = this.field_h * this.field_u / 256;
-                    var9 = -var8 + this.field_h;
-                    var10 = 0;
-                    L17: while (true) {
-                      if (var6 <= var10) {
-                        break L13;
-                      } else {
-                        param0[var10 + var7] = var8 * this.field_r[var10] + param0[var10 + var7] * var9 >> -1951367064;
-                        var10++;
-                        continue L17;
+                      var7 = stackIn_63_0;
+                      var8 = this.field_h * this.field_u / 256;
+                      var9 = -var8 + this.field_h;
+                      var10 = 0;
+                      L18: while (true) {
+                        if (var6 <= var10) {
+                          break L14;
+                        } else {
+                          param0[var10 + var7] = var8 * this.field_r[var10] + param0[var10 + var7] * var9 >> -1951367064;
+                          var10++;
+                          continue L18;
+                        }
                       }
+                    } else {
+                      break L13;
                     }
-                  } else {
-                    break L13;
                   }
                 }
+                break L13;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -270,7 +273,7 @@ final class dra extends f {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L18: {
+          L19: {
             var4 = decompiledCaughtException;
             stackIn_69_0 = (RuntimeException) (var4);
 
@@ -280,12 +283,12 @@ final class dra extends f {
               stackIn_70_0 = (RuntimeException) ((Object) stackIn_69_0);
               stackIn_70_1 = (StringBuilder) ((Object) stackIn_69_1);
               stackIn_70_2 = "null";
-              break L18;
+              break L19;
             } else {
               stackIn_70_0 = (RuntimeException) ((Object) stackIn_69_0);
               stackIn_70_1 = (StringBuilder) ((Object) stackIn_69_1);
               stackIn_70_2 = "{...}";
-              break L18;
+              break L19;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_70_0), stackIn_70_2 + ',' + param1 + ',' + param2 + ')');
@@ -301,13 +304,18 @@ final class dra extends f {
         int var3;
         L0: {
           var3 = VoidHunters.field_G;
-          if ((this.field_s ^ -1) >= -1) {
-            if (this.field_s < 1048576) {
-              if (null == this.field_m) {
+          if ((this.field_s ^ -1) < -1) {
+            if (null != this.field_o) {
+              this.field_k.a(param0);
+              if (this.field_s >= 1048576) {
                 break L0;
               } else {
-                this.field_j.a(param0);
-                break L0;
+                if (null == this.field_m) {
+                  break L0;
+                } else {
+                  this.field_j.a(param0);
+                  break L0;
+                }
               }
             } else {
               if (this.field_s >= 1048576) {

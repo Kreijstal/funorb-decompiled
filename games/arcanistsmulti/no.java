@@ -77,59 +77,62 @@ final class no extends qk {
                     var1 = (cg) ((Object) ph.field_a.b(param0 ^ -12624));
                     L3: while (true) {
                       L4: {
-                        if (var1 == null) {
-                          if (param0 == -1) {
-                            break L4;
-                          } else {
-                            no.l((byte) 65);
-                            break L4;
-                          }
-                        } else {
-                          stackIn_25_0 = var1.field_Eb ^ -1;
-
-                          stackIn_25_1 = -1;
-
-                          L5: {
-                            if (stackIn_25_0 >= stackIn_25_1) {
+                        L5: {
+                          if (var1 == null) {
+                            if (param0 == -1) {
                               break L5;
                             } else {
-                              var1.field_Eb = var1.field_Eb - 1;
-                              if (0 == var1.field_Eb) {
-                                var1.field_Sb = 0;
-                                if (var1.e(183874081)) {
-                                  var1.a(true);
-                                  break L5;
-                                } else {
-                                  break L5;
-                                }
+                              no.l((byte) 65);
+                              break L4;
+                            }
+                          } else {
+                            stackIn_25_0 = var1.field_Eb ^ -1;
+
+                            stackIn_25_1 = -1;
+
+                            L6: {
+                              if (stackIn_25_0 >= stackIn_25_1) {
+                                break L6;
                               } else {
-                                var1 = (cg) ((Object) ph.field_a.a(0));
-                                continue L3;
+                                var1.field_Eb = var1.field_Eb - 1;
+                                if (0 == var1.field_Eb) {
+                                  var1.field_Sb = 0;
+                                  if (var1.e(183874081)) {
+                                    var1.a(true);
+                                    break L6;
+                                  } else {
+                                    break L6;
+                                  }
+                                } else {
+                                  var1 = (cg) ((Object) ph.field_a.a(0));
+                                  continue L3;
+                                }
                               }
                             }
+                            var1 = (cg) ((Object) ph.field_a.a(0));
+                            continue L3;
                           }
-                          var1 = (cg) ((Object) ph.field_a.a(0));
-                          continue L3;
                         }
+                        break L4;
                       }
                       break L0;
                     }
                   } else {
-                    L6: {
+                    L7: {
                       if (-1 <= (var1_ref.field_bc ^ -1)) {
-                        break L6;
+                        break L7;
                       } else {
                         var1_ref.field_bc = var1_ref.field_bc - 1;
                         if (var1_ref.field_bc == 0) {
                           var1_ref.field_ac = 0;
                           if (!var1_ref.e(-100)) {
-                            break L6;
+                            break L7;
                           } else {
                             var1_ref.a(true);
-                            break L6;
+                            break L7;
                           }
                         } else {
-                          break L6;
+                          break L7;
                         }
                       }
                     }
@@ -138,22 +141,22 @@ final class no extends qk {
                   }
                 }
               } else {
-                L7: {
+                L8: {
                   if ((var1.field_Eb ^ -1) < -1) {
                     var1.field_Eb = var1.field_Eb - 1;
                     if (-1 == (var1.field_Eb ^ -1)) {
                       var1.field_Sb = 0;
                       if (var1.e(183874081)) {
                         var1.a(true);
-                        break L7;
+                        break L8;
                       } else {
-                        break L7;
+                        break L8;
                       }
                     } else {
-                      break L7;
+                      break L8;
                     }
                   } else {
-                    break L7;
+                    break L8;
                   }
                 }
                 var1 = (cg) ((Object) gm.field_j.a(0));

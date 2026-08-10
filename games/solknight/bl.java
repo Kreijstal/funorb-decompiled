@@ -141,71 +141,36 @@ final class bl extends gg {
     }
 
     final static od[] b(boolean param0) {
-        od[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = SolKnight.field_L ? 1 : 0;
-                    var1 = new od[nb.field_c];
-                    if (!param0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    bl.b(false);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    var2 = 0;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (nb.field_c > var2) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    og.a((byte) -97);
-                    return var1;
-                }
-                case 5: {
-                    var1[var2] = new od(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], jc.field_c[var2], ig.field_H);
-                    var2++;
-                    if (var3 == 0) {
-                        statePc = 8;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    return var1;
-                }
-                case 8: {
-                    if (var3 == 0) {
-                        statePc = 3;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
-                    og.a((byte) -97);
-                    return var1;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        od[] var1;
+        int var2;
+        int var3;
+        var3 = SolKnight.field_L ? 1 : 0;
+        var1 = new od[nb.field_c];
+        if (param0) {
+          bl.b(false);
+          var2 = 0;
+          L0: while (true) {
+            if (nb.field_c <= var2) {
+              og.a((byte) -97);
+              return var1;
+            } else {
+              var1[var2] = new od(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], jc.field_c[var2], ig.field_H);
+              var2++;
+              continue L0;
             }
+          }
+        } else {
+          var2 = 0;
+          L1: while (true) {
+            if (nb.field_c <= var2) {
+              og.a((byte) -97);
+              return var1;
+            } else {
+              var1[var2] = new od(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], jc.field_c[var2], ig.field_H);
+              var2++;
+              continue L1;
+            }
+          }
         }
     }
 

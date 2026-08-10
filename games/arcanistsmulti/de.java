@@ -2429,18 +2429,53 @@ final class de {
                               }
                             }
                             L9: {
-                              if (param1 - var8 < field_c) {
-                                if (param1 + var8 >= field_k) {
-                                  break L9;
-                                } else {
-                                  if (param0 < field_i) {
-                                    break L9;
-                                  } else {
-                                    if (param0 >= field_h) {
+                              if (param1 - var8 >= field_c) {
+                                if (param0 >= field_i) {
+                                  if (param0 < field_h) {
+                                    field_l[var6] = param3;
+                                    if (param1 + var8 >= field_k) {
                                       break L9;
                                     } else {
-                                      field_l[var7] = param3;
+                                      if (param0 < field_i) {
+                                        break L9;
+                                      } else {
+                                        if (param0 >= field_h) {
+                                          break L9;
+                                        } else {
+                                          field_l[var7] = param3;
+                                          break L9;
+                                        }
+                                      }
+                                    }
+                                  } else {
+                                    if (param1 + var8 >= field_k) {
                                       break L9;
+                                    } else {
+                                      if (param0 < field_i) {
+                                        break L9;
+                                      } else {
+                                        if (param0 >= field_h) {
+                                          break L9;
+                                        } else {
+                                          field_l[var7] = param3;
+                                          break L9;
+                                        }
+                                      }
+                                    }
+                                  }
+                                } else {
+                                  if (param1 + var8 >= field_k) {
+                                    break L9;
+                                  } else {
+                                    if (param0 < field_i) {
+                                      break L9;
+                                    } else {
+                                      if (param0 >= field_h) {
+                                        break L9;
+                                      } else {
+                                        field_l[var7] = param3;
+                                        break L9;
+                                      }
                                     }
                                   }
                                 }

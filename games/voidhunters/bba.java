@@ -212,49 +212,14 @@ final class bba implements ntb {
     }
 
     final void a(rna param0, boolean param1) {
-        RuntimeException runtimeException = null;
-        wm var4 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_c = (rna[]) ((Object) ija.a(param0, this.field_c, 0, nha.field_o));
-              if (param1) {
-                break L1;
-              } else {
-                var4 = (wm) null;
+            this.field_c = (rna[]) ((Object) ija.a(param0, this.field_c, 0, nha.field_o));
+            if (!param1) {
+                wm var4 = (wm) null;
                 this.a((byte) 23, (wm) null);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("bba.M(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "bba.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -371,47 +336,13 @@ final class bba implements ntb {
     }
 
     final void a(byte param0, wm param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_b = (wm[]) ((Object) ija.a(param1, this.field_b, 0, jv.field_d));
-              if (param0 < -97) {
-                break L1;
-              } else {
+            this.field_b = (wm[]) ((Object) ija.a(param1, this.field_b, 0, jv.field_d));
+            if (param0 >= -97) {
                 field_f = (String) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("bba.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "bba.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -470,16 +401,19 @@ final class bba implements ntb {
                 }
               }
             }
-            if (null == this.field_c) {
-              break L1;
-            } else {
-              if (-var3 + param0 >= this.field_c.length) {
-                break L1;
+            L4: {
+              if (null == this.field_c) {
+                break L4;
               } else {
-                this.field_c = (rna[]) ((Object) dt.a(nha.field_o, param0 - var3, 15667, this.field_c));
-                break L1;
+                if (-var3 + param0 >= this.field_c.length) {
+                  break L4;
+                } else {
+                  this.field_c = (rna[]) ((Object) dt.a(nha.field_o, param0 - var3, 15667, this.field_c));
+                  break L1;
+                }
               }
             }
+            break L1;
           }
         }
     }
@@ -620,8 +554,10 @@ final class bba implements ntb {
         if (param1 != -1) {
             this.c((byte) 14);
         }
-        if (param0 >= 0 && this.field_b != null && this.field_b.length > param0) {
-            this.field_b[param0].field_a = !this.field_b[param0].field_a ? true : false;
+        if (param0 >= 0) {
+            if (this.field_b != null && this.field_b.length > param0) {
+                this.field_b[param0].field_a = !this.field_b[param0].field_a ? true : false;
+            }
         }
     }
 

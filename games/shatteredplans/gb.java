@@ -21,7 +21,17 @@ final class gb extends oh {
     final static void a(byte param0, int param1, int param2, int param3) {
         int var4;
         L0: {
-          if (-1 != (param3 ^ -1)) {
+          if (-1 == (param3 ^ -1)) {
+            L1: {
+              if (vm.field_Bb != param2) {
+                qh.field_v = true;
+                vm.field_Bb = param2;
+                kb.a(68, param1);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
             if (-2 != (param3 ^ -1)) {
               break L0;
             } else {
@@ -49,18 +59,18 @@ final class gb extends oh {
             }
           }
         }
-        L1: {
+        L2: {
           var4 = 40 % ((-21 - param0) / 59);
           if (param3 != 2) {
-            break L1;
+            break L2;
           } else {
             if (ul.field_Hb == param2) {
-              break L1;
+              break L2;
             } else {
               ul.field_Hb = param2;
               qh.field_v = true;
               kb.a(95, param1);
-              break L1;
+              break L2;
             }
           }
         }

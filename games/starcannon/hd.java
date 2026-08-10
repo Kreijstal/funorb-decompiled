@@ -20,47 +20,13 @@ class hd implements de, lg {
     static boolean field_p;
 
     private final void a(int param0, uj param1, byte param2, int param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.a(param0, param3, 0, param1, this.field_c, 0, 26296, this.field_n);
-              if (param2 < -97) {
-                break L1;
-              } else {
+            this.a(param0, param3, 0, param1, this.field_c, 0, 26296, this.field_n);
+            if (param2 >= -97) {
                 this.field_b = 76;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("hd.W(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "hd.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -69,100 +35,33 @@ class hd implements de, lg {
     }
 
     public final void a(int param0, uj param1, int param2, int param3, int param4) {
-        RuntimeException runtimeException = null;
+        bd var13 = null;
+        bd var14 = null;
         int var7 = 0;
         nh var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        bd var13 = null;
-        bd var14 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_5_1 = 0;
-        int stackIn_5_2 = 0;
-        int stackIn_6_0;
-        int stackIn_6_1;
-        int stackIn_6_2;
-        int stackIn_6_3;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -3) {
-                break L1;
-              } else {
+            if (param0 != -3) {
                 field_p = true;
-                break L1;
-              }
             }
-            L2: {
-              if (!param1.d(true)) {
-                break L2;
-              } else {
-                L3: {
-                  var13 = this.a(param1, (byte) -41);
-                  var14 = var13;
-                  var7 = var14.a(param4, 0);
-                  var8 = var13.field_d[var7];
-                  var9 = var14.a((byte) -30, param4);
-                  var10 = this.a(param1, var9, (byte) 125, param2);
-                  var11 = this.a((byte) -95, param1, param3) + Math.max(0, var8.field_g);
-                  stackIn_5_0 = this.a((byte) -42, param1, param3);
-
-                  stackIn_5_1 = this.a(true, param1);
-
-                  stackIn_5_2 = var8.field_c;
-
-                  if (var14.field_d.length > var7 + 1) {
-                    stackIn_6_0 = stackIn_5_0;
-                    stackIn_6_1 = stackIn_5_1;
-                    stackIn_6_2 = stackIn_5_2;
-                    stackIn_6_3 = var13.field_d[1 + var7].field_g;
-                    break L3;
-                  } else {
-                    stackIn_6_0 = stackIn_5_0;
-                    stackIn_6_1 = stackIn_5_1;
-                    stackIn_6_2 = stackIn_5_2;
-                    stackIn_6_3 = var8.field_c;
-                    break L3;
-                  }
-                }
-                var12 = stackIn_6_0 + Math.min(stackIn_6_1, Math.min(stackIn_6_2, stackIn_6_3));
+            if (param1.d(true)) {
+                var13 = this.a(param1, (byte) -41);
+                var14 = var13;
+                var7 = var14.a(param4, 0);
+                var8 = var13.field_d[var7];
+                var9 = var14.a((byte) -30, param4);
+                var10 = this.a(param1, var9, (byte) 125, param2);
+                var11 = this.a((byte) -95, param1, param3) + Math.max(0, var8.field_g);
+                var12 = this.a((byte) -42, param1, param3) + Math.min(this.a(true, param1), Math.min(var8.field_c, var14.field_d.length <= var7 + 1 ? var8.field_c : var13.field_d[1 + var7].field_g));
                 cl.a(true, param1.field_j + param3 + param1.field_f, param1.field_s + param2, param1.field_j + param3, param1.field_i + param1.field_s + param2);
                 eh.field_j.a(this.field_j, var10, var11, var12, var10, false);
                 wf.a(-82);
-                break L2;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (runtimeException);
-
-            stackIn_10_1 = new StringBuilder().append("hd.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L4;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L4;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "hd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -778,47 +677,50 @@ class hd implements de, lg {
             }
             L5: {
               L6: {
-                var6 = this.field_h;
-                if (var6 != 0) {
-                  if (3 != var6) {
-                    if (1 == var6) {
-                      if (!(param1.field_m instanceof se)) {
-                        break L5;
-                      } else {
-                        ((se) ((Object) param1.field_m)).a(this.field_f, this.a(param1, false), 466572161, var3_int >> -1785899327, var5);
-                        break L5;
-                      }
-                    } else {
-                      if (2 == var6) {
+                L7: {
+                  var6 = this.field_h;
+                  if (var6 != 0) {
+                    if (3 != var6) {
+                      if (1 == var6) {
                         if (!(param1.field_m instanceof se)) {
-                          break L5;
+                          break L6;
                         } else {
-                          ((se) ((Object) param1.field_m)).a(this.a(param1, false), var3_int, (byte) 127, var5, this.field_f);
+                          ((se) ((Object) param1.field_m)).a(this.field_f, this.a(param1, false), 466572161, var3_int >> -1785899327, var5);
                           break L5;
                         }
                       } else {
-                        break L5;
+                        if (2 == var6) {
+                          if (!(param1.field_m instanceof se)) {
+                            break L6;
+                          } else {
+                            ((se) ((Object) param1.field_m)).a(this.a(param1, false), var3_int, (byte) 127, var5, this.field_f);
+                            break L5;
+                          }
+                        } else {
+                          break L5;
+                        }
                       }
+                    } else {
+                      break L7;
                     }
                   } else {
-                    break L6;
+                    break L7;
                   }
-                } else {
+                }
+                if (!(param1.field_m instanceof se)) {
                   break L6;
+                } else {
+                  ((se) ((Object) param1.field_m)).a(var5, 0, (byte) 111, this.a(param1, false), this.field_f);
+                  break L5;
                 }
               }
-              if (!(param1.field_m instanceof se)) {
-                break L5;
-              } else {
-                ((se) ((Object) param1.field_m)).a(var5, 0, (byte) 111, this.a(param1, false), this.field_f);
-                break L5;
-              }
+              break L5;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var3 = decompiledCaughtException;
             stackIn_31_0 = (RuntimeException) (var3);
 
@@ -828,12 +730,12 @@ class hd implements de, lg {
               stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
               stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackIn_32_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
               stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackIn_32_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw sd.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ')');

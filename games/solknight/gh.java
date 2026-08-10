@@ -149,113 +149,30 @@ final class gh extends af {
         RuntimeException var2 = null;
         int var3 = 0;
         m var4 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = SolKnight.field_L ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
+        RuntimeException decompiledCaughtException = null;
+        var3 = SolKnight.field_L ? 1 : 0;
+        try {
+          L0: {
+            var4 = (m) ((Object) gg.field_b.a((byte) 51));
+            L1: while (true) {
+              if (var4 == null) {
+                if (param1 == 9543) {
+                  break L0;
+                } else {
+                  gh.a('i', (byte) 57);
+                  return;
                 }
-                case 1: {
-                    try {
-                        var4 = (m) ((Object) gg.field_b.a((byte) 51));
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (var4 == null) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        l.a(param0, param1 ^ -9489, var4);
-                        var4 = (m) ((Object) gg.field_b.b(-121));
-                        if (var3 != 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var3 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (param1 == 9543) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        gh.a('i', (byte) 57);
-                        return;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var2 = (RuntimeException) ((Object) caughtException);
-                    throw fc.a((Throwable) ((Object) var2), "gh.CA(" + param0 + ',' + param1 + ')');
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                l.a(param0, param1 ^ -9489, var4);
+                var4 = (m) ((Object) gg.field_b.b(-121));
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw fc.a((Throwable) ((Object) var2), "gh.CA(" + param0 + ',' + param1 + ')');
         }
     }
 

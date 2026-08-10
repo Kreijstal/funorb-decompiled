@@ -190,45 +190,103 @@ final class t implements Runnable {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
-        if (sp.field_V && vj.field_h) {
-            return;
+        int var1;
+        r var2;
+        L0: {
+          if (!sp.field_V) {
+            break L0;
+          } else {
+            if (!vj.field_h) {
+              break L0;
+            } else {
+              return;
+            }
+          }
         }
-        if (null == hj.field_e) {
+        L1: {
+          if (null != hj.field_e) {
+            break L1;
+          } else {
             hj.field_e = hm.a(4, true);
+            break L1;
+          }
         }
-        if (null == bs.field_Xb) {
+        L2: {
+          if (null != bs.field_Xb) {
+            break L2;
+          } else {
             bs.field_Xb = ol.a(106, 5, 0, 1);
+            break L2;
+          }
         }
-        if (hj.field_e != null) {
-            if (!(!hj.field_e.field_o)) {
-                jq.field_e = jq.field_e & (hj.field_e.field_p ^ -1);
-                ml.field_z = ml.field_z | hj.field_e.field_p;
-                sp.field_V = true;
-                hj.field_e = null;
+        L3: {
+          if (hj.field_e == null) {
+            break L3;
+          } else {
+            if (hj.field_e.field_o) {
+              jq.field_e = jq.field_e & (hj.field_e.field_p ^ -1);
+              ml.field_z = ml.field_z | hj.field_e.field_p;
+              sp.field_V = true;
+              hj.field_e = null;
+              break L3;
+            } else {
+              break L3;
             }
+          }
         }
-        if (bs.field_Xb != null) {
-            if (!(!bs.field_Xb.field_p)) {
-                var1 = -1 + bs.field_Xb.field_o[0];
-                vj.field_h = true;
-                bs.field_Xb = null;
-                if (!(field_l >= var1)) {
-                    field_l = var1;
-                }
+        L4: {
+          if (bs.field_Xb == null) {
+            break L4;
+          } else {
+            if (bs.field_Xb.field_p) {
+              var1 = -1 + bs.field_Xb.field_o[0];
+              vj.field_h = true;
+              bs.field_Xb = null;
+              if (field_l < var1) {
+                field_l = var1;
+                break L4;
+              } else {
+                break L4;
+              }
+            } else {
+              break L4;
             }
+          }
         }
-        if (param0 != 44) {
-            r var2 = (r) null;
+        L5: {
+          if (param0 == 44) {
+            break L5;
+          } else {
+            var2 = (r) null;
             t.a((u[]) null, (int[]) null, (r) null, (r) null, false);
+            break L5;
+          }
         }
-        if (sp.field_V && vj.field_h) {
-            le.a(468713154);
-            jn.a(param0 ^ 41);
-            if (lc.field_b == 9 && jq.field_e == 0) {
-                lc.field_b = 5;
-                gj.a((byte) -123, false, am.field_n, 5);
+        L6: {
+          if (!sp.field_V) {
+            break L6;
+          } else {
+            L7: {
+              if (!vj.field_h) {
+                break L7;
+              } else {
+                le.a(468713154);
+                jn.a(param0 ^ 41);
+                if (lc.field_b != 9) {
+                  break L7;
+                } else {
+                  if (jq.field_e != 0) {
+                    break L7;
+                  } else {
+                    lc.field_b = 5;
+                    gj.a((byte) -123, false, am.field_n, 5);
+                    break L6;
+                  }
+                }
+              }
             }
+            break L6;
+          }
         }
     }
 

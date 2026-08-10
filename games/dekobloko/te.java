@@ -178,19 +178,13 @@ final class te extends wm {
     }
 
     public static void e(int param0) {
-        mm var2;
         field_q = null;
         if (param0 != 0) {
-          var2 = (mm) null;
-          te.a((String) null, 15, -79, (String[]) null, (mm) null);
-          field_v = null;
-          field_t = null;
-          return;
-        } else {
-          field_v = null;
-          field_t = null;
-          return;
+            mm var2 = (mm) null;
+            te.a((String) null, 15, -79, (String[]) null, (mm) null);
         }
+        field_v = null;
+        field_t = null;
     }
 
     private final boolean c(String param0, byte param1) {
@@ -298,18 +292,18 @@ final class te extends wm {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int stackIn_5_0 = 0;
-        int stackIn_28_0 = 0;
+        int stackIn_27_0 = 0;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_32_2 = null;
+        String stackIn_31_2 = null;
+        StringBuilder stackIn_33_1 = null;
         StringBuilder stackIn_34_1 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
+        String stackIn_34_2 = null;
+        StringBuilder stackIn_36_1 = null;
         StringBuilder stackIn_37_1 = null;
-        StringBuilder stackIn_38_1 = null;
-        String stackIn_38_2 = null;
+        String stackIn_37_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -322,8 +316,6 @@ final class te extends wm {
         String var11 = null;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
         var13 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -349,154 +341,135 @@ final class te extends wm {
             var8 = param0.length();
             var9 = 0;
             L2: while (true) {
-              L3: {
-                L4: {
-                  L5: {
-                    if (var9 >= var8) {
-                      break L5;
-                    } else {
-                      var10 = param0.charAt(var9);
-                      var15 = var10;
-                      var14 = 32;
-                      if (var13 != 0) {
-                        if (var14 <= var15) {
-                          break L3;
-                        } else {
-                          break L4;
-                        }
-                      } else {
-                        L6: {
-                          L7: {
-                            if (var14 == var15) {
-                              break L7;
-                            } else {
-                              if (45 == var10) {
-                                break L7;
-                              } else {
-                                break L6;
-                              }
-                            }
-                          }
-                          var11 = param0.substring(var7, var9 + 1).trim();
-                          var12 = param4.a(var11);
-                          if (param2 <= var12) {
-                            var7 = var9 + 1;
-                            incrementValue$0 = var6;
-                            var6++;
-                            param3[incrementValue$0] = var11;
-                            break L6;
-                          } else {
-                            break L6;
-                          }
-                        }
-                        L8: {
-                          if (62 != var10) {
-                            break L8;
-                          } else {
-                            if (param0.regionMatches(var9 - 3, "<br>", 0, 4)) {
-                              incrementValue$1 = var6;
-                              var6++;
-                              param3[incrementValue$1] = param0.substring(var7, -3 + var9).trim();
-                              var7 = var9 + 1;
-                              break L8;
-                            } else {
-                              break L8;
-                            }
-                          }
-                        }
-                        var9++;
-                        if (var13 == 0) {
-                          continue L2;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                  }
+              if (var9 >= var8) {
+                L3: {
                   if (var7 >= var8) {
                     break L3;
                   } else {
+                    incrementValue$0 = var6;
+                    var6++;
+                    param3[incrementValue$0] = param0.substring(var7, var8).trim();
+                    break L3;
+                  }
+                }
+                L4: {
+                  if (param1 > 65) {
+                    break L4;
+                  } else {
+                    field_t = (String) null;
                     break L4;
                   }
                 }
-                incrementValue$2 = var6;
-                var6++;
-                param3[incrementValue$2] = param0.substring(var7, var8).trim();
-                break L3;
-              }
-              L9: {
-                if (param1 > 65) {
-                  break L9;
+                stackIn_27_0 = var6;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              } else {
+                L5: {
+                  L6: {
+                    var10 = param0.charAt(var9);
+                    if (32 == var10) {
+                      break L6;
+                    } else {
+                      if (45 == var10) {
+                        break L6;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
+                  var11 = param0.substring(var7, var9 + 1).trim();
+                  var12 = param4.a(var11);
+                  if (param2 <= var12) {
+                    var7 = var9 + 1;
+                    incrementValue$1 = var6;
+                    var6++;
+                    param3[incrementValue$1] = var11;
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                if (62 == var10) {
+                  L7: {
+                    if (param0.regionMatches(var9 - 3, "<br>", 0, 4)) {
+                      incrementValue$2 = var6;
+                      var6++;
+                      param3[incrementValue$2] = param0.substring(var7, -3 + var9).trim();
+                      var7 = var9 + 1;
+                      break L7;
+                    } else {
+                      break L7;
+                    }
+                  }
+                  var9++;
+                  continue L2;
                 } else {
-                  field_t = (String) null;
-                  break L9;
+                  var9++;
+                  continue L2;
                 }
               }
-              stackIn_28_0 = var6;
-              decompiledRegionSelector0 = 1;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L8: {
             var5 = decompiledCaughtException;
-            stackIn_31_0 = (RuntimeException) (var5);
+            stackIn_30_0 = (RuntimeException) (var5);
 
-            stackIn_31_1 = new StringBuilder().append("te.E(");
+            stackIn_30_1 = new StringBuilder().append("te.E(");
 
             if (param0 == null) {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "null";
-              break L10;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "null";
+              break L8;
             } else {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "{...}";
-              break L10;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackIn_31_2 = "{...}";
+              break L8;
             }
           }
-          L11: {
+          L9: {
 
 
-            stackIn_34_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_33_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',');
 
             if (param3 == null) {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackIn_35_2 = "null";
-              break L11;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
+              break L9;
             } else {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackIn_35_2 = "{...}";
-              break L11;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
+              break L9;
             }
           }
-          L12: {
+          L10: {
 
 
-            stackIn_37_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(',');
+            stackIn_36_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_34_2).append(',');
 
             if (param4 == null) {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackIn_38_2 = "null";
-              break L12;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "null";
+              break L10;
             } else {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackIn_38_2 = "{...}";
-              break L12;
+              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "{...}";
+              break L10;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_32_0), stackIn_38_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_31_0), stackIn_37_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_5_0;
         } else {
-          return stackIn_28_0;
+          return stackIn_27_0;
         }
     }
 

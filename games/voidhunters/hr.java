@@ -358,74 +358,35 @@ final class hr extends rqa {
     }
 
     final static void a(int param0, int param1, int param2) {
-        RuntimeException runtimeException = null;
         int var3_int = 0;
-        int var4 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var4 = VoidHunters.field_G;
+        int var4 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              if (param2 < -65) {
-                break L1;
-              } else {
+            if (param2 >= -65) {
                 field_o = (String[]) null;
-                break L1;
-              }
             }
-            L2: {
-              if (param1 != hob.field_d) {
+            if (!(param1 == hob.field_d)) {
                 grb.field_l = new int[param1];
-                var3_int = 0;
-                L3: while (true) {
-                  if (var3_int >= param1) {
-                    gbb.field_q = param1 + -1;
-                    tpa.field_b = 32 * param1;
-                    hob.field_d = param1;
-                    break L2;
-                  } else {
+                for (var3_int = 0; var3_int < param1; var3_int++) {
                     grb.field_l[var3_int] = (var3_int << -221093940) / param1;
-                    var3_int++;
-                    continue L3;
-                  }
                 }
-              } else {
-                break L2;
-              }
+                gbb.field_q = param1 + -1;
+                tpa.field_b = 32 * param1;
+                hob.field_d = param1;
             }
-            L4: {
-              if (param0 == noa.field_o) {
-                break L4;
-              } else {
-                L5: {
-                  if (hob.field_d != param0) {
-                    sj.field_p = new int[param0];
-                    var3_int = 0;
-                    L6: while (true) {
-                      if (param0 <= var3_int) {
-                        break L5;
-                      } else {
-                        sj.field_p[var3_int] = (var3_int << -1802205204) / param0;
-                        var3_int++;
-                        continue L6;
-                      }
-                    }
-                  } else {
+            if (param0 != noa.field_o) {
+                if (hob.field_d == param0) {
                     sj.field_p = grb.field_l;
-                    break L5;
-                  }
+                } else {
+                    sj.field_p = new int[param0];
+                    for (var3_int = 0; param0 > var3_int; var3_int++) {
+                        sj.field_p[var3_int] = (var3_int << -1802205204) / param0;
+                    }
                 }
                 wf.field_d = param0 + -1;
                 noa.field_o = param0;
-                break L4;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) runtimeException), "hr.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "hr.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

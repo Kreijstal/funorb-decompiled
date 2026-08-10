@@ -74,24 +74,17 @@ final class fl {
           return 39;
         } else {
           L0: {
-            L1: {
-              if ((param2 ^ -1) == -257) {
-                break L1;
-              } else {
-                var11 = param2 * ((-param1 + 256) * var5 + var8 * param1) >> -58785616;
-                var13 = (var10 * param1 + (-param1 + 256) * var7) * param2 >> 1520454800;
-                var12 = param2 * (var9 * param1 + var6 * (256 + -param1)) >> 1169540304;
-                if (!client.field_A) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
+            if ((param2 ^ -1) == -257) {
+              var12 = param1 * var9 + var6 * (256 + -param1) >> -1790237528;
+              var13 = (256 - param1) * var7 + param1 * var10 >> -785939032;
+              var11 = param1 * var8 + var5 * (-param1 + 256) >> 1045223560;
+              break L0;
+            } else {
+              var11 = param2 * ((-param1 + 256) * var5 + var8 * param1) >> -58785616;
+              var13 = (var10 * param1 + (-param1 + 256) * var7) * param2 >> 1520454800;
+              var12 = param2 * (var9 * param1 + var6 * (256 + -param1)) >> 1169540304;
+              break L0;
             }
-            var12 = param1 * var9 + var6 * (256 + -param1) >> -1790237528;
-            var13 = (256 - param1) * var7 + param1 * var10 >> -785939032;
-            var11 = param1 * var8 + var5 * (-param1 + 256) >> 1045223560;
-            break L0;
           }
           return var11 << 757731664 | var12 << 364164456 | var13;
         }

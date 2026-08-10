@@ -710,31 +710,34 @@ final class kr extends Exception {
                   var10 = param4;
                   var11 = (15 & param2) * var7;
                   if (gf.field_i <= var8) {
-                    if (gf.field_l <= var8) {
-                      break L10;
-                    } else {
-                      if (gf.field_a > var9) {
-                        break L10;
+                    L16: {
+                      if (gf.field_l <= var8) {
+                        break L16;
                       } else {
-                        if (gf.field_f <= var9) {
-                          break L10;
+                        if (gf.field_a > var9) {
+                          break L16;
                         } else {
-                          var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
-                          var12 = 65280 & var10;
-                          var10 = var10 & 16711935;
-                          var12 = var12 * var11;
-                          var12 = var12 & 16711680;
-                          var10 = var10 * var11;
-                          var10 = var10 & -16711936;
-                          var13 = var9 * 640 + var8;
-                          var14 = gf.field_h[var13];
-                          var12 = var12 + (16711680 & (-var11 + 256) * (var14 & 65280));
-                          var10 = var10 + (-16711936 & (16711935 & var14) * (-var11 + 256));
-                          gf.field_h[var13] = ee.a(var12, var10) >>> 2068345832;
-                          break L10;
+                          if (gf.field_f <= var9) {
+                            break L16;
+                          } else {
+                            var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
+                            var12 = 65280 & var10;
+                            var10 = var10 & 16711935;
+                            var12 = var12 * var11;
+                            var12 = var12 & 16711680;
+                            var10 = var10 * var11;
+                            var10 = var10 & -16711936;
+                            var13 = var9 * 640 + var8;
+                            var14 = gf.field_h[var13];
+                            var12 = var12 + (16711680 & (-var11 + 256) * (var14 & 65280));
+                            var10 = var10 + (-16711936 & (16711935 & var14) * (-var11 + 256));
+                            gf.field_h[var13] = ee.a(var12, var10) >>> 2068345832;
+                            break L16;
+                          }
                         }
                       }
                     }
+                    break L10;
                   } else {
                     break L10;
                   }

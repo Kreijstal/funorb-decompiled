@@ -782,6 +782,7 @@ final class cg extends gi {
         field_h = null;
         field_v = null;
         if (param0 != 1) {
+            java.math.BigInteger var2 = (java.math.BigInteger) null;
             cg.a((java.math.BigInteger) null, -72, (ni) null, (ni) null, (java.math.BigInteger) null);
         }
     }

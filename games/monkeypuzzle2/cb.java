@@ -10,12 +10,12 @@ final class cb {
 
     final static boolean a(int param0, boolean param1) {
         try {
-            long dupTemp$0 = 0L;
+            long dupTemp$1 = 0L;
+            hb var2_ref_hb = null;
+            int var2 = 0;
+            IOException var2_ref_IOException = null;
             int stackIn_10_0 = 0;
             Throwable decompiledCaughtException = null;
-            int var2 = 0;
-            hb var2_ref_hb = null;
-            IOException var2_ref_IOException = null;
             L0: {
               if (null == qg.field_a) {
                 qg.field_a = pj.field_g.a(di.field_d, 0, cg.field_g);
@@ -27,9 +27,9 @@ final class cb {
             if (-1 == (qg.field_a.field_g ^ -1)) {
               return false;
             } else {
-              dupTemp$0 = pf.a(0);
-              qg.field_d = dupTemp$0;
-              d.field_k = dupTemp$0;
+              dupTemp$1 = pf.a(0);
+              qg.field_d = dupTemp$1;
+              d.field_k = dupTemp$1;
               if (-2 != (qg.field_a.field_g ^ -1)) {
                 dk.field_h = ed.field_b;
                 var2 = 82 / ((param0 - -53) / 63);
@@ -63,16 +63,9 @@ final class cb {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2_ref_IOException = (IOException) (Object) decompiledCaughtException;
                   dk.field_h = ed.field_b;
-                  if (MonkeyPuzzle2.field_F) {
-                    dk.field_h = ed.field_b;
-                    var2 = 82 / ((param0 - -53) / 63);
-                    qg.field_a = null;
-                    return true;
-                  } else {
-                    var2 = 82 / ((param0 - -53) / 63);
-                    qg.field_a = null;
-                    return true;
-                  }
+                  var2 = 82 / ((param0 - -53) / 63);
+                  qg.field_a = null;
+                  return true;
                 }
                 var2 = 82 / ((param0 - -53) / 63);
                 qg.field_a = null;

@@ -76,154 +76,76 @@ abstract class hi extends wb implements jb {
     }
 
     final static void a(boolean param0) {
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int decompiledRegionSelector0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = OrbDefence.field_D ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
+        var4 = OrbDefence.field_D ? 1 : 0;
+        try {
+          L0: {
+            if (!param0) {
+              var5 = vf.field_a;
+              var1 = var5;
+              var2 = 0;
+              var3 = var5.length;
+              L1: while (true) {
+                if (var3 <= var2) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  incrementValue$16 = var2;
+                  var2++;
+                  var5[incrementValue$16] = 0;
+                  incrementValue$17 = var2;
+                  var2++;
+                  var5[incrementValue$17] = 0;
+                  incrementValue$18 = var2;
+                  var2++;
+                  var5[incrementValue$18] = 0;
+                  incrementValue$19 = var2;
+                  var2++;
+                  var5[incrementValue$19] = 0;
+                  incrementValue$20 = var2;
+                  var2++;
+                  var5[incrementValue$20] = 0;
+                  incrementValue$21 = var2;
+                  var2++;
+                  var5[incrementValue$21] = 0;
+                  incrementValue$22 = var2;
+                  var2++;
+                  var5[incrementValue$22] = 0;
+                  incrementValue$23 = var2;
+                  var2++;
+                  var5[incrementValue$23] = 0;
+                  continue L1;
                 }
-                case 1: {
-                    try {
-                        if (!param0) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    try {
-                        var5 = vf.field_a;
-                        var1 = var5;
-                        var2 = 0;
-                        var3 = var5.length;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var3 <= var2) {
-                            statePc = 11;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        incrementValue$8 = var2;
-                        var2++;
-                        var5[incrementValue$8] = 0;
-                        incrementValue$9 = var2;
-                        var2++;
-                        var5[incrementValue$9] = 0;
-                        incrementValue$10 = var2;
-                        var2++;
-                        var5[incrementValue$10] = 0;
-                        incrementValue$11 = var2;
-                        var2++;
-                        var5[incrementValue$11] = 0;
-                        incrementValue$12 = var2;
-                        var2++;
-                        var5[incrementValue$12] = 0;
-                        incrementValue$13 = var2;
-                        var2++;
-                        var5[incrementValue$13] = 0;
-                        incrementValue$14 = var2;
-                        var2++;
-                        var5[incrementValue$14] = 0;
-                        incrementValue$15 = var2;
-                        var2++;
-                        var5[incrementValue$15] = 0;
-                        if (var4 == 0) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    var1_ref = (RuntimeException) ((Object) caughtException);
-                    throw dd.a((Throwable) ((Object) var1_ref), "hi.J(" + param0 + ')');
-                }
-                case 11: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw dd.a((Throwable) ((Object) var1_ref), "hi.J(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -392,52 +314,17 @@ abstract class hi extends wb implements jb {
     }
 
     public final void a(vi param0, boolean param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!param1) {
-                break L1;
-              } else {
+            if (param1) {
                 field_f = (String) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("hi.K(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) ((Object) runtimeException), "hi.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static int i(int param0) {
-        boolean stackIn_11_0 = false;
-        int stackIn_30_0 = 0;
+        int stackIn_28_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -452,112 +339,89 @@ abstract class hi extends wb implements jb {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (!nf.e(32722)) {
-                    break L3;
+              if (!nf.e(32722)) {
+                L2: {
+                  ab.field_j.a(jc.a(ig.field_fb, (byte) 81, bg.field_c), param0 ^ -1, jc.a(ua.field_a, (byte) 37, vl.field_d));
+                  if (!ab.field_j.a((byte) -1)) {
+                    break L2;
                   } else {
-                    ab.field_j.e((byte) -74);
-                    stackIn_11_0 = ab.field_j.a((byte) -1);
-
-                    if (var7 != 0) {
-                      break L2;
-                    } else {
-                      L4: {
-                        if (stackIn_11_0) {
-                          var1_int = 1;
-                          break L4;
-                        } else {
-                          break L4;
-                        }
-                      }
-                      if (13 == ob.field_K) {
-                        var2 = 1;
-                        if (var7 == 0) {
-                          continue L1;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        continue L1;
-                      }
-                    }
+                    var1_int = 1;
+                    break L2;
                   }
                 }
-                ab.field_j.a(jc.a(ig.field_fb, (byte) 81, bg.field_c), param0 ^ -1, jc.a(ua.field_a, (byte) 37, vl.field_d));
-                stackIn_11_0 = ab.field_j.a((byte) -1);
-                break L2;
-              }
-              L5: {
-                if (!stackIn_11_0) {
-                  break L5;
-                } else {
-                  var1_int = 1;
-                  break L5;
-                }
-              }
-              L6: {
-                L7: {
-                  var3 = param0;
-                  if (var1_int == 0) {
-                    break L7;
-                  } else {
-                    if (0 > ab.field_j.field_h) {
-                      break L7;
+                L3: {
+                  L4: {
+                    var3 = param0;
+                    if (var1_int == 0) {
+                      break L4;
                     } else {
-                      L8: {
+                      if (0 > ab.field_j.field_h) {
+                        break L4;
+                      } else {
                         var3 = gg.field_O[ab.field_j.field_h];
                         if (2 == var3) {
-                          break L8;
+                          me.c(true);
+                          break L3;
                         } else {
                           if ((var3 ^ -1) != -6) {
-                            break L6;
+                            break L3;
                           } else {
-                            break L8;
+                            me.c(true);
+                            break L3;
                           }
                         }
                       }
+                    }
+                  }
+                  if (var2 == 0) {
+                    break L3;
+                  } else {
+                    if (kg.field_m != 2) {
                       me.c(true);
-                      if (var7 == 0) {
-                        break L6;
-                      } else {
-                        break L7;
-                      }
-                    }
-                  }
-                }
-                if (var2 == 0) {
-                  break L6;
-                } else {
-                  if (kg.field_m != 2) {
-                    me.c(true);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-              }
-              L9: {
-                if (-1 != (var3 ^ -1)) {
-                  break L9;
-                } else {
-                  if (kg.field_m == 2) {
-                    var4 = ji.b(107) - am.field_a;
-                    var6 = (int)((-var4 + 10999L) / 1000L);
-                    if (0 < var6) {
-                      break L9;
+                      break L3;
                     } else {
-                      var3 = 2;
-                      gb.a(true, 5, true);
-                      break L9;
+                      break L3;
                     }
-                  } else {
-                    break L9;
                   }
                 }
+                L5: {
+                  if (-1 != (var3 ^ -1)) {
+                    break L5;
+                  } else {
+                    if (kg.field_m == 2) {
+                      var4 = ji.b(107) - am.field_a;
+                      var6 = (int)((-var4 + 10999L) / 1000L);
+                      if (0 < var6) {
+                        break L5;
+                      } else {
+                        var3 = 2;
+                        gb.a(true, 5, true);
+                        break L5;
+                      }
+                    } else {
+                      break L5;
+                    }
+                  }
+                }
+                stackIn_28_0 = var3;
+                break L0;
+              } else {
+                L6: {
+                  ab.field_j.e((byte) -74);
+                  if (ab.field_j.a((byte) -1)) {
+                    var1_int = 1;
+                    break L6;
+                  } else {
+                    break L6;
+                  }
+                }
+                if (13 == ob.field_K) {
+                  var2 = 1;
+                  continue L1;
+                } else {
+                  continue L1;
+                }
               }
-              stackIn_30_0 = var3;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -565,7 +429,7 @@ abstract class hi extends wb implements jb {
           var1 = decompiledCaughtException;
           throw dd.a((Throwable) ((Object) var1), "hi.O(" + param0 + ')');
         }
-        return stackIn_30_0;
+        return stackIn_28_0;
     }
 
     public static void g(int param0) {
@@ -614,49 +478,14 @@ abstract class hi extends wb implements jb {
     }
 
     public final void a(vi param0, int param1) {
-        RuntimeException runtimeException = null;
-        String var4 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.b(-20959);
-              if (param1 > 27) {
-                break L1;
-              } else {
-                var4 = (String) null;
+            this.b(-20959);
+            if (param1 <= 27) {
+                String var4 = (String) null;
                 this.a(87, (String) null);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("hi.N(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) ((Object) runtimeException), "hi.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -27,14 +27,40 @@ final class da extends ue {
           L0: {
             var2 = this.field_s + 1;
             if (mo.field_l == 0) {
-              if (this.field_e < var2) {
-                break L0;
-              } else {
-                if (-21 >= (this.field_e ^ -1)) {
+              L1: {
+                if (this.field_e < var2) {
+                  break L1;
+                } else {
+                  if (this.field_g > this.field_e) {
+                    this.field_e = var2 + -1;
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              if (this.field_g + 1 > var2) {
+                var2 = 1 + this.field_g;
+                if (this.field_e < var2) {
                   break L0;
                 } else {
-                  this.field_e = var2 + -1;
+                  if (-21 >= (this.field_e ^ -1)) {
+                    break L0;
+                  } else {
+                    this.field_e = var2 + -1;
+                    break L0;
+                  }
+                }
+              } else {
+                if (this.field_e < var2) {
                   break L0;
+                } else {
+                  if (-21 >= (this.field_e ^ -1)) {
+                    break L0;
+                  } else {
+                    this.field_e = var2 + -1;
+                    break L0;
+                  }
                 }
               }
             } else {
@@ -46,64 +72,66 @@ final class da extends ue {
                 } else {
                   this.field_e = var2 + -1;
                   break L0;
-                }
-              }
-            }
-          }
-          L1: {
-            if ((var2 ^ -1) <= -23) {
-              if (this.field_e < var2) {
-                break L1;
-              } else {
-                if (-41 >= (this.field_e ^ -1)) {
-                  break L1;
-                } else {
-                  this.field_e = var2 + -1;
-                  break L1;
-                }
-              }
-            } else {
-              if (this.field_e < var2) {
-                break L1;
-              } else {
-                if (-41 >= (this.field_e ^ -1)) {
-                  break L1;
-                } else {
-                  this.field_e = var2 + -1;
-                  break L1;
                 }
               }
             }
           }
           L2: {
-            if (param0 <= -19) {
-              break L2;
+            if ((var2 ^ -1) > -23) {
+              var2 = 22;
+              if (this.field_e < var2) {
+                break L2;
+              } else {
+                if (-41 >= (this.field_e ^ -1)) {
+                  break L2;
+                } else {
+                  this.field_e = var2 + -1;
+                  break L2;
+                }
+              }
             } else {
-              discarded$0 = this.c((byte) -122);
-              break L2;
+              if (this.field_e < var2) {
+                break L2;
+              } else {
+                if (-41 >= (this.field_e ^ -1)) {
+                  break L2;
+                } else {
+                  this.field_e = var2 + -1;
+                  break L2;
+                }
+              }
             }
           }
           L3: {
-            if (var2 >= 42) {
+            if (param0 <= -19) {
+              break L3;
+            } else {
+              discarded$0 = this.c((byte) -122);
+              break L3;
+            }
+          }
+          L4: {
+            if (var2 < 42) {
+              var2 = 42;
               if (var2 > this.field_e) {
-                break L3;
+                break L4;
               } else {
                 if (60 <= this.field_e) {
-                  break L3;
+                  break L4;
                 } else {
                   this.field_e = -1 + var2;
-                  break L3;
+                  break L4;
                 }
               }
             } else {
               if (var2 > this.field_e) {
-                break L3;
+                break L4;
               } else {
                 if (60 <= this.field_e) {
-                  break L3;
+                  break L4;
                 } else {
                   this.field_e = -1 + var2;
-                  break L3;
+                  break L4;
                 }
               }
             }
@@ -1982,7 +2010,8 @@ final class da extends ue {
             }
           }
           L3: {
-            if ((var2 ^ -1) <= -23) {
+            if ((var2 ^ -1) > -23) {
+              var2 = 22;
               if (this.field_e < var2) {
                 break L3;
               } else {
@@ -2016,29 +2045,32 @@ final class da extends ue {
             }
           }
           L5: {
-            if ((this.field_i ^ -1) > -61) {
-              if (var2 > this.field_e) {
-                break L5;
-              } else {
-                if (this.field_e >= this.field_m) {
-                  break L5;
+            L6: {
+              if ((this.field_i ^ -1) > -61) {
+                if (var2 > this.field_e) {
+                  break L6;
                 } else {
-                  this.field_e = -1 + var2;
-                  break L5;
+                  if (this.field_e >= this.field_m) {
+                    break L6;
+                  } else {
+                    this.field_e = -1 + var2;
+                    break L5;
+                  }
                 }
-              }
-            } else {
-              if (this.field_e < var2) {
-                break L5;
               } else {
-                if (this.field_e >= 60) {
+                if (this.field_e < var2) {
                   break L5;
                 } else {
-                  this.field_e = 60;
-                  break L5;
+                  if (this.field_e >= 60) {
+                    break L6;
+                  } else {
+                    this.field_e = 60;
+                    break L5;
+                  }
                 }
               }
             }
+            break L5;
           }
           return;
         } else {

@@ -147,26 +147,29 @@ final class uv extends k {
               }
             }
             L12: {
-              if (dg.field_j > param1) {
-                break L12;
-              } else {
-                if (var6 < dg.field_k) {
-                  var11 = var6 * dg.field_i + var7 - -(-param1 + var6 & 1);
-                  var12 = 1 + var9 - var7 >> -1104331263;
-                  L13: while (true) {
-                    var12--;
-                    if (var12 < 0) {
-                      break L12;
-                    } else {
-                      dg.field_e[var11] = 16777215;
-                      var11 += 2;
-                      continue L13;
-                    }
-                  }
+              L13: {
+                if (dg.field_j > param1) {
+                  break L13;
                 } else {
-                  break L12;
+                  if (var6 < dg.field_k) {
+                    var11 = var6 * dg.field_i + var7 - -(-param1 + var6 & 1);
+                    var12 = 1 + var9 - var7 >> -1104331263;
+                    L14: while (true) {
+                      var12--;
+                      if (var12 < 0) {
+                        break L13;
+                      } else {
+                        dg.field_e[var11] = 16777215;
+                        var11 += 2;
+                        continue L14;
+                      }
+                    }
+                  } else {
+                    break L12;
+                  }
                 }
               }
+              break L12;
             }
             break L0;
           }

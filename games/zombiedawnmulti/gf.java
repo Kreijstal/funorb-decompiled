@@ -48,95 +48,34 @@ abstract class gf implements j {
     }
 
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6, boolean param7) {
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var8 = null;
         try {
-          L0: {
-            L1: {
-              if (ek.field_z.field_T == 0) {
-                break L1;
-              } else {
-                if (nh.field_m) {
-                  break L1;
-                } else {
-                  if (sh.field_L) {
-                    q.a(13151);
-                    break L1;
-                  } else {
+            if (ek.field_z.field_T != 0 && !nh.field_m) {
+                if (!sh.field_L) {
                     sq.field_N = true;
-                    if (!ZombieDawnMulti.field_E) {
-                      break L1;
-                    } else {
-                      q.a(13151);
-                      break L1;
-                    }
-                  }
+                } else {
+                    q.a(13151);
                 }
-              }
             }
-            L2: {
-              if (param0 > 92) {
-                break L2;
-              } else {
+            if (param0 <= 92) {
                 gf.a(true);
-                break L2;
-              }
             }
-            L3: {
-              if (!sq.field_N) {
-                break L3;
-              } else {
+            if (sq.field_N) {
                 ce.a(param6, param5, param3, 20, (byte) 110, param2, param1, param6, param4);
                 lj.field_v.a(-11838, param7);
-                if (param7) {
-                  L4: {
-                    if (0 != dp.field_c.field_T) {
-                      sq.field_N = false;
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  if (jk.field_d.field_T == 0) {
-                    break L3;
-                  } else {
+                if (!param7) {
+                    return;
+                }
+                if (!(0 == dp.field_c.field_T)) {
+                    sq.field_N = false;
+                }
+                if (jk.field_d.field_T != 0) {
                     pf.a(-103);
                     sq.field_N = false;
                     return;
-                  }
-                } else {
-                  return;
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var8 = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var8);
-
-            stackIn_20_1 = new StringBuilder().append("gf.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L5;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L5;
-            }
-          }
-          throw fa.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) ((Object) runtimeException), "gf.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

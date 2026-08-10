@@ -18,12 +18,12 @@ final class qk {
 
     final static byte[] a(int param0, byte[] param1) {
         byte[] stackIn_7_0 = null;
-        byte[] stackIn_22_0 = null;
+        byte[] stackIn_21_0 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -78,31 +78,24 @@ final class qk {
                         }
                       }
                       L5: {
-                        L6: {
-                          var14 = new byte[var6];
-                          var12 = var14;
-                          var7 = var12;
-                          if (var3 == 1) {
-                            break L6;
-                          } else {
-                            var8 = al.field_F;
-                            synchronized (var8) {
-                              L7: {
-                                al.field_F.a(8, var14, var10);
-                                break L7;
-                              }
-                            }
-                            if (!Lexicominos.field_L) {
-                              break L5;
-                            } else {
+                        var14 = new byte[var6];
+                        var12 = var14;
+                        var7 = var12;
+                        if (var3 == 1) {
+                          ic.a(var14, var6, param1, var4, 9);
+                          break L5;
+                        } else {
+                          var8 = al.field_F;
+                          synchronized (var8) {
+                            L6: {
+                              al.field_F.a(8, var14, var10);
                               break L6;
                             }
                           }
+                          break L5;
                         }
-                        ic.a(var14, var6, param1, var4, 9);
-                        break L5;
                       }
-                      stackIn_22_0 = (byte[]) (var7);
+                      stackIn_21_0 = (byte[]) (var7);
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -123,30 +116,30 @@ final class qk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var2);
+            stackIn_24_0 = (RuntimeException) (var2);
 
-            stackIn_25_1 = new StringBuilder().append("qk.A(").append(param0).append(',');
+            stackIn_24_1 = new StringBuilder().append("qk.A(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L8;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
+              break L7;
             } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L8;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
+              break L7;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_7_0;
         } else {
-          return stackIn_22_0;
+          return stackIn_21_0;
         }
     }
 

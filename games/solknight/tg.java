@@ -17,20 +17,19 @@ final class tg extends pj {
 
     final static String a(boolean param0, int param1, CharSequence param2) {
         String var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
         String stackIn_13_0 = null;
-        Object stackIn_16_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
+        String stackIn_19_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3_ref = null;
         var5 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
@@ -46,13 +45,7 @@ final class tg extends pj {
                   if (var4 < param2.length()) {
                     if (wg.a(param2.charAt(var4), (byte) -127)) {
                       var4++;
-                      if (var5 == 0) {
-                        continue L1;
-                      } else {
-                        stackIn_16_0 = null;
-                        decompiledRegionSelector0 = 3;
-                        break L0;
-                      }
+                      continue L1;
                     } else {
                       stackIn_13_0 = ah.field_b;
                       decompiledRegionSelector0 = 2;
@@ -73,23 +66,23 @@ final class tg extends pj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var3_ref);
+            stackIn_18_0 = (RuntimeException) (var3_ref);
 
-            stackIn_19_1 = new StringBuilder().append("tg.E(").append(param0).append(',').append(param1).append(',');
+            stackIn_18_1 = new StringBuilder().append("tg.E(").append(param0).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L2;
             } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L2;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0;
@@ -97,11 +90,7 @@ final class tg extends pj {
           if (decompiledRegionSelector0 == 1) {
             return stackIn_7_0;
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_13_0;
-            } else {
-              return (String) ((Object) stackIn_16_0);
-            }
+            return stackIn_13_0;
           }
         }
     }

@@ -46,119 +46,32 @@ final class al implements hf {
     }
 
     al(sob param0, aja param1, woa param2) {
-        RuntimeException runtimeException = null;
-        sda var5 = null;
         wfa var6 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
-        StringBuilder stackIn_20_1 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        sda var5 = null;
         try {
-          L0: {
-            L1: {
-              if (!(param1 instanceof sda)) {
-                if (param1 instanceof wfa) {
-                  var6 = (wfa) ((Object) param1);
-                  this.field_e = var6.field_F;
-                  this.field_g = var6.field_q;
-                  this.field_d = var6.field_e;
-                  break L1;
-                } else {
-                  throw new RuntimeException();
-                }
-              } else {
+            if (param1 instanceof sda) {
                 var5 = (sda) ((Object) param1);
                 this.field_d = var5.field_e;
                 this.field_g = var5.field_q;
                 this.field_e = var5.field_F;
-                break L1;
-              }
-            }
-            L2: {
-              if (param2 == null) {
-                break L2;
-              } else {
-                L3: {
-                  this.field_c = param2;
-                  if (this.field_d != this.field_c.field_a) {
-                    break L3;
-                  } else {
-                    if (this.field_g == this.field_c.field_c) {
-                      this.field_b = this.field_c.field_d;
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
+            } else {
+                if (!(param1 instanceof wfa)) {
+                    throw new RuntimeException();
                 }
-                throw new RuntimeException();
-              }
+                var6 = (wfa) ((Object) param1);
+                this.field_e = var6.field_F;
+                this.field_g = var6.field_q;
+                this.field_d = var6.field_e;
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (runtimeException);
-
-            stackIn_14_1 = new StringBuilder().append("al.<init>(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
+            if (param2 != null) {
+                this.field_c = param2;
+                if (this.field_d != this.field_c.field_a || this.field_g != this.field_c.field_c) {
+                    throw new RuntimeException();
+                }
+                this.field_b = this.field_c.field_d;
             }
-          }
-          L5: {
-
-
-            stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
-
-            if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L5;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L5;
-            }
-          }
-          L6: {
-
-
-            stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
-
-            if (param2 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L6;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L6;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_21_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

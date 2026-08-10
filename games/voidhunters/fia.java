@@ -524,158 +524,161 @@ final class fia {
             }
             L27: {
               if ((fe.field_p ^ -1) <= -1) {
-                var19 = hab.field_g[fe.field_p];
-                if (var19 == null) {
-                  break L27;
-                } else {
-                  var21 = new lta();
-                  var21.field_b = de.field_o;
-                  var21.field_c = gt.field_p;
-                  var21.field_a = ql.field_o;
-                  if (au.field_c != 1) {
-                    if (-3 == (au.field_c ^ -1)) {
-                      L28: {
-                        var23 = uob.field_g[-1 + uob.field_g.length];
-                        var3 = var23;
-                        var4 = var21.a(true, pk.field_o);
-                        var5 = var21.a(0, noa.field_q);
-                        if (ujb.field_c == 1) {
-                          if (si.field_o[81]) {
-                            uob.field_g[-1 + uob.field_g.length] = qi.a(var4, false, var23, (byte) -14);
-                            uob.field_g[-1 + uob.field_g.length] = qi.a(var5, false, uob.field_g[-1 + uob.field_g.length], (byte) -14);
-                            break L28;
-                          } else {
-                            break L28;
-                          }
-                        } else {
-                          break L28;
-                        }
-                      }
-                      L29: {
-                        if (-3 == (ujb.field_c ^ -1)) {
-                          var6_ref_int____ = new int[uob.field_g.length + 1][];
-                          var7 = 0;
-                          L30: while (true) {
-                            if (uob.field_g.length <= var7) {
-                              var6_ref_int____[uob.field_g.length] = new int[]{};
-                              uob.field_g = var6_ref_int____;
+                L28: {
+                  var19 = hab.field_g[fe.field_p];
+                  if (var19 == null) {
+                    break L28;
+                  } else {
+                    var21 = new lta();
+                    var21.field_b = de.field_o;
+                    var21.field_c = gt.field_p;
+                    var21.field_a = ql.field_o;
+                    if (au.field_c != 1) {
+                      if (-3 == (au.field_c ^ -1)) {
+                        L29: {
+                          var23 = uob.field_g[-1 + uob.field_g.length];
+                          var3 = var23;
+                          var4 = var21.a(true, pk.field_o);
+                          var5 = var21.a(0, noa.field_q);
+                          if (ujb.field_c == 1) {
+                            if (si.field_o[81]) {
+                              uob.field_g[-1 + uob.field_g.length] = qi.a(var4, false, var23, (byte) -14);
+                              uob.field_g[-1 + uob.field_g.length] = qi.a(var5, false, uob.field_g[-1 + uob.field_g.length], (byte) -14);
                               break L29;
                             } else {
-                              var6_ref_int____[var7] = uob.field_g[var7];
-                              var7++;
-                              continue L30;
+                              break L29;
+                            }
+                          } else {
+                            break L29;
+                          }
+                        }
+                        L30: {
+                          if (-3 == (ujb.field_c ^ -1)) {
+                            var6_ref_int____ = new int[uob.field_g.length + 1][];
+                            var7 = 0;
+                            L31: while (true) {
+                              if (uob.field_g.length <= var7) {
+                                var6_ref_int____[uob.field_g.length] = new int[]{};
+                                uob.field_g = var6_ref_int____;
+                                break L30;
+                              } else {
+                                var6_ref_int____[var7] = uob.field_g[var7];
+                                var7++;
+                                continue L31;
+                              }
+                            }
+                          } else {
+                            break L30;
+                          }
+                        }
+                        if (sab.field_o == 1) {
+                          var6 = -1;
+                          var7 = 2147483647;
+                          var8 = 0;
+                          L32: while (true) {
+                            if (var23.length <= var8) {
+                              if (0 == (var6 ^ -1)) {
+                                break L28;
+                              } else {
+                                L33: {
+                                  if (si.field_o[83]) {
+                                    var8 = fnb.field_b / 2;
+                                    var5 = var8 * (var5 / var8);
+                                    break L33;
+                                  } else {
+                                    break L33;
+                                  }
+                                }
+                                var23[var6] = var4;
+                                var3[1 + var6] = var5;
+                                break L28;
+                              }
+                            } else {
+                              var9 = var23[var8];
+                              var10 = var3[1 + var8];
+                              var11 = var9 + -var4;
+                              var12 = var10 + -var5;
+                              var13 = ar.a(var11, (byte) 106, var12);
+                              if ((var7 ^ -1) < (var13 ^ -1)) {
+                                var6 = var8;
+                                var7 = var13;
+                                var8 += 2;
+                                continue L32;
+                              } else {
+                                var8 += 2;
+                                continue L32;
+                              }
                             }
                           }
                         } else {
-                          break L29;
-                        }
-                      }
-                      if (sab.field_o == 1) {
-                        var6 = -1;
-                        var7 = 2147483647;
-                        var8 = 0;
-                        L31: while (true) {
-                          if (var23.length <= var8) {
-                            if (0 == (var6 ^ -1)) {
-                              break L27;
-                            } else {
-                              L32: {
-                                if (si.field_o[83]) {
-                                  var8 = fnb.field_b / 2;
-                                  var5 = var8 * (var5 / var8);
-                                  break L32;
-                                } else {
-                                  break L32;
-                                }
-                              }
-                              var23[var6] = var4;
-                              var3[1 + var6] = var5;
-                              break L27;
-                            }
-                          } else {
-                            var9 = var23[var8];
-                            var10 = var3[1 + var8];
-                            var11 = var9 + -var4;
-                            var12 = var10 + -var5;
-                            var13 = ar.a(var11, (byte) 106, var12);
-                            if ((var7 ^ -1) < (var13 ^ -1)) {
-                              var6 = var8;
-                              var7 = var13;
-                              var8 += 2;
-                              continue L31;
-                            } else {
-                              var8 += 2;
-                              continue L31;
-                            }
-                          }
+                          break L27;
                         }
                       } else {
                         break L27;
                       }
                     } else {
-                      break L27;
-                    }
-                  } else {
-                    L33: {
-                      if (1 != ujb.field_c) {
-                        break L33;
-                      } else {
-                        var3_int = -1;
-                        var4 = 2147483647;
-                        var27 = var19.field_v;
-                        var20 = var27;
-                        var5_ref_int__ = var20;
-                        var6 = 0;
-                        L34: while (true) {
-                          if (var27.length <= var6) {
-                            if (-1 != var3_int) {
-                              nkb.a(false, "Adding point " + var3_int);
-                              var22 = hw.field_d[-1 + hw.field_d.length];
-                              hw.field_d[-1 + hw.field_d.length] = qi.a(var3_int, true, var22, (byte) -14);
-                              break L33;
-                            } else {
-                              break L33;
-                            }
-                          } else {
-                            L35: {
-                              var7 = var27[var6];
-                              var8 = var5_ref_int__[var6 + 1];
-                              var9 = var21.a(var7, (byte) 125);
-                              var10 = var21.b(true, var8);
-                              var11 = ar.a(-pk.field_o + var9, (byte) 119, var10 - noa.field_q);
-                              if (var11 < var4) {
-                                var4 = var11;
-                                var3_int = var6 >> 677879169;
-                                break L35;
+                      L34: {
+                        if (1 != ujb.field_c) {
+                          break L34;
+                        } else {
+                          var3_int = -1;
+                          var4 = 2147483647;
+                          var27 = var19.field_v;
+                          var20 = var27;
+                          var5_ref_int__ = var20;
+                          var6 = 0;
+                          L35: while (true) {
+                            if (var27.length <= var6) {
+                              if (-1 != var3_int) {
+                                nkb.a(false, "Adding point " + var3_int);
+                                var22 = hw.field_d[-1 + hw.field_d.length];
+                                hw.field_d[-1 + hw.field_d.length] = qi.a(var3_int, true, var22, (byte) -14);
+                                break L34;
                               } else {
-                                break L35;
+                                break L34;
                               }
+                            } else {
+                              L36: {
+                                var7 = var27[var6];
+                                var8 = var5_ref_int__[var6 + 1];
+                                var9 = var21.a(var7, (byte) 125);
+                                var10 = var21.b(true, var8);
+                                var11 = ar.a(-pk.field_o + var9, (byte) 119, var10 - noa.field_q);
+                                if (var11 < var4) {
+                                  var4 = var11;
+                                  var3_int = var6 >> 677879169;
+                                  break L36;
+                                } else {
+                                  break L36;
+                                }
+                              }
+                              var6 += 2;
+                              continue L35;
                             }
-                            var6 += 2;
-                            continue L34;
                           }
                         }
                       }
-                    }
-                    if (-3 != (ujb.field_c ^ -1)) {
-                      break L27;
-                    } else {
-                      var3_array = new int[1 + hw.field_d.length][];
-                      var4 = 0;
-                      L36: while (true) {
-                        if (var4 >= hw.field_d.length) {
-                          var3_array[hw.field_d.length] = new int[]{};
-                          hw.field_d = var3_array;
-                          break L27;
-                        } else {
-                          var3_array[var4] = hw.field_d[var4];
-                          var4++;
-                          continue L36;
+                      if (-3 != (ujb.field_c ^ -1)) {
+                        break L28;
+                      } else {
+                        var3_array = new int[1 + hw.field_d.length][];
+                        var4 = 0;
+                        L37: while (true) {
+                          if (var4 >= hw.field_d.length) {
+                            var3_array[hw.field_d.length] = new int[]{};
+                            hw.field_d = var3_array;
+                            break L27;
+                          } else {
+                            var3_array[var4] = hw.field_d[var4];
+                            var4++;
+                            continue L37;
+                          }
                         }
                       }
                     }
                   }
                 }
+                break L27;
               } else {
                 break L27;
               }

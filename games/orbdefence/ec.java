@@ -17,136 +17,50 @@ final class ec extends ta implements ai {
     private dh field_G;
 
     private final void a(int param0, int param1) {
-        int statePc = 0;
-        s[] var3 = null;
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        s[] var7 = null;
-        s[] var8 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var6 = OrbDefence.field_D ? 1 : 0;
-                    if (this.field_D >= param0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    var7 = new s[param0];
-                    var8 = var7;
-                    var3 = var8;
-                    var4 = new int[param0];
-                    if (param1 == 11339) {
-                        statePc = 14;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    this.a(44, 28, 45, 89);
-                    var5 = 0;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (this.field_D > var5) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    this.field_B = var8;
-                    this.field_C = var4;
-                    this.field_D = param0;
-                    return;
-                }
-                case 7: {
-                    var7[var5] = this.field_B[var5];
-                    var4[var5] = this.field_C[var5];
-                    var5++;
-                    if (var6 == 0) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                case 9: {
-                    if (var6 == 0) {
-                        statePc = 5;
-                    } else {
-                        statePc = 12;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    this.field_B = var8;
-                    this.field_C = var4;
-                    this.field_D = param0;
-                    return;
-                }
-                case 14: {
-                    var5 = 0;
-                    statePc = 15;
-                    continue stateLoop;
-                }
-                case 15: {
-                    if (this.field_D > var5) {
-                        statePc = 17;
-                    } else {
-                        statePc = 16;
-                    }
-                    continue stateLoop;
-                }
-                case 16: {
-                    this.field_B = var8;
-                    this.field_C = var4;
-                    this.field_D = param0;
-                    return;
-                }
-                case 17: {
-                    var7[var5] = this.field_B[var5];
-                    var4[var5] = this.field_C[var5];
-                    var5++;
-                    if (var6 == 0) {
-                        statePc = 19;
-                    } else {
-                        statePc = 18;
-                    }
-                    continue stateLoop;
-                }
-                case 18: {
-                    return;
-                }
-                case 19: {
-                    if (var6 == 0) {
-                        statePc = 15;
-                    } else {
-                        statePc = 22;
-                    }
-                    continue stateLoop;
-                }
-                case 22: {
-                    this.field_B = var8;
-                    this.field_C = var4;
-                    this.field_D = param0;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        s[] var3;
+        int[] var4;
+        int var5;
+        int var6;
+        s[] var7;
+        var6 = OrbDefence.field_D ? 1 : 0;
+        if (this.field_D >= param0) {
+          return;
+        } else {
+          var7 = new s[param0];
+          var3 = var7;
+          var4 = new int[param0];
+          if (param1 != 11339) {
+            this.a(44, 28, 45, 89);
+            var5 = 0;
+            L0: while (true) {
+              if (this.field_D <= var5) {
+                this.field_B = var3;
+                this.field_C = var4;
+                this.field_D = param0;
+                return;
+              } else {
+                var7[var5] = this.field_B[var5];
+                var4[var5] = this.field_C[var5];
+                var5++;
+                continue L0;
+              }
             }
+          } else {
+            var5 = 0;
+            L1: while (true) {
+              if (this.field_D <= var5) {
+                this.field_B = var3;
+                this.field_C = var4;
+                this.field_D = param0;
+                return;
+              } else {
+                var7[var5] = this.field_B[var5];
+                var4[var5] = this.field_C[var5];
+                var5++;
+                continue L1;
+              }
+            }
+          }
         }
     }
 
@@ -233,91 +147,24 @@ final class ec extends ta implements ai {
     }
 
     public final void a(byte param0, int param1, int param2, s param3, int param4) {
-        RuntimeException runtimeException = null;
-        int var6_int = 0;
         int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var8 = OrbDefence.field_D ? 1 : 0;
+        int var6_int = 0;
+        int var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          L0: {
-            var6_int = 0;
-            L1: while (true) {
-              L2: {
-                L3: {
-                  if (this.field_D <= var6_int) {
-                    break L3;
-                  } else {
-                    if (var8 != 0) {
-                      break L2;
-                    } else {
-                      L4: {
-                        if (param3 != this.field_B[var6_int]) {
-                          break L4;
-                        } else {
-                          L5: {
-                            var7 = this.field_C[var6_int];
-                            if (-1 == var7) {
-                              break L5;
-                            } else {
-                              il.a(this.field_C[var6_int], 0);
-                              if (var8 == 0) {
-                                break L3;
-                              } else {
-                                break L5;
-                              }
-                            }
-                          }
-                          this.field_G.q(4210752);
-                          if (var8 == 0) {
-                            break L3;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
-                      var6_int++;
-                      if (var8 == 0) {
-                        continue L1;
-                      } else {
-                        var6_int = -66 / ((param0 - -3) / 62);
-                        return;
-                      }
+            for (var6_int = 0; this.field_D > var6_int; var6_int++) {
+                if (param3 == this.field_B[var6_int]) {
+                    var7 = this.field_C[var6_int];
+                    if (-1 != var7) {
+                        il.a(this.field_C[var6_int], 0);
+                        break;
                     }
-                  }
+                    this.field_G.q(4210752);
+                    break;
                 }
-                var6_int = -66 / ((param0 - -3) / 62);
-                break L2;
-              }
-              break L0;
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            runtimeException = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (runtimeException);
-
-            stackIn_16_1 = new StringBuilder().append("ec.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L6;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L6;
-            }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param4 + ')');
+            var6_int = -66 / ((param0 - -3) / 62);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) ((Object) runtimeException), "ec.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -482,138 +329,66 @@ final class ec extends ta implements ai {
     }
 
     final static void l(int param0) {
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int[] var6 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var5 = OrbDefence.field_D ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var6 = ji.field_a;
-                        var1 = var6;
-                        var2 = 0;
-                        var3 = -114 / ((4 - param0) / 42);
-                        var4 = var6.length;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (var2 >= var4) {
-                            statePc = 9;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        incrementValue$8 = var2;
-                        var2++;
-                        var6[incrementValue$8] = 0;
-                        incrementValue$9 = var2;
-                        var2++;
-                        var6[incrementValue$9] = 0;
-                        incrementValue$10 = var2;
-                        var2++;
-                        var6[incrementValue$10] = 0;
-                        incrementValue$11 = var2;
-                        var2++;
-                        var6[incrementValue$11] = 0;
-                        incrementValue$12 = var2;
-                        var2++;
-                        var6[incrementValue$12] = 0;
-                        incrementValue$13 = var2;
-                        var2++;
-                        var6[incrementValue$13] = 0;
-                        incrementValue$14 = var2;
-                        var2++;
-                        var6[incrementValue$14] = 0;
-                        incrementValue$15 = var2;
-                        var2++;
-                        var6[incrementValue$15] = 0;
-                        if (var5 == 0) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (var5 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    var1_ref = (RuntimeException) ((Object) caughtException);
-                    throw dd.a((Throwable) ((Object) var1_ref), "ec.H(" + param0 + ')');
-                }
-                case 9: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
+        var5 = OrbDefence.field_D ? 1 : 0;
+        try {
+          L0: {
+            var6 = ji.field_a;
+            var1 = var6;
+            var2 = 0;
+            var3 = -114 / ((4 - param0) / 42);
+            var4 = var6.length;
+            L1: while (true) {
+              if (var2 >= var4) {
+                break L0;
+              } else {
+                incrementValue$16 = var2;
+                var2++;
+                var6[incrementValue$16] = 0;
+                incrementValue$17 = var2;
+                var2++;
+                var6[incrementValue$17] = 0;
+                incrementValue$18 = var2;
+                var2++;
+                var6[incrementValue$18] = 0;
+                incrementValue$19 = var2;
+                var2++;
+                var6[incrementValue$19] = 0;
+                incrementValue$20 = var2;
+                var2++;
+                var6[incrementValue$20] = 0;
+                incrementValue$21 = var2;
+                var2++;
+                var6[incrementValue$21] = 0;
+                incrementValue$22 = var2;
+                var2++;
+                var6[incrementValue$22] = 0;
+                incrementValue$23 = var2;
+                var2++;
+                var6[incrementValue$23] = 0;
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw dd.a((Throwable) ((Object) var1_ref), "ec.H(" + param0 + ')');
         }
     }
 

@@ -270,62 +270,65 @@ final class mp extends ij {
                   this.field_l = ik.a(param1.i(110), (byte) -76, '<');
                   break L1;
                 } else {
-                  if ((param0 ^ -1) != -3) {
-                    if (3 == param0) {
-                      var4_int = param1.h(255);
-                      this.field_m = new int[var4_int];
-                      this.field_n = new int[var4_int][];
-                      var5 = 0;
-                      L2: while (true) {
-                        if (var4_int <= var5) {
-                          break L1;
-                        } else {
-                          L3: {
-                            var6 = param1.c((byte) -7);
-                            var7 = cf.a(var6, 123);
-                            if (var7 == null) {
-                              break L3;
-                            } else {
-                              this.field_m[var5] = var6;
-                              array$0 = new int[var7.field_a];
-                              this.field_n[var5] = array$0;
-                              var8 = 0;
-                              L4: while (true) {
-                                if (var8 >= var7.field_a) {
-                                  break L3;
-                                } else {
-                                  this.field_n[var5][var8] = param1.c((byte) -7);
-                                  var8++;
-                                  continue L4;
+                  L2: {
+                    if ((param0 ^ -1) != -3) {
+                      if (3 == param0) {
+                        var4_int = param1.h(255);
+                        this.field_m = new int[var4_int];
+                        this.field_n = new int[var4_int][];
+                        var5 = 0;
+                        L3: while (true) {
+                          if (var4_int <= var5) {
+                            break L2;
+                          } else {
+                            L4: {
+                              var6 = param1.c((byte) -7);
+                              var7 = cf.a(var6, 123);
+                              if (var7 == null) {
+                                break L4;
+                              } else {
+                                this.field_m[var5] = var6;
+                                array$0 = new int[var7.field_a];
+                                this.field_n[var5] = array$0;
+                                var8 = 0;
+                                L5: while (true) {
+                                  if (var8 >= var7.field_a) {
+                                    break L4;
+                                  } else {
+                                    this.field_n[var5][var8] = param1.c((byte) -7);
+                                    var8++;
+                                    continue L5;
+                                  }
                                 }
                               }
                             }
+                            var5++;
+                            continue L3;
                           }
-                          var5++;
-                          continue L2;
+                        }
+                      } else {
+                        if (4 == param0) {
+                          break L2;
+                        } else {
+                          break L1;
                         }
                       }
                     } else {
-                      if (4 == param0) {
-                        break L1;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  } else {
-                    var4_int = param1.h(255);
-                    this.field_o = new int[var4_int];
-                    var5 = 0;
-                    L5: while (true) {
-                      if (var5 >= var4_int) {
-                        break L1;
-                      } else {
-                        this.field_o[var5] = param1.c((byte) -7);
-                        var5++;
-                        continue L5;
+                      var4_int = param1.h(255);
+                      this.field_o = new int[var4_int];
+                      var5 = 0;
+                      L6: while (true) {
+                        if (var5 >= var4_int) {
+                          break L2;
+                        } else {
+                          this.field_o[var5] = param1.c((byte) -7);
+                          var5++;
+                          continue L6;
+                        }
                       }
                     }
                   }
+                  break L1;
                 }
               }
               decompiledRegionSelector0 = 1;
@@ -337,7 +340,7 @@ final class mp extends ij {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var4 = decompiledCaughtException;
             stackIn_22_0 = (RuntimeException) (var4);
 
@@ -347,12 +350,12 @@ final class mp extends ij {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw dn.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param2 + ')');

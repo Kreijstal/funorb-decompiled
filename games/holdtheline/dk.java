@@ -1034,16 +1034,19 @@ class dk implements dh, vc {
                         break L5;
                       }
                     } else {
-                      if (-3 != (var6 ^ -1)) {
-                        break L5;
-                      } else {
-                        if (!(param1.field_i instanceof lg)) {
-                          break L5;
+                      L7: {
+                        if (-3 != (var6 ^ -1)) {
+                          break L7;
                         } else {
-                          ((lg) ((Object) param1.field_i)).a(this.a(param1, (byte) -43), 965, this.field_f, var5, var3_int);
-                          break L5;
+                          if (!(param1.field_i instanceof lg)) {
+                            break L7;
+                          } else {
+                            ((lg) ((Object) param1.field_i)).a(this.a(param1, (byte) -43), 965, this.field_f, var5, var3_int);
+                            break L5;
+                          }
                         }
                       }
+                      break L5;
                     }
                   } else {
                     break L6;
@@ -1061,7 +1064,7 @@ class dk implements dh, vc {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var3 = decompiledCaughtException;
             stackIn_33_0 = (RuntimeException) (var3);
 
@@ -1071,12 +1074,12 @@ class dk implements dh, vc {
               stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
               stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackIn_34_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
               stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackIn_34_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw kk.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');

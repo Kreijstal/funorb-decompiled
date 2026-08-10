@@ -10,167 +10,21 @@ final class ih {
 
     final static void a(int param0) {
         int var1_int = 0;
-        int var2 = 0;
-        int decompiledRegionSelector0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        RuntimeException var1 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var2 = ZombieDawnMulti.field_E ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (dl.field_h != null) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    try {
-                        if (null == ud.field_P) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        ud.field_P = new ja(512, 512);
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        ud.field_P.a();
-                        var1_int = param0;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (0 < var1_int) {
-                            statePc = 9;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        dl.field_h.b((byte) 125);
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        oo.d(256, 256, var1_int, -var1_int + 256);
-                        var1_int--;
-                        if (var2 != 0) {
-                            statePc = 15;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        if (var2 == 0) {
-                            statePc = 7;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        dl.field_h.b((byte) 125);
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    var1 = (RuntimeException) ((Object) caughtException);
-                    throw fa.a((Throwable) ((Object) var1), "ih.C(" + param0 + ')');
-                }
-                case 15: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int var2 = ZombieDawnMulti.field_E ? 1 : 0;
+        if (dl.field_h == null) {
+            return;
+        }
+        try {
+            if (!(null != ud.field_P)) {
+                ud.field_P = new ja(512, 512);
             }
+            ud.field_P.a();
+            for (var1_int = param0; 0 < var1_int; var1_int--) {
+                oo.d(256, 256, var1_int, -var1_int + 256);
+            }
+            dl.field_h.b((byte) 125);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');
         }
     }
 
@@ -243,66 +97,26 @@ final class ih {
     }
 
     final static void a(n param0, int param1, int param2) {
-        RuntimeException runtimeException = null;
-        int var4 = 0;
         ga var5 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        int var4 = 0;
         try {
-          L0: {
-            L1: {
-              L2: {
-                var5 = ma.field_a;
-                var5.b((byte) -35, param2);
-                var5.field_j = var5.field_j + 1;
-                var4 = var5.field_j;
-                var5.a(param1 ^ 112, param1);
-                if (null != param0.field_f) {
-                  break L2;
-                } else {
-                  var5.a(-92, 0);
-                  if (!ZombieDawnMulti.field_E) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              var5.a(-33, param0.field_f.length);
-              var5.a(param0.field_f, param0.field_f.length, 0, 115);
-              break L1;
+            var5 = ma.field_a;
+            var5.b((byte) -35, param2);
+            var5.field_j = var5.field_j + 1;
+            var4 = var5.field_j;
+            var5.a(param1 ^ 112, param1);
+            if (null == param0.field_f) {
+                var5.a(-92, 0);
+            } else {
+                var5.a(-33, param0.field_f.length);
+                var5.a(param0.field_f, param0.field_f.length, 0, 115);
             }
             var5.f(var4, 121);
             var5.field_j = var5.field_j - 4;
             param0.field_h = var5.i(-1478490344);
             var5.e(41, -var4 + var5.field_j);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("ih.F(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
-          }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) ((Object) runtimeException), "ih.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

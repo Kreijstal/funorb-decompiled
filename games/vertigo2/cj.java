@@ -561,6 +561,7 @@ class cj extends iq implements dq {
     }
 
     final void a(iq param0, byte param1, int param2, int param3, int param4, int param5) {
+        RuntimeException runtimeException = null;
         vp var7 = null;
         iq var8 = null;
         int var9 = 0;
@@ -571,7 +572,6 @@ class cj extends iq implements dq {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -603,8 +603,8 @@ class cj extends iq implements dq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var7_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var7_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
 
             stackIn_10_1 = new StringBuilder().append("cj.HA(");
 
@@ -870,6 +870,7 @@ class cj extends iq implements dq {
     }
 
     void a(byte param0, int param1, int param2, iq param3) {
+        RuntimeException runtimeException = null;
         vp var5 = null;
         iq var6 = null;
         int var7 = 0;
@@ -880,7 +881,6 @@ class cj extends iq implements dq {
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -916,8 +916,8 @@ class cj extends iq implements dq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var5_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
 
             stackIn_10_1 = new StringBuilder().append("cj.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
@@ -938,32 +938,64 @@ class cj extends iq implements dq {
     }
 
     final static void b(boolean param0, int param1, int param2, int param3) {
-        if (!pm.field_a) {
-            return;
-        }
-        ql.field_L.a(0, param0);
-        int var4 = ji.field_n.l(0) ? 1 : 0;
-        if (param1 != (kf.field_c ^ -1)) {
-            if (!(var4 != 0)) {
+        int var4;
+        int var5;
+        if (pm.field_a) {
+          L0: {
+            ql.field_L.a(0, param0);
+            var4 = ji.field_n.l(0) ? 1 : 0;
+            if (param1 == (kf.field_c ^ -1)) {
+              break L0;
+            } else {
+              if (var4 == 0) {
                 param0 = false;
                 on.a(9110);
+                break L0;
+              } else {
+                break L0;
+              }
             }
-        }
-        if (param0) {
-            ji.field_n.a(param2, 538, param3);
-        }
-        if (!(var4 == 0)) {
-            ql.field_L.a(0, param0);
-        }
-        int var5 = ji.field_n.k(12282) + ji.field_n.field_ob;
-        if (-641 > (var5 ^ -1)) {
-            gr.field_Y = gr.field_Y + 5;
-        } else {
-            if (635 > var5) {
-                if (!(0 >= gr.field_Y)) {
+          }
+          L1: {
+            if (!param0) {
+              break L1;
+            } else {
+              ji.field_n.a(param2, 538, param3);
+              break L1;
+            }
+          }
+          L2: {
+            if (var4 != 0) {
+              ql.field_L.a(0, param0);
+              break L2;
+            } else {
+              break L2;
+            }
+          }
+          L3: {
+            var5 = ji.field_n.k(12282) + ji.field_n.field_ob;
+            if (-641 <= (var5 ^ -1)) {
+              L4: {
+                if (635 <= var5) {
+                  break L4;
+                } else {
+                  if (0 < gr.field_Y) {
                     gr.field_Y = gr.field_Y - 5;
+                    break L4;
+                  } else {
+                    break L3;
+                  }
                 }
+              }
+              break L3;
+            } else {
+              gr.field_Y = gr.field_Y + 5;
+              break L3;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

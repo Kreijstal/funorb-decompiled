@@ -13,60 +13,17 @@ final class hk {
     static String field_c;
 
     private final void a(int param0, bl param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param0 < -47) {
-              L1: {
-                if (param1 == null) {
-                  break L1;
-                } else {
-                  param1.b(34);
-                  param1.a((byte) -120);
-                  this.field_b = this.field_b + param1.field_y;
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (runtimeException);
-
-            stackIn_7_1 = new StringBuilder().append("hk.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
-          }
-          throw lj.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+        if (param0 >= -47) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            if (param1 != null) {
+                param1.b(34);
+                param1.a((byte) -120);
+                this.field_b = this.field_b + param1.field_y;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) ((Object) runtimeException), "hk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

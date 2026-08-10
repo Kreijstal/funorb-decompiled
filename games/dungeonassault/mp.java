@@ -23,6 +23,7 @@ final class mp {
     }
 
     final static void a(Random param0, int[] param1, int param2, int param3, int param4) {
+        RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
         int[] var7 = null;
@@ -35,7 +36,6 @@ final class mp {
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
         var6 = DungeonAssault.field_K;
         try {
           L0: {
@@ -73,8 +73,8 @@ final class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var5 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var5);
+            runtimeException = decompiledCaughtException;
+            stackIn_12_0 = (RuntimeException) (runtimeException);
 
             stackIn_12_1 = new StringBuilder().append("mp.C(");
 

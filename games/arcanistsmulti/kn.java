@@ -82,36 +82,39 @@ final class kn extends ob implements vb {
               }
             }
             L5: {
-              if (null == this.field_zb) {
-                break L5;
-              } else {
-                L6: {
-                  stackIn_14_0 = this.field_zb.j(2);
+              L6: {
+                if (null == this.field_zb) {
+                  break L6;
+                } else {
+                  L7: {
+                    stackIn_14_0 = this.field_zb.j(2);
 
-                  if (this.field_nb) {
-                    stackIn_15_0 = stackIn_14_0;
-                    stackIn_15_1 = 0;
+                    if (this.field_nb) {
+                      stackIn_15_0 = stackIn_14_0;
+                      stackIn_15_1 = 0;
+                      break L7;
+                    } else {
+                      stackIn_15_0 = stackIn_14_0;
+                      stackIn_15_1 = 1;
+                      break L7;
+                    }
+                  }
+                  if ((stackIn_15_0 ? 1 : 0) != stackIn_15_1) {
                     break L6;
                   } else {
-                    stackIn_15_0 = stackIn_14_0;
-                    stackIn_15_1 = 1;
-                    break L6;
+                    this.a(this.field_lb, 0);
+                    this.field_nb = this.field_zb.j(2);
+                    break L5;
                   }
                 }
-                if ((stackIn_15_0 ? 1 : 0) != stackIn_15_1) {
-                  break L5;
-                } else {
-                  this.a(this.field_lb, 0);
-                  this.field_nb = this.field_zb.j(2);
-                  break L5;
-                }
               }
+              break L5;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var5_ref = decompiledCaughtException;
             stackIn_20_0 = (RuntimeException) (var5_ref);
 
@@ -121,12 +124,12 @@ final class kn extends ob implements vb {
               stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
               stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackIn_21_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
               stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackIn_21_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw aa.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');

@@ -23,66 +23,19 @@ final class se {
     }
 
     final void a(int param0, int param1, int param2, int param3, r param4) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            this.field_d = param4;
-            this.field_b = param1;
-            this.field_a = param0;
-            if (param3 == -22899) {
-              L1: {
-                this.field_g = param2;
-                if (param4 == null) {
-                  break L1;
-                } else {
-                  if ((param4.field_t ^ -1) != -10) {
-                    break L1;
-                  } else {
-                    param1 = 12;
-                    break L1;
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("se.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
-          }
-          throw qk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+        this.field_d = param4;
+        this.field_b = param1;
+        this.field_a = param0;
+        if (param3 != -22899) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            this.field_g = param2;
+            if (param4 != null && (param4.field_t ^ -1) == -10) {
+                param1 = 12;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) ((Object) runtimeException), "se.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

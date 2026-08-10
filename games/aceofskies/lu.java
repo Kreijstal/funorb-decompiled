@@ -49,65 +49,23 @@ final class lu {
     }
 
     lu(wl param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         this.field_c = new kp();
         try {
-          L0: {
-            L1: {
-              this.field_d = param0;
-              if (!this.field_d.field_A) {
-                break L1;
-              } else {
-                if (this.field_d.field_u) {
-                  this.field_b = new wj(this.field_d);
-                  if (this.field_d.field_Hb <= 1) {
-                    break L1;
-                  } else {
-                    if (!this.field_d.field_i) {
-                      break L1;
-                    } else {
-                      if (this.field_d.field_Nb) {
-                        this.field_b = new wj(this.field_d);
-                        break L1;
-                      } else {
-                        return;
-                      }
-                    }
-                  }
-                } else {
-                  return;
+            this.field_d = param0;
+            if (this.field_d.field_A) {
+                if (!this.field_d.field_u) {
+                    return;
                 }
-              }
+                this.field_b = new wj(this.field_d);
+                if (this.field_d.field_Hb > 1 && this.field_d.field_i) {
+                    if (!this.field_d.field_Nb) {
+                        return;
+                    }
+                    this.field_b = new wj(this.field_d);
+                }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (runtimeException);
-
-            stackIn_12_1 = new StringBuilder().append("lu.<init>(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L2;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L2;
-            }
-          }
-          throw pn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) ((Object) runtimeException), "lu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

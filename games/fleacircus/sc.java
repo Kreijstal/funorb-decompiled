@@ -41,98 +41,56 @@ final class sc {
     }
 
     final static void a(int param0) {
+        Object var1 = null;
         int var2 = 0;
         int var4 = 0;
-        int stackIn_17_0 = 0;
         Throwable decompiledCaughtException = null;
-        Object var1 = null;
         RuntimeException var1_ref = null;
+        int var5 = 0;
         var4 = fleas.field_A ? 1 : 0;
         try {
-          L0: {
-            var1 = rh.field_f;
-            synchronized (var1) {
+          var1 = rh.field_f;
+          synchronized (var1) {
+            L0: {
               L1: {
-                L2: {
-                  L3: {
-                    L4: {
-                      L5: {
-                        tl.field_o = tc.field_h;
-                        lg.field_d = lg.field_d + 1;
-                        if ((em.field_f ^ -1) > param0) {
-                          break L5;
-                        } else {
-                          L6: while (true) {
-                            if (em.field_f == sd.field_a) {
-                              break L4;
-                            } else {
-                              var2 = qk.field_b[sd.field_a];
-                              sd.field_a = 127 & 1 + sd.field_a;
-                              stackIn_17_0 = 0;
-
-                              if (var4 != 0) {
-                                break L3;
-                              } else {
-                                L7: {
-                                  L8: {
-                                    if (stackIn_17_0 <= var2) {
-                                      break L8;
-                                    } else {
-                                      ei.field_H[var2 ^ -1] = false;
-                                      if (var4 == 0) {
-                                        break L7;
-                                      } else {
-                                        break L8;
-                                      }
-                                    }
-                                  }
-                                  ei.field_H[var2] = true;
-                                  break L7;
-                                }
-                                if (var4 == 0) {
-                                  continue L6;
-                                } else {
-                                  break L5;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                      var2 = 0;
-                      L9: while (true) {
-                        L10: {
-                          if (-113 >= (var2 ^ -1)) {
-                            break L10;
-                          } else {
-                            ei.field_H[var2] = false;
-                            var2++;
-                            if (var4 != 0) {
-                              break L2;
-                            } else {
-                              if (var4 == 0) {
-                                continue L9;
-                              } else {
-                                break L10;
-                              }
-                            }
-                          }
-                        }
-                        em.field_f = sd.field_a;
-                        break L4;
+                tl.field_o = tc.field_h;
+                lg.field_d = lg.field_d + 1;
+                if ((em.field_f ^ -1) > param0) {
+                  var5 = 0;
+                  var2 = var5;
+                  L2: while (true) {
+                    if (-113 >= (var5 ^ -1)) {
+                      em.field_f = sd.field_a;
+                      break L1;
+                    } else {
+                      ei.field_H[var5] = false;
+                      var5++;
+                      continue L2;
+                    }
+                  }
+                } else {
+                  L3: while (true) {
+                    if (em.field_f == sd.field_a) {
+                      break L1;
+                    } else {
+                      var2 = qk.field_b[sd.field_a];
+                      sd.field_a = 127 & 1 + sd.field_a;
+                      if (0 <= var2) {
+                        ei.field_H[var2] = true;
+                        continue L3;
+                      } else {
+                        ei.field_H[var2 ^ -1] = false;
+                        continue L3;
                       }
                     }
-                    stackIn_17_0 = ak.field_e;
-                    break L3;
                   }
-                  tc.field_h = stackIn_17_0;
-                  break L2;
                 }
-                break L1;
               }
+              tc.field_h = ak.field_e;
+              break L0;
             }
-            break L0;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;

@@ -466,6 +466,7 @@ class og extends qm implements he {
     }
 
     void a(qm param0, int param1, int param2, int param3) {
+        RuntimeException runtimeException = null;
         tm var5 = null;
         qm var6 = null;
         int var7 = 0;
@@ -476,7 +477,6 @@ class og extends qm implements he {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var8 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -504,8 +504,8 @@ class og extends qm implements he {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("og.N(");
 
@@ -692,6 +692,7 @@ class og extends qm implements he {
     }
 
     final void a(int param0, int param1, int param2, int param3, qm param4, int param5) {
+        RuntimeException runtimeException = null;
         tm var7 = null;
         qm var8 = null;
         int var9 = 0;
@@ -702,7 +703,6 @@ class og extends qm implements he {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
         var9 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -734,8 +734,8 @@ class og extends qm implements he {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var7_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var7_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_9_0 = (RuntimeException) (runtimeException);
 
             stackIn_9_1 = new StringBuilder().append("og.PA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 

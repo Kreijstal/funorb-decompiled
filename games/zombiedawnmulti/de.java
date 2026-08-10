@@ -33,18 +33,15 @@ final class de {
     }
 
     final static void a(go param0, byte param1, Object param2) {
-        java.awt.AWTEvent stackIn_9_0 = null;
-        Object stackIn_13_0 = null;
-        RuntimeException stackIn_21_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        StringBuilder stackIn_24_1 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
         Throwable decompiledCaughtException = null;
-        java.awt.AWTEvent stackOut_8_0;
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -66,89 +63,74 @@ final class de {
               var3_int = 0;
               L2: while (true) {
                 L3: {
+                  if (50 <= var3_int) {
+                    break L3;
+                  } else {
+                    if (param0.field_j.peekEvent() == null) {
+                      break L3;
+                    } else {
+                      vd.a(false, 1L);
+                      var3_int++;
+                      continue L2;
+                    }
+                  }
+                }
+                try {
                   L4: {
-                    if (50 <= var3_int) {
+                    if (param2 != null) {
+                      param0.field_j.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
                       break L4;
                     } else {
-                      stackOut_8_0 = param0.field_j.peekEvent();
-                      stackIn_13_0 = stackOut_8_0;
-                      stackIn_9_0 = stackOut_8_0;
-                      if (var4 != 0) {
-                        break L3;
-                      } else {
-                        if (stackIn_9_0 == null) {
-                          break L4;
-                        } else {
-                          vd.a(false, 1L);
-                          var3_int++;
-                          if (var4 == 0) {
-                            continue L2;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
+                      return;
                     }
                   }
-                  stackIn_13_0 = param2;
-                  break L3;
-                }
-                if (stackIn_13_0 != null) {
-                  try {
-                    L5: {
-                      param0.field_j.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
-                      break L5;
-                    }
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    var3 = (Exception) (Object) decompiledCaughtException;
-                    return;
-                  }
-                  return;
-                } else {
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var3 = (Exception) (Object) decompiledCaughtException;
                   return;
                 }
+                return;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L6: {
+          L5: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var3_ref);
+            stackIn_18_0 = (RuntimeException) (var3_ref);
 
-            stackIn_21_1 = new StringBuilder().append("de.B(");
+            stackIn_18_1 = new StringBuilder().append("de.B(");
 
             if (param0 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
+              break L5;
+            } else {
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
+              break L5;
+            }
+          }
+          L6: {
+
+
+            stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(param1).append(',');
+
+            if (param2 == null) {
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "null";
               break L6;
             } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "{...}";
               break L6;
             }
           }
-          L7: {
-
-
-            stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L7;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L7;
-            }
-          }
-          throw fa.a((Throwable) ((Object) stackIn_22_0), stackIn_25_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_19_0), stackIn_22_2 + ')');
         }
     }
 

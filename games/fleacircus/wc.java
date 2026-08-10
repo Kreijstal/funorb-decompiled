@@ -36,6 +36,7 @@ final class wc extends lh {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int[] var11 = null;
         var10 = fleas.field_A ? 1 : 0;
         try {
           L0: {
@@ -43,6 +44,7 @@ final class wc extends lh {
               if (!param2) {
                 break L1;
               } else {
+                var11 = (int[]) null;
                 this.a((ng) null, (byte[]) null, false, (int[]) null);
                 break L1;
               }

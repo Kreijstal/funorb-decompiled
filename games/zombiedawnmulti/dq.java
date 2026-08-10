@@ -12,46 +12,12 @@ final class dq extends l implements java.awt.image.ImageProducer, java.awt.image
     static int field_l;
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (this.field_n != param0) {
-                break L1;
-              } else {
+            if (this.field_n == param0) {
                 this.field_n = null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("dq.removeConsumer(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) ((Object) runtimeException), "dq.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,50 +26,15 @@ final class dq extends l implements java.awt.image.ImageProducer, java.awt.image
     }
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
-        RuntimeException runtimeException = null;
-        java.awt.image.ImageConsumer var6 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.c((byte) -127);
-              param1.drawImage(this.field_g, param3, param0, (java.awt.image.ImageObserver) (this));
-              if (param2 == 2) {
-                break L1;
-              } else {
-                var6 = (java.awt.image.ImageConsumer) null;
+            this.c((byte) -127);
+            param1.drawImage(this.field_g, param3, param0, (java.awt.image.ImageObserver) (this));
+            if (param2 != 2) {
+                java.awt.image.ImageConsumer var6 = (java.awt.image.ImageConsumer) null;
                 this.isConsumer((java.awt.image.ImageConsumer) null);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("dq.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) ((Object) runtimeException), "dq.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -128,58 +59,24 @@ final class dq extends l implements java.awt.image.ImageProducer, java.awt.image
     }
 
     final void a(int param0, java.awt.Component param1, int param2, int param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_b = new int[1 + param3 * param2];
-              this.field_f = param2;
-              this.field_h = param3;
-              this.field_m = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-              this.field_g = param1.createImage((java.awt.image.ImageProducer) (this));
-              this.c((byte) -110);
-              param1.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-              this.c((byte) 77);
-              param1.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-              this.c((byte) 50);
-              param1.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-              this.b((byte) 126);
-              if (param0 == -6) {
-                break L1;
-              } else {
+            this.field_b = new int[1 + param3 * param2];
+            this.field_f = param2;
+            this.field_h = param3;
+            this.field_m = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+            this.field_g = param1.createImage((java.awt.image.ImageProducer) (this));
+            this.c((byte) -110);
+            param1.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
+            this.c((byte) 77);
+            param1.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
+            this.c((byte) 50);
+            param1.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
+            this.b((byte) 126);
+            if (param0 != -6) {
                 field_i = (String) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("dq.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw fa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) ((Object) runtimeException), "dq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

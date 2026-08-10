@@ -38,25 +38,28 @@ final class jia extends k {
                   this.field_n = param1.b(16711935);
                   break L2;
                 } else {
-                  if ((var4_int ^ -1) != -3) {
-                    break L2;
-                  } else {
-                    L3: {
-                      stackIn_12_0 = this;
+                  L3: {
+                    if ((var4_int ^ -1) != -3) {
+                      break L3;
+                    } else {
+                      L4: {
+                        stackIn_12_0 = this;
 
-                      if (1 != param1.b(param0 ^ -16711866)) {
-                        stackIn_13_0 = this;
-                        stackIn_13_1 = 0;
-                        break L3;
-                      } else {
-                        stackIn_13_0 = this;
-                        stackIn_13_1 = 1;
-                        break L3;
+                        if (1 != param1.b(param0 ^ -16711866)) {
+                          stackIn_13_0 = this;
+                          stackIn_13_1 = 0;
+                          break L4;
+                        } else {
+                          stackIn_13_0 = this;
+                          stackIn_13_1 = 1;
+                          break L4;
+                        }
                       }
+                      ((jia) (this)).field_f = stackIn_13_1 != 0;
+                      break L3;
                     }
-                    ((jia) (this)).field_f = stackIn_13_1 != 0;
-                    break L2;
                   }
+                  break L2;
                 }
               } else {
                 this.field_k = param1.b(16711935);
@@ -67,7 +70,7 @@ final class jia extends k {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var4 = decompiledCaughtException;
             stackIn_17_0 = (RuntimeException) (var4);
 
@@ -77,12 +80,12 @@ final class jia extends k {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw pe.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param2 + ')');

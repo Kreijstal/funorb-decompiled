@@ -25,11 +25,11 @@ final class qe {
     }
 
     qe(wl param0) {
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -75,55 +75,58 @@ final class qe {
                   }
                 }
               } else {
-                var20 = rb.a(false, wl.field_Kb, 50);
-                this.field_j = new sr(param0, 6410, 128, 128, 16, var20, 6410);
-                var21 = rb.a(false, mq.field_e, -77);
-                this.field_g = new sr(param0, 6410, 128, 128, 16, var21, 6410);
-                var10 = param0.field_cc;
-                if (!var10.b(true)) {
-                  break L1;
-                } else {
-                  L4: {
-                    var22 = rb.a(false, ho.field_a, -88);
-                    this.field_b = new sr(param0, 6408, 128, 128, 16);
-                    var4 = new sr(param0, 6409, 128, 128, 16, var22, 6409);
-                    if (var10.a((byte) 97, this.field_b, var4, 2.0f)) {
-                      this.field_b.a(false);
-                      break L4;
-                    } else {
-                      this.field_b.b((byte) -50);
-                      this.field_b = null;
-                      break L4;
+                L4: {
+                  var20 = rb.a(false, wl.field_Kb, 50);
+                  this.field_j = new sr(param0, 6410, 128, 128, 16, var20, 6410);
+                  var21 = rb.a(false, mq.field_e, -77);
+                  this.field_g = new sr(param0, 6410, 128, 128, 16, var21, 6410);
+                  var10 = param0.field_cc;
+                  if (!var10.b(true)) {
+                    break L4;
+                  } else {
+                    L5: {
+                      var22 = rb.a(false, ho.field_a, -88);
+                      this.field_b = new sr(param0, 6408, 128, 128, 16);
+                      var4 = new sr(param0, 6409, 128, 128, 16, var22, 6409);
+                      if (var10.a((byte) 97, this.field_b, var4, 2.0f)) {
+                        this.field_b.a(false);
+                        break L5;
+                      } else {
+                        this.field_b.b((byte) -50);
+                        this.field_b = null;
+                        break L5;
+                      }
                     }
+                    var4.b((byte) -67);
+                    break L4;
                   }
-                  var4.b((byte) -67);
-                  break L1;
                 }
+                break L1;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var2 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var2);
+            stackIn_17_0 = (RuntimeException) (var2);
 
-            stackIn_16_1 = new StringBuilder().append("qe.<init>(");
+            stackIn_17_1 = new StringBuilder().append("qe.<init>(");
 
             if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L5;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
+              break L6;
             } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L5;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
+              break L6;
             }
           }
-          throw pn.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
     }
 

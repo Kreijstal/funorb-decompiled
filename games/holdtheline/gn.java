@@ -386,7 +386,7 @@ final class gn {
                           break L9;
                         }
                       }
-                      throw kk.a((Throwable) ((Object) stackIn_36_0), (stackIn_36_2 != 0) + " " + param3 + " " + param0.length + " " + pg.a((byte) 120, var9, param0.length) + " " + pg.a((byte) 122, var9, param0.length + -2) + " " + this.field_a.field_e[param3] + " " + this.field_a.field_t);
+                      throw kk.a((Throwable) ((Object) stackIn_36_0), (stackIn_36_2 != 0) + " " + param3 + " " + var9.length + " " + pg.a((byte) 120, var9, var9.length) + " " + pg.a((byte) 122, var9, var9.length + -2) + " " + this.field_a.field_e[param3] + " " + this.field_a.field_t);
                     }
                     L10: {
                       if (this.field_d) {

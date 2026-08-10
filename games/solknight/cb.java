@@ -60,30 +60,23 @@ final class cb extends IOException {
 
     final static void b(byte param0) {
         int var1;
-        L0: {
-          if (wc.field_a >= 224) {
-            break L0;
+        if (wc.field_a >= 224) {
+          ah.a((byte) -103, 256);
+          if (param0 == -39) {
+            return;
           } else {
-            var1 = wc.field_a % 32;
-            ah.a((byte) -69, 32 + (wc.field_a - var1));
-            if (!SolKnight.field_L) {
-              if (param0 != -39) {
-                cb.b(-18);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              break L0;
-            }
+            cb.b(-18);
+            return;
           }
-        }
-        ah.a((byte) -103, 256);
-        if (param0 == -39) {
-          return;
         } else {
-          cb.b(-18);
-          return;
+          var1 = wc.field_a % 32;
+          ah.a((byte) -69, 32 + (wc.field_a - var1));
+          if (param0 == -39) {
+            return;
+          } else {
+            cb.b(-18);
+            return;
+          }
         }
     }
 

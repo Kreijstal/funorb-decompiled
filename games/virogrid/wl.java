@@ -126,95 +126,21 @@ final class wl {
     }
 
     final static void a(pd param0, i param1, int param2, int param3, boolean param4, java.awt.Component param5, int param6, int param7) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        StringBuilder stackIn_8_1 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        StringBuilder stackIn_11_1 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              ua.a(param6, param4, 10);
-              ae.field_g = ua.a(param0, param5, 0, param7);
-              ac.field_c = ua.a(param0, param5, 1, param2);
-              hd.field_g = new r();
-              nf.field_e = 1000 * param2 / param6;
-              ac.field_c.a(hd.field_g);
-              vg.field_B = param1;
-              vg.field_B.e(2, c.field_a);
-              ae.field_g.a(vg.field_B);
-              if (param3 > 104) {
-                break L1;
-              } else {
+            ua.a(param6, param4, 10);
+            ae.field_g = ua.a(param0, param5, 0, param7);
+            ac.field_c = ua.a(param0, param5, 1, param2);
+            hd.field_g = new r();
+            nf.field_e = 1000 * param2 / param6;
+            ac.field_c.a(hd.field_g);
+            vg.field_B = param1;
+            vg.field_B.e(2, c.field_a);
+            ae.field_g.a(vg.field_B);
+            if (param3 <= 104) {
                 field_b = -11;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("wl.C(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          L3: {
-
-
-            stackIn_8_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
-          }
-          L4: {
-
-
-            stackIn_11_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L4;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L4;
-            }
-          }
-          throw kg.a((Throwable) ((Object) stackIn_6_0), stackIn_12_2 + ',' + param6 + ',' + param7 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) ((Object) runtimeException), "wl.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 

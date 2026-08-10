@@ -760,80 +760,26 @@ class go extends kg {
     }
 
     void a(int param0, int param1, vg param2, byte param3) {
-        RuntimeException runtimeException = null;
         pj var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.a(param0, param1, param2, param3);
-              this.j((byte) -59);
-              if (1 != this.field_o) {
-                break L1;
-              } else {
-                L2: {
-                  if (this.field_p instanceof pj) {
+            super.a(param0, param1, param2, param3);
+            this.j((byte) -59);
+            if (1 == this.field_o) {
+                if (!(!(this.field_p instanceof pj))) {
                     var5 = (pj) ((Object) this.field_p);
                     var6 = var5.a(param0, pd.field_k, param1, (vg) (this), true, bb.field_b);
-                    if ((var6 ^ -1) == 0) {
-                      break L2;
-                    } else {
-                      L3: {
-                        if (!this.field_P) {
-                          break L3;
-                        } else {
-                          if (this.field_R <= var6) {
-                            break L3;
-                          } else {
-                            if (var6 <= this.field_N) {
-                              break L3;
-                            } else {
-                              var6 = this.field_R;
-                              break L3;
-                            }
-                          }
+                    if ((var6 ^ -1) != 0) {
+                        if (this.field_P && this.field_R > var6 && var6 > this.field_N) {
+                            var6 = this.field_R;
                         }
-                      }
-                      this.field_H = var6;
-                      break L2;
+                        this.field_H = var6;
                     }
-                  } else {
-                    break L2;
-                  }
                 }
                 this.field_Q = pr.a(14274);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("go.PA(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
-          }
-          throw r.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) ((Object) runtimeException), "go.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

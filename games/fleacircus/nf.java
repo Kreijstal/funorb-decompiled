@@ -212,36 +212,27 @@ final class nf extends gj implements pe, da {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param3 == 248) {
-                break L1;
-              } else {
-                this.j(115);
-                break L1;
-              }
+            if (param3 == 248) {
+              break L0;
+            } else {
+              this.j(115);
+              break L0;
             }
-            L2: {
-              if (this.field_L == param4) {
-                break L2;
-              } else {
-                if (this.field_J == param4) {
-                  this.j(3);
-                  if (!fleas.field_A) {
-                    break L0;
-                  } else {
-                    break L2;
-                  }
-                } else {
-                  return;
-                }
-              }
-            }
+          }
+          if (this.field_L == param4) {
             na.a((byte) -121);
             return;
+          } else {
+            if (this.field_J == param4) {
+              this.j(3);
+              return;
+            } else {
+              return;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L1: {
             var6 = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (var6);
 
@@ -251,12 +242,12 @@ final class nf extends gj implements pe, da {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L3;
+              break L1;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L3;
+              break L1;
             }
           }
           throw pf.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');

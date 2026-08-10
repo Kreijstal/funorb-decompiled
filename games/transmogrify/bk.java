@@ -72,39 +72,25 @@ final class bk {
           var2 = 0;
           var3 = this.field_b.field_h;
           L0: while (true) {
-            L1: {
-              if (this.field_b == var3) {
-                break L1;
-              } else {
-                var3 = var3.field_h;
-                var2++;
-                if (var4 == 0) {
-                  continue L0;
-                } else {
-                  break L1;
-                }
-              }
+            if (this.field_b == var3) {
+              return var2;
+            } else {
+              var3 = var3.field_h;
+              var2++;
+              continue L0;
             }
-            return var2;
           }
         } else {
           var2 = 0;
           var3 = this.field_b.field_h;
-          L2: while (true) {
-            L3: {
-              if (this.field_b == var3) {
-                break L3;
-              } else {
-                var3 = var3.field_h;
-                var2++;
-                if (var4 == 0) {
-                  continue L2;
-                } else {
-                  break L3;
-                }
-              }
+          L1: while (true) {
+            if (this.field_b == var3) {
+              return var2;
+            } else {
+              var3 = var3.field_h;
+              var2++;
+              continue L1;
             }
-            return var2;
           }
         }
     }

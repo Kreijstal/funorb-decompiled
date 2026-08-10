@@ -1050,7 +1050,7 @@ final class nh {
                             break L9;
                           }
                         }
-                        throw vk.a((Throwable) ((Object) stackIn_38_0), (stackIn_38_2 != 0) + " " + param2 + " " + param0.length + " " + qh.a(16777215, var9, param0.length) + " " + qh.a(16777215, var9, -2 + param0.length) + " " + this.field_h.field_q[param2] + " " + this.field_h.field_f);
+                        throw vk.a((Throwable) ((Object) stackIn_38_0), (stackIn_38_2 != 0) + " " + param2 + " " + var9.length + " " + qh.a(16777215, var9, var9.length) + " " + qh.a(16777215, var9, -2 + var9.length) + " " + this.field_h.field_q[param2] + " " + this.field_h.field_f);
                       }
                       L10: {
                         if (!this.field_d) {

@@ -418,7 +418,7 @@ final class ih extends qe {
 
     private final void f(int param0) {
         hb stackIn_30_0 = null;
-        int stackIn_48_0 = 0;
+        int stackIn_49_0 = 0;
         int var2;
         hb var2_ref_hb;
         wb[] var3;
@@ -547,25 +547,28 @@ final class ih extends qe {
                         break L8;
                       } else {
                         L9: {
-                          var18 = ((u) ((Object) hh.field_s)).field_Q;
-                          this.a((byte) -112, -1);
-                          if (null == this.field_F) {
-                            break L9;
-                          } else {
-                            if (var18.field_t == this.field_F.field_n) {
-                              break L7;
+                          L10: {
+                            var18 = ((u) ((Object) hh.field_s)).field_Q;
+                            this.a((byte) -112, -1);
+                            if (null == this.field_F) {
+                              break L10;
                             } else {
-                              break L9;
+                              if (var18.field_t == this.field_F.field_n) {
+                                break L9;
+                              } else {
+                                break L10;
+                              }
                             }
                           }
+                          this.field_F = new wd(var18.field_e, var18.field_t, rf.field_M);
+                          if (null != var18.field_p) {
+                            gd.a(64, var18.field_p);
+                            break L9;
+                          } else {
+                            break L7;
+                          }
                         }
-                        this.field_F = new wd(var18.field_e, var18.field_t, rf.field_M);
-                        if (null != var18.field_p) {
-                          gd.a(64, var18.field_p);
-                          break L7;
-                        } else {
-                          break L7;
-                        }
+                        break L7;
                       }
                     }
                   }
@@ -586,31 +589,31 @@ final class ih extends qe {
                             this.a(6, 0);
                             break L7;
                           } else {
-                            stackIn_48_0 = no.field_d;
-                            if (stackIn_48_0 != 1) {
+                            stackIn_49_0 = no.field_d;
+                            if (stackIn_49_0 != 1) {
                               if (2 != no.field_d) {
                                 break L7;
                               } else {
-                                L10: {
+                                L11: {
                                   var2 = this.a(-1, hm.field_k, lc.field_c);
                                   if (var2 != -1) {
-                                    L11: {
+                                    L12: {
                                       um.field_i[var2] = gm.field_d.field_a[var2];
                                       if (null == um.field_i[var2]) {
-                                        break L11;
+                                        break L12;
                                       } else {
                                         if (um.field_i[var2].field_b != null) {
-                                          break L11;
+                                          break L12;
                                         } else {
                                           um.field_i[var2].field_b = new wd(um.field_i[var2].field_n.field_e);
-                                          break L11;
+                                          break L12;
                                         }
                                       }
                                     }
                                     ho.b((byte) -36);
-                                    break L10;
+                                    break L11;
                                   } else {
-                                    break L10;
+                                    break L11;
                                   }
                                 }
                                 this.field_F = null;
@@ -672,13 +675,13 @@ final class ih extends qe {
                     }
                   }
                 } else {
-                  L12: {
+                  L13: {
                     if (-1 == this.field_C) {
                       stackIn_30_0 = null;
-                      break L12;
+                      break L13;
                     } else {
                       stackIn_30_0 = um.field_i[this.field_C];
-                      break L12;
+                      break L13;
                     }
                   }
                   var17 = stackIn_30_0;

@@ -25,24 +25,38 @@ final class hl {
           this.c(127);
           var3 = this.field_b.field_i;
           L0: while (true) {
-            if (var3 == this.field_b) {
-              return var2;
-            } else {
-              var2++;
-              var3 = var3.field_i;
-              continue L0;
+            L1: {
+              if (var3 == this.field_b) {
+                break L1;
+              } else {
+                var2++;
+                var3 = var3.field_i;
+                if (var4 == 0) {
+                  continue L0;
+                } else {
+                  break L1;
+                }
+              }
             }
+            return var2;
           }
         } else {
           var3 = this.field_b.field_i;
-          L1: while (true) {
-            if (var3 == this.field_b) {
-              return var2;
-            } else {
-              var2++;
-              var3 = var3.field_i;
-              continue L1;
+          L2: while (true) {
+            L3: {
+              if (var3 == this.field_b) {
+                break L3;
+              } else {
+                var2++;
+                var3 = var3.field_i;
+                if (var4 == 0) {
+                  continue L2;
+                } else {
+                  break L3;
+                }
+              }
             }
+            return var2;
           }
         }
     }
@@ -89,32 +103,113 @@ final class hl {
     }
 
     final static String a(String param0, String param1, String param2, boolean param3) {
-        int var4;
-        int var5;
-        var5 = SolKnight.field_L ? 1 : 0;
-        if (param3) {
-          var4 = param0.indexOf(param2);
-          L0: while (true) {
-            if (-1 == var4) {
-              return param0;
-            } else {
-              param0 = param0.substring(0, var4) + param1 + param0.substring(var4 + param2.length());
-              var4 = param0.indexOf(param2, var4 + param1.length());
-              continue L0;
+        int var4 = 0;
+        int var5 = 0;
+        String stackIn_5_0 = null;
+        String stackIn_7_0 = null;
+        String stackIn_11_0 = null;
+        String stackIn_13_0 = null;
+        int statePc = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = SolKnight.field_L ? 1 : 0;
+                    if (param3) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    field_a = (int[]) null;
+                    statePc = 8;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var4 = param0.indexOf(param2);
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if (-1 == var4) {
+                        statePc = 6;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    param0 = param0.substring(0, var4) + param1 + param0.substring(var4 + param2.length());
+                    stackIn_7_0 = (String) (param0);
+                    stackIn_5_0 = stackIn_7_0;
+                    if (var5 != 0) {
+                        statePc = 7;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    var4 = ((String) (Object) stackIn_5_0).indexOf(param2, var4 + param1.length());
+                    if (var5 == 0) {
+                        statePc = 3;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    stackIn_7_0 = (String) (param0);
+                    statePc = 7;
+                    continue stateLoop;
+                }
+                case 7: {
+                    return stackIn_7_0;
+                }
+                case 8: {
+                    var4 = param0.indexOf(param2);
+                    statePc = 9;
+                    continue stateLoop;
+                }
+                case 9: {
+                    if (-1 == var4) {
+                        statePc = 12;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    param0 = param0.substring(0, var4) + param1 + param0.substring(var4 + param2.length());
+                    stackIn_13_0 = (String) (param0);
+                    stackIn_11_0 = stackIn_13_0;
+                    if (var5 != 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    var4 = ((String) (Object) stackIn_11_0).indexOf(param2, var4 + param1.length());
+                    if (var5 == 0) {
+                        statePc = 9;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    stackIn_13_0 = (String) (param0);
+                    statePc = 13;
+                    continue stateLoop;
+                }
+                case 13: {
+                    return stackIn_13_0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } else {
-          field_a = (int[]) null;
-          var4 = param0.indexOf(param2);
-          L1: while (true) {
-            if (-1 == var4) {
-              return param0;
-            } else {
-              param0 = param0.substring(0, var4) + param1 + param0.substring(var4 + param2.length());
-              var4 = param0.indexOf(param2, var4 + param1.length());
-              continue L1;
-            }
-          }
         }
     }
 

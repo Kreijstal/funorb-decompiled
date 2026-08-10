@@ -450,18 +450,21 @@ final class ma extends bg {
                 break L6;
               }
             }
-            if (this.field_u <= this.field_s) {
-              break L4;
-            } else {
-              this.field_s = this.field_s + 1;
-              if (this.field_s <= 0) {
-                break L4;
+            L7: {
+              if (this.field_u <= this.field_s) {
+                break L7;
               } else {
-                var6 = (this.field_u + -this.field_s) * (-this.field_s + this.field_u);
-                this.field_A = this.field_r + (-this.field_r + this.field_q) * var6 / var5;
-                break L4;
+                this.field_s = this.field_s + 1;
+                if (this.field_s <= 0) {
+                  break L7;
+                } else {
+                  var6 = (this.field_u + -this.field_s) * (-this.field_s + this.field_u);
+                  this.field_A = this.field_r + (-this.field_r + this.field_q) * var6 / var5;
+                  break L7;
+                }
               }
             }
+            break L4;
           }
         }
     }

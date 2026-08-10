@@ -9,14 +9,11 @@ final class ik {
     static String[] field_a;
 
     final static void a(int param0) {
-        int var1_int = 0;
+        Object var1 = null;
         int var2 = 0;
         int var4 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_23_1 = 0;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        Object var1 = null;
+        int var1_int = 0;
         RuntimeException var1_ref = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -25,97 +22,43 @@ final class ik {
             synchronized (var1) {
               L1: {
                 L2: {
-                  L3: {
-                    lp.field_j = kj.field_j;
-                    em.field_cb = em.field_cb + 1;
-                    if (0 <= qf.field_f) {
-                      break L3;
-                    } else {
-                      var2 = 0;
-                      L4: while (true) {
-                        L5: {
-                          L6: {
-                            if ((var2 ^ -1) <= -113) {
-                              break L6;
-                            } else {
-                              lc.field_m[var2] = false;
-                              var2++;
-                              if (var4 != 0) {
-                                break L5;
-                              } else {
-                                if (var4 == 0) {
-                                  continue L4;
-                                } else {
-                                  break L6;
-                                }
-                              }
-                            }
-                          }
-                          qf.field_f = fh.field_j;
-                          break L5;
-                        }
-                        if (var4 == 0) {
-                          break L2;
+                  lp.field_j = kj.field_j;
+                  em.field_cb = em.field_cb + 1;
+                  if (0 <= qf.field_f) {
+                    L3: while (true) {
+                      if (fh.field_j == qf.field_f) {
+                        break L2;
+                      } else {
+                        var2 = ln.field_f[fh.field_j];
+                        fh.field_j = fh.field_j + 1 & 127;
+                        if (-1 < (var2 ^ -1)) {
+                          lc.field_m[var2 ^ -1] = false;
+                          continue L3;
                         } else {
-                          break L3;
+                          lc.field_m[var2] = true;
+                          continue L3;
                         }
                       }
                     }
-                  }
-                  L7: while (true) {
-                    if (fh.field_j == qf.field_f) {
-                      break L2;
-                    } else {
-                      var2 = ln.field_f[fh.field_j];
-                      fh.field_j = fh.field_j + 1 & 127;
-                      stackIn_23_0 = -1;
-
-                      stackIn_23_1 = var2 ^ -1;
-
-                      if (var4 != 0) {
-                        decompiledRegionSelector0 = 0;
-                        break L1;
+                  } else {
+                    var2 = 0;
+                    L4: while (true) {
+                      if ((var2 ^ -1) <= -113) {
+                        qf.field_f = fh.field_j;
+                        break L2;
                       } else {
-                        L8: {
-                          L9: {
-                            if (stackIn_23_0 < stackIn_23_1) {
-                              break L9;
-                            } else {
-                              lc.field_m[var2] = true;
-                              if (var4 == 0) {
-                                break L8;
-                              } else {
-                                break L9;
-                              }
-                            }
-                          }
-                          lc.field_m[var2 ^ -1] = false;
-                          break L8;
-                        }
-                        if (var4 == 0) {
-                          continue L7;
-                        } else {
-                          break L2;
-                        }
+                        lc.field_m[var2] = false;
+                        var2++;
+                        continue L4;
                       }
                     }
                   }
                 }
                 kj.field_j = f.field_c;
-                decompiledRegionSelector0 = 1;
                 break L1;
               }
             }
-            L10: {
-              if (decompiledRegionSelector0 == 0) {
-                break L10;
-              } else {
-                stackIn_23_0 = -88;
-                stackIn_23_1 = (param0 - -17) / 55;
-                break L10;
-              }
-            }
-            var1_int = stackIn_23_0 % stackIn_23_1;
+            var1_int = -88 % ((param0 - -17) / 55);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

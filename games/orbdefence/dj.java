@@ -139,16 +139,16 @@ final class dj {
     }
 
     final static void a(ki param0, byte param1, ki param2, ki param3) {
-        hj var17 = null;
+        hj var18 = null;
         qg[] var5 = null;
         qg[][] var6 = null;
-        int[][] var19 = null;
-        int[][] var16 = null;
+        int[][] var20 = null;
+        int[][] var17 = null;
         int[][] var7 = null;
-        qg[] var14 = null;
+        qg[] var15 = null;
         int var11_int = 0;
-        hj var15 = null;
-        hj var18 = null;
+        hj var16 = null;
+        hj var19 = null;
         hj var11 = null;
         hj var12 = null;
         int var8 = 0;
@@ -163,50 +163,51 @@ final class dj {
             pc.field_bb = (kc) ((Object) wl.a("arezzo12", (byte) -124, "commonui", param2, param3));
             lm.field_f = (kc) ((Object) wl.a("arezzo14", (byte) -111, "commonui", param2, param3));
             if (param1 <= 91) {
+                ki var14 = (ki) null;
                 dj.a((ki) null, (byte) 9, (ki) null, (ki) null);
             }
             qc.field_b = (kc) ((Object) wl.a("arezzo14bold", (byte) -120, "commonui", param2, param3));
-            var17 = new hj(param0.a("", 1, "button.gif"), (java.awt.Component) ((Object) tf.field_f));
+            var18 = new hj(param0.a("", 1, "button.gif"), (java.awt.Component) ((Object) tf.field_f));
             uc.a(false, "commonui", param2, "dropdown");
             var5 = fl.a(-9945, param2, "commonui", "screen_options");
             kk.field_P = new qg[4];
             dc.field_h = new qg[4];
             ck.field_n = new qg[4];
             var6 = new qg[][]{dc.field_h, kk.field_P, ck.field_n};
-            var19 = new int[4][];
-            var16 = var19;
-            var7 = var16;
+            var20 = new int[4][];
+            var17 = var20;
+            var7 = var17;
             var7[0] = var5[0].field_k;
-            for (var8 = 1; var19.length > var8; var8++) {
-                var7[var8] = (int[]) ((Object) var19[0].clone());
+            for (var8 = 1; var20.length > var8; var8++) {
+                var7[var8] = (int[]) ((Object) var20[0].clone());
             }
             var8 = var5[0].field_l[0];
-            var19[2][var8] = 16777215;
-            var19[1][var8] = 2394342;
-            var19[3][var8] = 4767999;
+            var20[2][var8] = 16777215;
+            var20[1][var8] = 2394342;
+            var20[3][var8] = 4767999;
             for (var9 = 0; -4 < (var9 ^ -1); var9++) {
-                var14 = var6[var9];
-                qg[] var10 = var14;
-                for (var11_int = 0; var14.length > var11_int; var11_int++) {
-                    var14[var11_int] = h.a(var5[var9], (byte) 37, var19[var11_int]);
+                var15 = var6[var9];
+                qg[] var10 = var15;
+                for (var11_int = 0; var15.length > var11_int; var11_int++) {
+                    var15[var11_int] = h.a(var5[var9], (byte) 37, var20[var11_int]);
                 }
             }
-            var9 = var17.field_k;
+            var9 = var18.field_k;
             h.k(126);
-            var17.d();
-            ul.h(0, 0, ul.field_f, ul.field_l);
-            var15 = new hj(var9, var9);
-            var18 = var15;
             var18.d();
-            var17.b(0, 0);
+            ul.h(0, 0, ul.field_f, ul.field_l);
+            var16 = new hj(var9, var9);
+            var19 = var16;
+            var19.d();
+            var18.b(0, 0);
             var11 = new hj(var9, var9);
             var11.d();
-            var17.b(-var17.field_o + var9, 0);
-            var12 = new hj(-(2 * var9) + var17.field_o, var9);
+            var18.b(-var18.field_o + var9, 0);
+            var12 = new hj(-(2 * var9) + var18.field_o, var9);
             var12.d();
-            var17.b(-var9, 0);
+            var18.b(-var9, 0);
             oc.g((byte) -105);
-            ea.field_b = new hj[]{var15, var12, var11};
+            ea.field_b = new hj[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
             throw dd.a((Throwable) ((Object) runtimeException), "dj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -223,6 +224,7 @@ final class dj {
         field_e = null;
         field_b = null;
         if (param0 <= 72) {
+            ki var2 = (ki) null;
             dj.a((ki) null, (byte) 47, (ki) null, (ki) null);
         }
     }

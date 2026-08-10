@@ -8,11 +8,11 @@ final class df {
 
     final static void a(int param0, String param1) {
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        String stackIn_45_2 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -75,78 +75,64 @@ final class df {
                   c.field_S = 0;
                   break L5;
                 } else {
-                  L6: {
-                    if (ok.field_w) {
-                      break L6;
+                  if (ok.field_w) {
+                    c.field_S = oh.field_db;
+                    break L5;
+                  } else {
+                    if (var2_int == 0) {
+                      c.field_S = 0;
+                      break L5;
                     } else {
-                      if (var2_int == 0) {
-                        c.field_S = 0;
-                        break L5;
-                      } else {
-                        break L6;
-                      }
+                      c.field_S = oh.field_db;
+                      break L5;
                     }
                   }
-                  c.field_S = oh.field_db;
-                  if (var3 == 0) {
-                    break L5;
-                  } else {
-                    c.field_S = 0;
-                    break L5;
-                  }
                 }
               }
-              L7: {
-                aa.field_t = kb.field_r;
-                gg.field_f = rf.field_a;
-                if (param1 == null) {
-                  break L7;
+              aa.field_t = kb.field_r;
+              gg.field_f = rf.field_a;
+              if (param1 == null) {
+                if (var2_int != 0) {
+                  ok.field_w = true;
+                  break L2;
                 } else {
-                  ok.field_w = false;
-                  if (var3 == 0) {
-                    break L2;
-                  } else {
-                    break L7;
-                  }
+                  break L2;
                 }
-              }
-              if (var2_int != 0) {
-                ok.field_w = true;
-                break L2;
               } else {
+                ok.field_w = false;
                 break L2;
               }
             }
-            L8: {
+            L6: {
               if (ok.field_w) {
-                break L8;
+                break L6;
               } else {
                 if (oh.field_db <= c.field_S) {
-                  break L8;
+                  break L6;
                 } else {
                   if (!pl.field_c) {
-                    break L8;
+                    break L6;
                   } else {
                     aa.field_t = kb.field_r;
                     gg.field_f = rf.field_a;
                     c.field_S = 0;
-                    break L8;
+                    break L6;
                   }
                 }
               }
             }
-            L9: {
+            L7: {
               gf.field_b = param1;
               kb.field_r = -1;
               if (!ok.field_w) {
-                break L9;
+                break L7;
               } else {
                 if (wb.field_y == c.field_S) {
                   ok.field_w = false;
                   c.field_S = 0;
-                  break L9;
+                  break L7;
                 } else {
-                  break L9;
+                  break L7;
                 }
               }
             }
@@ -155,25 +141,25 @@ final class df {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L8: {
             var2 = decompiledCaughtException;
-            stackIn_44_0 = (RuntimeException) (var2);
+            stackIn_42_0 = (RuntimeException) (var2);
 
-            stackIn_44_1 = new StringBuilder().append("df.D(").append(param0).append(',');
+            stackIn_42_1 = new StringBuilder().append("df.D(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackIn_45_2 = "null";
-              break L10;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "null";
+              break L8;
             } else {
-              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackIn_45_2 = "{...}";
-              break L10;
+              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackIn_43_2 = "{...}";
+              break L8;
             }
           }
-          throw pf.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_43_0), stackIn_43_2 + ')');
         }
     }
 

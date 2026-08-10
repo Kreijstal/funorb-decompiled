@@ -314,63 +314,19 @@ class kg extends vg {
     }
 
     void a(int param0, int param1, vg param2, byte param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.a(param0, param1, param2, param3);
-              if (this.field_o == 0) {
-                break L1;
-              } else {
-                if (rf.field_n != this.field_o) {
-                  L2: {
-                    if (!this.a(pd.field_k, 72, bb.field_b, param1, param0)) {
-                      break L2;
-                    } else {
-                      if (rf.field_n != 0) {
-                        break L2;
-                      } else {
-                        this.a(this.field_o, pd.field_k - param0, -param1 + bb.field_b, (byte) -109);
-                        break L2;
-                      }
-                    }
-                  }
-                  this.a(pd.field_k, param1, param0, bb.field_b, -600269855, param2);
-                  break L1;
-                } else {
-                  return;
+            super.a(param0, param1, param2, param3);
+            if (this.field_o != 0) {
+                if (rf.field_n == this.field_o) {
+                    return;
                 }
-              }
+                if (this.a(pd.field_k, 72, bb.field_b, param1, param0) && rf.field_n == 0) {
+                    this.a(this.field_o, pd.field_k - param0, -param1 + bb.field_b, (byte) -109);
+                }
+                this.a(pd.field_k, param1, param0, bb.field_b, -600269855, param2);
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (runtimeException);
-
-            stackIn_10_1 = new StringBuilder().append("kg.PA(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
-          }
-          throw r.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) ((Object) runtimeException), "kg.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

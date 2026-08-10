@@ -11,28 +11,29 @@ final class wh implements Iterable {
     private br field_e;
 
     final br a(long param0, int param1) {
-        br var6 = null;
-        int var7 = ZombieDawnMulti.field_E ? 1 : 0;
-        br var4 = this.field_a[(int)(param0 & (long)(-1 + this.field_d))];
+        br var4;
+        int var5;
+        br var6;
+        int var7;
+        var7 = ZombieDawnMulti.field_E ? 1 : 0;
+        var4 = this.field_a[(int)(param0 & (long)(-1 + this.field_d))];
         this.field_e = var4.field_d;
-        int var5 = -79 / ((param1 - -3) / 54);
-        do {
-            if (var4 == this.field_e) {
-                this.field_e = null;
-                return null;
+        var5 = -79 / ((param1 - -3) / 54);
+        L0: while (true) {
+          if (var4 != this.field_e) {
+            if (param0 != this.field_e.field_e) {
+              this.field_e = this.field_e.field_d;
+              continue L0;
+            } else {
+              var6 = this.field_e;
+              this.field_e = this.field_e.field_d;
+              return var6;
             }
-            if (var7 != 0) {
-                return null;
-            }
-            if (param0 == this.field_e.field_e) {
-                var6 = this.field_e;
-                this.field_e = this.field_e.field_d;
-                return var6;
-            }
-            this.field_e = this.field_e.field_d;
-        } while (var7 == 0);
-        this.field_e = null;
-        return null;
+          } else {
+            this.field_e = null;
+            return null;
+          }
+        }
     }
 
     final void a(long param0, byte param1, br param2) {
@@ -208,59 +209,17 @@ final class wh implements Iterable {
     }
 
     wh(int param0) {
-        br dupTemp$1 = null;
         int var2 = 0;
+        br dupTemp$0 = null;
         br var3 = null;
-        int var4 = 0;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = ZombieDawnMulti.field_E ? 1 : 0;
-                    this.field_a = new br[param0];
-                    this.field_d = param0;
-                    var2 = 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (param0 <= var2) {
-                        statePc = 5;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    dupTemp$1 = new br();
-                    var3 = dupTemp$1;
-                    this.field_a[var2] = dupTemp$1;
-                    var3.field_d = var3;
-                    var3.field_b = var3;
-                    var2++;
-                    if (var4 == 0) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    if (var4 == 0) {
-                        statePc = 1;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        this.field_a = new br[param0];
+        this.field_d = param0;
+        for (var2 = 0; param0 > var2; var2++) {
+            dupTemp$0 = new br();
+            var3 = dupTemp$0;
+            this.field_a[var2] = dupTemp$0;
+            var3.field_d = var3;
+            var3.field_b = var3;
         }
     }
 

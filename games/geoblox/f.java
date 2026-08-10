@@ -293,23 +293,21 @@ class f extends qf implements pl {
                       }
                     }
                   }
-                  if (0 != jk.field_d) {
-                    L2: {
-                      if (0 == jk.field_d) {
-                        break L2;
-                      } else {
-                        if (0 != jk.field_d) {
-                          break L0;
-                        } else {
-                          break L2;
-                        }
-                      }
-                    }
-                    if (3 >= var1_int) {
+                  if (0 == jk.field_d) {
+                    if (var1_int < 3) {
+                      uf.field_b = uf.field_b + 1;
                       break L0;
                     } else {
-                      uf.field_b = uf.field_b - 1;
-                      break L0;
+                      if (0 != jk.field_d) {
+                        break L0;
+                      } else {
+                        if (3 >= var1_int) {
+                          break L0;
+                        } else {
+                          uf.field_b = uf.field_b - 1;
+                          break L0;
+                        }
+                      }
                     }
                   } else {
                     if (0 != jk.field_d) {
@@ -328,68 +326,66 @@ class f extends qf implements pl {
                   break L0;
                 }
               } else {
-                L3: {
-                  L4: {
+                L2: {
+                  L3: {
                     if (2 != jk.field_d) {
-                      break L4;
+                      break L3;
                     } else {
                       if (5 <= var1_int) {
-                        break L4;
+                        break L3;
                       } else {
                         uf.field_b = uf.field_b + 1;
-                        break L3;
+                        break L2;
                       }
                     }
                   }
-                  if (0 != jk.field_d) {
-                    L5: {
-                      if (0 == jk.field_d) {
-                        break L5;
+                  if (0 == jk.field_d) {
+                    if (var1_int < 3) {
+                      uf.field_b = uf.field_b + 1;
+                      break L2;
+                    } else {
+                      if (0 != jk.field_d) {
+                        break L2;
                       } else {
-                        if (0 != jk.field_d) {
-                          break L3;
+                        if (3 >= var1_int) {
+                          break L2;
                         } else {
-                          break L5;
+                          uf.field_b = uf.field_b - 1;
+                          break L2;
                         }
                       }
                     }
-                    if (3 >= var1_int) {
-                      break L3;
-                    } else {
-                      uf.field_b = uf.field_b - 1;
-                      break L3;
-                    }
                   } else {
                     if (0 != jk.field_d) {
-                      break L3;
+                      break L2;
                     } else {
                       if (3 >= var1_int) {
-                        break L3;
+                        break L2;
                       } else {
                         uf.field_b = uf.field_b - 1;
-                        break L3;
+                        break L2;
                       }
                     }
                   }
                 }
-                L6: {
+                L4: {
                   pa.field_g = pa.field_g - 1;
                   gi.field_e = gi.field_e + 1;
                   if (30 <= gi.field_e % param0) {
-                    break L6;
+                    break L4;
                   } else {
                     uf.field_b = 0 + ka.field_h;
-                    break L6;
+                    break L4;
                   }
                 }
-                L7: {
+                L5: {
                   if (!el.field_o.field_x) {
-                    break L7;
+                    break L5;
                   } else {
                     if (gi.field_e % 18 == 0) {
                       if (-1 == (gg.field_b ^ -1)) {
                         if (pf.field_D) {
-                          L8: {
+                          L6: {
                             gg.field_b = gg.field_b + 1;
                             g.field_j = 0;
                             fd.a(300, fl.field_c[22], false, j.field_gb);
@@ -398,25 +394,25 @@ class f extends qf implements pl {
                             fieldTemp$24 = wa.field_a;
                             wa.field_a = wa.field_a - 1;
                             if (-1 <= (fieldTemp$24 ^ -1)) {
-                              break L8;
+                              break L6;
                             } else {
                               ha.field_g = wa.field_a % 15 % 2;
-                              break L8;
+                              break L6;
                             }
                           }
-                          L9: {
+                          L7: {
                             fieldTemp$25 = jf.field_j;
                             jf.field_j = jf.field_j - 1;
                             if (-1 <= (fieldTemp$25 ^ -1)) {
-                              break L9;
+                              break L7;
                             } else {
                               rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
-                              break L9;
+                              break L7;
                             }
                           }
                           return;
                         } else {
-                          L10: {
+                          L8: {
                             g.field_j = g.field_j % 4;
                             ul.field_a = vf.field_H[g.field_j];
                             g.field_j = g.field_j + 1;
@@ -424,20 +420,20 @@ class f extends qf implements pl {
                             fieldTemp$26 = wa.field_a;
                             wa.field_a = wa.field_a - 1;
                             if (-1 <= (fieldTemp$26 ^ -1)) {
-                              break L10;
+                              break L8;
                             } else {
                               ha.field_g = wa.field_a % 15 % 2;
-                              break L10;
+                              break L8;
                             }
                           }
-                          L11: {
+                          L9: {
                             fieldTemp$27 = jf.field_j;
                             jf.field_j = jf.field_j - 1;
                             if (-1 <= (fieldTemp$27 ^ -1)) {
-                              break L11;
+                              break L9;
                             } else {
                               rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
-                              break L11;
+                              break L9;
                             }
                           }
                           return;
@@ -445,32 +441,32 @@ class f extends qf implements pl {
                       } else {
                         if ((gg.field_b ^ -1) == -2) {
                           if (ok.field_a.length > g.field_j) {
-                            L12: {
+                            L10: {
                               ul.field_a = ok.field_a[g.field_j];
                               g.field_j = g.field_j + 1;
                               var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
                               fieldTemp$28 = wa.field_a;
                               wa.field_a = wa.field_a - 1;
                               if (-1 <= (fieldTemp$28 ^ -1)) {
-                                break L12;
+                                break L10;
                               } else {
                                 ha.field_g = wa.field_a % 15 % 2;
-                                break L12;
+                                break L10;
                               }
                             }
-                            L13: {
+                            L11: {
                               fieldTemp$29 = jf.field_j;
                               jf.field_j = jf.field_j - 1;
                               if (-1 <= (fieldTemp$29 ^ -1)) {
-                                break L13;
+                                break L11;
                               } else {
                                 rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
-                                break L13;
+                                break L11;
                               }
                             }
                             return;
                           } else {
-                            L14: {
+                            L12: {
                               gg.field_b = gg.field_b + 1;
                               pa.field_g = 200;
                               g.field_j = g.field_j + 1;
@@ -478,20 +474,20 @@ class f extends qf implements pl {
                               fieldTemp$30 = wa.field_a;
                               wa.field_a = wa.field_a - 1;
                               if (-1 <= (fieldTemp$30 ^ -1)) {
-                                break L14;
+                                break L12;
                               } else {
                                 ha.field_g = wa.field_a % 15 % 2;
-                                break L14;
+                                break L12;
                               }
                             }
-                            L15: {
+                            L13: {
                               fieldTemp$31 = jf.field_j;
                               jf.field_j = jf.field_j - 1;
                               if (-1 <= (fieldTemp$31 ^ -1)) {
-                                break L15;
+                                break L13;
                               } else {
                                 rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
-                                break L15;
+                                break L13;
                               }
                             }
                             return;
@@ -500,11 +496,11 @@ class f extends qf implements pl {
                           g.field_j = g.field_j % 4;
                           ul.field_a = ld.field_b[g.field_j];
                           g.field_j = g.field_j + 1;
-                          break L7;
+                          break L5;
                         }
                       }
                     } else {
-                      break L7;
+                      break L5;
                     }
                   }
                 }
@@ -521,15 +517,15 @@ class f extends qf implements pl {
                     return;
                   }
                 } else {
-                  L16: {
+                  L14: {
                     ha.field_g = wa.field_a % 15 % 2;
                     fieldTemp$34 = jf.field_j;
                     jf.field_j = jf.field_j - 1;
                     if (-1 <= (fieldTemp$34 ^ -1)) {
-                      break L16;
+                      break L14;
                     } else {
                       rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
-                      break L16;
+                      break L14;
                     }
                   }
                   return;
@@ -537,18 +533,18 @@ class f extends qf implements pl {
               }
             }
           }
-          L17: {
+          L15: {
             pa.field_g = pa.field_g - 1;
             gi.field_e = gi.field_e + 1;
             if (30 <= gi.field_e % param0) {
-              break L17;
+              break L15;
             } else {
               uf.field_b = 0 + ka.field_h;
-              break L17;
+              break L15;
             }
           }
           if (el.field_o.field_x) {
-            L18: {
+            L16: {
               if (gi.field_e % 18 == 0) {
                 if (-1 == (gg.field_b ^ -1)) {
                   if (!pf.field_D) {
@@ -596,15 +592,15 @@ class f extends qf implements pl {
                         return;
                       }
                     } else {
-                      L19: {
+                      L17: {
                         ha.field_g = wa.field_a % 15 % 2;
                         fieldTemp$40 = jf.field_j;
                         jf.field_j = jf.field_j - 1;
                         if (-1 <= (fieldTemp$40 ^ -1)) {
-                          break L19;
+                          break L17;
                         } else {
                           rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
-                          break L19;
+                          break L17;
                         }
                       }
                       return;
@@ -613,7 +609,7 @@ class f extends qf implements pl {
                 } else {
                   if ((gg.field_b ^ -1) == -2) {
                     if (ok.field_a.length <= g.field_j) {
-                      L20: {
+                      L18: {
                         gg.field_b = gg.field_b + 1;
                         pa.field_g = 200;
                         g.field_j = g.field_j + 1;
@@ -621,10 +617,10 @@ class f extends qf implements pl {
                         fieldTemp$41 = wa.field_a;
                         wa.field_a = wa.field_a - 1;
                         if (-1 <= (fieldTemp$41 ^ -1)) {
-                          break L20;
+                          break L18;
                         } else {
                           ha.field_g = wa.field_a % 15 % 2;
-                          break L20;
+                          break L18;
                         }
                       }
                       fieldTemp$42 = jf.field_j;
@@ -636,27 +632,27 @@ class f extends qf implements pl {
                         return;
                       }
                     } else {
-                      L21: {
+                      L19: {
                         ul.field_a = ok.field_a[g.field_j];
                         g.field_j = g.field_j + 1;
                         var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
                         fieldTemp$43 = wa.field_a;
                         wa.field_a = wa.field_a - 1;
                         if (-1 <= (fieldTemp$43 ^ -1)) {
-                          break L21;
+                          break L19;
                         } else {
                           ha.field_g = wa.field_a % 15 % 2;
-                          break L21;
+                          break L19;
                         }
                       }
-                      L22: {
+                      L20: {
                         fieldTemp$44 = jf.field_j;
                         jf.field_j = jf.field_j - 1;
                         if (-1 <= (fieldTemp$44 ^ -1)) {
-                          break L22;
+                          break L20;
                         } else {
                           rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
-                          break L22;
+                          break L20;
                         }
                       }
                       return;
@@ -665,11 +661,11 @@ class f extends qf implements pl {
                     g.field_j = g.field_j % 4;
                     ul.field_a = ld.field_b[g.field_j];
                     g.field_j = g.field_j + 1;
-                    break L18;
+                    break L16;
                   }
                 }
               } else {
-                break L18;
+                break L16;
               }
             }
             var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
@@ -721,24 +717,24 @@ class f extends qf implements pl {
             }
           }
         } else {
-          L23: {
+          L21: {
             pa.field_g = pa.field_g - 1;
             gi.field_e = gi.field_e + 1;
             if (30 <= gi.field_e % param0) {
-              break L23;
+              break L21;
             } else {
               uf.field_b = 0 + ka.field_h;
-              break L23;
+              break L21;
             }
           }
-          L24: {
+          L22: {
             if (!el.field_o.field_x) {
-              break L24;
+              break L22;
             } else {
               if (gi.field_e % 18 == 0) {
                 if (-1 == (gg.field_b ^ -1)) {
                   if (pf.field_D) {
-                    L25: {
+                    L23: {
                       gg.field_b = gg.field_b + 1;
                       g.field_j = 0;
                       fd.a(300, fl.field_c[22], false, j.field_gb);
@@ -747,25 +743,25 @@ class f extends qf implements pl {
                       fieldTemp$51 = wa.field_a;
                       wa.field_a = wa.field_a - 1;
                       if (-1 <= (fieldTemp$51 ^ -1)) {
-                        break L25;
+                        break L23;
                       } else {
                         ha.field_g = wa.field_a % 15 % 2;
-                        break L25;
+                        break L23;
                       }
                     }
-                    L26: {
+                    L24: {
                       fieldTemp$52 = jf.field_j;
                       jf.field_j = jf.field_j - 1;
                       if (-1 <= (fieldTemp$52 ^ -1)) {
-                        break L26;
+                        break L24;
                       } else {
                         rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
-                        break L26;
+                        break L24;
                       }
                     }
                     return;
                   } else {
-                    L27: {
+                    L25: {
                       g.field_j = g.field_j % 4;
                       ul.field_a = vf.field_H[g.field_j];
                       g.field_j = g.field_j + 1;
@@ -773,20 +769,20 @@ class f extends qf implements pl {
                       fieldTemp$53 = wa.field_a;
                       wa.field_a = wa.field_a - 1;
                       if (-1 <= (fieldTemp$53 ^ -1)) {
-                        break L27;
+                        break L25;
                       } else {
                         ha.field_g = wa.field_a % 15 % 2;
-                        break L27;
+                        break L25;
                       }
                     }
-                    L28: {
+                    L26: {
                       fieldTemp$54 = jf.field_j;
                       jf.field_j = jf.field_j - 1;
                       if (-1 <= (fieldTemp$54 ^ -1)) {
-                        break L28;
+                        break L26;
                       } else {
                         rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
-                        break L28;
+                        break L26;
                       }
                     }
                     return;
@@ -794,32 +790,32 @@ class f extends qf implements pl {
                 } else {
                   if ((gg.field_b ^ -1) == -2) {
                     if (ok.field_a.length > g.field_j) {
-                      L29: {
+                      L27: {
                         ul.field_a = ok.field_a[g.field_j];
                         g.field_j = g.field_j + 1;
                         var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
                         fieldTemp$55 = wa.field_a;
                         wa.field_a = wa.field_a - 1;
                         if (-1 <= (fieldTemp$55 ^ -1)) {
-                          break L29;
+                          break L27;
                         } else {
                           ha.field_g = wa.field_a % 15 % 2;
-                          break L29;
+                          break L27;
                         }
                       }
-                      L30: {
+                      L28: {
                         fieldTemp$56 = jf.field_j;
                         jf.field_j = jf.field_j - 1;
                         if (-1 <= (fieldTemp$56 ^ -1)) {
-                          break L30;
+                          break L28;
                         } else {
                           rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
-                          break L30;
+                          break L28;
                         }
                       }
                       return;
                     } else {
-                      L31: {
+                      L29: {
                         gg.field_b = gg.field_b + 1;
                         pa.field_g = 200;
                         g.field_j = g.field_j + 1;
@@ -827,20 +823,20 @@ class f extends qf implements pl {
                         fieldTemp$57 = wa.field_a;
                         wa.field_a = wa.field_a - 1;
                         if (-1 <= (fieldTemp$57 ^ -1)) {
-                          break L31;
+                          break L29;
                         } else {
                           ha.field_g = wa.field_a % 15 % 2;
-                          break L31;
+                          break L29;
                         }
                       }
-                      L32: {
+                      L30: {
                         fieldTemp$58 = jf.field_j;
                         jf.field_j = jf.field_j - 1;
                         if (-1 <= (fieldTemp$58 ^ -1)) {
-                          break L32;
+                          break L30;
                         } else {
                           rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
-                          break L32;
+                          break L30;
                         }
                       }
                       return;
@@ -849,11 +845,11 @@ class f extends qf implements pl {
                     g.field_j = g.field_j % 4;
                     ul.field_a = ld.field_b[g.field_j];
                     g.field_j = g.field_j + 1;
-                    break L24;
+                    break L22;
                   }
                 }
               } else {
-                break L24;
+                break L22;
               }
             }
           }
@@ -870,15 +866,15 @@ class f extends qf implements pl {
               return;
             }
           } else {
-            L33: {
+            L31: {
               ha.field_g = wa.field_a % 15 % 2;
               fieldTemp$61 = jf.field_j;
               jf.field_j = jf.field_j - 1;
               if (-1 <= (fieldTemp$61 ^ -1)) {
-                break L33;
+                break L31;
               } else {
                 rj.field_c = ((int)(md.field_b * var1) << -1388546160) + (r.field_ub - -((int)(var1 * fe.field_c) << 1841154216) - -(int)(uk.field_j * var1));
-                break L33;
+                break L31;
               }
             }
             return;

@@ -12,23 +12,14 @@ final class ck extends IOException {
     final static String a(CharSequence param0, byte param1) {
         StringBuilder discarded$0 = null;
         Object stackIn_3_0 = null;
-        boolean stackIn_7_0 = false;
-        int stackIn_13_0 = 0;
-        boolean stackIn_15_0 = false;
-        int stackIn_19_0 = 0;
-        Object stackIn_23_0 = null;
-        boolean stackIn_29_0 = false;
-        int stackIn_34_0 = 0;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        String stackIn_41_2 = null;
+        Object stackIn_16_0 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_6_0;
-        boolean stackOut_14_0;
-        boolean stackOut_28_0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -46,121 +37,71 @@ final class ck extends IOException {
               var3 = param0.length();
               L1: while (true) {
                 L2: {
-                  L3: {
-                    if (var2_int >= var3) {
-                      break L3;
+                  if (var2_int >= var3) {
+                    break L2;
+                  } else {
+                    if (!cf.a(param0.charAt(var2_int), (byte) 78)) {
+                      break L2;
                     } else {
-                      stackOut_6_0 = cf.a(param0.charAt(var2_int), (byte) 78);
-                      stackIn_13_0 = stackOut_6_0 ? 1 : 0;
-                      stackIn_7_0 = stackOut_6_0;
-                      if (var9 != 0) {
-                        break L2;
-                      } else {
-                        if (!stackIn_7_0) {
-                          break L3;
-                        } else {
-                          var2_int++;
-                          if (var9 == 0) {
-                            continue L1;
-                          } else {
-                            stackIn_13_0 = var3;
-                            break L2;
-                          }
-                        }
-                      }
+                      var2_int++;
+                      continue L1;
                     }
                   }
-                  stackIn_13_0 = var3;
-                  break L2;
                 }
-                L4: while (true) {
-                  L5: {
-                    L6: {
-                      if (stackIn_13_0 <= var2_int) {
-                        break L6;
+                L3: while (true) {
+                  L4: {
+                    if (var3 <= var2_int) {
+                      break L4;
+                    } else {
+                      if (!cf.a(param0.charAt(var3 - 1), (byte) 78)) {
+                        break L4;
                       } else {
-                        stackOut_14_0 = cf.a(param0.charAt(var3 - 1), (byte) 78);
-                        stackIn_19_0 = stackOut_14_0 ? 1 : 0;
-                        stackIn_15_0 = stackOut_14_0;
-                        if (var9 != 0) {
-                          break L5;
-                        } else {
-                          if (!stackIn_15_0) {
-                            break L6;
-                          } else {
-                            var3--;
-                            if (var9 == 0) {
-                              stackIn_13_0 = var3;
-                              continue L4;
-                            } else {
-                              break L6;
-                            }
-                          }
-                        }
+                        var3--;
+                        continue L3;
                       }
                     }
-                    stackIn_19_0 = -var2_int + var3;
-                    break L5;
                   }
-                  var4 = stackIn_19_0;
+                  var4 = -var2_int + var3;
                   if (-2 >= (var4 ^ -1)) {
                     if ((var4 ^ -1) >= -13) {
-                      L7: {
+                      L5: {
                         var5 = new StringBuilder(var4);
                         if (param1 == -48) {
-                          break L7;
+                          break L5;
                         } else {
                           field_d = (java.awt.Frame) null;
-                          break L7;
+                          break L5;
                         }
                       }
                       var6 = var2_int;
-                      L8: while (true) {
-                        L9: {
-                          L10: {
-                            if (var3 <= var6) {
-                              break L10;
+                      L6: while (true) {
+                        if (var3 <= var6) {
+                          if (var5.length() != 0) {
+                            return var5.toString();
+                          } else {
+                            return null;
+                          }
+                        } else {
+                          L7: {
+                            var7 = param0.charAt(var6);
+                            if (!vb.a((byte) -106, (char) var7)) {
+                              break L7;
                             } else {
-                              var7 = param0.charAt(var6);
-                              stackOut_28_0 = vb.a((byte) -106, (char) var7);
-                              stackIn_34_0 = stackOut_28_0 ? 1 : 0;
-                              stackIn_29_0 = stackOut_28_0;
-                              if (var9 != 0) {
-                                break L9;
+                              var8 = hh.a(125, (char) var7);
+                              if (var8 == 0) {
+                                break L7;
                               } else {
-                                L11: {
-                                  if (!stackIn_29_0) {
-                                    break L11;
-                                  } else {
-                                    var8 = hh.a(125, (char) var7);
-                                    if (var8 == 0) {
-                                      break L11;
-                                    } else {
-                                      discarded$0 = var5.append((char) var8);
-                                      break L11;
-                                    }
-                                  }
-                                }
-                                var6++;
-                                if (var9 == 0) {
-                                  continue L8;
-                                } else {
-                                  break L10;
-                                }
+                                discarded$0 = var5.append((char) var8);
+                                break L7;
                               }
                             }
                           }
-                          stackIn_34_0 = var5.length() ^ -1;
-                          break L9;
-                        }
-                        if (stackIn_34_0 != -1) {
-                          return var5.toString();
-                        } else {
-                          return null;
+                          var6++;
+                          continue L6;
                         }
                       }
                     } else {
-                      stackIn_23_0 = null;
+                      stackIn_16_0 = null;
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -177,30 +118,30 @@ final class ck extends IOException {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L12: {
+          L8: {
             var2 = decompiledCaughtException;
-            stackIn_40_0 = (RuntimeException) (var2);
+            stackIn_31_0 = (RuntimeException) (var2);
 
-            stackIn_40_1 = new StringBuilder().append("ck.B(");
+            stackIn_31_1 = new StringBuilder().append("ck.B(");
 
             if (param0 == null) {
-              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackIn_41_2 = "null";
-              break L12;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
+              break L8;
             } else {
-              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackIn_41_2 = "{...}";
-              break L12;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
+              break L8;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ',' + param1 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return (String) ((Object) stackIn_3_0);
         } else {
-          return (String) ((Object) stackIn_23_0);
+          return (String) ((Object) stackIn_16_0);
         }
     }
 
@@ -216,22 +157,12 @@ final class ck extends IOException {
     }
 
     final static void b(byte param0) {
-        if (jc.field_b == null) {
-          if (param0 < -25) {
-            return;
-          } else {
+        if (jc.field_b != null) {
+            jc.field_b.b(58);
+            jc.field_b = null;
+        }
+        if (param0 >= -25) {
             field_a = 22;
-            return;
-          }
-        } else {
-          jc.field_b.b(58);
-          jc.field_b = null;
-          if (param0 < -25) {
-            return;
-          } else {
-            field_a = 22;
-            return;
-          }
         }
     }
 

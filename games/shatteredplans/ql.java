@@ -137,87 +137,40 @@ final class ql extends oh {
     }
 
     final static void a(int param0) {
-        RuntimeException runtimeException = null;
         gm var1 = null;
-        int var2 = 0;
-        boolean stackIn_21_0 = false;
-        RuntimeException decompiledCaughtException = null;
-        var2 = ShatteredPlansClient.field_F ? 1 : 0;
+        int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              aj.field_e.e();
-              hg.field_q.e();
-              if (param0 == -26848) {
-                break L1;
-              } else {
+            aj.field_e.e();
+            hg.field_q.e();
+            if (param0 != -26848) {
                 ql.a((byte) 108);
-                break L1;
-              }
             }
-            L2: {
-              dp.field_u = dp.field_u - 1;
-              if (dp.field_u == 0) {
+            dp.field_u = dp.field_u - 1;
+            if (!(dp.field_u != 0)) {
                 dp.field_u = 200;
                 var1 = (gm) ((Object) eo.field_ab.d(param0 ^ -26848));
-                L3: while (true) {
-                  if (var1 == null) {
-                    if (nc.field_v != null) {
-                      var1 = (gm) ((Object) nc.field_v.d(0));
-                      L4: while (true) {
-                        if (var1 == null) {
-                          break L2;
-                        } else {
-                          L5: {
-                            if (!var1.field_n.c(2048)) {
-                              var1.b((byte) -84);
-                              break L5;
-                            } else {
-                              break L5;
-                            }
-                          }
-                          var1 = (gm) ((Object) nc.field_v.a((byte) -71));
-                          continue L4;
-                        }
-                      }
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    L6: {
-                      if (!var1.field_n.c(2048)) {
+                while (var1 != null) {
+                    if (!(var1.field_n.c(2048))) {
                         var1.b((byte) -108);
-                        break L6;
-                      } else {
-                        break L6;
-                      }
                     }
                     var1 = (gm) ((Object) eo.field_ab.a((byte) -71));
-                    continue L3;
-                  }
                 }
-              } else {
-                break L2;
-              }
-            }
-            L7: {
-              if (jh.field_B == null) {
-                break L7;
-              } else {
-                stackIn_21_0 = jh.field_B.h(5309);
-                if (!stackIn_21_0) {
-                  break L7;
-                } else {
-                  break L7;
+                if (!(nc.field_v == null)) {
+                    var1 = (gm) ((Object) nc.field_v.d(0));
+                    while (var1 != null) {
+                        if (!(var1.field_n.c(2048))) {
+                            var1.b((byte) -84);
+                        }
+                        var1 = (gm) ((Object) nc.field_v.a((byte) -71));
+                    }
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "ql.A(" + param0 + ')');
+            if (jh.field_B != null) {
+                if (jh.field_B.h(5309)) {
+                }
+            }
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) ((Object) runtimeException), "ql.A(" + param0 + ')');
         }
     }
 

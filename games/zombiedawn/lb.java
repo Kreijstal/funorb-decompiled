@@ -168,27 +168,30 @@ final class lb extends pn implements hh {
                           break L3;
                         }
                       }
-                      var6_int = stackIn_15_0;
-                      if (var6_int != 0) {
-                        break L2;
-                      } else {
-                        if (param2 != this.field_V) {
-                          break L2;
+                      L4: {
+                        var6_int = stackIn_15_0;
+                        if (var6_int != 0) {
+                          break L4;
                         } else {
-                          if (this.field_cb) {
-                            if ((be.field_j ^ -1) < -1) {
-                              this.a(param2, -115);
-                              break L2;
+                          if (param2 != this.field_V) {
+                            break L4;
+                          } else {
+                            if (this.field_cb) {
+                              if ((be.field_j ^ -1) < -1) {
+                                this.a(param2, -115);
+                                break L2;
+                              } else {
+                                this.field_F.a(new kf(this.field_F), true);
+                                break L2;
+                              }
                             } else {
-                              this.field_F.a(new kf(this.field_F), true);
+                              this.field_F.a(new i(this.field_F, kb.field_f), true);
                               break L2;
                             }
-                          } else {
-                            this.field_F.a(new i(this.field_F, kb.field_f), true);
-                            break L2;
                           }
                         }
                       }
+                      break L2;
                     } else {
                       this.a(param2, -104);
                       break L2;
@@ -204,7 +207,7 @@ final class lb extends pn implements hh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var6 = decompiledCaughtException;
             stackIn_28_0 = (RuntimeException) (var6);
 
@@ -214,12 +217,12 @@ final class lb extends pn implements hh {
               stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
               stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackIn_29_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
               stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackIn_29_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw sh.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param3 + ',' + param4 + ')');

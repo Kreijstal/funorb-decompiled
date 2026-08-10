@@ -20,49 +20,39 @@ final class dn extends ie {
     final int a(byte param0, long param1) {
         int var4;
         int var5;
-        int stackIn_5_0 = 0;
         var5 = client.field_A ? 1 : 0;
         if (param0 == 109) {
-          if (this.field_g < this.field_m) {
+          if (this.field_g >= this.field_m) {
+            var4 = 0;
+            L0: while (true) {
+              L1: {
+                var4++;
+                this.field_m = this.field_m + param1;
+                if (var4 >= 10) {
+                  break L1;
+                } else {
+                  if (this.field_m < this.field_g) {
+                    continue L0;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              L2: {
+                if (this.field_m < this.field_g) {
+                  this.field_m = this.field_g;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              return var4;
+            }
+          } else {
             this.field_h = this.field_h + (-this.field_g + this.field_m);
             this.field_g = this.field_g + (this.field_m - this.field_g);
             this.field_m = this.field_m + param1;
             return 1;
-          } else {
-            var4 = 0;
-            L0: while (true) {
-              var4++;
-              this.field_m = this.field_m + param1;
-              stackIn_5_0 = var4;
-              L1: while (true) {
-                L2: {
-                  if (stackIn_5_0 >= 10) {
-                    break L2;
-                  } else {
-                    if (this.field_m < this.field_g) {
-                      continue L0;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                stackIn_5_0 = (this.field_m < this.field_g ? -1 : (this.field_m == this.field_g ? 0 : 1));
-
-                if (var5 != 0) {
-                  continue L1;
-                } else {
-                  L3: {
-                    if (stackIn_5_0 < 0) {
-                      this.field_m = this.field_g;
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  return var4;
-                }
-              }
-            }
           }
         } else {
           return -6;
@@ -71,18 +61,11 @@ final class dn extends ie {
 
     final void b(int param0) {
         if (param0 != -30693) {
-          return;
-        } else {
-          L0: {
-            this.field_h = 0L;
-            if (this.field_g < this.field_m) {
-              this.field_g = this.field_g + (-this.field_g + this.field_m);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return;
+            return;
+        }
+        this.field_h = 0L;
+        if (!(this.field_g >= this.field_m)) {
+            this.field_g = this.field_g + (-this.field_g + this.field_m);
         }
     }
 
@@ -101,10 +84,6 @@ final class dn extends ie {
         this.field_g = this.field_g + this.c(-8325);
         if (param0 != -22962) {
             this.field_o = 53;
-            if (!(this.field_g >= this.field_m)) {
-                return (-this.field_g + this.field_m) / 1000000L;
-            }
-            return 0L;
         }
         if (!(this.field_g >= this.field_m)) {
             return (-this.field_g + this.field_m) / 1000000L;
@@ -116,7 +95,7 @@ final class dn extends ie {
         int var1_int = 0;
         ac var2 = null;
         int var3 = 0;
-        ac stackIn_7_0 = null;
+        ac stackIn_6_0 = null;
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var1 = null;
         var3 = client.field_A ? 1 : 0;
@@ -137,12 +116,8 @@ final class dn extends ie {
                 var1_int++;
                 continue L2;
               } else {
-                if (var3 != 0) {
-                  continue L2;
-                } else {
-                  stackIn_7_0 = (ac) (var2);
-                  break L0;
-                }
+                stackIn_6_0 = (ac) (var2);
+                break L0;
               }
             }
           }
@@ -151,161 +126,32 @@ final class dn extends ie {
           var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
           return null;
         }
-        return stackIn_7_0;
+        return stackIn_6_0;
     }
 
     private final long c(int param0) {
-        long var2 = 0L;
-        long var4 = 0L;
-        long var6 = 0L;
         int var8 = 0;
-        int var9 = 0;
-        long stackIn_12_0 = 0L;
-        long stackIn_14_0 = 0L;
-        long stackIn_18_0 = 0L;
-        long stackIn_20_0 = 0L;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var9 = client.field_A ? 1 : 0;
-                    var2 = System.nanoTime();
-                    var4 = var2 - this.field_h;
-                    if (param0 == -8325) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    this.a(110);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    this.field_h = var2;
-                    if (var4 <= -5000000000L) {
-                        statePc = 15;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    if ((var4 ^ -1L) > -5000000001L) {
-                        statePc = 5;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    this.field_f[this.field_o] = var4;
-                    if (-2 < (this.field_n ^ -1)) {
-                        statePc = 7;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
+        int var9 = client.field_A ? 1 : 0;
+        long var2 = System.nanoTime();
+        long var4 = var2 - this.field_h;
+        if (param0 != -8325) {
+            this.a(110);
+        }
+        this.field_h = var2;
+        if (var4 > -5000000000L) {
+            if (!((var4 ^ -1L) <= -5000000001L)) {
+                this.field_f[this.field_o] = var4;
+                if (!(-2 >= (this.field_n ^ -1))) {
                     this.field_n = this.field_n + 1;
-                    statePc = 8;
-                    continue stateLoop;
                 }
-                case 8: {
-                    this.field_o = (1 + this.field_o) % 10;
-                    statePc = 9;
-                    continue stateLoop;
-                }
-                case 9: {
-                    var6 = 0L;
-                    var8 = 1;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    if (var8 > this.field_n) {
-                        statePc = 13;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
-                    stackIn_14_0 = var6 + this.field_f[(10 + (this.field_o - var8)) % 10];
-                    stackIn_12_0 = stackIn_14_0;
-                    if (var9 != 0) {
-                        statePc = 14;
-                    } else {
-                        statePc = 12;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    var6 = stackIn_12_0;
-                    var8++;
-                    if (var9 == 0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 13: {
-                    stackIn_14_0 = var6 / (long)this.field_n;
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 14: {
-                    return stackIn_14_0;
-                }
-                case 15: {
-                    var6 = 0L;
-                    var8 = 1;
-                    statePc = 16;
-                    continue stateLoop;
-                }
-                case 16: {
-                    if (var8 > this.field_n) {
-                        statePc = 19;
-                    } else {
-                        statePc = 17;
-                    }
-                    continue stateLoop;
-                }
-                case 17: {
-                    stackIn_20_0 = var6 + this.field_f[(10 + (this.field_o - var8)) % 10];
-                    stackIn_18_0 = stackIn_20_0;
-                    if (var9 != 0) {
-                        statePc = 20;
-                    } else {
-                        statePc = 18;
-                    }
-                    continue stateLoop;
-                }
-                case 18: {
-                    var6 = stackIn_18_0;
-                    var8++;
-                    if (var9 == 0) {
-                        statePc = 16;
-                    } else {
-                        statePc = 19;
-                    }
-                    continue stateLoop;
-                }
-                case 19: {
-                    stackIn_20_0 = var6 / (long)this.field_n;
-                    statePc = 20;
-                    continue stateLoop;
-                }
-                case 20: {
-                    return stackIn_20_0;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                this.field_o = (1 + this.field_o) % 10;
             }
         }
+        long var6 = 0L;
+        for (var8 = 1; var8 <= this.field_n; var8++) {
+            var6 = var6 + this.field_f[(10 + (this.field_o - var8)) % 10];
+        }
+        return var6 / (long)this.field_n;
     }
 
     dn() {

@@ -239,31 +239,24 @@ final class pc extends tj {
                     if (3 != gj.field_t) {
                       break L4;
                     } else {
-                      L5: {
-                        if (0 >= re.field_X.d(-6448)) {
-                          break L5;
+                      if (0 >= re.field_X.d(-6448)) {
+                        if ((rf.c(0) ^ -1L) >= (ta.field_f ^ -1L)) {
+                          break L4;
                         } else {
-                          var1_int = re.field_X.e(291208897);
-                          if (var1_int == 0) {
-                            gj.field_t = gj.field_t + 1;
-                            if (!Lexicominos.field_L) {
-                              break L4;
-                            } else {
-                              break L5;
-                            }
-                          } else {
-                            stackIn_22_0 = ca.a(-51, var1_int);
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          }
+                          stackIn_26_0 = ca.a(-51, -2);
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         }
-                      }
-                      if ((rf.c(0) ^ -1L) >= (ta.field_f ^ -1L)) {
-                        break L4;
                       } else {
-                        stackIn_26_0 = ca.a(-51, -2);
-                        decompiledRegionSelector0 = 2;
-                        break L0;
+                        var1_int = re.field_X.e(291208897);
+                        if (var1_int == 0) {
+                          gj.field_t = gj.field_t + 1;
+                          break L4;
+                        } else {
+                          stackIn_22_0 = ca.a(-51, var1_int);
+                          decompiledRegionSelector0 = 1;
+                          break L0;
+                        }
                       }
                     }
                   }

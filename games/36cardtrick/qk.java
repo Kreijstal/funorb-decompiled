@@ -194,7 +194,7 @@ final class qk {
                           break L10;
                         }
                       }
-                      throw ma.a((Throwable) ((Object) stackIn_38_0), (stackIn_38_2 != 0) + " " + param1 + " " + param2.length + " " + uh.a((byte) 124, param2.length, var9) + " " + uh.a((byte) 114, -2 + param2.length, var9) + " " + this.field_c.field_i[param1] + " " + this.field_c.field_g);
+                      throw ma.a((Throwable) ((Object) stackIn_38_0), (stackIn_38_2 != 0) + " " + param1 + " " + var9.length + " " + uh.a((byte) 124, var9.length, var9) + " " + uh.a((byte) 114, -2 + var9.length, var9) + " " + this.field_c.field_i[param1] + " " + this.field_c.field_g);
                     }
                     L11: {
                       if (!this.field_e) {

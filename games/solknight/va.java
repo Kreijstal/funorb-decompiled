@@ -88,51 +88,37 @@ abstract class va {
         stackIn_3_0.field_r = stackIn_3_1 != 0;
         var8.field_y = param4;
         if (param3 == 437409504) {
-          L1: {
-            if (!param1) {
-              break L1;
+          if (!param1) {
+            if (this.c(125) >= 20) {
+              throw new RuntimeException();
             } else {
-              if (-21 < (this.b(false) ^ -1)) {
-                this.field_m.a(var8, 0);
-                if (SolKnight.field_L) {
-                  break L1;
-                } else {
-                  return var8;
-                }
-              } else {
-                throw new RuntimeException();
-              }
+              this.field_d.a(var8, param3 + -437409504);
+              return var8;
             }
-          }
-          if (this.c(125) >= 20) {
-            throw new RuntimeException();
           } else {
-            this.field_d.a(var8, param3 + -437409504);
-            return var8;
+            if (-21 < (this.b(false) ^ -1)) {
+              this.field_m.a(var8, 0);
+              return var8;
+            } else {
+              throw new RuntimeException();
+            }
           }
         } else {
-          L2: {
-            this.d((byte) -77);
-            if (!param1) {
-              break L2;
+          this.d((byte) -77);
+          if (!param1) {
+            if (this.c(125) >= 20) {
+              throw new RuntimeException();
             } else {
-              if (-21 < (this.b(false) ^ -1)) {
-                this.field_m.a(var8, 0);
-                if (SolKnight.field_L) {
-                  break L2;
-                } else {
-                  return var8;
-                }
-              } else {
-                throw new RuntimeException();
-              }
+              this.field_d.a(var8, param3 + -437409504);
+              return var8;
             }
-          }
-          if (this.c(125) >= 20) {
-            throw new RuntimeException();
           } else {
-            this.field_d.a(var8, param3 + -437409504);
-            return var8;
+            if (-21 < (this.b(false) ^ -1)) {
+              this.field_m.a(var8, 0);
+              return var8;
+            } else {
+              throw new RuntimeException();
+            }
           }
         }
     }

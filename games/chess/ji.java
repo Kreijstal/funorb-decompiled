@@ -35,35 +35,38 @@ final class ji extends kn {
         try {
           L0: {
             L1: {
-              super.a(param0, param1, param2, param3, param4 ^ param4, param5);
-              var7 = vj.field_a;
-              if (var7 == null) {
-                break L1;
-              } else {
-                if (!this.a(param0, param5, param2, (byte) -117, param3)) {
-                  break L1;
+              L2: {
+                super.a(param0, param1, param2, param3, param4 ^ param4, param5);
+                var7 = vj.field_a;
+                if (var7 == null) {
+                  break L2;
                 } else {
-                  if (this.field_p instanceof cj) {
-                    ((cj) ((Object) this.field_p)).a(var7, -10925, (ji) (this));
-                    vj.field_a = null;
-                    break L1;
+                  if (!this.a(param0, param5, param2, (byte) -117, param3)) {
+                    break L2;
                   } else {
-                    if (!(var7.field_p instanceof cj)) {
-                      break L1;
-                    } else {
-                      ((cj) ((Object) var7.field_p)).a(var7, -10925, (ji) (this));
+                    if (this.field_p instanceof cj) {
+                      ((cj) ((Object) this.field_p)).a(var7, -10925, (ji) (this));
                       vj.field_a = null;
                       break L1;
+                    } else {
+                      if (!(var7.field_p instanceof cj)) {
+                        break L2;
+                      } else {
+                        ((cj) ((Object) var7.field_p)).a(var7, -10925, (ji) (this));
+                        vj.field_a = null;
+                        break L1;
+                      }
                     }
                   }
                 }
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var7_ref = decompiledCaughtException;
             stackIn_9_0 = (RuntimeException) (var7_ref);
 
@@ -73,12 +76,12 @@ final class ji extends kn {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "null";
-              break L2;
+              break L3;
             } else {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "{...}";
-              break L2;
+              break L3;
             }
           }
           throw fk.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

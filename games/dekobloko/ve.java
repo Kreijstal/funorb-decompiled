@@ -120,15 +120,13 @@ final class ve extends w {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8, int param9) {
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
+        int var16 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int[] var10 = null;
         RuntimeException var10_ref = null;
         int var11 = 0;
@@ -136,169 +134,61 @@ final class ve extends w {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        int var16 = 0;
         int[] var17 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var16 = client.field_A ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param6 == 9) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        ve.h((byte) 90);
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        param5--;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        param5--;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (param5 < 0) {
-                            statePc = 15;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var17 = param7;
-                        var10 = var17;
-                        var11 = param1;
-                        var12 = param4;
-                        var13 = param0;
-                        var14 = param8;
-                        var15 = 8355711 & var17[var11] >> -852264639;
-                        var10[var11] = var15 + lb.a(65280, var13 >> -1295343735) + (lb.a(var12 >> 1494704929, 16711680) + lb.a(var14 >> 200866833, 255));
-                        param4 = param4 + param3;
-                        param1++;
-                        param8 = param8 + param9;
-                        param0 = param0 + param2;
-                        if (var16 == 0) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        if (var16 == 0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    var10_ref = (RuntimeException) ((Object) caughtException);
-                    stackIn_13_0 = (RuntimeException) (var10_ref);
-                    stackIn_12_0 = stackIn_13_0;
-                    stackIn_13_1 = new StringBuilder().append("ve.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-                    stackIn_12_1 = stackIn_13_1;
-                    if (param7 == null) {
-                        statePc = 13;
-                    } else {
-                        statePc = 12;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    stackIn_14_0 = (RuntimeException) ((Object) stackIn_12_0);
-                    stackIn_14_1 = (StringBuilder) ((Object) stackIn_12_1);
-                    stackIn_14_2 = "{...}";
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 13: {
-                    stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-                    stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-                    stackIn_14_2 = "null";
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 14: {
-                    throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param8 + ',' + param9 + ')');
-                }
-                case 15: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var16 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param6 == 9) {
+                break L1;
+              } else {
+                ve.h((byte) 90);
+                break L1;
+              }
             }
+            param5--;
+            L2: while (true) {
+              if (param5 < 0) {
+                break L0;
+              } else {
+                var17 = param7;
+                var10 = var17;
+                var11 = param1;
+                var12 = param4;
+                var13 = param0;
+                var14 = param8;
+                var15 = 8355711 & var17[var11] >> -852264639;
+                var10[var11] = var15 + lb.a(65280, var13 >> -1295343735) + (lb.a(var12 >> 1494704929, 16711680) + lb.a(var14 >> 200866833, 255));
+                param4 = param4 + param3;
+                param1++;
+                param8 = param8 + param9;
+                param0 = param0 + param2;
+                param5--;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var10_ref = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (var10_ref);
+
+            stackIn_10_1 = new StringBuilder().append("ve.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
+
+            if (param7 == null) {
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
+              break L3;
+            } else {
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
+              break L3;
+            }
+          }
+          throw dh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

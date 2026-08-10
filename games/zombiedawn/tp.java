@@ -482,55 +482,58 @@ final class tp extends sp {
                 }
               }
               L13: {
-                if (null == this.field_n) {
-                  break L13;
-                } else {
-                  if (this.field_o != 0) {
-                    L14: {
+                L14: {
+                  if (null == this.field_n) {
+                    break L14;
+                  } else {
+                    if (this.field_o != 0) {
                       L15: {
-                        if (null == this.field_z) {
-                          break L15;
-                        } else {
-                          if (var6 <= this.field_z.length) {
-                            gp.a(this.field_z, 0, var6);
-                            break L14;
+                        L16: {
+                          if (null == this.field_z) {
+                            break L16;
                           } else {
-                            break L15;
+                            if (var6 <= this.field_z.length) {
+                              gp.a(this.field_z, 0, var6);
+                              break L15;
+                            } else {
+                              break L16;
+                            }
                           }
                         }
+                        this.field_z = new int[var6];
+                        this.field_q = new int[var6];
+                        break L15;
                       }
-                      this.field_z = new int[var6];
-                      this.field_q = new int[var6];
-                      break L14;
-                    }
-                    L16: {
-                      this.field_s.a(this.field_z, 0, param2);
-                      if (qf.field_l) {
-                        param1 = param1 << 1;
-                        stackIn_64_0 = param1 << 1;
-                        break L16;
-                      } else {
-                        stackIn_64_0 = param1;
-                        break L16;
+                      L17: {
+                        this.field_s.a(this.field_z, 0, param2);
+                        if (qf.field_l) {
+                          param1 = param1 << 1;
+                          stackIn_64_0 = param1 << 1;
+                          break L17;
+                        } else {
+                          stackIn_64_0 = param1;
+                          break L17;
+                        }
                       }
-                    }
-                    var7 = stackIn_64_0;
-                    var8 = this.field_o * this.field_y / 256;
-                    var9 = -var8 + this.field_y;
-                    var10 = 0;
-                    L17: while (true) {
-                      if (var10 >= var6) {
-                        break L13;
-                      } else {
-                        param0[var10 + var7] = param0[var7 - -var10] * var9 - -(var8 * this.field_z[var10]) >> 832242696;
-                        var10++;
-                        continue L17;
+                      var7 = stackIn_64_0;
+                      var8 = this.field_o * this.field_y / 256;
+                      var9 = -var8 + this.field_y;
+                      var10 = 0;
+                      L18: while (true) {
+                        if (var10 >= var6) {
+                          break L14;
+                        } else {
+                          param0[var10 + var7] = param0[var7 - -var10] * var9 - -(var8 * this.field_z[var10]) >> 832242696;
+                          var10++;
+                          continue L18;
+                        }
                       }
+                    } else {
+                      break L13;
                     }
-                  } else {
-                    break L13;
                   }
                 }
+                break L13;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -538,7 +541,7 @@ final class tp extends sp {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L18: {
+          L19: {
             var4 = decompiledCaughtException;
             stackIn_70_0 = (RuntimeException) (var4);
 
@@ -548,12 +551,12 @@ final class tp extends sp {
               stackIn_71_0 = (RuntimeException) ((Object) stackIn_70_0);
               stackIn_71_1 = (StringBuilder) ((Object) stackIn_70_1);
               stackIn_71_2 = "null";
-              break L18;
+              break L19;
             } else {
               stackIn_71_0 = (RuntimeException) ((Object) stackIn_70_0);
               stackIn_71_1 = (StringBuilder) ((Object) stackIn_70_1);
               stackIn_71_2 = "{...}";
-              break L18;
+              break L19;
             }
           }
           throw sh.a((Throwable) ((Object) stackIn_71_0), stackIn_71_2 + ',' + param1 + ',' + param2 + ')');
@@ -768,23 +771,28 @@ final class tp extends sp {
               }
             }
           } else {
-            if (1048576 <= this.field_u) {
-              if (0 >= this.field_o) {
-                break L0;
-              } else {
-                if (null != this.field_n) {
-                  this.field_s.a(param0);
+            if (1048576 > this.field_u) {
+              if (this.field_r != null) {
+                this.field_t.a(param0);
+                if (0 >= this.field_o) {
                   break L0;
                 } else {
-                  if (0 >= this.field_o) {
+                  if (null == this.field_n) {
                     break L0;
                   } else {
-                    if (null == this.field_n) {
-                      break L0;
-                    } else {
-                      this.field_s.a(param0);
-                      break L0;
-                    }
+                    this.field_s.a(param0);
+                    break L0;
+                  }
+                }
+              } else {
+                if (0 >= this.field_o) {
+                  break L0;
+                } else {
+                  if (null == this.field_n) {
+                    break L0;
+                  } else {
+                    this.field_s.a(param0);
+                    break L0;
                   }
                 }
               }

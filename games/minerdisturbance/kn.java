@@ -414,6 +414,7 @@ class kn extends fe implements rk {
     }
 
     void a(int param0, int param1, byte param2, fe param3) {
+        RuntimeException runtimeException = null;
         hh var5 = null;
         fe var6 = null;
         int var7 = 0;
@@ -424,7 +425,6 @@ class kn extends fe implements rk {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -457,8 +457,8 @@ class kn extends fe implements rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
 
             stackIn_10_1 = new StringBuilder().append("kn.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 

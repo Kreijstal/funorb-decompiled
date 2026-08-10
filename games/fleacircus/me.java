@@ -60,48 +60,34 @@ final class me implements ch {
             this.field_j.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_i + "</u>", param1 + param3.field_y, param4 + param3.field_z, param3.field_u, param3.field_j, var6_int, -1, this.field_h, this.field_d, this.field_j.field_H + this.field_j.field_K);
             if (param3.e(1)) {
               L4: {
-                L5: {
-                  var7 = this.field_j.b(param3.field_i);
-                  var8 = this.field_j.field_H + this.field_j.field_K;
-                  var9 = param3.field_y + param1;
-                  var10 = param4 + param3.field_z;
-                  if (-3 != (this.field_h ^ -1)) {
-                    break L5;
+                var7 = this.field_j.b(param3.field_i);
+                var8 = this.field_j.field_H + this.field_j.field_K;
+                var9 = param3.field_y + param1;
+                var10 = param4 + param3.field_z;
+                if (-3 != (this.field_h ^ -1)) {
+                  if ((this.field_h ^ -1) != -2) {
+                    break L4;
                   } else {
-                    var9 = var9 + (param3.field_u - var7);
-                    if (var11 == 0) {
-                      break L4;
-                    } else {
-                      break L5;
-                    }
+                    var9 = var9 + (-var7 + param3.field_u >> -1626499839);
+                    break L4;
                   }
-                }
-                if ((this.field_h ^ -1) != -2) {
-                  break L4;
                 } else {
-                  var9 = var9 + (-var7 + param3.field_u >> -1626499839);
+                  var9 = var9 + (param3.field_u - var7);
                   break L4;
                 }
               }
-              L6: {
-                L7: {
-                  if (2 == this.field_d) {
-                    break L7;
+              L5: {
+                if (2 == this.field_d) {
+                  var10 = var10 + (-var8 + param3.field_j);
+                  break L5;
+                } else {
+                  if ((this.field_d ^ -1) != -2) {
+                    break L5;
                   } else {
-                    if ((this.field_d ^ -1) != -2) {
-                      break L6;
-                    } else {
-                      var10 = var10 + (param3.field_j + -var8 >> 229519201);
-                      if (var11 == 0) {
-                        break L6;
-                      } else {
-                        break L7;
-                      }
-                    }
+                    var10 = var10 + (param3.field_j + -var8 >> 229519201);
+                    break L5;
                   }
                 }
-                var10 = var10 + (-var8 + param3.field_j);
-                break L6;
               }
               ek.a(var8, var9 - 2, 2 + var10, 1, var7 - -4);
               break L0;
@@ -111,7 +97,7 @@ final class me implements ch {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L6: {
             var6 = decompiledCaughtException;
             stackIn_21_0 = (RuntimeException) (var6);
 
@@ -121,12 +107,12 @@ final class me implements ch {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "null";
-              break L8;
+              break L6;
             } else {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "{...}";
-              break L8;
+              break L6;
             }
           }
           throw pf.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param4 + ')');
@@ -227,111 +213,25 @@ final class me implements ch {
     }
 
     final static dd[] b(int param0) {
-        int var1 = 0;
-        dd[] var2 = null;
         int var3 = 0;
         int var4 = 0;
+        byte[] var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        int var8 = 0;
-        byte[] var10 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_12_0 = 0;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var8 = fleas.field_A ? 1 : 0;
-                    var1 = -93 / ((param0 - -66) / 37);
-                    var2 = new dd[ef.field_l];
-                    var3 = 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (ef.field_l <= var3) {
-                        statePc = 11;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var4 = ij.field_H[var3] * ob.field_a[var3];
-                    var10 = of.field_d[var3];
-                    var6 = new int[var4];
-                    stackIn_12_0 = 0;
-                    stackIn_3_0 = stackIn_12_0;
-                    if (var8 != 0) {
-                        statePc = 12;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var7 = stackIn_3_0;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (var4 <= var7) {
-                        statePc = 8;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    var6[var7] = rd.field_d[sc.a((int) var10[var7], 255)];
-                    var7++;
-                    if (var8 != 0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    if (var8 == 0) {
-                        statePc = 4;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    var2[var3] = new dd(e.field_e, uf.field_k, vg.field_I[var3], b.field_b[var3], ij.field_H[var3], ob.field_a[var3], var6);
-                    var3++;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 9: {
-                    var2[var3] = new dd(e.field_e, uf.field_k, vg.field_I[var3], b.field_b[var3], ij.field_H[var3], ob.field_a[var3], var6);
-                    var3++;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    if (var8 == 0) {
-                        statePc = 1;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
-                    stackIn_12_0 = -28210;
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 12: {
-                    c.o(stackIn_12_0);
-                    return var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int var8 = fleas.field_A ? 1 : 0;
+        int var1 = -93 / ((param0 - -66) / 37);
+        dd[] var2 = new dd[ef.field_l];
+        for (var3 = 0; ef.field_l > var3; var3++) {
+            var4 = ij.field_H[var3] * ob.field_a[var3];
+            var5 = of.field_d[var3];
+            var6 = new int[var4];
+            for (var7 = 0; var4 > var7; var7++) {
+                var6[var7] = rd.field_d[sc.a((int) var5[var7], 255)];
             }
+            var2[var3] = new dd(e.field_e, uf.field_k, vg.field_I[var3], b.field_b[var3], ij.field_H[var3], ob.field_a[var3], var6);
         }
+        c.o(-28210);
+        return var2;
     }
 
     final static void a(int param0, int param1, boolean param2) {

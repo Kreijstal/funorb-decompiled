@@ -150,66 +150,33 @@ final class ka extends ig {
 
     final static void a(boolean param0, int param1) {
         kf var2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
         try {
-          L0: {
-            L1: {
-              ec.field_b = param1;
-              if (param0) {
-                break L1;
-              } else {
+            ec.field_b = param1;
+            if (!param0) {
                 field_q = -113;
-                break L1;
-              }
             }
             var2 = (kf) ((Object) oj.field_o.c((byte) -36));
-            L2: while (true) {
-              if (var2 == null) {
-                L3: {
-                  if (null == mp.field_R) {
-                    break L3;
-                  } else {
-                    var2 = (kf) ((Object) mp.field_R.c((byte) 113));
-                    L4: while (true) {
-                      if (var2 == null) {
-                        break L3;
-                      } else {
-                        L5: {
-                          if (var2.field_m.b(-113)) {
-                            var2.field_o.d(128 + var2.field_n * ec.field_b >> -1219814008);
-                            break L5;
-                          } else {
-                            var2.a((byte) -117);
-                            break L5;
-                          }
-                        }
-                        var2 = (kf) ((Object) mp.field_R.f((byte) -5));
-                        continue L4;
-                      }
-                    }
-                  }
-                }
-                break L0;
-              } else {
-                L6: {
-                  if (!var2.field_m.b(-108)) {
-                    var2.a((byte) -117);
-                    break L6;
-                  } else {
+            while (var2 != null) {
+                if (var2.field_m.b(-108)) {
                     var2.field_o.d(ec.field_b * var2.field_n + 128 >> 1000803112);
-                    break L6;
-                  }
+                } else {
+                    var2.a((byte) -117);
                 }
                 var2 = (kf) ((Object) oj.field_o.f((byte) -5));
-                continue L2;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2_ref), "ka.M(" + param0 + ',' + param1 + ')');
+            if (null != mp.field_R) {
+                var2 = (kf) ((Object) mp.field_R.c((byte) 113));
+                while (var2 != null) {
+                    if (!var2.field_m.b(-113)) {
+                        var2.a((byte) -117);
+                    } else {
+                        var2.field_o.d(128 + var2.field_n * ec.field_b >> -1219814008);
+                    }
+                    var2 = (kf) ((Object) mp.field_R.f((byte) -5));
+                }
+            }
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) ((Object) runtimeException), "ka.M(" + param0 + ',' + param1 + ')');
         }
     }
 

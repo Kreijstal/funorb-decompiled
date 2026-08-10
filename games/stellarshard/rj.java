@@ -74,17 +74,20 @@ class rj extends gg {
                       break L3;
                     }
                   }
-                  ((rj) (this)).field_q = stackIn_10_1 != 0;
-                  if (null == this.field_v) {
-                    break L2;
-                  } else {
-                    if (!(this.field_v instanceof da)) {
-                      break L2;
+                  L4: {
+                    ((rj) (this)).field_q = stackIn_10_1 != 0;
+                    if (null == this.field_v) {
+                      break L4;
                     } else {
-                      ((da) ((Object) this.field_v)).a((byte) 76, var5_int != 0, (rj) (this));
-                      break L2;
+                      if (!(this.field_v instanceof da)) {
+                        break L4;
+                      } else {
+                        ((da) ((Object) this.field_v)).a((byte) 76, var5_int != 0, (rj) (this));
+                        break L2;
+                      }
                     }
                   }
+                  break L2;
                 } else {
                   break L2;
                 }
@@ -98,7 +101,7 @@ class rj extends gg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var5 = decompiledCaughtException;
             stackIn_16_0 = (RuntimeException) (var5);
 
@@ -108,12 +111,12 @@ class rj extends gg {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw ma.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
@@ -1380,19 +1383,22 @@ class rj extends gg {
             L7: {
               if (null != this.field_v) {
                 L8: {
-                  discarded$6 = param2.append(" listener=");
-                  if (this.field_v instanceof rj) {
-                    break L8;
-                  } else {
-                    discarded$7 = param2.append(this.field_v);
-                    if (var6 == 0) {
-                      break L7;
+                  L9: {
+                    discarded$6 = param2.append(" listener=");
+                    if (this.field_v instanceof rj) {
+                      break L9;
                     } else {
-                      break L8;
+                      discarded$7 = param2.append(this.field_v);
+                      if (var6 == 0) {
+                        break L8;
+                      } else {
+                        break L9;
+                      }
                     }
                   }
+                  param2 = this.a(1 + param1, false, param2, param3);
+                  break L8;
                 }
-                param2 = this.a(1 + param1, false, param2, param3);
                 break L7;
               } else {
                 break L7;
@@ -1402,7 +1408,7 @@ class rj extends gg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L10: {
             var5 = decompiledCaughtException;
             stackIn_25_0 = (RuntimeException) (var5);
 
@@ -1412,15 +1418,15 @@ class rj extends gg {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "null";
-              break L9;
+              break L10;
             } else {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "{...}";
-              break L9;
+              break L10;
             }
           }
-          L10: {
+          L11: {
 
 
             stackIn_28_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',');
@@ -1429,12 +1435,12 @@ class rj extends gg {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_26_0);
               stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackIn_29_2 = "null";
-              break L10;
+              break L11;
             } else {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_26_0);
               stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackIn_29_2 = "{...}";
-              break L10;
+              break L11;
             }
           }
           throw ma.a((Throwable) ((Object) stackIn_26_0), stackIn_29_2 + ')');

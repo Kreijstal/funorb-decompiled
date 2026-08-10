@@ -54,89 +54,92 @@ final class oo extends tf {
                 this.field_w = param0.l(-1);
                 break L1;
               } else {
-                if (param1 == 2) {
-                  var5 = param0.e((byte) -112);
-                  this.field_n = new char[var5];
-                  this.field_p = new int[var5];
-                  var6 = 0;
-                  L2: while (true) {
-                    if (var5 <= var6) {
-                      break L1;
-                    } else {
-                      L3: {
-                        this.field_p[var6] = param0.n(-98);
-                        var7 = param0.o(6);
-                        stackIn_16_0 = this.field_n;
-
-                        stackIn_16_1 = var6;
-
-                        if (var7 == 0) {
-                          stackIn_17_0 = (char[]) ((Object) stackIn_16_0);
-                          stackIn_17_1 = stackIn_16_1;
-                          stackIn_17_2 = (char)0;
-                          break L3;
-                        } else {
-                          stackIn_17_0 = (char[]) ((Object) stackIn_16_0);
-                          stackIn_17_1 = stackIn_16_1;
-                          stackIn_17_2 = hm.a((byte) var7, -112);
-                          break L3;
-                        }
-                      }
-                      stackIn_17_0[stackIn_17_1] = stackIn_17_2;
-                      var6++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  if (param1 == 3) {
-                    var5 = param0.e((byte) 34);
-                    this.field_z = new char[var5];
-                    this.field_D = new int[var5];
+                L2: {
+                  if (param1 == 2) {
+                    var5 = param0.e((byte) -112);
+                    this.field_n = new char[var5];
+                    this.field_p = new int[var5];
                     var6 = 0;
-                    L4: while (true) {
-                      if (var6 >= var5) {
-                        break L1;
+                    L3: while (true) {
+                      if (var5 <= var6) {
+                        break L2;
                       } else {
-                        L5: {
-                          this.field_D[var6] = param0.n(-98);
+                        L4: {
+                          this.field_p[var6] = param0.n(-98);
                           var7 = param0.o(6);
-                          stackIn_10_0 = this.field_z;
+                          stackIn_16_0 = this.field_n;
 
-                          stackIn_10_1 = var6;
+                          stackIn_16_1 = var6;
 
-                          if (var7 != 0) {
-                            stackIn_11_0 = (char[]) ((Object) stackIn_10_0);
-                            stackIn_11_1 = stackIn_10_1;
-                            stackIn_11_2 = hm.a((byte) var7, -104);
-                            break L5;
+                          if (var7 == 0) {
+                            stackIn_17_0 = (char[]) ((Object) stackIn_16_0);
+                            stackIn_17_1 = stackIn_16_1;
+                            stackIn_17_2 = (char)0;
+                            break L4;
                           } else {
-                            stackIn_11_0 = (char[]) ((Object) stackIn_10_0);
-                            stackIn_11_1 = stackIn_10_1;
-                            stackIn_11_2 = 0;
-                            break L5;
+                            stackIn_17_0 = (char[]) ((Object) stackIn_16_0);
+                            stackIn_17_1 = stackIn_16_1;
+                            stackIn_17_2 = hm.a((byte) var7, -112);
+                            break L4;
                           }
                         }
-                        stackIn_11_0[stackIn_11_1] = (char) stackIn_11_2;
+                        stackIn_17_0[stackIn_17_1] = stackIn_17_2;
                         var6++;
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
-                    if ((param1 ^ -1) != -5) {
-                      break L1;
+                    if (param1 == 3) {
+                      var5 = param0.e((byte) 34);
+                      this.field_z = new char[var5];
+                      this.field_D = new int[var5];
+                      var6 = 0;
+                      L5: while (true) {
+                        if (var6 >= var5) {
+                          break L2;
+                        } else {
+                          L6: {
+                            this.field_D[var6] = param0.n(-98);
+                            var7 = param0.o(6);
+                            stackIn_10_0 = this.field_z;
+
+                            stackIn_10_1 = var6;
+
+                            if (var7 != 0) {
+                              stackIn_11_0 = (char[]) ((Object) stackIn_10_0);
+                              stackIn_11_1 = stackIn_10_1;
+                              stackIn_11_2 = hm.a((byte) var7, -104);
+                              break L6;
+                            } else {
+                              stackIn_11_0 = (char[]) ((Object) stackIn_10_0);
+                              stackIn_11_1 = stackIn_10_1;
+                              stackIn_11_2 = 0;
+                              break L6;
+                            }
+                          }
+                          stackIn_11_0[stackIn_11_1] = (char) stackIn_11_2;
+                          var6++;
+                          continue L5;
+                        }
+                      }
                     } else {
-                      this.field_A = true;
-                      break L1;
+                      if ((param1 ^ -1) != -5) {
+                        break L2;
+                      } else {
+                        this.field_A = true;
+                        break L1;
+                      }
                     }
                   }
                 }
+                break L1;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var4 = decompiledCaughtException;
             stackIn_22_0 = (RuntimeException) (var4);
 
@@ -146,12 +149,12 @@ final class oo extends tf {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw aa.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ',' + param2 + ')');

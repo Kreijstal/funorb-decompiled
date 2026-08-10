@@ -1073,25 +1073,28 @@ class jd implements fc, sf {
                   if (-4 == (var6 ^ -1)) {
                     break L6;
                   } else {
-                    if (var6 != 1) {
-                      if (2 != var6) {
-                        break L5;
-                      } else {
-                        if (param1.field_l instanceof mb) {
-                          ((mb) ((Object) param1.field_l)).a(this.a(true, param1), this.field_b, var5, 97, var3_int);
-                          break L5;
+                    L7: {
+                      if (var6 != 1) {
+                        if (2 != var6) {
+                          break L7;
                         } else {
+                          if (param1.field_l instanceof mb) {
+                            ((mb) ((Object) param1.field_l)).a(this.a(true, param1), this.field_b, var5, 97, var3_int);
+                            break L7;
+                          } else {
+                            break L5;
+                          }
+                        }
+                      } else {
+                        if (!(param1.field_l instanceof mb)) {
+                          break L7;
+                        } else {
+                          ((mb) ((Object) param1.field_l)).a(var5, this.a(true, param1), this.field_b, var3_int >> 1277950913, false);
                           break L5;
                         }
                       }
-                    } else {
-                      if (!(param1.field_l instanceof mb)) {
-                        break L5;
-                      } else {
-                        ((mb) ((Object) param1.field_l)).a(var5, this.a(true, param1), this.field_b, var3_int >> 1277950913, false);
-                        break L5;
-                      }
                     }
+                    break L5;
                   }
                 } else {
                   break L6;
@@ -1108,7 +1111,7 @@ class jd implements fc, sf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var3 = decompiledCaughtException;
             stackIn_35_0 = (RuntimeException) (var3);
 
@@ -1118,12 +1121,12 @@ class jd implements fc, sf {
               stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
               stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackIn_36_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
               stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackIn_36_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw ii.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ')');

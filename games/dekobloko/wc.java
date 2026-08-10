@@ -43,19 +43,18 @@ final class wc extends bh {
 
     final static String a(boolean param0, CharSequence param1, int param2) {
         String var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         String stackIn_4_0 = null;
         String stackIn_11_0 = null;
-        Object stackIn_14_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3_ref = null;
         var5 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -74,13 +73,7 @@ final class wc extends bh {
                     break L0;
                   } else {
                     var4++;
-                    if (var5 == 0) {
-                      continue L1;
-                    } else {
-                      stackIn_14_0 = null;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    }
+                    continue L1;
                   }
                 } else {
                   return null;
@@ -92,37 +85,32 @@ final class wc extends bh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var3_ref);
+            stackIn_16_0 = (RuntimeException) (var3_ref);
 
-            stackIn_17_1 = new StringBuilder().append("wc.A(").append(param0).append(',');
+            stackIn_16_1 = new StringBuilder().append("wc.A(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
               break L2;
             } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
               break L2;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0;
         } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_11_0;
-          } else {
-            return (String) ((Object) stackIn_14_0);
-          }
+          return stackIn_11_0;
         }
     }
 
     final static void a(int param0, int param1, int param2) {
-        RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -132,10 +120,9 @@ final class wc extends bh {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_11_1 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
         var11 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -148,59 +135,39 @@ final class wc extends bh {
               var8 = gn.field_e[4 + var3_int];
               var9 = param1 + 5;
               L1: while (true) {
-                L2: {
-                  L3: {
-                    if (var9 >= param0) {
-                      break L3;
-                    } else {
-                      var10 = gn.field_e[3 + var9];
-                      stackIn_11_0 = var7;
-
-                      stackIn_11_1 = var10;
-
-                      if (var11 != 0) {
-                        break L2;
-                      } else {
-                        L4: {
-                          if (stackIn_11_0 < stackIn_11_1) {
-                            gn.field_e[var3_int] = gn.field_e[var9];
-                            gn.field_e[var3_int - -1] = gn.field_e[var9 + 1];
-                            gn.field_e[2 + var3_int] = gn.field_e[2 + var9];
-                            gn.field_e[3 + var3_int] = var10;
-                            gn.field_e[4 + var3_int] = gn.field_e[var9 - -4];
-                            var3_int += 5;
-                            gn.field_e[var9] = gn.field_e[var3_int];
-                            gn.field_e[1 + var9] = gn.field_e[var3_int + 1];
-                            gn.field_e[var9 + 2] = gn.field_e[var3_int + 2];
-                            gn.field_e[var9 - -3] = gn.field_e[3 + var3_int];
-                            gn.field_e[4 + var9] = gn.field_e[4 + var3_int];
-                            break L4;
-                          } else {
-                            break L4;
-                          }
-                        }
-                        var9 += 5;
-                        if (var11 == 0) {
-                          continue L1;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                  }
+                if (var9 >= param0) {
                   gn.field_e[var3_int] = var4;
                   gn.field_e[var3_int - -1] = var5;
                   gn.field_e[var3_int + 2] = var6;
                   gn.field_e[var3_int - -3] = var7;
                   gn.field_e[4 + var3_int] = var8;
                   wc.a(var3_int, param1, param2);
-                  stackIn_11_0 = param0;
-                  stackIn_11_1 = 5 + var3_int;
-                  break L2;
+                  wc.a(param0, 5 + var3_int, param2 + 0);
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L2: {
+                    var10 = gn.field_e[3 + var9];
+                    if (var7 < var10) {
+                      gn.field_e[var3_int] = gn.field_e[var9];
+                      gn.field_e[var3_int - -1] = gn.field_e[var9 + 1];
+                      gn.field_e[2 + var3_int] = gn.field_e[2 + var9];
+                      gn.field_e[3 + var3_int] = var10;
+                      gn.field_e[4 + var3_int] = gn.field_e[var9 - -4];
+                      var3_int += 5;
+                      gn.field_e[var9] = gn.field_e[var3_int];
+                      gn.field_e[1 + var9] = gn.field_e[var3_int + 1];
+                      gn.field_e[var9 + 2] = gn.field_e[var3_int + 2];
+                      gn.field_e[var9 - -3] = gn.field_e[3 + var3_int];
+                      gn.field_e[4 + var9] = gn.field_e[4 + var3_int];
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                  var9 += 5;
+                  continue L1;
                 }
-                wc.a(stackIn_11_0, stackIn_11_1, param2 + 0);
-                decompiledRegionSelector0 = 1;
-                break L0;
               }
             } else {
               decompiledRegionSelector0 = 0;
@@ -209,8 +176,8 @@ final class wc extends bh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw dh.a((Throwable) ((Object) runtimeException), "wc.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          var3 = decompiledCaughtException;
+          throw dh.a((Throwable) ((Object) var3), "wc.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

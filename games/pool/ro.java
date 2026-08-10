@@ -442,31 +442,34 @@ final class ro {
             }
             L4: {
               L5: {
-                this.field_f = this.field_q[1] - this.field_q[0];
-                if (0 != this.field_f) {
-                  break L5;
-                } else {
-                  if (-1 == (this.field_m ^ -1)) {
-                    break L4;
+                L6: {
+                  this.field_f = this.field_q[1] - this.field_q[0];
+                  if (0 != this.field_f) {
+                    break L6;
                   } else {
-                    break L5;
+                    if (-1 == (this.field_m ^ -1)) {
+                      break L5;
+                    } else {
+                      break L6;
+                    }
                   }
                 }
+                var3_int = ke.a(false, this.field_m * this.field_m + this.field_f * this.field_f);
+                if (var3_int == 0) {
+                  break L5;
+                } else {
+                  this.field_m = (this.field_m << -1164665176) / var3_int;
+                  this.field_f = (this.field_f << 1458958504) / var3_int;
+                  break L4;
+                }
               }
-              var3_int = ke.a(false, this.field_m * this.field_m + this.field_f * this.field_f);
-              if (var3_int == 0) {
-                break L4;
-              } else {
-                this.field_m = (this.field_m << -1164665176) / var3_int;
-                this.field_f = (this.field_f << 1458958504) / var3_int;
-                break L4;
-              }
+              break L4;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var3 = decompiledCaughtException;
             stackIn_16_0 = (RuntimeException) (var3);
 
@@ -476,12 +479,12 @@ final class ro {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw wm.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');

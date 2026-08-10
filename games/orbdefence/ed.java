@@ -78,8 +78,6 @@ final class ed {
     }
 
     final int a(int param0, int param1) {
-        int stackIn_13_0 = 0;
-        int stackIn_13_1 = 0;
         int var3;
         int var4;
         var4 = OrbDefence.field_D ? 1 : 0;
@@ -89,23 +87,11 @@ final class ed {
               var3 = 1;
               L0: while (true) {
                 if (this.field_g.length > var3) {
-                  stackIn_13_0 = param0;
-
-                  stackIn_13_1 = this.field_g[var3] + this.field_g[-1 + var3] >> -1052047551;
-
-                  if (var4 == 0) {
-                    if (stackIn_13_0 < stackIn_13_1) {
-                      return var3 + -1;
-                    } else {
-                      var3++;
-                      if (var4 == 0) {
-                        continue L0;
-                      } else {
-                        return -1 + this.field_g.length;
-                      }
-                    }
+                  if (param0 < this.field_g[var3] + this.field_g[-1 + var3] >> -1052047551) {
+                    return var3 + -1;
                   } else {
-                    return stackIn_13_0 + stackIn_13_1;
+                    var3++;
+                    continue L0;
                   }
                 } else {
                   return -1 + this.field_g.length;

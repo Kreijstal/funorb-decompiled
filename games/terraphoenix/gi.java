@@ -1244,91 +1244,99 @@ final class gi {
                                                       } else {
                                                         if ((var4.field_h.field_P ^ -1) < -1) {
                                                           L40: {
-                                                            if (null == this.field_e) {
-                                                              if ((this.field_s ^ -1) == -2) {
-                                                                break L40;
-                                                              } else {
-                                                                if (-7 == (this.field_s ^ -1)) {
-                                                                  break L40;
-                                                                } else {
-                                                                  if (this.field_s == 5) {
-                                                                    break L40;
-                                                                  } else {
-                                                                    if ((this.field_s ^ -1) == -8) {
-                                                                      break L40;
-                                                                    } else {
-                                                                      var4.field_h.a((byte) 114, this.field_o, this.field_s);
-                                                                      break L40;
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            } else {
-                                                              if ((this.field_s ^ -1) == -2) {
-                                                                break L40;
-                                                              } else {
-                                                                if (-7 == (this.field_s ^ -1)) {
-                                                                  break L40;
-                                                                } else {
-                                                                  if (this.field_s == 5) {
-                                                                    break L40;
-                                                                  } else {
-                                                                    if ((this.field_s ^ -1) == -8) {
-                                                                      break L40;
-                                                                    } else {
-                                                                      var4.field_h.a((byte) 114, this.field_o, this.field_s);
-                                                                      break L40;
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                          L41: {
-                                                            if (-1 > (var4.field_h.field_P ^ -1)) {
-                                                              break L41;
-                                                            } else {
-                                                              if (var4.field_h.field_Z != null) {
-                                                                break L41;
-                                                              } else {
-                                                                if (7 == var4.field_h.field_t) {
+                                                            if (null != this.field_e) {
+                                                              L41: {
+                                                                if (100.0 * Math.random() > (double)this.field_e.field_B) {
+                                                                  this.field_e.field_B = this.field_e.field_B + 1;
                                                                   break L41;
                                                                 } else {
-                                                                  if (this.field_e == null) {
-                                                                    break L41;
+                                                                  break L41;
+                                                                }
+                                                              }
+                                                              if ((this.field_s ^ -1) == -2) {
+                                                                break L40;
+                                                              } else {
+                                                                if (-7 == (this.field_s ^ -1)) {
+                                                                  break L40;
+                                                                } else {
+                                                                  if (this.field_s == 5) {
+                                                                    break L40;
                                                                   } else {
-                                                                    this.field_e.field_e = this.field_e.field_e + 1;
-                                                                    break L41;
+                                                                    if ((this.field_s ^ -1) == -8) {
+                                                                      break L40;
+                                                                    } else {
+                                                                      var4.field_h.a((byte) 114, this.field_o, this.field_s);
+                                                                      break L40;
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            } else {
+                                                              if ((this.field_s ^ -1) == -2) {
+                                                                break L40;
+                                                              } else {
+                                                                if (-7 == (this.field_s ^ -1)) {
+                                                                  break L40;
+                                                                } else {
+                                                                  if (this.field_s == 5) {
+                                                                    break L40;
+                                                                  } else {
+                                                                    if ((this.field_s ^ -1) == -8) {
+                                                                      break L40;
+                                                                    } else {
+                                                                      var4.field_h.a((byte) 114, this.field_o, this.field_s);
+                                                                      break L40;
+                                                                    }
                                                                   }
                                                                 }
                                                               }
                                                             }
                                                           }
                                                           L42: {
-                                                            if (this.field_e == null) {
+                                                            if (-1 > (var4.field_h.field_P ^ -1)) {
                                                               break L42;
                                                             } else {
-                                                              L43: {
-                                                                if (-91 < (this.field_e.field_B ^ -1)) {
-                                                                  break L43;
+                                                              if (var4.field_h.field_Z != null) {
+                                                                break L42;
+                                                              } else {
+                                                                if (7 == var4.field_h.field_t) {
+                                                                  break L42;
                                                                 } else {
-                                                                  mh.a((byte) 112, 0, 255);
-                                                                  break L43;
+                                                                  if (this.field_e == null) {
+                                                                    break L42;
+                                                                  } else {
+                                                                    this.field_e.field_e = this.field_e.field_e + 1;
+                                                                    break L42;
+                                                                  }
                                                                 }
                                                               }
+                                                            }
+                                                          }
+                                                          L43: {
+                                                            if (this.field_e == null) {
+                                                              break L43;
+                                                            } else {
                                                               L44: {
-                                                                if (-11 < (this.field_e.field_e ^ -1)) {
+                                                                if (-91 < (this.field_e.field_B ^ -1)) {
                                                                   break L44;
                                                                 } else {
-                                                                  mh.a((byte) 113, 2, 253);
+                                                                  mh.a((byte) 112, 0, 255);
                                                                   break L44;
+                                                                }
+                                                              }
+                                                              L45: {
+                                                                if (-11 < (this.field_e.field_e ^ -1)) {
+                                                                  break L45;
+                                                                } else {
+                                                                  mh.a((byte) 113, 2, 253);
+                                                                  break L45;
                                                                 }
                                                               }
                                                               if ((this.field_e.field_e ^ -1) <= -26) {
                                                                 mh.a((byte) 126, 3, 252);
-                                                                break L42;
+                                                                break L43;
                                                               } else {
-                                                                break L42;
+                                                                break L43;
                                                               }
                                                             }
                                                           }

@@ -7,51 +7,14 @@ final class nh {
     static db[] field_c;
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        uh stackIn_6_0;
-        int stackIn_6_1;
-        int stackIn_6_2;
-        ih stackIn_6_3;
-        uh stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        int stackIn_7_2 = 0;
-        ih stackIn_7_3 = null;
-        int stackIn_7_4 = 0;
-        if (aa.field_i[param2] == null) {
-          return;
-        } else {
-          uf.field_n = param2;
-          if (param0 != 0) {
+        if (!(aa.field_i[param2] != null)) {
             return;
-          } else {
-            L0: {
-              stackIn_6_0 = uh.field_n;
-
-              stackIn_6_1 = 76;
-
-              stackIn_6_2 = param1;
-
-              stackIn_6_3 = aa.field_i[uf.field_n];
-
-              if (!param3) {
-                stackIn_7_0 = (uh) ((Object) stackIn_6_0);
-                stackIn_7_1 = stackIn_6_1;
-                stackIn_7_2 = stackIn_6_2;
-                stackIn_7_3 = (ih) ((Object) stackIn_6_3);
-                stackIn_7_4 = 60;
-                break L0;
-              } else {
-                stackIn_7_0 = (uh) ((Object) stackIn_6_0);
-                stackIn_7_1 = stackIn_6_1;
-                stackIn_7_2 = stackIn_6_2;
-                stackIn_7_3 = (ih) ((Object) stackIn_6_3);
-                stackIn_7_4 = 30;
-                break L0;
-              }
-            }
-            ((uh) (Object) stackIn_7_0).a((byte) stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4 * b.field_r / 22050);
-            return;
-          }
         }
+        uf.field_n = param2;
+        if (param0 != 0) {
+            return;
+        }
+        uh.field_n.a((byte) 76, param1, aa.field_i[uf.field_n], (param3 ? 30 : 60) * b.field_r / 22050);
     }
 
     public static void a(int param0) {
@@ -59,8 +22,6 @@ final class nh {
         field_b = null;
         if (param0 != 60) {
             field_a = (pg) null;
-            field_a = null;
-            return;
         }
         field_a = null;
     }
@@ -162,53 +123,17 @@ final class nh {
     }
 
     final static String a(char param0, int param1, byte param2) {
-        char[] var3;
-        int var4;
-        int var5;
-        char[] var6;
-        var5 = Lexicominos.field_L ? 1 : 0;
-        if (param2 >= 44) {
-          var6 = new char[param1];
-          var3 = var6;
-          var4 = 0;
-          L0: while (true) {
-            L1: {
-              if (var4 >= param1) {
-                break L1;
-              } else {
-                var6[var4] = param0;
-                var4++;
-                if (var5 == 0) {
-                  continue L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            return new String(var6);
-          }
-        } else {
-          field_c = (db[]) null;
-          var6 = new char[param1];
-          var3 = var6;
-          var4 = 0;
-          L2: while (true) {
-            L3: {
-              if (var4 >= param1) {
-                break L3;
-              } else {
-                var6[var4] = param0;
-                var4++;
-                if (var5 == 0) {
-                  continue L2;
-                } else {
-                  break L3;
-                }
-              }
-            }
-            return new String(var6);
-          }
+        int var4 = 0;
+        int var5 = Lexicominos.field_L ? 1 : 0;
+        if (param2 < 44) {
+            field_c = (db[]) null;
         }
+        char[] var6 = new char[param1];
+        char[] var3 = var6;
+        for (var4 = 0; var4 < param1; var4++) {
+            var6[var4] = param0;
+        }
+        return new String(var6);
     }
 
     static {

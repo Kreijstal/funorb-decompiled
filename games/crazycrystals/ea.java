@@ -1523,40 +1523,43 @@ abstract class ea extends pn {
                         }
                       }
                     }
-                    this.f(1, param2, param0, param1);
-                    if ((this.field_s | this.field_o) == 0) {
-                      break L1;
-                    } else {
-                      var5 = param0[param2 - -this.field_s][this.field_o + param1];
-                      L4: while (true) {
-                        if (var5 instanceof ig) {
-                          if (this.a((byte) 42, param0, var5)) {
-                            break L1;
+                    L4: {
+                      this.f(1, param2, param0, param1);
+                      if ((this.field_s | this.field_o) == 0) {
+                        break L4;
+                      } else {
+                        var5 = param0[param2 - -this.field_s][this.field_o + param1];
+                        L5: while (true) {
+                          if (var5 instanceof ig) {
+                            if (this.a((byte) 42, param0, var5)) {
+                              break L4;
+                            } else {
+                              cn.field_e.a(64, param1 * 12, 12 * param2, 0, (byte) -111);
+                              param0[param2][param1] = this.a(param2, param1, var5, -119, param0);
+                              param0[this.field_s + param2][this.field_o + param1] = (f) ((Object) new ig(var5, bd.field_n, param0[this.field_s + param2][this.field_o + param1], true));
+                              mb.field_g = mb.field_g - wd.field_j;
+                              ob.field_l = ob.field_l - 1;
+                              mb.field_g = mb.field_g + ob.field_l;
+                              wd.field_j = wd.field_j + 1;
+                              je.field_j = je.field_j + -2;
+                              fp.field_a = fp.field_a + -4;
+                              b.field_a = b.field_a + -2;
+                              we.field_h = we.field_h + -4;
+                              decompiledRegionSelector0 = 3;
+                              break L0;
+                            }
                           } else {
-                            cn.field_e.a(64, param1 * 12, 12 * param2, 0, (byte) -111);
-                            param0[param2][param1] = this.a(param2, param1, var5, -119, param0);
-                            param0[this.field_s + param2][this.field_o + param1] = (f) ((Object) new ig(var5, bd.field_n, param0[this.field_s + param2][this.field_o + param1], true));
-                            mb.field_g = mb.field_g - wd.field_j;
-                            ob.field_l = ob.field_l - 1;
-                            mb.field_g = mb.field_g + ob.field_l;
-                            wd.field_j = wd.field_j + 1;
-                            je.field_j = je.field_j + -2;
-                            fp.field_a = fp.field_a + -4;
-                            b.field_a = b.field_a + -2;
-                            we.field_h = we.field_h + -4;
-                            decompiledRegionSelector0 = 3;
-                            break L0;
-                          }
-                        } else {
-                          if (!(var5 instanceof pn)) {
-                            break L1;
-                          } else {
-                            var5 = ((pn) ((Object) var5)).field_l;
-                            continue L4;
+                            if (!(var5 instanceof pn)) {
+                              break L4;
+                            } else {
+                              var5 = ((pn) ((Object) var5)).field_l;
+                              continue L5;
+                            }
                           }
                         }
                       }
                     }
+                    break L1;
                   }
                 } else {
                   break L1;
@@ -1571,7 +1574,7 @@ abstract class ea extends pn {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var5_ref = decompiledCaughtException;
             stackIn_26_0 = (RuntimeException) (var5_ref);
 
@@ -1581,12 +1584,12 @@ abstract class ea extends pn {
               stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
               stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackIn_27_2 = "null";
-              break L5;
+              break L6;
             } else {
               stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
               stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackIn_27_2 = "{...}";
-              break L5;
+              break L6;
             }
           }
           throw dn.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -2077,46 +2080,12 @@ abstract class ea extends pn {
     }
 
     void f(int param0, int param1, f[][] param2, int param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 1) {
-                break L1;
-              } else {
+            if (param0 != 1) {
                 this.g(113);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ea.LA(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dn.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) ((Object) runtimeException), "ea.LA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -2281,46 +2250,12 @@ abstract class ea extends pn {
     }
 
     void b(int param0, int param1, int param2, f[][] param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param2 == -663) {
-                break L1;
-              } else {
+            if (param2 != -663) {
                 this.field_s = -24;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ea.BB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dn.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) ((Object) runtimeException), "ea.BB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

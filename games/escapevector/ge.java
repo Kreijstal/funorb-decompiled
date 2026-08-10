@@ -39,21 +39,21 @@ final class ge implements Runnable {
                         continue stateLoop;
                     } catch (Throwable stateCaught_1) {
                         caughtException = stateCaught_1;
-                        statePc = ((Object) stateCaught_1 instanceof Exception ? 12 : 14);
+                        statePc = ((Object) stateCaught_1 instanceof Exception ? 13 : 15);
                         continue stateLoop;
                     }
                 }
                 case 2: {
                     try {
                         if (var4 != 0) {
-                            statePc = 16;
+                            statePc = 17;
                         } else {
                             statePc = 3;
                         }
                         continue stateLoop;
                     } catch (Throwable stateCaught_2) {
                         caughtException = stateCaught_2;
-                        statePc = ((Object) stateCaught_2 instanceof Exception ? 12 : 14);
+                        statePc = ((Object) stateCaught_2 instanceof Exception ? 13 : 15);
                         continue stateLoop;
                     }
                 }
@@ -64,7 +64,7 @@ final class ge implements Runnable {
                         continue stateLoop;
                     } catch (Throwable stateCaught_3) {
                         caughtException = stateCaught_3;
-                        statePc = ((Object) stateCaught_3 instanceof Exception ? 12 : 14);
+                        statePc = ((Object) stateCaught_3 instanceof Exception ? 13 : 15);
                         continue stateLoop;
                     }
                 }
@@ -78,7 +78,7 @@ final class ge implements Runnable {
                         continue stateLoop;
                     } catch (Throwable stateCaught_4) {
                         caughtException = stateCaught_4;
-                        statePc = ((Object) stateCaught_4 instanceof Exception ? 12 : 14);
+                        statePc = ((Object) stateCaught_4 instanceof Exception ? 13 : 15);
                         continue stateLoop;
                     }
                 }
@@ -93,7 +93,7 @@ final class ge implements Runnable {
                         continue stateLoop;
                     } catch (Throwable stateCaught_5) {
                         caughtException = stateCaught_5;
-                        statePc = ((Object) stateCaught_5 instanceof Exception ? 12 : 14);
+                        statePc = ((Object) stateCaught_5 instanceof Exception ? 13 : 15);
                         continue stateLoop;
                     }
                 }
@@ -107,7 +107,7 @@ final class ge implements Runnable {
                         continue stateLoop;
                     } catch (Throwable stateCaught_6) {
                         caughtException = stateCaught_6;
-                        statePc = ((Object) stateCaught_6 instanceof Exception ? 12 : 14);
+                        statePc = ((Object) stateCaught_6 instanceof Exception ? 13 : 15);
                         continue stateLoop;
                     }
                 }
@@ -118,7 +118,7 @@ final class ge implements Runnable {
                         continue stateLoop;
                     } catch (Throwable stateCaught_7) {
                         caughtException = stateCaught_7;
-                        statePc = ((Object) stateCaught_7 instanceof Exception ? 12 : 14);
+                        statePc = ((Object) stateCaught_7 instanceof Exception ? 13 : 15);
                         continue stateLoop;
                     }
                 }
@@ -133,7 +133,7 @@ final class ge implements Runnable {
                         continue stateLoop;
                     } catch (Throwable stateCaught_8) {
                         caughtException = stateCaught_8;
-                        statePc = ((Object) stateCaught_8 instanceof Exception ? 12 : 14);
+                        statePc = ((Object) stateCaught_8 instanceof Exception ? 13 : 15);
                         continue stateLoop;
                     }
                 }
@@ -145,7 +145,7 @@ final class ge implements Runnable {
                         continue stateLoop;
                     } catch (Throwable stateCaught_9) {
                         caughtException = stateCaught_9;
-                        statePc = ((Object) stateCaught_9 instanceof Exception ? 12 : 14);
+                        statePc = ((Object) stateCaught_9 instanceof Exception ? 13 : 15);
                         continue stateLoop;
                     }
                 }
@@ -159,48 +159,48 @@ final class ge implements Runnable {
                         continue stateLoop;
                     } catch (Throwable stateCaught_10) {
                         caughtException = stateCaught_10;
-                        statePc = ((Object) stateCaught_10 instanceof Exception ? 12 : 14);
+                        statePc = ((Object) stateCaught_10 instanceof Exception ? 13 : 15);
                         continue stateLoop;
                     }
                 }
                 case 11: {
                     this.field_g = false;
-                    statePc = 16;
+                    statePc = 17;
                     continue stateLoop;
                 }
-                case 12: {
+                case 13: {
                     try {
                         exception = (Exception) ((Object) caughtException);
                         pf.a(false, (String) null, (Throwable) ((Object) exception));
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
                         statePc = 14;
                         continue stateLoop;
-                    }
-                }
-                case 13: {
-                    this.field_g = false;
-                    statePc = 16;
-                    continue stateLoop;
-                }
-                case 14: {
-                    try {
-                        var3 = caughtException;
+                    } catch (Throwable stateCaught_13) {
+                        caughtException = stateCaught_13;
                         statePc = 15;
                         continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 14;
+                    }
+                }
+                case 14: {
+                    this.field_g = false;
+                    statePc = 17;
+                    continue stateLoop;
+                }
+                case 15: {
+                    try {
+                        var3 = caughtException;
+                        statePc = 16;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_15) {
+                        caughtException = stateCaught_15;
+                        statePc = 15;
                         continue stateLoop;
                     }
                 }
-                case 15: {
+                case 16: {
                     this.field_g = false;
                     throw ge.<RuntimeException>$cfr$sneakyThrow(var3);
                 }
-                case 16: {
+                case 17: {
                     return;
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
@@ -795,7 +795,7 @@ final class ge implements Runnable {
                       }
                     }
                     nm.a(stackIn_15_0);
-                    decompiledRegionSelector0 = 1;
+                    decompiledRegionSelector0 = 0;
                     break L0;
                   }
                 }
@@ -803,7 +803,7 @@ final class ge implements Runnable {
               var8 = (ei) ((Object) nf.field_w.a(false));
               if (var8 == null) {
                 nm.a(16);
-                decompiledRegionSelector0 = 2;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 L8: {
@@ -835,12 +835,12 @@ final class ge implements Runnable {
                   break L2;
                 } else {
                   nm.a(16);
-                  decompiledRegionSelector0 = 3;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
             }
-            decompiledRegionSelector0 = 0;
+            decompiledRegionSelector0 = 3;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

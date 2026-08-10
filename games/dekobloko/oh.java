@@ -267,47 +267,32 @@ final class oh implements Runnable {
             Object var2 = null;
             Throwable var3 = null;
             int var4 = 0;
-            int stackIn_7_0 = 0;
             Throwable decompiledCaughtException = null;
             var4 = client.field_A ? 1 : 0;
             try {
               L0: while (true) {
                 L1: {
-                  L2: {
-                    if (this.field_a.field_n >= this.field_a.field_r.length) {
-                      break L2;
+                  if (this.field_a.field_n >= this.field_a.field_r.length) {
+                    break L1;
+                  } else {
+                    var1_int = this.field_g.read(this.field_a.field_r, this.field_a.field_n, -this.field_a.field_n + this.field_a.field_r.length);
+                    if (var1_int < 0) {
+                      break L1;
                     } else {
-                      var1_int = this.field_g.read(this.field_a.field_r, this.field_a.field_n, -this.field_a.field_n + this.field_a.field_r.length);
-                      stackIn_7_0 = var1_int;
-
-                      if (var4 != 0) {
-                        break L1;
-                      } else {
-                        if (stackIn_7_0 < 0) {
-                          break L2;
-                        } else {
-                          this.field_a.field_n = this.field_a.field_n + var1_int;
-                          if (var4 == 0) {
-                            continue L0;
-                          } else {
-                            break L2;
-                          }
-                        }
-                      }
+                      this.field_a.field_n = this.field_a.field_n + var1_int;
+                      continue L0;
                     }
                   }
-                  stackIn_7_0 = this.field_a.field_r.length;
-                  break L1;
                 }
-                if (stackIn_7_0 == this.field_a.field_n) {
+                if (this.field_a.field_r.length == this.field_a.field_n) {
                   throw oh.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_a.field_r.length + " " + this.field_j));
                 } else {
                   var1 = this;
                   synchronized (var1) {
-                    L3: {
+                    L2: {
                       this.finalize();
                       this.field_k = 3;
-                      break L3;
+                      break L2;
                     }
                   }
                   return;
@@ -318,10 +303,10 @@ final class oh implements Runnable {
               var1 = (Exception) (Object) decompiledCaughtException;
               var2 = this;
               synchronized (var2) {
-                L4: {
+                L3: {
                   this.finalize();
                   this.field_k = this.field_k + 1;
-                  break L4;
+                  break L3;
                 }
               }
               return;

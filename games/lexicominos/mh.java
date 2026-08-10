@@ -132,48 +132,34 @@ final class mh extends nb implements jk {
     }
 
     public final void a(int param0, int param1, int param2, int param3, kf param4) {
-        RuntimeException var6 = null;
         int var7 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if (param4 != this.field_G) {
-                  break L2;
-                } else {
-                  dc.c(255);
-                  if (var7 == 0) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              L3: {
+              if (param4 != this.field_G) {
                 if (param4 == this.field_E) {
-                  break L3;
+                  bg.a(false);
+                  break L1;
                 } else {
                   if (param4 == this.field_C) {
                     ui.d(param2 ^ 215535462);
-                    if (var7 == 0) {
-                      break L1;
-                    } else {
-                      break L3;
-                    }
+                    break L1;
                   } else {
                     break L1;
                   }
                 }
+              } else {
+                dc.c(255);
+                break L1;
               }
-              bg.a(false);
-              break L1;
             }
             if (param2 == 215535458) {
               break L0;
@@ -184,25 +170,25 @@ final class mh extends nb implements jk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var6 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var6);
+            stackIn_13_0 = (RuntimeException) (var6);
 
-            stackIn_14_1 = new StringBuilder().append("mh.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+            stackIn_13_1 = new StringBuilder().append("mh.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 
             if (param4 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
+              break L2;
             } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
+              break L2;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
     }
 

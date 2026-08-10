@@ -87,7 +87,7 @@ final class l {
         int var12 = 0;
         ln[] var13 = null;
         ln var14 = null;
-        fs var15 = null;
+        ln var15 = null;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -111,6 +111,8 @@ final class l {
                 break L0;
               } else {
                 var7 = var5[var6];
+                var15 = var7;
+                var15 = var7;
                 var8 = 0;
                 var13 = var7.field_D;
                 var9_ref_ln__ = var13;
@@ -121,7 +123,7 @@ final class l {
                     var9_ref_ln__ = var7.field_D;
                     var10 = 0;
                     L4: while (true) {
-                      if (var10 >= param1.length) {
+                      if (var10 >= var9_ref_ln__.length) {
                         var9 = 0;
                         L5: while (true) {
                           if (4 <= var9) {
@@ -173,9 +175,9 @@ final class l {
                         }
                       } else {
                         L10: {
-                          var15 = param1[var10];
-                          if (var7.field_p < ((ln) ((Object) var15)).field_p) {
-                            di.a((ln) ((Object) var15), false, param0);
+                          var15 = var9_ref_ln__[var10];
+                          if (var7.field_p < var15.field_p) {
+                            di.a(var15, false, param0);
                             break L10;
                           } else {
                             break L10;
@@ -187,6 +189,8 @@ final class l {
                     }
                   } else {
                     var14 = var13[var10];
+                    var15 = var14;
+                    var15 = var14;
                     if (var14.field_p > var7.field_p) {
                       var8++;
                       var10++;

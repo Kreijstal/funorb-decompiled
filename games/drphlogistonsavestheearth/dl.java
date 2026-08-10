@@ -26,125 +26,53 @@ final class dl extends si {
     }
 
     final static void a(String param0, int param1, int param2) {
-        RuntimeException runtimeException = null;
         int var3_int = 0;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              oi.field_c = false;
-              pj.field_F = false;
-              if (param2 >= 57) {
-                break L1;
-              } else {
+            oi.field_c = false;
+            pj.field_F = false;
+            if (param2 < 57) {
                 dl.a(false, -65);
-                break L1;
-              }
             }
-            L2: {
-              if (ol.field_a == null) {
-                break L2;
-              } else {
-                if (ol.field_a.field_Q) {
-                  L3: {
-                    var3_int = 1;
-                    if ((param1 ^ -1) == -9) {
-                      L4: {
-                        if (!sg.field_a) {
-                          param0 = m.field_c;
-                          break L4;
-                        } else {
-                          param0 = tf.field_ib;
-                          break L4;
-                        }
-                      }
-                      param1 = 2;
-                      pi.field_O.b((byte) 37, qf.field_c);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  L5: {
-                    if (-11 != (param1 ^ -1)) {
-                      break L5;
-                    } else {
-                      bh.a((byte) -31);
-                      var3_int = 0;
-                      break L5;
-                    }
-                  }
-                  L6: {
-                    if (var3_int != 0) {
-                      L7: {
-                        if (!pj.field_F) {
-                          break L7;
-                        } else {
-                          param0 = a.a(5044, field_J, new String[]{param0});
-                          break L7;
-                        }
-                      }
-                      L8: {
-                        if (hl.field_b) {
-                          param0 = eg.field_b;
-                          break L8;
-                        } else {
-                          break L8;
-                        }
-                      }
-                      ol.field_a.a(param1, param0, -5485);
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
-                  if ((param1 ^ -1) == -257) {
-                    break L2;
-                  } else {
-                    if (param1 != 10) {
-                      if (!sg.field_a) {
-                        pi.field_O.i(134);
-                        break L2;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  }
-                } else {
-                  return;
+            if (ol.field_a != null) {
+                if (!ol.field_a.field_Q) {
+                    return;
                 }
-              }
+                var3_int = 1;
+                if ((param1 ^ -1) != -9) {
+                } else {
+                    if (sg.field_a) {
+                        param0 = tf.field_ib;
+                    } else {
+                        param0 = m.field_c;
+                    }
+                    param1 = 2;
+                    pi.field_O.b((byte) 37, qf.field_c);
+                }
+                if (-11 == (param1 ^ -1)) {
+                    bh.a((byte) -31);
+                    var3_int = 0;
+                }
+                if (!(var3_int == 0)) {
+                    if (pj.field_F) {
+                        param0 = a.a(5044, field_J, new String[]{param0});
+                    }
+                    if (!(!hl.field_b)) {
+                        param0 = eg.field_b;
+                    }
+                    ol.field_a.a(param1, param0, -5485);
+                }
+                if ((param1 ^ -1) != -257) {
+                    if (param1 == 10) {
+                        return;
+                    }
+                    if (sg.field_a) {
+                        return;
+                    }
+                    pi.field_O.i(134);
+                }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            runtimeException = decompiledCaughtException;
-            stackIn_30_0 = (RuntimeException) (runtimeException);
-
-            stackIn_30_1 = new StringBuilder().append("dl.G(");
-
-            if (param0 == null) {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackIn_31_2 = "null";
-              break L9;
-            } else {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackIn_31_2 = "{...}";
-              break L9;
-            }
-          }
-          throw ie.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) ((Object) runtimeException), "dl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

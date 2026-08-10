@@ -67,11 +67,11 @@ final class tf extends ne implements in {
     }
 
     private final void a(int param0, boolean param1, gh param2) {
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        String stackIn_39_2 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
@@ -91,113 +91,75 @@ final class tf extends ne implements in {
               }
             }
             L2: {
-              L3: {
-                if (!param2.field_d) {
-                  break L3;
-                } else {
-                  var4 = qa.field_g;
-                  if (var6 == 0) {
+              if (!param2.field_d) {
+                if (param2.field_b != null) {
+                  var4 = wg.field_d;
+                  if (this.field_Gb != null) {
+                    this.field_Gb.a(496);
                     break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
-                }
-              }
-              L4: {
-                if (param2.field_b != null) {
-                  break L4;
                 } else {
                   var4 = param2.field_h;
                   if ((param2.field_c ^ -1) != -249) {
                     break L2;
                   } else {
-                    L5: {
+                    L3: {
                       if (!param1) {
                         nq.f(-42);
-                        break L5;
+                        break L3;
                       } else {
-                        break L5;
+                        break L3;
                       }
                     }
                     var4 = ba.field_p;
                     this.field_Ib = true;
-                    if (var6 == 0) {
-                      break L2;
-                    } else {
-                      break L4;
-                    }
+                    break L2;
                   }
                 }
-              }
-              var4 = wg.field_d;
-              if (this.field_Gb != null) {
-                this.field_Gb.a(496);
-                break L2;
               } else {
+                var4 = qa.field_g;
                 break L2;
               }
             }
-            L6: {
-              L7: {
-                var5 = new wd((ne) (this), ci.field_d, var4);
-                if (!param2.field_d) {
-                  break L7;
-                } else {
-                  if (param2.field_e) {
-                    this.a((cf) (new pj((tf) (this))), (byte) 122);
-                    decompiledRegionSelector0 = 0;
-                    break L0;
-                  } else {
-                    var5.a(ub.field_xb, -112, (bj) (this));
-                    if (var6 == 0) {
-                      break L6;
-                    } else {
-                      break L7;
-                    }
-                  }
-                }
-              }
-              L8: {
-                L9: {
+            L4: {
+              var5 = new wd((ne) (this), ci.field_d, var4);
+              if (!param2.field_d) {
+                L5: {
                   if (!this.field_Ib) {
-                    break L9;
+                    if (-6 != (param2.field_c ^ -1)) {
+                      var5.a(sn.field_Zb, -1, true);
+                      break L5;
+                    } else {
+                      var5.a(lc.field_g, 11, true);
+                      var5.a(oe.field_b, 17, true);
+                      break L5;
+                    }
                   } else {
                     var5.a(ub.field_xb, param0 ^ 58, (bj) (this));
-                    if (var6 == 0) {
-                      break L8;
-                    } else {
-                      break L9;
-                    }
+                    break L5;
                   }
                 }
-                if (-6 != (param2.field_c ^ -1)) {
-                  var5.a(sn.field_Zb, -1, true);
-                  break L8;
+                if (param2.field_c == 3) {
+                  var5.a(od.field_zb, 7, true);
+                  break L4;
                 } else {
-                  var5.a(lc.field_g, 11, true);
-                  var5.a(oe.field_b, 17, true);
-                  if (var6 == 0) {
-                    break L8;
+                  if ((param2.field_c ^ -1) != -7) {
+                    break L4;
                   } else {
-                    var5.a(sn.field_Zb, -1, true);
-                    break L8;
+                    var5.a(wm.field_S, 9, true);
+                    break L4;
                   }
                 }
-              }
-              if (param2.field_c == 3) {
-                var5.a(od.field_zb, 7, true);
-                break L6;
               } else {
-                if ((param2.field_c ^ -1) != -7) {
-                  break L6;
+                if (param2.field_e) {
+                  this.a((cf) (new pj((tf) (this))), (byte) 122);
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
-                  var5.a(wm.field_S, 9, true);
-                  if (var6 == 0) {
-                    break L6;
-                  } else {
-                    var5.a(od.field_zb, 7, true);
-                    break L6;
-                  }
+                  var5.a(ub.field_xb, -112, (bj) (this));
+                  break L4;
                 }
               }
             }
@@ -207,25 +169,25 @@ final class tf extends ne implements in {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L6: {
             var4_ref = decompiledCaughtException;
-            stackIn_38_0 = (RuntimeException) (var4_ref);
+            stackIn_33_0 = (RuntimeException) (var4_ref);
 
-            stackIn_38_1 = new StringBuilder().append("tf.A(").append(param0).append(',').append(param1).append(',');
+            stackIn_33_1 = new StringBuilder().append("tf.A(").append(param0).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackIn_39_2 = "null";
-              break L10;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
+              break L6;
             } else {
-              stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackIn_39_2 = "{...}";
-              break L10;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
+              break L6;
             }
           }
-          throw fa.a((Throwable) ((Object) stackIn_39_0), stackIn_39_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

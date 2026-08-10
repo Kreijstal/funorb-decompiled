@@ -756,37 +756,40 @@ final class fi extends fa {
           if (!this.field_u) {
             break L16;
           } else {
-            if (mm.a(-109) < this.field_n) {
-              break L16;
-            } else {
-              var2 = (fe) ((Object) this.field_m.b(0));
-              L17: while (true) {
-                if (var2 == null) {
-                  this.field_n = 1000L + mm.a(-89);
-                  break L16;
-                } else {
-                  L18: {
-                    if (var2.field_z) {
-                      break L18;
-                    } else {
-                      if (var2.field_C) {
-                        if (var2.field_B) {
-                          var2.b(4);
-                          break L18;
-                        } else {
-                          throw new RuntimeException();
-                        }
+            L17: {
+              if (mm.a(-109) < this.field_n) {
+                break L17;
+              } else {
+                var2 = (fe) ((Object) this.field_m.b(0));
+                L18: while (true) {
+                  if (var2 == null) {
+                    this.field_n = 1000L + mm.a(-89);
+                    break L17;
+                  } else {
+                    L19: {
+                      if (var2.field_z) {
+                        break L19;
                       } else {
-                        var2.field_C = true;
-                        break L18;
+                        if (var2.field_C) {
+                          if (var2.field_B) {
+                            var2.b(4);
+                            break L19;
+                          } else {
+                            throw new RuntimeException();
+                          }
+                        } else {
+                          var2.field_C = true;
+                          break L19;
+                        }
                       }
                     }
+                    var2 = (fe) ((Object) this.field_m.a((byte) 127));
+                    continue L18;
                   }
-                  var2 = (fe) ((Object) this.field_m.a((byte) 127));
-                  continue L17;
                 }
               }
             }
+            break L16;
           }
         }
     }

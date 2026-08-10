@@ -155,38 +155,16 @@ final class nc {
     }
 
     final static void a(byte param0) {
-        int var1;
-        int var2;
-        var1 = -126 / ((-26 - param0) / 54);
+        int var2 = 0;
+        int var1 = -126 / ((-26 - param0) / 54);
         if ((th.field_D ^ -1) >= -33) {
-          lg.a(-103, 0);
-          if (fleas.field_A) {
-            L0: {
-              var2 = th.field_D % 32;
-              if (0 != var2) {
-                break L0;
-              } else {
+            lg.a(-103, 0);
+        } else {
+            var2 = th.field_D % 32;
+            if (0 == var2) {
                 var2 = 32;
-                break L0;
-              }
             }
             lg.a(-116, th.field_D - var2);
-            return;
-          } else {
-            return;
-          }
-        } else {
-          L1: {
-            var2 = th.field_D % 32;
-            if (0 != var2) {
-              break L1;
-            } else {
-              var2 = 32;
-              break L1;
-            }
-          }
-          lg.a(-116, th.field_D - var2);
-          return;
         }
     }
 

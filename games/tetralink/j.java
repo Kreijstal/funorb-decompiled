@@ -40,62 +40,65 @@ final class j extends gb {
             if (param1 < -38) {
               L1: {
                 if (1 != param0) {
-                  if (param0 == 2) {
-                    var4_int = param2.d((byte) -99);
-                    this.field_v = new int[var4_int];
-                    var5 = 0;
-                    L2: while (true) {
-                      if (var4_int <= var5) {
-                        break L1;
-                      } else {
-                        this.field_v[var5] = param2.e(127);
-                        var5++;
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    if (-4 == (param0 ^ -1)) {
+                  L2: {
+                    if (param0 == 2) {
                       var4_int = param2.d((byte) -99);
-                      this.field_y = new int[var4_int];
-                      this.field_z = new int[var4_int][];
+                      this.field_v = new int[var4_int];
                       var5 = 0;
                       L3: while (true) {
-                        if (var5 >= var4_int) {
-                          break L1;
+                        if (var4_int <= var5) {
+                          break L2;
                         } else {
-                          L4: {
-                            var6 = param2.e(127);
-                            var7 = bj.a(0, var6);
-                            if (var7 == null) {
-                              break L4;
-                            } else {
-                              this.field_y[var5] = var6;
-                              array$0 = new int[var7.field_c];
-                              this.field_z[var5] = array$0;
-                              var8 = 0;
-                              L5: while (true) {
-                                if (var8 >= var7.field_c) {
-                                  break L4;
-                                } else {
-                                  this.field_z[var5][var8] = param2.e(127);
-                                  var8++;
-                                  continue L5;
-                                }
-                              }
-                            }
-                          }
+                          this.field_v[var5] = param2.e(127);
                           var5++;
                           continue L3;
                         }
                       }
                     } else {
-                      if (4 == param0) {
-                        break L1;
+                      if (-4 == (param0 ^ -1)) {
+                        var4_int = param2.d((byte) -99);
+                        this.field_y = new int[var4_int];
+                        this.field_z = new int[var4_int][];
+                        var5 = 0;
+                        L4: while (true) {
+                          if (var5 >= var4_int) {
+                            break L2;
+                          } else {
+                            L5: {
+                              var6 = param2.e(127);
+                              var7 = bj.a(0, var6);
+                              if (var7 == null) {
+                                break L5;
+                              } else {
+                                this.field_y[var5] = var6;
+                                array$0 = new int[var7.field_c];
+                                this.field_z[var5] = array$0;
+                                var8 = 0;
+                                L6: while (true) {
+                                  if (var8 >= var7.field_c) {
+                                    break L5;
+                                  } else {
+                                    this.field_z[var5][var8] = param2.e(127);
+                                    var8++;
+                                    continue L6;
+                                  }
+                                }
+                              }
+                            }
+                            var5++;
+                            continue L4;
+                          }
+                        }
                       } else {
-                        break L1;
+                        if (4 == param0) {
+                          break L2;
+                        } else {
+                          break L1;
+                        }
                       }
                     }
                   }
+                  break L1;
                 } else {
                   this.field_w = hi.a(param2.g((byte) 81), '<', 783);
                   break L1;
@@ -110,7 +113,7 @@ final class j extends gb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var4 = decompiledCaughtException;
             stackIn_22_0 = (RuntimeException) (var4);
 
@@ -120,12 +123,12 @@ final class j extends gb {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw oi.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');

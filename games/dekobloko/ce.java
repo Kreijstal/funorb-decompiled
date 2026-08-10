@@ -760,47 +760,13 @@ class ce extends bh {
     }
 
     void a(int param0, int param1, int param2, ce param3, int param4, int param5) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_o = 0;
-              if (param1 == 64) {
-                break L1;
-              } else {
+            this.field_o = 0;
+            if (param1 != 64) {
                 this.toString();
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ce.IB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dh.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param4 + ',' + param5 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) ((Object) runtimeException), "ce.IB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -1488,19 +1454,22 @@ class ce extends bh {
             L7: {
               if (this.field_v != null) {
                 L8: {
-                  discarded$6 = param1.append(" listener=");
-                  if (this.field_v instanceof ce) {
-                    break L8;
-                  } else {
-                    discarded$7 = param1.append(this.field_v);
-                    if (var6 == 0) {
-                      break L7;
+                  L9: {
+                    discarded$6 = param1.append(" listener=");
+                    if (this.field_v instanceof ce) {
+                      break L9;
                     } else {
-                      break L8;
+                      discarded$7 = param1.append(this.field_v);
+                      if (var6 == 0) {
+                        break L8;
+                      } else {
+                        break L9;
+                      }
                     }
                   }
+                  param1 = this.a(param2, 1 + param3, param1, true);
+                  break L8;
                 }
-                param1 = this.a(param2, 1 + param3, param1, true);
                 break L7;
               } else {
                 break L7;
@@ -1510,7 +1479,7 @@ class ce extends bh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L10: {
             var5 = decompiledCaughtException;
             stackIn_25_0 = (RuntimeException) (var5);
 
@@ -1520,15 +1489,15 @@ class ce extends bh {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "null";
-              break L9;
+              break L10;
             } else {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "{...}";
-              break L9;
+              break L10;
             }
           }
-          L10: {
+          L11: {
 
 
             stackIn_28_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',');
@@ -1537,12 +1506,12 @@ class ce extends bh {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_26_0);
               stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackIn_29_2 = "null";
-              break L10;
+              break L11;
             } else {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_26_0);
               stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackIn_29_2 = "{...}";
-              break L10;
+              break L11;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_26_0), stackIn_29_2 + ',' + param3 + ')');

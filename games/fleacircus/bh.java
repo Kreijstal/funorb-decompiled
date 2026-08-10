@@ -90,19 +90,16 @@ final class bh extends lh {
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_22_0 = 0;
-        boolean stackIn_26_0 = false;
-        int stackIn_34_0 = 0;
-        int stackIn_37_0 = 0;
-        int stackIn_39_0 = 0;
-        int stackIn_41_0 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        String stackIn_45_2 = null;
+        int stackIn_32_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_38_0 = 0;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        String stackIn_42_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_25_0;
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -144,67 +141,42 @@ final class bh extends lh {
                                 var5 = 0;
                                 var6 = 0;
                                 L3: while (true) {
-                                  L4: {
+                                  if (var6 >= param2.length()) {
+                                    if ((var5 ^ -1) >= -1) {
+                                      stackIn_38_0 = 1;
+                                      decompiledRegionSelector0 = 7;
+                                      break L0;
+                                    } else {
+                                      stackIn_36_0 = 0;
+                                      decompiledRegionSelector0 = 6;
+                                      break L0;
+                                    }
+                                  } else {
+                                    L4: {
+                                      var7 = param2.charAt(var6);
+                                      if (!r.a((char) var7, -55)) {
+                                        var5 = 0;
+                                        break L4;
+                                      } else {
+                                        var5++;
+                                        break L4;
+                                      }
+                                    }
                                     L5: {
-                                      if (var6 >= param2.length()) {
+                                      if (-3 < (var5 ^ -1)) {
                                         break L5;
                                       } else {
-                                        var7 = param2.charAt(var6);
-                                        stackOut_25_0 = r.a((char) var7, -55);
-                                        stackIn_37_0 = stackOut_25_0 ? 1 : 0;
-                                        stackIn_26_0 = stackOut_25_0;
-                                        if (var8 != 0) {
-                                          break L4;
+                                        if (!param1) {
+                                          stackIn_32_0 = 0;
+                                          decompiledRegionSelector0 = 5;
+                                          break L0;
                                         } else {
-                                          L6: {
-                                            L7: {
-                                              if (!stackIn_26_0) {
-                                                break L7;
-                                              } else {
-                                                var5++;
-                                                if (var8 == 0) {
-                                                  break L6;
-                                                } else {
-                                                  break L7;
-                                                }
-                                              }
-                                            }
-                                            var5 = 0;
-                                            break L6;
-                                          }
-                                          L8: {
-                                            if (-3 < (var5 ^ -1)) {
-                                              break L8;
-                                            } else {
-                                              if (!param1) {
-                                                stackIn_34_0 = 0;
-                                                decompiledRegionSelector0 = 5;
-                                                break L0;
-                                              } else {
-                                                break L8;
-                                              }
-                                            }
-                                          }
-                                          var6++;
-                                          if (var8 == 0) {
-                                            continue L3;
-                                          } else {
-                                            break L5;
-                                          }
+                                          break L5;
                                         }
                                       }
                                     }
-                                    stackIn_37_0 = var5 ^ -1;
-                                    break L4;
-                                  }
-                                  if (stackIn_37_0 >= -1) {
-                                    stackIn_41_0 = 1;
-                                    decompiledRegionSelector0 = 7;
-                                    break L0;
-                                  } else {
-                                    stackIn_39_0 = 0;
-                                    decompiledRegionSelector0 = 6;
-                                    break L0;
+                                    var6++;
+                                    continue L3;
                                   }
                                 }
                               } else {
@@ -232,25 +204,25 @@ final class bh extends lh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L6: {
             var3 = decompiledCaughtException;
-            stackIn_44_0 = (RuntimeException) (var3);
+            stackIn_41_0 = (RuntimeException) (var3);
 
-            stackIn_44_1 = new StringBuilder().append("bh.C(").append(param0).append(',').append(param1).append(',');
+            stackIn_41_1 = new StringBuilder().append("bh.C(").append(param0).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackIn_45_2 = "null";
-              break L9;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "null";
+              break L6;
             } else {
-              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackIn_45_2 = "{...}";
-              break L9;
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "{...}";
+              break L6;
             }
           }
-          throw pf.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_42_0), stackIn_42_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0 != 0;
@@ -268,12 +240,12 @@ final class bh extends lh {
                   return stackIn_22_0 != 0;
                 } else {
                   if (decompiledRegionSelector0 == 5) {
-                    return stackIn_34_0 != 0;
+                    return stackIn_32_0 != 0;
                   } else {
                     if (decompiledRegionSelector0 == 6) {
-                      return stackIn_39_0 != 0;
+                      return stackIn_36_0 != 0;
                     } else {
-                      return stackIn_41_0 != 0;
+                      return stackIn_38_0 != 0;
                     }
                   }
                 }
@@ -285,17 +257,11 @@ final class bh extends lh {
 
     public static void a(int param0) {
         if (param0 > -125) {
-          field_q = (long[]) null;
-          field_u = null;
-          field_n = null;
-          field_q = null;
-          return;
-        } else {
-          field_u = null;
-          field_n = null;
-          field_q = null;
-          return;
+            field_q = (long[]) null;
         }
+        field_u = null;
+        field_n = null;
+        field_q = null;
     }
 
     bh(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {

@@ -1227,7 +1227,8 @@ final class dd extends bl {
                 }
               }
               L75: {
-                if (var22 != 8) {
+                if (var22 == 8) {
+                  var21 = var23;
                   if (var22 != 11) {
                     break L75;
                   } else {
@@ -1503,314 +1504,331 @@ final class dd extends bl {
                     break L92;
                   }
                 } else {
-                  L93: {
-                    this.field_T[var15] = 1;
-                    if (var18 < 0) {
-                      break L93;
-                    } else {
-                      if (var18 > 96) {
-                        break L93;
-                      } else {
-                        L94: {
-                          var19 = this.field_fb[var15];
-                          var25 = 7680 - (var18 + this.field_J.field_K[var19]) * 64 - this.field_J.field_c[var19] / 2;
-                          if (var25 >= 0) {
-                            if (var25 <= 7999) {
-                              break L94;
-                            } else {
-                              var25 = 7999;
-                              break L94;
-                            }
+                  this.field_T[var15] = 1;
+                  if (var18 >= 0) {
+                    if (var18 <= 96) {
+                      L93: {
+                        var19 = this.field_fb[var15];
+                        var25 = 7680 - (var18 + this.field_J.field_K[var19]) * 64 - this.field_J.field_c[var19] / 2;
+                        if (var25 >= 0) {
+                          if (var25 <= 7999) {
+                            break L93;
                           } else {
-                            var25 = 0;
-                            break L94;
+                            var25 = 7999;
+                            break L93;
                           }
+                        } else {
+                          var25 = 0;
+                          break L93;
                         }
-                        this.field_B[var15] = var25;
-                        break L93;
+                      }
+                      this.field_B[var15] = var25;
+                      if (var23 == 0) {
+                        break L92;
+                      } else {
+                        this.field_bb[var15] = var23;
+                        if (this.field_J.field_q != 0) {
+                          break L92;
+                        } else {
+                          this.field_bb[var15] = this.field_bb[var15] * 2;
+                          break L92;
+                        }
+                      }
+                    } else {
+                      if (var23 == 0) {
+                        break L92;
+                      } else {
+                        this.field_bb[var15] = var23;
+                        if (this.field_J.field_q != 0) {
+                          break L92;
+                        } else {
+                          this.field_bb[var15] = this.field_bb[var15] * 2;
+                          break L92;
+                        }
                       }
                     }
-                  }
-                  if (var23 == 0) {
-                    break L92;
                   } else {
-                    this.field_bb[var15] = var23;
-                    if (this.field_J.field_q != 0) {
+                    if (var23 == 0) {
                       break L92;
                     } else {
-                      this.field_bb[var15] = this.field_bb[var15] * 2;
-                      break L92;
+                      this.field_bb[var15] = var23;
+                      if (this.field_J.field_q != 0) {
+                        break L92;
+                      } else {
+                        this.field_bb[var15] = this.field_bb[var15] * 2;
+                        break L92;
+                      }
                     }
                   }
                 }
               }
-              L95: {
+              L94: {
                 if (var22 != 4) {
                   if (var22 == 6) {
-                    break L95;
+                    break L94;
                   } else {
-                    L96: {
+                    L95: {
                       if (this.field_sb[var15] == 0) {
-                        break L96;
+                        break L95;
                       } else {
                         var25 = field_rb[this.field_I[var15]];
                         this.a(var15, var25);
-                        break L96;
+                        break L95;
                       }
                     }
                     this.field_hb[var15] = 0;
                     this.field_sb[var15] = 0;
-                    break L95;
+                    break L94;
                   }
                 } else {
-                  L97: {
+                  L96: {
                     this.field_sb[var15] = 1;
                     if (var23 / 16 <= 0) {
-                      break L97;
+                      break L96;
                     } else {
                       this.field_q[var15] = var23 / 16;
-                      break L97;
+                      break L96;
                     }
                   }
                   if ((var23 & 15) <= 0) {
-                    break L95;
+                    break L94;
                   } else {
                     this.field_G[var15] = var23 & 15;
-                    break L95;
+                    break L94;
+                  }
+                }
+              }
+              L97: {
+                if (var22 != 17) {
+                  this.field_K[var15] = 0;
+                  break L97;
+                } else {
+                  this.field_K[var15] = 1;
+                  if (var23 == 0) {
+                    break L97;
+                  } else {
+                    this.field_p[var15] = (var23 & 240) / 16 - (var23 & 15);
+                    break L97;
                   }
                 }
               }
               L98: {
-                if (var22 != 17) {
-                  this.field_K[var15] = 0;
-                  break L98;
-                } else {
-                  this.field_K[var15] = 1;
-                  if (var23 == 0) {
-                    break L98;
-                  } else {
-                    this.field_p[var15] = (var23 & 240) / 16 - (var23 & 15);
-                    break L98;
-                  }
-                }
-              }
-              L99: {
-                L100: {
+                L99: {
                   if (var22 == 10) {
-                    break L100;
+                    break L99;
                   } else {
                     if (var22 == 6) {
-                      break L100;
+                      break L99;
                     } else {
                       if (var22 != 5) {
                         if (this.field_kb[var15] != 2) {
                           this.field_kb[var15] = 0;
-                          break L99;
+                          break L98;
                         } else {
                           this.field_kb[var15] = 1;
-                          break L99;
+                          break L98;
                         }
                       } else {
-                        break L100;
+                        break L99;
                       }
                     }
                   }
                 }
                 this.field_kb[var15] = 1;
                 if (var23 == 0) {
-                  break L99;
+                  break L98;
                 } else {
                   this.field_H[var15] = (var23 & 240) / 16 - (var23 & 15);
-                  break L99;
+                  break L98;
                 }
               }
-              L101: {
+              L100: {
                 if (var22 != 25) {
                   if (this.field_vb[var15] != 2) {
                     this.field_vb[var15] = 0;
-                    break L101;
+                    break L100;
                   } else {
                     this.field_vb[var15] = 1;
-                    break L101;
+                    break L100;
                   }
                 } else {
                   this.field_vb[var15] = 1;
                   if (var23 == 0) {
-                    break L101;
+                    break L100;
                   } else {
                     this.field_r[var15] = (var23 & 240) / 16 - (var23 & 15);
-                    break L101;
+                    break L100;
                   }
                 }
               }
-              L102: {
+              L101: {
                 if (var22 != 234) {
-                  break L102;
+                  break L101;
                 } else {
-                  L103: {
+                  L102: {
                     if (var23 != 0) {
                       this.field_N[var15] = var23;
-                      break L103;
+                      break L102;
                     } else {
                       var23 = this.field_N[var15];
-                      break L103;
+                      break L102;
                     }
                   }
                   this.field_gb[var15] = this.field_gb[var15] + var23;
                   if (this.field_gb[var15] >= 0) {
                     if (this.field_gb[var15] <= 64) {
-                      break L102;
+                      break L101;
                     } else {
                       this.field_gb[var15] = 64;
-                      break L102;
+                      break L101;
                     }
                   } else {
                     this.field_gb[var15] = 0;
-                    break L102;
+                    break L101;
                   }
                 }
               }
-              L104: {
+              L103: {
                 if (var22 != 235) {
-                  break L104;
+                  break L103;
                 } else {
-                  L105: {
+                  L104: {
                     if (var23 != 0) {
                       this.field_v[var15] = var23;
-                      break L105;
+                      break L104;
                     } else {
                       var23 = this.field_v[var15];
-                      break L105;
+                      break L104;
                     }
                   }
                   this.field_gb[var15] = this.field_gb[var15] - var23;
                   if (this.field_gb[var15] >= 0) {
                     if (this.field_gb[var15] <= 64) {
-                      break L104;
+                      break L103;
                     } else {
                       this.field_gb[var15] = 64;
-                      break L104;
+                      break L103;
                     }
                   } else {
                     this.field_gb[var15] = 0;
-                    break L104;
+                    break L103;
+                  }
+                }
+              }
+              L105: {
+                if (var22 != 1) {
+                  this.field_ab[var15] = 0;
+                  break L105;
+                } else {
+                  if (var23 == 0) {
+                    break L105;
+                  } else {
+                    this.field_ab[var15] = var23;
+                    break L105;
                   }
                 }
               }
               L106: {
-                if (var22 != 1) {
-                  this.field_ab[var15] = 0;
+                if (var22 != 2) {
+                  this.field_nb[var15] = 0;
                   break L106;
                 } else {
                   if (var23 == 0) {
                     break L106;
                   } else {
-                    this.field_ab[var15] = var23;
+                    this.field_nb[var15] = var23;
                     break L106;
                   }
                 }
               }
               L107: {
-                if (var22 != 2) {
-                  this.field_nb[var15] = 0;
+                if (var22 != 225) {
                   break L107;
                 } else {
-                  if (var23 == 0) {
-                    break L107;
-                  } else {
-                    this.field_nb[var15] = var23;
-                    break L107;
-                  }
-                }
-              }
-              L108: {
-                if (var22 != 225) {
-                  break L108;
-                } else {
-                  L109: {
+                  L108: {
                     if (var23 != 0) {
                       this.field_ib[var15] = var23;
-                      break L109;
+                      break L108;
                     } else {
                       var23 = this.field_ib[var15];
-                      break L109;
+                      break L108;
                     }
                   }
-                  L110: {
+                  L109: {
                     this.field_I[var15] = this.field_I[var15] - var23 * 4;
                     if (this.field_I[var15] >= 0) {
                       if (this.field_I[var15] <= 7999) {
-                        break L110;
+                        break L109;
                       } else {
                         this.field_I[var15] = 7999;
-                        break L110;
+                        break L109;
                       }
                     } else {
                       this.field_I[var15] = 0;
-                      break L110;
+                      break L109;
                     }
                   }
                   var25 = field_rb[this.field_I[var15]];
                   this.a(var15, var25);
-                  break L108;
+                  break L107;
                 }
               }
-              L111: {
+              L110: {
                 if (var22 != 226) {
-                  break L111;
+                  break L110;
                 } else {
-                  L112: {
+                  L111: {
                     if (var23 != 0) {
                       this.field_eb[var15] = var23;
-                      break L112;
+                      break L111;
                     } else {
                       var23 = this.field_eb[var15];
-                      break L112;
+                      break L111;
                     }
                   }
-                  L113: {
+                  L112: {
                     this.field_I[var15] = this.field_I[var15] + var23 * 4;
                     if (this.field_I[var15] >= 0) {
                       if (this.field_I[var15] <= 7999) {
-                        break L113;
+                        break L112;
                       } else {
                         this.field_I[var15] = 7999;
-                        break L113;
+                        break L112;
                       }
                     } else {
                       this.field_I[var15] = 0;
-                      break L113;
+                      break L112;
                     }
                   }
                   var25 = field_rb[this.field_I[var15]];
                   this.a(var15, var25);
-                  break L111;
+                  break L110;
                 }
               }
               if (var22 == 33) {
                 if (var23 / 16 != 1) {
-                  L114: {
+                  L113: {
                     var23 = var23 & 15;
                     if (var23 != 0) {
                       this.field_mb[var15] = var23;
-                      break L114;
+                      break L113;
                     } else {
                       var23 = this.field_mb[var15];
-                      break L114;
+                      break L113;
                     }
                   }
-                  L115: {
+                  L114: {
                     this.field_I[var15] = this.field_I[var15] + var23;
                     if (this.field_I[var15] >= 0) {
                       if (this.field_I[var15] <= 7999) {
-                        break L115;
+                        break L114;
                       } else {
                         this.field_I[var15] = 7999;
-                        break L115;
+                        break L114;
                       }
                     } else {
                       this.field_I[var15] = 0;
-                      break L115;
+                      break L114;
                     }
                   }
                   var25 = field_rb[this.field_I[var15]];
@@ -1818,28 +1836,28 @@ final class dd extends bl {
                   var15++;
                   continue L23;
                 } else {
-                  L116: {
+                  L115: {
                     var23 = var23 & 15;
                     if (var23 != 0) {
                       this.field_z[var15] = var23;
-                      break L116;
+                      break L115;
                     } else {
                       var23 = this.field_z[var15];
-                      break L116;
+                      break L115;
                     }
                   }
-                  L117: {
+                  L116: {
                     this.field_I[var15] = this.field_I[var15] - var23;
                     if (this.field_I[var15] >= 0) {
                       if (this.field_I[var15] <= 7999) {
-                        break L117;
+                        break L116;
                       } else {
                         this.field_I[var15] = 7999;
-                        break L117;
+                        break L116;
                       }
                     } else {
                       this.field_I[var15] = 0;
-                      break L117;
+                      break L116;
                     }
                   }
                   var25 = field_rb[this.field_I[var15]];

@@ -195,44 +195,30 @@ final class ig extends ki implements ka {
     public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
         RuntimeException var6 = null;
         int var7 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if (param3 != this.field_F) {
-                  break L2;
-                } else {
-                  ok.a((byte) 96);
-                  if (var7 == 0) {
+              if (param3 != this.field_F) {
+                if (param3 != this.field_E) {
+                  if (this.field_G == param3) {
+                    qk.f(4);
                     break L1;
                   } else {
-                    break L2;
+                    break L1;
                   }
-                }
-              }
-              L3: {
-                if (param3 != this.field_E) {
-                  break L3;
                 } else {
                   wf.d(350);
-                  if (var7 == 0) {
-                    break L1;
-                  } else {
-                    break L3;
-                  }
+                  break L1;
                 }
-              }
-              if (this.field_G == param3) {
-                qk.f(4);
-                break L1;
               } else {
+                ok.a((byte) 96);
                 break L1;
               }
             }
@@ -245,25 +231,25 @@ final class ig extends ki implements ka {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var6 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var6);
+            stackIn_13_0 = (RuntimeException) (var6);
 
-            stackIn_15_1 = new StringBuilder().append("ig.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_13_1 = new StringBuilder().append("ig.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
             if (param3 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L4;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
+              break L2;
             } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L4;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
+              break L2;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param4 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param4 + ')');
         }
     }
 

@@ -1240,66 +1240,18 @@ final class ud {
     }
 
     final void a(ue[] param0, boolean param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (!param1) {
-              L1: {
-                if (this.field_g == null) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (wd.field_x) {
-                      this.field_g.i(param0[3].field_k * this.field_m / 1000);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  this.field_g = null;
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (runtimeException);
-
-            stackIn_10_1 = new StringBuilder().append("ud.A(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
-          }
-          throw ii.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+        if (param1) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            if (this.field_g != null) {
+                if (!(!wd.field_x)) {
+                    this.field_g.i(param0[3].field_k * this.field_m / 1000);
+                }
+                this.field_g = null;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) ((Object) runtimeException), "ud.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1316,62 +1268,18 @@ final class ud {
     }
 
     final void a(ue[] param0, byte param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 106) {
-                break L1;
-              } else {
+            if (param1 != 106) {
                 this.a((dg[]) null, (rb) null, -3, (ue[]) null, -0.052863935081619066, (byte) 41);
-                break L1;
-              }
             }
-            L2: {
-              if (this.field_r == null) {
-                break L2;
-              } else {
-                L3: {
-                  if (wd.field_x) {
+            if (this.field_r != null) {
+                if (!(!wd.field_x)) {
                     this.field_r.i(param0[8].field_k * this.field_s / 1000);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
                 }
                 this.field_r = null;
-                break L2;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (runtimeException);
-
-            stackIn_10_1 = new StringBuilder().append("ud.C(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L4;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L4;
-            }
-          }
-          throw ii.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) ((Object) runtimeException), "ud.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -243,55 +243,58 @@ final class sj extends we {
                 }
               }
               L13: {
-                if (this.field_L == null) {
-                  break L13;
-                } else {
-                  if (0 != this.field_E) {
-                    L14: {
+                L14: {
+                  if (this.field_L == null) {
+                    break L14;
+                  } else {
+                    if (0 != this.field_E) {
                       L15: {
-                        if (null == this.field_G) {
-                          break L15;
-                        } else {
-                          if (this.field_G.length >= var6) {
-                            ii.a(this.field_G, 0, var6);
-                            break L14;
+                        L16: {
+                          if (null == this.field_G) {
+                            break L16;
                           } else {
-                            break L15;
+                            if (this.field_G.length >= var6) {
+                              ii.a(this.field_G, 0, var6);
+                              break L15;
+                            } else {
+                              break L16;
+                            }
                           }
                         }
+                        this.field_G = new int[var6];
+                        this.field_I = new int[var6];
+                        break L15;
                       }
-                      this.field_G = new int[var6];
-                      this.field_I = new int[var6];
-                      break L14;
-                    }
-                    L16: {
-                      this.field_t.a(this.field_G, 0, param2);
-                      if (!tb.field_b) {
-                        stackIn_62_0 = param1;
-                        break L16;
-                      } else {
-                        param1 = param1 << 1;
-                        stackIn_62_0 = param1 << 1;
-                        break L16;
+                      L17: {
+                        this.field_t.a(this.field_G, 0, param2);
+                        if (!tb.field_b) {
+                          stackIn_62_0 = param1;
+                          break L17;
+                        } else {
+                          param1 = param1 << 1;
+                          stackIn_62_0 = param1 << 1;
+                          break L17;
+                        }
                       }
-                    }
-                    var7 = stackIn_62_0;
-                    var8 = this.field_A * this.field_E / 256;
-                    var9 = this.field_A + -var8;
-                    var10 = 0;
-                    L17: while (true) {
-                      if (var10 >= var6) {
-                        break L13;
-                      } else {
-                        param0[var10 + var7] = var8 * this.field_G[var10] + param0[var10 + var7] * var9 >> 1373565576;
-                        var10++;
-                        continue L17;
+                      var7 = stackIn_62_0;
+                      var8 = this.field_A * this.field_E / 256;
+                      var9 = this.field_A + -var8;
+                      var10 = 0;
+                      L18: while (true) {
+                        if (var10 >= var6) {
+                          break L14;
+                        } else {
+                          param0[var10 + var7] = var8 * this.field_G[var10] + param0[var10 + var7] * var9 >> 1373565576;
+                          var10++;
+                          continue L18;
+                        }
                       }
+                    } else {
+                      break L13;
                     }
-                  } else {
-                    break L13;
                   }
                 }
+                break L13;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -299,7 +302,7 @@ final class sj extends we {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L18: {
+          L19: {
             var4 = decompiledCaughtException;
             stackIn_68_0 = (RuntimeException) (var4);
 
@@ -309,12 +312,12 @@ final class sj extends we {
               stackIn_69_0 = (RuntimeException) ((Object) stackIn_68_0);
               stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
               stackIn_69_2 = "null";
-              break L18;
+              break L19;
             } else {
               stackIn_69_0 = (RuntimeException) ((Object) stackIn_68_0);
               stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
               stackIn_69_2 = "{...}";
-              break L18;
+              break L19;
             }
           }
           throw ci.a((Throwable) ((Object) stackIn_69_0), stackIn_69_2 + ',' + param1 + ',' + param2 + ')');
@@ -343,13 +346,18 @@ final class sj extends we {
         int var3;
         L0: {
           var3 = SteelSentinels.field_G;
-          if ((this.field_D ^ -1) >= -1) {
-            if (1048576 > this.field_D) {
-              if (null == this.field_w) {
+          if ((this.field_D ^ -1) < -1) {
+            if (null != this.field_s) {
+              this.field_O.d(param0);
+              if (1048576 <= this.field_D) {
                 break L0;
               } else {
-                this.field_M.d(param0);
-                break L0;
+                if (null == this.field_w) {
+                  break L0;
+                } else {
+                  this.field_M.d(param0);
+                  break L0;
+                }
               }
             } else {
               if (1048576 <= this.field_D) {

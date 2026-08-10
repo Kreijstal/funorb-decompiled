@@ -818,88 +818,31 @@ class bm extends mi {
     }
 
     void a(byte param0, ea param1, int param2, int param3) {
-        RuntimeException runtimeException = null;
-        int var6 = 0;
         et var7 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        int var6 = 0;
         try {
-          L0: {
-            L1: {
-              super.a((byte) 126, param1, param2, param3);
-              if (param0 > 13) {
-                break L1;
-              } else {
+            super.a((byte) 126, param1, param2, param3);
+            if (param0 <= 13) {
                 this.field_B = -1;
-                break L1;
-              }
             }
-            L2: {
-              this.h(0);
-              if (this.field_i != 1) {
-                break L2;
-              } else {
-                L3: {
-                  if (this.field_e instanceof et) {
+            this.h(0);
+            if (this.field_i == 1) {
+                if (!(!(this.field_e instanceof et))) {
                     var7 = (et) ((Object) this.field_e);
                     var6 = var7.a((ea) (this), param3, param2, cf.field_g, 3, ic.field_b);
-                    if (-1 != var6) {
-                      L4: {
-                        if (!this.field_G) {
-                          break L4;
-                        } else {
-                          if (var6 >= this.field_A) {
-                            break L4;
-                          } else {
-                            if (var6 > this.field_D) {
-                              var6 = this.field_A;
-                              break L4;
-                            } else {
-                              break L4;
+                    if (!(-1 == var6)) {
+                        if (this.field_G && var6 < this.field_A) {
+                            if (!(var6 <= this.field_D)) {
+                                var6 = this.field_A;
                             }
-                          }
                         }
-                      }
-                      this.field_B = var6;
-                      break L3;
-                    } else {
-                      break L3;
+                        this.field_B = var6;
                     }
-                  } else {
-                    break L3;
-                  }
                 }
                 this.field_F = kh.a(-60);
-                break L2;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (runtimeException);
-
-            stackIn_17_1 = new StringBuilder().append("bm.S(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L5;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L5;
-            }
-          }
-          throw pn.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) ((Object) runtimeException), "bm.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

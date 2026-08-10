@@ -128,32 +128,113 @@ final class hg extends sf {
     }
 
     final static String a(String param0, String param1, String param2, byte param3) {
-        int var4;
-        int var5;
-        var5 = OrbDefence.field_D ? 1 : 0;
-        if (param3 < -2) {
-          var4 = param0.indexOf(param2);
-          L0: while (true) {
-            if ((var4 ^ -1) == 0) {
-              return param0;
-            } else {
-              param0 = param0.substring(0, var4) + param1 + param0.substring(var4 - -param2.length());
-              var4 = param0.indexOf(param2, param1.length() + var4);
-              continue L0;
+        String stackIn_5_0 = null;
+        String stackIn_7_0 = null;
+        String stackIn_11_0 = null;
+        String stackIn_13_0 = null;
+        int statePc = 0;
+        int var4 = 0;
+        int var5 = 0;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var5 = OrbDefence.field_D ? 1 : 0;
+                    if (param3 < -2) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    field_Z = -35;
+                    statePc = 8;
+                    continue stateLoop;
+                }
+                case 2: {
+                    var4 = param0.indexOf(param2);
+                    statePc = 3;
+                    continue stateLoop;
+                }
+                case 3: {
+                    if ((var4 ^ -1) == 0) {
+                        statePc = 6;
+                    } else {
+                        statePc = 4;
+                    }
+                    continue stateLoop;
+                }
+                case 4: {
+                    param0 = param0.substring(0, var4) + param1 + param0.substring(var4 - -param2.length());
+                    stackIn_7_0 = (String) (param0);
+                    stackIn_5_0 = stackIn_7_0;
+                    if (var5 != 0) {
+                        statePc = 7;
+                    } else {
+                        statePc = 5;
+                    }
+                    continue stateLoop;
+                }
+                case 5: {
+                    var4 = ((String) (Object) stackIn_5_0).indexOf(param2, param1.length() + var4);
+                    if (var5 == 0) {
+                        statePc = 3;
+                    } else {
+                        statePc = 6;
+                    }
+                    continue stateLoop;
+                }
+                case 6: {
+                    stackIn_7_0 = (String) (param0);
+                    statePc = 7;
+                    continue stateLoop;
+                }
+                case 7: {
+                    return stackIn_7_0;
+                }
+                case 8: {
+                    var4 = param0.indexOf(param2);
+                    statePc = 9;
+                    continue stateLoop;
+                }
+                case 9: {
+                    if ((var4 ^ -1) == 0) {
+                        statePc = 12;
+                    } else {
+                        statePc = 10;
+                    }
+                    continue stateLoop;
+                }
+                case 10: {
+                    param0 = param0.substring(0, var4) + param1 + param0.substring(var4 - -param2.length());
+                    stackIn_13_0 = (String) (param0);
+                    stackIn_11_0 = stackIn_13_0;
+                    if (var5 != 0) {
+                        statePc = 13;
+                    } else {
+                        statePc = 11;
+                    }
+                    continue stateLoop;
+                }
+                case 11: {
+                    var4 = ((String) (Object) stackIn_11_0).indexOf(param2, param1.length() + var4);
+                    if (var5 == 0) {
+                        statePc = 9;
+                    } else {
+                        statePc = 12;
+                    }
+                    continue stateLoop;
+                }
+                case 12: {
+                    stackIn_13_0 = (String) (param0);
+                    statePc = 13;
+                    continue stateLoop;
+                }
+                case 13: {
+                    return stackIn_13_0;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
-          }
-        } else {
-          field_Z = -35;
-          var4 = param0.indexOf(param2);
-          L1: while (true) {
-            if ((var4 ^ -1) == 0) {
-              return param0;
-            } else {
-              param0 = param0.substring(0, var4) + param1 + param0.substring(var4 - -param2.length());
-              var4 = param0.indexOf(param2, param1.length() + var4);
-              continue L1;
-            }
-          }
         }
     }
 

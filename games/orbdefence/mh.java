@@ -30,10 +30,10 @@ final class mh {
     }
 
     final ca c(byte param0) {
+        int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
         int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
         int var3;
         ca var4;
         ca var5;
@@ -43,24 +43,24 @@ final class mh {
         ca var31;
         var3 = OrbDefence.field_D ? 1 : 0;
         if ((this.field_h ^ -1) < -1) {
-          if (this.field_e[-1 + this.field_h] == this.field_c) {
+          if (this.field_e[-1 + this.field_h] != this.field_c) {
+            var31 = this.field_c;
+            this.field_c = var31.field_e;
+            return var31;
+          } else {
             if (param0 >= -55) {
               this.a((byte) 19);
               L0: while (true) {
                 if (this.field_h < this.field_d) {
-                  fieldTemp$4 = this.field_h;
+                  fieldTemp$3 = this.field_h;
                   this.field_h = this.field_h + 1;
-                  var4 = this.field_e[fieldTemp$4].field_e;
+                  var4 = this.field_e[fieldTemp$3].field_e;
                   var22 = var4;
                   if (var4 != this.field_e[this.field_h - 1]) {
                     this.field_c = var22.field_e;
                     return var22;
                   } else {
-                    if (var3 == 0) {
-                      continue L0;
-                    } else {
-                      return null;
-                    }
+                    continue L0;
                   }
                 } else {
                   return null;
@@ -69,47 +69,35 @@ final class mh {
             } else {
               L1: while (true) {
                 if (this.field_h < this.field_d) {
-                  fieldTemp$5 = this.field_h;
+                  fieldTemp$4 = this.field_h;
                   this.field_h = this.field_h + 1;
-                  var4 = this.field_e[fieldTemp$5].field_e;
+                  var4 = this.field_e[fieldTemp$4].field_e;
                   var18 = var4;
                   if (var4 != this.field_e[this.field_h - 1]) {
                     this.field_c = var18.field_e;
                     return var18;
                   } else {
-                    if (var3 == 0) {
-                      continue L1;
-                    } else {
-                      return null;
-                    }
+                    continue L1;
                   }
                 } else {
                   return null;
                 }
               }
             }
-          } else {
-            var31 = this.field_c;
-            this.field_c = var31.field_e;
-            return var31;
           }
         } else {
           if (param0 < -55) {
             L2: while (true) {
               if (this.field_h < this.field_d) {
-                fieldTemp$6 = this.field_h;
+                fieldTemp$5 = this.field_h;
                 this.field_h = this.field_h + 1;
-                var4 = this.field_e[fieldTemp$6].field_e;
+                var4 = this.field_e[fieldTemp$5].field_e;
                 var17 = var4;
                 if (var4 != this.field_e[this.field_h - 1]) {
                   this.field_c = var17.field_e;
                   return var17;
                 } else {
-                  if (var3 == 0) {
-                    continue L2;
-                  } else {
-                    return null;
-                  }
+                  continue L2;
                 }
               } else {
                 return null;
@@ -119,19 +107,15 @@ final class mh {
             this.a((byte) 19);
             L3: while (true) {
               if (this.field_h < this.field_d) {
-                fieldTemp$7 = this.field_h;
+                fieldTemp$6 = this.field_h;
                 this.field_h = this.field_h + 1;
-                var4 = this.field_e[fieldTemp$7].field_e;
+                var4 = this.field_e[fieldTemp$6].field_e;
                 var5 = var4;
                 if (var4 != this.field_e[this.field_h - 1]) {
                   this.field_c = var5.field_e;
                   return var5;
                 } else {
-                  if (var3 == 0) {
-                    continue L3;
-                  } else {
-                    return null;
-                  }
+                  continue L3;
                 }
               } else {
                 return null;
@@ -162,78 +146,55 @@ final class mh {
 
     final ca a(byte param0) {
         if (param0 < 115) {
-          this.a((byte) -8);
-          this.field_h = 0;
-          return this.c((byte) -108);
-        } else {
-          this.field_h = 0;
-          return this.c((byte) -108);
+            this.a((byte) -8);
+            this.field_h = 0;
+            return this.c((byte) -108);
         }
+        this.field_h = 0;
+        return this.c((byte) -108);
     }
 
     mh(int param0) {
-        ca dupTemp$0 = null;
-        ca var3 = null;
-        int var4 = OrbDefence.field_D ? 1 : 0;
+        ca dupTemp$1 = null;
+        int var2;
+        ca var3;
         this.field_h = 0;
         this.field_d = param0;
         this.field_e = new ca[param0];
-        int var2 = 0;
-        do {
-            if (var2 >= param0) {
-                return;
-            }
-            dupTemp$0 = new ca();
-            var3 = dupTemp$0;
-            this.field_e[var2] = dupTemp$0;
+        var2 = 0;
+        L0: while (true) {
+          if (var2 < param0) {
+            dupTemp$1 = new ca();
+            var3 = dupTemp$1;
+            this.field_e[var2] = dupTemp$1;
             var3.field_e = var3;
             var3.field_c = var3;
             var2++;
-            if (var4 != 0) {
-                return;
-            }
-        } while (var4 == 0);
+            continue L0;
+          } else {
+            return;
+          }
+        }
     }
 
     final ca a(long param0, int param1) {
-        ca var4;
-        ca var5;
-        int var6;
-        Object stackIn_7_0 = null;
-        var6 = OrbDefence.field_D ? 1 : 0;
-        if (param1 == -1) {
-          var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_d))];
-          this.field_g = var4.field_e;
-          L0: while (true) {
-            if (this.field_g != var4) {
-              stackIn_7_0 = this;
-
-              if (var6 == 0) {
-                if ((((mh) (this)).field_g.field_d ^ -1L) != (param0 ^ -1L)) {
-                  this.field_g = this.field_g.field_e;
-                  if (var6 == 0) {
-                    continue L0;
-                  } else {
-                    this.field_g = null;
-                    return null;
-                  }
-                } else {
-                  var5 = this.field_g;
-                  this.field_g = this.field_g.field_e;
-                  return var5;
-                }
-              } else {
-                ((mh) (this)).field_g = null;
-                return null;
-              }
-            } else {
-              this.field_g = null;
-              return null;
-            }
-          }
-        } else {
-          return (ca) null;
+        ca var5 = null;
+        int var6 = OrbDefence.field_D ? 1 : 0;
+        if (param1 != -1) {
+            return (ca) null;
         }
+        ca var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_d))];
+        this.field_g = var4.field_e;
+        while (this.field_g != var4) {
+            if ((this.field_g.field_d ^ -1L) == (param0 ^ -1L)) {
+                var5 = this.field_g;
+                this.field_g = this.field_g.field_e;
+                return var5;
+            }
+            this.field_g = this.field_g.field_e;
+        }
+        this.field_g = null;
+        return null;
     }
 
     static {

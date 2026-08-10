@@ -155,13 +155,13 @@ final class me {
         bo var6 = null;
         int var7 = 0;
         bo stackIn_4_0 = null;
-        bo stackIn_11_0 = null;
-        bo stackIn_14_0 = null;
+        bo stackIn_10_0 = null;
+        bo stackIn_13_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -177,69 +177,53 @@ final class me {
               var4 = 53 % ((param0 - 52) / 37);
               var5 = 0;
               L1: while (true) {
-                L2: {
-                  L3: {
-                    if (var5 >= var3.length) {
-                      break L3;
-                    } else {
-                      var6 = var3[var5];
-                      stackIn_14_0 = (bo) (var6);
-
-                      if (var7 != 0) {
-                        break L2;
-                      } else {
-                        if (((bo) (Object) stackIn_14_0).a(var2, (byte) -107)) {
-                          stackIn_11_0 = (bo) (var6);
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        } else {
-                          var5++;
-                          if (var7 == 0) {
-                            continue L1;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                    }
+                if (var5 >= var3.length) {
+                  stackIn_13_0 = wi.field_h;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                } else {
+                  var6 = var3[var5];
+                  if (var6.a(var2, (byte) -107)) {
+                    stackIn_10_0 = (bo) (var6);
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  } else {
+                    var5++;
+                    continue L1;
                   }
-                  stackIn_14_0 = wi.field_h;
-                  break L2;
                 }
-                decompiledRegionSelector0 = 1;
-                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var2_ref = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var2_ref);
+            stackIn_16_0 = (RuntimeException) (var2_ref);
 
-            stackIn_17_1 = new StringBuilder().append("me.D(").append(param0).append(',');
+            stackIn_16_1 = new StringBuilder().append("me.D(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L4;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
+              break L2;
             } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L4;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
+              break L2;
             }
           }
-          throw fa.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_14_0;
+            return stackIn_10_0;
           } else {
-            return stackIn_11_0;
+            return stackIn_13_0;
           }
         }
     }
@@ -248,45 +232,28 @@ final class me {
         field_m = null;
         field_d = null;
         if (param0 != 119) {
-          me.a((byte) -96);
-          field_f = null;
-          field_e = null;
-          field_c = null;
-          field_j = null;
-          field_k = null;
-          return;
-        } else {
-          field_f = null;
-          field_e = null;
-          field_c = null;
-          field_j = null;
-          field_k = null;
-          return;
+            me.a((byte) -96);
         }
+        field_f = null;
+        field_e = null;
+        field_c = null;
+        field_j = null;
+        field_k = null;
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        var3 = on.a(param2, -18924);
-        var4 = wn.a(-126, param2);
-        var5 = on.a(param0, -18924);
+        int var3 = on.a(param2, -18924);
+        int var4 = wn.a(-126, param2);
+        int var5 = on.a(param0, -18924);
         if (param1 != -2106461552) {
-          return (int[]) null;
-        } else {
-          var6 = wn.a(-127, param0);
-          var7 = (int)((long)var3 * (long)var5 >> 1988394960);
-          var8 = (int)((long)var3 * (long)var6 >> 1889680848);
-          var9 = (int)((long)var5 * (long)var4 >> -1063871984);
-          var10 = (int)((long)var6 * (long)var4 >> -2106461552);
-          return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
+            return (int[]) null;
         }
+        int var6 = wn.a(-127, param0);
+        int var7 = (int)((long)var3 * (long)var5 >> 1988394960);
+        int var8 = (int)((long)var3 * (long)var6 >> 1889680848);
+        int var9 = (int)((long)var5 * (long)var4 >> -1063871984);
+        int var10 = (int)((long)var6 * (long)var4 >> -2106461552);
+        return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
     final static sl a(byte[] param0, boolean param1) {

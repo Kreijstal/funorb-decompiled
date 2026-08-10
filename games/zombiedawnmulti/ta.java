@@ -58,7 +58,6 @@ final class ta extends al {
     }
 
     final void a(String param0, float param1, int param2, boolean param3) {
-        RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
@@ -69,6 +68,7 @@ final class ta extends al {
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -97,27 +97,20 @@ final class ta extends al {
                     break L3;
                   }
                 }
-                L4: {
-                  ((ta) (this)).field_kb = stackIn_7_1 != 0;
-                  if (this.field_kb) {
-                    break L4;
+                ((ta) (this)).field_kb = stackIn_7_1 != 0;
+                if (this.field_kb) {
+                  this.field_qb.a(4210752, 8405024, (byte) -95);
+                  this.field_qb.field_L = true;
+                  break L2;
+                } else {
+                  this.field_qb.a(4210752, 2113632, (byte) 117);
+                  if (this.field_nb) {
+                    this.field_qb.field_L = false;
+                    break L2;
                   } else {
-                    this.field_qb.a(4210752, 2113632, (byte) 117);
-                    if (this.field_nb) {
-                      this.field_qb.field_L = false;
-                      if (!ZombieDawnMulti.field_E) {
-                        break L2;
-                      } else {
-                        break L4;
-                      }
-                    } else {
-                      break L2;
-                    }
+                    break L2;
                   }
                 }
-                this.field_qb.a(4210752, 8405024, (byte) -95);
-                this.field_qb.field_L = true;
-                break L2;
               }
             }
             this.field_qb.field_B = (int)(65536.0f * (param1 / 100.0f));
@@ -131,7 +124,7 @@ final class ta extends al {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var5 = decompiledCaughtException;
             stackIn_17_0 = (RuntimeException) (var5);
 
@@ -141,12 +134,12 @@ final class ta extends al {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "null";
-              break L5;
+              break L4;
             } else {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "{...}";
-              break L5;
+              break L4;
             }
           }
           throw fa.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');

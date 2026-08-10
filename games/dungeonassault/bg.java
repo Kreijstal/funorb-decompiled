@@ -1268,7 +1268,17 @@ final class bg extends qe {
             }
           }
           L7: {
-            if ((var3 ^ -1) == 0) {
+            if ((var3 ^ -1) != 0) {
+              L8: {
+                qc.field_y = var3;
+                if (rb.field_N != qc.field_y) {
+                  break L8;
+                } else {
+                  this.a(fb.field_d[-vd.field_a + rb.field_N], 125);
+                  break L8;
+                }
+              }
+              gg.a((byte) -96);
               if (0 == (var2 ^ -1)) {
                 break L7;
               } else {
@@ -1292,13 +1302,13 @@ final class bg extends qe {
               }
             }
           }
-          L8: {
+          L9: {
             if (param0 == 5458) {
-              break L8;
+              break L9;
             } else {
               var8 = (di) null;
               this.a((di) null, -127);
-              break L8;
+              break L9;
             }
           }
           return;

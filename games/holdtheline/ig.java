@@ -233,71 +233,24 @@ final class ig extends dk {
     }
 
     final void a(byte param0, hj[] param1) {
-        RuntimeException runtimeException = null;
-        nj[] var3 = null;
+        nj[] var7 = null;
         int var4 = 0;
         nj var5 = null;
-        int var6 = 0;
-        nj[] var7 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var6 = HoldTheLine.field_D;
+        int var6 = HoldTheLine.field_D;
         try {
-          L0: {
             var7 = this.field_s;
-            var3 = var7;
-            var4 = 0;
-            L1: while (true) {
-              if (var4 >= var7.length) {
-                L2: {
-                  if (param0 == -2) {
-                    break L2;
-                  } else {
-                    field_u = (float[]) null;
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                L3: {
-                  var5 = var7[var4];
-                  if (var5 != null) {
+            nj[] var3 = var7;
+            for (var4 = 0; var4 < var7.length; var4++) {
+                var5 = var7[var4];
+                if (!(var5 == null)) {
                     var5.field_j = param1;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
                 }
-                var4++;
-                continue L1;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (runtimeException);
-
-            stackIn_12_1 = new StringBuilder().append("ig.Q(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
+            if (param0 != -2) {
+                field_u = (float[]) null;
             }
-          }
-          throw kk.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) ((Object) runtimeException), "ig.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

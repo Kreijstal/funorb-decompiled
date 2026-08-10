@@ -124,26 +124,29 @@ final class ba {
               }
             }
             L8: {
-              n.field_s = param0;
-              jf.field_b = -1;
-              ak.field_c = -1;
-              if (!sk.field_h) {
-                break L8;
-              } else {
-                if (rb.field_m == dm.field_a) {
-                  dm.field_a = 0;
-                  sk.field_h = false;
-                  break L8;
+              L9: {
+                n.field_s = param0;
+                jf.field_b = -1;
+                ak.field_c = -1;
+                if (!sk.field_h) {
+                  break L9;
                 } else {
-                  break L8;
+                  if (rb.field_m == dm.field_a) {
+                    dm.field_a = 0;
+                    sk.field_h = false;
+                    break L9;
+                  } else {
+                    break L8;
+                  }
                 }
               }
+              break L8;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L10: {
             var2 = decompiledCaughtException;
             stackIn_40_0 = (RuntimeException) (var2);
 
@@ -153,12 +156,12 @@ final class ba {
               stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
               stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
               stackIn_41_2 = "null";
-              break L9;
+              break L10;
             } else {
               stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
               stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
               stackIn_41_2 = "{...}";
-              break L9;
+              break L10;
             }
           }
           throw kk.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ',' + param1 + ')');

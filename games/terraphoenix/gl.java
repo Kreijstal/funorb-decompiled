@@ -929,17 +929,20 @@ class gl extends uf {
                       break L3;
                     }
                   }
-                  ((gl) (this)).field_s = stackIn_10_1 != 0;
-                  if (this.field_r == null) {
-                    break L2;
-                  } else {
-                    if (!(this.field_r instanceof de)) {
-                      break L2;
+                  L4: {
+                    ((gl) (this)).field_s = stackIn_10_1 != 0;
+                    if (this.field_r == null) {
+                      break L4;
                     } else {
-                      ((de) ((Object) this.field_r)).a(true, var5_int != 0, (gl) (this));
-                      break L2;
+                      if (!(this.field_r instanceof de)) {
+                        break L4;
+                      } else {
+                        ((de) ((Object) this.field_r)).a(true, var5_int != 0, (gl) (this));
+                        break L2;
+                      }
                     }
                   }
+                  break L2;
                 } else {
                   break L2;
                 }
@@ -953,7 +956,7 @@ class gl extends uf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var5 = decompiledCaughtException;
             stackIn_16_0 = (RuntimeException) (var5);
 
@@ -963,12 +966,12 @@ class gl extends uf {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw qk.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -981,47 +984,13 @@ class gl extends uf {
     }
 
     void a(int param0, int param1, int param2, int param3, int param4, gl param5) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_j = 0;
-              if (param0 >= 36) {
-                break L1;
-              } else {
+            this.field_j = 0;
+            if (param0 < 36) {
                 this.d(18);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("gl.HA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw qk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) ((Object) runtimeException), "gl.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1150,19 +1119,22 @@ class gl extends uf {
             L7: {
               if (null != this.field_r) {
                 L8: {
-                  discarded$6 = param3.append(" listener=");
-                  if (this.field_r instanceof gl) {
-                    break L8;
-                  } else {
-                    discarded$7 = param3.append(this.field_r);
-                    if (var6 == 0) {
-                      break L7;
+                  L9: {
+                    discarded$6 = param3.append(" listener=");
+                    if (this.field_r instanceof gl) {
+                      break L9;
                     } else {
-                      break L8;
+                      discarded$7 = param3.append(this.field_r);
+                      if (var6 == 0) {
+                        break L8;
+                      } else {
+                        break L9;
+                      }
                     }
                   }
+                  param3 = this.a(34, param3, param1 - -1, param0);
+                  break L8;
                 }
-                param3 = this.a(34, param3, param1 - -1, param0);
                 break L7;
               } else {
                 break L7;
@@ -1172,7 +1144,7 @@ class gl extends uf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L10: {
             var5 = decompiledCaughtException;
             stackIn_27_0 = (RuntimeException) (var5);
 
@@ -1182,15 +1154,15 @@ class gl extends uf {
               stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
               stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackIn_28_2 = "null";
-              break L9;
+              break L10;
             } else {
               stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
               stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackIn_28_2 = "{...}";
-              break L9;
+              break L10;
             }
           }
-          L10: {
+          L11: {
 
 
             stackIn_30_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',');
@@ -1199,12 +1171,12 @@ class gl extends uf {
               stackIn_28_0 = (RuntimeException) ((Object) stackIn_28_0);
               stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackIn_31_2 = "null";
-              break L10;
+              break L11;
             } else {
               stackIn_28_0 = (RuntimeException) ((Object) stackIn_28_0);
               stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackIn_31_2 = "{...}";
-              break L10;
+              break L11;
             }
           }
           throw qk.a((Throwable) ((Object) stackIn_28_0), stackIn_31_2 + ')');
@@ -1407,94 +1379,20 @@ class gl extends uf {
     }
 
     gl(String param0, cj param1, sc param2) {
-        RuntimeException runtimeException = null;
         w var4 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         this.field_y = 0;
         this.field_v = 0;
         try {
-          L0: {
-            L1: {
-              this.field_o = param0;
-              this.field_r = param2;
-              this.field_l = param1;
-              if (!(this.field_l instanceof w)) {
-                break L1;
-              } else {
+            this.field_o = param0;
+            this.field_r = param2;
+            this.field_l = param1;
+            if (this.field_l instanceof w) {
                 var4 = (w) ((Object) this.field_l);
                 this.field_p = var4.a((gl) (this), (byte) 102);
                 this.field_n = var4.b((gl) (this), (byte) 116);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (runtimeException);
-
-            stackIn_6_1 = new StringBuilder().append("gl.<init>(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
-          }
-          L3: {
-
-
-            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
-          }
-          L4: {
-
-
-            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-
-            if (param2 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
-          }
-          throw qk.a((Throwable) ((Object) stackIn_7_0), stackIn_13_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

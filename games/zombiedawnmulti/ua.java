@@ -461,121 +461,114 @@ final class ua extends rg {
             L1: {
               L2: {
                 L3: {
+                  if (!(this.field_B instanceof gn)) {
+                    break L3;
+                  } else {
+                    if (!((gn) ((Object) this.field_B)).field_F) {
+                      break L2;
+                    } else {
+                      break L3;
+                    }
+                  }
+                }
+                if ((this.field_u ^ -1) == -2) {
                   L4: {
-                    if (!(this.field_B instanceof gn)) {
+                    var5_int = -this.field_L + (bd.field_g + -param2);
+                    var6 = -param3 + (-this.field_F + bo.field_d);
+                    if (this.field_y != var5_int) {
                       break L4;
                     } else {
-                      if (!((gn) ((Object) this.field_B)).field_F) {
-                        break L3;
+                      if (this.field_i == var6) {
+                        break L1;
                       } else {
                         break L4;
                       }
                     }
                   }
-                  if ((this.field_u ^ -1) == -2) {
-                    break L2;
+                  this.field_i = var6;
+                  this.field_y = var5_int;
+                  if (!(this.field_A instanceof ad)) {
+                    break L1;
                   } else {
-                    break L3;
+                    ((ad) ((Object) this.field_A)).a(param2, false, (ua) (this), param3);
+                    break L1;
                   }
+                } else {
+                  break L2;
                 }
-                if (this.field_H) {
-                  L5: {
-                    if (this.field_G != this.field_y) {
-                      L6: {
-                        var5_int = this.field_G + -this.field_y;
-                        stackIn_11_0 = this;
+              }
+              if (this.field_H) {
+                L5: {
+                  if (this.field_G != this.field_y) {
+                    L6: {
+                      var5_int = this.field_G + -this.field_y;
+                      stackIn_11_0 = this;
 
-                        stackIn_11_1 = this.field_y;
+                      stackIn_11_1 = this.field_y;
 
-                        if (Math.abs(var5_int) <= 2) {
-                          stackIn_13_0 = this;
+                      if (Math.abs(var5_int) <= 2) {
+                        stackIn_13_0 = this;
 
-                          if (0 < var5_int) {
-                            stackIn_14_0 = this;
-                            stackIn_14_1 = stackIn_11_1;
-                            stackIn_14_2 = 1;
-                            break L6;
-                          } else {
-                            stackIn_14_0 = this;
-                            stackIn_14_1 = stackIn_11_1;
-                            stackIn_14_2 = -1;
-                            break L6;
-                          }
+                        if (0 < var5_int) {
+                          stackIn_14_0 = this;
+                          stackIn_14_1 = stackIn_11_1;
+                          stackIn_14_2 = 1;
+                          break L6;
                         } else {
                           stackIn_14_0 = this;
                           stackIn_14_1 = stackIn_11_1;
-                          stackIn_14_2 = var5_int >> 2135042977;
+                          stackIn_14_2 = -1;
                           break L6;
                         }
+                      } else {
+                        stackIn_14_0 = this;
+                        stackIn_14_1 = stackIn_11_1;
+                        stackIn_14_2 = var5_int >> 2135042977;
+                        break L6;
                       }
-                      ((ua) (this)).field_y = stackIn_14_1 + stackIn_14_2;
-                      break L5;
-                    } else {
-                      break L5;
                     }
-                  }
-                  if (this.field_M == this.field_i) {
-                    break L1;
+                    ((ua) (this)).field_y = stackIn_14_1 + stackIn_14_2;
+                    break L5;
                   } else {
-                    L7: {
-                      var5_int = this.field_M + -this.field_i;
-                      stackIn_20_0 = this;
+                    break L5;
+                  }
+                }
+                if (this.field_M == this.field_i) {
+                  break L1;
+                } else {
+                  L7: {
+                    var5_int = this.field_M + -this.field_i;
+                    stackIn_20_0 = this;
 
-                      stackIn_20_1 = this.field_i;
+                    stackIn_20_1 = this.field_i;
 
-                      if (2 < Math.abs(var5_int)) {
+                    if (2 < Math.abs(var5_int)) {
+                      stackIn_21_0 = this;
+                      stackIn_21_1 = stackIn_20_1;
+                      stackIn_21_2 = var5_int >> -1034321183;
+                      break L7;
+                    } else {
+                      stackIn_19_0 = this;
+
+                      if ((var5_int ^ -1) < -1) {
                         stackIn_21_0 = this;
                         stackIn_21_1 = stackIn_20_1;
-                        stackIn_21_2 = var5_int >> -1034321183;
+                        stackIn_21_2 = 1;
                         break L7;
                       } else {
-                        stackIn_19_0 = this;
-
-                        if ((var5_int ^ -1) < -1) {
-                          stackIn_21_0 = this;
-                          stackIn_21_1 = stackIn_20_1;
-                          stackIn_21_2 = 1;
-                          break L7;
-                        } else {
-                          stackIn_21_0 = this;
-                          stackIn_21_1 = stackIn_20_1;
-                          stackIn_21_2 = -1;
-                          break L7;
-                        }
+                        stackIn_21_0 = this;
+                        stackIn_21_1 = stackIn_20_1;
+                        stackIn_21_2 = -1;
+                        break L7;
                       }
                     }
-                    ((ua) (this)).field_i = stackIn_21_1 + stackIn_21_2;
-                    if (!ZombieDawnMulti.field_E) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
                   }
-                } else {
-                  super.a(param0, param1, param2, param3);
-                  return;
+                  ((ua) (this)).field_i = stackIn_21_1 + stackIn_21_2;
+                  break L1;
                 }
-              }
-              L8: {
-                var5_int = -this.field_L + (bd.field_g + -param2);
-                var6 = -param3 + (-this.field_F + bo.field_d);
-                if (this.field_y != var5_int) {
-                  break L8;
-                } else {
-                  if (this.field_i == var6) {
-                    break L1;
-                  } else {
-                    break L8;
-                  }
-                }
-              }
-              this.field_i = var6;
-              this.field_y = var5_int;
-              if (!(this.field_A instanceof ad)) {
-                break L1;
               } else {
-                ((ad) ((Object) this.field_A)).a(param2, false, (ua) (this), param3);
-                break L1;
+                super.a(param0, param1, param2, param3);
+                return;
               }
             }
             super.a(param0, param1, param2, param3);
@@ -583,7 +576,7 @@ final class ua extends rg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var5 = decompiledCaughtException;
             stackIn_31_0 = (RuntimeException) (var5);
 
@@ -593,12 +586,12 @@ final class ua extends rg {
               stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
               stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackIn_32_2 = "null";
-              break L9;
+              break L8;
             } else {
               stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
               stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackIn_32_2 = "{...}";
-              break L9;
+              break L8;
             }
           }
           throw fa.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param2 + ',' + param3 + ')');

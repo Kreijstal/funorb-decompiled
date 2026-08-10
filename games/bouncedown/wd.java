@@ -11,63 +11,18 @@ class wd extends lk {
     private boolean field_w;
 
     void a(int param0, int param1, int param2, lk param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.a(param0, param1, param2, param3);
-              if (-1 == (this.field_u ^ -1)) {
-                break L1;
-              } else {
-                if (this.field_u == n.field_m) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (!this.c(uc.field_C, 0, param2, param1, ll.field_y)) {
-                      break L2;
-                    } else {
-                      if (-1 == (n.field_m ^ -1)) {
+            super.a(param0, param1, param2, param3);
+            if (-1 != (this.field_u ^ -1) && this.field_u != n.field_m) {
+                if (this.c(uc.field_C, 0, param2, param1, ll.field_y)) {
+                    if (!(-1 != (n.field_m ^ -1))) {
                         this.a(ll.field_y - param2, uc.field_C - param1, (byte) -127, this.field_u);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
                     }
-                  }
-                  this.a(ll.field_y, param1, param3, param2, 34, uc.field_C);
-                  break L1;
                 }
-              }
+                this.a(ll.field_y, param1, param3, param2, 34, uc.field_C);
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (runtimeException);
-
-            stackIn_10_1 = new StringBuilder().append("wd.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
-          }
-          throw ii.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) ((Object) runtimeException), "wd.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

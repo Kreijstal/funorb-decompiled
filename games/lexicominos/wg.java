@@ -240,79 +240,50 @@ final class wg implements Runnable {
     public final void run() {
         try {
             int var1_int = 0;
-            int var4 = 0;
-            int var5 = 0;
-            int var6 = 0;
-            Throwable decompiledCaughtException = null;
             Object var1 = null;
-            Exception var1_ref = null;
             Object var2 = null;
+            Throwable var3 = null;
+            int var4 = 0;
+            Throwable decompiledCaughtException = null;
             var4 = Lexicominos.field_L ? 1 : 0;
             try {
               L0: while (true) {
                 L1: {
-                  L2: {
-                    L3: {
-                      if (this.field_i.field_h >= this.field_i.field_j.length) {
-                        break L3;
-                      } else {
-                        var1_int = this.field_g.read(this.field_i.field_j, this.field_i.field_h, -this.field_i.field_h + this.field_i.field_j.length);
-                        var6 = -1;
-                        var5 = var1_int ^ -1;
-                        if (var4 != 0) {
-                          if (var5 == var6) {
-                            break L1;
-                          } else {
-                            break L2;
-                          }
-                        } else {
-                          L4: {
-                            if (var5 <= var6) {
-                              break L4;
-                            } else {
-                              if (var4 == 0) {
-                                break L3;
-                              } else {
-                                break L4;
-                              }
-                            }
-                          }
-                          this.field_i.field_h = this.field_i.field_h + var1_int;
-                          if (var4 == 0) {
-                            continue L0;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                    }
-                    if (this.field_i.field_h == this.field_i.field_j.length) {
-                      break L1;
+                  if (this.field_i.field_h >= this.field_i.field_j.length) {
+                    break L1;
+                  } else {
+                    var1_int = this.field_g.read(this.field_i.field_j, this.field_i.field_h, -this.field_i.field_h + this.field_i.field_j.length);
+                    if ((var1_int ^ -1) <= -1) {
+                      this.field_i.field_h = this.field_i.field_h + var1_int;
+                      continue L0;
                     } else {
-                      break L2;
+                      break L1;
                     }
                   }
+                }
+                if (this.field_i.field_h == this.field_i.field_j.length) {
+                  throw wg.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.field_j.length + " " + this.field_c));
+                } else {
                   var1 = this;
                   synchronized (var1) {
-                    L5: {
+                    L2: {
                       this.finalize();
                       this.field_d = 3;
-                      break L5;
+                      break L2;
                     }
                   }
                   return;
                 }
-                throw wg.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.field_j.length + " " + this.field_c));
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var1_ref = (Exception) (Object) decompiledCaughtException;
+              var1 = (Exception) (Object) decompiledCaughtException;
               var2 = this;
               synchronized (var2) {
-                L6: {
+                L3: {
                   this.finalize();
                   this.field_d = this.field_d + 1;
-                  break L6;
+                  break L3;
                 }
               }
               return;

@@ -2233,14 +2233,34 @@ final class db extends qe {
     }
 
     private final void a(int param0, int param1, boolean param2) {
-        int var4 = tg.field_f[3][param0];
-        if (param1 != -1) {
+        int var4;
+        L0: {
+          var4 = tg.field_f[3][param0];
+          if (param1 == -1) {
+            break L0;
+          } else {
             field_u = (String) null;
+            break L0;
+          }
         }
-        if (this.field_w.c(97) && sg.a(3, 3, param0)) {
-            if (!(!rp.a(param1 ^ -15204377, var4))) {
-                hm.a(var4, param0, param2, -64);
+        L1: {
+          if (!this.field_w.c(97)) {
+            break L1;
+          } else {
+            L2: {
+              if (!sg.a(3, 3, param0)) {
+                break L2;
+              } else {
+                if (rp.a(param1 ^ -15204377, var4)) {
+                  hm.a(var4, param0, param2, -64);
+                  break L2;
+                } else {
+                  break L1;
+                }
+              }
             }
+            break L1;
+          }
         }
     }
 

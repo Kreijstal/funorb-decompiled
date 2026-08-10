@@ -779,83 +779,27 @@ abstract class ek extends vg implements ni {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, vg param5) {
-        RuntimeException runtimeException = null;
-        vg[] var7 = null;
+        vg[] var11 = null;
         int var8 = 0;
         vg var9 = null;
-        int var10 = 0;
-        vg[] var11 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var10 = ShatteredPlansClient.field_F ? 1 : 0;
-        try {
-          L0: {
-            if (this.field_B == null) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              var11 = this.field_B;
-              var7 = var11;
-              var8 = 0;
-              L1: while (true) {
-                if (var8 >= var11.length) {
-                  L2: {
-                    if (param4 == -600269855) {
-                      break L2;
-                    } else {
-                      field_E = (qr) null;
-                      break L2;
-                    }
-                  }
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L3: {
-                    var9 = var11[var8];
-                    if (var9 == null) {
-                      break L3;
-                    } else {
-                      var9.a(param0, this.field_q + param1, param2 - -this.field_m, param3, -600269855, param5);
-                      break L3;
-                    }
-                  }
-                  var8++;
-                  continue L1;
-                }
-              }
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (runtimeException);
-
-            stackIn_14_1 = new StringBuilder().append("ek.HA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
-          }
-          throw r.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+        int var10 = ShatteredPlansClient.field_F ? 1 : 0;
+        if (!(this.field_B != null)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            var11 = this.field_B;
+            vg[] var7 = var11;
+            for (var8 = 0; var8 < var11.length; var8++) {
+                var9 = var11[var8];
+                if (var9 != null) {
+                    var9.a(param0, this.field_q + param1, param2 - -this.field_m, param3, -600269855, param5);
+                }
+            }
+            if (param4 != -600269855) {
+                field_E = (qr) null;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) ((Object) runtimeException), "ek.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

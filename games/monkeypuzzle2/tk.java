@@ -58,11 +58,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         break L1;
                       } else {
                         var2_int = -1;
-                        if (!MonkeyPuzzle2.field_F) {
-                          break L1;
-                        } else {
-                          break L2;
-                        }
+                        break L1;
                       }
                     }
                   }
@@ -150,7 +146,6 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
-        RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -158,33 +153,27 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
               if (null != wj.field_k) {
                 L2: {
                   L3: {
-                    L4: {
-                      je.field_c = 0;
-                      var2_int = param0.getKeyCode();
-                      if (var2_int < 0) {
-                        break L4;
+                    je.field_c = 0;
+                    var2_int = param0.getKeyCode();
+                    if (var2_int < 0) {
+                      break L3;
+                    } else {
+                      if (var2_int < cb.field_c.length) {
+                        var2_int = cb.field_c[var2_int] & -129;
+                        break L2;
                       } else {
-                        if (var2_int < cb.field_c.length) {
-                          break L3;
-                        } else {
-                          break L4;
-                        }
+                        break L3;
                       }
                     }
-                    var2_int = -1;
-                    if (!MonkeyPuzzle2.field_F) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
                   }
-                  var2_int = cb.field_c[var2_int] & -129;
+                  var2_int = -1;
                   break L2;
                 }
                 if (vf.field_a < 0) {
@@ -212,9 +201,9 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (runtimeException);
+          L4: {
+            var2 = decompiledCaughtException;
+            stackIn_16_0 = (RuntimeException) (var2);
 
             stackIn_16_1 = new StringBuilder().append("tk.keyReleased(");
 
@@ -222,12 +211,12 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "null";
-              break L5;
+              break L4;
             } else {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "{...}";
-              break L5;
+              break L4;
             }
           }
           throw la.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
@@ -367,46 +356,12 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (wj.field_k == null) {
-                break L1;
-              } else {
+            if (wj.field_k != null) {
                 vf.field_a = -1;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("tk.focusLost(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw la.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) ((Object) runtimeException), "tk.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

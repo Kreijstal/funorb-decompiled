@@ -1028,7 +1028,7 @@ final class kk {
                             break L9;
                           }
                         }
-                        throw sl.a((Throwable) ((Object) stackIn_37_0), (stackIn_37_2 != 0) + " " + param1 + " " + param3.length + " " + ql.a(0, var9, param3.length) + " " + ql.a(param0 ^ 4, var9, -2 + param3.length) + " " + this.field_b.field_b[param1] + " " + this.field_b.field_p);
+                        throw sl.a((Throwable) ((Object) stackIn_37_0), (stackIn_37_2 != 0) + " " + param1 + " " + var9.length + " " + ql.a(0, var9, var9.length) + " " + ql.a(param0 ^ 4, var9, -2 + var9.length) + " " + this.field_b.field_b[param1] + " " + this.field_b.field_p);
                       }
                       L10: {
                         if (this.field_e) {

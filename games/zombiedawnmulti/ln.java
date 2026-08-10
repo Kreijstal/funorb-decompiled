@@ -12,25 +12,15 @@ final class ln implements Iterator {
     private qa field_e;
 
     public final Object next() {
-        Object var1;
-        var1 = this.field_e;
+        Object var1 = this.field_e;
         if (this.field_b.field_d != var1) {
-          this.field_e = ((qa) (var1)).field_k;
-          if (ZombieDawnMulti.field_E) {
+            this.field_e = ((qa) (var1)).field_k;
+        } else {
             var1 = null;
             this.field_e = null;
-            this.field_a = (qa) (var1);
-            return var1;
-          } else {
-            this.field_a = (qa) (var1);
-            return var1;
-          }
-        } else {
-          var1 = null;
-          this.field_e = null;
-          this.field_a = (qa) (var1);
-          return var1;
         }
+        this.field_a = (qa) (var1);
+        return var1;
     }
 
     public final boolean hasNext() {

@@ -78,13 +78,13 @@ final class oa {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_14_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -100,82 +100,66 @@ final class oa {
             }
             var2_int = 0;
             L2: while (true) {
-              L3: {
-                L4: {
-                  if (-9 >= (var2_int ^ -1)) {
-                    break L4;
-                  } else {
-                    stackIn_11_0 = param1[var2_int];
-
-                    if (var3 != 0) {
-                      break L3;
-                    } else {
-                      if (stackIn_11_0 == 0) {
-                        var2_int++;
-                        if (var3 == 0) {
-                          continue L2;
-                        } else {
-                          break L4;
-                        }
-                      } else {
-                        stackIn_8_0 = 1;
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      }
-                    }
-                  }
+              if (-9 >= (var2_int ^ -1)) {
+                stackIn_10_0 = 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              } else {
+                if (param1[var2_int] == 0) {
+                  var2_int++;
+                  continue L2;
+                } else {
+                  stackIn_7_0 = 1;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
-                stackIn_11_0 = 0;
-                break L3;
               }
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var2);
+            stackIn_13_0 = (RuntimeException) (var2);
 
-            stackIn_14_1 = new StringBuilder().append("oa.B(").append(param0).append(',');
+            stackIn_13_1 = new StringBuilder().append("oa.B(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L5;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
+              break L3;
             } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L5;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
+              break L3;
             }
           }
-          throw fa.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_11_0 != 0;
+          return stackIn_7_0 != 0;
         } else {
-          return stackIn_8_0 != 0;
+          return stackIn_10_0 != 0;
         }
     }
 
     final static int a(byte param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int[] var6 = null;
         int stackIn_4_0 = 0;
+        int stackIn_15_0 = 0;
         int stackIn_16_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_17_1 = 0;
+        int stackIn_16_1 = 0;
         int stackIn_20_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -196,61 +180,45 @@ final class oa {
               }
               var2 = 0;
               L2: while (true) {
-                L3: {
-                  L4: {
-                    if (op.field_m.field_z.length <= var2) {
-                      break L4;
+                if (op.field_m.field_z.length <= var2) {
+                  stackIn_20_0 = var1_int;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L3: {
+                    var3 = op.field_m.field_z[var2];
+                    if (var3 <= 0) {
+                      break L3;
                     } else {
-                      var3 = op.field_m.field_z[var2];
-                      stackIn_20_0 = var3;
-
-                      if (var5 != 0) {
-                        break L3;
-                      } else {
-                        L5: {
-                          if (stackIn_20_0 <= 0) {
-                            break L5;
-                          } else {
-                            L6: {
-                              var4 = -var3 + op.field_m.a((byte) 32, var2, 750);
-                              if (var4 > 50) {
-                                var4 = var3;
-                                break L6;
-                              } else {
-                                break L6;
-                              }
-                            }
-                            L7: {
-                              stackIn_16_0 = var1_int;
-
-                              if (fb.field_e.field_M != var2) {
-                                stackIn_17_0 = stackIn_16_0;
-                                stackIn_17_1 = var4 / 20;
-                                break L7;
-                              } else {
-                                stackIn_17_0 = stackIn_16_0;
-                                stackIn_17_1 = var4 / 40;
-                                break L7;
-                              }
-                            }
-                            var1_int = stackIn_17_0 + stackIn_17_1;
-                            break L5;
-                          }
-                        }
-                        var2++;
-                        if (var5 == 0) {
-                          continue L2;
+                      L4: {
+                        var4 = -var3 + op.field_m.a((byte) 32, var2, 750);
+                        if (var4 > 50) {
+                          var4 = var3;
+                          break L4;
                         } else {
                           break L4;
                         }
                       }
+                      L5: {
+                        stackIn_15_0 = var1_int;
+
+                        if (fb.field_e.field_M != var2) {
+                          stackIn_16_0 = stackIn_15_0;
+                          stackIn_16_1 = var4 / 20;
+                          break L5;
+                        } else {
+                          stackIn_16_0 = stackIn_15_0;
+                          stackIn_16_1 = var4 / 40;
+                          break L5;
+                        }
+                      }
+                      var1_int = stackIn_16_0 + stackIn_16_1;
+                      break L3;
                     }
                   }
-                  stackIn_20_0 = var1_int;
-                  break L3;
+                  var2++;
+                  continue L2;
                 }
-                decompiledRegionSelector0 = 1;
-                break L0;
               }
             }
           }

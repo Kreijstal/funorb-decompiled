@@ -73,69 +73,33 @@ final class sm {
     }
 
     final static ck a(byte param0, int param1, int param2) {
-        ck var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        ck stackIn_5_0 = null;
-        ck stackIn_6_0 = null;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var5 = client.field_A ? 1 : 0;
-                    var3 = new ck(param1, param1);
-                    var4 = 0;
-                    if (param0 < -96) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    field_e = 97;
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (var3.field_D.length > var4) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return var3;
-                }
-                case 4: {
-                    stackIn_6_0 = (ck) (var3);
-                    stackIn_5_0 = stackIn_6_0;
-                    if (var5 == 0) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    return stackIn_5_0;
-                }
-                case 6: {
-                    stackIn_6_0.field_D[var4] = param2;
-                    var4++;
-                    if (var5 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    return var3;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        ck var3;
+        int var4;
+        int var5;
+        var5 = client.field_A ? 1 : 0;
+        var3 = new ck(param1, param1);
+        var4 = 0;
+        if (param0 < -96) {
+          L0: while (true) {
+            if (var3.field_D.length <= var4) {
+              return var3;
+            } else {
+              var3.field_D[var4] = param2;
+              var4++;
+              continue L0;
             }
+          }
+        } else {
+          field_e = 97;
+          L1: while (true) {
+            if (var3.field_D.length <= var4) {
+              return var3;
+            } else {
+              var3.field_D[var4] = param2;
+              var4++;
+              continue L1;
+            }
+          }
         }
     }
 
@@ -323,28 +287,21 @@ final class sm {
           return var3;
         } else {
           L0: {
-            L1: {
-              if (-32769 >= (param1 ^ -1)) {
-                break L1;
-              } else {
-                var4 = this.field_f.a(param1, 88, 1);
-                if (!client.field_A) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
+            if (-32769 >= (param1 ^ -1)) {
+              var4 = this.field_b.a(32767 & param1, -112, 1);
+              break L0;
+            } else {
+              var4 = this.field_f.a(param1, 88, 1);
+              break L0;
             }
-            var4 = this.field_b.a(32767 & param1, -112, 1);
-            break L0;
           }
-          L2: {
+          L1: {
             var3 = new me();
             if (var4 != null) {
               var3.a((byte) 80, new wl(var4));
-              break L2;
+              break L1;
             } else {
-              break L2;
+              break L1;
             }
           }
           if (32768 > param1) {

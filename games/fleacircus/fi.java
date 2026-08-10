@@ -17,18 +17,15 @@ final class fi extends lh {
         String stackIn_13_0 = null;
         String stackIn_18_0 = null;
         String stackIn_21_0 = null;
-        boolean stackIn_25_0 = false;
-        String stackIn_33_0 = null;
-        int stackIn_36_0 = 0;
-        String stackIn_39_0 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_44_2 = null;
+        String stackIn_31_0 = null;
+        String stackIn_36_0 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        String stackIn_41_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_24_0;
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -63,65 +60,40 @@ final class fi extends lh {
                                   var5 = 0;
                                   var6 = 0;
                                   L4: while (true) {
-                                    L5: {
+                                    if (param0.length() <= var6) {
+                                      if (0 < var5) {
+                                        stackIn_36_0 = ha.field_m;
+                                        decompiledRegionSelector0 = 6;
+                                        break L0;
+                                      } else {
+                                        return null;
+                                      }
+                                    } else {
+                                      L5: {
+                                        var7 = param0.charAt(var6);
+                                        if (!r.a((char) var7, -122)) {
+                                          var5 = 0;
+                                          break L5;
+                                        } else {
+                                          var5++;
+                                          break L5;
+                                        }
+                                      }
                                       L6: {
-                                        if (param0.length() <= var6) {
+                                        if (2 > var5) {
                                           break L6;
                                         } else {
-                                          var7 = param0.charAt(var6);
-                                          stackOut_24_0 = r.a((char) var7, -122);
-                                          stackIn_36_0 = stackOut_24_0 ? 1 : 0;
-                                          stackIn_25_0 = stackOut_24_0;
-                                          if (var8 != 0) {
-                                            break L5;
+                                          if (!param1) {
+                                            stackIn_31_0 = wf.field_e;
+                                            decompiledRegionSelector0 = 5;
+                                            break L0;
                                           } else {
-                                            L7: {
-                                              L8: {
-                                                if (!stackIn_25_0) {
-                                                  break L8;
-                                                } else {
-                                                  var5++;
-                                                  if (var8 == 0) {
-                                                    break L7;
-                                                  } else {
-                                                    break L8;
-                                                  }
-                                                }
-                                              }
-                                              var5 = 0;
-                                              break L7;
-                                            }
-                                            L9: {
-                                              if (2 > var5) {
-                                                break L9;
-                                              } else {
-                                                if (!param1) {
-                                                  stackIn_33_0 = wf.field_e;
-                                                  decompiledRegionSelector0 = 5;
-                                                  break L0;
-                                                } else {
-                                                  break L9;
-                                                }
-                                              }
-                                            }
-                                            var6++;
-                                            if (var8 == 0) {
-                                              continue L4;
-                                            } else {
-                                              break L6;
-                                            }
+                                            break L6;
                                           }
                                         }
                                       }
-                                      stackIn_36_0 = 0;
-                                      break L5;
-                                    }
-                                    if (stackIn_36_0 < var5) {
-                                      stackIn_39_0 = ha.field_m;
-                                      decompiledRegionSelector0 = 6;
-                                      break L0;
-                                    } else {
-                                      return null;
+                                      var6++;
+                                      continue L4;
                                     }
                                   }
                                 } else {
@@ -159,25 +131,25 @@ final class fi extends lh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L7: {
             var3 = decompiledCaughtException;
-            stackIn_43_0 = (RuntimeException) (var3);
+            stackIn_40_0 = (RuntimeException) (var3);
 
-            stackIn_43_1 = new StringBuilder().append("fi.B(");
+            stackIn_40_1 = new StringBuilder().append("fi.B(");
 
             if (param0 == null) {
-              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackIn_44_2 = "null";
-              break L10;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "null";
+              break L7;
             } else {
-              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackIn_44_2 = "{...}";
-              break L10;
+              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackIn_41_2 = "{...}";
+              break L7;
             }
           }
-          throw pf.a((Throwable) ((Object) stackIn_44_0), stackIn_44_2 + ',' + param1 + ',' + param2 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0;
@@ -195,9 +167,9 @@ final class fi extends lh {
                   return stackIn_21_0;
                 } else {
                   if (decompiledRegionSelector0 == 5) {
-                    return stackIn_33_0;
+                    return stackIn_31_0;
                   } else {
-                    return stackIn_39_0;
+                    return stackIn_36_0;
                   }
                 }
               }

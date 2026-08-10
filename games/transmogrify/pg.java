@@ -81,21 +81,11 @@ final class pg {
           } else {
             bc.a(-1L + param0, -23850);
             bc.a(1L, -23850);
-            if (!Transmogrify.field_A) {
-              if (param1 > -76) {
-                field_a = false;
-                return;
-              } else {
-                return;
-              }
+            if (param1 <= -76) {
+              return;
             } else {
-              bc.a(param0, -23850);
-              if (param1 <= -76) {
-                return;
-              } else {
-                field_a = false;
-                return;
-              }
+              field_a = false;
+              return;
             }
           }
         }

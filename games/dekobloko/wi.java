@@ -187,50 +187,16 @@ final class wi {
     }
 
     final static void a(boolean param0, int param1, String param2) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              dc.field_d = param0;
-              mg.field_Nb = true;
-              cl.field_r = new gk(ah.field_c, ec.field_p, param2, vb.field_Z, dc.field_d);
-              ah.field_c.a((byte) -115, cl.field_r);
-              if (param1 <= -20) {
-                break L1;
-              } else {
+            dc.field_d = param0;
+            mg.field_Nb = true;
+            cl.field_r = new gk(ah.field_c, ec.field_p, param2, vb.field_Z, dc.field_d);
+            ah.field_c.a((byte) -115, cl.field_r);
+            if (param1 > -20) {
                 field_b = -117;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("wi.C(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dh.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) ((Object) runtimeException), "wi.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

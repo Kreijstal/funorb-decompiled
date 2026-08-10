@@ -10,101 +10,36 @@ final class em extends hi {
     static int field_q;
 
     final static void c(byte param0) {
-        int var1_int = 0;
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        var6 = OrbDefence.field_D ? 1 : 0;
-        try {
-          L0: {
-            var1_int = ul.field_f;
-            var2 = ul.field_l;
-            var3 = -1 + var2 * var1_int;
-            L1: while (true) {
-              L2: {
-                L3: {
-                  L4: {
-                    if ((var3 ^ -1) > -1) {
-                      break L4;
-                    } else {
-                      var4 = ul.field_b[var3];
-                      var5 = 0;
-                      var8 = -8388609;
-                      var7 = var4 & 8388608 ^ -1;
-                      if (var6 != 0) {
-                        if (var7 == var8) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        L5: {
-                          if (var7 != var8) {
-                            break L5;
-                          } else {
-                            var5 = var5 | var4 & 8323072;
-                            break L5;
-                          }
-                        }
-                        L6: {
-                          if ((var4 & 32768) != 32768) {
-                            break L6;
-                          } else {
-                            var5 = var5 | var4 & 32512;
-                            break L6;
-                          }
-                        }
-                        L7: {
-                          if ((var4 & 128) != 128) {
-                            break L7;
-                          } else {
-                            var5 = var5 | 127 & var4;
-                            break L7;
-                          }
-                        }
-                        cg.field_d.field_v[var3] = var5 << -943490239;
-                        var3--;
-                        if (var6 == 0) {
-                          continue L1;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                  }
-                  li.field_a.d();
-                  if (param0 == 67) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
-              hm.a(cg.field_d.field_v, 3, param0 + -67, 3);
-              cb.field_a.a(param0 ^ -101);
-              li.field_a.e(0, 0, 640, 480, ef.field_k);
-              decompiledRegionSelector0 = 1;
-              break L0;
+        int var6 = OrbDefence.field_D ? 1 : 0;
+        int var1_int = ul.field_f;
+        int var2 = ul.field_l;
+        for (var3 = -1 + var2 * var1_int; (var3 ^ -1) <= -1; var3--) {
+            var4 = ul.field_b[var3];
+            var5 = 0;
+            if ((var4 & 8388608 ^ -1) == -8388609) {
+                var5 = var5 | var4 & 8323072;
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw dd.a((Throwable) ((Object) var1), "em.V(" + param0 + ')');
+            if ((var4 & 32768) == 32768) {
+                var5 = var5 | var4 & 32512;
+            }
+            if ((var4 & 128) == 128) {
+                var5 = var5 | 127 & var4;
+            }
+            cg.field_d.field_v[var3] = var5 << -943490239;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        li.field_a.d();
+        if (param0 != 67) {
+            return;
+        }
+        try {
+            hm.a(cg.field_d.field_v, 3, param0 + -67, 3);
+            cb.field_a.a(param0 ^ -101);
+            li.field_a.e(0, 0, 640, 480, ef.field_k);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) ((Object) runtimeException), "em.V(" + param0 + ')');
         }
     }
 

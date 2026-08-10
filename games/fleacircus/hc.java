@@ -15,52 +15,33 @@ final class hc {
     static int field_j;
 
     final lh b(byte param0) {
-        int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
         int var3;
         lh var4;
         lh var5;
         lh var8;
-        Object stackIn_4_0 = null;
-        Object stackIn_10_0 = null;
-        Object stackIn_18_0 = null;
-        Object stackIn_24_0 = null;
         var3 = fleas.field_A ? 1 : 0;
         if (-1 > (this.field_e ^ -1)) {
           if (this.field_a == this.field_g[this.field_e + -1]) {
             L0: while (true) {
-              L1: {
-                if (this.field_e >= this.field_h) {
-                  break L1;
+              if (this.field_e >= this.field_h) {
+                if (param0 > 89) {
+                  return null;
                 } else {
-                  fieldTemp$2 = this.field_e;
-                  this.field_e = this.field_e + 1;
-                  var5 = this.field_g[fieldTemp$2].field_h;
-                  stackIn_18_0 = this;
-
-                  if (var3 == 0) {
-                    if (((hc) (this)).field_g[-1 + this.field_e] != var5) {
-                      this.field_a = var5.field_h;
-                      return var5;
-                    } else {
-                      if (var3 == 0) {
-                        continue L0;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  } else {
-                    ((hc) (this)).field_h = 63;
-                    return null;
-                  }
+                  this.field_h = 63;
+                  return null;
                 }
-              }
-              if (param0 > 89) {
-                return null;
               } else {
-                stackIn_24_0 = this;
-                ((hc) (this)).field_h = 63;
-                return null;
+                fieldTemp$3 = this.field_e;
+                this.field_e = this.field_e + 1;
+                var5 = this.field_g[fieldTemp$3].field_h;
+                if (this.field_g[-1 + this.field_e] != var5) {
+                  this.field_a = var5.field_h;
+                  return var5;
+                } else {
+                  continue L0;
+                }
               }
             }
           } else {
@@ -69,39 +50,24 @@ final class hc {
             return var8;
           }
         } else {
-          L2: while (true) {
-            L3: {
-              if (this.field_e >= this.field_h) {
-                break L3;
+          L1: while (true) {
+            if (this.field_e >= this.field_h) {
+              if (param0 > 89) {
+                return null;
               } else {
-                fieldTemp$3 = this.field_e;
-                this.field_e = this.field_e + 1;
-                var4 = this.field_g[fieldTemp$3].field_h;
-                stackIn_4_0 = this;
-
-                if (var3 == 0) {
-                  if (((hc) (this)).field_g[-1 + this.field_e] != var4) {
-                    this.field_a = var4.field_h;
-                    return var4;
-                  } else {
-                    if (var3 == 0) {
-                      continue L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                } else {
-                  ((hc) (this)).field_h = 63;
-                  return null;
-                }
+                this.field_h = 63;
+                return null;
               }
-            }
-            if (param0 > 89) {
-              return null;
             } else {
-              stackIn_10_0 = this;
-              ((hc) (this)).field_h = 63;
-              return null;
+              fieldTemp$4 = this.field_e;
+              this.field_e = this.field_e + 1;
+              var4 = this.field_g[fieldTemp$4].field_h;
+              if (this.field_g[-1 + this.field_e] != var4) {
+                this.field_a = var4.field_h;
+                return var4;
+              } else {
+                continue L1;
+              }
             }
           }
         }
@@ -144,8 +110,6 @@ final class hc {
     }
 
     final lh a(long param0, int param1) {
-        Object stackIn_7_0 = null;
-        Object stackIn_16_0 = null;
         lh var4;
         lh var5;
         int var6;
@@ -155,25 +119,13 @@ final class hc {
           this.field_i = var4.field_h;
           L0: while (true) {
             if (this.field_i != var4) {
-              stackIn_7_0 = this;
-
-              if (var6 == 0) {
-                if (((hc) (this)).field_i.field_c != param0) {
-                  this.field_i = this.field_i.field_h;
-                  if (var6 == 0) {
-                    continue L0;
-                  } else {
-                    this.field_i = null;
-                    return null;
-                  }
-                } else {
-                  var5 = this.field_i;
-                  this.field_i = this.field_i.field_h;
-                  return var5;
-                }
+              if (this.field_i.field_c != param0) {
+                this.field_i = this.field_i.field_h;
+                continue L0;
               } else {
-                ((hc) (this)).field_i = null;
-                return null;
+                var5 = this.field_i;
+                this.field_i = this.field_i.field_h;
+                return var5;
               }
             } else {
               this.field_i = null;
@@ -185,25 +137,13 @@ final class hc {
           this.field_i = var4.field_h;
           L1: while (true) {
             if (this.field_i != var4) {
-              stackIn_16_0 = this;
-
-              if (var6 == 0) {
-                if (((hc) (this)).field_i.field_c != param0) {
-                  this.field_i = this.field_i.field_h;
-                  if (var6 == 0) {
-                    continue L1;
-                  } else {
-                    this.field_i = null;
-                    return null;
-                  }
-                } else {
-                  var5 = this.field_i;
-                  this.field_i = this.field_i.field_h;
-                  return var5;
-                }
+              if (this.field_i.field_c != param0) {
+                this.field_i = this.field_i.field_h;
+                continue L1;
               } else {
-                ((hc) (this)).field_i = null;
-                return null;
+                var5 = this.field_i;
+                this.field_i = this.field_i.field_h;
+                return var5;
               }
             } else {
               this.field_i = null;
@@ -214,27 +154,26 @@ final class hc {
     }
 
     hc(int param0) {
-        lh dupTemp$0 = null;
-        lh var3 = null;
-        int var4 = fleas.field_A ? 1 : 0;
+        lh dupTemp$1 = null;
+        int var2;
+        lh var3;
         this.field_e = 0;
         this.field_g = new lh[param0];
         this.field_h = param0;
-        int var2 = 0;
-        do {
-            if (param0 <= var2) {
-                return;
-            }
-            dupTemp$0 = new lh();
-            var3 = dupTemp$0;
-            this.field_g[var2] = dupTemp$0;
+        var2 = 0;
+        L0: while (true) {
+          if (param0 > var2) {
+            dupTemp$1 = new lh();
+            var3 = dupTemp$1;
+            this.field_g[var2] = dupTemp$1;
             var3.field_h = var3;
             var3.field_a = var3;
             var2++;
-            if (var4 != 0) {
-                return;
-            }
-        } while (var4 == 0);
+            continue L0;
+          } else {
+            return;
+          }
+        }
     }
 
     final void a(lh param0, boolean param1, long param2) {

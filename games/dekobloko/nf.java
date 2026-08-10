@@ -107,45 +107,25 @@ final class nf {
     final int a(int param0, int param1) {
         int var3;
         int var4;
-        int var5;
-        int var6;
         var4 = client.field_A ? 1 : 0;
         if (this.field_a != null) {
           if (-1 != (this.field_a.length ^ -1)) {
             var3 = 1;
             L0: while (true) {
-              L1: {
-                if (this.field_a.length <= var3) {
-                  break L1;
+              if (this.field_a.length <= var3) {
+                if (param1 <= 103) {
+                  nf.a(-11);
+                  return -1 + this.field_a.length;
                 } else {
-                  var6 = this.field_a[-1 + var3] + this.field_a[var3] >> 4945089 ^ -1;
-                  var5 = param0 ^ -1;
-                  if (var4 != 0) {
-                    if (var5 <= var6) {
-                      nf.a(-11);
-                      return -1 + this.field_a.length;
-                    } else {
-                      return -1 + this.field_a.length;
-                    }
-                  } else {
-                    if (var5 <= var6) {
-                      var3++;
-                      if (var4 == 0) {
-                        continue L0;
-                      } else {
-                        break L1;
-                      }
-                    } else {
-                      return var3 + -1;
-                    }
-                  }
+                  return -1 + this.field_a.length;
                 }
-              }
-              if (param1 <= 103) {
-                nf.a(-11);
-                return -1 + this.field_a.length;
               } else {
-                return -1 + this.field_a.length;
+                if ((param0 ^ -1) > (this.field_a[-1 + var3] + this.field_a[var3] >> 4945089 ^ -1)) {
+                  return var3 + -1;
+                } else {
+                  var3++;
+                  continue L0;
+                }
               }
             }
           } else {

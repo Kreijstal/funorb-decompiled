@@ -148,94 +148,39 @@ final class eg implements de {
     }
 
     public final void a(int param0, boolean param1, int param2, int param3, uj param4) {
-        RuntimeException runtimeException = null;
+        el var15 = null;
         int var7 = 0;
         int var8 = 0;
+        int var14 = 0;
         double var9 = 0.0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        el var15 = null;
-        uj stackIn_3_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!(param4 instanceof el)) {
-                stackIn_3_0 = null;
-                break L1;
-              } else {
-                stackIn_3_0 = (uj) (param4);
-                break L1;
-              }
+            var15 = param4 instanceof el ? (el) ((Object) param4) : null;
+            ki.d(param0 + param4.field_s, param4.field_j + param3, param4.field_i, param4.field_f, this.field_b);
+            if (var15 != null) {
             }
-            L2: {
-              var15 = (el) ((Object) stackIn_3_0);
-              ki.d(param0 + param4.field_s, param4.field_j + param3, param4.field_i, param4.field_f, this.field_b);
-              if (var15 == null) {
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              var7 = var15.field_K + (param4.field_s + param0);
-              var8 = var15.field_G + param4.field_j + param3;
-              ki.e(var7, var8, var15.field_I, this.field_g);
-              if (var15.field_E == -1) {
-                break L3;
-              } else {
+            var7 = var15.field_K + (param4.field_s + param0);
+            var8 = var15.field_G + param4.field_j + param3;
+            ki.e(var7, var8, var15.field_I, this.field_g);
+            if (var15.field_E != -1) {
                 var9 = (double)var15.field_E * 3.141592653589793 * 2.0 / (double)var15.field_B;
                 var11 = (int)(-Math.sin(var9) * (double)var15.field_I);
                 var12 = (int)(Math.cos(var9) * (double)var15.field_I);
                 ki.e(var7 + var11, var8 + var12, 1, this.field_j);
-                break L3;
-              }
             }
-            L4: {
-              ki.e(var7, var8, 2, 1);
-              var9 = (double)var15.field_F * 3.141592653589793 * 2.0 / (double)var15.field_B;
-              var11 = (int)(-Math.sin(var9) * (double)var15.field_I);
-              var13 = -54 / ((param2 - 2) / 54);
-              var12 = (int)(Math.cos(var9) * (double)var15.field_I);
-              ki.a(var7, var8, var11 + var7, var12 + var8, 1);
-              if (this.field_k == null) {
-                break L4;
-              } else {
+            ki.e(var7, var8, 2, 1);
+            var9 = (double)var15.field_F * 3.141592653589793 * 2.0 / (double)var15.field_B;
+            var11 = (int)(-Math.sin(var9) * (double)var15.field_I);
+            int var13 = -54 / ((param2 - 2) / 54);
+            var12 = (int)(Math.cos(var9) * (double)var15.field_I);
+            ki.a(var7, var8, var11 + var7, var12 + var8, 1);
+            if (this.field_k != null) {
                 var14 = var15.field_I + var15.field_K - -this.field_d;
                 this.field_k.a(param4.field_k, var14 + param4.field_s + param0, this.field_e + param4.field_j + param3, -this.field_d + (-var14 + param4.field_i), param4.field_f - (this.field_d << -2004493151), this.field_c, this.field_m, 1, 1, 0);
-                break L4;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (runtimeException);
-
-            stackIn_11_1 = new StringBuilder().append("eg.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L5;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L5;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "eg.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

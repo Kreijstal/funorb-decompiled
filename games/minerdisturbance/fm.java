@@ -15,72 +15,26 @@ final class fm extends kn implements sh {
     static String field_I;
 
     public final void a(int param0, byte param1, hc param2, int param3, int param4) {
-        RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var8 = MinerDisturbance.field_ab;
+        int var8 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            var6_int = 0;
-            L1: while (true) {
-              L2: {
-                if (var6_int >= this.field_R) {
-                  break L2;
-                } else {
-                  if (this.field_M[var6_int] != param2) {
-                    var6_int++;
-                    continue L1;
-                  } else {
+            for (var6_int = 0; var6_int < this.field_R; var6_int++) {
+                if (this.field_M[var6_int] == param2) {
                     var7 = this.field_P[var6_int];
-                    if (var7 != -1) {
-                      oj.a(this.field_P[var6_int], 3);
-                      break L2;
-                    } else {
-                      this.field_J.s(2121792);
-                      break L2;
+                    if (var7 == -1) {
+                        this.field_J.s(2121792);
+                        break;
                     }
-                  }
+                    oj.a(this.field_P[var6_int], 3);
+                    break;
                 }
-              }
-              L3: {
-                if (param1 == 6) {
-                  break L3;
-                } else {
-                  this.field_J = (rg) null;
-                  break L3;
-                }
-              }
-              break L0;
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("fm.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
+            if (param1 != 6) {
+                this.field_J = (rg) null;
             }
-          }
-          throw lj.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param3 + ',' + param4 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) ((Object) runtimeException), "fm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -206,46 +160,12 @@ final class fm extends kn implements sh {
     }
 
     final static void a(String param0, boolean param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!param1) {
-                break L1;
-              } else {
+            if (param1) {
                 fm.e((byte) -36);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("fm.D(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw lj.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) ((Object) runtimeException), "fm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

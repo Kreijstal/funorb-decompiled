@@ -25,111 +25,57 @@ final class a {
         int var1;
         int var2;
         String var3;
-        L0: {
-          var2 = ZombieDawnMulti.field_E ? 1 : 0;
-          pm.field_P = null;
-          nj.field_f = false;
-          if (ch.field_e) {
-            break L0;
+        var2 = ZombieDawnMulti.field_E ? 1 : 0;
+        pm.field_P = null;
+        nj.field_f = false;
+        if (ch.field_e) {
+          h.field_L.c(false);
+          if (param0 != -1) {
+            var3 = (String) null;
+            a.a((String) null, (String) null, (byte) 24);
+            return;
           } else {
-            var1 = qq.field_a;
-            if (0 >= var1) {
+            return;
+          }
+        } else {
+          var1 = qq.field_a;
+          if (0 >= var1) {
+            h.field_L.m(-7435);
+            sp.c(param0 + 1);
+            if (param0 != -1) {
+              var3 = (String) null;
+              a.a((String) null, (String) null, (byte) 24);
+              return;
+            } else {
+              return;
+            }
+          } else {
+            if (1 == var1) {
+              pm.field_P = rp.field_e;
+              pm.field_P = wi.a(new CharSequence[]{(CharSequence) ((Object) pm.field_P), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mi.field_Nb)}, 77);
               h.field_L.m(-7435);
               sp.c(param0 + 1);
-              if (var2 == 0) {
-                if (param0 != -1) {
-                  var3 = (String) null;
-                  a.a((String) null, (String) null, (byte) 24);
-                  return;
-                } else {
-                  return;
-                }
+              if (param0 == -1) {
+                return;
               } else {
-                break L0;
+                var3 = (String) null;
+                a.a((String) null, (String) null, (byte) 24);
+                return;
               }
             } else {
-              if (1 == var1) {
-                pm.field_P = rp.field_e;
-                pm.field_P = wi.a(new CharSequence[]{(CharSequence) ((Object) pm.field_P), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mi.field_Nb)}, 77);
-                h.field_L.m(-7435);
-                sp.c(param0 + 1);
-                if (var2 == 0) {
-                  if (param0 != -1) {
-                    var3 = (String) null;
-                    a.a((String) null, (String) null, (byte) 24);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  h.field_L.c(false);
-                  if (param0 != -1) {
-                    var3 = (String) null;
-                    a.a((String) null, (String) null, (byte) 24);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
+              pm.field_P = vl.a(al.field_cb, new String[]{Integer.toString(var1)}, 2);
+              pm.field_P = wi.a(new CharSequence[]{(CharSequence) ((Object) pm.field_P), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mi.field_Nb)}, 77);
+              h.field_L.m(-7435);
+              sp.c(param0 + 1);
+              if (param0 == -1) {
+                return;
               } else {
-                pm.field_P = vl.a(al.field_cb, new String[]{Integer.toString(var1)}, 2);
-                if (var2 == 0) {
-                  pm.field_P = wi.a(new CharSequence[]{(CharSequence) ((Object) pm.field_P), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mi.field_Nb)}, 77);
-                  h.field_L.m(-7435);
-                  sp.c(param0 + 1);
-                  if (var2 != 0) {
-                    h.field_L.c(false);
-                    if (param0 == -1) {
-                      return;
-                    } else {
-                      var3 = (String) null;
-                      a.a((String) null, (String) null, (byte) 24);
-                      return;
-                    }
-                  } else {
-                    if (param0 != -1) {
-                      var3 = (String) null;
-                      a.a((String) null, (String) null, (byte) 24);
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                } else {
-                  pm.field_P = rp.field_e;
-                  pm.field_P = wi.a(new CharSequence[]{(CharSequence) ((Object) pm.field_P), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mi.field_Nb)}, 77);
-                  h.field_L.m(-7435);
-                  sp.c(param0 + 1);
-                  if (var2 == 0) {
-                    if (param0 != -1) {
-                      var3 = (String) null;
-                      a.a((String) null, (String) null, (byte) 24);
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    h.field_L.c(false);
-                    if (param0 != -1) {
-                      var3 = (String) null;
-                      a.a((String) null, (String) null, (byte) 24);
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                }
+                var3 = (String) null;
+                a.a((String) null, (String) null, (byte) 24);
+                return;
               }
             }
           }
-        }
-        h.field_L.c(false);
-        if (param0 != -1) {
-          var3 = (String) null;
-          a.a((String) null, (String) null, (byte) 24);
-          return;
-        } else {
-          return;
         }
     }
 

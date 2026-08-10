@@ -201,13 +201,13 @@ final class pu {
                             var21++;
                             continue L7;
                           } else {
-                            var15 = param3[var19];
+                            var15 = var12[var19];
                             var19 = var19 + var7_int;
-                            var15 = var15 + param3[var19];
-                            var15 = var15 + param3[var20];
+                            var15 = var15 + var12[var19];
+                            var15 = var15 + var12[var20];
                             var19 = var19 + var7_int;
                             var20 = var20 + var7_int;
-                            var15 = var15 + param3[var20];
+                            var15 = var15 + var12[var20];
                             var13[var18] = (byte)(var15 >> -261151358);
                             var20 = var20 + var7_int;
                             var18 = var18 + var7_int;

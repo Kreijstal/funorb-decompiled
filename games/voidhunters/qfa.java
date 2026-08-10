@@ -487,48 +487,14 @@ final class qfa extends ha {
     }
 
     final void a(za param0) {
-        od discarded$2 = null;
-        od discarded$3 = null;
-        RuntimeException runtimeException = null;
         mb var3 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        od discarded$0 = null;
+        od discarded$1 = null;
         try {
-          L0: {
-            L1: {
-              this.field_Kb = ((gpa) ((Object) param0)).field_e;
-              if (this.field_z != null) {
-                break L1;
-              } else {
-                L2: {
-                  var3 = new mb(80);
-                  if (!this.field_ac) {
-                    var3.a(-1.0f, 1059949744);
-                    var3.a(-1.0f, 1059949744);
-                    var3.a(0.0f, 1059949744);
-                    var3.a(0.0f, 1059949744);
-                    var3.a(1.0f, 1059949744);
-                    var3.a(1.0f, 1059949744);
-                    var3.a(-1.0f, 1059949744);
-                    var3.a(0.0f, 1059949744);
-                    var3.a(1.0f, 1059949744);
-                    var3.a(1.0f, 1059949744);
-                    var3.a(1.0f, 1059949744);
-                    var3.a(1.0f, 1059949744);
-                    var3.a(0.0f, 1059949744);
-                    var3.a(1.0f, 1059949744);
-                    var3.a(0.0f, 1059949744);
-                    var3.a(-1.0f, 1059949744);
-                    var3.a(1.0f, 1059949744);
-                    var3.a(0.0f, 1059949744);
-                    var3.a(0.0f, 1059949744);
-                    var3.a(0.0f, 1059949744);
-                    break L2;
-                  } else {
+            this.field_Kb = ((gpa) ((Object) param0)).field_e;
+            if (this.field_z == null) {
+                var3 = new mb(80);
+                if (this.field_ac) {
                     var3.b(-1.0f, 1724347896);
                     var3.b(-1.0f, 1724347896);
                     var3.b(0.0f, 1724347896);
@@ -549,39 +515,35 @@ final class qfa extends ha {
                     var3.b(0.0f, 1724347896);
                     var3.b(0.0f, 1724347896);
                     var3.b(0.0f, 1724347896);
-                    break L2;
-                  }
+                } else {
+                    var3.a(-1.0f, 1059949744);
+                    var3.a(-1.0f, 1059949744);
+                    var3.a(0.0f, 1059949744);
+                    var3.a(0.0f, 1059949744);
+                    var3.a(1.0f, 1059949744);
+                    var3.a(1.0f, 1059949744);
+                    var3.a(-1.0f, 1059949744);
+                    var3.a(0.0f, 1059949744);
+                    var3.a(1.0f, 1059949744);
+                    var3.a(1.0f, 1059949744);
+                    var3.a(1.0f, 1059949744);
+                    var3.a(1.0f, 1059949744);
+                    var3.a(0.0f, 1059949744);
+                    var3.a(1.0f, 1059949744);
+                    var3.a(0.0f, 1059949744);
+                    var3.a(-1.0f, 1059949744);
+                    var3.a(1.0f, 1059949744);
+                    var3.a(0.0f, 1059949744);
+                    var3.a(0.0f, 1059949744);
+                    var3.a(0.0f, 1059949744);
                 }
                 this.field_z = this.a(var3.field_h, 20, var3.field_e, false, (byte) 121);
-                discarded$2 = new od(this.field_z, 5126, 3, 0);
-                discarded$3 = new od(this.field_z, 5126, 2, 12);
+                discarded$0 = new od(this.field_z, 5126, 3, 0);
+                discarded$1 = new od(this.field_z, 5126, 2, 12);
                 this.field_Ec.a(8, (qfa) (this));
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("qfa.GB(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "qfa.GB(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1782,50 +1744,16 @@ final class qfa extends ha {
     }
 
     final void a(pw param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_Db.a(false, param0);
-              this.field_F.a(false, this.field_Db);
-              this.field_F.b(5);
-              this.field_Bb.a(this.field_F, 14);
-              if (-2 == (this.field_Jb ^ -1)) {
-                break L1;
-              } else {
+            this.field_Db.a(false, param0);
+            this.field_F.a(false, this.field_Db);
+            this.field_F.b(5);
+            this.field_Bb.a(this.field_F, 14);
+            if (-2 != (this.field_Jb ^ -1)) {
                 this.b(true);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("qfa.FB(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "qfa.FB(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -3761,6 +3689,8 @@ final class qfa extends ha {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int incrementValue$4 = 0;
+        int stackIn_28_0 = 0;
+        int stackIn_28_1 = 0;
         int var2;
         int var4;
         hua var5;
@@ -3840,82 +3770,84 @@ final class qfa extends ha {
                     break L7;
                   }
                 }
-                L8: {
-                  if (this.field_ec.b(105)) {
-                    L9: {
-                      if (var2 <= 0) {
-                        break L9;
+                L8: while (true) {
+                  L9: {
+                    if (this.field_ec.b(105)) {
+                      L10: {
+                        if (var2 <= 0) {
+                          break L10;
+                        } else {
+                          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, cm.field_j, 0);
+                          var2 = 0;
+                          break L10;
+                        }
+                      }
+                      L11: while (true) {
+                        if (this.field_v.b(124)) {
+                          L12: while (true) {
+                            if (this.field_Cc.b(112)) {
+                              L13: while (true) {
+                                if (this.field_zb.b(106)) {
+                                  L14: while (true) {
+                                    if (this.field_v.b(-104)) {
+                                      this.field_r.a(true);
+                                      if (-100663297 <= (this.u(97) ^ -1)) {
+                                        break L9;
+                                      } else {
+                                        if (60000L + this.field_vc >= wt.a(false)) {
+                                          break L9;
+                                        } else {
+                                          System.gc();
+                                          this.field_vc = wt.a(false);
+                                          break L9;
+                                        }
+                                      }
+                                    } else {
+                                      var12 = (hua) ((Object) this.field_v.a(true));
+                                      jaggl.OpenGL.glDeleteLists((int)var12.field_b, var12.field_d);
+                                      continue L14;
+                                    }
+                                  }
+                                } else {
+                                  var11 = this.field_zb.a(true);
+                                  jaggl.OpenGL.glDeleteObjectARB(var11.field_b);
+                                  continue L13;
+                                }
+                              }
+                            } else {
+                              var10 = this.field_Cc.a(true);
+                              jaggl.OpenGL.glDeleteProgramARB((int)var10.field_b);
+                              continue L12;
+                            }
+                          }
+                        } else {
+                          var9 = (hua) ((Object) this.field_v.a(true));
+                          jaggl.OpenGL.glDeleteLists((int)var9.field_b, var9.field_d);
+                          continue L11;
+                        }
+                      }
+                    } else {
+                      var8 = (hua) ((Object) this.field_ec.a(true));
+                      incrementValue$2 = var2;
+                      var2++;
+                      cm.field_j[incrementValue$2] = (int)var8.field_b;
+                      this.field_q = this.field_q - var8.field_d;
+                      stackIn_28_0 = var2 ^ -1;
+
+                      stackIn_28_1 = -1001;
+
+                      if (stackIn_28_0 != stackIn_28_1) {
+                        continue L8;
                       } else {
                         jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, cm.field_j, 0);
                         var2 = 0;
-                        break L9;
-                      }
-                    }
-                    L10: while (true) {
-                      if (this.field_v.b(124)) {
-                        L11: while (true) {
-                          if (this.field_Cc.b(112)) {
-                            L12: while (true) {
-                              if (this.field_zb.b(106)) {
-                                L13: while (true) {
-                                  if (this.field_v.b(-104)) {
-                                    this.field_r.a(true);
-                                    if (-100663297 <= (this.u(97) ^ -1)) {
-                                      break L8;
-                                    } else {
-                                      if (60000L + this.field_vc >= wt.a(false)) {
-                                        break L8;
-                                      } else {
-                                        System.gc();
-                                        this.field_vc = wt.a(false);
-                                        break L8;
-                                      }
-                                    }
-                                  } else {
-                                    var12 = (hua) ((Object) this.field_v.a(true));
-                                    jaggl.OpenGL.glDeleteLists((int)var12.field_b, var12.field_d);
-                                    continue L13;
-                                  }
-                                }
-                              } else {
-                                var11 = this.field_zb.a(true);
-                                jaggl.OpenGL.glDeleteObjectARB(var11.field_b);
-                                continue L12;
-                              }
-                            }
-                          } else {
-                            var10 = this.field_Cc.a(true);
-                            jaggl.OpenGL.glDeleteProgramARB((int)var10.field_b);
-                            continue L11;
-                          }
-                        }
-                      } else {
-                        var9 = (hua) ((Object) this.field_v.a(true));
-                        jaggl.OpenGL.glDeleteLists((int)var9.field_b, var9.field_d);
-                        continue L10;
-                      }
-                    }
-                  } else {
-                    var8 = (hua) ((Object) this.field_ec.a(true));
-                    incrementValue$2 = var2;
-                    var2++;
-                    cm.field_j[incrementValue$2] = (int)var8.field_b;
-                    this.field_q = this.field_q - var8.field_d;
-                    if ((var2 ^ -1) <= -1001) {
-                      break L8;
-                    } else {
-                      if (60000L + this.field_vc >= wt.a(false)) {
-                        break L8;
-                      } else {
-                        System.gc();
-                        this.field_vc = wt.a(false);
-                        break L8;
+                        continue L8;
                       }
                     }
                   }
+                  this.field_Mc = param0;
+                  return;
                 }
-                this.field_Mc = param0;
-                return;
               } else {
                 var6 = (hua) ((Object) this.field_Nc.a(true));
                 incrementValue$3 = var2;

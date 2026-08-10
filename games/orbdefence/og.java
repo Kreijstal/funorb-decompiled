@@ -73,28 +73,17 @@ final class og {
     }
 
     og(boolean param0) {
-        L0: {
-          L1: {
-            this.field_l = ja.field_e;
-            this.field_k = vj.field_a;
-            this.field_e = bh.field_c;
-            this.field_d = wb.field_d;
-            this.field_c = pc.field_X;
-            this.field_h = vk.field_v;
-            this.field_m = tf.field_l;
-            if (param0) {
-              break L1;
-            } else {
-              this.field_i = null;
-              if (!OrbDefence.field_D) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          this.field_i = n.field_c;
-          break L0;
+        this.field_l = ja.field_e;
+        this.field_k = vj.field_a;
+        this.field_e = bh.field_c;
+        this.field_d = wb.field_d;
+        this.field_c = pc.field_X;
+        this.field_h = vk.field_v;
+        this.field_m = tf.field_l;
+        if (!param0) {
+            this.field_i = null;
+        } else {
+            this.field_i = n.field_c;
         }
         this.field_f = gb.field_b;
     }

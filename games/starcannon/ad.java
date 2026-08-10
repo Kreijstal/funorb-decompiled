@@ -265,113 +265,116 @@ final class ad extends kf {
                   }
                 }
                 L6: {
-                  if (-3 != (param0 ^ -1)) {
-                    break L6;
-                  } else {
-                    if (!wk.a(54)) {
-                      var6 = bj.field_c[param0];
-                      bj.field_c[param0] = 120;
-                      bi.field_c[param0] = bi.field_c[param0] + (bj.field_c[param0] - var6);
-                      qi.field_a[param0] = 350;
-                      b.field_c[param0] = b.field_c[param0] + 10;
-                      break L6;
+                  L7: {
+                    if (-3 != (param0 ^ -1)) {
+                      break L7;
                     } else {
-                      qi.field_a[param0] = 360 - -b.field_c[param0];
-                      bj.field_c[param0] = 120;
-                      break L6;
+                      if (!wk.a(54)) {
+                        var6 = bj.field_c[param0];
+                        bj.field_c[param0] = 120;
+                        bi.field_c[param0] = bi.field_c[param0] + (bj.field_c[param0] - var6);
+                        qi.field_a[param0] = 350;
+                        b.field_c[param0] = b.field_c[param0] + 10;
+                        break L7;
+                      } else {
+                        qi.field_a[param0] = 360 - -b.field_c[param0];
+                        bj.field_c[param0] = 120;
+                        break L6;
+                      }
                     }
                   }
+                  break L6;
                 }
                 break L0;
               } else {
-                L7: {
+                L8: {
                   var7 = var5_ref_int__[var6];
                   var8 = mj.field_c[var7];
                   if (19 != var7) {
                     if (var7 != 20) {
-                      L8: {
+                      L9: {
                         if (var8 == null) {
                           var8 = "ERROR: missing text";
-                          break L8;
+                          break L9;
                         } else {
-                          break L8;
+                          break L9;
                         }
                       }
-                      L9: {
+                      L10: {
                         if (-13 == (var7 ^ -1)) {
-                          break L9;
+                          break L10;
                         } else {
                           if ((var7 ^ -1) != -14) {
                             var9 = var4.a(var8);
                             if (var9 > var3_int) {
                               var3_int = var9;
-                              break L7;
+                              break L8;
                             } else {
                               var6++;
                               continue L1;
                             }
                           } else {
-                            break L9;
+                            break L10;
                           }
                         }
                       }
                       var9 = ak.field_e - -64 + 9;
                       if (var3_int < var9) {
                         var3_int = var9;
-                        break L7;
+                        break L8;
                       } else {
-                        break L7;
+                        break L8;
                       }
                     } else {
-                      L10: {
+                      L11: {
                         var9 = var4.a(ec.field_d);
                         if (var3_int < var9) {
                           var3_int = var9;
-                          break L10;
+                          break L11;
                         } else {
-                          break L10;
+                          break L11;
                         }
                       }
-                      L11: {
+                      L12: {
                         var9 = var4.a(fd.field_d);
                         if (var3_int < var9) {
                           var3_int = var9;
-                          break L11;
+                          break L12;
                         } else {
-                          break L11;
+                          break L12;
                         }
                       }
                       var9 = var4.a(gh.field_A);
                       if (var3_int < var9) {
                         var3_int = var9;
-                        break L7;
+                        break L8;
                       } else {
-                        break L7;
+                        break L8;
                       }
                     }
                   } else {
-                    L12: {
+                    L13: {
                       var9 = var4.a(cf.field_k);
                       if (var9 > var3_int) {
                         var3_int = var9;
-                        break L12;
+                        break L13;
                       } else {
-                        break L12;
+                        break L13;
                       }
                     }
-                    L13: {
+                    L14: {
                       var9 = var4.a(fl.field_g);
                       if (var3_int >= var9) {
-                        break L13;
+                        break L14;
                       } else {
                         var3_int = var9;
-                        break L13;
+                        break L14;
                       }
                     }
                     var9 = var4.a(hg.field_D);
                     if (var9 > var3_int) {
                       var3_int = var9;
-                      break L7;
+                      break L8;
                     } else {
                       var6++;
                       continue L1;
@@ -385,7 +388,7 @@ final class ad extends kf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L14: {
+          L15: {
             var3 = decompiledCaughtException;
             stackIn_50_0 = (RuntimeException) (var3);
 
@@ -395,12 +398,12 @@ final class ad extends kf {
               stackIn_51_0 = (RuntimeException) ((Object) stackIn_50_0);
               stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
               stackIn_51_2 = "null";
-              break L14;
+              break L15;
             } else {
               stackIn_51_0 = (RuntimeException) ((Object) stackIn_50_0);
               stackIn_51_1 = (StringBuilder) ((Object) stackIn_50_1);
               stackIn_51_2 = "{...}";
-              break L14;
+              break L15;
             }
           }
           throw sd.a((Throwable) ((Object) stackIn_51_0), stackIn_51_2 + ',' + param2 + ')');

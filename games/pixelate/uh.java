@@ -67,12 +67,41 @@ final class uh {
     }
 
     final void b(int param0) {
-        this.field_f.a(false);
-        if (param0 != -1) {
+        L0: {
+          this.field_f.a(false);
+          if (param0 == -1) {
+            break L0;
+          } else {
             uh.f(88);
+            break L0;
+          }
         }
-        if (!this.field_f.c(-127) && !this.field_l && -1 >= (this.field_e ^ -1) && -1 >= (this.field_u ^ -1) && this.field_h >= this.field_u) {
-            this.field_q.a(this.field_u, this.field_p, 0);
+        L1: {
+          if (this.field_f.c(-127)) {
+            break L1;
+          } else {
+            L2: {
+              if (this.field_l) {
+                break L2;
+              } else {
+                if (-1 < (this.field_e ^ -1)) {
+                  break L2;
+                } else {
+                  if (-1 < (this.field_u ^ -1)) {
+                    break L2;
+                  } else {
+                    if (this.field_h < this.field_u) {
+                      break L2;
+                    } else {
+                      this.field_q.a(this.field_u, this.field_p, 0);
+                      break L1;
+                    }
+                  }
+                }
+              }
+            }
+            break L1;
+          }
         }
     }
 

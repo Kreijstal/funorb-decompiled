@@ -307,7 +307,8 @@ final class kl extends al {
         }
         L1: {
           var3 = stackIn_3_0;
-          if ((this.field_m ^ -1) > -2153) {
+          if ((this.field_m ^ -1) <= -2153) {
+            var3 = 1;
             if (var3 == 0) {
               break L1;
             } else {

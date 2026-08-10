@@ -174,26 +174,29 @@ final class tg {
               }
             }
             L8: {
-              fa.field_c = param1;
-              vd.field_y = -1;
-              h.field_b = -1;
-              if (!il.field_n) {
-                break L8;
-              } else {
-                if (oh.field_E == pe.field_pb) {
-                  il.field_n = false;
-                  pe.field_pb = 0;
-                  break L8;
+              L9: {
+                fa.field_c = param1;
+                vd.field_y = -1;
+                h.field_b = -1;
+                if (!il.field_n) {
+                  break L9;
                 } else {
-                  break L8;
+                  if (oh.field_E == pe.field_pb) {
+                    il.field_n = false;
+                    pe.field_pb = 0;
+                    break L9;
+                  } else {
+                    break L8;
+                  }
                 }
               }
+              break L8;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L10: {
             var2 = decompiledCaughtException;
             stackIn_43_0 = (RuntimeException) (var2);
 
@@ -203,12 +206,12 @@ final class tg {
               stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
               stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
               stackIn_44_2 = "null";
-              break L9;
+              break L10;
             } else {
               stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
               stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
               stackIn_44_2 = "{...}";
-              break L9;
+              break L10;
             }
           }
           throw lj.a((Throwable) ((Object) stackIn_44_0), stackIn_44_2 + ')');

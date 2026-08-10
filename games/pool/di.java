@@ -1367,7 +1367,7 @@ final class di {
                           break L9;
                         }
                       }
-                      throw wm.a((Throwable) ((Object) stackIn_34_0), (stackIn_34_2 != 0) + " " + param3 + " " + param1.length + " " + qo.a(param1.length, var9, 0) + " " + qo.a(param1.length + -2, var9, param0 ^ 0) + " " + this.field_f.field_w[param3] + " " + this.field_f.field_v);
+                      throw wm.a((Throwable) ((Object) stackIn_34_0), (stackIn_34_2 != 0) + " " + param3 + " " + var9.length + " " + qo.a(var9.length, var9, 0) + " " + qo.a(var9.length + -2, var9, param0 ^ 0) + " " + this.field_f.field_w[param3] + " " + this.field_f.field_v);
                     }
                     L10: {
                       if (this.field_i) {

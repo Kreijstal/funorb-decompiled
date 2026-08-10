@@ -915,13 +915,18 @@ final class kd {
                         if (290 <= m.field_e) {
                           break L8;
                         } else {
-                          if ((nk.field_w ^ -1) >= -10) {
-                            if (558 < nk.field_w) {
-                              if (631 <= nk.field_w) {
+                          if ((nk.field_w ^ -1) < -10) {
+                            if (82 > nk.field_w) {
+                              this.field_n = tg.field_g;
+                              if (558 >= nk.field_w) {
                                 break L8;
                               } else {
-                                this.field_n = tg.field_g;
-                                break L8;
+                                if (631 <= nk.field_w) {
+                                  break L8;
+                                } else {
+                                  this.field_n = tg.field_g;
+                                  break L8;
+                                }
                               }
                             } else {
                               if (558 >= nk.field_w) {

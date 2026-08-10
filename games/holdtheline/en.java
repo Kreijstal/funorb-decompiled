@@ -648,90 +648,93 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
         try {
           L0: {
             L1: {
-              if (tf.field_n == null) {
-                break L1;
-              } else {
-                L2: {
-                  L3: {
-                    cb.field_j = 0;
-                    var2_int = param0.getKeyCode();
-                    if ((var2_int ^ -1) > -1) {
-                      break L3;
-                    } else {
-                      if (qj.field_N.length > var2_int) {
-                        var2_int = qj.field_N[var2_int];
-                        if ((var2_int & 128) != 0) {
-                          var2_int = -1;
-                          break L2;
-                        } else {
-                          break L2;
-                        }
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  var2_int = -1;
+              L2: {
+                if (tf.field_n == null) {
                   break L2;
-                }
-                L4: {
-                  if (-1 < (jd.field_J ^ -1)) {
-                    break L4;
-                  } else {
-                    if ((var2_int ^ -1) > -1) {
-                      break L4;
-                    } else {
-                      na.field_r[jd.field_J] = var2_int;
-                      jd.field_J = 1 + jd.field_J & 127;
-                      if (jd.field_J != th.field_j) {
+                } else {
+                  L3: {
+                    L4: {
+                      cb.field_j = 0;
+                      var2_int = param0.getKeyCode();
+                      if ((var2_int ^ -1) > -1) {
                         break L4;
                       } else {
-                        jd.field_J = -1;
-                        break L4;
+                        if (qj.field_N.length > var2_int) {
+                          var2_int = qj.field_N[var2_int];
+                          if ((var2_int & 128) != 0) {
+                            var2_int = -1;
+                            break L3;
+                          } else {
+                            break L3;
+                          }
+                        } else {
+                          break L4;
+                        }
+                      }
+                    }
+                    var2_int = -1;
+                    break L3;
+                  }
+                  L5: {
+                    if (-1 < (jd.field_J ^ -1)) {
+                      break L5;
+                    } else {
+                      if ((var2_int ^ -1) > -1) {
+                        break L5;
+                      } else {
+                        na.field_r[jd.field_J] = var2_int;
+                        jd.field_J = 1 + jd.field_J & 127;
+                        if (jd.field_J != th.field_j) {
+                          break L5;
+                        } else {
+                          jd.field_J = -1;
+                          break L5;
+                        }
                       }
                     }
                   }
-                }
-                L5: {
-                  if (0 > var2_int) {
-                    break L5;
-                  } else {
-                    var3 = 127 & 1 + lj.field_b;
-                    if (var3 != vj.field_l) {
-                      p.field_a[lj.field_b] = var2_int;
-                      d.field_b[lj.field_b] = (char)0;
-                      lj.field_b = var3;
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                }
-                L6: {
-                  var3 = param0.getModifiers();
-                  if (-1 != (10 & var3 ^ -1)) {
-                    break L6;
-                  } else {
-                    if ((var2_int ^ -1) == -86) {
+                  L6: {
+                    if (0 > var2_int) {
                       break L6;
                     } else {
-                      if (10 != var2_int) {
-                        break L1;
+                      var3 = 127 & 1 + lj.field_b;
+                      if (var3 != vj.field_l) {
+                        p.field_a[lj.field_b] = var2_int;
+                        d.field_b[lj.field_b] = (char)0;
+                        lj.field_b = var3;
+                        break L6;
                       } else {
                         break L6;
                       }
                     }
                   }
+                  L7: {
+                    var3 = param0.getModifiers();
+                    if (-1 != (10 & var3 ^ -1)) {
+                      break L7;
+                    } else {
+                      if ((var2_int ^ -1) == -86) {
+                        break L7;
+                      } else {
+                        if (10 != var2_int) {
+                          break L2;
+                        } else {
+                          break L7;
+                        }
+                      }
+                    }
+                  }
+                  param0.consume();
+                  break L1;
                 }
-                param0.consume();
-                break L1;
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var2 = decompiledCaughtException;
             stackIn_24_0 = (RuntimeException) (var2);
 
@@ -741,12 +744,12 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw kk.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');

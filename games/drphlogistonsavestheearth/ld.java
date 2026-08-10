@@ -1969,138 +1969,141 @@ final class ld {
           if (26 > var8) {
             break L19;
           } else {
-            if (var8 > 34) {
-              break L19;
-            } else {
-              if (!param1) {
-                break L19;
+            L20: {
+              if (var8 > 34) {
+                break L20;
               } else {
-                L20: {
-                  var14 = -26 + var8;
-                  var15 = var14 / 3;
-                  var16 = var14 % 3;
-                  var17 = (int)(-400.0 * Math.exp((double)(-lf.field_b) / 25.0));
-                  wj.f(285, 122 + var17 + 40, 300, 110, 16249576);
-                  if (var14 >= 0) {
-                    L21: {
+                if (!param1) {
+                  break L20;
+                } else {
+                  L21: {
+                    var14 = -26 + var8;
+                    var15 = var14 / 3;
+                    var16 = var14 % 3;
+                    var17 = (int)(-400.0 * Math.exp((double)(-lf.field_b) / 25.0));
+                    wj.f(285, 122 + var17 + 40, 300, 110, 16249576);
+                    if (var14 >= 0) {
                       L22: {
-                        if (-4 < (var14 ^ -1)) {
-                          break L22;
-                        } else {
-                          if ((hb.field_g ^ -1) >= -1) {
-                            var18 = wi.field_a;
-                            break L21;
-                          } else {
-                            break L22;
-                          }
-                        }
-                      }
-                      if (var14 <= gf.field_D) {
-                        var18 = eb.field_e[var14];
-                        break L21;
-                      } else {
-                        var18 = md.field_f;
-                        break L21;
-                      }
-                    }
-                    var19 = 0;
-                    L23: while (true) {
-                      if (var19 >= 4) {
-                        L24: {
-                          var19 = 5;
-                          wj.a(this.b(param2, true) + -var19, -var19 + this.a((byte) -90, param2), var18.field_y - -10, 2 * var19 + var18.field_w, 4227327, (int)(ji.a(65535, (double)lf.field_b / 10.0) * 128.0 + 128.0));
-                          var18.b(this.b(param2, true), this.a((byte) -74, param2), (int)(224.0 - 32.0 * ji.a(65535, (double)lf.field_b / 10.0)), 16777215);
-                          if (gf.field_D >= var14) {
-                            stackIn_82_0 = tc.field_b[var14];
-                            break L24;
-                          } else {
-                            stackIn_82_0 = s.field_f;
-                            break L24;
-                          }
-                        }
-                        L25: {
-                          var9 = stackIn_82_0;
-                          if ((var14 ^ -1) > -4) {
-                            break L25;
+                        L23: {
+                          if (-4 < (var14 ^ -1)) {
+                            break L23;
                           } else {
                             if ((hb.field_g ^ -1) >= -1) {
-                              var9 = s.field_f;
-                              break L25;
+                              var18 = wi.field_a;
+                              break L22;
                             } else {
-                              break L25;
+                              break L23;
                             }
                           }
                         }
-                        L26: {
-                          L27: {
-                            cb.field_b.c((String) (var9), 285, 64 + (var17 - -122), 0, -1);
-                            var20 = 0;
-                            if ((hb.field_g ^ -1) < -1) {
-                              break L27;
+                        if (var14 <= gf.field_D) {
+                          var18 = eb.field_e[var14];
+                          break L22;
+                        } else {
+                          var18 = md.field_f;
+                          break L22;
+                        }
+                      }
+                      var19 = 0;
+                      L24: while (true) {
+                        if (var19 >= 4) {
+                          L25: {
+                            var19 = 5;
+                            wj.a(this.b(param2, true) + -var19, -var19 + this.a((byte) -90, param2), var18.field_y - -10, 2 * var19 + var18.field_w, 4227327, (int)(ji.a(65535, (double)lf.field_b / 10.0) * 128.0 + 128.0));
+                            var18.b(this.b(param2, true), this.a((byte) -74, param2), (int)(224.0 - 32.0 * ji.a(65535, (double)lf.field_b / 10.0)), 16777215);
+                            if (gf.field_D >= var14) {
+                              stackIn_82_0 = tc.field_b[var14];
+                              break L25;
                             } else {
-                              if ((var14 ^ -1) > -4) {
-                                break L27;
+                              stackIn_82_0 = s.field_f;
+                              break L25;
+                            }
+                          }
+                          L26: {
+                            var9 = stackIn_82_0;
+                            if ((var14 ^ -1) > -4) {
+                              break L26;
+                            } else {
+                              if ((hb.field_g ^ -1) >= -1) {
+                                var9 = s.field_f;
+                                break L26;
                               } else {
-                                var20 = this.g(0);
-                                var9 = s.field_h;
                                 break L26;
                               }
                             }
                           }
-                          if (gf.field_D >= var14) {
-                            var9 = le.field_a[var14];
-                            break L26;
-                          } else {
-                            var20 = this.g(0);
-                            var9 = pe.field_i;
-                            break L26;
-                          }
-                        }
-                        cb.field_b.a((String) (var9), 285, var17 + 122 - -94, 320, 240, var20, -1, 0, 0, cb.field_b.field_x);
-                        if (var14 > gf.field_D) {
-                          break L20;
-                        } else {
-                          L28: {
-                            L29: {
-                              if (-1 > (hb.field_g ^ -1)) {
-                                break L29;
+                          L27: {
+                            L28: {
+                              cb.field_b.c((String) (var9), 285, 64 + (var17 - -122), 0, -1);
+                              var20 = 0;
+                              if ((hb.field_g ^ -1) < -1) {
+                                break L28;
                               } else {
-                                if ((var14 ^ -1) <= -4) {
-                                  var9 = null;
+                                if ((var14 ^ -1) > -4) {
                                   break L28;
                                 } else {
-                                  break L29;
+                                  var20 = this.g(0);
+                                  var9 = s.field_h;
+                                  break L27;
                                 }
                               }
                             }
-                            var9 = af.field_a;
-                            break L28;
+                            if (gf.field_D >= var14) {
+                              var9 = le.field_a[var14];
+                              break L27;
+                            } else {
+                              var20 = this.g(0);
+                              var9 = pe.field_i;
+                              break L27;
+                            }
                           }
-                          cb.field_b.c((String) (var9), 285, 94 + (122 + var17) + 100, 0, -1);
-                          break L20;
+                          cb.field_b.a((String) (var9), 285, var17 + 122 - -94, 320, 240, var20, -1, 0, 0, cb.field_b.field_x);
+                          if (var14 > gf.field_D) {
+                            break L21;
+                          } else {
+                            L29: {
+                              L30: {
+                                if (-1 > (hb.field_g ^ -1)) {
+                                  break L30;
+                                } else {
+                                  if ((var14 ^ -1) <= -4) {
+                                    var9 = null;
+                                    break L29;
+                                  } else {
+                                    break L30;
+                                  }
+                                }
+                              }
+                              var9 = af.field_a;
+                              break L29;
+                            }
+                            cb.field_b.c((String) (var9), 285, 94 + (122 + var17) + 100, 0, -1);
+                            break L21;
+                          }
+                        } else {
+                          wj.a(this.b(param2, true) + -var19, this.a((byte) -113, param2) - var19, var19 * 2 + var18.field_y, var18.field_w - -(var19 * 2), 128, 255 + -(64 * var19));
+                          var19++;
+                          continue L24;
                         }
-                      } else {
-                        wj.a(this.b(param2, true) + -var19, this.a((byte) -113, param2) - var19, var19 * 2 + var18.field_y, var18.field_w - -(var19 * 2), 128, 255 + -(64 * var19));
-                        var19++;
-                        continue L23;
                       }
+                    } else {
+                      break L21;
                     }
-                  } else {
-                    break L20;
                   }
-                }
-                if ((var15 ^ -1) == 0) {
-                  break L19;
-                } else {
-                  if (-1 == var16) {
-                    break L19;
+                  if ((var15 ^ -1) == 0) {
+                    break L20;
                   } else {
-                    cb.field_b.c(a.a(5044, ek.field_q, new String[]{Integer.toString(var15 + 1), Integer.toString(1 + var16)}), 285, var17 + 122 - -20, 0, -1);
-                    break L19;
+                    if (-1 == var16) {
+                      break L20;
+                    } else {
+                      cb.field_b.c(a.a(5044, ek.field_q, new String[]{Integer.toString(var15 + 1), Integer.toString(1 + var16)}), 285, var17 + 122 - -20, 0, -1);
+                      break L19;
+                    }
                   }
                 }
               }
             }
+            break L19;
           }
         }
     }

@@ -17,10 +17,8 @@ final class he extends wf {
     }
 
     final static void a(String[] args, byte param1, String param2, int param3) {
-        RuntimeException runtimeException = null;
         String[] var4 = null;
         int var5 = 0;
-        String[] var6 = null;
         int stackIn_12_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -32,55 +30,44 @@ final class he extends wf {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var4_ref = null;
+        String[] var6 = null;
         var5 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
             if (param1 > 75) {
               L1: {
-                L2: {
-                  db.field_a = gd.field_l;
-                  if (255 == param3) {
-                    break L2;
-                  } else {
-                    L3: {
-                      if (param3 < 100) {
-                        break L3;
-                      } else {
-                        if (param3 > 105) {
-                          break L3;
-                        } else {
-                          var4 = args;
-                          dj.a(false, var4);
-                          de.field_a = ve.a(args, (byte) -128);
-                          if (var5 == 0) {
-                            break L1;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                    }
-                    de.field_a = mk.a(242763393, param2, param3);
-                    if (var5 == 0) {
-                      break L1;
+                db.field_a = gd.field_l;
+                if (255 == param3) {
+                  L2: {
+                    if (-14 >= (ab.field_j ^ -1)) {
+                      stackIn_12_0 = 0;
+                      break L2;
                     } else {
+                      stackIn_12_0 = 1;
                       break L2;
                     }
                   }
-                }
-                L4: {
-                  if (-14 >= (ab.field_j ^ -1)) {
-                    stackIn_12_0 = 0;
-                    break L4;
+                  de.field_a = de.a(stackIn_12_0 != 0, (byte) -116);
+                  var6 = (String[]) null;
+                  dj.a(false, (String[]) null);
+                  break L1;
+                } else {
+                  if (param3 < 100) {
+                    de.field_a = mk.a(242763393, param2, param3);
+                    break L1;
                   } else {
-                    stackIn_12_0 = 1;
-                    break L4;
+                    if (param3 > 105) {
+                      de.field_a = mk.a(242763393, param2, param3);
+                      break L1;
+                    } else {
+                      var4 = args;
+                      dj.a(false, var4);
+                      de.field_a = ve.a(args, (byte) -128);
+                      break L1;
+                    }
                   }
                 }
-                de.field_a = de.a(stackIn_12_0 != 0, (byte) -116);
-                var6 = (String[]) null;
-                dj.a(false, (String[]) null);
-                break L1;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -91,9 +78,9 @@ final class he extends wf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (runtimeException);
+          L3: {
+            var4_ref = decompiledCaughtException;
+            stackIn_16_0 = (RuntimeException) (var4_ref);
 
             stackIn_16_1 = new StringBuilder().append("he.C(");
 
@@ -101,15 +88,15 @@ final class he extends wf {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "null";
-              break L5;
+              break L3;
             } else {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "{...}";
-              break L5;
+              break L3;
             }
           }
-          L6: {
+          L4: {
 
 
             stackIn_19_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param1).append(',');
@@ -118,12 +105,12 @@ final class he extends wf {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackIn_20_2 = "null";
-              break L6;
+              break L4;
             } else {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackIn_20_2 = "{...}";
-              break L6;
+              break L4;
             }
           }
           throw ch.a((Throwable) ((Object) stackIn_17_0), stackIn_20_2 + ',' + param3 + ')');

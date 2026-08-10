@@ -60,6 +60,7 @@ final class sob extends ha {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         int var6;
         int var7;
         int var8;
@@ -976,15 +977,74 @@ final class sob extends ha {
                             }
                             L38: {
                               if (param0 - var10 >= this.field_H) {
-                                if (param0 - var10 >= this.field_H) {
-                                  if (param1 < this.field_n) {
-                                    break L38;
+                                if (param0 + var10 < this.field_A) {
+                                  if (param1 - var10 >= this.field_n) {
+                                    if (param1 + var10 < this.field_p) {
+                                      this.field_k[var6 - var10] = param3;
+                                      this.field_k[var6 + var10] = param3;
+                                      this.field_k[var8] = param3;
+                                      this.field_k[var9] = param3;
+                                      L39: while (true) {
+                                        L40: {
+                                          incrementValue$4 = var11;
+                                          var11++;
+                                          var12 = var12 + (incrementValue$4 + var11);
+                                          var6 = var6 - this.field_i;
+                                          var7 = var7 + this.field_i;
+                                          if (var12 <= param2) {
+                                            break L40;
+                                          } else {
+                                            var10--;
+                                            var12 = var12 - (var10 + var10);
+                                            var8 = var8 + this.field_i;
+                                            var9 = var9 - this.field_i;
+                                            break L40;
+                                          }
+                                        }
+                                        if (var10 >= var11) {
+                                          this.field_k[var8 - var11] = param3;
+                                          this.field_k[var8 + var11] = param3;
+                                          this.field_k[var6 - var10] = param3;
+                                          this.field_k[var6 + var10] = param3;
+                                          this.field_k[var7 - var10] = param3;
+                                          this.field_k[var7 + var10] = param3;
+                                          this.field_k[var9 - var11] = param3;
+                                          this.field_k[var9 + var11] = param3;
+                                          continue L39;
+                                        } else {
+                                          break L3;
+                                        }
+                                      }
+                                    } else {
+                                      if (param0 - var10 < this.field_H) {
+                                        break L38;
+                                      } else {
+                                        if (param1 < this.field_n) {
+                                          break L38;
+                                        } else {
+                                          if (param1 >= this.field_p) {
+                                            break L38;
+                                          } else {
+                                            this.field_k[var6 - var10] = param3;
+                                            break L38;
+                                          }
+                                        }
+                                      }
+                                    }
                                   } else {
-                                    if (param1 >= this.field_p) {
+                                    if (param0 - var10 < this.field_H) {
                                       break L38;
                                     } else {
-                                      this.field_k[var6 - var10] = param3;
-                                      break L38;
+                                      if (param1 < this.field_n) {
+                                        break L38;
+                                      } else {
+                                        if (param1 >= this.field_p) {
+                                          break L38;
+                                        } else {
+                                          this.field_k[var6 - var10] = param3;
+                                          break L38;
+                                        }
+                                      }
                                     }
                                   }
                                 } else {
@@ -1004,7 +1064,9 @@ final class sob extends ha {
                                   }
                                 }
                               } else {
-                                if (param0 - var10 >= this.field_H) {
+                                if (param0 - var10 < this.field_H) {
+                                  break L38;
+                                } else {
                                   if (param1 < this.field_n) {
                                     break L38;
                                   } else {
@@ -1015,205 +1077,163 @@ final class sob extends ha {
                                       break L38;
                                     }
                                   }
-                                } else {
-                                  if (param0 - var10 < this.field_H) {
-                                    break L38;
-                                  } else {
-                                    if (param1 < this.field_n) {
-                                      break L38;
-                                    } else {
-                                      if (param1 >= this.field_p) {
-                                        break L38;
-                                      } else {
-                                        this.field_k[var6 - var10] = param3;
-                                        break L38;
-                                      }
-                                    }
-                                  }
                                 }
                               }
                             }
-                            L39: {
+                            L41: {
                               if (param0 + var10 < this.field_A) {
                                 if (param1 >= this.field_n) {
                                   if (param1 < this.field_p) {
                                     this.field_k[var6 + var10] = param3;
                                     if (param1 - var10 < this.field_n) {
-                                      break L39;
+                                      break L41;
                                     } else {
                                       if (param0 < this.field_H) {
-                                        break L39;
+                                        break L41;
                                       } else {
                                         if (param0 >= this.field_A) {
-                                          break L39;
+                                          break L41;
                                         } else {
                                           this.field_k[var8] = param3;
-                                          break L39;
+                                          break L41;
                                         }
                                       }
                                     }
                                   } else {
                                     if (param1 - var10 < this.field_n) {
-                                      break L39;
+                                      break L41;
                                     } else {
                                       if (param0 < this.field_H) {
-                                        break L39;
+                                        break L41;
                                       } else {
                                         if (param0 >= this.field_A) {
-                                          break L39;
+                                          break L41;
                                         } else {
                                           this.field_k[var8] = param3;
-                                          break L39;
+                                          break L41;
                                         }
                                       }
                                     }
                                   }
                                 } else {
                                   if (param1 - var10 < this.field_n) {
-                                    break L39;
+                                    break L41;
                                   } else {
                                     if (param0 < this.field_H) {
-                                      break L39;
+                                      break L41;
                                     } else {
                                       if (param0 >= this.field_A) {
-                                        break L39;
+                                        break L41;
                                       } else {
                                         this.field_k[var8] = param3;
-                                        break L39;
+                                        break L41;
                                       }
                                     }
                                   }
                                 }
                               } else {
                                 if (param1 - var10 < this.field_n) {
-                                  break L39;
+                                  break L41;
                                 } else {
                                   if (param0 < this.field_H) {
-                                    break L39;
+                                    break L41;
                                   } else {
                                     if (param0 >= this.field_A) {
-                                      break L39;
+                                      break L41;
                                     } else {
                                       this.field_k[var8] = param3;
-                                      break L39;
+                                      break L41;
                                     }
                                   }
                                 }
                               }
                             }
-                            L40: {
+                            L42: {
                               if (param1 + var10 >= this.field_p) {
-                                break L40;
+                                break L42;
                               } else {
                                 if (param0 < this.field_H) {
-                                  break L40;
+                                  break L42;
                                 } else {
                                   if (param0 >= this.field_A) {
-                                    break L40;
+                                    break L42;
                                   } else {
                                     this.field_k[var9] = param3;
-                                    break L40;
+                                    break L42;
                                   }
                                 }
                               }
                             }
-                            L41: while (true) {
-                              L42: {
-                                incrementValue$4 = var11;
+                            L43: while (true) {
+                              L44: {
+                                incrementValue$5 = var11;
                                 var11++;
-                                var12 = var12 + (incrementValue$4 + var11);
+                                var12 = var12 + (incrementValue$5 + var11);
                                 var6 = var6 - this.field_i;
                                 var7 = var7 + this.field_i;
                                 if (var12 <= param2) {
-                                  break L42;
+                                  break L44;
                                 } else {
                                   var10--;
                                   var12 = var12 - (var10 + var10);
                                   var8 = var8 + this.field_i;
                                   var9 = var9 - this.field_i;
-                                  break L42;
+                                  break L44;
                                 }
                               }
                               if (var10 >= var11) {
-                                L43: {
+                                L45: {
                                   if (param1 - var10 < this.field_n) {
-                                    break L43;
+                                    break L45;
                                   } else {
                                     if (param1 - var10 >= this.field_p) {
-                                      break L43;
+                                      break L45;
                                     } else {
-                                      if (param0 - var11 < this.field_H) {
-                                        if (param0 + var11 >= this.field_H) {
-                                          if (param0 + var11 >= this.field_A) {
-                                            break L43;
+                                      if (param0 - var11 >= this.field_H) {
+                                        if (param0 - var11 < this.field_A) {
+                                          this.field_k[var8 - var11] = param3;
+                                          if (param0 + var11 < this.field_H) {
+                                            break L45;
                                           } else {
-                                            this.field_k[var8 + var11] = param3;
-                                            break L43;
+                                            if (param0 + var11 >= this.field_A) {
+                                              break L45;
+                                            } else {
+                                              this.field_k[var8 + var11] = param3;
+                                              break L45;
+                                            }
                                           }
                                         } else {
                                           if (param0 + var11 < this.field_H) {
-                                            break L43;
+                                            break L45;
                                           } else {
                                             if (param0 + var11 >= this.field_A) {
-                                              break L43;
+                                              break L45;
                                             } else {
                                               this.field_k[var8 + var11] = param3;
-                                              break L43;
+                                              break L45;
                                             }
                                           }
                                         }
                                       } else {
                                         if (param0 + var11 < this.field_H) {
-                                          break L43;
-                                        } else {
-                                          if (param0 + var11 >= this.field_A) {
-                                            break L43;
-                                          } else {
-                                            this.field_k[var8 + var11] = param3;
-                                            break L43;
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                                L44: {
-                                  if (param1 - var11 < this.field_n) {
-                                    break L44;
-                                  } else {
-                                    if (param1 - var11 >= this.field_p) {
-                                      break L44;
-                                    } else {
-                                      L45: {
-                                        if (param0 - var10 < this.field_H) {
                                           break L45;
                                         } else {
-                                          if (param0 - var10 >= this.field_A) {
+                                          if (param0 + var11 >= this.field_A) {
                                             break L45;
                                           } else {
-                                            this.field_k[var6 - var10] = param3;
+                                            this.field_k[var8 + var11] = param3;
                                             break L45;
                                           }
-                                        }
-                                      }
-                                      if (param0 + var10 < this.field_H) {
-                                        break L44;
-                                      } else {
-                                        if (param0 + var10 >= this.field_A) {
-                                          break L44;
-                                        } else {
-                                          this.field_k[var6 + var10] = param3;
-                                          break L44;
                                         }
                                       }
                                     }
                                   }
                                 }
                                 L46: {
-                                  if (param1 + var11 < this.field_n) {
+                                  if (param1 - var11 < this.field_n) {
                                     break L46;
                                   } else {
-                                    if (param1 + var11 >= this.field_p) {
+                                    if (param1 - var11 >= this.field_p) {
                                       break L46;
                                     } else {
                                       L47: {
@@ -1223,7 +1243,7 @@ final class sob extends ha {
                                           if (param0 - var10 >= this.field_A) {
                                             break L47;
                                           } else {
-                                            this.field_k[var7 - var10] = param3;
+                                            this.field_k[var6 - var10] = param3;
                                             break L47;
                                           }
                                         }
@@ -1234,39 +1254,71 @@ final class sob extends ha {
                                         if (param0 + var10 >= this.field_A) {
                                           break L46;
                                         } else {
-                                          this.field_k[var7 + var10] = param3;
+                                          this.field_k[var6 + var10] = param3;
                                           break L46;
                                         }
                                       }
                                     }
                                   }
                                 }
-                                if (param1 + var10 < this.field_n) {
-                                  continue L41;
-                                } else {
-                                  if (param1 + var10 >= this.field_p) {
-                                    continue L41;
+                                L48: {
+                                  if (param1 + var11 < this.field_n) {
+                                    break L48;
                                   } else {
-                                    L48: {
-                                      if (param0 - var11 < this.field_H) {
+                                    if (param1 + var11 >= this.field_p) {
+                                      break L48;
+                                    } else {
+                                      L49: {
+                                        if (param0 - var10 < this.field_H) {
+                                          break L49;
+                                        } else {
+                                          if (param0 - var10 >= this.field_A) {
+                                            break L49;
+                                          } else {
+                                            this.field_k[var7 - var10] = param3;
+                                            break L49;
+                                          }
+                                        }
+                                      }
+                                      if (param0 + var10 < this.field_H) {
                                         break L48;
                                       } else {
-                                        if (param0 - var11 >= this.field_A) {
+                                        if (param0 + var10 >= this.field_A) {
                                           break L48;
                                         } else {
-                                          this.field_k[var9 - var11] = param3;
+                                          this.field_k[var7 + var10] = param3;
                                           break L48;
                                         }
                                       }
                                     }
+                                  }
+                                }
+                                if (param1 + var10 < this.field_n) {
+                                  continue L43;
+                                } else {
+                                  if (param1 + var10 >= this.field_p) {
+                                    continue L43;
+                                  } else {
+                                    L50: {
+                                      if (param0 - var11 < this.field_H) {
+                                        break L50;
+                                      } else {
+                                        if (param0 - var11 >= this.field_A) {
+                                          break L50;
+                                        } else {
+                                          this.field_k[var9 - var11] = param3;
+                                          break L50;
+                                        }
+                                      }
+                                    }
                                     if (param0 + var11 < this.field_H) {
-                                      continue L41;
+                                      continue L43;
                                     } else {
                                       if (param0 + var11 >= this.field_A) {
-                                        continue L41;
+                                        continue L43;
                                       } else {
                                         this.field_k[var9 + var11] = param3;
-                                        continue L41;
+                                        continue L43;
                                       }
                                     }
                                   }
@@ -1292,39 +1344,39 @@ final class sob extends ha {
           }
           return;
         } else {
-          L49: {
+          L51: {
             if (param0 < this.field_H) {
-              break L49;
+              break L51;
             } else {
-              L50: {
+              L52: {
                 if (param1 < this.field_n) {
-                  break L50;
+                  break L52;
                 } else {
                   if (param0 >= this.field_A) {
-                    break L50;
+                    break L52;
                   } else {
                     if (param1 < this.field_p) {
-                      L51: {
-                        L52: {
+                      L53: {
+                        L54: {
                           var6 = param3 >>> 24;
                           var7 = param0 + param1 * this.field_i;
                           if (param4 == 0) {
-                            break L52;
+                            break L54;
                           } else {
-                            L53: {
+                            L55: {
                               if (param4 != 1) {
-                                break L53;
+                                break L55;
                               } else {
                                 if (var6 != 255) {
-                                  break L53;
+                                  break L55;
                                 } else {
-                                  break L52;
+                                  break L54;
                                 }
                               }
                             }
                             if (param4 != 1) {
                               if (param4 != 2) {
-                                break L49;
+                                break L51;
                               } else {
                                 var8 = var7;
                                 var9 = param3;
@@ -1333,7 +1385,7 @@ final class sob extends ha {
                                 var12 = (var9 & 16711935) + (var10 & 16711935);
                                 var10 = (var12 & 16777472) + (var11 - var12 & 65536);
                                 this.field_k[var8] = var11 - var10 | var10 - (var10 >>> 8);
-                                break L51;
+                                break L53;
                               }
                             } else {
                               var8 = var7;
@@ -1344,16 +1396,16 @@ final class sob extends ha {
                               var12 = this.field_k[var8];
                               var12 = ((var12 & 16711935) * var11 >> 8 & 16711935) + ((var12 & 65280) * var11 >> 8 & 65280);
                               this.field_k[var8] = var9 + var12;
-                              break L51;
+                              break L53;
                             }
                           }
                         }
                         this.field_k[var7] = param3;
-                        break L51;
+                        break L53;
                       }
                       return;
                     } else {
-                      break L50;
+                      break L52;
                     }
                   }
                 }
@@ -2741,41 +2793,44 @@ final class sob extends ha {
             if (var2 == null) {
               break L0;
             } else {
-              this.field_l = param0;
-              var3 = param0.getSize();
-              this.field_z = var3.width;
-              this.field_o = var3.height;
-              this.field_D = var2;
-              if (this.field_c != null) {
-                break L0;
-              } else {
-                L1: {
+              L1: {
+                this.field_l = param0;
+                var3 = param0.getSize();
+                this.field_z = var3.width;
+                this.field_o = var3.height;
+                this.field_D = var2;
+                if (this.field_c != null) {
+                  break L1;
+                } else {
                   L2: {
-                    this.field_k = var2.field_f;
-                    this.field_i = var2.field_e;
-                    this.field_j = var2.field_d;
-                    if (this.field_i != this.field_F) {
-                      break L2;
-                    } else {
-                      if (this.field_j == this.field_q) {
-                        break L1;
+                    L3: {
+                      this.field_k = var2.field_f;
+                      this.field_i = var2.field_e;
+                      this.field_j = var2.field_d;
+                      if (this.field_i != this.field_F) {
+                        break L3;
                       } else {
-                        break L2;
+                        if (this.field_j == this.field_q) {
+                          break L2;
+                        } else {
+                          break L3;
+                        }
                       }
                     }
+                    this.field_F = this.field_i;
+                    this.field_v = this.field_i;
+                    this.field_q = this.field_j;
+                    this.field_u = this.field_j;
+                    array$1 = new float[this.field_F * this.field_q];
+                    this.field_r = array$1;
+                    this.field_G = array$1;
+                    break L2;
                   }
-                  this.field_F = this.field_i;
-                  this.field_v = this.field_i;
-                  this.field_q = this.field_j;
-                  this.field_u = this.field_j;
-                  array$1 = new float[this.field_F * this.field_q];
-                  this.field_r = array$1;
-                  this.field_G = array$1;
+                  this.y();
                   break L1;
                 }
-                this.y();
-                break L0;
               }
+              break L0;
             }
           }
         }
@@ -3672,114 +3727,117 @@ final class sob extends ha {
                         }
                       }
                     }
-                    if (param5 != 1) {
-                      if (param5 != 2) {
-                        throw new IllegalArgumentException();
-                      } else {
-                        L16: while (true) {
-                          if (param0 > param2) {
-                            break L1;
-                          } else {
-                            L17: {
-                              var9 = param1 >> 16;
-                              if (var9 < this.field_n) {
-                                break L17;
-                              } else {
-                                if (var9 >= this.field_p) {
-                                  break L17;
+                    L16: {
+                      if (param5 != 1) {
+                        if (param5 != 2) {
+                          throw new IllegalArgumentException();
+                        } else {
+                          L17: while (true) {
+                            if (param0 > param2) {
+                              break L16;
+                            } else {
+                              L18: {
+                                var9 = param1 >> 16;
+                                if (var9 < this.field_n) {
+                                  break L18;
                                 } else {
-                                  var10 = param0 + var9 * this.field_i;
-                                  var11 = this.field_k[var10];
-                                  var12 = param4 + var11;
-                                  var13 = (param4 & 16711935) + (var11 & 16711935);
-                                  var11 = (var13 & 16777472) + (var12 - var13 & 65536);
-                                  this.field_k[var10] = var12 - var11 | var11 - (var11 >>> 8);
-                                  break L17;
+                                  if (var9 >= this.field_p) {
+                                    break L18;
+                                  } else {
+                                    var10 = param0 + var9 * this.field_i;
+                                    var11 = this.field_k[var10];
+                                    var12 = param4 + var11;
+                                    var13 = (param4 & 16711935) + (var11 & 16711935);
+                                    var11 = (var13 & 16777472) + (var12 - var13 & 65536);
+                                    this.field_k[var10] = var12 - var11 | var11 - (var11 >>> 8);
+                                    break L18;
+                                  }
+                                }
+                              }
+                              param1 = param1 + var7;
+                              param0++;
+                              continue L17;
+                            }
+                          }
+                        }
+                      } else {
+                        param4 = ((param4 & 16711935) * var8 >> 8 & 16711935) + ((param4 & 65280) * var8 >> 8 & 65280) + (var8 << 24);
+                        var9 = 256 - var8;
+                        L19: while (true) {
+                          if (param0 > param2) {
+                            break L16;
+                          } else {
+                            L20: {
+                              var10 = param1 >> 16;
+                              if (var10 < this.field_n) {
+                                break L20;
+                              } else {
+                                if (var10 >= this.field_p) {
+                                  break L20;
+                                } else {
+                                  var11 = param0 + var10 * this.field_i;
+                                  var12 = this.field_k[var11];
+                                  var12 = ((var12 & 16711935) * var9 >> 8 & 16711935) + ((var12 & 65280) * var9 >> 8 & 65280);
+                                  this.field_k[var11] = param4 + var12;
+                                  break L20;
                                 }
                               }
                             }
                             param1 = param1 + var7;
                             param0++;
-                            continue L16;
+                            continue L19;
                           }
-                        }
-                      }
-                    } else {
-                      param4 = ((param4 & 16711935) * var8 >> 8 & 16711935) + ((param4 & 65280) * var8 >> 8 & 65280) + (var8 << 24);
-                      var9 = 256 - var8;
-                      L18: while (true) {
-                        if (param0 > param2) {
-                          break L1;
-                        } else {
-                          L19: {
-                            var10 = param1 >> 16;
-                            if (var10 < this.field_n) {
-                              break L19;
-                            } else {
-                              if (var10 >= this.field_p) {
-                                break L19;
-                              } else {
-                                var11 = param0 + var10 * this.field_i;
-                                var12 = this.field_k[var11];
-                                var12 = ((var12 & 16711935) * var9 >> 8 & 16711935) + ((var12 & 65280) * var9 >> 8 & 65280);
-                                this.field_k[var11] = param4 + var12;
-                                break L19;
-                              }
-                            }
-                          }
-                          param1 = param1 + var7;
-                          param0++;
-                          continue L18;
                         }
                       }
                     }
+                    break L1;
                   }
                 }
-                L20: while (true) {
+                L21: while (true) {
                   if (param0 > param2) {
                     break L1;
                   } else {
-                    L21: {
+                    L22: {
                       var9 = param1 >> 16;
                       if (var9 < this.field_n) {
-                        break L21;
+                        break L22;
                       } else {
                         if (var9 >= this.field_p) {
-                          break L21;
+                          break L22;
                         } else {
                           this.field_k[param0 + var9 * this.field_i] = param4;
-                          break L21;
+                          break L22;
                         }
                       }
                     }
                     param1 = param1 + var7;
                     param0++;
-                    continue L20;
+                    continue L21;
                   }
                 }
               }
             }
             return;
           } else {
-            L22: {
+            L23: {
               if (param3 < 0) {
                 this.P(param0, param1 + param3, -param3 + 1, param4, param5);
-                break L22;
+                break L23;
               } else {
                 this.P(param0, param1, param3 + 1, param4, param5);
-                break L22;
+                break L23;
               }
             }
             return;
           }
         } else {
-          L23: {
+          L24: {
             if (param2 < 0) {
               this.U(param0 + param2, param1, -param2 + 1, param4, param5);
-              break L23;
+              break L24;
             } else {
               this.U(param0, param1, param2 + 1, param4, param5);
-              break L23;
+              break L24;
             }
           }
           return;

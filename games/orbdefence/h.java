@@ -79,33 +79,26 @@ final class h extends kj {
               }
             }
             L2: {
-              L3: {
-                ((h) (this)).field_F = stackIn_4_1 != 0;
-                this.field_D = param7;
-                this.field_B = param6;
-                var12_int = -this.field_D + this.field_B;
-                var13 = this.field_C.a(param10, var12_int, this.field_C.field_H) - -(2 * this.field_D);
-                if (param3 < var13) {
-                  break L3;
-                } else {
-                  var13 = param3;
-                  if (!OrbDefence.field_D) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
+              ((h) (this)).field_F = stackIn_4_1 != 0;
+              this.field_D = param7;
+              this.field_B = param6;
+              var12_int = -this.field_D + this.field_B;
+              var13 = this.field_C.a(param10, var12_int, this.field_C.field_H) - -(2 * this.field_D);
+              if (param3 < var13) {
+                this.a(param0, param1, var13, (byte) -90, param2);
+                break L2;
+              } else {
+                var13 = param3;
+                break L2;
               }
-              this.a(param0, param1, var13, (byte) -90, param2);
-              break L2;
             }
-            L4: {
+            L3: {
               if (!this.field_F) {
                 stackIn_10_0 = 2 * this.field_D + this.field_B;
-                break L4;
+                break L3;
               } else {
                 stackIn_10_0 = 0;
-                break L4;
+                break L3;
               }
             }
             var14 = stackIn_10_0;
@@ -114,7 +107,7 @@ final class h extends kj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var12 = decompiledCaughtException;
             stackIn_14_0 = (RuntimeException) (var12);
 
@@ -124,15 +117,15 @@ final class h extends kj {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackIn_15_2 = "null";
-              break L5;
+              break L4;
             } else {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackIn_15_2 = "{...}";
-              break L5;
+              break L4;
             }
           }
-          L6: {
+          L5: {
 
 
             stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
@@ -141,15 +134,15 @@ final class h extends kj {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "null";
-              break L6;
+              break L5;
             } else {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "{...}";
-              break L6;
+              break L5;
             }
           }
-          L7: {
+          L6: {
 
 
             stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param9).append(',');
@@ -158,12 +151,12 @@ final class h extends kj {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackIn_21_2 = "null";
-              break L7;
+              break L6;
             } else {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackIn_21_2 = "{...}";
-              break L7;
+              break L6;
             }
           }
           throw dd.a((Throwable) ((Object) stackIn_15_0), stackIn_21_2 + ')');

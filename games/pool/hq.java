@@ -634,23 +634,26 @@ final class hq {
                 var6 = var14;
                 L2: while (true) {
                   if (var13.length <= var14) {
-                    if (var5 == null) {
-                      break L0;
-                    } else {
-                      this.field_a.field_I.e(-54);
-                      var4.field_s = nd.field_j;
-                      var4.field_n = ((cr) ((Object) ((ko) (var5)).c((byte) -64))).field_n;
-                      var4.field_m = (ko) (var5);
-                      var4.field_q = 2;
-                      stackIn_24_0 = this.field_a.field_I.f((byte) 117);
-                      this.field_a.s((byte) -62);
-                      break L0;
+                    L3: {
+                      if (var5 == null) {
+                        break L3;
+                      } else {
+                        this.field_a.field_I.e(-54);
+                        var4.field_s = nd.field_j;
+                        var4.field_n = ((cr) ((Object) ((ko) (var5)).c((byte) -64))).field_n;
+                        var4.field_m = (ko) (var5);
+                        var4.field_q = 2;
+                        stackIn_24_0 = this.field_a.field_I.f((byte) 117);
+                        this.field_a.s((byte) -62);
+                        break L3;
+                      }
                     }
+                    break L0;
                   } else {
                     var17 = var13[var14];
                     if (var17.field_s) {
                       if (var3 == this.field_a.field_I.field_f.b(var14, 30554)) {
-                        L3: {
+                        L4: {
                           var8 = this.field_a.field_I.a(17897, var14);
                           var18 = this.field_a.field_I.field_w[var8];
                           var17.field_g = var18.field_g;
@@ -660,9 +663,9 @@ final class hq {
                           var18.a(var14, -106);
                           if (var5 == null) {
                             var5 = new ko();
-                            break L3;
+                            break L4;
                           } else {
-                            break L3;
+                            break L4;
                           }
                         }
                         ((ko) (var5)).b((byte) -43, new cr(var14, var8));
@@ -874,16 +877,19 @@ final class hq {
                 }
               }
               L12: {
-                if (this.field_h.field_s != 16384) {
-                  break L12;
-                } else {
-                  if (param1.field_z != this.field_a.field_I.field_f.b(param1.field_n, 30554)) {
-                    break L12;
+                L13: {
+                  if (this.field_h.field_s != 16384) {
+                    break L13;
                   } else {
-                    this.b(1, 14, -28186);
-                    break L12;
+                    if (param1.field_z != this.field_a.field_I.field_f.b(param1.field_n, 30554)) {
+                      break L13;
+                    } else {
+                      this.b(1, 14, -28186);
+                      break L12;
+                    }
                   }
                 }
+                break L12;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -894,7 +900,7 @@ final class hq {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L13: {
+          L14: {
             var3 = decompiledCaughtException;
             stackIn_48_0 = (RuntimeException) (var3);
 
@@ -904,12 +910,12 @@ final class hq {
               stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
               stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
               stackIn_49_2 = "null";
-              break L13;
+              break L14;
             } else {
               stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
               stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
               stackIn_49_2 = "{...}";
-              break L13;
+              break L14;
             }
           }
           throw wm.a((Throwable) ((Object) stackIn_49_0), stackIn_49_2 + ')');

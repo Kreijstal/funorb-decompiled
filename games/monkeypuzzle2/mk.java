@@ -12,10 +12,6 @@ final class mk extends ug {
     final static void f(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
         int var1;
         int var2;
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -26,52 +22,11 @@ final class mk extends ug {
             if (-ii.field_B + -10 + 480 >= em.field_B) {
               qc.field_N = 1;
               s.field_O = 0;
-              if (var2 != 0) {
-                fieldTemp$0 = s.field_O;
-                s.field_O = s.field_O + 1;
-                if (fieldTemp$0 > 150) {
-                  L0: {
-                    qc.field_N = 2;
-                    if (var2 == 0) {
-                      break L0;
-                    } else {
-                      fieldTemp$1 = em.field_B;
-                      em.field_B = em.field_B + 1;
-                      if (480 >= fieldTemp$1) {
-                        break L0;
-                      } else {
-                        mb.field_e.d(4011);
-                        ke.b(8192);
-                        if (param0 > 125) {
-                          return;
-                        } else {
-                          mk.a(99);
-                          return;
-                        }
-                      }
-                    }
-                  }
-                  if (param0 > 125) {
-                    return;
-                  } else {
-                    mk.a(99);
-                    return;
-                  }
-                } else {
-                  if (param0 > 125) {
-                    return;
-                  } else {
-                    mk.a(99);
-                    return;
-                  }
-                }
+              if (param0 <= 125) {
+                mk.a(99);
+                return;
               } else {
-                if (param0 > 125) {
-                  return;
-                } else {
-                  mk.a(99);
-                  return;
-                }
+                return;
               }
             } else {
               if (param0 <= 125) {
@@ -82,121 +37,54 @@ final class mk extends ug {
               }
             }
           } else {
-            L1: {
-              L2: {
-                if (-2 == (var1 ^ -1)) {
-                  fieldTemp$2 = s.field_O;
-                  s.field_O = s.field_O + 1;
-                  if (fieldTemp$2 > 150) {
-                    qc.field_N = 2;
-                    if (var2 == 0) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    if (param0 > 125) {
-                      return;
-                    } else {
-                      mk.a(99);
-                      return;
-                    }
-                  }
-                } else {
-                  if (-3 == (var1 ^ -1)) {
-                    if (var2 == 0) {
-                      break L2;
-                    } else {
-                      em.field_B = em.field_B - 1;
-                      if (-ii.field_B + -10 + 480 >= em.field_B) {
-                        qc.field_N = 1;
-                        s.field_O = 0;
-                        if (var2 != 0) {
-                          fieldTemp$3 = s.field_O;
-                          s.field_O = s.field_O + 1;
-                          if (fieldTemp$3 > 150) {
-                            L3: {
-                              qc.field_N = 2;
-                              if (var2 == 0) {
-                                break L3;
-                              } else {
-                                fieldTemp$4 = em.field_B;
-                                em.field_B = em.field_B + 1;
-                                if (480 >= fieldTemp$4) {
-                                  break L3;
-                                } else {
-                                  mb.field_e.d(4011);
-                                  ke.b(8192);
-                                  if (param0 <= 125) {
-                                    mk.a(99);
-                                    return;
-                                  } else {
-                                    return;
-                                  }
-                                }
-                              }
-                            }
-                            if (param0 <= 125) {
-                              mk.a(99);
-                              return;
-                            } else {
-                              return;
-                            }
-                          } else {
-                            if (param0 <= 125) {
-                              mk.a(99);
-                              return;
-                            } else {
-                              return;
-                            }
-                          }
-                        } else {
-                          if (param0 <= 125) {
-                            mk.a(99);
-                            return;
-                          } else {
-                            return;
-                          }
-                        }
-                      } else {
-                        if (param0 <= 125) {
-                          mk.a(99);
-                          return;
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                  } else {
-                    if (param0 <= 125) {
-                      mk.a(99);
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-              }
-              fieldTemp$5 = em.field_B;
-              em.field_B = em.field_B + 1;
-              if (480 >= fieldTemp$5) {
-                break L1;
-              } else {
-                mb.field_e.d(4011);
-                ke.b(8192);
-                if (param0 > 125) {
-                  return;
-                } else {
+            if (-2 == (var1 ^ -1)) {
+              fieldTemp$0 = s.field_O;
+              s.field_O = s.field_O + 1;
+              if (fieldTemp$0 > 150) {
+                qc.field_N = 2;
+                if (param0 <= 125) {
                   mk.a(99);
                   return;
+                } else {
+                  return;
+                }
+              } else {
+                if (param0 <= 125) {
+                  mk.a(99);
+                  return;
+                } else {
+                  return;
                 }
               }
-            }
-            if (param0 > 125) {
-              return;
             } else {
-              mk.a(99);
-              return;
+              if (-3 == (var1 ^ -1)) {
+                fieldTemp$1 = em.field_B;
+                em.field_B = em.field_B + 1;
+                if (480 >= fieldTemp$1) {
+                  if (param0 <= 125) {
+                    mk.a(99);
+                    return;
+                  } else {
+                    return;
+                  }
+                } else {
+                  mb.field_e.d(4011);
+                  ke.b(8192);
+                  if (param0 <= 125) {
+                    mk.a(99);
+                    return;
+                  } else {
+                    return;
+                  }
+                }
+              } else {
+                if (param0 <= 125) {
+                  mk.a(99);
+                  return;
+                } else {
+                  return;
+                }
+              }
             }
           }
         } else {
@@ -250,112 +138,70 @@ final class mk extends ug {
                 var3 = 0;
                 var4 = param0;
                 L0: while (true) {
-                  L1: {
-                    if (0L == var4) {
-                      break L1;
-                    } else {
-                      var3++;
-                      var4 = var4 / 37L;
-                      if (var11 == 0) {
-                        continue L0;
+                  if (0L == var4) {
+                    var12 = new StringBuilder(var3);
+                    L1: while (true) {
+                      if (param0 == 0L) {
+                        var12.reverse();
+                        var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
+                        return var12.toString();
                       } else {
-                        break L1;
-                      }
-                    }
-                  }
-                  var12 = new StringBuilder(var3);
-                  L2: while (true) {
-                    L3: {
-                      L4: {
-                        if (param0 == 0L) {
-                          break L4;
-                        } else {
+                        L2: {
                           var7 = param0;
                           param0 = param0 / 37L;
                           var9 = sc.field_a[(int)(-(param0 * 37L) + var7)];
-                          if (var11 != 0) {
-                            break L3;
+                          if (var9 == 95) {
+                            var10 = -1 + var12.length();
+                            var9 = 160;
+                            var12.setCharAt(var10, Character.toUpperCase(var12.charAt(var10)));
+                            break L2;
                           } else {
-                            L5: {
-                              if (var9 == 95) {
-                                var10 = -1 + var12.length();
-                                var9 = 160;
-                                var12.setCharAt(var10, Character.toUpperCase(var12.charAt(var10)));
-                                break L5;
-                              } else {
-                                break L5;
-                              }
-                            }
-                            discarded$2 = var12.append((char) var9);
-                            if (var11 == 0) {
-                              continue L2;
-                            } else {
-                              break L4;
-                            }
+                            break L2;
                           }
                         }
+                        discarded$2 = var12.append((char) var9);
+                        continue L1;
                       }
-                      var12.reverse();
-                      var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
-                      break L3;
                     }
-                    return var12.toString();
+                  } else {
+                    var3++;
+                    var4 = var4 / 37L;
+                    continue L0;
                   }
                 }
               } else {
                 var3 = 0;
                 var4 = param0;
-                L6: while (true) {
-                  L7: {
-                    if (0L == var4) {
-                      break L7;
-                    } else {
-                      var3++;
-                      var4 = var4 / 37L;
-                      if (var11 == 0) {
-                        continue L6;
+                L3: while (true) {
+                  if (0L == var4) {
+                    var13 = new StringBuilder(var3);
+                    L4: while (true) {
+                      if (param0 == 0L) {
+                        var13.reverse();
+                        var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
+                        return var13.toString();
                       } else {
-                        break L7;
-                      }
-                    }
-                  }
-                  var13 = new StringBuilder(var3);
-                  L8: while (true) {
-                    L9: {
-                      L10: {
-                        if (param0 == 0L) {
-                          break L10;
-                        } else {
+                        L5: {
                           var7 = param0;
                           param0 = param0 / 37L;
                           var9 = sc.field_a[(int)(-(param0 * 37L) + var7)];
-                          if (var11 != 0) {
-                            break L9;
+                          if (var9 == 95) {
+                            var10 = -1 + var13.length();
+                            var9 = 160;
+                            var13.setCharAt(var10, Character.toUpperCase(var13.charAt(var10)));
+                            break L5;
                           } else {
-                            L11: {
-                              if (var9 == 95) {
-                                var10 = -1 + var13.length();
-                                var9 = 160;
-                                var13.setCharAt(var10, Character.toUpperCase(var13.charAt(var10)));
-                                break L11;
-                              } else {
-                                break L11;
-                              }
-                            }
-                            discarded$3 = var13.append((char) var9);
-                            if (var11 == 0) {
-                              continue L8;
-                            } else {
-                              break L10;
-                            }
+                            break L5;
                           }
                         }
+                        discarded$3 = var13.append((char) var9);
+                        continue L4;
                       }
-                      var13.reverse();
-                      var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
-                      break L9;
                     }
-                    return var13.toString();
+                  } else {
+                    var3++;
+                    var4 = var4 / 37L;
+                    continue L3;
                   }
                 }
               }

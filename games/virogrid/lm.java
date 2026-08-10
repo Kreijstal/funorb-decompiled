@@ -177,50 +177,53 @@ final class lm implements Runnable {
               }
             }
             L8: {
-              if (!db.b((byte) 13, param4)) {
-                break L8;
-              } else {
-                if (-1 > (hj.field_h ^ -1)) {
-                  L9: {
-                    pj.a(c.field_d, param4 + 256);
-                    var5_int = 1024 * Math.min(-hj.field_h + id.field_c, hj.field_h) / id.field_c;
-                    if (var5_int > 0) {
-                      var6 = 0;
-                      L10: while (true) {
-                        if (c.field_d.field_B.length <= var6) {
-                          break L9;
-                        } else {
-                          L11: {
-                            var7 = (var6 * 173 - -(159 * id.field_r)) % var5_int + -(var5_int / 2);
-                            var8 = 255 & c.field_d.field_B[var6];
-                            var8 = var8 + var7;
-                            if (0 <= var8) {
-                              if (255 >= var8) {
-                                break L11;
-                              } else {
-                                var8 = 255;
-                                break L11;
-                              }
-                            } else {
-                              var8 = 0;
-                              break L11;
-                            }
-                          }
-                          c.field_d.field_B[var6] = oh.a(var8, rb.a(c.field_d.field_B[var6], 16776960));
-                          var6++;
-                          continue L10;
-                        }
-                      }
-                    } else {
-                      break L9;
-                    }
-                  }
-                  ul.b((byte) 105);
-                  break L8;
+              L9: {
+                if (!db.b((byte) 13, param4)) {
+                  break L9;
                 } else {
-                  break L8;
+                  if (-1 > (hj.field_h ^ -1)) {
+                    L10: {
+                      pj.a(c.field_d, param4 + 256);
+                      var5_int = 1024 * Math.min(-hj.field_h + id.field_c, hj.field_h) / id.field_c;
+                      if (var5_int > 0) {
+                        var6 = 0;
+                        L11: while (true) {
+                          if (c.field_d.field_B.length <= var6) {
+                            break L10;
+                          } else {
+                            L12: {
+                              var7 = (var6 * 173 - -(159 * id.field_r)) % var5_int + -(var5_int / 2);
+                              var8 = 255 & c.field_d.field_B[var6];
+                              var8 = var8 + var7;
+                              if (0 <= var8) {
+                                if (255 >= var8) {
+                                  break L12;
+                                } else {
+                                  var8 = 255;
+                                  break L12;
+                                }
+                              } else {
+                                var8 = 0;
+                                break L12;
+                              }
+                            }
+                            c.field_d.field_B[var6] = oh.a(var8, rb.a(c.field_d.field_B[var6], 16776960));
+                            var6++;
+                            continue L11;
+                          }
+                        }
+                      } else {
+                        break L10;
+                      }
+                    }
+                    ul.b((byte) 105);
+                    break L9;
+                  } else {
+                    break L8;
+                  }
                 }
               }
+              break L8;
             }
             break L0;
           }

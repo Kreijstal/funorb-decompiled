@@ -250,77 +250,56 @@ final class nj {
             }
           }
           L4: {
-            L5: {
-              tj.b(653);
-              if ((uj.field_i ^ -1) <= -151) {
-                break L5;
-              } else {
-                rj.field_H.e(var3, var4);
-                if (var8 == 0) {
-                  break L4;
-                } else {
-                  break L5;
-                }
-              }
+            tj.b(653);
+            if ((uj.field_i ^ -1) <= -151) {
+              ki.field_H.b(15 + var3, var4 + 10, var5);
+              break L4;
+            } else {
+              rj.field_H.e(var3, var4);
+              break L4;
             }
-            ki.field_H.b(15 + var3, var4 + 10, var5);
-            break L4;
           }
-          L6: {
+          L5: {
             var6 = uj.field_i - 125;
             if (-1 <= (var6 ^ -1)) {
-              break L6;
+              break L5;
             } else {
               if (50 <= var6) {
-                break L6;
+                break L5;
               } else {
-                L7: {
-                  if (var6 < 20) {
-                    break L7;
-                  } else {
-                    L8: {
-                      if (var6 < 30) {
-                        break L8;
-                      } else {
-                        var7 = (50 - var6) * 256 / 20;
-                        ca.field_f.c(var3, var4, var7);
-                        if (var8 == 0) {
-                          break L6;
-                        } else {
-                          break L8;
-                        }
-                      }
-                    }
+                if (var6 < 20) {
+                  var7 = var6 * 256 / 20;
+                  ca.field_f.c(var3, var4, var7);
+                  break L5;
+                } else {
+                  if (var6 < 30) {
                     ca.field_f.c(var3, var4, 256);
-                    if (var8 == 0) {
-                      break L6;
-                    } else {
-                      break L7;
-                    }
+                    break L5;
+                  } else {
+                    var7 = (50 - var6) * 256 / 20;
+                    ca.field_f.c(var3, var4, var7);
+                    break L5;
                   }
                 }
-                var7 = var6 * 256 / 20;
-                ca.field_f.c(var3, var4, var7);
-                break L6;
               }
             }
           }
-          L9: {
+          L6: {
             var6 = -140 + uj.field_i;
             if (0 >= var6) {
-              break L9;
+              break L6;
             } else {
-              L10: {
+              L7: {
                 var7 = 256;
                 if ((var6 ^ -1) > -21) {
                   var7 = 256 * var6 / 20;
-                  break L10;
+                  break L7;
                 } else {
-                  break L10;
+                  break L7;
                 }
               }
               dj.field_b.b(var3 - -15, 10 + var4, var5 * var7 >> 44628424);
-              break L9;
+              break L6;
             }
           }
           return;

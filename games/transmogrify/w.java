@@ -16,7 +16,12 @@ final class w implements Iterator {
         wf var1;
         int var2;
         var2 = Transmogrify.field_A ? 1 : 0;
-        if (this.field_b.field_d[this.field_c + -1] == this.field_d) {
+        if (this.field_b.field_d[this.field_c + -1] != this.field_d) {
+          var1 = this.field_d;
+          this.field_e = var1;
+          this.field_d = var1.field_b;
+          return var1;
+        } else {
           L0: while (true) {
             if (this.field_b.field_c > this.field_c) {
               fieldTemp$1 = this.field_c;
@@ -27,47 +32,33 @@ final class w implements Iterator {
                 this.field_e = var1;
                 return var1;
               } else {
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  return null;
-                }
+                continue L0;
               }
             } else {
               return null;
             }
           }
-        } else {
-          var1 = this.field_d;
-          this.field_e = var1;
-          this.field_d = var1.field_b;
-          return var1;
         }
     }
 
     public final boolean hasNext() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
         int var2;
         var2 = Transmogrify.field_A ? 1 : 0;
         if (this.field_b.field_d[-1 + this.field_c] == this.field_d) {
           L0: while (true) {
-            if (this.field_b.field_c > this.field_c) {
-              fieldTemp$1 = this.field_c;
+            if (this.field_b.field_c <= this.field_c) {
+              return false;
+            } else {
+              fieldTemp$2 = this.field_c;
               this.field_c = this.field_c + 1;
-              if (this.field_b.field_d[fieldTemp$1].field_b == this.field_b.field_d[-1 + this.field_c]) {
-                this.field_d = this.field_b.field_d[this.field_c + -1];
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  this.field_d = this.field_b.field_d[-1 + this.field_c].field_b;
-                  return true;
-                }
-              } else {
+              if (this.field_b.field_d[fieldTemp$2].field_b != this.field_b.field_d[-1 + this.field_c]) {
                 this.field_d = this.field_b.field_d[-1 + this.field_c].field_b;
                 return true;
+              } else {
+                this.field_d = this.field_b.field_d[this.field_c + -1];
+                continue L0;
               }
-            } else {
-              return false;
             }
           }
         } else {
@@ -78,12 +69,10 @@ final class w implements Iterator {
     private final void a(byte param0) {
         this.field_c = 1;
         if (param0 != -75) {
-          return;
-        } else {
-          this.field_d = this.field_b.field_d[0].field_b;
-          this.field_e = null;
-          return;
+            return;
         }
+        this.field_d = this.field_b.field_d[0].field_b;
+        this.field_e = null;
     }
 
     final static sj a(j param0, int param1, nf param2, byte param3, char param4) {
@@ -190,13 +179,12 @@ final class w implements Iterator {
     }
 
     final static sj a(byte param0, boolean param1) {
-        Object stackIn_6_0 = null;
-        sj stackIn_20_0 = null;
         Object var2;
         int var3;
         int var4;
         int var5;
         int var6;
+        int var7;
         L0: {
           var6 = Transmogrify.field_A ? 1 : 0;
           if (!param1) {
@@ -211,104 +199,79 @@ final class w implements Iterator {
         var4 = -1;
         var5 = 0;
         L1: while (true) {
-          L2: {
-            if (12 <= var5) {
-              break L2;
-            } else {
-              stackIn_6_0 = null;
-
-              if (var6 == 0) {
-                L3: {
-                  if (stackIn_6_0 == wk.field_a.field_e[var5]) {
-                    break L3;
-                  } else {
-                    if (wk.field_a.field_e[var5].field_i == param0) {
-                      L4: {
-                        if (var4 < wk.field_a.field_e[var5].field_l) {
-                          var3 = var5;
-                          var2 = wk.field_a;
-                          var4 = wk.field_a.field_e[var5].field_l;
-                          break L4;
-                        } else {
-                          break L4;
-                        }
-                      }
-                      if (wk.field_a.field_e[var5].field_x) {
-                        var3 = var5;
-                        var4 = 2147483647;
-                        var2 = wk.field_a;
+          if (12 <= var5) {
+            var7 = 0;
+            var5 = var7;
+            L2: while (true) {
+              if ((var7 ^ -1) <= -9) {
+                if (var2 != null) {
+                  return ((j) (var2)).field_e[var3];
+                } else {
+                  return null;
+                }
+              } else {
+                if (si.field_i.field_e[var7] != null) {
+                  if (param0 == si.field_i.field_e[var7].field_i) {
+                    L3: {
+                      if (si.field_i.field_e[var7].field_l > var4) {
+                        var3 = var7;
+                        var2 = si.field_i;
+                        var4 = si.field_i.field_e[var7].field_l;
                         break L3;
                       } else {
                         break L3;
                       }
-                    } else {
-                      break L3;
                     }
+                    if (si.field_i.field_e[var7].field_x) {
+                      var3 = var7;
+                      var4 = 2147483647;
+                      var2 = si.field_i;
+                      var7++;
+                      continue L2;
+                    } else {
+                      var7++;
+                      continue L2;
+                    }
+                  } else {
+                    var7++;
+                    continue L2;
+                  }
+                } else {
+                  var7++;
+                  continue L2;
+                }
+              }
+            }
+          } else {
+            if (null != wk.field_a.field_e[var5]) {
+              if (wk.field_a.field_e[var5].field_i == param0) {
+                L4: {
+                  if (var4 < wk.field_a.field_e[var5].field_l) {
+                    var3 = var5;
+                    var2 = wk.field_a;
+                    var4 = wk.field_a.field_e[var5].field_l;
+                    break L4;
+                  } else {
+                    break L4;
                   }
                 }
-                var5++;
-                if (var6 == 0) {
+                if (wk.field_a.field_e[var5].field_x) {
+                  var3 = var5;
+                  var4 = 2147483647;
+                  var2 = wk.field_a;
+                  var5++;
                   continue L1;
                 } else {
-                  break L2;
-                }
-              } else {
-                return (sj) ((Object) stackIn_6_0);
-              }
-            }
-          }
-          var5 = 0;
-          L5: while (true) {
-            L6: {
-              if ((var5 ^ -1) <= -9) {
-                break L6;
-              } else {
-                stackIn_20_0 = si.field_i.field_e[var5];
-
-                if (var6 == 0) {
-                  L7: {
-                    if (stackIn_20_0 == null) {
-                      break L7;
-                    } else {
-                      if (param0 != si.field_i.field_e[var5].field_i) {
-                        break L7;
-                      } else {
-                        L8: {
-                          if (si.field_i.field_e[var5].field_l > var4) {
-                            var3 = var5;
-                            var2 = si.field_i;
-                            var4 = si.field_i.field_e[var5].field_l;
-                            break L8;
-                          } else {
-                            break L8;
-                          }
-                        }
-                        if (si.field_i.field_e[var5].field_x) {
-                          var3 = var5;
-                          var4 = 2147483647;
-                          var2 = si.field_i;
-                          break L7;
-                        } else {
-                          break L7;
-                        }
-                      }
-                    }
-                  }
                   var5++;
-                  if (var6 == 0) {
-                    continue L5;
-                  } else {
-                    break L6;
-                  }
-                } else {
-                  return stackIn_20_0;
+                  continue L1;
                 }
+              } else {
+                var5++;
+                continue L1;
               }
-            }
-            if (var2 != null) {
-              return ((j) (var2)).field_e[var3];
             } else {
-              return null;
+              var5++;
+              continue L1;
             }
           }
         }
@@ -371,10 +334,9 @@ final class w implements Iterator {
 
     public static void b(byte param0) {
         field_a = null;
-        if (param0 <= -84) {
-            return;
+        if (param0 > -84) {
+            field_a = (String) null;
         }
-        field_a = (String) null;
     }
 
     w(vi param0) {

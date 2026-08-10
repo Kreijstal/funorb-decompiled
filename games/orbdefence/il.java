@@ -36,20 +36,13 @@ final class il {
           var2 = 0;
           var3 = this.field_b.field_f;
           L0: while (true) {
-            L1: {
-              if (var3 == this.field_b) {
-                break L1;
-              } else {
-                var3 = var3.field_f;
-                var2++;
-                if (var4 == 0) {
-                  continue L0;
-                } else {
-                  break L1;
-                }
-              }
+            if (var3 == this.field_b) {
+              return var2;
+            } else {
+              var3 = var3.field_f;
+              var2++;
+              continue L0;
             }
-            return var2;
           }
         }
     }

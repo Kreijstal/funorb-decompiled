@@ -6,86 +6,33 @@ final class nb extends ka {
     static dq field_c;
 
     final static void a(int param0, wl param1) {
-        RuntimeException runtimeException = null;
         od var7 = null;
-        aj var9 = null;
-        cs var11 = null;
         byte[] var19 = null;
+        aj var9 = null;
         byte[] var20 = null;
+        cs var11 = null;
         byte[] var21 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (null != wl.field_Kb) {
-                break L1;
-              } else {
+            if (null == wl.field_Kb) {
                 var7 = new od();
                 var19 = var7.a(-959081435, 128, 128, 16);
                 wl.field_Kb = sf.a(false, param0 + -145, var19);
-                break L1;
-              }
             }
-            L2: {
-              if (mq.field_e != null) {
-                break L2;
-              } else {
+            if (mq.field_e == null) {
                 var9 = new aj();
                 var20 = var9.a(param0 + -12, 128, 16, 128);
                 mq.field_e = sf.a(false, -137, var20);
-                break L2;
-              }
             }
-            L3: {
-              if (param0 == 8) {
-                break L3;
-              } else {
+            if (param0 != 8) {
                 field_c = (dq) null;
-                break L3;
-              }
             }
-            L4: {
-              var11 = param1.field_cc;
-              if (!var11.b(true)) {
-                break L4;
-              } else {
-                if (null != ho.field_a) {
-                  break L4;
-                } else {
-                  var21 = gg.a(8, -93, 16.0f, new ol(419684), 128, 128, 4.0f, 4.0f, 0.5f, 16, 0.6000000238418579f);
-                  ho.field_a = sf.a(false, -137, var21);
-                  break L4;
-                }
-              }
+            var11 = param1.field_cc;
+            if (var11.b(true) && null == ho.field_a) {
+                var21 = gg.a(8, -93, 16.0f, new ol(419684), 128, 128, 4.0f, 4.0f, 0.5f, 16, 0.6000000238418579f);
+                ho.field_a = sf.a(false, -137, var21);
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (runtimeException);
-
-            stackIn_12_1 = new StringBuilder().append("nb.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L5;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L5;
-            }
-          }
-          throw pn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) ((Object) runtimeException), "nb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

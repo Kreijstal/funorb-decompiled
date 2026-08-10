@@ -342,37 +342,40 @@ final class uk extends ab {
           if (!this.field_f) {
             break L16;
           } else {
-            if ((gk.a(85) ^ -1L) > (this.field_o ^ -1L)) {
-              break L16;
-            } else {
-              var2 = (rk) ((Object) this.field_q.b(0));
-              L17: while (true) {
-                if (var2 == null) {
-                  this.field_o = 1000L + gk.a(127);
-                  break L16;
-                } else {
-                  L18: {
-                    if (!var2.field_z) {
-                      if (var2.field_t) {
-                        if (var2.field_u) {
-                          var2.c(2);
-                          break L18;
+            L17: {
+              if ((gk.a(85) ^ -1L) > (this.field_o ^ -1L)) {
+                break L17;
+              } else {
+                var2 = (rk) ((Object) this.field_q.b(0));
+                L18: while (true) {
+                  if (var2 == null) {
+                    this.field_o = 1000L + gk.a(127);
+                    break L17;
+                  } else {
+                    L19: {
+                      if (!var2.field_z) {
+                        if (var2.field_t) {
+                          if (var2.field_u) {
+                            var2.c(2);
+                            break L19;
+                          } else {
+                            throw new RuntimeException();
+                          }
                         } else {
-                          throw new RuntimeException();
+                          var2.field_t = true;
+                          break L19;
                         }
                       } else {
-                        var2.field_t = true;
-                        break L18;
+                        break L19;
                       }
-                    } else {
-                      break L18;
                     }
+                    var2 = (rk) ((Object) this.field_q.c(-86));
+                    continue L18;
                   }
-                  var2 = (rk) ((Object) this.field_q.c(-86));
-                  continue L17;
                 }
               }
             }
+            break L16;
           }
         }
     }

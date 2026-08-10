@@ -23,7 +23,11 @@ final class qd {
         var3 = SolKnight.field_L ? 1 : 0;
         if (param0 >= 49) {
           if (0 < this.field_c) {
-            if (this.field_g[this.field_c + -1] == this.field_h) {
+            if (this.field_g[this.field_c + -1] != this.field_h) {
+              var12 = this.field_h;
+              this.field_h = var12.field_d;
+              return var12;
+            } else {
               L0: while (true) {
                 if (this.field_i > this.field_c) {
                   fieldTemp$2 = this.field_c;
@@ -34,20 +38,12 @@ final class qd {
                     this.field_h = var9.field_d;
                     return var9;
                   } else {
-                    if (var3 == 0) {
-                      continue L0;
-                    } else {
-                      return null;
-                    }
+                    continue L0;
                   }
                 } else {
                   return null;
                 }
               }
-            } else {
-              var12 = this.field_h;
-              this.field_h = var12.field_d;
-              return var12;
             }
           } else {
             L1: while (true) {
@@ -60,11 +56,7 @@ final class qd {
                   this.field_h = var5.field_d;
                   return var5;
                 } else {
-                  if (var3 == 0) {
-                    continue L1;
-                  } else {
-                    return null;
-                  }
+                  continue L1;
                 }
               } else {
                 return null;
@@ -77,50 +69,24 @@ final class qd {
     }
 
     final gg a(boolean param0, long param1) {
-        gg var4;
-        gg var5;
-        int var6;
-        int stackIn_8_0 = 0;
-        var6 = SolKnight.field_L ? 1 : 0;
-        var4 = this.field_g[(int)((long)(this.field_i + -1) & param1)];
+        gg var5 = null;
+        int var6 = SolKnight.field_L ? 1 : 0;
+        gg var4 = this.field_g[(int)((long)(this.field_i + -1) & param1)];
         this.field_b = var4.field_d;
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (var4 == this.field_b) {
-                break L2;
-              } else {
-                stackIn_8_0 = ((this.field_b.field_g ^ -1L) < (param1 ^ -1L) ? -1 : ((this.field_b.field_g ^ -1L) == (param1 ^ -1L) ? 0 : 1));
-
-                if (var6 != 0) {
-                  break L1;
-                } else {
-                  if (stackIn_8_0 == 0) {
-                    var5 = this.field_b;
-                    this.field_b = this.field_b.field_d;
-                    return var5;
-                  } else {
-                    this.field_b = this.field_b.field_d;
-                    if (var6 == 0) {
-                      continue L0;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-              }
+        while (var4 != this.field_b) {
+            if (!((this.field_b.field_g ^ -1L) != (param1 ^ -1L))) {
+                var5 = this.field_b;
+                this.field_b = this.field_b.field_d;
+                return var5;
             }
-            this.field_b = null;
-            stackIn_8_0 = param0 ? 1 : 0;
-            break L1;
-          }
-          if (stackIn_8_0 == 1) {
-            return null;
-          } else {
-            this.c((byte) -46);
-            return null;
-          }
+            this.field_b = this.field_b.field_d;
         }
+        this.field_b = null;
+        if (param0) {
+            return null;
+        }
+        this.c((byte) -46);
+        return null;
     }
 
     final gg b(int param0) {
@@ -147,13 +113,13 @@ final class qd {
 
     final void a(byte param0, gg param1, long param2) {
         gg var5 = null;
-        RuntimeException var5_ref = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5_ref = null;
         try {
           L0: {
             L1: {
@@ -164,22 +130,25 @@ final class qd {
                 break L1;
               }
             }
-            var5 = this.field_g[(int)(param2 & (long)(this.field_i - 1))];
-            param1.field_d = var5;
-            param1.field_a = var5.field_a;
-            param1.field_a.field_d = param1;
-            param1.field_d.field_a = param1;
-            param1.field_g = param2;
-            if (param0 > 22) {
-              break L0;
-            } else {
-              field_d = -118;
-              return;
+            L2: {
+              var5 = this.field_g[(int)(param2 & (long)(this.field_i - 1))];
+              param1.field_d = var5;
+              param1.field_a = var5.field_a;
+              param1.field_a.field_d = param1;
+              param1.field_d.field_a = param1;
+              param1.field_g = param2;
+              if (param0 > 22) {
+                break L2;
+              } else {
+                field_d = -118;
+                break L2;
+              }
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var5_ref = decompiledCaughtException;
             stackIn_8_0 = (RuntimeException) (var5_ref);
 
@@ -189,12 +158,12 @@ final class qd {
               stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
               stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackIn_9_2 = "null";
-              break L2;
+              break L3;
             } else {
               stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
               stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackIn_9_2 = "{...}";
-              break L2;
+              break L3;
             }
           }
           throw fc.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ')');
@@ -202,62 +171,48 @@ final class qd {
     }
 
     final static boolean b(byte param0) {
-        L0: {
-          if (te.field_O != -1) {
-            break L0;
-          } else {
-            if (!bf.c(79, 1)) {
-              return false;
-            } else {
-              te.field_O = te.field_N.j(255);
-              te.field_N.field_m = 0;
-              break L0;
+        if (te.field_O == -1) {
+            if (!(bf.c(79, 1))) {
+                return false;
             }
-          }
+            te.field_O = te.field_N.j(255);
+            te.field_N.field_m = 0;
         }
-        L1: {
-          if ((te.field_O ^ -1) != 1) {
-            break L1;
-          } else {
-            if (bf.c(36, 2)) {
-              te.field_O = te.field_N.i(-22);
-              te.field_N.field_m = 0;
-              break L1;
-            } else {
-              return false;
+        if ((te.field_O ^ -1) == 1) {
+            if (!bf.c(36, 2)) {
+                return false;
             }
-          }
+            te.field_O = te.field_N.i(-22);
+            te.field_N.field_m = 0;
         }
         if (param0 <= 124) {
-          qd.a(-104);
-          return bf.c(100, te.field_O);
-        } else {
-          return bf.c(100, te.field_O);
+            qd.a(-104);
+            return bf.c(100, te.field_O);
         }
+        return bf.c(100, te.field_O);
     }
 
     qd(int param0) {
-        gg dupTemp$0 = null;
-        gg var3 = null;
-        int var4 = SolKnight.field_L ? 1 : 0;
+        gg dupTemp$1 = null;
+        int var2;
+        gg var3;
         this.field_c = 0;
         this.field_g = new gg[param0];
         this.field_i = param0;
-        int var2 = 0;
-        do {
-            if (var2 >= param0) {
-                return;
-            }
-            dupTemp$0 = new gg();
-            var3 = dupTemp$0;
-            this.field_g[var2] = dupTemp$0;
+        var2 = 0;
+        L0: while (true) {
+          if (var2 < param0) {
+            dupTemp$1 = new gg();
+            var3 = dupTemp$1;
+            this.field_g[var2] = dupTemp$1;
             var3.field_a = var3;
             var3.field_d = var3;
             var2++;
-            if (var4 != 0) {
-                return;
-            }
-        } while (var4 == 0);
+            continue L0;
+          } else {
+            return;
+          }
+        }
     }
 
     static {

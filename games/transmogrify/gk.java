@@ -15,11 +15,10 @@ final class gk {
     final static boolean a(boolean param0, int param1) {
         try {
             long dupTemp$1 = 0L;
-            hj var2_ref_hj = null;
             int var2 = 0;
+            hj var2_ref_hj = null;
             IOException var2_ref_IOException = null;
-            int stackIn_11_0 = 0;
-            int decompiledRegionSelector0 = 0;
+            int stackIn_10_0 = 0;
             Throwable decompiledCaughtException = null;
             L0: {
               if (null != fk.field_F) {
@@ -32,66 +31,50 @@ final class gk {
             if (-1 == (fk.field_F.field_c ^ -1)) {
               return false;
             } else {
-              L1: {
-                L2: {
-                  dupTemp$1 = lk.a(0);
-                  td.field_b = dupTemp$1;
-                  wi.field_q = dupTemp$1;
-                  if (fk.field_F.field_c == 1) {
-                    break L2;
-                  } else {
-                    lj.field_z = ng.field_j;
-                    if (!Transmogrify.field_A) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
+              dupTemp$1 = lk.a(0);
+              td.field_b = dupTemp$1;
+              wi.field_q = dupTemp$1;
+              if (fk.field_F.field_c == 1) {
                 try {
-                  L3: {
-                    L4: {
+                  L1: {
+                    L2: {
                       nk.field_b = new gj((java.net.Socket) (fk.field_F.field_g), l.field_b);
                       ff.field_D.field_h = 0;
                       var2_ref_hj = nf.field_l;
                       var2_ref_hj.field_h = 0;
                       if (param0) {
-                        stackIn_11_0 = -2;
-                        break L4;
+                        stackIn_10_0 = -2;
+                        break L2;
                       } else {
-                        stackIn_11_0 = -1;
-                        break L4;
+                        stackIn_10_0 = -1;
+                        break L2;
                       }
                     }
-                    bd.field_t = stackIn_11_0;
-                    nf.field_k = stackIn_11_0;
-                    dg.field_a = stackIn_11_0;
+                    bd.field_t = stackIn_10_0;
+                    nf.field_k = stackIn_10_0;
+                    dg.field_a = stackIn_10_0;
                     lj.field_z = jk.field_y;
                     qb.a(124, pi.field_h, ff.field_D, dh.field_x, ua.field_c);
                     rb.a(-1, -377);
-                    decompiledRegionSelector0 = 0;
-                    break L3;
+                    break L1;
                   }
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L5: {
-                    var2_ref_IOException = (IOException) (Object) decompiledCaughtException;
-                    lj.field_z = ng.field_j;
-                    decompiledRegionSelector0 = 1;
-                    break L5;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
+                  var2_ref_IOException = (IOException) (Object) decompiledCaughtException;
+                  lj.field_z = ng.field_j;
                   fk.field_F = null;
                   var2 = 100 / ((param1 - 71) / 43);
                   return true;
-                } else {
-                  break L1;
                 }
+                fk.field_F = null;
+                var2 = 100 / ((param1 - 71) / 43);
+                return true;
+              } else {
+                lj.field_z = ng.field_j;
+                fk.field_F = null;
+                var2 = 100 / ((param1 - 71) / 43);
+                return true;
               }
-              fk.field_F = null;
-              var2 = 100 / ((param1 - 71) / 43);
-              return true;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

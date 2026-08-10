@@ -13,113 +13,30 @@ final class wi implements ml {
         RuntimeException var2 = null;
         int var3 = 0;
         me var4 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = MonkeyPuzzle2.field_F ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
+        RuntimeException decompiledCaughtException = null;
+        var3 = MonkeyPuzzle2.field_F ? 1 : 0;
+        try {
+          L0: {
+            var4 = (me) ((Object) af.field_a.a((byte) -117));
+            L1: while (true) {
+              if (var4 == null) {
+                if (param1 == 1197) {
+                  break L0;
+                } else {
+                  field_d = (ad) null;
+                  return;
                 }
-                case 1: {
-                    try {
-                        var4 = (me) ((Object) af.field_a.a((byte) -117));
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (var4 == null) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        qc.a(var4, (byte) 117, param0);
-                        var4 = (me) ((Object) af.field_a.d((byte) 63));
-                        if (var3 != 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var3 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (param1 == 1197) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        field_d = (ad) null;
-                        return;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var2 = (RuntimeException) ((Object) caughtException);
-                    throw la.a((Throwable) ((Object) var2), "wi.A(" + param0 + ',' + param1 + ')');
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                qc.a(var4, (byte) 117, param0);
+                var4 = (me) ((Object) af.field_a.d((byte) 63));
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw la.a((Throwable) ((Object) var2), "wi.A(" + param0 + ',' + param1 + ')');
         }
     }
 

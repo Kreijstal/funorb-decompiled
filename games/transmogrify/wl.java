@@ -109,51 +109,34 @@ final class wl extends aj implements hl, df, tc {
     public final void a(int param0, int param1, int param2, le param3) {
         RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
             if (param1 == 2818) {
-              L1: {
-                if (0 == param2) {
-                  break L1;
-                } else {
-                  L2: {
-                    L3: {
-                      if (-2 != (param2 ^ -1)) {
-                        break L3;
-                      } else {
-                        mh.a(11207, "privacy.ws");
-                        if (var6 == 0) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                    if (param2 != 2) {
-                      break L2;
-                    } else {
-                      mh.a(param1 + 8389, "conduct.ws");
-                      if (var6 == 0) {
-                        break L2;
-                      } else {
-                        break L1;
-                      }
-                    }
+              if (0 == param2) {
+                mh.a(11207, "terms.ws");
+                return;
+              } else {
+                if (-2 != (param2 ^ -1)) {
+                  if (param2 != 2) {
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  } else {
+                    mh.a(param1 + 8389, "conduct.ws");
+                    return;
                   }
-                  decompiledRegionSelector0 = 1;
-                  break L0;
+                } else {
+                  mh.a(11207, "privacy.ws");
+                  return;
                 }
               }
-              mh.a(11207, "terms.ws");
-              return;
             } else {
               decompiledRegionSelector0 = 0;
               break L0;
@@ -161,25 +144,25 @@ final class wl extends aj implements hl, df, tc {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L1: {
             var5 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var5);
+            stackIn_12_0 = (RuntimeException) (var5);
 
-            stackIn_14_1 = new StringBuilder().append("wl.OA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_12_1 = new StringBuilder().append("wl.OA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
             if (param3 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L1;
             } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L1;
             }
           }
-          throw ch.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -531,12 +514,12 @@ final class wl extends aj implements hl, df, tc {
 
     public final void a(lj param0, int param1, int param2, int param3, int param4) {
         boolean discarded$1 = false;
-        RuntimeException runtimeException = null;
+        RuntimeException var6 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
@@ -548,49 +531,39 @@ final class wl extends aj implements hl, df, tc {
                 break L1;
               }
             }
-            L2: {
-              L3: {
-                if (param0 != this.field_A) {
-                  break L3;
-                } else {
-                  kc.a((byte) -127);
-                  if (!Transmogrify.field_A) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
+            if (param0 != this.field_A) {
               if (param0 == this.field_G) {
                 discarded$1 = this.l(2188);
-                break L2;
+                break L0;
               } else {
                 return;
               }
+            } else {
+              kc.a((byte) -127);
+              return;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (runtimeException);
+          L2: {
+            var6 = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (var6);
 
-            stackIn_11_1 = new StringBuilder().append("wl.MA(");
+            stackIn_10_1 = new StringBuilder().append("wl.MA(");
 
             if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L4;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
+              break L2;
             } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L4;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
+              break L2;
             }
           }
-          throw ch.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

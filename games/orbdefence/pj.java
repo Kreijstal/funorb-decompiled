@@ -67,34 +67,37 @@ class pj extends ca {
                 }
               }
               L2: {
-                if (stackIn_5_0 != (this.field_t ? 1 : 0)) {
-                  break L2;
-                } else {
-                  L3: {
-                    stackIn_8_0 = this;
-
-                    if (var5_int == 0) {
-                      stackIn_9_0 = this;
-                      stackIn_9_1 = 0;
-                      break L3;
-                    } else {
-                      stackIn_9_0 = this;
-                      stackIn_9_1 = 1;
-                      break L3;
-                    }
-                  }
-                  ((pj) (this)).field_t = stackIn_9_1 != 0;
-                  if (null == this.field_h) {
-                    break L2;
+                L3: {
+                  if (stackIn_5_0 != (this.field_t ? 1 : 0)) {
+                    break L3;
                   } else {
-                    if (!(this.field_h instanceof cl)) {
-                      break L2;
+                    L4: {
+                      stackIn_8_0 = this;
+
+                      if (var5_int == 0) {
+                        stackIn_9_0 = this;
+                        stackIn_9_1 = 0;
+                        break L4;
+                      } else {
+                        stackIn_9_0 = this;
+                        stackIn_9_1 = 1;
+                        break L4;
+                      }
+                    }
+                    ((pj) (this)).field_t = stackIn_9_1 != 0;
+                    if (null == this.field_h) {
+                      break L3;
                     } else {
-                      ((cl) ((Object) this.field_h)).a((byte) 43, var5_int != 0, (pj) (this));
-                      break L2;
+                      if (!(this.field_h instanceof cl)) {
+                        break L3;
+                      } else {
+                        ((cl) ((Object) this.field_h)).a((byte) 43, var5_int != 0, (pj) (this));
+                        break L2;
+                      }
                     }
                   }
                 }
+                break L2;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -105,7 +108,7 @@ class pj extends ca {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var5 = decompiledCaughtException;
             stackIn_15_0 = (RuntimeException) (var5);
 
@@ -115,12 +118,12 @@ class pj extends ca {
               stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackIn_16_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackIn_16_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw dd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ',' + param3 + ')');
@@ -141,26 +144,33 @@ class pj extends ca {
         var4 = this.f(param0 + -20680);
         var5_int = 0;
         L0: while (true) {
-          if (var4 < var5_int) {
-            L1: {
-              var5 = wj.g(param0 ^ -16392);
-              if (var5 != null) {
-                mb.field_a.a(sl.field_ab, uk.field_c, 0, var5);
-                break L1;
+          L1: {
+            if (var4 < var5_int) {
+              break L1;
+            } else {
+              this.a(param1, var5_int, param0 + 1048493, param2);
+              var5_int++;
+              if (var6 == 0) {
+                continue L0;
               } else {
                 break L1;
               }
             }
-            if (param0 != 82) {
-              field_o = (String[]) null;
-              return;
+          }
+          L2: {
+            var5 = wj.g(param0 ^ -16392);
+            if (var5 != null) {
+              mb.field_a.a(sl.field_ab, uk.field_c, 0, var5);
+              break L2;
             } else {
-              return;
+              break L2;
             }
+          }
+          if (param0 != 82) {
+            field_o = (String[]) null;
+            return;
           } else {
-            this.a(param1, var5_int, param0 + 1048493, param2);
-            var5_int++;
-            continue L0;
+            return;
           }
         }
     }
@@ -368,47 +378,13 @@ class pj extends ca {
     }
 
     void a(int param0, int param1, byte param2, pj param3, int param4, int param5) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_v = 0;
-              if (param2 < -91) {
-                break L1;
-              } else {
+            this.field_v = 0;
+            if (param2 >= -91) {
                 this.h(-66);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("pj.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param4 + ',' + param5 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) ((Object) runtimeException), "pj.J(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -507,45 +483,59 @@ class pj extends ca {
             }
             L4: {
               if (null != this.field_j) {
-                discarded$4 = param3.append(" renderer=");
-                if (!(this.field_j instanceof pj)) {
-                  discarded$5 = param3.append(this.field_j);
-                  break L4;
-                } else {
-                  param3 = this.a((byte) -85, param2, 1 + param0, param3);
-                  break L4;
+                L5: {
+                  discarded$4 = param3.append(" renderer=");
+                  if (!(this.field_j instanceof pj)) {
+                    break L5;
+                  } else {
+                    param3 = this.a((byte) -85, param2, 1 + param0, param3);
+                    if (var6 == 0) {
+                      break L4;
+                    } else {
+                      break L5;
+                    }
+                  }
                 }
+                discarded$5 = param3.append(this.field_j);
+                break L4;
               } else {
                 break L4;
               }
             }
-            L5: {
+            L6: {
               if (param1 <= -88) {
-                break L5;
+                break L6;
               } else {
                 pj.a(-49, (hj) null);
-                break L5;
+                break L6;
               }
             }
-            L6: {
+            L7: {
               if (this.field_h != null) {
-                discarded$6 = param3.append(" listener=");
-                if (!(this.field_h instanceof pj)) {
-                  discarded$7 = param3.append(this.field_h);
-                  break L6;
-                } else {
-                  param3 = this.a((byte) -32, param2, param0 - -1, param3);
-                  break L6;
+                L8: {
+                  discarded$6 = param3.append(" listener=");
+                  if (!(this.field_h instanceof pj)) {
+                    break L8;
+                  } else {
+                    param3 = this.a((byte) -32, param2, param0 - -1, param3);
+                    if (var6 == 0) {
+                      break L7;
+                    } else {
+                      break L8;
+                    }
+                  }
                 }
+                discarded$7 = param3.append(this.field_h);
+                break L7;
               } else {
-                break L6;
+                break L7;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L9: {
             var5 = decompiledCaughtException;
             stackIn_24_0 = (RuntimeException) (var5);
 
@@ -555,15 +545,15 @@ class pj extends ca {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "null";
-              break L7;
+              break L9;
             } else {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "{...}";
-              break L7;
+              break L9;
             }
           }
-          L8: {
+          L10: {
 
 
             stackIn_27_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
@@ -572,12 +562,12 @@ class pj extends ca {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackIn_28_2 = "null";
-              break L8;
+              break L10;
             } else {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackIn_28_2 = "{...}";
-              break L8;
+              break L10;
             }
           }
           throw dd.a((Throwable) ((Object) stackIn_25_0), stackIn_28_2 + ')');
@@ -760,10 +750,10 @@ class pj extends ca {
         dd var10;
         dd var11;
         dd var12;
-        dd var13;
         dd var14;
-        dd var18;
-        dd var19;
+        dd var15;
+        dd var16;
+        dd var17;
         var7 = OrbDefence.field_D ? 1 : 0;
         if (!param1) {
           this.a((byte) -77, (pj) (this), param3, param0);
@@ -800,36 +790,55 @@ class pj extends ca {
                         break L1;
                       } else {
                         this.h(0);
-                        if (of.field_G == 0) {
-                          if (ud.field_j != 0) {
-                            L2: {
-                              this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
-                              var18 = al.field_c;
-                              var6 = var18;
-                              if (var18 == null) {
-                                break L2;
-                              } else {
+                        if (var7 == 0) {
+                          break L1;
+                        } else {
+                          L2: {
+                            param2 = false;
+                            if (of.field_G != 0) {
+                              break L2;
+                            } else {
+                              if (ud.field_j != 0) {
                                 L3: {
-                                  if (var18.field_h instanceof wk) {
-                                    ((wk) ((Object) var18.field_h)).a(-114, var18, (mm) null);
+                                  this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
+                                  var16 = al.field_c;
+                                  var6 = var16;
+                                  if (var16 == null) {
                                     break L3;
                                   } else {
+                                    L4: {
+                                      if (var16.field_h instanceof wk) {
+                                        ((wk) ((Object) var16.field_h)).a(-114, var16, (mm) null);
+                                        break L4;
+                                      } else {
+                                        break L4;
+                                      }
+                                    }
+                                    al.field_c = null;
                                     break L3;
                                   }
                                 }
-                                al.field_c = null;
-                                break L2;
+                                if (var7 == 0) {
+                                  break L2;
+                                } else {
+                                  if (var5 == 0) {
+                                    break L2;
+                                  } else {
+                                    if (-1 != (gi.field_e ^ -1)) {
+                                      this.h(0);
+                                      break L2;
+                                    } else {
+                                      break L2;
+                                    }
+                                  }
+                                }
+                              } else {
+                                ud.field_j = of.field_G;
+                                fg.a(101, this.g(-8235));
+                                return param2;
                               }
                             }
-                            ud.field_j = of.field_G;
-                            fg.a(101, this.g(-8235));
-                            return param2;
-                          } else {
-                            ud.field_j = of.field_G;
-                            fg.a(101, this.g(-8235));
-                            return param2;
                           }
-                        } else {
                           ud.field_j = of.field_G;
                           fg.a(101, this.g(-8235));
                           return param2;
@@ -837,27 +846,98 @@ class pj extends ca {
                       }
                     }
                   }
-                  L4: {
-                    if (of.field_G != 0) {
-                      break L4;
-                    } else {
-                      if (ud.field_j != 0) {
+                  if (of.field_G == 0) {
+                    if (ud.field_j != 0) {
+                      L5: {
                         this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
-                        var19 = al.field_c;
-                        var6 = var19;
-                        if (var19 == null) {
-                          break L4;
+                        var17 = al.field_c;
+                        var6 = var17;
+                        if (var17 == null) {
+                          break L5;
                         } else {
-                          L5: {
-                            if (var19.field_h instanceof wk) {
-                              ((wk) ((Object) var19.field_h)).a(-114, var19, (mm) null);
-                              break L5;
+                          L6: {
+                            if (var17.field_h instanceof wk) {
+                              ((wk) ((Object) var17.field_h)).a(-114, var17, (mm) null);
+                              break L6;
                             } else {
-                              break L5;
+                              break L6;
                             }
                           }
                           al.field_c = null;
-                          break L4;
+                          break L5;
+                        }
+                      }
+                      if (var7 != 0) {
+                        L7: {
+                          if (var5 == 0) {
+                            break L7;
+                          } else {
+                            if (-1 != (gi.field_e ^ -1)) {
+                              this.h(0);
+                              break L7;
+                            } else {
+                              ud.field_j = of.field_G;
+                              fg.a(101, this.g(-8235));
+                              return param2;
+                            }
+                          }
+                        }
+                        ud.field_j = of.field_G;
+                        fg.a(101, this.g(-8235));
+                        return param2;
+                      } else {
+                        ud.field_j = of.field_G;
+                        fg.a(101, this.g(-8235));
+                        return param2;
+                      }
+                    } else {
+                      ud.field_j = of.field_G;
+                      fg.a(101, this.g(-8235));
+                      return param2;
+                    }
+                  } else {
+                    ud.field_j = of.field_G;
+                    fg.a(101, this.g(-8235));
+                    return param2;
+                  }
+                } else {
+                  L8: {
+                    if (of.field_G != 0) {
+                      break L8;
+                    } else {
+                      if (ud.field_j != 0) {
+                        L9: {
+                          this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
+                          var15 = al.field_c;
+                          var6 = var15;
+                          if (var15 == null) {
+                            break L9;
+                          } else {
+                            L10: {
+                              if (var15.field_h instanceof wk) {
+                                ((wk) ((Object) var15.field_h)).a(-114, var15, (mm) null);
+                                break L10;
+                              } else {
+                                break L10;
+                              }
+                            }
+                            al.field_c = null;
+                            break L9;
+                          }
+                        }
+                        if (var7 == 0) {
+                          break L8;
+                        } else {
+                          if (var5 == 0) {
+                            break L8;
+                          } else {
+                            if (-1 != (gi.field_e ^ -1)) {
+                              this.h(0);
+                              break L8;
+                            } else {
+                              break L8;
+                            }
+                          }
                         }
                       } else {
                         ud.field_j = of.field_G;
@@ -869,73 +949,102 @@ class pj extends ca {
                   ud.field_j = of.field_G;
                   fg.a(101, this.g(-8235));
                   return param2;
-                } else {
-                  if (of.field_G == 0) {
-                    if (ud.field_j == 0) {
-                      ud.field_j = of.field_G;
-                      fg.a(101, this.g(-8235));
-                      return param2;
-                    } else {
-                      L6: {
-                        this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
-                        var14 = al.field_c;
-                        var6 = var14;
-                        if (var14 == null) {
-                          break L6;
-                        } else {
-                          L7: {
-                            if (var14.field_h instanceof wk) {
-                              ((wk) ((Object) var14.field_h)).a(-114, var14, (mm) null);
-                              break L7;
-                            } else {
-                              break L7;
-                            }
-                          }
-                          al.field_c = null;
-                          break L6;
-                        }
-                      }
-                      ud.field_j = of.field_G;
-                      fg.a(101, this.g(-8235));
-                      return param2;
-                    }
-                  } else {
-                    ud.field_j = of.field_G;
-                    fg.a(101, this.g(-8235));
-                    return param2;
-                  }
                 }
               } else {
                 if (-1 != (gi.field_e ^ -1)) {
-                  L8: {
+                  L11: {
                     if (this.a((byte) -120, (pj) (this), gi.field_e, param3, bg.field_c, ig.field_fb, param0)) {
                       param2 = false;
-                      break L8;
+                      break L11;
                     } else {
                       if (var5 == 0) {
-                        break L8;
+                        break L11;
                       } else {
                         this.h(0);
-                        if (of.field_G == 0) {
-                          if (ud.field_j != 0) {
-                            L9: {
-                              this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
-                              var12 = al.field_c;
-                              if (var12 == null) {
-                                break L9;
-                              } else {
-                                L10: {
-                                  if (var12.field_h instanceof wk) {
-                                    ((wk) ((Object) var12.field_h)).a(-114, var12, (mm) null);
-                                    break L10;
-                                  } else {
-                                    break L10;
+                        if (var7 == 0) {
+                          break L11;
+                        } else {
+                          param2 = false;
+                          if (of.field_G == 0) {
+                            if (ud.field_j != 0) {
+                              L12: {
+                                this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
+                                var12 = al.field_c;
+                                if (var12 == null) {
+                                  break L12;
+                                } else {
+                                  L13: {
+                                    if (var12.field_h instanceof wk) {
+                                      ((wk) ((Object) var12.field_h)).a(-114, var12, (mm) null);
+                                      break L13;
+                                    } else {
+                                      break L13;
+                                    }
                                   }
+                                  al.field_c = null;
+                                  break L12;
                                 }
-                                al.field_c = null;
-                                break L9;
                               }
+                              if (var7 != 0) {
+                                if (var5 != 0) {
+                                  if (-1 == (gi.field_e ^ -1)) {
+                                    ud.field_j = of.field_G;
+                                    fg.a(101, this.g(-8235));
+                                    return param2;
+                                  } else {
+                                    this.h(0);
+                                    ud.field_j = of.field_G;
+                                    fg.a(101, this.g(-8235));
+                                    return param2;
+                                  }
+                                } else {
+                                  ud.field_j = of.field_G;
+                                  fg.a(101, this.g(-8235));
+                                  return param2;
+                                }
+                              } else {
+                                ud.field_j = of.field_G;
+                                fg.a(101, this.g(-8235));
+                                return param2;
+                              }
+                            } else {
+                              ud.field_j = of.field_G;
+                              fg.a(101, this.g(-8235));
+                              return param2;
                             }
+                          } else {
+                            ud.field_j = of.field_G;
+                            fg.a(101, this.g(-8235));
+                            return param2;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  if (of.field_G == 0) {
+                    if (ud.field_j != 0) {
+                      L14: {
+                        this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
+                        var14 = al.field_c;
+                        if (var14 == null) {
+                          break L14;
+                        } else {
+                          L15: {
+                            if (var14.field_h instanceof wk) {
+                              ((wk) ((Object) var14.field_h)).a(-114, var14, (mm) null);
+                              break L15;
+                            } else {
+                              break L15;
+                            }
+                          }
+                          al.field_c = null;
+                          break L14;
+                        }
+                      }
+                      if (var7 != 0) {
+                        if (var5 != 0) {
+                          if (-1 != (gi.field_e ^ -1)) {
+                            this.h(0);
                             ud.field_j = of.field_G;
                             fg.a(101, this.g(-8235));
                             return param2;
@@ -949,32 +1058,11 @@ class pj extends ca {
                           fg.a(101, this.g(-8235));
                           return param2;
                         }
+                      } else {
+                        ud.field_j = of.field_G;
+                        fg.a(101, this.g(-8235));
+                        return param2;
                       }
-                    }
-                  }
-                  if (of.field_G == 0) {
-                    if (ud.field_j != 0) {
-                      L11: {
-                        this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
-                        var13 = al.field_c;
-                        if (var13 == null) {
-                          break L11;
-                        } else {
-                          L12: {
-                            if (var13.field_h instanceof wk) {
-                              ((wk) ((Object) var13.field_h)).a(-114, var13, (mm) null);
-                              break L12;
-                            } else {
-                              break L12;
-                            }
-                          }
-                          al.field_c = null;
-                          break L11;
-                        }
-                      }
-                      ud.field_j = of.field_G;
-                      fg.a(101, this.g(-8235));
-                      return param2;
                     } else {
                       ud.field_j = of.field_G;
                       fg.a(101, this.g(-8235));
@@ -987,29 +1075,45 @@ class pj extends ca {
                   }
                 } else {
                   if (of.field_G == 0) {
-                    if (ud.field_j == 0) {
+                    if (ud.field_j != 0) {
+                      L16: {
+                        this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
+                        var11 = al.field_c;
+                        if (var11 == null) {
+                          break L16;
+                        } else {
+                          L17: {
+                            if (var11.field_h instanceof wk) {
+                              ((wk) ((Object) var11.field_h)).a(-114, var11, (mm) null);
+                              break L17;
+                            } else {
+                              break L17;
+                            }
+                          }
+                          al.field_c = null;
+                          break L16;
+                        }
+                      }
+                      L18: {
+                        if (var7 == 0) {
+                          break L18;
+                        } else {
+                          if (var5 == 0) {
+                            break L18;
+                          } else {
+                            if (-1 != (gi.field_e ^ -1)) {
+                              this.h(0);
+                              break L18;
+                            } else {
+                              break L18;
+                            }
+                          }
+                        }
+                      }
                       ud.field_j = of.field_G;
                       fg.a(101, this.g(-8235));
                       return param2;
                     } else {
-                      L13: {
-                        this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
-                        var11 = al.field_c;
-                        if (var11 == null) {
-                          break L13;
-                        } else {
-                          L14: {
-                            if (var11.field_h instanceof wk) {
-                              ((wk) ((Object) var11.field_h)).a(-114, var11, (mm) null);
-                              break L14;
-                            } else {
-                              break L14;
-                            }
-                          }
-                          al.field_c = null;
-                          break L13;
-                        }
-                      }
                       ud.field_j = of.field_G;
                       fg.a(101, this.g(-8235));
                       return param2;
@@ -1023,39 +1127,100 @@ class pj extends ca {
               }
             } else {
               if (-1 != (gi.field_e ^ -1)) {
-                L15: {
+                L19: {
                   if (this.a((byte) -120, (pj) (this), gi.field_e, param3, bg.field_c, ig.field_fb, param0)) {
                     param2 = false;
-                    break L15;
+                    break L19;
                   } else {
                     if (var5 == 0) {
-                      break L15;
+                      break L19;
                     } else {
                       this.h(0);
-                      if (of.field_G == 0) {
-                        if (ud.field_j == 0) {
+                      if (var7 == 0) {
+                        break L19;
+                      } else {
+                        param2 = false;
+                        if (of.field_G == 0) {
+                          if (ud.field_j == 0) {
+                            ud.field_j = of.field_G;
+                            fg.a(101, this.g(-8235));
+                            return param2;
+                          } else {
+                            L20: {
+                              this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
+                              var9 = al.field_c;
+                              if (var9 == null) {
+                                break L20;
+                              } else {
+                                L21: {
+                                  if (var9.field_h instanceof wk) {
+                                    ((wk) ((Object) var9.field_h)).a(-114, var9, (mm) null);
+                                    break L21;
+                                  } else {
+                                    break L21;
+                                  }
+                                }
+                                al.field_c = null;
+                                break L20;
+                              }
+                            }
+                            L22: {
+                              if (var7 == 0) {
+                                break L22;
+                              } else {
+                                if (var5 == 0) {
+                                  break L22;
+                                } else {
+                                  if (-1 != (gi.field_e ^ -1)) {
+                                    this.h(0);
+                                    break L22;
+                                  } else {
+                                    break L22;
+                                  }
+                                }
+                              }
+                            }
+                            ud.field_j = of.field_G;
+                            fg.a(101, this.g(-8235));
+                            return param2;
+                          }
+                        } else {
+                          ud.field_j = of.field_G;
+                          fg.a(101, this.g(-8235));
+                          return param2;
+                        }
+                      }
+                    }
+                  }
+                }
+                if (of.field_G == 0) {
+                  if (ud.field_j != 0) {
+                    L23: {
+                      this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
+                      var10 = al.field_c;
+                      if (var10 == null) {
+                        break L23;
+                      } else {
+                        L24: {
+                          if (var10.field_h instanceof wk) {
+                            ((wk) ((Object) var10.field_h)).a(-114, var10, (mm) null);
+                            break L24;
+                          } else {
+                            break L24;
+                          }
+                        }
+                        al.field_c = null;
+                        break L23;
+                      }
+                    }
+                    if (var7 != 0) {
+                      if (var5 != 0) {
+                        if (-1 == (gi.field_e ^ -1)) {
                           ud.field_j = of.field_G;
                           fg.a(101, this.g(-8235));
                           return param2;
                         } else {
-                          L16: {
-                            this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
-                            var9 = al.field_c;
-                            if (var9 == null) {
-                              break L16;
-                            } else {
-                              L17: {
-                                if (var9.field_h instanceof wk) {
-                                  ((wk) ((Object) var9.field_h)).a(-114, var9, (mm) null);
-                                  break L17;
-                                } else {
-                                  break L17;
-                                }
-                              }
-                              al.field_c = null;
-                              break L16;
-                            }
-                          }
+                          this.h(0);
                           ud.field_j = of.field_G;
                           fg.a(101, this.g(-8235));
                           return param2;
@@ -1065,33 +1230,12 @@ class pj extends ca {
                         fg.a(101, this.g(-8235));
                         return param2;
                       }
+                    } else {
+                      ud.field_j = of.field_G;
+                      fg.a(101, this.g(-8235));
+                      return param2;
                     }
-                  }
-                }
-                if (of.field_G == 0) {
-                  if (ud.field_j == 0) {
-                    ud.field_j = of.field_G;
-                    fg.a(101, this.g(-8235));
-                    return param2;
                   } else {
-                    L18: {
-                      this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
-                      var10 = al.field_c;
-                      if (var10 == null) {
-                        break L18;
-                      } else {
-                        L19: {
-                          if (var10.field_h instanceof wk) {
-                            ((wk) ((Object) var10.field_h)).a(-114, var10, (mm) null);
-                            break L19;
-                          } else {
-                            break L19;
-                          }
-                        }
-                        al.field_c = null;
-                        break L18;
-                      }
-                    }
                     ud.field_j = of.field_G;
                     fg.a(101, this.g(-8235));
                     return param2;
@@ -1108,22 +1252,38 @@ class pj extends ca {
                     fg.a(101, this.g(-8235));
                     return param2;
                   } else {
-                    L20: {
+                    L25: {
                       this.a(param0, ua.field_a, (byte) -98, (pj) (this), param3, vl.field_d);
                       var8 = al.field_c;
                       if (var8 == null) {
-                        break L20;
+                        break L25;
                       } else {
-                        L21: {
+                        L26: {
                           if (var8.field_h instanceof wk) {
                             ((wk) ((Object) var8.field_h)).a(-114, var8, (mm) null);
-                            break L21;
+                            break L26;
                           } else {
-                            break L21;
+                            break L26;
                           }
                         }
                         al.field_c = null;
-                        break L20;
+                        break L25;
+                      }
+                    }
+                    L27: {
+                      if (var7 == 0) {
+                        break L27;
+                      } else {
+                        if (var5 == 0) {
+                          break L27;
+                        } else {
+                          if (-1 != (gi.field_e ^ -1)) {
+                            this.h(0);
+                            break L27;
+                          } else {
+                            break L27;
+                          }
+                        }
                       }
                     }
                     ud.field_j = of.field_G;
@@ -1354,94 +1514,20 @@ class pj extends ca {
     }
 
     pj(String param0, td param1, ag param2) {
-        RuntimeException runtimeException = null;
         rj var4 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         this.field_f = 0;
         this.field_q = 0;
         try {
-          L0: {
-            L1: {
-              this.field_h = param2;
-              this.field_l = param0;
-              this.field_j = param1;
-              if (!(this.field_j instanceof rj)) {
-                break L1;
-              } else {
+            this.field_h = param2;
+            this.field_l = param0;
+            this.field_j = param1;
+            if (this.field_j instanceof rj) {
                 var4 = (rj) ((Object) this.field_j);
                 this.field_m = var4.c((pj) (this), true);
                 this.field_r = var4.b((pj) (this), true);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (runtimeException);
-
-            stackIn_6_1 = new StringBuilder().append("pj.<init>(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
-          }
-          L3: {
-
-
-            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
-          }
-          L4: {
-
-
-            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-
-            if (param2 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_7_0), stackIn_13_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

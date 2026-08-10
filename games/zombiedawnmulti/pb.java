@@ -219,23 +219,16 @@ final class pb {
         var3 += 128;
         var4 = 64;
         if (!param2) {
-          L0: {
-            var5 = 256 - var4;
-            if (var5 >= var3) {
-              break L0;
+          var5 = 256 - var4;
+          if (var5 >= var3) {
+            if (var4 <= var3) {
+              return var3;
             } else {
-              var3 = var5;
-              if (ZombieDawnMulti.field_E) {
-                break L0;
-              } else {
-                return var3;
-              }
+              var3 = var4;
+              return var3;
             }
-          }
-          if (var4 <= var3) {
-            return var3;
           } else {
-            var3 = var4;
+            var3 = var5;
             return var3;
           }
         } else {

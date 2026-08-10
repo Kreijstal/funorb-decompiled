@@ -958,8 +958,6 @@ class uc implements eb, af {
     }
 
     public final void a(int param0, int param1, byte param2, ng param3, int param4) {
-        RuntimeException runtimeException = null;
-        int var6_int = 0;
         kd var7 = null;
         int var8 = 0;
         mn var9 = null;
@@ -967,83 +965,22 @@ class uc implements eb, af {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_3_1 = 0;
-        int stackIn_3_2 = 0;
-        int stackIn_4_0;
-        int stackIn_4_1;
-        int stackIn_4_2;
-        int stackIn_4_3;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var6_int = 97 % ((-46 - param2) / 40);
-              if (!param3.b(true)) {
-                break L1;
-              } else {
-                L2: {
-                  var7 = this.b(-86, param3);
-                  var8 = var7.a(false, param4);
-                  var9 = var7.field_b[var8];
-                  var10 = var7.b(true, param4);
-                  var11 = this.b(param0, param3, 2, var10);
-                  var12 = this.a(param1, param3, (byte) 80) - -Math.max(0, var9.field_b);
-                  stackIn_3_0 = this.a(param1, param3, (byte) -57);
-
-                  stackIn_3_1 = this.c(101, param3);
-
-                  stackIn_3_2 = var9.field_d;
-
-                  if (var7.field_b.length > 1 + var8) {
-                    stackIn_4_0 = stackIn_3_0;
-                    stackIn_4_1 = stackIn_3_1;
-                    stackIn_4_2 = stackIn_3_2;
-                    stackIn_4_3 = var7.field_b[1 + var8].field_b;
-                    break L2;
-                  } else {
-                    stackIn_4_0 = stackIn_3_0;
-                    stackIn_4_1 = stackIn_3_1;
-                    stackIn_4_2 = stackIn_3_2;
-                    stackIn_4_3 = var9.field_d;
-                    break L2;
-                  }
-                }
-                var13 = stackIn_4_0 - -Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_4_3));
+            int var6_int = 97 % ((-46 - param2) / 40);
+            if (param3.b(true)) {
+                var7 = this.b(-86, param3);
+                var8 = var7.a(false, param4);
+                var9 = var7.field_b[var8];
+                var10 = var7.b(true, param4);
+                var11 = this.b(param0, param3, 2, var10);
+                var12 = this.a(param1, param3, (byte) 80) - -Math.max(0, var9.field_b);
+                var13 = this.a(param1, param3, (byte) -57) - -Math.min(this.c(101, param3), Math.min(var9.field_d, var7.field_b.length <= 1 + var8 ? var9.field_d : var7.field_b[1 + var8].field_b));
                 hp.a(param0 + param3.field_z, param3.field_p + param1 - -param3.field_C, param3.field_E + param0 - -param3.field_z, (byte) -91, param1 + param3.field_p);
                 h.field_X.a(var12, var13, var11, var11, this.field_e, false);
                 ia.a((byte) 92);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("uc.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
-          }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param4 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) ((Object) runtimeException), "uc.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -1429,47 +1366,50 @@ class uc implements eb, af {
             }
             L5: {
               L6: {
-                var6 = this.field_l;
-                if (var6 != 0) {
-                  if (-4 != (var6 ^ -1)) {
-                    if (1 != var6) {
-                      if (-3 != (var6 ^ -1)) {
-                        break L5;
+                L7: {
+                  var6 = this.field_l;
+                  if (var6 != 0) {
+                    if (-4 != (var6 ^ -1)) {
+                      if (1 != var6) {
+                        if (-3 != (var6 ^ -1)) {
+                          break L6;
+                        } else {
+                          if (!(param1.field_r instanceof no)) {
+                            break L6;
+                          } else {
+                            ((no) ((Object) param1.field_r)).a(this.field_a, var5, var3_int, false, this.b(param1, -472248767));
+                            break L5;
+                          }
+                        }
                       } else {
-                        if (!(param1.field_r instanceof no)) {
+                        if (param1.field_r instanceof no) {
+                          ((no) ((Object) param1.field_r)).a(this.b(param1, param0 + -472248770), false, var5, this.field_a, var3_int >> 1072573025);
                           break L5;
                         } else {
-                          ((no) ((Object) param1.field_r)).a(this.field_a, var5, var3_int, false, this.b(param1, -472248767));
                           break L5;
                         }
                       }
                     } else {
-                      if (param1.field_r instanceof no) {
-                        ((no) ((Object) param1.field_r)).a(this.b(param1, param0 + -472248770), false, var5, this.field_a, var3_int >> 1072573025);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
+                      break L7;
                     }
                   } else {
-                    break L6;
+                    break L7;
                   }
-                } else {
+                }
+                if (!(param1.field_r instanceof no)) {
                   break L6;
+                } else {
+                  ((no) ((Object) param1.field_r)).a(this.b(param1, -472248767), var5, this.field_a, 0, 61);
+                  break L5;
                 }
               }
-              if (!(param1.field_r instanceof no)) {
-                break L5;
-              } else {
-                ((no) ((Object) param1.field_r)).a(this.b(param1, -472248767), var5, this.field_a, 0, 61);
-                break L5;
-              }
+              break L5;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var3 = decompiledCaughtException;
             stackIn_35_0 = (RuntimeException) (var3);
 
@@ -1479,12 +1419,12 @@ class uc implements eb, af {
               stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
               stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackIn_36_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
               stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackIn_36_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw aa.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ')');

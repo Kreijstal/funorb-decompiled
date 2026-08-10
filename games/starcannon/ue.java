@@ -859,7 +859,7 @@ final class ue {
                           break L9;
                         }
                       }
-                      throw sd.a((Throwable) ((Object) stackIn_36_0), (stackIn_36_2 != 0) + " " + param0 + " " + param3.length + " " + mg.a(param3.length, var9, (byte) -69) + " " + mg.a(-2 + param3.length, var9, (byte) -110) + " " + this.field_b.field_c[param0] + " " + this.field_b.field_b);
+                      throw sd.a((Throwable) ((Object) stackIn_36_0), (stackIn_36_2 != 0) + " " + param0 + " " + var9.length + " " + mg.a(var9.length, var9, (byte) -69) + " " + mg.a(-2 + var9.length, var9, (byte) -110) + " " + this.field_b.field_c[param0] + " " + this.field_b.field_b);
                     }
                     L10: {
                       if (!this.field_d) {

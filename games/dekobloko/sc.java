@@ -35,8 +35,7 @@ final class sc extends we {
         java.net.URI stackIn_12_2;
         StringBuilder stackIn_12_3;
         String stackIn_12_4;
-        java.net.Socket stackIn_24_0 = null;
-        java.net.Socket stackIn_32_0 = null;
+        java.net.Socket stackIn_23_0 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         List var3 = null;
@@ -147,67 +146,51 @@ final class sc extends we {
         var8 = var6_array;
         var9 = 0;
         L6: while (true) {
-          L7: {
-            if (var8.length <= var9) {
-              break L7;
+          if (var8.length <= var9) {
+            if (var7 == null) {
+              return this.b(2);
             } else {
-              var10 = var8[var9];
-              var11 = (java.net.Proxy) (var10);
-              try {
-                L8: {
-                  var12 = this.a((byte) -86, var11);
-                  stackIn_32_0 = (java.net.Socket) (var12);
-
-                  if (var13 != 0) {
-                    decompiledRegionSelector0 = 0;
-                    break L8;
-                  } else {
-                    if (stackIn_32_0 != null) {
-                      stackIn_24_0 = (java.net.Socket) (var12);
-                      decompiledRegionSelector0 = 2;
-                      break L8;
-                    } else {
-                      decompiledRegionSelector0 = 1;
-                      break L8;
-                    }
-                  }
-                }
-              } catch (db decompiledCaughtParameter1) {
-                decompiledCaughtException = decompiledCaughtParameter1;
-                L9: {
-                  var12_ref = (db) (Object) decompiledCaughtException;
-                  var7 = var12_ref;
+              throw sc.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+            }
+          } else {
+            var10 = var8[var9];
+            var11 = (java.net.Proxy) (var10);
+            try {
+              L7: {
+                var12 = this.a((byte) -86, var11);
+                if (var12 != null) {
+                  stackIn_23_0 = (java.net.Socket) (var12);
                   decompiledRegionSelector0 = 1;
-                  break L9;
-                }
-              } catch (java.io.IOException decompiledCaughtParameter2) {
-                decompiledCaughtException = decompiledCaughtParameter2;
-                L10: {
-                  var12_ref2 = (IOException) (Object) decompiledCaughtException;
-                  decompiledRegionSelector0 = 1;
-                  break L10;
+                  break L7;
+                } else {
+                  var9++;
+                  decompiledRegionSelector0 = 0;
+                  break L7;
                 }
               }
-              if (decompiledRegionSelector0 == 0) {
-                return stackIn_32_0;
-              } else {
-                if (decompiledRegionSelector0 == 1) {
-                  var9++;
-                  if (var13 == 0) {
-                    continue L6;
-                  } else {
-                    break L7;
-                  }
-                } else {
-                  return stackIn_24_0;
-                }
+            } catch (db decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L8: {
+                var12_ref = (db) (Object) decompiledCaughtException;
+                var7 = var12_ref;
+                var9++;
+                decompiledRegionSelector0 = 0;
+                break L8;
+              }
+            } catch (java.io.IOException decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
+              L9: {
+                var12_ref2 = (IOException) (Object) decompiledCaughtException;
+                var9++;
+                decompiledRegionSelector0 = 0;
+                break L9;
               }
             }
-          }
-          if (var7 != null) {
-            throw sc.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
-          } else {
-            return this.b(2);
+            if (decompiledRegionSelector0 == 0) {
+              continue L6;
+            } else {
+              return stackIn_23_0;
+            }
           }
         }
     }
@@ -349,16 +332,16 @@ final class sc extends we {
     }
 
     private final java.net.Socket a(String param0, int param1, String param2, int param3) throws IOException {
-        java.net.Socket stackIn_12_0 = null;
-        Object stackIn_27_0 = null;
+        java.net.Socket stackIn_11_0 = null;
+        Object stackIn_26_0 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
+        String stackIn_30_2 = null;
+        StringBuilder stackIn_32_1 = null;
         StringBuilder stackIn_33_1 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
+        String stackIn_33_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
@@ -375,84 +358,73 @@ final class sc extends we {
         try {
           L0: {
             L1: {
-              L2: {
-                var13 = new java.net.Socket(param2, param1);
-                var13.setSoTimeout(10000);
-                var6 = var13.getOutputStream();
-                if (param0 == null) {
-                  break L2;
-                } else {
-                  var6.write(("CONNECT " + this.field_d + ":" + this.field_f + " HTTP/1.0\n" + param0 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
-                  if (var12 == 0) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              var13 = new java.net.Socket(param2, param1);
+              var13.setSoTimeout(10000);
+              var6 = var13.getOutputStream();
+              if (param0 == null) {
+                var6.write(("CONNECT " + this.field_d + ":" + this.field_f + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                break L1;
+              } else {
+                var6.write(("CONNECT " + this.field_d + ":" + this.field_f + " HTTP/1.0\n" + param0 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                break L1;
               }
-              var6.write(("CONNECT " + this.field_d + ":" + this.field_f + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
-              break L1;
             }
-            L3: {
+            L2: {
               var6.flush();
               if (param3 == 1323) {
-                break L3;
+                break L2;
               } else {
                 this.field_i = (java.net.ProxySelector) null;
-                break L3;
+                break L2;
               }
             }
-            L4: {
+            L3: {
               var7 = new BufferedReader((Reader) ((Object) new InputStreamReader(var13.getInputStream())));
               var8 = var7.readLine();
               if (var8 == null) {
-                break L4;
+                break L3;
               } else {
-                L5: {
+                L4: {
                   if (var8.startsWith("HTTP/1.0 200")) {
-                    break L5;
+                    break L4;
                   } else {
                     if (!var8.startsWith("HTTP/1.1 200")) {
-                      L6: {
+                      L5: {
                         if (var8.startsWith("HTTP/1.0 407")) {
-                          break L6;
+                          break L5;
                         } else {
                           if (!var8.startsWith("HTTP/1.1 407")) {
-                            break L4;
+                            break L3;
                           } else {
-                            break L6;
+                            break L5;
                           }
                         }
                       }
                       var9 = 0;
                       var8 = var7.readLine();
                       var10 = "proxy-authenticate: ";
-                      L7: while (true) {
-                        L8: {
+                      L6: while (true) {
+                        L7: {
                           if (var8 == null) {
-                            break L8;
+                            break L7;
                           } else {
                             if ((var9 ^ -1) <= -51) {
-                              break L8;
+                              break L7;
                             } else {
                               if (!var8.toLowerCase().startsWith(var10)) {
                                 var8 = var7.readLine();
                                 var9++;
-                                if (var12 == 0) {
-                                  continue L7;
-                                } else {
-                                  break L8;
-                                }
+                                continue L6;
                               } else {
-                                L9: {
+                                L8: {
                                   var14 = var8.substring(var10.length()).trim();
                                   var8 = var14;
                                   var11 = var14.indexOf(' ');
                                   if ((var11 ^ -1) != 0) {
                                     var8 = var14.substring(0, var11);
-                                    break L9;
+                                    break L8;
                                   } else {
-                                    break L9;
+                                    break L8;
                                   }
                                 }
                                 throw new db(var8);
@@ -463,11 +435,11 @@ final class sc extends we {
                         throw new db("");
                       }
                     } else {
-                      break L5;
+                      break L4;
                     }
                   }
                 }
-                stackIn_12_0 = (java.net.Socket) (var13);
+                stackIn_11_0 = (java.net.Socket) (var13);
                 decompiledRegionSelector0 = 0;
                 break L0;
               }
@@ -475,53 +447,53 @@ final class sc extends we {
             var6.close();
             var7.close();
             var13.close();
-            stackIn_27_0 = null;
+            stackIn_26_0 = null;
             decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L9: {
             var5 = decompiledCaughtException;
-            stackIn_30_0 = (RuntimeException) (var5);
+            stackIn_29_0 = (RuntimeException) (var5);
 
-            stackIn_30_1 = new StringBuilder().append("sc.J(");
+            stackIn_29_1 = new StringBuilder().append("sc.J(");
 
             if (param0 == null) {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackIn_31_2 = "null";
-              break L10;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
+              break L9;
             } else {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackIn_31_2 = "{...}";
-              break L10;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
+              break L9;
             }
           }
-          L11: {
+          L10: {
 
 
-            stackIn_33_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',').append(param1).append(',');
+            stackIn_32_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackIn_34_2 = "null";
-              break L11;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "null";
+              break L10;
             } else {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackIn_34_2 = "{...}";
-              break L11;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackIn_33_2 = "{...}";
+              break L10;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_31_0), stackIn_34_2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_30_0), stackIn_33_2 + ',' + param3 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_12_0;
+          return stackIn_11_0;
         } else {
-          return (java.net.Socket) ((Object) stackIn_27_0);
+          return (java.net.Socket) ((Object) stackIn_26_0);
         }
     }
 
@@ -557,47 +529,40 @@ final class sc extends we {
               }
               var2 = 0;
               L2: while (true) {
-                L3: {
-                  if (var2 >= var1.field_o) {
-                    break L3;
-                  } else {
-                    L4: {
-                      if (var4.field_y[var2] != null) {
-                        if (0 == var4.field_y[var2].field_c) {
-                          stackIn_14_0 = 0;
-                          decompiledRegionSelector0 = 1;
-                          break L0;
-                        } else {
-                          break L4;
-                        }
+                if (var2 >= var1.field_o) {
+                  stackIn_22_0 = 1;
+                  decompiledRegionSelector0 = 3;
+                  break L0;
+                } else {
+                  L3: {
+                    if (var4.field_y[var2] != null) {
+                      if (0 == var4.field_y[var2].field_c) {
+                        stackIn_14_0 = 0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       } else {
-                        break L4;
+                        break L3;
                       }
-                    }
-                    L5: {
-                      if (null == var4.field_t[var2]) {
-                        break L5;
-                      } else {
-                        if (-1 == (var4.field_t[var2].field_c ^ -1)) {
-                          stackIn_19_0 = 0;
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    var2++;
-                    if (var3 == 0) {
-                      continue L2;
                     } else {
                       break L3;
                     }
                   }
+                  L4: {
+                    if (null == var4.field_t[var2]) {
+                      break L4;
+                    } else {
+                      if (-1 == (var4.field_t[var2].field_c ^ -1)) {
+                        stackIn_19_0 = 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
+                  var2++;
+                  continue L2;
                 }
-                stackIn_22_0 = 1;
-                decompiledRegionSelector0 = 3;
-                break L0;
               }
             }
           }
@@ -629,19 +594,12 @@ final class sc extends we {
         field_j = (pi[][]) null;
         field_p = null;
         if (param0) {
-          field_h = (String) null;
-          field_h = null;
-          field_k = null;
-          field_o = null;
-          field_l = null;
-          return;
-        } else {
-          field_h = null;
-          field_k = null;
-          field_o = null;
-          field_l = null;
-          return;
+            field_h = (String) null;
         }
+        field_h = null;
+        field_k = null;
+        field_o = null;
+        field_l = null;
     }
 
     static {

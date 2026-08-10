@@ -104,89 +104,19 @@ final class ml implements ntb, utb {
 
     final void a(byte param0, lta param1, boolean param2, pe param3, int param4) {
         int var6_int = 0;
-        int var7 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        var7 = VoidHunters.field_G;
-        try {
-          L0: {
-            this.a(param3, (byte) 84, param4, param1, param2);
-            if (param0 > 21) {
-              L1: {
-                if (null == this.field_f) {
-                  break L1;
-                } else {
-                  var6_int = 0;
-                  L2: while (true) {
-                    if (this.field_f.length <= var6_int) {
-                      break L1;
-                    } else {
-                      this.field_f[var6_int].a((byte) 87, param1, param2, param3, param4);
-                      var6_int++;
-                      continue L2;
-                    }
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var6 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var6);
-
-            stackIn_10_1 = new StringBuilder().append("ml.NB(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
-          }
-          L4: {
-
-
-            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_14_2 + ',' + param4 + ')');
+        int var7 = VoidHunters.field_G;
+        this.a(param3, (byte) 84, param4, param1, param2);
+        if (param0 <= 21) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            if (null != this.field_f) {
+                for (var6_int = 0; this.field_f.length > var6_int; var6_int++) {
+                    this.field_f[var6_int].a((byte) 87, param1, param2, param3, param4);
+                }
+            }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "ml.NB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -724,22 +654,25 @@ final class ml implements ntb, utb {
               }
             }
             L20: {
-              if (-1 <= (var25.field_d ^ -1)) {
-                break L20;
-              } else {
-                if (!param0) {
-                  break L20;
+              L21: {
+                if (-1 <= (var25.field_d ^ -1)) {
+                  break L21;
                 } else {
-                  ((sg) ((Object) param3)).e(-1, var25.field_d);
-                  break L20;
+                  if (!param0) {
+                    break L21;
+                  } else {
+                    ((sg) ((Object) param3)).e(-1, var25.field_d);
+                    break L20;
+                  }
                 }
               }
+              break L20;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L21: {
+          L22: {
             var5 = decompiledCaughtException;
             stackIn_82_0 = (RuntimeException) (var5);
 
@@ -749,15 +682,15 @@ final class ml implements ntb, utb {
               stackIn_83_0 = (RuntimeException) ((Object) stackIn_82_0);
               stackIn_83_1 = (StringBuilder) ((Object) stackIn_82_1);
               stackIn_83_2 = "null";
-              break L21;
+              break L22;
             } else {
               stackIn_83_0 = (RuntimeException) ((Object) stackIn_82_0);
               stackIn_83_1 = (StringBuilder) ((Object) stackIn_82_1);
               stackIn_83_2 = "{...}";
-              break L21;
+              break L22;
             }
           }
-          L22: {
+          L23: {
 
 
             stackIn_85_1 = ((StringBuilder) (Object) stackIn_83_1).append(stackIn_83_2).append(',');
@@ -766,12 +699,12 @@ final class ml implements ntb, utb {
               stackIn_83_0 = (RuntimeException) ((Object) stackIn_83_0);
               stackIn_86_1 = (StringBuilder) ((Object) stackIn_85_1);
               stackIn_86_2 = "null";
-              break L22;
+              break L23;
             } else {
               stackIn_83_0 = (RuntimeException) ((Object) stackIn_83_0);
               stackIn_86_1 = (StringBuilder) ((Object) stackIn_85_1);
               stackIn_86_2 = "{...}";
-              break L22;
+              break L23;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_83_0), stackIn_86_2 + ')');
@@ -1852,42 +1785,45 @@ final class ml implements ntb, utb {
                     }
                   }
                 }
-                if (this.field_d == null) {
-                  break L13;
-                } else {
-                  if (!pqa.a(4, 11284)) {
-                    break L13;
+                L31: {
+                  if (this.field_d == null) {
+                    break L31;
                   } else {
-                    var16 = 0;
-                    L31: while (true) {
-                      if (this.field_d.length <= var16) {
-                        break L13;
-                      } else {
-                        L32: {
-                          if (-1 == this.field_d[var16].field_c) {
-                            var17 = this.field_d[var16].field_e;
-                            var18 = this.field_d[var16].field_d;
-                            var19 = param3.a(var17, (byte) 125);
-                            var20 = param3.b(true, var18);
-                            if (pqa.a(4, 11284)) {
-                              var21 = fc.a(this.field_b + var47.field_o[var16].field_a, (byte) -93) * 8 >> -1614252728;
-                              var22 = eu.a(var47.field_o[var16].field_a + this.field_b, 99) * 8 >> 1821729576;
-                              c.a(param3.b(true, var22 + var18), param3.a(var17 - -var21, (byte) 119), var19, var20, -16777216, 16711680);
-                              cka.a(-1, Integer.toString(var16), 16711935, var20, var19, param1 ^ 4350);
-                              break L32;
+                    if (!pqa.a(4, 11284)) {
+                      break L31;
+                    } else {
+                      var16 = 0;
+                      L32: while (true) {
+                        if (this.field_d.length <= var16) {
+                          break L31;
+                        } else {
+                          L33: {
+                            if (-1 == this.field_d[var16].field_c) {
+                              var17 = this.field_d[var16].field_e;
+                              var18 = this.field_d[var16].field_d;
+                              var19 = param3.a(var17, (byte) 125);
+                              var20 = param3.b(true, var18);
+                              if (pqa.a(4, 11284)) {
+                                var21 = fc.a(this.field_b + var47.field_o[var16].field_a, (byte) -93) * 8 >> -1614252728;
+                                var22 = eu.a(var47.field_o[var16].field_a + this.field_b, 99) * 8 >> 1821729576;
+                                c.a(param3.b(true, var22 + var18), param3.a(var17 - -var21, (byte) 119), var19, var20, -16777216, 16711680);
+                                cka.a(-1, Integer.toString(var16), 16711935, var20, var19, param1 ^ 4350);
+                                break L33;
+                              } else {
+                                break L33;
+                              }
                             } else {
-                              break L32;
+                              break L33;
                             }
-                          } else {
-                            break L32;
                           }
+                          var16++;
+                          continue L32;
                         }
-                        var16++;
-                        continue L31;
                       }
                     }
                   }
                 }
+                break L13;
               } else {
                 break L13;
               }
@@ -1896,7 +1832,7 @@ final class ml implements ntb, utb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L33: {
+          L34: {
             var6 = decompiledCaughtException;
             stackIn_127_0 = (RuntimeException) (var6);
 
@@ -1906,15 +1842,15 @@ final class ml implements ntb, utb {
               stackIn_128_0 = (RuntimeException) ((Object) stackIn_127_0);
               stackIn_128_1 = (StringBuilder) ((Object) stackIn_127_1);
               stackIn_128_2 = "null";
-              break L33;
+              break L34;
             } else {
               stackIn_128_0 = (RuntimeException) ((Object) stackIn_127_0);
               stackIn_128_1 = (StringBuilder) ((Object) stackIn_127_1);
               stackIn_128_2 = "{...}";
-              break L33;
+              break L34;
             }
           }
-          L34: {
+          L35: {
 
 
             stackIn_130_1 = ((StringBuilder) (Object) stackIn_128_1).append(stackIn_128_2).append(',').append(param1).append(',').append(param2).append(',');
@@ -1923,12 +1859,12 @@ final class ml implements ntb, utb {
               stackIn_128_0 = (RuntimeException) ((Object) stackIn_128_0);
               stackIn_131_1 = (StringBuilder) ((Object) stackIn_130_1);
               stackIn_131_2 = "null";
-              break L34;
+              break L35;
             } else {
               stackIn_128_0 = (RuntimeException) ((Object) stackIn_128_0);
               stackIn_131_1 = (StringBuilder) ((Object) stackIn_130_1);
               stackIn_131_2 = "{...}";
-              break L34;
+              break L35;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_128_0), stackIn_131_2 + ',' + param4 + ')');
@@ -3155,100 +3091,29 @@ final class ml implements ntb, utb {
     }
 
     final void a(ij param0, sg param1, int param2) {
-        int var4_int = 0;
-        int var5 = 0;
         int var6 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var5 = VoidHunters.field_G;
+        int var4_int = 0;
+        int var5 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              if ((this.i((byte) -112).b(-1) ^ -1) == param2) {
-                break L1;
-              } else {
-                L2: {
-                  var4_int = this.a(param1, param2 ^ 10298);
-                  if (!this.k((byte) 84)) {
-                    break L2;
-                  } else {
-                    if (var4_int == 0) {
-                      var4_int++;
-                      break L2;
-                    } else {
-                      break L2;
+            if ((this.i((byte) -112).b(-1) ^ -1) != param2) {
+                var4_int = this.a(param1, param2 ^ 10298);
+                if (this.k((byte) 84)) {
+                    if (!(var4_int != 0)) {
+                        var4_int++;
                     }
-                  }
                 }
                 param0.b(-10258, new ihb(this.i((byte) -112).b(-1), var4_int));
-                break L1;
-              }
             }
-            L3: {
-              if (this.field_f == null) {
-                break L3;
-              } else {
+            if (this.field_f != null) {
                 var6 = 0;
                 var4_int = var6;
-                L4: while (true) {
-                  if (this.field_f.length <= var6) {
-                    break L3;
-                  } else {
+                while (this.field_f.length > var6) {
                     this.field_f[var6].a(param0, param1, 0);
                     var6++;
-                    continue L4;
-                  }
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var4);
-
-            stackIn_14_1 = new StringBuilder().append("ml.VC(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L5;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L5;
-            }
-          }
-          L6: {
-
-
-            stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
-
-            if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L6;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L6;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_18_2 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "ml.VC(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -3863,33 +3728,36 @@ final class ml implements ntb, utb {
               }
             }
             L2: {
-              this.a(param5, param0, 0, param3, param7, param2, param1, param8, param4);
-              if (this.field_f == null) {
-                break L2;
-              } else {
-                if (this.field_f.length > 0) {
-                  var10_int = gaa.field_o;
-                  var11 = pua.field_p;
-                  var12 = 0;
-                  L3: while (true) {
-                    if (this.field_f.length <= var12) {
-                      break L2;
-                    } else {
-                      this.field_f[var12].a(this.field_n, var11, param2, this.field_b, param4, param5, 256, var10_int, this.field_r);
-                      var12++;
-                      continue L3;
-                    }
-                  }
+              L3: {
+                this.a(param5, param0, 0, param3, param7, param2, param1, param8, param4);
+                if (this.field_f == null) {
+                  break L3;
                 } else {
-                  break L2;
+                  if (this.field_f.length > 0) {
+                    var10_int = gaa.field_o;
+                    var11 = pua.field_p;
+                    var12 = 0;
+                    L4: while (true) {
+                      if (this.field_f.length <= var12) {
+                        break L3;
+                      } else {
+                        this.field_f[var12].a(this.field_n, var11, param2, this.field_b, param4, param5, 256, var10_int, this.field_r);
+                        var12++;
+                        continue L4;
+                      }
+                    }
+                  } else {
+                    break L2;
+                  }
                 }
               }
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var10 = decompiledCaughtException;
             stackIn_12_0 = (RuntimeException) (var10);
 
@@ -3899,12 +3767,12 @@ final class ml implements ntb, utb {
               stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackIn_13_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackIn_13_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
@@ -7503,70 +7371,20 @@ final class ml implements ntb, utb {
 
     final void a(int[] param0, byte param1, boolean param2) {
         int var4_int = 0;
-        int var5 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var5 = VoidHunters.field_G;
+        int var5 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              if (param1 == -17) {
-                break L1;
-              } else {
+            if (param1 != -17) {
                 this.field_a = (aqa) null;
-                break L1;
-              }
             }
-            L2: {
-              param0[0] = param0[0] + this.field_i;
-              param0[1] = param0[1] + this.i((byte) -112).field_p;
-              if (!param2) {
-                break L2;
-              } else {
-                if (null == this.field_f) {
-                  break L2;
-                } else {
-                  var4_int = 0;
-                  L3: while (true) {
-                    if (var4_int >= this.field_f.length) {
-                      break L2;
-                    } else {
-                      this.field_f[var4_int].a(param0, (byte) -17, param2);
-                      var4_int++;
-                      continue L3;
-                    }
-                  }
+            param0[0] = param0[0] + this.field_i;
+            param0[1] = param0[1] + this.i((byte) -112).field_p;
+            if (param2 && null != this.field_f) {
+                for (var4_int = 0; var4_int < this.field_f.length; var4_int++) {
+                    this.field_f[var4_int].a(param0, (byte) -17, param2);
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var4);
-
-            stackIn_11_1 = new StringBuilder().append("ml.EC(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L4;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L4;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "ml.EC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -8381,100 +8199,24 @@ final class ml implements ntb, utb {
 
     final void a(int param0, int param1, pe param2, lta param3) {
         int var5_int = 0;
-        int var6 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        var6 = VoidHunters.field_G;
+        int var6 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              if (this.field_a == null) {
-                break L1;
-              } else {
+            if (this.field_a != null) {
                 this.field_a.a((byte) -116, param1, param3, this.field_g);
-                break L1;
-              }
             }
-            L2: {
-              if (null == this.field_k) {
-                break L2;
-              } else {
+            if (null != this.field_k) {
                 this.field_k.a(this.field_b, param3, this.i((byte) -112).field_v, this.field_n, param2, this.field_r, param0 + 110);
-                break L2;
-              }
             }
-            L3: {
-              if (param0 == 0) {
-                break L3;
-              } else {
+            if (param0 != 0) {
                 this.d(34, -81);
-                break L3;
-              }
             }
-            L4: {
-              if (this.field_f == null) {
-                break L4;
-              } else {
-                var5_int = 0;
-                L5: while (true) {
-                  if (var5_int >= this.field_f.length) {
-                    break L4;
-                  } else {
+            if (this.field_f != null) {
+                for (var5_int = 0; var5_int < this.field_f.length; var5_int++) {
                     this.field_f[var5_int].a(0, param1, param2, param3);
-                    var5_int++;
-                    continue L5;
-                  }
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var5 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var5);
-
-            stackIn_14_1 = new StringBuilder().append("ml.JB(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L6;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L6;
-            }
-          }
-          L7: {
-
-
-            stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
-
-            if (param3 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L7;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L7;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_18_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "ml.JB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

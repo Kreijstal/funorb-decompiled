@@ -74,13 +74,11 @@ final class cc {
     }
 
     final static String a(int param0, int param1, int param2, byte[] param3) {
-        int incrementValue$1 = 0;
+        int incrementValue$0 = 0;
         char[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         char[] var10 = null;
         String stackIn_15_0 = null;
@@ -90,6 +88,8 @@ final class cc {
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var4_ref = null;
+        int var8 = 0;
         var9 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -106,57 +106,48 @@ final class cc {
             var5 = 0;
             var6 = 0;
             L2: while (true) {
-              L3: {
-                if (var6 >= param2) {
-                  break L3;
-                } else {
-                  L4: {
-                    var7 = 255 & param3[var6 + param0];
-                    if (var7 == 0) {
-                      break L4;
+              if (var6 >= param2) {
+                stackIn_15_0 = new String(var10, 0, var5);
+                break L0;
+              } else {
+                var7 = 255 & param3[var6 + param0];
+                if (var7 != 0) {
+                  L3: {
+                    if (-129 < (var7 ^ -1)) {
+                      break L3;
                     } else {
-                      L5: {
-                        if (-129 < (var7 ^ -1)) {
-                          break L5;
-                        } else {
-                          if (var7 >= 160) {
-                            break L5;
+                      if (var7 >= 160) {
+                        break L3;
+                      } else {
+                        L4: {
+                          var8 = af.field_a[var7 - 128];
+                          if (var8 == 0) {
+                            var8 = 63;
+                            break L4;
                           } else {
-                            L6: {
-                              var8 = af.field_a[var7 - 128];
-                              if (var8 == 0) {
-                                var8 = 63;
-                                break L6;
-                              } else {
-                                break L6;
-                              }
-                            }
-                            var7 = var8;
-                            break L5;
+                            break L4;
                           }
                         }
+                        var7 = var8;
+                        break L3;
                       }
-                      incrementValue$1 = var5;
-                      var5++;
-                      var10[incrementValue$1] = (char)var7;
-                      break L4;
                     }
                   }
+                  incrementValue$0 = var5;
+                  var5++;
+                  var10[incrementValue$0] = (char)var7;
                   var6++;
-                  if (var9 == 0) {
-                    continue L2;
-                  } else {
-                    break L3;
-                  }
+                  continue L2;
+                } else {
+                  var6++;
+                  continue L2;
                 }
               }
-              stackIn_15_0 = new String(var10, 0, var5);
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L5: {
             var4_ref = decompiledCaughtException;
             stackIn_18_0 = (RuntimeException) (var4_ref);
 
@@ -166,12 +157,12 @@ final class cc {
               stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
               stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackIn_19_2 = "null";
-              break L7;
+              break L5;
             } else {
               stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
               stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackIn_19_2 = "{...}";
-              break L7;
+              break L5;
             }
           }
           throw ch.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
@@ -182,21 +173,13 @@ final class cc {
     public static void a(boolean param0) {
         field_e = null;
         if (!param0) {
-          field_f = (int[]) null;
-          field_f = null;
-          field_c = null;
-          field_g = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
-          field_f = null;
-          field_c = null;
-          field_g = null;
-          field_d = null;
-          field_b = null;
-          return;
+            field_f = (int[]) null;
         }
+        field_f = null;
+        field_c = null;
+        field_g = null;
+        field_d = null;
+        field_b = null;
     }
 
     static {

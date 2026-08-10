@@ -128,32 +128,10 @@ final class uk extends wj {
     }
 
     final static boolean f(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
         if (param0 != 20) {
-          L0: {
             field_p = (String) null;
-            if (cf.field_b != ed.field_c) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (cf.field_b != ed.field_c) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
         }
+        return cf.field_b == ed.field_c ? true : false;
     }
 
     uk(rj param0) {
@@ -168,92 +146,28 @@ final class uk extends wj {
     }
 
     final static void a(int param0, byte param1, le param2) {
-        RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var7 = MonkeyPuzzle2.field_F ? 1 : 0;
-        try {
-          L0: {
-            if (param1 >= 118) {
-              var3_int = param0 * 16 / 50;
-              var4 = 0;
-              L1: while (true) {
-                L2: {
-                  L3: {
-                    if ((var4 ^ -1) <= -301) {
-                      break L3;
-                    } else {
-                      if (var7 != 0) {
-                        break L2;
-                      } else {
-                        L4: {
-                          if (var3_int > sc.field_h[var4]) {
-                            var5 = var4 / 20;
-                            var6 = 32 * (var4 - var5 * 20);
-                            var5 = var5 * 32;
-                            ge.h(var6, var5, var6 + 32, 32 + var5);
-                            param2.a(0, 0);
-                            break L4;
-                          } else {
-                            break L4;
-                          }
-                        }
-                        var4++;
-                        if (var7 == 0) {
-                          continue L1;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                  }
-                  ge.b();
-                  break L2;
-                }
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (runtimeException);
-
-            stackIn_14_1 = new StringBuilder().append("uk.D(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L5;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L5;
-            }
-          }
-          throw la.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+        int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
+        if (param1 < 118) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            var3_int = param0 * 16 / 50;
+            for (var4 = 0; (var4 ^ -1) > -301; var4++) {
+                if (!(var3_int <= sc.field_h[var4])) {
+                    var5 = var4 / 20;
+                    var6 = 32 * (var4 - var5 * 20);
+                    var5 = var5 * 32;
+                    ge.h(var6, var5, var6 + 32, 32 + var5);
+                    param2.a(0, 0);
+                }
+            }
+            ge.b();
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) ((Object) runtimeException), "uk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

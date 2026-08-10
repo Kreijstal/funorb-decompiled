@@ -2999,62 +2999,65 @@ final class fl extends k {
           L0: {
             L1: {
               L2: {
-                if (this.field_E.c()) {
-                  var4_int = this.field_r * this.field_E.field_d / c.field_l;
-                  L3: while (true) {
-                    L4: {
-                      var5 = this.field_K + (long)param2 * (long)var4_int;
-                      if (this.field_n + -var5 < 0L) {
-                        break L4;
-                      } else {
-                        this.field_K = var5;
-                        if (var8 != 0) {
-                          break L1;
+                L3: {
+                  if (this.field_E.c()) {
+                    var4_int = this.field_r * this.field_E.field_d / c.field_l;
+                    L4: while (true) {
+                      L5: {
+                        var5 = this.field_K + (long)param2 * (long)var4_int;
+                        if (this.field_n + -var5 < 0L) {
+                          break L5;
                         } else {
-                          if (var8 == 0) {
+                          this.field_K = var5;
+                          if (var8 != 0) {
                             break L2;
                           } else {
-                            break L4;
+                            if (var8 == 0) {
+                              break L3;
+                            } else {
+                              break L5;
+                            }
                           }
                         }
                       }
-                    }
-                    L5: {
-                      var7 = (int)((-1L + (long)var4_int + (-this.field_K + this.field_n)) / (long)var4_int);
-                      this.field_K = this.field_K + (long)var7 * (long)var4_int;
-                      this.field_A.a(param0, param1, var7);
-                      param1 = param1 + var7;
-                      param2 = param2 - var7;
-                      this.c(false);
-                      if (this.field_E.c()) {
-                        break L5;
-                      } else {
-                        if (var8 == 0) {
-                          break L2;
+                      L6: {
+                        var7 = (int)((-1L + (long)var4_int + (-this.field_K + this.field_n)) / (long)var4_int);
+                        this.field_K = this.field_K + (long)var7 * (long)var4_int;
+                        this.field_A.a(param0, param1, var7);
+                        param1 = param1 + var7;
+                        param2 = param2 - var7;
+                        this.c(false);
+                        if (this.field_E.c()) {
+                          break L6;
                         } else {
-                          break L5;
+                          if (var8 == 0) {
+                            break L3;
+                          } else {
+                            break L6;
+                          }
                         }
                       }
+                      if (var8 == 0) {
+                        continue L4;
+                      } else {
+                        this.field_A.a(param0, param1, param2);
+                        break L1;
+                      }
                     }
-                    if (var8 == 0) {
-                      continue L3;
-                    } else {
-                      this.field_A.a(param0, param1, param2);
-                      break L1;
-                    }
+                  } else {
+                    break L3;
                   }
-                } else {
-                  break L2;
                 }
+                this.field_A.a(param0, param1, param2);
+                break L2;
               }
-              this.field_A.a(param0, param1, param2);
               break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var4 = decompiledCaughtException;
             stackIn_17_0 = (RuntimeException) (var4);
 
@@ -3064,12 +3067,12 @@ final class fl extends k {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw bd.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ')');

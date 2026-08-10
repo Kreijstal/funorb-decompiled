@@ -62,48 +62,34 @@ final class lc implements ml {
                 break L4;
               } else {
                 L5: {
-                  L6: {
-                    var7 = this.field_g.a(param1.field_s);
-                    var8 = this.field_g.field_C - -this.field_g.field_D;
-                    var9 = param3 + param1.field_r;
-                    if (2 != this.field_a) {
-                      break L6;
+                  var7 = this.field_g.a(param1.field_s);
+                  var8 = this.field_g.field_C - -this.field_g.field_D;
+                  var9 = param3 + param1.field_r;
+                  if (2 != this.field_a) {
+                    if ((this.field_a ^ -1) == -2) {
+                      var9 = var9 + (-var7 + param1.field_l >> 1722042721);
+                      break L5;
                     } else {
-                      var9 = var9 + (-var7 + param1.field_l);
-                      if (var11 == 0) {
-                        break L5;
-                      } else {
-                        break L6;
-                      }
+                      break L5;
                     }
-                  }
-                  if ((this.field_a ^ -1) == -2) {
-                    var9 = var9 + (-var7 + param1.field_l >> 1722042721);
-                    break L5;
                   } else {
+                    var9 = var9 + (-var7 + param1.field_l);
                     break L5;
                   }
                 }
-                L7: {
-                  L8: {
-                    var10 = param2 - -param1.field_e;
-                    if (-3 == (this.field_c ^ -1)) {
-                      break L8;
+                L6: {
+                  var10 = param2 - -param1.field_e;
+                  if (-3 == (this.field_c ^ -1)) {
+                    var10 = var10 + (param1.field_p + -var8);
+                    break L6;
+                  } else {
+                    if (this.field_c != 1) {
+                      break L6;
                     } else {
-                      if (this.field_c != 1) {
-                        break L7;
-                      } else {
-                        var10 = var10 + (-var8 + param1.field_p >> 722015393);
-                        if (var11 == 0) {
-                          break L7;
-                        } else {
-                          break L8;
-                        }
-                      }
+                      var10 = var10 + (-var8 + param1.field_p >> 722015393);
+                      break L6;
                     }
                   }
-                  var10 = var10 + (param1.field_p + -var8);
-                  break L7;
                 }
                 hk.a(var9 - 2, var10 - -2, 117, 4 + var7, var8);
                 break L4;
@@ -113,7 +99,7 @@ final class lc implements ml {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L7: {
             var6 = decompiledCaughtException;
             stackIn_21_0 = (RuntimeException) (var6);
 
@@ -123,12 +109,12 @@ final class lc implements ml {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "null";
-              break L9;
+              break L7;
             } else {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "{...}";
-              break L9;
+              break L7;
             }
           }
           throw la.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -144,16 +130,14 @@ final class lc implements ml {
             int var7 = 0;
             int var8 = 0;
             String var9 = null;
-            int var10 = 0;
-            int var11 = 0;
-            String stackIn_11_0 = null;
+            String stackIn_9_0 = null;
+            String stackIn_17_0 = null;
             String stackIn_19_0 = null;
-            String stackIn_21_0 = null;
-            RuntimeException stackIn_24_0 = null;
-            StringBuilder stackIn_24_1 = null;
-            RuntimeException stackIn_25_0 = null;
-            StringBuilder stackIn_25_1 = null;
-            String stackIn_25_2 = null;
+            RuntimeException stackIn_22_0 = null;
+            StringBuilder stackIn_22_1 = null;
+            RuntimeException stackIn_23_0 = null;
+            StringBuilder stackIn_23_1 = null;
+            String stackIn_23_2 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
@@ -170,119 +154,89 @@ final class lc implements ml {
                     var5 = ma.a(param1 + 213, ';', var4);
                     var6 = 0;
                     L2: while (true) {
-                      L3: {
-                        if (var5.length <= var6) {
-                          break L3;
-                        } else {
+                      if (var5.length <= var6) {
+                        decompiledRegionSelector0 = 0;
+                        break L1;
+                      } else {
+                        L3: {
                           var7 = var5[var6].indexOf('=');
-                          var11 = -1;
-                          var10 = var7 ^ -1;
-                          if (var8 != 0) {
-                            if (var10 == var11) {
+                          if ((var7 ^ -1) > -1) {
+                            break L3;
+                          } else {
+                            if (var5[var6].substring(0, var7).trim().equals(var3)) {
+                              stackIn_9_0 = var5[var6].substring(1 + var7).trim();
                               decompiledRegionSelector0 = 1;
                               break L1;
-                            } else {
-                              decompiledRegionSelector0 = 2;
-                              break L1;
-                            }
-                          } else {
-                            L4: {
-                              if (var10 > var11) {
-                                break L4;
-                              } else {
-                                if (var5[var6].substring(0, var7).trim().equals(var3)) {
-                                  stackIn_11_0 = var5[var6].substring(1 + var7).trim();
-                                  decompiledRegionSelector0 = 3;
-                                  break L1;
-                                } else {
-                                  break L4;
-                                }
-                              }
-                            }
-                            var6++;
-                            if (var8 == 0) {
-                              continue L2;
                             } else {
                               break L3;
                             }
                           }
                         }
+                        var6++;
+                        continue L2;
                       }
-                      decompiledRegionSelector0 = 0;
-                      break L1;
                     }
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L5: {
+                  L4: {
                     var2 = decompiledCaughtException;
                     decompiledRegionSelector0 = 0;
-                    break L5;
+                    break L4;
                   }
                 }
-                L6: {
-                  L7: {
-                    if (decompiledRegionSelector0 == 0) {
-                      if (param1 == -89) {
-                        break L6;
-                      } else {
-                        break L7;
-                      }
+                if (decompiledRegionSelector0 == 0) {
+                  L5: {
+                    if (param1 == -89) {
+                      break L5;
                     } else {
-                      if (decompiledRegionSelector0 == 1) {
-                        break L6;
-                      } else {
-                        if (decompiledRegionSelector0 == 2) {
-                          break L7;
-                        } else {
-                          decompiledRegionSelector1 = 2;
-                          break L0;
-                        }
-                      }
+                      field_d = false;
+                      break L5;
                     }
                   }
-                  field_d = false;
-                  break L6;
-                }
-                if (null == e.field_c) {
-                  stackIn_21_0 = param0.getParameter("settings");
-                  decompiledRegionSelector1 = 1;
-                  break L0;
+                  if (null == e.field_c) {
+                    stackIn_19_0 = param0.getParameter("settings");
+                    decompiledRegionSelector1 = 1;
+                    break L0;
+                  } else {
+                    stackIn_17_0 = e.field_c;
+                    decompiledRegionSelector1 = 0;
+                    break L0;
+                  }
                 } else {
-                  stackIn_19_0 = e.field_c;
-                  decompiledRegionSelector1 = 0;
+                  decompiledRegionSelector1 = 2;
                   break L0;
                 }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L8: {
+              L6: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_24_0 = (RuntimeException) (var2_ref);
+                stackIn_22_0 = (RuntimeException) (var2_ref);
 
-                stackIn_24_1 = new StringBuilder().append("lc.A(");
+                stackIn_22_1 = new StringBuilder().append("lc.A(");
 
                 if (param0 == null) {
-                  stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-                  stackIn_25_2 = "null";
-                  break L8;
+                  stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+                  stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+                  stackIn_23_2 = "null";
+                  break L6;
                 } else {
-                  stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-                  stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-                  stackIn_25_2 = "{...}";
-                  break L8;
+                  stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+                  stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+                  stackIn_23_2 = "{...}";
+                  break L6;
                 }
               }
-              throw la.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
+              throw la.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ')');
             }
             if (decompiledRegionSelector1 == 0) {
-              return stackIn_19_0;
+              return stackIn_17_0;
             } else {
               if (decompiledRegionSelector1 == 1) {
-                return stackIn_21_0;
+                return stackIn_19_0;
               } else {
-                return stackIn_11_0;
+                return stackIn_9_0;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

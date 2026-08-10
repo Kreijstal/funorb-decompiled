@@ -44,11 +44,11 @@ final class ob extends ta implements ff, ai {
     public final void a(int param0, int param1, byte param2, te param3) {
         RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = OrbDefence.field_D ? 1 : 0;
         try {
@@ -61,61 +61,44 @@ final class ob extends ta implements ff, ai {
                 break L1;
               }
             }
-            L2: {
-              if (param1 == 0) {
-                break L2;
+            if (param1 == 0) {
+              ol.a("terms.ws", 1);
+              return;
+            } else {
+              if (param1 == 1) {
+                ol.a("privacy.ws", param2 + -100);
+                return;
               } else {
-                L3: {
-                  L4: {
-                    if (param1 == 1) {
-                      break L4;
-                    } else {
-                      if (param1 != 2) {
-                        break L3;
-                      } else {
-                        ol.a("conduct.ws", param2 + -100);
-                        if (var6 == 0) {
-                          break L3;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                  }
-                  ol.a("privacy.ws", param2 + -100);
-                  if (var6 == 0) {
-                    break L3;
-                  } else {
-                    break L2;
-                  }
+                if (param1 != 2) {
+                  break L0;
+                } else {
+                  ol.a("conduct.ws", param2 + -100);
+                  return;
                 }
-                break L0;
               }
             }
-            ol.a("terms.ws", 1);
-            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L2: {
             var5 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var5);
+            stackIn_12_0 = (RuntimeException) (var5);
 
-            stackIn_14_1 = new StringBuilder().append("ob.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_12_1 = new StringBuilder().append("ob.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
             if (param3 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L5;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
             } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L5;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 

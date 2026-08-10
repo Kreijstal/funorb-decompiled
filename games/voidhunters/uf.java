@@ -1050,88 +1050,31 @@ class uf extends htb {
     }
 
     void a(int param0, int param1, int param2, shb param3) {
-        RuntimeException runtimeException = null;
-        int var6 = 0;
         at var7 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        int var6 = 0;
         try {
-          L0: {
-            L1: {
-              super.a(param0, param1, param2 ^ 0, param3);
-              this.h(param2 ^ -27100);
-              if (param2 == -981) {
-                break L1;
-              } else {
+            super.a(param0, param1, param2 ^ 0, param3);
+            this.h(param2 ^ -27100);
+            if (param2 != -981) {
                 this.field_J = -63L;
-                break L1;
-              }
             }
-            L2: {
-              if (-2 != (this.field_n ^ -1)) {
-                break L2;
-              } else {
-                L3: {
-                  if (this.field_q instanceof at) {
+            if (-2 == (this.field_n ^ -1)) {
+                if (!(!(this.field_q instanceof at))) {
                     var7 = (at) ((Object) this.field_q);
                     var6 = var7.a(kc.field_b, uia.field_b, param0, param1, (shb) (this), param2 + 980);
-                    if (0 == (var6 ^ -1)) {
-                      break L3;
-                    } else {
-                      L4: {
-                        if (!this.field_I) {
-                          break L4;
-                        } else {
-                          if (var6 >= this.field_B) {
-                            break L4;
-                          } else {
-                            if (this.field_H < var6) {
-                              var6 = this.field_B;
-                              break L4;
-                            } else {
-                              break L4;
+                    if (0 != (var6 ^ -1)) {
+                        if (this.field_I && var6 < this.field_B) {
+                            if (!(this.field_H >= var6)) {
+                                var6 = this.field_B;
                             }
-                          }
                         }
-                      }
-                      this.field_K = var6;
-                      break L3;
+                        this.field_K = var6;
                     }
-                  } else {
-                    break L3;
-                  }
                 }
                 this.field_J = wt.a(false);
-                break L2;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (runtimeException);
-
-            stackIn_16_1 = new StringBuilder().append("uf.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L5;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L5;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "uf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -293,369 +293,95 @@ final class ki {
     }
 
     ki(int param0, int param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        Object var7;
-        String var8;
-        int var9;
-        String var10;
-        int var11;
-        var11 = ZombieDawnMulti.field_E ? 1 : 0;
+        String var10 = null;
+        int var6 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        String var8 = null;
+        int var9 = 0;
         this.field_b = new ja(137, 49);
         this.field_c = param0;
         this.field_g = param2;
         this.field_q = param1;
         g.c(this.field_b);
-        var7 = null;
-        if (0 <= param0) {
-          if (-20 < (param0 ^ -1)) {
-            L0: {
-              if (!ll.field_k.c(127, param0)) {
-                break L0;
-              } else {
-                var7 = wa.field_b[param0];
-                break L0;
-              }
-            }
-            L1: {
-              L2: {
-                var4 = 6575425;
-                var5 = 3420451;
-                var6 = 5524287;
-                var8 = fh.field_g;
-                var9 = ll.field_k.field_t[param0];
-                if (!ll.field_k.d(param0, 53)) {
-                  break L2;
-                } else {
-                  var8 = vo.field_n;
-                  var9 = cr.a(param0, -117);
-                  if (var11 == 0) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              if (var9 == 0) {
-                break L1;
-              } else {
-                var8 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
-                break L1;
-              }
-            }
-            L3: {
-              var9 = var9 * 131 / cr.a(param0, -110);
-              oo.a(1, 1, 135, 47, var4, var5);
-              oo.f(2, 2, 133, 30, 16777215, 32);
-              oo.f(3, 3, 101, 28, 65793, 128);
-              oo.f(106, 3, 28, 28, 65793, 128);
-              oo.e(2, 33, 133, 14, 65793);
-              oo.e(3, 34, var9, 12, var6);
-              if (var7 == null) {
-                break L3;
-              } else {
-                ((ja) (var7)).g(108, 5);
-                break L3;
-              }
-            }
-            L4: {
-              L5: {
+        Object var7 = null;
+        if (0 > param0) {
+            if (32 > param0 || -39 > (param0 ^ -1)) {
+                var6 = 1993752;
                 if (ll.field_k.c(127, param0)) {
-                  break L5;
-                } else {
-                  var10 = ro.field_N;
-                  if (var11 == 0) {
-                    break L4;
-                  } else {
-                    break L5;
-                  }
+                    var7 = wa.field_b[-44 + (param0 + 26)];
                 }
-              }
-              var10 = gh.field_f[param0];
-              break L4;
-            }
-            qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-            qp.field_w.b(var8, 68, 45, 16777215, -1);
-            g.d();
-            return;
-          } else {
-            L6: {
-              if (32 > param0) {
-                break L6;
-              } else {
-                if (-39 <= (param0 ^ -1)) {
-                  L7: {
-                    if (!ll.field_k.c(127, param0)) {
-                      break L7;
-                    } else {
-                      var7 = wa.field_b[-13 + param0];
-                      break L7;
-                    }
-                  }
-                  L8: {
-                    L9: {
-                      var6 = 8783880;
-                      var5 = 5053184;
-                      var4 = 8135424;
-                      var8 = fh.field_g;
-                      var9 = ll.field_k.field_t[param0];
-                      if (!ll.field_k.d(param0, 53)) {
-                        break L9;
-                      } else {
-                        var8 = vo.field_n;
-                        var9 = cr.a(param0, -117);
-                        if (var11 == 0) {
-                          break L8;
-                        } else {
-                          break L9;
-                        }
-                      }
-                    }
-                    if (var9 == 0) {
-                      break L8;
-                    } else {
-                      var8 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
-                      var10 = var8;
-                      var8 = var10;
-                      break L8;
-                    }
-                  }
-                  L10: {
-                    var9 = var9 * 131 / cr.a(param0, -110);
-                    oo.a(1, 1, 135, 47, var4, var5);
-                    oo.f(2, 2, 133, 30, 16777215, 32);
-                    oo.f(3, 3, 101, 28, 65793, 128);
-                    oo.f(106, 3, 28, 28, 65793, 128);
-                    oo.e(2, 33, 133, 14, 65793);
-                    oo.e(3, 34, var9, 12, var6);
-                    if (var7 == null) {
-                      break L10;
-                    } else {
-                      ((ja) (var7)).g(108, 5);
-                      break L10;
-                    }
-                  }
-                  L11: {
-                    L12: {
-                      if (ll.field_k.c(127, param0)) {
-                        break L12;
-                      } else {
-                        var10 = ro.field_N;
-                        if (var11 == 0) {
-                          break L11;
-                        } else {
-                          break L12;
-                        }
-                      }
-                    }
-                    var10 = gh.field_f[param0];
-                    var8 = var10;
-                    var8 = var10;
-                    break L11;
-                  }
-                  qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-                  qp.field_w.b(var8, 68, 45, 16777215, -1);
-                  g.d();
-                  return;
-                } else {
-                  break L6;
-                }
-              }
-            }
-            L13: {
-              var6 = 1993752;
-              if (!ll.field_k.c(127, param0)) {
-                break L13;
-              } else {
-                var7 = wa.field_b[-44 + (param0 + 26)];
-                break L13;
-              }
-            }
-            L14: {
-              L15: {
                 var4 = 280577;
                 var5 = 2306851;
                 var8 = fh.field_g;
                 var9 = ll.field_k.field_t[param0];
-                if (!ll.field_k.d(param0, 53)) {
-                  break L15;
+                if (ll.field_k.d(param0, 53)) {
+                    var8 = vo.field_n;
+                    var9 = cr.a(param0, -117);
                 } else {
-                  var8 = vo.field_n;
-                  var9 = cr.a(param0, -117);
-                  if (var11 == 0) {
-                    break L14;
-                  } else {
-                    break L15;
-                  }
-                }
-              }
-              if (var9 == 0) {
-                break L14;
-              } else {
-                var8 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
-                var10 = var8;
-                var8 = var10;
-                break L14;
-              }
-            }
-            L16: {
-              var9 = var9 * 131 / cr.a(param0, -110);
-              oo.a(1, 1, 135, 47, var4, var5);
-              oo.f(2, 2, 133, 30, 16777215, 32);
-              oo.f(3, 3, 101, 28, 65793, 128);
-              oo.f(106, 3, 28, 28, 65793, 128);
-              oo.e(2, 33, 133, 14, 65793);
-              oo.e(3, 34, var9, 12, var6);
-              if (var7 == null) {
-                break L16;
-              } else {
-                ((ja) (var7)).g(108, 5);
-                break L16;
-              }
-            }
-            L17: {
-              L18: {
-                if (ll.field_k.c(127, param0)) {
-                  break L18;
-                } else {
-                  var10 = ro.field_N;
-                  if (var11 == 0) {
-                    break L17;
-                  } else {
-                    break L18;
-                  }
-                }
-              }
-              var10 = gh.field_f[param0];
-              var8 = var10;
-              break L17;
-            }
-            qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-            qp.field_w.b(var8, 68, 45, 16777215, -1);
-            g.d();
-            return;
-          }
-        } else {
-          L19: {
-            if (32 > param0) {
-              break L19;
-            } else {
-              if (-39 <= (param0 ^ -1)) {
-                L20: {
-                  if (!ll.field_k.c(127, param0)) {
-                    break L20;
-                  } else {
-                    var7 = wa.field_b[-13 + param0];
-                    break L20;
-                  }
-                }
-                L21: {
-                  L22: {
-                    var6 = 8783880;
-                    var5 = 5053184;
-                    var4 = 8135424;
-                    var8 = fh.field_g;
-                    var9 = ll.field_k.field_t[param0];
-                    if (!ll.field_k.d(param0, 53)) {
-                      break L22;
-                    } else {
-                      var8 = vo.field_n;
-                      var9 = cr.a(param0, -117);
-                      if (var11 == 0) {
-                        break L21;
-                      } else {
-                        break L22;
-                      }
+                    if (var9 != 0) {
+                        var8 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
                     }
-                  }
-                  if (var9 == 0) {
-                    break L21;
-                  } else {
-                    var8 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
-                    var10 = var8;
-                    var8 = var10;
-                    break L21;
-                  }
                 }
-                L23: {
-                  var9 = var9 * 131 / cr.a(param0, -110);
-                  oo.a(1, 1, 135, 47, var4, var5);
-                  oo.f(2, 2, 133, 30, 16777215, 32);
-                  oo.f(3, 3, 101, 28, 65793, 128);
-                  oo.f(106, 3, 28, 28, 65793, 128);
-                  oo.e(2, 33, 133, 14, 65793);
-                  oo.e(3, 34, var9, 12, var6);
-                  if (var7 == null) {
-                    break L23;
-                  } else {
+                var9 = var9 * 131 / cr.a(param0, -110);
+                oo.a(1, 1, 135, 47, var4, var5);
+                oo.f(2, 2, 133, 30, 16777215, 32);
+                oo.f(3, 3, 101, 28, 65793, 128);
+                oo.f(106, 3, 28, 28, 65793, 128);
+                oo.e(2, 33, 133, 14, 65793);
+                oo.e(3, 34, var9, 12, var6);
+                if (var7 != null) {
                     ((ja) (var7)).g(108, 5);
-                    break L23;
-                  }
                 }
-                L24: {
-                  L25: {
-                    if (ll.field_k.c(127, param0)) {
-                      break L25;
-                    } else {
-                      var10 = ro.field_N;
-                      if (var11 == 0) {
-                        break L24;
-                      } else {
-                        break L25;
-                      }
-                    }
-                  }
-                  var10 = gh.field_f[param0];
-                  var8 = var10;
-                  break L24;
+                if (!ll.field_k.c(127, param0)) {
+                    var10 = ro.field_N;
+                } else {
+                    var10 = gh.field_f[param0];
                 }
                 qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
                 qp.field_w.b(var8, 68, 45, 16777215, -1);
                 g.d();
                 return;
-              } else {
-                break L19;
-              }
             }
-          }
-          L26: {
-            var6 = 1993752;
-            if (!ll.field_k.c(127, param0)) {
-              break L26;
-            } else {
-              var7 = wa.field_b[-44 + (param0 + 26)];
-              break L26;
+            if (ll.field_k.c(127, param0)) {
+                var7 = wa.field_b[-13 + param0];
             }
-          }
-          L27: {
-            L28: {
-              var4 = 280577;
-              var5 = 2306851;
-              var8 = fh.field_g;
-              var9 = ll.field_k.field_t[param0];
-              if (!ll.field_k.d(param0, 53)) {
-                break L28;
-              } else {
+            var6 = 8783880;
+            var5 = 5053184;
+            var4 = 8135424;
+            var8 = fh.field_g;
+            var9 = ll.field_k.field_t[param0];
+            if (ll.field_k.d(param0, 53)) {
                 var8 = vo.field_n;
+                var10 = var8;
+                var8 = var10;
                 var9 = cr.a(param0, -117);
-                if (var11 == 0) {
-                  break L27;
-                } else {
-                  break L28;
+                var9 = var9 * 131 / cr.a(param0, -110);
+                oo.a(1, 1, 135, 47, var4, var5);
+                oo.f(2, 2, 133, 30, 16777215, 32);
+                oo.f(3, 3, 101, 28, 65793, 128);
+                oo.f(106, 3, 28, 28, 65793, 128);
+                oo.e(2, 33, 133, 14, 65793);
+                oo.e(3, 34, var9, 12, var6);
+                if (var7 != null) {
+                    ((ja) (var7)).g(108, 5);
                 }
-              }
+                if (!ll.field_k.c(127, param0)) {
+                    var10 = ro.field_N;
+                } else {
+                    var10 = gh.field_f[param0];
+                    var8 = var10;
+                }
+                qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+                qp.field_w.b(var8, 68, 45, 16777215, -1);
+                g.d();
+                return;
             }
-            if (var9 == 0) {
-              break L27;
-            } else {
-              var8 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
-              var10 = var8;
-              var8 = var10;
-              break L27;
+            if (var9 != 0) {
+                var8 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
+                var10 = var8;
+                var8 = var10;
             }
-          }
-          L29: {
             var9 = var9 * 131 / cr.a(param0, -110);
             oo.a(1, 1, 135, 47, var4, var5);
             oo.f(2, 2, 133, 30, 16777215, 32);
@@ -663,35 +389,169 @@ final class ki {
             oo.f(106, 3, 28, 28, 65793, 128);
             oo.e(2, 33, 133, 14, 65793);
             oo.e(3, 34, var9, 12, var6);
-            if (var7 == null) {
-              break L29;
-            } else {
-              ((ja) (var7)).g(108, 5);
-              break L29;
+            if (var7 != null) {
+                ((ja) (var7)).g(108, 5);
             }
-          }
-          L30: {
-            L31: {
-              if (ll.field_k.c(127, param0)) {
-                break L31;
-              } else {
+            if (!ll.field_k.c(127, param0)) {
                 var10 = ro.field_N;
-                if (var11 == 0) {
-                  break L30;
-                } else {
-                  break L31;
-                }
-              }
+            } else {
+                var10 = gh.field_f[param0];
+                var8 = var10;
+                var8 = var10;
             }
-            var10 = gh.field_f[param0];
-            var8 = var10;
-            break L30;
-          }
-          qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-          qp.field_w.b(var8, 68, 45, 16777215, -1);
-          g.d();
-          return;
+            qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+            qp.field_w.b(var8, 68, 45, 16777215, -1);
+            g.d();
+            return;
         }
+        if (-20 >= (param0 ^ -1)) {
+            if (32 > param0 || -39 > (param0 ^ -1)) {
+                var6 = 1993752;
+                if (ll.field_k.c(127, param0)) {
+                    var7 = wa.field_b[-44 + (param0 + 26)];
+                }
+                var4 = 280577;
+                var5 = 2306851;
+                var8 = fh.field_g;
+                var9 = ll.field_k.field_t[param0];
+                if (ll.field_k.d(param0, 53)) {
+                    var8 = vo.field_n;
+                    var9 = cr.a(param0, -117);
+                } else {
+                    if (var9 != 0) {
+                        var8 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
+                    }
+                }
+                var9 = var9 * 131 / cr.a(param0, -110);
+                oo.a(1, 1, 135, 47, var4, var5);
+                oo.f(2, 2, 133, 30, 16777215, 32);
+                oo.f(3, 3, 101, 28, 65793, 128);
+                oo.f(106, 3, 28, 28, 65793, 128);
+                oo.e(2, 33, 133, 14, 65793);
+                oo.e(3, 34, var9, 12, var6);
+                if (var7 != null) {
+                    ((ja) (var7)).g(108, 5);
+                }
+                if (!ll.field_k.c(127, param0)) {
+                    var10 = ro.field_N;
+                } else {
+                    var10 = gh.field_f[param0];
+                }
+                qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+                qp.field_w.b(var8, 68, 45, 16777215, -1);
+                g.d();
+                return;
+            }
+            if (ll.field_k.c(127, param0)) {
+                var7 = wa.field_b[-13 + param0];
+            }
+            var6 = 8783880;
+            var5 = 5053184;
+            var4 = 8135424;
+            var8 = fh.field_g;
+            var9 = ll.field_k.field_t[param0];
+            if (ll.field_k.d(param0, 53)) {
+                var8 = vo.field_n;
+                var10 = var8;
+                var8 = var10;
+                var9 = cr.a(param0, -117);
+                var9 = var9 * 131 / cr.a(param0, -110);
+                oo.a(1, 1, 135, 47, var4, var5);
+                oo.f(2, 2, 133, 30, 16777215, 32);
+                oo.f(3, 3, 101, 28, 65793, 128);
+                oo.f(106, 3, 28, 28, 65793, 128);
+                oo.e(2, 33, 133, 14, 65793);
+                oo.e(3, 34, var9, 12, var6);
+                if (var7 != null) {
+                    ((ja) (var7)).g(108, 5);
+                }
+                if (!ll.field_k.c(127, param0)) {
+                    var10 = ro.field_N;
+                } else {
+                    var10 = gh.field_f[param0];
+                    var8 = var10;
+                    var8 = var10;
+                }
+                qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+                qp.field_w.b(var8, 68, 45, 16777215, -1);
+                g.d();
+                return;
+            }
+            if (var9 != 0) {
+                var8 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
+            }
+            var9 = var9 * 131 / cr.a(param0, -110);
+            oo.a(1, 1, 135, 47, var4, var5);
+            oo.f(2, 2, 133, 30, 16777215, 32);
+            oo.f(3, 3, 101, 28, 65793, 128);
+            oo.f(106, 3, 28, 28, 65793, 128);
+            oo.e(2, 33, 133, 14, 65793);
+            oo.e(3, 34, var9, 12, var6);
+            if (var7 != null) {
+                ((ja) (var7)).g(108, 5);
+            }
+            if (!ll.field_k.c(127, param0)) {
+                var10 = ro.field_N;
+            } else {
+                var10 = gh.field_f[param0];
+            }
+            qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+            qp.field_w.b(var8, 68, 45, 16777215, -1);
+            g.d();
+            return;
+        }
+        if (ll.field_k.c(127, param0)) {
+            var7 = wa.field_b[param0];
+        }
+        var4 = 6575425;
+        var5 = 3420451;
+        var6 = 5524287;
+        var8 = fh.field_g;
+        var9 = ll.field_k.field_t[param0];
+        if (ll.field_k.d(param0, 53)) {
+            var8 = vo.field_n;
+            var9 = cr.a(param0, -117);
+            var9 = var9 * 131 / cr.a(param0, -110);
+            oo.a(1, 1, 135, 47, var4, var5);
+            oo.f(2, 2, 133, 30, 16777215, 32);
+            oo.f(3, 3, 101, 28, 65793, 128);
+            oo.f(106, 3, 28, 28, 65793, 128);
+            oo.e(2, 33, 133, 14, 65793);
+            oo.e(3, 34, var9, 12, var6);
+            if (var7 != null) {
+                ((ja) (var7)).g(108, 5);
+            }
+            if (!ll.field_k.c(127, param0)) {
+                var10 = ro.field_N;
+            } else {
+                var10 = gh.field_f[param0];
+            }
+            qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+            qp.field_w.b(var8, 68, 45, 16777215, -1);
+            g.d();
+            return;
+        }
+        if (var9 != 0) {
+            var8 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
+        }
+        var9 = var9 * 131 / cr.a(param0, -110);
+        oo.a(1, 1, 135, 47, var4, var5);
+        oo.f(2, 2, 133, 30, 16777215, 32);
+        oo.f(3, 3, 101, 28, 65793, 128);
+        oo.f(106, 3, 28, 28, 65793, 128);
+        oo.e(2, 33, 133, 14, 65793);
+        oo.e(3, 34, var9, 12, var6);
+        if (var7 != null) {
+            ((ja) (var7)).g(108, 5);
+        }
+        if (!ll.field_k.c(127, param0)) {
+            var10 = ro.field_N;
+        } else {
+            var10 = gh.field_f[param0];
+        }
+        qp.field_w.a(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+        qp.field_w.b(var8, 68, 45, 16777215, -1);
+        g.d();
     }
 
     static {

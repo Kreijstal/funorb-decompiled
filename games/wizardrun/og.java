@@ -716,80 +716,28 @@ class og extends pl {
     }
 
     void a(int param0, int param1, int param2, ub param3) {
-        RuntimeException runtimeException = null;
-        int var6 = 0;
         qe var7 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        int var6 = 0;
         try {
-          L0: {
-            L1: {
-              super.a(param0 + 0, param1, param2, param3);
-              this.e(param0 ^ param0);
-              if ((this.field_q ^ -1) != -2) {
-                break L1;
-              } else {
-                L2: {
-                  if (this.field_w instanceof qe) {
+            super.a(param0 + 0, param1, param2, param3);
+            this.e(param0 ^ param0);
+            if ((this.field_q ^ -1) == -2) {
+                if (!(!(this.field_w instanceof qe))) {
                     var7 = (qe) ((Object) this.field_w);
                     var6 = var7.a(9397, pg.field_n, param2, (ub) (this), param1, fi.field_B);
-                    if ((var6 ^ -1) != 0) {
-                      L3: {
-                        if (!this.field_Q) {
-                          break L3;
-                        } else {
-                          if (var6 >= this.field_M) {
-                            break L3;
-                          } else {
-                            if (var6 > this.field_J) {
-                              var6 = this.field_M;
-                              break L3;
-                            } else {
-                              break L3;
+                    if (!((var6 ^ -1) == 0)) {
+                        if (this.field_Q && var6 < this.field_M) {
+                            if (!(var6 <= this.field_J)) {
+                                var6 = this.field_M;
                             }
-                          }
                         }
-                      }
-                      this.field_L = var6;
-                      break L2;
-                    } else {
-                      break L2;
+                        this.field_L = var6;
                     }
-                  } else {
-                    break L2;
-                  }
                 }
                 this.field_I = d.a((byte) 44);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (runtimeException);
-
-            stackIn_15_1 = new StringBuilder().append("og.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L4;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L4;
-            }
-          }
-          throw bd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) ((Object) runtimeException), "og.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

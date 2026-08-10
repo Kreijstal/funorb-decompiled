@@ -38,69 +38,72 @@ final class pi extends fh {
                 this.field_k = up.a((byte) -67, '<', param0.a(-1));
                 break L2;
               } else {
-                if ((param1 ^ -1) == -3) {
-                  var4_int = param0.e((byte) -113);
-                  this.field_n = new int[var4_int];
-                  var5 = 0;
-                  L3: while (true) {
-                    if (var4_int <= var5) {
-                      break L2;
-                    } else {
-                      this.field_n[var5] = param0.e(1869);
-                      var5++;
-                      continue L3;
-                    }
-                  }
-                } else {
-                  if (-4 == (param1 ^ -1)) {
-                    var4_int = param0.e((byte) -107);
-                    this.field_m = new int[var4_int];
-                    this.field_l = new int[var4_int][];
+                L3: {
+                  if ((param1 ^ -1) == -3) {
+                    var4_int = param0.e((byte) -113);
+                    this.field_n = new int[var4_int];
                     var5 = 0;
                     L4: while (true) {
                       if (var4_int <= var5) {
-                        break L2;
+                        break L3;
                       } else {
-                        L5: {
-                          var6 = param0.e(param2 ^ 1869);
-                          var7 = itb.a(0, var6);
-                          if (var7 == null) {
-                            break L5;
-                          } else {
-                            this.field_m[var5] = var6;
-                            array$0 = new int[var7.field_c];
-                            this.field_l[var5] = array$0;
-                            var8 = 0;
-                            L6: while (true) {
-                              if (var8 >= var7.field_c) {
-                                break L5;
-                              } else {
-                                this.field_l[var5][var8] = param0.e(1869);
-                                var8++;
-                                continue L6;
-                              }
-                            }
-                          }
-                        }
+                        this.field_n[var5] = param0.e(1869);
                         var5++;
                         continue L4;
                       }
                     }
                   } else {
-                    if ((param1 ^ -1) == -5) {
-                      break L2;
+                    if (-4 == (param1 ^ -1)) {
+                      var4_int = param0.e((byte) -107);
+                      this.field_m = new int[var4_int];
+                      this.field_l = new int[var4_int][];
+                      var5 = 0;
+                      L5: while (true) {
+                        if (var4_int <= var5) {
+                          break L3;
+                        } else {
+                          L6: {
+                            var6 = param0.e(param2 ^ 1869);
+                            var7 = itb.a(0, var6);
+                            if (var7 == null) {
+                              break L6;
+                            } else {
+                              this.field_m[var5] = var6;
+                              array$0 = new int[var7.field_c];
+                              this.field_l[var5] = array$0;
+                              var8 = 0;
+                              L7: while (true) {
+                                if (var8 >= var7.field_c) {
+                                  break L6;
+                                } else {
+                                  this.field_l[var5][var8] = param0.e(1869);
+                                  var8++;
+                                  continue L7;
+                                }
+                              }
+                            }
+                          }
+                          var5++;
+                          continue L5;
+                        }
+                      }
                     } else {
-                      break L2;
+                      if ((param1 ^ -1) == -5) {
+                        break L3;
+                      } else {
+                        break L2;
+                      }
                     }
                   }
                 }
+                break L2;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var4 = decompiledCaughtException;
             stackIn_22_0 = (RuntimeException) (var4);
 
@@ -110,12 +113,12 @@ final class pi extends fh {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ',' + param2 + ')');

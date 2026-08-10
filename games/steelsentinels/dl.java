@@ -201,6 +201,7 @@ class dl extends lh implements lm {
     }
 
     void a(int param0, int param1, lh param2, int param3) {
+        RuntimeException runtimeException = null;
         jc var5 = null;
         lh var6 = null;
         int var7 = 0;
@@ -211,7 +212,6 @@ class dl extends lh implements lm {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = SteelSentinels.field_G;
         try {
           L0: {
@@ -244,8 +244,8 @@ class dl extends lh implements lm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
 
             stackIn_10_1 = new StringBuilder().append("dl.H(").append(param0).append(',').append(param1).append(',');
 
@@ -657,6 +657,7 @@ class dl extends lh implements lm {
     }
 
     final void a(byte param0, int param1, int param2, int param3, lh param4, int param5) {
+        RuntimeException runtimeException = null;
         jc var7 = null;
         lh var8 = null;
         int var9 = 0;
@@ -667,7 +668,6 @@ class dl extends lh implements lm {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
         var10 = SteelSentinels.field_G;
         try {
           L0: {
@@ -694,8 +694,8 @@ class dl extends lh implements lm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var7_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var7_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("dl.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 

@@ -129,220 +129,36 @@ final class fe extends se implements co, in, jn {
     }
 
     final static void a(byte param0, int param1) {
-        Object var2 = null;
+        br var2 = null;
         int var3 = 0;
-        int decompiledRegionSelector0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = ZombieDawnMulti.field_E ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param0 <= -87) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    try {
-                        var2 = (n) ((Object) nq.field_s.c(86));
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var2 == null) {
-                            statePc = 8;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        ih.a((n) (var2), 1, param1);
-                        var2 = (n) ((Object) nq.field_s.b(6));
-                        if (var3 != 0) {
-                            statePc = 9;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (var3 == 0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        var2 = dc.field_Gb.c(84);
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        if (var2 == null) {
-                            statePc = 16;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        mi.b(1, param1);
-                        var2 = dc.field_Gb.b(6);
-                        if (var3 == 0) {
-                            statePc = 12;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        if (var3 == 0) {
-                            statePc = 9;
-                        } else {
-                            statePc = 13;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    var2 = caughtException;
-                    throw fa.a((Throwable) (var2), "fe.I(" + param0 + ',' + param1 + ')');
-                }
-                case 16: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
-        }
-    }
-
-    public final void a(int param0, int param1, gn param2, int param3, int param4) {
-        boolean discarded$1 = false;
-        RuntimeException var6 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        n var4 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
+        var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            if (param3 <= -83) {
-              L1: {
-                L2: {
-                  if (param2 != this.field_O) {
-                    break L2;
-                  } else {
-                    dq.c(-120);
-                    if (!ZombieDawnMulti.field_E) {
-                      break L1;
+            if (param0 <= -87) {
+              var4 = (n) ((Object) nq.field_s.c(86));
+              L1: while (true) {
+                if (var4 == null) {
+                  var2 = dc.field_Gb.c(84);
+                  L2: while (true) {
+                    if (var2 == null) {
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     } else {
-                      break L2;
+                      mi.b(1, param1);
+                      var2 = dc.field_Gb.b(6);
+                      continue L2;
                     }
                   }
-                }
-                if (param2 != this.field_S) {
-                  break L1;
                 } else {
-                  discarded$1 = this.a((byte) -79);
-                  return;
+                  ih.a(var4, 1, param1);
+                  var4 = (n) ((Object) nq.field_s.b(6));
+                  continue L1;
                 }
               }
-              decompiledRegionSelector0 = 1;
-              break L0;
             } else {
               decompiledRegionSelector0 = 0;
               break L0;
@@ -350,25 +166,67 @@ final class fe extends se implements co, in, jn {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var6 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var6);
+          var2_ref = decompiledCaughtException;
+          throw fa.a((Throwable) ((Object) var2_ref), "fe.I(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
+        }
+    }
 
-            stackIn_10_1 = new StringBuilder().append("fe.E(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
+    public final void a(int param0, int param1, gn param2, int param3, int param4) {
+        boolean discarded$1 = false;
+        RuntimeException var6 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            if (param3 <= -83) {
+              if (param2 != this.field_O) {
+                if (param2 != this.field_S) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  discarded$1 = this.a((byte) -79);
+                  return;
+                }
+              } else {
+                dq.c(-120);
+                return;
+              }
             } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
-          throw fa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ',' + param4 + ')');
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var6 = decompiledCaughtException;
+            stackIn_9_0 = (RuntimeException) (var6);
+
+            stackIn_9_1 = new StringBuilder().append("fe.E(").append(param0).append(',').append(param1).append(',');
+
+            if (param2 == null) {
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
+              break L1;
+            } else {
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
+              break L1;
+            }
+          }
+          throw fa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ',' + param4 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -466,48 +324,34 @@ final class fe extends se implements co, in, jn {
     }
 
     public final void a(int param0, sq param1, int param2, int param3) {
-        RuntimeException var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if (-1 != (param3 ^ -1)) {
-                  break L2;
-                } else {
-                  ge.a("terms.ws", (byte) 127);
-                  if (var6 == 0) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              L3: {
+              if (-1 != (param3 ^ -1)) {
                 if (param3 == 1) {
-                  break L3;
+                  ge.a("privacy.ws", (byte) 125);
+                  break L1;
                 } else {
                   if ((param3 ^ -1) == -3) {
                     ge.a("conduct.ws", (byte) 127);
-                    if (var6 == 0) {
-                      break L1;
-                    } else {
-                      break L3;
-                    }
+                    break L1;
                   } else {
                     break L1;
                   }
                 }
+              } else {
+                ge.a("terms.ws", (byte) 127);
+                break L1;
               }
-              ge.a("privacy.ws", (byte) 125);
-              break L1;
             }
             if (param2 < -16) {
               break L0;
@@ -518,25 +362,25 @@ final class fe extends se implements co, in, jn {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var5 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var5);
+            stackIn_13_0 = (RuntimeException) (var5);
 
-            stackIn_14_1 = new StringBuilder().append("fe.C(").append(param0).append(',');
+            stackIn_13_1 = new StringBuilder().append("fe.C(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
+              break L2;
             } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
+              break L2;
             }
           }
-          throw fa.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ',' + param3 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -113,48 +113,32 @@ final class ga implements lh {
         field_d = null;
         field_c = null;
         if (param0 != -52) {
-          field_d = (String) null;
-          field_e = null;
-          field_a = null;
-          return;
-        } else {
-          field_e = null;
-          field_a = null;
-          return;
+            field_d = (String) null;
         }
+        field_e = null;
+        field_a = null;
     }
 
     final static void b(byte param0) {
         aa.field_f = new vj();
-        if (param0 == -112) {
-            return;
+        if (param0 != -112) {
+            field_e = (jc) null;
         }
-        field_e = (jc) null;
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        uf var3;
         if (param0) {
-          field_a = (String) null;
-          var3 = we.field_b;
-          var3.f(param2, -4);
-          var3.a(true, 3);
-          var3.a(true, 10);
-          var3.d(-1, param1);
-          return;
-        } else {
-          var3 = we.field_b;
-          var3.f(param2, -4);
-          var3.a(true, 3);
-          var3.a(true, 10);
-          var3.d(-1, param1);
-          return;
+            field_a = (String) null;
         }
+        uf var3 = we.field_b;
+        var3.f(param2, -4);
+        var3.a(true, 3);
+        var3.a(true, 10);
+        var3.d(-1, param1);
     }
 
     final static jc a(int param0, String param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -162,14 +146,14 @@ final class ga implements lh {
         jc stackIn_8_0 = null;
         jc stackIn_18_0 = null;
         jc stackIn_22_0 = null;
-        Object stackIn_25_0 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
+        String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var5 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -223,13 +207,7 @@ final class ga implements lh {
                       }
                     }
                     var3++;
-                    if (var5 == 0) {
-                      continue L2;
-                    } else {
-                      stackIn_25_0 = null;
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    }
+                    continue L2;
                   } else {
                     return null;
                   }
@@ -241,23 +219,23 @@ final class ga implements lh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackIn_28_0 = (RuntimeException) (var2);
+            stackIn_27_0 = (RuntimeException) (var2);
 
-            stackIn_28_1 = new StringBuilder().append("ga.A(").append(param0).append(',');
+            stackIn_27_1 = new StringBuilder().append("ga.A(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "null";
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
               break L5;
             } else {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "{...}";
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
               break L5;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0;
@@ -268,11 +246,7 @@ final class ga implements lh {
             if (decompiledRegionSelector0 == 2) {
               return stackIn_18_0;
             } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_22_0;
-              } else {
-                return (jc) ((Object) stackIn_25_0);
-              }
+              return stackIn_22_0;
             }
           }
         }

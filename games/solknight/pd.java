@@ -35,11 +35,11 @@ abstract class pd {
 
     final static void a(int param0, String param1) {
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
-        String stackIn_48_2 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        RuntimeException stackIn_46_0 = null;
+        StringBuilder stackIn_46_1 = null;
+        String stackIn_46_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -103,89 +103,75 @@ abstract class pd {
                   kk.field_d = 0;
                   break L5;
                 } else {
-                  L6: {
-                    if (ab.field_u) {
-                      break L6;
-                    } else {
-                      if (var2_int == 0) {
-                        kk.field_d = 0;
-                        break L5;
-                      } else {
-                        break L6;
-                      }
-                    }
-                  }
-                  kk.field_d = kg.field_e;
-                  if (var3 == 0) {
+                  if (ab.field_u) {
+                    kk.field_d = kg.field_e;
                     break L5;
                   } else {
-                    kk.field_d = 0;
-                    break L5;
+                    if (var2_int == 0) {
+                      kk.field_d = 0;
+                      break L5;
+                    } else {
+                      kk.field_d = kg.field_e;
+                      break L5;
+                    }
                   }
                 }
               }
-              L7: {
-                L8: {
-                  bf.field_a = ch.field_b;
-                  if (param1 == null) {
-                    break L8;
+              L6: {
+                bf.field_a = ch.field_b;
+                if (param1 == null) {
+                  if (var2_int != 0) {
+                    ab.field_u = true;
+                    break L6;
                   } else {
-                    ab.field_u = false;
-                    if (var3 == 0) {
-                      break L7;
-                    } else {
-                      break L8;
-                    }
+                    break L6;
                   }
-                }
-                if (var2_int != 0) {
-                  ab.field_u = true;
-                  break L7;
                 } else {
-                  break L7;
+                  ab.field_u = false;
+                  break L6;
                 }
               }
               kd.field_c = ql.field_v;
               break L2;
             }
-            L9: {
+            L7: {
               if (ab.field_u) {
-                break L9;
+                break L7;
               } else {
                 if (kg.field_e <= kk.field_d) {
-                  break L9;
+                  break L7;
                 } else {
                   if (ne.field_d) {
                     kd.field_c = ql.field_v;
                     bf.field_a = ch.field_b;
                     kk.field_d = 0;
-                    break L9;
+                    break L7;
                   } else {
-                    break L9;
+                    break L7;
                   }
                 }
               }
             }
-            L10: {
+            L8: {
               if (param0 >= 122) {
-                break L10;
+                break L8;
               } else {
                 var4 = (String) null;
                 pd.a(95, (String) null);
-                break L10;
+                break L8;
               }
             }
-            L11: {
+            L9: {
               s.field_ib = param1;
               if (!ab.field_u) {
-                break L11;
+                break L9;
               } else {
                 if (kk.field_d != pj.field_A) {
-                  break L11;
+                  break L9;
                 } else {
                   kk.field_d = 0;
                   ab.field_u = false;
-                  break L11;
+                  break L9;
                 }
               }
             }
@@ -195,25 +181,25 @@ abstract class pd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L12: {
+          L10: {
             var2 = decompiledCaughtException;
-            stackIn_47_0 = (RuntimeException) (var2);
+            stackIn_45_0 = (RuntimeException) (var2);
 
-            stackIn_47_1 = new StringBuilder().append("pd.G(").append(param0).append(',');
+            stackIn_45_1 = new StringBuilder().append("pd.G(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackIn_48_2 = "null";
-              break L12;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "null";
+              break L10;
             } else {
-              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackIn_48_2 = "{...}";
-              break L12;
+              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackIn_46_2 = "{...}";
+              break L10;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_48_0), stackIn_48_2 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_46_0), stackIn_46_2 + ')');
         }
     }
 

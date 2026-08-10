@@ -248,179 +248,50 @@ final class gl {
     }
 
     private final int b(int param0, int param1) {
-        boolean stackIn_4_0 = false;
-        int stackIn_10_0 = 0;
-        boolean stackIn_14_0 = false;
-        int stackIn_20_0 = 0;
-        boolean stackOut_3_0;
-        boolean stackOut_13_0;
-        int statePc = 0;
-        int var3 = 0;
-        int var4 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = Lexicominos.field_L ? 1 : 0;
-                    if (param1 != 12359) {
-                        statePc = 11;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        int var3;
+        int var4;
+        var4 = Lexicominos.field_L ? 1 : 0;
+        if (param1 != 12359) {
+          this.a(90, true);
+          var3 = this.field_d.length;
+          L0: while (true) {
+            if (param0 < var3) {
+              return var3;
+            } else {
+              if (this.field_c) {
+                if (var3 == 0) {
+                  var3 = 1;
+                  continue L0;
+                } else {
+                  var3 = var3 * this.field_g;
+                  continue L0;
                 }
-                case 1: {
-                    var3 = this.field_d.length;
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (param0 < var3) {
-                        statePc = 9;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    stackOut_3_0 = this.field_c;
-                    stackIn_10_0 = stackOut_3_0 ? 1 : 0;
-                    stackIn_4_0 = stackOut_3_0;
-                    if (var4 != 0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (stackIn_4_0) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    var3 = var3 + this.field_g;
-                    if (var4 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    if (var3 == 0) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    var3 = var3 * this.field_g;
-                    if (var4 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    var3 = 1;
-                    if (var4 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    stackIn_10_0 = var3;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    return stackIn_10_0;
-                }
-                case 11: {
-                    this.a(90, true);
-                    var3 = this.field_d.length;
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 12: {
-                    if (param0 < var3) {
-                        statePc = 19;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 13: {
-                    stackOut_13_0 = this.field_c;
-                    stackIn_20_0 = stackOut_13_0 ? 1 : 0;
-                    stackIn_14_0 = stackOut_13_0;
-                    if (var4 != 0) {
-                        statePc = 20;
-                    } else {
-                        statePc = 14;
-                    }
-                    continue stateLoop;
-                }
-                case 14: {
-                    if (stackIn_14_0) {
-                        statePc = 16;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 15: {
-                    var3 = var3 + this.field_g;
-                    if (var4 == 0) {
-                        statePc = 12;
-                    } else {
-                        statePc = 16;
-                    }
-                    continue stateLoop;
-                }
-                case 16: {
-                    if (var3 == 0) {
-                        statePc = 18;
-                    } else {
-                        statePc = 17;
-                    }
-                    continue stateLoop;
-                }
-                case 17: {
-                    var3 = var3 * this.field_g;
-                    if (var4 == 0) {
-                        statePc = 12;
-                    } else {
-                        statePc = 18;
-                    }
-                    continue stateLoop;
-                }
-                case 18: {
-                    var3 = 1;
-                    if (var4 == 0) {
-                        statePc = 12;
-                    } else {
-                        statePc = 19;
-                    }
-                    continue stateLoop;
-                }
-                case 19: {
-                    stackIn_20_0 = var3;
-                    statePc = 20;
-                    continue stateLoop;
-                }
-                case 20: {
-                    return stackIn_20_0;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                var3 = var3 + this.field_g;
+                continue L0;
+              }
             }
+          }
+        } else {
+          var3 = this.field_d.length;
+          L1: while (true) {
+            if (param0 < var3) {
+              return var3;
+            } else {
+              if (this.field_c) {
+                if (var3 == 0) {
+                  var3 = 1;
+                  continue L1;
+                } else {
+                  var3 = var3 * this.field_g;
+                  continue L1;
+                }
+              } else {
+                var3 = var3 + this.field_g;
+                continue L1;
+              }
+            }
+          }
         }
     }
 

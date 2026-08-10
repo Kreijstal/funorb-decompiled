@@ -131,13 +131,13 @@ abstract class kva implements ura {
                             var20++;
                             continue L6;
                           } else {
-                            var14 = param2[var18];
+                            var14 = var11[var18];
                             var18 = var18 + var6_int;
-                            var14 = var14 + param2[var18];
-                            var14 = var14 + param2[var19];
+                            var14 = var14 + var11[var18];
+                            var14 = var14 + var11[var19];
                             var18 = var18 + var6_int;
                             var19 = var19 + var6_int;
-                            var14 = var14 + param2[var19];
+                            var14 = var14 + var11[var19];
                             var19 = var19 + var6_int;
                             var12[var17] = (byte)(var14 >> -1751429886);
                             var17 = var17 + var6_int;
@@ -278,59 +278,16 @@ abstract class kva implements ura {
     }
 
     public void a(tu param0, int param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param1 == -28798) {
-              L1: {
-                if (this.field_i == param0) {
-                  break L1;
-                } else {
-                  this.field_i = param0;
-                  this.c(0);
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (runtimeException);
-
-            stackIn_7_1 = new StringBuilder().append("kva.H(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+        if (param1 != -28798) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            if (this.field_i != param0) {
+                this.field_i = param0;
+                this.c(0);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "kva.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -468,13 +425,13 @@ abstract class kva implements ura {
                             var20++;
                             continue L7;
                           } else {
-                            var14 = param1[var18];
+                            var14 = var11[var18];
                             var18 = var18 + var6_int;
-                            var14 = var14 + param1[var18];
+                            var14 = var14 + var11[var18];
                             var18 = var18 + var6_int;
-                            var14 = var14 + param1[var19];
+                            var14 = var14 + var11[var19];
                             var19 = var19 + var6_int;
-                            var14 = var14 + param1[var19];
+                            var14 = var14 + var11[var19];
                             var19 = var19 + var6_int;
                             var12[var17] = 0.25f * var14;
                             var17 = var17 + var6_int;

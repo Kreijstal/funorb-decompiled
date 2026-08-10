@@ -272,38 +272,41 @@ abstract class uk {
                       }
                     }
                     L21: {
-                      if (null == param0[4]) {
-                        break L21;
-                      } else {
-                        if (-1 == (param0[4].field_l ^ -1)) {
-                          break L21;
+                      L22: {
+                        if (null == param0[4]) {
+                          break L22;
                         } else {
-                          if (param0[4].field_k != 0) {
-                            vj.f(var16, var18, var17, var19);
-                            var20 = var14;
-                            L22: while (true) {
-                              if (var15 <= var20) {
-                                vj.b(kg.field_a);
-                                break L21;
-                              } else {
-                                var21 = var12;
-                                L23: while (true) {
-                                  if (var13 <= var21) {
-                                    var20 = var20 + param0[4].field_k;
-                                    continue L22;
-                                  } else {
-                                    param0[4].d(var21, var20);
-                                    var21 = var21 + param0[4].field_l;
-                                    continue L23;
+                          if (-1 == (param0[4].field_l ^ -1)) {
+                            break L22;
+                          } else {
+                            if (param0[4].field_k != 0) {
+                              vj.f(var16, var18, var17, var19);
+                              var20 = var14;
+                              L23: while (true) {
+                                if (var15 <= var20) {
+                                  vj.b(kg.field_a);
+                                  break L22;
+                                } else {
+                                  var21 = var12;
+                                  L24: while (true) {
+                                    if (var13 <= var21) {
+                                      var20 = var20 + param0[4].field_k;
+                                      continue L23;
+                                    } else {
+                                      param0[4].d(var21, var20);
+                                      var21 = var21 + param0[4].field_l;
+                                      continue L24;
+                                    }
                                   }
                                 }
                               }
+                            } else {
+                              break L21;
                             }
-                          } else {
-                            break L21;
                           }
                         }
                       }
+                      break L21;
                     }
                     decompiledRegionSelector0 = 2;
                     break L0;
@@ -319,7 +322,7 @@ abstract class uk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L24: {
+          L25: {
             var6 = decompiledCaughtException;
             stackIn_76_0 = (RuntimeException) (var6);
 
@@ -329,12 +332,12 @@ abstract class uk {
               stackIn_77_0 = (RuntimeException) ((Object) stackIn_76_0);
               stackIn_77_1 = (StringBuilder) ((Object) stackIn_76_1);
               stackIn_77_2 = "null";
-              break L24;
+              break L25;
             } else {
               stackIn_77_0 = (RuntimeException) ((Object) stackIn_76_0);
               stackIn_77_1 = (StringBuilder) ((Object) stackIn_76_1);
               stackIn_77_2 = "{...}";
-              break L24;
+              break L25;
             }
           }
           throw ma.a((Throwable) ((Object) stackIn_77_0), stackIn_77_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

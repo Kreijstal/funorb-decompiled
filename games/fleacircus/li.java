@@ -49,165 +49,128 @@ final class li implements Iterable {
     final static void a(boolean param0, byte param1) {
         int var2;
         int var3;
-        L0: {
-          L1: {
-            var3 = fleas.field_A ? 1 : 0;
-            if (wc.field_q <= 0) {
-              break L1;
-            } else {
-              if (aa.field_r == null) {
-                L2: {
-                  L3: {
-                    rh.field_p = wf.a(0, 640, 0, fg.field_q, 0, 480);
-                    if (rh.field_p == null) {
-                      break L3;
-                    } else {
-                      var2 = 2;
-                      aj.a(0, rh.field_p);
-                      if (var3 == 0) {
-                        break L2;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  var2 = 3;
-                  if (var3 == 0) {
-                    break L2;
-                  } else {
-                    L4: {
-                      if (!qh.c((byte) 71)) {
-                        break L4;
-                      } else {
-                        var2 = 0;
-                        break L4;
-                      }
-                    }
-                    var2 = 1;
-                    break L2;
-                  }
-                }
-                if (param1 == -74) {
-                  if (null != aa.field_r) {
-                    return;
-                  } else {
-                    L5: {
-                      if (sc.field_a) {
-                        pf.a(var2, 1, param0);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                    return;
-                  }
+        var3 = fleas.field_A ? 1 : 0;
+        if (wc.field_q <= 0) {
+          if (!qh.c((byte) 71)) {
+            var2 = 1;
+            if (param1 == -74) {
+              if (null == aa.field_r) {
+                if (!sc.field_a) {
+                  return;
                 } else {
+                  pf.a(var2, 1, param0);
                   return;
                 }
               } else {
-                rh.field_p = aa.field_r.b(param1 + -7862);
-                qa.a((byte) 116, 2);
-                if (var3 == 0) {
-                  L6: {
-                    if (rh.field_p == null) {
-                      break L6;
-                    } else {
-                      var2 = 2;
-                      aj.a(0, rh.field_p);
-                      if (var3 == 0) {
-                        break L0;
-                      } else {
-                        break L6;
-                      }
-                    }
-                  }
-                  var2 = 3;
-                  if (var3 == 0) {
-                    break L0;
-                  } else {
-                    break L1;
-                  }
-                } else {
-                  L7: {
-                    L8: {
-                      rh.field_p = wf.a(0, 640, 0, fg.field_q, 0, 480);
-                      if (rh.field_p == null) {
-                        break L8;
-                      } else {
-                        var2 = 2;
-                        aj.a(0, rh.field_p);
-                        if (var3 == 0) {
-                          break L7;
-                        } else {
-                          break L8;
-                        }
-                      }
-                    }
-                    var2 = 3;
-                    if (var3 == 0) {
-                      break L7;
-                    } else {
-                      L9: {
-                        if (!qh.c((byte) 71)) {
-                          break L9;
-                        } else {
-                          var2 = 0;
-                          break L9;
-                        }
-                      }
-                      var2 = 1;
-                      break L7;
-                    }
-                  }
-                  if (param1 == -74) {
-                    if (null != aa.field_r) {
-                      return;
-                    } else {
-                      L10: {
-                        if (sc.field_a) {
-                          pf.a(var2, 1, param0);
-                          break L10;
-                        } else {
-                          break L10;
-                        }
-                      }
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
+                return;
               }
-            }
-          }
-          L11: {
-            if (!qh.c((byte) 71)) {
-              break L11;
             } else {
-              var2 = 0;
-              if (var3 == 0) {
-                break L0;
-              } else {
-                break L11;
-              }
-            }
-          }
-          var2 = 1;
-          break L0;
-        }
-        if (param1 == -74) {
-          if (null == aa.field_r) {
-            if (!sc.field_a) {
-              return;
-            } else {
-              pf.a(var2, 1, param0);
               return;
             }
           } else {
-            return;
+            var2 = 0;
+            if (param1 == -74) {
+              if (null == aa.field_r) {
+                if (!sc.field_a) {
+                  return;
+                } else {
+                  pf.a(var2, 1, param0);
+                  return;
+                }
+              } else {
+                return;
+              }
+            } else {
+              return;
+            }
           }
         } else {
-          return;
+          if (aa.field_r == null) {
+            rh.field_p = wf.a(0, 640, 0, fg.field_q, 0, 480);
+            if (rh.field_p == null) {
+              var2 = 3;
+              if (param1 == -74) {
+                if (null != aa.field_r) {
+                  return;
+                } else {
+                  L0: {
+                    if (sc.field_a) {
+                      pf.a(var2, 1, param0);
+                      break L0;
+                    } else {
+                      break L0;
+                    }
+                  }
+                  return;
+                }
+              } else {
+                return;
+              }
+            } else {
+              var2 = 2;
+              aj.a(0, rh.field_p);
+              if (param1 == -74) {
+                if (null != aa.field_r) {
+                  return;
+                } else {
+                  L1: {
+                    if (sc.field_a) {
+                      pf.a(var2, 1, param0);
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  }
+                  return;
+                }
+              } else {
+                return;
+              }
+            }
+          } else {
+            rh.field_p = aa.field_r.b(param1 + -7862);
+            qa.a((byte) 116, 2);
+            if (rh.field_p == null) {
+              var2 = 3;
+              if (param1 == -74) {
+                if (null != aa.field_r) {
+                  return;
+                } else {
+                  L2: {
+                    if (sc.field_a) {
+                      pf.a(var2, 1, param0);
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                  return;
+                }
+              } else {
+                return;
+              }
+            } else {
+              var2 = 2;
+              aj.a(0, rh.field_p);
+              if (param1 == -74) {
+                if (null != aa.field_r) {
+                  return;
+                } else {
+                  L3: {
+                    if (sc.field_a) {
+                      pf.a(var2, 1, param0);
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                  return;
+                }
+              } else {
+                return;
+              }
+            }
+          }
         }
     }
 
@@ -223,32 +186,19 @@ final class li implements Iterable {
         lh var4;
         lh var5;
         int var6;
-        Object stackIn_7_0 = null;
         var6 = fleas.field_A ? 1 : 0;
         if (param0) {
           var4 = this.field_f[(int)(param1 & (long)(this.field_g + -1))];
           this.field_a = var4.field_h;
           L0: while (true) {
             if (var4 != this.field_a) {
-              stackIn_7_0 = this;
-
-              if (var6 == 0) {
-                if (((li) (this)).field_a.field_c == param1) {
-                  var5 = this.field_a;
-                  this.field_a = this.field_a.field_h;
-                  return var5;
-                } else {
-                  this.field_a = this.field_a.field_h;
-                  if (var6 == 0) {
-                    continue L0;
-                  } else {
-                    this.field_a = null;
-                    return null;
-                  }
-                }
+              if (this.field_a.field_c == param1) {
+                var5 = this.field_a;
+                this.field_a = this.field_a.field_h;
+                return var5;
               } else {
-                ((li) (this)).field_a = null;
-                return null;
+                this.field_a = this.field_a.field_h;
+                continue L0;
               }
             } else {
               this.field_a = null;

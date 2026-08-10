@@ -81,31 +81,24 @@ final class ai {
                     if ((cl.field_A ^ -1) != -4) {
                       break L4;
                     } else {
-                      L5: {
-                        if (re.field_y.a((byte) -125) <= 0) {
-                          break L5;
+                      if (re.field_y.a((byte) -125) <= 0) {
+                        if (ob.field_G < lk.a(0)) {
+                          stackIn_32_0 = og.a(2, -2);
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         } else {
-                          var1_int = re.field_y.c(1);
-                          if (var1_int != 0) {
-                            stackIn_27_0 = og.a(param0 ^ 0, var1_int);
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          } else {
-                            cl.field_A = cl.field_A + 1;
-                            if (!Transmogrify.field_A) {
-                              break L4;
-                            } else {
-                              break L5;
-                            }
-                          }
+                          break L4;
                         }
-                      }
-                      if (ob.field_G < lk.a(0)) {
-                        stackIn_32_0 = og.a(2, -2);
-                        decompiledRegionSelector0 = 2;
-                        break L0;
                       } else {
-                        break L4;
+                        var1_int = re.field_y.c(1);
+                        if (var1_int != 0) {
+                          stackIn_27_0 = og.a(param0 ^ 0, var1_int);
+                          decompiledRegionSelector0 = 1;
+                          break L0;
+                        } else {
+                          cl.field_A = cl.field_A + 1;
+                          break L4;
+                        }
                       }
                     }
                   }

@@ -112,28 +112,21 @@ abstract class qb {
           }
         }
         L1: {
-          L2: {
-            stackIn_3_0.field_r = stackIn_3_1 != 0;
-            if (!param2) {
-              break L2;
+          stackIn_3_0.field_r = stackIn_3_1 != 0;
+          if (!param2) {
+            if (20 <= this.d(20)) {
+              throw new RuntimeException();
             } else {
-              if (20 > this.a(0)) {
-                this.field_g.a(param0 ^ 488002304, var8);
-                if (!ZombieDawnMulti.field_E) {
-                  break L1;
-                } else {
-                  break L2;
-                }
-              } else {
-                throw new RuntimeException();
-              }
+              this.field_c.a(29664, var8);
+              break L1;
             }
-          }
-          if (20 <= this.d(20)) {
-            throw new RuntimeException();
           } else {
-            this.field_c.a(29664, var8);
-            break L1;
+            if (20 > this.a(0)) {
+              this.field_g.a(param0 ^ 488002304, var8);
+              break L1;
+            } else {
+              throw new RuntimeException();
+            }
           }
         }
         if (param0 != 487989472) {

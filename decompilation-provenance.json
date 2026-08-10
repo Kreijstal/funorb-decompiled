@@ -1,9 +1,9 @@
 {
   "formatVersion": 1,
-  "capturedAt": "2026-08-09T20:29:35.615Z",
+  "capturedAt": "2026-08-09T23:44:01.016Z",
   "generators": {
     "dekoblokoWork": {
-      "commit": "743cb79e9bf4229669e5a6ef15e380d8a86d3a57",
+      "commit": "f86d79b8537a5e0ac43000455df6be17f16e37b4",
       "trackedClean": true
     },
     "javaTools": {
@@ -15,10 +15,11 @@
     "script": "scripts/decompile-all-games.sh",
     "arguments": [
       ".work/games",
-      "--reuse-pipeline"
+      "--jobs",
+      "3"
     ],
     "selectedGame": null,
-    "reusePipeline": true,
+    "reusePipeline": false,
     "updateBaseline": false,
     "fixedPipelineArguments": [
       "--profile",
@@ -26,12 +27,13 @@
       "--safe-bytecode"
     ],
     "environment": {
-      "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+      "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1",
+      "PIPELINE_TIMEOUT_SECONDS": "1800"
     }
   },
   "publication": {
-    "synchronizedAt": "2026-08-09T21:08:24.383Z",
-    "destinationBaseCommit": "b14e032e43193c7fec566546ffcc4f732de38aac",
+    "synchronizedAt": "2026-08-10T02:11:31.378Z",
+    "destinationBaseCommit": "8246e45521753539de984a8829d8b3ffe3f820c3",
     "syncedGames": [
       "36cardtrick",
       "aceofskies",

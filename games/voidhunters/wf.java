@@ -1512,18 +1512,21 @@ final class wf {
               L5: {
                 var4 = (ip.field_p.height - dma.field_j) / 2;
                 if (-1 != (this.field_c ^ -1)) {
-                  if (this.field_c >= ocb.field_m.length) {
-                    break L5;
-                  } else {
-                    if (ocb.field_m[this.field_c] == null) {
-                      break L5;
+                  L6: {
+                    if (this.field_c >= ocb.field_m.length) {
+                      break L6;
                     } else {
-                      var5 = ocb.field_m[this.field_c];
-                      var6 = 1;
-                      pm.a(ip.field_p.width / 2 - (tea.a(var6, var5, 13879) / 2 + -var3), 1, var4 + 110, var5, 1, 16777215, (byte) -120);
-                      break L5;
+                      if (ocb.field_m[this.field_c] == null) {
+                        break L6;
+                      } else {
+                        var5 = ocb.field_m[this.field_c];
+                        var6 = 1;
+                        pm.a(ip.field_p.width / 2 - (tea.a(var6, var5, 13879) / 2 + -var3), 1, var4 + 110, var5, 1, 16777215, (byte) -120);
+                        break L6;
+                      }
                     }
                   }
+                  break L5;
                 } else {
                   bn.a(137, var3 + ip.field_p.width / 2 - wrb.a(param0 ^ 37, 137) / 2, (byte) 103, 20 + var4);
                   break L5;
@@ -1532,7 +1535,7 @@ final class wf {
               return;
             } else {
               if (this.a(var2, 126)) {
-                L6: {
+                L7: {
                   stackIn_12_0 = this;
 
                   stackIn_12_1 = var2;
@@ -1541,12 +1544,12 @@ final class wf {
                     stackIn_13_0 = this;
                     stackIn_13_1 = stackIn_12_1;
                     stackIn_13_2 = 0;
-                    break L6;
+                    break L7;
                   } else {
                     stackIn_13_0 = this;
                     stackIn_13_1 = stackIn_12_1;
                     stackIn_13_2 = 1;
-                    break L6;
+                    break L7;
                   }
                 }
                 this.a(stackIn_13_1, stackIn_13_2 != 0, param0 ^ 40);

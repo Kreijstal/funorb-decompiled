@@ -646,47 +646,13 @@ final class ei {
     }
 
     final void a(boolean param0, oh param1, boolean param2) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.b(param0, param1, (byte) -104);
-              if (!param2) {
-                break L1;
-              } else {
+            this.b(param0, param1, (byte) -104);
+            if (param2) {
                 this.e(69);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ei.U(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw oi.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) ((Object) runtimeException), "ei.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -908,18 +874,21 @@ final class ei {
                                       break L10;
                                     }
                                   }
-                                  var12 = stackIn_55_0;
-                                  this.field_g.a(var11, (byte) -96);
-                                  if (var12 == 0) {
-                                    break L7;
-                                  } else {
-                                    if (this.field_g.field_l == -1) {
-                                      break L7;
+                                  L11: {
+                                    var12 = stackIn_55_0;
+                                    this.field_g.a(var11, (byte) -96);
+                                    if (var12 == 0) {
+                                      break L11;
                                     } else {
-                                      lb.a(bo.field_A, 573509761);
-                                      break L7;
+                                      if (this.field_g.field_l == -1) {
+                                        break L11;
+                                      } else {
+                                        lb.a(bo.field_A, 573509761);
+                                        break L7;
+                                      }
                                     }
                                   }
+                                  break L7;
                                 }
                               }
                             }

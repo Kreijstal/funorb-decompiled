@@ -525,37 +525,40 @@ final class lg extends wd {
           if (!this.field_i) {
             break L16;
           } else {
-            if ((je.a(1) ^ -1L) > (this.field_g ^ -1L)) {
-              break L16;
-            } else {
-              var2 = (sk) ((Object) this.field_w.b(0));
-              L17: while (true) {
-                if (var2 == null) {
-                  this.field_g = 1000L + je.a(param0 + -18054);
-                  break L16;
-                } else {
-                  L18: {
-                    if (var2.field_m) {
-                      break L18;
-                    } else {
-                      if (var2.field_q) {
-                        if (!var2.field_r) {
-                          throw new RuntimeException();
-                        } else {
-                          var2.c(10);
-                          break L18;
-                        }
+            L17: {
+              if ((je.a(1) ^ -1L) > (this.field_g ^ -1L)) {
+                break L17;
+              } else {
+                var2 = (sk) ((Object) this.field_w.b(0));
+                L18: while (true) {
+                  if (var2 == null) {
+                    this.field_g = 1000L + je.a(param0 + -18054);
+                    break L17;
+                  } else {
+                    L19: {
+                      if (var2.field_m) {
+                        break L19;
                       } else {
-                        var2.field_q = true;
-                        break L18;
+                        if (var2.field_q) {
+                          if (!var2.field_r) {
+                            throw new RuntimeException();
+                          } else {
+                            var2.c(10);
+                            break L19;
+                          }
+                        } else {
+                          var2.field_q = true;
+                          break L19;
+                        }
                       }
                     }
+                    var2 = (sk) ((Object) this.field_w.c((byte) 122));
+                    continue L18;
                   }
-                  var2 = (sk) ((Object) this.field_w.c((byte) 122));
-                  continue L17;
                 }
               }
             }
+            break L16;
           }
         }
     }

@@ -226,149 +226,154 @@ final class go {
         try {
           L0: {
             L1: {
-              var4_int = 124 / ((param2 - 4) / 62);
-              if (-2 == (param0 ^ -1)) {
-                var5 = param1.a((byte) -11);
-                this.field_e = new int[var5];
-                var6 = 0;
-                L2: while (true) {
-                  if (var6 >= var5) {
-                    this.field_c = new int[var5];
-                    var6 = 0;
-                    L3: while (true) {
-                      if (var5 <= var6) {
-                        var6 = 0;
-                        L4: while (true) {
-                          if (var6 >= var5) {
-                            break L1;
-                          } else {
-                            this.field_c[var6] = (param1.a((byte) -11) << -533953584) - -this.field_c[var6];
-                            var6++;
-                            continue L4;
+              L2: {
+                var4_int = 124 / ((param2 - 4) / 62);
+                if (-2 == (param0 ^ -1)) {
+                  var5 = param1.a((byte) -11);
+                  this.field_e = new int[var5];
+                  var6 = 0;
+                  L3: while (true) {
+                    if (var6 >= var5) {
+                      this.field_c = new int[var5];
+                      var6 = 0;
+                      L4: while (true) {
+                        if (var5 <= var6) {
+                          var6 = 0;
+                          L5: while (true) {
+                            if (var6 >= var5) {
+                              break L2;
+                            } else {
+                              this.field_c[var6] = (param1.a((byte) -11) << -533953584) - -this.field_c[var6];
+                              var6++;
+                              continue L5;
+                            }
                           }
+                        } else {
+                          this.field_c[var6] = param1.a((byte) -11);
+                          var6++;
+                          continue L4;
                         }
-                      } else {
-                        this.field_c[var6] = param1.a((byte) -11);
-                        var6++;
-                        continue L3;
                       }
-                    }
-                  } else {
-                    this.field_e[var6] = param1.a((byte) -11);
-                    var6++;
-                    continue L2;
-                  }
-                }
-              } else {
-                if (param0 == 2) {
-                  this.field_b = param1.a((byte) -11);
-                  break L1;
-                } else {
-                  if ((param0 ^ -1) == -4) {
-                    var5 = param1.h(-11);
-                    this.field_f = new int[1 + var5];
-                    var6 = 0;
-                    L5: while (true) {
-                      if (var6 >= var5) {
-                        this.field_f[var5] = 9999999;
-                        break L1;
-                      } else {
-                        this.field_f[var6] = param1.h(-11);
-                        var6++;
-                        continue L5;
-                      }
-                    }
-                  } else {
-                    if (param0 == 5) {
-                      param1.h(-11);
-                      break L1;
                     } else {
-                      if (-7 != (param0 ^ -1)) {
-                        if (-8 == (param0 ^ -1)) {
-                          param1.a((byte) -11);
+                      this.field_e[var6] = param1.a((byte) -11);
+                      var6++;
+                      continue L3;
+                    }
+                  }
+                } else {
+                  if (param0 == 2) {
+                    this.field_b = param1.a((byte) -11);
+                    break L1;
+                  } else {
+                    if ((param0 ^ -1) == -4) {
+                      var5 = param1.h(-11);
+                      this.field_f = new int[1 + var5];
+                      var6 = 0;
+                      L6: while (true) {
+                        if (var6 >= var5) {
+                          this.field_f[var5] = 9999999;
                           break L1;
                         } else {
-                          if (8 == param0) {
-                            this.field_j = param1.h(-11);
-                            this.field_a = false;
+                          this.field_f[var6] = param1.h(-11);
+                          var6++;
+                          continue L6;
+                        }
+                      }
+                    } else {
+                      if (param0 == 5) {
+                        param1.h(-11);
+                        break L1;
+                      } else {
+                        if (-7 != (param0 ^ -1)) {
+                          if (-8 == (param0 ^ -1)) {
+                            param1.a((byte) -11);
                             break L1;
                           } else {
-                            if ((param0 ^ -1) != -10) {
-                              if ((param0 ^ -1) != -11) {
-                                if (11 != param0) {
-                                  if (12 != param0) {
-                                    if ((param0 ^ -1) == -14) {
-                                      var5 = param1.a((byte) -11);
-                                      this.field_i = new int[var5][];
-                                      var6 = 0;
-                                      L6: while (true) {
-                                        if (var6 >= var5) {
-                                          break L1;
-                                        } else {
-                                          L7: {
-                                            var7 = param1.h(-11);
-                                            if (0 < var7) {
-                                              array$0 = new int[var7];
-                                              this.field_i[var6] = array$0;
-                                              this.field_i[var6][0] = param1.m(0);
-                                              var8 = 1;
-                                              L8: while (true) {
-                                                if (var8 >= var7) {
-                                                  break L7;
-                                                } else {
-                                                  this.field_i[var6][var8] = param1.a((byte) -11);
-                                                  var8++;
-                                                  continue L8;
+                            if (8 == param0) {
+                              this.field_j = param1.h(-11);
+                              this.field_a = false;
+                              break L1;
+                            } else {
+                              if ((param0 ^ -1) != -10) {
+                                if ((param0 ^ -1) != -11) {
+                                  if (11 != param0) {
+                                    if (12 != param0) {
+                                      if ((param0 ^ -1) == -14) {
+                                        var5 = param1.a((byte) -11);
+                                        this.field_i = new int[var5][];
+                                        var6 = 0;
+                                        L7: while (true) {
+                                          if (var6 >= var5) {
+                                            break L2;
+                                          } else {
+                                            L8: {
+                                              var7 = param1.h(-11);
+                                              if (0 < var7) {
+                                                array$0 = new int[var7];
+                                                this.field_i[var6] = array$0;
+                                                this.field_i[var6][0] = param1.m(0);
+                                                var8 = 1;
+                                                L9: while (true) {
+                                                  if (var8 >= var7) {
+                                                    break L8;
+                                                  } else {
+                                                    this.field_i[var6][var8] = param1.a((byte) -11);
+                                                    var8++;
+                                                    continue L9;
+                                                  }
                                                 }
+                                              } else {
+                                                break L8;
                                               }
+                                            }
+                                            var6++;
+                                            continue L7;
+                                          }
+                                        }
+                                      } else {
+                                        if (14 == param0) {
+                                          break L2;
+                                        } else {
+                                          if ((param0 ^ -1) == -16) {
+                                            break L2;
+                                          } else {
+                                            if ((param0 ^ -1) == -17) {
+                                              break L2;
                                             } else {
-                                              break L7;
+                                              if (-19 == (param0 ^ -1)) {
+                                                break L2;
+                                              } else {
+                                                break L1;
+                                              }
                                             }
                                           }
-                                          var6++;
-                                          continue L6;
                                         }
                                       }
                                     } else {
-                                      if (14 == param0) {
-                                        break L1;
-                                      } else {
-                                        if ((param0 ^ -1) == -16) {
-                                          break L1;
-                                        } else {
-                                          if ((param0 ^ -1) == -17) {
-                                            break L1;
-                                          } else {
-                                            if (-19 == (param0 ^ -1)) {
-                                              break L1;
+                                      var5 = param1.h(-11);
+                                      var6 = 0;
+                                      L10: while (true) {
+                                        if (var6 >= var5) {
+                                          var6 = 0;
+                                          L11: while (true) {
+                                            if (var6 >= var5) {
+                                              break L2;
                                             } else {
-                                              break L1;
+                                              param1.a((byte) -11);
+                                              var6++;
+                                              continue L11;
                                             }
                                           }
+                                        } else {
+                                          param1.a((byte) -11);
+                                          var6++;
+                                          continue L10;
                                         }
                                       }
                                     }
                                   } else {
-                                    var5 = param1.h(-11);
-                                    var6 = 0;
-                                    L9: while (true) {
-                                      if (var6 >= var5) {
-                                        var6 = 0;
-                                        L10: while (true) {
-                                          if (var6 >= var5) {
-                                            break L1;
-                                          } else {
-                                            param1.a((byte) -11);
-                                            var6++;
-                                            continue L10;
-                                          }
-                                        }
-                                      } else {
-                                        param1.a((byte) -11);
-                                        var6++;
-                                        continue L9;
-                                      }
-                                    }
+                                    param1.h(-11);
+                                    break L1;
                                   }
                                 } else {
                                   param1.h(-11);
@@ -378,26 +383,24 @@ final class go {
                                 param1.h(-11);
                                 break L1;
                               }
-                            } else {
-                              param1.h(-11);
-                              break L1;
                             }
                           }
+                        } else {
+                          param1.a((byte) -11);
+                          break L1;
                         }
-                      } else {
-                        param1.a((byte) -11);
-                        break L1;
                       }
                     }
                   }
                 }
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L12: {
             var4 = decompiledCaughtException;
             stackIn_56_0 = (RuntimeException) (var4);
 
@@ -407,12 +410,12 @@ final class go {
               stackIn_57_0 = (RuntimeException) ((Object) stackIn_56_0);
               stackIn_57_1 = (StringBuilder) ((Object) stackIn_56_1);
               stackIn_57_2 = "null";
-              break L11;
+              break L12;
             } else {
               stackIn_57_0 = (RuntimeException) ((Object) stackIn_56_0);
               stackIn_57_1 = (StringBuilder) ((Object) stackIn_56_1);
               stackIn_57_2 = "{...}";
-              break L11;
+              break L12;
             }
           }
           throw wn.a((Throwable) ((Object) stackIn_57_0), stackIn_57_2 + ',' + param2 + ')');

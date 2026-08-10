@@ -536,19 +536,22 @@ class fi extends l {
               L6: {
                 if (null != this.field_o) {
                   L7: {
-                    discarded$6 = param3.append(" listener=");
-                    if (this.field_o instanceof fi) {
-                      break L7;
-                    } else {
-                      discarded$7 = param3.append(this.field_o);
-                      if (var6 == 0) {
-                        break L6;
+                    L8: {
+                      discarded$6 = param3.append(" listener=");
+                      if (this.field_o instanceof fi) {
+                        break L8;
                       } else {
-                        break L7;
+                        discarded$7 = param3.append(this.field_o);
+                        if (var6 == 0) {
+                          break L7;
+                        } else {
+                          break L8;
+                        }
                       }
                     }
+                    param3 = this.a(param1, (byte) 126, 1 + param0, param3);
+                    break L7;
                   }
-                  param3 = this.a(param1, (byte) 126, 1 + param0, param3);
                   break L6;
                 } else {
                   break L6;
@@ -563,7 +566,7 @@ class fi extends l {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L9: {
             var5 = decompiledCaughtException;
             stackIn_24_0 = (RuntimeException) (var5);
 
@@ -573,15 +576,15 @@ class fi extends l {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "null";
-              break L8;
+              break L9;
             } else {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "{...}";
-              break L8;
+              break L9;
             }
           }
-          L9: {
+          L10: {
 
 
             stackIn_27_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param2).append(',');
@@ -590,12 +593,12 @@ class fi extends l {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackIn_28_2 = "null";
-              break L9;
+              break L10;
             } else {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackIn_28_2 = "{...}";
-              break L9;
+              break L10;
             }
           }
           throw kg.a((Throwable) ((Object) stackIn_25_0), stackIn_28_2 + ')');

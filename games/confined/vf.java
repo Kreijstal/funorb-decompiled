@@ -24,59 +24,16 @@ class vf implements fe, pj {
     static int field_c;
 
     public void a(byte param0, int param1, boolean param2, fj param3, int param4) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (this.field_a == null) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                this.a((byte) -112, param3, param4, param1);
-                if (param0 <= -97) {
-                  break L1;
-                } else {
-                  field_c = -49;
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("vf.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param4 + ')');
+        if (!(this.field_a != null)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            this.a((byte) -112, param3, param4, param1);
+            if (param0 > -97) {
+                field_c = -49;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "vf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -244,25 +201,28 @@ class vf implements fe, pj {
                   var6 = this.field_p;
                   if (0 != var6) {
                     if (-4 != (var6 ^ -1)) {
-                      if (-2 == (var6 ^ -1)) {
-                        if (!(param1.field_p instanceof c)) {
-                          break L4;
-                        } else {
-                          ((c) ((Object) param1.field_p)).a(var3_int >> 323596033, 121, var5, this.b(param1, param0 + 2147483647), this.field_a);
-                          break L4;
-                        }
-                      } else {
-                        if (var6 == 2) {
-                          if (param1.field_p instanceof c) {
-                            ((c) ((Object) param1.field_p)).a(this.field_a, this.b(param1, -2), var5, var3_int, -103);
-                            break L4;
+                      L6: {
+                        if (-2 == (var6 ^ -1)) {
+                          if (!(param1.field_p instanceof c)) {
+                            break L6;
                           } else {
+                            ((c) ((Object) param1.field_p)).a(var3_int >> 323596033, 121, var5, this.b(param1, param0 + 2147483647), this.field_a);
                             break L4;
                           }
                         } else {
-                          break L4;
+                          if (var6 == 2) {
+                            if (param1.field_p instanceof c) {
+                              ((c) ((Object) param1.field_p)).a(this.field_a, this.b(param1, -2), var5, var3_int, -103);
+                              break L6;
+                            } else {
+                              break L4;
+                            }
+                          } else {
+                            break L4;
+                          }
                         }
                       }
+                      break L4;
                     } else {
                       break L5;
                     }
@@ -286,7 +246,7 @@ class vf implements fe, pj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var3 = decompiledCaughtException;
             stackIn_33_0 = (RuntimeException) (var3);
 
@@ -296,12 +256,12 @@ class vf implements fe, pj {
               stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
               stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackIn_34_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
               stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackIn_34_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw sd.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');

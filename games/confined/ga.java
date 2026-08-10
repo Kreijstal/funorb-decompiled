@@ -571,51 +571,18 @@ class ga extends fj implements hi {
     }
 
     final void b(fj param0, int param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_N.a((rk) (param0), (byte) -66);
-              if (param1 == 10) {
-                break L1;
-              } else {
+            this.field_N.a((rk) (param0), (byte) -66);
+            if (param1 != 10) {
                 field_I = (int[]) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ga.J(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "ga.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     void a(fj param0, int param1, int param2, int param3) {
+        RuntimeException runtimeException = null;
         vb var5 = null;
         fj var6 = null;
         int var7 = 0;
@@ -625,7 +592,6 @@ class ga extends fj implements hi {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = Confined.field_J ? 1 : 0;
         try {
           L0: {
@@ -652,8 +618,8 @@ class ga extends fj implements hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("ga.V(");
 

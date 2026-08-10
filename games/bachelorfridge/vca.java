@@ -40,34 +40,20 @@ final class vca extends bw {
     }
 
     private final void a(int param0, int param1, int param2, String param3, po param4) {
-        RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         kv var10 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        StringBuilder stackIn_8_1 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var6_int = 2 + (param4.a(param3) - -(param3.length() * 4));
-              var7 = 8 + (param4.field_B + param4.field_u - -2);
-              this.field_g = new kv(var6_int, var7);
-              bu.a(0, this.field_g);
-              ce.a(true, param0, 1 + param4.field_u, param3, 1, true);
-              db.b(119);
-              this.field_g.f((param0 & 16579836) >> -786958142);
-              if ((param1 ^ -1) == param2) {
-                break L1;
-              } else {
+            var6_int = 2 + (param4.a(param3) - -(param3.length() * 4));
+            var7 = 8 + (param4.field_B + param4.field_u - -2);
+            this.field_g = new kv(var6_int, var7);
+            bu.a(0, this.field_g);
+            ce.a(true, param0, 1 + param4.field_u, param3, 1, true);
+            db.b(119);
+            this.field_g.f((param0 & 16579836) >> -786958142);
+            if ((param1 ^ -1) != param2) {
                 var8 = var6_int;
                 var9 = var7;
                 var10 = new kv(var8, var9);
@@ -75,49 +61,9 @@ final class vca extends bw {
                 this.field_g.c(0, 0, var8, var9);
                 db.b(111);
                 this.field_g = var10;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("vca.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          L3: {
-
-
-            stackIn_8_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
-
-            if (param4 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
-          }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), stackIn_9_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) ((Object) runtimeException), "vca.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

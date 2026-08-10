@@ -468,25 +468,46 @@ class nn extends ae {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        jh var8 = null;
-        long var6 = 0L;
-        if (param0 != 0) {
-            return;
-        }
-        if (this.field_H != null) {
-            if (!(0 != param3)) {
-                this.field_H.a((na) (this), param1, param2, true, this.field_K);
-                if (this.field_H instanceof jh) {
-                    var8 = (jh) ((Object) this.field_H);
-                    if (this.field_Q != this.field_V) {
+        long var6;
+        jh var8;
+        if (param0 == 0) {
+          L0: {
+            if (this.field_H == null) {
+              break L0;
+            } else {
+              if (0 == param3) {
+                L1: {
+                  this.field_H.a((na) (this), param1, param2, true, this.field_K);
+                  if (!(this.field_H instanceof jh)) {
+                    break L1;
+                  } else {
+                    L2: {
+                      var8 = (jh) ((Object) this.field_H);
+                      if (this.field_Q == this.field_V) {
+                        break L2;
+                      } else {
                         var8.a(this.field_Q, 18985, this.field_V, param1, param2, (na) (this));
+                        break L2;
+                      }
                     }
                     var6 = k.a(param0 ^ 0);
-                    if (((var6 - this.field_bb) % 1000L ^ -1L) > -501L) {
-                        var8.a((na) (this), param2, this.field_V, 0, param1);
+                    if (((var6 - this.field_bb) % 1000L ^ -1L) <= -501L) {
+                      break L1;
+                    } else {
+                      var8.a((na) (this), param2, this.field_V, 0, param1);
+                      break L0;
                     }
+                  }
                 }
+                break L0;
+              } else {
+                break L0;
+              }
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

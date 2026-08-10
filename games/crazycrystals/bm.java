@@ -24,58 +24,16 @@ final class bm {
     }
 
     final static void a(int param0, dl[] param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 6437) {
-                break L1;
-              } else {
+            if (param0 != 6437) {
                 field_h = -125;
-                break L1;
-              }
             }
-            L2: {
-              nl.field_f = param1;
-              if (null == nl.field_f) {
-                break L2;
-              } else {
-                if (3 <= param1.length) {
-                  break L2;
-                } else {
-                  throw new IllegalArgumentException("");
-                }
-              }
+            nl.field_f = param1;
+            if (null != nl.field_f && 3 > param1.length) {
+                throw new IllegalArgumentException("");
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var2);
-
-            stackIn_8_1 = new StringBuilder().append("bm.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
-          }
-          throw dn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) ((Object) runtimeException), "bm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

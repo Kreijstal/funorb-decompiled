@@ -99,56 +99,22 @@ final class lc {
     }
 
     final static void a(boolean param0, boolean param1) {
-        RuntimeException runtimeException = null;
         int var2_int = 0;
-        int var3 = 0;
-        int stackIn_6_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var3 = ZombieDawn.field_J;
+        int var3 = ZombieDawn.field_J;
         try {
-          L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
+            if (!param0) {
                 field_c = 'D';
-                break L1;
-              }
             }
-            L2: {
-              if (param1) {
-                stackIn_6_0 = 0;
-                break L2;
-              } else {
-                stackIn_6_0 = 1;
-                break L2;
-              }
-            }
-            L3: {
-              uh.field_g = stackIn_6_0 != 0;
-              if (!param1) {
-                break L3;
-              } else {
+            uh.field_g = !param1 ? true : false;
+            if (param1) {
                 b.field_p = new int[100];
-                var2_int = 0;
-                L4: while (true) {
-                  if (var2_int >= b.field_p.length) {
-                    oe.field_c = jp.a((byte) 125, 48);
-                    break L3;
-                  } else {
+                for (var2_int = 0; var2_int < b.field_p.length; var2_int++) {
                     b.field_p[var2_int] = 256 / b.field_p.length * (var2_int * 65793);
-                    var2_int++;
-                    continue L4;
-                  }
                 }
-              }
+                oe.field_c = jp.a((byte) 125, 48);
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw sh.a((Throwable) ((Object) runtimeException), "lc.I(" + param0 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) ((Object) runtimeException), "lc.I(" + param0 + ',' + param1 + ')');
         }
     }
 

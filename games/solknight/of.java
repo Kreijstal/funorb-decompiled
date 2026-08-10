@@ -33,98 +33,31 @@ final class of {
     }
 
     private final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
-        boolean stackIn_5_0 = false;
-        boolean stackIn_6_0 = false;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = SolKnight.field_L ? 1 : 0;
-                    var3 = this.field_a.length;
-                    if (param1 < -98) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        int var3;
+        int var4;
+        var4 = SolKnight.field_L ? 1 : 0;
+        var3 = this.field_a.length;
+        if (param1 >= -98) {
+          return -103;
+        } else {
+          L0: while (true) {
+            if (var3 > param0) {
+              return var3;
+            } else {
+              if (!this.field_i) {
+                var3 = var3 + this.field_c;
+                continue L0;
+              } else {
+                if (var3 != 0) {
+                  var3 = var3 * this.field_c;
+                  continue L0;
+                } else {
+                  var3 = 1;
+                  continue L0;
                 }
-                case 1: {
-                    return -103;
-                }
-                case 2: {
-                    if (var3 <= param0) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return var3;
-                }
-                case 4: {
-                    stackIn_6_0 = this.field_i;
-                    stackIn_5_0 = stackIn_6_0;
-                    if (var4 == 0) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    return stackIn_5_0 ? 1 : 0;
-                }
-                case 6: {
-                    if (!stackIn_6_0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    if (var3 != 0) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    var3 = 1;
-                    if (var4 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    var3 = var3 * this.field_c;
-                    if (var4 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
-                    var3 = var3 + this.field_c;
-                    if (var4 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
-                    return var3;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+          }
         }
     }
 

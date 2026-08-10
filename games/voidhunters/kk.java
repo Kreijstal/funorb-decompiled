@@ -139,7 +139,7 @@ final class kk extends rqa {
                   L6: {
                     var9 = param2;
                     var10 = var8;
-                    var11 = var8;
+                    var11 = var6;
                     if (-2 != (var9 ^ -1)) {
                       if (-3 == (var9 ^ -1)) {
                         ((tva) ((Object) var10)).a(var11, 29106);

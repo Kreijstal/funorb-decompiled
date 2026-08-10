@@ -29,60 +29,16 @@ final class gh {
     }
 
     final static void a(int param0, String param1, boolean param2) {
-        RuntimeException runtimeException = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              cd.field_b = true;
-              if (!param2) {
-                stackIn_3_0 = 0;
-                break L1;
-              } else {
-                stackIn_3_0 = 1;
-                break L1;
-              }
-            }
-            L2: {
-              jd.field_l = stackIn_3_0 != 0;
-              a.field_n = new nk(lg.field_w, hc.field_f, param1, qc.field_t, jd.field_l);
-              lg.field_w.a(a.field_n, -1);
-              if (param0 == 23321) {
-                break L2;
-              } else {
+            cd.field_b = true;
+            jd.field_l = param2 ? true : false;
+            a.field_n = new nk(lg.field_w, hc.field_f, param1, qc.field_t, jd.field_l);
+            lg.field_w.a(a.field_n, -1);
+            if (param0 != 23321) {
                 field_i = (ac[]) null;
-                break L2;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("gh.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
-          }
-          throw vk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) ((Object) runtimeException), "gh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

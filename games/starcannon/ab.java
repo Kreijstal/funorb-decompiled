@@ -108,61 +108,64 @@ class ab extends dk {
                 }
               }
               L3: {
-                if (ah.field_d == null) {
-                  break L3;
-                } else {
-                  var3 = null;
-                  var6 = 0;
-                  var4 = var6;
-                  L4: while (true) {
-                    if (og.field_d.length <= var6) {
-                      if (var3 != null) {
-                        ah.field_d.a("Screenshot(s) " + (String) (var3) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
-                        break L3;
+                L4: {
+                  if (ah.field_d == null) {
+                    break L4;
+                  } else {
+                    var3 = null;
+                    var6 = 0;
+                    var4 = var6;
+                    L5: while (true) {
+                      if (og.field_d.length <= var6) {
+                        if (var3 != null) {
+                          ah.field_d.a("Screenshot(s) " + (String) (var3) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                          break L4;
+                        } else {
+                          break L3;
+                        }
                       } else {
-                        break L3;
-                      }
-                    } else {
-                      L5: {
-                        var9 = og.field_d[var6];
-                        if (var9 != null) {
-                          L6: {
-                            if (var9.field_x != 365) {
-                              break L6;
-                            } else {
-                              if ((var9.field_q ^ -1) != -140) {
-                                break L6;
+                        L6: {
+                          var9 = og.field_d[var6];
+                          if (var9 != null) {
+                            L7: {
+                              if (var9.field_x != 365) {
+                                break L7;
                               } else {
-                                break L5;
+                                if ((var9.field_q ^ -1) != -140) {
+                                  break L7;
+                                } else {
+                                  break L6;
+                                }
                               }
                             }
-                          }
-                          if (var3 != null) {
-                            var3 = (String) (var3) + ", " + var6;
-                            break L5;
+                            if (var3 != null) {
+                              var3 = (String) (var3) + ", " + var6;
+                              break L6;
+                            } else {
+                              var3 = Integer.toString(var6);
+                              break L6;
+                            }
                           } else {
-                            var3 = Integer.toString(var6);
-                            break L5;
+                            break L6;
                           }
-                        } else {
-                          break L5;
                         }
+                        var6++;
+                        continue L5;
                       }
-                      var6++;
-                      continue L4;
                     }
                   }
                 }
+                break L3;
               }
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              L7: {
+              L8: {
                 if (ah.field_d != null) {
                   ah.field_d.a(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
-                  break L7;
+                  break L8;
                 } else {
-                  break L7;
+                  break L8;
                 }
               }
               decompiledRegionSelector0 = 0;
@@ -211,64 +214,21 @@ class ab extends dk {
     }
 
     void a(int param0, int param1, uj param2, int param3) {
-        RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param0 > 27) {
-              L1: {
-                super.a(110, param1, param2, param3);
-                this.field_E = null;
-                if (!this.field_h) {
-                  break L1;
-                } else {
-                  var5_int = -this.field_s + -param1 + pe.field_d;
-                  var6 = -param3 + la.field_c + -this.field_j;
-                  this.field_E = this.a(var6, -256, var5_int);
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (runtimeException);
-
-            stackIn_7_1 = new StringBuilder().append("ab.U(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param3 + ')');
+        if (param0 <= 27) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            super.a(110, param1, param2, param3);
+            this.field_E = null;
+            if (this.field_h) {
+                var5_int = -this.field_s + -param1 + pe.field_d;
+                var6 = -param3 + la.field_c + -this.field_j;
+                this.field_E = this.a(var6, -256, var5_int);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "ab.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

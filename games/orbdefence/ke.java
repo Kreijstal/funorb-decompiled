@@ -10,6 +10,7 @@ final class ke {
     public static void a(byte param0) {
         field_c = null;
         if (param0 != -80) {
+            java.applet.Applet var2 = (java.applet.Applet) null;
             ke.a((String) null, false, (byte) 42, (java.applet.Applet) null);
         }
         field_a = null;

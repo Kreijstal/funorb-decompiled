@@ -371,6 +371,7 @@ final class lj extends di {
 
     final synchronized void b(int param0, int param1) {
         if (param1 < 103) {
+            fj var4 = (fj) null;
             this.a((ki) null, (vd) null, (byte) -88, (fj) null, 47);
         }
         this.field_k = param0;
@@ -562,6 +563,7 @@ final class lj extends di {
             this.field_l = 0L;
             this.field_z = param0 ? true : false;
             if (param1 >= -56) {
+                he var8 = (he) null;
                 this.a((he) null, false, -61);
             }
             var5_int = this.field_S.f();
@@ -946,6 +948,7 @@ final class lj extends di {
     final synchronized void a(int param0, int param1, byte param2) {
         this.b(param1, param0, (byte) -114);
         if (param2 <= 63) {
+            fj var5 = (fj) null;
             this.a(13, false, (fj) null);
         }
     }
@@ -961,6 +964,7 @@ final class lj extends di {
             this.field_z = param3 ? true : false;
             this.field_M = param1;
             if (param5 > -103) {
+                fj var9 = (fj) null;
                 this.a(true, -73, true, (fj) null);
             }
             this.field_r = param0 ? true : false;
@@ -1872,6 +1876,7 @@ final class lj extends di {
     final synchronized void e(int param0) {
         this.a(true, 8841);
         if (param0 <= 61) {
+            he var3 = (he) null;
             this.a((he) null, false, -3);
         }
     }
@@ -2367,47 +2372,13 @@ final class lj extends di {
     }
 
     private final synchronized void a(int param0, boolean param1, fj param2) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.a(param1, -122, true, param2);
-              if (param0 == -23335) {
-                break L1;
-              } else {
+            this.a(param1, -122, true, param2);
+            if (param0 != -23335) {
                 this.field_x = (int[]) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("lj.M(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) ((Object) runtimeException), "lj.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -29,12 +29,7 @@ final class fl {
                   this.field_a = var5.field_b;
                   return var5;
                 } else {
-                  if (var3 == 0) {
-                    continue L0;
-                  } else {
-                    var2 = 6 % ((-26 - param0) / 58);
-                    return null;
-                  }
+                  continue L0;
                 }
               } else {
                 var2 = 6 % ((-26 - param0) / 58);
@@ -56,12 +51,7 @@ final class fl {
                 this.field_a = var4.field_b;
                 return var4;
               } else {
-                if (var3 == 0) {
-                  continue L1;
-                } else {
-                  var2 = 6 % ((-26 - param0) / 58);
-                  return null;
-                }
+                continue L1;
               }
             } else {
               var2 = 6 % ((-26 - param0) / 58);
@@ -76,46 +66,28 @@ final class fl {
         wf var5;
         int var6;
         wf var7;
-        int stackIn_7_0 = 0;
         var6 = Transmogrify.field_A ? 1 : 0;
         var4 = this.field_e[(int)((long)(-1 + this.field_d) & param0)];
         this.field_b = var4.field_b;
         L0: while (true) {
-          L1: {
-            L2: {
-              if (this.field_b == var4) {
-                break L2;
-              } else {
-                stackIn_7_0 = ((this.field_b.field_c ^ -1L) < (param0 ^ -1L) ? -1 : ((this.field_b.field_c ^ -1L) == (param0 ^ -1L) ? 0 : 1));
-
-                if (var6 != 0) {
-                  break L1;
-                } else {
-                  if (stackIn_7_0 != 0) {
-                    this.field_b = this.field_b.field_b;
-                    if (var6 == 0) {
-                      continue L0;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    var5 = this.field_b;
-                    this.field_b = this.field_b.field_b;
-                    return var5;
-                  }
-                }
-              }
-            }
+          if (this.field_b == var4) {
             this.field_b = null;
-            stackIn_7_0 = param1;
-            break L1;
-          }
-          if (stackIn_7_0 == 0) {
-            return null;
+            if (param1 == 0) {
+              return null;
+            } else {
+              var7 = (wf) null;
+              this.a(28L, (byte) 9, (wf) null);
+              return null;
+            }
           } else {
-            var7 = (wf) null;
-            this.a(28L, (byte) 9, (wf) null);
-            return null;
+            if ((this.field_b.field_c ^ -1L) != (param0 ^ -1L)) {
+              this.field_b = this.field_b.field_b;
+              continue L0;
+            } else {
+              var5 = this.field_b;
+              this.field_b = this.field_b.field_b;
+              return var5;
+            }
           }
         }
     }
@@ -199,27 +171,26 @@ final class fl {
     }
 
     fl(int param0) {
-        wf dupTemp$0 = null;
-        wf var3 = null;
-        int var4 = Transmogrify.field_A ? 1 : 0;
+        wf dupTemp$1 = null;
+        int var2;
+        wf var3;
         this.field_f = 0;
         this.field_e = new wf[param0];
         this.field_d = param0;
-        int var2 = 0;
-        do {
-            if (param0 <= var2) {
-                return;
-            }
-            dupTemp$0 = new wf();
-            var3 = dupTemp$0;
-            this.field_e[var2] = dupTemp$0;
+        var2 = 0;
+        L0: while (true) {
+          if (param0 > var2) {
+            dupTemp$1 = new wf();
+            var3 = dupTemp$1;
+            this.field_e[var2] = dupTemp$1;
             var3.field_b = var3;
             var3.field_f = var3;
             var2++;
-            if (var4 != 0) {
-                return;
-            }
-        } while (var4 == 0);
+            continue L0;
+          } else {
+            return;
+          }
+        }
     }
 
     static {

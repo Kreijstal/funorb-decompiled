@@ -314,26 +314,29 @@ final class he {
                 }
               }
               L11: {
-                if (ph.field_c > param2) {
-                  break L11;
-                } else {
-                  if (var6 < ph.field_h) {
-                    var11 = ph.field_j * var6 - -var7 - -(var6 + -param2 & 1);
-                    var12 = 1 + var9 - var7 >> -1345641023;
-                    L12: while (true) {
-                      var12--;
-                      if (-1 < (var12 ^ -1)) {
-                        break L11;
-                      } else {
-                        ph.field_e[var11] = 16777215;
-                        var11 += 2;
-                        continue L12;
-                      }
-                    }
+                L12: {
+                  if (ph.field_c > param2) {
+                    break L12;
                   } else {
-                    break L11;
+                    if (var6 < ph.field_h) {
+                      var11 = ph.field_j * var6 - -var7 - -(var6 + -param2 & 1);
+                      var12 = 1 + var9 - var7 >> -1345641023;
+                      L13: while (true) {
+                        var12--;
+                        if (-1 < (var12 ^ -1)) {
+                          break L12;
+                        } else {
+                          ph.field_e[var11] = 16777215;
+                          var11 += 2;
+                          continue L13;
+                        }
+                      }
+                    } else {
+                      break L11;
+                    }
                   }
                 }
+                break L11;
               }
               decompiledRegionSelector0 = 1;
               break L0;

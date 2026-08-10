@@ -37,11 +37,11 @@ final class jk extends ci implements ka {
     }
 
     private final void a(boolean param0, byte param1, wg param2) {
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        String stackIn_38_2 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
@@ -52,117 +52,77 @@ final class jk extends ci implements ka {
         try {
           L0: {
             L1: {
-              L2: {
-                this.field_tb = true;
-                if (param2.field_c) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (null == param2.field_a) {
-                      break L3;
-                    } else {
-                      var4 = pc.field_d;
-                      if (null != this.field_vb) {
-                        this.field_vb.a((byte) 22);
-                        if (var6 == 0) {
-                          break L1;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        break L1;
-                      }
-                    }
-                  }
+              this.field_tb = true;
+              if (param2.field_c) {
+                var4 = lk.field_d;
+                break L1;
+              } else {
+                if (null == param2.field_a) {
                   var4 = param2.field_d;
                   if (-249 == (param2.field_b ^ -1)) {
-                    L4: {
+                    L2: {
                       if (!param0) {
                         pk.i(918092705);
-                        break L4;
+                        break L2;
                       } else {
-                        break L4;
+                        break L2;
                       }
                     }
                     this.field_wb = true;
                     var4 = ce.field_a;
-                    if (var6 == 0) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                } else {
+                  var4 = pc.field_d;
+                  if (null != this.field_vb) {
+                    this.field_vb.a((byte) 22);
+                    break L1;
                   } else {
                     break L1;
                   }
                 }
               }
-              var4 = lk.field_d;
-              break L1;
             }
-            L5: {
-              L6: {
-                var5 = new lj((ci) (this), uc.field_g, var4);
-                if (!param2.field_c) {
-                  break L6;
-                } else {
-                  if (!param2.field_f) {
+            L3: {
+              var5 = new lj((ci) (this), uc.field_g, var4);
+              if (!param2.field_c) {
+                L4: {
+                  if (this.field_wb) {
                     var5.a(0, dd.field_a, (dg) (this));
-                    if (var6 == 0) {
-                      break L5;
-                    } else {
-                      break L6;
-                    }
+                    break L4;
                   } else {
-                    this.c(-3399, new qe((jk) (this)));
-                    decompiledRegionSelector0 = 0;
-                    break L0;
-                  }
-                }
-              }
-              L7: {
-                if (this.field_wb) {
-                  var5.a(0, dd.field_a, (dg) (this));
-                  break L7;
-                } else {
-                  L8: {
                     if (-6 == (param2.field_b ^ -1)) {
-                      break L8;
+                      var5.a(11, cl.field_k, 1);
+                      var5.a(17, ph.field_e, 1);
+                      break L4;
                     } else {
                       var5.a(-1, u.field_e, 1);
-                      if (var6 == 0) {
-                        break L7;
-                      } else {
-                        break L8;
-                      }
+                      break L4;
                     }
                   }
-                  var5.a(11, cl.field_k, 1);
-                  var5.a(17, ph.field_e, 1);
-                  if (var6 == 0) {
-                    break L7;
-                  } else {
-                    var5.a(0, dd.field_a, (dg) (this));
-                    break L7;
-                  }
                 }
-              }
-              L9: {
                 if (3 != param2.field_b) {
-                  break L9;
+                  if (6 == param2.field_b) {
+                    var5.a(9, ik.field_d, 1);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
                 } else {
                   var5.a(7, qd.field_a, 1);
-                  if (var6 == 0) {
-                    break L5;
-                  } else {
-                    break L9;
-                  }
+                  break L3;
                 }
-              }
-              if (6 == param2.field_b) {
-                var5.a(9, ik.field_d, 1);
-                break L5;
               } else {
-                break L5;
+                if (!param2.field_f) {
+                  var5.a(0, dd.field_a, (dg) (this));
+                  break L3;
+                } else {
+                  this.c(-3399, new qe((jk) (this)));
+                  decompiledRegionSelector0 = 0;
+                  break L0;
+                }
               }
             }
             this.c(-3399, var5);
@@ -176,25 +136,25 @@ final class jk extends ci implements ka {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L5: {
             var4_ref = decompiledCaughtException;
-            stackIn_37_0 = (RuntimeException) (var4_ref);
+            stackIn_33_0 = (RuntimeException) (var4_ref);
 
-            stackIn_37_1 = new StringBuilder().append("jk.QA(").append(param0).append(',').append(param1).append(',');
+            stackIn_33_1 = new StringBuilder().append("jk.QA(").append(param0).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackIn_38_2 = "null";
-              break L10;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "null";
+              break L5;
             } else {
-              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
-              stackIn_38_2 = "{...}";
-              break L10;
+              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackIn_34_2 = "{...}";
+              break L5;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_38_0), stackIn_38_2 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

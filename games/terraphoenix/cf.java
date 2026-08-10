@@ -63,89 +63,92 @@ final class cf implements java.awt.event.KeyListener, java.awt.event.FocusListen
         try {
           L0: {
             L1: {
-              if (null == th.field_g) {
-                break L1;
-              } else {
-                L2: {
-                  L3: {
-                    eb.field_F = 0;
-                    var2_int = param0.getKeyCode();
-                    if (var2_int < 0) {
-                      break L3;
-                    } else {
-                      if (var2_int < lf.field_a.length) {
-                        var2_int = lf.field_a[var2_int];
-                        if (-1 != (128 & var2_int ^ -1)) {
-                          var2_int = -1;
-                          break L2;
-                        } else {
-                          break L2;
-                        }
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  var2_int = -1;
+              L2: {
+                if (null == th.field_g) {
                   break L2;
-                }
-                L4: {
-                  if (0 > dj.field_e) {
-                    break L4;
-                  } else {
-                    if (var2_int < 0) {
-                      break L4;
-                    } else {
-                      sj.field_g[dj.field_e] = var2_int;
-                      dj.field_e = dj.field_e + 1 & 127;
-                      if (vl.field_h == dj.field_e) {
-                        dj.field_e = -1;
+                } else {
+                  L3: {
+                    L4: {
+                      eb.field_F = 0;
+                      var2_int = param0.getKeyCode();
+                      if (var2_int < 0) {
                         break L4;
                       } else {
-                        break L4;
+                        if (var2_int < lf.field_a.length) {
+                          var2_int = lf.field_a[var2_int];
+                          if (-1 != (128 & var2_int ^ -1)) {
+                            var2_int = -1;
+                            break L3;
+                          } else {
+                            break L3;
+                          }
+                        } else {
+                          break L4;
+                        }
+                      }
+                    }
+                    var2_int = -1;
+                    break L3;
+                  }
+                  L5: {
+                    if (0 > dj.field_e) {
+                      break L5;
+                    } else {
+                      if (var2_int < 0) {
+                        break L5;
+                      } else {
+                        sj.field_g[dj.field_e] = var2_int;
+                        dj.field_e = dj.field_e + 1 & 127;
+                        if (vl.field_h == dj.field_e) {
+                          dj.field_e = -1;
+                          break L5;
+                        } else {
+                          break L5;
+                        }
                       }
                     }
                   }
-                }
-                L5: {
-                  if (var2_int >= 0) {
-                    var3 = 1 + u.field_g & 127;
-                    if (var3 == r.field_V) {
-                      break L5;
+                  L6: {
+                    if (var2_int >= 0) {
+                      var3 = 1 + u.field_g & 127;
+                      if (var3 == r.field_V) {
+                        break L6;
+                      } else {
+                        ll.field_b[u.field_g] = var2_int;
+                        ah.field_E[u.field_g] = (char)0;
+                        u.field_g = var3;
+                        break L6;
+                      }
                     } else {
-                      ll.field_b[u.field_g] = var2_int;
-                      ah.field_E[u.field_g] = (char)0;
-                      u.field_g = var3;
-                      break L5;
+                      break L6;
                     }
-                  } else {
-                    break L5;
                   }
-                }
-                var3 = param0.getModifiers();
-                if ((var3 & 10) != 0) {
-                  param0.consume();
-                  break L1;
-                } else {
-                  if ((var2_int ^ -1) == -86) {
+                  var3 = param0.getModifiers();
+                  if ((var3 & 10) != 0) {
                     param0.consume();
                     break L1;
                   } else {
-                    if (10 != var2_int) {
-                      break L1;
-                    } else {
+                    if ((var2_int ^ -1) == -86) {
                       param0.consume();
                       break L1;
+                    } else {
+                      if (10 != var2_int) {
+                        break L2;
+                      } else {
+                        param0.consume();
+                        break L1;
+                      }
                     }
                   }
                 }
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var2 = decompiledCaughtException;
             stackIn_27_0 = (RuntimeException) (var2);
 
@@ -155,12 +158,12 @@ final class cf implements java.awt.event.KeyListener, java.awt.event.FocusListen
               stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
               stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackIn_28_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
               stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackIn_28_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw qk.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');

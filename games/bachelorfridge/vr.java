@@ -351,7 +351,7 @@ final class vr {
                           break L10;
                         }
                       }
-                      throw pe.a((Throwable) ((Object) stackIn_40_0), (stackIn_40_2 != 0) + " " + param3 + " " + param0.length + " " + wc.a(var9, -31303, param0.length) + " " + wc.a(var9, -31303, param0.length - 2) + " " + this.field_f.field_p[param3] + " " + this.field_f.field_b);
+                      throw pe.a((Throwable) ((Object) stackIn_40_0), (stackIn_40_2 != 0) + " " + param3 + " " + var9.length + " " + wc.a(var9, -31303, var9.length) + " " + wc.a(var9, -31303, var9.length - 2) + " " + this.field_f.field_p[param3] + " " + this.field_f.field_b);
                     }
                     L11: {
                       if (!this.field_g) {

@@ -1086,13 +1086,18 @@ final class hf {
                         break L7;
                       } else {
                         if (-291 < (ja.field_s ^ -1)) {
-                          if (an.field_g <= 9) {
-                            if (558 < an.field_g) {
-                              if (an.field_g >= 631) {
+                          if (an.field_g > 9) {
+                            if (82 > an.field_g) {
+                              this.field_s = vf.field_o;
+                              if (558 >= an.field_g) {
                                 break L7;
                               } else {
-                                this.field_s = vf.field_o;
-                                break L7;
+                                if (an.field_g >= 631) {
+                                  break L7;
+                                } else {
+                                  this.field_s = vf.field_o;
+                                  break L7;
+                                }
                               }
                             } else {
                               if (558 >= an.field_g) {

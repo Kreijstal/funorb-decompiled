@@ -156,62 +156,65 @@ final class ff extends uh {
             L1: {
               var4_int = -121 % ((1 - param2) / 57);
               if (param1 != 1) {
-                if (param1 != 2) {
-                  if ((param1 ^ -1) == -4) {
-                    var5 = param0.j(7909);
-                    this.field_n = new int[var5][];
-                    this.field_r = new int[var5];
-                    var6 = 0;
-                    L2: while (true) {
-                      if (var6 >= var5) {
-                        break L1;
-                      } else {
-                        L3: {
-                          var7 = param0.i(-1174051992);
-                          var8 = qf.a(var7, 0);
-                          if (var8 == null) {
-                            break L3;
-                          } else {
-                            this.field_r[var6] = var7;
-                            array$0 = new int[var8.field_a];
-                            this.field_n[var6] = array$0;
-                            var9 = 0;
-                            L4: while (true) {
-                              if (var8.field_a <= var9) {
-                                break L3;
-                              } else {
-                                this.field_n[var6][var9] = param0.i(-1174051992);
-                                var9++;
-                                continue L4;
+                L2: {
+                  if (param1 != 2) {
+                    if ((param1 ^ -1) == -4) {
+                      var5 = param0.j(7909);
+                      this.field_n = new int[var5][];
+                      this.field_r = new int[var5];
+                      var6 = 0;
+                      L3: while (true) {
+                        if (var6 >= var5) {
+                          break L2;
+                        } else {
+                          L4: {
+                            var7 = param0.i(-1174051992);
+                            var8 = qf.a(var7, 0);
+                            if (var8 == null) {
+                              break L4;
+                            } else {
+                              this.field_r[var6] = var7;
+                              array$0 = new int[var8.field_a];
+                              this.field_n[var6] = array$0;
+                              var9 = 0;
+                              L5: while (true) {
+                                if (var8.field_a <= var9) {
+                                  break L4;
+                                } else {
+                                  this.field_n[var6][var9] = param0.i(-1174051992);
+                                  var9++;
+                                  continue L5;
+                                }
                               }
                             }
                           }
+                          var6++;
+                          continue L3;
                         }
-                        var6++;
-                        continue L2;
+                      }
+                    } else {
+                      if (-5 != (param1 ^ -1)) {
+                        break L2;
+                      } else {
+                        break L1;
                       }
                     }
                   } else {
-                    if (-5 != (param1 ^ -1)) {
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                } else {
-                  var5 = param0.j(7909);
-                  this.field_s = new int[var5];
-                  var6 = 0;
-                  L5: while (true) {
-                    if (var6 >= var5) {
-                      break L1;
-                    } else {
-                      this.field_s[var6] = param0.i(-1174051992);
-                      var6++;
-                      continue L5;
+                    var5 = param0.j(7909);
+                    this.field_s = new int[var5];
+                    var6 = 0;
+                    L6: while (true) {
+                      if (var6 >= var5) {
+                        break L2;
+                      } else {
+                        this.field_s[var6] = param0.i(-1174051992);
+                        var6++;
+                        continue L6;
+                      }
                     }
                   }
                 }
+                break L1;
               } else {
                 this.field_t = uj.a(-46, '<', param0.a(-50));
                 break L1;
@@ -221,7 +224,7 @@ final class ff extends uh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var4 = decompiledCaughtException;
             stackIn_20_0 = (RuntimeException) (var4);
 
@@ -231,12 +234,12 @@ final class ff extends uh {
               stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
               stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackIn_21_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
               stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackIn_21_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw sd.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ',' + param2 + ')');

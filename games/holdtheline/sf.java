@@ -78,48 +78,14 @@ final class sf extends mm implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.b(0);
-              param2.drawImage(this.field_b, param1, param0, (java.awt.image.ImageObserver) (this));
-              if (param3 == 34) {
-                break L1;
-              } else {
+            this.b(0);
+            param2.drawImage(this.field_b, param1, param0, (java.awt.image.ImageObserver) (this));
+            if (param3 != 34) {
                 field_o = (String) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("sf.D(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) ((Object) runtimeException), "sf.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -149,46 +115,12 @@ final class sf extends mm implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (this.field_i != param0) {
-                break L1;
-              } else {
+            if (this.field_i == param0) {
                 this.field_i = null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("sf.removeConsumer(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) ((Object) runtimeException), "sf.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -262,87 +194,40 @@ final class sf extends mm implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final static void a(int param0) {
-        RuntimeException runtimeException = null;
         ui var1 = null;
-        int var2 = 0;
-        boolean stackIn_20_0 = false;
-        RuntimeException decompiledCaughtException = null;
-        var2 = HoldTheLine.field_D;
+        int var2 = HoldTheLine.field_D;
         try {
-          L0: {
-            L1: {
-              pk.field_G.d();
-              if (param0 == -1379) {
-                break L1;
-              } else {
+            pk.field_G.d();
+            if (param0 != -1379) {
                 sf.c(-82);
-                break L1;
-              }
             }
-            L2: {
-              jd.field_G.d();
-              gg.field_G = gg.field_G - 1;
-              if (0 == gg.field_G) {
+            jd.field_G.d();
+            gg.field_G = gg.field_G - 1;
+            if (!(0 != gg.field_G)) {
                 gg.field_G = 200;
                 var1 = (ui) ((Object) ol.field_b.b((byte) 118));
-                L3: while (true) {
-                  if (var1 == null) {
-                    if (null != ob.field_b) {
-                      var1 = (ui) ((Object) ob.field_b.b((byte) 120));
-                      L4: while (true) {
-                        if (var1 == null) {
-                          break L2;
-                        } else {
-                          L5: {
-                            if (var1.field_k.b(88)) {
-                              break L5;
-                            } else {
-                              var1.d(0);
-                              break L5;
-                            }
-                          }
-                          var1 = (ui) ((Object) ob.field_b.c((byte) -51));
-                          continue L4;
-                        }
-                      }
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    L6: {
-                      if (!var1.field_k.b(116)) {
+                while (var1 != null) {
+                    if (!(var1.field_k.b(116))) {
                         var1.d(0);
-                        break L6;
-                      } else {
-                        break L6;
-                      }
                     }
                     var1 = (ui) ((Object) ol.field_b.c((byte) 93));
-                    continue L3;
-                  }
                 }
-              } else {
-                break L2;
-              }
-            }
-            L7: {
-              if (i.field_m == null) {
-                break L7;
-              } else {
-                stackIn_20_0 = i.field_m.c((byte) 85);
-                if (!stackIn_20_0) {
-                  break L7;
-                } else {
-                  break L7;
+                if (!(null == ob.field_b)) {
+                    var1 = (ui) ((Object) ob.field_b.b((byte) 120));
+                    while (var1 != null) {
+                        if (!var1.field_k.b(88)) {
+                            var1.d(0);
+                        }
+                        var1 = (ui) ((Object) ob.field_b.c((byte) -51));
+                    }
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) runtimeException), "sf.J(" + param0 + ')');
+            if (i.field_m != null) {
+                if (i.field_m.c((byte) 85)) {
+                }
+            }
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) ((Object) runtimeException), "sf.J(" + param0 + ')');
         }
     }
 

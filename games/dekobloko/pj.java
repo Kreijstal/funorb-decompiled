@@ -59,19 +59,17 @@ final class pj extends sf {
     }
 
     final static void a(ve param0, byte param1) {
-        RuntimeException runtimeException = null;
         ve var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
-        boolean stackIn_6_0 = false;
-        int stackIn_12_0 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_5_0;
         var3 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -80,50 +78,26 @@ final class pj extends sf {
               var2 = (ve) ((Object) h.field_b.c((byte) -99));
               L1: while (true) {
                 L2: {
-                  L3: {
-                    L4: {
-                      if (var2 == null) {
-                        break L4;
-                      } else {
-                        stackOut_5_0 = var2.a(param0, false);
-                        stackIn_12_0 = stackOut_5_0 ? 1 : 0;
-                        stackIn_6_0 = stackOut_5_0;
-                        if (var3 != 0) {
-                          break L3;
-                        } else {
-                          if (!stackIn_6_0) {
-                            break L4;
-                          } else {
-                            var2 = (ve) ((Object) h.field_b.d(true));
-                            if (var3 == 0) {
-                              continue L1;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                      }
+                  if (var2 == null) {
+                    break L2;
+                  } else {
+                    if (!var2.a(param0, false)) {
+                      break L2;
+                    } else {
+                      var2 = (ve) ((Object) h.field_b.d(true));
+                      continue L1;
                     }
-                    L5: {
-                      if (var2 != null) {
-                        break L5;
-                      } else {
-                        h.field_b.a(param0, 2777);
-                        if (var3 == 0) {
-                          break L2;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    stackIn_12_0 = 114;
-                    break L3;
                   }
-                  fm.a((byte) stackIn_12_0, param0, var2);
-                  break L2;
                 }
-                decompiledRegionSelector0 = 1;
-                break L0;
+                if (var2 != null) {
+                  stackIn_10_0 = 114;
+                  fm.a((byte) stackIn_10_0, param0, var2);
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  h.field_b.a(param0, 2777);
+                  return;
+                }
               }
             } else {
               decompiledRegionSelector0 = 0;
@@ -132,25 +106,25 @@ final class pj extends sf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            runtimeException = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (runtimeException);
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackIn_14_0 = (RuntimeException) (var2_ref);
 
-            stackIn_16_1 = new StringBuilder().append("pj.E(");
+            stackIn_14_1 = new StringBuilder().append("pj.E(");
 
             if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L6;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
+              break L3;
             } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L6;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
+              break L3;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

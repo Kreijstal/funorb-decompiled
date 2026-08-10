@@ -143,7 +143,7 @@ final class p extends uc {
     }
 
     private final boolean c(byte param0) {
-        int stackIn_74_0 = 0;
+        int stackIn_78_0 = 0;
         int var2;
         int var3;
         var3 = CrazyCrystals.field_B;
@@ -220,7 +220,16 @@ final class p extends uc {
                 }
               }
               L7: {
-                if (!this.field_e.b(true)) {
+                if (this.field_e.b(true)) {
+                  L8: {
+                    if (-1 > (gi.field_m ^ -1)) {
+                      gi.field_m = 0;
+                      tb.field_d.a(fk.field_x[0], 100, 96 * gi.field_m, 8192);
+                      break L8;
+                    } else {
+                      break L8;
+                    }
+                  }
                   if (!this.field_e.e(-19741)) {
                     break L7;
                   } else {
@@ -247,28 +256,28 @@ final class p extends uc {
                 }
               }
               if (this.field_e.g(param0 ^ -70)) {
-                L8: {
+                L9: {
                   var2 = -6 + -this.field_g + qh.field_i;
                   if (-1 >= (var2 ^ -1)) {
                     if (-65 > (var2 ^ -1)) {
                       var2 = 64;
-                      break L8;
+                      break L9;
                     } else {
-                      break L8;
+                      break L9;
                     }
                   } else {
                     var2 = 0;
-                    break L8;
+                    break L9;
                   }
                 }
-                L9: {
+                L10: {
                   if (this.field_e.a(true)) {
-                    break L9;
+                    break L10;
                   } else {
                     if (var2 == gi.field_m) {
                       break L2;
                     } else {
-                      break L9;
+                      break L10;
                     }
                   }
                 }
@@ -285,26 +294,14 @@ final class p extends uc {
               }
             }
           }
-          L10: {
+          L11: {
             if (3 == this.field_e.field_c) {
-              L11: {
+              L12: {
                 if (!this.field_e.d(96)) {
-                  break L11;
+                  break L12;
                 } else {
                   if (-1 > (qd.field_r ^ -1)) {
                     ia.a(-658435066, -8 + qd.field_r);
-                    break L11;
-                  } else {
-                    break L11;
-                  }
-                }
-              }
-              L12: {
-                if (!this.field_e.b(107)) {
-                  break L12;
-                } else {
-                  if (-65 < (qd.field_r ^ -1)) {
-                    ia.a(-658435066, 8 + qd.field_r);
                     break L12;
                   } else {
                     break L12;
@@ -312,64 +309,84 @@ final class p extends uc {
                 }
               }
               L13: {
-                if (!this.field_e.b(true)) {
-                  if (!this.field_e.e(-19741)) {
+                if (!this.field_e.b(107)) {
+                  break L13;
+                } else {
+                  if (-65 < (qd.field_r ^ -1)) {
+                    ia.a(-658435066, 8 + qd.field_r);
                     break L13;
                   } else {
+                    break L13;
+                  }
+                }
+              }
+              L14: {
+                if (this.field_e.b(true)) {
+                  L15: {
+                    if (0 < qd.field_r) {
+                      ia.a(-658435066, 0);
+                      break L15;
+                    } else {
+                      break L15;
+                    }
+                  }
+                  if (!this.field_e.e(-19741)) {
+                    break L14;
+                  } else {
                     if (-65 >= (qd.field_r ^ -1)) {
-                      break L13;
+                      break L14;
                     } else {
                       ia.a(-658435066, 64);
-                      break L13;
+                      break L14;
                     }
                   }
                 } else {
                   if (!this.field_e.e(-19741)) {
-                    break L13;
+                    break L14;
                   } else {
                     if (-65 >= (qd.field_r ^ -1)) {
-                      break L13;
+                      break L14;
                     } else {
                       ia.a(-658435066, 64);
-                      break L13;
+                      break L14;
                     }
                   }
                 }
               }
               if (!this.field_e.g(-1)) {
-                break L10;
+                break L11;
               } else {
-                L14: {
+                L16: {
                   var2 = qh.field_i + (-6 + -this.field_g);
                   if ((var2 ^ -1) <= -1) {
                     if (-65 <= (var2 ^ -1)) {
-                      break L14;
+                      break L16;
                     } else {
                       var2 = 64;
-                      break L14;
+                      break L16;
                     }
                   } else {
                     var2 = 0;
-                    break L14;
+                    break L16;
                   }
                 }
                 if (qd.field_r == var2) {
-                  break L10;
+                  break L11;
                 } else {
                   ia.a(-658435066, var2);
-                  break L10;
+                  break L11;
                 }
               }
             } else {
-              break L10;
+              break L11;
             }
           }
-          L15: {
+          L17: {
             if (qh.field_k != this.field_e.field_c) {
-              break L15;
+              break L17;
             } else {
               if (!this.field_e.a(true)) {
-                break L15;
+                break L17;
               } else {
                 qc.a(this.field_e.field_i, 0);
                 this.field_e.a(param0 ^ -70, true, -1);
@@ -377,24 +394,24 @@ final class p extends uc {
               }
             }
           }
-          L16: {
+          L18: {
             if (rk.field_g != this.field_e.field_c) {
-              break L16;
+              break L18;
             } else {
               if (!this.field_e.a(true)) {
-                break L16;
+                break L18;
               } else {
-                L17: {
+                L19: {
                   if (jm.field_j) {
-                    stackIn_74_0 = 0;
-                    break L17;
+                    stackIn_78_0 = 0;
+                    break L19;
                   } else {
-                    stackIn_74_0 = 1;
-                    break L17;
+                    stackIn_78_0 = 1;
+                    break L19;
                   }
                 }
-                jm.field_j = stackIn_74_0 != 0;
-                break L16;
+                jm.field_j = stackIn_78_0 != 0;
+                break L18;
               }
             }
           }

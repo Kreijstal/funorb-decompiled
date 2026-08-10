@@ -49,57 +49,23 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     public final void mouseClicked(java.awt.event.MouseEvent param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!param0.isPopupTrigger()) {
-                break L1;
-              } else {
+            if (param0.isPopupTrigger()) {
                 param0.consume();
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("rd.mouseClicked(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw pf.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) ((Object) runtimeException), "rd.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void mousePressed(java.awt.event.MouseEvent param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
@@ -108,41 +74,34 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 break L1;
               } else {
                 L2: {
-                  L3: {
-                    m.field_a = 0;
-                    fb.field_b = param0.getX();
-                    th.field_s = param0.getY();
-                    lj.a((byte) -88);
-                    if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-                      break L3;
-                    } else {
-                      vk.field_O = 2;
-                      lk.field_J = 2;
-                      if (!fleas.field_A) {
-                        break L2;
-                      } else {
-                        break L3;
-                      }
-                    }
+                  m.field_a = 0;
+                  fb.field_b = param0.getX();
+                  th.field_s = param0.getY();
+                  lj.a((byte) -88);
+                  if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
+                    vk.field_O = 1;
+                    lk.field_J = 1;
+                    break L2;
+                  } else {
+                    vk.field_O = 2;
+                    lk.field_J = 2;
+                    break L2;
                   }
-                  vk.field_O = 1;
-                  lk.field_J = 1;
-                  break L2;
                 }
-                L4: {
+                L3: {
                   var2_int = param0.getModifiers();
                   ag.field_a = true;
                   if ((var2_int & 4) != 0) {
-                    break L4;
+                    break L3;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
-                L5: {
+                L4: {
                   if ((var2_int & 16) == 0) {
-                    break L5;
+                    break L4;
                   } else {
-                    break L5;
+                    break L4;
                   }
                 }
                 if (0 != (8 & var2_int)) {
@@ -161,72 +120,38 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var2 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2);
+            stackIn_12_0 = (RuntimeException) (var2);
 
-            stackIn_13_1 = new StringBuilder().append("rd.mousePressed(");
+            stackIn_12_1 = new StringBuilder().append("rd.mousePressed(");
 
             if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L6;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L5;
             } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L6;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L5;
             }
           }
-          throw pf.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (sg.field_i == null) {
-                break L1;
-              } else {
+            if (sg.field_i != null) {
                 m.field_a = 0;
                 gd.field_a = param0.getX();
                 vf.field_p = param0.getY();
                 ag.field_a = true;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("rd.mouseEntered(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw pf.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) ((Object) runtimeException), "rd.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -360,49 +285,15 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (null == sg.field_i) {
-                break L1;
-              } else {
+            if (null != sg.field_i) {
                 m.field_a = 0;
                 gd.field_a = param0.getX();
                 vf.field_p = param0.getY();
                 ag.field_a = true;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("rd.mouseDragged(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw pf.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) ((Object) runtimeException), "rd.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

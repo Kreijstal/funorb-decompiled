@@ -71,14 +71,14 @@ abstract class tk extends o {
         int var4 = 0;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_23_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_22_0 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
+        String stackIn_26_2 = null;
         int decompiledRegionSelector0 = 0;
         int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
@@ -116,45 +116,29 @@ abstract class tk extends o {
                   }
                   var3 = 0;
                   L4: while (true) {
-                    L5: {
-                      L6: {
-                        if (var3 >= param1.length()) {
-                          break L6;
-                        } else {
-                          stackIn_21_0 = -1;
-
-                          if (var4 != 0) {
-                            break L5;
-                          } else {
-                            if (stackIn_21_0 == var2.indexOf((int) param1.charAt(var3))) {
-                              stackIn_18_0 = 0;
-                              decompiledRegionSelector0 = 3;
-                              break L1;
-                            } else {
-                              var3++;
-                              if (var4 == 0) {
-                                continue L4;
-                              } else {
-                                break L6;
-                              }
-                            }
-                          }
-                        }
-                      }
+                    if (var3 >= param1.length()) {
                       Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
-                      stackIn_21_0 = 1;
-                      break L5;
+                      stackIn_20_0 = 1;
+                      decompiledRegionSelector0 = 3;
+                      break L1;
+                    } else {
+                      if (-1 == var2.indexOf((int) param1.charAt(var3))) {
+                        stackIn_17_0 = 0;
+                        decompiledRegionSelector0 = 2;
+                        break L1;
+                      } else {
+                        var3++;
+                        continue L4;
+                      }
                     }
-                    decompiledRegionSelector0 = 2;
-                    break L1;
                   }
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackIn_23_0 = 0;
-              return stackIn_23_0 != 0;
+              stackIn_22_0 = 0;
+              return stackIn_22_0 != 0;
             }
             if (decompiledRegionSelector0 == 0) {
               decompiledRegionSelector1 = 0;
@@ -176,25 +160,25 @@ abstract class tk extends o {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L7: {
+          L5: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_26_0 = (RuntimeException) (var2_ref2);
+            stackIn_25_0 = (RuntimeException) (var2_ref2);
 
-            stackIn_26_1 = new StringBuilder().append("tk.PB(").append(param0).append(',');
+            stackIn_25_1 = new StringBuilder().append("tk.PB(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "null";
-              break L7;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
+              break L5;
             } else {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "{...}";
-              break L7;
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
+              break L5;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
         if (decompiledRegionSelector1 == 0) {
           return stackIn_4_0 != 0;
@@ -203,9 +187,9 @@ abstract class tk extends o {
             return stackIn_9_0 != 0;
           } else {
             if (decompiledRegionSelector1 == 2) {
-              return stackIn_21_0 != 0;
+              return stackIn_17_0 != 0;
             } else {
-              return stackIn_18_0 != 0;
+              return stackIn_20_0 != 0;
             }
           }
         }
@@ -220,18 +204,14 @@ abstract class tk extends o {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6;
-        int var7;
-        var6 = this.field_s << 1216309027;
+        int var6 = this.field_s << 1216309027;
         if (param0 > -84) {
-          return;
-        } else {
-          var7 = this.field_t << -736522813;
-          param1 = (param1 << -2062366428) + (var6 & 15);
-          param2 = (param2 << -1836361756) + (var7 & 15);
-          this.a(var6, var7, param1, param2, param3, param4);
-          return;
+            return;
         }
+        int var7 = this.field_t << -736522813;
+        param1 = (param1 << -2062366428) + (var6 & 15);
+        param2 = (param2 << -1836361756) + (var7 & 15);
+        this.a(var6, var7, param1, param2, param3, param4);
     }
 
     final static boolean a(int param0, CharSequence param1) {
@@ -282,16 +262,11 @@ abstract class tk extends o {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
-        String var7;
         if (param0 != 2093920872) {
-          var7 = (String) null;
-          tk.a(false, (String) null);
-          this.a(-102, param3, param4, param1 << 2093920872, param2 << -579450267);
-          return;
-        } else {
-          this.a(-102, param3, param4, param1 << 2093920872, param2 << -579450267);
-          return;
+            String var7 = (String) null;
+            tk.a(false, (String) null);
         }
+        this.a(-102, param3, param4, param1 << 2093920872, param2 << -579450267);
     }
 
     tk() {

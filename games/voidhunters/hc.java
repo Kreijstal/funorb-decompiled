@@ -109,22 +109,25 @@ final class hc {
                 L2: while (true) {
                   if (var5 >= 2) {
                     L3: {
-                      if (var4 != 0) {
-                        break L3;
-                      } else {
-                        if (this.field_a[1] == this.field_a[0]) {
-                          break L0;
+                      L4: {
+                        if (var4 != 0) {
+                          break L4;
                         } else {
-                          break L3;
+                          if (this.field_a[1] == this.field_a[0]) {
+                            break L3;
+                          } else {
+                            break L4;
+                          }
                         }
                       }
+                      param1.a(param0);
+                      break L3;
                     }
-                    param1.a(param0);
                     break L0;
                   } else {
                     var7 = 0;
                     var6 = var7;
-                    L4: while (true) {
+                    L5: while (true) {
                       if (var7 >= this.field_g[var5]) {
                         var5++;
                         continue L2;
@@ -133,12 +136,12 @@ final class hc {
                           this.field_b[var5][1][var7] = this.field_b[var5][0][var7];
                           this.field_e[var5][1][var7] = this.field_e[var5][0][var7];
                           var7++;
-                          continue L4;
+                          continue L5;
                         } else {
                           this.field_b[var5][1][var7] = param0.e(1869);
                           this.field_e[var5][1][var7] = param0.e(1869);
                           var7++;
-                          continue L4;
+                          continue L5;
                         }
                       }
                     }
@@ -146,7 +149,7 @@ final class hc {
                 }
               } else {
                 var6 = 0;
-                L5: while (true) {
+                L6: while (true) {
                   if (var6 >= this.field_g[var5]) {
                     var5++;
                     continue L1;
@@ -154,7 +157,7 @@ final class hc {
                     this.field_b[var5][0][var6] = param0.e(1869);
                     this.field_e[var5][0][var6] = param0.e(1869);
                     var6++;
-                    continue L5;
+                    continue L6;
                   }
                 }
               }

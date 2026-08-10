@@ -326,7 +326,7 @@ final class jd {
                 if (we.field_a <= var7_int) {
                   break L1;
                 } else {
-                  param2[var7_int] = 10;
+                  var23[var7_int] = 10;
                   var7_int++;
                   continue L5;
                 }

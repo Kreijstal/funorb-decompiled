@@ -172,21 +172,14 @@ abstract class dd {
                     var3_int = 1;
                     if ((param2 ^ -1) == -9) {
                       L3: {
-                        L4: {
-                          param2 = 2;
-                          if (vb.field_Z) {
-                            break L4;
-                          } else {
-                            param0 = di.field_A;
-                            if (!client.field_A) {
-                              break L3;
-                            } else {
-                              break L4;
-                            }
-                          }
+                        param2 = 2;
+                        if (vb.field_Z) {
+                          param0 = wa.field_b;
+                          break L3;
+                        } else {
+                          param0 = di.field_A;
+                          break L3;
                         }
-                        param0 = wa.field_b;
-                        break L3;
                       }
                       dm.field_c.a(hb.field_Ob, 30534);
                       break L2;
@@ -194,37 +187,37 @@ abstract class dd {
                       break L2;
                     }
                   }
-                  L5: {
+                  L4: {
                     if (param2 != 10) {
-                      break L5;
+                      break L4;
                     } else {
                       var3_int = 0;
                       si.d(-31842);
-                      break L5;
+                      break L4;
                     }
                   }
-                  L6: {
+                  L5: {
                     if (var3_int == 0) {
-                      break L6;
+                      break L5;
                     } else {
-                      L7: {
+                      L6: {
                         if (!tj.field_Vb) {
-                          break L7;
+                          break L6;
                         } else {
                           param0 = cm.a((byte) 103, cm.field_d, new String[]{param0});
-                          break L7;
+                          break L6;
                         }
                       }
-                      L8: {
+                      L7: {
                         if (!dc.field_d) {
-                          break L8;
+                          break L7;
                         } else {
                           param0 = rg.field_d;
-                          break L8;
+                          break L7;
                         }
                       }
                       cl.field_r.a((byte) 48, param0, param2);
-                      break L6;
+                      break L5;
                     }
                   }
                   if (-257 == (param2 ^ -1)) {
@@ -256,7 +249,7 @@ abstract class dd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var3 = decompiledCaughtException;
             stackIn_27_0 = (RuntimeException) (var3);
 
@@ -266,12 +259,12 @@ abstract class dd {
               stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
               stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackIn_28_2 = "null";
-              break L9;
+              break L8;
             } else {
               stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
               stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackIn_28_2 = "{...}";
-              break L9;
+              break L8;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
@@ -323,14 +316,12 @@ abstract class dd {
                 throw new RuntimeException();
             }
             this.field_d.a(var8, -7267);
-            if (!client.field_A) {
-                return var8;
+        } else {
+            if (!(20 > this.c(0))) {
+                throw new RuntimeException();
             }
+            this.field_n.a(var8, -7267);
         }
-        if (!(20 > this.c(0))) {
-            throw new RuntimeException();
-        }
-        this.field_n.a(var8, -7267);
         return var8;
     }
 

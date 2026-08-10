@@ -29,43 +29,32 @@ abstract class si extends ca {
         try {
           L0: {
             L1: {
-              L2: {
-                if (0 < param0) {
-                  break L2;
-                } else {
-                  var4 = param1;
-                  if (var7 == 0) {
+              if (0 < param0) {
+                var8 = new byte[param3];
+                var4 = var8;
+                var5_int = 0;
+                L2: while (true) {
+                  if (var5_int >= param3) {
                     break L1;
                   } else {
-                    break L2;
+                    var8[var5_int] = param1[var5_int + param0];
+                    var5_int++;
+                    continue L2;
                   }
                 }
-              }
-              var8 = new byte[param3];
-              var4 = var8;
-              var5_int = 0;
-              L3: while (true) {
-                if (var5_int >= param3) {
-                  break L1;
-                } else {
-                  var8[var5_int] = param1[var5_int + param0];
-                  var5_int++;
-                  if (var7 == 0) {
-                    continue L3;
-                  } else {
-                    break L1;
-                  }
-                }
+              } else {
+                var4 = param1;
+                break L1;
               }
             }
-            L4: {
+            L3: {
               var5 = new kc();
               var5.a((byte) 119);
               if (param2 <= -42) {
-                break L4;
+                break L3;
               } else {
                 si.e((byte) -111);
-                break L4;
+                break L3;
               }
             }
             var5.a((long)(param3 * 8), var4, -24893);
@@ -76,7 +65,7 @@ abstract class si extends ca {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var4_ref = decompiledCaughtException;
             stackIn_12_0 = (RuntimeException) (var4_ref);
 
@@ -86,12 +75,12 @@ abstract class si extends ca {
               stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackIn_13_2 = "null";
-              break L5;
+              break L4;
             } else {
               stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackIn_13_2 = "{...}";
-              break L5;
+              break L4;
             }
           }
           throw ld.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param2 + ',' + param3 + ')');
@@ -101,15 +90,10 @@ abstract class si extends ca {
 
     final static void e(byte param0) {
         if (param0 < 5) {
-          field_t = (hh) null;
-          kb.field_b.field_p = 0;
-          kb.field_b.field_j = 0;
-          return;
-        } else {
-          kb.field_b.field_p = 0;
-          kb.field_b.field_j = 0;
-          return;
+            field_t = (hh) null;
         }
+        kb.field_b.field_p = 0;
+        kb.field_b.field_j = 0;
     }
 
     abstract int c(byte param0);
@@ -165,17 +149,11 @@ abstract class si extends ca {
 
     public static void e(boolean param0) {
         if (param0) {
-          field_q = (String) null;
-          field_q = null;
-          field_t = null;
-          field_u = null;
-          return;
-        } else {
-          field_q = null;
-          field_t = null;
-          field_u = null;
-          return;
+            field_q = (String) null;
         }
+        field_q = null;
+        field_t = null;
+        field_u = null;
     }
 
     si() {

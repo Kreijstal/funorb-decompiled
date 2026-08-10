@@ -36,150 +36,23 @@ class uf extends af {
         if (param6 >= param7) {
           if (param0 > param6) {
             qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
-            if (param4 <= -48) {
+            if (param4 > -48) {
+              field_r = (String) null;
               return;
             } else {
-              field_r = (String) null;
               return;
             }
           } else {
-            L0: {
-              if (param7 >= param0) {
-                qb.a(param0, param6, param3, param2, param5, param1, 95, mi.field_f, param7);
-                if (var9 == 0) {
-                  break L0;
-                } else {
-                  qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
-                  if (param4 <= -48) {
-                    return;
-                  } else {
-                    field_r = (String) null;
-                    return;
-                  }
-                }
+            if (param7 >= param0) {
+              qb.a(param0, param6, param3, param2, param5, param1, 95, mi.field_f, param7);
+              if (param4 > -48) {
+                field_r = (String) null;
+                return;
               } else {
-                qb.a(param7, param6, param1, param2, param5, param3, 75, mi.field_f, param0);
-                if (var9 == 0) {
-                  break L0;
-                } else {
-                  qb.a(param0, param6, param3, param2, param5, param1, 95, mi.field_f, param7);
-                  qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
-                  if (param4 > -48) {
-                    field_r = (String) null;
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              }
-            }
-            if (param4 <= -48) {
-              return;
-            } else {
-              field_r = (String) null;
-              return;
-            }
-          }
-        } else {
-          if (param0 > param7) {
-            qb.a(param6, param0, param3, param2, param1, param5, 98, mi.field_f, param7);
-            if (var9 != 0) {
-              if (param0 > param6) {
-                qb.a(param6, param7, param1, param2, param3, param5, 38, mi.field_f, param0);
-                if (var9 != 0) {
-                  L1: {
-                    if (param0 > param6) {
-                      qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
-                      break L1;
-                    } else {
-                      L2: {
-                        if (param7 >= param0) {
-                          break L2;
-                        } else {
-                          qb.a(param7, param6, param1, param2, param5, param3, 75, mi.field_f, param0);
-                          if (var9 == 0) {
-                            break L1;
-                          } else {
-                            break L2;
-                          }
-                        }
-                      }
-                      qb.a(param0, param6, param3, param2, param5, param1, 95, mi.field_f, param7);
-                      if (var9 == 0) {
-                        break L1;
-                      } else {
-                        L3: {
-                          qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
-                          if (param4 <= -48) {
-                            break L3;
-                          } else {
-                            field_r = (String) null;
-                            break L3;
-                          }
-                        }
-                        return;
-                      }
-                    }
-                  }
-                  if (param4 > -48) {
-                    field_r = (String) null;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  if (param4 > -48) {
-                    field_r = (String) null;
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                qb.a(param0, param7, param5, param2, param3, param1, 73, mi.field_f, param6);
-                if (var9 == 0) {
-                  if (param4 > -48) {
-                    field_r = (String) null;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  L4: {
-                    qb.a(param6, param7, param1, param2, param3, param5, 38, mi.field_f, param0);
-                    if (param0 > param6) {
-                      qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
-                      break L4;
-                    } else {
-                      L5: {
-                        if (param7 >= param0) {
-                          break L5;
-                        } else {
-                          qb.a(param7, param6, param1, param2, param5, param3, 75, mi.field_f, param0);
-                          break L5;
-                        }
-                      }
-                      qb.a(param0, param6, param3, param2, param5, param1, 95, mi.field_f, param7);
-                      if (var9 == 0) {
-                        break L4;
-                      } else {
-                        qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
-                        break L4;
-                      }
-                    }
-                  }
-                  L6: {
-                    if (param4 <= -48) {
-                      break L6;
-                    } else {
-                      field_r = (String) null;
-                      break L6;
-                    }
-                  }
-                  return;
-                }
+                return;
               }
             } else {
+              qb.a(param7, param6, param1, param2, param5, param3, 75, mi.field_f, param0);
               if (param4 > -48) {
                 field_r = (String) null;
                 return;
@@ -187,85 +60,28 @@ class uf extends af {
                 return;
               }
             }
-          } else {
-            L7: {
-              if (param0 > param6) {
-                qb.a(param6, param7, param1, param2, param3, param5, 38, mi.field_f, param0);
-                if (var9 == 0) {
-                  break L7;
-                } else {
-                  L8: {
-                    if (param0 > param6) {
-                      qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
-                      break L8;
-                    } else {
-                      L9: {
-                        if (param7 >= param0) {
-                          break L9;
-                        } else {
-                          qb.a(param7, param6, param1, param2, param5, param3, 75, mi.field_f, param0);
-                          break L9;
-                        }
-                      }
-                      qb.a(param0, param6, param3, param2, param5, param1, 95, mi.field_f, param7);
-                      if (var9 == 0) {
-                        break L8;
-                      } else {
-                        qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
-                        break L8;
-                      }
-                    }
-                  }
-                  L10: {
-                    if (param4 <= -48) {
-                      break L10;
-                    } else {
-                      field_r = (String) null;
-                      break L10;
-                    }
-                  }
-                  return;
-                }
+          }
+        } else {
+          if (param0 <= param7) {
+            if (param0 > param6) {
+              qb.a(param6, param7, param1, param2, param3, param5, 38, mi.field_f, param0);
+              if (param4 <= -48) {
+                return;
               } else {
-                qb.a(param0, param7, param5, param2, param3, param1, 73, mi.field_f, param6);
-                if (var9 == 0) {
-                  break L7;
-                } else {
-                  L11: {
-                    qb.a(param6, param7, param1, param2, param3, param5, 38, mi.field_f, param0);
-                    if (param0 > param6) {
-                      qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
-                      break L11;
-                    } else {
-                      L12: {
-                        if (param7 >= param0) {
-                          break L12;
-                        } else {
-                          qb.a(param7, param6, param1, param2, param5, param3, 75, mi.field_f, param0);
-                          break L12;
-                        }
-                      }
-                      qb.a(param0, param6, param3, param2, param5, param1, 95, mi.field_f, param7);
-                      if (var9 == 0) {
-                        break L11;
-                      } else {
-                        qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
-                        break L11;
-                      }
-                    }
-                  }
-                  L13: {
-                    if (param4 <= -48) {
-                      break L13;
-                    } else {
-                      field_r = (String) null;
-                      break L13;
-                    }
-                  }
-                  return;
-                }
+                field_r = (String) null;
+                return;
+              }
+            } else {
+              qb.a(param0, param7, param5, param2, param3, param1, 73, mi.field_f, param6);
+              if (param4 <= -48) {
+                return;
+              } else {
+                field_r = (String) null;
+                return;
               }
             }
+          } else {
+            qb.a(param6, param0, param3, param2, param1, param5, 98, mi.field_f, param7);
             if (param4 > -48) {
               field_r = (String) null;
               return;
@@ -277,92 +93,96 @@ class uf extends af {
     }
 
     final static ff a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = SolKnight.field_L ? 1 : 0;
-        ff[] var5 = qh.a(-89);
-        ff[] var2 = var5;
-        if (param1 != -121) {
-            field_p = 7;
-            var3 = 0;
-            do {
-                if (var5.length <= var3) {
-                    return null;
-                }
-                if (!(param0 != var5[var3].field_a)) {
-                    return var5[var3];
-                }
-                var3++;
-            } while (var4 == 0);
-            return null;
-        }
-        var3 = 0;
-        do {
-            if (var5.length <= var3) {
-                return null;
-            }
-            if (!(param0 != var5[var3].field_a)) {
+        ff[] var2;
+        int var3;
+        int var4;
+        ff[] var5;
+        var4 = SolKnight.field_L ? 1 : 0;
+        var5 = qh.a(-89);
+        var2 = var5;
+        if (param1 == -121) {
+          var3 = 0;
+          L0: while (true) {
+            if (var5.length > var3) {
+              if (param0 == var5[var3].field_a) {
                 return var5[var3];
+              } else {
+                var3++;
+                continue L0;
+              }
+            } else {
+              return null;
             }
-            var3++;
-        } while (var4 == 0);
-        return null;
+          }
+        } else {
+          field_p = 7;
+          var3 = 0;
+          L1: while (true) {
+            if (var5.length > var3) {
+              if (param0 == var5[var3].field_a) {
+                return var5[var3];
+              } else {
+                var3++;
+                continue L1;
+              }
+            } else {
+              return null;
+            }
+          }
+        }
     }
 
     final static void a(boolean param0, int param1, int param2, rl param3) {
         int var4_int = 0;
+        RuntimeException var4 = null;
         Object var5 = null;
+        Throwable var6 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         Throwable decompiledCaughtException = null;
-        RuntimeException var4 = null;
         try {
           L0: {
-            L1: {
-              var4_int = -123 / ((90 - param1) / 33);
-              if (null != ah.field_a) {
-                kd.a(param2, (byte) 101, param3, 1048576, param0);
-                break L1;
-              } else {
-                break L1;
-              }
+            var4_int = -123 / ((90 - param1) / 33);
+            if (null != ah.field_a) {
+              kd.a(param2, (byte) 101, param3, 1048576, param0);
+              break L0;
+            } else {
+              break L0;
             }
-            L2: {
-              if (null != ua.field_I) {
-                var5 = kj.field_P;
-                synchronized (var5) {
-                  L3: {
-                    ua.field_I.b(param2, -1, -129);
-                    if (param3 == dj.field_j) {
-                      return;
+          }
+          if (null != ua.field_I) {
+            var5 = kj.field_P;
+            synchronized (var5) {
+              L1: {
+                ua.field_I.b(param2, -1, -129);
+                if (param3 == dj.field_j) {
+                  return;
+                } else {
+                  L2: {
+                    ua.field_I.a((byte) 97);
+                    kj.field_P.h();
+                    dj.field_j = param3;
+                    if (null == dj.field_j) {
+                      break L2;
                     } else {
-                      L4: {
-                        ua.field_I.a((byte) 97);
-                        kj.field_P.h();
-                        dj.field_j = param3;
-                        if (null == dj.field_j) {
-                          break L4;
-                        } else {
-                          ua.field_I.a(param0, dj.field_j, true);
-                          break L4;
-                        }
-                      }
-                      break L3;
+                      ua.field_I.a(param0, dj.field_j, true);
+                      break L2;
                     }
                   }
+                  break L1;
                 }
-                break L2;
-              } else {
-                break L2;
               }
             }
-            break L0;
+            return;
+          } else {
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L3: {
             var4 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_19_0 = (RuntimeException) (var4);
 
@@ -372,12 +192,12 @@ class uf extends af {
               stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
               stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackIn_20_2 = "null";
-              break L5;
+              break L3;
             } else {
               stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
               stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackIn_20_2 = "{...}";
-              break L5;
+              break L3;
             }
           }
           throw fc.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
@@ -396,14 +216,14 @@ class uf extends af {
 
     final static void a(byte param0, int param1, int param2, java.awt.Canvas param3) {
         java.awt.Graphics var4 = null;
+        RuntimeException var4_ref = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
-        Exception var4_ref = null;
-        RuntimeException var4_ref2 = null;
+        Exception var4_ref2 = null;
         try {
           L0: {
             try {
@@ -416,26 +236,23 @@ class uf extends af {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L2: {
-                var4_ref = (Exception) (Object) decompiledCaughtException;
+                var4_ref2 = (Exception) (Object) decompiledCaughtException;
                 param3.repaint();
                 break L2;
               }
             }
-            L3: {
-              if (param0 == 99) {
-                break L3;
-              } else {
-                field_r = (String) null;
-                break L3;
-              }
+            if (param0 == 99) {
+              break L0;
+            } else {
+              field_r = (String) null;
+              return;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L4: {
-            var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var4_ref2);
+          L3: {
+            var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (var4_ref);
 
             stackIn_8_1 = new StringBuilder().append("uf.FA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
@@ -443,12 +260,12 @@ class uf extends af {
               stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
               stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackIn_9_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
               stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackIn_9_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw fc.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');

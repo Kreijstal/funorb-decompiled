@@ -172,69 +172,72 @@ final class s extends am {
               }
             }
             L2: {
-              if (param2 != 0) {
-                if (1 == param2) {
-                  L3: {
-                    stackIn_21_0 = this;
+              L3: {
+                if (param2 != 0) {
+                  if (1 == param2) {
+                    L4: {
+                      stackIn_21_0 = this;
 
-                    if (1 != param0.i((byte) -101)) {
-                      stackIn_22_0 = this;
-                      stackIn_22_1 = 0;
-                      break L3;
-                    } else {
-                      stackIn_22_0 = this;
-                      stackIn_22_1 = 1;
-                      break L3;
-                    }
-                  }
-                  ((s) (this)).field_p = stackIn_22_1 != 0;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              } else {
-                this.field_v = new kj[param0.i((byte) -101)];
-                var4_int = 0;
-                L4: while (true) {
-                  if (var4_int >= this.field_v.length) {
-                    break L2;
-                  } else {
-                    L5: {
-                      var5 = param0.i((byte) -101);
-                      var6 = var5;
-                      if (0 == var6) {
-                        this.field_v[var4_int] = (kj) ((Object) tl.a(param0, (byte) -51));
-                        break L5;
+                      if (1 != param0.i((byte) -101)) {
+                        stackIn_22_0 = this;
+                        stackIn_22_1 = 0;
+                        break L4;
                       } else {
-                        if ((var6 ^ -1) != -2) {
-                          if (-3 == (var6 ^ -1)) {
-                            this.field_v[var4_int] = (kj) ((Object) c.a(i.c(param1, 40), param0));
-                            break L5;
-                          } else {
-                            if (var6 != 3) {
-                              break L5;
-                            } else {
-                              this.field_v[var4_int] = (kj) ((Object) bi.a(param0, (byte) 13));
-                              break L5;
-                            }
-                          }
-                        } else {
-                          this.field_v[var4_int] = (kj) ((Object) wa.a(false, param0));
-                          break L5;
-                        }
+                        stackIn_22_0 = this;
+                        stackIn_22_1 = 1;
+                        break L4;
                       }
                     }
-                    var4_int++;
-                    continue L4;
+                    ((s) (this)).field_p = stackIn_22_1 != 0;
+                    break L3;
+                  } else {
+                    break L2;
+                  }
+                } else {
+                  this.field_v = new kj[param0.i((byte) -101)];
+                  var4_int = 0;
+                  L5: while (true) {
+                    if (var4_int >= this.field_v.length) {
+                      break L3;
+                    } else {
+                      L6: {
+                        var5 = param0.i((byte) -101);
+                        var6 = var5;
+                        if (0 == var6) {
+                          this.field_v[var4_int] = (kj) ((Object) tl.a(param0, (byte) -51));
+                          break L6;
+                        } else {
+                          if ((var6 ^ -1) != -2) {
+                            if (-3 == (var6 ^ -1)) {
+                              this.field_v[var4_int] = (kj) ((Object) c.a(i.c(param1, 40), param0));
+                              break L6;
+                            } else {
+                              if (var6 != 3) {
+                                break L6;
+                              } else {
+                                this.field_v[var4_int] = (kj) ((Object) bi.a(param0, (byte) 13));
+                                break L6;
+                              }
+                            }
+                          } else {
+                            this.field_v[var4_int] = (kj) ((Object) wa.a(false, param0));
+                            break L6;
+                          }
+                        }
+                      }
+                      var4_int++;
+                      continue L5;
+                    }
                   }
                 }
               }
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var4 = decompiledCaughtException;
             stackIn_26_0 = (RuntimeException) (var4);
 
@@ -244,12 +247,12 @@ final class s extends am {
               stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
               stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackIn_27_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
               stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackIn_27_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw rb.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param1 + ',' + param2 + ')');

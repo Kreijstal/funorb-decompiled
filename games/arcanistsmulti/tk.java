@@ -267,83 +267,86 @@ final class tk extends tf {
           if (tc.field_A == null) {
             break L1;
           } else {
-            var3 = tc.field_A.b(false, param1);
-            if (var3 == 0) {
-              break L1;
-            } else {
-              L2: {
-                if (var3 != 2) {
-                  break L2;
-                } else {
-                  if (tc.field_A.field_rb == null) {
-                    break L2;
+            L2: {
+              var3 = tc.field_A.b(false, param1);
+              if (var3 == 0) {
+                break L2;
+              } else {
+                L3: {
+                  if (var3 != 2) {
+                    break L3;
                   } else {
-                    if (!tc.field_A.field_rb.equals("")) {
-                      L3: {
-                        if (tc.field_A.field_rb.charAt(0) != 91) {
-                          var7 = (CharSequence) ((Object) tc.field_A.field_rb);
-                          var4 = gk.a(var7, param0 ^ -13);
-                          break L3;
-                        } else {
-                          var4 = tc.field_A.field_rb;
-                          break L3;
-                        }
-                      }
-                      L4: {
-                        var5 = null;
-                        if (vd.field_h == 0) {
-                          var5 = bo.a(var4, (byte) -26, param2);
-                          break L4;
-                        } else {
-                          break L4;
-                        }
-                      }
-                      L5: {
-                        if (1 == vd.field_h) {
-                          var5 = oe.a(var4, 29140, param2);
-                          break L5;
-                        } else {
-                          break L5;
-                        }
-                      }
-                      L6: {
-                        if (-3 == (vd.field_h ^ -1)) {
-                          var5 = eh.a((byte) -48, param2, var4);
-                          break L6;
-                        } else {
-                          break L6;
-                        }
-                      }
-                      L7: {
-                        if ((vd.field_h ^ -1) != -4) {
-                          break L7;
-                        } else {
-                          var5 = hf.a(var4, var4, param2, param0 ^ 10068666);
-                          break L7;
-                        }
-                      }
-                      L8: {
-                        if (var5 == null) {
-                          break L8;
-                        } else {
-                          var6 = (String) null;
-                          ao.a(0, (byte) 126, (String) (var5), var4, 2, (String) null);
-                          break L8;
-                        }
-                      }
-                      tc.field_A = null;
-                      vd.field_h = -1;
-                      break L1;
+                    if (tc.field_A.field_rb == null) {
+                      break L3;
                     } else {
-                      break L2;
+                      if (!tc.field_A.field_rb.equals("")) {
+                        L4: {
+                          if (tc.field_A.field_rb.charAt(0) != 91) {
+                            var7 = (CharSequence) ((Object) tc.field_A.field_rb);
+                            var4 = gk.a(var7, param0 ^ -13);
+                            break L4;
+                          } else {
+                            var4 = tc.field_A.field_rb;
+                            break L4;
+                          }
+                        }
+                        L5: {
+                          var5 = null;
+                          if (vd.field_h == 0) {
+                            var5 = bo.a(var4, (byte) -26, param2);
+                            break L5;
+                          } else {
+                            break L5;
+                          }
+                        }
+                        L6: {
+                          if (1 == vd.field_h) {
+                            var5 = oe.a(var4, 29140, param2);
+                            break L6;
+                          } else {
+                            break L6;
+                          }
+                        }
+                        L7: {
+                          if (-3 == (vd.field_h ^ -1)) {
+                            var5 = eh.a((byte) -48, param2, var4);
+                            break L7;
+                          } else {
+                            break L7;
+                          }
+                        }
+                        L8: {
+                          if ((vd.field_h ^ -1) != -4) {
+                            break L8;
+                          } else {
+                            var5 = hf.a(var4, var4, param2, param0 ^ 10068666);
+                            break L8;
+                          }
+                        }
+                        L9: {
+                          if (var5 == null) {
+                            break L9;
+                          } else {
+                            var6 = (String) null;
+                            ao.a(0, (byte) 126, (String) (var5), var4, 2, (String) null);
+                            break L9;
+                          }
+                        }
+                        tc.field_A = null;
+                        vd.field_h = -1;
+                        break L2;
+                      } else {
+                        break L3;
+                      }
                     }
                   }
                 }
+                tc.field_A = null;
+                vd.field_h = -1;
+                break L1;
               }
-              tc.field_A = null;
-              vd.field_h = -1;
-              break L1;
             }
+            break L1;
           }
         }
     }

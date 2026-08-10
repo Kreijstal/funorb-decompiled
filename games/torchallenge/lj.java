@@ -818,7 +818,7 @@ final class lj {
                           break L9;
                         }
                       }
-                      throw oj.a((Throwable) ((Object) stackIn_35_0), (stackIn_35_2 != 0) + " " + param3 + " " + param2.length + " " + k.a(var9, param2.length, 0) + " " + k.a(var9, -2 + param2.length, 0) + " " + this.field_l.field_t[param3] + " " + this.field_l.field_k);
+                      throw oj.a((Throwable) ((Object) stackIn_35_0), (stackIn_35_2 != 0) + " " + param3 + " " + var9.length + " " + k.a(var9, var9.length, 0) + " " + k.a(var9, -2 + var9.length, 0) + " " + this.field_l.field_t[param3] + " " + this.field_l.field_k);
                     }
                     L10: {
                       if (!this.field_i) {

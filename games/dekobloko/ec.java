@@ -45,117 +45,34 @@ final class ec {
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = client.field_A ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
+        RuntimeException decompiledCaughtException = null;
+        var3 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            var1 = we.field_b;
+            L1: while (true) {
+              if (!sc.c((byte) -104)) {
+                if (param0 <= -91) {
+                  break L0;
+                } else {
+                  ec.a(-123);
+                  return;
                 }
-                case 1: {
-                    try {
-                        var1 = we.field_b;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (!sc.c((byte) -104)) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var1.f(8, -4);
-                        fieldTemp$1 = var1.field_n + 1;
-                        var1.field_n = var1.field_n + 1;
-                        var2 = fieldTemp$1;
-                        ba.a(-32141, var1);
-                        we.field_b.b(var1.field_n - var2, true);
-                        if (var3 != 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var3 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (param0 <= -91) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        ec.a(-123);
-                        return;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var1_ref = (RuntimeException) ((Object) caughtException);
-                    throw dh.a((Throwable) ((Object) var1_ref), "ec.A(" + param0 + ')');
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                var1.f(8, -4);
+                fieldTemp$1 = var1.field_n + 1;
+                var1.field_n = var1.field_n + 1;
+                var2 = fieldTemp$1;
+                ba.a(-32141, var1);
+                we.field_b.b(var1.field_n - var2, true);
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw dh.a((Throwable) ((Object) var1_ref), "ec.A(" + param0 + ')');
         }
     }
 

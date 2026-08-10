@@ -384,17 +384,20 @@ final class dg extends fi {
           L0: {
             if (param1 >= 113) {
               L1: {
-                if (!this.field_z) {
-                  break L1;
-                } else {
-                  this.field_L = this.field_L + 1;
-                  if (this.field_J * 2 < this.field_L) {
-                    this.field_L = this.field_L - this.field_J * 2;
-                    break L1;
+                L2: {
+                  if (!this.field_z) {
+                    break L2;
                   } else {
-                    break L1;
+                    this.field_L = this.field_L + 1;
+                    if (this.field_J * 2 < this.field_L) {
+                      this.field_L = this.field_L - this.field_J * 2;
+                      break L2;
+                    } else {
+                      break L1;
+                    }
                   }
                 }
+                break L1;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -405,7 +408,7 @@ final class dg extends fi {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var5 = decompiledCaughtException;
             stackIn_9_0 = (RuntimeException) (var5);
 
@@ -415,12 +418,12 @@ final class dg extends fi {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "null";
-              break L2;
+              break L3;
             } else {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "{...}";
-              break L2;
+              break L3;
             }
           }
           throw kg.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ')');

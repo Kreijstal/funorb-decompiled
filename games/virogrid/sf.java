@@ -327,72 +327,26 @@ final class sf extends fd implements ta {
     }
 
     public final void a(int param0, tg param1, int param2, int param3, int param4) {
-        RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var8 = Virogrid.field_F ? 1 : 0;
+        int var8 = Virogrid.field_F ? 1 : 0;
         try {
-          L0: {
-            var6_int = 0;
-            L1: while (true) {
-              L2: {
-                if (this.field_H <= var6_int) {
-                  break L2;
-                } else {
-                  if (this.field_E[var6_int] != param1) {
-                    var6_int++;
-                    continue L1;
-                  } else {
+            for (var6_int = 0; this.field_H > var6_int; var6_int++) {
+                if (this.field_E[var6_int] == param1) {
                     var7 = this.field_N[var6_int];
-                    if ((var7 ^ -1) != 0) {
-                      kf.a(this.field_N[var6_int], param0 + -12086);
-                      break L2;
-                    } else {
-                      this.field_G.h(true);
-                      break L2;
+                    if ((var7 ^ -1) == 0) {
+                        this.field_G.h(true);
+                        break;
                     }
-                  }
+                    kf.a(this.field_N[var6_int], param0 + -12086);
+                    break;
                 }
-              }
-              L3: {
-                if (param0 == 12085) {
-                  break L3;
-                } else {
-                  this.field_L = (e) null;
-                  break L3;
-                }
-              }
-              break L0;
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("sf.L(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
+            if (param0 != 12085) {
+                this.field_L = (e) null;
             }
-          }
-          throw kg.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) ((Object) runtimeException), "sf.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

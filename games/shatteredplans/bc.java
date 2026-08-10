@@ -1256,7 +1256,7 @@ final class bc {
                             break L9;
                           }
                         }
-                        throw r.a((Throwable) ((Object) stackIn_37_0), (stackIn_37_2 != 0) + " " + param2 + " " + param1.length + " " + me.a(63, var9, param1.length) + " " + me.a(59, var9, param1.length - 2) + " " + this.field_f.field_f[param2] + " " + this.field_f.field_c);
+                        throw r.a((Throwable) ((Object) stackIn_37_0), (stackIn_37_2 != 0) + " " + param2 + " " + var9.length + " " + me.a(63, var9, var9.length) + " " + me.a(59, var9, var9.length - 2) + " " + this.field_f.field_f[param2] + " " + this.field_f.field_c);
                       }
                       L10: {
                         if (this.field_j) {

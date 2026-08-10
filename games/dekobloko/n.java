@@ -148,14 +148,14 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
         int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
         try {
           L0: {
             if (f.field_r != null) {
@@ -172,11 +172,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
                       var2_int = be.field_w[var2_int];
                       if ((128 & var2_int) != 0) {
                         var2_int = -1;
-                        if (!client.field_A) {
-                          break L1;
-                        } else {
-                          break L2;
-                        }
+                        break L1;
                       } else {
                         break L1;
                       }
@@ -268,46 +264,12 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (null == f.field_r) {
-                break L1;
-              } else {
+            if (null != f.field_r) {
                 wi.field_b = -1;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("n.focusLost(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dh.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) ((Object) runtimeException), "n.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -360,11 +322,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
                         break L3;
                       } else {
                         var2_int = be.field_w[var2_int] & -129;
-                        if (!client.field_A) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
+                        break L2;
                       }
                     }
                   }
@@ -436,48 +394,20 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
             if (0 >= var1) {
               cl.field_r.n(-127);
               em.a(-1199770620);
-              if (var2 != 0) {
-                cl.field_r.o(4210752);
-                return;
-              } else {
-                return;
-              }
+              return;
             } else {
               if (var1 == 1) {
                 ed.field_d = aa.field_d;
                 ed.field_d = db.a(new CharSequence[]{(CharSequence) ((Object) ed.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) hf.field_b)}, -62);
                 cl.field_r.n(-127);
                 em.a(-1199770620);
-                if (var2 == 0) {
-                  return;
-                } else {
-                  cl.field_r.o(4210752);
-                  return;
-                }
+                return;
               } else {
                 ed.field_d = cm.a((byte) 87, jc.field_e, new String[]{Integer.toString(var1)});
-                if (var2 == 0) {
-                  ed.field_d = db.a(new CharSequence[]{(CharSequence) ((Object) ed.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) hf.field_b)}, -62);
-                  cl.field_r.n(-127);
-                  em.a(-1199770620);
-                  if (var2 == 0) {
-                    return;
-                  } else {
-                    cl.field_r.o(4210752);
-                    return;
-                  }
-                } else {
-                  ed.field_d = aa.field_d;
-                  ed.field_d = db.a(new CharSequence[]{(CharSequence) ((Object) ed.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) hf.field_b)}, -62);
-                  cl.field_r.n(-127);
-                  em.a(-1199770620);
-                  if (var2 == 0) {
-                    return;
-                  } else {
-                    cl.field_r.o(4210752);
-                    return;
-                  }
-                }
+                ed.field_d = db.a(new CharSequence[]{(CharSequence) ((Object) ed.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) hf.field_b)}, -62);
+                cl.field_r.n(-127);
+                em.a(-1199770620);
+                return;
               }
             }
           } else {
@@ -493,147 +423,47 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_10_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = client.field_A ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param1 < param2) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var3_int = param1;
-                        param1 = param2;
-                        param2 = var3_int;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (param0 >= 37) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        n.b(77);
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (param2 == 0) {
-                            statePc = 9;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var3_int = param1 % param2;
-                        param1 = param2;
-                        stackIn_10_0 = var3_int;
-                        stackIn_8_0 = stackIn_10_0;
-                        if (var4 != 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        param2 = stackIn_8_0;
-                        if (var4 == 0) {
-                            statePc = 6;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        stackIn_10_0 = param1;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    return stackIn_10_0;
-                }
-                case 11: {
-                    var3 = (RuntimeException) ((Object) caughtException);
-                    throw dh.a((Throwable) ((Object) var3), "n.E(" + param0 + ',' + param1 + ',' + param2 + ')');
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int stackIn_9_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param1 < param2) {
+                var3_int = param1;
+                param1 = param2;
+                param2 = var3_int;
+                break L1;
+              } else {
+                break L1;
+              }
             }
+            L2: {
+              if (param0 >= 37) {
+                break L2;
+              } else {
+                n.b(77);
+                break L2;
+              }
+            }
+            L3: while (true) {
+              if (param2 == 0) {
+                stackIn_9_0 = param1;
+                break L0;
+              } else {
+                var3_int = param1 % param2;
+                param1 = param2;
+                param2 = var3_int;
+                continue L3;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw dh.a((Throwable) ((Object) var3), "n.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
+        return stackIn_9_0;
     }
 
     static {

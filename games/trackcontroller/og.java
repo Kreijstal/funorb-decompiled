@@ -187,61 +187,18 @@ final class og extends jj implements m {
     }
 
     public final void a(rh param0, int param1, int param2, int param3, int param4) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (this.field_lb) {
-              nk.a(true, -126, false);
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                nh.a((byte) 122);
-                this.t(20252);
-                if (param4 == -27322) {
-                  break L1;
-                } else {
-                  this.field_ob = true;
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (runtimeException);
-
-            stackIn_9_1 = new StringBuilder().append("og.A(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
-          }
-          throw sl.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        if (!(!this.field_lb)) {
+            nk.a(true, -126, false);
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            nh.a((byte) 122);
+            this.t(20252);
+            if (param4 != -27322) {
+                this.field_ob = true;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) ((Object) runtimeException), "og.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

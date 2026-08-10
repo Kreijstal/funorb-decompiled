@@ -30,7 +30,6 @@ final class qh {
     }
 
     final static void a(int param0, int param1, rp param2, int param3, int param4, int param5) {
-        RuntimeException runtimeException = null;
         ef var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -41,109 +40,52 @@ final class qh {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ef var16 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              L2: {
-                var16 = qp.field_w;
-                var6 = var16;
-                var7 = param2.field_t[param0];
-                var8 = cr.a(param0, param1 ^ 30026);
-                ol.field_n.c(param4, param3, param5);
-                dj.field_p.a(param4 - -71, param3 + 17, param5);
-                if (param5 >= 255) {
-                  break L2;
-                } else {
-                  em.field_X.a(22 + param4, param3 + 77, param5);
-                  if (!ZombieDawnMulti.field_E) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              em.field_X.a(param4 + 22, param3 - -77, 150 - -(on.a(wf.field_m * 128, -18924) >> 1492253547), 65535);
-              break L1;
+            var6 = qp.field_w;
+            var7 = param2.field_t[param0];
+            var8 = cr.a(param0, param1 ^ 30026);
+            ol.field_n.c(param4, param3, param5);
+            dj.field_p.a(param4 - -71, param3 + 17, param5);
+            if (param5 < 255) {
+                em.field_X.a(22 + param4, param3 + 77, param5);
+            } else {
+                em.field_X.a(param4 + 22, param3 - -77, 150 - -(on.a(wf.field_m * 128, -18924) >> 1492253547), 65535);
             }
-            L3: {
-              if (hh.field_h != null) {
-                break L3;
-              } else {
+            if (hh.field_h == null) {
                 hh.field_h = new ja(12, 32);
                 g.c(hh.field_h);
                 oo.a(0, 0, 12, 16, 65280, 16776960);
                 oo.a(0, 16, 12, 17, 16776960, 16711680);
                 g.d();
-                break L3;
-              }
             }
-            L4: {
-              if (param1 == -29990) {
-                break L4;
-              } else {
+            if (param1 != -29990) {
                 qh.a(-92);
-                break L4;
-              }
             }
-            L5: {
-              hh.field_h.c(param4 + 80, 36 + param3, param5);
-              var9 = var7 * 31 / var8;
-              oo.f(param4 + 80, param3 + 36, 12, 31 - var9, 1, param5);
-              wa.field_b[-44 + param0 + 26].c(18 + param4, param3 - -44, param5);
-              ((fm) ((Object) var16)).a(gh.field_f[param0], param4 - -4, -7 + param3, 54, 90, 16777215, 1, param5, 1, 1, ((fm) ((Object) var6)).field_C - -((fm) ((Object) var6)).field_r);
-              var10 = new Random();
-              if (var7 < var8) {
-                break L5;
-              } else {
-                if (-1 == (hp.a((byte) -98, var10, 7) ^ -1)) {
-                  var11 = new ve(85 + param4, param3 - -18, 8, 0.0, 8.0, 1.5, 1, 1.5, 0.99, 1);
-                  var11.field_k = 39 * param4 + (wf.field_m - -(param3 * 17));
-                  var12 = 200 * param5 >> 777040968;
-                  var13 = 128 * var12;
-                  var14 = var12 * 64;
-                  var13 = var13 >> 8;
-                  var15 = 255 * var12;
-                  var14 = var14 >> 8;
-                  var13 = var13 << 16;
-                  var15 = var15 >> 8;
-                  var14 = var14 << 8;
-                  var11.a(var15 | (var13 | var14), 85 + param4, true, 18 + param3, 16777215, -1963);
-                  break L5;
-                } else {
-                  return;
+            hh.field_h.c(param4 + 80, 36 + param3, param5);
+            var9 = var7 * 31 / var8;
+            oo.f(param4 + 80, param3 + 36, 12, 31 - var9, 1, param5);
+            wa.field_b[-44 + param0 + 26].c(18 + param4, param3 - -44, param5);
+            ((fm) ((Object) var6)).a(gh.field_f[param0], param4 - -4, -7 + param3, 54, 90, 16777215, 1, param5, 1, 1, ((fm) ((Object) var6)).field_C - -((fm) ((Object) var6)).field_r);
+            var10 = new Random();
+            if (var7 >= var8) {
+                if (-1 != (hp.a((byte) -98, var10, 7) ^ -1)) {
+                    return;
                 }
-              }
+                var11 = new ve(85 + param4, param3 - -18, 8, 0.0, 8.0, 1.5, 1, 1.5, 0.99, 1);
+                var11.field_k = 39 * param4 + (wf.field_m - -(param3 * 17));
+                var12 = 200 * param5 >> 777040968;
+                var13 = 128 * var12;
+                var14 = var12 * 64;
+                var13 = var13 >> 8;
+                var15 = 255 * var12;
+                var14 = var14 >> 8;
+                var13 = var13 << 16;
+                var15 = var15 >> 8;
+                var14 = var14 << 8;
+                var11.a(var15 | (var13 | var14), 85 + param4, true, 18 + param3, 16777215, -1963);
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            runtimeException = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (runtimeException);
-
-            stackIn_15_1 = new StringBuilder().append("qh.C(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L6;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L6;
-            }
-          }
-          throw fa.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) ((Object) runtimeException), "qh.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -136,32 +136,21 @@ final class ka {
     }
 
     ka(boolean param0) {
-        L0: {
-          L1: {
-            this.field_l = wc.field_N;
-            this.field_h = of.field_g;
-            this.field_g = sn.field_Ib;
-            this.field_k = fe.field_R;
-            this.field_a = ek.field_K;
-            this.field_n = kk.field_s;
-            this.field_o = ti.field_W;
-            this.field_d = pg.field_b;
-            this.field_i = tk.field_m;
-            this.field_e = ch.field_h;
-            this.field_j = ce.field_r;
-            if (param0) {
-              break L1;
-            } else {
-              this.field_r = null;
-              if (!ZombieDawnMulti.field_E) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          this.field_r = af.field_g;
-          break L0;
+        this.field_l = wc.field_N;
+        this.field_h = of.field_g;
+        this.field_g = sn.field_Ib;
+        this.field_k = fe.field_R;
+        this.field_a = ek.field_K;
+        this.field_n = kk.field_s;
+        this.field_o = ti.field_W;
+        this.field_d = pg.field_b;
+        this.field_i = tk.field_m;
+        this.field_e = ch.field_h;
+        this.field_j = ce.field_r;
+        if (!param0) {
+            this.field_r = null;
+        } else {
+            this.field_r = af.field_g;
         }
     }
 

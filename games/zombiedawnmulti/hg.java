@@ -30,26 +30,19 @@ final class hg extends gm {
         String var18;
         String var19;
         L0: {
-          L1: {
-            var13 = ZombieDawnMulti.field_E ? 1 : 0;
-            if (!(param1 instanceof fn)) {
-              break L1;
-            } else {
-              var14 = (fn) ((Object) param1);
-              param1 = var14.field_f;
-              var2 = var14.field_k + " | ";
-              if (var13 == 0) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
+          var13 = ZombieDawnMulti.field_E ? 1 : 0;
+          if (!(param1 instanceof fn)) {
+            var2 = "";
+            var11 = var2;
+            var2 = var11;
+            var11 = var2;
+            break L0;
+          } else {
+            var14 = (fn) ((Object) param1);
+            param1 = var14.field_f;
+            var2 = var14.field_k + " | ";
+            break L0;
           }
-          var2 = "";
-          var11 = var2;
-          var2 = var11;
-          var11 = var2;
-          break L0;
         }
         var15 = new StringWriter();
         var4 = new PrintWriter((Writer) ((Object) var15));
@@ -64,44 +57,26 @@ final class hg extends gm {
         var11 = var7;
         var2 = var11;
         var11 = var7;
-        L2: while (true) {
-          L3: {
-            L4: {
-              var8 = var6.readLine();
-              var11 = var8;
-              var2 = var11;
-              var11 = var8;
-              if (var8 != null) {
-                break L4;
+        L1: while (true) {
+          var8 = var6.readLine();
+          var11 = var8;
+          var2 = var11;
+          var11 = var8;
+          if (var8 != null) {
+            L2: {
+              var9 = var8.indexOf('(');
+              var10 = var8.indexOf(')', 1 + var9);
+              if (var9 == -1) {
+                var11 = var8;
+                var2 = var11;
+                var2 = var11;
+                break L2;
               } else {
-                if (var13 == 0) {
-                  break L3;
-                } else {
-                  break L4;
-                }
+                var11 = var8.substring(0, var9);
+                break L2;
               }
             }
-            L5: {
-              L6: {
-                var9 = var8.indexOf('(');
-                var10 = var8.indexOf(')', 1 + var9);
-                if (var9 == -1) {
-                  break L6;
-                } else {
-                  var11 = var8.substring(0, var9);
-                  if (var13 == 0) {
-                    break L5;
-                  } else {
-                    break L6;
-                  }
-                }
-              }
-              var11 = var8;
-              var2 = var11;
-              var2 = var11;
-              break L5;
-            }
-            L7: {
+            L3: {
               var16 = var11.trim();
               var2 = var16;
               var2 = var16;
@@ -116,33 +91,30 @@ final class hg extends gm {
               var2 = var19;
               var2 = var19;
               if (0 == (var9 ^ -1)) {
-                break L7;
+                break L3;
               } else {
                 if (0 == (var10 ^ -1)) {
-                  break L7;
+                  break L3;
                 } else {
                   var12 = var8.indexOf(".java:", var9);
                   if (0 > var12) {
-                    break L7;
+                    break L3;
                   } else {
                     var2 = var19 + var8.substring(var12 + 5, var10);
-                    break L7;
+                    break L3;
                   }
                 }
               }
             }
             var2 = var2 + ' ';
-            if (var13 == 0) {
-              continue L2;
-            } else {
-              break L3;
-            }
-          }
-          if (param0 > -58) {
-            return (String) null;
+            continue L1;
           } else {
-            var2 = var2 + "| " + var7;
-            return var2;
+            if (param0 > -58) {
+              return (String) null;
+            } else {
+              var2 = var2 + "| " + var7;
+              return var2;
+            }
           }
         }
     }
@@ -159,38 +131,24 @@ final class hg extends gm {
           hg.c(false);
           var4 = 0;
           L0: while (true) {
-            L1: {
-              if (param2 <= var4) {
-                break L1;
-              } else {
-                var6[var4] = param1;
-                var4++;
-                if (var5 == 0) {
-                  continue L0;
-                } else {
-                  break L1;
-                }
-              }
+            if (param2 <= var4) {
+              return new String(var6);
+            } else {
+              var6[var4] = param1;
+              var4++;
+              continue L0;
             }
-            return new String(var6);
           }
         } else {
           var4 = 0;
-          L2: while (true) {
-            L3: {
-              if (param2 <= var4) {
-                break L3;
-              } else {
-                var6[var4] = param1;
-                var4++;
-                if (var5 == 0) {
-                  continue L2;
-                } else {
-                  break L3;
-                }
-              }
+          L1: while (true) {
+            if (param2 <= var4) {
+              return new String(var6);
+            } else {
+              var6[var4] = param1;
+              var4++;
+              continue L1;
             }
-            return new String(var6);
           }
         }
     }
@@ -201,150 +159,56 @@ final class hg extends gm {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var6 = ZombieDawnMulti.field_E ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var6 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          L0: {
+            oo.c(param0.c(this.g(58), -20126), param0.d(this.h(102), 109), this.field_kb, 16711680);
+            var3_int = 0;
+            L1: while (true) {
+              if (this.field_fb <= var3_int) {
+                if (param1 > 58) {
+                  break L0;
+                } else {
+                  hg.a(-91, '', 11);
+                  return;
                 }
-                case 1: {
-                    try {
-                        oo.c(param0.c(this.g(58), -20126), param0.d(this.h(102), 109), this.field_kb, 16711680);
-                        var3_int = 0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (this.field_fb <= var3_int) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var4 = param0.c(this.field_cb[var3_int], -20126);
-                        var5 = param0.d(this.field_hb[var3_int], 126);
-                        oo.e(-1 + var4, -1 + var5, 3, 3, 0);
-                        oo.a(var4, var5, 65280);
-                        var3_int++;
-                        if (var6 != 0) {
-                            statePc = 13;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var6 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (param1 > 58) {
-                            statePc = 13;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        hg.a(-91, '', 11);
-                        return;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var3 = (RuntimeException) ((Object) caughtException);
-                    stackIn_11_0 = (RuntimeException) (var3);
-                    stackIn_10_0 = stackIn_11_0;
-                    stackIn_11_1 = new StringBuilder().append("hg.J(");
-                    stackIn_10_1 = stackIn_11_1;
-                    if (param0 == null) {
-                        statePc = 11;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
-                    stackIn_12_0 = (RuntimeException) ((Object) stackIn_10_0);
-                    stackIn_12_1 = (StringBuilder) ((Object) stackIn_10_1);
-                    stackIn_12_2 = "{...}";
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 11: {
-                    stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                    stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                    stackIn_12_2 = "null";
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 12: {
-                    throw fa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
-                }
-                case 13: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                var4 = param0.c(this.field_cb[var3_int], -20126);
+                var5 = param0.d(this.field_hb[var3_int], 126);
+                oo.e(-1 + var4, -1 + var5, 3, 3, 0);
+                oo.a(var4, var5, 65280);
+                var3_int++;
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackIn_9_0 = (RuntimeException) (var3);
+
+            stackIn_9_1 = new StringBuilder().append("hg.J(");
+
+            if (param0 == null) {
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
+              break L2;
+            } else {
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
+              break L2;
+            }
+          }
+          throw fa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
         }
     }
 

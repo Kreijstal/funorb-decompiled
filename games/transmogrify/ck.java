@@ -189,37 +189,28 @@ final class ck extends aj implements tc, df {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param1 == 17) {
-                break L1;
-              } else {
-                var7 = (String) null;
-                discarded$1 = this.a(21, 119, (String) null, (qg) null, (String) null, (byte) 74);
-                break L1;
-              }
+            if (param1 == 17) {
+              break L0;
+            } else {
+              var7 = (String) null;
+              discarded$1 = this.a(21, 119, (String) null, (qg) null, (String) null, (byte) 74);
+              break L0;
             }
-            L2: {
-              if (param0 == this.field_w) {
-                break L2;
-              } else {
-                if (this.field_x == param0) {
-                  this.n(0);
-                  if (!Transmogrify.field_A) {
-                    break L0;
-                  } else {
-                    break L2;
-                  }
-                } else {
-                  return;
-                }
-              }
-            }
+          }
+          if (param0 == this.field_w) {
             bl.a(param1 + 841);
             return;
+          } else {
+            if (this.field_x == param0) {
+              this.n(0);
+              return;
+            } else {
+              return;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L1: {
             var6 = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (var6);
 
@@ -229,12 +220,12 @@ final class ck extends aj implements tc, df {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L3;
+              break L1;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L3;
+              break L1;
             }
           }
           throw ch.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

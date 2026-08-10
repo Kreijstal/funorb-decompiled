@@ -81,6 +81,7 @@ final class ei extends sh {
     private final int b(int param0, tk param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
+        int[] var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -96,6 +97,7 @@ final class ei extends sh {
               if (param0 == 32) {
                 break L1;
               } else {
+                var4 = (int[]) null;
                 this.b((int[]) null, -128, 50);
                 break L1;
               }
@@ -158,6 +160,7 @@ final class ei extends sh {
 
     final synchronized boolean d(int param0) {
         if (param0 != 31499) {
+            int[] var3 = (int[]) null;
             this.b((int[]) null, -50, -87);
         }
         return this.field_G.c();
@@ -1091,6 +1094,7 @@ final class ei extends sh {
         int discarded$0 = 0;
         int var4;
         int var5;
+        tk var6;
         L0: {
           var5 = fleas.field_A ? 1 : 0;
           if ((param2 ^ -1) <= -1) {
@@ -1113,6 +1117,7 @@ final class ei extends sh {
           if (param1) {
             break L2;
           } else {
+            var6 = (tk) null;
             discarded$0 = this.b(19, (tk) null);
             break L2;
           }
@@ -1796,11 +1801,13 @@ final class ei extends sh {
         int discarded$1 = 0;
         tk var3;
         int var4;
+        tk var5;
         L0: {
           var4 = fleas.field_A ? 1 : 0;
           if (param1 == 31911) {
             break L0;
           } else {
+            var5 = (tk) null;
             discarded$1 = this.b(64, (tk) null);
             break L0;
           }
@@ -1841,6 +1848,7 @@ final class ei extends sh {
 
     private final void e(int param0, int param1) {
         int var4;
+        tk var5;
         var4 = fleas.field_A ? 1 : 0;
         if (-1 < (param0 ^ -1)) {
           param0 = 0;
@@ -1869,6 +1877,7 @@ final class ei extends sh {
             if (param1 == 15198) {
               break L1;
             } else {
+              var5 = (tk) null;
               this.a(-127, (tk) null, false);
               break L1;
             }

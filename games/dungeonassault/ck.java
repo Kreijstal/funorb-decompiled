@@ -293,35 +293,38 @@ class ck extends lm {
         try {
           L0: {
             L1: {
-              super.a(param0, param1, param2, param3);
-              if (this.field_y == 0) {
-                break L1;
-              } else {
-                if (la.field_g != this.field_y) {
-                  L2: {
-                    if (!this.a(hj.field_S, param0, param1, -1, eh.field_h)) {
-                      break L2;
-                    } else {
-                      if (0 != la.field_g) {
-                        break L2;
+              L2: {
+                super.a(param0, param1, param2, param3);
+                if (this.field_y == 0) {
+                  break L2;
+                } else {
+                  if (la.field_g != this.field_y) {
+                    L3: {
+                      if (!this.a(hj.field_S, param0, param1, -1, eh.field_h)) {
+                        break L3;
                       } else {
-                        this.b(-param1 + eh.field_h, this.field_y, 1, -param0 + hj.field_S);
-                        break L2;
+                        if (0 != la.field_g) {
+                          break L3;
+                        } else {
+                          this.b(-param1 + eh.field_h, this.field_y, 1, -param0 + hj.field_S);
+                          break L3;
+                        }
                       }
                     }
+                    this.a(param1, true, eh.field_h, param2, param0, hj.field_S);
+                    break L2;
+                  } else {
+                    break L1;
                   }
-                  this.a(param1, true, eh.field_h, param2, param0, hj.field_S);
-                  break L1;
-                } else {
-                  break L1;
                 }
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var5 = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (var5);
 
@@ -331,12 +334,12 @@ class ck extends lm {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L3;
+              break L4;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L3;
+              break L4;
             }
           }
           throw vk.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ')');

@@ -303,49 +303,14 @@ final class nn {
     }
 
     final static void a(int[][] param0, byte param1) {
-        RuntimeException runtimeException = null;
-        byte[] var3 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              qd.field_a = param0;
-              if (param1 < -94) {
-                break L1;
-              } else {
-                var3 = (byte[]) null;
+            qd.field_a = param0;
+            if (param1 >= -94) {
+                byte[] var3 = (byte[]) null;
                 nn.a(-46, (byte[]) null, -63, -109);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("nn.C(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) ((Object) runtimeException), "nn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

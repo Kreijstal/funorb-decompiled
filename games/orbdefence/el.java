@@ -220,60 +220,13 @@ final class el extends ta implements bf, ai {
     }
 
     public final void a(byte param0, int param1, int param2, s param3, int param4) {
-        RuntimeException runtimeException = null;
-        int var6_int = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              L2: {
-                if (param3 == this.field_H) {
-                  break L2;
-                } else {
-                  if (param3 != this.field_J) {
-                    break L1;
-                  } else {
-                    this.k(-126);
-                    if (!OrbDefence.field_D) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-              }
-              sg.k(-16);
-              break L1;
+            if (param3 == this.field_H || param3 == this.field_J) {
+                sg.k(-16);
             }
-            var6_int = 45 / ((param0 - -3) / 62);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (runtimeException);
-
-            stackIn_9_1 = new StringBuilder().append("el.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param4 + ')');
+            int var6_int = 45 / ((param0 - -3) / 62);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) ((Object) runtimeException), "el.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

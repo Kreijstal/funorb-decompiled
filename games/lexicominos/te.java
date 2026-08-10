@@ -76,27 +76,19 @@ final class te extends kf {
               try {
                 L1: {
                   L2: {
-                    L3: {
-                      var9 = param2.getParameter("cookiehost");
-                      var7 = var9;
-                      var7 = var9;
-                      var10 = param0 + "=" + param3 + "; version=1; path=/; domain=" + var9;
-                      var7 = var10;
-                      var7 = var10;
-                      var7 = var10;
-                      if (0L > param1) {
-                        break L3;
-                      } else {
-                        var7 = var10 + "; Expires=" + q.a(1000L * param1 + rf.c(0), (byte) 28) + "; Max-Age=" + param1;
-                        if (!Lexicominos.field_L) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      }
+                    var9 = param2.getParameter("cookiehost");
+                    var7 = var9;
+                    var7 = var9;
+                    var10 = param0 + "=" + param3 + "; version=1; path=/; domain=" + var9;
+                    var7 = var10;
+                    var7 = var10;
+                    if (0L > param1) {
+                      var7 = var10 + "; Discard;";
+                      break L2;
+                    } else {
+                      var7 = var10 + "; Expires=" + q.a(1000L * param1 + rf.c(0), (byte) 28) + "; Max-Age=" + param1;
+                      break L2;
                     }
-                    var7 = var7 + "; Discard;";
-                    break L2;
                   }
                   oa.a("document.cookie=\"" + var7 + "\"", param2, param4 + -31196);
                   break L1;
@@ -109,7 +101,7 @@ final class te extends kf {
               return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
+              L3: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackIn_11_0 = (RuntimeException) (var6_ref);
 
@@ -119,15 +111,15 @@ final class te extends kf {
                   stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
                   stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
                   stackIn_12_2 = "null";
-                  break L4;
+                  break L3;
                 } else {
                   stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
                   stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
                   stackIn_12_2 = "{...}";
-                  break L4;
+                  break L3;
                 }
               }
-              L5: {
+              L4: {
 
 
                 stackIn_14_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',');
@@ -136,15 +128,15 @@ final class te extends kf {
                   stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
                   stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
                   stackIn_15_2 = "null";
-                  break L5;
+                  break L4;
                 } else {
                   stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
                   stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
                   stackIn_15_2 = "{...}";
-                  break L5;
+                  break L4;
                 }
               }
-              L6: {
+              L5: {
 
 
                 stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
@@ -153,12 +145,12 @@ final class te extends kf {
                   stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
                   stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
                   stackIn_18_2 = "null";
-                  break L6;
+                  break L5;
                 } else {
                   stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
                   stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
                   stackIn_18_2 = "{...}";
-                  break L6;
+                  break L5;
                 }
               }
               throw ld.a((Throwable) ((Object) stackIn_12_0), stackIn_18_2 + ',' + param4 + ')');

@@ -899,7 +899,7 @@ final class ki {
                             break L9;
                           }
                         }
-                        throw dd.a((Throwable) ((Object) stackIn_39_0), (stackIn_39_2 != 0) + " " + param2 + " " + param0.length + " " + eg.a(var9, 0, param0.length) + " " + eg.a(var9, 0, param0.length + -2) + " " + this.field_i.field_r[param2] + " " + this.field_i.field_p);
+                        throw dd.a((Throwable) ((Object) stackIn_39_0), (stackIn_39_2 != 0) + " " + param2 + " " + var9.length + " " + eg.a(var9, 0, var9.length) + " " + eg.a(var9, 0, var9.length + -2) + " " + this.field_i.field_r[param2] + " " + this.field_i.field_p);
                       }
                       L10: {
                         if (this.field_g) {

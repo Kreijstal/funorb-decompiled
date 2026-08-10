@@ -381,69 +381,72 @@ final class jr extends wt {
                 this.field_q = ee.a((byte) 10, '<', param0.h(-17883));
                 break L2;
               } else {
-                if (param2 == 2) {
-                  var4_int = param0.g(-61);
-                  this.field_t = new int[var4_int];
-                  var5 = 0;
-                  L3: while (true) {
-                    if (var5 >= var4_int) {
-                      break L2;
-                    } else {
-                      this.field_t[var5] = param0.i((byte) 0);
-                      var5++;
-                      continue L3;
-                    }
-                  }
-                } else {
-                  if (3 != param2) {
-                    if ((param2 ^ -1) != -5) {
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    var4_int = param0.g(82);
-                    this.field_o = new int[var4_int];
-                    this.field_s = new int[var4_int][];
+                L3: {
+                  if (param2 == 2) {
+                    var4_int = param0.g(-61);
+                    this.field_t = new int[var4_int];
                     var5 = 0;
                     L4: while (true) {
-                      if (var4_int <= var5) {
-                        break L2;
+                      if (var5 >= var4_int) {
+                        break L3;
                       } else {
-                        L5: {
-                          var6 = param0.i((byte) 0);
-                          var7 = ks.a(var6, -28228);
-                          if (var7 != null) {
-                            this.field_o[var5] = var6;
-                            array$0 = new int[var7.field_c];
-                            this.field_s[var5] = array$0;
-                            var8 = 0;
-                            L6: while (true) {
-                              if (var7.field_c <= var8) {
-                                break L5;
-                              } else {
-                                this.field_s[var5][var8] = param0.i((byte) 0);
-                                var8++;
-                                continue L6;
-                              }
-                            }
-                          } else {
-                            break L5;
-                          }
-                        }
+                        this.field_t[var5] = param0.i((byte) 0);
                         var5++;
                         continue L4;
                       }
                     }
+                  } else {
+                    if (3 != param2) {
+                      if ((param2 ^ -1) != -5) {
+                        break L3;
+                      } else {
+                        break L2;
+                      }
+                    } else {
+                      var4_int = param0.g(82);
+                      this.field_o = new int[var4_int];
+                      this.field_s = new int[var4_int][];
+                      var5 = 0;
+                      L5: while (true) {
+                        if (var4_int <= var5) {
+                          break L3;
+                        } else {
+                          L6: {
+                            var6 = param0.i((byte) 0);
+                            var7 = ks.a(var6, -28228);
+                            if (var7 != null) {
+                              this.field_o[var5] = var6;
+                              array$0 = new int[var7.field_c];
+                              this.field_s[var5] = array$0;
+                              var8 = 0;
+                              L7: while (true) {
+                                if (var7.field_c <= var8) {
+                                  break L6;
+                                } else {
+                                  this.field_s[var5][var8] = param0.i((byte) 0);
+                                  var8++;
+                                  continue L7;
+                                }
+                              }
+                            } else {
+                              break L6;
+                            }
+                          }
+                          var5++;
+                          continue L5;
+                        }
+                      }
+                    }
                   }
                 }
+                break L2;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var4 = decompiledCaughtException;
             stackIn_23_0 = (RuntimeException) (var4);
 
@@ -453,12 +456,12 @@ final class jr extends wt {
               stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
               stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackIn_24_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
               stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackIn_24_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw pn.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ',' + param2 + ')');

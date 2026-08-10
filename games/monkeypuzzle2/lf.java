@@ -100,31 +100,24 @@ final class lf {
                   }
                   L4: {
                     if (ii.field_T == param0) {
-                      L5: {
-                        if ((pg.field_a.c(72) ^ -1) >= -1) {
-                          break L5;
+                      if ((pg.field_a.c(72) ^ -1) >= -1) {
+                        if (wi.field_f < pf.a(param0 ^ 3)) {
+                          stackIn_31_0 = dh.a(true, -2);
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         } else {
-                          var1_int = pg.field_a.a(-16840);
-                          if (0 != var1_int) {
-                            stackIn_26_0 = dh.a(true, var1_int);
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          } else {
-                            ii.field_T = ii.field_T + 1;
-                            if (!MonkeyPuzzle2.field_F) {
-                              break L4;
-                            } else {
-                              break L5;
-                            }
-                          }
+                          break L4;
                         }
-                      }
-                      if (wi.field_f < pf.a(param0 ^ 3)) {
-                        stackIn_31_0 = dh.a(true, -2);
-                        decompiledRegionSelector0 = 2;
-                        break L0;
                       } else {
-                        break L4;
+                        var1_int = pg.field_a.a(-16840);
+                        if (0 != var1_int) {
+                          stackIn_26_0 = dh.a(true, var1_int);
+                          decompiledRegionSelector0 = 1;
+                          break L0;
+                        } else {
+                          ii.field_T = ii.field_T + 1;
+                          break L4;
+                        }
                       }
                     } else {
                       break L4;

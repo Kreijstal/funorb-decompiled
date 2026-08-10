@@ -32,36 +32,39 @@ final class sh extends to {
         try {
           L0: {
             L1: {
-              super.a(param0, param1, param2, param3, param4, param5);
-              var8 = mm.field_a;
-              var7 = var8;
-              if (var8 == null) {
-                break L1;
-              } else {
-                if (this.a(param2, param1, param5 ^ -122, param0, param3)) {
-                  if (this.field_o instanceof ma) {
-                    ((ma) ((Object) this.field_o)).a(var8, -16073, (sh) (this));
-                    mm.field_a = null;
-                    break L1;
-                  } else {
-                    if (!(var8.field_o instanceof ma)) {
-                      break L1;
-                    } else {
-                      ((ma) ((Object) var8.field_o)).a(var8, -16073, (sh) (this));
+              L2: {
+                super.a(param0, param1, param2, param3, param4, param5);
+                var8 = mm.field_a;
+                var7 = var8;
+                if (var8 == null) {
+                  break L2;
+                } else {
+                  if (this.a(param2, param1, param5 ^ -122, param0, param3)) {
+                    if (this.field_o instanceof ma) {
+                      ((ma) ((Object) this.field_o)).a(var8, -16073, (sh) (this));
                       mm.field_a = null;
                       break L1;
+                    } else {
+                      if (!(var8.field_o instanceof ma)) {
+                        break L2;
+                      } else {
+                        ((ma) ((Object) var8.field_o)).a(var8, -16073, (sh) (this));
+                        mm.field_a = null;
+                        break L1;
+                      }
                     }
+                  } else {
+                    break L1;
                   }
-                } else {
-                  break L1;
                 }
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var7_ref = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (var7_ref);
 
@@ -71,12 +74,12 @@ final class sh extends to {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L2;
+              break L3;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L2;
+              break L3;
             }
           }
           throw pn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param5 + ')');

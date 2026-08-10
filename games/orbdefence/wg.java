@@ -162,33 +162,17 @@ final class wg extends hi {
         int var3;
         int var4;
         ba[] var5;
-        int stackIn_5_0 = 0;
-        int stackIn_5_1 = 0;
         var4 = OrbDefence.field_D ? 1 : 0;
         var5 = jl.a((byte) 60);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
           if (var5.length > var3) {
-            stackIn_5_0 = var5[var3].field_d;
-
-            stackIn_5_1 = param0;
-
-            if (var4 == 0) {
-              if (stackIn_5_0 != stackIn_5_1) {
-                var3++;
-                if (var4 == 0) {
-                  continue L0;
-                } else {
-                  var3 = -127 / ((-71 - param1) / 52);
-                  return null;
-                }
-              } else {
-                return var5[var3];
-              }
+            if (var5[var3].field_d != param0) {
+              var3++;
+              continue L0;
             } else {
-              var3 = stackIn_5_0 / stackIn_5_1;
-              return null;
+              return var5[var3];
             }
           } else {
             var3 = -127 / ((-71 - param1) / 52);

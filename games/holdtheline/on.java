@@ -113,69 +113,72 @@ final class on extends ln {
                 this.field_u = fl.a(param1.j(-1231), (byte) -29, '<');
                 break L2;
               } else {
-                if ((param2 ^ -1) != -3) {
-                  if ((param2 ^ -1) == -4) {
-                    var4_int = param1.f((byte) -95);
-                    this.field_w = new int[var4_int];
-                    this.field_q = new int[var4_int][];
-                    var5 = 0;
-                    L3: while (true) {
-                      if (var4_int <= var5) {
-                        break L2;
-                      } else {
-                        L4: {
-                          var6 = param1.k(120);
-                          var7 = ln.a(var6, (byte) -96);
-                          if (var7 == null) {
-                            break L4;
-                          } else {
-                            this.field_w[var5] = var6;
-                            array$0 = new int[var7.field_c];
-                            this.field_q[var5] = array$0;
-                            var8 = 0;
-                            L5: while (true) {
-                              if (var8 >= var7.field_c) {
-                                break L4;
-                              } else {
-                                this.field_q[var5][var8] = param1.k(98);
-                                var8++;
-                                continue L5;
+                L3: {
+                  if ((param2 ^ -1) != -3) {
+                    if ((param2 ^ -1) == -4) {
+                      var4_int = param1.f((byte) -95);
+                      this.field_w = new int[var4_int];
+                      this.field_q = new int[var4_int][];
+                      var5 = 0;
+                      L4: while (true) {
+                        if (var4_int <= var5) {
+                          break L3;
+                        } else {
+                          L5: {
+                            var6 = param1.k(120);
+                            var7 = ln.a(var6, (byte) -96);
+                            if (var7 == null) {
+                              break L5;
+                            } else {
+                              this.field_w[var5] = var6;
+                              array$0 = new int[var7.field_c];
+                              this.field_q[var5] = array$0;
+                              var8 = 0;
+                              L6: while (true) {
+                                if (var8 >= var7.field_c) {
+                                  break L5;
+                                } else {
+                                  this.field_q[var5][var8] = param1.k(98);
+                                  var8++;
+                                  continue L6;
+                                }
                               }
                             }
                           }
+                          var5++;
+                          continue L4;
                         }
-                        var5++;
-                        continue L3;
+                      }
+                    } else {
+                      if (param2 == 4) {
+                        break L3;
+                      } else {
+                        break L2;
                       }
                     }
                   } else {
-                    if (param2 == 4) {
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                } else {
-                  var4_int = param1.f((byte) -111);
-                  this.field_o = new int[var4_int];
-                  var5 = 0;
-                  L6: while (true) {
-                    if (var5 >= var4_int) {
-                      break L2;
-                    } else {
-                      this.field_o[var5] = param1.k(72);
-                      var5++;
-                      continue L6;
+                    var4_int = param1.f((byte) -111);
+                    this.field_o = new int[var4_int];
+                    var5 = 0;
+                    L7: while (true) {
+                      if (var5 >= var4_int) {
+                        break L3;
+                      } else {
+                        this.field_o[var5] = param1.k(72);
+                        var5++;
+                        continue L7;
+                      }
                     }
                   }
                 }
+                break L2;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var4 = decompiledCaughtException;
             stackIn_22_0 = (RuntimeException) (var4);
 
@@ -185,12 +188,12 @@ final class on extends ln {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw kk.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param2 + ')');

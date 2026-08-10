@@ -31,78 +31,26 @@ final class vg extends ec {
     }
 
     final void a(int param0, int param1, int param2, fi param3, int param4, int param5) {
-        ce var7 = null;
-        RuntimeException var7_ref = null;
         ce var8 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param5 > 73) {
-              L1: {
-                super.a(param0, param1, param2, param3, param4, 125);
-                var8 = ra.field_b;
-                var7 = var8;
-                if (var8 == null) {
-                  break L1;
-                } else {
-                  if (this.a(param4, param1, param0, (byte) 46, param2)) {
-                    if (this.field_o instanceof ik) {
-                      ((ik) ((Object) this.field_o)).a(82, (vg) (this), var8);
-                      ra.field_b = null;
-                      return;
-                    } else {
-                      if (!(var8.field_o instanceof ik)) {
-                        break L1;
-                      } else {
-                        ((ik) ((Object) var8.field_o)).a(120, (vg) (this), var8);
-                        ra.field_b = null;
-                        return;
-                      }
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var7_ref = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var7_ref);
-
-            stackIn_12_1 = new StringBuilder().append("vg.JA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L2;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L2;
-            }
-          }
-          throw kg.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param4 + ',' + param5 + ')');
+        if (param5 <= 73) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            super.a(param0, param1, param2, param3, param4, 125);
+            var8 = ra.field_b;
+            ce var7 = var8;
+            if (var8 != null) {
+                if (!this.a(param4, param1, param0, (byte) 46, param2)) {
+                    return;
+                }
+                if (this.field_o instanceof ik || var8.field_o instanceof ik) {
+                    ((ik) ((Object) this.field_o)).a(82, (vg) (this), var8);
+                    ra.field_b = null;
+                    return;
+                }
+            }
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) ((Object) runtimeException), "vg.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

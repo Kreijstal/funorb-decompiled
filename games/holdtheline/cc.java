@@ -473,17 +473,20 @@ final class cc extends ca {
                       }
                     }
                     L3: {
-                      eb.field_o = new fb(var4, var5, nj.field_d, ni.field_b, cm.field_a, tn.field_c, var14);
-                      if (l.field_b) {
-                        break L3;
-                      } else {
-                        if (pj.b((byte) 109)) {
-                          break L3;
+                      L4: {
+                        eb.field_o = new fb(var4, var5, nj.field_d, ni.field_b, cm.field_a, tn.field_c, var14);
+                        if (l.field_b) {
+                          break L4;
                         } else {
-                          am.a(3, (byte) -37, eb.field_o);
-                          break L3;
+                          if (pj.b((byte) 109)) {
+                            break L4;
+                          } else {
+                            am.a(3, (byte) -37, eb.field_o);
+                            break L3;
+                          }
                         }
                       }
+                      break L3;
                     }
                     decompiledRegionSelector0 = 3;
                     break L0;
@@ -507,7 +510,7 @@ final class cc extends ca {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var3 = decompiledCaughtException;
             stackIn_30_0 = (RuntimeException) (var3);
 
@@ -517,12 +520,12 @@ final class cc extends ca {
               stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
               stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackIn_31_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
               stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackIn_31_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw kk.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ',' + param1 + ',' + param2 + ')');

@@ -20,91 +20,72 @@ final class ij extends kd {
         int var2_int = 0;
         df var3 = null;
         int var4 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        wf var5 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        wf var5 = null;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
             if (null != param0.field_h) {
               L1: {
                 L2: {
-                  L3: {
-                    L4: {
-                      if (param0.field_i != 0) {
-                        break L4;
-                      } else {
-                        if (-1 == (param0.field_k ^ -1)) {
-                          break L3;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    var2_int = 0;
-                    L5: while (true) {
-                      if (pj.field_H <= var2_int) {
-                        break L3;
-                      } else {
-                        var3 = tf.field_d[var2_int];
-                        var7 = var3.field_g ^ -1;
-                        var6 = -3;
-                        if (var4 != 0) {
-                          if (var6 > var7) {
-                            break L1;
-                          } else {
-                            break L2;
-                          }
-                        } else {
-                          L6: {
-                            if (var6 != var7) {
-                              break L6;
-                            } else {
-                              if (param0.field_i != var3.field_i) {
-                                break L6;
-                              } else {
-                                if (param0.field_k == var3.field_k) {
-                                  decompiledRegionSelector0 = 1;
-                                  break L0;
-                                } else {
-                                  break L6;
-                                }
-                              }
-                            }
-                          }
-                          var2_int++;
-                          if (var4 == 0) {
-                            continue L5;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  if (param1 > 106) {
-                    break L1;
-                  } else {
+                  if (param0.field_i != 0) {
                     break L2;
+                  } else {
+                    if (-1 == (param0.field_k ^ -1)) {
+                      break L1;
+                    } else {
+                      break L2;
+                    }
                   }
                 }
-                var5 = (wf) null;
-                ij.a(5, 11, (wf) null);
-                break L1;
+                var2_int = 0;
+                L3: while (true) {
+                  if (pj.field_H <= var2_int) {
+                    break L1;
+                  } else {
+                    L4: {
+                      var3 = tf.field_d[var2_int];
+                      if (-3 != (var3.field_g ^ -1)) {
+                        break L4;
+                      } else {
+                        if (param0.field_i != var3.field_i) {
+                          break L4;
+                        } else {
+                          if (param0.field_k == var3.field_k) {
+                            decompiledRegionSelector0 = 1;
+                            break L0;
+                          } else {
+                            break L4;
+                          }
+                        }
+                      }
+                    }
+                    var2_int++;
+                    continue L3;
+                  }
+                }
               }
-              L7: {
-                if (null == param0.field_b) {
-                  break L7;
+              L5: {
+                if (param1 > 106) {
+                  break L5;
                 } else {
-                  break L7;
+                  var5 = (wf) null;
+                  ij.a(5, 11, (wf) null);
+                  break L5;
+                }
+              }
+              L6: {
+                if (null == param0.field_b) {
+                  break L6;
+                } else {
+                  break L6;
                 }
               }
               r.a(param0, 0);
@@ -117,25 +98,25 @@ final class ij extends kd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var2 = decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var2);
+            stackIn_23_0 = (RuntimeException) (var2);
 
-            stackIn_25_1 = new StringBuilder().append("ij.D(");
+            stackIn_23_1 = new StringBuilder().append("ij.D(");
 
             if (param0 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L8;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
+              break L7;
             } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L8;
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
+              break L7;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -150,11 +131,11 @@ final class ij extends kd {
 
     final void b(int param0, ij[] param1) {
         int stackIn_12_0 = 0;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -186,39 +167,28 @@ final class ij extends kd {
                     break L3;
                   } else {
                     L4: {
-                      L5: {
-                        if (var4 >= param1.length) {
-                          break L5;
-                        } else {
-                          if (null != param1[var4]) {
-                            break L4;
-                          } else {
-                            break L5;
+                      if (var4 >= param1.length) {
+                        break L4;
+                      } else {
+                        if (null != param1[var4]) {
+                          L5: {
+                            if (param1[var4].field_q > param1[var3_int].field_q) {
+                              stackIn_12_0 = var3_int;
+                              break L5;
+                            } else {
+                              stackIn_12_0 = var4;
+                              break L5;
+                            }
                           }
+                          var5 = stackIn_12_0;
+                          break L2;
+                        } else {
+                          break L4;
                         }
                       }
-                      var5 = var3_int;
-                      if (var6 == 0) {
-                        break L2;
-                      } else {
-                        break L4;
-                      }
                     }
-                    L6: {
-                      if (param1[var4].field_q > param1[var3_int].field_q) {
-                        stackIn_12_0 = var3_int;
-                        break L6;
-                      } else {
-                        stackIn_12_0 = var4;
-                        break L6;
-                      }
-                    }
-                    var5 = stackIn_12_0;
-                    if (var6 == 0) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
+                    var5 = var3_int;
+                    break L2;
                   }
                 }
               }
@@ -233,48 +203,41 @@ final class ij extends kd {
                 }
               }
             }
-            L7: {
-              L8: {
-                if (var5 > -1) {
-                  break L8;
-                } else {
-                  param1[this.field_i] = null;
-                  if (var6 == 0) {
-                    break L7;
-                  } else {
-                    break L8;
-                  }
-                }
+            L6: {
+              if (var5 > -1) {
+                param1[this.field_i] = param1[var5];
+                param1[var5].b(-3, param1);
+                param1[this.field_i].field_i = this.field_i;
+                break L6;
+              } else {
+                param1[this.field_i] = null;
+                break L6;
               }
-              param1[this.field_i] = param1[var5];
-              param1[var5].b(-3, param1);
-              param1[this.field_i].field_i = this.field_i;
-              break L7;
             }
             this.field_i = -1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L7: {
             var3 = decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var3);
+            stackIn_24_0 = (RuntimeException) (var3);
 
-            stackIn_25_1 = new StringBuilder().append("ij.A(").append(param0).append(',');
+            stackIn_24_1 = new StringBuilder().append("ij.A(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L9;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
+              break L7;
             } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L9;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
+              break L7;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
     }
 
@@ -590,11 +553,7 @@ final class ij extends kd {
                     param1[var4] = (ij) (this);
                     this.field_i = var4;
                     var4 = (-1 + this.field_i) / 2;
-                    if (var5 == 0) {
-                      continue L1;
-                    } else {
-                      break L2;
-                    }
+                    continue L1;
                   }
                 }
               }

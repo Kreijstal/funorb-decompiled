@@ -11,126 +11,48 @@ final class sc {
     static String field_c;
 
     final static void a(int param0, byte param1, String param2) {
-        RuntimeException runtimeException = null;
-        int var3_int = 0;
         int var4 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              gb.field_d = false;
-              dl.field_g = false;
-              var3_int = 38 / ((-9 - param1) / 61);
-              if (null == jj.field_a) {
-                break L1;
-              } else {
-                if (!jj.field_a.field_D) {
-                  break L1;
+            gb.field_d = false;
+            dl.field_g = false;
+            int var3_int = 38 / ((-9 - param1) / 61);
+            if (null != jj.field_a && jj.field_a.field_D) {
+                var4 = 1;
+                if (param0 != 8) {
                 } else {
-                  L2: {
-                    var4 = 1;
-                    if (param0 == 8) {
-                      L3: {
-                        L4: {
-                          param0 = 2;
-                          if (!ca.field_k) {
-                            break L4;
-                          } else {
-                            param2 = fk.field_j;
-                            if (!Lexicominos.field_L) {
-                              break L3;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
+                    param0 = 2;
+                    if (ca.field_k) {
+                        param2 = fk.field_j;
+                    } else {
                         param2 = l.field_C;
-                        break L3;
-                      }
-                      eb.field_b.a(3, dd.field_d);
-                      break L2;
-                    } else {
-                      break L2;
                     }
-                  }
-                  L5: {
-                    if ((param0 ^ -1) == -11) {
-                      var4 = 0;
-                      qf.g(-94);
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  L6: {
-                    if (var4 != 0) {
-                      L7: {
-                        if (!dl.field_g) {
-                          break L7;
-                        } else {
-                          param2 = da.a(new String[]{param2}, Lexicominos.field_F, false);
-                          break L7;
-                        }
-                      }
-                      L8: {
-                        if (!lh.field_w) {
-                          break L8;
-                        } else {
-                          param2 = id.field_u;
-                          break L8;
-                        }
-                      }
-                      jj.field_a.a(-109, param0, param2);
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
-                  if (-257 == (param0 ^ -1)) {
-                    break L1;
-                  } else {
-                    if (param0 != 10) {
-                      if (!ca.field_k) {
-                        eb.field_b.d((byte) -100);
-                        break L1;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  }
+                    eb.field_b.a(3, dd.field_d);
                 }
-              }
+                if (!((param0 ^ -1) != -11)) {
+                    var4 = 0;
+                    qf.g(-94);
+                }
+                if (!(var4 == 0)) {
+                    if (dl.field_g) {
+                        param2 = da.a(new String[]{param2}, Lexicominos.field_F, false);
+                    }
+                    if (lh.field_w) {
+                        param2 = id.field_u;
+                    }
+                    jj.field_a.a(-109, param0, param2);
+                }
+                if (-257 != (param0 ^ -1)) {
+                    if (param0 == 10) {
+                        return;
+                    }
+                    if (ca.field_k) {
+                        return;
+                    }
+                    eb.field_b.d((byte) -100);
+                }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            runtimeException = decompiledCaughtException;
-            stackIn_27_0 = (RuntimeException) (runtimeException);
-
-            stackIn_27_1 = new StringBuilder().append("sc.A(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "null";
-              break L9;
-            } else {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "{...}";
-              break L9;
-            }
-          }
-          throw ld.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) ((Object) runtimeException), "sc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

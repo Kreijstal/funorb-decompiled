@@ -445,24 +445,27 @@ final class kf extends gm {
         try {
           L0: {
             L1: {
-              var5_int = -100 % ((param0 - -28) / 43);
-              if (!this.field_M) {
-                break L1;
-              } else {
-                this.field_x = this.field_x + 1;
-                if (this.field_x <= 2 * this.field_A) {
-                  break L1;
+              L2: {
+                var5_int = -100 % ((param0 - -28) / 43);
+                if (!this.field_M) {
+                  break L2;
                 } else {
-                  this.field_x = this.field_x - this.field_A * 2;
-                  break L1;
+                  this.field_x = this.field_x + 1;
+                  if (this.field_x <= 2 * this.field_A) {
+                    break L2;
+                  } else {
+                    this.field_x = this.field_x - this.field_A * 2;
+                    break L1;
+                  }
                 }
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var5 = decompiledCaughtException;
             stackIn_6_0 = (RuntimeException) (var5);
 
@@ -472,12 +475,12 @@ final class kf extends gm {
               stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
               stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackIn_7_2 = "null";
-              break L2;
+              break L3;
             } else {
               stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
               stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackIn_7_2 = "{...}";
-              break L2;
+              break L3;
             }
           }
           throw rb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param2 + ',' + param3 + ')');

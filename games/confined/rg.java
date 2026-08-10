@@ -295,63 +295,21 @@ class rg extends fj {
     }
 
     void a(fj param0, int param1, int param2, int param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.a(param0, param1, param2, param3);
-              if (0 == this.field_o) {
-                break L1;
-              } else {
-                if (this.field_o != Confined.field_I) {
-                  L2: {
-                    if (!this.a(ld.field_l, (byte) 124, param2, jh.field_R, param3)) {
-                      break L2;
-                    } else {
-                      if (Confined.field_I == 0) {
-                        this.a(25124, jh.field_R + -param3, ld.field_l - param2, this.field_o);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  this.a(-38, param3, ld.field_l, param0, jh.field_R, param2);
-                  break L1;
-                } else {
-                  return;
+            super.a(param0, param1, param2, param3);
+            if (0 != this.field_o) {
+                if (this.field_o == Confined.field_I) {
+                    return;
                 }
-              }
+                if (this.a(ld.field_l, (byte) 124, param2, jh.field_R, param3)) {
+                    if (!(Confined.field_I != 0)) {
+                        this.a(25124, jh.field_R + -param3, ld.field_l - param2, this.field_o);
+                    }
+                }
+                this.a(-38, param3, ld.field_l, param0, jh.field_R, param2);
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (runtimeException);
-
-            stackIn_11_1 = new StringBuilder().append("rg.V(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "rg.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

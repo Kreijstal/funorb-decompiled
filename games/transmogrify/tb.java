@@ -9,11 +9,11 @@ final class tb {
     static ti[] field_b;
 
     final static void a(kk param0, int param1, boolean param2, boolean param3, int param4) {
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -41,12 +41,7 @@ final class tb {
                 break L1;
               } else {
                 ff.field_D.f(6389, 16);
-                if (!Transmogrify.field_A) {
-                  break L1;
-                } else {
-                  ff.field_D.f(6389, 18);
-                  break L1;
-                }
+                break L1;
               }
             }
             L2: {
@@ -123,23 +118,23 @@ final class tb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var5 = decompiledCaughtException;
-            stackIn_27_0 = (RuntimeException) (var5);
+            stackIn_25_0 = (RuntimeException) (var5);
 
-            stackIn_27_1 = new StringBuilder().append("tb.A(");
+            stackIn_25_1 = new StringBuilder().append("tb.A(");
 
             if (param0 == null) {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "null";
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L9;
             } else {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "{...}";
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L9;
             }
           }
-          throw ch.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

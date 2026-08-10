@@ -34,47 +34,40 @@ final class cg extends me {
               }
               var2 = 0;
               L2: while (true) {
-                L3: {
-                  if (var1.field_p <= var2) {
-                    break L3;
-                  } else {
-                    L4: {
-                      if (var4.field_m[var2] == null) {
-                        break L4;
-                      } else {
-                        if (var4.field_m[var2].field_c == 0) {
-                          stackIn_12_0 = 0;
-                          decompiledRegionSelector0 = 1;
-                          break L0;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    L5: {
-                      if (null != var4.field_o[var2]) {
-                        if (-1 != (var4.field_o[var2].field_c ^ -1)) {
-                          break L5;
-                        } else {
-                          stackIn_17_0 = 0;
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        }
-                      } else {
-                        break L5;
-                      }
-                    }
-                    var2++;
-                    if (var3 == 0) {
-                      continue L2;
-                    } else {
+                if (var1.field_p <= var2) {
+                  stackIn_20_0 = 1;
+                  decompiledRegionSelector0 = 3;
+                  break L0;
+                } else {
+                  L3: {
+                    if (var4.field_m[var2] == null) {
                       break L3;
+                    } else {
+                      if (var4.field_m[var2].field_c == 0) {
+                        stackIn_12_0 = 0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
+                      } else {
+                        break L3;
+                      }
                     }
                   }
+                  L4: {
+                    if (null != var4.field_o[var2]) {
+                      if (-1 != (var4.field_o[var2].field_c ^ -1)) {
+                        break L4;
+                      } else {
+                        stackIn_17_0 = 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
+                      }
+                    } else {
+                      break L4;
+                    }
+                  }
+                  var2++;
+                  continue L2;
                 }
-                stackIn_20_0 = 1;
-                decompiledRegionSelector0 = 3;
-                break L0;
               }
             } else {
               stackIn_3_0 = 0;

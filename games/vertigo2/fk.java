@@ -704,7 +704,15 @@ final class fk extends sn {
           }
         }
         L1: {
-          if ((this.field_r ^ -1) <= -1048577) {
+          if ((this.field_r ^ -1) > -1048577) {
+            L2: {
+              if (null != this.field_u) {
+                this.field_H.a(param0);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
             if ((this.field_E ^ -1) >= -1) {
               break L1;
             } else {
@@ -728,88 +736,91 @@ final class fk extends sn {
             }
           }
         }
-        L2: {
+        L3: {
           if (this.field_w) {
-            L3: {
+            L4: {
               if ((this.field_y ^ -1) >= -1) {
-                break L3;
+                break L4;
               } else {
                 if (!this.field_v.g(-26083)) {
                   this.field_B = null;
                   this.field_w = false;
                   this.field_y = -this.field_y;
-                  break L2;
-                } else {
                   break L3;
+                } else {
+                  break L4;
                 }
               }
             }
             if ((this.field_y ^ -1) <= -1) {
-              break L2;
+              break L3;
             } else {
               if (this.field_H.g(-26083)) {
-                break L2;
+                break L3;
               } else {
                 this.field_y = -this.field_y;
                 this.field_u = null;
                 this.field_w = false;
-                break L2;
+                break L3;
               }
             }
           } else {
-            break L2;
+            break L3;
           }
         }
-        L4: {
+        L5: {
           if (this.field_y == 0) {
-            break L4;
+            break L5;
           } else {
             this.field_r = this.field_r + this.field_y * param0;
             if ((this.field_r ^ -1) <= -1048577) {
-              this.field_r = 1048576;
-              if (this.field_w) {
-                break L4;
-              } else {
-                this.field_y = 0;
-                if (!this.field_C) {
-                  L5: {
-                    if (null != this.field_u) {
-                      this.field_H.a(true);
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  this.field_u = null;
-                  break L4;
+              L6: {
+                this.field_r = 1048576;
+                if (this.field_w) {
+                  break L6;
                 } else {
-                  break L4;
+                  this.field_y = 0;
+                  if (!this.field_C) {
+                    L7: {
+                      if (null != this.field_u) {
+                        this.field_H.a(true);
+                        break L7;
+                      } else {
+                        break L7;
+                      }
+                    }
+                    this.field_u = null;
+                    break L6;
+                  } else {
+                    break L5;
+                  }
                 }
               }
+              break L5;
             } else {
               if ((this.field_r ^ -1) >= -1) {
                 this.field_r = 0;
                 if (!this.field_w) {
                   this.field_y = 0;
                   if (!this.field_C) {
-                    L6: {
+                    L8: {
                       if (this.field_B == null) {
-                        break L6;
+                        break L8;
                       } else {
                         this.field_v.a(true);
-                        break L6;
+                        break L8;
                       }
                     }
                     this.field_B = null;
-                    break L4;
+                    break L5;
                   } else {
-                    break L4;
+                    break L5;
                   }
                 } else {
-                  break L4;
+                  break L5;
                 }
               } else {
-                break L4;
+                break L5;
               }
             }
           }

@@ -30,30 +30,14 @@ final class hk {
     }
 
     final static String a(int param0, int param1, char param2) {
-        char[] var3;
-        int var4;
-        int var5;
-        char[] var6;
-        var5 = Transmogrify.field_A ? 1 : 0;
-        var6 = new char[param1];
-        var3 = var6;
-        var4 = param0;
-        L0: while (true) {
-          L1: {
-            if (param1 <= var4) {
-              break L1;
-            } else {
-              var6[var4] = param2;
-              var4++;
-              if (var5 == 0) {
-                continue L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          return new String(var6);
+        int var4 = 0;
+        int var5 = Transmogrify.field_A ? 1 : 0;
+        char[] var6 = new char[param1];
+        char[] var3 = var6;
+        for (var4 = param0; param1 > var4; var4++) {
+            var6[var4] = param2;
         }
+        return new String(var6);
     }
 
     static {

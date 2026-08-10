@@ -750,22 +750,25 @@ abstract class of {
               }
               L43: {
                 L44: {
-                  if (0 == param4) {
-                    break L44;
-                  } else {
-                    if (param4 != 2) {
-                      break L43;
+                  L45: {
+                    if (0 == param4) {
+                      break L45;
                     } else {
-                      break L44;
+                      if (param4 != 2) {
+                        break L44;
+                      } else {
+                        break L45;
+                      }
                     }
                   }
+                  if (!param3) {
+                    break L44;
+                  } else {
+                    TorChallenge.field_E = be.a(mj.field_b, dk.field_a, vj.field_c, param1 + rf.field_eb[vj.field_c][1], rf.field_eb[vj.field_c][0] + param0, 25, TorChallenge.field_E, hf.field_c);
+                    break L43;
+                  }
                 }
-                if (!param3) {
-                  break L43;
-                } else {
-                  TorChallenge.field_E = be.a(mj.field_b, dk.field_a, vj.field_c, param1 + rf.field_eb[vj.field_c][1], rf.field_eb[vj.field_c][0] + param0, 25, TorChallenge.field_E, hf.field_c);
-                  break L43;
-                }
+                break L43;
               }
               decompiledRegionSelector0 = 1;
               break L0;

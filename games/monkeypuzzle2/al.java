@@ -63,94 +63,35 @@ abstract class al {
 
     final static void a(int param0, byte param1) {
         int var2;
-        int var3;
         int var4;
         int var5;
+        int var3;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         var2 = -50 / ((param1 - -40) / 48);
         var4 = aa.field_a;
         if (-2 != (var4 ^ -1)) {
           if ((var4 ^ -1) != -3) {
-            if ((var4 ^ -1) == -4) {
+            if ((var4 ^ -1) != -4) {
+              return;
+            } else {
               tj.field_a.c(0, 0);
               return;
-            } else {
-              return;
             }
           } else {
-            if (var5 != 0) {
-              if ((var4 ^ -1) != -4) {
-                return;
-              } else {
-                tj.field_a.c(0, 0);
-                return;
-              }
-            } else {
-              ne.field_a[1].b(0, 0);
-              var3 = 50 - -(int)(ia.a(true, 0.14000000059604645f * (float)param0) * 30.0f + 10.0f * ha.a((byte) 51, (float)param0 * 0.11999999731779099f));
-              ne.field_a[0].b(0, 0, var3);
-              ge.h(80, 0, 560, 480);
-              ik.field_p[i.field_n].b(100, 0, 70);
-              cl.field_c[sk.field_G].b(0, 0, 100);
-              ge.b();
-              return;
-            }
+            ne.field_a[1].b(0, 0);
+            var3 = 50 - -(int)(ia.a(true, 0.14000000059604645f * (float)param0) * 30.0f + 10.0f * ha.a((byte) 51, (float)param0 * 0.11999999731779099f));
+            ne.field_a[0].b(0, 0, var3);
+            ge.h(80, 0, 560, 480);
+            ik.field_p[i.field_n].b(100, 0, 70);
+            cl.field_c[sk.field_G].b(0, 0, 100);
+            ge.b();
+            return;
           }
         } else {
-          if (var5 == 0) {
-            ib.field_b.a(0, 0);
-            var4 = (int)(20.0f * ia.a(true, (float)param0 * 0.009999999776482582f)) + 70;
-            m.field_k.b(0, 0, var4);
-            if (var5 != 0) {
-              ne.field_a[1].b(0, 0);
-              var3 = 50 - -(int)(ia.a(true, 0.14000000059604645f * (float)param0) * 30.0f + 10.0f * ha.a((byte) 51, (float)param0 * 0.11999999731779099f));
-              ne.field_a[0].b(0, 0, var3);
-              ge.h(80, 0, 560, 480);
-              ik.field_p[i.field_n].b(100, 0, 70);
-              cl.field_c[sk.field_G].b(0, 0, 100);
-              ge.b();
-              if (var5 == 0) {
-                return;
-              } else {
-                tj.field_a.c(0, 0);
-                return;
-              }
-            } else {
-              return;
-            }
-          } else {
-            if ((var4 ^ -1) == -3) {
-              if (var5 == 0) {
-                ne.field_a[1].b(0, 0);
-                var3 = 50 - -(int)(ia.a(true, 0.14000000059604645f * (float)param0) * 30.0f + 10.0f * ha.a((byte) 51, (float)param0 * 0.11999999731779099f));
-                ne.field_a[0].b(0, 0, var3);
-                ge.h(80, 0, 560, 480);
-                ik.field_p[i.field_n].b(100, 0, 70);
-                cl.field_c[sk.field_G].b(0, 0, 100);
-                ge.b();
-                if (var5 != 0) {
-                  tj.field_a.c(0, 0);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                if ((var4 ^ -1) != -4) {
-                  return;
-                } else {
-                  tj.field_a.c(0, 0);
-                  return;
-                }
-              }
-            } else {
-              if ((var4 ^ -1) != -4) {
-                return;
-              } else {
-                tj.field_a.c(0, 0);
-                return;
-              }
-            }
-          }
+          ib.field_b.a(0, 0);
+          var4 = (int)(20.0f * ia.a(true, (float)param0 * 0.009999999776482582f)) + 70;
+          m.field_k.b(0, 0, var4);
+          return;
         }
     }
 
@@ -167,20 +108,13 @@ abstract class al {
           var3 = var6;
           var4 = 0;
           L0: while (true) {
-            L1: {
-              if (param1 <= var4) {
-                break L1;
-              } else {
-                var6[var4] = param0;
-                var4++;
-                if (var5 == 0) {
-                  continue L0;
-                } else {
-                  break L1;
-                }
-              }
+            if (param1 <= var4) {
+              return new String(var6);
+            } else {
+              var6[var4] = param0;
+              var4++;
+              continue L0;
             }
-            return new String(var6);
           }
         }
     }
@@ -285,11 +219,9 @@ abstract class al {
     final static int a(int param0, int param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_3_0 = 0;
+        int stackIn_13_0 = 0;
         int stackIn_15_0 = 0;
-        int stackIn_17_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -299,52 +231,29 @@ abstract class al {
             if (param2) {
               var3_int = 1;
               L1: while (true) {
-                L2: {
-                  L3: {
-                    L4: {
-                      if ((param1 ^ -1) >= -2) {
-                        break L4;
-                      } else {
-                        var6 = param1 & 1;
-                        var5 = 0;
-                        if (var4 != 0) {
-                          if (var5 != var6) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        } else {
-                          L5: {
-                            if (var5 != var6) {
-                              var3_int = var3_int * param0;
-                              break L5;
-                            } else {
-                              break L5;
-                            }
-                          }
-                          param1 = param1 >> 1;
-                          param0 = param0 * param0;
-                          if (var4 == 0) {
-                            continue L1;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
-                    }
-                    if (-2 != (param1 ^ -1)) {
+                if ((param1 ^ -1) >= -2) {
+                  if (-2 != (param1 ^ -1)) {
+                    stackIn_15_0 = var3_int;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
+                  } else {
+                    stackIn_13_0 = param0 * var3_int;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  }
+                } else {
+                  L2: {
+                    if (0 != (param1 & 1)) {
+                      var3_int = var3_int * param0;
                       break L2;
                     } else {
-                      break L3;
+                      break L2;
                     }
                   }
-                  stackIn_15_0 = param0 * var3_int;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
+                  param1 = param1 >> 1;
+                  param0 = param0 * param0;
+                  continue L1;
                 }
-                stackIn_17_0 = var3_int;
-                decompiledRegionSelector0 = 2;
-                break L0;
               }
             } else {
               stackIn_3_0 = -124;
@@ -361,9 +270,9 @@ abstract class al {
           return stackIn_3_0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_15_0;
+            return stackIn_13_0;
           } else {
-            return stackIn_17_0;
+            return stackIn_15_0;
           }
         }
     }

@@ -75,36 +75,29 @@ final class qm extends se implements fi, in {
             L3: {
               pk.field_b.a((byte) -120);
               if (param1) {
-                L4: {
-                  if (ao.field_e == pk.field_b.field_b) {
-                    break L4;
-                  } else {
-                    var9 = pk.field_b;
-                    var10 = vl.a(kj.field_f, new String[]{param2}, 2);
-                    var9.field_j.a((byte) -118, var10, 15);
-                    if (!ZombieDawnMulti.field_E) {
-                      break L3;
-                    } else {
-                      break L4;
-                    }
-                  }
+                if (ao.field_e == pk.field_b.field_b) {
+                  var11 = pk.field_b;
+                  var12 = vl.a(ag.field_g, new String[]{param2}, 2);
+                  var11.field_j.a((byte) -118, var12, 16);
+                  break L3;
+                } else {
+                  var9 = pk.field_b;
+                  var10 = vl.a(kj.field_f, new String[]{param2}, 2);
+                  var9.field_j.a((byte) -118, var10, 15);
+                  break L3;
                 }
-                var11 = pk.field_b;
-                var12 = vl.a(ag.field_g, new String[]{param2}, 2);
-                var11.field_j.a((byte) -118, var12, 16);
-                break L3;
               } else {
                 break L3;
               }
             }
-            L5: {
+            L4: {
               var13 = pk.field_b;
               var5 = vb.field_f;
               if (param3 < -117) {
-                break L5;
+                break L4;
               } else {
                 field_I = (String) null;
-                break L5;
+                break L4;
               }
             }
             var6 = ka.field_t;
@@ -113,7 +106,7 @@ final class qm extends se implements fi, in {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var4 = decompiledCaughtException;
             stackIn_16_0 = (RuntimeException) (var4);
 
@@ -123,15 +116,15 @@ final class qm extends se implements fi, in {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "null";
-              break L6;
+              break L5;
             } else {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "{...}";
-              break L6;
+              break L5;
             }
           }
-          L7: {
+          L6: {
 
 
             stackIn_19_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param1).append(',');
@@ -140,12 +133,12 @@ final class qm extends se implements fi, in {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackIn_20_2 = "null";
-              break L7;
+              break L6;
             } else {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackIn_20_2 = "{...}";
-              break L7;
+              break L6;
             }
           }
           throw fa.a((Throwable) ((Object) stackIn_17_0), stackIn_20_2 + ',' + param3 + ')');
@@ -154,11 +147,11 @@ final class qm extends se implements fi, in {
 
     public final void a(int param0, int param1, gn param2, int param3, int param4) {
         int var7 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
@@ -167,63 +160,32 @@ final class qm extends se implements fi, in {
           L0: {
             if (param3 < -83) {
               L1: {
-                L2: {
-                  if (this.field_G == param2) {
-                    break L2;
-                  } else {
-                    L3: {
-                      L4: {
-                        if (this.field_P == param2) {
-                          break L4;
-                        } else {
-                          if (param2 == this.field_J) {
-                            L5: {
-                              if (!this.field_K) {
-                                break L5;
-                              } else {
-                                oi.a(-124);
-                                if (var7 == 0) {
-                                  break L3;
-                                } else {
-                                  break L5;
-                                }
-                              }
-                            }
-                            L6: {
-                              if (!this.field_L) {
-                                break L6;
-                              } else {
-                                dq.c(-118);
-                                if (var7 == 0) {
-                                  break L3;
-                                } else {
-                                  break L6;
-                                }
-                              }
-                            }
-                            qi.a(false);
-                            if (var7 == 0) {
-                              break L3;
-                            } else {
-                              break L4;
-                            }
-                          } else {
-                            break L1;
-                          }
-                        }
-                      }
-                      hb.a(0);
-                      if (var7 == 0) {
-                        break L3;
-                      } else {
-                        break L2;
-                      }
-                    }
+                if (this.field_G == param2) {
+                  this.a((byte) -95);
+                  break L1;
+                } else {
+                  if (this.field_P == param2) {
+                    hb.a(0);
                     break L1;
+                  } else {
+                    if (param2 == this.field_J) {
+                      if (!this.field_K) {
+                        if (!this.field_L) {
+                          qi.a(false);
+                          break L1;
+                        } else {
+                          dq.c(-118);
+                          break L1;
+                        }
+                      } else {
+                        oi.a(-124);
+                        break L1;
+                      }
+                    } else {
+                      break L1;
+                    }
                   }
                 }
-                this.a((byte) -95);
-                break L1;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -234,25 +196,25 @@ final class qm extends se implements fi, in {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L2: {
             var6 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var6);
+            stackIn_17_0 = (RuntimeException) (var6);
 
-            stackIn_21_1 = new StringBuilder().append("qm.E(").append(param0).append(',').append(param1).append(',');
+            stackIn_17_1 = new StringBuilder().append("qm.E(").append(param0).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L7;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
+              break L2;
             } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L7;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
+              break L2;
             }
           }
-          throw fa.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param3 + ',' + param4 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param3 + ',' + param4 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -284,6 +246,7 @@ final class qm extends se implements fi, in {
     final void g(byte param0) {
         this.field_H.b(true);
         if (param0 < 101) {
+            cf var3 = (cf) null;
             this.a(39, '￟', (cf) null, 8);
         }
         this.field_M.b(true);
@@ -323,10 +286,8 @@ final class qm extends se implements fi, in {
         fm var7 = null;
         String var8 = null;
         bo var9 = null;
-        int var11 = 0;
         el var12 = null;
         el var13 = null;
-        var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
             L1: {
@@ -391,143 +352,115 @@ final class qm extends se implements fi, in {
               }
             }
             L6: {
-              L7: {
-                this.field_H = (pm) ((Object) new on(param0, (bj) (this), 100));
-                this.field_M = (pm) ((Object) new on("", (bj) (this), 20));
-                if (!this.field_K) {
-                  break L7;
-                } else {
-                  this.field_G = new gn(ci.field_g, (bj) null);
-                  this.field_J = new gn(oe.field_b, (bj) null);
-                  this.field_H.field_F = false;
-                  if (var11 == 0) {
-                    break L6;
+              this.field_H = (pm) ((Object) new on(param0, (bj) (this), 100));
+              this.field_M = (pm) ((Object) new on("", (bj) (this), 20));
+              if (!this.field_K) {
+                L7: {
+                  this.field_G = new gn(qo.field_s, (bj) null);
+                  stackIn_18_0 = this;
+
+                  stackIn_18_1 = null;
+
+                  stackIn_18_2 = null;
+
+                  if (!this.field_L) {
+                    stackIn_19_0 = this;
+                    stackIn_19_1 = null;
+                    stackIn_19_2 = null;
+                    stackIn_19_3 = sn.field_Zb;
+                    break L7;
                   } else {
+                    stackIn_19_0 = this;
+                    stackIn_19_1 = null;
+                    stackIn_19_2 = null;
+                    stackIn_19_3 = gf.field_a;
                     break L7;
                   }
                 }
-              }
-              L8: {
-                this.field_G = new gn(qo.field_s, (bj) null);
-                stackIn_18_0 = this;
-
-                stackIn_18_1 = null;
-
-                stackIn_18_2 = null;
-
-                if (!this.field_L) {
-                  stackIn_19_0 = this;
-                  stackIn_19_1 = null;
-                  stackIn_19_2 = null;
-                  stackIn_19_3 = sn.field_Zb;
-                  break L8;
+                ((qm) (this)).field_J = new gn(stackIn_19_3, (bj) null);
+                if (!this.field_Q) {
+                  break L6;
                 } else {
-                  stackIn_19_0 = this;
-                  stackIn_19_1 = null;
-                  stackIn_19_2 = null;
-                  stackIn_19_3 = gf.field_a;
-                  break L8;
+                  this.field_P = new gn(en.field_a, (bj) (this));
+                  break L6;
                 }
-              }
-              ((qm) (this)).field_J = new gn(stackIn_19_3, (bj) null);
-              if (!this.field_Q) {
-                break L6;
               } else {
-                this.field_P = new gn(en.field_a, (bj) (this));
+                this.field_G = new gn(ci.field_g, (bj) null);
+                this.field_J = new gn(oe.field_b, (bj) null);
+                this.field_H.field_F = false;
                 break L6;
               }
             }
-            L9: {
+            L8: {
               this.field_H.field_h = (nl) ((Object) new tb(10000536));
               this.field_M.field_h = (nl) ((Object) new m(10000536));
               var6 = new oq();
               this.field_G.field_h = (nl) ((Object) var6);
               if (this.field_J == null) {
-                break L9;
+                break L8;
               } else {
                 this.field_J.field_h = (nl) ((Object) var6);
+                break L8;
+              }
+            }
+            L9: {
+              if (null == this.field_P) {
+                break L9;
+              } else {
+                this.field_P.field_h = (nl) ((Object) var6);
                 break L9;
               }
             }
             L10: {
+              this.field_H.field_x = lh.field_e;
               if (null == this.field_P) {
                 break L10;
               } else {
-                this.field_P.field_h = (nl) ((Object) var6);
+                this.field_P.field_x = field_I;
                 break L10;
               }
             }
             L11: {
-              this.field_H.field_x = lh.field_e;
-              if (null == this.field_P) {
+              if (this.field_K) {
+                this.field_J.field_x = gi.field_p;
                 break L11;
               } else {
-                this.field_P.field_x = field_I;
-                break L11;
+                if (this.field_L) {
+                  this.field_J.field_x = de.field_a;
+                  this.field_J.field_h = (nl) ((Object) new he());
+                  break L11;
+                } else {
+                  this.field_J.field_h = (nl) ((Object) new he());
+                  break L11;
+                }
               }
             }
             L12: {
-              L13: {
-                if (this.field_K) {
-                  break L13;
-                } else {
-                  L14: {
-                    if (this.field_L) {
-                      break L14;
-                    } else {
-                      this.field_J.field_h = (nl) ((Object) new he());
-                      if (var11 == 0) {
-                        break L12;
-                      } else {
-                        break L14;
-                      }
-                    }
-                  }
-                  this.field_J.field_x = de.field_a;
-                  this.field_J.field_h = (nl) ((Object) new he());
-                  if (var11 == 0) {
-                    break L12;
-                  } else {
-                    break L13;
-                  }
-                }
-              }
-              this.field_J.field_x = gi.field_p;
-              break L12;
-            }
-            L15: {
               this.field_i = 15;
               var7 = ke.field_h;
               if (null == this.field_O) {
-                break L15;
+                break L12;
               } else {
                 this.field_i = this.field_i + (var7.a(this.field_O, this.field_n - 40, var7.field_C) - -5);
-                break L15;
+                break L12;
               }
             }
-            L16: {
-              L17: {
-                var8 = sh.field_M;
-                var9 = me.a(-57, jl.b(0));
-                if (wp.field_b != var9) {
-                  break L17;
+            L13: {
+              var8 = sh.field_M;
+              var9 = me.a(-57, jl.b(0));
+              if (wp.field_b != var9) {
+                if (l.field_c != var9) {
+                  break L13;
                 } else {
-                  var8 = fa.field_Gb;
-                  if (var11 == 0) {
-                    break L16;
-                  } else {
-                    break L17;
-                  }
+                  var8 = lj.field_f;
+                  break L13;
                 }
-              }
-              if (l.field_c != var9) {
-                break L16;
               } else {
-                var8 = lj.field_f;
-                break L16;
+                var8 = fa.field_Gb;
+                break L13;
               }
             }
-            L18: {
+            L14: {
               dupTemp$0 = new el(10, this.field_i, -20 + this.field_n, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
               var12 = dupTemp$0;
               this.b((byte) 112, dupTemp$0);
@@ -538,96 +471,85 @@ final class qm extends se implements fi, in {
               this.field_i = this.field_i + (5 + ((cf) ((Object) var13)).field_w);
               this.field_G.field_A = (bj) (this);
               if (null == this.field_P) {
-                break L18;
+                break L14;
               } else {
                 this.field_P.field_A = (bj) (this);
-                break L18;
+                break L14;
               }
             }
-            L19: {
+            L15: {
               if (null == this.field_J) {
-                break L19;
+                break L15;
               } else {
                 this.field_J.field_A = (bj) (this);
-                break L19;
+                break L15;
               }
             }
-            L20: {
-              L21: {
-                if (this.field_P == null) {
-                  break L21;
-                } else {
-                  this.field_G.b(85, this.field_i, 28972, this.field_n + -95, 30);
-                  this.field_i = this.field_i + 60;
-                  if (var11 == 0) {
-                    break L20;
-                  } else {
-                    break L21;
-                  }
-                }
-              }
-              this.field_G.b(8, this.field_i, 28972, this.field_n - 6 + -10, 30);
-              this.field_i = this.field_i + 35;
-              break L20;
-            }
-            L22: {
+            L16: {
               if (this.field_P == null) {
-                break L22;
+                this.field_G.b(8, this.field_i, 28972, this.field_n - 6 + -10, 30);
+                this.field_i = this.field_i + 35;
+                break L16;
+              } else {
+                this.field_G.b(85, this.field_i, 28972, this.field_n + -95, 30);
+                this.field_i = this.field_i + 60;
+                break L16;
+              }
+            }
+            L17: {
+              if (this.field_P == null) {
+                break L17;
               } else {
                 this.field_P.b(8, this.field_i, 28972, -10 + (-6 + this.field_n), 30);
                 this.field_i = this.field_i + 35;
-                break L22;
+                break L17;
               }
             }
-            L23: {
+            L18: {
               if (null == this.field_J) {
-                break L23;
+                break L18;
               } else {
-                L24: {
+                L19: {
                   if (this.field_K) {
-                    break L24;
+                    break L19;
                   } else {
                     if (this.field_L) {
-                      break L24;
+                      break L19;
                     } else {
                       this.field_J.b(8, this.field_i, 28972, 40, 20);
                       this.field_i = this.field_i + 25;
-                      if (var11 == 0) {
-                        break L23;
-                      } else {
-                        break L24;
-                      }
+                      break L18;
                     }
                   }
                 }
                 this.field_J.b(8, this.field_i, 28972, -10 + (this.field_n + -6), 30);
                 this.field_i = this.field_i + 35;
-                break L23;
+                break L18;
               }
             }
-            L25: {
+            L20: {
               this.b(0, 0, 28972, this.field_n, 3 + this.field_i);
               this.b((byte) 70, this.field_G);
               if (null == this.field_P) {
-                break L25;
+                break L20;
               } else {
                 this.b((byte) 71, this.field_P);
-                break L25;
+                break L20;
               }
             }
-            L26: {
+            L21: {
               if (this.field_J == null) {
-                break L26;
+                break L21;
               } else {
                 this.b((byte) 126, this.field_J);
-                break L26;
+                break L21;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L27: {
+          L22: {
             var6_ref = decompiledCaughtException;
             stackIn_59_0 = (RuntimeException) (var6_ref);
 
@@ -637,15 +559,15 @@ final class qm extends se implements fi, in {
               stackIn_60_0 = (RuntimeException) ((Object) stackIn_59_0);
               stackIn_60_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackIn_60_2 = "null";
-              break L27;
+              break L22;
             } else {
               stackIn_60_0 = (RuntimeException) ((Object) stackIn_59_0);
               stackIn_60_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackIn_60_2 = "{...}";
-              break L27;
+              break L22;
             }
           }
-          L28: {
+          L23: {
 
 
             stackIn_62_1 = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_60_2).append(',');
@@ -654,12 +576,12 @@ final class qm extends se implements fi, in {
               stackIn_60_0 = (RuntimeException) ((Object) stackIn_60_0);
               stackIn_63_1 = (StringBuilder) ((Object) stackIn_62_1);
               stackIn_63_2 = "null";
-              break L28;
+              break L23;
             } else {
               stackIn_60_0 = (RuntimeException) ((Object) stackIn_60_0);
               stackIn_63_1 = (StringBuilder) ((Object) stackIn_62_1);
               stackIn_63_2 = "{...}";
-              break L28;
+              break L23;
             }
           }
           throw fa.a((Throwable) ((Object) stackIn_60_0), stackIn_63_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -799,6 +721,7 @@ final class qm extends se implements fi, in {
     public final void a(pm param0, int param1) {
         try {
             if (param1 != 0) {
+                String var4 = (String) null;
                 qm.a(-1.2370823621749878f, -17, (String) null);
             }
         } catch (RuntimeException runtimeException) {
@@ -869,54 +792,32 @@ final class qm extends se implements fi, in {
     final static vg b(int param0, int param1, int param2, int param3) {
         vg var4;
         int var5;
-        int stackIn_8_0 = 0;
-        int stackIn_8_1 = 0;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         var4 = (vg) ((Object) ag.field_i.c(78));
         L0: while (true) {
-          L1: {
-            L2: {
-              if (var4 == null) {
-                break L2;
+          if (var4 != null) {
+            if (param2 == var4.field_i) {
+              return var4;
+            } else {
+              var4 = (vg) ((Object) ag.field_i.b(6));
+              continue L0;
+            }
+          } else {
+            L1: {
+              if (param0 > 97) {
+                break L1;
               } else {
-                stackIn_8_0 = param2;
-
-                stackIn_8_1 = var4.field_i;
-
-                if (var5 != 0) {
-                  break L1;
-                } else {
-                  if (stackIn_8_0 == stackIn_8_1) {
-                    return var4;
-                  } else {
-                    var4 = (vg) ((Object) ag.field_i.b(6));
-                    if (var5 == 0) {
-                      continue L0;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
+                field_I = (String) null;
+                break L1;
               }
             }
-            stackIn_8_0 = param0;
-            stackIn_8_1 = 97;
-            break L1;
+            var4 = new vg();
+            var4.field_p = param3;
+            var4.field_i = param2;
+            ag.field_i.a(var4, false);
+            vi.a(param1, var4, (byte) -126);
+            return var4;
           }
-          L3: {
-            if (stackIn_8_0 > stackIn_8_1) {
-              break L3;
-            } else {
-              field_I = (String) null;
-              break L3;
-            }
-          }
-          var4 = new vg();
-          var4.field_p = param3;
-          var4.field_i = param2;
-          ag.field_i.a(var4, false);
-          vi.a(param1, var4, (byte) -126);
-          return var4;
         }
     }
 
@@ -924,6 +825,7 @@ final class qm extends se implements fi, in {
         try {
             lh.field_i = param0;
             if (param1 != 80) {
+                String var4 = (String) null;
                 qm.a(-1.1143913269042969f, -113, (String) null);
             }
             od.field_Bb = param2;

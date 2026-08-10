@@ -74,55 +74,58 @@ final class pk extends wf {
           L0: {
             L1: {
               L2: {
-                if (!this.field_w.d()) {
-                  break L2;
-                } else {
-                  var4_int = this.field_w.field_b * this.field_n / e.field_r;
-                  L3: while (true) {
-                    L4: {
-                      var5 = (long)param2 * (long)var4_int + this.field_P;
-                      if (0L > -var5 + this.field_L) {
-                        break L4;
-                      } else {
-                        this.field_P = var5;
-                        if (var8 != 0) {
-                          break L1;
+                L3: {
+                  if (!this.field_w.d()) {
+                    break L3;
+                  } else {
+                    var4_int = this.field_w.field_b * this.field_n / e.field_r;
+                    L4: while (true) {
+                      L5: {
+                        var5 = (long)param2 * (long)var4_int + this.field_P;
+                        if (0L > -var5 + this.field_L) {
+                          break L5;
                         } else {
-                          if (var8 == 0) {
+                          this.field_P = var5;
+                          if (var8 != 0) {
                             break L2;
                           } else {
-                            break L4;
+                            if (var8 == 0) {
+                              break L3;
+                            } else {
+                              break L5;
+                            }
                           }
                         }
                       }
-                    }
-                    var7 = (int)(((long)var4_int + (this.field_L - this.field_P + -1L)) / (long)var4_int);
-                    this.field_P = this.field_P + (long)var7 * (long)var4_int;
-                    this.field_o.a(param0, param1, var7);
-                    param2 = param2 - var7;
-                    param1 = param1 + var7;
-                    this.b((byte) -126);
-                    if (!this.field_w.d()) {
-                      break L2;
-                    } else {
-                      if (var8 == 0) {
-                        continue L3;
+                      var7 = (int)(((long)var4_int + (this.field_L - this.field_P + -1L)) / (long)var4_int);
+                      this.field_P = this.field_P + (long)var7 * (long)var4_int;
+                      this.field_o.a(param0, param1, var7);
+                      param2 = param2 - var7;
+                      param1 = param1 + var7;
+                      this.b((byte) -126);
+                      if (!this.field_w.d()) {
+                        break L3;
                       } else {
-                        this.field_o.a(param0, param1, param2);
-                        break L1;
+                        if (var8 == 0) {
+                          continue L4;
+                        } else {
+                          this.field_o.a(param0, param1, param2);
+                          break L1;
+                        }
                       }
                     }
                   }
                 }
+                this.field_o.a(param0, param1, param2);
+                break L2;
               }
-              this.field_o.a(param0, param1, param2);
               break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var4 = decompiledCaughtException;
             stackIn_14_0 = (RuntimeException) (var4);
 
@@ -132,12 +135,12 @@ final class pk extends wf {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackIn_15_2 = "null";
-              break L5;
+              break L6;
             } else {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackIn_15_2 = "{...}";
-              break L5;
+              break L6;
             }
           }
           throw ii.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ')');

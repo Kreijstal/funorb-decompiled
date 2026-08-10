@@ -18,104 +18,38 @@ final class hb implements dh {
     static dm[] field_d;
 
     public final void a(int param0, int param1, int param2, boolean param3, el param4) {
-        RuntimeException runtimeException = null;
-        int var7 = 0;
-        int var8 = 0;
+        int var13 = 0;
         double var9 = 0.0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        qb var14 = null;
-        el stackIn_3_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            L1: {
-              if (!(param4 instanceof qb)) {
-                stackIn_3_0 = null;
-                break L1;
-              } else {
-                stackIn_3_0 = (el) (param4);
-                break L1;
-              }
-            }
-            L2: {
-              var14 = (qb) ((Object) stackIn_3_0);
-              vb.a(param0 - -param4.field_v, param4.field_m + param2, param4.field_r, param4.field_h, this.field_f);
-              if (var14 == null) {
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              var7 = param4.field_v + param0 - -var14.field_E;
-              var8 = param4.field_m + param2 - -var14.field_O;
-              vb.d(var7, var8, var14.field_K, this.field_e);
-              if (var14.field_J == -1) {
-                break L3;
-              } else {
-                var9 = (double)var14.field_J * 3.141592653589793 * 2.0 / (double)var14.field_H;
-                var11 = (int)(-Math.sin(var9) * (double)var14.field_K);
-                var12 = (int)(Math.cos(var9) * (double)var14.field_K);
-                vb.d(var7 + var11, var8 - -var12, 1, this.field_g);
-                break L3;
-              }
-            }
-            vb.d(var7, var8, 2, 1);
-            var9 = 2.0 * (3.141592653589793 * (double)var14.field_I) / (double)var14.field_H;
+        qb var14 = param4 instanceof qb ? (qb) ((Object) param4) : null;
+        vb.a(param0 - -param4.field_v, param4.field_m + param2, param4.field_r, param4.field_h, this.field_f);
+        if (var14 != null) {
+        }
+        int var7 = param4.field_v + param0 - -var14.field_E;
+        int var8 = param4.field_m + param2 - -var14.field_O;
+        vb.d(var7, var8, var14.field_K, this.field_e);
+        if (var14.field_J != -1) {
+            var9 = (double)var14.field_J * 3.141592653589793 * 2.0 / (double)var14.field_H;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_K);
             var12 = (int)(Math.cos(var9) * (double)var14.field_K);
-            if (param1 <= -5) {
-              L4: {
-                vb.g(var7, var8, var11 + var7, var12 + var8, 1);
-                if (this.field_a == null) {
-                  break L4;
-                } else {
-                  var13 = this.field_c + (var14.field_E - -var14.field_K);
-                  this.field_a.a(param4.field_s, var13 + (param0 + param4.field_v), param2 - -param4.field_m - -this.field_i, param4.field_r - (this.field_c + var13), -(this.field_c << 1444492961) + param4.field_h, this.field_m, this.field_k, 1, 1, 0);
-                  break L4;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("hb.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L5;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L5;
-            }
-          }
-          throw t.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
+            vb.d(var7 + var11, var8 - -var12, 1, this.field_g);
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        vb.d(var7, var8, 2, 1);
+        var9 = 2.0 * (3.141592653589793 * (double)var14.field_I) / (double)var14.field_H;
+        var11 = (int)(-Math.sin(var9) * (double)var14.field_K);
+        var12 = (int)(Math.cos(var9) * (double)var14.field_K);
+        if (param1 > -5) {
+            return;
+        }
+        try {
+            vb.g(var7, var8, var11 + var7, var12 + var8, 1);
+            if (this.field_a != null) {
+                var13 = this.field_c + (var14.field_E - -var14.field_K);
+                this.field_a.a(param4.field_s, var13 + (param0 + param4.field_v), param2 - -param4.field_m - -this.field_i, param4.field_r - (this.field_c + var13), -(this.field_c << 1444492961) + param4.field_h, this.field_m, this.field_k, 1, 1, 0);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

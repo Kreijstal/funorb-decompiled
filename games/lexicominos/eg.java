@@ -8,200 +8,47 @@ final class eg extends mg {
     static sh field_C;
 
     final void h(int param0) {
-        ta var2 = null;
-        al var3 = null;
-        int var4 = 0;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = Lexicominos.field_L ? 1 : 0;
-                    var2 = new ta(this.field_D);
-                    if (param0 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    var3 = (al) ((Object) var2.a(param0 ^ 250));
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (var3 != null) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    this.field_A = null;
-                    return;
-                }
-                case 5: {
-                    var3.field_D = false;
-                    var3 = (al) ((Object) var2.c(param0 + -73));
-                    if (var4 == 0) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    return;
-                }
-                case 7: {
-                    if (var4 == 0) {
-                        statePc = 3;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    this.field_A = null;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        int var4 = Lexicominos.field_L ? 1 : 0;
+        ta var2 = new ta(this.field_D);
+        if (param0 != 0) {
+            return;
         }
+        al var3 = (al) ((Object) var2.a(param0 ^ 250));
+        while (var3 != null) {
+            var3.field_D = false;
+            var3 = (al) ((Object) var2.c(param0 + -73));
+        }
+        this.field_A = null;
     }
 
     final void f(boolean param0) {
-        ta var2;
-        al var3;
-        int var4;
-        ta var5;
-        ta var6;
-        var4 = Lexicominos.field_L ? 1 : 0;
-        if (param0) {
-          var5 = new ta(this.field_D);
-          var3 = (al) ((Object) var5.a(250));
-          L0: while (true) {
-            if (var3 != null) {
-              if (var4 == 0) {
-                L1: {
-                  if (var3.f((byte) -77)) {
-                    var3.b((byte) -121);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                var3 = (al) ((Object) var5.c(-124));
-                if (var4 == 0) {
-                  continue L0;
-                } else {
-                  this.field_A = (w) ((Object) this.e(false));
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              this.field_A = (w) ((Object) this.e(false));
-              return;
-            }
-          }
-        } else {
-          this.f(127);
-          var6 = new ta(this.field_D);
-          var2 = var6;
-          var3 = (al) ((Object) var6.a(250));
-          L2: while (true) {
-            if (var3 != null) {
-              if (var4 == 0) {
-                L3: {
-                  if (var3.f((byte) -77)) {
-                    var3.b((byte) -121);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                var3 = (al) ((Object) var6.c(-124));
-                if (var4 == 0) {
-                  continue L2;
-                } else {
-                  this.field_A = (w) ((Object) this.e(false));
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              this.field_A = (w) ((Object) this.e(false));
-              return;
-            }
-          }
+        int var4 = Lexicominos.field_L ? 1 : 0;
+        if (!param0) {
+            this.f(127);
         }
+        ta var2 = new ta(this.field_D);
+        al var3 = (al) ((Object) var2.a(250));
+        while (var3 != null) {
+            if (!(!var3.f((byte) -77))) {
+                var3.b((byte) -121);
+            }
+            var3 = (al) ((Object) var2.c(-124));
+        }
+        this.field_A = (w) ((Object) this.e(false));
     }
 
     final void g(boolean param0) {
-        ta var2;
-        al var3;
-        int var4;
-        var4 = Lexicominos.field_L ? 1 : 0;
-        var2 = new ta(this.field_D);
-        var3 = (al) ((Object) var2.a(250));
+        int var4 = Lexicominos.field_L ? 1 : 0;
+        ta var2 = new ta(this.field_D);
+        al var3 = (al) ((Object) var2.a(250));
         if (param0) {
-          eg.i(-88);
-          L0: while (true) {
-            if (var3 != null) {
-              if (var4 == 0) {
-                L1: {
-                  if (!var3.a((byte) 26)) {
-                    break L1;
-                  } else {
-                    var3.b((byte) -122);
-                    break L1;
-                  }
-                }
-                var3 = (al) ((Object) var2.c(-69));
-                if (var4 == 0) {
-                  continue L0;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              return;
+            eg.i(-88);
+        }
+        while (var3 != null) {
+            if (var3.a((byte) 26)) {
+                var3.b((byte) -122);
             }
-          }
-        } else {
-          L2: while (true) {
-            if (var3 != null) {
-              if (var4 == 0) {
-                L3: {
-                  if (!var3.a((byte) 26)) {
-                    break L3;
-                  } else {
-                    var3.b((byte) -122);
-                    break L3;
-                  }
-                }
-                var3 = (al) ((Object) var2.c(-69));
-                if (var4 == 0) {
-                  continue L2;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
-          }
+            var3 = (al) ((Object) var2.c(-69));
         }
     }
 
@@ -209,29 +56,34 @@ final class eg extends mg {
         field_C = null;
         field_E = null;
         field_F = null;
-        if (param0 <= -59) {
-            return;
+        if (param0 > -59) {
+            field_F = (String) null;
         }
-        field_F = (String) null;
     }
 
     final al e(boolean param0) {
-        int var4 = Lexicominos.field_L ? 1 : 0;
-        if (param0) {
-            return (al) null;
-        }
-        ta var2 = new ta(this.field_D);
-        al var3 = (al) ((Object) var2.a(250));
-        do {
-            if (var3 == null) {
-                return null;
-            }
-            if (var3.field_D) {
+        ta var2;
+        al var3;
+        int var4;
+        var4 = Lexicominos.field_L ? 1 : 0;
+        if (!param0) {
+          var2 = new ta(this.field_D);
+          var3 = (al) ((Object) var2.a(250));
+          L0: while (true) {
+            if (var3 != null) {
+              if (!var3.field_D) {
+                var3 = (al) ((Object) var2.c(-53));
+                continue L0;
+              } else {
                 return var3;
+              }
+            } else {
+              return null;
             }
-            var3 = (al) ((Object) var2.c(-53));
-        } while (var4 == 0);
-        return null;
+          }
+        } else {
+          return (al) null;
+        }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -244,16 +96,10 @@ final class eg extends mg {
         }
         ta var5 = new ta(this.field_D);
         w var6 = (w) ((Object) var5.b(0));
-        do {
-            if (var6 == null) {
-                return;
-            }
+        while (var6 != null) {
             var6.a((byte) -115, this.field_o + param1, param2 + this.field_t, param3);
             var6 = (w) ((Object) var5.e(31842));
-            if (var7 != 0) {
-                return;
-            }
-        } while (var7 == 0);
+        }
     }
 
     public eg() {
@@ -262,81 +108,54 @@ final class eg extends mg {
     }
 
     final w f(int param0) {
-        ta var2;
-        al var3;
-        int var4;
-        boolean stackIn_3_0 = false;
-        int stackIn_8_0 = 0;
-        boolean stackOut_2_0;
-        var4 = Lexicominos.field_L ? 1 : 0;
-        var2 = new ta(this.field_D);
-        var3 = (al) ((Object) var2.a(250));
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (var3 == null) {
-                break L2;
-              } else {
-                stackOut_2_0 = var3.field_D;
-                stackIn_8_0 = stackOut_2_0 ? 1 : 0;
-                stackIn_3_0 = stackOut_2_0;
-                if (var4 != 0) {
-                  break L1;
-                } else {
-                  if (stackIn_3_0) {
-                    return var3.e(-21374);
-                  } else {
-                    var3 = (al) ((Object) var2.c(-87));
-                    if (var4 == 0) {
-                      continue L0;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-              }
+        int var4 = Lexicominos.field_L ? 1 : 0;
+        ta var2 = new ta(this.field_D);
+        al var3 = (al) ((Object) var2.a(250));
+        while (var3 != null) {
+            if (!(!var3.field_D)) {
+                return var3.e(-21374);
             }
-            stackIn_8_0 = param0;
-            break L1;
-          }
-          if (stackIn_8_0 == 0) {
-            return null;
-          } else {
-            this.f(true);
-            return null;
-          }
+            var3 = (al) ((Object) var2.c(-87));
         }
+        if (param0 == 0) {
+            return null;
+        }
+        this.f(true);
+        return null;
     }
 
     final void a(int param0, w param1) {
         al var3 = null;
-        RuntimeException var3_ref = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3_ref = null;
         try {
           L0: {
             if (param1 instanceof al) {
-              var3 = (al) ((Object) param1);
-              this.field_D.a(param0 + 14484, var3);
-              var3.field_D = true;
-              var3.a((byte) 44, (w) (this));
-              if (param0 == -14579) {
-                break L0;
-              } else {
-                this.f(18);
-                return;
+              L1: {
+                var3 = (al) ((Object) param1);
+                this.field_D.a(param0 + 14484, var3);
+                var3.field_D = true;
+                var3.a((byte) 44, (w) (this));
+                if (param0 == -14579) {
+                  break L1;
+                } else {
+                  this.f(18);
+                  break L1;
+                }
               }
+              break L0;
             } else {
               throw new IllegalArgumentException();
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var3_ref = decompiledCaughtException;
             stackIn_7_0 = (RuntimeException) (var3_ref);
 
@@ -346,12 +165,12 @@ final class eg extends mg {
               stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
               stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackIn_8_2 = "null";
-              break L1;
+              break L2;
             } else {
               stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
               stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackIn_8_2 = "{...}";
-              break L1;
+              break L2;
             }
           }
           throw ld.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');

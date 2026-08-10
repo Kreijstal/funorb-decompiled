@@ -135,13 +135,7 @@ final class ua extends vi {
           } else {
             if (0L != param0 % 10L) {
               qe.a(param0, -111);
-              if (client.field_A) {
-                qe.a(-1L + param0, -124);
-                qe.a(1L, -109);
-                return;
-              } else {
-                return;
-              }
+              return;
             } else {
               qe.a(-1L + param0, -124);
               qe.a(1L, -109);
@@ -155,13 +149,7 @@ final class ua extends vi {
           } else {
             if (0L != param0 % 10L) {
               qe.a(param0, -111);
-              if (!client.field_A) {
-                return;
-              } else {
-                qe.a(-1L + param0, -124);
-                qe.a(1L, -109);
-                return;
-              }
+              return;
             } else {
               qe.a(-1L + param0, -124);
               qe.a(1L, -109);

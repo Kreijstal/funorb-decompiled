@@ -43,33 +43,22 @@ final class ee {
         try {
           L0: {
             L1: {
-              L2: {
-                if (param0 > (param2 ^ -1)) {
-                  break L2;
-                } else {
-                  var4 = param3;
-                  if (var7 == 0) {
+              if (param0 > (param2 ^ -1)) {
+                var8 = new byte[param1];
+                var4 = var8;
+                var5_int = 0;
+                L2: while (true) {
+                  if (param1 <= var5_int) {
                     break L1;
                   } else {
-                    break L2;
+                    var8[var5_int] = param3[param2 + var5_int];
+                    var5_int++;
+                    continue L2;
                   }
                 }
-              }
-              var8 = new byte[param1];
-              var4 = var8;
-              var5_int = 0;
-              L3: while (true) {
-                if (param1 <= var5_int) {
-                  break L1;
-                } else {
-                  var8[var5_int] = param3[param2 + var5_int];
-                  var5_int++;
-                  if (var7 == 0) {
-                    continue L3;
-                  } else {
-                    break L1;
-                  }
-                }
+              } else {
+                var4 = param3;
+                break L1;
               }
             }
             var5 = new vc();
@@ -82,7 +71,7 @@ final class ee {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var4_ref = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (var4_ref);
 
@@ -92,12 +81,12 @@ final class ee {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw dd.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');

@@ -234,21 +234,24 @@ final class qp extends vh {
               if (this.field_ac == -1) {
                 break L3;
               } else {
-                if (null == this.field_dc[this.field_ac]) {
-                  break L3;
-                } else {
-                  var7 = this.field_dc[this.field_ac].field_cc;
-                  var8 = this.field_eb - -(this.field_Ub * (var7 + this.field_ac));
-                  L4: while (true) {
-                    if (var8 <= param4) {
-                      this.field_dc[this.field_ac].a(param0, param1, this.field_Wb + param2, (byte) 126, var8, this.field_Vb[this.field_ac].field_ib);
-                      break L3;
-                    } else {
-                      var8 = var8 - this.field_Ub;
-                      continue L4;
+                L4: {
+                  if (null == this.field_dc[this.field_ac]) {
+                    break L4;
+                  } else {
+                    var7 = this.field_dc[this.field_ac].field_cc;
+                    var8 = this.field_eb - -(this.field_Ub * (var7 + this.field_ac));
+                    L5: while (true) {
+                      if (var8 <= param4) {
+                        this.field_dc[this.field_ac].a(param0, param1, this.field_Wb + param2, (byte) 126, var8, this.field_Vb[this.field_ac].field_ib);
+                        break L4;
+                      } else {
+                        var8 = var8 - this.field_Ub;
+                        continue L5;
+                      }
                     }
                   }
                 }
+                break L3;
               }
             }
             return;

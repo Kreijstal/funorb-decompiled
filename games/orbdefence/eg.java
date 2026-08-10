@@ -119,7 +119,6 @@ final class eg extends fg {
 
     final static e b(int param0, String param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -127,14 +126,14 @@ final class eg extends fg {
         e stackIn_8_0 = null;
         e stackIn_17_0 = null;
         e stackIn_20_0 = null;
-        Object stackIn_23_0 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
+        String stackIn_26_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var5 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -180,13 +179,7 @@ final class eg extends fg {
                       }
                     }
                     var3++;
-                    if (var5 == 0) {
-                      continue L1;
-                    } else {
-                      stackIn_23_0 = null;
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    }
+                    continue L1;
                   } else {
                     return null;
                   }
@@ -198,23 +191,23 @@ final class eg extends fg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackIn_26_0 = (RuntimeException) (var2);
+            stackIn_25_0 = (RuntimeException) (var2);
 
-            stackIn_26_1 = new StringBuilder().append("eg.IA(").append(param0).append(',');
+            stackIn_25_1 = new StringBuilder().append("eg.IA(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "null";
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "null";
               break L4;
             } else {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "{...}";
+              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackIn_26_2 = "{...}";
               break L4;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0;
@@ -225,11 +218,7 @@ final class eg extends fg {
             if (decompiledRegionSelector0 == 2) {
               return stackIn_17_0;
             } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_20_0;
-              } else {
-                return (e) ((Object) stackIn_23_0);
-              }
+              return stackIn_20_0;
             }
           }
         }

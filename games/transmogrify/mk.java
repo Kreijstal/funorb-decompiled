@@ -127,7 +127,6 @@ abstract class mk extends aj {
 
     final static uk a(int param0, String param1) {
         int var2_int = 0;
-        RuntimeException var2 = null;
         String var3 = null;
         uk var4 = null;
         String var5 = null;
@@ -135,14 +134,13 @@ abstract class mk extends aj {
         CharSequence var7 = null;
         CharSequence var8 = null;
         uk stackIn_17_0 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
-        int decompiledRegionSelector0 = 0;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
@@ -160,17 +158,10 @@ abstract class mk extends aj {
                         var5 = hj.a((byte) -128, var8);
                         if (var5.equals(var3)) {
                           stackIn_17_0 = (uk) (var4);
-                          decompiledRegionSelector0 = 0;
                           break L0;
                         } else {
                           var4 = (uk) ((Object) sj.field_u.a(-91));
-                          if (var6 == 0) {
-                            continue L1;
-                          } else {
-                            stackIn_20_0 = null;
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          }
+                          continue L1;
                         }
                       } else {
                         return null;
@@ -193,29 +184,25 @@ abstract class mk extends aj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var2);
+            stackIn_22_0 = (RuntimeException) (var2);
 
-            stackIn_23_1 = new StringBuilder().append("mk.P(").append(param0).append(',');
+            stackIn_22_1 = new StringBuilder().append("mk.P(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L2;
             } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L2;
             }
           }
-          throw ch.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_17_0;
-        } else {
-          return (uk) ((Object) stackIn_20_0);
-        }
+        return stackIn_17_0;
     }
 
     final static uj a(int param0, String param1, int param2) {

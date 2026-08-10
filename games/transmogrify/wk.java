@@ -68,7 +68,6 @@ final class wk {
 
     final static String a(java.applet.Applet param0, byte param1) {
         try {
-            RuntimeException var2 = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -76,17 +75,18 @@ final class wk {
             int var7 = 0;
             int var8 = 0;
             String var9 = null;
-            String stackIn_9_0 = null;
-            String stackIn_16_0 = null;
+            String stackIn_8_0 = null;
+            String stackIn_15_0 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
-            RuntimeException stackIn_20_0 = null;
-            StringBuilder stackIn_20_1 = null;
-            String stackIn_20_2 = null;
+            String stackIn_19_2 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            Throwable var2_ref = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
             var8 = Transmogrify.field_A ? 1 : 0;
             try {
               L0: {
@@ -106,51 +106,40 @@ final class wk {
                       }
                     }
                     L3: while (true) {
-                      L4: {
-                        if (var5.length <= var6) {
-                          break L4;
-                        } else {
+                      if (var5.length <= var6) {
+                        decompiledRegionSelector0 = 0;
+                        break L1;
+                      } else {
+                        L4: {
                           var7 = var5[var6].indexOf('=');
-                          if (var8 != 0) {
+                          if (0 > var7) {
                             break L4;
                           } else {
-                            L5: {
-                              if (0 > var7) {
-                                break L5;
-                              } else {
-                                if (var5[var6].substring(0, var7).trim().equals(var3)) {
-                                  stackIn_9_0 = var5[var6].substring(1 + var7).trim();
-                                  decompiledRegionSelector0 = 1;
-                                  break L1;
-                                } else {
-                                  break L5;
-                                }
-                              }
-                            }
-                            var6++;
-                            if (var8 == 0) {
-                              continue L3;
+                            if (var5[var6].substring(0, var7).trim().equals(var3)) {
+                              stackIn_8_0 = var5[var6].substring(1 + var7).trim();
+                              decompiledRegionSelector0 = 1;
+                              break L1;
                             } else {
                               break L4;
                             }
                           }
                         }
+                        var6++;
+                        continue L3;
                       }
-                      decompiledRegionSelector0 = 0;
-                      break L1;
                     }
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L6: {
-                    var2_ref = decompiledCaughtException;
+                  L5: {
+                    var2 = decompiledCaughtException;
                     decompiledRegionSelector0 = 0;
-                    break L6;
+                    break L5;
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
                   if (md.field_j != null) {
-                    stackIn_16_0 = md.field_j;
+                    stackIn_15_0 = md.field_j;
                     decompiledRegionSelector1 = 0;
                     break L0;
                   } else {
@@ -163,30 +152,30 @@ final class wk {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L7: {
-                var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_19_0 = (RuntimeException) (var2);
+              L6: {
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_18_0 = (RuntimeException) (var2_ref);
 
-                stackIn_19_1 = new StringBuilder().append("wk.B(");
+                stackIn_18_1 = new StringBuilder().append("wk.B(");
 
                 if (param0 == null) {
-                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackIn_20_2 = "null";
-                  break L7;
+                  stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+                  stackIn_19_2 = "null";
+                  break L6;
                 } else {
-                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackIn_20_2 = "{...}";
-                  break L7;
+                  stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+                  stackIn_19_2 = "{...}";
+                  break L6;
                 }
               }
-              throw ch.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ')');
+              throw ch.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
             }
             if (decompiledRegionSelector1 == 0) {
-              return stackIn_16_0;
+              return stackIn_15_0;
             } else {
-              return stackIn_9_0;
+              return stackIn_8_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -248,8 +248,6 @@ final class ol {
     final int b(int param0, int param1) {
         int var3;
         int var4;
-        int var5;
-        int var6;
         L0: {
           var4 = Transmogrify.field_A ? 1 : 0;
           if (this.field_g == null) {
@@ -260,38 +258,20 @@ final class ol {
             } else {
               var3 = 1;
               L1: while (true) {
-                L2: {
-                  if (this.field_g.length <= var3) {
-                    break L2;
+                if (this.field_g.length <= var3) {
+                  if (param0 != 29791) {
+                    this.field_g = (int[]) null;
+                    return -1 + this.field_g.length;
                   } else {
-                    var6 = param1;
-                    var5 = this.field_g[var3] + this.field_g[-1 + var3] >> 814495393;
-                    if (var4 != 0) {
-                      if (var5 != var6) {
-                        this.field_g = (int[]) null;
-                        return -1 + this.field_g.length;
-                      } else {
-                        return -1 + this.field_g.length;
-                      }
-                    } else {
-                      if (var5 <= var6) {
-                        var3++;
-                        if (var4 == 0) {
-                          continue L1;
-                        } else {
-                          break L2;
-                        }
-                      } else {
-                        return -1 + var3;
-                      }
-                    }
+                    return -1 + this.field_g.length;
                   }
-                }
-                if (param0 != 29791) {
-                  this.field_g = (int[]) null;
-                  return -1 + this.field_g.length;
                 } else {
-                  return -1 + this.field_g.length;
+                  if (this.field_g[var3] + this.field_g[-1 + var3] >> 814495393 <= param1) {
+                    var3++;
+                    continue L1;
+                  } else {
+                    return -1 + var3;
+                  }
                 }
               }
             }

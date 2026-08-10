@@ -110,6 +110,7 @@ class gn extends na implements nf {
     }
 
     void a(na param0, int param1, int param2, boolean param3) {
+        RuntimeException runtimeException = null;
         tg var5 = null;
         na var6 = null;
         int var7 = 0;
@@ -119,7 +120,6 @@ class gn extends na implements nf {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = TetraLink.field_J;
         try {
           L0: {
@@ -146,8 +146,8 @@ class gn extends na implements nf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("gn.MA(");
 
@@ -954,6 +954,7 @@ class gn extends na implements nf {
     }
 
     final void a(int param0, boolean param1, na param2, int param3, int param4, int param5) {
+        RuntimeException runtimeException = null;
         tg var7 = null;
         na var8 = null;
         int var9 = 0;
@@ -964,7 +965,6 @@ class gn extends na implements nf {
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
         var9 = TetraLink.field_J;
         try {
           L0: {
@@ -999,8 +999,8 @@ class gn extends na implements nf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var7_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var7_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
 
             stackIn_10_1 = new StringBuilder().append("gn.AB(").append(param0).append(',').append(param1).append(',');
 

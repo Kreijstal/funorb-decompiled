@@ -27,111 +27,69 @@ final class jj extends kj {
                 jj.a((String) null, (byte) -111, (java.applet.Applet) null);
                 var4 = param1;
                 L0: while (true) {
-                  L1: {
-                    if (-1L == (var4 ^ -1L)) {
-                      break L1;
-                    } else {
-                      var4 = var4 / 37L;
-                      var3++;
-                      if (var11 == 0) {
-                        continue L0;
+                  if (-1L == (var4 ^ -1L)) {
+                    var13 = new StringBuilder(var3);
+                    L1: while (true) {
+                      if (-1L == (param1 ^ -1L)) {
+                        var13.reverse();
+                        var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
+                        return var13.toString();
                       } else {
-                        break L1;
-                      }
-                    }
-                  }
-                  var13 = new StringBuilder(var3);
-                  L2: while (true) {
-                    L3: {
-                      L4: {
-                        if (-1L == (param1 ^ -1L)) {
-                          break L4;
-                        } else {
+                        L2: {
                           var7 = param1;
                           param1 = param1 / 37L;
                           var9 = nk.field_r[(int)(-(param1 * 37L) + var7)];
-                          if (var11 != 0) {
-                            break L3;
+                          if (var9 != 95) {
+                            break L2;
                           } else {
-                            L5: {
-                              if (var9 != 95) {
-                                break L5;
-                              } else {
-                                var10 = var13.length() - 1;
-                                var13.setCharAt(var10, Character.toUpperCase(var13.charAt(var10)));
-                                var9 = 160;
-                                break L5;
-                              }
-                            }
-                            discarded$2 = var13.append((char) var9);
-                            if (var11 == 0) {
-                              continue L2;
-                            } else {
-                              break L4;
-                            }
+                            var10 = var13.length() - 1;
+                            var13.setCharAt(var10, Character.toUpperCase(var13.charAt(var10)));
+                            var9 = 160;
+                            break L2;
                           }
                         }
+                        discarded$2 = var13.append((char) var9);
+                        continue L1;
                       }
-                      var13.reverse();
-                      var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
-                      break L3;
                     }
-                    return var13.toString();
+                  } else {
+                    var4 = var4 / 37L;
+                    var3++;
+                    continue L0;
                   }
                 }
               } else {
                 var4 = param1;
-                L6: while (true) {
-                  L7: {
-                    if (-1L == (var4 ^ -1L)) {
-                      break L7;
-                    } else {
-                      var4 = var4 / 37L;
-                      var3++;
-                      if (var11 == 0) {
-                        continue L6;
+                L3: while (true) {
+                  if (-1L == (var4 ^ -1L)) {
+                    var14 = new StringBuilder(var3);
+                    L4: while (true) {
+                      if (-1L == (param1 ^ -1L)) {
+                        var14.reverse();
+                        var14.setCharAt(0, Character.toUpperCase(var14.charAt(0)));
+                        return var14.toString();
                       } else {
-                        break L7;
-                      }
-                    }
-                  }
-                  var14 = new StringBuilder(var3);
-                  L8: while (true) {
-                    L9: {
-                      L10: {
-                        if (-1L == (param1 ^ -1L)) {
-                          break L10;
-                        } else {
+                        L5: {
                           var7 = param1;
                           param1 = param1 / 37L;
                           var9 = nk.field_r[(int)(-(param1 * 37L) + var7)];
-                          if (var11 != 0) {
-                            break L9;
+                          if (var9 != 95) {
+                            break L5;
                           } else {
-                            L11: {
-                              if (var9 != 95) {
-                                break L11;
-                              } else {
-                                var10 = var14.length() - 1;
-                                var14.setCharAt(var10, Character.toUpperCase(var14.charAt(var10)));
-                                var9 = 160;
-                                break L11;
-                              }
-                            }
-                            discarded$3 = var14.append((char) var9);
-                            if (var11 == 0) {
-                              continue L8;
-                            } else {
-                              break L10;
-                            }
+                            var10 = var14.length() - 1;
+                            var14.setCharAt(var10, Character.toUpperCase(var14.charAt(var10)));
+                            var9 = 160;
+                            break L5;
                           }
                         }
+                        discarded$3 = var14.append((char) var9);
+                        continue L4;
                       }
-                      var14.reverse();
-                      var14.setCharAt(0, Character.toUpperCase(var14.charAt(0)));
-                      break L9;
                     }
-                    return var14.toString();
+                  } else {
+                    var4 = var4 / 37L;
+                    var3++;
+                    continue L3;
                   }
                 }
               }

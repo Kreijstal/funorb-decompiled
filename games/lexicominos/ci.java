@@ -47,26 +47,19 @@ final class ci {
             }
             var4 = 0;
             L2: while (true) {
-              L3: {
-                if (var2_int <= var4) {
-                  break L3;
-                } else {
-                  var3[-1 + (var2_int - var4)] = param0.charAt(var4);
-                  var4++;
-                  if (var5 == 0) {
-                    continue L2;
-                  } else {
-                    break L3;
-                  }
-                }
+              if (var2_int <= var4) {
+                stackIn_7_0 = new String(var3);
+                break L0;
+              } else {
+                var3[-1 + (var2_int - var4)] = param0.charAt(var4);
+                var4++;
+                continue L2;
               }
-              stackIn_7_0 = new String(var3);
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (var2);
 
@@ -76,12 +69,12 @@ final class ci {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw ld.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
@@ -136,80 +129,25 @@ final class ci {
     }
 
     final int b(int param0) {
-        int var2 = 0;
-        ca var3 = null;
-        int var4 = 0;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = Lexicominos.field_L ? 1 : 0;
-                    var2 = 0;
-                    var3 = this.field_d.field_l;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (this.field_d == var3) {
-                        statePc = 9;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var3 = var3.field_l;
-                    var2++;
-                    if (var4 == 0) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return var2;
-                }
-                case 4: {
-                    if (var4 == 0) {
-                        statePc = 1;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (param0 >= 22) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    field_a = (sh) null;
-                    return var2;
-                }
-                case 7: {
-                    return var2;
-                }
-                case 9: {
-                    if (param0 < 22) {
-                        statePc = 11;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
-                    return var2;
-                }
-                case 11: {
-                    field_a = (sh) null;
-                    return var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int var2;
+        ca var3;
+        int var4;
+        var4 = Lexicominos.field_L ? 1 : 0;
+        var2 = 0;
+        var3 = this.field_d.field_l;
+        L0: while (true) {
+          if (this.field_d == var3) {
+            if (param0 < 22) {
+              field_a = (sh) null;
+              return var2;
+            } else {
+              return var2;
             }
+          } else {
+            var3 = var3.field_l;
+            var2++;
+            continue L0;
+          }
         }
     }
 

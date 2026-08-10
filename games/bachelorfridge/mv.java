@@ -338,10 +338,10 @@ class mv extends at {
         aga var2;
         if (param0 > 16) {
           var2 = this.field_k.field_l.a(44, this.field_l.field_h);
-          if (var2.i(-85)) {
+          if (!var2.i(-85)) {
+            this.field_k.field_l.a(-27449, this.field_l).b(false);
             return;
           } else {
-            this.field_k.field_l.a(-27449, this.field_l).b(false);
             return;
           }
         } else {
@@ -383,42 +383,112 @@ class mv extends at {
             }
           }
           L2: {
-            if (this.field_j != 25) {
-              if (this.field_j != 25) {
-                break L2;
+            if (this.field_j == 25) {
+              L3: {
+                if (!this.field_k.d((byte) -70)) {
+                  this.d((byte) -111);
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+              if (this.field_j == 25) {
+                if (!this.field_k.d((byte) -73)) {
+                  this.f(87);
+                  if (15 != this.field_j) {
+                    break L2;
+                  } else {
+                    if (this.field_k.d((byte) -112)) {
+                      break L2;
+                    } else {
+                      if (4 != var8.field_r) {
+                        break L2;
+                      } else {
+                        this.field_l.field_fb.a(new ha(this.field_l, var5), true);
+                        break L2;
+                      }
+                    }
+                  }
+                } else {
+                  if (15 != this.field_j) {
+                    break L2;
+                  } else {
+                    if (this.field_k.d((byte) -112)) {
+                      break L2;
+                    } else {
+                      if (4 != var8.field_r) {
+                        break L2;
+                      } else {
+                        this.field_l.field_fb.a(new ha(this.field_l, var5), true);
+                        break L2;
+                      }
+                    }
+                  }
+                }
               } else {
-                if (this.field_k.d((byte) -73)) {
+                if (15 != this.field_j) {
                   break L2;
                 } else {
-                  this.f(87);
-                  break L2;
+                  if (this.field_k.d((byte) -112)) {
+                    break L2;
+                  } else {
+                    if (4 != var8.field_r) {
+                      break L2;
+                    } else {
+                      this.field_l.field_fb.a(new ha(this.field_l, var5), true);
+                      break L2;
+                    }
+                  }
                 }
               }
             } else {
-              if (this.field_j != 25) {
-                break L2;
-              } else {
-                if (this.field_k.d((byte) -73)) {
-                  break L2;
-                } else {
+              if (this.field_j == 25) {
+                if (!this.field_k.d((byte) -73)) {
                   this.f(87);
-                  break L2;
-                }
-              }
-            }
-          }
-          L3: {
-            if (15 != this.field_j) {
-              break L3;
-            } else {
-              if (this.field_k.d((byte) -112)) {
-                break L3;
-              } else {
-                if (4 != var8.field_r) {
-                  break L3;
+                  if (15 != this.field_j) {
+                    break L2;
+                  } else {
+                    if (this.field_k.d((byte) -112)) {
+                      break L2;
+                    } else {
+                      if (4 != var8.field_r) {
+                        break L2;
+                      } else {
+                        this.field_l.field_fb.a(new ha(this.field_l, var5), true);
+                        break L2;
+                      }
+                    }
+                  }
                 } else {
-                  this.field_l.field_fb.a(new ha(this.field_l, var5), true);
-                  break L3;
+                  if (15 != this.field_j) {
+                    break L2;
+                  } else {
+                    if (this.field_k.d((byte) -112)) {
+                      break L2;
+                    } else {
+                      if (4 != var8.field_r) {
+                        break L2;
+                      } else {
+                        this.field_l.field_fb.a(new ha(this.field_l, var5), true);
+                        break L2;
+                      }
+                    }
+                  }
+                }
+              } else {
+                if (15 != this.field_j) {
+                  break L2;
+                } else {
+                  if (this.field_k.d((byte) -112)) {
+                    break L2;
+                  } else {
+                    if (4 != var8.field_r) {
+                      break L2;
+                    } else {
+                      this.field_l.field_fb.a(new ha(this.field_l, var5), true);
+                      break L2;
+                    }
+                  }
                 }
               }
             }
@@ -478,11 +548,11 @@ class mv extends at {
             }
           }
           if (50 == this.field_j) {
-            if (this.field_k.d((byte) -120)) {
-              return false;
-            } else {
+            if (!this.field_k.d((byte) -120)) {
               var5.b(-1, var8.field_o);
               id.e(49, var5.field_s.field_o.field_e);
+              return false;
+            } else {
               return false;
             }
           } else {
@@ -499,9 +569,7 @@ class mv extends at {
         ad var3;
         int var4;
         var4 = BachelorFridge.field_y;
-        if ((this.field_k.field_p ^ -1) == param0) {
-          return;
-        } else {
+        if ((this.field_k.field_p ^ -1) != param0) {
           var2 = (pp) ((Object) this.field_k.field_o.b((byte) 90));
           L0: while (true) {
             if (var2 == null) {
@@ -524,6 +592,8 @@ class mv extends at {
               continue L0;
             }
           }
+        } else {
+          return;
         }
     }
 

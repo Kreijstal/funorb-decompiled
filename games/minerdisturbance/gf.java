@@ -865,26 +865,86 @@ final class gf {
               }
             }
             L18: {
-              if (this.field_n <= ca.field_k) {
-                if (!sc.field_b) {
-                  break L18;
-                } else {
-                  if (!q.field_b[this.field_n][this.field_p].field_V) {
-                    break L18;
+              if (this.field_n > ca.field_k) {
+                L19: {
+                  if (this.field_i > -40) {
+                    this.field_i = this.field_i - 2;
+                    break L19;
                   } else {
+                    break L19;
+                  }
+                }
+                if (sc.field_b) {
+                  if (q.field_b[this.field_n][this.field_p].field_V) {
                     ag.a(true, 1, 32 * this.field_p, 32 * this.field_n);
                     break L18;
+                  } else {
+                    if (ca.field_k != this.field_n) {
+                      break L16;
+                    } else {
+                      if (this.field_p != hf.field_t) {
+                        break L16;
+                      } else {
+                        if (il.e(param0 ^ -10296)) {
+                          break L16;
+                        } else {
+                          rj.a((byte) -38, 7);
+                          break L16;
+                        }
+                      }
+                    }
+                  }
+                } else {
+                  if (ca.field_k != this.field_n) {
+                    break L16;
+                  } else {
+                    if (this.field_p != hf.field_t) {
+                      break L16;
+                    } else {
+                      if (il.e(param0 ^ -10296)) {
+                        break L16;
+                      } else {
+                        rj.a((byte) -38, 7);
+                        break L16;
+                      }
+                    }
                   }
                 }
               } else {
-                if (!sc.field_b) {
-                  break L18;
-                } else {
-                  if (!q.field_b[this.field_n][this.field_p].field_V) {
-                    break L18;
-                  } else {
+                if (sc.field_b) {
+                  if (q.field_b[this.field_n][this.field_p].field_V) {
                     ag.a(true, 1, 32 * this.field_p, 32 * this.field_n);
                     break L18;
+                  } else {
+                    if (ca.field_k != this.field_n) {
+                      break L16;
+                    } else {
+                      if (this.field_p != hf.field_t) {
+                        break L16;
+                      } else {
+                        if (il.e(param0 ^ -10296)) {
+                          break L16;
+                        } else {
+                          rj.a((byte) -38, 7);
+                          break L16;
+                        }
+                      }
+                    }
+                  }
+                } else {
+                  if (ca.field_k != this.field_n) {
+                    break L16;
+                  } else {
+                    if (this.field_p != hf.field_t) {
+                      break L16;
+                    } else {
+                      if (il.e(param0 ^ -10296)) {
+                        break L16;
+                      } else {
+                        rj.a((byte) -38, 7);
+                        break L16;
+                      }
+                    }
                   }
                 }
               }
@@ -905,12 +965,12 @@ final class gf {
             }
           } else {
             if (this.field_g != 0) {
-              L19: {
+              L20: {
                 if (-10 < this.field_i) {
                   this.field_i = this.field_i - 2;
-                  break L19;
+                  break L20;
                 } else {
-                  break L19;
+                  break L20;
                 }
               }
               if (q.field_b[-1 + this.field_n][this.field_p].field_a) {
@@ -920,12 +980,12 @@ final class gf {
                 break L16;
               }
             } else {
-              L20: {
+              L21: {
                 if (10 > this.field_i) {
                   this.field_i = this.field_i + 2;
-                  break L20;
+                  break L21;
                 } else {
-                  break L20;
+                  break L21;
                 }
               }
               if (q.field_b[1 + this.field_n][this.field_p].field_a) {
@@ -938,36 +998,36 @@ final class gf {
           }
         }
         if (param0 == 21161) {
-          L21: {
-            L22: {
+          L22: {
+            L23: {
               if (q.field_b[this.field_n][this.field_p].field_a) {
-                break L22;
+                break L23;
               } else {
                 if (!je.field_O.b(this.field_n, this.field_p, (byte) 50)) {
                   if (-1 <= (je.e(this.field_n, this.field_p, 1, 1) ^ -1)) {
-                    break L21;
+                    break L22;
                   } else {
                     this.field_b = 0;
                     this.field_h = 8;
                     this.field_g = 0;
-                    break L21;
+                    break L22;
                   }
                 } else {
-                  break L22;
+                  break L23;
                 }
               }
             }
             this.field_b = 250;
             this.field_h = 16;
             this.field_g = 0;
-            break L21;
+            break L22;
           }
-          L23: {
+          L24: {
             if (39 < (this.field_m ^ -1)) {
               this.field_m = -40;
-              break L23;
+              break L24;
             } else {
-              break L23;
+              break L24;
             }
           }
           return;
@@ -1607,35 +1667,125 @@ final class gf {
                 }
               }
               L39: {
-                if (hf.field_t <= this.field_p) {
-                  if (sc.field_b) {
-                    if (!q.field_b[this.field_n][this.field_p].field_V) {
-                      break L39;
-                    } else {
-                      ag.a(true, 32, this.field_p * 32, 32 * this.field_n);
-                      break L39;
-                    }
-                  } else {
-                    if (!sc.field_b) {
-                      break L39;
-                    } else {
-                      if (!q.field_b[this.field_n][this.field_p].field_V) {
-                        break L39;
+                if (hf.field_t > this.field_p) {
+                  if (var6 != 0) {
+                    L40: {
+                      if (var4 > this.field_m) {
+                        this.field_m = this.field_m + 1;
+                        break L40;
                       } else {
+                        break L40;
+                      }
+                    }
+                    if (sc.field_b) {
+                      if (q.field_b[this.field_n][this.field_p].field_V) {
                         ag.a(true, 32, this.field_p * 32, 32 * this.field_n);
                         break L39;
+                      } else {
+                        if (this.field_n != ca.field_k) {
+                          break L19;
+                        } else {
+                          if (hf.field_t != this.field_p) {
+                            break L19;
+                          } else {
+                            if (il.e(-31391)) {
+                              break L19;
+                            } else {
+                              rj.a((byte) -38, 10);
+                              break L19;
+                            }
+                          }
+                        }
+                      }
+                    } else {
+                      if (this.field_n != ca.field_k) {
+                        break L19;
+                      } else {
+                        if (hf.field_t != this.field_p) {
+                          break L19;
+                        } else {
+                          if (il.e(-31391)) {
+                            break L19;
+                          } else {
+                            rj.a((byte) -38, 10);
+                            break L19;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    if (sc.field_b) {
+                      if (q.field_b[this.field_n][this.field_p].field_V) {
+                        ag.a(true, 32, this.field_p * 32, 32 * this.field_n);
+                        break L39;
+                      } else {
+                        if (this.field_n != ca.field_k) {
+                          break L19;
+                        } else {
+                          if (hf.field_t != this.field_p) {
+                            break L19;
+                          } else {
+                            if (il.e(-31391)) {
+                              break L19;
+                            } else {
+                              rj.a((byte) -38, 10);
+                              break L19;
+                            }
+                          }
+                        }
+                      }
+                    } else {
+                      if (this.field_n != ca.field_k) {
+                        break L19;
+                      } else {
+                        if (hf.field_t != this.field_p) {
+                          break L19;
+                        } else {
+                          if (il.e(-31391)) {
+                            break L19;
+                          } else {
+                            rj.a((byte) -38, 10);
+                            break L19;
+                          }
+                        }
                       }
                     }
                   }
                 } else {
-                  if (!sc.field_b) {
-                    break L39;
-                  } else {
-                    if (!q.field_b[this.field_n][this.field_p].field_V) {
-                      break L39;
-                    } else {
+                  if (sc.field_b) {
+                    if (q.field_b[this.field_n][this.field_p].field_V) {
                       ag.a(true, 32, this.field_p * 32, 32 * this.field_n);
                       break L39;
+                    } else {
+                      if (this.field_n != ca.field_k) {
+                        break L19;
+                      } else {
+                        if (hf.field_t != this.field_p) {
+                          break L19;
+                        } else {
+                          if (il.e(-31391)) {
+                            break L19;
+                          } else {
+                            rj.a((byte) -38, 10);
+                            break L19;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    if (this.field_n != ca.field_k) {
+                      break L19;
+                    } else {
+                      if (hf.field_t != this.field_p) {
+                        break L19;
+                      } else {
+                        if (il.e(-31391)) {
+                          break L19;
+                        } else {
+                          rj.a((byte) -38, 10);
+                          break L19;
+                        }
+                      }
                     }
                   }
                 }
@@ -1656,15 +1806,15 @@ final class gf {
               }
             }
           }
-          L40: {
-            L41: {
+          L41: {
+            L42: {
               if (q.field_b[this.field_n][this.field_p].field_a) {
-                break L41;
+                break L42;
               } else {
                 if (je.field_O.b(this.field_n, this.field_p, (byte) 120)) {
-                  break L41;
+                  break L42;
                 } else {
-                  break L40;
+                  break L41;
                 }
               }
             }
@@ -1672,7 +1822,7 @@ final class gf {
             this.field_h = 16;
             this.field_b = 250;
             this.field_g = 0;
-            break L40;
+            break L41;
           }
           return;
         } else {
@@ -4000,34 +4150,20 @@ final class gf {
                                   break L146;
                                 } else {
                                   if (!q.field_b[this.field_n - -1][-1 + this.field_p].g()) {
-                                    if (this.field_k <= 40) {
-                                      break L145;
-                                    } else {
-                                      if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                        break L145;
-                                      } else {
-                                        this.field_k = 40;
-                                        break L145;
-                                      }
-                                    }
+                                    break L146;
                                   } else {
-                                    if (this.field_k <= 40) {
-                                      break L145;
-                                    } else {
-                                      if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                        break L145;
-                                      } else {
-                                        this.field_k = 40;
-                                        break L145;
-                                      }
-                                    }
+                                    this.field_m = 0;
+                                    this.field_f = 0;
+                                    break L146;
                                   }
                                 }
                               }
                             }
                           }
-                          if (79 < (this.field_k ^ -1)) {
-                            L147: {
+                          L147: {
+                            if (79 >= (this.field_k ^ -1)) {
+                              break L147;
+                            } else {
                               if (-1 >= (this.field_f ^ -1)) {
                                 break L147;
                               } else {
@@ -4044,274 +4180,234 @@ final class gf {
                                 }
                               }
                             }
-                            L148: {
-                              if (-81 <= (this.field_k ^ -1)) {
+                          }
+                          L148: {
+                            if (-81 <= (this.field_k ^ -1)) {
+                              break L148;
+                            } else {
+                              if (this.field_f <= 0) {
                                 break L148;
                               } else {
-                                if (this.field_f > 0) {
-                                  if (-1 < (this.field_m ^ -1)) {
+                                if (-1 < (this.field_m ^ -1)) {
+                                  break L148;
+                                } else {
+                                  if (q.field_b[this.field_n + 1][this.field_p + 1].g()) {
+                                    this.field_m = 0;
+                                    this.field_f = 0;
                                     break L148;
                                   } else {
-                                    if (q.field_b[this.field_n + 1][this.field_p + 1].g()) {
-                                      this.field_m = 0;
-                                      this.field_f = 0;
-                                      break L148;
-                                    } else {
-                                      break L148;
-                                    }
-                                  }
-                                } else {
-                                  if (this.field_k <= 40) {
-                                    break L145;
-                                  } else {
-                                    if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                      break L145;
-                                    } else {
-                                      this.field_k = 40;
-                                      break L145;
-                                    }
+                                    break L148;
                                   }
                                 }
                               }
                             }
-                            if (-80 > this.field_k) {
-                              if (0 < this.field_f) {
-                                if (this.field_m >= 0) {
-                                  L149: {
-                                    if (q.field_b[-1 + this.field_n][this.field_p + 1].g()) {
-                                      this.field_f = 0;
-                                      this.field_m = 0;
-                                      break L149;
-                                    } else {
-                                      break L149;
-                                    }
-                                  }
-                                  if (this.field_k <= 40) {
-                                    break L145;
-                                  } else {
-                                    if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                      break L145;
-                                    } else {
-                                      this.field_k = 40;
-                                      break L145;
-                                    }
-                                  }
+                          }
+                          if (-80 > this.field_k) {
+                            if (0 < this.field_f) {
+                              if (this.field_m >= 0) {
+                                if (q.field_b[-1 + this.field_n][this.field_p + 1].g()) {
+                                  this.field_f = 0;
+                                  this.field_m = 0;
+                                  break L145;
                                 } else {
-                                  if (this.field_k <= 40) {
-                                    break L145;
-                                  } else {
-                                    if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                      break L145;
-                                    } else {
-                                      this.field_k = 40;
-                                      break L145;
-                                    }
-                                  }
+                                  break L145;
                                 }
                               } else {
                                 if (this.field_k <= 40) {
-                                  break L145;
+                                  break L144;
                                 } else {
                                   if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                    break L145;
+                                    break L144;
                                   } else {
                                     this.field_k = 40;
-                                    break L145;
+                                    break L144;
                                   }
                                 }
                               }
                             } else {
                               if (this.field_k <= 40) {
-                                break L145;
+                                break L144;
                               } else {
                                 if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                  break L145;
+                                  break L144;
                                 } else {
                                   this.field_k = 40;
-                                  break L145;
+                                  break L144;
                                 }
                               }
                             }
                           } else {
                             if (this.field_k <= 40) {
-                              break L145;
+                              break L144;
                             } else {
                               if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                break L145;
+                                break L144;
                               } else {
                                 this.field_k = 40;
-                                break L145;
+                                break L144;
                               }
                             }
                           }
                         } else {
-                          L150: {
+                          L149: {
                             if (80 >= this.field_k) {
-                              break L150;
+                              break L149;
                             } else {
                               if ((this.field_f ^ -1) <= -1) {
-                                break L150;
+                                break L149;
                               } else {
                                 if (0 > this.field_i) {
-                                  break L150;
+                                  break L149;
                                 } else {
-                                  if (!q.field_b[1 + this.field_n][-1 + this.field_p].g()) {
-                                    break L150;
+                                  if (q.field_b[1 + this.field_n][-1 + this.field_p].g()) {
+                                    this.field_k = 80;
+                                    this.field_i = -this.field_i;
+                                    break L149;
                                   } else {
-                                    if ((this.field_k ^ -1) <= 39) {
-                                      break L144;
-                                    } else {
-                                      if (!q.field_b[-1 + this.field_n][this.field_p].g()) {
-                                        break L144;
-                                      } else {
-                                        this.field_k = -40;
-                                        break L144;
-                                      }
-                                    }
+                                    break L149;
                                   }
                                 }
                               }
                             }
                           }
-                          if ((this.field_k ^ -1) > 79) {
-                            L151: {
+                          L150: {
+                            if ((this.field_k ^ -1) <= 79) {
+                              break L150;
+                            } else {
                               if (-1 >= (this.field_f ^ -1)) {
-                                break L151;
+                                break L150;
                               } else {
                                 if ((this.field_i ^ -1) < -1) {
-                                  break L151;
+                                  break L150;
                                 } else {
                                   if (!q.field_b[this.field_n - 1][-1 + this.field_p].g()) {
-                                    break L151;
+                                    break L150;
                                   } else {
                                     this.field_i = -this.field_i;
                                     this.field_k = -80;
+                                    break L150;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          L151: {
+                            if (80 >= this.field_k) {
+                              break L151;
+                            } else {
+                              if (this.field_f <= 0) {
+                                break L151;
+                              } else {
+                                if (this.field_i < 0) {
+                                  break L151;
+                                } else {
+                                  if (q.field_b[1 + this.field_n][1 + this.field_p].g()) {
+                                    this.field_k = 80;
+                                    this.field_i = -this.field_i;
+                                    break L151;
+                                  } else {
                                     break L151;
                                   }
                                 }
                               }
                             }
-                            if (80 < this.field_k) {
-                              if (this.field_f <= 0) {
-                                if (79 >= (this.field_k ^ -1)) {
-                                  if (this.field_k > 40) {
-                                    if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                      break L145;
-                                    } else {
-                                      this.field_k = 40;
-                                      break L145;
-                                    }
-                                  } else {
-                                    if (this.field_k <= 40) {
-                                      break L145;
-                                    } else {
-                                      if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                        break L145;
-                                      } else {
-                                        this.field_k = 40;
-                                        break L145;
-                                      }
-                                    }
-                                  }
+                          }
+                          if (79 < (this.field_k ^ -1)) {
+                            if (this.field_f > 0) {
+                              if (-1 <= (this.field_i ^ -1)) {
+                                if (q.field_b[this.field_n - 1][1 + this.field_p].g()) {
+                                  this.field_i = -this.field_i;
+                                  this.field_k = -80;
+                                  break L145;
                                 } else {
-                                  if (this.field_k <= 40) {
-                                    break L145;
-                                  } else {
-                                    if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                      break L145;
-                                    } else {
-                                      this.field_k = 40;
-                                      break L145;
-                                    }
-                                  }
+                                  break L145;
                                 }
                               } else {
-                                if (this.field_i >= 0) {
-                                  if (this.field_k <= 40) {
-                                    break L145;
-                                  } else {
-                                    if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                      break L145;
-                                    } else {
-                                      this.field_k = 40;
-                                      break L145;
-                                    }
-                                  }
+                                if (this.field_k <= 40) {
+                                  break L144;
                                 } else {
-                                  if (this.field_k <= 40) {
-                                    break L145;
+                                  if (!q.field_b[this.field_n - -1][this.field_p].g()) {
+                                    break L144;
                                   } else {
-                                    if (!q.field_b[this.field_n - -1][this.field_p].g()) {
-                                      break L145;
-                                    } else {
-                                      this.field_k = 40;
-                                      break L145;
-                                    }
+                                    this.field_k = 40;
+                                    break L144;
                                   }
                                 }
                               }
                             } else {
-                              if ((this.field_k ^ -1) <= 39) {
+                              if (this.field_k <= 40) {
                                 break L144;
                               } else {
-                                if (!q.field_b[-1 + this.field_n][this.field_p].g()) {
+                                if (!q.field_b[this.field_n - -1][this.field_p].g()) {
                                   break L144;
                                 } else {
-                                  this.field_k = -40;
+                                  this.field_k = 40;
                                   break L144;
                                 }
                               }
                             }
                           } else {
-                            if ((this.field_k ^ -1) <= 39) {
+                            if (this.field_k <= 40) {
                               break L144;
                             } else {
-                              if (!q.field_b[-1 + this.field_n][this.field_p].g()) {
+                              if (!q.field_b[this.field_n - -1][this.field_p].g()) {
                                 break L144;
                               } else {
-                                this.field_k = -40;
+                                this.field_k = 40;
                                 break L144;
                               }
                             }
                           }
                         }
                       }
-                      if ((this.field_k ^ -1) <= 39) {
+                      if (this.field_k <= 40) {
                         break L144;
                       } else {
-                        if (!q.field_b[-1 + this.field_n][this.field_p].g()) {
+                        if (!q.field_b[this.field_n - -1][this.field_p].g()) {
                           break L144;
                         } else {
-                          this.field_k = -40;
+                          this.field_k = 40;
                           break L144;
                         }
                       }
                     }
                     L152: {
-                      if ((this.field_k ^ -1) < -161) {
-                        this.field_k = this.field_k - 320;
-                        this.field_n = this.field_n + 1;
+                      if ((this.field_k ^ -1) <= 39) {
                         break L152;
                       } else {
-                        break L152;
+                        if (!q.field_b[-1 + this.field_n][this.field_p].g()) {
+                          break L152;
+                        } else {
+                          this.field_k = -40;
+                          break L152;
+                        }
                       }
                     }
                     L153: {
-                      if ((this.field_k ^ -1) > 159) {
-                        this.field_n = this.field_n - 1;
-                        this.field_k = this.field_k + 320;
+                      if ((this.field_k ^ -1) < -161) {
+                        this.field_k = this.field_k - 320;
+                        this.field_n = this.field_n + 1;
                         break L153;
                       } else {
                         break L153;
                       }
                     }
                     L154: {
-                      if ((this.field_f ^ -1) < -161) {
-                        this.field_f = this.field_f - 320;
-                        this.field_p = this.field_p + 1;
+                      if ((this.field_k ^ -1) > 159) {
+                        this.field_n = this.field_n - 1;
+                        this.field_k = this.field_k + 320;
                         break L154;
                       } else {
                         break L154;
+                      }
+                    }
+                    L155: {
+                      if ((this.field_f ^ -1) < -161) {
+                        this.field_f = this.field_f - 320;
+                        this.field_p = this.field_p + 1;
+                        break L155;
+                      } else {
+                        break L155;
                       }
                     }
                     if (this.field_f < -160) {

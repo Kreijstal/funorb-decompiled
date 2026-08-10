@@ -271,38 +271,41 @@ final class cl {
                       }
                     }
                     L20: {
-                      if (param0[param5] == null) {
-                        break L20;
-                      } else {
-                        if (0 == param0[4].field_s) {
-                          break L20;
+                      L21: {
+                        if (param0[param5] == null) {
+                          break L21;
                         } else {
-                          if (0 != param0[4].field_v) {
-                            ll.b(var16, var18, var17, var19);
-                            var20 = var14;
-                            L21: while (true) {
-                              if (var15 <= var20) {
-                                ll.b(bf.field_a);
-                                break L20;
-                              } else {
-                                var21 = var12;
-                                L22: while (true) {
-                                  if (var21 >= var13) {
-                                    var20 = var20 + param0[4].field_v;
-                                    continue L21;
-                                  } else {
-                                    param0[4].e(var21, var20);
-                                    var21 = var21 + param0[4].field_s;
-                                    continue L22;
+                          if (0 == param0[4].field_s) {
+                            break L21;
+                          } else {
+                            if (0 != param0[4].field_v) {
+                              ll.b(var16, var18, var17, var19);
+                              var20 = var14;
+                              L22: while (true) {
+                                if (var15 <= var20) {
+                                  ll.b(bf.field_a);
+                                  break L21;
+                                } else {
+                                  var21 = var12;
+                                  L23: while (true) {
+                                    if (var21 >= var13) {
+                                      var20 = var20 + param0[4].field_v;
+                                      continue L22;
+                                    } else {
+                                      param0[4].e(var21, var20);
+                                      var21 = var21 + param0[4].field_s;
+                                      continue L23;
+                                    }
                                   }
                                 }
                               }
+                            } else {
+                              break L20;
                             }
-                          } else {
-                            break L20;
                           }
                         }
                       }
+                      break L20;
                     }
                     decompiledRegionSelector0 = 2;
                     break L0;
@@ -315,7 +318,7 @@ final class cl {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L23: {
+          L24: {
             var6 = decompiledCaughtException;
             stackIn_77_0 = (RuntimeException) (var6);
 
@@ -325,12 +328,12 @@ final class cl {
               stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
               stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
               stackIn_78_2 = "null";
-              break L23;
+              break L24;
             } else {
               stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
               stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
               stackIn_78_2 = "{...}";
-              break L23;
+              break L24;
             }
           }
           throw sl.a((Throwable) ((Object) stackIn_78_0), stackIn_78_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

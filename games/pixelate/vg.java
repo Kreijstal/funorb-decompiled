@@ -413,73 +413,70 @@ final class vg {
         try {
             Throwable decompiledCaughtException = null;
             IOException var2 = null;
-            if (null == sh.field_e) {
-              aa.field_f.field_m = 0;
-              return;
-            } else {
-              L0: {
-                if (param0 < 0) {
-                  if (aa.field_f.field_m == 0) {
-                    if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
+            L0: {
+              if (null == sh.field_e) {
+                break L0;
+              } else {
+                L1: {
+                  if (param0 >= 0) {
+                    if (Pixelate.field_G != uk.field_s) {
                       break L0;
                     } else {
-                      aa.field_f.g(param0, 15514);
-                      break L0;
+                      if (aa.field_f.field_m != 0) {
+                        break L1;
+                      } else {
+                        if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
+                          break L1;
+                        } else {
+                          aa.field_f.g(param0, 15514);
+                          break L1;
+                        }
+                      }
                     }
                   } else {
                     if (aa.field_f.field_m != 0) {
-                      break L0;
+                      break L1;
                     } else {
                       if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
-                        break L0;
+                        break L1;
                       } else {
                         aa.field_f.g(param0, 15514);
-                        break L0;
+                        break L1;
                       }
                     }
                   }
-                } else {
-                  if (aa.field_f.field_m != 0) {
-                    break L0;
+                }
+                L2: {
+                  if ((aa.field_f.field_m ^ -1) < -1) {
+                    try {
+                      L3: {
+                        sh.field_e.a(aa.field_f.field_m, -98, 0, aa.field_f.field_k);
+                        aj.field_m = hm.a(64);
+                        break L3;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L4: {
+                        var2 = (IOException) (Object) decompiledCaughtException;
+                        na.a(true);
+                        break L4;
+                      }
+                    }
+                    aa.field_f.field_m = 0;
+                    break L2;
                   } else {
-                    if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
-                      break L0;
-                    } else {
-                      aa.field_f.g(param0, 15514);
-                      break L0;
-                    }
+                    break L2;
                   }
                 }
-              }
-              L1: {
-                if ((aa.field_f.field_m ^ -1) < -1) {
-                  try {
-                    L2: {
-                      sh.field_e.a(aa.field_f.field_m, -98, 0, aa.field_f.field_k);
-                      aj.field_m = hm.a(64);
-                      break L2;
-                    }
-                  } catch (java.io.IOException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L3: {
-                      var2 = (IOException) (Object) decompiledCaughtException;
-                      na.a(true);
-                      break L3;
-                    }
-                  }
-                  aa.field_f.field_m = 0;
-                  break L1;
+                if (param1 == 10000) {
+                  return;
                 } else {
-                  break L1;
+                  vg.a(true);
+                  return;
                 }
-              }
-              if (param1 == 10000) {
-                return;
-              } else {
-                vg.a(true);
-                return;
               }
             }
+            aa.field_f.field_m = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

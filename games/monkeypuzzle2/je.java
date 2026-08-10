@@ -13,67 +13,25 @@ final class je {
     private ni field_g;
 
     private final void a(Object param0, int param1, int param2, long param3) {
-        RuntimeException runtimeException = null;
         b var6 = null;
         la var6_ref = null;
-        int var7 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = MonkeyPuzzle2.field_F ? 1 : 0;
+        int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            if (param1 > this.field_d) {
-              throw new IllegalStateException();
-            } else {
-              this.a(0, param3);
-              this.field_e = this.field_e - param1;
-              L1: while (true) {
-                L2: {
-                  if (this.field_e >= 0) {
-                    break L2;
-                  } else {
-                    var6 = (b) ((Object) this.field_g.b((byte) -86));
-                    this.a(var6, 4821);
-                    if (var7 == 0) {
-                      continue L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                var6_ref = new la(param0, param1);
-                this.field_b.a(param3, true, var6_ref);
-                this.field_g.a(12, var6_ref);
-                ((b) ((Object) var6_ref)).field_f = (long)param2;
-                break L0;
-              }
+            if (!(param1 <= this.field_d)) {
+                throw new IllegalStateException();
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (runtimeException);
-
-            stackIn_11_1 = new StringBuilder().append("je.E(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
+            this.a(0, param3);
+            this.field_e = this.field_e - param1;
+            while (this.field_e < 0) {
+                var6 = (b) ((Object) this.field_g.b((byte) -86));
+                this.a(var6, 4821);
             }
-          }
-          throw la.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            var6_ref = new la(param0, param1);
+            this.field_b.a(param3, true, var6_ref);
+            this.field_g.a(12, var6_ref);
+            ((b) ((Object) var6_ref)).field_f = (long)param2;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) ((Object) runtimeException), "je.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -162,13 +120,7 @@ final class je {
               ((b) ((Object) var7)).field_f = 0L;
               var8.c(-19822);
               var8.a(7847);
-              if (MonkeyPuzzle2.field_F) {
-                this.field_g.a(12, var8);
-                var8.field_f = 0L;
-                return var6;
-              } else {
-                return var6;
-              }
+              return var6;
             } else {
               this.field_g.a(12, var8);
               var8.field_f = 0L;

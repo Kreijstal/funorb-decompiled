@@ -253,80 +253,26 @@ class nk extends rm {
     }
 
     void a(int param0, n param1, int param2, byte param3) {
-        RuntimeException runtimeException = null;
         vc var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.a(param0, param1, param2, param3);
-              this.k(-62);
-              if ((this.field_v ^ -1) != -2) {
-                break L1;
-              } else {
-                L2: {
-                  if (this.field_l instanceof vc) {
+            super.a(param0, param1, param2, param3);
+            this.k(-62);
+            if ((this.field_v ^ -1) == -2) {
+                if (!(!(this.field_l instanceof vc))) {
                     var5 = (vc) ((Object) this.field_l);
                     var6 = var5.a(param2, (byte) 110, nc.field_g, param0, (n) (this), rf.field_X);
-                    if (var6 == -1) {
-                      break L2;
-                    } else {
-                      L3: {
-                        if (!this.field_G) {
-                          break L3;
-                        } else {
-                          if (var6 >= this.field_Q) {
-                            break L3;
-                          } else {
-                            if (var6 <= this.field_L) {
-                              break L3;
-                            } else {
-                              var6 = this.field_Q;
-                              break L3;
-                            }
-                          }
+                    if (var6 != -1) {
+                        if (this.field_G && var6 < this.field_Q && var6 > this.field_L) {
+                            var6 = this.field_Q;
                         }
-                      }
-                      this.field_O = var6;
-                      break L2;
+                        this.field_O = var6;
                     }
-                  } else {
-                    break L2;
-                  }
                 }
                 this.field_P = bb.b(-1);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("nk.JA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
-          }
-          throw kk.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) ((Object) runtimeException), "nk.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

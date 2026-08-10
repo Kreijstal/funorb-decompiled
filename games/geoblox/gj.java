@@ -134,39 +134,21 @@ final class gj extends fj {
 
     final static void f(byte param0) {
         ja var1 = null;
-        RuntimeException var1_ref = null;
-        int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var2 = Geoblox.field_C;
+        int var2 = Geoblox.field_C;
         try {
-          L0: {
             var1 = (ja) ((Object) a.field_d.g(0));
-            L1: while (true) {
-              if (var1 == null) {
-                if (param0 <= -33) {
-                  break L0;
-                } else {
-                  gj.f((byte) 90);
-                  return;
-                }
-              } else {
-                L2: {
-                  if (-1 == (var1.field_z ^ -1)) {
-                    break L2;
-                  } else {
+            while (var1 != null) {
+                if (-1 != (var1.field_z ^ -1)) {
                     var1.e(1643839728);
-                    break L2;
-                  }
                 }
                 var1 = (ja) ((Object) a.field_d.d(1));
-                continue L1;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "gj.B(" + param0 + ')');
+            if (param0 > -33) {
+                gj.f((byte) 90);
+                return;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ')');
         }
     }
 

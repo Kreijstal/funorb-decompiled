@@ -79,7 +79,7 @@ final class lb implements sm {
     }
 
     lb(kj param0, pa param1, ac param2) {
-        RuntimeException var4 = null;
+        RuntimeException runtimeException = null;
         jg var5 = null;
         vh var6 = null;
         RuntimeException stackIn_13_0 = null;
@@ -146,8 +146,8 @@ final class lb implements sm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var4 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var4);
+            runtimeException = decompiledCaughtException;
+            stackIn_13_0 = (RuntimeException) (runtimeException);
 
             stackIn_13_1 = new StringBuilder().append("lb.<init>(");
 

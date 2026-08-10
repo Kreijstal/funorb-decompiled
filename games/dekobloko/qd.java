@@ -76,14 +76,8 @@ final class qd extends w {
               return;
             } else {
               this.field_Tb.field_X = this.field_X;
-              if (!client.field_A) {
-                this.field_Tb.field_W = this.field_W;
-                return;
-              } else {
-                this.field_Tb.field_X = 0;
-                this.field_Tb.field_W = this.field_W;
-                return;
-              }
+              this.field_Tb.field_W = this.field_W;
+              return;
             }
           } else {
             return;
@@ -151,14 +145,8 @@ final class qd extends w {
               return;
             } else {
               this.field_Tb.field_X = this.field_X;
-              if (!client.field_A) {
-                this.field_Tb.field_W = this.field_W;
-                return;
-              } else {
-                this.field_Tb.field_X = 0;
-                this.field_Tb.field_W = this.field_W;
-                return;
-              }
+              this.field_Tb.field_W = this.field_W;
+              return;
             }
           } else {
             return;

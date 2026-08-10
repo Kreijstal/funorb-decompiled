@@ -6,7 +6,7 @@ final class hm {
     static tk field_a;
 
     final static void a(byte param0, int param1) {
-        int stackIn_88_0 = 0;
+        int stackIn_100_0 = 0;
         int var2;
         int var3;
         int var4;
@@ -18,18 +18,18 @@ final class hm {
             L0: {
               if (ol.field_f >= HoldTheLine.field_A) {
                 if (HoldTheLine.field_A - -lc.field_h > ol.field_f) {
-                  stackIn_88_0 = 1;
+                  stackIn_100_0 = 1;
                   break L0;
                 } else {
-                  stackIn_88_0 = 0;
+                  stackIn_100_0 = 0;
                   break L0;
                 }
               } else {
-                stackIn_88_0 = 0;
+                stackIn_100_0 = 0;
                 break L0;
               }
             }
-            var3 = stackIn_88_0;
+            var3 = stackIn_100_0;
             if (param1 == -1) {
               L1: {
                 ol.field_f = 0;
@@ -285,16 +285,39 @@ final class hm {
                     }
                     L14: {
                       if (!va.field_k) {
-                        a.field_I = param1;
-                        if (!va.field_k) {
-                          break L14;
-                        } else {
-                          if (ol.field_f != fd.field_d) {
+                        if (HoldTheLine.field_A > ol.field_f) {
+                          L15: {
+                            if (na.field_k) {
+                              ol.field_f = 0;
+                              break L15;
+                            } else {
+                              break L15;
+                            }
+                          }
+                          a.field_I = param1;
+                          if (!va.field_k) {
                             break L14;
                           } else {
-                            ol.field_f = 0;
-                            va.field_k = false;
+                            if (ol.field_f != fd.field_d) {
+                              break L14;
+                            } else {
+                              ol.field_f = 0;
+                              va.field_k = false;
+                              break L14;
+                            }
+                          }
+                        } else {
+                          a.field_I = param1;
+                          if (!va.field_k) {
                             break L14;
+                          } else {
+                            if (ol.field_f != fd.field_d) {
+                              break L14;
+                            } else {
+                              ol.field_f = 0;
+                              va.field_k = false;
+                              break L14;
+                            }
                           }
                         }
                       } else {
@@ -324,28 +347,28 @@ final class hm {
               }
               if (-1 == param1) {
                 if (var3 == 0) {
-                  L15: {
+                  L16: {
                     if (va.field_k) {
-                      break L15;
+                      break L16;
                     } else {
                       if (HoldTheLine.field_A <= ol.field_f) {
-                        break L15;
+                        break L16;
                       } else {
                         if (na.field_k) {
                           ol.field_f = 0;
-                          break L15;
+                          break L16;
                         } else {
-                          L16: {
+                          L17: {
                             a.field_I = param1;
                             if (!va.field_k) {
-                              break L16;
+                              break L17;
                             } else {
                               if (ol.field_f != fd.field_d) {
-                                break L16;
+                                break L17;
                               } else {
                                 ol.field_f = 0;
                                 va.field_k = false;
-                                break L16;
+                                break L17;
                               }
                             }
                           }
@@ -367,113 +390,136 @@ final class hm {
                     return;
                   }
                 } else {
-                  L17: {
+                  L18: {
                     va.field_k = true;
                     if (va.field_k) {
-                      break L17;
+                      break L18;
                     } else {
                       if (HoldTheLine.field_A <= ol.field_f) {
-                        break L17;
+                        break L18;
                       } else {
                         if (na.field_k) {
                           ol.field_f = 0;
-                          break L17;
+                          break L18;
                         } else {
-                          break L17;
+                          break L18;
                         }
                       }
                     }
                   }
-                  L18: {
+                  L19: {
                     a.field_I = param1;
                     if (!va.field_k) {
-                      break L18;
+                      break L19;
                     } else {
                       if (ol.field_f != fd.field_d) {
-                        break L18;
+                        break L19;
                       } else {
                         ol.field_f = 0;
                         va.field_k = false;
-                        break L18;
+                        break L19;
                       }
                     }
                   }
                   return;
                 }
               } else {
-                L19: {
+                L20: {
                   va.field_k = false;
                   if (va.field_k) {
-                    break L19;
+                    break L20;
                   } else {
                     if (HoldTheLine.field_A <= ol.field_f) {
-                      break L19;
+                      break L20;
                     } else {
                       if (na.field_k) {
                         ol.field_f = 0;
-                        break L19;
+                        break L20;
                       } else {
-                        break L19;
+                        break L20;
                       }
                     }
                   }
                 }
-                L20: {
+                L21: {
                   a.field_I = param1;
                   if (!va.field_k) {
-                    break L20;
+                    break L21;
                   } else {
                     if (ol.field_f != fd.field_d) {
-                      break L20;
+                      break L21;
                     } else {
                       ol.field_f = 0;
                       va.field_k = false;
-                      break L20;
+                      break L21;
                     }
                   }
                 }
                 return;
               }
             } else {
-              L21: {
+              L22: {
                 ol.field_f = 0;
                 if (-1 == param1) {
                   if (var3 == 0) {
-                    break L21;
+                    break L22;
                   } else {
                     va.field_k = true;
-                    break L21;
+                    break L22;
                   }
                 } else {
                   va.field_k = false;
-                  break L21;
+                  break L22;
                 }
               }
-              L22: {
+              L23: {
                 if (!va.field_k) {
-                  a.field_I = param1;
-                  if (!va.field_k) {
-                    break L22;
-                  } else {
-                    if (ol.field_f != fd.field_d) {
-                      break L22;
+                  if (HoldTheLine.field_A > ol.field_f) {
+                    L24: {
+                      if (na.field_k) {
+                        ol.field_f = 0;
+                        break L24;
+                      } else {
+                        break L24;
+                      }
+                    }
+                    a.field_I = param1;
+                    if (!va.field_k) {
+                      break L23;
                     } else {
-                      ol.field_f = 0;
-                      va.field_k = false;
-                      break L22;
+                      if (ol.field_f != fd.field_d) {
+                        break L23;
+                      } else {
+                        ol.field_f = 0;
+                        va.field_k = false;
+                        break L23;
+                      }
+                    }
+                  } else {
+                    a.field_I = param1;
+                    if (!va.field_k) {
+                      break L23;
+                    } else {
+                      if (ol.field_f != fd.field_d) {
+                        break L23;
+                      } else {
+                        ol.field_f = 0;
+                        va.field_k = false;
+                        break L23;
+                      }
                     }
                   }
                 } else {
                   a.field_I = param1;
                   if (!va.field_k) {
-                    break L22;
+                    break L23;
                   } else {
                     if (ol.field_f != fd.field_d) {
-                      break L22;
+                      break L23;
                     } else {
                       ol.field_f = 0;
                       va.field_k = false;
-                      break L22;
+                      break L23;
                     }
                   }
                 }
@@ -482,28 +528,28 @@ final class hm {
             }
           }
         } else {
-          L23: {
+          L25: {
             if (va.field_k) {
-              break L23;
+              break L25;
             } else {
               if (HoldTheLine.field_A <= ol.field_f) {
-                break L23;
+                break L25;
               } else {
                 if (na.field_k) {
                   ol.field_f = 0;
-                  break L23;
+                  break L25;
                 } else {
-                  L24: {
+                  L26: {
                     a.field_I = param1;
                     if (!va.field_k) {
-                      break L24;
+                      break L26;
                     } else {
                       if (ol.field_f != fd.field_d) {
-                        break L24;
+                        break L26;
                       } else {
                         ol.field_f = 0;
                         va.field_k = false;
-                        break L24;
+                        break L26;
                       }
                     }
                   }

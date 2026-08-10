@@ -200,7 +200,7 @@ final class dj {
                           break L10;
                         }
                       }
-                      throw sh.a((Throwable) ((Object) stackIn_39_0), (stackIn_39_2 != 0) + " " + param2 + " " + param0.length + " " + ii.a(8099, param0.length, var9) + " " + ii.a(8099, param0.length - 2, var9) + " " + this.field_b.field_j[param2] + " " + this.field_b.field_m);
+                      throw sh.a((Throwable) ((Object) stackIn_39_0), (stackIn_39_2 != 0) + " " + param2 + " " + var9.length + " " + ii.a(8099, var9.length, var9) + " " + ii.a(8099, var9.length - 2, var9) + " " + this.field_b.field_j[param2] + " " + this.field_b.field_m);
                     }
                     L11: {
                       if (!this.field_f) {

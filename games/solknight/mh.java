@@ -61,194 +61,23 @@ final class mh {
     }
 
     final static void a(int param0) {
+        int var2 = SolKnight.field_L ? 1 : 0;
+        fh.field_e.c(-10158);
         int var1_int = 0;
-        int var2 = 0;
-        int stackIn_5_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        RuntimeException var1 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var2 = SolKnight.field_L ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        fh.field_e.c(-10158);
-                        var1_int = 0;
-                        if (param0 == 8192) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    stackIn_5_0 = -33;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        stackIn_5_0 = -33;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (stackIn_5_0 >= (var1_int ^ -1)) {
-                            statePc = 9;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        qf.field_c[var1_int] = 0L;
-                        var1_int++;
-                        if (var2 != 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (var2 == 0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        var1_int = 0;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        if ((var1_int ^ -1) <= -33) {
-                            statePc = 14;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        pg.field_d[var1_int] = 0L;
-                        var1_int++;
-                        if (var2 != 0) {
-                            statePc = 17;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        if (var2 == 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 13;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        mj.field_b = 0;
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    var1 = (RuntimeException) ((Object) caughtException);
-                    throw fc.a((Throwable) ((Object) var1), "mh.D(" + param0 + ')');
-                }
-                case 17: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        if (param0 != 8192) {
+            return;
+        }
+        try {
+            while (-33 < (var1_int ^ -1)) {
+                qf.field_c[var1_int] = 0L;
+                var1_int++;
             }
+            for (var1_int = 0; (var1_int ^ -1) > -33; var1_int++) {
+                pg.field_d[var1_int] = 0L;
+            }
+            mj.field_b = 0;
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) ((Object) runtimeException), "mh.D(" + param0 + ')');
         }
     }
 

@@ -6,90 +6,36 @@ final class uf {
     static vn field_a;
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, String param5, int param6, int param7) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (-1 == (ch.field_d.field_U ^ -1)) {
-                break L1;
-              } else {
-                if (!wh.field_g) {
-                  if (ld.field_p) {
-                    gj.a((byte) -124);
-                    break L1;
-                  } else {
-                    ef.field_r = true;
-                    break L1;
-                  }
+            if (-1 != (ch.field_d.field_U ^ -1)) {
+                if (wh.field_g) {
                 } else {
-                  break L1;
+                    if (!ld.field_p) {
+                        ef.field_r = true;
+                    } else {
+                        gj.a((byte) -124);
+                    }
                 }
-              }
             }
-            L2: {
-              if (param4 == -7361) {
-                break L2;
-              } else {
+            if (param4 != -7361) {
                 field_b = (String) null;
-                break L2;
-              }
             }
-            L3: {
-              if (!ef.field_r) {
-                break L3;
-              } else {
+            if (ef.field_r) {
                 fn.a(20, param5, param1, param1, (byte) -104, param2, param7, param0, param6);
                 tm.field_d.b(param3, (byte) 52);
-                if (!param3) {
-                  break L3;
-                } else {
-                  L4: {
-                    if (-1 != (hf.field_f.field_U ^ -1)) {
-                      ef.field_r = false;
-                      break L4;
-                    } else {
-                      break L4;
+                if (param3) {
+                    if (!(-1 == (hf.field_f.field_U ^ -1))) {
+                        ef.field_r = false;
                     }
-                  }
-                  if (0 != ih.field_d.field_U) {
+                    if (0 == ih.field_d.field_U) {
+                        return;
+                    }
                     ue.b(10);
                     ef.field_r = false;
-                    break L3;
-                  } else {
-                    return;
-                  }
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (runtimeException);
-
-            stackIn_19_1 = new StringBuilder().append("uf.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L5;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L5;
-            }
-          }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param6 + ',' + param7 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) ((Object) runtimeException), "uf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 

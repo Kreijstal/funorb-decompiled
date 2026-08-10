@@ -20,11 +20,11 @@ final class sk extends ua implements ql {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -44,38 +44,16 @@ final class sk extends ua implements ql {
                 if (var6_int >= this.field_C) {
                   break L3;
                 } else {
-                  if (var8 != 0) {
-                    break L3;
-                  } else {
-                    L4: {
-                      if (this.field_B[var6_int] != param4) {
-                        break L4;
-                      } else {
-                        L5: {
-                          var7 = this.field_z[var6_int];
-                          if (0 == (var7 ^ -1)) {
-                            break L5;
-                          } else {
-                            qh.a(this.field_z[var6_int], true);
-                            if (var8 == 0) {
-                              break L3;
-                            } else {
-                              break L5;
-                            }
-                          }
-                        }
-                        this.field_H.g((byte) -75);
-                        if (var8 == 0) {
-                          break L3;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
+                  if (this.field_B[var6_int] != param4) {
                     var6_int++;
-                    if (var8 == 0) {
-                      continue L2;
+                    continue L2;
+                  } else {
+                    var7 = this.field_z[var6_int];
+                    if (0 == (var7 ^ -1)) {
+                      this.field_H.g((byte) -75);
+                      break L3;
                     } else {
+                      qh.a(this.field_z[var6_int], true);
                       break L3;
                     }
                   }
@@ -86,25 +64,25 @@ final class sk extends ua implements ql {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L4: {
             var6 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var6);
+            stackIn_13_0 = (RuntimeException) (var6);
 
-            stackIn_17_1 = new StringBuilder().append("sk.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+            stackIn_13_1 = new StringBuilder().append("sk.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 
             if (param4 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L6;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
+              break L4;
             } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L6;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
+              break L4;
             }
           }
-          throw la.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
+          throw la.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
     }
 
@@ -245,91 +223,25 @@ final class sk extends ua implements ql {
     }
 
     private final void a(int param0, int param1) {
-        t[] var3 = null;
-        int[] var4 = null;
         int var5 = 0;
-        int var6 = 0;
-        t var7 = null;
-        t[] var8 = null;
-        t[] var9 = null;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var6 = MonkeyPuzzle2.field_F ? 1 : 0;
-                    if (this.field_C < param0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    var8 = new t[param0];
-                    var9 = var8;
-                    var3 = var9;
-                    if (param1 <= -67) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var7 = (t) null;
-                    this.a(-89, -86, -14, 112, (t) null);
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    var4 = new int[param0];
-                    var5 = 0;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (this.field_C <= var5) {
-                        statePc = 9;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    var8[var5] = this.field_B[var5];
-                    var4[var5] = this.field_z[var5];
-                    var5++;
-                    if (var6 != 0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    if (var6 == 0) {
-                        statePc = 5;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    this.field_C = param0;
-                    this.field_z = var4;
-                    this.field_B = var9;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        int var6 = MonkeyPuzzle2.field_F ? 1 : 0;
+        if (this.field_C >= param0) {
+            return;
         }
+        t[] var8 = new t[param0];
+        t[] var3 = var8;
+        if (param1 > -67) {
+            t var7 = (t) null;
+            this.a(-89, -86, -14, 112, (t) null);
+        }
+        int[] var4 = new int[param0];
+        for (var5 = 0; this.field_C > var5; var5++) {
+            var8[var5] = this.field_B[var5];
+            var4[var5] = this.field_z[var5];
+        }
+        this.field_C = param0;
+        this.field_z = var4;
+        this.field_B = var3;
     }
 
     sk(ha param0, ta param1, String param2) {

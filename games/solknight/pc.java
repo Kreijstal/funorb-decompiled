@@ -22,40 +22,17 @@ final class pc {
     }
 
     final static void a(int param0) {
-        int var1;
+        int var1 = 0;
         if (wc.field_a <= 32) {
-          ah.a((byte) -102, 0);
-          if (SolKnight.field_L) {
-            L0: {
-              var1 = wc.field_a % 32;
-              if (var1 == 0) {
+            ah.a((byte) -102, 0);
+        } else {
+            var1 = wc.field_a % 32;
+            if (!(var1 != 0)) {
                 var1 = 32;
-                break L0;
-              } else {
-                break L0;
-              }
             }
             ah.a((byte) -68, -var1 + wc.field_a);
-            var1 = 57 % ((param0 - -18) / 58);
-            return;
-          } else {
-            var1 = 57 % ((param0 - -18) / 58);
-            return;
-          }
-        } else {
-          L1: {
-            var1 = wc.field_a % 32;
-            if (var1 == 0) {
-              var1 = 32;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          ah.a((byte) -68, -var1 + wc.field_a);
-          var1 = 57 % ((param0 - -18) / 58);
-          return;
         }
+        var1 = 57 % ((param0 - -18) / 58);
     }
 
     static {

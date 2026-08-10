@@ -455,222 +455,225 @@ abstract class oe extends dd {
             var6 = 0;
             if (param2 == 160) {
               L3: {
-                var7 = 0;
-                var8 = 0;
-                if (param0) {
-                  var9 = 15;
-                  L4: while (true) {
-                    if (-1 < (var9 ^ -1)) {
-                      L5: {
-                        if ((var8 ^ -1) <= -9) {
-                          var3_int = var3_int + (-160 + var7);
-                          break L5;
-                        } else {
-                          break L5;
+                L4: {
+                  var7 = 0;
+                  var8 = 0;
+                  if (param0) {
+                    var9 = 15;
+                    L5: while (true) {
+                      if (-1 < (var9 ^ -1)) {
+                        L6: {
+                          if ((var8 ^ -1) <= -9) {
+                            var3_int = var3_int + (-160 + var7);
+                            break L6;
+                          } else {
+                            break L6;
+                          }
                         }
-                      }
-                      var9 = 0;
-                      L6: while (true) {
-                        if (pg.field_a.length <= var9) {
-                          break L3;
-                        } else {
-                          L7: {
+                        var9 = 0;
+                        L7: while (true) {
+                          if (pg.field_a.length <= var9) {
+                            break L4;
+                          } else {
                             L8: {
-                              if (-1 != (1 << var9 & var5 ^ -1)) {
-                                break L8;
-                              } else {
-                                if (!param0) {
-                                  break L8;
-                                } else {
-                                  break L7;
-                                }
-                              }
-                            }
-                            L9: {
-                              if (da.a(0, 88)) {
-                                break L9;
-                              } else {
-                                if (var9 != 16) {
+                              L9: {
+                                if (-1 != (1 << var9 & var5 ^ -1)) {
                                   break L9;
                                 } else {
-                                  if (!qi.d(109)) {
-                                    break L7;
-                                  } else {
+                                  if (!param0) {
                                     break L9;
+                                  } else {
+                                    break L8;
                                   }
                                 }
                               }
-                            }
-                            L10: {
-                              if (mc.field_a < var3_int) {
-                                break L10;
-                              } else {
-                                if (mc.field_a > var3_int - -32) {
+                              L10: {
+                                if (da.a(0, 88)) {
                                   break L10;
                                 } else {
-                                  if (var4 > he.field_d) {
+                                  if (var9 != 16) {
                                     break L10;
                                   } else {
-                                    if (he.field_d > var4 - -32) {
-                                      break L10;
+                                    if (!qi.d(109)) {
+                                      break L8;
                                     } else {
-                                      if (a.field_e == var9) {
-                                        a.field_e = -1;
-                                        break L3;
+                                      break L10;
+                                    }
+                                  }
+                                }
+                              }
+                              L11: {
+                                if (mc.field_a < var3_int) {
+                                  break L11;
+                                } else {
+                                  if (mc.field_a > var3_int - -32) {
+                                    break L11;
+                                  } else {
+                                    if (var4 > he.field_d) {
+                                      break L11;
+                                    } else {
+                                      if (he.field_d > var4 - -32) {
+                                        break L11;
                                       } else {
-                                        a.field_e = var9;
-                                        break L3;
+                                        if (a.field_e == var9) {
+                                          a.field_e = -1;
+                                          break L3;
+                                        } else {
+                                          a.field_e = var9;
+                                          break L3;
+                                        }
                                       }
                                     }
                                   }
                                 }
                               }
-                            }
-                            incrementValue$0 = var6;
-                            var6++;
-                            if (7 != incrementValue$0) {
-                              var3_int += 40;
-                              break L7;
-                            } else {
-                              L11: {
-                                var3_int = 160;
-                                var4 += 40;
-                                if (!param1) {
-                                  var4 += 5;
-                                  break L11;
-                                } else {
-                                  break L11;
-                                }
-                              }
-                              if (!param0) {
-                                break L7;
+                              incrementValue$0 = var6;
+                              var6++;
+                              if (7 != incrementValue$0) {
+                                var3_int += 40;
+                                break L8;
                               } else {
-                                if ((var8 ^ -1) > -9) {
-                                  var3_int = var3_int + var7;
-                                  break L7;
+                                L12: {
+                                  var3_int = 160;
+                                  var4 += 40;
+                                  if (!param1) {
+                                    var4 += 5;
+                                    break L12;
+                                  } else {
+                                    break L12;
+                                  }
+                                }
+                                if (!param0) {
+                                  break L8;
                                 } else {
-                                  break L7;
+                                  if ((var8 ^ -1) > -9) {
+                                    var3_int = var3_int + var7;
+                                    break L8;
+                                  } else {
+                                    break L8;
+                                  }
                                 }
                               }
                             }
+                            var9++;
+                            continue L7;
                           }
-                          var9++;
-                          continue L6;
                         }
-                      }
-                    } else {
-                      L12: {
-                        if ((var5 & 1 << var9 ^ -1) != -1) {
-                          break L12;
-                        } else {
-                          var7 += 20;
-                          var8++;
-                          break L12;
+                      } else {
+                        L13: {
+                          if ((var5 & 1 << var9 ^ -1) != -1) {
+                            break L13;
+                          } else {
+                            var7 += 20;
+                            var8++;
+                            break L13;
+                          }
                         }
+                        var9--;
+                        continue L5;
                       }
-                      var9--;
-                      continue L4;
                     }
-                  }
-                } else {
-                  L13: {
-                    if ((var8 ^ -1) <= -9) {
-                      var3_int = var3_int + (-160 + var7);
-                      break L13;
-                    } else {
-                      break L13;
+                  } else {
+                    L14: {
+                      if ((var8 ^ -1) <= -9) {
+                        var3_int = var3_int + (-160 + var7);
+                        break L14;
+                      } else {
+                        break L14;
+                      }
                     }
-                  }
-                  var9 = 0;
-                  L14: while (true) {
-                    if (pg.field_a.length <= var9) {
-                      break L3;
-                    } else {
-                      L15: {
+                    var9 = 0;
+                    L15: while (true) {
+                      if (pg.field_a.length <= var9) {
+                        break L4;
+                      } else {
                         L16: {
-                          if (-1 != (1 << var9 & var5 ^ -1)) {
-                            break L16;
-                          } else {
-                            if (!param0) {
-                              break L16;
-                            } else {
-                              break L15;
-                            }
-                          }
-                        }
-                        L17: {
-                          if (da.a(0, 88)) {
-                            break L17;
-                          } else {
-                            if (var9 != 16) {
+                          L17: {
+                            if (-1 != (1 << var9 & var5 ^ -1)) {
                               break L17;
                             } else {
-                              if (!qi.d(109)) {
-                                break L15;
-                              } else {
+                              if (!param0) {
                                 break L17;
+                              } else {
+                                break L16;
                               }
                             }
                           }
-                        }
-                        L18: {
-                          if (mc.field_a < var3_int) {
-                            break L18;
-                          } else {
-                            if (mc.field_a > var3_int - -32) {
+                          L18: {
+                            if (da.a(0, 88)) {
                               break L18;
                             } else {
-                              if (var4 > he.field_d) {
+                              if (var9 != 16) {
                                 break L18;
                               } else {
-                                if (he.field_d > var4 - -32) {
-                                  break L18;
+                                if (!qi.d(109)) {
+                                  break L16;
                                 } else {
-                                  if (a.field_e == var9) {
-                                    a.field_e = -1;
-                                    break L3;
+                                  break L18;
+                                }
+                              }
+                            }
+                          }
+                          L19: {
+                            if (mc.field_a < var3_int) {
+                              break L19;
+                            } else {
+                              if (mc.field_a > var3_int - -32) {
+                                break L19;
+                              } else {
+                                if (var4 > he.field_d) {
+                                  break L19;
+                                } else {
+                                  if (he.field_d > var4 - -32) {
+                                    break L19;
                                   } else {
-                                    a.field_e = var9;
-                                    break L3;
+                                    if (a.field_e == var9) {
+                                      a.field_e = -1;
+                                      break L3;
+                                    } else {
+                                      a.field_e = var9;
+                                      break L3;
+                                    }
                                   }
                                 }
                               }
                             }
                           }
-                        }
-                        incrementValue$1 = var6;
-                        var6++;
-                        if (7 != incrementValue$1) {
-                          var3_int += 40;
-                          break L15;
-                        } else {
-                          L19: {
-                            var3_int = 160;
-                            var4 += 40;
-                            if (!param1) {
-                              var4 += 5;
-                              break L19;
-                            } else {
-                              break L19;
-                            }
-                          }
-                          if (!param0) {
-                            break L15;
+                          incrementValue$1 = var6;
+                          var6++;
+                          if (7 != incrementValue$1) {
+                            var3_int += 40;
+                            break L16;
                           } else {
-                            if ((var8 ^ -1) > -9) {
-                              var3_int = var3_int + var7;
-                              break L15;
+                            L20: {
+                              var3_int = 160;
+                              var4 += 40;
+                              if (!param1) {
+                                var4 += 5;
+                                break L20;
+                              } else {
+                                break L20;
+                              }
+                            }
+                            if (!param0) {
+                              break L16;
                             } else {
-                              break L15;
+                              if ((var8 ^ -1) > -9) {
+                                var3_int = var3_int + var7;
+                                break L16;
+                              } else {
+                                break L16;
+                              }
                             }
                           }
                         }
+                        var9++;
+                        continue L15;
                       }
-                      var9++;
-                      continue L14;
                     }
                   }
                 }
+                break L3;
               }
               decompiledRegionSelector0 = 1;
               break L0;

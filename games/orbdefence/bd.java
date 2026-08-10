@@ -117,26 +117,26 @@ final class bd extends dm {
     }
 
     final void a(int param0, String param1, int param2, kc param3, int param4, int param5, int param6, int param7) {
-        ed stackIn_38_0;
-        ed stackIn_38_1;
-        int stackIn_38_2;
-        int stackIn_38_3;
-        ed stackIn_39_0 = null;
-        ed stackIn_39_1 = null;
-        int stackIn_39_2 = 0;
-        int stackIn_39_3 = 0;
-        int stackIn_39_4 = 0;
-        ed stackIn_42_0 = null;
-        ed stackIn_43_0 = null;
-        int stackIn_43_1 = 0;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
-        RuntimeException stackIn_49_0 = null;
+        ed stackIn_36_0;
+        ed stackIn_36_1;
+        int stackIn_36_2;
+        int stackIn_36_3;
+        ed stackIn_37_0 = null;
+        ed stackIn_37_1 = null;
+        int stackIn_37_2 = 0;
+        int stackIn_37_3 = 0;
+        int stackIn_37_4 = 0;
+        ed stackIn_40_0 = null;
+        ed stackIn_41_0 = null;
+        int stackIn_41_1 = 0;
+        RuntimeException stackIn_46_0 = null;
+        StringBuilder stackIn_46_1 = null;
+        RuntimeException stackIn_47_0 = null;
+        StringBuilder stackIn_47_1 = null;
+        String stackIn_47_2 = null;
         StringBuilder stackIn_49_1 = null;
-        String stackIn_49_2 = null;
-        StringBuilder stackIn_51_1 = null;
-        StringBuilder stackIn_52_1 = null;
-        String stackIn_52_2 = null;
+        StringBuilder stackIn_50_1 = null;
+        String stackIn_50_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
@@ -228,169 +228,137 @@ final class bd extends dm {
                 }
               }
               L4: {
-                L5: {
-                  this.field_c = new ed[var10];
-                  if (0 != this.field_r) {
-                    break L5;
-                  } else {
-                    var11 = param3.field_H;
-                    if (var15 == 0) {
+                this.field_c = new ed[var10];
+                if (0 != this.field_r) {
+                  if (this.field_r != 1) {
+                    if (2 == this.field_r) {
+                      var11 = this.field_i - param3.field_B + -(var10 * this.field_j);
                       break L4;
                     } else {
-                      break L5;
+                      L5: {
+                        var12 = (-(var10 * this.field_j) + this.field_i) / (var10 + 1);
+                        if (var12 >= 0) {
+                          break L5;
+                        } else {
+                          var12 = 0;
+                          break L5;
+                        }
+                      }
+                      this.field_j = this.field_j + var12;
+                      var11 = param3.field_H - -var12;
+                      break L4;
                     }
-                  }
-                }
-                L6: {
-                  if (this.field_r != 1) {
-                    break L6;
                   } else {
                     var11 = (-(this.field_j * var10) + this.field_i >> 674541921) + param3.field_H;
-                    if (var15 == 0) {
-                      break L4;
-                    } else {
-                      break L6;
-                    }
+                    break L4;
                   }
+                } else {
+                  var11 = param3.field_H;
+                  break L4;
                 }
-                L7: {
-                  if (2 == this.field_r) {
-                    break L7;
-                  } else {
-                    L8: {
-                      var12 = (-(var10 * this.field_j) + this.field_i) / (var10 + 1);
-                      if (var12 >= 0) {
-                        break L8;
-                      } else {
-                        var12 = 0;
-                        break L8;
-                      }
-                    }
-                    this.field_j = this.field_j + var12;
-                    var11 = param3.field_H - -var12;
-                    if (var15 == 0) {
-                      break L4;
+              }
+              var12 = 0;
+              L6: while (true) {
+                if (var10 <= var12) {
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                } else {
+                  L7: {
+                    var13 = var16[var12];
+                    stackIn_36_0 = null;
+
+                    stackIn_36_1 = null;
+
+                    stackIn_36_2 = -param3.field_H + var11;
+
+                    stackIn_36_3 = param3.field_B + var11;
+
+                    if (var13 == null) {
+                      stackIn_37_0 = null;
+                      stackIn_37_1 = null;
+                      stackIn_37_2 = stackIn_36_2;
+                      stackIn_37_3 = stackIn_36_3;
+                      stackIn_37_4 = 0;
+                      break L7;
                     } else {
+                      stackIn_37_0 = null;
+                      stackIn_37_1 = null;
+                      stackIn_37_2 = stackIn_36_2;
+                      stackIn_37_3 = stackIn_36_3;
+                      stackIn_37_4 = var13.length();
                       break L7;
                     }
                   }
-                }
-                var11 = this.field_i - param3.field_B + -(var10 * this.field_j);
-                break L4;
-              }
-              var12 = 0;
-              L9: while (true) {
-                L10: {
-                  if (var10 <= var12) {
-                    break L10;
-                  } else {
-                    var13 = var16[var12];
-                    if (var15 == 0) {
-                      L11: {
-                        stackIn_38_0 = null;
-
-                        stackIn_38_1 = null;
-
-                        stackIn_38_2 = -param3.field_H + var11;
-
-                        stackIn_38_3 = param3.field_B + var11;
-
-                        if (var13 == null) {
-                          stackIn_39_0 = null;
-                          stackIn_39_1 = null;
-                          stackIn_39_2 = stackIn_38_2;
-                          stackIn_39_3 = stackIn_38_3;
-                          stackIn_39_4 = 0;
-                          break L11;
-                        } else {
-                          stackIn_39_0 = null;
-                          stackIn_39_1 = null;
-                          stackIn_39_2 = stackIn_38_2;
-                          stackIn_39_3 = stackIn_38_3;
-                          stackIn_39_4 = var13.length();
-                          break L11;
-                        }
-                      }
-                      L12: {
-                        var14 = new ed(stackIn_39_2, stackIn_39_3, stackIn_39_4);
-                        var14.field_g[0] = 0;
-                        if (var13 == null) {
-                          break L12;
-                        } else {
-                          L13: {
-                            var14.field_g[var13.length()] = param3.a(var13);
-                            stackIn_42_0 = (ed) (var14);
-
-                            if (-4 != (param2 ^ -1)) {
-                              stackIn_43_0 = (ed) ((Object) stackIn_42_0);
-                              stackIn_43_1 = 0;
-                              break L13;
-                            } else {
-                              stackIn_43_0 = (ed) ((Object) stackIn_42_0);
-                              stackIn_43_1 = this.a(var13, param4, param3.a(var13), (byte) 74);
-                              break L13;
-                            }
-                          }
-                          ll.a(stackIn_43_0, stackIn_43_1, var13, param3, 404465128);
-                          break L12;
-                        }
-                      }
-                      this.field_c[var12] = var14;
-                      var11 = var11 + param6;
-                      var12++;
-                      if (var15 == 0) {
-                        continue L9;
-                      } else {
-                        break L10;
-                      }
+                  L8: {
+                    var14 = new ed(stackIn_37_2, stackIn_37_3, stackIn_37_4);
+                    var14.field_g[0] = 0;
+                    if (var13 == null) {
+                      break L8;
                     } else {
-                      return;
+                      L9: {
+                        var14.field_g[var13.length()] = param3.a(var13);
+                        stackIn_40_0 = (ed) (var14);
+
+                        if (-4 != (param2 ^ -1)) {
+                          stackIn_41_0 = (ed) ((Object) stackIn_40_0);
+                          stackIn_41_1 = 0;
+                          break L9;
+                        } else {
+                          stackIn_41_0 = (ed) ((Object) stackIn_40_0);
+                          stackIn_41_1 = this.a(var13, param4, param3.a(var13), (byte) 74);
+                          break L9;
+                        }
+                      }
+                      ll.a(stackIn_41_0, stackIn_41_1, var13, param3, 404465128);
+                      break L8;
                     }
                   }
+                  this.field_c[var12] = var14;
+                  var11 = var11 + param6;
+                  var12++;
+                  continue L6;
                 }
-                decompiledRegionSelector0 = 2;
-                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L14: {
+          L10: {
             var9 = decompiledCaughtException;
-            stackIn_48_0 = (RuntimeException) (var9);
+            stackIn_46_0 = (RuntimeException) (var9);
 
-            stackIn_48_1 = new StringBuilder().append("bd.N(").append(param0).append(',');
+            stackIn_46_1 = new StringBuilder().append("bd.N(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
-              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
-              stackIn_49_2 = "null";
-              break L14;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "null";
+              break L10;
             } else {
-              stackIn_49_0 = (RuntimeException) ((Object) stackIn_48_0);
-              stackIn_49_1 = (StringBuilder) ((Object) stackIn_48_1);
-              stackIn_49_2 = "{...}";
-              break L14;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackIn_47_2 = "{...}";
+              break L10;
             }
           }
-          L15: {
+          L11: {
 
 
-            stackIn_51_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_49_2).append(',').append(param2).append(',');
+            stackIn_49_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(',').append(param2).append(',');
 
             if (param3 == null) {
-              stackIn_49_0 = (RuntimeException) ((Object) stackIn_49_0);
-              stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
-              stackIn_52_2 = "null";
-              break L15;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackIn_50_1 = (StringBuilder) ((Object) stackIn_49_1);
+              stackIn_50_2 = "null";
+              break L11;
             } else {
-              stackIn_49_0 = (RuntimeException) ((Object) stackIn_49_0);
-              stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
-              stackIn_52_2 = "{...}";
-              break L15;
+              stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackIn_50_1 = (StringBuilder) ((Object) stackIn_49_1);
+              stackIn_50_2 = "{...}";
+              break L11;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_49_0), stackIn_52_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_47_0), stackIn_50_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

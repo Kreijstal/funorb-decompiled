@@ -39,47 +39,28 @@ final class ql extends lh {
         int var3;
         int var4;
         fh[] var5;
-        var4 = fleas.field_A ? 1 : 0;
-        if (param0 == -22471) {
-          var5 = al.b(true);
-          var2 = var5;
-          var3 = 0;
-          L0: while (true) {
-            if (var3 < var5.length) {
-              if (var5[var3].field_d != param1) {
-                var3++;
-                if (var4 == 0) {
-                  continue L0;
-                } else {
-                  return null;
-                }
-              } else {
-                return var5[var3];
-              }
-            } else {
-              return null;
-            }
+        L0: {
+          var4 = fleas.field_A ? 1 : 0;
+          if (param0 == -22471) {
+            break L0;
+          } else {
+            field_l = (ae) null;
+            break L0;
           }
-        } else {
-          field_l = (ae) null;
-          var5 = al.b(true);
-          var2 = var5;
-          var3 = 0;
-          L1: while (true) {
-            if (var3 < var5.length) {
-              if (var5[var3].field_d != param1) {
-                var3++;
-                if (var4 == 0) {
-                  continue L1;
-                } else {
-                  return null;
-                }
-              } else {
-                return var5[var3];
-              }
+        }
+        var5 = al.b(true);
+        var2 = var5;
+        var3 = 0;
+        L1: while (true) {
+          if (var3 < var5.length) {
+            if (var5[var3].field_d != param1) {
+              var3++;
+              continue L1;
             } else {
-              return null;
+              return var5[var3];
             }
+          } else {
+            return null;
           }
         }
     }

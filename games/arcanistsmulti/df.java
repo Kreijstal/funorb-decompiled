@@ -901,6 +901,7 @@ class df extends qm implements a {
     }
 
     void a(qm param0, int param1, int param2, int param3) {
+        RuntimeException runtimeException = null;
         oc var5 = null;
         qm var6 = null;
         int var7 = 0;
@@ -910,7 +911,6 @@ class df extends qm implements a {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
@@ -937,8 +937,8 @@ class df extends qm implements a {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("df.E(");
 

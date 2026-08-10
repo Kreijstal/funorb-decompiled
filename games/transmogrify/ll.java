@@ -74,8 +74,7 @@ final class ll extends bi implements df {
     }
 
     final static int s(int param0) {
-        boolean stackIn_10_0 = false;
-        int stackIn_31_0 = 0;
+        int stackIn_29_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -90,120 +89,97 @@ final class ll extends bi implements df {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (!pc.b(-10)) {
-                    break L3;
+              if (!pc.b(-10)) {
+                L2: {
+                  bk.field_c.a(-112, tl.a(196077633, ol.field_b, nk.field_c), tl.a(196077633, oa.field_j, bk.field_a));
+                  if (bk.field_c.b(31552)) {
+                    var1_int = 1;
+                    break L2;
                   } else {
-                    bk.field_c.d((byte) -6);
-                    stackIn_10_0 = bk.field_c.b(31552);
-
-                    if (var7 != 0) {
-                      break L2;
-                    } else {
-                      L4: {
-                        if (!stackIn_10_0) {
-                          break L4;
-                        } else {
-                          var1_int = 1;
-                          break L4;
-                        }
-                      }
-                      if (-14 == (ch.field_d ^ -1)) {
-                        var2 = 1;
-                        if (var7 == 0) {
-                          continue L1;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        continue L1;
-                      }
-                    }
+                    break L2;
                   }
                 }
-                bk.field_c.a(-112, tl.a(196077633, ol.field_b, nk.field_c), tl.a(196077633, oa.field_j, bk.field_a));
-                stackIn_10_0 = bk.field_c.b(31552);
-                break L2;
-              }
-              L5: {
-                if (stackIn_10_0) {
-                  var1_int = 1;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              L6: {
-                L7: {
-                  var3 = 0;
-                  if (var1_int == 0) {
-                    break L7;
-                  } else {
-                    if ((bk.field_c.field_d ^ -1) > -1) {
-                      break L7;
+                L3: {
+                  L4: {
+                    var3 = 0;
+                    if (var1_int == 0) {
+                      break L4;
                     } else {
-                      L8: {
+                      if ((bk.field_c.field_d ^ -1) > -1) {
+                        break L4;
+                      } else {
                         var3 = uj.field_d[bk.field_c.field_d];
                         if (-3 == (var3 ^ -1)) {
-                          break L8;
+                          i.a(false);
+                          break L3;
                         } else {
                           if ((var3 ^ -1) != -6) {
-                            break L6;
+                            break L3;
                           } else {
-                            break L8;
+                            i.a(false);
+                            break L3;
                           }
                         }
                       }
+                    }
+                  }
+                  if (var2 == 0) {
+                    break L3;
+                  } else {
+                    if ((q.field_a ^ -1) == -3) {
+                      break L3;
+                    } else {
                       i.a(false);
-                      if (var7 == 0) {
+                      break L3;
+                    }
+                  }
+                }
+                L5: {
+                  if (param0 >= 107) {
+                    break L5;
+                  } else {
+                    field_W = (String) null;
+                    break L5;
+                  }
+                }
+                L6: {
+                  if (0 != var3) {
+                    break L6;
+                  } else {
+                    if (-3 == (q.field_a ^ -1)) {
+                      var4 = -c.field_c + lk.a(0);
+                      var6 = (int)((-var4 + 10999L) / 1000L);
+                      if (var6 > 0) {
                         break L6;
                       } else {
-                        break L7;
+                        tf.a((byte) 79, true, 5);
+                        var3 = 2;
+                        break L6;
                       }
-                    }
-                  }
-                }
-                if (var2 == 0) {
-                  break L6;
-                } else {
-                  if ((q.field_a ^ -1) == -3) {
-                    break L6;
-                  } else {
-                    i.a(false);
-                    break L6;
-                  }
-                }
-              }
-              L9: {
-                if (param0 >= 107) {
-                  break L9;
-                } else {
-                  field_W = (String) null;
-                  break L9;
-                }
-              }
-              L10: {
-                if (0 != var3) {
-                  break L10;
-                } else {
-                  if (-3 == (q.field_a ^ -1)) {
-                    var4 = -c.field_c + lk.a(0);
-                    var6 = (int)((-var4 + 10999L) / 1000L);
-                    if (var6 > 0) {
-                      break L10;
                     } else {
-                      tf.a((byte) 79, true, 5);
-                      var3 = 2;
-                      break L10;
+                      break L6;
                     }
-                  } else {
-                    break L10;
                   }
                 }
+                stackIn_29_0 = var3;
+                break L0;
+              } else {
+                L7: {
+                  bk.field_c.d((byte) -6);
+                  if (!bk.field_c.b(31552)) {
+                    break L7;
+                  } else {
+                    var1_int = 1;
+                    break L7;
+                  }
+                }
+                if (-14 == (ch.field_d ^ -1)) {
+                  var2 = 1;
+                  continue L1;
+                } else {
+                  continue L1;
+                }
               }
-              stackIn_31_0 = var3;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -211,7 +187,7 @@ final class ll extends bi implements df {
           var1 = decompiledCaughtException;
           throw ch.a((Throwable) ((Object) var1), "ll.AA(" + param0 + ')');
         }
-        return stackIn_31_0;
+        return stackIn_29_0;
     }
 
     private final void r(int param0) {

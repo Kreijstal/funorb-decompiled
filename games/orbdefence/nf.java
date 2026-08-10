@@ -56,28 +56,28 @@ abstract class nf extends o {
     }
 
     final static byte[] a(byte[] param0, int param1) {
-        byte[] stackIn_2_0 = null;
-        byte[] stackIn_10_0 = null;
-        byte[] stackIn_25_0 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
-        int decompiledRegionSelector0 = 0;
-        Throwable decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
         byte[] var5_ref_byte__ = null;
+        int var5 = 0;
         byte[] var6 = null;
-        Object var7 = null;
         mg var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
+        byte[] stackIn_2_0 = null;
+        byte[] stackIn_10_0 = null;
+        byte[] stackIn_24_0 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
+        Object var7 = null;
         try {
           L0: {
             if (param1 == -2) {
@@ -117,31 +117,24 @@ abstract class nf extends o {
                           }
                         }
                         L5: {
-                          L6: {
-                            var13 = new byte[var5];
-                            var11 = var13;
-                            var6 = var11;
-                            if ((var3 ^ -1) != -2) {
-                              break L6;
-                            } else {
-                              ac.a(var13, var5, param0, var4, 9);
-                              if (!OrbDefence.field_D) {
-                                break L5;
-                              } else {
+                          var13 = new byte[var5];
+                          var11 = var13;
+                          var6 = var11;
+                          if ((var3 ^ -1) != -2) {
+                            var7 = tj.field_e;
+                            synchronized (var7) {
+                              L6: {
+                                tj.field_e.a(var13, 693, var9);
                                 break L6;
                               }
                             }
+                            break L5;
+                          } else {
+                            ac.a(var13, var5, param0, var4, 9);
+                            break L5;
                           }
-                          var7 = tj.field_e;
-                          synchronized (var7) {
-                            L7: {
-                              tj.field_e.a(var13, 693, var9);
-                              break L7;
-                            }
-                          }
-                          break L5;
                         }
-                        stackIn_25_0 = (byte[]) (var6);
+                        stackIn_24_0 = (byte[]) (var6);
                         decompiledRegionSelector0 = 2;
                         break L0;
                       }
@@ -167,25 +160,25 @@ abstract class nf extends o {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_28_0 = (RuntimeException) (var2);
+            stackIn_27_0 = (RuntimeException) (var2);
 
-            stackIn_28_1 = new StringBuilder().append("nf.D(");
+            stackIn_27_1 = new StringBuilder().append("nf.D(");
 
             if (param0 == null) {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "null";
-              break L8;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
+              break L7;
             } else {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "{...}";
-              break L8;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
+              break L7;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param1 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_2_0;
@@ -193,7 +186,7 @@ abstract class nf extends o {
           if (decompiledRegionSelector0 == 1) {
             return stackIn_10_0;
           } else {
-            return stackIn_25_0;
+            return stackIn_24_0;
           }
         }
     }

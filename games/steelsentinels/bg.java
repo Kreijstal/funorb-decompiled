@@ -13,14 +13,67 @@ abstract class bg extends kd {
     static byte[][] field_A;
 
     final static void c(byte param0) {
-        if (param0 <= 56) {
+        int stackIn_5_0 = 0;
+        String[] stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        String[] stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
+        String stackIn_8_2 = null;
+        L0: {
+          if (param0 > 56) {
+            break L0;
+          } else {
             field_E = (String) null;
+            break L0;
+          }
         }
-        si.field_p = !si.field_p ? true : false;
-        ti.field_A[41] = !si.field_p ? fm.field_h : hf.field_b;
-        if (si.field_p && fk.field_i != null && null != fk.field_i.field_C) {
-            fk.field_i.field_V = -(fk.field_i.field_C.field_Gb >> 1335201924) + fk.field_i.field_E - 3200;
-            fk.field_i.field_p = -(fk.field_i.field_C.field_hc >> -1662392220) + (fk.field_i.field_P + 5120);
+        L1: {
+          if (si.field_p) {
+            stackIn_5_0 = 0;
+            break L1;
+          } else {
+            stackIn_5_0 = 1;
+            break L1;
+          }
+        }
+        L2: {
+          si.field_p = stackIn_5_0 != 0;
+          stackIn_7_0 = ti.field_A;
+
+          stackIn_7_1 = 41;
+
+          if (si.field_p) {
+            stackIn_8_0 = (String[]) ((Object) stackIn_7_0);
+            stackIn_8_1 = stackIn_7_1;
+            stackIn_8_2 = hf.field_b;
+            break L2;
+          } else {
+            stackIn_8_0 = (String[]) ((Object) stackIn_7_0);
+            stackIn_8_1 = stackIn_7_1;
+            stackIn_8_2 = fm.field_h;
+            break L2;
+          }
+        }
+        L3: {
+          stackIn_8_0[stackIn_8_1] = stackIn_8_2;
+          if (!si.field_p) {
+            break L3;
+          } else {
+            L4: {
+              if (fk.field_i == null) {
+                break L4;
+              } else {
+                if (null == fk.field_i.field_C) {
+                  break L4;
+                } else {
+                  fk.field_i.field_V = -(fk.field_i.field_C.field_Gb >> 1335201924) + fk.field_i.field_E - 3200;
+                  fk.field_i.field_p = -(fk.field_i.field_C.field_hc >> -1662392220) + (fk.field_i.field_P + 5120);
+                  break L3;
+                }
+              }
+            }
+            break L3;
+          }
         }
     }
 

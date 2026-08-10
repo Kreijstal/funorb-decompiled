@@ -567,7 +567,17 @@ final class am {
           }
         }
         L1: {
-          if ((param2 ^ -1) != -2) {
+          if ((param2 ^ -1) == -2) {
+            L2: {
+              if (gh.field_v != param0) {
+                si.field_P = true;
+                gh.field_v = param0;
+                ro.a(param3, true);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
             if (2 != param2) {
               break L1;
             } else {
@@ -595,12 +605,12 @@ final class am {
             }
           }
         }
-        L2: {
+        L3: {
           if (param1 == -26931) {
-            break L2;
+            break L3;
           } else {
             am.a((byte) -107);
-            break L2;
+            break L3;
           }
         }
     }

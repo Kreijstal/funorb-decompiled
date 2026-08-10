@@ -340,81 +340,71 @@ final class qe extends wh {
           }
         }
         L1: {
-          if (-1048577 >= (this.field_m ^ -1)) {
-            if (0 < this.field_t) {
+          if (-1048577 < (this.field_m ^ -1)) {
+            L2: {
+              if (this.field_y != null) {
+                this.field_r.d(param0);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            if (0 >= this.field_t) {
+              break L1;
+            } else {
               if (this.field_o == null) {
                 break L1;
               } else {
                 this.field_A.d(param0);
                 break L1;
-              }
-            } else {
-              if (0 >= this.field_t) {
-                break L1;
-              } else {
-                if (this.field_o == null) {
-                  break L1;
-                } else {
-                  this.field_A.d(param0);
-                  break L1;
-                }
               }
             }
           } else {
-            if (0 < this.field_t) {
+            if (0 >= this.field_t) {
+              break L1;
+            } else {
               if (this.field_o == null) {
                 break L1;
               } else {
                 this.field_A.d(param0);
                 break L1;
-              }
-            } else {
-              if (0 >= this.field_t) {
-                break L1;
-              } else {
-                if (this.field_o == null) {
-                  break L1;
-                } else {
-                  this.field_A.d(param0);
-                  break L1;
-                }
               }
             }
           }
         }
-        L2: {
+        L3: {
           if (this.field_q) {
-            L3: {
+            L4: {
               if (0 >= this.field_v) {
-                break L3;
+                break L4;
               } else {
                 if (this.field_w.c((byte) -116)) {
-                  break L3;
+                  break L4;
                 } else {
                   this.field_q = false;
                   this.field_x = null;
                   this.field_v = -this.field_v;
-                  break L2;
+                  break L3;
                 }
               }
             }
             if (-1 >= (this.field_v ^ -1)) {
-              break L2;
+              break L3;
             } else {
               if (!this.field_r.c((byte) -80)) {
                 this.field_v = -this.field_v;
                 this.field_y = null;
                 this.field_q = false;
-                break L2;
+                break L3;
               } else {
-                break L2;
+                break L3;
               }
             }
           } else {
-            break L2;
+            break L3;
           }
         }
-        L4: {
+        L5: {
           if (0 != this.field_v) {
             this.field_m = this.field_m + param0 * this.field_v;
             if (1048576 <= this.field_m) {
@@ -422,50 +412,50 @@ final class qe extends wh {
               if (!this.field_q) {
                 this.field_v = 0;
                 if (!this.field_D) {
-                  L5: {
+                  L6: {
                     if (null == this.field_y) {
-                      break L5;
+                      break L6;
                     } else {
                       this.field_r.f(11795);
-                      break L5;
+                      break L6;
                     }
                   }
                   this.field_y = null;
-                  break L4;
+                  break L5;
                 } else {
-                  break L4;
+                  break L5;
                 }
               } else {
-                break L4;
+                break L5;
               }
             } else {
               if (-1 <= (this.field_m ^ -1)) {
                 this.field_m = 0;
                 if (this.field_q) {
-                  break L4;
+                  break L5;
                 } else {
                   this.field_v = 0;
                   if (!this.field_D) {
-                    L6: {
+                    L7: {
                       if (null != this.field_x) {
                         this.field_w.f(11795);
-                        break L6;
+                        break L7;
                       } else {
-                        break L6;
+                        break L7;
                       }
                     }
                     this.field_x = null;
-                    break L4;
+                    break L5;
                   } else {
-                    break L4;
+                    break L5;
                   }
                 }
               } else {
-                break L4;
+                break L5;
               }
             }
           } else {
-            break L4;
+            break L5;
           }
         }
     }

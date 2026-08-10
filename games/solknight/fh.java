@@ -13,14 +13,14 @@ final class fh {
     final static void a(int param0, java.applet.Applet param1) {
         try {
             java.net.URL var2 = null;
-            RuntimeException var2_ref = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            Exception var2_ref2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             try {
               L0: {
                 try {
@@ -32,23 +32,26 @@ final class fh {
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   L2: {
-                    var2_ref2 = (Exception) (Object) decompiledCaughtException;
-                    var2_ref2.printStackTrace();
+                    var2_ref = (Exception) (Object) decompiledCaughtException;
+                    var2_ref.printStackTrace();
                     break L2;
                   }
                 }
-                if (param0 > 15) {
-                  break L0;
-                } else {
-                  field_g = true;
-                  return;
+                L3: {
+                  if (param0 > 15) {
+                    break L3;
+                  } else {
+                    field_g = true;
+                    break L3;
+                  }
                 }
+                break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L3: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_8_0 = (RuntimeException) (var2_ref);
+              L4: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_8_0 = (RuntimeException) (var2_ref2);
 
                 stackIn_8_1 = new StringBuilder().append("fh.B(").append(param0).append(',');
 
@@ -56,12 +59,12 @@ final class fh {
                   stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
                   stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackIn_9_2 = "null";
-                  break L3;
+                  break L4;
                 } else {
                   stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
                   stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackIn_9_2 = "{...}";
-                  break L3;
+                  break L4;
                 }
               }
               throw fc.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
@@ -74,113 +77,86 @@ final class fh {
     }
 
     public static void a(byte param0) {
-        String var2;
         field_c = null;
         field_e = null;
         field_f = null;
         if (param0 != 58) {
-          var2 = (String) null;
-          fh.a((String) null, (byte) 19);
-          field_d = null;
-          return;
-        } else {
-          field_d = null;
-          return;
+            String var2 = (String) null;
+            fh.a((String) null, (byte) 19);
         }
+        field_d = null;
     }
 
     final static pc a(String param0, byte param1) {
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        pc stackIn_16_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         String var6 = null;
+        pc stackIn_13_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
         var5 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
             var2_int = param0.length();
             var3 = 0;
             L1: while (true) {
-              L2: {
-                L3: {
-                  L4: {
-                    if (var3 >= var2_int) {
-                      break L4;
-                    } else {
-                      var4 = param0.charAt(var3);
-                      var8 = -49;
-                      var7 = var4 ^ -1;
-                      if (var5 != 0) {
-                        if (var7 >= var8) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        if (var7 <= var8) {
-                          if (var4 <= 57) {
-                            var3++;
-                            if (var5 == 0) {
-                              continue L1;
-                            } else {
-                              break L4;
-                            }
-                          } else {
-                            return null;
-                          }
-                        } else {
-                          return null;
-                        }
-                      }
-                    }
-                  }
+              if (var3 >= var2_int) {
+                L2: {
                   if (param1 >= 65) {
                     break L2;
                   } else {
-                    break L3;
+                    var6 = (String) null;
+                    fh.a((String) null, (byte) -122);
+                    break L2;
                   }
                 }
-                var6 = (String) null;
-                fh.a((String) null, (byte) -122);
-                break L2;
+                stackIn_13_0 = si.field_C;
+                break L0;
+              } else {
+                var4 = param0.charAt(var3);
+                if ((var4 ^ -1) <= -49) {
+                  if (var4 <= 57) {
+                    var3++;
+                    continue L1;
+                  } else {
+                    return null;
+                  }
+                } else {
+                  return null;
+                }
               }
-              stackIn_16_0 = si.field_C;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var2);
+            stackIn_16_0 = (RuntimeException) (var2);
 
-            stackIn_19_1 = new StringBuilder().append("fh.A(");
+            stackIn_16_1 = new StringBuilder().append("fh.A(");
 
             if (param0 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L5;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
+              break L3;
             } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L5;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
+              break L3;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ')');
         }
-        return stackIn_16_0;
+        return stackIn_13_0;
     }
 
     static {

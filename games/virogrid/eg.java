@@ -55,48 +55,14 @@ final class eg extends in {
     }
 
     private final void a(int param0, byte param1, int param2, i param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              param3.a(param0, true, -1);
-              param3.c(-128, param2);
-              if (param1 <= -85) {
-                break L1;
-              } else {
+            param3.a(param0, true, -1);
+            param3.c(-128, param2);
+            if (param1 > -85) {
                 eg.b((byte) -72);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("eg.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw kg.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) ((Object) runtimeException), "eg.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -788,23 +754,28 @@ final class eg extends in {
         int var3;
         L0: {
           var3 = Virogrid.field_F ? 1 : 0;
-          if (-1 <= (this.field_k ^ -1)) {
-            if (1048576 <= this.field_k) {
-              break L0;
-            } else {
-              if (null != this.field_u) {
-                this.field_x.a(param0);
+          if (-1 > (this.field_k ^ -1)) {
+            if (this.field_B != null) {
+              this.field_A.a(param0);
+              if (1048576 <= this.field_k) {
                 break L0;
               } else {
-                if (1048576 <= this.field_k) {
+                if (null == this.field_u) {
                   break L0;
                 } else {
-                  if (null == this.field_u) {
-                    break L0;
-                  } else {
-                    this.field_x.a(param0);
-                    break L0;
-                  }
+                  this.field_x.a(param0);
+                  break L0;
+                }
+              }
+            } else {
+              if (1048576 <= this.field_k) {
+                break L0;
+              } else {
+                if (null == this.field_u) {
+                  break L0;
+                } else {
+                  this.field_x.a(param0);
+                  break L0;
                 }
               }
             }
@@ -869,54 +840,57 @@ final class eg extends in {
           if (-1 == (this.field_r ^ -1)) {
             break L4;
           } else {
-            this.field_k = this.field_k + param0 * this.field_r;
-            if (1048576 <= this.field_k) {
-              this.field_k = 1048576;
-              if (this.field_n) {
-                break L4;
-              } else {
-                this.field_r = 0;
-                if (!this.field_o) {
-                  L5: {
-                    if (this.field_u == null) {
-                      break L5;
-                    } else {
-                      this.field_x.c(false);
-                      break L5;
-                    }
-                  }
-                  this.field_u = null;
-                  break L4;
+            L5: {
+              this.field_k = this.field_k + param0 * this.field_r;
+              if (1048576 <= this.field_k) {
+                this.field_k = 1048576;
+                if (this.field_n) {
+                  break L5;
                 } else {
-                  break L4;
-                }
-              }
-            } else {
-              if (-1 <= (this.field_k ^ -1)) {
-                this.field_k = 0;
-                if (!this.field_n) {
                   this.field_r = 0;
-                  if (this.field_o) {
-                    break L4;
-                  } else {
+                  if (!this.field_o) {
                     L6: {
-                      if (this.field_B != null) {
-                        this.field_A.c(false);
+                      if (this.field_u == null) {
                         break L6;
                       } else {
+                        this.field_x.c(false);
                         break L6;
                       }
                     }
-                    this.field_B = null;
+                    this.field_u = null;
+                    break L5;
+                  } else {
+                    break L4;
+                  }
+                }
+              } else {
+                if (-1 <= (this.field_k ^ -1)) {
+                  this.field_k = 0;
+                  if (!this.field_n) {
+                    this.field_r = 0;
+                    if (this.field_o) {
+                      break L5;
+                    } else {
+                      L7: {
+                        if (this.field_B != null) {
+                          this.field_A.c(false);
+                          break L7;
+                        } else {
+                          break L7;
+                        }
+                      }
+                      this.field_B = null;
+                      break L4;
+                    }
+                  } else {
                     break L4;
                   }
                 } else {
                   break L4;
                 }
-              } else {
-                break L4;
               }
             }
+            break L4;
           }
         }
     }

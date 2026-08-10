@@ -164,138 +164,55 @@ final class dc implements Iterable {
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
+        RuntimeException decompiledCaughtException = null;
+        var4 = MonkeyPuzzle2.field_F ? 1 : 0;
+        try {
+          L0: {
+            var5 = hb.field_l;
+            var1 = var5;
+            var2 = 0;
+            var3 = var5.length;
+            L1: while (true) {
+              if (var2 >= var3) {
+                if (param0 == 114) {
+                  break L0;
+                } else {
+                  field_c = -18;
+                  return;
                 }
-                case 1: {
-                    try {
-                        var5 = hb.field_l;
-                        var1 = var5;
-                        var2 = 0;
-                        var3 = var5.length;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (var2 >= var3) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        incrementValue$8 = var2;
-                        var2++;
-                        var5[incrementValue$8] = 0;
-                        incrementValue$9 = var2;
-                        var2++;
-                        var5[incrementValue$9] = 0;
-                        incrementValue$10 = var2;
-                        var2++;
-                        var5[incrementValue$10] = 0;
-                        incrementValue$11 = var2;
-                        var2++;
-                        var5[incrementValue$11] = 0;
-                        incrementValue$12 = var2;
-                        var2++;
-                        var5[incrementValue$12] = 0;
-                        incrementValue$13 = var2;
-                        var2++;
-                        var5[incrementValue$13] = 0;
-                        incrementValue$14 = var2;
-                        var2++;
-                        var5[incrementValue$14] = 0;
-                        incrementValue$15 = var2;
-                        var2++;
-                        var5[incrementValue$15] = 0;
-                        if (var4 != 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (param0 == 114) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        field_c = -18;
-                        return;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var1_ref = (RuntimeException) ((Object) caughtException);
-                    throw la.a((Throwable) ((Object) var1_ref), "dc.E(" + param0 + ')');
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                incrementValue$8 = var2;
+                var2++;
+                var5[incrementValue$8] = 0;
+                incrementValue$9 = var2;
+                var2++;
+                var5[incrementValue$9] = 0;
+                incrementValue$10 = var2;
+                var2++;
+                var5[incrementValue$10] = 0;
+                incrementValue$11 = var2;
+                var2++;
+                var5[incrementValue$11] = 0;
+                incrementValue$12 = var2;
+                var2++;
+                var5[incrementValue$12] = 0;
+                incrementValue$13 = var2;
+                var2++;
+                var5[incrementValue$13] = 0;
+                incrementValue$14 = var2;
+                var2++;
+                var5[incrementValue$14] = 0;
+                incrementValue$15 = var2;
+                var2++;
+                var5[incrementValue$15] = 0;
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw la.a((Throwable) ((Object) var1_ref), "dc.E(" + param0 + ')');
         }
     }
 
@@ -327,8 +244,6 @@ final class dc implements Iterable {
     }
 
     final ug a(byte param0, long param1) {
-        Object stackIn_7_0 = null;
-        Object stackIn_16_0 = null;
         ug var4;
         ug var5;
         int var6;
@@ -338,25 +253,13 @@ final class dc implements Iterable {
           this.field_a = var4.field_d;
           L0: while (true) {
             if (this.field_a != var4) {
-              stackIn_7_0 = this;
-
-              if (var6 == 0) {
-                if ((((dc) (this)).field_a.field_a ^ -1L) != (param1 ^ -1L)) {
-                  this.field_a = this.field_a.field_d;
-                  if (var6 == 0) {
-                    continue L0;
-                  } else {
-                    this.field_a = null;
-                    return null;
-                  }
-                } else {
-                  var5 = this.field_a;
-                  this.field_a = this.field_a.field_d;
-                  return var5;
-                }
+              if ((this.field_a.field_a ^ -1L) != (param1 ^ -1L)) {
+                this.field_a = this.field_a.field_d;
+                continue L0;
               } else {
-                ((dc) (this)).field_a = null;
-                return null;
+                var5 = this.field_a;
+                this.field_a = this.field_a.field_d;
+                return var5;
               }
             } else {
               this.field_a = null;
@@ -368,25 +271,13 @@ final class dc implements Iterable {
           this.field_a = var4.field_d;
           L1: while (true) {
             if (this.field_a != var4) {
-              stackIn_16_0 = this;
-
-              if (var6 == 0) {
-                if ((((dc) (this)).field_a.field_a ^ -1L) != (param1 ^ -1L)) {
-                  this.field_a = this.field_a.field_d;
-                  if (var6 == 0) {
-                    continue L1;
-                  } else {
-                    this.field_a = null;
-                    return null;
-                  }
-                } else {
-                  var5 = this.field_a;
-                  this.field_a = this.field_a.field_d;
-                  return var5;
-                }
+              if ((this.field_a.field_a ^ -1L) != (param1 ^ -1L)) {
+                this.field_a = this.field_a.field_d;
+                continue L1;
               } else {
-                ((dc) (this)).field_a = null;
-                return null;
+                var5 = this.field_a;
+                this.field_a = this.field_a.field_d;
+                return var5;
               }
             } else {
               this.field_a = null;

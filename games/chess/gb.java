@@ -202,15 +202,8 @@ abstract class gb extends fa {
                 return -1;
               } else {
                 L0: {
-                  if (param0 == var2) {
-                    if (11 == rm.field_Q) {
-                      if (-1 == (cf.field_Lb ^ -1)) {
-                        gb.i(param0 ^ -29025);
-                        break L0;
-                      } else {
-                        return var2;
-                      }
-                    } else {
+                  if (param0 != var2) {
+                    if (var2 == 1) {
                       if (11 == rm.field_Q) {
                         if (-1 == (cf.field_Lb ^ -1)) {
                           gb.i(param0 ^ -29025);
@@ -221,6 +214,20 @@ abstract class gb extends fa {
                       } else {
                         return var2;
                       }
+                    } else {
+                      L1: {
+                        if (!sk.field_p) {
+                          this.a("reconnect", -58);
+                          break L1;
+                        } else {
+                          break L1;
+                        }
+                      }
+                      dh.c(12);
+                      jc.a(var2, n.field_c, (byte) 85);
+                      bg.field_ab = true;
+                      ma.field_E = 15000L + ud.a(param0 + 2);
+                      return var2;
                     }
                   } else {
                     if (11 == rm.field_Q) {
@@ -563,49 +570,14 @@ abstract class gb extends fa {
     }
 
     final void a(int param0, int param1, String param2) {
-        RuntimeException runtimeException = null;
-        String var5 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.a(true, param1, param2, 640, 480);
-              if (param0 == 16742) {
-                break L1;
-              } else {
-                var5 = (String) null;
+            this.a(true, param1, param2, 640, 480);
+            if (param0 != 16742) {
+                String var5 = (String) null;
                 this.a(110, -96, (String) null);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("gb.BB(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw fk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) ((Object) runtimeException), "gb.BB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

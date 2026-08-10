@@ -22,102 +22,36 @@ final class mi extends el {
 
     final static void k(int param0) {
         try {
-            IOException iOException = null;
-            IOException var2_ref = null;
             int var1_int = 0;
-            int var3 = 0;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var1 = null;
-            var3 = TrackController.field_F ? 1 : 0;
-            try {
-              L0: {
-                L1: {
-                  if (rj.field_d != null) {
-                    rj.field_d.c((byte) 101);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                if (param0 == 10228) {
-                  L2: {
-                    if (rb.field_a != null) {
-                      rb.field_a.a(83);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    if (null != sd.field_c) {
-                      try {
-                        L4: {
-                          sd.field_c.d(0);
-                          break L4;
-                        }
-                      } catch (java.io.IOException decompiledCaughtParameter0) {
-                        decompiledCaughtException = decompiledCaughtParameter0;
-                        L5: {
-                          iOException = (IOException) (Object) decompiledCaughtException;
-                          break L5;
-                        }
-                      }
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  L6: {
-                    if (kh.field_e == null) {
-                      break L6;
-                    } else {
-                      var1_int = 0;
-                      L7: while (true) {
-                        if (var1_int >= kh.field_e.length) {
-                          break L6;
-                        } else {
-                          L8: {
-                            if (null != kh.field_e[var1_int]) {
-                              try {
-                                L9: {
-                                  kh.field_e[var1_int].d(0);
-                                  break L9;
-                                }
-                              } catch (java.io.IOException decompiledCaughtParameter1) {
-                                decompiledCaughtException = decompiledCaughtParameter1;
-                                L10: {
-                                  var2_ref = (IOException) (Object) decompiledCaughtException;
-                                  break L10;
-                                }
-                              }
-                              break L8;
-                            } else {
-                              break L8;
-                            }
-                          }
-                          var1_int++;
-                          continue L7;
-                        }
-                      }
-                    }
-                  }
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw sl.a((Throwable) ((Object) var1), "mi.I(" + param0 + ')');
+            int var3 = TrackController.field_F ? 1 : 0;
+            if (!(rj.field_d == null)) {
+                rj.field_d.c((byte) 101);
             }
-            if (decompiledRegionSelector0 == 0) {
-              return;
-            } else {
-              return;
+            if (param0 != 10228) {
+                return;
+            }
+            try {
+                if (!(rb.field_a == null)) {
+                    rb.field_a.a(83);
+                }
+                if (!(null == sd.field_c)) {
+                    try {
+                        sd.field_c.d(0);
+                    } catch (IOException iOException) {
+                    }
+                }
+                if (kh.field_e != null) {
+                    for (var1_int = 0; var1_int < kh.field_e.length; var1_int++) {
+                        if (!(null == kh.field_e[var1_int])) {
+                            try {
+                                kh.field_e[var1_int].d(0);
+                            } catch (IOException var2_ref) {
+                            }
+                        }
+                    }
+                }
+            } catch (RuntimeException runtimeException) {
+                throw sl.a((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

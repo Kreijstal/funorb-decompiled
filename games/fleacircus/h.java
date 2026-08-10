@@ -38,34 +38,21 @@ final class h extends RuntimeException {
 
     final static void a(int param0) {
         int var1;
-        if (224 > gf.field_d) {
-          var1 = gf.field_d % 32;
-          ia.a(true, -var1 + (gf.field_d - -32));
-          if (param0 == -32) {
-            return;
-          } else {
-            h.a((byte) 30);
-            return;
-          }
-        } else {
-          ia.a(true, 256);
-          if (!fleas.field_A) {
-            if (param0 != -32) {
-              h.a((byte) 30);
-              return;
-            } else {
-              return;
-            }
-          } else {
+        L0: {
+          if (224 > gf.field_d) {
             var1 = gf.field_d % 32;
             ia.a(true, -var1 + (gf.field_d - -32));
-            if (param0 == -32) {
-              return;
-            } else {
-              h.a((byte) 30);
-              return;
-            }
+            break L0;
+          } else {
+            ia.a(true, 256);
+            break L0;
           }
+        }
+        if (param0 != -32) {
+          h.a((byte) 30);
+          return;
+        } else {
+          return;
         }
     }
 

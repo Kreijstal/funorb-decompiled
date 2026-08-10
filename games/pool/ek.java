@@ -256,6 +256,7 @@ final class ek {
     }
 
     final static void a(vh param0, byte param1, int param2) {
+        RuntimeException runtimeException = null;
         aa var3 = null;
         vh var4 = null;
         vh stackIn_5_0 = null;
@@ -268,7 +269,6 @@ final class ek {
         String stackIn_15_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
         try {
           L0: {
             if (param1 <= -38) {
@@ -326,8 +326,8 @@ final class ek {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var3_ref = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var3_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_14_0 = (RuntimeException) (runtimeException);
 
             stackIn_14_1 = new StringBuilder().append("ek.C(");
 

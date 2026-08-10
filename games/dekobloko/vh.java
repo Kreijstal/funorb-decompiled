@@ -21,45 +21,43 @@ final class vh {
           var1 = ik.a(4);
           var3 = -wg.field_i + var1;
           if (-30001L <= (var3 ^ -1L)) {
-            L0: {
-              L1: {
-                var5 = 3000;
-                if (-8 < (af.field_d ^ -1)) {
-                  break L1;
-                } else {
-                  var5 = 12000;
-                  if (var6 == 0) {
+            var5 = 3000;
+            if (-8 < (af.field_d ^ -1)) {
+              if (-6 < (af.field_d ^ -1)) {
+                L0: {
+                  if (-4 < (af.field_d ^ -1)) {
                     break L0;
                   } else {
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                if (-6 < (af.field_d ^ -1)) {
-                  break L2;
-                } else {
-                  var5 = 9000;
-                  if (var6 == 0) {
+                    var5 = 6000;
                     break L0;
-                  } else {
-                    break L2;
                   }
                 }
-              }
-              if (-4 < (af.field_d ^ -1)) {
-                break L0;
+                if ((long)var5 < var3) {
+                  wg.field_i = var1;
+                  af.field_d = af.field_d + 1;
+                  return true;
+                } else {
+                  return false;
+                }
               } else {
-                var5 = 6000;
-                break L0;
+                var5 = 9000;
+                if ((long)var5 < var3) {
+                  wg.field_i = var1;
+                  af.field_d = af.field_d + 1;
+                  return true;
+                } else {
+                  return false;
+                }
               }
-            }
-            if ((long)var5 < var3) {
-              wg.field_i = var1;
-              af.field_d = af.field_d + 1;
-              return true;
             } else {
-              return false;
+              var5 = 12000;
+              if ((long)var5 < var3) {
+                wg.field_i = var1;
+                af.field_d = af.field_d + 1;
+                return true;
+              } else {
+                return false;
+              }
             }
           } else {
             af.field_d = 0;

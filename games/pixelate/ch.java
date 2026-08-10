@@ -391,6 +391,7 @@ class ch extends ng implements j {
     }
 
     void a(int param0, int param1, int param2, ng param3) {
+        RuntimeException runtimeException = null;
         nm var5 = null;
         ng var6 = null;
         int var7 = 0;
@@ -400,7 +401,6 @@ class ch extends ng implements j {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -427,8 +427,8 @@ class ch extends ng implements j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("ch.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
@@ -666,47 +666,13 @@ class ch extends ng implements j {
     }
 
     final void b(ng param0, int param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_F.a(22125, param0);
-              if (param1 == 80) {
-                break L1;
-              } else {
+            this.field_F.a(22125, param0);
+            if (param1 != 80) {
                 field_H = (String) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ch.LA(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) ((Object) runtimeException), "ch.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -790,6 +756,7 @@ class ch extends ng implements j {
     }
 
     final void a(int param0, int param1, ng param2, int param3, int param4, int param5) {
+        RuntimeException runtimeException = null;
         nm var7 = null;
         ng var8 = null;
         int var9 = 0;
@@ -799,7 +766,6 @@ class ch extends ng implements j {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -825,8 +791,8 @@ class ch extends ng implements j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var7_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var7_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("ch.EA(").append(param0).append(',').append(param1).append(',');
 

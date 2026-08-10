@@ -284,25 +284,28 @@ final class te extends am {
                   break L1;
                 } else {
                   if (-2 != (var4_int ^ -1)) {
-                    if (var4_int != 2) {
-                      break L1;
-                    } else {
-                      L2: {
-                        stackIn_12_0 = this;
+                    L2: {
+                      if (var4_int != 2) {
+                        break L2;
+                      } else {
+                        L3: {
+                          stackIn_12_0 = this;
 
-                        if (param0.i((byte) -101) != 1) {
-                          stackIn_13_0 = this;
-                          stackIn_13_1 = 0;
-                          break L2;
-                        } else {
-                          stackIn_13_0 = this;
-                          stackIn_13_1 = 1;
-                          break L2;
+                          if (param0.i((byte) -101) != 1) {
+                            stackIn_13_0 = this;
+                            stackIn_13_1 = 0;
+                            break L3;
+                          } else {
+                            stackIn_13_0 = this;
+                            stackIn_13_1 = 1;
+                            break L3;
+                          }
                         }
+                        ((te) (this)).field_p = stackIn_13_1 != 0;
+                        break L2;
                       }
-                      ((te) (this)).field_p = stackIn_13_1 != 0;
-                      break L1;
                     }
+                    break L1;
                   } else {
                     this.field_u = param0.i((byte) -101);
                     break L1;
@@ -318,7 +321,7 @@ final class te extends am {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var4 = decompiledCaughtException;
             stackIn_17_0 = (RuntimeException) (var4);
 
@@ -328,12 +331,12 @@ final class te extends am {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "null";
-              break L3;
+              break L4;
             } else {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "{...}";
-              break L3;
+              break L4;
             }
           }
           throw rb.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ')');

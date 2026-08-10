@@ -89,98 +89,36 @@ final class oa {
 
     final static void a(int param0) {
         try {
-            IOException iOException = null;
-            IOException var2_ref = null;
             int var1_int = 0;
-            int var3 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var1 = null;
-            var3 = ShatteredPlansClient.field_F ? 1 : 0;
+            int var3 = ShatteredPlansClient.field_F ? 1 : 0;
             try {
-              L0: {
-                L1: {
-                  if (param0 == 0) {
-                    break L1;
-                  } else {
+                if (param0 != 0) {
                     oa.b(-14);
-                    break L1;
-                  }
                 }
-                L2: {
-                  if (vp.field_o == null) {
-                    break L2;
-                  } else {
+                if (vp.field_o != null) {
                     vp.field_o.e(param0 + -16363);
-                    break L2;
-                  }
                 }
-                L3: {
-                  if (vn.field_w == null) {
-                    break L3;
-                  } else {
+                if (vn.field_w != null) {
                     vn.field_w.a((byte) -122);
-                    break L3;
-                  }
                 }
-                L4: {
-                  if (null == oq.field_g) {
-                    break L4;
-                  } else {
+                if (null != oq.field_g) {
                     try {
-                      L5: {
                         oq.field_g.b((byte) 127);
-                        break L5;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        break L6;
-                      }
+                    } catch (IOException iOException) {
                     }
-                    break L4;
-                  }
                 }
-                L7: {
-                  if (null == tr.field_Eb) {
-                    break L7;
-                  } else {
-                    var1_int = 0;
-                    L8: while (true) {
-                      if (var1_int >= tr.field_Eb.length) {
-                        break L7;
-                      } else {
-                        L9: {
-                          if (tr.field_Eb[var1_int] != null) {
+                if (null != tr.field_Eb) {
+                    for (var1_int = 0; var1_int < tr.field_Eb.length; var1_int++) {
+                        if (!(tr.field_Eb[var1_int] == null)) {
                             try {
-                              L10: {
                                 tr.field_Eb[var1_int].b((byte) -65);
-                                break L10;
-                              }
-                            } catch (java.io.IOException decompiledCaughtParameter1) {
-                              decompiledCaughtException = decompiledCaughtParameter1;
-                              L11: {
-                                var2_ref = (IOException) (Object) decompiledCaughtException;
-                                break L11;
-                              }
+                            } catch (IOException var2_ref) {
                             }
-                            break L9;
-                          } else {
-                            break L9;
-                          }
                         }
-                        var1_int++;
-                        continue L8;
-                      }
                     }
-                  }
                 }
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw r.a((Throwable) ((Object) var1), "oa.C(" + param0 + ')');
+            } catch (RuntimeException runtimeException) {
+                throw r.a((Throwable) ((Object) runtimeException), "oa.C(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

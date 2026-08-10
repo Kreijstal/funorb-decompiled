@@ -78,31 +78,24 @@ abstract class gg extends be {
               var7 = var15;
               var8 = 0;
               L2: while (true) {
-                L3: {
-                  if (256 <= var8) {
-                    break L3;
-                  } else {
-                    var10[var8] = param0[var8].field_d;
-                    var4[var8] = param0[var8].field_c;
-                    var5[var8] = param0[var8].field_b;
-                    var6[var8] = param0[var8].field_i;
-                    var7[var8] = param0[var8].field_k;
-                    var8++;
-                    if (var9 == 0) {
-                      continue L2;
-                    } else {
-                      break L3;
-                    }
-                  }
+                if (256 <= var8) {
+                  stackIn_10_0 = new lm(param2, var16, var17, var18, var19, var20);
+                  break L0;
+                } else {
+                  var10[var8] = param0[var8].field_d;
+                  var4[var8] = param0[var8].field_c;
+                  var5[var8] = param0[var8].field_b;
+                  var6[var8] = param0[var8].field_i;
+                  var7[var8] = param0[var8].field_k;
+                  var8++;
+                  continue L2;
                 }
-                stackIn_10_0 = new lm(param2, var16, var17, var18, var19, var20);
-                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3_ref = decompiledCaughtException;
             stackIn_13_0 = (RuntimeException) (var3_ref);
 
@@ -112,15 +105,15 @@ abstract class gg extends be {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
-          L5: {
+          L4: {
 
 
             stackIn_16_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param1).append(',');
@@ -129,12 +122,12 @@ abstract class gg extends be {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "null";
-              break L5;
+              break L4;
             } else {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "{...}";
-              break L5;
+              break L4;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_17_2 + ')');

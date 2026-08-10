@@ -323,99 +323,73 @@ final class nc {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param1 > 26) {
-                break L1;
-              } else {
-                field_a = -33;
-                break L1;
-              }
+            if (param1 > 26) {
+              break L0;
+            } else {
+              field_a = -33;
+              break L0;
             }
-            L2: {
-              L3: {
-                if ((kj.field_R ^ -1) <= -11) {
-                  break L3;
-                } else {
-                  L4: {
-                    var3_int = 0;
-                    if (!wa.field_b) {
-                      break L4;
-                    } else {
-                      wa.field_b = false;
-                      var3_int = 1;
-                      break L4;
-                    }
-                  }
-                  la.a(ak.a(true), ae.field_e, 82, var3_int != 0, mc.a(-100));
-                  if (var4 == 0) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              if (!uk.h(250)) {
-                mi.a();
-                vg.b(240, 320, 18);
+          }
+          if ((kj.field_R ^ -1) <= -11) {
+            if (!uk.h(250)) {
+              mi.a();
+              vg.b(240, 320, 18);
+              uf.a((byte) 99, 0, 0, param0);
+              return;
+            } else {
+              if (-1 == (fj.field_i ^ -1)) {
+                nh.a((byte) -101, false, param2);
                 uf.a((byte) 99, 0, 0, param0);
                 return;
               } else {
-                L5: {
-                  if (-1 == (fj.field_i ^ -1)) {
-                    break L5;
-                  } else {
-                    ih.a(20753, param0);
-                    if (var4 == 0) {
-                      break L2;
-                    } else {
-                      break L5;
-                    }
-                  }
-                }
-                nh.a((byte) -101, false, param2);
-                uf.a((byte) 99, 0, 0, param0);
-                if (var4 == 0) {
-                  break L2;
-                } else {
-                  mi.a();
-                  vg.b(240, 320, 18);
-                  uf.a((byte) 99, 0, 0, param0);
-                  return;
-                }
+                ih.a(20753, param0);
+                return;
               }
             }
-            break L0;
+          } else {
+            L1: {
+              var3_int = 0;
+              if (!wa.field_b) {
+                break L1;
+              } else {
+                wa.field_b = false;
+                var3_int = 1;
+                break L1;
+              }
+            }
+            la.a(ak.a(true), ae.field_e, 82, var3_int != 0, mc.a(-100));
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var3);
+            stackIn_15_0 = (RuntimeException) (var3);
 
-            stackIn_18_1 = new StringBuilder().append("nc.D(");
+            stackIn_15_1 = new StringBuilder().append("nc.D(");
 
             if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L6;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L2;
             } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L6;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L2;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ',' + param2 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -426,76 +400,22 @@ final class nc {
     }
 
     final void a(boolean param0) {
-        gg var2 = null;
-        int var3 = 0;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = SolKnight.field_L ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    var2 = this.field_e.field_d;
-                    if (var2 == this.field_e) {
-                        statePc = 3;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var2.c(10);
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (var3 != 0) {
-                        statePc = 7;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (var3 == 0) {
-                        statePc = 8;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    var2.c(10);
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 7: {
-                    if (var3 == 0) {
-                        statePc = 1;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    if (!param0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    this.field_c = null;
-                    return;
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        gg var2;
+        int var3;
+        var3 = SolKnight.field_L ? 1 : 0;
+        L0: while (true) {
+          var2 = this.field_e.field_d;
+          if (var2 != this.field_e) {
+            var2.c(10);
+            continue L0;
+          } else {
+            if (!param0) {
+              return;
+            } else {
+              this.field_c = null;
+              return;
             }
+          }
         }
     }
 

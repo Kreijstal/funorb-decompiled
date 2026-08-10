@@ -222,75 +222,24 @@ class bb extends qa {
     }
 
     void a(int param0, int param1, qa param2, byte param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param3 <= -85) {
-              L1: {
-                super.a(param0, param1, param2, (byte) -94);
-                if (-1 == (this.field_v ^ -1)) {
-                  break L1;
-                } else {
-                  if (this.field_v != kc.field_f) {
-                    L2: {
-                      if (!this.b(param0, param1, 0, ag.field_f, kc.field_b)) {
-                        break L2;
-                      } else {
-                        if (-1 == (kc.field_f ^ -1)) {
-                          this.a(kc.field_b + -param0, 84, -param1 + ag.field_f, this.field_v);
-                          break L2;
-                        } else {
-                          break L2;
-                        }
-                      }
-                    }
-                    this.a((byte) 5, param2, param1, ag.field_f, kc.field_b, param0);
-                    break L1;
-                  } else {
-                    return;
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("bb.I(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
-          }
-          throw pf.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param3 + ')');
+        if (param3 > -85) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            super.a(param0, param1, param2, (byte) -94);
+            if (-1 != (this.field_v ^ -1)) {
+                if (this.field_v == kc.field_f) {
+                    return;
+                }
+                if (this.b(param0, param1, 0, ag.field_f, kc.field_b)) {
+                    if (!(-1 != (kc.field_f ^ -1))) {
+                        this.a(kc.field_b + -param0, 84, -param1 + ag.field_f, this.field_v);
+                    }
+                }
+                this.a((byte) 5, param2, param1, ag.field_f, kc.field_b, param0);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) ((Object) runtimeException), "bb.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

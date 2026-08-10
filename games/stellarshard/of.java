@@ -777,43 +777,46 @@ final class of extends dg {
         try {
           L0: {
             L1: {
-              super.a(param0, -111, param2, param3, param4, param5);
-              var8 = 58 % ((param1 - -50) / 57);
-              var9 = lk.field_e;
-              if (var9 == null) {
-                break L1;
-              } else {
-                if (!this.a((byte) 127, param4, param0, param5, param3)) {
-                  break L1;
+              L2: {
+                super.a(param0, -111, param2, param3, param4, param5);
+                var8 = 58 % ((param1 - -50) / 57);
+                var9 = lk.field_e;
+                if (var9 == null) {
+                  break L2;
                 } else {
-                  L2: {
-                    if (this.field_v instanceof jh) {
-                      break L2;
-                    } else {
-                      if (var9.field_v instanceof jh) {
-                        ((jh) ((Object) var9.field_v)).a((of) (this), (byte) 107, var9);
-                        lk.field_e = null;
-                        if (stellarshard.field_B == 0) {
-                          break L1;
-                        } else {
-                          break L2;
-                        }
+                  if (!this.a((byte) 127, param4, param0, param5, param3)) {
+                    break L2;
+                  } else {
+                    L3: {
+                      if (this.field_v instanceof jh) {
+                        break L3;
                       } else {
-                        break L1;
+                        if (var9.field_v instanceof jh) {
+                          ((jh) ((Object) var9.field_v)).a((of) (this), (byte) 107, var9);
+                          lk.field_e = null;
+                          if (stellarshard.field_B == 0) {
+                            break L2;
+                          } else {
+                            break L3;
+                          }
+                        } else {
+                          break L1;
+                        }
                       }
                     }
+                    ((jh) ((Object) this.field_v)).a((of) (this), (byte) 30, var9);
+                    lk.field_e = null;
+                    break L1;
                   }
-                  ((jh) ((Object) this.field_v)).a((of) (this), (byte) 30, var9);
-                  lk.field_e = null;
-                  break L1;
                 }
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var7 = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (var7);
 
@@ -823,12 +826,12 @@ final class of extends dg {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L3;
+              break L4;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L3;
+              break L4;
             }
           }
           throw ma.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

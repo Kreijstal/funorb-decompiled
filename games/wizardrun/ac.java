@@ -167,62 +167,65 @@ final class ac extends rk {
             }
             L2: {
               if (-2 != (param2 ^ -1)) {
-                if ((param2 ^ -1) != -3) {
-                  if ((param2 ^ -1) != -4) {
-                    if (param2 == 4) {
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    var4_int = param1.f(255);
-                    this.field_w = new int[var4_int];
-                    this.field_u = new int[var4_int][];
-                    var5 = 0;
-                    L3: while (true) {
-                      if (var4_int <= var5) {
-                        break L2;
+                L3: {
+                  if ((param2 ^ -1) != -3) {
+                    if ((param2 ^ -1) != -4) {
+                      if (param2 == 4) {
+                        break L3;
                       } else {
-                        L4: {
-                          var6 = param1.j(-14477);
-                          var7 = nh.a(0, var6);
-                          if (var7 == null) {
-                            break L4;
-                          } else {
-                            this.field_w[var5] = var6;
-                            array$0 = new int[var7.field_f];
-                            this.field_u[var5] = array$0;
-                            var8 = 0;
-                            L5: while (true) {
-                              if (var8 >= var7.field_f) {
-                                break L4;
-                              } else {
-                                this.field_u[var5][var8] = param1.j(-14477);
-                                var8++;
-                                continue L5;
+                        break L2;
+                      }
+                    } else {
+                      var4_int = param1.f(255);
+                      this.field_w = new int[var4_int];
+                      this.field_u = new int[var4_int][];
+                      var5 = 0;
+                      L4: while (true) {
+                        if (var4_int <= var5) {
+                          break L3;
+                        } else {
+                          L5: {
+                            var6 = param1.j(-14477);
+                            var7 = nh.a(0, var6);
+                            if (var7 == null) {
+                              break L5;
+                            } else {
+                              this.field_w[var5] = var6;
+                              array$0 = new int[var7.field_f];
+                              this.field_u[var5] = array$0;
+                              var8 = 0;
+                              L6: while (true) {
+                                if (var8 >= var7.field_f) {
+                                  break L5;
+                                } else {
+                                  this.field_u[var5][var8] = param1.j(-14477);
+                                  var8++;
+                                  continue L6;
+                                }
                               }
                             }
                           }
+                          var5++;
+                          continue L4;
                         }
+                      }
+                    }
+                  } else {
+                    var4_int = param1.f(255);
+                    this.field_p = new int[var4_int];
+                    var5 = 0;
+                    L7: while (true) {
+                      if (var5 >= var4_int) {
+                        break L3;
+                      } else {
+                        this.field_p[var5] = param1.j(-14477);
                         var5++;
-                        continue L3;
+                        continue L7;
                       }
                     }
                   }
-                } else {
-                  var4_int = param1.f(255);
-                  this.field_p = new int[var4_int];
-                  var5 = 0;
-                  L6: while (true) {
-                    if (var5 >= var4_int) {
-                      break L2;
-                    } else {
-                      this.field_p[var5] = param1.j(-14477);
-                      var5++;
-                      continue L6;
-                    }
-                  }
                 }
+                break L2;
               } else {
                 this.field_v = tj.a(param1.d(0), -22710, '<');
                 break L2;
@@ -232,7 +235,7 @@ final class ac extends rk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var4 = decompiledCaughtException;
             stackIn_22_0 = (RuntimeException) (var4);
 
@@ -242,12 +245,12 @@ final class ac extends rk {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw bd.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param2 + ')');

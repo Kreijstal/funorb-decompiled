@@ -58,11 +58,7 @@ final class gb implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       var2_int = ud.field_V[var2_int];
                       if (-1 != (128 & var2_int ^ -1)) {
                         var2_int = -1;
-                        if (!ZombieDawnMulti.field_E) {
-                          break L1;
-                        } else {
-                          break L2;
-                        }
+                        break L1;
                       } else {
                         break L1;
                       }
@@ -174,11 +170,7 @@ final class gb implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         break L3;
                       } else {
                         var2_int = -129 & ud.field_V[var2_int];
-                        if (!ZombieDawnMulti.field_E) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
+                        break L2;
                       }
                     }
                   }

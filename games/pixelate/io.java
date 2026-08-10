@@ -327,40 +327,43 @@ final class io {
                       return;
                     }
                   } else {
-                    var6 = ga.field_f + -140;
-                    if ((var6 ^ -1) < -1) {
-                      L8: {
-                        var7 = 256;
-                        if ((var6 ^ -1) <= -21) {
-                          break L8;
-                        } else {
-                          var7 = var6 * 256 / 20;
-                          break L8;
+                    L8: {
+                      var6 = ga.field_f + -140;
+                      if ((var6 ^ -1) >= -1) {
+                        break L8;
+                      } else {
+                        L9: {
+                          var7 = 256;
+                          if ((var6 ^ -1) <= -21) {
+                            break L9;
+                          } else {
+                            var7 = var6 * 256 / 20;
+                            break L9;
+                          }
                         }
+                        in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
+                        break L8;
                       }
-                      in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
-                      return;
-                    } else {
-                      return;
                     }
+                    return;
                   }
                 } else {
-                  L9: {
+                  L10: {
                     var6 = ga.field_f + -140;
                     if ((var6 ^ -1) >= -1) {
-                      break L9;
+                      break L10;
                     } else {
-                      L10: {
+                      L11: {
                         var7 = 256;
                         if ((var6 ^ -1) <= -21) {
-                          break L10;
+                          break L11;
                         } else {
                           var7 = var6 * 256 / 20;
-                          break L10;
+                          break L11;
                         }
                       }
                       in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
-                      break L9;
+                      break L10;
                     }
                   }
                   return;
@@ -372,291 +375,306 @@ final class io {
                   if (var6 < 50) {
                     if (-21 >= (var6 ^ -1)) {
                       if ((var6 ^ -1) > -31) {
-                        L11: {
+                        L12: {
                           bd.field_a.b(var3, var4, 256);
                           var6 = ga.field_f + -140;
                           if ((var6 ^ -1) >= -1) {
-                            break L11;
+                            break L12;
                           } else {
-                            L12: {
+                            L13: {
                               var7 = 256;
                               if ((var6 ^ -1) <= -21) {
-                                break L12;
+                                break L13;
                               } else {
                                 var7 = var6 * 256 / 20;
-                                break L12;
+                                break L13;
                               }
                             }
                             in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
-                            break L11;
+                            break L12;
                           }
                         }
                         return;
                       } else {
-                        L13: {
+                        L14: {
                           var7 = (12800 + -(var6 * 256)) / 20;
                           bd.field_a.b(var3, var4, var7);
                           var6 = ga.field_f + -140;
                           if ((var6 ^ -1) >= -1) {
-                            break L13;
+                            break L14;
                           } else {
-                            L14: {
+                            L15: {
                               var7 = 256;
                               if ((var6 ^ -1) <= -21) {
-                                break L14;
+                                break L15;
                               } else {
                                 var7 = var6 * 256 / 20;
-                                break L14;
+                                break L15;
                               }
                             }
                             in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
-                            break L13;
+                            break L14;
                           }
                         }
                         return;
                       }
                     } else {
-                      L15: {
+                      L16: {
                         var7 = 256 * var6 / 20;
                         bd.field_a.b(var3, var4, var7);
                         var6 = ga.field_f + -140;
                         if ((var6 ^ -1) >= -1) {
-                          break L15;
+                          break L16;
                         } else {
-                          L16: {
+                          L17: {
                             var7 = 256;
                             if ((var6 ^ -1) <= -21) {
-                              break L16;
+                              break L17;
                             } else {
                               var7 = var6 * 256 / 20;
-                              break L16;
+                              break L17;
                             }
                           }
                           in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
-                          break L15;
+                          break L16;
                         }
                       }
                       return;
                     }
                   } else {
-                    var6 = ga.field_f + -140;
-                    if ((var6 ^ -1) < -1) {
-                      L17: {
-                        var7 = 256;
-                        if ((var6 ^ -1) <= -21) {
-                          break L17;
-                        } else {
-                          var7 = var6 * 256 / 20;
-                          break L17;
+                    L18: {
+                      var6 = ga.field_f + -140;
+                      if ((var6 ^ -1) >= -1) {
+                        break L18;
+                      } else {
+                        L19: {
+                          var7 = 256;
+                          if ((var6 ^ -1) <= -21) {
+                            break L19;
+                          } else {
+                            var7 = var6 * 256 / 20;
+                            break L19;
+                          }
                         }
+                        in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
+                        break L18;
                       }
-                      in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
-                      return;
-                    } else {
-                      return;
                     }
+                    return;
                   }
                 } else {
-                  L18: {
+                  L20: {
                     var6 = ga.field_f + -140;
                     if ((var6 ^ -1) >= -1) {
-                      break L18;
+                      break L20;
                     } else {
-                      L19: {
+                      L21: {
                         var7 = 256;
                         if ((var6 ^ -1) <= -21) {
-                          break L19;
+                          break L21;
                         } else {
                           var7 = var6 * 256 / 20;
-                          break L19;
+                          break L21;
                         }
                       }
                       in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
-                      break L18;
+                      break L20;
                     }
                   }
                   return;
                 }
               }
             } else {
-              L20: {
+              L22: {
                 t.a(0, 0, t.field_j, t.field_d, 0, -var5 + 256);
                 ia.a((byte) 92);
                 if (ga.field_f >= 150) {
                   th.field_b.a(var3 - -15, var4 - -10, var5);
-                  break L20;
+                  break L22;
                 } else {
                   re.field_b.d(var3, var4);
-                  break L20;
+                  break L22;
                 }
               }
               var6 = ga.field_f + -125;
               if (-1 <= (var6 ^ -1)) {
-                L21: {
+                L23: {
                   var6 = ga.field_f + -140;
                   if ((var6 ^ -1) >= -1) {
-                    break L21;
+                    break L23;
                   } else {
-                    L22: {
+                    L24: {
                       var7 = 256;
                       if ((var6 ^ -1) <= -21) {
-                        break L22;
+                        break L24;
                       } else {
                         var7 = var6 * 256 / 20;
-                        break L22;
+                        break L24;
                       }
                     }
                     in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
-                    break L21;
+                    break L23;
                   }
                 }
                 return;
               } else {
-                L23: {
+                L25: {
                   if (var6 < 50) {
-                    L24: {
+                    L26: {
                       if (-21 >= (var6 ^ -1)) {
                         if ((var6 ^ -1) <= -31) {
                           var7 = (12800 + -(var6 * 256)) / 20;
                           bd.field_a.b(var3, var4, var7);
-                          break L24;
+                          break L26;
                         } else {
                           bd.field_a.b(var3, var4, 256);
-                          break L24;
+                          break L26;
                         }
                       } else {
                         var7 = 256 * var6 / 20;
                         bd.field_a.b(var3, var4, var7);
-                        break L24;
+                        break L26;
                       }
                     }
-                    var6 = ga.field_f + -140;
-                    if ((var6 ^ -1) >= -1) {
-                      break L23;
-                    } else {
-                      L25: {
-                        var7 = 256;
-                        if ((var6 ^ -1) <= -21) {
-                          break L25;
-                        } else {
-                          var7 = var6 * 256 / 20;
-                          break L25;
+                    L27: {
+                      var6 = ga.field_f + -140;
+                      if ((var6 ^ -1) >= -1) {
+                        break L27;
+                      } else {
+                        L28: {
+                          var7 = 256;
+                          if ((var6 ^ -1) <= -21) {
+                            break L28;
+                          } else {
+                            var7 = var6 * 256 / 20;
+                            break L28;
+                          }
                         }
+                        in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
+                        break L27;
                       }
-                      in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
-                      break L23;
                     }
+                    break L25;
                   } else {
-                    var6 = ga.field_f + -140;
-                    if ((var6 ^ -1) >= -1) {
-                      break L23;
-                    } else {
-                      L26: {
-                        var7 = 256;
-                        if ((var6 ^ -1) <= -21) {
-                          break L26;
-                        } else {
-                          var7 = var6 * 256 / 20;
-                          break L26;
+                    L29: {
+                      var6 = ga.field_f + -140;
+                      if ((var6 ^ -1) >= -1) {
+                        break L29;
+                      } else {
+                        L30: {
+                          var7 = 256;
+                          if ((var6 ^ -1) <= -21) {
+                            break L30;
+                          } else {
+                            var7 = var6 * 256 / 20;
+                            break L30;
+                          }
                         }
+                        in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
+                        break L29;
                       }
-                      in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
-                      break L23;
                     }
+                    break L25;
                   }
                 }
                 return;
               }
             }
           } else {
-            L27: {
+            L31: {
               field_g = (fm) null;
               if (ga.field_f <= 200) {
-                break L27;
+                break L31;
               } else {
                 var5 = (250 - ga.field_f << 1849963112) / 50;
-                break L27;
+                break L31;
               }
             }
-            L28: {
+            L32: {
               h.a(-113, re.field_b);
               ja.a();
               t.d();
               ma.d((byte) 106);
               if (256 <= var5) {
-                break L28;
+                break L32;
               } else {
                 t.a(0, 0, t.field_j, t.field_d, 0, -var5 + 256);
-                break L28;
+                break L32;
               }
             }
-            L29: {
+            L33: {
               ia.a((byte) 92);
               if (ga.field_f >= 150) {
                 th.field_b.a(var3 - -15, var4 - -10, var5);
-                break L29;
+                break L33;
               } else {
                 re.field_b.d(var3, var4);
-                break L29;
+                break L33;
               }
             }
-            L30: {
-              L31: {
+            L34: {
+              L35: {
                 var6 = ga.field_f + -125;
                 if (-1 <= (var6 ^ -1)) {
-                  break L31;
+                  break L35;
                 } else {
                   if (var6 < 50) {
                     if (-21 >= (var6 ^ -1)) {
                       if ((var6 ^ -1) <= -31) {
                         var7 = (12800 + -(var6 * 256)) / 20;
                         bd.field_a.b(var3, var4, var7);
-                        break L31;
+                        break L35;
                       } else {
                         bd.field_a.b(var3, var4, 256);
-                        break L31;
+                        break L35;
                       }
                     } else {
                       var7 = 256 * var6 / 20;
                       bd.field_a.b(var3, var4, var7);
-                      break L31;
+                      break L35;
                     }
                   } else {
-                    var6 = ga.field_f + -140;
-                    if ((var6 ^ -1) >= -1) {
-                      break L30;
-                    } else {
-                      L32: {
-                        var7 = 256;
-                        if ((var6 ^ -1) <= -21) {
-                          break L32;
-                        } else {
-                          var7 = var6 * 256 / 20;
-                          break L32;
+                    L36: {
+                      var6 = ga.field_f + -140;
+                      if ((var6 ^ -1) >= -1) {
+                        break L36;
+                      } else {
+                        L37: {
+                          var7 = 256;
+                          if ((var6 ^ -1) <= -21) {
+                            break L37;
+                          } else {
+                            var7 = var6 * 256 / 20;
+                            break L37;
+                          }
                         }
+                        in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
+                        break L36;
                       }
-                      in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
-                      break L30;
+                    }
+                    break L34;
+                  }
+                }
+              }
+              L38: {
+                var6 = ga.field_f + -140;
+                if ((var6 ^ -1) >= -1) {
+                  break L38;
+                } else {
+                  L39: {
+                    var7 = 256;
+                    if ((var6 ^ -1) <= -21) {
+                      break L39;
+                    } else {
+                      var7 = var6 * 256 / 20;
+                      break L39;
                     }
                   }
+                  in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
+                  break L38;
                 }
               }
-              var6 = ga.field_f + -140;
-              if ((var6 ^ -1) >= -1) {
-                break L30;
-              } else {
-                L33: {
-                  var7 = 256;
-                  if ((var6 ^ -1) <= -21) {
-                    break L33;
-                  } else {
-                    var7 = var6 * 256 / 20;
-                    break L33;
-                  }
-                }
-                in.field_s.a(15 + var3, 10 + var4, var7 * var5 >> 350114248);
-                break L30;
-              }
+              break L34;
             }
             return;
           }

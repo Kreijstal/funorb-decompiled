@@ -35,63 +35,26 @@ final class se extends jc {
 
     final void a(int param0, int param1, int param2, int param3, fe param4, int param5) {
         ma var7 = null;
-        RuntimeException var7_ref = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.a(param0, param1, param2, param3, param4, param5 + param5);
-              var7 = j.field_d;
-              if (var7 == null) {
-                break L1;
-              } else {
-                if (this.b(param1, param0, param3, param2, -88)) {
-                  if (!(this.field_y instanceof cd)) {
-                    if (!(var7.field_y instanceof cd)) {
-                      break L1;
-                    } else {
-                      ((cd) ((Object) var7.field_y)).a(param5 + 27055, (se) (this), var7);
-                      j.field_d = null;
-                      return;
-                    }
-                  } else {
+            super.a(param0, param1, param2, param3, param4, param5 + param5);
+            var7 = j.field_d;
+            if (var7 != null) {
+                if (!this.b(param1, param0, param3, param2, -88)) {
+                    return;
+                }
+                if (this.field_y instanceof cd) {
                     ((cd) ((Object) this.field_y)).a(27055, (se) (this), var7);
                     j.field_d = null;
                     return;
-                  }
-                } else {
-                  return;
                 }
-              }
+                if (var7.field_y instanceof cd) {
+                    ((cd) ((Object) var7.field_y)).a(param5 + 27055, (se) (this), var7);
+                    j.field_d = null;
+                    return;
+                }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var7_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var7_ref);
-
-            stackIn_10_1 = new StringBuilder().append("se.LA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
-          }
-          throw lj.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param5 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) ((Object) runtimeException), "se.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

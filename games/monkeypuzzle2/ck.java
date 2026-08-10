@@ -44,20 +44,13 @@ final class ck {
               }
             }
             L2: {
-              L3: {
-                if (param1 == null) {
-                  break L3;
-                } else {
-                  var3 = param1;
-                  if (!MonkeyPuzzle2.field_F) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
+              if (param1 == null) {
+                var3 = this.field_h.field_f.field_d;
+                break L2;
+              } else {
+                var3 = param1;
+                break L2;
               }
-              var3 = this.field_h.field_f.field_d;
-              break L2;
             }
             if (var3 == this.field_h.field_f) {
               this.field_c = null;
@@ -73,7 +66,7 @@ final class ck {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3_ref = decompiledCaughtException;
             stackIn_13_0 = (RuntimeException) (var3_ref);
 
@@ -83,12 +76,12 @@ final class ck {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw la.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
@@ -216,20 +209,13 @@ final class ck {
               }
             }
             L2: {
-              L3: {
-                if (param1 != null) {
-                  break L3;
-                } else {
-                  var3 = this.field_h.field_f.field_c;
-                  if (!MonkeyPuzzle2.field_F) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
+              if (param1 != null) {
+                var3 = param1;
+                break L2;
+              } else {
+                var3 = this.field_h.field_f.field_c;
+                break L2;
               }
-              var3 = param1;
-              break L2;
             }
             if (this.field_h.field_f == var3) {
               this.field_c = null;
@@ -245,7 +231,7 @@ final class ck {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3_ref = decompiledCaughtException;
             stackIn_13_0 = (RuntimeException) (var3_ref);
 
@@ -255,12 +241,12 @@ final class ck {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw la.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');

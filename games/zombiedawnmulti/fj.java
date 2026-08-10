@@ -24,52 +24,17 @@ final class fj extends gn {
 
     final static void a(byte param0) {
         try {
-            Exception var1 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            L0: {
-              if (null == bg.field_e) {
-                break L0;
-              } else {
+            if (null != bg.field_e) {
                 try {
-                  L1: {
                     bg.field_e.a(0L, (byte) -70);
                     bg.field_e.a(-1, 24, s.field_e.field_j, s.field_e.field_m);
-                    decompiledRegionSelector0 = 0;
-                    break L1;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
-                    var1 = (Exception) (Object) decompiledCaughtException;
-                    decompiledRegionSelector0 = 1;
-                    break L2;
-                  }
+                } catch (Exception exception) {
                 }
-                if (decompiledRegionSelector0 == 0) {
-                  L3: {
-                    if (param0 == 85) {
-                      break L3;
-                    } else {
-                      field_M = true;
-                      break L3;
-                    }
-                  }
-                  s.field_e.field_j = s.field_e.field_j + 24;
-                  return;
-                } else {
-                  break L0;
-                }
-              }
             }
             if (param0 != 85) {
-              field_M = true;
-              s.field_e.field_j = s.field_e.field_j + 24;
-              return;
-            } else {
-              s.field_e.field_j = s.field_e.field_j + 24;
-              return;
+                field_M = true;
             }
+            s.field_e.field_j = s.field_e.field_j + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -78,20 +43,6 @@ final class fj extends gn {
     }
 
     final static void a(int param0, ja param1) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
@@ -99,223 +50,38 @@ final class fj extends gn {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var10 = ZombieDawnMulti.field_E ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var10 = ZombieDawnMulti.field_E ? 1 : 0;
+        int var2_int = 20 % ((-42 - param0) / 36);
+        if (((param1.field_w | param1.field_x | param1.field_r | param1.field_y) & 3) == 0) {
+            return;
+        }
+        try {
+            var3 = (3 & param1.field_r) + param1.field_x;
+            var3 = -(var3 & 3) + (4 + var3);
+            var4 = (param1.field_y & 3) + param1.field_w;
+            var4 = var4 + -(3 & var4) + 4;
+            var5 = new int[var3 * var4];
+            var6 = 0;
+            var7 = (param1.field_y & 3) * var3 + (param1.field_r & 3);
+            for (var8 = 0; var8 < param1.field_w; var8++) {
+                for (var9 = 0; var9 < param1.field_x; var9++) {
+                    incrementValue$0 = var7;
+                    var7++;
+                    incrementValue$1 = var6;
+                    var6++;
+                    var5[incrementValue$0] = param1.field_B[incrementValue$1];
                 }
-                case 1: {
-                    try {
-                        var2_int = 20 % ((-42 - param0) / 36);
-                        if (((param1.field_w | param1.field_x | param1.field_r | param1.field_y) & 3) != 0) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    try {
-                        var3 = (3 & param1.field_r) + param1.field_x;
-                        var3 = -(var3 & 3) + (4 + var3);
-                        var4 = (param1.field_y & 3) + param1.field_w;
-                        var4 = var4 + -(3 & var4) + 4;
-                        var5 = new int[var3 * var4];
-                        var6 = 0;
-                        var7 = (param1.field_y & 3) * var3 + (param1.field_r & 3);
-                        var8 = 0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var8 >= param1.field_w) {
-                            statePc = 13;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (var10 != 0) {
-                            statePc = 19;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var9 = 0;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (var9 >= param1.field_x) {
-                            statePc = 11;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        incrementValue$0 = var7;
-                        var7++;
-                        incrementValue$1 = var6;
-                        var6++;
-                        var5[incrementValue$0] = param1.field_B[incrementValue$1];
-                        var9++;
-                        if (var10 != 0) {
-                            statePc = 12;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        if (var10 == 0) {
-                            statePc = 7;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        var7 = var7 + (var3 + -param1.field_x);
-                        var8++;
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        if (var10 == 0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 13;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        param1.field_y = param1.field_y & -4;
-                        param1.field_B = var5;
-                        param1.field_x = var3;
-                        param1.field_r = param1.field_r & -4;
-                        param1.field_w = var4;
-                        statePc = 19;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    var2 = (RuntimeException) ((Object) caughtException);
-                    stackIn_17_0 = (RuntimeException) (var2);
-                    stackIn_16_0 = stackIn_17_0;
-                    stackIn_17_1 = new StringBuilder().append("fj.B(").append(param0).append(',');
-                    stackIn_16_1 = stackIn_17_1;
-                    if (param1 == null) {
-                        statePc = 17;
-                    } else {
-                        statePc = 16;
-                    }
-                    continue stateLoop;
-                }
-                case 16: {
-                    stackIn_18_0 = (RuntimeException) ((Object) stackIn_16_0);
-                    stackIn_18_1 = (StringBuilder) ((Object) stackIn_16_1);
-                    stackIn_18_2 = "{...}";
-                    statePc = 18;
-                    continue stateLoop;
-                }
-                case 17: {
-                    stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-                    stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-                    stackIn_18_2 = "null";
-                    statePc = 18;
-                    continue stateLoop;
-                }
-                case 18: {
-                    throw fa.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
-                }
-                case 19: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                var7 = var7 + (var3 + -param1.field_x);
             }
+            param1.field_y = param1.field_y & -4;
+            param1.field_B = var5;
+            param1.field_x = var3;
+            param1.field_r = param1.field_r & -4;
+            param1.field_w = var4;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) ((Object) runtimeException), "fj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

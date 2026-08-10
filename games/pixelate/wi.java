@@ -566,107 +566,34 @@ final class wi {
     }
 
     final void a(byte param0, aa param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            L1: {
-              if (param0 > 66) {
-                break L1;
-              } else {
-                this.field_l = 31L;
-                break L1;
-              }
-            }
-            if (param1.field_a) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L2: {
-                this.field_k = param1.field_j;
-                if (-1 != (param1.field_j ^ -1)) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (-1 == (io.field_e ^ -1)) {
-                      this.field_b.a(gd.field_j, (byte) -31, 12);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  this.field_b.a(uo.field_d, (byte) -127, 13);
-                  break L2;
-                }
-              }
-              L4: {
-                if (1 == param1.field_j) {
-                  L5: {
-                    if (0 != gh.field_v) {
-                      break L5;
-                    } else {
-                      this.field_b.a(m.field_l, (byte) -97, 12);
-                      break L5;
-                    }
-                  }
-                  this.field_b.a(ec.field_n, (byte) -106, 13);
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L6: {
-                if (2 != param1.field_j) {
-                  break L6;
-                } else {
-                  L7: {
-                    if (0 != ib.field_e) {
-                      break L7;
-                    } else {
-                      this.field_b.a(gf.field_d, (byte) -78, 12);
-                      break L7;
-                    }
-                  }
-                  this.field_b.a(sf.field_a, (byte) -62, 13);
-                  break L6;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            runtimeException = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (runtimeException);
-
-            stackIn_22_1 = new StringBuilder().append("wi.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L8;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L8;
-            }
-          }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
+        if (param0 <= 66) {
+            this.field_l = 31L;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        if (!(!param1.field_a)) {
+            return;
+        }
+        try {
+            this.field_k = param1.field_j;
+            if (-1 == (param1.field_j ^ -1)) {
+                if (!(-1 != (io.field_e ^ -1))) {
+                    this.field_b.a(gd.field_j, (byte) -31, 12);
+                }
+                this.field_b.a(uo.field_d, (byte) -127, 13);
+            }
+            if (!(1 != param1.field_j)) {
+                if (0 == gh.field_v) {
+                    this.field_b.a(m.field_l, (byte) -97, 12);
+                }
+                this.field_b.a(ec.field_n, (byte) -106, 13);
+            }
+            if (2 == param1.field_j) {
+                if (0 == ib.field_e) {
+                    this.field_b.a(gf.field_d, (byte) -78, 12);
+                }
+                this.field_b.a(sf.field_a, (byte) -62, 13);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

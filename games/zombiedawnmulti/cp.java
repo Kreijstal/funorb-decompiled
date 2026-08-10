@@ -110,31 +110,24 @@ final class cp extends se implements jn, in {
 
     public final void a(int param0, int param1, gn param2, int param3, int param4) {
         RuntimeException var6 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             L1: {
-              L2: {
-                if (param2 != this.field_W) {
-                  break L2;
+              if (param2 != this.field_W) {
+                if (param2 == this.field_M) {
+                  this.i(16777215);
+                  break L1;
                 } else {
-                  qe.c((byte) 125);
-                  if (!ZombieDawnMulti.field_E) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
+                  break L1;
                 }
-              }
-              if (param2 == this.field_M) {
-                this.i(16777215);
-                break L1;
               } else {
+                qe.c((byte) 125);
                 break L1;
               }
             }
@@ -147,25 +140,25 @@ final class cp extends se implements jn, in {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var6 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var6);
+            stackIn_10_0 = (RuntimeException) (var6);
 
-            stackIn_11_1 = new StringBuilder().append("cp.E(").append(param0).append(',').append(param1).append(',');
+            stackIn_10_1 = new StringBuilder().append("cp.E(").append(param0).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
+              break L2;
             } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
+              break L2;
             }
           }
-          throw fa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param3 + ',' + param4 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

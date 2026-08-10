@@ -286,25 +286,28 @@ final class sna extends le {
             L2: {
               var4_int = param0;
               if (-1 != (var4_int ^ -1)) {
-                if (-2 != (var4_int ^ -1)) {
-                  break L2;
-                } else {
-                  L3: {
-                    stackIn_10_0 = this;
+                L3: {
+                  if (-2 != (var4_int ^ -1)) {
+                    break L3;
+                  } else {
+                    L4: {
+                      stackIn_10_0 = this;
 
-                    if (-2 != (param2.e((byte) -121) ^ -1)) {
-                      stackIn_11_0 = this;
-                      stackIn_11_1 = 0;
-                      break L3;
-                    } else {
-                      stackIn_11_0 = this;
-                      stackIn_11_1 = 1;
-                      break L3;
+                      if (-2 != (param2.e((byte) -121) ^ -1)) {
+                        stackIn_11_0 = this;
+                        stackIn_11_1 = 0;
+                        break L4;
+                      } else {
+                        stackIn_11_0 = this;
+                        stackIn_11_1 = 1;
+                        break L4;
+                      }
                     }
+                    ((sna) (this)).field_g = stackIn_11_1 != 0;
+                    break L3;
                   }
-                  ((sna) (this)).field_g = stackIn_11_1 != 0;
-                  break L2;
                 }
+                break L2;
               } else {
                 this.field_i = param2.e(1869) << -1130615932;
                 break L2;
@@ -314,7 +317,7 @@ final class sna extends le {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var4 = decompiledCaughtException;
             stackIn_15_0 = (RuntimeException) (var4);
 
@@ -324,12 +327,12 @@ final class sna extends le {
               stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackIn_16_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackIn_16_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');

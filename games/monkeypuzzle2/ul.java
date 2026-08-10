@@ -15,18 +15,18 @@ final class ul extends nf {
     }
 
     final void a(boolean param0, String param1, int param2, float param3) {
+        RuntimeException runtimeException = null;
+        String var6 = null;
         int stackIn_3_0 = 0;
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        String var6 = null;
         try {
           L0: {
             L1: {
@@ -64,13 +64,7 @@ final class ul extends nf {
                     break L2;
                   } else {
                     this.field_Q.field_G = false;
-                    if (!MonkeyPuzzle2.field_F) {
-                      break L2;
-                    } else {
-                      this.field_Q.a((byte) -115, 8405024, 4210752);
-                      this.field_Q.field_G = true;
-                      break L2;
-                    }
+                    break L2;
                   }
                 }
               } else {
@@ -93,24 +87,24 @@ final class ul extends nf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var5 = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var5);
+            runtimeException = decompiledCaughtException;
+            stackIn_18_0 = (RuntimeException) (runtimeException);
 
-            stackIn_20_1 = new StringBuilder().append("ul.D(").append(param0).append(',');
+            stackIn_18_1 = new StringBuilder().append("ul.D(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
               break L5;
             } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
               break L5;
             }
           }
-          throw la.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param2 + ',' + param3 + ')');
+          throw la.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

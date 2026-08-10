@@ -112,37 +112,30 @@ final class bg implements Iterable {
               }
             }
             L2: while (true) {
-              L3: {
-                if (var2_int <= var3) {
-                  break L3;
-                } else {
-                  var4 = param0.charAt(var3);
-                  if (var4 >= 48) {
-                    if (var4 <= 57) {
-                      var3++;
-                      if (var5 == 0) {
-                        continue L2;
-                      } else {
-                        break L3;
-                      }
-                    } else {
-                      stackIn_8_0 = null;
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    }
+              if (var2_int <= var3) {
+                stackIn_11_0 = ll.field_a;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              } else {
+                var4 = param0.charAt(var3);
+                if (var4 >= 48) {
+                  if (var4 <= 57) {
+                    var3++;
+                    continue L2;
                   } else {
-                    return null;
+                    stackIn_8_0 = null;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   }
+                } else {
+                  return null;
                 }
               }
-              stackIn_11_0 = ll.field_a;
-              decompiledRegionSelector0 = 1;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
             stackIn_14_0 = (RuntimeException) (var2);
 
@@ -152,12 +145,12 @@ final class bg implements Iterable {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackIn_15_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackIn_15_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw ld.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');

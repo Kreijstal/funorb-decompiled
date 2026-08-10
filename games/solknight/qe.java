@@ -9,48 +9,34 @@ final class qe extends ki implements re, ka {
     private kj field_E;
 
     public final void a(int param0, int param1, int param2, kj param3) {
-        RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         var6 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if (param1 == 0) {
-                  break L2;
-                } else {
-                  L3: {
-                    if ((param1 ^ -1) == -2) {
-                      break L3;
-                    } else {
-                      if (-3 != (param1 ^ -1)) {
-                        break L1;
-                      } else {
-                        ud.a(11692, "conduct.ws");
-                        if (var6 == 0) {
-                          break L1;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                  }
+              if (param1 == 0) {
+                ud.a(11692, "terms.ws");
+                break L1;
+              } else {
+                if ((param1 ^ -1) == -2) {
                   ud.a(11692, "privacy.ws");
-                  if (var6 == 0) {
+                  break L1;
+                } else {
+                  if (-3 != (param1 ^ -1)) {
                     break L1;
                   } else {
-                    break L2;
+                    ud.a(11692, "conduct.ws");
+                    break L1;
                   }
                 }
               }
-              ud.a(11692, "terms.ws");
-              break L1;
             }
             if (param2 == 50) {
               break L0;
@@ -61,25 +47,25 @@ final class qe extends ki implements re, ka {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var5 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var5);
+            stackIn_12_0 = (RuntimeException) (var5);
 
-            stackIn_14_1 = new StringBuilder().append("qe.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_12_1 = new StringBuilder().append("qe.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
             if (param3 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
             } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 

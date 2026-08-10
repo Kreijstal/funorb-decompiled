@@ -495,21 +495,47 @@ class sb extends pi {
     }
 
     final static void a(int param0) {
-        if (!kj.a(false)) {
-            if (!(null != dm.field_f)) {
-                dm.field_f = fn.a(0, 6);
+        L0: {
+          if (kj.a(false)) {
+            break L0;
+          } else {
+            if (null == dm.field_f) {
+              dm.field_f = fn.a(0, 6);
+              break L0;
+            } else {
+              break L0;
             }
+          }
         }
-        if (param0 != 6) {
+        L1: {
+          if (param0 == 6) {
+            break L1;
+          } else {
             field_n = (p) null;
+            break L1;
+          }
         }
-        if (!si.field_a && null != dm.field_f) {
-            if (!(!dm.field_f.field_q)) {
-                fn.a(dm.field_f.field_t, true);
-                si.field_a = true;
-                aa.field_j.a(35, pj.field_c);
-                ck.a(param0 + -30839);
+        L2: {
+          if (si.field_a) {
+            break L2;
+          } else {
+            L3: {
+              if (null == dm.field_f) {
+                break L3;
+              } else {
+                if (dm.field_f.field_q) {
+                  fn.a(dm.field_f.field_t, true);
+                  si.field_a = true;
+                  aa.field_j.a(35, pj.field_c);
+                  ck.a(param0 + -30839);
+                  break L3;
+                } else {
+                  break L2;
+                }
+              }
             }
+            break L2;
+          }
         }
     }
 

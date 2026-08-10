@@ -192,7 +192,7 @@ final class eg {
                           break L10;
                         }
                       }
-                      throw aa.a((Throwable) ((Object) stackIn_38_0), (stackIn_38_2 != 0) + " " + param3 + " " + param1.length + " " + mj.a(param1.length, (byte) -112, var9) + " " + mj.a(-2 + param1.length, (byte) -86, var9) + " " + this.field_i.field_h[param3] + " " + this.field_i.field_p);
+                      throw aa.a((Throwable) ((Object) stackIn_38_0), (stackIn_38_2 != 0) + " " + param3 + " " + var9.length + " " + mj.a(var9.length, (byte) -112, var9) + " " + mj.a(-2 + var9.length, (byte) -86, var9) + " " + this.field_i.field_h[param3] + " " + this.field_i.field_p);
                     }
                     L11: {
                       if (this.field_h) {

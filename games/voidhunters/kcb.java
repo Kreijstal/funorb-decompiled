@@ -26,8 +26,6 @@ final class kcb extends rqa {
         tv var9 = null;
         faa var10 = null;
         int var11 = 0;
-        tv[] var12 = null;
-        tv[] var13 = null;
         var11 = VoidHunters.field_G;
         try {
           L0: {
@@ -35,7 +33,6 @@ final class kcb extends rqa {
               if (param4 < -45) {
                 break L1;
               } else {
-                var12 = (tv[]) null;
                 kcb.a(-101, (dja) null, (faa) null, -50, 54, (tv[]) null);
                 break L1;
               }
@@ -55,8 +52,7 @@ final class kcb extends rqa {
                       }
                     }
                   }
-                  var13 = param1.a(11995, var6_int);
-                  param5 = var13;
+                  param5 = param1.a(11995, var6_int);
                   break L3;
                 }
                 var7 = 0;

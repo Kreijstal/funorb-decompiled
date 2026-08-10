@@ -726,108 +726,34 @@ final class hqb {
     }
 
     final void a(pgb param0, int param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param0.field_k) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (param1 > 73) {
-                L1: {
-                  this.field_c = param0.field_a;
-                  if (param0.field_a == 0) {
-                    L2: {
-                      if (kib.field_d == 0) {
-                        this.field_i.a(vv.field_a, (byte) -53, 12);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    this.field_i.a(tda.field_M, (byte) -53, 13);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                L3: {
-                  if (1 == param0.field_a) {
-                    L4: {
-                      if (0 != idb.field_p) {
-                        break L4;
-                      } else {
-                        this.field_i.a(gbb.field_p, (byte) -53, 12);
-                        break L4;
-                      }
-                    }
-                    this.field_i.a(ocb.field_j, (byte) -53, 13);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L5: {
-                  if (-3 != (param0.field_a ^ -1)) {
-                    break L5;
-                  } else {
-                    L6: {
-                      if (0 == lla.field_h) {
-                        this.field_i.a(bga.field_o, (byte) -53, 12);
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    this.field_i.a(uta.field_o, (byte) -53, 13);
-                    break L5;
-                  }
-                }
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            runtimeException = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (runtimeException);
-
-            stackIn_24_1 = new StringBuilder().append("hqb.I(");
-
-            if (param0 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L7;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L7;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
+        if (!(!param0.field_k)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
+        if (param1 <= 73) {
             return;
-          } else {
-            return;
-          }
+        }
+        try {
+            this.field_c = param0.field_a;
+            if (!(param0.field_a != 0)) {
+                if (!(kib.field_d != 0)) {
+                    this.field_i.a(vv.field_a, (byte) -53, 12);
+                }
+                this.field_i.a(tda.field_M, (byte) -53, 13);
+            }
+            if (!(1 != param0.field_a)) {
+                if (0 == idb.field_p) {
+                    this.field_i.a(gbb.field_p, (byte) -53, 12);
+                }
+                this.field_i.a(ocb.field_j, (byte) -53, 13);
+            }
+            if (-3 == (param0.field_a ^ -1)) {
+                if (!(0 != lla.field_h)) {
+                    this.field_i.a(bga.field_o, (byte) -53, 12);
+                }
+                this.field_i.a(uta.field_o, (byte) -53, 13);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "hqb.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

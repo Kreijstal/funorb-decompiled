@@ -14,12 +14,14 @@ final class una implements ntb {
         bba var3 = null;
         bba var4 = null;
         int var2 = 19 / ((param0 - 35) / 63);
-        if (null != this.field_b && this.field_g > 0 && this.field_b.length > this.field_g) {
-            var3 = this.field_b[-1 + this.field_g];
-            var4 = this.field_b[this.field_g];
-            this.field_b[-1 + this.field_g] = var4;
-            this.field_b[this.field_g] = var3;
-            this.field_g = this.field_g - 1;
+        if (null != this.field_b) {
+            if (this.field_g > 0 && this.field_b.length > this.field_g) {
+                var3 = this.field_b[-1 + this.field_g];
+                var4 = this.field_b[this.field_g];
+                this.field_b[-1 + this.field_g] = var4;
+                this.field_b[this.field_g] = var3;
+                this.field_g = this.field_g - 1;
+            }
         }
     }
 
@@ -183,66 +185,22 @@ final class una implements ntb {
     }
 
     final void a(int param0, rsb param1) {
-        RuntimeException runtimeException = null;
-        int var4 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = VoidHunters.field_G;
+        int var4 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              qha.b(false);
-              if (param0 == -2374) {
-                break L1;
-              } else {
+            qha.b(false);
+            if (param0 != -2374) {
                 this.field_e = 104;
-                break L1;
-              }
             }
-            L2: {
-              if (null == this.field_b) {
-                break L2;
-              } else {
+            if (null != this.field_b) {
                 this.field_c = 0;
-                L3: while (true) {
-                  if (this.field_b.length <= this.field_c) {
-                    this.field_c = -1;
-                    break L2;
-                  } else {
+                while (this.field_b.length > this.field_c) {
                     this.field_b[this.field_c].a(param1, -40);
                     this.field_c = this.field_c + 1;
-                    continue L3;
-                  }
                 }
-              }
+                this.field_c = -1;
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (runtimeException);
-
-            stackIn_11_1 = new StringBuilder().append("una.N(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L4;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L4;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "una.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -904,9 +862,11 @@ final class una implements ntb {
         if (param0 != -828) {
             this.field_g = 33;
         }
-        if (null != this.field_b && this.field_g >= 0 && this.field_g < this.field_b.length) {
-            var2 = this.field_b[this.field_g];
-            var2.a(this.field_e, -1);
+        if (null != this.field_b) {
+            if (this.field_g >= 0 && this.field_g < this.field_b.length) {
+                var2 = this.field_b[this.field_g];
+                var2.a(this.field_e, -1);
+            }
         }
     }
 

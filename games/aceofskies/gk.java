@@ -916,7 +916,7 @@ final class gk {
                             break L9;
                           }
                         }
-                        throw pn.a((Throwable) ((Object) stackIn_39_0), (stackIn_39_2 != 0) + " " + param2 + " " + param1.length + " " + lj.a(-124, var9, param1.length) + " " + lj.a(-118, var9, param1.length + -2) + " " + this.field_e.field_g[param2] + " " + this.field_e.field_t);
+                        throw pn.a((Throwable) ((Object) stackIn_39_0), (stackIn_39_2 != 0) + " " + param2 + " " + var9.length + " " + lj.a(-124, var9, var9.length) + " " + lj.a(-118, var9, var9.length + -2) + " " + this.field_e.field_g[param2] + " " + this.field_e.field_t);
                       }
                       L10: {
                         if (this.field_f) {

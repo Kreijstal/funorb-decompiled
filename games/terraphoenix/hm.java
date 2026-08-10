@@ -385,23 +385,26 @@ final class hm extends gl {
               }
             }
             L2: {
-              if (!this.field_P) {
-                break L2;
-              } else {
-                this.field_A = this.field_A + 1;
-                if (this.field_A <= this.field_K * 2) {
-                  break L2;
+              L3: {
+                if (!this.field_P) {
+                  break L3;
                 } else {
-                  this.field_A = this.field_A - 2 * this.field_K;
-                  break L2;
+                  this.field_A = this.field_A + 1;
+                  if (this.field_A <= this.field_K * 2) {
+                    break L3;
+                  } else {
+                    this.field_A = this.field_A - 2 * this.field_K;
+                    break L2;
+                  }
                 }
               }
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var5 = decompiledCaughtException;
             stackIn_8_0 = (RuntimeException) (var5);
 
@@ -411,12 +414,12 @@ final class hm extends gl {
               stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
               stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackIn_9_2 = "null";
-              break L3;
+              break L4;
             } else {
               stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
               stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackIn_9_2 = "{...}";
-              break L3;
+              break L4;
             }
           }
           throw qk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');

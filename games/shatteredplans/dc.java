@@ -607,6 +607,7 @@ final class dc {
 
     final static void d(int param0) {
         try {
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -625,35 +626,44 @@ final class dc {
                   }
                 }
                 L2: {
-                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
-                  if (var1 == null) {
-                    break L2;
-                  } else {
-                    try {
-                      L3: {
-                        var2 = Runtime.getRuntime();
-                        var4 = (Object[]) null;
-                        var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                        re.field_a = 1 + (int)(var3.longValue() / 1048576L);
+                  L3: {
+                    var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+                    if (var1 == null) {
+                      break L3;
+                    } else {
+                      try {
+                        L4: {
+                          var2 = Runtime.getRuntime();
+                          var4 = (Object[]) null;
+                          var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
+                          re.field_a = 1 + (int)(var3.longValue() / 1048576L);
+                          decompiledRegionSelector0 = 0;
+                          break L4;
+                        }
+                      } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L5: {
+                          var2_ref = decompiledCaughtException;
+                          decompiledRegionSelector0 = 1;
+                          break L5;
+                        }
+                      }
+                      if (decompiledRegionSelector0 == 0) {
+                        break L2;
+                      } else {
                         break L3;
                       }
-                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L4: {
-                        var2_ref = decompiledCaughtException;
-                        break L4;
-                      }
                     }
-                    break L2;
                   }
+                  break L2;
                 }
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L5: {
+              L6: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                break L5;
+                break L6;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -3964,49 +3974,14 @@ final class dc {
     }
 
     private final void a(ln param0, boolean param1, byte param2) {
-        RuntimeException runtimeException = null;
-        eg var5 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              kd.a(this.field_o, param1, param0, (byte) -2);
-              if (param2 > 113) {
-                break L1;
-              } else {
-                var5 = (eg) null;
+            kd.a(this.field_o, param1, param0, (byte) -2);
+            if (param2 <= 113) {
+                eg var5 = (eg) null;
                 this.a((ln) null, (eg) null, 39);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("dc.M(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw r.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) ((Object) runtimeException), "dc.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

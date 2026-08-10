@@ -102,35 +102,34 @@ final class r {
     }
 
     final static ao a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        ao[] var5 = wm.b(true);
-        ao[] var2 = var5;
-        if (param1 != 35) {
+        ao[] var2;
+        int var3;
+        int var4;
+        ao[] var5;
+        L0: {
+          var4 = ZombieDawnMulti.field_E ? 1 : 0;
+          var5 = wm.b(true);
+          var2 = var5;
+          if (param1 == 35) {
+            break L0;
+          } else {
             field_b = (String) null;
-            var3 = 0;
-            do {
-                if (var3 >= var5.length) {
-                    return null;
-                }
-                if (!(var5[var3].field_g != param0)) {
-                    return var5[var3];
-                }
-                var3++;
-            } while (var4 == 0);
-            return null;
+            break L0;
+          }
         }
         var3 = 0;
-        do {
-            if (var3 >= var5.length) {
-                return null;
+        L1: while (true) {
+          if (var3 < var5.length) {
+            if (var5[var3].field_g == param0) {
+              return var5[var3];
+            } else {
+              var3++;
+              continue L1;
             }
-            if (!(var5[var3].field_g != param0)) {
-                return var5[var3];
-            }
-            var3++;
-        } while (var4 == 0);
-        return null;
+          } else {
+            return null;
+          }
+        }
     }
 
     static {

@@ -230,20 +230,13 @@ final class ch {
               }
             }
             L2: {
-              L3: {
-                if (param1 != null) {
-                  break L3;
-                } else {
-                  var3 = this.field_d.field_b.field_b;
-                  if (!ZombieDawnMulti.field_E) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
+              if (param1 != null) {
+                var3 = param1;
+                break L2;
+              } else {
+                var3 = this.field_d.field_b.field_b;
+                break L2;
               }
-              var3 = param1;
-              break L2;
             }
             if (var3 == this.field_d.field_b) {
               this.field_f = null;
@@ -259,7 +252,7 @@ final class ch {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3_ref = decompiledCaughtException;
             stackIn_13_0 = (RuntimeException) (var3_ref);
 
@@ -269,12 +262,12 @@ final class ch {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw fa.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
@@ -301,29 +294,22 @@ final class ch {
         try {
           L0: {
             L1: {
-              L2: {
-                if (param1 == null) {
-                  break L2;
-                } else {
-                  var3 = param1;
-                  if (!ZombieDawnMulti.field_E) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              if (param1 == null) {
+                var3 = this.field_d.field_b.field_d;
+                break L1;
+              } else {
+                var3 = param1;
+                break L1;
               }
-              var3 = this.field_d.field_b.field_d;
-              break L1;
             }
             if (var3 != this.field_d.field_b) {
-              L3: {
+              L2: {
                 this.field_f = var3.field_d;
                 if (param0 == 2680) {
-                  break L3;
+                  break L2;
                 } else {
                   ch.a(95, true);
-                  break L3;
+                  break L2;
                 }
               }
               stackIn_9_0 = (br) (var3);
@@ -338,7 +324,7 @@ final class ch {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3_ref = decompiledCaughtException;
             stackIn_12_0 = (RuntimeException) (var3_ref);
 
@@ -348,12 +334,12 @@ final class ch {
               stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackIn_13_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackIn_13_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw fa.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');

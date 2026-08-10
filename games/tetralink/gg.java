@@ -96,16 +96,19 @@ final class gg extends hm {
               }
             }
             L7: {
-              if (null == ic.field_b) {
-                break L7;
-              } else {
-                if (ic.field_b.d((byte) 127)) {
-                  break L7;
+              L8: {
+                if (null == ic.field_b) {
+                  break L8;
                 } else {
-                  oa.field_B = null;
-                  break L7;
+                  if (ic.field_b.d((byte) 127)) {
+                    break L8;
+                  } else {
+                    oa.field_B = null;
+                    break L7;
+                  }
                 }
               }
+              break L7;
             }
             break L0;
           }

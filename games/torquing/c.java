@@ -3,70 +3,27 @@
  */
 final class c {
     final static void a(Torquing param0, int param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param1 == 9072) {
-              L1: {
-                rf.field_q[6] = new int[]{1};
-                ok.field_C[6] = 404;
-                vo.field_f[6] = new mh(param0, 6);
-                rf.field_q[9] = new int[]{18, 19, 17, 12};
-                de.field_c[9] = 40;
-                nn.field_a[9][0] = (af) ((Object) new ia(27, 52, 574, 402));
-                vo.field_f[9] = new mh(param0, 9);
-                rf.field_q[3] = new int[]{8, 9, 20};
-                vo.field_f[3] = new mh(param0, 3);
-                rf.field_q[2] = new int[]{20, 12};
-                vo.field_f[2] = new mh(param0, 2);
-                if ((wp.field_w ^ -1) >= -1) {
-                  break L1;
-                } else {
-                  rf.field_q[1] = new int[]{4, 2, 13, 10, 6, 11, 5};
-                  vo.field_f[1] = new mh(param0, 1);
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (runtimeException);
-
-            stackIn_7_1 = new StringBuilder().append("c.C(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
-          }
-          throw rb.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+        if (param1 != 9072) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            rf.field_q[6] = new int[]{1};
+            ok.field_C[6] = 404;
+            vo.field_f[6] = new mh(param0, 6);
+            rf.field_q[9] = new int[]{18, 19, 17, 12};
+            de.field_c[9] = 40;
+            nn.field_a[9][0] = (af) ((Object) new ia(27, 52, 574, 402));
+            vo.field_f[9] = new mh(param0, 9);
+            rf.field_q[3] = new int[]{8, 9, 20};
+            vo.field_f[3] = new mh(param0, 3);
+            rf.field_q[2] = new int[]{20, 12};
+            vo.field_f[2] = new mh(param0, 2);
+            if ((wp.field_w ^ -1) < -1) {
+                rf.field_q[1] = new int[]{4, 2, 13, 10, 6, 11, 5};
+                vo.field_f[1] = new mh(param0, 1);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) ((Object) runtimeException), "c.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

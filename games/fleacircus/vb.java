@@ -28,22 +28,20 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static gm a(String param0, byte param1) {
         String var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         gm var4 = null;
         String var5 = null;
         int var6 = 0;
         CharSequence var7 = null;
         CharSequence var8 = null;
-        gm stackIn_15_0 = null;
-        Object stackIn_18_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
+        gm stackIn_14_0 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var6 = fleas.field_A ? 1 : 0;
         try {
           L0: {
@@ -65,36 +63,20 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
                   L3: {
                     var8 = (CharSequence) ((Object) var4.field_jb);
                     var5 = uk.a(102, var8);
-                    stackIn_18_0 = null;
-
-                    if (var6 != 0) {
+                    if (var5 == null) {
+                      var5 = var4.field_jb;
                       break L3;
                     } else {
-                      L4: {
-                        if (stackIn_18_0 == var5) {
-                          var5 = var4.field_jb;
-                          break L4;
-                        } else {
-                          break L4;
-                        }
-                      }
-                      if (!var5.equals(var2)) {
-                        var4 = (gm) ((Object) kc.field_c.a(-113));
-                        if (var6 == 0) {
-                          continue L2;
-                        } else {
-                          stackIn_18_0 = null;
-                          break L3;
-                        }
-                      } else {
-                        stackIn_15_0 = (gm) (var4);
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      }
+                      break L3;
                     }
                   }
-                  decompiledRegionSelector0 = 0;
-                  break L0;
+                  if (!var5.equals(var2)) {
+                    var4 = (gm) ((Object) kc.field_c.a(-113));
+                    continue L2;
+                  } else {
+                    stackIn_14_0 = (gm) (var4);
+                    break L0;
+                  }
                 } else {
                   return null;
                 }
@@ -105,31 +87,27 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var2_ref = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var2_ref);
+            stackIn_19_0 = (RuntimeException) (var2_ref);
 
-            stackIn_21_1 = new StringBuilder().append("vb.B(");
+            stackIn_19_1 = new StringBuilder().append("vb.B(");
 
             if (param0 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L5;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
+              break L4;
             } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L5;
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
+              break L4;
             }
           }
-          throw pf.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param1 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return (gm) ((Object) stackIn_18_0);
-        } else {
-          return stackIn_15_0;
-        }
+        return stackIn_14_0;
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {

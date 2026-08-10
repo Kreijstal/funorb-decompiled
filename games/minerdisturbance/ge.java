@@ -39,7 +39,7 @@ final class ge {
                           } else {
                             kf.a(gl.field_u[var5], (byte) -111);
                             gl.field_u[var5] = null;
-                            decompiledRegionSelector0 = 3;
+                            decompiledRegionSelector0 = 2;
                             break L0;
                           }
                         }
@@ -61,7 +61,7 @@ final class ge {
                           if (null != dn.field_t[var3_int]) {
                             kf.a(dn.field_t[var3_int], (byte) -114);
                             dn.field_t[var3_int] = null;
-                            decompiledRegionSelector0 = 2;
+                            decompiledRegionSelector0 = 1;
                             break L0;
                           } else {
                             break L5;
@@ -74,7 +74,7 @@ final class ge {
                   }
                 }
               }
-              decompiledRegionSelector0 = 1;
+              decompiledRegionSelector0 = 3;
               break L0;
             } else {
               decompiledRegionSelector0 = 0;

@@ -81,36 +81,24 @@ class dh extends hl implements ai {
     public static void e(byte param0) {
         if (param0 != -94) {
             field_Z = 63;
-            field_bb = null;
-            field_X = null;
-            return;
         }
         field_bb = null;
         field_X = null;
     }
 
     final static String a(int param0, long param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
         qc.field_c.setTime(new Date(param1));
-        var3 = qc.field_c.get(7);
-        var4 = qc.field_c.get(5);
-        var5 = qc.field_c.get(2);
-        var6 = qc.field_c.get(1);
-        var7 = qc.field_c.get(11);
-        var8 = qc.field_c.get(12);
-        var9 = qc.field_c.get(13);
+        int var3 = qc.field_c.get(7);
+        int var4 = qc.field_c.get(5);
+        int var5 = qc.field_c.get(2);
+        int var6 = qc.field_c.get(1);
+        int var7 = qc.field_c.get(11);
+        int var8 = qc.field_c.get(12);
+        int var9 = qc.field_c.get(13);
         if (param0 != -15591) {
-          field_bb = (tl) null;
-          return te.field_N[var3 + -1] + ", " + var4 / 10 + var4 % 10 + "-" + md.field_e[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
-        } else {
-          return te.field_N[var3 + -1] + ", " + var4 / 10 + var4 % 10 + "-" + md.field_e[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+            field_bb = (tl) null;
         }
+        return te.field_N[var3 + -1] + ", " + var4 / 10 + var4 % 10 + "-" + md.field_e[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     final void d(byte param0) {
@@ -122,70 +110,20 @@ class dh extends hl implements ai {
     }
 
     final void q(int param0) {
-        s var3;
-        if (param0 == 4210752) {
-          if (this.field_A) {
-            this.field_A = false;
-            if (!this.field_W) {
-              if (!this.field_cb) {
-                return;
-              } else {
-                rf.d(false);
-                return;
-              }
-            } else {
-              jk.a(121);
-              if (OrbDefence.field_D) {
-                L0: {
-                  if (this.field_cb) {
-                    rf.d(false);
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
+        if (param0 != 4210752) {
+            s var3 = (s) null;
+            this.a((byte) 120, -34, 27, (s) null, 96);
+        }
+        if (!this.field_A) {
             return;
-          }
+        }
+        this.field_A = false;
+        if (this.field_W) {
+            jk.a(121);
         } else {
-          var3 = (s) null;
-          this.a((byte) 120, -34, 27, (s) null, 96);
-          if (this.field_A) {
-            this.field_A = false;
-            if (this.field_W) {
-              jk.a(121);
-              if (!OrbDefence.field_D) {
-                return;
-              } else {
-                L1: {
-                  if (this.field_cb) {
-                    rf.d(false);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                return;
-              }
-            } else {
-              L2: {
-                if (this.field_cb) {
-                  rf.d(false);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return;
+            if (!(!this.field_cb)) {
+                rf.d(false);
             }
-          } else {
-            return;
-          }
         }
     }
 
@@ -212,32 +150,25 @@ class dh extends hl implements ai {
               var2_int = param0.length();
               var3 = 0;
               L1: while (true) {
-                L2: {
-                  if (var3 >= var2_int) {
-                    break L2;
-                  } else {
-                    var4 = param0.charAt(var3);
-                    if (48 <= var4) {
-                      if (57 >= var4) {
-                        var3++;
-                        if (var5 == 0) {
-                          continue L1;
-                        } else {
-                          break L2;
-                        }
-                      } else {
-                        stackIn_10_0 = null;
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      }
+                if (var3 >= var2_int) {
+                  stackIn_13_0 = ba.field_a;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                } else {
+                  var4 = param0.charAt(var3);
+                  if (48 <= var4) {
+                    if (57 >= var4) {
+                      var3++;
+                      continue L1;
                     } else {
-                      return null;
+                      stackIn_10_0 = null;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     }
+                  } else {
+                    return null;
                   }
                 }
-                stackIn_13_0 = ba.field_a;
-                decompiledRegionSelector0 = 2;
-                break L0;
               }
             } else {
               stackIn_3_0 = (e) null;
@@ -247,7 +178,7 @@ class dh extends hl implements ai {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
             stackIn_16_0 = (RuntimeException) (var2);
 
@@ -257,12 +188,12 @@ class dh extends hl implements ai {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "null";
-              break L3;
+              break L2;
             } else {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "{...}";
-              break L3;
+              break L2;
             }
           }
           throw dd.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ')');
@@ -282,17 +213,18 @@ class dh extends hl implements ai {
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
+        ec stackIn_12_0 = null;
         ec stackIn_13_0 = null;
-        ec stackIn_14_0 = null;
-        String stackIn_14_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        String stackIn_13_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
+        ec var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         ec var7 = null;
@@ -318,91 +250,59 @@ class dh extends hl implements ai {
                 }
               }
               L2: {
-                L3: {
-                  ((dh) (this)).field_eb = stackIn_7_1 != 0;
-                  this.field_ab.a(16711422, 8405024, 4210752);
-                  var7 = new ec((dh) (this), this.field_db, param2);
-                  var5 = -74 % ((param0 - 43) / 46);
-                  if ((param1 ^ -1) == -6) {
-                    break L3;
-                  } else {
-                    L4: {
-                      if (-257 != (param1 ^ -1)) {
-                        break L4;
-                      } else {
-                        var7.a(tk.field_l, -34, (ag) (this));
-                        if (var6 == 0) {
-                          break L2;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    L5: {
-                      stackIn_13_0 = (ec) (var7);
+                ((dh) (this)).field_eb = stackIn_7_1 != 0;
+                this.field_ab.a(16711422, 8405024, 4210752);
+                var7 = new ec((dh) (this), this.field_db, param2);
+                var4 = var7;
+                var5 = -74 % ((param0 - 43) / 46);
+                if ((param1 ^ -1) == -6) {
+                  var7.a(vc.field_n, 11, -15858);
+                  var7.a(ld.field_d, 17, -15858);
+                  break L2;
+                } else {
+                  if (-257 != (param1 ^ -1)) {
+                    L3: {
+                      stackIn_12_0 = (ec) (var7);
 
                       if (this.field_W) {
-                        stackIn_14_0 = (ec) ((Object) stackIn_13_0);
-                        stackIn_14_1 = tk.field_l;
-                        break L5;
+                        stackIn_13_0 = (ec) ((Object) stackIn_12_0);
+                        stackIn_13_1 = tk.field_l;
+                        break L3;
                       } else {
-                        stackIn_14_0 = (ec) ((Object) stackIn_13_0);
-                        stackIn_14_1 = vc.field_i;
-                        break L5;
+                        stackIn_13_0 = (ec) ((Object) stackIn_12_0);
+                        stackIn_13_1 = vc.field_i;
+                        break L3;
                       }
                     }
-                    ((ec) (Object) stackIn_14_0).a(stackIn_14_1, -1, -15858);
-                    if (var6 == 0) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                var7.a(vc.field_n, 11, -15858);
-                var7.a(ld.field_d, 17, -15858);
-                break L2;
-              }
-              L6: {
-                L7: {
-                  if (-4 != (param1 ^ -1)) {
-                    break L7;
+                    ((ec) (Object) stackIn_13_0).a(stackIn_13_1, -1, -15858);
+                    break L2;
                   } else {
-                    var7.a(vk.field_y, 7, -15858);
-                    if (var6 == 0) {
-                      break L6;
-                    } else {
-                      break L7;
-                    }
+                    var7.a(tk.field_l, -34, (ag) (this));
+                    break L2;
                   }
                 }
-                if ((param1 ^ -1) == -5) {
-                  var7.a(l.field_a, 8, -15858);
-                  break L6;
-                } else {
-                  L8: {
+              }
+              L4: {
+                if (-4 != (param1 ^ -1)) {
+                  if ((param1 ^ -1) == -5) {
+                    var7.a(l.field_a, 8, -15858);
+                    break L4;
+                  } else {
                     if (param1 != 6) {
-                      break L8;
+                      if ((param1 ^ -1) != -10) {
+                        break L4;
+                      } else {
+                        var7.a(fk.field_d, -34, (ag) (this));
+                        break L4;
+                      }
                     } else {
                       var7.a(qf.field_k, 9, -15858);
-                      if (var6 == 0) {
-                        break L6;
-                      } else {
-                        break L8;
-                      }
+                      break L4;
                     }
                   }
-                  if ((param1 ^ -1) != -10) {
-                    break L6;
-                  } else {
-                    var7.a(fk.field_d, -34, (ag) (this));
-                    if (var6 == 0) {
-                      break L6;
-                    } else {
-                      var7.a(l.field_a, 8, -15858);
-                      break L6;
-                    }
-                  }
+                } else {
+                  var7.a(vk.field_y, 7, -15858);
+                  break L4;
                 }
               }
               this.a(false, var7);
@@ -412,25 +312,25 @@ class dh extends hl implements ai {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var4 = decompiledCaughtException;
-            stackIn_32_0 = (RuntimeException) (var4);
+          L5: {
+            var4_ref = decompiledCaughtException;
+            stackIn_27_0 = (RuntimeException) (var4_ref);
 
-            stackIn_32_1 = new StringBuilder().append("dh.PA(").append(param0).append(',').append(param1).append(',');
+            stackIn_27_1 = new StringBuilder().append("dh.PA(").append(param0).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackIn_33_2 = "null";
-              break L9;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
+              break L5;
             } else {
-              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackIn_33_2 = "{...}";
-              break L9;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
+              break L5;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -456,57 +356,16 @@ class dh extends hl implements ai {
     }
 
     public void a(byte param0, int param1, int param2, s param3, int param4) {
-        RuntimeException runtimeException = null;
-        int var6_int = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              L2: {
-                if (this.field_eb) {
-                  break L2;
-                } else {
-                  jj.a("tochangedisplayname.ws", (byte) -93, uj.b((byte) -120));
-                  if (!OrbDefence.field_D) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              il.a(3, 0);
-              this.q(4210752);
-              break L1;
-            }
-            var6_int = -39 % ((-3 - param0) / 62);
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("dh.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
+            if (!this.field_eb) {
+                jj.a("tochangedisplayname.ws", (byte) -93, uj.b((byte) -120));
             } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
+                il.a(3, 0);
+                this.q(4210752);
             }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param4 + ')');
+            int var6_int = -39 % ((-3 - param0) / 62);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) ((Object) runtimeException), "dh.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

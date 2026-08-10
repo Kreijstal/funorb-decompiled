@@ -387,47 +387,50 @@ class ic implements t, dl {
             }
             L5: {
               L6: {
-                var6 = this.field_f;
-                if (0 == var6) {
-                  break L6;
-                } else {
-                  if (3 != var6) {
-                    if (-2 != (var6 ^ -1)) {
-                      if ((var6 ^ -1) != -3) {
-                        break L5;
+                L7: {
+                  var6 = this.field_f;
+                  if (0 == var6) {
+                    break L7;
+                  } else {
+                    if (3 != var6) {
+                      if (-2 != (var6 ^ -1)) {
+                        if ((var6 ^ -1) != -3) {
+                          break L6;
+                        } else {
+                          if (!(param1.field_k instanceof cj)) {
+                            break L6;
+                          } else {
+                            ((cj) ((Object) param1.field_k)).a(-19121, this.c((byte) 78, param1), var5, this.field_k, var3_int);
+                            break L5;
+                          }
+                        }
                       } else {
-                        if (!(param1.field_k instanceof cj)) {
+                        if (param1.field_k instanceof cj) {
+                          ((cj) ((Object) param1.field_k)).a(113, this.field_k, this.c((byte) 78, param1), var5, var3_int >> -1508892255);
                           break L5;
                         } else {
-                          ((cj) ((Object) param1.field_k)).a(-19121, this.c((byte) 78, param1), var5, this.field_k, var3_int);
                           break L5;
                         }
                       }
                     } else {
-                      if (param1.field_k instanceof cj) {
-                        ((cj) ((Object) param1.field_k)).a(113, this.field_k, this.c((byte) 78, param1), var5, var3_int >> -1508892255);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
+                      break L7;
                     }
-                  } else {
-                    break L6;
                   }
                 }
+                if (!(param1.field_k instanceof cj)) {
+                  break L6;
+                } else {
+                  ((cj) ((Object) param1.field_k)).a(1888, var5, this.field_k, 0, this.c((byte) 67, param1));
+                  break L5;
+                }
               }
-              if (!(param1.field_k instanceof cj)) {
-                break L5;
-              } else {
-                ((cj) ((Object) param1.field_k)).a(1888, var5, this.field_k, 0, this.c((byte) 67, param1));
-                break L5;
-              }
+              break L5;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var3 = decompiledCaughtException;
             stackIn_34_0 = (RuntimeException) (var3);
 
@@ -437,12 +440,12 @@ class ic implements t, dl {
               stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
               stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackIn_35_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
               stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackIn_35_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw sl.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ')');
@@ -502,49 +505,14 @@ class ic implements t, dl {
     }
 
     private final void a(byte param0, int param1, al param2, int param3) {
-        RuntimeException runtimeException = null;
-        al var6 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.a(param2, this.field_m, 0, 0, param3, param1, (byte) -114, this.field_i);
-              if (param0 < -37) {
-                break L1;
-              } else {
-                var6 = (al) null;
+            this.a(param2, this.field_m, 0, 0, param3, param1, (byte) -114, this.field_i);
+            if (param0 >= -37) {
+                al var6 = (al) null;
                 this.a((al) null, 74);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ic.AA(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) ((Object) runtimeException), "ic.AA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

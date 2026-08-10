@@ -85,32 +85,35 @@ final class hnb extends iw implements oo {
               }
             }
             L6: {
-              if (null == this.field_P) {
-                break L6;
-              } else {
-                L7: {
-                  if (this.field_P.h(0)) {
-                    stackIn_16_0 = 0;
+              L7: {
+                if (null == this.field_P) {
+                  break L7;
+                } else {
+                  L8: {
+                    if (this.field_P.h(0)) {
+                      stackIn_16_0 = 0;
+                      break L8;
+                    } else {
+                      stackIn_16_0 = 1;
+                      break L8;
+                    }
+                  }
+                  if (stackIn_16_0 == (this.field_M ? 1 : 0)) {
+                    this.a(true, this.field_L);
+                    this.field_M = this.field_P.h(0);
                     break L7;
                   } else {
-                    stackIn_16_0 = 1;
-                    break L7;
+                    break L6;
                   }
                 }
-                if (stackIn_16_0 == (this.field_M ? 1 : 0)) {
-                  this.a(true, this.field_L);
-                  this.field_M = this.field_P.h(0);
-                  break L6;
-                } else {
-                  break L6;
-                }
               }
+              break L6;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L9: {
             var5_ref = decompiledCaughtException;
             stackIn_22_0 = (RuntimeException) (var5_ref);
 
@@ -120,12 +123,12 @@ final class hnb extends iw implements oo {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "null";
-              break L8;
+              break L9;
             } else {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "{...}";
-              break L8;
+              break L9;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
@@ -815,27 +818,30 @@ final class hnb extends iw implements oo {
                           break L3;
                         }
                       }
-                      var6_int = stackIn_13_0;
-                      if (var6_int != 0) {
-                        break L2;
-                      } else {
-                        if (this.field_L != param3) {
-                          break L2;
+                      L4: {
+                        var6_int = stackIn_13_0;
+                        if (var6_int != 0) {
+                          break L4;
                         } else {
-                          if (!this.field_K) {
-                            this.field_v.a(false, new mr(this.field_v, qua.field_a));
-                            break L2;
+                          if (this.field_L != param3) {
+                            break L4;
                           } else {
-                            if (-1 <= (hcb.field_o ^ -1)) {
-                              this.field_v.a(false, new qh(this.field_v));
+                            if (!this.field_K) {
+                              this.field_v.a(false, new mr(this.field_v, qua.field_a));
                               break L2;
                             } else {
-                              this.a(true, param3);
-                              break L2;
+                              if (-1 <= (hcb.field_o ^ -1)) {
+                                this.field_v.a(false, new qh(this.field_v));
+                                break L2;
+                              } else {
+                                this.a(true, param3);
+                                break L2;
+                              }
                             }
                           }
                         }
                       }
+                      break L2;
                     }
                   }
                 }
@@ -845,7 +851,7 @@ final class hnb extends iw implements oo {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var6 = decompiledCaughtException;
             stackIn_28_0 = (RuntimeException) (var6);
 
@@ -855,12 +861,12 @@ final class hnb extends iw implements oo {
               stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
               stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackIn_29_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
               stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackIn_29_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param4 + ')');

@@ -148,60 +148,16 @@ final class wf implements Iterable {
     }
 
     final static void a(String param0, boolean param1, boolean param2) {
-        RuntimeException runtimeException = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              ah.field_c = true;
-              if (!param2) {
-                stackIn_3_0 = 0;
-                break L1;
-              } else {
-                stackIn_3_0 = 1;
-                break L1;
-              }
-            }
-            L2: {
-              ud.field_c = stackIn_3_0 != 0;
-              ok.field_x = new bd(nb.field_a, rg.field_o, param0, jg.field_d, ud.field_c);
-              nb.field_a.b(ok.field_x, (byte) -35);
-              if (!param1) {
-                break L2;
-              } else {
+            ah.field_c = true;
+            ud.field_c = param2 ? true : false;
+            ok.field_x = new bd(nb.field_a, rg.field_o, param0, jg.field_d, ud.field_c);
+            nb.field_a.b(ok.field_x, (byte) -35);
+            if (param1) {
                 field_e = (String) null;
-                break L2;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("wf.E(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
-          }
-          throw pf.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) ((Object) runtimeException), "wf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

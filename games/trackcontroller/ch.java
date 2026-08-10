@@ -158,47 +158,13 @@ abstract class ch extends re {
     }
 
     final void a(byte param0, String param1, int param2) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.a(480, param2, 640, 16813, param1);
-              if (param0 < -64) {
-                break L1;
-              } else {
+            this.a(480, param2, 640, 16813, param1);
+            if (param0 >= -64) {
                 ch.n(-86);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ch.V(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) ((Object) runtimeException), "ch.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -875,6 +841,7 @@ abstract class ch extends re {
 
     private final int j(int param0) {
         int var2;
+        int var3;
         if (this.field_e) {
           return -1;
         } else {
@@ -889,15 +856,8 @@ abstract class ch extends re {
                 return -1;
               } else {
                 L0: {
-                  if (var2 == 0) {
-                    if (rl.field_N == 11) {
-                      if (-1 == (gj.field_c ^ -1)) {
-                        ri.e(-128);
-                        break L0;
-                      } else {
-                        return var2;
-                      }
-                    } else {
+                  if (var2 != 0) {
+                    if (1 == var2) {
                       if (rl.field_N == 11) {
                         if (-1 == (gj.field_c ^ -1)) {
                           ri.e(-128);
@@ -908,6 +868,21 @@ abstract class ch extends re {
                       } else {
                         return var2;
                       }
+                    } else {
+                      L1: {
+                        if (ka.field_a) {
+                          break L1;
+                        } else {
+                          this.a("reconnect", (byte) 100);
+                          break L1;
+                        }
+                      }
+                      var3 = 8 % ((param0 - -14) / 33);
+                      hh.a(-28717);
+                      af.a(-100, var2, fi.field_t);
+                      li.field_i = true;
+                      rk.field_eb = qg.a(false) + 15000L;
+                      return var2;
                     }
                   } else {
                     if (rl.field_N == 11) {

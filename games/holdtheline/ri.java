@@ -11,66 +11,18 @@ final class ri {
     static ac field_e;
 
     final static void a(byte param0, String[] param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            L1: {
-              if (null == cg.field_b) {
-                break L1;
-              } else {
-                cg.field_b.field_R.a(param1, (byte) 43);
-                break L1;
-              }
-            }
-            if (param0 > 33) {
-              L2: {
-                if (vf.field_l == null) {
-                  break L2;
-                } else {
-                  vf.field_l.field_H.a(param1, (byte) 43);
-                  break L2;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (runtimeException);
-
-            stackIn_9_1 = new StringBuilder().append("ri.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
-          }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+        if (null != cg.field_b) {
+            cg.field_b.field_R.a(param1, (byte) 43);
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        if (param0 <= 33) {
+            return;
+        }
+        try {
+            if (vf.field_l != null) {
+                vf.field_l.field_H.a(param1, (byte) 43);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

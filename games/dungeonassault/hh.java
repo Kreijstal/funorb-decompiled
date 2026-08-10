@@ -519,59 +519,16 @@ class hh implements ca, th {
     }
 
     public void a(byte param0, lm param1, int param2, int param3, boolean param4) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (this.field_u == null) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                this.a(param1, param2, (byte) 111, param3);
-                if (param0 == 34) {
-                  break L1;
-                } else {
-                  this.field_j = 71;
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("hh.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
-          }
-          throw vk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        if (!(this.field_u != null)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            this.a(param1, param2, (byte) 111, param3);
+            if (param0 != 34) {
+                this.field_j = 71;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) ((Object) runtimeException), "hh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -856,49 +813,14 @@ class hh implements ca, th {
     }
 
     private final void a(lm param0, int param1, byte param2, int param3) {
-        RuntimeException runtimeException = null;
-        lm var6 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.a((byte) -64, this.field_q, this.field_g, param1, 0, param0, 0, param3);
-              if (param2 >= 91) {
-                break L1;
-              } else {
-                var6 = (lm) null;
+            this.a((byte) -64, this.field_q, this.field_g, param1, 0, param0, 0, param3);
+            if (param2 < 91) {
+                lm var6 = (lm) null;
                 this.a((lm) null, -119, (byte) -24, -82);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("hh.L(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw vk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) ((Object) runtimeException), "hh.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1022,47 +944,50 @@ class hh implements ca, th {
             }
             L4: {
               L5: {
-                var7 = this.field_f;
-                if (-1 != (var7 ^ -1)) {
-                  if (-4 != (var7 ^ -1)) {
-                    if ((var7 ^ -1) == -2) {
-                      if (param0.field_t instanceof fe) {
-                        ((fe) ((Object) param0.field_t)).a(var5, this.b(param0, -444136767), this.field_u, (byte) -78, var3_int >> -1161650911);
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    } else {
-                      if (2 == var7) {
+                L6: {
+                  var7 = this.field_f;
+                  if (-1 != (var7 ^ -1)) {
+                    if (-4 != (var7 ^ -1)) {
+                      if ((var7 ^ -1) == -2) {
                         if (param0.field_t instanceof fe) {
-                          ((fe) ((Object) param0.field_t)).a(var3_int, (byte) 81, this.b(param0, -444136767), this.field_u, var5);
+                          ((fe) ((Object) param0.field_t)).a(var5, this.b(param0, -444136767), this.field_u, (byte) -78, var3_int >> -1161650911);
                           break L4;
                         } else {
                           break L4;
                         }
                       } else {
-                        break L4;
+                        if (2 == var7) {
+                          if (param0.field_t instanceof fe) {
+                            ((fe) ((Object) param0.field_t)).a(var3_int, (byte) 81, this.b(param0, -444136767), this.field_u, var5);
+                            break L5;
+                          } else {
+                            break L4;
+                          }
+                        } else {
+                          break L4;
+                        }
                       }
+                    } else {
+                      break L6;
                     }
                   } else {
-                    break L5;
+                    break L6;
                   }
-                } else {
+                }
+                if (!(param0.field_t instanceof fe)) {
                   break L5;
+                } else {
+                  ((fe) ((Object) param0.field_t)).a(this.b(param0, -444136767), -74, this.field_u, 0, var5);
+                  break L4;
                 }
               }
-              if (!(param0.field_t instanceof fe)) {
-                break L4;
-              } else {
-                ((fe) ((Object) param0.field_t)).a(this.b(param0, -444136767), -74, this.field_u, 0, var5);
-                break L4;
-              }
+              break L4;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var3 = decompiledCaughtException;
             stackIn_30_0 = (RuntimeException) (var3);
 
@@ -1072,12 +997,12 @@ class hh implements ca, th {
               stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
               stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackIn_31_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
               stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackIn_31_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw vk.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ',' + param1 + ')');

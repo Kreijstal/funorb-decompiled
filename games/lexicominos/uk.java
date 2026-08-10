@@ -65,20 +65,20 @@ final class uk extends ql {
     }
 
     final void a(boolean param0, String param1, int param2, float param3) {
+        RuntimeException runtimeException = null;
+        int var5_int = 0;
         boolean stackIn_2_0 = false;
         boolean stackIn_3_0 = false;
         int stackIn_3_1 = 0;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
         try {
           L0: {
             L1: {
@@ -122,13 +122,7 @@ final class uk extends ql {
                     break L2;
                   } else {
                     this.field_X.field_G = false;
-                    if (!Lexicominos.field_L) {
-                      break L2;
-                    } else {
-                      this.field_X.b(4210752, 8405024, 86);
-                      this.field_X.field_G = true;
-                      break L2;
-                    }
+                    break L2;
                   }
                 }
               }
@@ -141,24 +135,24 @@ final class uk extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var5 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var5);
+            runtimeException = decompiledCaughtException;
+            stackIn_15_0 = (RuntimeException) (runtimeException);
 
-            stackIn_17_1 = new StringBuilder().append("uk.J(").append(param0).append(',');
+            stackIn_15_1 = new StringBuilder().append("uk.J(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
               break L4;
             } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
               break L4;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param2 + ',' + param3 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -304,121 +298,42 @@ final class uk extends ql {
     }
 
     final static void g(boolean param0) {
-        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
         th var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = Lexicominos.field_L ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var1 = ed.field_q;
-                        if (param0) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        uk.g(false);
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        if (!kf.d(true)) {
-                            statePc = 10;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var1.h(8, 0);
-                        fieldTemp$1 = var1.field_h + 1;
-                        var1.field_h = var1.field_h + 1;
-                        var2 = fieldTemp$1;
-                        ej.a(-17, var1);
-                        ed.field_q.d(-var2 + var1.field_h, (byte) -125);
-                        if (var3 == 0) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (var3 == 0) {
-                            statePc = 3;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var1_ref = (RuntimeException) ((Object) caughtException);
-                    throw ld.a((Throwable) ((Object) var1_ref), "uk.A(" + param0 + ')');
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
+        var3 = Lexicominos.field_L ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var1 = ed.field_q;
+              if (param0) {
+                break L1;
+              } else {
+                uk.g(false);
+                break L1;
+              }
             }
+            L2: while (true) {
+              if (!kf.d(true)) {
+                break L0;
+              } else {
+                var1.h(8, 0);
+                fieldTemp$2 = var1.field_h + 1;
+                var1.field_h = var1.field_h + 1;
+                var2 = fieldTemp$2;
+                ej.a(-17, var1);
+                ed.field_q.d(-var2 + var1.field_h, (byte) -125);
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ld.a((Throwable) ((Object) var1_ref), "uk.A(" + param0 + ')');
         }
     }
 

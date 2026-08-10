@@ -116,13 +116,13 @@ final class ue {
                             var21++;
                             continue L6;
                           } else {
-                            var15 = param0[var19];
+                            var15 = var12[var19];
                             var19 = var19 + var7_int;
-                            var15 = var15 + param0[var19];
+                            var15 = var15 + var12[var19];
                             var19 = var19 + var7_int;
-                            var15 = var15 + param0[var20];
+                            var15 = var15 + var12[var20];
                             var20 = var20 + var7_int;
-                            var15 = var15 + param0[var20];
+                            var15 = var15 + var12[var20];
                             var20 = var20 + var7_int;
                             var13[var18] = (byte)(var15 >> 92680482);
                             var18 = var18 + var7_int;

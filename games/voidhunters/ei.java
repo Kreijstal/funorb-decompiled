@@ -27,94 +27,39 @@ final class ei implements wwa {
     }
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
-        RuntimeException runtimeException = null;
+        ata var15 = null;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
+        int var14 = 0;
         double var10 = 0.0;
         int var12 = 0;
         int var13 = 0;
-        int var14 = 0;
-        ata var15 = null;
-        shb stackIn_3_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 instanceof ata) {
-                stackIn_3_0 = (shb) (param1);
-                break L1;
-              } else {
-                stackIn_3_0 = null;
-                break L1;
-              }
+            var15 = !(param1 instanceof ata) ? null : (ata) ((Object) param1);
+            dma.d(param1.field_g + param2, param1.field_r + param3, param1.field_h, param1.field_f, this.field_h);
+            if (var15 != null) {
             }
-            L2: {
-              var15 = (ata) ((Object) stackIn_3_0);
-              dma.d(param1.field_g + param2, param1.field_r + param3, param1.field_h, param1.field_f, this.field_h);
-              if (var15 == null) {
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              var7 = var15.field_J + param2 - -param1.field_g;
-              var9 = 127 / ((-27 - param0) / 35);
-              var8 = var15.field_B + (param1.field_r + param3);
-              dma.f(var7, var8, var15.field_F, this.field_m);
-              if ((var15.field_E ^ -1) != 0) {
+            var7 = var15.field_J + param2 - -param1.field_g;
+            int var9 = 127 / ((-27 - param0) / 35);
+            var8 = var15.field_B + (param1.field_r + param3);
+            dma.f(var7, var8, var15.field_F, this.field_m);
+            if (!((var15.field_E ^ -1) == 0)) {
                 var10 = 3.141592653589793 * (double)var15.field_E * 2.0 / (double)var15.field_I;
                 var12 = (int)(-Math.sin(var10) * (double)var15.field_F);
                 var13 = (int)(Math.cos(var10) * (double)var15.field_F);
                 dma.f(var12 + var7, var8 - -var13, 1, this.field_d);
-                break L3;
-              } else {
-                break L3;
-              }
             }
-            L4: {
-              dma.f(var7, var8, 2, 1);
-              var10 = 2.0 * (3.141592653589793 * (double)var15.field_D) / (double)var15.field_I;
-              var12 = (int)(-Math.sin(var10) * (double)var15.field_F);
-              var13 = (int)(Math.cos(var10) * (double)var15.field_F);
-              dma.a(var7, var8, var7 - -var12, var8 + var13, 1);
-              if (null == this.field_j) {
-                break L4;
-              } else {
+            dma.f(var7, var8, 2, 1);
+            var10 = 2.0 * (3.141592653589793 * (double)var15.field_D) / (double)var15.field_I;
+            var12 = (int)(-Math.sin(var10) * (double)var15.field_F);
+            var13 = (int)(Math.cos(var10) * (double)var15.field_F);
+            dma.a(var7, var8, var7 - -var12, var8 + var13, 1);
+            if (null != this.field_j) {
                 var14 = var15.field_J + var15.field_F + this.field_k;
                 this.field_j.a(param1.field_j, var14 + param1.field_g + param2, param1.field_r + (param3 - -this.field_g), param1.field_h - var14 - this.field_k, -(this.field_k << -1386778239) + param1.field_f, this.field_l, this.field_b, 1, 1, 0);
-                break L4;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (runtimeException);
-
-            stackIn_12_1 = new StringBuilder().append("ei.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L5;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L5;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "ei.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

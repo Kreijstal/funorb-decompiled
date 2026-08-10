@@ -112,6 +112,34 @@ final class w {
           if (param13 >= param15) {
             if (param0 >= param15) {
               hf.a(param1, param2, param8, param12, param15, param7, 1517200784, param3, param13, param9, param4, param10, mi.field_f, param5, param14, param11, param0);
+              if (param6 > -13) {
+                w.a((byte) 9);
+                return;
+              } else {
+                return;
+              }
+            } else {
+              hf.a(param9, param5, param7, param12, param0, param8, 1517200784, param14, param13, param1, param4, param10, mi.field_f, param2, param3, param11, param15);
+              if (param6 > -13) {
+                w.a((byte) 9);
+                return;
+              } else {
+                return;
+              }
+            }
+          } else {
+            hf.a(param9, param5, param7, param8, param0, param12, 1517200784, param11, param15, param4, param1, param2, mi.field_f, param10, param3, param14, param13);
+            if (param6 > -13) {
+              w.a((byte) 9);
+              return;
+            } else {
+              return;
+            }
+          }
+        } else {
+          if (param15 <= param0) {
+            if (param13 < param15) {
+              hf.a(param4, param10, param12, param7, param13, param8, 1517200784, param14, param0, param1, param9, param5, mi.field_f, param2, param11, param3, param15);
               if (param6 <= -13) {
                 return;
               } else {
@@ -119,249 +147,16 @@ final class w {
                 return;
               }
             } else {
-              hf.a(param9, param5, param7, param12, param0, param8, 1517200784, param14, param13, param1, param4, param10, mi.field_f, param2, param3, param11, param15);
-              if (var17 == 0) {
-                if (param6 <= -13) {
-                  return;
-                } else {
-                  w.a((byte) 9);
-                  return;
-                }
+              hf.a(param1, param2, param8, param7, param15, param12, 1517200784, param11, param0, param4, param9, param5, mi.field_f, param10, param14, param3, param13);
+              if (param6 <= -13) {
+                return;
               } else {
-                hf.a(param1, param2, param8, param12, param15, param7, 1517200784, param3, param13, param9, param4, param10, mi.field_f, param5, param14, param11, param0);
-                if (param6 <= -13) {
-                  return;
-                } else {
-                  w.a((byte) 9);
-                  return;
-                }
+                w.a((byte) 9);
+                return;
               }
             }
           } else {
-            hf.a(param9, param5, param7, param8, param0, param12, 1517200784, param11, param15, param4, param1, param2, mi.field_f, param10, param3, param14, param13);
-            if (var17 != 0) {
-              if (param0 >= param15) {
-                hf.a(param1, param2, param8, param12, param15, param7, 1517200784, param3, param13, param9, param4, param10, mi.field_f, param5, param14, param11, param0);
-                if (param6 <= -13) {
-                  return;
-                } else {
-                  w.a((byte) 9);
-                  return;
-                }
-              } else {
-                hf.a(param9, param5, param7, param12, param0, param8, 1517200784, param14, param13, param1, param4, param10, mi.field_f, param2, param3, param11, param15);
-                if (var17 == 0) {
-                  if (param6 <= -13) {
-                    return;
-                  } else {
-                    w.a((byte) 9);
-                    return;
-                  }
-                } else {
-                  hf.a(param1, param2, param8, param12, param15, param7, 1517200784, param3, param13, param9, param4, param10, mi.field_f, param5, param14, param11, param0);
-                  if (param6 > -13) {
-                    w.a((byte) 9);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              }
-            } else {
-              if (param6 > -13) {
-                w.a((byte) 9);
-                return;
-              } else {
-                return;
-              }
-            }
-          }
-        } else {
-          if (param15 > param0) {
             hf.a(param4, param10, param12, param8, param13, param7, 1517200784, param3, param15, param9, param1, param2, mi.field_f, param5, param11, param14, param0);
-            if (var17 != 0) {
-              if (param13 < param15) {
-                hf.a(param4, param10, param12, param7, param13, param8, 1517200784, param14, param0, param1, param9, param5, mi.field_f, param2, param11, param3, param15);
-                if (var17 != 0) {
-                  L0: {
-                    L1: {
-                      if (param13 >= param15) {
-                        break L1;
-                      } else {
-                        hf.a(param9, param5, param7, param8, param0, param12, 1517200784, param11, param15, param4, param1, param2, mi.field_f, param10, param3, param14, param13);
-                        if (var17 == 0) {
-                          break L0;
-                        } else {
-                          break L1;
-                        }
-                      }
-                    }
-                    L2: {
-                      if (param0 >= param15) {
-                        break L2;
-                      } else {
-                        hf.a(param9, param5, param7, param12, param0, param8, 1517200784, param14, param13, param1, param4, param10, mi.field_f, param2, param3, param11, param15);
-                        if (var17 == 0) {
-                          break L0;
-                        } else {
-                          break L2;
-                        }
-                      }
-                    }
-                    hf.a(param1, param2, param8, param12, param15, param7, 1517200784, param3, param13, param9, param4, param10, mi.field_f, param5, param14, param11, param0);
-                    break L0;
-                  }
-                  if (param6 > -13) {
-                    w.a((byte) 9);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  if (param6 > -13) {
-                    w.a((byte) 9);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                hf.a(param1, param2, param8, param7, param15, param12, 1517200784, param11, param0, param4, param9, param5, mi.field_f, param10, param14, param3, param13);
-                if (var17 == 0) {
-                  if (param6 > -13) {
-                    w.a((byte) 9);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  L3: {
-                    hf.a(param4, param10, param12, param7, param13, param8, 1517200784, param14, param0, param1, param9, param5, mi.field_f, param2, param11, param3, param15);
-                    if (param13 >= param15) {
-                      break L3;
-                    } else {
-                      hf.a(param9, param5, param7, param8, param0, param12, 1517200784, param11, param15, param4, param1, param2, mi.field_f, param10, param3, param14, param13);
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    L5: {
-                      if (param0 >= param15) {
-                        break L5;
-                      } else {
-                        hf.a(param9, param5, param7, param12, param0, param8, 1517200784, param14, param13, param1, param4, param10, mi.field_f, param2, param3, param11, param15);
-                        if (var17 == 0) {
-                          break L4;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    hf.a(param1, param2, param8, param12, param15, param7, 1517200784, param3, param13, param9, param4, param10, mi.field_f, param5, param14, param11, param0);
-                    break L4;
-                  }
-                  L6: {
-                    if (param6 <= -13) {
-                      break L6;
-                    } else {
-                      w.a((byte) 9);
-                      break L6;
-                    }
-                  }
-                  return;
-                }
-              }
-            } else {
-              if (param6 > -13) {
-                w.a((byte) 9);
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
-            L7: {
-              if (param13 < param15) {
-                hf.a(param4, param10, param12, param7, param13, param8, 1517200784, param14, param0, param1, param9, param5, mi.field_f, param2, param11, param3, param15);
-                if (var17 == 0) {
-                  break L7;
-                } else {
-                  L8: {
-                    if (param13 >= param15) {
-                      break L8;
-                    } else {
-                      hf.a(param9, param5, param7, param8, param0, param12, 1517200784, param11, param15, param4, param1, param2, mi.field_f, param10, param3, param14, param13);
-                      break L8;
-                    }
-                  }
-                  L9: {
-                    L10: {
-                      if (param0 >= param15) {
-                        break L10;
-                      } else {
-                        hf.a(param9, param5, param7, param12, param0, param8, 1517200784, param14, param13, param1, param4, param10, mi.field_f, param2, param3, param11, param15);
-                        if (var17 == 0) {
-                          break L9;
-                        } else {
-                          break L10;
-                        }
-                      }
-                    }
-                    hf.a(param1, param2, param8, param12, param15, param7, 1517200784, param3, param13, param9, param4, param10, mi.field_f, param5, param14, param11, param0);
-                    break L9;
-                  }
-                  L11: {
-                    if (param6 <= -13) {
-                      break L11;
-                    } else {
-                      w.a((byte) 9);
-                      break L11;
-                    }
-                  }
-                  return;
-                }
-              } else {
-                hf.a(param1, param2, param8, param7, param15, param12, 1517200784, param11, param0, param4, param9, param5, mi.field_f, param10, param14, param3, param13);
-                if (var17 == 0) {
-                  break L7;
-                } else {
-                  L12: {
-                    hf.a(param4, param10, param12, param7, param13, param8, 1517200784, param14, param0, param1, param9, param5, mi.field_f, param2, param11, param3, param15);
-                    if (param13 >= param15) {
-                      break L12;
-                    } else {
-                      hf.a(param9, param5, param7, param8, param0, param12, 1517200784, param11, param15, param4, param1, param2, mi.field_f, param10, param3, param14, param13);
-                      break L12;
-                    }
-                  }
-                  L13: {
-                    L14: {
-                      if (param0 >= param15) {
-                        break L14;
-                      } else {
-                        hf.a(param9, param5, param7, param12, param0, param8, 1517200784, param14, param13, param1, param4, param10, mi.field_f, param2, param3, param11, param15);
-                        if (var17 == 0) {
-                          break L13;
-                        } else {
-                          break L14;
-                        }
-                      }
-                    }
-                    hf.a(param1, param2, param8, param12, param15, param7, 1517200784, param3, param13, param9, param4, param10, mi.field_f, param5, param14, param11, param0);
-                    break L13;
-                  }
-                  L15: {
-                    if (param6 <= -13) {
-                      break L15;
-                    } else {
-                      w.a((byte) 9);
-                      break L15;
-                    }
-                  }
-                  return;
-                }
-              }
-            }
             if (param6 > -13) {
               w.a((byte) 9);
               return;

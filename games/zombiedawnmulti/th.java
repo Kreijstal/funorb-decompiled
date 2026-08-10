@@ -78,28 +78,14 @@ final class th {
     }
 
     final int a(int param0) {
-        int var2;
-        br var3;
-        int var4;
-        var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        var2 = param0;
-        var3 = this.field_b.field_d;
-        L0: while (true) {
-          L1: {
-            if (var3 == this.field_b) {
-              break L1;
-            } else {
-              var3 = var3.field_d;
-              var2++;
-              if (var4 == 0) {
-                continue L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          return var2;
+        int var4 = ZombieDawnMulti.field_E ? 1 : 0;
+        int var2 = param0;
+        br var3 = this.field_b.field_d;
+        while (var3 != this.field_b) {
+            var3 = var3.field_d;
+            var2++;
         }
+        return var2;
     }
 
     final br c(int param0) {
@@ -139,21 +125,14 @@ final class th {
         try {
           L0: {
             L1: {
-              L2: {
-                var4 = -72 / ((param0 - 10) / 33);
-                if (param1 != null) {
-                  break L2;
-                } else {
-                  var3 = this.field_b.field_d;
-                  if (!ZombieDawnMulti.field_E) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              var4 = -72 / ((param0 - 10) / 33);
+              if (param1 != null) {
+                var3 = param1;
+                break L1;
+              } else {
+                var3 = this.field_b.field_d;
+                break L1;
               }
-              var3 = param1;
-              break L1;
             }
             if (this.field_b != var3) {
               this.field_f = var3.field_d;
@@ -169,7 +148,7 @@ final class th {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3_ref = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (var3_ref);
 
@@ -179,12 +158,12 @@ final class th {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L3;
+              break L2;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L3;
+              break L2;
             }
           }
           throw fa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
@@ -245,113 +224,47 @@ final class th {
     }
 
     final void e(int param0) {
-        br var2 = null;
-        int var3 = 0;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = ZombieDawnMulti.field_E ? 1 : 0;
-                    if (param0 == -30986) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    var2 = this.field_b.field_d;
-                    if (this.field_b == var2) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var2.a(true);
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (var3 != 0) {
-                        statePc = 8;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (var3 == 0) {
-                        statePc = 9;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    var2.a(true);
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    if (var3 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    this.field_f = null;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        br var2;
+        int var3;
+        var3 = ZombieDawnMulti.field_E ? 1 : 0;
+        if (param0 == -30986) {
+          L0: while (true) {
+            var2 = this.field_b.field_d;
+            if (this.field_b != var2) {
+              var2.a(true);
+              continue L0;
+            } else {
+              this.field_f = null;
+              return;
             }
+          }
+        } else {
+          return;
         }
     }
 
     final static void b(byte param0) {
-        byte[] var1;
-        byte[] var2;
-        if (param0 == -61) {
-          if (wc.j(112)) {
-            fn.field_b = true;
-            if (ZombieDawnMulti.field_E) {
-              var2 = ll.field_k.f(-16613);
-              var1 = var2;
-              da.a(-55, 6, var2);
-              return;
+        byte[] var2 = null;
+        byte[] var1 = null;
+        if (param0 != -61) {
+            th.a(30, 99, -87, 29, -54, -51, -90);
+            if (wc.j(112)) {
+                fn.field_b = true;
             } else {
-              return;
+                var2 = ll.field_k.f(-16613);
+                var1 = var2;
+                da.a(-55, 6, var2);
+                return;
             }
-          } else {
-            var2 = ll.field_k.f(-16613);
-            var1 = var2;
-            da.a(-55, 6, var2);
             return;
-          }
+        }
+        if (wc.j(112)) {
+            fn.field_b = true;
         } else {
-          th.a(30, 99, -87, 29, -54, -51, -90);
-          if (wc.j(112)) {
-            fn.field_b = true;
-            if (ZombieDawnMulti.field_E) {
-              var2 = ll.field_k.f(-16613);
-              var1 = var2;
-              da.a(-55, 6, var2);
-              return;
-            } else {
-              return;
-            }
-          } else {
             var2 = ll.field_k.f(-16613);
             var1 = var2;
             da.a(-55, 6, var2);
             return;
-          }
         }
     }
 

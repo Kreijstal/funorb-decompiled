@@ -155,22 +155,25 @@ final class bs extends bw {
                 }
               }
               L6: {
-                if (!dma.field_a) {
-                  break L6;
-                } else {
-                  of.b(115);
-                  dca.d(-122);
-                  if (-9 != (iba.field_s ^ -1)) {
-                    break L6;
+                L7: {
+                  if (!dma.field_a) {
+                    break L7;
                   } else {
-                    if (hs.a(false, nga.field_i)) {
-                      break L6;
+                    of.b(115);
+                    dca.d(-122);
+                    if (-9 != (iba.field_s ^ -1)) {
+                      break L7;
                     } else {
-                      lg.a(true, 0, false);
-                      break L6;
+                      if (hs.a(false, nga.field_i)) {
+                        break L7;
+                      } else {
+                        lg.a(true, 0, false);
+                        break L6;
+                      }
                     }
                   }
                 }
+                break L6;
               }
               decompiledRegionSelector0 = 1;
               break L0;

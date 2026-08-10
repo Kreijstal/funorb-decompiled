@@ -90,7 +90,24 @@ final class lh {
               }
             }
             L1: {
-              if (0 == this.field_j) {
+              if (0 != this.field_j) {
+                L2: {
+                  if (-1 != (k.field_c ^ -1)) {
+                    L3: {
+                      if ((this.field_g ^ -1) < -1) {
+                        break L3;
+                      } else {
+                        this.field_g = ah.field_b;
+                        this.field_f = this.field_j;
+                        break L3;
+                      }
+                    }
+                    this.field_g = this.field_g - 1;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
                 if (dl.field_h != 0) {
                   break L1;
                 } else {
@@ -114,39 +131,39 @@ final class lh {
                 }
               }
             }
-            L2: {
+            L4: {
               if (0 != this.field_j) {
-                break L2;
+                break L4;
               } else {
-                L3: {
+                L5: {
                   if (this.field_h) {
-                    break L3;
+                    break L5;
                   } else {
                     if (d.field_s) {
-                      break L3;
+                      break L5;
                     } else {
-                      break L2;
+                      break L4;
                     }
                   }
                 }
                 if (0 > param0) {
                   if (this.field_h) {
                     this.field_k = -1;
-                    break L2;
+                    break L4;
                   } else {
-                    break L2;
+                    break L4;
                   }
                 } else {
-                  L4: {
+                  L6: {
                     if (this.field_k != param0) {
-                      break L4;
+                      break L6;
                     } else {
-                      break L4;
+                      break L6;
                     }
                   }
                   this.field_k = param0;
                   this.field_h = true;
-                  break L2;
+                  break L4;
                 }
               }
             }

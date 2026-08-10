@@ -53,47 +53,33 @@ final class qc implements td {
                 break L3;
               } else {
                 L4: {
-                  L5: {
-                    var7 = this.field_d.a(param2.field_l);
-                    var8 = this.field_d.field_H + this.field_d.field_B;
-                    var9 = param2.field_s + param1;
-                    if (2 == this.field_a) {
+                  var7 = this.field_d.a(param2.field_l);
+                  var8 = this.field_d.field_H + this.field_d.field_B;
+                  var9 = param2.field_s + param1;
+                  if (2 == this.field_a) {
+                    var9 = var9 + (param2.field_m + -var7);
+                    break L4;
+                  } else {
+                    if (this.field_a != 1) {
+                      break L4;
+                    } else {
+                      var9 = var9 + (-var7 + param2.field_m >> 1332275905);
+                      break L4;
+                    }
+                  }
+                }
+                L5: {
+                  var10 = param2.field_n + param0;
+                  if (this.field_e != 2) {
+                    if (this.field_e != 1) {
                       break L5;
                     } else {
-                      if (this.field_a != 1) {
-                        break L4;
-                      } else {
-                        var9 = var9 + (-var7 + param2.field_m >> 1332275905);
-                        if (var11 == 0) {
-                          break L4;
-                        } else {
-                          break L5;
-                        }
-                      }
+                      var10 = var10 + (-var8 + param2.field_r >> 1289759553);
+                      break L5;
                     }
-                  }
-                  var9 = var9 + (param2.field_m + -var7);
-                  break L4;
-                }
-                L6: {
-                  L7: {
-                    var10 = param2.field_n + param0;
-                    if (this.field_e != 2) {
-                      break L7;
-                    } else {
-                      var10 = var10 + (-var8 + param2.field_r);
-                      if (var11 == 0) {
-                        break L6;
-                      } else {
-                        break L7;
-                      }
-                    }
-                  }
-                  if (this.field_e != 1) {
-                    break L6;
                   } else {
-                    var10 = var10 + (-var8 + param2.field_r >> 1289759553);
-                    break L6;
+                    var10 = var10 + (-var8 + param2.field_r);
+                    break L5;
                   }
                 }
                 wh.a(4 + var7, false, var9 - 2, var8, var10 + 2);
@@ -109,7 +95,7 @@ final class qc implements td {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L6: {
             var6 = decompiledCaughtException;
             stackIn_21_0 = (RuntimeException) (var6);
 
@@ -119,12 +105,12 @@ final class qc implements td {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "null";
-              break L8;
+              break L6;
             } else {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "{...}";
-              break L8;
+              break L6;
             }
           }
           throw dd.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param3 + ',' + param4 + ')');
@@ -154,22 +140,15 @@ final class qc implements td {
             var4 = 0;
             if (param1 == 1) {
               L1: while (true) {
-                L2: {
-                  if (var2_int <= var4) {
-                    break L2;
-                  } else {
-                    var3[-var4 + var2_int - 1] = param0.charAt(var4);
-                    var4++;
-                    if (var5 == 0) {
-                      continue L1;
-                    } else {
-                      break L2;
-                    }
-                  }
+                if (var2_int <= var4) {
+                  stackIn_7_0 = new String(var3);
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  var3[-var4 + var2_int - 1] = param0.charAt(var4);
+                  var4++;
+                  continue L1;
                 }
-                stackIn_7_0 = new String(var3);
-                decompiledRegionSelector0 = 1;
-                break L0;
               }
             } else {
               stackIn_3_0 = (String) null;
@@ -179,7 +158,7 @@ final class qc implements td {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (var2);
 
@@ -189,12 +168,12 @@ final class qc implements td {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L3;
+              break L2;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L3;
+              break L2;
             }
           }
           throw dd.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');

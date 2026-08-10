@@ -67,71 +67,24 @@ final class sd extends rg {
     }
 
     final void a(int param0, cf param1, int param2, int param3, boolean param4, int param5) {
-        RuntimeException runtimeException = null;
         ua var7 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.a(param0, param1, param2, param3, param4, param5);
-              var7 = qi.field_a;
-              if (var7 == null) {
-                break L1;
-              } else {
-                if (!this.a(81, param5, param0, param3, param2)) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (!(this.field_A instanceof vq)) {
-                      break L2;
-                    } else {
-                      ((vq) ((Object) this.field_A)).a(var7, (byte) 5, (sd) (this));
-                      qi.field_a = null;
-                      if (!ZombieDawnMulti.field_E) {
-                        break L1;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  if (var7.field_A instanceof vq) {
-                    ((vq) ((Object) var7.field_A)).a(var7, (byte) 5, (sd) (this));
+            super.a(param0, param1, param2, param3, param4, param5);
+            var7 = qi.field_a;
+            if (var7 != null && this.a(81, param5, param0, param3, param2)) {
+                if (this.field_A instanceof vq) {
+                    ((vq) ((Object) this.field_A)).a(var7, (byte) 5, (sd) (this));
                     qi.field_a = null;
-                    break L1;
-                  } else {
                     return;
-                  }
                 }
-              }
+                if (!(var7.field_A instanceof vq)) {
+                    return;
+                }
+                ((vq) ((Object) var7.field_A)).a(var7, (byte) 5, (sd) (this));
+                qi.field_a = null;
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (runtimeException);
-
-            stackIn_11_1 = new StringBuilder().append("sd.NA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
-          }
-          throw fa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) ((Object) runtimeException), "sd.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

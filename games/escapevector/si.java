@@ -38,62 +38,65 @@ final class si extends fl {
                   this.field_s = bb.a(-128, param1.c(false), '<');
                   break L1;
                 } else {
-                  if ((param2 ^ -1) != -3) {
-                    if (-4 == (param2 ^ -1)) {
-                      var4_int = param1.e(0);
-                      this.field_q = new int[var4_int][];
-                      this.field_x = new int[var4_int];
-                      var5 = 0;
-                      L2: while (true) {
-                        if (var4_int <= var5) {
-                          break L1;
-                        } else {
-                          L3: {
-                            var6 = param1.f(1952);
-                            var7 = kf.a((byte) -57, var6);
-                            if (var7 != null) {
-                              this.field_x[var5] = var6;
-                              array$0 = new int[var7.field_d];
-                              this.field_q[var5] = array$0;
-                              var8 = 0;
-                              L4: while (true) {
-                                if (var7.field_d <= var8) {
-                                  break L3;
-                                } else {
-                                  this.field_q[var5][var8] = param1.f(n.a(param0, 11875));
-                                  var8++;
-                                  continue L4;
+                  L2: {
+                    if ((param2 ^ -1) != -3) {
+                      if (-4 == (param2 ^ -1)) {
+                        var4_int = param1.e(0);
+                        this.field_q = new int[var4_int][];
+                        this.field_x = new int[var4_int];
+                        var5 = 0;
+                        L3: while (true) {
+                          if (var4_int <= var5) {
+                            break L2;
+                          } else {
+                            L4: {
+                              var6 = param1.f(1952);
+                              var7 = kf.a((byte) -57, var6);
+                              if (var7 != null) {
+                                this.field_x[var5] = var6;
+                                array$0 = new int[var7.field_d];
+                                this.field_q[var5] = array$0;
+                                var8 = 0;
+                                L5: while (true) {
+                                  if (var7.field_d <= var8) {
+                                    break L4;
+                                  } else {
+                                    this.field_q[var5][var8] = param1.f(n.a(param0, 11875));
+                                    var8++;
+                                    continue L5;
+                                  }
                                 }
+                              } else {
+                                break L4;
                               }
-                            } else {
-                              break L3;
                             }
+                            var5++;
+                            continue L3;
                           }
-                          var5++;
-                          continue L2;
+                        }
+                      } else {
+                        if (param2 != 4) {
+                          break L2;
+                        } else {
+                          break L1;
                         }
                       }
                     } else {
-                      if (param2 != 4) {
-                        break L1;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  } else {
-                    var4_int = param1.e(param0 ^ 10691);
-                    this.field_z = new int[var4_int];
-                    var5 = 0;
-                    L5: while (true) {
-                      if (var5 >= var4_int) {
-                        break L1;
-                      } else {
-                        this.field_z[var5] = param1.f(1952);
-                        var5++;
-                        continue L5;
+                      var4_int = param1.e(param0 ^ 10691);
+                      this.field_z = new int[var4_int];
+                      var5 = 0;
+                      L6: while (true) {
+                        if (var5 >= var4_int) {
+                          break L2;
+                        } else {
+                          this.field_z[var5] = param1.f(1952);
+                          var5++;
+                          continue L6;
+                        }
                       }
                     }
                   }
+                  break L1;
                 }
               }
               decompiledRegionSelector0 = 1;
@@ -105,7 +108,7 @@ final class si extends fl {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var4 = decompiledCaughtException;
             stackIn_23_0 = (RuntimeException) (var4);
 
@@ -115,12 +118,12 @@ final class si extends fl {
               stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
               stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackIn_24_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
               stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackIn_24_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw t.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param2 + ')');

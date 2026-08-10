@@ -666,49 +666,52 @@ class hl extends uk {
           if (this.field_T == 0) {
             break L15;
           } else {
-            if (!this.field_qb) {
-              break L15;
-            } else {
-              L16: {
-                this.field_M = aa.field_Nb - (this.field_Z - -param5);
-                this.field_yb = a.field_a + (-this.field_lb + -param4);
-                if (0 <= this.field_M) {
-                  break L16;
-                } else {
-                  this.field_M = 0;
-                  break L16;
+            L16: {
+              if (!this.field_qb) {
+                break L16;
+              } else {
+                L17: {
+                  this.field_M = aa.field_Nb - (this.field_Z - -param5);
+                  this.field_yb = a.field_a + (-this.field_lb + -param4);
+                  if (0 <= this.field_M) {
+                    break L17;
+                  } else {
+                    this.field_M = 0;
+                    break L17;
+                  }
                 }
-              }
-              L17: {
-                if (this.field_M <= param3 - this.field_Hb) {
-                  break L17;
-                } else {
-                  this.field_M = -this.field_Hb + param3;
-                  break L17;
+                L18: {
+                  if (this.field_M <= param3 - this.field_Hb) {
+                    break L18;
+                  } else {
+                    this.field_M = -this.field_Hb + param3;
+                    break L18;
+                  }
                 }
-              }
-              L18: {
-                if ((this.field_yb ^ -1) <= -1) {
-                  break L18;
-                } else {
-                  this.field_yb = 0;
-                  break L18;
+                L19: {
+                  if ((this.field_yb ^ -1) <= -1) {
+                    break L19;
+                  } else {
+                    this.field_yb = 0;
+                    break L19;
+                  }
                 }
-              }
-              L19: {
-                this.field_Db = 0;
-                if (-this.field_R + param2 >= this.field_yb) {
-                  break L19;
-                } else {
-                  this.field_yb = -this.field_R + param2;
-                  break L19;
+                L20: {
+                  this.field_Db = 0;
+                  if (-this.field_R + param2 >= this.field_yb) {
+                    break L20;
+                  } else {
+                    this.field_yb = -this.field_R + param2;
+                    break L20;
+                  }
                 }
+                this.field_eb = param5 - -this.field_M;
+                this.field_U = 0;
+                this.field_z = param4 + this.field_yb;
+                break L16;
               }
-              this.field_eb = param5 - -this.field_M;
-              this.field_U = 0;
-              this.field_z = param4 + this.field_yb;
-              break L15;
             }
+            break L15;
           }
         }
     }
@@ -1484,16 +1487,6 @@ class hl extends uk {
     }
 
     hl(long param0, hl param1, int param2, int param3, int param4, int param5, String param6) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         this.field_K = 256;
         this.field_I = -2147483648;
         this.field_ib = -1;
@@ -1510,61 +1503,17 @@ class hl extends uk {
         this.field_nb = -1;
         this.field_S = true;
         try {
-          L0: {
-            L1: {
-              this.field_yb = param3;
-              this.field_c = param0;
-              this.field_M = param2;
-              this.field_Hb = param4;
-              this.field_R = param5;
-              this.a(param1, -2147483648);
-              if (param6 == null) {
-                break L1;
-              } else {
+            this.field_yb = param3;
+            this.field_c = param0;
+            this.field_M = param2;
+            this.field_Hb = param4;
+            this.field_R = param5;
+            this.a(param1, -2147483648);
+            if (param6 != null) {
                 this.field_jb = param6;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (runtimeException);
-
-            stackIn_6_1 = new StringBuilder().append("hl.<init>(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
-          }
-          L3: {
-
-
-            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-
-            if (param6 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
-          }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) ((Object) runtimeException), "hl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

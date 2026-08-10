@@ -12,248 +12,39 @@ class ik extends a implements df {
     private boolean field_eb;
 
     final static String q(int param0) {
-        String stackIn_9_0 = null;
-        String stackIn_19_0 = null;
-        String stackIn_26_0 = null;
-        String stackIn_36_0 = null;
-        int statePc = 0;
-        String var1 = null;
         int var2 = 0;
+        String var7 = null;
         int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        String var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var5 = Transmogrify.field_A ? 1 : 0;
-                    var6 = "(" + bd.field_t + " " + nf.field_k + " " + dg.field_a + ") " + ca.field_e;
-                    var1 = var6;
-                    if (param0 == 48) {
-                        statePc = 20;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    field_cb = (tf) null;
-                    if (-1 > (tg.field_a ^ -1)) {
-                        statePc = 4;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    return var1;
-                }
-                case 4: {
-                    var1 = var6 + ":";
-                    var2 = 0;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (var2 < tg.field_a) {
-                        statePc = 8;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    return var1;
-                }
-                case 8: {
-                    stackIn_19_0 = var1 + ' ';
-                    stackIn_9_0 = stackIn_19_0;
-                    if (var5 != 0) {
-                        statePc = 19;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    var15 = stackIn_9_0;
-                    var3 = 255 & nf.field_l.field_g[var2];
-                    var4 = var3 >> 2035313988;
-                    if (10 > var4) {
-                        statePc = 12;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
+        String var8 = null;
+        int var5 = Transmogrify.field_A ? 1 : 0;
+        String var6 = "(" + bd.field_t + " " + nf.field_k + " " + dg.field_a + ") " + ca.field_e;
+        String var1 = var6;
+        if (param0 != 48) {
+            field_cb = (tf) null;
+        }
+        if (-1 > (tg.field_a ^ -1)) {
+            var1 = var6 + ":";
+            for (var2 = 0; var2 < tg.field_a; var2++) {
+                var7 = var1 + ' ';
+                var3 = 255 & nf.field_l.field_g[var2];
+                var4 = var3 >> 2035313988;
+                if (10 <= var4) {
                     var4 += 55;
-                    if (var5 == 0) {
-                        statePc = 13;
-                    } else {
-                        statePc = 12;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
+                } else {
                     var4 += 48;
-                    statePc = 13;
-                    continue stateLoop;
                 }
-                case 13: {
-                    var3 = var3 & 15;
-                    if ((var3 ^ -1) > -11) {
-                        statePc = 16;
-                    } else {
-                        statePc = 14;
-                    }
-                    continue stateLoop;
-                }
-                case 14: {
+                var3 = var3 & 15;
+                if ((var3 ^ -1) <= -11) {
                     var3 += 55;
-                    if (var5 == 0) {
-                        statePc = 17;
-                    } else {
-                        statePc = 16;
-                    }
-                    continue stateLoop;
-                }
-                case 16: {
+                } else {
                     var3 += 48;
-                    statePc = 17;
-                    continue stateLoop;
                 }
-                case 17: {
-                    var16 = var15 + (char)var4;
-                    var1 = var16 + (char)var3;
-                    var2++;
-                    if (var5 == 0) {
-                        statePc = 5;
-                    } else {
-                        statePc = 18;
-                    }
-                    continue stateLoop;
-                }
-                case 18: {
-                    stackIn_19_0 = (String) (var1);
-                    statePc = 19;
-                    continue stateLoop;
-                }
-                case 19: {
-                    return stackIn_19_0;
-                }
-                case 20: {
-                    if (-1 > (tg.field_a ^ -1)) {
-                        statePc = 22;
-                    } else {
-                        statePc = 21;
-                    }
-                    continue stateLoop;
-                }
-                case 21: {
-                    return var1;
-                }
-                case 22: {
-                    var1 = var6 + ":";
-                    var2 = 0;
-                    statePc = 23;
-                    continue stateLoop;
-                }
-                case 23: {
-                    if (var2 < tg.field_a) {
-                        statePc = 25;
-                    } else {
-                        statePc = 24;
-                    }
-                    continue stateLoop;
-                }
-                case 24: {
-                    return var1;
-                }
-                case 25: {
-                    stackIn_36_0 = var1 + ' ';
-                    stackIn_26_0 = stackIn_36_0;
-                    if (var5 != 0) {
-                        statePc = 36;
-                    } else {
-                        statePc = 26;
-                    }
-                    continue stateLoop;
-                }
-                case 26: {
-                    var17 = stackIn_26_0;
-                    var3 = 255 & nf.field_l.field_g[var2];
-                    var4 = var3 >> 2035313988;
-                    if (10 > var4) {
-                        statePc = 29;
-                    } else {
-                        statePc = 27;
-                    }
-                    continue stateLoop;
-                }
-                case 27: {
-                    var4 += 55;
-                    if (var5 == 0) {
-                        statePc = 30;
-                    } else {
-                        statePc = 29;
-                    }
-                    continue stateLoop;
-                }
-                case 29: {
-                    var4 += 48;
-                    statePc = 30;
-                    continue stateLoop;
-                }
-                case 30: {
-                    var3 = var3 & 15;
-                    if ((var3 ^ -1) > -11) {
-                        statePc = 33;
-                    } else {
-                        statePc = 31;
-                    }
-                    continue stateLoop;
-                }
-                case 31: {
-                    var3 += 55;
-                    if (var5 == 0) {
-                        statePc = 34;
-                    } else {
-                        statePc = 33;
-                    }
-                    continue stateLoop;
-                }
-                case 33: {
-                    var3 += 48;
-                    statePc = 34;
-                    continue stateLoop;
-                }
-                case 34: {
-                    var18 = var17 + (char)var4;
-                    var1 = var18 + (char)var3;
-                    var2++;
-                    if (var5 == 0) {
-                        statePc = 23;
-                    } else {
-                        statePc = 35;
-                    }
-                    continue stateLoop;
-                }
-                case 35: {
-                    stackIn_36_0 = (String) (var1);
-                    statePc = 36;
-                    continue stateLoop;
-                }
-                case 36: {
-                    return stackIn_36_0;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                var8 = var7 + (char)var4;
+                var1 = var8 + (char)var3;
             }
         }
+        return var1;
     }
 
     final boolean a(int param0, qg param1, byte param2, char param3) {
@@ -322,14 +113,14 @@ class ik extends a implements df {
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
+        ee stackIn_12_0 = null;
         ee stackIn_13_0 = null;
-        ee stackIn_14_0 = null;
-        String stackIn_14_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_32_2 = null;
+        String stackIn_13_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -356,94 +147,59 @@ class ik extends a implements df {
                 }
               }
               L2: {
-                L3: {
-                  ((ik) (this)).field_gb = stackIn_7_1 != 0;
-                  this.field_db = true;
-                  this.field_fb.a(true, 4210752, 8405024);
-                  var6 = new ee((ik) (this), this.field_hb, param0);
-                  if (5 != param1) {
-                    break L3;
-                  } else {
-                    var6.a(qb.field_a, 11, param2 + 5);
-                    var6.a(ta.field_b, 17, param2 + 5);
-                    if (var5 == 0) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                L4: {
+                ((ik) (this)).field_gb = stackIn_7_1 != 0;
+                this.field_db = true;
+                this.field_fb.a(true, 4210752, 8405024);
+                var6 = new ee((ik) (this), this.field_hb, param0);
+                if (5 != param1) {
                   if (param1 == 256) {
-                    break L4;
+                    var6.a((ma) (this), 8283, rc.field_b);
+                    break L2;
                   } else {
-                    L5: {
-                      stackIn_13_0 = (ee) (var6);
+                    L3: {
+                      stackIn_12_0 = (ee) (var6);
 
                       if (!this.field_eb) {
-                        stackIn_14_0 = (ee) ((Object) stackIn_13_0);
-                        stackIn_14_1 = te.field_f;
-                        break L5;
+                        stackIn_13_0 = (ee) ((Object) stackIn_12_0);
+                        stackIn_13_1 = te.field_f;
+                        break L3;
                       } else {
-                        stackIn_14_0 = (ee) ((Object) stackIn_13_0);
-                        stackIn_14_1 = rc.field_b;
-                        break L5;
+                        stackIn_13_0 = (ee) ((Object) stackIn_12_0);
+                        stackIn_13_1 = rc.field_b;
+                        break L3;
                       }
                     }
-                    ((ee) (Object) stackIn_14_0).a(stackIn_14_1, -1, 1);
-                    if (var5 == 0) {
-                      break L2;
+                    ((ee) (Object) stackIn_13_0).a(stackIn_13_1, -1, 1);
+                    break L2;
+                  }
+                } else {
+                  var6.a(qb.field_a, 11, param2 + 5);
+                  var6.a(ta.field_b, 17, param2 + 5);
+                  break L2;
+                }
+              }
+              L4: {
+                if ((param1 ^ -1) == param2) {
+                  var6.a(ad.field_f, 7, param2 + 5);
+                  break L4;
+                } else {
+                  if (-5 != (param1 ^ -1)) {
+                    if (6 != param1) {
+                      if (param1 != 9) {
+                        break L4;
+                      } else {
+                        var6.a((ma) (this), param2 + 8287, of.field_b);
+                        break L4;
+                      }
                     } else {
+                      var6.a(ee.field_C, 9, param2 ^ -3);
                       break L4;
                     }
-                  }
-                }
-                var6.a((ma) (this), 8283, rc.field_b);
-                break L2;
-              }
-              L6: {
-                L7: {
-                  if ((param1 ^ -1) == param2) {
-                    break L7;
                   } else {
-                    L8: {
-                      if (-5 != (param1 ^ -1)) {
-                        break L8;
-                      } else {
-                        var6.a(ch.field_a, 8, 1);
-                        if (var5 == 0) {
-                          break L6;
-                        } else {
-                          break L8;
-                        }
-                      }
-                    }
-                    L9: {
-                      if (6 != param1) {
-                        break L9;
-                      } else {
-                        var6.a(ee.field_C, 9, param2 ^ -3);
-                        if (var5 == 0) {
-                          break L6;
-                        } else {
-                          break L9;
-                        }
-                      }
-                    }
-                    if (param1 != 9) {
-                      break L6;
-                    } else {
-                      var6.a((ma) (this), param2 + 8287, of.field_b);
-                      if (var5 == 0) {
-                        break L6;
-                      } else {
-                        break L7;
-                      }
-                    }
+                    var6.a(ch.field_a, 8, 1);
+                    break L4;
                   }
                 }
-                var6.a(ad.field_f, 7, param2 + 5);
-                break L6;
               }
               this.b(-96, var6);
               decompiledRegionSelector0 = 1;
@@ -452,25 +208,25 @@ class ik extends a implements df {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L5: {
             var4 = decompiledCaughtException;
-            stackIn_31_0 = (RuntimeException) (var4);
+            stackIn_27_0 = (RuntimeException) (var4);
 
-            stackIn_31_1 = new StringBuilder().append("ik.C(");
+            stackIn_27_1 = new StringBuilder().append("ik.C(");
 
             if (param0 == null) {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "null";
-              break L10;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "null";
+              break L5;
             } else {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "{...}";
-              break L10;
+              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackIn_28_2 = "{...}";
+              break L5;
             }
           }
-          throw ch.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param1 + ',' + param2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -502,63 +258,19 @@ class ik extends a implements df {
     }
 
     final void r(int param0) {
-        if (!this.field_A) {
-          return;
-        } else {
-          this.field_A = false;
-          if (param0 == 77) {
-            if (!this.field_eb) {
-              if (!this.field_jb) {
-                return;
-              } else {
-                ff.a((byte) -124);
-                return;
-              }
-            } else {
-              ai.b(param0 + -202);
-              if (Transmogrify.field_A) {
-                L0: {
-                  if (this.field_jb) {
-                    ff.a((byte) -124);
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
+        if (!(this.field_A)) {
+            return;
+        }
+        this.field_A = false;
+        if (param0 != 77) {
             this.r(-69);
-            if (this.field_eb) {
-              ai.b(param0 + -202);
-              if (!Transmogrify.field_A) {
-                return;
-              } else {
-                L1: {
-                  if (this.field_jb) {
-                    ff.a((byte) -124);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                return;
-              }
-            } else {
-              L2: {
-                if (this.field_jb) {
-                  ff.a((byte) -124);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return;
+        }
+        if (this.field_eb) {
+            ai.b(param0 + -202);
+        } else {
+            if (!(!this.field_jb)) {
+                ff.a((byte) -124);
             }
-          }
         }
     }
 
@@ -654,13 +366,13 @@ class ik extends a implements df {
     }
 
     public void a(lj param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var6 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         try {
           L0: {
             L1: {
@@ -673,41 +385,37 @@ class ik extends a implements df {
             }
             L2: {
               if (!this.field_gb) {
+                ia.a(ha.b(105), 6, "tochangedisplayname.ws");
                 break L2;
               } else {
                 ba.a(123, 3);
                 this.r(77);
-                if (!Transmogrify.field_A) {
-                  break L0;
-                } else {
-                  break L2;
-                }
+                break L2;
               }
             }
-            ia.a(ha.b(105), 6, "tochangedisplayname.ws");
-            return;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var6);
+            stackIn_8_0 = (RuntimeException) (var6);
 
-            stackIn_9_1 = new StringBuilder().append("ik.MA(");
+            stackIn_8_1 = new StringBuilder().append("ik.MA(");
 
             if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
               break L3;
             } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
               break L3;
             }
           }
-          throw ch.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

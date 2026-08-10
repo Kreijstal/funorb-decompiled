@@ -109,34 +109,27 @@ final class jf extends mg {
               }
             }
             L2: {
-              L3: {
-                ((jf) (this)).field_J = stackIn_4_1 != 0;
-                this.field_D = param8;
-                this.field_F = param6;
-                this.field_E = param7;
-                var12_int = this.field_F + -this.field_E;
-                var13 = this.field_D.a(param10, var12_int, this.field_D.field_E) + 2 * this.field_E;
-                if (var13 > param3) {
-                  break L3;
-                } else {
-                  var13 = param3;
-                  if (!Lexicominos.field_L) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
+              ((jf) (this)).field_J = stackIn_4_1 != 0;
+              this.field_D = param8;
+              this.field_F = param6;
+              this.field_E = param7;
+              var12_int = this.field_F + -this.field_E;
+              var13 = this.field_D.a(param10, var12_int, this.field_D.field_E) + 2 * this.field_E;
+              if (var13 > param3) {
+                this.a(var13, param2, true, param1, param0);
+                break L2;
+              } else {
+                var13 = param3;
+                break L2;
               }
-              this.a(var13, param2, true, param1, param0);
-              break L2;
             }
-            L4: {
+            L3: {
               if (this.field_J) {
                 stackIn_10_0 = 0;
-                break L4;
+                break L3;
               } else {
                 stackIn_10_0 = this.field_F - -(this.field_E * 2);
-                break L4;
+                break L3;
               }
             }
             var14 = stackIn_10_0;
@@ -145,7 +138,7 @@ final class jf extends mg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var12 = decompiledCaughtException;
             stackIn_14_0 = (RuntimeException) (var12);
 
@@ -155,15 +148,15 @@ final class jf extends mg {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackIn_15_2 = "null";
-              break L5;
+              break L4;
             } else {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackIn_15_2 = "{...}";
-              break L5;
+              break L4;
             }
           }
-          L6: {
+          L5: {
 
 
             stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
@@ -172,15 +165,15 @@ final class jf extends mg {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "null";
-              break L6;
+              break L5;
             } else {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "{...}";
-              break L6;
+              break L5;
             }
           }
-          L7: {
+          L6: {
 
 
             stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param9).append(',');
@@ -189,12 +182,12 @@ final class jf extends mg {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackIn_21_2 = "null";
-              break L7;
+              break L6;
             } else {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackIn_21_2 = "{...}";
-              break L7;
+              break L6;
             }
           }
           throw ld.a((Throwable) ((Object) stackIn_15_0), stackIn_21_2 + ')');

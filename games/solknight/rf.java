@@ -229,46 +229,32 @@ final class rf extends ki implements re, ka, ge {
     public final void a(int param0, int param1, int param2, kj param3) {
         RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if (param1 != 0) {
-                  break L2;
-                } else {
-                  ud.a(11692, "terms.ws");
-                  if (var6 == 0) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              L3: {
+              if (param1 != 0) {
                 if (1 == param1) {
-                  break L3;
+                  ud.a(11692, "privacy.ws");
+                  break L1;
                 } else {
                   if (-3 != (param1 ^ -1)) {
                     break L1;
                   } else {
                     ud.a(11692, "conduct.ws");
-                    if (var6 == 0) {
-                      break L1;
-                    } else {
-                      break L3;
-                    }
+                    break L1;
                   }
                 }
+              } else {
+                ud.a(11692, "terms.ws");
+                break L1;
               }
-              ud.a(11692, "privacy.ws");
-              break L1;
             }
             if (param2 == 50) {
               break L0;
@@ -279,25 +265,25 @@ final class rf extends ki implements re, ka, ge {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var5 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var5);
+            stackIn_12_0 = (RuntimeException) (var5);
 
-            stackIn_14_1 = new StringBuilder().append("rf.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_12_1 = new StringBuilder().append("rf.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
             if (param3 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
             } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
@@ -841,36 +827,29 @@ final class rf extends ki implements re, ka, ge {
     }
 
     public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
-        boolean discarded$1 = false;
+        boolean discarded$0 = false;
         RuntimeException var6 = null;
         kj var7 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             L1: {
-              L2: {
-                if (this.field_D == param3) {
-                  break L2;
+              if (this.field_D == param3) {
+                ig.a((byte) -79);
+                break L1;
+              } else {
+                if (this.field_R != param3) {
+                  break L1;
                 } else {
-                  if (this.field_R != param3) {
-                    break L1;
-                  } else {
-                    discarded$1 = this.i(11608);
-                    if (!SolKnight.field_L) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
+                  discarded$0 = this.i(11608);
+                  break L1;
                 }
               }
-              ig.a((byte) -79);
-              break L1;
             }
             if (param4) {
               break L0;
@@ -882,25 +861,25 @@ final class rf extends ki implements re, ka, ge {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var6 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var6);
+            stackIn_9_0 = (RuntimeException) (var6);
 
-            stackIn_10_1 = new StringBuilder().append("rf.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_9_1 = new StringBuilder().append("rf.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
             if (param3 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
+              break L2;
             } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
+              break L2;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param4 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param4 + ')');
         }
     }
 

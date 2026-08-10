@@ -39,30 +39,23 @@ abstract class rj {
               if (param1 <= -2) {
                 var6 = 0;
                 L1: while (true) {
-                  L2: {
-                    if (var6 >= var5.length) {
-                      break L2;
-                    } else {
-                      L3: {
-                        var7 = var5[var6];
-                        if (var3 != var7) {
-                          var4 = var4 + param0.a(true, var7);
-                          break L3;
-                        } else {
-                          break L3;
-                        }
-                      }
-                      var6++;
-                      if (var8 == 0) {
-                        continue L1;
+                  if (var6 >= var5.length) {
+                    stackIn_14_0 = ne.field_c + " - " + var4 / (-1 + var9.length) + "%";
+                    decompiledRegionSelector0 = 2;
+                    break L0;
+                  } else {
+                    L2: {
+                      var7 = var5[var6];
+                      if (var3 != var7) {
+                        var4 = var4 + param0.a(true, var7);
+                        break L2;
                       } else {
                         break L2;
                       }
                     }
+                    var6++;
+                    continue L1;
                   }
-                  stackIn_14_0 = ne.field_c + " - " + var4 / (-1 + var9.length) + "%";
-                  decompiledRegionSelector0 = 2;
-                  break L0;
                 }
               } else {
                 stackIn_6_0 = (String) null;
@@ -77,7 +70,7 @@ abstract class rj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2_ref = decompiledCaughtException;
             stackIn_17_0 = (RuntimeException) (var2_ref);
 
@@ -87,12 +80,12 @@ abstract class rj {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw ch.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ')');
@@ -109,22 +102,13 @@ abstract class rj {
     }
 
     final static h b(boolean param0) {
-        if (null != eh.field_e) {
-          if (!param0) {
-            rj.b(false);
-            return eh.field_e;
-          } else {
-            return eh.field_e;
-          }
-        } else {
-          eh.field_e = new h(al.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, al.field_i.field_y, -1, 2147483647, true);
-          if (param0) {
-            return eh.field_e;
-          } else {
-            rj.b(false);
-            return eh.field_e;
-          }
+        if (null == eh.field_e) {
+            eh.field_e = new h(al.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, al.field_i.field_y, -1, 2147483647, true);
         }
+        if (!param0) {
+            rj.b(false);
+        }
+        return eh.field_e;
     }
 
     public static void a(boolean param0) {

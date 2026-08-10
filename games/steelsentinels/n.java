@@ -634,10 +634,11 @@ abstract class n extends lg {
 
     final void a(int param0, boolean param1) {
         int stackIn_24_0 = 0;
-        String stackIn_106_0 = null;
-        String stackIn_107_0 = null;
-        int stackIn_107_1 = 0;
-        int stackIn_110_2 = 0;
+        String stackIn_113_0 = null;
+        String stackIn_114_0 = null;
+        int stackIn_114_1 = 0;
+        int stackIn_117_2 = 0;
+        int stackIn_147_0 = 0;
         int var3;
         java.awt.Dimension var4;
         int var5;
@@ -736,19 +737,31 @@ abstract class n extends lg {
           }
           var3 = stackIn_24_0;
           fl.field_d = kj.j(param0 + 16);
-          if (var3 == 0) {
-            if (fl.field_d == -1) {
-              break L6;
-            } else {
-              if (fl.field_d == 0) {
-                if (fl.field_d == -1) {
-                  break L6;
-                } else {
-                  if (fl.field_d == 0) {
+          if (var3 != 0) {
+            if (-1 == (fl.field_d ^ -1)) {
+              if (11 == uj.field_d) {
+                if (!ri.a(param0 ^ 16731216)) {
+                  ee.c(11828);
+                  if (fl.field_d == -1) {
                     break L6;
                   } else {
-                    r.field_l = mm.a(127) + 15000L;
+                    if (fl.field_d == 0) {
+                      break L6;
+                    } else {
+                      r.field_l = mm.a(127) + 15000L;
+                      break L6;
+                    }
+                  }
+                } else {
+                  if (fl.field_d == -1) {
                     break L6;
+                  } else {
+                    if (fl.field_d == 0) {
+                      break L6;
+                    } else {
+                      r.field_l = mm.a(127) + 15000L;
+                      break L6;
+                    }
                   }
                 }
               } else {
@@ -761,6 +774,17 @@ abstract class n extends lg {
                     r.field_l = mm.a(127) + 15000L;
                     break L6;
                   }
+                }
+              }
+            } else {
+              if (fl.field_d == -1) {
+                break L6;
+              } else {
+                if (fl.field_d == 0) {
+                  break L6;
+                } else {
+                  r.field_l = mm.a(127) + 15000L;
+                  break L6;
                 }
               }
             }
@@ -983,15 +1007,15 @@ abstract class n extends lg {
                     }
                   }
                   L23: {
-                    stackIn_106_0 = uj.field_k;
+                    stackIn_113_0 = uj.field_k;
 
                     if (ub.field_j) {
-                      stackIn_107_0 = (String) ((Object) stackIn_106_0);
-                      stackIn_107_1 = 0;
+                      stackIn_114_0 = (String) ((Object) stackIn_113_0);
+                      stackIn_114_1 = 0;
                       break L23;
                     } else {
-                      stackIn_107_0 = (String) ((Object) stackIn_106_0);
-                      stackIn_107_1 = 1;
+                      stackIn_114_0 = (String) ((Object) stackIn_113_0);
+                      stackIn_114_1 = 1;
                       break L23;
                     }
                   }
@@ -1001,18 +1025,18 @@ abstract class n extends lg {
 
 
                     if (ub.field_j) {
-                      stackIn_107_0 = (String) ((Object) stackIn_107_0);
+                      stackIn_114_0 = (String) ((Object) stackIn_114_0);
 
-                      stackIn_110_2 = 0;
+                      stackIn_117_2 = 0;
                       break L24;
                     } else {
-                      stackIn_107_0 = (String) ((Object) stackIn_107_0);
+                      stackIn_114_0 = (String) ((Object) stackIn_114_0);
 
-                      stackIn_110_2 = 1;
+                      stackIn_117_2 = 1;
                       break L24;
                     }
                   }
-                  nm.a(stackIn_107_0, stackIn_107_1 != 0, stackIn_110_2 != 0, param0 + 7);
+                  nm.a(stackIn_114_0, stackIn_114_1 != 0, stackIn_117_2 != 0, param0 + 7);
                   break L21;
                 }
                 L25: {
@@ -1106,39 +1130,55 @@ abstract class n extends lg {
         }
         L33: {
           if (nj.field_Q != 13) {
-            if (param1) {
-              break L33;
-            } else {
-              if (!ti.field_x) {
-                break L33;
+            break L33;
+          } else {
+            L34: {
+              var3 = 1;
+              if (rh.field_q == null) {
+                break L34;
               } else {
-                pa.a(sl.field_n, 9174);
-                this.a(false);
-                hg.a((byte) -93, sl.field_n);
-                break L33;
+                L35: {
+                  if (!rh.field_q.b(-2)) {
+                    stackIn_147_0 = 0;
+                    break L35;
+                  } else {
+                    stackIn_147_0 = 1;
+                    break L35;
+                  }
+                }
+                var3 = stackIn_147_0;
+                mc.a(rh.field_q.field_i, rh.field_q.field_g, -21801);
+                break L34;
               }
             }
-          } else {
-            if (param1) {
+            if (var3 != 0) {
+              nj.field_Q = 20;
               break L33;
             } else {
-              if (!ti.field_x) {
-                break L33;
-              } else {
-                pa.a(sl.field_n, 9174);
-                this.a(false);
-                hg.a((byte) -93, sl.field_n);
-                break L33;
-              }
+              break L33;
             }
           }
         }
-        L34: {
+        L36: {
+          if (param1) {
+            break L36;
+          } else {
+            if (!ti.field_x) {
+              break L36;
+            } else {
+              pa.a(sl.field_n, 9174);
+              this.a(false);
+              hg.a((byte) -93, sl.field_n);
+              break L36;
+            }
+          }
+        }
+        L37: {
           if (dg.field_h[8]) {
             sa.a((byte) -110);
-            break L34;
+            break L37;
           } else {
-            break L34;
+            break L37;
           }
         }
     }

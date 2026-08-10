@@ -91,13 +91,13 @@ abstract class fnb {
                                 var9_int = ar.a(var7, (byte) 109, var8);
                                 if (var9_int < tj.field_q) {
                                   cqb.a(var6.field_d + 65536, var6.field_h, var6.field_h, var6.field_d, (byte) -54);
-                                  decompiledRegionSelector0 = 2;
+                                  decompiledRegionSelector0 = 1;
                                   break L0;
                                 } else {
                                   break L6;
                                 }
                               } else {
-                                decompiledRegionSelector0 = 1;
+                                decompiledRegionSelector0 = 0;
                                 break L0;
                               }
                             }
@@ -111,7 +111,7 @@ abstract class fnb {
                 }
               }
             }
-            decompiledRegionSelector0 = 0;
+            decompiledRegionSelector0 = 2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2874,7 +2874,16 @@ final class fc extends bn {
               this.field_X[this.field_w] = param0.field_X[var2];
               this.field_bb[this.field_w] = param0.field_bb[var2];
               this.field_d[this.field_w] = param0.field_d[var2];
-              if (this.field_H == null) {
+              if (this.field_H != null) {
+                L5: {
+                  if (param0.field_H == null) {
+                    this.field_H[this.field_w] = param0.field_M;
+                    break L5;
+                  } else {
+                    this.field_H[this.field_w] = param0.field_H[var2];
+                    break L5;
+                  }
+                }
                 if (this.field_R == null) {
                   break L4;
                 } else {
@@ -2895,40 +2904,40 @@ final class fc extends bn {
                     this.field_R[this.field_w] = param0.field_R[var2];
                     break L4;
                   }
-                }
-              }
-            }
-            L5: {
-              if (this.field_F == null) {
-                break L5;
-              } else {
-                if (param0.field_F == null) {
-                  this.field_F[this.field_w] = (short)-1;
-                  break L5;
-                } else {
-                  this.field_F[this.field_w] = param0.field_F[var2];
-                  break L5;
                 }
               }
             }
             L6: {
-              if (this.field_eb == null) {
+              if (this.field_F == null) {
                 break L6;
               } else {
-                L7: {
+                if (param0.field_F == null) {
+                  this.field_F[this.field_w] = (short)-1;
+                  break L6;
+                } else {
+                  this.field_F[this.field_w] = param0.field_F[var2];
+                  break L6;
+                }
+              }
+            }
+            L7: {
+              if (this.field_eb == null) {
+                break L7;
+              } else {
+                L8: {
                   if (param0.field_eb == null) {
-                    break L7;
+                    break L8;
                   } else {
                     if (param0.field_eb[var2] == -1) {
-                      break L7;
+                      break L8;
                     } else {
                       this.field_eb[this.field_w] = (byte)(param0.field_eb[var2] + this.field_L);
-                      break L6;
+                      break L7;
                     }
                   }
                 }
                 this.field_eb[this.field_w] = (byte)-1;
-                break L6;
+                break L7;
               }
             }
             this.field_w = this.field_w + 1;

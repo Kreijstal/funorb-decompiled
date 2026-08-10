@@ -53,20 +53,13 @@ final class km {
         try {
           L0: {
             L1: {
-              L2: {
-                if (param0 == null) {
-                  break L2;
-                } else {
-                  var3 = param0;
-                  if (!OrbDefence.field_D) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              if (param0 == null) {
+                var3 = this.field_c.field_d.field_c;
+                break L1;
+              } else {
+                var3 = param0;
+                break L1;
               }
-              var3 = this.field_c.field_d.field_c;
-              break L1;
             }
             if (this.field_c.field_d != var3) {
               this.field_a = var3.field_c;
@@ -88,7 +81,7 @@ final class km {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3_ref = decompiledCaughtException;
             stackIn_13_0 = (RuntimeException) (var3_ref);
 
@@ -98,12 +91,12 @@ final class km {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "null";
-              break L3;
+              break L2;
             } else {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "{...}";
-              break L3;
+              break L2;
             }
           }
           throw dd.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
@@ -155,132 +148,53 @@ final class km {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
         int var7_int = 0;
-        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var13 = OrbDefence.field_D ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var7_int = param4 + ul.field_f * param3;
-                        var8 = param2 & 16711935;
-                        param2 = param2 & 65280;
-                        var9 = 0;
-                        if (param1 > 53) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_b = (String) null;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        if (param6 <= var9) {
-                            statePc = 10;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var10 = (1 + var9) * (-param5 + param0) / (1 + param6) + param5;
-                        var11 = ul.field_b[var7_int];
-                        var12 = 16711935 & var11;
-                        var11 = var11 & 65280;
-                        var12 = (var8 * var10 & -16711936) + ((256 - var10) * var12 & -16711936);
-                        var11 = (16711680 & var10 * param2) - -(16711680 & (-var10 + 256) * var11);
-                        incrementValue$1 = var7_int;
-                        var7_int++;
-                        ul.field_b[incrementValue$1] = ge.a(var12, var11) >>> -1215909112;
-                        var9++;
-                        if (var13 == 0) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (var13 == 0) {
-                            statePc = 3;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var7 = (RuntimeException) ((Object) caughtException);
-                    throw dd.a((Throwable) ((Object) var7), "km.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
+        var13 = OrbDefence.field_D ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var7_int = param4 + ul.field_f * param3;
+              var8 = param2 & 16711935;
+              param2 = param2 & 65280;
+              var9 = 0;
+              if (param1 > 53) {
+                break L1;
+              } else {
+                field_b = (String) null;
+                break L1;
+              }
             }
+            L2: while (true) {
+              if (param6 <= var9) {
+                break L0;
+              } else {
+                var10 = (1 + var9) * (-param5 + param0) / (1 + param6) + param5;
+                var11 = ul.field_b[var7_int];
+                var12 = 16711935 & var11;
+                var11 = var11 & 65280;
+                var12 = (var8 * var10 & -16711936) + ((256 - var10) * var12 & -16711936);
+                var11 = (16711680 & var10 * param2) - -(16711680 & (-var10 + 256) * var11);
+                incrementValue$2 = var7_int;
+                var7_int++;
+                ul.field_b[incrementValue$2] = ge.a(var12, var11) >>> -1215909112;
+                var9++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          throw dd.a((Throwable) ((Object) var7), "km.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -377,27 +291,20 @@ final class km {
         try {
           L0: {
             L1: {
-              L2: {
-                if (param0 != null) {
-                  break L2;
-                } else {
-                  var3 = this.field_c.field_d.field_e;
-                  if (!OrbDefence.field_D) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              if (param0 != null) {
+                var3 = param0;
+                break L1;
+              } else {
+                var3 = this.field_c.field_d.field_e;
+                break L1;
               }
-              var3 = param0;
-              break L1;
             }
-            L3: {
+            L2: {
               if (param1 == -1) {
-                break L3;
+                break L2;
               } else {
                 km.a(true);
-                break L3;
+                break L2;
               }
             }
             if (this.field_c.field_d == var3) {
@@ -414,7 +321,7 @@ final class km {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3_ref = decompiledCaughtException;
             stackIn_13_0 = (RuntimeException) (var3_ref);
 
@@ -424,12 +331,12 @@ final class km {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw dd.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');

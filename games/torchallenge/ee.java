@@ -1027,19 +1027,22 @@ class ee extends da {
             L6: {
               if (this.field_k != null) {
                 L7: {
-                  discarded$6 = param0.append(" listener=");
-                  if (this.field_k instanceof ee) {
-                    break L7;
-                  } else {
-                    discarded$7 = param0.append(this.field_k);
-                    if (var6 == 0) {
-                      break L6;
+                  L8: {
+                    discarded$6 = param0.append(" listener=");
+                    if (this.field_k instanceof ee) {
+                      break L8;
                     } else {
-                      break L7;
+                      discarded$7 = param0.append(this.field_k);
+                      if (var6 == 0) {
+                        break L7;
+                      } else {
+                        break L8;
+                      }
                     }
                   }
+                  param0 = this.a(param2, param3 + 1, param0, true);
+                  break L7;
                 }
-                param0 = this.a(param2, param3 + 1, param0, true);
                 break L6;
               } else {
                 break L6;
@@ -1049,7 +1052,7 @@ class ee extends da {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L9: {
             var5 = decompiledCaughtException;
             stackIn_21_0 = (RuntimeException) (var5);
 
@@ -1059,15 +1062,15 @@ class ee extends da {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "null";
-              break L8;
+              break L9;
             } else {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "{...}";
-              break L8;
+              break L9;
             }
           }
-          L9: {
+          L10: {
 
 
             stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param1).append(',');
@@ -1076,12 +1079,12 @@ class ee extends da {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "null";
-              break L9;
+              break L10;
             } else {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "{...}";
-              break L9;
+              break L10;
             }
           }
           throw oj.a((Throwable) ((Object) stackIn_22_0), stackIn_25_2 + ',' + param3 + ')');

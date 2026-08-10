@@ -26,42 +26,31 @@ final class n {
         try {
           L0: {
             L1: {
-              L2: {
-                if (-1 > (param3 ^ -1)) {
-                  break L2;
-                } else {
-                  var4 = param0;
-                  if (var7 == 0) {
+              if (-1 > (param3 ^ -1)) {
+                var8 = new byte[param1];
+                var4 = var8;
+                var5_int = 0;
+                L2: while (true) {
+                  if (var5_int >= param1) {
                     break L1;
                   } else {
-                    break L2;
+                    var8[var5_int] = param0[param3 + var5_int];
+                    var5_int++;
+                    continue L2;
                   }
                 }
-              }
-              var8 = new byte[param1];
-              var4 = var8;
-              var5_int = 0;
-              L3: while (true) {
-                if (var5_int >= param1) {
-                  break L1;
-                } else {
-                  var8[var5_int] = param0[param3 + var5_int];
-                  var5_int++;
-                  if (var7 == 0) {
-                    continue L3;
-                  } else {
-                    break L1;
-                  }
-                }
+              } else {
+                var4 = param0;
+                break L1;
               }
             }
-            L4: {
+            L3: {
               var5 = new rl();
               if (param2 == -5705) {
-                break L4;
+                break L3;
               } else {
                 n.a(true);
-                break L4;
+                break L3;
               }
             }
             var5.a(param2 + 21003);
@@ -75,7 +64,7 @@ final class n {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var4_ref = decompiledCaughtException;
             stackIn_12_0 = (RuntimeException) (var4_ref);
 
@@ -85,12 +74,12 @@ final class n {
               stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackIn_13_2 = "null";
-              break L5;
+              break L4;
             } else {
               stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackIn_13_2 = "{...}";
-              break L5;
+              break L4;
             }
           }
           throw ch.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -101,8 +90,6 @@ final class n {
     public static void a(boolean param0) {
         if (param0) {
             n.a(true);
-            field_b = null;
-            return;
         }
         field_b = null;
     }

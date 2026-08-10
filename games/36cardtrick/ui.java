@@ -105,98 +105,36 @@ final class ui extends g implements qh {
 
     final static void d(byte param0) {
         try {
-            IOException iOException = null;
-            IOException var2_ref = null;
             int var1_int = 0;
-            int var3 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var1 = null;
-            var3 = Main.field_T;
+            int var3 = Main.field_T;
             try {
-              L0: {
-                L1: {
-                  if (dg.field_H != null) {
+                if (!(dg.field_H == null)) {
                     dg.field_H.a(82);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
                 }
-                L2: {
-                  if (param0 < -49) {
-                    break L2;
-                  } else {
+                if (param0 >= -49) {
                     ui.l(-66);
-                    break L2;
-                  }
                 }
-                L3: {
-                  if (null != sc.field_b) {
+                if (!(null == sc.field_b)) {
                     sc.field_b.b(124);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
                 }
-                L4: {
-                  if (ni.field_c != null) {
+                if (!(ni.field_c == null)) {
                     try {
-                      L5: {
                         ni.field_c.a((byte) -120);
-                        break L5;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        break L6;
-                      }
+                    } catch (IOException iOException) {
                     }
-                    break L4;
-                  } else {
-                    break L4;
-                  }
                 }
-                L7: {
-                  if (null == rk.field_Z) {
-                    break L7;
-                  } else {
-                    var1_int = 0;
-                    L8: while (true) {
-                      if (var1_int >= rk.field_Z.length) {
-                        break L7;
-                      } else {
-                        L9: {
-                          if (rk.field_Z[var1_int] != null) {
+                if (null != rk.field_Z) {
+                    for (var1_int = 0; var1_int < rk.field_Z.length; var1_int++) {
+                        if (!(rk.field_Z[var1_int] == null)) {
                             try {
-                              L10: {
                                 rk.field_Z[var1_int].a((byte) -86);
-                                break L10;
-                              }
-                            } catch (java.io.IOException decompiledCaughtParameter1) {
-                              decompiledCaughtException = decompiledCaughtParameter1;
-                              L11: {
-                                var2_ref = (IOException) (Object) decompiledCaughtException;
-                                break L11;
-                              }
+                            } catch (IOException var2_ref) {
                             }
-                            break L9;
-                          } else {
-                            break L9;
-                          }
                         }
-                        var1_int++;
-                        continue L8;
-                      }
                     }
-                  }
                 }
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw ma.a((Throwable) ((Object) var1), "ui.D(" + param0 + ')');
+            } catch (RuntimeException runtimeException) {
+                throw ma.a((Throwable) ((Object) runtimeException), "ui.D(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

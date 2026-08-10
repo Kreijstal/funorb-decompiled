@@ -10,23 +10,30 @@ class kb extends ri {
     static oh field_n;
 
     final static tf a(int param0, boolean param1) {
-        int var4 = Transmogrify.field_A ? 1 : 0;
-        tf[] var5 = rh.d(-26481);
-        tf[] var2 = var5;
-        if (!param1) {
-            return (tf) null;
-        }
-        int var3 = 0;
-        do {
-            if (var5.length <= var3) {
-                return null;
-            }
-            if (var5[var3].field_c == param0) {
+        tf[] var2;
+        int var3;
+        int var4;
+        tf[] var5;
+        var4 = Transmogrify.field_A ? 1 : 0;
+        var5 = rh.d(-26481);
+        var2 = var5;
+        if (param1) {
+          var3 = 0;
+          L0: while (true) {
+            if (var5.length > var3) {
+              if (var5[var3].field_c != param0) {
+                var3++;
+                continue L0;
+              } else {
                 return var5[var3];
+              }
+            } else {
+              return null;
             }
-            var3++;
-        } while (var4 == 0);
-        return null;
+          }
+        } else {
+          return (tf) null;
+        }
     }
 
     final static byte[] a(String param0, byte param1) {

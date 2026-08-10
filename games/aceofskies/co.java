@@ -221,26 +221,29 @@ final class co {
               }
             }
             L12: {
-              if (vp.field_f > param0) {
-                break L12;
-              } else {
-                if (vp.field_d > var6) {
-                  var11 = var7 + (var6 * vp.field_i - -(-param0 + var6 & 1));
-                  var12 = -var7 + 1 - -var9 >> -594024799;
-                  L13: while (true) {
-                    var12--;
-                    if (0 > var12) {
-                      break L12;
-                    } else {
-                      vp.field_j[var11] = 16777215;
-                      var11 += 2;
-                      continue L13;
-                    }
-                  }
+              L13: {
+                if (vp.field_f > param0) {
+                  break L13;
                 } else {
-                  break L12;
+                  if (vp.field_d > var6) {
+                    var11 = var7 + (var6 * vp.field_i - -(-param0 + var6 & 1));
+                    var12 = -var7 + 1 - -var9 >> -594024799;
+                    L14: while (true) {
+                      var12--;
+                      if (0 > var12) {
+                        break L13;
+                      } else {
+                        vp.field_j[var11] = 16777215;
+                        var11 += 2;
+                        continue L14;
+                      }
+                    }
+                  } else {
+                    break L12;
+                  }
                 }
               }
+              break L12;
             }
             break L0;
           }

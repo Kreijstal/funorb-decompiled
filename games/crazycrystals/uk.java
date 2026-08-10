@@ -254,32 +254,35 @@ final class uk extends nf {
                     }
                   }
                   L13: {
-                    if (gh.field_y) {
-                      break L13;
-                    } else {
-                      if (!rc.a(-63)) {
-                        L14: {
-                          if (null != eb.field_p) {
+                    L14: {
+                      if (gh.field_y) {
+                        break L14;
+                      } else {
+                        if (!rc.a(-63)) {
+                          L15: {
+                            if (null != eb.field_p) {
+                              break L15;
+                            } else {
+                              eb.field_p = qa.a((byte) 121, 4);
+                              break L15;
+                            }
+                          }
+                          if (!eb.field_p.field_k) {
                             break L14;
                           } else {
-                            eb.field_p = qa.a((byte) 121, 4);
-                            break L14;
+                            fk.field_s = eb.field_p.field_f;
+                            pc.field_y = pc.field_y & (fk.field_s ^ -1);
+                            gh.field_y = true;
+                            fk.field_s = fk.field_s + pc.field_y;
+                            eb.field_p = null;
+                            break L13;
                           }
-                        }
-                        if (!eb.field_p.field_k) {
-                          break L13;
                         } else {
-                          fk.field_s = eb.field_p.field_f;
-                          pc.field_y = pc.field_y & (fk.field_s ^ -1);
-                          gh.field_y = true;
-                          fk.field_s = fk.field_s + pc.field_y;
-                          eb.field_p = null;
                           break L13;
                         }
-                      } else {
-                        break L13;
                       }
                     }
+                    break L13;
                   }
                   decompiledRegionSelector1 = 0;
                   break L0;

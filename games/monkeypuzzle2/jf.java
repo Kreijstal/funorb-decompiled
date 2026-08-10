@@ -20,7 +20,7 @@ final class jf extends ug {
         RuntimeException var1 = null;
         ki var2 = null;
         int var3 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
@@ -28,37 +28,21 @@ final class jf extends ug {
             var1_int = param0;
             var2 = (ki) ((Object) ok.field_a.a((byte) -117));
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (var2 == null) {
-                    break L3;
+              if (var2 == null) {
+                stackIn_7_0 = var1_int;
+                break L0;
+              } else {
+                L2: {
+                  if (var2.field_q - (float)var2.field_y <= (float)var1_int) {
+                    break L2;
                   } else {
-                    stackIn_8_0 = (var2.field_q - (float)var2.field_y < (float)var1_int ? -1 : (var2.field_q - (float)var2.field_y == (float)var1_int ? 0 : 1));
-
-                    if (var3 != 0) {
-                      break L2;
-                    } else {
-                      L4: {
-                        if (stackIn_8_0 <= 0) {
-                          break L4;
-                        } else {
-                          var1_int = (int)((float)(-var2.field_y) + var2.field_q);
-                          break L4;
-                        }
-                      }
-                      var2 = (ki) ((Object) ok.field_a.d((byte) 63));
-                      if (var3 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
-                    }
+                    var1_int = (int)((float)(-var2.field_y) + var2.field_q);
+                    break L2;
                   }
                 }
-                stackIn_8_0 = var1_int;
-                break L2;
+                var2 = (ki) ((Object) ok.field_a.d((byte) 63));
+                continue L1;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -66,59 +50,24 @@ final class jf extends ug {
           var1 = decompiledCaughtException;
           throw la.a((Throwable) ((Object) var1), "jf.B(" + param0 + ')');
         }
-        return stackIn_8_0;
+        return stackIn_7_0;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7) {
-        RuntimeException runtimeException = null;
-        int[] var10 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_l = param7;
-              this.field_e = param5;
-              this.field_o = param1;
-              this.field_j = param6;
-              this.field_m = param3;
-              this.field_n = param4;
-              this.field_h = param0;
-              if (param2 > 103) {
-                break L1;
-              } else {
-                var10 = (int[]) null;
+            this.field_l = param7;
+            this.field_e = param5;
+            this.field_o = param1;
+            this.field_j = param6;
+            this.field_m = param3;
+            this.field_n = param4;
+            this.field_h = param0;
+            if (param2 <= 103) {
+                int[] var10 = (int[]) null;
                 this.a(67, 55, 21, -107, -21, 22, 114, (int[]) null);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("jf.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-
-            if (param7 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw la.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) ((Object) runtimeException), "jf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 

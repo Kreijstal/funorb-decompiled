@@ -156,13 +156,13 @@ abstract class cq implements jj {
                               var20++;
                               continue L6;
                             } else {
-                              var14 = param0[var18];
+                              var14 = var11[var18];
                               var18 = var18 + var6_int;
-                              var14 = var14 + param0[var18];
-                              var14 = var14 + param0[var19];
+                              var14 = var14 + var11[var18];
+                              var14 = var14 + var11[var19];
                               var18 = var18 + var6_int;
                               var19 = var19 + var6_int;
-                              var14 = var14 + param0[var19];
+                              var14 = var14 + var11[var19];
                               var19 = var19 + var6_int;
                               var12[var17] = var14 * 0.25f;
                               var17 = var17 + var6_int;
@@ -333,13 +333,13 @@ abstract class cq implements jj {
                               var20++;
                               continue L6;
                             } else {
-                              var14 = param2[var18];
+                              var14 = var11[var18];
                               var18 = var18 + var6_int;
-                              var14 = var14 + param2[var18];
+                              var14 = var14 + var11[var18];
                               var18 = var18 + var6_int;
-                              var14 = var14 + param2[var19];
+                              var14 = var14 + var11[var19];
                               var19 = var19 + var6_int;
-                              var14 = var14 + param2[var19];
+                              var14 = var14 + var11[var19];
                               var19 = var19 + var6_int;
                               var12[var17] = (byte)(var14 >> -2027735838);
                               var17 = var17 + var6_int;

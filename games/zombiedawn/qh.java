@@ -8,126 +8,52 @@ final class qh extends vo {
 
     final static void a(int param0, int param1, String param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
-        String var4 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 10) {
-                break L1;
-              } else {
-                var4 = (String) null;
+            if (param0 != 10) {
+                String var4 = (String) null;
                 qh.a(24, 51, (String) null);
-                break L1;
-              }
             }
-            L2: {
-              ce.field_q = false;
-              mp.field_e = false;
-              if (kk.field_i == null) {
-                break L2;
-              } else {
-                if (kk.field_i.field_H) {
-                  L3: {
-                    if (param1 != 8) {
-                      break L3;
+            ce.field_q = false;
+            mp.field_e = false;
+            if (kk.field_i != null) {
+                if (!kk.field_i.field_H) {
+                    return;
+                }
+                if (param1 == 8) {
+                    param1 = 2;
+                    if (nm.field_c) {
+                        param2 = tl.field_e;
                     } else {
-                      L4: {
-                        param1 = 2;
-                        if (!nm.field_c) {
-                          param2 = fl.field_b;
-                          break L4;
-                        } else {
-                          param2 = tl.field_e;
-                          break L4;
-                        }
-                      }
-                      he.field_a.a(m.field_B, 20);
-                      break L3;
+                        param2 = fl.field_b;
                     }
-                  }
-                  L5: {
-                    var3_int = 1;
-                    if (-11 != (param1 ^ -1)) {
-                      break L5;
-                    } else {
-                      var3_int = 0;
-                      jp.a((byte) -70);
-                      break L5;
+                    he.field_a.a(m.field_B, 20);
+                }
+                var3_int = 1;
+                if (-11 == (param1 ^ -1)) {
+                    var3_int = 0;
+                    jp.a((byte) -70);
+                }
+                if (var3_int != 0) {
+                    if (!(!mp.field_e)) {
+                        param2 = s.a(1938762664, nd.field_e, new String[]{param2});
                     }
-                  }
-                  L6: {
-                    if (var3_int == 0) {
-                      break L6;
-                    } else {
-                      L7: {
-                        if (mp.field_e) {
-                          param2 = s.a(1938762664, nd.field_e, new String[]{param2});
-                          break L7;
-                        } else {
-                          break L7;
-                        }
-                      }
-                      L8: {
-                        if (pk.field_J) {
-                          param2 = fe.field_L;
-                          break L8;
-                        } else {
-                          break L8;
-                        }
-                      }
-                      kk.field_i.a(param2, param1, param0 ^ 27);
-                      break L6;
+                    if (!(!pk.field_J)) {
+                        param2 = fe.field_L;
                     }
-                  }
-                  if (-257 == (param1 ^ -1)) {
-                    break L2;
-                  } else {
-                    if (param1 != 10) {
-                      if (nm.field_c) {
-                        break L2;
-                      } else {
+                    kk.field_i.a(param2, param1, param0 ^ 27);
+                }
+                if (-257 != (param1 ^ -1)) {
+                    if (param1 == 10) {
+                        return;
+                    }
+                    if (!nm.field_c) {
                         he.field_a.h(-123);
                         return;
-                      }
-                    } else {
-                      return;
                     }
-                  }
-                } else {
-                  return;
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var3 = decompiledCaughtException;
-            stackIn_28_0 = (RuntimeException) (var3);
-
-            stackIn_28_1 = new StringBuilder().append("qh.N(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "null";
-              break L9;
-            } else {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "{...}";
-              break L9;
-            }
-          }
-          throw sh.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) ((Object) runtimeException), "qh.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

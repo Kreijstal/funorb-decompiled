@@ -293,13 +293,13 @@ final class li extends me {
         int var4 = 0;
         int var5 = 0;
         int stackIn_6_0 = 0;
+        int stackIn_11_0 = 0;
         int stackIn_13_0 = 0;
-        int stackIn_15_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = Transmogrify.field_A ? 1 : 0;
@@ -314,23 +314,17 @@ final class li extends me {
                 var3_int = -(int)(4294967296L % (long)param0) + -2147483648;
                 L1: while (true) {
                   var4 = param1.nextInt();
-                  L2: while (true) {
-                    if (var3_int <= var4) {
-                      continue L1;
+                  if (var3_int <= var4) {
+                    continue L1;
+                  } else {
+                    if (!param2) {
+                      stackIn_13_0 = ic.a(param0, (byte) -70, var4);
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     } else {
-                      if (var5 != 0) {
-                        continue L2;
-                      } else {
-                        if (!param2) {
-                          stackIn_15_0 = ic.a(param0, (byte) -70, var4);
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        } else {
-                          stackIn_13_0 = -58;
-                          decompiledRegionSelector0 = 1;
-                          break L0;
-                        }
-                      }
+                      stackIn_11_0 = -58;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     }
                   }
                 }
@@ -341,33 +335,33 @@ final class li extends me {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var3);
+            stackIn_16_0 = (RuntimeException) (var3);
 
-            stackIn_18_1 = new StringBuilder().append("li.H(").append(param0).append(',');
+            stackIn_16_1 = new StringBuilder().append("li.H(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L3;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
+              break L2;
             } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L3;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
+              break L2;
             }
           }
-          throw ch.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_6_0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_13_0;
+            return stackIn_11_0;
           } else {
-            return stackIn_15_0;
+            return stackIn_13_0;
           }
         }
     }

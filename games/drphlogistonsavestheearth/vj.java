@@ -289,7 +289,7 @@ final class vj {
                           break L9;
                         }
                       }
-                      throw ie.a((Throwable) ((Object) stackIn_36_0), (stackIn_36_2 != 0) + " " + param2 + " " + param3.length + " " + th.a(var9, (byte) 127, param3.length) + " " + th.a(var9, (byte) 125, -2 + param3.length) + " " + this.field_b.field_j[param2] + " " + this.field_b.field_p);
+                      throw ie.a((Throwable) ((Object) stackIn_36_0), (stackIn_36_2 != 0) + " " + param2 + " " + var9.length + " " + th.a(var9, (byte) 127, var9.length) + " " + th.a(var9, (byte) 125, -2 + var9.length) + " " + this.field_b.field_j[param2] + " " + this.field_b.field_p);
                     }
                     L10: {
                       if (this.field_c) {

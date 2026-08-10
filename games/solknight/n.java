@@ -30,11 +30,7 @@ final class n implements Iterator {
               this.field_g = this.field_g + 1;
               if (this.field_e.field_b[fieldTemp$1].field_d == this.field_e.field_b[this.field_g - 1]) {
                 this.field_f = this.field_e.field_b[this.field_g - 1];
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  return false;
-                }
+                continue L0;
               } else {
                 this.field_f = this.field_e.field_b[this.field_g + -1].field_d;
                 return true;
@@ -81,11 +77,7 @@ final class n implements Iterator {
               this.field_g = this.field_g + 1;
               var1 = this.field_e.field_b[fieldTemp$1].field_d;
               if (this.field_e.field_b[this.field_g + -1] == var1) {
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  return null;
-                }
+                continue L0;
               } else {
                 this.field_f = var1.field_d;
                 this.field_d = var1;

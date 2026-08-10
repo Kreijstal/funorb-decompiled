@@ -170,141 +170,54 @@ class sf extends ie {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        StringBuilder stackIn_4_0 = null;
-        StringBuilder stackIn_7_0 = null;
+        StringBuilder stackIn_5_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var7 = OrbDefence.field_D ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var5 = -73 / ((param3 - -32) / 42);
-                        var4_int = param1.length();
-                        param1.setLength(param0);
-                        var6 = var4_int;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (param0 <= var6) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        stackIn_7_0 = (StringBuilder) (param1);
-                        stackIn_4_0 = stackIn_7_0;
-                        if (var7 != 0) {
-                            statePc = 7;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        ((StringBuilder) (Object) stackIn_4_0).setCharAt(var6, param2);
-                        var6++;
-                        if (var7 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        stackIn_7_0 = (StringBuilder) (param1);
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    return stackIn_7_0;
-                }
-                case 8: {
-                    var4 = (RuntimeException) ((Object) caughtException);
-                    stackIn_10_0 = (RuntimeException) (var4);
-                    stackIn_9_0 = stackIn_10_0;
-                    stackIn_10_1 = new StringBuilder().append("sf.J(").append(param0).append(',');
-                    stackIn_9_1 = stackIn_10_1;
-                    if (param1 == null) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    stackIn_11_0 = (RuntimeException) ((Object) stackIn_9_0);
-                    stackIn_11_1 = (StringBuilder) ((Object) stackIn_9_1);
-                    stackIn_11_2 = "{...}";
-                    statePc = 11;
-                    continue stateLoop;
-                }
-                case 10: {
-                    stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-                    stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-                    stackIn_11_2 = "null";
-                    statePc = 11;
-                    continue stateLoop;
-                }
-                case 11: {
-                    throw dd.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ')');
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var7 = OrbDefence.field_D ? 1 : 0;
+        try {
+          L0: {
+            var5 = -73 / ((param3 - -32) / 42);
+            var4_int = param1.length();
+            param1.setLength(param0);
+            var6 = var4_int;
+            L1: while (true) {
+              if (param0 <= var6) {
+                stackIn_5_0 = (StringBuilder) (param1);
+                break L0;
+              } else {
+                param1.setCharAt(var6, param2);
+                var6++;
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (var4);
+
+            stackIn_8_1 = new StringBuilder().append("sf.J(").append(param0).append(',');
+
+            if (param1 == null) {
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
+              break L2;
+            } else {
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
+              break L2;
+            }
+          }
+          throw dd.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ',' + param3 + ')');
         }
+        return stackIn_5_0;
     }
 
     private final void a(sf param0, byte param1) {
@@ -661,16 +574,6 @@ class sf extends ie {
     }
 
     private sf(long param0, sf param1, int param2, int param3, int param4, int param5, String param6) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         this.field_x = -2147483648;
         this.field_H = -2147483648;
         this.field_m = -1;
@@ -685,57 +588,13 @@ class sf extends ie {
         this.field_W = -2147483648;
         this.field_P = true;
         try {
-          L0: {
-            L1: {
-              this.field_d = param0;
-              this.a(param1, (byte) -117);
-              if (param6 == null) {
-                break L1;
-              } else {
+            this.field_d = param0;
+            this.a(param1, (byte) -117);
+            if (param6 != null) {
                 this.field_r = param6;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (runtimeException);
-
-            stackIn_6_1 = new StringBuilder().append("sf.<init>(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
-          }
-          L3: {
-
-
-            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-
-            if (param6 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) ((Object) runtimeException), "sf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

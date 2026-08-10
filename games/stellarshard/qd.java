@@ -31,7 +31,23 @@ final class qd {
               }
             }
             L1: {
-              if (this.field_d == 0) {
+              if (this.field_d != 0) {
+                L2: {
+                  if (-1 != (fb.field_n ^ -1)) {
+                    L3: {
+                      if (-1 <= (this.field_a ^ -1)) {
+                        this.field_a = rc.field_m;
+                        break L3;
+                      } else {
+                        break L3;
+                      }
+                    }
+                    this.field_a = this.field_a - 1;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
                 if (0 != gh.field_c) {
                   break L1;
                 } else {
@@ -55,38 +71,38 @@ final class qd {
                 }
               }
             }
-            L2: {
+            L4: {
               if ((this.field_d ^ -1) != param2) {
-                break L2;
+                break L4;
               } else {
-                L3: {
+                L5: {
                   if (this.field_g) {
-                    break L3;
+                    break L5;
                   } else {
                     if (qc.field_a) {
-                      break L3;
+                      break L5;
                     } else {
-                      break L2;
+                      break L4;
                     }
                   }
                 }
                 if (-1 >= (param0 ^ -1)) {
-                  L4: {
+                  L6: {
                     if (param0 != this.field_f) {
-                      break L4;
+                      break L6;
                     } else {
-                      break L4;
+                      break L6;
                     }
                   }
                   this.field_g = true;
                   this.field_f = param0;
-                  break L2;
+                  break L4;
                 } else {
                   if (!this.field_g) {
-                    break L2;
+                    break L4;
                   } else {
                     this.field_f = -1;
-                    break L2;
+                    break L4;
                   }
                 }
               }

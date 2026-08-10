@@ -275,14 +275,8 @@ final class mo extends cj {
               return;
             } else {
               this.field_Mb.field_R = this.field_R;
-              if (!ZombieDawnMulti.field_E) {
-                this.field_Mb.field_lb = this.field_lb;
-                return;
-              } else {
-                this.field_Mb.field_R = 0;
-                this.field_Mb.field_lb = this.field_lb;
-                return;
-              }
+              this.field_Mb.field_lb = this.field_lb;
+              return;
             }
           } else {
             return;
@@ -340,14 +334,8 @@ final class mo extends cj {
               return;
             } else {
               this.field_Mb.field_R = this.field_R;
-              if (!ZombieDawnMulti.field_E) {
-                this.field_Mb.field_lb = this.field_lb;
-                return;
-              } else {
-                this.field_Mb.field_R = 0;
-                this.field_Mb.field_lb = this.field_lb;
-                return;
-              }
+              this.field_Mb.field_lb = this.field_lb;
+              return;
             }
           } else {
             return;
@@ -361,161 +349,23 @@ final class mo extends cj {
         if (param4 <= param2) {
           if (param2 < param6) {
             ld.a(-12628, param6, param2, param5, param3, param4, param0, oo.field_i, param1);
-            if (param7 > 30) {
+            if (param7 <= 30) {
+              mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
               return;
             } else {
-              mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
               return;
             }
           } else {
             if (param4 < param6) {
               ld.a(-12628, param2, param6, param0, param3, param4, param5, oo.field_i, param1);
-              if (var9 == 0) {
-                if (param7 > 30) {
-                  return;
-                } else {
-                  mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
-                  return;
-                }
+              if (param7 <= 30) {
+                mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
+                return;
               } else {
-                ld.a(-12628, param6, param2, param5, param3, param4, param0, oo.field_i, param1);
-                if (param7 > 30) {
-                  return;
-                } else {
-                  mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
-                  return;
-                }
+                return;
               }
             } else {
               ld.a(-12628, param2, param4, param0, param5, param6, param3, oo.field_i, param1);
-              if (var9 != 0) {
-                ld.a(-12628, param2, param6, param0, param3, param4, param5, oo.field_i, param1);
-                if (var9 == 0) {
-                  if (param7 > 30) {
-                    return;
-                  } else {
-                    mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
-                    return;
-                  }
-                } else {
-                  ld.a(-12628, param6, param2, param5, param3, param4, param0, oo.field_i, param1);
-                  if (param7 <= 30) {
-                    mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                if (param7 <= 30) {
-                  mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            }
-          }
-        } else {
-          if (param4 < param6) {
-            ld.a(-12628, param6, param4, param5, param0, param2, param3, oo.field_i, param1);
-            if (var9 != 0) {
-              if (param6 > param2) {
-                ld.a(-12628, param4, param6, param3, param0, param2, param5, oo.field_i, param1);
-                if (var9 != 0) {
-                  L0: {
-                    if (param2 < param6) {
-                      ld.a(-12628, param6, param2, param5, param3, param4, param0, oo.field_i, param1);
-                      break L0;
-                    } else {
-                      L1: {
-                        if (param4 < param6) {
-                          break L1;
-                        } else {
-                          ld.a(-12628, param2, param4, param0, param5, param6, param3, oo.field_i, param1);
-                          if (var9 == 0) {
-                            break L0;
-                          } else {
-                            break L1;
-                          }
-                        }
-                      }
-                      ld.a(-12628, param2, param6, param0, param3, param4, param5, oo.field_i, param1);
-                      if (var9 == 0) {
-                        break L0;
-                      } else {
-                        L2: {
-                          ld.a(-12628, param6, param2, param5, param3, param4, param0, oo.field_i, param1);
-                          if (param7 > 30) {
-                            break L2;
-                          } else {
-                            mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
-                            break L2;
-                          }
-                        }
-                        return;
-                      }
-                    }
-                  }
-                  if (param7 <= 30) {
-                    mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  if (param7 <= 30) {
-                    mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                ld.a(-12628, param4, param2, param3, param5, param6, param0, oo.field_i, param1);
-                if (var9 == 0) {
-                  if (param7 <= 30) {
-                    mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  L3: {
-                    ld.a(-12628, param4, param6, param3, param0, param2, param5, oo.field_i, param1);
-                    if (param2 < param6) {
-                      ld.a(-12628, param6, param2, param5, param3, param4, param0, oo.field_i, param1);
-                      break L3;
-                    } else {
-                      L4: {
-                        if (param4 < param6) {
-                          break L4;
-                        } else {
-                          ld.a(-12628, param2, param4, param0, param5, param6, param3, oo.field_i, param1);
-                          break L4;
-                        }
-                      }
-                      ld.a(-12628, param2, param6, param0, param3, param4, param5, oo.field_i, param1);
-                      if (var9 == 0) {
-                        break L3;
-                      } else {
-                        ld.a(-12628, param6, param2, param5, param3, param4, param0, oo.field_i, param1);
-                        break L3;
-                      }
-                    }
-                  }
-                  L5: {
-                    if (param7 > 30) {
-                      break L5;
-                    } else {
-                      mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
-                      break L5;
-                    }
-                  }
-                  return;
-                }
-              }
-            } else {
               if (param7 <= 30) {
                 mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
                 return;
@@ -523,85 +373,28 @@ final class mo extends cj {
                 return;
               }
             }
-          } else {
-            L6: {
-              if (param6 > param2) {
-                ld.a(-12628, param4, param6, param3, param0, param2, param5, oo.field_i, param1);
-                if (var9 == 0) {
-                  break L6;
-                } else {
-                  L7: {
-                    if (param2 < param6) {
-                      ld.a(-12628, param6, param2, param5, param3, param4, param0, oo.field_i, param1);
-                      break L7;
-                    } else {
-                      L8: {
-                        if (param4 < param6) {
-                          break L8;
-                        } else {
-                          ld.a(-12628, param2, param4, param0, param5, param6, param3, oo.field_i, param1);
-                          break L8;
-                        }
-                      }
-                      ld.a(-12628, param2, param6, param0, param3, param4, param5, oo.field_i, param1);
-                      if (var9 == 0) {
-                        break L7;
-                      } else {
-                        ld.a(-12628, param6, param2, param5, param3, param4, param0, oo.field_i, param1);
-                        break L7;
-                      }
-                    }
-                  }
-                  L9: {
-                    if (param7 > 30) {
-                      break L9;
-                    } else {
-                      mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
-                      break L9;
-                    }
-                  }
-                  return;
-                }
+          }
+        } else {
+          if (param4 >= param6) {
+            if (param6 > param2) {
+              ld.a(-12628, param4, param6, param3, param0, param2, param5, oo.field_i, param1);
+              if (param7 > 30) {
+                return;
               } else {
-                ld.a(-12628, param4, param2, param3, param5, param6, param0, oo.field_i, param1);
-                if (var9 == 0) {
-                  break L6;
-                } else {
-                  L10: {
-                    ld.a(-12628, param4, param6, param3, param0, param2, param5, oo.field_i, param1);
-                    if (param2 < param6) {
-                      ld.a(-12628, param6, param2, param5, param3, param4, param0, oo.field_i, param1);
-                      break L10;
-                    } else {
-                      L11: {
-                        if (param4 < param6) {
-                          break L11;
-                        } else {
-                          ld.a(-12628, param2, param4, param0, param5, param6, param3, oo.field_i, param1);
-                          break L11;
-                        }
-                      }
-                      ld.a(-12628, param2, param6, param0, param3, param4, param5, oo.field_i, param1);
-                      if (var9 == 0) {
-                        break L10;
-                      } else {
-                        ld.a(-12628, param6, param2, param5, param3, param4, param0, oo.field_i, param1);
-                        break L10;
-                      }
-                    }
-                  }
-                  L12: {
-                    if (param7 > 30) {
-                      break L12;
-                    } else {
-                      mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
-                      break L12;
-                    }
-                  }
-                  return;
-                }
+                mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
+                return;
+              }
+            } else {
+              ld.a(-12628, param4, param2, param3, param5, param6, param0, oo.field_i, param1);
+              if (param7 > 30) {
+                return;
+              } else {
+                mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
+                return;
               }
             }
+          } else {
+            ld.a(-12628, param6, param4, param5, param0, param2, param3, oo.field_i, param1);
             if (param7 <= 30) {
               mo.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
               return;

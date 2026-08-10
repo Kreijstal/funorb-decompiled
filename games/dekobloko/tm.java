@@ -12,8 +12,7 @@ final class tm {
     static int field_c;
 
     final static int a(byte param0) {
-        boolean stackIn_11_0 = false;
-        int stackIn_34_0 = 0;
+        int stackIn_31_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -28,123 +27,99 @@ final class tm {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (!ab.c((byte) 52)) {
-                    break L3;
+              if (!ab.c((byte) 52)) {
+                L2: {
+                  k.field_f.a(ub.a(bh.field_g, (byte) -81, pm.field_f), -20563, ub.a(he.field_S, (byte) -81, nf.field_h));
+                  if (k.field_f.b((byte) 114)) {
+                    var1_int = 1;
+                    break L2;
                   } else {
-                    k.field_f.a(-111);
-                    stackIn_11_0 = k.field_f.b((byte) 114);
-
-                    if (var7 != 0) {
-                      break L2;
-                    } else {
-                      L4: {
-                        if (stackIn_11_0) {
-                          var1_int = 1;
-                          break L4;
-                        } else {
-                          break L4;
-                        }
-                      }
-                      if (wh.field_c == 13) {
-                        var2 = 1;
-                        if (var7 == 0) {
-                          continue L1;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        continue L1;
-                      }
-                    }
+                    break L2;
                   }
                 }
-                k.field_f.a(ub.a(bh.field_g, (byte) -81, pm.field_f), -20563, ub.a(he.field_S, (byte) -81, nf.field_h));
-                stackIn_11_0 = k.field_f.b((byte) 114);
-                break L2;
-              }
-              L5: {
-                if (stackIn_11_0) {
-                  var1_int = 1;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              L6: {
-                L7: {
-                  L8: {
+                L3: {
+                  L4: {
                     var3 = 0;
                     if (var1_int == 0) {
-                      break L8;
+                      break L4;
                     } else {
                       if ((k.field_f.field_h ^ -1) <= -1) {
-                        break L7;
+                        L5: {
+                          var3 = qf.field_i[k.field_f.field_h];
+                          if (2 == var3) {
+                            break L5;
+                          } else {
+                            if (-6 == (var3 ^ -1)) {
+                              break L5;
+                            } else {
+                              break L3;
+                            }
+                          }
+                        }
+                        bf.a(false);
+                        break L3;
                       } else {
-                        break L8;
+                        break L4;
                       }
                     }
                   }
                   if (var2 == 0) {
-                    break L6;
+                    break L3;
                   } else {
                     if (-3 == (bc.field_B ^ -1)) {
-                      break L6;
+                      break L3;
                     } else {
                       bf.a(false);
-                      if (var7 == 0) {
-                        break L6;
+                      break L3;
+                    }
+                  }
+                }
+                L6: {
+                  if (param0 <= -88) {
+                    break L6;
+                  } else {
+                    tm.a((byte) 116);
+                    break L6;
+                  }
+                }
+                L7: {
+                  if (var3 != 0) {
+                    break L7;
+                  } else {
+                    if (2 == bc.field_B) {
+                      var4 = ik.a(4) - di.field_F;
+                      var6 = (int)((10999L - var4) / 1000L);
+                      if (0 >= var6) {
+                        var3 = 2;
+                        bl.a(-79, 5, true);
+                        break L7;
                       } else {
                         break L7;
                       }
-                    }
-                  }
-                }
-                L9: {
-                  var3 = qf.field_i[k.field_f.field_h];
-                  if (2 == var3) {
-                    break L9;
-                  } else {
-                    if (-6 == (var3 ^ -1)) {
-                      break L9;
                     } else {
-                      break L6;
+                      break L7;
                     }
                   }
                 }
-                bf.a(false);
-                break L6;
-              }
-              L10: {
-                if (param0 <= -88) {
-                  break L10;
-                } else {
-                  tm.a((byte) 116);
-                  break L10;
-                }
-              }
-              L11: {
-                if (var3 != 0) {
-                  break L11;
-                } else {
-                  if (2 == bc.field_B) {
-                    var4 = ik.a(4) - di.field_F;
-                    var6 = (int)((10999L - var4) / 1000L);
-                    if (0 >= var6) {
-                      var3 = 2;
-                      bl.a(-79, 5, true);
-                      break L11;
-                    } else {
-                      break L11;
-                    }
+                stackIn_31_0 = var3;
+                break L0;
+              } else {
+                L8: {
+                  k.field_f.a(-111);
+                  if (k.field_f.b((byte) 114)) {
+                    var1_int = 1;
+                    break L8;
                   } else {
-                    break L11;
+                    break L8;
                   }
                 }
+                if (wh.field_c == 13) {
+                  var2 = 1;
+                  continue L1;
+                } else {
+                  continue L1;
+                }
               }
-              stackIn_34_0 = var3;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,7 +127,7 @@ final class tm {
           var1 = decompiledCaughtException;
           throw dh.a((Throwable) ((Object) var1), "tm.B(" + param0 + ')');
         }
-        return stackIn_34_0;
+        return stackIn_31_0;
     }
 
     public static void a(int param0) {

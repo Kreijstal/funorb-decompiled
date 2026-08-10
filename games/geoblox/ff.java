@@ -182,49 +182,14 @@ class ff implements dh, cc {
     }
 
     private final void a(int param0, int param1, el param2, boolean param3) {
-        RuntimeException runtimeException = null;
-        el var6 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.a(param1, this.field_p, param2, 0, 0, this.field_o, 0, param0);
-              if (param3) {
-                break L1;
-              } else {
-                var6 = (el) null;
+            this.a(param1, this.field_p, param2, 0, 0, this.field_o, 0, param0);
+            if (!param3) {
+                el var6 = (el) null;
                 this.b((byte) -108, (el) null);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ff.P(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "ff.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -284,41 +249,44 @@ class ff implements dh, cc {
               }
               L4: {
                 L5: {
-                  var6 = this.field_g;
-                  if (var6 == 0) {
-                    break L5;
-                  } else {
-                    if (-4 == (var6 ^ -1)) {
-                      break L5;
+                  L6: {
+                    var6 = this.field_g;
+                    if (var6 == 0) {
+                      break L6;
                     } else {
-                      if (var6 != 1) {
-                        if (-3 != (var6 ^ -1)) {
-                          break L4;
+                      if (-4 == (var6 ^ -1)) {
+                        break L6;
+                      } else {
+                        if (var6 != 1) {
+                          if (-3 != (var6 ^ -1)) {
+                            break L5;
+                          } else {
+                            if (!(param1.field_w instanceof vc)) {
+                              break L5;
+                            } else {
+                              ((vc) ((Object) param1.field_w)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
+                              break L4;
+                            }
+                          }
                         } else {
                           if (!(param1.field_w instanceof vc)) {
-                            break L4;
+                            break L5;
                           } else {
-                            ((vc) ((Object) param1.field_w)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
+                            ((vc) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 289769985, (byte) 58, this.field_n);
                             break L4;
                           }
-                        }
-                      } else {
-                        if (!(param1.field_w instanceof vc)) {
-                          break L4;
-                        } else {
-                          ((vc) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 289769985, (byte) 58, this.field_n);
-                          break L4;
                         }
                       }
                     }
                   }
+                  if (!(param1.field_w instanceof vc)) {
+                    break L5;
+                  } else {
+                    ((vc) ((Object) param1.field_w)).a(var5, 0, this.c(param0 ^ 18, param1), -91, this.field_n);
+                    break L4;
+                  }
                 }
-                if (!(param1.field_w instanceof vc)) {
-                  break L4;
-                } else {
-                  ((vc) ((Object) param1.field_w)).a(var5, 0, this.c(param0 ^ 18, param1), -91, this.field_n);
-                  break L4;
-                }
+                break L4;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -329,7 +297,7 @@ class ff implements dh, cc {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var3 = decompiledCaughtException;
             stackIn_30_0 = (RuntimeException) (var3);
 
@@ -339,12 +307,12 @@ class ff implements dh, cc {
               stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
               stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackIn_31_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
               stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackIn_31_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw t.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ')');
@@ -791,59 +759,16 @@ class ff implements dh, cc {
     }
 
     public void a(int param0, int param1, int param2, boolean param3, el param4) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (null == this.field_n) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                this.a(param0, param2, param4, true);
-                if (param1 < -5) {
-                  break L1;
-                } else {
-                  this.field_c = -8;
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("ff.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
-          }
-          throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+        if (!(null != this.field_n)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            this.a(param0, param2, param4, true);
+            if (param1 >= -5) {
+                this.field_c = -8;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "ff.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

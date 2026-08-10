@@ -77,39 +77,42 @@ class lm extends ne {
                   if (null != cf.field_c) {
                     var2 = 0;
                     L7: while (true) {
-                      if (cf.field_c.length <= var2) {
-                        break L6;
-                      } else {
-                        if (var4 == 0) {
-                          L8: {
-                            if (null == cf.field_c[var2]) {
-                              break L8;
-                            } else {
-                              try {
-                                L9: {
-                                  cf.field_c[var2].c((byte) -42);
-                                  break L9;
+                      L8: {
+                        if (cf.field_c.length <= var2) {
+                          break L8;
+                        } else {
+                          if (var4 == 0) {
+                            L9: {
+                              if (null == cf.field_c[var2]) {
+                                break L9;
+                              } else {
+                                try {
+                                  L10: {
+                                    cf.field_c[var2].c((byte) -42);
+                                    break L10;
+                                  }
+                                } catch (java.io.IOException decompiledCaughtParameter1) {
+                                  decompiledCaughtException = decompiledCaughtParameter1;
+                                  L11: {
+                                    var3_ref = (IOException) (Object) decompiledCaughtException;
+                                    break L11;
+                                  }
                                 }
-                              } catch (java.io.IOException decompiledCaughtParameter1) {
-                                decompiledCaughtException = decompiledCaughtParameter1;
-                                L10: {
-                                  var3_ref = (IOException) (Object) decompiledCaughtException;
-                                  break L10;
-                                }
+                                break L9;
                               }
+                            }
+                            var2++;
+                            if (var4 == 0) {
+                              continue L7;
+                            } else {
                               break L8;
                             }
-                          }
-                          var2++;
-                          if (var4 == 0) {
-                            continue L7;
                           } else {
-                            break L6;
+                            return;
                           }
-                        } else {
-                          return;
                         }
                       }
+                      break L6;
                     }
                   } else {
                     break L6;
@@ -1065,47 +1068,13 @@ class lm extends ne {
     }
 
     void a(int param0, boolean param1, int param2, lm param3, int param4, int param5) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_y = 0;
-              if (param1) {
-                break L1;
-              } else {
+            this.field_y = 0;
+            if (!param1) {
                 this.field_i = (String) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("lm.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw vk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param4 + ',' + param5 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) ((Object) runtimeException), "lm.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -1229,17 +1198,20 @@ class lm extends ne {
                       break L2;
                     }
                   }
-                  ((lm) (this)).field_u = stackIn_7_1 != 0;
-                  if (null == this.field_n) {
-                    break L1;
-                  } else {
-                    if (this.field_n instanceof de) {
-                      ((de) ((Object) this.field_n)).a(true, (lm) (this), var5_int != 0);
-                      break L1;
+                  L3: {
+                    ((lm) (this)).field_u = stackIn_7_1 != 0;
+                    if (null == this.field_n) {
+                      break L3;
                     } else {
-                      break L1;
+                      if (this.field_n instanceof de) {
+                        ((de) ((Object) this.field_n)).a(true, (lm) (this), var5_int != 0);
+                        break L3;
+                      } else {
+                        break L1;
+                      }
                     }
                   }
+                  break L1;
                 } else {
                   break L1;
                 }
@@ -1253,7 +1225,7 @@ class lm extends ne {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var5 = decompiledCaughtException;
             stackIn_14_0 = (RuntimeException) (var5);
 
@@ -1263,12 +1235,12 @@ class lm extends ne {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackIn_15_2 = "null";
-              break L3;
+              break L4;
             } else {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackIn_15_2 = "{...}";
-              break L3;
+              break L4;
             }
           }
           throw vk.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param3 + ')');

@@ -29,102 +29,81 @@ final class nd {
     }
 
     final static void a(byte param0, java.awt.Canvas param1, boolean param2) {
-        int var3_int = 0;
         int var4 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
         RuntimeException var3 = null;
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if ((vh.field_n ^ -1) > -11) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (rf.l(-28)) {
-                      break L3;
-                    } else {
-                      ul.d();
-                      cd.a(320, false, 240);
-                      kg.a(0, (byte) -83, 0, param1);
-                      if (var4 == 0) {
-                        break L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  L4: {
-                    if (-1 == (hi.field_k ^ -1)) {
-                      break L4;
-                    } else {
-                      em.a(0, param1);
-                      if (var4 == 0) {
-                        break L1;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                  t.a(param2, true, false);
-                  kg.a(0, (byte) -83, 0, param1);
-                  if (var4 == 0) {
-                    break L1;
+              if ((vh.field_n ^ -1) > -11) {
+                L2: {
+                  var3_int = 0;
+                  if (hh.field_c) {
+                    var3_int = 1;
+                    hh.field_c = false;
+                    break L2;
                   } else {
                     break L2;
                   }
                 }
-              }
-              L5: {
-                var3_int = 0;
-                if (hh.field_c) {
-                  var3_int = 1;
-                  hh.field_c = false;
-                  break L5;
+                hc.a((byte) -96, var3_int != 0, tj.a(-112), ca.a(false), sk.field_H);
+                break L1;
+              } else {
+                if (rf.l(-28)) {
+                  if (-1 == (hi.field_k ^ -1)) {
+                    t.a(param2, true, false);
+                    kg.a(0, (byte) -83, 0, param1);
+                    break L1;
+                  } else {
+                    em.a(0, param1);
+                    break L1;
+                  }
                 } else {
-                  break L5;
+                  ul.d();
+                  cd.a(320, false, 240);
+                  kg.a(0, (byte) -83, 0, param1);
+                  break L1;
                 }
               }
-              hc.a((byte) -96, var3_int != 0, tj.a(-112), ca.a(false), sk.field_H);
-              break L1;
             }
-            L6: {
+            L3: {
               if (param0 <= -43) {
-                break L6;
+                break L3;
               } else {
                 nd.b(-113);
-                break L6;
+                break L3;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L4: {
             var3 = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var3);
+            stackIn_16_0 = (RuntimeException) (var3);
 
-            stackIn_19_1 = new StringBuilder().append("nd.A(").append(param0).append(',');
+            stackIn_16_1 = new StringBuilder().append("nd.A(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L7;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
+              break L4;
             } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L7;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
+              break L4;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ')');
         }
     }
 

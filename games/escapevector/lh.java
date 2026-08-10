@@ -358,10 +358,10 @@ final class lh {
                       break L15;
                     }
                   }
-                  if (-81 > (am.field_k ^ -1)) {
-                    am.field_k = am.field_k - 1;
+                  if (-81 <= (am.field_k ^ -1)) {
                     return;
                   } else {
+                    am.field_k = am.field_k - 1;
                     return;
                   }
                 } else {
@@ -717,37 +717,40 @@ final class lh {
                 }
               }
             }
-            if (var2 == null) {
-              L30: {
-                if (am.field_k == 110) {
-                  rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                  break L30;
-                } else {
-                  break L30;
+            L30: {
+              if (var2 == null) {
+                L31: {
+                  if (am.field_k == 110) {
+                    rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
+                    break L31;
+                  } else {
+                    break L31;
+                  }
                 }
-              }
-              if (-81 > (am.field_k ^ -1)) {
-                am.field_k = am.field_k - 1;
-                return;
-              } else {
-                return;
-              }
-            } else {
-              fg.field_b = var3;
-              dg.field_t = (ed) (var2);
-              if (-96 >= (am.field_k ^ -1)) {
-                if (-111 < (am.field_k ^ -1)) {
-                  am.field_k = am.field_k + 1;
-                  return;
+                if (-81 > (am.field_k ^ -1)) {
+                  am.field_k = am.field_k - 1;
+                  break L30;
                 } else {
                   return;
                 }
               } else {
-                am.field_k = 95;
-                rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
-                return;
+                fg.field_b = var3;
+                dg.field_t = (ed) (var2);
+                if (-96 >= (am.field_k ^ -1)) {
+                  if (-111 >= (am.field_k ^ -1)) {
+                    break L30;
+                  } else {
+                    am.field_k = am.field_k + 1;
+                    return;
+                  }
+                } else {
+                  am.field_k = 95;
+                  rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
+                  return;
+                }
               }
             }
+            return;
           } else {
             am.field_k = 0;
             return;

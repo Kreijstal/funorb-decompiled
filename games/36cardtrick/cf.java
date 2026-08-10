@@ -73,7 +73,6 @@ final class cf implements b {
     }
 
     final static void a(Main param0, byte param1) {
-        Main var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -81,6 +80,7 @@ final class cf implements b {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
+        Main var3 = null;
         try {
           L0: {
             L1: {
@@ -96,26 +96,29 @@ final class cf implements b {
               }
             }
             L2: {
-              cj.field_l[4] = 428;
-              fh.field_G[4] = new int[]{17};
-              param0.field_E[4] = new re(param0, 4);
-              if (d.field_c <= 0) {
-                break L2;
-              } else {
-                if (!hl.a(jk.field_a, -1)) {
-                  break L2;
+              L3: {
+                cj.field_l[4] = 428;
+                fh.field_G[4] = new int[]{17};
+                param0.field_E[4] = new re(param0, 4);
+                if (d.field_c <= 0) {
+                  break L3;
                 } else {
-                  fh.field_G[1] = new int[]{7, 3, 4, 8, 5, 10};
-                  param0.field_E[1] = new re(param0, 1);
-                  break L2;
+                  if (!hl.a(jk.field_a, -1)) {
+                    break L3;
+                  } else {
+                    fh.field_G[1] = new int[]{7, 3, 4, 8, 5, 10};
+                    param0.field_E[1] = new re(param0, 1);
+                    break L2;
+                  }
                 }
               }
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var2 = decompiledCaughtException;
             stackIn_8_0 = (RuntimeException) (var2);
 
@@ -125,12 +128,12 @@ final class cf implements b {
               stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
               stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackIn_9_2 = "null";
-              break L3;
+              break L4;
             } else {
               stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
               stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackIn_9_2 = "{...}";
-              break L3;
+              break L4;
             }
           }
           throw ma.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');

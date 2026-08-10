@@ -1038,21 +1038,24 @@ final class ola {
           if (-2 != (this.field_s.field_R ^ -1)) {
             break L10;
           } else {
-            if (this.field_k.field_a != 2) {
-              break L10;
-            } else {
-              if (pka.field_f) {
-                uca.a(30, (byte) -35);
-                lla.a(true, (byte) 99, 0);
-                iu.d(37);
-                rs.a(true);
-                sia.field_h = false;
-                lg.a(true, 12, true);
-                break L10;
+            L11: {
+              if (this.field_k.field_a != 2) {
+                break L11;
               } else {
-                break L10;
+                if (pka.field_f) {
+                  uca.a(30, (byte) -35);
+                  lla.a(true, (byte) 99, 0);
+                  iu.d(37);
+                  rs.a(true);
+                  sia.field_h = false;
+                  lg.a(true, 12, true);
+                  break L11;
+                } else {
+                  break L10;
+                }
               }
             }
+            break L10;
           }
         }
     }

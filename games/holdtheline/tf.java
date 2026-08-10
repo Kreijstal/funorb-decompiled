@@ -25,23 +25,28 @@ final class tf extends tj {
         int var3;
         L0: {
           var3 = HoldTheLine.field_D;
-          if ((this.field_y ^ -1) >= -1) {
-            if (1048576 <= this.field_y) {
-              break L0;
-            } else {
-              if (null != this.field_m) {
-                this.field_C.a(param0);
+          if ((this.field_y ^ -1) < -1) {
+            if (this.field_z != null) {
+              this.field_q.a(param0);
+              if (1048576 <= this.field_y) {
                 break L0;
               } else {
-                if (1048576 <= this.field_y) {
+                if (null == this.field_m) {
                   break L0;
                 } else {
-                  if (null == this.field_m) {
-                    break L0;
-                  } else {
-                    this.field_C.a(param0);
-                    break L0;
-                  }
+                  this.field_C.a(param0);
+                  break L0;
+                }
+              }
+            } else {
+              if (1048576 <= this.field_y) {
+                break L0;
+              } else {
+                if (null == this.field_m) {
+                  break L0;
+                } else {
+                  this.field_C.a(param0);
+                  break L0;
                 }
               }
             }

@@ -44,103 +44,53 @@ abstract class wb {
     final static void b(byte param0) {
         int var1;
         int var2;
-        L0: {
-          var2 = Lexicominos.field_L ? 1 : 0;
-          jj.field_d = null;
-          gb.field_d = false;
-          if (ca.field_k) {
-            break L0;
+        var2 = Lexicominos.field_L ? 1 : 0;
+        jj.field_d = null;
+        gb.field_d = false;
+        if (ca.field_k) {
+          jj.field_a.i(15);
+          if (param0 != 50) {
+            field_g = (java.awt.Image) null;
+            return;
           } else {
-            var1 = be.field_l;
-            if (var1 <= 0) {
+            return;
+          }
+        } else {
+          var1 = be.field_l;
+          if (var1 <= 0) {
+            jj.field_a.g(true);
+            vg.a(113);
+            if (param0 != 50) {
+              field_g = (java.awt.Image) null;
+              return;
+            } else {
+              return;
+            }
+          } else {
+            if ((var1 ^ -1) == -2) {
+              jj.field_d = oj.field_d;
+              jj.field_d = ef.a(new CharSequence[]{(CharSequence) ((Object) jj.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gj.field_u)}, 0);
               jj.field_a.g(true);
               vg.a(113);
-              if (var2 == 0) {
-                if (param0 != 50) {
-                  field_g = (java.awt.Image) null;
-                  return;
-                } else {
-                  return;
-                }
+              if (param0 == 50) {
+                return;
               } else {
-                break L0;
+                field_g = (java.awt.Image) null;
+                return;
               }
             } else {
-              if ((var1 ^ -1) == -2) {
-                jj.field_d = oj.field_d;
-                jj.field_d = ef.a(new CharSequence[]{(CharSequence) ((Object) jj.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gj.field_u)}, 0);
-                jj.field_a.g(true);
-                vg.a(113);
-                if (var2 == 0) {
-                  if (param0 != 50) {
-                    field_g = (java.awt.Image) null;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  jj.field_a.i(15);
-                  if (param0 != 50) {
-                    field_g = (java.awt.Image) null;
-                    return;
-                  } else {
-                    return;
-                  }
-                }
+              jj.field_d = da.a(new String[]{Integer.toString(var1)}, mc.field_m, false);
+              jj.field_d = ef.a(new CharSequence[]{(CharSequence) ((Object) jj.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gj.field_u)}, 0);
+              jj.field_a.g(true);
+              vg.a(113);
+              if (param0 == 50) {
+                return;
               } else {
-                jj.field_d = da.a(new String[]{Integer.toString(var1)}, mc.field_m, false);
-                if (var2 == 0) {
-                  jj.field_d = ef.a(new CharSequence[]{(CharSequence) ((Object) jj.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gj.field_u)}, 0);
-                  jj.field_a.g(true);
-                  vg.a(113);
-                  if (var2 != 0) {
-                    jj.field_a.i(15);
-                    if (param0 == 50) {
-                      return;
-                    } else {
-                      field_g = (java.awt.Image) null;
-                      return;
-                    }
-                  } else {
-                    if (param0 == 50) {
-                      return;
-                    } else {
-                      field_g = (java.awt.Image) null;
-                      return;
-                    }
-                  }
-                } else {
-                  jj.field_d = oj.field_d;
-                  jj.field_d = ef.a(new CharSequence[]{(CharSequence) ((Object) jj.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gj.field_u)}, 0);
-                  jj.field_a.g(true);
-                  vg.a(113);
-                  if (var2 == 0) {
-                    if (param0 != 50) {
-                      field_g = (java.awt.Image) null;
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    jj.field_a.i(15);
-                    if (param0 != 50) {
-                      field_g = (java.awt.Image) null;
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                }
+                field_g = (java.awt.Image) null;
+                return;
               }
             }
           }
-        }
-        jj.field_a.i(15);
-        if (param0 != 50) {
-          field_g = (java.awt.Image) null;
-          return;
-        } else {
-          return;
         }
     }
 
@@ -217,14 +167,12 @@ abstract class wb {
                 throw new RuntimeException();
             }
             this.field_d.a(83, var8);
-            if (!Lexicominos.field_L) {
-                return var8;
+        } else {
+            if (!(this.c((byte) 67) < 20)) {
+                throw new RuntimeException();
             }
+            this.field_l.a(param0 + -74, var8);
         }
-        if (!(this.c((byte) 67) < 20)) {
-            throw new RuntimeException();
-        }
-        this.field_l.a(param0 + -74, var8);
         return var8;
     }
 

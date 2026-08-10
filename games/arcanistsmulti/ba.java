@@ -218,98 +218,36 @@ final class ba {
 
     final static void b(int param0) {
         try {
-            IOException iOException = null;
-            IOException var2_ref = null;
-            RuntimeException runtimeException = null;
             int var1_int = 0;
-            int var3 = 0;
-            Throwable decompiledCaughtException = null;
-            var3 = ArcanistsMulti.field_G ? 1 : 0;
+            int var3 = ArcanistsMulti.field_G ? 1 : 0;
             try {
-              L0: {
-                L1: {
-                  if (jl.field_c == null) {
-                    break L1;
-                  } else {
+                if (jl.field_c != null) {
                     jl.field_c.c(param0 ^ 16700264);
-                    break L1;
-                  }
                 }
-                L2: {
-                  if (null == ed.field_yb) {
-                    break L2;
-                  } else {
+                if (null != ed.field_yb) {
                     ed.field_yb.a((byte) 90);
-                    break L2;
-                  }
                 }
-                L3: {
-                  if (null != bm.field_e) {
+                if (!(null == bm.field_e)) {
                     try {
-                      L4: {
                         bm.field_e.c((byte) -101);
-                        break L4;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L5: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        break L5;
-                      }
+                    } catch (IOException iOException) {
                     }
-                    break L3;
-                  } else {
-                    break L3;
-                  }
                 }
-                L6: {
-                  if (null == bb.field_b) {
-                    break L6;
-                  } else {
-                    var1_int = 0;
-                    L7: while (true) {
-                      if (var1_int >= bb.field_b.length) {
-                        break L6;
-                      } else {
-                        L8: {
-                          if (null != bb.field_b[var1_int]) {
+                if (null != bb.field_b) {
+                    for (var1_int = 0; var1_int < bb.field_b.length; var1_int++) {
+                        if (!(null == bb.field_b[var1_int])) {
                             try {
-                              L9: {
                                 bb.field_b[var1_int].c((byte) -101);
-                                break L9;
-                              }
-                            } catch (java.io.IOException decompiledCaughtParameter1) {
-                              decompiledCaughtException = decompiledCaughtParameter1;
-                              L10: {
-                                var2_ref = (IOException) (Object) decompiledCaughtException;
-                                break L10;
-                              }
+                            } catch (IOException var2_ref) {
                             }
-                            break L8;
-                          } else {
-                            break L8;
-                          }
                         }
-                        var1_int++;
-                        continue L7;
-                      }
                     }
-                  }
                 }
-                L11: {
-                  if (param0 == 11670) {
-                    break L11;
-                  } else {
+                if (param0 != 11670) {
                     field_f = (String) null;
-                    break L11;
-                  }
                 }
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-              throw aa.a((Throwable) ((Object) runtimeException), "ba.B(" + param0 + ')');
+            } catch (RuntimeException runtimeException) {
+                throw aa.a((Throwable) ((Object) runtimeException), "ba.B(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

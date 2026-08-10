@@ -26,7 +26,17 @@ final class oj {
           }
         }
         L1: {
-          if (1 != param0) {
+          if (1 == param0) {
+            L2: {
+              if (ii.field_Q != param2) {
+                ii.field_Q = param2;
+                tj.field_l = true;
+                pj.b(-6446, param3);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
             if (2 != param0) {
               break L1;
             } else {
@@ -54,12 +64,12 @@ final class oj {
             }
           }
         }
-        L2: {
+        L3: {
           if (param1 == -99) {
-            break L2;
+            break L3;
           } else {
             oj.a((byte) 15);
-            break L2;
+            break L3;
           }
         }
     }

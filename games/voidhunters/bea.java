@@ -858,114 +858,117 @@ final class bea implements ntb {
                       }
                     }
                     L4: {
-                      var22 = var20.e(0);
-                      if (var22 == null) {
-                        break L4;
-                      } else {
-                        var8 = var22.b(1);
-                        if (var8 != null) {
-                          var9 = 0;
-                          L5: while (true) {
-                            if (var9 >= var8.length) {
-                              break L4;
-                            } else {
-                              L6: {
-                                var10 = var8[var9];
-                                var11 = var10.a((byte) -128);
-                                if (var11 != null) {
-                                  var23 = var11;
-                                  var13_int = 0;
-                                  L7: while (true) {
-                                    if (var23.length <= var13_int) {
-                                      break L6;
-                                    } else {
-                                      L8: {
-                                        var14_ref_wm = var23[var13_int];
-                                        if (var14_ref_wm instanceof om) {
-                                          this.a(var14_ref_wm, var20, 0, param0 ^ -14277);
-                                          break L8;
-                                        } else {
-                                          if (var14_ref_wm instanceof jsb) {
-                                            this.a(var14_ref_wm, var20, 0, 14276);
-                                            break L8;
+                      L5: {
+                        var22 = var20.e(0);
+                        if (var22 == null) {
+                          break L5;
+                        } else {
+                          var8 = var22.b(1);
+                          if (var8 != null) {
+                            var9 = 0;
+                            L6: while (true) {
+                              if (var9 >= var8.length) {
+                                break L5;
+                              } else {
+                                L7: {
+                                  var10 = var8[var9];
+                                  var11 = var10.a((byte) -128);
+                                  if (var11 != null) {
+                                    var23 = var11;
+                                    var13_int = 0;
+                                    L8: while (true) {
+                                      if (var23.length <= var13_int) {
+                                        break L7;
+                                      } else {
+                                        L9: {
+                                          var14_ref_wm = var23[var13_int];
+                                          if (var14_ref_wm instanceof om) {
+                                            this.a(var14_ref_wm, var20, 0, param0 ^ -14277);
+                                            break L9;
                                           } else {
-                                            if (!(var14_ref_wm instanceof vp)) {
-                                              if (!(var14_ref_wm instanceof ih)) {
-                                                break L8;
-                                              } else {
-                                                this.a(var14_ref_wm, var20, 1, param0 ^ -14277);
-                                                break L8;
-                                              }
+                                            if (var14_ref_wm instanceof jsb) {
+                                              this.a(var14_ref_wm, var20, 0, 14276);
+                                              break L9;
                                             } else {
-                                              this.a(var14_ref_wm, var20, 0, param0 ^ -14277);
-                                              break L8;
+                                              if (!(var14_ref_wm instanceof vp)) {
+                                                if (!(var14_ref_wm instanceof ih)) {
+                                                  break L9;
+                                                } else {
+                                                  this.a(var14_ref_wm, var20, 1, param0 ^ -14277);
+                                                  break L9;
+                                                }
+                                              } else {
+                                                this.a(var14_ref_wm, var20, 0, param0 ^ -14277);
+                                                break L9;
+                                              }
                                             }
                                           }
                                         }
+                                        var13_int++;
+                                        continue L8;
                                       }
-                                      var13_int++;
-                                      continue L7;
                                     }
+                                  } else {
+                                    break L7;
                                   }
-                                } else {
-                                  break L6;
                                 }
-                              }
-                              L9: {
-                                var12 = var10.c((byte) -42);
-                                if (var12 == null) {
-                                  break L9;
-                                } else {
-                                  var13 = var12;
-                                  var14 = 0;
-                                  L10: while (true) {
-                                    if (var14 >= var13.length) {
-                                      break L9;
-                                    } else {
-                                      L11: {
-                                        var15 = var13[var14];
-                                        if (!(var15 instanceof ika)) {
-                                          if (var15 instanceof cf) {
-                                            L12: {
-                                              var24 = (cf) ((Object) var15);
-                                              var17 = var24.a(1, -106);
-                                              var18 = fq.field_o[var17];
-                                              if (-1 == (var18 ^ -1)) {
-                                                var17++;
-                                                break L12;
-                                              } else {
-                                                if (var18 != 1) {
-                                                  break L12;
+                                L10: {
+                                  var12 = var10.c((byte) -42);
+                                  if (var12 == null) {
+                                    break L10;
+                                  } else {
+                                    var13 = var12;
+                                    var14 = 0;
+                                    L11: while (true) {
+                                      if (var14 >= var13.length) {
+                                        break L10;
+                                      } else {
+                                        L12: {
+                                          var15 = var13[var14];
+                                          if (!(var15 instanceof ika)) {
+                                            if (var15 instanceof cf) {
+                                              L13: {
+                                                var24 = (cf) ((Object) var15);
+                                                var17 = var24.a(1, -106);
+                                                var18 = fq.field_o[var17];
+                                                if (-1 == (var18 ^ -1)) {
+                                                  var17++;
+                                                  break L13;
                                                 } else {
-                                                  var17--;
-                                                  break L12;
+                                                  if (var18 != 1) {
+                                                    break L13;
+                                                  } else {
+                                                    var17--;
+                                                    break L13;
+                                                  }
                                                 }
                                               }
+                                              var24.a(var20, false, 1, var17);
+                                              break L12;
+                                            } else {
+                                              break L12;
                                             }
-                                            var24.a(var20, false, 1, var17);
-                                            break L11;
                                           } else {
-                                            break L11;
+                                            this.a(var15, 17333, var20, 0);
+                                            break L12;
                                           }
-                                        } else {
-                                          this.a(var15, 17333, var20, 0);
-                                          break L11;
                                         }
+                                        var14++;
+                                        continue L11;
                                       }
-                                      var14++;
-                                      continue L10;
                                     }
                                   }
                                 }
+                                var9++;
+                                continue L6;
                               }
-                              var9++;
-                              continue L5;
                             }
+                          } else {
+                            break L4;
                           }
-                        } else {
-                          break L4;
                         }
                       }
+                      break L4;
                     }
                     break L0;
                   } else {
@@ -975,7 +978,7 @@ final class bea implements ntb {
                   }
                 }
               } else {
-                L13: {
+                L14: {
                   var21 = var5[var6_int];
                   if (var21 != null) {
                     var8_int = mjb.b(21957, var21.q((byte) 91));
@@ -985,16 +988,16 @@ final class bea implements ntb {
                       var21.g(var9, 98);
                       if (-1 == var9) {
                         var21.a(new aoa(), param0 ^ -5);
-                        break L13;
+                        break L14;
                       } else {
-                        break L13;
+                        break L14;
                       }
                     } else {
                       var6_int++;
                       continue L1;
                     }
                   } else {
-                    break L13;
+                    break L14;
                   }
                 }
                 var6_int++;
@@ -1004,7 +1007,7 @@ final class bea implements ntb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L14: {
+          L15: {
             var4 = decompiledCaughtException;
             stackIn_51_0 = (RuntimeException) (var4);
 
@@ -1014,15 +1017,15 @@ final class bea implements ntb {
               stackIn_52_0 = (RuntimeException) ((Object) stackIn_51_0);
               stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
               stackIn_52_2 = "null";
-              break L14;
+              break L15;
             } else {
               stackIn_52_0 = (RuntimeException) ((Object) stackIn_51_0);
               stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
               stackIn_52_2 = "{...}";
-              break L14;
+              break L15;
             }
           }
-          L15: {
+          L16: {
 
 
             stackIn_54_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_52_2).append(',');
@@ -1031,12 +1034,12 @@ final class bea implements ntb {
               stackIn_52_0 = (RuntimeException) ((Object) stackIn_52_0);
               stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
               stackIn_55_2 = "null";
-              break L15;
+              break L16;
             } else {
               stackIn_52_0 = (RuntimeException) ((Object) stackIn_52_0);
               stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
               stackIn_55_2 = "{...}";
-              break L15;
+              break L16;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_52_0), stackIn_55_2 + ')');
@@ -3660,47 +3663,13 @@ final class bea implements ntb {
     }
 
     final void a(boolean param0, dmb param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_b = (dmb[]) ((Object) ija.a(param1, this.field_b, 0, ra.field_o));
-              if (param0) {
-                break L1;
-              } else {
+            this.field_b = (dmb[]) ((Object) ija.a(param1, this.field_b, 0, ra.field_o));
+            if (!param0) {
                 field_f = (float[]) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("bea.UA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "bea.UA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -3939,70 +3908,24 @@ final class bea implements ntb {
         dmb[] var6 = null;
         int var7 = 0;
         dmb var8 = null;
-        int var9 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        var9 = VoidHunters.field_G;
+        int var9 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              var3_int = param0.d(false);
-              var4 = qta.a(var3_int, 9) ? 1 : 0;
-              var5 = new Random((long)this.field_d);
-              if (param1 == 0) {
-                break L1;
-              } else {
+            var3_int = param0.d(false);
+            var4 = qta.a(var3_int, 9) ? 1 : 0;
+            var5 = new Random((long)this.field_d);
+            if (param1 != 0) {
                 bea.a((byte) 80, (Object) null, -58);
-                break L1;
-              }
             }
-            L2: {
-              this.a(false, var3_int, 27943, false, param0, var4 != 0, var5);
-              if (null == this.field_b) {
-                break L2;
-              } else {
+            this.a(false, var3_int, 27943, false, param0, var4 != 0, var5);
+            if (null != this.field_b) {
                 var6 = this.field_b;
-                var7 = 0;
-                L3: while (true) {
-                  if (var6.length <= var7) {
-                    break L2;
-                  } else {
+                for (var7 = 0; var6.length > var7; var7++) {
                     var8 = var6[var7];
                     var8.a(param0, true);
-                    var7++;
-                    continue L3;
-                  }
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var3);
-
-            stackIn_10_1 = new StringBuilder().append("bea.N(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L4;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L4;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "bea.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

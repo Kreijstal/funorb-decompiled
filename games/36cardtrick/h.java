@@ -64,53 +64,26 @@ final class h extends hl {
 
     final static void e(byte param0) {
         gi var1 = null;
-        int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
-        var2 = Main.field_T;
+        int var2 = Main.field_T;
         try {
-          L0: {
-            L1: {
-              wd.field_e.f();
-              if (param0 == -84) {
-                break L1;
-              } else {
+            wd.field_e.f();
+            if (param0 != -84) {
                 field_F = -57;
-                break L1;
-              }
             }
-            L2: {
-              cb.field_g.f();
-              bi.field_d = bi.field_d - 1;
-              if (bi.field_d != 0) {
-                break L2;
-              } else {
+            cb.field_g.f();
+            bi.field_d = bi.field_d - 1;
+            if (bi.field_d == 0) {
                 bi.field_d = 200;
                 var1 = (gi) ((Object) aj.field_s.a((byte) 74));
-                L3: while (true) {
-                  if (var1 == null) {
-                    break L2;
-                  } else {
-                    L4: {
-                      if (var1.field_i.b(125)) {
-                        break L4;
-                      } else {
+                while (var1 != null) {
+                    if (!var1.field_i.b(125)) {
                         var1.c(84);
-                        break L4;
-                      }
                     }
                     var1 = (gi) ((Object) aj.field_s.b((byte) -92));
-                    continue L3;
-                  }
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1_ref), "h.HA(" + param0 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) ((Object) runtimeException), "h.HA(" + param0 + ')');
         }
     }
 

@@ -603,49 +603,15 @@ final class ol extends ma implements nn, mj, wl {
     }
 
     final void a(int param0, int param1, mf param2, int param3) {
-        boolean discarded$1 = false;
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        boolean discarded$0 = false;
         try {
-          L0: {
-            L1: {
-              super.a(param0, -120, param2, param3);
-              this.field_V.field_H = this.h((byte) -123);
-              if (param1 < -6) {
-                break L1;
-              } else {
-                discarded$1 = this.i(-8);
-                break L1;
-              }
+            super.a(param0, -120, param2, param3);
+            this.field_V.field_H = this.h((byte) -123);
+            if (param1 >= -6) {
+                discarded$0 = this.i(-8);
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ol.G(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw fk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) ((Object) runtimeException), "ol.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -990,49 +956,15 @@ final class ol extends ma implements nn, mj, wl {
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              param0.removeKeyListener(lg.field_d);
-              param0.removeFocusListener(lg.field_d);
-              lk.field_e = -1;
-              if (param1 == 20) {
-                break L1;
-              } else {
+            param0.removeKeyListener(lg.field_d);
+            param0.removeFocusListener(lg.field_d);
+            lk.field_e = -1;
+            if (param1 != 20) {
                 field_R = (of) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ol.IA(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw fk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) ((Object) runtimeException), "ol.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

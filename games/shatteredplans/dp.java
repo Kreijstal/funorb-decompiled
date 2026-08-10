@@ -191,73 +191,76 @@ final class dp extends df {
         try {
           L0: {
             L1: {
-              if (param0 == param1) {
-                this.field_y = so.a(param2.e(-1), '<', 51);
-                break L1;
-              } else {
-                if (param1 != 2) {
-                  if (-4 != (param1 ^ -1)) {
-                    if (4 != param1) {
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  } else {
-                    var4_int = param2.j(-74);
-                    this.field_w = new int[var4_int];
-                    this.field_q = new int[var4_int][];
-                    var5 = 0;
-                    L2: while (true) {
-                      if (var4_int <= var5) {
-                        break L1;
+              L2: {
+                if (param0 == param1) {
+                  this.field_y = so.a(param2.e(-1), '<', 51);
+                  break L2;
+                } else {
+                  if (param1 != 2) {
+                    if (-4 != (param1 ^ -1)) {
+                      if (4 != param1) {
+                        break L2;
                       } else {
-                        L3: {
-                          var6 = param2.f(-20976);
-                          var7 = aq.a(var6, 0);
-                          if (var7 != null) {
-                            this.field_w[var5] = var6;
-                            array$0 = new int[var7.field_e];
-                            this.field_q[var5] = array$0;
-                            var8 = 0;
-                            L4: while (true) {
-                              if (var7.field_e <= var8) {
-                                break L3;
-                              } else {
-                                this.field_q[var5][var8] = param2.f(-20976);
-                                var8++;
-                                continue L4;
+                        break L1;
+                      }
+                    } else {
+                      var4_int = param2.j(-74);
+                      this.field_w = new int[var4_int];
+                      this.field_q = new int[var4_int][];
+                      var5 = 0;
+                      L3: while (true) {
+                        if (var4_int <= var5) {
+                          break L2;
+                        } else {
+                          L4: {
+                            var6 = param2.f(-20976);
+                            var7 = aq.a(var6, 0);
+                            if (var7 != null) {
+                              this.field_w[var5] = var6;
+                              array$0 = new int[var7.field_e];
+                              this.field_q[var5] = array$0;
+                              var8 = 0;
+                              L5: while (true) {
+                                if (var7.field_e <= var8) {
+                                  break L4;
+                                } else {
+                                  this.field_q[var5][var8] = param2.f(-20976);
+                                  var8++;
+                                  continue L5;
+                                }
                               }
+                            } else {
+                              break L4;
                             }
-                          } else {
-                            break L3;
                           }
+                          var5++;
+                          continue L3;
                         }
-                        var5++;
-                        continue L2;
                       }
                     }
-                  }
-                } else {
-                  var4_int = param2.j(-70);
-                  this.field_o = new int[var4_int];
-                  var5 = 0;
-                  L5: while (true) {
-                    if (var5 >= var4_int) {
-                      break L1;
-                    } else {
-                      this.field_o[var5] = param2.f(param0 + -20977);
-                      var5++;
-                      continue L5;
+                  } else {
+                    var4_int = param2.j(-70);
+                    this.field_o = new int[var4_int];
+                    var5 = 0;
+                    L6: while (true) {
+                      if (var5 >= var4_int) {
+                        break L2;
+                      } else {
+                        this.field_o[var5] = param2.f(param0 + -20977);
+                        var5++;
+                        continue L6;
+                      }
                     }
                   }
                 }
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var4 = decompiledCaughtException;
             stackIn_21_0 = (RuntimeException) (var4);
 
@@ -267,12 +270,12 @@ final class dp extends df {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw r.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');

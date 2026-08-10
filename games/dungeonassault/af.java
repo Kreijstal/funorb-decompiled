@@ -33,88 +33,46 @@ final class af {
     }
 
     final static void a(byte param0) {
-        RuntimeException runtimeException = null;
-        int[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
         int[] var4 = null;
+        int[] var1 = null;
         int[] var5 = null;
         int var6 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var3 = DungeonAssault.field_K;
-        try {
-          L0: {
-            if (co.field_G != null) {
-              L1: {
-                co.field_G = null;
-                bd.field_f = 0;
-                if (param0 >= 5) {
-                  break L1;
-                } else {
-                  af.a(37);
-                  break L1;
-                }
-              }
-              L2: {
-                if (!gh.field_f) {
-                  break L2;
-                } else {
-                  ik.field_e.c();
-                  gh.field_f = false;
-                  nf.field_A = false;
-                  ik.field_e = null;
-                  break L2;
-                }
-              }
-              L3: {
-                if (!wa.field_a) {
-                  break L3;
-                } else {
-                  ll.field_i = new md();
-                  var4 = gj.field_c;
-                  var1 = var4;
-                  var2 = 0;
-                  L4: while (true) {
-                    if (var2 >= 8) {
-                      var5 = bp.field_e;
-                      var1 = var5;
-                      var6 = 0;
-                      var2 = var6;
-                      L5: while (true) {
-                        if (-9 >= (var6 ^ -1)) {
-                          wa.field_a = false;
-                          break L3;
-                        } else {
-                          var5[var6] = 0;
-                          var6++;
-                          continue L5;
-                        }
-                      }
-                    } else {
-                      var4[var2] = 0;
-                      var2++;
-                      continue L4;
-                    }
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw vk.a((Throwable) ((Object) runtimeException), "af.B(" + param0 + ')');
+        int var2 = 0;
+        int var3 = DungeonAssault.field_K;
+        if (co.field_G == null) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            co.field_G = null;
+            bd.field_f = 0;
+            if (param0 < 5) {
+                af.a(37);
+            }
+            if (gh.field_f) {
+                ik.field_e.c();
+                gh.field_f = false;
+                nf.field_A = false;
+                ik.field_e = null;
+            }
+            if (wa.field_a) {
+                ll.field_i = new md();
+                var4 = gj.field_c;
+                var1 = var4;
+                for (var2 = 0; var2 < 8; var2++) {
+                    var4[var2] = 0;
+                }
+                var5 = bp.field_e;
+                var1 = var5;
+                var6 = 0;
+                var2 = var6;
+                while (-9 < (var6 ^ -1)) {
+                    var5[var6] = 0;
+                    var6++;
+                }
+                wa.field_a = false;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) ((Object) runtimeException), "af.B(" + param0 + ')');
         }
     }
 

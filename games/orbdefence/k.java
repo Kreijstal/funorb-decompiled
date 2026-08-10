@@ -34,23 +34,21 @@ final class k {
         nd.field_a[44] = 71;
         nd.field_a[45] = 26;
         if (param0 != 0) {
-          k.b((byte) 21);
-          nd.field_a[520] = 59;
-          nd.field_a[222] = 58;
-          nd.field_a[192] = 28;
-          nd.field_a[59] = 57;
-          nd.field_a[47] = 73;
-          nd.field_a[46] = 72;
-          return;
-        } else {
-          nd.field_a[520] = 59;
-          nd.field_a[222] = 58;
-          nd.field_a[192] = 28;
-          nd.field_a[59] = 57;
-          nd.field_a[47] = 73;
-          nd.field_a[46] = 72;
-          return;
+            k.b((byte) 21);
+            nd.field_a[520] = 59;
+            nd.field_a[222] = 58;
+            nd.field_a[192] = 28;
+            nd.field_a[59] = 57;
+            nd.field_a[47] = 73;
+            nd.field_a[46] = 72;
+            return;
         }
+        nd.field_a[520] = 59;
+        nd.field_a[222] = 58;
+        nd.field_a[192] = 28;
+        nd.field_a[59] = 57;
+        nd.field_a[47] = 73;
+        nd.field_a[46] = 72;
     }
 
     final static Boolean b(byte param0) {
@@ -70,84 +68,43 @@ final class k {
     }
 
     final o c(byte param0) {
-        o var2;
-        o var3;
-        int var4;
-        Object stackIn_8_0 = null;
-        Object stackIn_17_0 = null;
-        var4 = OrbDefence.field_D ? 1 : 0;
-        if (null != this.field_c) {
-          if (param0 < -9) {
-            var2 = this.field_b[(int)(this.field_f & (long)(-1 + this.field_d))];
-            L0: while (true) {
-              if (this.field_c != var2) {
-                stackIn_17_0 = this;
-
-                if (var4 == 0) {
-                  if (((k) (this)).field_c.field_h != this.field_f) {
-                    this.field_c = this.field_c.field_f;
-                    if (var4 == 0) {
-                      continue L0;
-                    } else {
-                      this.field_c = null;
-                      return null;
-                    }
-                  } else {
-                    var3 = this.field_c;
-                    this.field_c = this.field_c.field_f;
-                    return var3;
-                  }
-                } else {
-                  ((k) (this)).field_c = null;
-                  return null;
-                }
-              } else {
-                this.field_c = null;
-                return null;
-              }
-            }
-          } else {
+        o var2 = null;
+        o var3 = null;
+        int var4 = OrbDefence.field_D ? 1 : 0;
+        if (null == this.field_c) {
+            return null;
+        }
+        if (param0 >= -9) {
             k.a((byte) -31);
             var2 = this.field_b[(int)(this.field_f & (long)(-1 + this.field_d))];
-            L1: while (true) {
-              if (this.field_c != var2) {
-                stackIn_8_0 = this;
-
-                if (var4 == 0) {
-                  if (((k) (this)).field_c.field_h != this.field_f) {
-                    this.field_c = this.field_c.field_f;
-                    if (var4 == 0) {
-                      continue L1;
-                    } else {
-                      this.field_c = null;
-                      return null;
-                    }
-                  } else {
+            while (this.field_c != var2) {
+                if (this.field_c.field_h == this.field_f) {
                     var3 = this.field_c;
                     this.field_c = this.field_c.field_f;
                     return var3;
-                  }
-                } else {
-                  ((k) (this)).field_c = null;
-                  return null;
                 }
-              } else {
-                this.field_c = null;
-                return null;
-              }
+                this.field_c = this.field_c.field_f;
             }
-          }
-        } else {
-          return null;
+            this.field_c = null;
+            return null;
         }
+        var2 = this.field_b[(int)(this.field_f & (long)(-1 + this.field_d))];
+        while (this.field_c != var2) {
+            if (this.field_c.field_h == this.field_f) {
+                var3 = this.field_c;
+                this.field_c = this.field_c.field_f;
+                return var3;
+            }
+            this.field_c = this.field_c.field_f;
+        }
+        this.field_c = null;
+        return null;
     }
 
     final o a(byte param0, long param1) {
         o var4;
         o var5;
         int var6;
-        Object stackIn_5_0 = null;
-        Object stackIn_14_0 = null;
         var6 = OrbDefence.field_D ? 1 : 0;
         this.field_f = param1;
         var4 = this.field_b[(int)(param1 & (long)(-1 + this.field_d))];
@@ -155,84 +112,59 @@ final class k {
         if (param0 <= 97) {
           field_a = (String) null;
           L0: while (true) {
-            if (this.field_c != var4) {
-              stackIn_14_0 = this;
-
-              if (var6 == 0) {
-                if ((((k) (this)).field_c.field_h ^ -1L) != (param1 ^ -1L)) {
-                  this.field_c = this.field_c.field_f;
-                  if (var6 == 0) {
-                    continue L0;
-                  } else {
-                    this.field_c = null;
-                    return null;
-                  }
-                } else {
-                  var5 = this.field_c;
-                  this.field_c = this.field_c.field_f;
-                  return var5;
-                }
-              } else {
-                ((k) (this)).field_c = null;
-                return null;
-              }
-            } else {
+            if (this.field_c == var4) {
               this.field_c = null;
               return null;
+            } else {
+              if ((this.field_c.field_h ^ -1L) != (param1 ^ -1L)) {
+                this.field_c = this.field_c.field_f;
+                continue L0;
+              } else {
+                var5 = this.field_c;
+                this.field_c = this.field_c.field_f;
+                return var5;
+              }
             }
           }
         } else {
           L1: while (true) {
-            if (this.field_c != var4) {
-              stackIn_5_0 = this;
-
-              if (var6 == 0) {
-                if ((((k) (this)).field_c.field_h ^ -1L) != (param1 ^ -1L)) {
-                  this.field_c = this.field_c.field_f;
-                  if (var6 == 0) {
-                    continue L1;
-                  } else {
-                    this.field_c = null;
-                    return null;
-                  }
-                } else {
-                  var5 = this.field_c;
-                  this.field_c = this.field_c.field_f;
-                  return var5;
-                }
-              } else {
-                ((k) (this)).field_c = null;
-                return null;
-              }
-            } else {
+            if (this.field_c == var4) {
               this.field_c = null;
               return null;
+            } else {
+              if ((this.field_c.field_h ^ -1L) != (param1 ^ -1L)) {
+                this.field_c = this.field_c.field_f;
+                continue L1;
+              } else {
+                var5 = this.field_c;
+                this.field_c = this.field_c.field_f;
+                return var5;
+              }
             }
           }
         }
     }
 
     k(int param0) {
-        o dupTemp$0 = null;
-        o var3 = null;
-        int var4 = OrbDefence.field_D ? 1 : 0;
+        o dupTemp$1 = null;
+        int var2;
+        o var3;
         this.field_b = new o[param0];
         this.field_d = param0;
-        int var2 = 0;
-        do {
-            if (var2 >= param0) {
-                return;
-            }
-            dupTemp$0 = new o();
-            var3 = dupTemp$0;
-            this.field_b[var2] = dupTemp$0;
+        var2 = 0;
+        L0: while (true) {
+          if (var2 < param0) {
+            dupTemp$1 = new o();
+            var3 = dupTemp$1;
+            this.field_b[var2] = dupTemp$1;
             var3.field_g = var3;
             var3.field_f = var3;
             var2++;
-            if (var4 != 0) {
-                return;
-            }
-        } while (var4 == 0);
+            continue L0;
+          } else {
+            return;
+          }
+        }
     }
 
     static {

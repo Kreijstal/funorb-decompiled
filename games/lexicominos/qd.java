@@ -36,9 +36,10 @@ final class qd {
 
     final static df a(int param0, boolean param1) {
         int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        int[] stackIn_26_0 = null;
+        int stackIn_9_0 = 0;
+        int[] stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
+        th var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -49,6 +50,7 @@ final class qd {
         L0: {
           var7 = Lexicominos.field_L ? 1 : 0;
           var8 = ig.field_a;
+          var2 = var8;
           var3 = var8.d(true);
           if ((128 & var3) == param0) {
             stackIn_3_0 = 0;
@@ -70,38 +72,27 @@ final class qd {
           } else {
             fd.field_g = var8.b(-1698573656);
             kc.field_c = var8.a(86);
-            if (var7 == 0) {
-              break L1;
-            } else {
-              kc.field_c = 0;
-              fd.field_g = 0;
-              break L1;
-            }
+            break L1;
           }
         }
         L2: {
           if (1 != var8.d(true)) {
-            stackIn_11_0 = 0;
+            stackIn_9_0 = 0;
             break L2;
           } else {
-            stackIn_11_0 = 1;
+            stackIn_9_0 = 1;
             break L2;
           }
         }
         L3: {
-          var4 = stackIn_11_0;
+          var4 = stackIn_9_0;
           ik.field_k = var8.c(false);
           if (var4 != 0) {
             gk.field_c = var8.c(false);
             break L3;
           } else {
             gk.field_c = ik.field_k;
-            if (var7 == 0) {
-              break L3;
-            } else {
-              gk.field_c = var8.c(false);
-              break L3;
-            }
+            break L3;
           }
         }
         L4: {
@@ -131,33 +122,25 @@ final class qd {
                 var9 = hi.field_d.a(param0 + 27467, var5);
                 oe.field_b = var9.c(-97);
                 if (gk.field_c.equals(og.field_c)) {
-                  stackIn_26_0 = null;
+                  stackIn_22_0 = null;
                   break L6;
                 } else {
-                  stackIn_26_0 = var9.field_r;
+                  stackIn_22_0 = var9.field_r;
                   break L6;
                 }
               }
-              eb.field_d = stackIn_26_0;
+              eb.field_d = stackIn_22_0;
               break L5;
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            L7: {
-              var6 = (Exception) (Object) decompiledCaughtException;
-              uj.a("CC1", (Throwable) ((Object) var6), 1);
-              eb.field_d = null;
-              oe.field_b = null;
-              break L7;
-            }
-          }
-          if (var7 != 0) {
-            oe.field_b = ij.a(80, -22651, var8);
+            var6 = (Exception) (Object) decompiledCaughtException;
+            uj.a("CC1", (Throwable) ((Object) var6), 1);
             eb.field_d = null;
-            return new df(param1);
-          } else {
+            oe.field_b = null;
             return new df(param1);
           }
+          return new df(param1);
         }
     }
 

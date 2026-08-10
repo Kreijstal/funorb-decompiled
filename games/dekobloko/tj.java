@@ -233,60 +233,17 @@ final class tj extends w {
     }
 
     final static void a(boolean param0, java.awt.Canvas param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            rf.a(12, (java.awt.Component) ((Object) param1));
-            if (!param0) {
-              L1: {
-                qf.a((byte) -35, (java.awt.Component) ((Object) param1));
-                if (uc.field_e == null) {
-                  break L1;
-                } else {
-                  uc.field_e.a(68, (java.awt.Component) ((Object) param1));
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (runtimeException);
-
-            stackIn_7_1 = new StringBuilder().append("tj.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dh.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+        rf.a(12, (java.awt.Component) ((Object) param1));
+        if (param0) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            qf.a((byte) -35, (java.awt.Component) ((Object) param1));
+            if (uc.field_e != null) {
+                uc.field_e.a(68, (java.awt.Component) ((Object) param1));
+            }
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) ((Object) runtimeException), "tj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

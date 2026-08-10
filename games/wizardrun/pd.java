@@ -305,35 +305,38 @@ final class pd extends mi {
         try {
           L0: {
             L1: {
-              super.a(param0, param1, param2, param3, param4, param5 + param5);
-              var7 = tg.field_h;
-              if (var7 == null) {
-                break L1;
-              } else {
-                if (!this.b(param1, param3, 0, param0, param2)) {
-                  break L1;
+              L2: {
+                super.a(param0, param1, param2, param3, param4, param5 + param5);
+                var7 = tg.field_h;
+                if (var7 == null) {
+                  break L2;
                 } else {
-                  if (!(this.field_s instanceof qg)) {
-                    if (!(var7.field_s instanceof qg)) {
-                      break L1;
+                  if (!this.b(param1, param3, 0, param0, param2)) {
+                    break L2;
+                  } else {
+                    if (!(this.field_s instanceof qg)) {
+                      if (!(var7.field_s instanceof qg)) {
+                        break L2;
+                      } else {
+                        ((qg) ((Object) var7.field_s)).a(var7, -106, (pd) (this));
+                        tg.field_h = null;
+                        break L1;
+                      }
                     } else {
-                      ((qg) ((Object) var7.field_s)).a(var7, -106, (pd) (this));
+                      ((qg) ((Object) this.field_s)).a(var7, -95, (pd) (this));
                       tg.field_h = null;
                       break L1;
                     }
-                  } else {
-                    ((qg) ((Object) this.field_s)).a(var7, -95, (pd) (this));
-                    tg.field_h = null;
-                    break L1;
                   }
                 }
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var7_ref = decompiledCaughtException;
             stackIn_9_0 = (RuntimeException) (var7_ref);
 
@@ -343,12 +346,12 @@ final class pd extends mi {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "null";
-              break L2;
+              break L3;
             } else {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "{...}";
-              break L2;
+              break L3;
             }
           }
           throw bd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param5 + ')');

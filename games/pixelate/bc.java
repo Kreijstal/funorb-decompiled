@@ -216,50 +216,22 @@ final class bc extends mg {
     }
 
     final static void a(int param0, byte param1) {
-        RuntimeException runtimeException = null;
         int var2_int = 0;
-        int var3 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var3 = Pixelate.field_H ? 1 : 0;
-        try {
-          L0: {
-            ie.a(pg.field_e, w.field_s, true, aa.field_o, 0, 127, param0);
-            var2_int = 0;
-            L1: while (true) {
-              if (var2_int >= pg.field_e) {
-                ie.a(param0 + pg.field_e, ro.field_a, false, qn.field_k, param0, 81, param0 + param0);
-                if (param1 >= 1) {
-                  L2: {
-                    if (pg.field_e <= param0) {
-                      break L2;
-                    } else {
-                      pg.field_e = param0;
-                      break L2;
-                    }
-                  }
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                gn.field_A[param0 + var2_int] = var2_int;
-                var2_int++;
-                continue L1;
-              }
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "bc.K(" + param0 + ',' + param1 + ')');
+        int var3 = Pixelate.field_H ? 1 : 0;
+        ie.a(pg.field_e, w.field_s, true, aa.field_o, 0, 127, param0);
+        for (var2_int = 0; var2_int < pg.field_e; var2_int++) {
+            gn.field_A[param0 + var2_int] = var2_int;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        ie.a(param0 + pg.field_e, ro.field_a, false, qn.field_k, param0, 81, param0 + param0);
+        if (param1 < 1) {
+            return;
+        }
+        try {
+            if (pg.field_e > param0) {
+                pg.field_e = param0;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) ((Object) runtimeException), "bc.K(" + param0 + ',' + param1 + ')');
         }
     }
 

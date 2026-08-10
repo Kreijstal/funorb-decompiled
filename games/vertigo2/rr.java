@@ -219,15 +219,11 @@ final class rr extends ji {
               }
             }
           }
-          if ((double)var6 < 1.5707963267948966) {
-            if (2.356194490192345 <= (double)var6) {
-              if ((double)var6 > 3.141592653589793) {
-                break L0;
-              } else {
-                tn.field_j = we.field_M + -param1;
-                bh.field_c = param2;
-                break L0;
-              }
+          if ((double)var6 >= 1.5707963267948966) {
+            if ((double)var6 <= 2.356194490192345) {
+              tn.field_j = param2;
+              bh.field_c = aa.field_Vb - param1;
+              break L0;
             } else {
               if (2.356194490192345 > (double)var6) {
                 break L0;

@@ -2487,6 +2487,11 @@ final class dj extends ee {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int var2;
         int var3;
         int var4;
@@ -2580,251 +2585,315 @@ final class dj extends ee {
           }
         }
         L8: {
-          if (!this.field_Sb) {
-            if (!this.field_cb) {
-              break L8;
-            } else {
-              incrementValue$2 = var2;
-              var2--;
-              if ((double)incrementValue$2 * Math.random() >= (double)var3) {
-                break L8;
-              } else {
-                var3--;
-                this.field_cb = false;
-                ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 3));
-                break L8;
+          L9: {
+            if (this.field_Sb) {
+              L10: {
+                incrementValue$2 = var2;
+                var2--;
+                if (Math.random() * (double)incrementValue$2 < (double)var3) {
+                  var3--;
+                  this.field_Sb = false;
+                  ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 2));
+                  break L10;
+                } else {
+                  break L10;
+                }
               }
-            }
-          } else {
-            if (!this.field_cb) {
-              break L8;
-            } else {
-              incrementValue$3 = var2;
-              var2--;
-              if ((double)incrementValue$3 * Math.random() >= (double)var3) {
-                break L8;
+              if (this.field_cb) {
+                incrementValue$3 = var2;
+                var2--;
+                if ((double)incrementValue$3 * Math.random() < (double)var3) {
+                  var3--;
+                  this.field_cb = false;
+                  ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 3));
+                  break L9;
+                } else {
+                  if (!this.field_eb) {
+                    break L8;
+                  } else {
+                    incrementValue$4 = var2;
+                    var2--;
+                    if ((double)incrementValue$4 * Math.random() >= (double)var3) {
+                      break L8;
+                    } else {
+                      this.field_eb = false;
+                      var3--;
+                      ri.a((rk) (this), param0 + 1, new cl(this.field_A, (dj) (this), 5));
+                      break L8;
+                    }
+                  }
+                }
               } else {
-                var3--;
-                this.field_cb = false;
-                ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 3));
-                break L8;
+                if (!this.field_eb) {
+                  break L8;
+                } else {
+                  incrementValue$5 = var2;
+                  var2--;
+                  if ((double)incrementValue$5 * Math.random() >= (double)var3) {
+                    break L8;
+                  } else {
+                    this.field_eb = false;
+                    var3--;
+                    ri.a((rk) (this), param0 + 1, new cl(this.field_A, (dj) (this), 5));
+                    break L8;
+                  }
+                }
+              }
+            } else {
+              if (this.field_cb) {
+                incrementValue$6 = var2;
+                var2--;
+                if ((double)incrementValue$6 * Math.random() < (double)var3) {
+                  var3--;
+                  this.field_cb = false;
+                  ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 3));
+                  break L9;
+                } else {
+                  if (!this.field_eb) {
+                    break L8;
+                  } else {
+                    incrementValue$7 = var2;
+                    var2--;
+                    if ((double)incrementValue$7 * Math.random() >= (double)var3) {
+                      break L8;
+                    } else {
+                      this.field_eb = false;
+                      var3--;
+                      ri.a((rk) (this), param0 + 1, new cl(this.field_A, (dj) (this), 5));
+                      break L8;
+                    }
+                  }
+                }
+              } else {
+                if (!this.field_eb) {
+                  break L8;
+                } else {
+                  incrementValue$8 = var2;
+                  var2--;
+                  if ((double)incrementValue$8 * Math.random() >= (double)var3) {
+                    break L8;
+                  } else {
+                    this.field_eb = false;
+                    var3--;
+                    ri.a((rk) (this), param0 + 1, new cl(this.field_A, (dj) (this), 5));
+                    break L8;
+                  }
+                }
               }
             }
           }
-        }
-        L9: {
           if (!this.field_eb) {
-            break L9;
+            break L8;
           } else {
-            incrementValue$4 = var2;
+            incrementValue$9 = var2;
             var2--;
-            if ((double)incrementValue$4 * Math.random() >= (double)var3) {
-              break L9;
+            if ((double)incrementValue$9 * Math.random() >= (double)var3) {
+              break L8;
             } else {
               this.field_eb = false;
               var3--;
               ri.a((rk) (this), param0 + 1, new cl(this.field_A, (dj) (this), 5));
-              break L9;
-            }
-          }
-        }
-        L10: {
-          if (!this.field_rb) {
-            break L10;
-          } else {
-            incrementValue$5 = var2;
-            var2--;
-            if ((double)var3 > (double)incrementValue$5 * Math.random()) {
-              var3--;
-              this.field_rb = false;
-              ri.a((rk) (this), param0 ^ -1, new cl(this.field_A, (dj) (this), 4));
-              break L10;
-            } else {
-              break L10;
+              break L8;
             }
           }
         }
         L11: {
-          if ((this.field_U ^ -1) >= -1) {
+          if (!this.field_rb) {
             break L11;
           } else {
-            this.field_U = 0;
-            ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 8));
-            break L11;
+            incrementValue$10 = var2;
+            var2--;
+            if ((double)var3 > (double)incrementValue$10 * Math.random()) {
+              var3--;
+              this.field_rb = false;
+              ri.a((rk) (this), param0 ^ -1, new cl(this.field_A, (dj) (this), 4));
+              break L11;
+            } else {
+              break L11;
+            }
           }
         }
         L12: {
-          if (0 < this.field_Pb) {
-            this.field_Pb = 0;
-            ri.a((rk) (this), param0 + 1, new cl(this.field_A, (dj) (this), 7));
+          if ((this.field_U ^ -1) >= -1) {
             break L12;
           } else {
+            this.field_U = 0;
+            ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 8));
             break L12;
           }
         }
+        L13: {
+          if (0 < this.field_Pb) {
+            this.field_Pb = 0;
+            ri.a((rk) (this), param0 + 1, new cl(this.field_A, (dj) (this), 7));
+            break L13;
+          } else {
+            break L13;
+          }
+        }
         var4 = this.field_ub;
-        L13: while (true) {
+        L14: while (true) {
           if ((var4 ^ -1) >= -1) {
             var4 = this.field_tb;
-            L14: while (true) {
+            L15: while (true) {
               if (0 >= var4) {
                 var4 = this.field_zb;
-                L15: while (true) {
+                L16: while (true) {
                   if (0 >= var4) {
                     var4 = this.field_ab;
-                    L16: while (true) {
+                    L17: while (true) {
                       if (var4 <= 0) {
                         var4 = this.field_Bb.field_b;
-                        L17: while (true) {
+                        L18: while (true) {
                           if ((var4 ^ -1) >= -9) {
-                            L18: {
+                            L19: {
                               if (-9 == (this.field_Bb.field_b ^ -1)) {
                                 this.field_Bb.field_d = 0;
-                                break L18;
-                              } else {
-                                break L18;
-                              }
-                            }
-                            L19: {
-                              if (this.field_ib > 0) {
-                                this.field_ib = 0;
-                                this.field_Bb.field_l = false;
-                                var4 = 0;
-                                L20: while (true) {
-                                  if (-6 >= (var4 ^ -1)) {
-                                    ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 15));
-                                    break L19;
-                                  } else {
-                                    if (this.field_Nb[var4] != null) {
-                                      this.field_Nb[var4].field_ab.field_l = false;
-                                      var4++;
-                                      continue L20;
-                                    } else {
-                                      var4++;
-                                      continue L20;
-                                    }
-                                  }
-                                }
+                                break L19;
                               } else {
                                 break L19;
                               }
                             }
-                            L21: {
+                            L20: {
+                              if (this.field_ib > 0) {
+                                this.field_ib = 0;
+                                this.field_Bb.field_l = false;
+                                var4 = 0;
+                                L21: while (true) {
+                                  if (-6 >= (var4 ^ -1)) {
+                                    ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 15));
+                                    break L20;
+                                  } else {
+                                    if (this.field_Nb[var4] != null) {
+                                      this.field_Nb[var4].field_ab.field_l = false;
+                                      var4++;
+                                      continue L21;
+                                    } else {
+                                      var4++;
+                                      continue L21;
+                                    }
+                                  }
+                                }
+                              } else {
+                                break L20;
+                              }
+                            }
+                            L22: {
                               if ((this.field_Gb ^ -1) >= -1) {
-                                break L21;
+                                break L22;
                               } else {
                                 this.field_Gb = 0;
                                 this.field_Kb = 0;
                                 ri.a((rk) (this), param0 ^ -1, new cl(this.field_A, (dj) (this), 16));
-                                break L21;
+                                break L22;
                               }
                             }
-                            L22: {
+                            L23: {
                               if (param0 <= (this.field_R ^ -1)) {
-                                break L22;
+                                break L23;
                               } else {
                                 this.field_R = 0;
                                 ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 9));
-                                break L22;
+                                break L23;
                               }
                             }
                             return;
                           } else {
-                            incrementValue$6 = var2;
+                            incrementValue$11 = var2;
                             var2--;
-                            if ((double)var3 > (double)incrementValue$6 * Math.random()) {
+                            if ((double)var3 > (double)incrementValue$11 * Math.random()) {
                               this.field_Bb.field_b = this.field_Bb.field_b - 1;
                               var3--;
                               ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 14));
                               var4--;
-                              continue L17;
+                              continue L18;
                             } else {
                               var4--;
-                              continue L17;
+                              continue L18;
                             }
                           }
                         }
                       } else {
-                        incrementValue$7 = var2;
+                        incrementValue$12 = var2;
                         var2--;
-                        if (Math.random() * (double)incrementValue$7 < (double)var3) {
+                        if (Math.random() * (double)incrementValue$12 < (double)var3) {
                           this.field_ab = this.field_ab - 1;
                           var3--;
                           ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 13));
                           var4--;
-                          continue L16;
+                          continue L17;
                         } else {
                           var4--;
-                          continue L16;
+                          continue L17;
                         }
                       }
                     }
                   } else {
-                    incrementValue$8 = var2;
+                    incrementValue$13 = var2;
                     var2--;
-                    if ((double)var3 > Math.random() * (double)incrementValue$8) {
-                      L23: {
+                    if ((double)var3 > Math.random() * (double)incrementValue$13) {
+                      L24: {
                         this.field_zb = this.field_zb - 4;
                         var3--;
                         if (0 <= this.field_zb) {
-                          break L23;
+                          break L24;
                         } else {
                           this.field_zb = 0;
-                          break L23;
+                          break L24;
                         }
                       }
                       ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 12));
                       var4 -= 4;
-                      continue L15;
+                      continue L16;
                     } else {
                       var4 -= 4;
-                      continue L15;
+                      continue L16;
                     }
                   }
                 }
               } else {
-                incrementValue$9 = var2;
+                incrementValue$14 = var2;
                 var2--;
-                if ((double)var3 > (double)incrementValue$9 * Math.random()) {
-                  L24: {
+                if ((double)var3 > (double)incrementValue$14 * Math.random()) {
+                  L25: {
                     var3--;
                     this.field_tb = this.field_tb - 4;
                     if ((this.field_tb ^ -1) > -1) {
                       this.field_tb = 0;
-                      break L24;
+                      break L25;
                     } else {
-                      break L24;
+                      break L25;
                     }
                   }
                   ri.a((rk) (this), param0 ^ -1, new cl(this.field_A, (dj) (this), 11));
                   var4 -= 4;
-                  continue L14;
+                  continue L15;
                 } else {
                   var4 -= 4;
-                  continue L14;
+                  continue L15;
                 }
               }
             }
           } else {
-            incrementValue$10 = var2;
+            incrementValue$15 = var2;
             var2--;
-            if (Math.random() * (double)incrementValue$10 < (double)var3) {
-              L25: {
+            if (Math.random() * (double)incrementValue$15 < (double)var3) {
+              L26: {
                 this.field_ub = this.field_ub - 4;
                 var3--;
                 if (-1 >= (this.field_ub ^ -1)) {
-                  break L25;
+                  break L26;
                 } else {
                   this.field_ub = 0;
-                  break L25;
+                  break L26;
                 }
               }
               ri.a((rk) (this), 0, new cl(this.field_A, (dj) (this), 10));
               var4 -= 4;
-              continue L13;
+              continue L14;
             } else {
               var4 -= 4;
-              continue L13;
+              continue L14;
             }
           }
         }

@@ -260,54 +260,19 @@ class rb extends lg {
     }
 
     void a(int param0, gm param1, int param2, int param3) {
-        RuntimeException runtimeException = null;
-        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.a(71, param1, param2, param3);
-              var5_int = -86 % ((param0 - -28) / 43);
-              this.field_F = null;
-              if (!this.field_s) {
-                break L1;
-              } else {
+            super.a(71, param1, param2, param3);
+            int var5_int = -86 % ((param0 - -28) / 43);
+            this.field_F = null;
+            if (this.field_s) {
                 var6 = -this.field_w + -param3 + n.field_t;
                 var7 = k.field_e + (-param2 + -this.field_k);
                 this.field_F = this.a(var6, false, var7);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("rb.P(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) ((Object) runtimeException), "rb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

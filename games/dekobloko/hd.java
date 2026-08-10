@@ -65,24 +65,17 @@ final class hd extends bh {
               if (!param1) {
                 break L3;
               } else {
-                L4: {
-                  if (w.field_H.field_f != ta.field_b) {
-                    break L4;
-                  } else {
-                    var9 = w.field_H;
-                    var10 = cm.a((byte) 94, fb.field_d, new String[]{param3});
-                    var9.field_h.a(var10, 16, param0 + 87);
-                    if (!client.field_A) {
-                      break L3;
-                    } else {
-                      break L4;
-                    }
-                  }
+                if (w.field_H.field_f != ta.field_b) {
+                  var11 = w.field_H;
+                  var12 = cm.a((byte) 86, sb.field_p, new String[]{param3});
+                  var11.field_h.a(var12, 15, param0 ^ 91);
+                  break L3;
+                } else {
+                  var9 = w.field_H;
+                  var10 = cm.a((byte) 94, fb.field_d, new String[]{param3});
+                  var9.field_h.a(var10, 16, param0 + 87);
+                  break L3;
                 }
-                var11 = w.field_H;
-                var12 = cm.a((byte) 86, sb.field_p, new String[]{param3});
-                var11.field_h.a(var12, 15, param0 ^ 91);
-                break L3;
               }
             }
             var13 = w.field_H;
@@ -93,7 +86,7 @@ final class hd extends bh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var4 = decompiledCaughtException;
             stackIn_13_0 = (RuntimeException) (var4);
 
@@ -103,15 +96,15 @@ final class hd extends bh {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "null";
-              break L5;
+              break L4;
             } else {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "{...}";
-              break L5;
+              break L4;
             }
           }
-          L6: {
+          L5: {
 
 
             stackIn_16_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
@@ -120,12 +113,12 @@ final class hd extends bh {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "null";
-              break L6;
+              break L5;
             } else {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "{...}";
-              break L6;
+              break L5;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_17_2 + ')');

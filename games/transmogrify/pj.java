@@ -61,42 +61,15 @@ final class pj extends rh {
         o var5;
         int var6;
         int var7;
-        int stackIn_5_0 = 0;
-        int stackIn_5_1 = 0;
         var7 = Transmogrify.field_A ? 1 : 0;
         var5 = (o) ((Object) mh.field_a.a((byte) -95));
         L0: while (true) {
           if (var5 != null) {
-            stackIn_5_0 = param0 ^ -1;
-
-            stackIn_5_1 = var5.field_j ^ -1;
-
-            if (var7 == 0) {
-              if (stackIn_5_0 == stackIn_5_1) {
-                return var5;
-              } else {
-                var5 = (o) ((Object) mh.field_a.a(true));
-                if (var7 == 0) {
-                  continue L0;
-                } else {
-                  var5 = new o();
-                  var6 = -119 / ((32 - param1) / 36);
-                  var5.field_n = param4;
-                  var5.field_j = param0;
-                  var5.field_h = param3;
-                  mh.field_a.a(var5, -84);
-                  nk.a(param2, var5, -31995);
-                  return var5;
-                }
-              }
-            } else {
-              var6 = stackIn_5_0 / stackIn_5_1;
-              var5.field_n = param4;
-              var5.field_j = param0;
-              var5.field_h = param3;
-              mh.field_a.a(var5, -84);
-              nk.a(param2, var5, -31995);
+            if ((param0 ^ -1) == (var5.field_j ^ -1)) {
               return var5;
+            } else {
+              var5 = (o) ((Object) mh.field_a.a(true));
+              continue L0;
             }
           } else {
             var5 = new o();

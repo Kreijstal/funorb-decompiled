@@ -10,63 +10,18 @@ class hf extends wj {
     boolean field_B;
 
     void a(int param0, int param1, wj param2, int param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.a(param0, param1, param2, param3);
-              if (-1 == (this.field_u ^ -1)) {
-                break L1;
-              } else {
-                if (this.field_u == fia.field_t) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (!this.a(gd.field_m, mk.field_p, 0, param0, param1)) {
-                      break L2;
-                    } else {
-                      if (fia.field_t == 0) {
+            super.a(param0, param1, param2, param3);
+            if (-1 != (this.field_u ^ -1) && this.field_u != fia.field_t) {
+                if (this.a(gd.field_m, mk.field_p, 0, param0, param1)) {
+                    if (!(fia.field_t != 0)) {
                         this.a(-param0 + mk.field_p, this.field_u, false, -param1 + gd.field_m);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
                     }
-                  }
-                  this.a(param0, mk.field_p, (byte) -101, param2, gd.field_m, param1);
-                  break L1;
                 }
-              }
+                this.a(param0, mk.field_p, (byte) -101, param2, gd.field_m, param1);
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (runtimeException);
-
-            stackIn_10_1 = new StringBuilder().append("hf.O(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
-          }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) ((Object) runtimeException), "hf.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

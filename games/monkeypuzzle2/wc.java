@@ -57,48 +57,14 @@ final class wc implements Iterator {
     }
 
     final static void a(String param0, boolean param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              hf.field_b = param0;
-              qh.a(12, true);
-              if (!param1) {
-                break L1;
-              } else {
+            hf.field_b = param0;
+            qh.a(12, true);
+            if (param1) {
                 field_e = (le[]) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("wc.D(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw la.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) ((Object) runtimeException), "wc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -124,11 +90,7 @@ final class wc implements Iterator {
               this.field_c = this.field_c + 1;
               if (this.field_b.field_f[fieldTemp$1].field_d == this.field_b.field_f[-1 + this.field_c]) {
                 this.field_f = this.field_b.field_f[-1 + this.field_c];
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  return false;
-                }
+                continue L0;
               } else {
                 this.field_f = this.field_b.field_f[-1 + this.field_c].field_d;
                 return true;
@@ -145,7 +107,8 @@ final class wc implements Iterator {
     public final Object next() {
         int fieldTemp$1 = 0;
         int var2;
-        ug var3;
+        Object var3;
+        ug var3_ref;
         ug var4;
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (this.field_f == this.field_b.field_f[this.field_c + -1]) {
@@ -153,17 +116,13 @@ final class wc implements Iterator {
             if (this.field_c < this.field_b.field_d) {
               fieldTemp$1 = this.field_c;
               this.field_c = this.field_c + 1;
-              var3 = this.field_b.field_f[fieldTemp$1].field_d;
-              if (var3 == this.field_b.field_f[-1 + this.field_c]) {
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  return null;
-                }
+              var3_ref = this.field_b.field_f[fieldTemp$1].field_d;
+              if (var3_ref == this.field_b.field_f[-1 + this.field_c]) {
+                continue L0;
               } else {
-                this.field_f = var3.field_d;
-                this.field_i = var3;
-                return var3;
+                this.field_f = var3_ref.field_d;
+                this.field_i = var3_ref;
+                return var3_ref;
               }
             } else {
               return null;
@@ -188,21 +147,11 @@ final class wc implements Iterator {
           }
         } else {
           qb.a(param0 + 17332, re.field_e + 32);
-          if (!MonkeyPuzzle2.field_F) {
-            if (param0 == -17076) {
-              return;
-            } else {
-              wc.a((byte) -100);
-              return;
-            }
+          if (param0 == -17076) {
+            return;
           } else {
-            qb.a(256, 256);
-            if (param0 == -17076) {
-              return;
-            } else {
-              wc.a((byte) -100);
-              return;
-            }
+            wc.a((byte) -100);
+            return;
           }
         }
     }

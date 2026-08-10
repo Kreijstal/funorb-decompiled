@@ -108,28 +108,32 @@ final class vf extends r {
     }
 
     final static boolean c(byte param0) {
-        if (param0 == -5) {
-          if (null != mg.field_a) {
-            if (null == mg.field_a.l(-63)) {
-              return false;
-            } else {
-              return true;
-            }
+        int stackIn_6_0 = 0;
+        L0: {
+          if (param0 == -5) {
+            break L0;
           } else {
-            return false;
-          }
-        } else {
-          vf.c((byte) -24);
-          if (null != mg.field_a) {
-            if (null == mg.field_a.l(-63)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
+            vf.c((byte) -24);
+            break L0;
           }
         }
+        L1: {
+          L2: {
+            if (null == mg.field_a) {
+              break L2;
+            } else {
+              if (null == mg.field_a.l(-63)) {
+                break L2;
+              } else {
+                stackIn_6_0 = 1;
+                break L1;
+              }
+            }
+          }
+          stackIn_6_0 = 0;
+          break L1;
+        }
+        return stackIn_6_0 != 0;
     }
 
     final static int a(int param0, byte param1, CharSequence param2) {
@@ -182,118 +186,31 @@ final class vf extends r {
     }
 
     final static void e(int param0) {
-        RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;
-        int var3 = 0;
-        int stackIn_9_0 = 0;
-        String[] stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        String[] stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        String stackIn_12_2 = null;
-        int stackIn_20_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var3 = fleas.field_A ? 1 : 0;
+        int var3 = fleas.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              rh.field_c.field_z = new String[wj.field_c[fleas.field_E].length];
-              rh.field_c.field_t = new boolean[rh.field_c.field_z.length];
-              if (param0 == -6359) {
-                break L1;
-              } else {
+            rh.field_c.field_z = new String[wj.field_c[fleas.field_E].length];
+            rh.field_c.field_t = new boolean[rh.field_c.field_z.length];
+            if (param0 != -6359) {
                 vf.c(true);
-                break L1;
-              }
             }
-            var1_int = 0;
-            L2: while (true) {
-              L3: {
-                L4: {
-                  if (var1_int >= rh.field_c.field_t.length) {
-                    break L4;
-                  } else {
-                    stackIn_20_0 = hj.field_a[fleas.field_E] ^ -1;
-
-                    if (var3 != 0) {
-                      break L3;
-                    } else {
-                      L5: {
-                        if (stackIn_20_0 > (var1_int ^ -1)) {
-                          stackIn_9_0 = 0;
-                          break L5;
-                        } else {
-                          stackIn_9_0 = 1;
-                          break L5;
-                        }
-                      }
-                      L6: {
-                        var2 = stackIn_9_0;
-                        stackIn_11_0 = rh.field_c.field_z;
-
-                        stackIn_11_1 = var1_int;
-
-                        if (var2 != 0) {
-                          stackIn_12_0 = (String[]) ((Object) stackIn_11_0);
-                          stackIn_12_1 = stackIn_11_1;
-                          stackIn_12_2 = wj.field_c[fleas.field_E][var1_int];
-                          break L6;
-                        } else {
-                          stackIn_12_0 = (String[]) ((Object) stackIn_11_0);
-                          stackIn_12_1 = stackIn_11_1;
-                          stackIn_12_2 = ik.field_C;
-                          break L6;
-                        }
-                      }
-                      L7: {
-                        stackIn_12_0[stackIn_12_1] = stackIn_12_2;
-                        if (0 != fleas.field_E) {
-                          break L7;
-                        } else {
-                          if (-16 < (var1_int ^ -1)) {
-                            break L7;
-                          } else {
-                            L8: {
-                              if (qh.c((byte) 107)) {
-                                break L8;
-                              } else {
-                                if (0 < wc.field_q) {
-                                  break L7;
-                                } else {
-                                  break L8;
-                                }
-                              }
-                            }
-                            rh.field_c.field_z[var1_int] = nb.field_e;
-                            var2 = 0;
-                            break L7;
-                          }
-                        }
-                      }
-                      rh.field_c.field_t[var1_int] = var2 != 0;
-                      var1_int++;
-                      if (var3 == 0) {
-                        continue L2;
-                      } else {
-                        break L4;
-                      }
+            for (var1_int = 0; var1_int < rh.field_c.field_t.length; var1_int++) {
+                var2 = hj.field_a[fleas.field_E] >= var1_int ? 1 : 0;
+                rh.field_c.field_z[var1_int] = var2 == 0 ? ik.field_C : wj.field_c[fleas.field_E][var1_int];
+                if (0 == fleas.field_E && -16 >= (var1_int ^ -1)) {
+                    if (qh.c((byte) 107) || 0 >= wc.field_q) {
+                        rh.field_c.field_z[var1_int] = nb.field_e;
+                        var2 = 0;
                     }
-                  }
                 }
-                rh.field_c.field_x = 0;
-                rh.field_c.field_S = 0;
-                stackIn_20_0 = 336;
-                break L3;
-              }
-              ll.d(stackIn_20_0);
-              break L0;
+                rh.field_c.field_t[var1_int] = var2 != 0;
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw pf.a((Throwable) ((Object) runtimeException), "vf.K(" + param0 + ')');
+            rh.field_c.field_x = 0;
+            rh.field_c.field_S = 0;
+            ll.d(336);
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) ((Object) runtimeException), "vf.K(" + param0 + ')');
         }
     }
 
@@ -307,8 +224,6 @@ final class vf extends r {
     final void d(boolean param0) {
         if (!param0) {
             vf.c(false);
-            this.field_o = null;
-            return;
         }
         this.field_o = null;
     }

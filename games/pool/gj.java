@@ -467,23 +467,26 @@ final class gj extends ei {
               }
             }
             L2: {
-              if (!this.field_N) {
-                break L2;
-              } else {
-                this.field_J = this.field_J + 1;
-                if (this.field_J > this.field_Q * 2) {
-                  this.field_J = this.field_J - 2 * this.field_Q;
-                  break L2;
+              L3: {
+                if (!this.field_N) {
+                  break L3;
                 } else {
-                  break L2;
+                  this.field_J = this.field_J + 1;
+                  if (this.field_J > this.field_Q * 2) {
+                    this.field_J = this.field_J - 2 * this.field_Q;
+                    break L3;
+                  } else {
+                    break L2;
+                  }
                 }
               }
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var5 = decompiledCaughtException;
             stackIn_9_0 = (RuntimeException) (var5);
 
@@ -493,12 +496,12 @@ final class gj extends ei {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "null";
-              break L3;
+              break L4;
             } else {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "{...}";
-              break L3;
+              break L4;
             }
           }
           throw wm.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');

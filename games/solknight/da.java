@@ -1120,7 +1120,7 @@ final class da {
                           break L10;
                         }
                       }
-                      throw fc.a((Throwable) ((Object) stackIn_39_0), (stackIn_39_2 != 0) + " " + param2 + " " + param1.length + " " + gl.a(param1.length, var9, 125) + " " + gl.a(param1.length + -2, var9, 125) + " " + this.field_g.field_b[param2] + " " + this.field_g.field_d);
+                      throw fc.a((Throwable) ((Object) stackIn_39_0), (stackIn_39_2 != 0) + " " + param2 + " " + var9.length + " " + gl.a(var9.length, var9, 125) + " " + gl.a(var9.length + -2, var9, 125) + " " + this.field_g.field_b[param2] + " " + this.field_g.field_d);
                     }
                     L11: {
                       if (this.field_h) {

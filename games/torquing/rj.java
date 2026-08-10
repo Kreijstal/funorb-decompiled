@@ -329,48 +329,51 @@ final class rj extends am {
                 break L2;
               } else {
                 if (-2 != (var4_int ^ -1)) {
-                  if (var4_int != 2) {
-                    if (3 != var4_int) {
-                      if (var4_int == 4) {
-                        this.field_A = param0.i((byte) -101);
-                        break L2;
-                      } else {
-                        if ((var4_int ^ -1) != -6) {
-                          if (-7 != (var4_int ^ -1)) {
-                            break L2;
+                  L4: {
+                    if (var4_int != 2) {
+                      if (3 != var4_int) {
+                        if (var4_int == 4) {
+                          this.field_A = param0.i((byte) -101);
+                          break L2;
+                        } else {
+                          if ((var4_int ^ -1) != -6) {
+                            if (-7 != (var4_int ^ -1)) {
+                              break L4;
+                            } else {
+                              this.field_u = param0.i((byte) -101);
+                              break L2;
+                            }
                           } else {
-                            this.field_u = param0.i((byte) -101);
+                            this.field_D = param0.i((byte) -101);
                             break L2;
                           }
-                        } else {
-                          this.field_D = param0.i((byte) -101);
-                          break L2;
                         }
+                      } else {
+                        dupTemp$0 = param0.i((byte) -101);
+                        this.field_u = dupTemp$0;
+                        this.field_D = dupTemp$0;
+                        break L2;
                       }
                     } else {
-                      dupTemp$0 = param0.i((byte) -101);
-                      this.field_u = dupTemp$0;
-                      this.field_D = dupTemp$0;
-                      break L2;
-                    }
-                  } else {
-                    this.field_z = param0.g(65536);
-                    if (0 > this.field_z) {
-                      this.field_x = new short[this.field_C];
-                      var4_int = 0;
-                      L4: while (true) {
-                        if (var4_int >= this.field_C) {
-                          break L2;
-                        } else {
-                          this.field_x[var4_int] = (short)param0.g(65536);
-                          var4_int++;
-                          continue L4;
+                      this.field_z = param0.g(65536);
+                      if (0 > this.field_z) {
+                        this.field_x = new short[this.field_C];
+                        var4_int = 0;
+                        L5: while (true) {
+                          if (var4_int >= this.field_C) {
+                            break L4;
+                          } else {
+                            this.field_x[var4_int] = (short)param0.g(65536);
+                            var4_int++;
+                            continue L5;
+                          }
                         }
+                      } else {
+                        break L2;
                       }
-                    } else {
-                      break L2;
                     }
                   }
+                  break L2;
                 } else {
                   this.field_C = param0.i((byte) -101);
                   break L2;
@@ -381,7 +384,7 @@ final class rj extends am {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var4 = decompiledCaughtException;
             stackIn_32_0 = (RuntimeException) (var4);
 
@@ -391,12 +394,12 @@ final class rj extends am {
               stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
               stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackIn_33_2 = "null";
-              break L5;
+              break L6;
             } else {
               stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
               stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackIn_33_2 = "{...}";
-              break L5;
+              break L6;
             }
           }
           throw rb.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ',' + param1 + ',' + param2 + ')');

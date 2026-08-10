@@ -440,37 +440,28 @@ final class cn extends kf implements fi, vn {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 67) {
-                break L1;
-              } else {
-                var7 = (ek) null;
-                this.a((byte) 103, -75, (ek) null, 25, 38);
-                break L1;
-              }
+            if (param0 == 67) {
+              break L0;
+            } else {
+              var7 = (ek) null;
+              this.a((byte) 103, -75, (ek) null, 25, 38);
+              break L0;
             }
-            L2: {
-              if (this.field_S == param2) {
-                break L2;
-              } else {
-                if (this.field_Z == param2) {
-                  this.i(-14356);
-                  if (!client.field_A) {
-                    break L0;
-                  } else {
-                    break L2;
-                  }
-                } else {
-                  return;
-                }
-              }
-            }
+          }
+          if (this.field_S == param2) {
             vb.g((byte) 105);
             return;
+          } else {
+            if (this.field_Z == param2) {
+              this.i(-14356);
+              return;
+            } else {
+              return;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L1: {
             var6 = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (var6);
 
@@ -480,12 +471,12 @@ final class cn extends kf implements fi, vn {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L3;
+              break L1;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L3;
+              break L1;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ',' + param4 + ')');

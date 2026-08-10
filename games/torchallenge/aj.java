@@ -546,65 +546,68 @@ final class aj {
               }
             }
             L12: {
-              if (vh.field_d == null) {
-                break L12;
-              } else {
-                var1_int = 0;
-                L13: while (true) {
-                  if (var1_int >= 3) {
-                    var1_int = 1;
-                    var2 = 0;
-                    L14: while (true) {
-                      if (-4 >= (var2 ^ -1)) {
-                        if (var1_int == 0) {
-                          break L12;
-                        } else {
-                          L15: {
-                            vh.field_d = null;
-                            if (eb.field_l != null) {
-                              break L15;
-                            } else {
-                              if (gl.field_a) {
-                                break L15;
+              L13: {
+                if (vh.field_d == null) {
+                  break L13;
+                } else {
+                  var1_int = 0;
+                  L14: while (true) {
+                    if (var1_int >= 3) {
+                      var1_int = 1;
+                      var2 = 0;
+                      L15: while (true) {
+                        if (-4 >= (var2 ^ -1)) {
+                          if (var1_int == 0) {
+                            break L13;
+                          } else {
+                            L16: {
+                              vh.field_d = null;
+                              if (eb.field_l != null) {
+                                break L16;
                               } else {
-                                vf.b((byte) 115);
-                                break L12;
+                                if (gl.field_a) {
+                                  break L16;
+                                } else {
+                                  vf.b((byte) 115);
+                                  break L12;
+                                }
                               }
                             }
+                            if (eb.field_l == null) {
+                              gl.field_a = false;
+                              break L13;
+                            } else {
+                              break L12;
+                            }
                           }
-                          if (eb.field_l == null) {
-                            gl.field_a = false;
-                            break L12;
-                          } else {
-                            break L12;
-                          }
-                        }
-                      } else {
-                        if (vh.field_d[var2] != null) {
-                          var1_int = 0;
-                          var2++;
-                          continue L14;
                         } else {
-                          var2++;
-                          continue L14;
+                          if (vh.field_d[var2] != null) {
+                            var1_int = 0;
+                            var2++;
+                            continue L15;
+                          } else {
+                            var2++;
+                            continue L15;
+                          }
                         }
                       }
-                    }
-                  } else {
-                    L16: {
-                      if (vh.field_d[var1_int].field_i) {
-                        ii.field_f[var1_int] = vh.field_d[var1_int].field_n;
-                        vh.field_d[var1_int] = null;
-                        break L16;
-                      } else {
-                        break L16;
+                    } else {
+                      L17: {
+                        if (vh.field_d[var1_int].field_i) {
+                          ii.field_f[var1_int] = vh.field_d[var1_int].field_n;
+                          vh.field_d[var1_int] = null;
+                          break L17;
+                        } else {
+                          break L17;
+                        }
                       }
+                      var1_int++;
+                      continue L14;
                     }
-                    var1_int++;
-                    continue L13;
                   }
                 }
               }
+              break L12;
             }
             break L0;
           }

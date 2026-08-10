@@ -237,55 +237,58 @@ final class tc extends qb {
                 }
               }
               L13: {
-                if (null == this.field_z) {
-                  break L13;
-                } else {
-                  if (this.field_r != 0) {
-                    L14: {
+                L14: {
+                  if (null == this.field_z) {
+                    break L14;
+                  } else {
+                    if (this.field_r != 0) {
                       L15: {
-                        if (this.field_s == null) {
-                          break L15;
-                        } else {
-                          if (this.field_s.length >= var6) {
-                            cj.a(this.field_s, 0, var6);
-                            break L14;
+                        L16: {
+                          if (this.field_s == null) {
+                            break L16;
                           } else {
-                            break L15;
+                            if (this.field_s.length >= var6) {
+                              cj.a(this.field_s, 0, var6);
+                              break L15;
+                            } else {
+                              break L16;
+                            }
                           }
                         }
+                        this.field_y = new int[var6];
+                        this.field_s = new int[var6];
+                        break L15;
                       }
-                      this.field_y = new int[var6];
-                      this.field_s = new int[var6];
-                      break L14;
-                    }
-                    L16: {
-                      this.field_C.b(this.field_s, 0, param2);
-                      if (!vn.field_g) {
-                        stackIn_66_0 = param1;
-                        break L16;
-                      } else {
-                        param1 = param1 << 1;
-                        stackIn_66_0 = param1 << 1;
-                        break L16;
+                      L17: {
+                        this.field_C.b(this.field_s, 0, param2);
+                        if (!vn.field_g) {
+                          stackIn_66_0 = param1;
+                          break L17;
+                        } else {
+                          param1 = param1 << 1;
+                          stackIn_66_0 = param1 << 1;
+                          break L17;
+                        }
                       }
-                    }
-                    var7 = stackIn_66_0;
-                    var8 = this.field_t * this.field_r / 256;
-                    var9 = this.field_t - var8;
-                    var10 = 0;
-                    L17: while (true) {
-                      if (var10 >= var6) {
-                        break L13;
-                      } else {
-                        param0[var7 - -var10] = var8 * this.field_s[var10] + param0[var7 - -var10] * var9 >> 2025300552;
-                        var10++;
-                        continue L17;
+                      var7 = stackIn_66_0;
+                      var8 = this.field_t * this.field_r / 256;
+                      var9 = this.field_t - var8;
+                      var10 = 0;
+                      L18: while (true) {
+                        if (var10 >= var6) {
+                          break L14;
+                        } else {
+                          param0[var7 - -var10] = var8 * this.field_s[var10] + param0[var7 - -var10] * var9 >> 2025300552;
+                          var10++;
+                          continue L18;
+                        }
                       }
+                    } else {
+                      break L13;
                     }
-                  } else {
-                    break L13;
                   }
                 }
+                break L13;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -297,7 +300,7 @@ final class tc extends qb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L18: {
+          L19: {
             var4 = decompiledCaughtException;
             stackIn_72_0 = (RuntimeException) (var4);
 
@@ -307,12 +310,12 @@ final class tc extends qb {
               stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
               stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
               stackIn_73_2 = "null";
-              break L18;
+              break L19;
             } else {
               stackIn_73_0 = (RuntimeException) ((Object) stackIn_72_0);
               stackIn_73_1 = (StringBuilder) ((Object) stackIn_72_1);
               stackIn_73_2 = "{...}";
-              break L18;
+              break L19;
             }
           }
           throw vk.a((Throwable) ((Object) stackIn_73_0), stackIn_73_2 + ',' + param1 + ',' + param2 + ')');

@@ -82,22 +82,13 @@ final class ji implements Iterable {
           this.field_c = var4.field_f;
           L0: while (true) {
             if (var4 != this.field_c) {
-              if (var6 == 0) {
-                if ((param1 ^ -1L) != (this.field_c.field_d ^ -1L)) {
-                  this.field_c = this.field_c.field_f;
-                  if (var6 == 0) {
-                    continue L0;
-                  } else {
-                    this.field_c = null;
-                    return null;
-                  }
-                } else {
-                  var5 = this.field_c;
-                  this.field_c = this.field_c.field_f;
-                  return var5;
-                }
+              if ((param1 ^ -1L) != (this.field_c.field_d ^ -1L)) {
+                this.field_c = this.field_c.field_f;
+                continue L0;
               } else {
-                return null;
+                var5 = this.field_c;
+                this.field_c = this.field_c.field_f;
+                return var5;
               }
             } else {
               this.field_c = null;
@@ -110,22 +101,13 @@ final class ji implements Iterable {
           this.field_c = var4.field_f;
           L1: while (true) {
             if (var4 != this.field_c) {
-              if (var6 == 0) {
-                if ((param1 ^ -1L) != (this.field_c.field_d ^ -1L)) {
-                  this.field_c = this.field_c.field_f;
-                  if (var6 == 0) {
-                    continue L1;
-                  } else {
-                    this.field_c = null;
-                    return null;
-                  }
-                } else {
-                  var5 = this.field_c;
-                  this.field_c = this.field_c.field_f;
-                  return var5;
-                }
+              if ((param1 ^ -1L) != (this.field_c.field_d ^ -1L)) {
+                this.field_c = this.field_c.field_f;
+                continue L1;
               } else {
-                return null;
+                var5 = this.field_c;
+                this.field_c = this.field_c.field_f;
+                return var5;
               }
             } else {
               this.field_c = null;

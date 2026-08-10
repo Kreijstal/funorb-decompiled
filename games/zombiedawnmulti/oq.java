@@ -118,39 +118,27 @@ final class oq extends hq {
           se.field_E = 0;
           qj.field_p = false;
           io.field_g = false;
-          if (param0 < 117) {
-            oq.c((byte) -11);
+          if (param0 >= 117) {
             return;
           } else {
+            oq.c((byte) -11);
             return;
           }
         } else {
           qj.field_p = true;
-          if (pp.field_n) {
-            ah.a((byte) -86, 21);
-            if (ZombieDawnMulti.field_E) {
-              se.field_E = 0;
-              qj.field_p = false;
-              io.field_g = false;
-              if (param0 < 117) {
-                oq.c((byte) -11);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              if (param0 < 117) {
-                oq.c((byte) -11);
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
+          if (!pp.field_n) {
             if (param0 < 117) {
               oq.c((byte) -11);
               return;
             } else {
+              return;
+            }
+          } else {
+            ah.a((byte) -86, 21);
+            if (param0 >= 117) {
+              return;
+            } else {
+              oq.c((byte) -11);
               return;
             }
           }

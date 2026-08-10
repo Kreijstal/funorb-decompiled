@@ -616,47 +616,50 @@ class am implements fp, io {
             }
             L5: {
               L6: {
-                var6 = this.field_m;
-                if (var6 != 0) {
-                  if ((var6 ^ -1) != -4) {
-                    if (1 == var6) {
-                      if (!(param0.field_x instanceof ve)) {
-                        break L5;
-                      } else {
-                        ((ve) ((Object) param0.field_x)).a(this.field_a, var3_int >> -1177150015, var5, this.c(-1, param0), false);
-                        break L5;
-                      }
-                    } else {
-                      if (-3 != (var6 ^ -1)) {
-                        break L5;
-                      } else {
+                L7: {
+                  var6 = this.field_m;
+                  if (var6 != 0) {
+                    if ((var6 ^ -1) != -4) {
+                      if (1 == var6) {
                         if (!(param0.field_x instanceof ve)) {
-                          break L5;
+                          break L6;
                         } else {
-                          ((ve) ((Object) param0.field_x)).a(this.c(-1, param0), this.field_a, false, var5, var3_int);
+                          ((ve) ((Object) param0.field_x)).a(this.field_a, var3_int >> -1177150015, var5, this.c(-1, param0), false);
                           break L5;
                         }
+                      } else {
+                        if (-3 != (var6 ^ -1)) {
+                          break L6;
+                        } else {
+                          if (!(param0.field_x instanceof ve)) {
+                            break L6;
+                          } else {
+                            ((ve) ((Object) param0.field_x)).a(this.c(-1, param0), this.field_a, false, var5, var3_int);
+                            break L5;
+                          }
+                        }
                       }
+                    } else {
+                      break L7;
                     }
                   } else {
-                    break L6;
+                    break L7;
                   }
-                } else {
+                }
+                if (!(param0.field_x instanceof ve)) {
                   break L6;
+                } else {
+                  ((ve) ((Object) param0.field_x)).a(var5, this.c(-1, param0), this.field_a, true, 0);
+                  break L5;
                 }
               }
-              if (!(param0.field_x instanceof ve)) {
-                break L5;
-              } else {
-                ((ve) ((Object) param0.field_x)).a(var5, this.c(-1, param0), this.field_a, true, 0);
-                break L5;
-              }
+              break L5;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var3 = decompiledCaughtException;
             stackIn_31_0 = (RuntimeException) (var3);
 
@@ -666,12 +669,12 @@ class am implements fp, io {
               stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
               stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackIn_32_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
               stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackIn_32_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw wm.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param1 + ')');

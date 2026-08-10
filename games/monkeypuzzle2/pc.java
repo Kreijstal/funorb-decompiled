@@ -682,94 +682,97 @@ abstract class pc extends nf {
               }
             }
             L2: {
-              hj.field_L = false;
-              if (null == me.field_f) {
-                break L2;
-              } else {
-                if (me.field_f.field_z) {
-                  L3: {
-                    if (param1 != 8) {
-                      break L3;
-                    } else {
-                      L4: {
+              L3: {
+                hj.field_L = false;
+                if (null == me.field_f) {
+                  break L3;
+                } else {
+                  if (me.field_f.field_z) {
+                    L4: {
+                      if (param1 != 8) {
+                        break L4;
+                      } else {
                         L5: {
-                          param1 = 2;
-                          if (fk.field_a) {
-                            break L5;
-                          } else {
-                            param2 = od.field_o;
-                            if (!MonkeyPuzzle2.field_F) {
-                              break L4;
+                          L6: {
+                            param1 = 2;
+                            if (fk.field_a) {
+                              break L6;
                             } else {
-                              break L5;
+                              param2 = od.field_o;
+                              if (!MonkeyPuzzle2.field_F) {
+                                break L5;
+                              } else {
+                                break L6;
+                              }
                             }
                           }
+                          param2 = r.field_b;
+                          break L5;
                         }
-                        param2 = r.field_b;
+                        j.field_e.a(bh.field_b, (byte) -34);
                         break L4;
                       }
-                      j.field_e.a(bh.field_b, (byte) -34);
-                      break L3;
                     }
-                  }
-                  L6: {
-                    var3_int = 1;
-                    if ((param1 ^ -1) != -11) {
-                      break L6;
-                    } else {
-                      wj.d((byte) 35);
-                      var3_int = 0;
-                      break L6;
-                    }
-                  }
-                  L7: {
-                    if (var3_int != 0) {
-                      L8: {
-                        if (!hj.field_L) {
-                          break L8;
-                        } else {
-                          param2 = gg.a(new String[]{param2}, ek.field_c, true);
-                          break L8;
-                        }
-                      }
-                      L9: {
-                        if (ja.field_F) {
-                          param2 = oa.field_F;
-                          break L9;
-                        } else {
-                          break L9;
-                        }
-                      }
-                      me.field_f.a(-10, param2, param1);
-                      break L7;
-                    } else {
-                      break L7;
-                    }
-                  }
-                  if (256 == param1) {
-                    break L2;
-                  } else {
-                    if (param1 != 10) {
-                      if (fk.field_a) {
-                        break L2;
+                    L7: {
+                      var3_int = 1;
+                      if ((param1 ^ -1) != -11) {
+                        break L7;
                       } else {
-                        j.field_e.k(-112);
+                        wj.d((byte) 35);
+                        var3_int = 0;
+                        break L7;
+                      }
+                    }
+                    L8: {
+                      if (var3_int != 0) {
+                        L9: {
+                          if (!hj.field_L) {
+                            break L9;
+                          } else {
+                            param2 = gg.a(new String[]{param2}, ek.field_c, true);
+                            break L9;
+                          }
+                        }
+                        L10: {
+                          if (ja.field_F) {
+                            param2 = oa.field_F;
+                            break L10;
+                          } else {
+                            break L10;
+                          }
+                        }
+                        me.field_f.a(-10, param2, param1);
+                        break L8;
+                      } else {
+                        break L8;
+                      }
+                    }
+                    if (256 == param1) {
+                      break L3;
+                    } else {
+                      if (param1 != 10) {
+                        if (fk.field_a) {
+                          break L3;
+                        } else {
+                          j.field_e.k(-112);
+                          break L2;
+                        }
+                      } else {
                         break L2;
                       }
-                    } else {
-                      break L2;
                     }
+                  } else {
+                    break L2;
                   }
-                } else {
-                  break L2;
                 }
               }
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L11: {
             var3 = decompiledCaughtException;
             stackIn_28_0 = (RuntimeException) (var3);
 
@@ -779,12 +782,12 @@ abstract class pc extends nf {
               stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
               stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackIn_29_2 = "null";
-              break L10;
+              break L11;
             } else {
               stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
               stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackIn_29_2 = "{...}";
-              break L10;
+              break L11;
             }
           }
           throw la.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');

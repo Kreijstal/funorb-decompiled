@@ -273,38 +273,41 @@ final class di {
                       }
                     }
                     L21: {
-                      if (param1[4] == null) {
-                        break L21;
-                      } else {
-                        if (param1[4].field_t == 0) {
-                          break L21;
+                      L22: {
+                        if (param1[4] == null) {
+                          break L22;
                         } else {
-                          if (0 != param1[4].field_x) {
-                            fn.f(var16, var18, var17, var19);
-                            var20 = var14;
-                            L22: while (true) {
-                              if (var15 <= var20) {
-                                fn.a(fj.field_E);
-                                break L21;
-                              } else {
-                                var21 = var12;
-                                L23: while (true) {
-                                  if (var13 <= var21) {
-                                    var20 = var20 + param1[4].field_x;
-                                    continue L22;
-                                  } else {
-                                    param1[4].d(var21, var20);
-                                    var21 = var21 + param1[4].field_t;
-                                    continue L23;
+                          if (param1[4].field_t == 0) {
+                            break L22;
+                          } else {
+                            if (0 != param1[4].field_x) {
+                              fn.f(var16, var18, var17, var19);
+                              var20 = var14;
+                              L23: while (true) {
+                                if (var15 <= var20) {
+                                  fn.a(fj.field_E);
+                                  break L22;
+                                } else {
+                                  var21 = var12;
+                                  L24: while (true) {
+                                    if (var13 <= var21) {
+                                      var20 = var20 + param1[4].field_x;
+                                      continue L23;
+                                    } else {
+                                      param1[4].d(var21, var20);
+                                      var21 = var21 + param1[4].field_t;
+                                      continue L24;
+                                    }
                                   }
                                 }
                               }
+                            } else {
+                              break L21;
                             }
-                          } else {
-                            break L21;
                           }
                         }
                       }
+                      break L21;
                     }
                     decompiledRegionSelector0 = 2;
                     break L0;
@@ -320,7 +323,7 @@ final class di {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L24: {
+          L25: {
             var6 = decompiledCaughtException;
             stackIn_73_0 = (RuntimeException) (var6);
 
@@ -330,12 +333,12 @@ final class di {
               stackIn_74_0 = (RuntimeException) ((Object) stackIn_73_0);
               stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackIn_74_2 = "null";
-              break L24;
+              break L25;
             } else {
               stackIn_74_0 = (RuntimeException) ((Object) stackIn_73_0);
               stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackIn_74_2 = "{...}";
-              break L24;
+              break L25;
             }
           }
           throw sd.a((Throwable) ((Object) stackIn_74_0), stackIn_74_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

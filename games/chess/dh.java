@@ -303,101 +303,32 @@ final class dh {
     }
 
     final void a(int param0, ld param1) {
-        RuntimeException runtimeException = null;
-        int var3_int = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param1.field_d) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                this.field_a = param1.field_k;
-                if (0 == param1.field_k) {
-                  L2: {
-                    if (sg.field_d != 0) {
-                      break L2;
-                    } else {
-                      this.field_b.a((byte) -12, dl.field_m, 12);
-                      break L2;
-                    }
-                  }
-                  this.field_b.a((byte) -12, ua.field_e, 13);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L3: {
-                var3_int = -49 % ((param0 - 3) / 36);
-                if (param1.field_k == 1) {
-                  L4: {
-                    if (-1 != (ii.field_Q ^ -1)) {
-                      break L4;
-                    } else {
-                      this.field_b.a((byte) -12, nk.field_v, 12);
-                      break L4;
-                    }
-                  }
-                  this.field_b.a((byte) -12, un.field_i, 13);
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L5: {
-                if (param1.field_k != 2) {
-                  break L5;
-                } else {
-                  L6: {
-                    if (-1 != (v.field_d ^ -1)) {
-                      break L6;
-                    } else {
-                      this.field_b.a((byte) -12, wf.field_X, 12);
-                      break L6;
-                    }
-                  }
-                  this.field_b.a((byte) -12, in.field_e, 13);
-                  break L5;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            runtimeException = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (runtimeException);
-
-            stackIn_20_1 = new StringBuilder().append("dh.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L7;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L7;
-            }
-          }
-          throw fk.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
+        if (!(!param1.field_d)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            this.field_a = param1.field_k;
+            if (!(0 != param1.field_k)) {
+                if (sg.field_d == 0) {
+                    this.field_b.a((byte) -12, dl.field_m, 12);
+                }
+                this.field_b.a((byte) -12, ua.field_e, 13);
+            }
+            int var3_int = -49 % ((param0 - 3) / 36);
+            if (!(param1.field_k != 1)) {
+                if (-1 == (ii.field_Q ^ -1)) {
+                    this.field_b.a((byte) -12, nk.field_v, 12);
+                }
+                this.field_b.a((byte) -12, un.field_i, 13);
+            }
+            if (param1.field_k == 2) {
+                if (-1 == (v.field_d ^ -1)) {
+                    this.field_b.a((byte) -12, wf.field_X, 12);
+                }
+                this.field_b.a((byte) -12, in.field_e, 13);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -729,37 +729,40 @@ final class tb extends uj {
             if (!this.field_B) {
               break L15;
             } else {
-              if (ll.a(1000) < this.field_g) {
-                break L15;
-              } else {
-                var2 = (rf) ((Object) this.field_q.a((byte) 117));
-                L16: while (true) {
-                  if (var2 == null) {
-                    this.field_g = ll.a(1000) - -1000L;
-                    break L15;
-                  } else {
-                    L17: {
-                      if (!var2.field_A) {
-                        if (var2.field_C) {
-                          if (!var2.field_x) {
-                            throw new RuntimeException();
+              L16: {
+                if (ll.a(1000) < this.field_g) {
+                  break L16;
+                } else {
+                  var2 = (rf) ((Object) this.field_q.a((byte) 117));
+                  L17: while (true) {
+                    if (var2 == null) {
+                      this.field_g = ll.a(1000) - -1000L;
+                      break L16;
+                    } else {
+                      L18: {
+                        if (!var2.field_A) {
+                          if (var2.field_C) {
+                            if (!var2.field_x) {
+                              throw new RuntimeException();
+                            } else {
+                              var2.b((byte) 12);
+                              break L18;
+                            }
                           } else {
-                            var2.b((byte) 12);
-                            break L17;
+                            var2.field_C = true;
+                            break L18;
                           }
                         } else {
-                          var2.field_C = true;
-                          break L17;
+                          break L18;
                         }
-                      } else {
-                        break L17;
                       }
+                      var2 = (rf) ((Object) this.field_q.a(true));
+                      continue L17;
                     }
-                    var2 = (rf) ((Object) this.field_q.a(true));
-                    continue L16;
                   }
                 }
               }
+              break L15;
             }
           }
           return;

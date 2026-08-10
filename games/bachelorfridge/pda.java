@@ -37,62 +37,65 @@ final class pda extends eo {
             }
             L2: {
               if (param2 != 1) {
-                if (-3 != (param2 ^ -1)) {
-                  if (-4 == (param2 ^ -1)) {
-                    var4_int = param0.b(16711935);
-                    this.field_o = new int[var4_int];
-                    this.field_n = new int[var4_int][];
-                    var5 = 0;
-                    L3: while (true) {
-                      if (var4_int <= var5) {
-                        break L2;
-                      } else {
-                        L4: {
-                          var6 = param0.e((byte) 57);
-                          var7 = pga.a(false, var6);
-                          if (var7 != null) {
-                            this.field_o[var5] = var6;
-                            array$0 = new int[var7.field_d];
-                            this.field_n[var5] = array$0;
-                            var8 = 0;
-                            L5: while (true) {
-                              if (var8 >= var7.field_d) {
-                                break L4;
-                              } else {
-                                this.field_n[var5][var8] = param0.e((byte) 85);
-                                var8++;
-                                continue L5;
+                L3: {
+                  if (-3 != (param2 ^ -1)) {
+                    if (-4 == (param2 ^ -1)) {
+                      var4_int = param0.b(16711935);
+                      this.field_o = new int[var4_int];
+                      this.field_n = new int[var4_int][];
+                      var5 = 0;
+                      L4: while (true) {
+                        if (var4_int <= var5) {
+                          break L3;
+                        } else {
+                          L5: {
+                            var6 = param0.e((byte) 57);
+                            var7 = pga.a(false, var6);
+                            if (var7 != null) {
+                              this.field_o[var5] = var6;
+                              array$0 = new int[var7.field_d];
+                              this.field_n[var5] = array$0;
+                              var8 = 0;
+                              L6: while (true) {
+                                if (var8 >= var7.field_d) {
+                                  break L5;
+                                } else {
+                                  this.field_n[var5][var8] = param0.e((byte) 85);
+                                  var8++;
+                                  continue L6;
+                                }
                               }
+                            } else {
+                              break L5;
                             }
-                          } else {
-                            break L4;
                           }
+                          var5++;
+                          continue L4;
                         }
-                        var5++;
-                        continue L3;
+                      }
+                    } else {
+                      if (4 != param2) {
+                        break L3;
+                      } else {
+                        break L2;
                       }
                     }
                   } else {
-                    if (4 != param2) {
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                } else {
-                  var4_int = param0.b(16711935);
-                  this.field_s = new int[var4_int];
-                  var5 = 0;
-                  L6: while (true) {
-                    if (var4_int <= var5) {
-                      break L2;
-                    } else {
-                      this.field_s[var5] = param0.e((byte) 97);
-                      var5++;
-                      continue L6;
+                    var4_int = param0.b(16711935);
+                    this.field_s = new int[var4_int];
+                    var5 = 0;
+                    L7: while (true) {
+                      if (var4_int <= var5) {
+                        break L3;
+                      } else {
+                        this.field_s[var5] = param0.e((byte) 97);
+                        var5++;
+                        continue L7;
+                      }
                     }
                   }
                 }
+                break L2;
               } else {
                 this.field_r = fda.a(param1 ^ -1, '<', param0.g(-125));
                 break L2;
@@ -102,7 +105,7 @@ final class pda extends eo {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var4 = decompiledCaughtException;
             stackIn_23_0 = (RuntimeException) (var4);
 
@@ -112,12 +115,12 @@ final class pda extends eo {
               stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
               stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackIn_24_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
               stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackIn_24_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw pe.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ',' + param2 + ')');

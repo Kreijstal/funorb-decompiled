@@ -26,53 +26,56 @@ final class vj extends al {
           }
         }
         L1: {
-          if (kg.field_i == 98) {
-            if ((this.field_b.field_d ^ -1) > -3) {
-              if (0 >= this.field_b.field_d) {
-                break L1;
+          L2: {
+            if (kg.field_i == 98) {
+              if ((this.field_b.field_d ^ -1) > -3) {
+                if (0 >= this.field_b.field_d) {
+                  break L2;
+                } else {
+                  this.field_b.b(this.field_b.field_d - 1, param0 ^ 31727);
+                  break L1;
+                }
               } else {
-                this.field_b.b(this.field_b.field_d - 1, param0 ^ 31727);
+                this.field_b.b(1, 64);
                 break L1;
               }
             } else {
-              this.field_b.b(1, 64);
-              break L1;
-            }
-          } else {
-            if (99 != kg.field_i) {
-              if ((kg.field_i ^ -1) != -97) {
-                if (97 != kg.field_i) {
-                  super.a(-31645);
-                  break L1;
-                } else {
-                  if (-3 < (this.field_b.field_d ^ -1)) {
+              if (99 != kg.field_i) {
+                if ((kg.field_i ^ -1) != -97) {
+                  if (97 != kg.field_i) {
+                    super.a(-31645);
                     break L1;
                   } else {
-                    if (-1 + this.field_b.field_h > this.field_b.field_d) {
-                      super.a(-31645);
-                      break L1;
+                    if (-3 < (this.field_b.field_d ^ -1)) {
+                      break L2;
                     } else {
-                      break L1;
+                      if (-1 + this.field_b.field_h > this.field_b.field_d) {
+                        super.a(-31645);
+                        break L1;
+                      } else {
+                        break L1;
+                      }
                     }
+                  }
+                } else {
+                  if (this.field_b.field_d >= 3) {
+                    super.a(-31645);
+                    break L1;
+                  } else {
+                    break L1;
                   }
                 }
               } else {
-                if (this.field_b.field_d >= 3) {
-                  super.a(-31645);
+                if (-3 < (this.field_b.field_d ^ -1)) {
+                  this.field_b.b(this.field_b.field_d - -1, param0 + 31551);
                   break L1;
                 } else {
                   break L1;
                 }
               }
-            } else {
-              if (-3 < (this.field_b.field_d ^ -1)) {
-                this.field_b.b(this.field_b.field_d - -1, param0 + 31551);
-                break L1;
-              } else {
-                break L1;
-              }
             }
           }
+          break L1;
         }
     }
 

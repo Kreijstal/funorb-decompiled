@@ -387,45 +387,38 @@ final class rf extends ta implements ff, ai, bf {
     }
 
     public final void a(byte param0, int param1, int param2, s param3, int param4) {
-        boolean discarded$3 = false;
-        RuntimeException runtimeException = null;
-        int var6_int = 0;
+        boolean discarded$1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
         try {
           L0: {
             L1: {
-              L2: {
-                if (this.field_F == param3) {
-                  break L2;
+              if (this.field_F == param3) {
+                qd.a((byte) 122);
+                break L1;
+              } else {
+                if (this.field_K == param3) {
+                  discarded$1 = this.e(false);
+                  break L1;
                 } else {
-                  if (this.field_K == param3) {
-                    discarded$3 = this.e(false);
-                    if (!OrbDefence.field_D) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    break L1;
-                  }
+                  break L1;
                 }
               }
-              qd.a((byte) 122);
-              break L1;
             }
             var6_int = 18 / ((-3 - param0) / 62);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (runtimeException);
+          L2: {
+            var6 = decompiledCaughtException;
+            stackIn_9_0 = (RuntimeException) (var6);
 
             stackIn_9_1 = new StringBuilder().append("rf.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
@@ -433,12 +426,12 @@ final class rf extends ta implements ff, ai, bf {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "null";
-              break L3;
+              break L2;
             } else {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "{...}";
-              break L3;
+              break L2;
             }
           }
           throw dd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param4 + ')');
@@ -814,44 +807,30 @@ final class rf extends ta implements ff, ai, bf {
     public final void a(int param0, int param1, byte param2, te param3) {
         RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if (0 != param1) {
-                  break L2;
-                } else {
-                  ol.a("terms.ws", 1);
-                  if (var6 == 0) {
+              if (0 != param1) {
+                if (1 != param1) {
+                  if (param1 != 2) {
                     break L1;
                   } else {
-                    break L2;
+                    ol.a("conduct.ws", 1);
+                    break L1;
                   }
-                }
-              }
-              L3: {
-                if (1 != param1) {
-                  break L3;
                 } else {
                   ol.a("privacy.ws", 1);
-                  if (var6 == 0) {
-                    break L1;
-                  } else {
-                    break L3;
-                  }
+                  break L1;
                 }
-              }
-              if (param1 != 2) {
-                break L1;
               } else {
-                ol.a("conduct.ws", 1);
+                ol.a("terms.ws", 1);
                 break L1;
               }
             }
@@ -864,25 +843,25 @@ final class rf extends ta implements ff, ai, bf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var5 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var5);
+            stackIn_12_0 = (RuntimeException) (var5);
 
-            stackIn_14_1 = new StringBuilder().append("rf.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_12_1 = new StringBuilder().append("rf.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
             if (param3 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
             } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 

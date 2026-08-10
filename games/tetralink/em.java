@@ -734,66 +734,20 @@ final class em {
     final void a(bh param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
-        int var5 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        var5 = TetraLink.field_J;
+        int var5 = TetraLink.field_J;
         try {
-          L0: {
-            L1: {
-              if (param1 == -7) {
-                break L1;
-              } else {
+            if (param1 != -7) {
                 this.field_e = (byte[]) null;
-                break L1;
-              }
             }
-            L2: {
-              var3_int = param0.d((byte) -99);
-              if (-1 == (var3_int & 2 ^ -1)) {
-                break L2;
-              } else {
-                var4 = 0;
-                L3: while (true) {
-                  if (6 <= var4) {
-                    break L2;
-                  } else {
+            var3_int = param0.d((byte) -99);
+            if (-1 != (var3_int & 2 ^ -1)) {
+                for (var4 = 0; 6 > var4; var4++) {
                     this.field_p[var4] = param0.g(-1772093437);
                     this.field_e[var4] = param0.g(-1772093437);
-                    var4++;
-                    continue L3;
-                  }
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var3);
-
-            stackIn_10_1 = new StringBuilder().append("em.I(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L4;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L4;
-            }
-          }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) ((Object) runtimeException), "em.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

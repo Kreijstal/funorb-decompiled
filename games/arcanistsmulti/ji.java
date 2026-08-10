@@ -122,90 +122,93 @@ final class ji implements java.awt.event.KeyListener, java.awt.event.FocusListen
         try {
           L0: {
             L1: {
-              if (null == ch.field_a) {
-                break L1;
-              } else {
-                L2: {
+              L2: {
+                if (null == ch.field_a) {
+                  break L2;
+                } else {
                   L3: {
-                    hg.field_b = 0;
-                    var2_int = param0.getKeyCode();
-                    if (-1 < (var2_int ^ -1)) {
-                      break L3;
-                    } else {
-                      if (var2_int < sb.field_h.length) {
-                        var2_int = sb.field_h[var2_int];
-                        if ((128 & var2_int) != 0) {
-                          var2_int = -1;
-                          break L2;
+                    L4: {
+                      hg.field_b = 0;
+                      var2_int = param0.getKeyCode();
+                      if (-1 < (var2_int ^ -1)) {
+                        break L4;
+                      } else {
+                        if (var2_int < sb.field_h.length) {
+                          var2_int = sb.field_h[var2_int];
+                          if ((128 & var2_int) != 0) {
+                            var2_int = -1;
+                            break L3;
+                          } else {
+                            break L3;
+                          }
                         } else {
-                          break L2;
+                          break L4;
+                        }
+                      }
+                    }
+                    var2_int = -1;
+                    break L3;
+                  }
+                  L5: {
+                    if (-1 < (ub.field_b ^ -1)) {
+                      break L5;
+                    } else {
+                      if ((var2_int ^ -1) <= -1) {
+                        dk.field_d[ub.field_b] = var2_int;
+                        ub.field_b = 127 & ub.field_b - -1;
+                        if (ub.field_b != go.field_g) {
+                          break L5;
+                        } else {
+                          ub.field_b = -1;
+                          break L5;
                         }
                       } else {
-                        break L3;
+                        break L5;
                       }
                     }
                   }
-                  var2_int = -1;
-                  break L2;
-                }
-                L4: {
-                  if (-1 < (ub.field_b ^ -1)) {
-                    break L4;
-                  } else {
+                  L6: {
                     if ((var2_int ^ -1) <= -1) {
-                      dk.field_d[ub.field_b] = var2_int;
-                      ub.field_b = 127 & ub.field_b - -1;
-                      if (ub.field_b != go.field_g) {
-                        break L4;
-                      } else {
-                        ub.field_b = -1;
-                        break L4;
-                      }
-                    } else {
-                      break L4;
-                    }
-                  }
-                }
-                L5: {
-                  if ((var2_int ^ -1) <= -1) {
-                    var3 = 1 + pi.field_a & 127;
-                    if (var3 != vk.field_u) {
-                      v.field_p[pi.field_a] = var2_int;
-                      qa.field_i[pi.field_a] = (char)0;
-                      pi.field_a = var3;
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  } else {
-                    break L5;
-                  }
-                }
-                L6: {
-                  var3 = param0.getModifiers();
-                  if (-1 != (10 & var3 ^ -1)) {
-                    break L6;
-                  } else {
-                    if ((var2_int ^ -1) == -86) {
-                      break L6;
-                    } else {
-                      if (var2_int != 10) {
-                        break L1;
+                      var3 = 1 + pi.field_a & 127;
+                      if (var3 != vk.field_u) {
+                        v.field_p[pi.field_a] = var2_int;
+                        qa.field_i[pi.field_a] = (char)0;
+                        pi.field_a = var3;
+                        break L6;
                       } else {
                         break L6;
                       }
+                    } else {
+                      break L6;
                     }
                   }
+                  L7: {
+                    var3 = param0.getModifiers();
+                    if (-1 != (10 & var3 ^ -1)) {
+                      break L7;
+                    } else {
+                      if ((var2_int ^ -1) == -86) {
+                        break L7;
+                      } else {
+                        if (var2_int != 10) {
+                          break L2;
+                        } else {
+                          break L7;
+                        }
+                      }
+                    }
+                  }
+                  param0.consume();
+                  break L1;
                 }
-                param0.consume();
-                break L1;
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var2 = decompiledCaughtException;
             stackIn_26_0 = (RuntimeException) (var2);
 
@@ -215,12 +218,12 @@ final class ji implements java.awt.event.KeyListener, java.awt.event.FocusListen
               stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
               stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackIn_27_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
               stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackIn_27_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw aa.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
@@ -536,46 +539,12 @@ final class ji implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (ch.field_a == null) {
-                break L1;
-              } else {
+            if (ch.field_a != null) {
                 ub.field_b = -1;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ji.focusLost(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) ((Object) runtimeException), "ji.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

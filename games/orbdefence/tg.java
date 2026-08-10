@@ -9,7 +9,6 @@ final class tg {
 
     final static ti a(String param0, int param1) {
         String var2 = null;
-        RuntimeException var2_ref = null;
         ti var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -17,14 +16,14 @@ final class tg {
         CharSequence var7 = null;
         Object stackIn_3_0 = null;
         ti stackIn_17_0 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        String stackIn_23_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var5 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -66,13 +65,7 @@ final class tg {
                     break L0;
                   } else {
                     var3 = (ti) ((Object) qb.field_a.c((byte) -97));
-                    if (var5 == 0) {
-                      continue L3;
-                    } else {
-                      stackIn_20_0 = null;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    }
+                    continue L3;
                   }
                 } else {
                   return null;
@@ -88,32 +81,28 @@ final class tg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2_ref = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var2_ref);
+            stackIn_22_0 = (RuntimeException) (var2_ref);
 
-            stackIn_23_1 = new StringBuilder().append("tg.B(");
+            stackIn_22_1 = new StringBuilder().append("tg.B(");
 
             if (param0 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L5;
             } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L5;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return (ti) ((Object) stackIn_3_0);
         } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_17_0;
-          } else {
-            return (ti) ((Object) stackIn_20_0);
-          }
+          return stackIn_17_0;
         }
     }
 

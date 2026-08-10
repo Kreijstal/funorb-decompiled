@@ -273,17 +273,20 @@ final class hd extends ub {
           L0: {
             if (param0 == 10000536) {
               L1: {
-                if (!this.field_I) {
-                  break L1;
-                } else {
-                  this.field_A = this.field_A + 1;
-                  if (2 * this.field_J < this.field_A) {
-                    this.field_A = this.field_A - 2 * this.field_J;
-                    break L1;
+                L2: {
+                  if (!this.field_I) {
+                    break L2;
                   } else {
-                    break L1;
+                    this.field_A = this.field_A + 1;
+                    if (2 * this.field_J < this.field_A) {
+                      this.field_A = this.field_A - 2 * this.field_J;
+                      break L2;
+                    } else {
+                      break L1;
+                    }
                   }
                 }
+                break L1;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -294,7 +297,7 @@ final class hd extends ub {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var5 = decompiledCaughtException;
             stackIn_9_0 = (RuntimeException) (var5);
 
@@ -304,12 +307,12 @@ final class hd extends ub {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "null";
-              break L2;
+              break L3;
             } else {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "{...}";
-              break L2;
+              break L3;
             }
           }
           throw bd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');

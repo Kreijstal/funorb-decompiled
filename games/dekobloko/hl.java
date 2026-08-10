@@ -137,27 +137,16 @@ final class hl {
     }
 
     hl(boolean param0) {
-        L0: {
-          L1: {
-            this.field_i = vl.field_k;
-            this.field_r = fc.field_h;
-            this.field_g = qm.field_e;
-            this.field_p = ad.field_x;
-            this.field_n = ic.field_a;
-            this.field_l = tg.field_c;
-            if (param0) {
-              break L1;
-            } else {
-              this.field_q = null;
-              if (!client.field_A) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          this.field_q = fa.field_q;
-          break L0;
+        this.field_i = vl.field_k;
+        this.field_r = fc.field_h;
+        this.field_g = qm.field_e;
+        this.field_p = ad.field_x;
+        this.field_n = ic.field_a;
+        this.field_l = tg.field_c;
+        if (!param0) {
+            this.field_q = null;
+        } else {
+            this.field_q = fa.field_q;
         }
         this.field_m = mf.field_R;
         this.field_j = fm.field_f;

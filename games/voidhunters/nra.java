@@ -418,7 +418,7 @@ final class nra implements dja {
                         var7 = 0;
                         L10: while (true) {
                           if (var7 >= var6) {
-                            param1[var6] = param2;
+                            var14[var6] = param2;
                             var7 = var6;
                             L11: while (true) {
                               if (param1.length <= var7) {

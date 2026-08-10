@@ -445,23 +445,43 @@ class dj extends hk {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        cc var6 = null;
-        long var7 = 0L;
-        int var5 = -124 % ((param2 - 1) / 43);
-        if (this.field_q != null) {
-            if (!(param3 != 0)) {
+        int var5;
+        cc var6;
+        long var7;
+        L0: {
+          var5 = -124 % ((param2 - 1) / 43);
+          if (this.field_q == null) {
+            break L0;
+          } else {
+            if (param3 == 0) {
+              L1: {
                 this.field_q.a(param0, -8, param1, this.field_D, (el) (this));
-                if (this.field_q instanceof cc) {
+                if (!(this.field_q instanceof cc)) {
+                  break L1;
+                } else {
+                  L2: {
                     var6 = (cc) ((Object) this.field_q);
-                    if (!(this.field_H == this.field_L)) {
-                        var6.a(this.field_L, 0, param1, param0, this.field_H, (el) (this));
+                    if (this.field_H != this.field_L) {
+                      var6.a(this.field_L, 0, param1, param0, this.field_H, (el) (this));
+                      break L2;
+                    } else {
+                      break L2;
                     }
-                    var7 = oa.a(-12520);
-                    if (((-this.field_O + var7) % 1000L ^ -1L) > -501L) {
-                        var6.a(param0, this.field_H, -2, (el) (this), param1);
-                    }
+                  }
+                  var7 = oa.a(-12520);
+                  if (((-this.field_O + var7) % 1000L ^ -1L) <= -501L) {
+                    break L1;
+                  } else {
+                    var6.a(param0, this.field_H, -2, (el) (this), param1);
+                    break L0;
+                  }
                 }
+              }
+              break L0;
+            } else {
+              break L0;
             }
+          }
         }
     }
 

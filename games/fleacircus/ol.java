@@ -18,23 +18,14 @@ final class ol {
 
     public static void a(boolean param0) {
         if (!param0) {
-          field_a = (String[]) null;
-          field_b = null;
-          field_a = null;
-          field_d = null;
-          field_e = null;
-          field_c = null;
-          field_f = null;
-          return;
-        } else {
-          field_b = null;
-          field_a = null;
-          field_d = null;
-          field_e = null;
-          field_c = null;
-          field_f = null;
-          return;
+            field_a = (String[]) null;
         }
+        field_b = null;
+        field_a = null;
+        field_d = null;
+        field_e = null;
+        field_c = null;
+        field_f = null;
     }
 
     final static hm a(String param0, int param1, int param2) {
@@ -99,8 +90,8 @@ final class ol {
         char[] var6 = null;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = fleas.field_A ? 1 : 0;
@@ -131,44 +122,31 @@ final class ol {
               }
               if (param1 < -84) {
                 L4: {
-                  L5: {
-                    if (param0 == 0) {
-                      break L5;
-                    } else {
-                      var6 = fh.field_e;
-                      var2 = var6;
-                      var3 = 0;
-                      L6: while (true) {
-                        if (var3 >= var6.length) {
-                          break L5;
+                  if (param0 == 0) {
+                    break L4;
+                  } else {
+                    var6 = fh.field_e;
+                    var2 = var6;
+                    var3 = 0;
+                    L5: while (true) {
+                      if (var3 >= var6.length) {
+                        break L4;
+                      } else {
+                        var4 = var6[var3];
+                        if (var4 == param0) {
+                          stackIn_18_0 = 1;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         } else {
-                          var4 = var6[var3];
-                          stackIn_22_0 = var4 ^ -1;
-
-                          if (var5 != 0) {
-                            break L4;
-                          } else {
-                            if (stackIn_22_0 == (param0 ^ -1)) {
-                              stackIn_19_0 = 1;
-                              decompiledRegionSelector0 = 3;
-                              break L0;
-                            } else {
-                              var3++;
-                              if (var5 == 0) {
-                                continue L6;
-                              } else {
-                                break L5;
-                              }
-                            }
-                          }
+                          var3++;
+                          continue L5;
                         }
                       }
                     }
                   }
-                  stackIn_22_0 = 0;
-                  break L4;
                 }
-                decompiledRegionSelector0 = 2;
+                stackIn_21_0 = 0;
+                decompiledRegionSelector0 = 3;
                 break L0;
               } else {
                 stackIn_11_0 = 1;
@@ -192,9 +170,9 @@ final class ol {
             return stackIn_11_0 != 0;
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return stackIn_22_0 != 0;
+              return stackIn_18_0 != 0;
             } else {
-              return stackIn_19_0 != 0;
+              return stackIn_21_0 != 0;
             }
           }
         }

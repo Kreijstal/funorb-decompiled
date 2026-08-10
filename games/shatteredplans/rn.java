@@ -395,13 +395,18 @@ final class rn implements Runnable {
               break L4;
             } else {
               L5: {
-                if (null == ce.field_x) {
-                  if (null != in.field_g) {
-                    if (in.field_g.field_Y == null) {
+                if (null != ce.field_x) {
+                  if (ce.field_x.field_Y != null) {
+                    ce.field_x.field_Y.i((byte) -47);
+                    if (null == in.field_g) {
                       break L5;
                     } else {
-                      in.field_g.field_Y.i((byte) -47);
-                      break L5;
+                      if (in.field_g.field_Y == null) {
+                        break L5;
+                      } else {
+                        in.field_g.field_Y.i((byte) -47);
+                        break L5;
+                      }
                     }
                   } else {
                     if (null == in.field_g) {

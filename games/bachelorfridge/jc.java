@@ -45,82 +45,85 @@ final class jc extends eo {
                   this.field_s = param0.g(49);
                   break L1;
                 } else {
-                  if ((param1 ^ -1) == -3) {
-                    var4_int = param0.b(16711935);
-                    this.field_u = new int[var4_int];
-                    this.field_p = new char[var4_int];
-                    var5 = 0;
-                    L2: while (true) {
-                      if (var4_int <= var5) {
-                        break L1;
-                      } else {
-                        L3: {
-                          this.field_u[var5] = param0.e((byte) 114);
-                          var6 = param0.b(true);
-                          stackIn_19_0 = this.field_p;
-
-                          stackIn_19_1 = var5;
-
-                          if (var6 != 0) {
-                            stackIn_20_0 = (char[]) ((Object) stackIn_19_0);
-                            stackIn_20_1 = stackIn_19_1;
-                            stackIn_20_2 = vja.a((byte) var6, (byte) -93);
-                            break L3;
-                          } else {
-                            stackIn_20_0 = (char[]) ((Object) stackIn_19_0);
-                            stackIn_20_1 = stackIn_19_1;
-                            stackIn_20_2 = 0;
-                            break L3;
-                          }
-                        }
-                        stackIn_20_0[stackIn_20_1] = (char) stackIn_20_2;
-                        var5++;
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    if (param1 == 3) {
+                  L2: {
+                    if ((param1 ^ -1) == -3) {
                       var4_int = param0.b(16711935);
-                      this.field_q = new int[var4_int];
-                      this.field_o = new char[var4_int];
+                      this.field_u = new int[var4_int];
+                      this.field_p = new char[var4_int];
                       var5 = 0;
-                      L4: while (true) {
-                        if (var5 >= var4_int) {
-                          break L1;
+                      L3: while (true) {
+                        if (var4_int <= var5) {
+                          break L2;
                         } else {
-                          L5: {
-                            this.field_q[var5] = param0.e((byte) 92);
+                          L4: {
+                            this.field_u[var5] = param0.e((byte) 114);
                             var6 = param0.b(true);
-                            stackIn_13_0 = this.field_o;
+                            stackIn_19_0 = this.field_p;
 
-                            stackIn_13_1 = var5;
+                            stackIn_19_1 = var5;
 
                             if (var6 != 0) {
-                              stackIn_14_0 = (char[]) ((Object) stackIn_13_0);
-                              stackIn_14_1 = stackIn_13_1;
-                              stackIn_14_2 = vja.a((byte) var6, (byte) -46);
-                              break L5;
+                              stackIn_20_0 = (char[]) ((Object) stackIn_19_0);
+                              stackIn_20_1 = stackIn_19_1;
+                              stackIn_20_2 = vja.a((byte) var6, (byte) -93);
+                              break L4;
                             } else {
-                              stackIn_14_0 = (char[]) ((Object) stackIn_13_0);
-                              stackIn_14_1 = stackIn_13_1;
-                              stackIn_14_2 = 0;
-                              break L5;
+                              stackIn_20_0 = (char[]) ((Object) stackIn_19_0);
+                              stackIn_20_1 = stackIn_19_1;
+                              stackIn_20_2 = 0;
+                              break L4;
                             }
                           }
-                          stackIn_14_0[stackIn_14_1] = (char) stackIn_14_2;
+                          stackIn_20_0[stackIn_20_1] = (char) stackIn_20_2;
                           var5++;
-                          continue L4;
+                          continue L3;
                         }
                       }
                     } else {
-                      if ((param1 ^ -1) == -5) {
-                        this.field_w = true;
-                        break L1;
+                      if (param1 == 3) {
+                        var4_int = param0.b(16711935);
+                        this.field_q = new int[var4_int];
+                        this.field_o = new char[var4_int];
+                        var5 = 0;
+                        L5: while (true) {
+                          if (var5 >= var4_int) {
+                            break L2;
+                          } else {
+                            L6: {
+                              this.field_q[var5] = param0.e((byte) 92);
+                              var6 = param0.b(true);
+                              stackIn_13_0 = this.field_o;
+
+                              stackIn_13_1 = var5;
+
+                              if (var6 != 0) {
+                                stackIn_14_0 = (char[]) ((Object) stackIn_13_0);
+                                stackIn_14_1 = stackIn_13_1;
+                                stackIn_14_2 = vja.a((byte) var6, (byte) -46);
+                                break L6;
+                              } else {
+                                stackIn_14_0 = (char[]) ((Object) stackIn_13_0);
+                                stackIn_14_1 = stackIn_13_1;
+                                stackIn_14_2 = 0;
+                                break L6;
+                              }
+                            }
+                            stackIn_14_0[stackIn_14_1] = (char) stackIn_14_2;
+                            var5++;
+                            continue L5;
+                          }
+                        }
                       } else {
-                        break L1;
+                        if ((param1 ^ -1) == -5) {
+                          this.field_w = true;
+                          break L1;
+                        } else {
+                          break L1;
+                        }
                       }
                     }
                   }
+                  break L1;
                 }
               }
               decompiledRegionSelector0 = 1;
@@ -132,7 +135,7 @@ final class jc extends eo {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var4 = decompiledCaughtException;
             stackIn_25_0 = (RuntimeException) (var4);
 
@@ -142,12 +145,12 @@ final class jc extends eo {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw pe.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ',' + param2 + ')');

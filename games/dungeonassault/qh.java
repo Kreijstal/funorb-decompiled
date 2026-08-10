@@ -248,62 +248,65 @@ final class qh {
                 }
               }
               L4: {
-                if (tg.field_l == null) {
-                  break L4;
-                } else {
-                  var2 = null;
-                  var5 = 0;
-                  var3 = var5;
-                  L5: while (true) {
-                    if (var5 >= of.field_q.length) {
-                      if (var2 != null) {
-                        tg.field_l.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
-                        break L4;
+                L5: {
+                  if (tg.field_l == null) {
+                    break L5;
+                  } else {
+                    var2 = null;
+                    var5 = 0;
+                    var3 = var5;
+                    L6: while (true) {
+                      if (var5 >= of.field_q.length) {
+                        if (var2 != null) {
+                          tg.field_l.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                          break L5;
+                        } else {
+                          break L4;
+                        }
                       } else {
-                        break L4;
-                      }
-                    } else {
-                      L6: {
-                        var8 = of.field_q[var5];
-                        if (var8 != null) {
-                          L7: {
-                            if (365 != var8.field_E) {
-                              break L7;
-                            } else {
-                              if ((var8.field_G ^ -1) != -140) {
-                                break L7;
+                        L7: {
+                          var8 = of.field_q[var5];
+                          if (var8 != null) {
+                            L8: {
+                              if (365 != var8.field_E) {
+                                break L8;
                               } else {
-                                var5++;
-                                continue L5;
+                                if ((var8.field_G ^ -1) != -140) {
+                                  break L8;
+                                } else {
+                                  var5++;
+                                  continue L6;
+                                }
                               }
                             }
-                          }
-                          if (var2 == null) {
-                            var2 = Integer.toString(var5);
-                            break L6;
+                            if (var2 == null) {
+                              var2 = Integer.toString(var5);
+                              break L7;
+                            } else {
+                              var2 = (String) (var2) + ", " + var5;
+                              break L7;
+                            }
                           } else {
-                            var2 = (String) (var2) + ", " + var5;
-                            break L6;
+                            break L7;
                           }
-                        } else {
-                          break L6;
                         }
+                        var5++;
+                        continue L6;
                       }
-                      var5++;
-                      continue L5;
                     }
                   }
                 }
+                break L4;
               }
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              L8: {
+              L9: {
                 if (null == tg.field_l) {
-                  break L8;
+                  break L9;
                 } else {
                   tg.field_l.a(bg.field_t, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
-                  break L8;
+                  break L9;
                 }
               }
               decompiledRegionSelector0 = 0;

@@ -121,77 +121,23 @@ abstract class gf extends ld {
     }
 
     private final void b(rc param0, int param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            L1: {
-              if (this.field_V != null) {
-                this.field_V.c(10);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
-                if (param0 != null) {
-                  break L3;
-                } else {
-                  this.field_V = new te();
-                  if (!SolKnight.field_L) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              param0.b(param0.field_x, param0.field_t, 6, 0, this.field_eb + 6);
-              this.field_V = new te(param0);
-              break L2;
-            }
-            this.a(this.field_V, param1 + 22188);
-            if (param1 == -16777) {
-              this.field_S = null;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("gf.M(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
-          }
-          throw fc.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
+        if (!(this.field_V == null)) {
+            this.field_V.c(10);
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
+        if (param0 == null) {
+            this.field_V = new te();
         } else {
-          return;
+            param0.b(param0.field_x, param0.field_t, 6, 0, this.field_eb + 6);
+            this.field_V = new te(param0);
+        }
+        this.a(this.field_V, param1 + 22188);
+        if (param1 != -16777) {
+            return;
+        }
+        try {
+            this.field_S = null;
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) ((Object) runtimeException), "gf.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -217,13 +163,13 @@ abstract class gf extends ld {
     }
 
     void c(int param0, rc param1) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
           L0: {
             L1: {
@@ -234,52 +180,42 @@ abstract class gf extends ld {
                 break L1;
               }
             }
-            L2: {
-              L3: {
-                this.field_S = param1;
-                if (kc.field_I != this.field_U) {
-                  break L3;
-                } else {
-                  this.b(this.field_S.field_x + 12 - -this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
-                  this.field_bb = 0;
-                  if (!SolKnight.field_L) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
+            this.field_S = param1;
+            if (kc.field_I != this.field_U) {
               if (this.field_U == ah.field_j) {
-                break L2;
+                break L0;
               } else {
                 this.field_U = ah.field_j;
                 this.field_bb = 0;
-                break L2;
+                return;
               }
+            } else {
+              this.b(this.field_S.field_x + 12 - -this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
+              this.field_bb = 0;
+              return;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var3);
+            stackIn_9_0 = (RuntimeException) (var3);
 
-            stackIn_10_1 = new StringBuilder().append("gf.NA(").append(param0).append(',');
+            stackIn_9_1 = new StringBuilder().append("gf.NA(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L4;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
+              break L2;
             } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L4;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
+              break L2;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
     }
 
@@ -301,85 +237,39 @@ abstract class gf extends ld {
     }
 
     boolean h(int param0) {
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
         int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$11 = 0;
-        int fieldTemp$12 = 0;
-        int fieldTemp$13 = 0;
         int var3;
         rc var4;
         var3 = SolKnight.field_L ? 1 : 0;
         if (param0 == 1784) {
           if (this.field_U != null) {
             if (this.field_U == ah.field_j) {
-              fieldTemp$7 = this.field_bb + 1;
+              fieldTemp$4 = this.field_bb + 1;
               this.field_bb = this.field_bb + 1;
-              if (this.field_ab == fieldTemp$7) {
+              if (this.field_ab == fieldTemp$4) {
                 this.field_U = kc.field_I;
                 this.b(this.field_S.field_x + 12 - -this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
                 this.field_bb = 0;
                 this.field_V.field_H = 0;
-                if (var3 != 0) {
-                  this.field_V.field_H = -((this.field_bb << 2029313000) / this.field_ab) + 256;
-                  return super.h(param0 + 0);
-                } else {
-                  return super.h(param0 + 0);
-                }
+                return super.h(param0 + 0);
               } else {
                 this.field_V.field_H = -((this.field_bb << 2029313000) / this.field_ab) + 256;
                 return super.h(param0 + 0);
               }
             } else {
               if (this.field_U == oa.field_j) {
-                fieldTemp$8 = this.field_bb + 1;
+                fieldTemp$5 = this.field_bb + 1;
                 this.field_bb = this.field_bb + 1;
-                if (fieldTemp$8 == this.field_db) {
+                if (fieldTemp$5 != this.field_db) {
+                  this.field_V.field_H = (this.field_bb << 88565416) / this.field_db;
+                  return super.h(param0 + 0);
+                } else {
                   this.field_U = null;
                   this.field_V.field_H = 256;
-                  if (var3 != 0) {
-                    fieldTemp$9 = this.field_bb + 1;
-                    this.field_bb = this.field_bb + 1;
-                    if (this.field_ab == fieldTemp$9) {
-                      this.field_U = kc.field_I;
-                      this.b(this.field_S.field_x + 12 - -this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
-                      this.field_bb = 0;
-                      this.field_V.field_H = 0;
-                      this.field_V.field_H = -((this.field_bb << 2029313000) / this.field_ab) + 256;
-                      return super.h(param0 + 0);
-                    } else {
-                      this.field_V.field_H = -((this.field_bb << 2029313000) / this.field_ab) + 256;
-                      return super.h(param0 + 0);
-                    }
-                  } else {
-                    return super.h(param0 + 0);
-                  }
-                } else {
-                  this.field_V.field_H = (this.field_bb << 88565416) / this.field_db;
-                  if (var3 != 0) {
-                    this.field_U = null;
-                    this.field_V.field_H = 256;
-                    if (var3 != 0) {
-                      fieldTemp$10 = this.field_bb + 1;
-                      this.field_bb = this.field_bb + 1;
-                      if (this.field_ab == fieldTemp$10) {
-                        this.field_U = kc.field_I;
-                        this.b(this.field_S.field_x + 12 - -this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
-                        this.field_bb = 0;
-                        this.field_V.field_H = 0;
-                        this.field_V.field_H = -((this.field_bb << 2029313000) / this.field_ab) + 256;
-                        return super.h(param0 + 0);
-                      } else {
-                        this.field_V.field_H = -((this.field_bb << 2029313000) / this.field_ab) + 256;
-                        return super.h(param0 + 0);
-                      }
-                    } else {
-                      return super.h(param0 + 0);
-                    }
-                  } else {
-                    return super.h(param0 + 0);
-                  }
+                  return super.h(param0 + 0);
                 }
               } else {
                 return super.h(param0 + 0);
@@ -392,71 +282,34 @@ abstract class gf extends ld {
           var4 = (rc) null;
           this.a('ﾴ', (byte) -22, -26, (rc) null);
           if (this.field_U != null) {
-            if (this.field_U != ah.field_j) {
+            if (this.field_U == ah.field_j) {
+              fieldTemp$6 = this.field_bb + 1;
+              this.field_bb = this.field_bb + 1;
+              if (this.field_ab == fieldTemp$6) {
+                this.field_U = kc.field_I;
+                this.b(this.field_S.field_x + 12 - -this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
+                this.field_bb = 0;
+                this.field_V.field_H = 0;
+                return super.h(param0 + 0);
+              } else {
+                this.field_V.field_H = -((this.field_bb << 2029313000) / this.field_ab) + 256;
+                return super.h(param0 + 0);
+              }
+            } else {
               if (this.field_U == oa.field_j) {
-                L0: {
-                  fieldTemp$11 = this.field_bb + 1;
-                  this.field_bb = this.field_bb + 1;
-                  if (fieldTemp$11 == this.field_db) {
-                    break L0;
-                  } else {
-                    this.field_V.field_H = (this.field_bb << 88565416) / this.field_db;
-                    if (var3 != 0) {
-                      break L0;
-                    } else {
-                      return super.h(param0 + 0);
-                    }
-                  }
-                }
-                this.field_U = null;
-                this.field_V.field_H = 256;
-                if (var3 != 0) {
-                  fieldTemp$12 = this.field_bb + 1;
-                  this.field_bb = this.field_bb + 1;
-                  if (this.field_ab == fieldTemp$12) {
-                    this.field_U = kc.field_I;
-                    this.b(this.field_S.field_x + 12 - -this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
-                    this.field_bb = 0;
-                    this.field_V.field_H = 0;
-                    if (var3 != 0) {
-                      this.field_V.field_H = -((this.field_bb << 2029313000) / this.field_ab) + 256;
-                      return super.h(param0 + 0);
-                    } else {
-                      return super.h(param0 + 0);
-                    }
-                  } else {
-                    this.field_V.field_H = -((this.field_bb << 2029313000) / this.field_ab) + 256;
-                    return super.h(param0 + 0);
-                  }
+                fieldTemp$7 = this.field_bb + 1;
+                this.field_bb = this.field_bb + 1;
+                if (fieldTemp$7 != this.field_db) {
+                  this.field_V.field_H = (this.field_bb << 88565416) / this.field_db;
+                  return super.h(param0 + 0);
                 } else {
+                  this.field_U = null;
+                  this.field_V.field_H = 256;
                   return super.h(param0 + 0);
                 }
               } else {
                 return super.h(param0 + 0);
               }
-            } else {
-              L1: {
-                L2: {
-                  fieldTemp$13 = this.field_bb + 1;
-                  this.field_bb = this.field_bb + 1;
-                  if (this.field_ab != fieldTemp$13) {
-                    break L2;
-                  } else {
-                    this.field_U = kc.field_I;
-                    this.b(this.field_S.field_x + 12 - -this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
-                    this.field_bb = 0;
-                    this.field_V.field_H = 0;
-                    if (var3 == 0) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                this.field_V.field_H = -((this.field_bb << 2029313000) / this.field_ab) + 256;
-                break L1;
-              }
-              return super.h(param0 + 0);
             }
           } else {
             return super.h(param0 + 0);

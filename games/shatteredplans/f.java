@@ -896,6 +896,7 @@ class f extends vg implements ni {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, vg param5) {
+        RuntimeException runtimeException = null;
         on var7 = null;
         vg var8 = null;
         int var9 = 0;
@@ -906,7 +907,6 @@ class f extends vg implements ni {
         String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -938,8 +938,8 @@ class f extends vg implements ni {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var7_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var7_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_9_0 = (RuntimeException) (runtimeException);
 
             stackIn_9_1 = new StringBuilder().append("f.HA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
 
@@ -1008,6 +1008,7 @@ class f extends vg implements ni {
     }
 
     void a(int param0, int param1, vg param2, byte param3) {
+        RuntimeException runtimeException = null;
         on var5 = null;
         vg var6 = null;
         int var7 = 0;
@@ -1017,7 +1018,6 @@ class f extends vg implements ni {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -1044,8 +1044,8 @@ class f extends vg implements ni {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("f.PA(").append(param0).append(',').append(param1).append(',');
 

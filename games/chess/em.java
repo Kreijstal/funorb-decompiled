@@ -549,38 +549,41 @@ final class em {
                         }
                       }
                       L20: {
-                        if (null == param1[4]) {
-                          break L20;
-                        } else {
-                          if (0 == param1[4].field_v) {
-                            break L20;
+                        L21: {
+                          if (null == param1[4]) {
+                            break L21;
                           } else {
-                            if (-1 != (param1[4].field_u ^ -1)) {
-                              wb.e(var16, var18, var17, var19);
-                              var20 = var14;
-                              L21: while (true) {
-                                if (var15 <= var20) {
-                                  wb.a(fa.field_d);
-                                  break L20;
-                                } else {
-                                  var21 = var12;
-                                  L22: while (true) {
-                                    if (var21 >= var13) {
-                                      var20 = var20 + param1[4].field_u;
-                                      continue L21;
-                                    } else {
-                                      param1[4].b(var21, var20);
-                                      var21 = var21 + param1[4].field_v;
-                                      continue L22;
+                            if (0 == param1[4].field_v) {
+                              break L21;
+                            } else {
+                              if (-1 != (param1[4].field_u ^ -1)) {
+                                wb.e(var16, var18, var17, var19);
+                                var20 = var14;
+                                L22: while (true) {
+                                  if (var15 <= var20) {
+                                    wb.a(fa.field_d);
+                                    break L21;
+                                  } else {
+                                    var21 = var12;
+                                    L23: while (true) {
+                                      if (var21 >= var13) {
+                                        var20 = var20 + param1[4].field_u;
+                                        continue L22;
+                                      } else {
+                                        param1[4].b(var21, var20);
+                                        var21 = var21 + param1[4].field_v;
+                                        continue L23;
+                                      }
                                     }
                                   }
                                 }
+                              } else {
+                                break L20;
                               }
-                            } else {
-                              break L20;
                             }
                           }
                         }
+                        break L20;
                       }
                       decompiledRegionSelector0 = 3;
                       break L0;
@@ -600,7 +603,7 @@ final class em {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L23: {
+          L24: {
             var6 = decompiledCaughtException;
             stackIn_77_0 = (RuntimeException) (var6);
 
@@ -610,12 +613,12 @@ final class em {
               stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
               stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
               stackIn_78_2 = "null";
-              break L23;
+              break L24;
             } else {
               stackIn_78_0 = (RuntimeException) ((Object) stackIn_77_0);
               stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
               stackIn_78_2 = "{...}";
-              break L23;
+              break L24;
             }
           }
           throw fk.a((Throwable) ((Object) stackIn_78_0), stackIn_78_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

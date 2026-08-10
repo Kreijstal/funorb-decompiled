@@ -13,97 +13,23 @@ final class uf extends tj {
         if (param9 < param6) {
           if (param15 > param6) {
             ul.a(param2, param15, param0, param9, lf.field_b, param11, param6, param10, param14, param8, param7, param12, -1464114640, param1, param5, param13, param4);
-            if (param3 == -28) {
+            if (param3 != -28) {
+              field_n = -121;
               return;
             } else {
-              field_n = -121;
               return;
             }
           } else {
-            L0: {
-              if (param15 > param9) {
-                ul.a(param7, param6, param13, param9, lf.field_b, param11, param15, param10, param5, param4, param2, param12, -1464114640, param1, param14, param0, param8);
-                if (var17 == 0) {
-                  break L0;
-                } else {
-                  ul.a(param2, param15, param0, param9, lf.field_b, param11, param6, param10, param14, param8, param7, param12, -1464114640, param1, param5, param13, param4);
-                  if (param3 == -28) {
-                    return;
-                  } else {
-                    field_n = -121;
-                    return;
-                  }
-                }
+            if (param15 > param9) {
+              ul.a(param7, param6, param13, param9, lf.field_b, param11, param15, param10, param5, param4, param2, param12, -1464114640, param1, param14, param0, param8);
+              if (param3 != -28) {
+                field_n = -121;
+                return;
               } else {
-                ul.a(param7, param6, param13, param15, lf.field_b, param2, param9, param14, param5, param1, param11, param0, -1464114640, param4, param10, param12, param8);
-                if (var17 == 0) {
-                  break L0;
-                } else {
-                  ul.a(param7, param6, param13, param9, lf.field_b, param11, param15, param10, param5, param4, param2, param12, -1464114640, param1, param14, param0, param8);
-                  ul.a(param2, param15, param0, param9, lf.field_b, param11, param6, param10, param14, param8, param7, param12, -1464114640, param1, param5, param13, param4);
-                  if (param3 != -28) {
-                    field_n = -121;
-                    return;
-                  } else {
-                    return;
-                  }
-                }
+                return;
               }
-            }
-            if (param3 == -28) {
-              return;
             } else {
-              field_n = -121;
-              return;
-            }
-          }
-        } else {
-          if (param15 > param9) {
-            ul.a(param2, param15, param0, param6, lf.field_b, param7, param9, param5, param14, param1, param11, param13, -1464114640, param8, param10, param12, param4);
-            if (var17 != 0) {
-              L1: {
-                if (param15 > param6) {
-                  break L1;
-                } else {
-                  L2: {
-                    L3: {
-                      if (param15 > param9) {
-                        break L3;
-                      } else {
-                        ul.a(param7, param6, param13, param15, lf.field_b, param2, param9, param14, param5, param1, param11, param0, -1464114640, param4, param10, param12, param8);
-                        if (var17 == 0) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                    ul.a(param7, param6, param13, param9, lf.field_b, param11, param15, param10, param5, param4, param2, param12, -1464114640, param1, param14, param0, param8);
-                    if (var17 == 0) {
-                      break L2;
-                    } else {
-                      break L1;
-                    }
-                  }
-                  if (param3 != -28) {
-                    field_n = -121;
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              }
-              L4: {
-                ul.a(param2, param15, param0, param9, lf.field_b, param11, param6, param10, param14, param8, param7, param12, -1464114640, param1, param5, param13, param4);
-                if (param3 == -28) {
-                  break L4;
-                } else {
-                  field_n = -121;
-                  break L4;
-                }
-              }
-              return;
-            } else {
+              ul.a(param7, param6, param13, param15, lf.field_b, param2, param9, param14, param5, param1, param11, param0, -1464114640, param4, param10, param12, param8);
               if (param3 != -28) {
                 field_n = -121;
                 return;
@@ -111,105 +37,31 @@ final class uf extends tj {
                 return;
               }
             }
+          }
+        } else {
+          if (param15 > param9) {
+            ul.a(param2, param15, param0, param6, lf.field_b, param7, param9, param5, param14, param1, param11, param13, -1464114640, param8, param10, param12, param4);
+            if (param3 == -28) {
+              return;
+            } else {
+              field_n = -121;
+              return;
+            }
           } else {
-            if (param6 >= param15) {
-              ul.a(param11, param9, param12, param15, lf.field_b, param2, param6, param14, param10, param8, param7, param0, param3 + -1464114612, param4, param5, param13, param1);
-              if (var17 != 0) {
-                ul.a(param11, param9, param12, param6, lf.field_b, param7, param15, param5, param10, param4, param2, param13, param3 + -1464114612, param8, param14, param0, param1);
-                if (var17 == 0) {
-                  if (param3 != -28) {
-                    field_n = -121;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  L5: {
-                    L6: {
-                      ul.a(param2, param15, param0, param6, lf.field_b, param7, param9, param5, param14, param1, param11, param13, -1464114640, param8, param10, param12, param4);
-                      if (param15 > param6) {
-                        break L6;
-                      } else {
-                        L7: {
-                          if (param15 > param9) {
-                            break L7;
-                          } else {
-                            ul.a(param7, param6, param13, param15, lf.field_b, param2, param9, param14, param5, param1, param11, param0, -1464114640, param4, param10, param12, param8);
-                            break L7;
-                          }
-                        }
-                        ul.a(param7, param6, param13, param9, lf.field_b, param11, param15, param10, param5, param4, param2, param12, -1464114640, param1, param14, param0, param8);
-                        if (var17 == 0) {
-                          break L5;
-                        } else {
-                          break L6;
-                        }
-                      }
-                    }
-                    ul.a(param2, param15, param0, param9, lf.field_b, param11, param6, param10, param14, param8, param7, param12, -1464114640, param1, param5, param13, param4);
-                    break L5;
-                  }
-                  L8: {
-                    if (param3 == -28) {
-                      break L8;
-                    } else {
-                      field_n = -121;
-                      break L8;
-                    }
-                  }
-                  return;
-                }
+            if (param6 < param15) {
+              ul.a(param11, param9, param12, param6, lf.field_b, param7, param15, param5, param10, param4, param2, param13, param3 + -1464114612, param8, param14, param0, param1);
+              if (param3 == -28) {
+                return;
               } else {
-                if (param3 != -28) {
-                  field_n = -121;
-                  return;
-                } else {
-                  return;
-                }
+                field_n = -121;
+                return;
               }
             } else {
-              ul.a(param11, param9, param12, param6, lf.field_b, param7, param15, param5, param10, param4, param2, param13, param3 + -1464114612, param8, param14, param0, param1);
-              if (var17 == 0) {
-                if (param3 != -28) {
-                  field_n = -121;
-                  return;
-                } else {
-                  return;
-                }
+              ul.a(param11, param9, param12, param15, lf.field_b, param2, param6, param14, param10, param8, param7, param0, param3 + -1464114612, param4, param5, param13, param1);
+              if (param3 != -28) {
+                field_n = -121;
+                return;
               } else {
-                L9: {
-                  L10: {
-                    ul.a(param2, param15, param0, param6, lf.field_b, param7, param9, param5, param14, param1, param11, param13, -1464114640, param8, param10, param12, param4);
-                    if (param15 > param6) {
-                      break L10;
-                    } else {
-                      L11: {
-                        if (param15 > param9) {
-                          break L11;
-                        } else {
-                          ul.a(param7, param6, param13, param15, lf.field_b, param2, param9, param14, param5, param1, param11, param0, -1464114640, param4, param10, param12, param8);
-                          break L11;
-                        }
-                      }
-                      ul.a(param7, param6, param13, param9, lf.field_b, param11, param15, param10, param5, param4, param2, param12, -1464114640, param1, param14, param0, param8);
-                      if (var17 == 0) {
-                        break L9;
-                      } else {
-                        break L10;
-                      }
-                    }
-                  }
-                  ul.a(param2, param15, param0, param9, lf.field_b, param11, param6, param10, param14, param8, param7, param12, -1464114640, param1, param5, param13, param4);
-                  break L9;
-                }
-                L12: {
-                  if (param3 == -28) {
-                    break L12;
-                  } else {
-                    field_n = -121;
-                    break L12;
-                  }
-                }
                 return;
               }
             }

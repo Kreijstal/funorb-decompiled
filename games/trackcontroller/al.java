@@ -497,17 +497,20 @@ class al extends fc {
                       break L2;
                     }
                   }
-                  ((al) (this)).field_q = stackIn_7_1 != 0;
-                  if (this.field_l == null) {
-                    break L1;
-                  } else {
-                    if (this.field_l instanceof vc) {
-                      ((vc) ((Object) this.field_l)).a(-11809, (al) (this), var5_int != 0);
-                      break L1;
+                  L3: {
+                    ((al) (this)).field_q = stackIn_7_1 != 0;
+                    if (this.field_l == null) {
+                      break L3;
                     } else {
-                      break L1;
+                      if (this.field_l instanceof vc) {
+                        ((vc) ((Object) this.field_l)).a(-11809, (al) (this), var5_int != 0);
+                        break L3;
+                      } else {
+                        break L1;
+                      }
                     }
                   }
+                  break L1;
                 } else {
                   break L1;
                 }
@@ -521,7 +524,7 @@ class al extends fc {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var5 = decompiledCaughtException;
             stackIn_14_0 = (RuntimeException) (var5);
 
@@ -531,12 +534,12 @@ class al extends fc {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackIn_15_2 = "null";
-              break L3;
+              break L4;
             } else {
               stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
               stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackIn_15_2 = "{...}";
-              break L3;
+              break L4;
             }
           }
           throw sl.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
@@ -619,24 +622,27 @@ class al extends fc {
               }
             }
             L6: {
-              if (this.field_l == null) {
-                break L6;
-              } else {
-                discarded$6 = param1.append(" listener=");
-                if (this.field_l instanceof al) {
-                  param1 = this.a(false, param3, param1, 1 + param2);
-                  break L6;
+              L7: {
+                if (this.field_l == null) {
+                  break L7;
                 } else {
-                  discarded$7 = param1.append(this.field_l);
-                  break L6;
+                  discarded$6 = param1.append(" listener=");
+                  if (this.field_l instanceof al) {
+                    param1 = this.a(false, param3, param1, 1 + param2);
+                    break L7;
+                  } else {
+                    discarded$7 = param1.append(this.field_l);
+                    break L6;
+                  }
                 }
               }
+              break L6;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var5 = decompiledCaughtException;
             stackIn_23_0 = (RuntimeException) (var5);
 
@@ -646,15 +652,15 @@ class al extends fc {
               stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
               stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackIn_24_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
               stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackIn_24_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
-          L8: {
+          L9: {
 
 
             stackIn_26_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param2).append(',');
@@ -663,12 +669,12 @@ class al extends fc {
               stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackIn_27_2 = "null";
-              break L8;
+              break L9;
             } else {
               stackIn_24_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackIn_27_2 = "{...}";
-              break L8;
+              break L9;
             }
           }
           throw sl.a((Throwable) ((Object) stackIn_24_0), stackIn_27_2 + ')');
@@ -693,47 +699,13 @@ class al extends fc {
     }
 
     void a(al param0, boolean param1, int param2, int param3, int param4, int param5) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_r = 0;
-              if (!param1) {
-                break L1;
-              } else {
+            this.field_r = 0;
+            if (param1) {
                 this.field_o = 76;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("al.GB(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw sl.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) ((Object) runtimeException), "al.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

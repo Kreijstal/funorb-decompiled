@@ -186,27 +186,30 @@ final class f extends ji {
             }
             L3: {
               if (il.field_a) {
-                ca.a(param1, param4, param6, param4, 20, param0, param5, 126, param3);
-                gk.field_c.a(0, param7);
-                if (!param7) {
-                  break L3;
-                } else {
-                  L4: {
-                    if (0 == kk.field_a.field_tb) {
+                L4: {
+                  ca.a(param1, param4, param6, param4, 20, param0, param5, 126, param3);
+                  gk.field_c.a(0, param7);
+                  if (!param7) {
+                    break L4;
+                  } else {
+                    L5: {
+                      if (0 == kk.field_a.field_tb) {
+                        break L5;
+                      } else {
+                        il.field_a = false;
+                        break L5;
+                      }
+                    }
+                    if (-1 == (oa.field_s.field_tb ^ -1)) {
                       break L4;
                     } else {
+                      fb.h(0);
                       il.field_a = false;
-                      break L4;
+                      break L3;
                     }
                   }
-                  if (-1 == (oa.field_s.field_tb ^ -1)) {
-                    break L3;
-                  } else {
-                    fb.h(0);
-                    il.field_a = false;
-                    break L3;
-                  }
                 }
+                break L3;
               } else {
                 break L3;
               }
@@ -215,7 +218,7 @@ final class f extends ji {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var8 = decompiledCaughtException;
             stackIn_18_0 = (RuntimeException) (var8);
 
@@ -225,12 +228,12 @@ final class f extends ji {
               stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
               stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackIn_19_2 = "null";
-              break L5;
+              break L6;
             } else {
               stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
               stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackIn_19_2 = "{...}";
-              break L5;
+              break L6;
             }
           }
           throw wn.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param6 + ',' + param7 + ')');

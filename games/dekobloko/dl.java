@@ -26,49 +26,37 @@ final class dl extends ek {
     }
 
     final static void a(byte param0, boolean param1, ck param2, int param3, int param4) {
-        int var6 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
+        int var6 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
         var6 = client.field_A ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if (param2 != tc.field_Tb) {
-                  break L2;
-                } else {
-                  lj.a(param4, param3, 0, true);
-                  if (var6 == 0) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              if (param2 != null) {
-                param2.e(0, param3, param4);
-                break L1;
-              } else {
-                hk.a(0, 0, 640, 480, 0);
-                if (var6 == 0) {
-                  break L1;
-                } else {
+              if (param2 != tc.field_Tb) {
+                if (param2 != null) {
                   param2.e(0, param3, param4);
                   break L1;
+                } else {
+                  hk.a(0, 0, 640, 480, 0);
+                  break L1;
                 }
+              } else {
+                lj.a(param4, param3, 0, true);
+                break L1;
               }
             }
-            L3: {
+            L2: {
               if (param1) {
                 fj.a(0, param4, -26, param3);
-                break L3;
+                break L2;
               } else {
-                break L3;
+                break L2;
               }
             }
             if (param0 >= 40) {
@@ -80,25 +68,25 @@ final class dl extends ek {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var5);
+            stackIn_14_0 = (RuntimeException) (var5);
 
-            stackIn_17_1 = new StringBuilder().append("dl.I(").append(param0).append(',').append(param1).append(',');
+            stackIn_14_1 = new StringBuilder().append("dl.I(").append(param0).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L4;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
+              break L3;
             } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L4;
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
+              break L3;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param3 + ',' + param4 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -115,114 +103,31 @@ final class dl extends ek {
         int var3 = 0;
         ck var4 = null;
         cl var5 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = client.field_A ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
+        RuntimeException decompiledCaughtException = null;
+        var3 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            var5 = (cl) ((Object) oe.field_I.c((byte) 113));
+            L1: while (true) {
+              if (var5 == null) {
+                if (param0 == 640) {
+                  break L0;
+                } else {
+                  var4 = (ck) null;
+                  dl.a((byte) 62, true, (ck) null, -96, 15);
+                  return;
                 }
-                case 1: {
-                    try {
-                        var5 = (cl) ((Object) oe.field_I.c((byte) 113));
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (var5 == null) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        fh.a((byte) 104, var5, param1);
-                        var5 = (cl) ((Object) oe.field_I.d(true));
-                        if (var3 != 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var3 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (param0 == 640) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var4 = (ck) null;
-                        dl.a((byte) 62, true, (ck) null, -96, 15);
-                        return;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var2 = (RuntimeException) ((Object) caughtException);
-                    throw dh.a((Throwable) ((Object) var2), "dl.L(" + param0 + ',' + param1 + ')');
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                fh.a((byte) 104, var5, param1);
+                var5 = (cl) ((Object) oe.field_I.d(true));
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw dh.a((Throwable) ((Object) var2), "dl.L(" + param0 + ',' + param1 + ')');
         }
     }
 

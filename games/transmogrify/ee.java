@@ -15,9 +15,6 @@ final class ee extends aj implements df {
     public static void l(int param0) {
         if (param0 != -31263) {
             field_C = (String) null;
-            field_y = null;
-            field_C = null;
-            return;
         }
         field_y = null;
         field_C = null;
@@ -51,88 +48,25 @@ final class ee extends aj implements df {
     }
 
     private final void b(byte param0, int param1) {
-        lj[] var3 = null;
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        lj[] var7 = null;
-        lj[] var8 = null;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var6 = Transmogrify.field_A ? 1 : 0;
-                    if (this.field_w >= param1) {
-                        statePc = 2;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    var7 = new lj[param1];
-                    var8 = var7;
-                    var3 = var8;
-                    var4 = new int[param1];
-                    var5 = 0;
-                    if (param0 <= -45) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                case 5: {
-                    if (var5 < this.field_w) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    this.field_w = param1;
-                    this.field_F = var8;
-                    this.field_E = var4;
-                    return;
-                }
-                case 7: {
-                    var7[var5] = this.field_F[var5];
-                    var4[var5] = this.field_E[var5];
-                    var5++;
-                    if (var6 == 0) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                case 9: {
-                    if (var6 == 0) {
-                        statePc = 5;
-                    } else {
-                        statePc = 12;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    this.field_w = param1;
-                    this.field_F = var8;
-                    this.field_E = var4;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        int var6 = Transmogrify.field_A ? 1 : 0;
+        if (!(this.field_w < param1)) {
+            return;
         }
+        lj[] var7 = new lj[param1];
+        lj[] var3 = var7;
+        int[] var4 = new int[param1];
+        int var5 = 0;
+        if (param0 > -45) {
+            return;
+        }
+        while (var5 < this.field_w) {
+            var7[var5] = this.field_F[var5];
+            var4[var5] = this.field_E[var5];
+            var5++;
+        }
+        this.field_w = param1;
+        this.field_F = var3;
+        this.field_E = var4;
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
@@ -143,67 +77,45 @@ final class ee extends aj implements df {
 
     public final void a(lj param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
-        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
             var6_int = 0;
             L1: while (true) {
               L2: {
-                L3: {
-                  if (var6_int >= this.field_w) {
-                    break L3;
+                if (var6_int >= this.field_w) {
+                  break L2;
+                } else {
+                  if (param0 != this.field_F[var6_int]) {
+                    var6_int++;
+                    continue L1;
                   } else {
-                    if (var8 != 0) {
+                    var7 = this.field_E[var6_int];
+                    if (-1 != var7) {
+                      ba.a(param1 + 99, this.field_E[var6_int]);
                       break L2;
                     } else {
-                      L4: {
-                        if (param0 != this.field_F[var6_int]) {
-                          break L4;
-                        } else {
-                          L5: {
-                            var7 = this.field_E[var6_int];
-                            if (-1 != var7) {
-                              break L5;
-                            } else {
-                              this.field_x.r(77);
-                              if (var8 == 0) {
-                                break L3;
-                              } else {
-                                break L5;
-                              }
-                            }
-                          }
-                          ba.a(param1 + 99, this.field_E[var6_int]);
-                          if (var8 == 0) {
-                            break L3;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
-                      var6_int++;
-                      if (var8 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
+                      this.field_x.r(77);
+                      break L2;
                     }
                   }
                 }
+              }
+              L3: {
                 if (param1 == 17) {
-                  break L2;
+                  break L3;
                 } else {
                   this.field_w = 61;
-                  return;
+                  break L3;
                 }
               }
               break L0;
@@ -211,25 +123,25 @@ final class ee extends aj implements df {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L4: {
             var6 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var6);
+            stackIn_13_0 = (RuntimeException) (var6);
 
-            stackIn_17_1 = new StringBuilder().append("ee.MA(");
+            stackIn_13_1 = new StringBuilder().append("ee.MA(");
 
             if (param0 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L6;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
+              break L4;
             } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L6;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
+              break L4;
             }
           }
-          throw ch.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

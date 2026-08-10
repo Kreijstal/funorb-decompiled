@@ -232,76 +232,26 @@ final class vj extends qs {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, vg param5) {
-        RuntimeException var7 = null;
-        fr var8 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            super.a(param0, param1, param2, param3, param4 + 0, param5);
-            var8 = oa.field_b;
-            if (param4 == -600269855) {
-              L1: {
-                if (var8 == null) {
-                  break L1;
-                } else {
-                  if (!this.a(param0, 87, param3, param1, param2)) {
-                    break L1;
-                  } else {
-                    if (!(this.field_u instanceof lf)) {
-                      if (!(var8.field_u instanceof lf)) {
-                        break L1;
-                      } else {
-                        ((lf) ((Object) var8.field_u)).a(param4 ^ 600248316, (vj) (this), var8);
-                        oa.field_b = null;
-                        return;
-                      }
-                    } else {
-                      ((lf) ((Object) this.field_u)).a(-27619, (vj) (this), var8);
-                      oa.field_b = null;
-                      return;
-                    }
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var7 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var7);
-
-            stackIn_11_1 = new StringBuilder().append("vj.HA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L2;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L2;
-            }
-          }
-          throw r.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+        super.a(param0, param1, param2, param3, param4 + 0, param5);
+        fr var8 = oa.field_b;
+        if (param4 != -600269855) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            if (var8 != null && this.a(param0, 87, param3, param1, param2)) {
+                if (this.field_u instanceof lf) {
+                    ((lf) ((Object) this.field_u)).a(-27619, (vj) (this), var8);
+                    oa.field_b = null;
+                    return;
+                }
+                if (var8.field_u instanceof lf) {
+                    ((lf) ((Object) var8.field_u)).a(param4 ^ 600248316, (vj) (this), var8);
+                    oa.field_b = null;
+                    return;
+                }
+            }
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) ((Object) runtimeException), "vj.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

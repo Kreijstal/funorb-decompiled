@@ -650,15 +650,15 @@ final class fk extends oo {
         int var5_int = 0;
         int var6_int = 0;
         jd[][] var6 = null;
-        Object var7 = null;
-        Object var8 = null;
-        Object var9 = null;
-        Object var10 = null;
-        Object var11 = null;
-        Object var12 = null;
-        Object var13 = null;
-        Object var14 = null;
-        Object var15 = null;
+        jd var7 = null;
+        jd var8 = null;
+        jd var9 = null;
+        jd var10 = null;
+        jd var11 = null;
+        jd var12 = null;
+        jd var13 = null;
+        jd var14 = null;
+        jd var15 = null;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
@@ -689,25 +689,25 @@ final class fk extends oo {
                           break L3;
                         }
                       }
-                      var7 = param0[0];
+                      var7 = var3[0];
                       var8 = var7;
                       var9 = var8;
-                      var10 = param0[0];
+                      var10 = var4[0];
                       var11 = var10;
                       var12 = var11;
-                      var13 = param0[0];
+                      var13 = var5[0];
                       var14 = var13;
                       var15 = var14;
                       var16 = 0;
                       L4: while (true) {
-                        if (var16 >= param0.length) {
+                        if (var16 >= var4.length) {
                           var3 = var4;
                           var4 = var5;
                           var6_int++;
                           continue L2;
                         } else {
                           L5: {
-                            if ((1 + var16 ^ -1) > (param0.length ^ -1)) {
+                            if ((1 + var16 ^ -1) > (var4.length ^ -1)) {
                               var12 = var4[1 + var16];
                               var15 = var5[1 + var16];
                               var9 = var3[var16 + 1];
@@ -717,7 +717,7 @@ final class fk extends oo {
                             }
                           }
                           L6: {
-                            var17 = (10 * ((jd) (var14)).field_g >> -1093222840) + ((((jd) (var12)).field_g * 10 >> 486663240) + (((jd) (var10)).field_g * 10 >> -1412194712) + ((5 * ((jd) (var9)).field_g >> 1788707528) + ((5 * ((jd) (var7)).field_g >> -865602264) - -(10 * ((jd) (var8)).field_g >> 1730619720) - -(((jd) (var11)).field_g * 180 >> 1495002312)))) + ((5 * ((jd) (var13)).field_g >> -1945874744) - -(5 * ((jd) (var15)).field_g >> 35663080));
+                            var17 = (10 * var14.field_g >> -1093222840) + ((var12.field_g * 10 >> 486663240) + (var10.field_g * 10 >> -1412194712) + ((5 * var9.field_g >> 1788707528) + ((5 * var7.field_g >> -865602264) - -(10 * var8.field_g >> 1730619720) - -(var11.field_g * 180 >> 1495002312)))) + ((5 * var13.field_g >> -1945874744) - -(5 * var15.field_g >> 35663080));
                             if (-4097 > (var17 ^ -1)) {
                               var17 = 4096;
                               break L6;
@@ -1115,49 +1115,15 @@ final class fk extends oo {
     }
 
     final void a(int param0, di param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_b = cg.a(param1, "", "pool_plasma");
-              this.field_i = cg.a(param1, "", "pool_plasma_win_jingle");
-              this.field_n = cg.a(param1, "", "pool_plasma_lose_jingle");
-              if (param0 == 1) {
-                break L1;
-              } else {
+            this.field_b = cg.a(param1, "", "pool_plasma");
+            this.field_i = cg.a(param1, "", "pool_plasma_win_jingle");
+            this.field_n = cg.a(param1, "", "pool_plasma_lose_jingle");
+            if (param0 != 1) {
                 field_gb = (hr) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("fk.Q(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) ((Object) runtimeException), "fk.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1242,126 +1208,169 @@ final class fk extends oo {
                               break L6;
                             } else {
                               L7: {
-                                if (-1 != (var11.field_E ^ -1)) {
-                                  if (var13.field_E != 0) {
-                                    break L7;
-                                  } else {
-                                    if (ga.a(250, true, ea.field_r) != 0) {
-                                      break L7;
+                                L8: {
+                                  if (-1 == (var11.field_E ^ -1)) {
+                                    L9: {
+                                      if (ga.a(250, true, ea.field_r) == 0) {
+                                        var11.field_E = var11.field_E + 1;
+                                        break L9;
+                                      } else {
+                                        break L9;
+                                      }
+                                    }
+                                    if (var13.field_E == 0) {
+                                      if (ga.a(250, true, ea.field_r) == 0) {
+                                        var13.field_E = var13.field_E + 1;
+                                        break L8;
+                                      } else {
+                                        if (var9.field_E != 0) {
+                                          break L7;
+                                        } else {
+                                          if (ga.a(250, true, ea.field_r) != 0) {
+                                            break L7;
+                                          } else {
+                                            var9.field_E = var9.field_E + 1;
+                                            break L7;
+                                          }
+                                        }
+                                      }
                                     } else {
-                                      var13.field_E = var13.field_E + 1;
-                                      break L7;
+                                      if (var9.field_E != 0) {
+                                        break L7;
+                                      } else {
+                                        if (ga.a(250, true, ea.field_r) != 0) {
+                                          break L7;
+                                        } else {
+                                          var9.field_E = var9.field_E + 1;
+                                          break L7;
+                                        }
+                                      }
+                                    }
+                                  } else {
+                                    if (var13.field_E == 0) {
+                                      if (ga.a(250, true, ea.field_r) == 0) {
+                                        var13.field_E = var13.field_E + 1;
+                                        break L8;
+                                      } else {
+                                        if (var9.field_E != 0) {
+                                          break L7;
+                                        } else {
+                                          if (ga.a(250, true, ea.field_r) != 0) {
+                                            break L7;
+                                          } else {
+                                            var9.field_E = var9.field_E + 1;
+                                            break L7;
+                                          }
+                                        }
+                                      }
+                                    } else {
+                                      if (var9.field_E != 0) {
+                                        break L7;
+                                      } else {
+                                        if (ga.a(250, true, ea.field_r) != 0) {
+                                          break L7;
+                                        } else {
+                                          var9.field_E = var9.field_E + 1;
+                                          break L7;
+                                        }
+                                      }
                                     }
                                   }
+                                }
+                                if (var9.field_E != 0) {
+                                  break L7;
                                 } else {
-                                  if (var13.field_E != 0) {
+                                  if (ga.a(250, true, ea.field_r) != 0) {
                                     break L7;
                                   } else {
-                                    if (ga.a(250, true, ea.field_r) != 0) {
-                                      break L7;
-                                    } else {
-                                      var13.field_E = var13.field_E + 1;
-                                      break L7;
-                                    }
+                                    var9.field_E = var9.field_E + 1;
+                                    break L7;
                                   }
                                 }
                               }
-                              if (var9.field_E == 0) {
-                                if (ga.a(250, true, ea.field_r) == 0) {
-                                  var9.field_E = var9.field_E + 1;
-                                  if (var15.field_E != 0) {
-                                    break L6;
-                                  } else {
-                                    if (0 != ga.a(250, true, ea.field_r)) {
-                                      break L6;
-                                    } else {
-                                      var15.field_E = var15.field_E + 1;
-                                      break L6;
-                                    }
-                                  }
-                                } else {
-                                  if (var15.field_E != 0) {
-                                    break L6;
-                                  } else {
-                                    if (0 != ga.a(250, true, ea.field_r)) {
-                                      break L6;
-                                    } else {
-                                      var15.field_E = var15.field_E + 1;
-                                      break L6;
-                                    }
-                                  }
-                                }
+                              if (var15.field_E != 0) {
+                                break L6;
                               } else {
-                                if (var15.field_E != 0) {
+                                if (0 != ga.a(250, true, ea.field_r)) {
                                   break L6;
                                 } else {
-                                  if (0 != ga.a(250, true, ea.field_r)) {
-                                    break L6;
-                                  } else {
-                                    var15.field_E = var15.field_E + 1;
-                                    break L6;
-                                  }
+                                  var15.field_E = var15.field_E + 1;
+                                  break L6;
                                 }
                               }
                             }
                           }
-                          L8: {
+                          L10: {
                             if (-1 > (var12.field_y ^ -1)) {
-                              L9: {
-                                if (var8.field_c) {
-                                  if (!var10.field_c) {
-                                    if (-1 != (var10.field_E ^ -1)) {
-                                      break L9;
+                              L11: {
+                                L12: {
+                                  if (!var8.field_c) {
+                                    if (var8.field_E == 0) {
+                                      var8.field_c = true;
+                                      if (var10.field_c) {
+                                        break L12;
+                                      } else {
+                                        if (-1 != (var10.field_E ^ -1)) {
+                                          break L12;
+                                        } else {
+                                          var10.field_c = true;
+                                          break L12;
+                                        }
+                                      }
                                     } else {
-                                      var10.field_c = true;
-                                      break L9;
+                                      if (!var10.field_c) {
+                                        if (-1 != (var10.field_E ^ -1)) {
+                                          break L12;
+                                        } else {
+                                          var10.field_c = true;
+                                          break L12;
+                                        }
+                                      } else {
+                                        if (var14.field_c) {
+                                          break L11;
+                                        } else {
+                                          if (0 != var14.field_E) {
+                                            break L11;
+                                          } else {
+                                            var14.field_c = true;
+                                            break L11;
+                                          }
+                                        }
+                                      }
                                     }
                                   } else {
                                     if (var10.field_c) {
-                                      break L9;
+                                      break L12;
                                     } else {
                                       if (-1 != (var10.field_E ^ -1)) {
-                                        break L9;
+                                        break L12;
                                       } else {
                                         var10.field_c = true;
-                                        break L9;
+                                        break L12;
                                       }
                                     }
                                   }
-                                } else {
-                                  if (var10.field_c) {
-                                    break L9;
-                                  } else {
-                                    if (-1 != (var10.field_E ^ -1)) {
-                                      break L9;
-                                    } else {
-                                      var10.field_c = true;
-                                      break L9;
-                                    }
-                                  }
                                 }
-                              }
-                              L10: {
                                 if (var14.field_c) {
-                                  break L10;
+                                  break L11;
                                 } else {
                                   if (0 != var14.field_E) {
-                                    break L10;
+                                    break L11;
                                   } else {
                                     var14.field_c = true;
-                                    break L10;
+                                    break L11;
                                   }
                                 }
                               }
-                              L11: {
+                              L13: {
                                 if (var16.field_c) {
-                                  break L11;
+                                  break L13;
                                 } else {
                                   if (-1 == (var16.field_E ^ -1)) {
                                     var16.field_c = true;
-                                    break L11;
+                                    break L13;
                                   } else {
-                                    break L11;
+                                    break L13;
                                   }
                                 }
                               }
@@ -1369,9 +1378,9 @@ final class fk extends oo {
                               var14.field_E = var14.field_E + 1;
                               var10.field_E = var10.field_E + 1;
                               var16.field_E = var16.field_E + 1;
-                              break L8;
+                              break L10;
                             } else {
-                              break L8;
+                              break L10;
                             }
                           }
                           var8 = var9;
@@ -1389,47 +1398,47 @@ final class fk extends oo {
                 } else {
                   var19 = var3[var4_int];
                   var6_int = 0;
-                  L12: while (true) {
+                  L14: while (true) {
                     if (-17 >= (var6_int ^ -1)) {
                       var4_int++;
                       continue L1;
                     } else {
-                      L13: {
+                      L15: {
                         var7_ref_bl = var19[var6_int];
                         if ((var7_ref_bl.field_E ^ -1) < -1) {
                           if (!var7_ref_bl.field_c) {
                             var7_ref_bl.field_E = var7_ref_bl.field_E - 2;
                             if (var7_ref_bl.field_E > 0) {
-                              break L13;
+                              break L15;
                             } else {
                               var7_ref_bl.field_E = 0;
-                              break L13;
+                              break L15;
                             }
                           } else {
                             var7_ref_bl.field_E = var7_ref_bl.field_E + 2;
                             if (-257 >= (var7_ref_bl.field_E ^ -1)) {
-                              L14: {
+                              L16: {
                                 if (0 != ga.a(10, true, ea.field_r)) {
-                                  break L14;
+                                  break L16;
                                 } else {
                                   var7_ref_bl.field_y = var7_ref_bl.field_y + 1;
-                                  break L14;
+                                  break L16;
                                 }
                               }
                               var7_ref_bl.field_c = false;
-                              break L13;
+                              break L15;
                             } else {
-                              break L13;
+                              break L15;
                             }
                           }
                         } else {
                           if (ga.a(2500, true, ea.field_r) == 0) {
                             var7_ref_bl.field_E = 1;
                             var7_ref_bl.field_c = true;
-                            break L13;
+                            break L15;
                           } else {
                             var7_ref_bl.field_E = 0;
-                            break L13;
+                            break L15;
                           }
                         }
                       }
@@ -1438,14 +1447,14 @@ final class fk extends oo {
                         if (var7_ref_bl.field_y >= 256) {
                           var7_ref_bl.field_y = 0;
                           var6_int++;
-                          continue L12;
+                          continue L14;
                         } else {
                           var6_int++;
-                          continue L12;
+                          continue L14;
                         }
                       } else {
                         var6_int++;
-                        continue L12;
+                        continue L14;
                       }
                     }
                   }
@@ -1779,9 +1788,9 @@ final class fk extends oo {
                 var32 = var37;
                 var9 = var32;
                 pl.a(var8, var36.length, 0, param1, 0, var7, t.field_a[1][var3_int], t.field_a[2][var3_int], t.field_a[0][var3_int].length, var37, -26182, t.field_a[0][var3_int]);
-                var10 = param1[0];
-                var11 = param1[0];
-                var12 = param1[0];
+                var10 = var4[0];
+                var11 = var5[0];
+                var12 = var6[0];
                 var13 = var36[0];
                 var14 = var38[0];
                 var15 = var37[0];
@@ -1796,9 +1805,9 @@ final class fk extends oo {
                     continue L2;
                   } else {
                     L4: {
-                      var18 = param1[var17];
-                      var19 = param1[var17];
-                      var20 = param1[var17];
+                      var18 = var4[var17];
+                      var19 = var5[var17];
+                      var20 = var6[var17];
                       var21 = var36[var17];
                       var22 = var38[var17];
                       var23 = var37[var17];

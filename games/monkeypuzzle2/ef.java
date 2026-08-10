@@ -7,11 +7,11 @@ final class ef {
 
     final static void a(int param0, String param1) {
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
-        String stackIn_48_2 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -74,42 +74,30 @@ final class ef {
                   ka.field_a = 0;
                   break L5;
                 } else {
-                  L6: {
-                    if (ac.field_b) {
-                      break L6;
-                    } else {
-                      if (var2_int == 0) {
-                        ka.field_a = 0;
-                        break L5;
-                      } else {
-                        break L6;
-                      }
-                    }
-                  }
-                  ka.field_a = cj.field_e;
-                  if (var3 == 0) {
+                  if (ac.field_b) {
+                    ka.field_a = cj.field_e;
                     break L5;
                   } else {
-                    ka.field_a = 0;
-                    break L5;
+                    if (var2_int == 0) {
+                      ka.field_a = 0;
+                      break L5;
+                    } else {
+                      ka.field_a = cj.field_e;
+                      break L5;
+                    }
                   }
                 }
               }
-              L7: {
+              L6: {
                 if (param1 != null) {
                   ac.field_b = false;
-                  break L7;
+                  break L6;
                 } else {
                   if (var2_int == 0) {
-                    break L7;
+                    break L6;
                   } else {
                     ac.field_b = true;
-                    if (var3 == 0) {
-                      break L7;
-                    } else {
-                      ac.field_b = false;
-                      break L7;
-                    }
+                    break L6;
                   }
                 }
               }
@@ -117,44 +105,44 @@ final class ef {
               nj.field_a = oi.field_f;
               break L2;
             }
-            L8: {
+            L7: {
               if (ac.field_b) {
-                break L8;
+                break L7;
               } else {
                 if (cj.field_e <= ka.field_a) {
-                  break L8;
+                  break L7;
                 } else {
                   if (oe.field_d) {
                     ka.field_a = 0;
                     nj.field_a = oi.field_f;
                     oa.field_G = gk.field_e;
-                    break L8;
+                    break L7;
                   } else {
-                    break L8;
+                    break L7;
                   }
                 }
               }
             }
-            L9: {
+            L8: {
               pf.field_b = param1;
               if (param0 > 8) {
-                break L9;
+                break L8;
               } else {
                 ef.a(false);
-                break L9;
+                break L8;
               }
             }
-            L10: {
+            L9: {
               gk.field_e = -1;
               if (!ac.field_b) {
-                break L10;
+                break L9;
               } else {
                 if (ik.field_l != ka.field_a) {
-                  break L10;
+                  break L9;
                 } else {
                   ka.field_a = 0;
                   ac.field_b = false;
-                  break L10;
+                  break L9;
                 }
               }
             }
@@ -163,25 +151,25 @@ final class ef {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L10: {
             var2 = decompiledCaughtException;
-            stackIn_47_0 = (RuntimeException) (var2);
+            stackIn_44_0 = (RuntimeException) (var2);
 
-            stackIn_47_1 = new StringBuilder().append("ef.B(").append(param0).append(',');
+            stackIn_44_1 = new StringBuilder().append("ef.B(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackIn_48_2 = "null";
-              break L11;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
+              break L10;
             } else {
-              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackIn_48_2 = "{...}";
-              break L11;
+              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
+              break L10;
             }
           }
-          throw la.a((Throwable) ((Object) stackIn_48_0), stackIn_48_2 + ')');
+          throw la.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ')');
         }
     }
 

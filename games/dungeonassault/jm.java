@@ -46,7 +46,15 @@ final class jm {
           }
         }
         L3: {
-          if (6 >= param1) {
+          if (6 < param1) {
+            L4: {
+              if (gm.field_d.field_k.a(param1 + 35, (byte) 117)) {
+                ol.field_a[1].b(param3, param0, 256);
+                break L4;
+              } else {
+                break L4;
+              }
+            }
             if (42 <= param1) {
               break L3;
             } else {

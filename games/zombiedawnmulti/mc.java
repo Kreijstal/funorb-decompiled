@@ -96,408 +96,92 @@ final class mc {
     }
 
     final static String a(long param0, byte param1) {
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$9 = null;
-        int var3 = 0;
-        long var4 = 0L;
-        StringBuilder var6 = null;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        StringBuilder var12 = null;
-        StringBuilder var13 = null;
-        StringBuilder var14 = null;
-        StringBuilder var15 = null;
-        StringBuilder var16 = null;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var11 = ZombieDawnMulti.field_E ? 1 : 0;
-                    if (-1L > (param0 ^ -1L)) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return null;
-                }
-                case 2: {
-                    if (-6582952005840035282L < (param0 ^ -1L)) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return null;
-                }
-                case 4: {
-                    if (-1L != (param0 % 37L ^ -1L)) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    return null;
-                }
-                case 6: {
-                    var3 = 0;
-                    var4 = param0;
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 7: {
-                    if ((var4 ^ -1L) == -1L) {
-                        statePc = 41;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    var3++;
-                    var4 = var4 / 37L;
-                    if (var11 == 0) {
-                        statePc = 18;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    var14 = new StringBuilder(var3);
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    if (param0 == 0L) {
-                        statePc = 16;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
-                    var7 = param0;
-                    param0 = param0 / 37L;
-                    var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
-                    if (var11 != 0) {
-                        statePc = 17;
-                    } else {
-                        statePc = 12;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    if (var9 == 95) {
-                        statePc = 14;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 14: {
-                    var10 = -1 + var14.length();
-                    var14.setCharAt(var10, Character.toUpperCase(var14.charAt(var10)));
-                    var9 = 160;
-                    statePc = 15;
-                    continue stateLoop;
-                }
-                case 15: {
-                    discarded$5 = var14.append((char) var9);
-                    if (var11 == 0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 16;
-                    }
-                    continue stateLoop;
-                }
-                case 16: {
-                    var14.reverse();
-                    var14.setCharAt(0, Character.toUpperCase(var14.charAt(0)));
-                    statePc = 17;
-                    continue stateLoop;
-                }
-                case 17: {
-                    return var14.toString();
-                }
-                case 18: {
-                    if (var11 == 0) {
-                        statePc = 7;
-                    } else {
-                        statePc = 19;
-                    }
-                    continue stateLoop;
-                }
-                case 19: {
-                    if (param1 == 26) {
-                        statePc = 21;
-                    } else {
-                        statePc = 20;
-                    }
-                    continue stateLoop;
-                }
-                case 20: {
-                    mc.a((byte) 85);
-                    statePc = 31;
-                    continue stateLoop;
-                }
-                case 21: {
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        int var3;
+        long var4;
+        StringBuilder var6;
+        long var7;
+        int var9;
+        int var10;
+        int var11;
+        StringBuilder var12;
+        StringBuilder var13;
+        var11 = ZombieDawnMulti.field_E ? 1 : 0;
+        if (-1L > (param0 ^ -1L)) {
+          if (-6582952005840035282L < (param0 ^ -1L)) {
+            if (-1L != (param0 % 37L ^ -1L)) {
+              var3 = 0;
+              var4 = param0;
+              L0: while (true) {
+                if ((var4 ^ -1L) == -1L) {
+                  if (param1 == 26) {
                     var12 = new StringBuilder(var3);
-                    var6 = var12;
-                    statePc = 22;
-                    continue stateLoop;
-                }
-                case 22: {
-                    if (param0 == 0L) {
-                        statePc = 28;
-                    } else {
-                        statePc = 23;
+                    L1: while (true) {
+                      if (param0 == 0L) {
+                        var12.reverse();
+                        var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
+                        return var12.toString();
+                      } else {
+                        L2: {
+                          var7 = param0;
+                          param0 = param0 / 37L;
+                          var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
+                          if (var9 == 95) {
+                            var10 = -1 + var12.length();
+                            var12.setCharAt(var10, Character.toUpperCase(var12.charAt(var10)));
+                            var9 = 160;
+                            break L2;
+                          } else {
+                            break L2;
+                          }
+                        }
+                        discarded$0 = var12.append((char) var9);
+                        continue L1;
+                      }
                     }
-                    continue stateLoop;
-                }
-                case 23: {
-                    var7 = param0;
-                    param0 = param0 / 37L;
-                    var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
-                    if (var11 != 0) {
-                        statePc = 29;
-                    } else {
-                        statePc = 24;
-                    }
-                    continue stateLoop;
-                }
-                case 24: {
-                    if (var9 == 95) {
-                        statePc = 26;
-                    } else {
-                        statePc = 27;
-                    }
-                    continue stateLoop;
-                }
-                case 26: {
-                    var10 = -1 + var12.length();
-                    var12.setCharAt(var10, Character.toUpperCase(var12.charAt(var10)));
-                    var9 = 160;
-                    statePc = 27;
-                    continue stateLoop;
-                }
-                case 27: {
-                    discarded$6 = var12.append((char) var9);
-                    if (var11 == 0) {
-                        statePc = 22;
-                    } else {
-                        statePc = 28;
-                    }
-                    continue stateLoop;
-                }
-                case 28: {
-                    var12.reverse();
-                    var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
-                    statePc = 29;
-                    continue stateLoop;
-                }
-                case 29: {
-                    return var12.toString();
-                }
-                case 31: {
+                  } else {
+                    mc.a((byte) 85);
                     var13 = new StringBuilder(var3);
                     var6 = var13;
-                    statePc = 32;
-                    continue stateLoop;
-                }
-                case 32: {
-                    if (param0 == 0L) {
-                        statePc = 38;
-                    } else {
-                        statePc = 33;
+                    L3: while (true) {
+                      if (param0 == 0L) {
+                        var13.reverse();
+                        var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
+                        return var13.toString();
+                      } else {
+                        L4: {
+                          var7 = param0;
+                          param0 = param0 / 37L;
+                          var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
+                          if (var9 == 95) {
+                            var10 = -1 + var13.length();
+                            var13.setCharAt(var10, Character.toUpperCase(var13.charAt(var10)));
+                            var9 = 160;
+                            break L4;
+                          } else {
+                            break L4;
+                          }
+                        }
+                        discarded$1 = var13.append((char) var9);
+                        continue L3;
+                      }
                     }
-                    continue stateLoop;
+                  }
+                } else {
+                  var3++;
+                  var4 = var4 / 37L;
+                  continue L0;
                 }
-                case 33: {
-                    var7 = param0;
-                    param0 = param0 / 37L;
-                    var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
-                    if (var11 != 0) {
-                        statePc = 39;
-                    } else {
-                        statePc = 34;
-                    }
-                    continue stateLoop;
-                }
-                case 34: {
-                    if (var9 == 95) {
-                        statePc = 36;
-                    } else {
-                        statePc = 37;
-                    }
-                    continue stateLoop;
-                }
-                case 36: {
-                    var10 = -1 + var13.length();
-                    var13.setCharAt(var10, Character.toUpperCase(var13.charAt(var10)));
-                    var9 = 160;
-                    statePc = 37;
-                    continue stateLoop;
-                }
-                case 37: {
-                    discarded$7 = var13.append((char) var9);
-                    if (var11 == 0) {
-                        statePc = 32;
-                    } else {
-                        statePc = 38;
-                    }
-                    continue stateLoop;
-                }
-                case 38: {
-                    var13.reverse();
-                    var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
-                    statePc = 39;
-                    continue stateLoop;
-                }
-                case 39: {
-                    return var13.toString();
-                }
-                case 41: {
-                    if (param1 != 26) {
-                        statePc = 51;
-                    } else {
-                        statePc = 42;
-                    }
-                    continue stateLoop;
-                }
-                case 42: {
-                    var15 = new StringBuilder(var3);
-                    statePc = 43;
-                    continue stateLoop;
-                }
-                case 43: {
-                    if (param0 == 0L) {
-                        statePc = 49;
-                    } else {
-                        statePc = 44;
-                    }
-                    continue stateLoop;
-                }
-                case 44: {
-                    var7 = param0;
-                    param0 = param0 / 37L;
-                    var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
-                    if (var11 != 0) {
-                        statePc = 50;
-                    } else {
-                        statePc = 45;
-                    }
-                    continue stateLoop;
-                }
-                case 45: {
-                    if (var9 == 95) {
-                        statePc = 47;
-                    } else {
-                        statePc = 48;
-                    }
-                    continue stateLoop;
-                }
-                case 47: {
-                    var10 = -1 + var15.length();
-                    var15.setCharAt(var10, Character.toUpperCase(var15.charAt(var10)));
-                    var9 = 160;
-                    statePc = 48;
-                    continue stateLoop;
-                }
-                case 48: {
-                    discarded$8 = var15.append((char) var9);
-                    if (var11 == 0) {
-                        statePc = 43;
-                    } else {
-                        statePc = 49;
-                    }
-                    continue stateLoop;
-                }
-                case 49: {
-                    var15.reverse();
-                    var15.setCharAt(0, Character.toUpperCase(var15.charAt(0)));
-                    statePc = 50;
-                    continue stateLoop;
-                }
-                case 50: {
-                    return var15.toString();
-                }
-                case 51: {
-                    mc.a((byte) 85);
-                    statePc = 53;
-                    continue stateLoop;
-                }
-                case 53: {
-                    var16 = new StringBuilder(var3);
-                    var6 = var16;
-                    statePc = 54;
-                    continue stateLoop;
-                }
-                case 54: {
-                    if (param0 == 0L) {
-                        statePc = 60;
-                    } else {
-                        statePc = 55;
-                    }
-                    continue stateLoop;
-                }
-                case 55: {
-                    var7 = param0;
-                    param0 = param0 / 37L;
-                    var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
-                    if (var11 != 0) {
-                        statePc = 61;
-                    } else {
-                        statePc = 56;
-                    }
-                    continue stateLoop;
-                }
-                case 56: {
-                    if (var9 == 95) {
-                        statePc = 58;
-                    } else {
-                        statePc = 59;
-                    }
-                    continue stateLoop;
-                }
-                case 58: {
-                    var10 = -1 + var16.length();
-                    var16.setCharAt(var10, Character.toUpperCase(var16.charAt(var10)));
-                    var9 = 160;
-                    statePc = 59;
-                    continue stateLoop;
-                }
-                case 59: {
-                    discarded$9 = var16.append((char) var9);
-                    if (var11 == 0) {
-                        statePc = 54;
-                    } else {
-                        statePc = 60;
-                    }
-                    continue stateLoop;
-                }
-                case 60: {
-                    var16.reverse();
-                    var16.setCharAt(0, Character.toUpperCase(var16.charAt(0)));
-                    statePc = 61;
-                    continue stateLoop;
-                }
-                case 61: {
-                    return var16.toString();
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+            } else {
+              return null;
             }
+          } else {
+            return null;
+          }
+        } else {
+          return null;
         }
     }
 

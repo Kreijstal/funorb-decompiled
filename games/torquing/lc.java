@@ -270,53 +270,56 @@ final class lc extends ro {
                 }
               }
               L5: {
-                if (null == kl.field_o) {
-                  break L5;
-                } else {
-                  var2 = null;
-                  var5 = 0;
-                  var3 = var5;
-                  L6: while (true) {
-                    if (var5 >= nc.field_d.length) {
-                      if (var2 != null) {
-                        kl.field_o.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
-                        break L5;
+                L6: {
+                  if (null == kl.field_o) {
+                    break L6;
+                  } else {
+                    var2 = null;
+                    var5 = 0;
+                    var3 = var5;
+                    L7: while (true) {
+                      if (var5 >= nc.field_d.length) {
+                        if (var2 != null) {
+                          kl.field_o.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                          break L6;
+                        } else {
+                          break L5;
+                        }
                       } else {
-                        break L5;
-                      }
-                    } else {
-                      var8 = nc.field_d[var5];
-                      if (var8 != null) {
-                        L7: {
-                          if ((var8.field_w ^ -1) != -366) {
-                            break L7;
-                          } else {
-                            if (-140 != (var8.field_u ^ -1)) {
-                              break L7;
+                        var8 = nc.field_d[var5];
+                        if (var8 != null) {
+                          L8: {
+                            if ((var8.field_w ^ -1) != -366) {
+                              break L8;
                             } else {
-                              var5++;
-                              continue L6;
+                              if (-140 != (var8.field_u ^ -1)) {
+                                break L8;
+                              } else {
+                                var5++;
+                                continue L7;
+                              }
                             }
                           }
-                        }
-                        L8: {
-                          if (var2 != null) {
-                            var2 = (String) (var2) + ", " + var5;
-                            break L8;
-                          } else {
-                            var2 = Integer.toString(var5);
-                            break L8;
+                          L9: {
+                            if (var2 != null) {
+                              var2 = (String) (var2) + ", " + var5;
+                              break L9;
+                            } else {
+                              var2 = Integer.toString(var5);
+                              break L9;
+                            }
                           }
+                          var5++;
+                          continue L7;
+                        } else {
+                          var5++;
+                          continue L7;
                         }
-                        var5++;
-                        continue L6;
-                      } else {
-                        var5++;
-                        continue L6;
                       }
                     }
                   }
                 }
+                break L5;
               }
               decompiledRegionSelector0 = 1;
               break L0;

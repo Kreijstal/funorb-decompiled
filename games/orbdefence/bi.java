@@ -20,14 +20,12 @@ final class bi {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var6 = OrbDefence.field_D ? 1 : 0;
@@ -37,74 +35,54 @@ final class bi {
             var4 = param0.length();
             var5 = 0;
             L1: while (true) {
-              L2: {
-                L3: {
-                  L4: {
-                    if (var4 <= var5) {
-                      break L4;
-                    } else {
-                      var8 = param1;
-                      var7 = param0.charAt(var5);
-                      if (var6 != 0) {
-                        if (var7 >= var8) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        L5: {
-                          if (var7 == var8) {
-                            var3_int++;
-                            break L5;
-                          } else {
-                            break L5;
-                          }
-                        }
-                        var5++;
-                        if (var6 == 0) {
-                          continue L1;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                  }
+              if (var4 <= var5) {
+                L2: {
                   if (param2 >= 123) {
                     break L2;
+                  } else {
+                    field_c = (byte[]) null;
+                    break L2;
+                  }
+                }
+                stackIn_12_0 = var3_int;
+                break L0;
+              } else {
+                L3: {
+                  if (param0.charAt(var5) == param1) {
+                    var3_int++;
+                    break L3;
                   } else {
                     break L3;
                   }
                 }
-                field_c = (byte[]) null;
-                break L2;
+                var5++;
+                continue L1;
               }
-              stackIn_13_0 = var3_int;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L4: {
             var3 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var3);
+            stackIn_15_0 = (RuntimeException) (var3);
 
-            stackIn_16_1 = new StringBuilder().append("bi.A(");
+            stackIn_15_1 = new StringBuilder().append("bi.A(");
 
             if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L6;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L4;
             } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L6;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L4;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_13_0;
+        return stackIn_12_0;
     }
 
     static {

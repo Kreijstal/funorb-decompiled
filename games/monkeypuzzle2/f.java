@@ -14,8 +14,6 @@ class f extends kc {
         int var2_int = 0;
         int var3 = 0;
         int var6 = 0;
-        int var8 = 0;
-        int var9 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var4 = 0;
@@ -27,54 +25,34 @@ class f extends kc {
             var2_int = param0 * 16 / 50;
             var3 = 0;
             L1: while (true) {
-              L2: {
-                L3: {
-                  L4: {
-                    if ((var3 ^ -1) <= -301) {
-                      break L4;
-                    } else {
-                      var9 = sc.field_h[var3];
-                      var8 = var2_int;
-                      if (var6 != 0) {
-                        if (var8 > var9) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        L5: {
-                          if (var8 > var9) {
-                            var4 = var3 / 20;
-                            var5 = 32 * (var3 - var4 * 20);
-                            var4 = var4 * 32;
-                            ge.h(var5, var4, var5 + 32, var4 + 32);
-                            ke.field_i.a(0, 0);
-                            break L5;
-                          } else {
-                            break L5;
-                          }
-                        }
-                        var3++;
-                        if (var6 == 0) {
-                          continue L1;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                  }
+              if ((var3 ^ -1) <= -301) {
+                L2: {
                   ge.b();
                   if (param1 > 69) {
                     break L2;
                   } else {
+                    var7 = (String) null;
+                    f.a(-43, (String) null);
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                L3: {
+                  if (var2_int > sc.field_h[var3]) {
+                    var4 = var3 / 20;
+                    var5 = 32 * (var3 - var4 * 20);
+                    var4 = var4 * 32;
+                    ge.h(var5, var4, var5 + 32, var4 + 32);
+                    ke.field_i.a(0, 0);
+                    break L3;
+                  } else {
                     break L3;
                   }
                 }
-                var7 = (String) null;
-                f.a(-43, (String) null);
-                return;
+                var3++;
+                continue L1;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -138,42 +116,30 @@ class f extends kc {
     fk a(boolean param0) {
         if (param0) {
             f.a(57, -11);
-            return sj.field_g;
         }
         return sj.field_g;
     }
 
     public static void b(byte param0) {
-        String var2;
         field_e = null;
         field_j = null;
         field_g = null;
         field_f = null;
         if (param0 != -77) {
-          var2 = (String) null;
-          f.a(-123, (String) null);
-          field_i = null;
-          return;
-        } else {
-          field_i = null;
-          return;
+            String var2 = (String) null;
+            f.a(-123, (String) null);
         }
+        field_i = null;
     }
 
     final static void a(int param0, int param1) {
-        hb var2;
-        var2 = gf.field_c;
+        hb var2 = gf.field_c;
         var2.b(true, param0);
         if (param1 != 22492) {
-          field_i = (lk) null;
-          var2.b(1, param1 + -71644);
-          var2.b(2, param1 + -71644);
-          return;
-        } else {
-          var2.b(1, param1 + -71644);
-          var2.b(2, param1 + -71644);
-          return;
+            field_i = (lk) null;
         }
+        var2.b(1, param1 + -71644);
+        var2.b(2, param1 + -71644);
     }
 
     f(long param0, String param1) {

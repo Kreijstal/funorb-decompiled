@@ -17,12 +17,11 @@ final class tl {
         kd var3 = null;
         int var4 = 0;
         ng var5 = null;
-        kd stackIn_3_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
@@ -32,38 +31,23 @@ final class tl {
               var3 = var2.field_f;
               var2.field_c = var3;
               var2 = var3;
-              stackIn_3_0 = (kd) (var2);
-              L2: while (true) {
-                if (stackIn_3_0 != param1.field_b) {
-                  continue L1;
-                } else {
-                  stackIn_3_0 = param1.field_b;
-
-                  if (var4 != 0) {
+              if (var2 != param1.field_b) {
+                continue L1;
+              } else {
+                var2 = param1.field_b;
+                L2: while (true) {
+                  var3 = var2.field_c;
+                  var3.field_f = var2;
+                  var2 = var3;
+                  if (param1.field_b != var2) {
                     continue L2;
                   } else {
-                    var2 = stackIn_3_0;
-                    L3: while (true) {
-                      var3 = var2.field_c;
-                      var3.field_f = var2;
-                      var2 = var3;
-                      L4: while (true) {
-                        if (param1.field_b != var2) {
-                          continue L3;
-                        } else {
-                          if (var4 != 0) {
-                            continue L4;
-                          } else {
-                            if (!param0) {
-                              break L0;
-                            } else {
-                              var5 = (ng) null;
-                              tl.a(true, (ng) null);
-                              return;
-                            }
-                          }
-                        }
-                      }
+                    if (!param0) {
+                      break L0;
+                    } else {
+                      var5 = (ng) null;
+                      tl.a(true, (ng) null);
+                      return;
                     }
                   }
                 }
@@ -72,25 +56,25 @@ final class tl {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L3: {
             var2_ref = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var2_ref);
+            stackIn_10_0 = (RuntimeException) (var2_ref);
 
-            stackIn_14_1 = new StringBuilder().append("tl.A(").append(param0).append(',');
+            stackIn_10_1 = new StringBuilder().append("tl.A(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L5;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
+              break L3;
             } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L5;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
+              break L3;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
     }
 
@@ -103,9 +87,8 @@ final class tl {
     }
 
     final int a(byte param0, int param1) {
-        int stackIn_6_0 = 0;
+        int stackIn_4_0 = 0;
         int stackIn_21_0 = 0;
-        int stackIn_36_0 = 0;
         int var3;
         int var4;
         var4 = Lexicominos.field_L ? 1 : 0;
@@ -114,132 +97,76 @@ final class tl {
             this.field_e = rf.a(param1, 47);
             this.field_d = 1;
             if (20 < this.field_d) {
-              stackIn_6_0 = 3;
+              stackIn_21_0 = 3;
               break L0;
             } else {
-              stackIn_6_0 = 1;
+              stackIn_21_0 = 1;
               break L0;
             }
           }
-          L1: {
-            L2: {
-              var3 = stackIn_6_0 * param1;
-              if (var3 > this.field_f / tg.field_j) {
-                break L2;
+          var3 = stackIn_21_0 * param1;
+          if (var3 > this.field_f / tg.field_j) {
+            var3 = this.field_f / tg.field_j;
+            if (param0 > 100) {
+              return var3;
+            } else {
+              this.field_e = -94;
+              return var3;
+            }
+          } else {
+            if (var3 < -this.field_f / tg.field_j) {
+              var3 = -this.field_f / tg.field_j;
+              if (param0 > 100) {
+                return var3;
               } else {
-                if (var3 < -this.field_f / tg.field_j) {
-                  var3 = -this.field_f / tg.field_j;
-                  if (var4 == 0) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                } else {
-                  if (param0 > 100) {
-                    return var3;
-                  } else {
-                    this.field_e = -94;
-                    return var3;
-                  }
-                }
+                this.field_e = -94;
+                return var3;
+              }
+            } else {
+              if (param0 > 100) {
+                return var3;
+              } else {
+                this.field_e = -94;
+                return var3;
               }
             }
-            var3 = this.field_f / tg.field_j;
-            break L1;
-          }
-          if (param0 <= 100) {
-            this.field_e = -94;
-            return var3;
-          } else {
-            return var3;
           }
         } else {
-          this.field_d = this.field_d + 1;
-          if (var4 == 0) {
-            L3: {
-              if (20 < this.field_d) {
-                stackIn_36_0 = 3;
-                break L3;
-              } else {
-                stackIn_36_0 = 1;
-                break L3;
-              }
+          L1: {
+            this.field_d = this.field_d + 1;
+            if (20 < this.field_d) {
+              stackIn_4_0 = 3;
+              break L1;
+            } else {
+              stackIn_4_0 = 1;
+              break L1;
             }
-            L4: {
-              L5: {
-                var3 = stackIn_36_0 * param1;
-                if (var3 > this.field_f / tg.field_j) {
-                  break L5;
-                } else {
-                  if (var3 < -this.field_f / tg.field_j) {
-                    var3 = -this.field_f / tg.field_j;
-                    if (var4 == 0) {
-                      break L4;
-                    } else {
-                      break L5;
-                    }
-                  } else {
-                    if (param0 <= 100) {
-                      this.field_e = -94;
-                      return var3;
-                    } else {
-                      return var3;
-                    }
-                  }
-                }
-              }
-              var3 = this.field_f / tg.field_j;
-              break L4;
-            }
-            if (param0 <= 100) {
-              this.field_e = -94;
+          }
+          var3 = stackIn_4_0 * param1;
+          if (var3 > this.field_f / tg.field_j) {
+            var3 = this.field_f / tg.field_j;
+            if (param0 > 100) {
               return var3;
             } else {
+              this.field_e = -94;
               return var3;
             }
           } else {
-            L6: {
-              this.field_e = rf.a(param1, 47);
-              this.field_d = 1;
-              if (20 < this.field_d) {
-                stackIn_21_0 = 3;
-                break L6;
+            if (var3 < -this.field_f / tg.field_j) {
+              var3 = -this.field_f / tg.field_j;
+              if (param0 > 100) {
+                return var3;
               } else {
-                stackIn_21_0 = 1;
-                break L6;
+                this.field_e = -94;
+                return var3;
               }
-            }
-            L7: {
-              L8: {
-                var3 = stackIn_21_0 * param1;
-                if (var3 > this.field_f / tg.field_j) {
-                  break L8;
-                } else {
-                  if (var3 < -this.field_f / tg.field_j) {
-                    var3 = -this.field_f / tg.field_j;
-                    if (var4 == 0) {
-                      break L7;
-                    } else {
-                      break L8;
-                    }
-                  } else {
-                    if (param0 <= 100) {
-                      this.field_e = -94;
-                      return var3;
-                    } else {
-                      return var3;
-                    }
-                  }
-                }
-              }
-              var3 = this.field_f / tg.field_j;
-              break L7;
-            }
-            if (param0 <= 100) {
-              this.field_e = -94;
-              return var3;
             } else {
-              return var3;
+              if (param0 > 100) {
+                return var3;
+              } else {
+                this.field_e = -94;
+                return var3;
+              }
             }
           }
         }

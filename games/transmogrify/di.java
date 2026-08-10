@@ -176,10 +176,10 @@ final class di {
         aa.field_g = false;
         if (lb.field_d) {
           wg.field_d.t(2121792);
-          if (param0 == -4690) {
+          if (param0 != -4690) {
+            field_e = -128;
             return;
           } else {
-            field_e = -128;
             return;
           }
         } else {
@@ -190,76 +190,32 @@ final class di {
               tg.field_c = wk.a(73, new CharSequence[]{(CharSequence) ((Object) tg.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) vi.field_b)});
               wg.field_d.r(77);
               dg.b(-86);
-              if (var2 == 0) {
-                if (param0 != -4690) {
-                  field_e = -128;
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                wg.field_d.t(2121792);
-                if (param0 != -4690) {
-                  field_e = -128;
-                  return;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              tg.field_c = hg.field_d;
-              if (var2 == 0) {
-                tg.field_c = wk.a(73, new CharSequence[]{(CharSequence) ((Object) tg.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) vi.field_b)});
-                wg.field_d.r(77);
-                dg.b(-86);
-                if (var2 == 0) {
-                  if (param0 != -4690) {
-                    field_e = -128;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  wg.field_d.t(2121792);
-                  if (param0 != -4690) {
-                    field_e = -128;
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                tg.field_c = ij.a(uh.field_d, new String[]{Integer.toString(var1)}, (byte) -78);
-                tg.field_c = wk.a(73, new CharSequence[]{(CharSequence) ((Object) tg.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) vi.field_b)});
-                wg.field_d.r(77);
-                dg.b(-86);
-                wg.field_d.t(2121792);
-                if (param0 != -4690) {
-                  field_e = -128;
-                  return;
-                } else {
-                  return;
-                }
-              }
-            }
-          } else {
-            wg.field_d.r(77);
-            dg.b(-86);
-            if (var2 != 0) {
-              wg.field_d.t(2121792);
-              if (param0 == -4690) {
-                return;
-              } else {
-                field_e = -128;
-                return;
-              }
-            } else {
               if (param0 != -4690) {
                 field_e = -128;
                 return;
               } else {
                 return;
               }
+            } else {
+              tg.field_c = hg.field_d;
+              tg.field_c = wk.a(73, new CharSequence[]{(CharSequence) ((Object) tg.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) vi.field_b)});
+              wg.field_d.r(77);
+              dg.b(-86);
+              if (param0 == -4690) {
+                return;
+              } else {
+                field_e = -128;
+                return;
+              }
+            }
+          } else {
+            wg.field_d.r(77);
+            dg.b(-86);
+            if (param0 == -4690) {
+              return;
+            } else {
+              field_e = -128;
+              return;
             }
           }
         }
@@ -307,161 +263,72 @@ final class di {
     }
 
     final static void c(int param0) {
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = Transmogrify.field_A ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var5 = ca.field_c;
-                        var1 = var5;
-                        var2 = 0;
-                        if (param0 == -11517) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        di.d(-51);
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var3 = var5.length;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var3 <= var2) {
-                            statePc = 11;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        incrementValue$8 = var2;
-                        var2++;
-                        var5[incrementValue$8] = 0;
-                        incrementValue$9 = var2;
-                        var2++;
-                        var5[incrementValue$9] = 0;
-                        incrementValue$10 = var2;
-                        var2++;
-                        var5[incrementValue$10] = 0;
-                        incrementValue$11 = var2;
-                        var2++;
-                        var5[incrementValue$11] = 0;
-                        incrementValue$12 = var2;
-                        var2++;
-                        var5[incrementValue$12] = 0;
-                        incrementValue$13 = var2;
-                        var2++;
-                        var5[incrementValue$13] = 0;
-                        incrementValue$14 = var2;
-                        var2++;
-                        var5[incrementValue$14] = 0;
-                        incrementValue$15 = var2;
-                        var2++;
-                        var5[incrementValue$15] = 0;
-                        if (var4 == 0) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    var1_ref = (RuntimeException) ((Object) caughtException);
-                    throw ch.a((Throwable) ((Object) var1_ref), "di.B(" + param0 + ')');
-                }
-                case 11: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
+        var4 = Transmogrify.field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var5 = ca.field_c;
+              var1 = var5;
+              var2 = 0;
+              if (param0 == -11517) {
+                break L1;
+              } else {
+                di.d(-51);
+                break L1;
+              }
             }
+            var3 = var5.length;
+            L2: while (true) {
+              if (var3 <= var2) {
+                break L0;
+              } else {
+                incrementValue$16 = var2;
+                var2++;
+                var5[incrementValue$16] = 0;
+                incrementValue$17 = var2;
+                var2++;
+                var5[incrementValue$17] = 0;
+                incrementValue$18 = var2;
+                var2++;
+                var5[incrementValue$18] = 0;
+                incrementValue$19 = var2;
+                var2++;
+                var5[incrementValue$19] = 0;
+                incrementValue$20 = var2;
+                var2++;
+                var5[incrementValue$20] = 0;
+                incrementValue$21 = var2;
+                var2++;
+                var5[incrementValue$21] = 0;
+                incrementValue$22 = var2;
+                var2++;
+                var5[incrementValue$22] = 0;
+                incrementValue$23 = var2;
+                var2++;
+                var5[incrementValue$23] = 0;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ch.a((Throwable) ((Object) var1_ref), "di.B(" + param0 + ')');
         }
     }
 

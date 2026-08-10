@@ -593,6 +593,7 @@ class ta extends pj implements c {
     }
 
     final void a(int param0, int param1, byte param2, pj param3, int param4, int param5) {
+        RuntimeException runtimeException = null;
         km var7 = null;
         pj var8 = null;
         int var9 = 0;
@@ -603,7 +604,6 @@ class ta extends pj implements c {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
         var9 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -635,8 +635,8 @@ class ta extends pj implements c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var7_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var7_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
 
             stackIn_10_1 = new StringBuilder().append("ta.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
@@ -993,6 +993,7 @@ class ta extends pj implements c {
     }
 
     void a(byte param0, pj param1, int param2, int param3) {
+        RuntimeException runtimeException = null;
         km var5 = null;
         pj var6 = null;
         int var7 = 0;
@@ -1002,7 +1003,6 @@ class ta extends pj implements c {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -1029,8 +1029,8 @@ class ta extends pj implements c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("ta.A(").append(param0).append(',');
 

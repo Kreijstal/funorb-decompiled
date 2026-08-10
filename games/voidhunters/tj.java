@@ -351,87 +351,90 @@ final class tj extends ara implements ntb {
         try {
           L0: {
             L1: {
-              var3_int = param1.a(this.field_d, (byte) 127);
-              var4 = param1.b(true, this.field_e);
-              if (param0 == this.field_m) {
-                var5 = param1.a(this.field_d - this.field_f, (byte) 123);
-                var6 = param1.b(true, -this.field_h + this.field_e);
-                c.a(var6, var5, var3_int, var4, -16777216, 16776977);
-                break L1;
-              } else {
-                if (-5 != (this.field_m ^ -1)) {
-                  if ((this.field_m ^ -1) != -4) {
-                    if (2 == this.field_m) {
-                      ena.a(var4, param1.field_a * 400.0f, param0 + -106, var3_int, 65280);
-                      break L1;
-                    } else {
-                      if (this.field_m != 5) {
-                        if (1 == this.field_m) {
-                          kq.a(2400.0f * param1.field_a, (byte) 96, var4, 65280, var3_int);
-                          ena.a(var4, 1600.0f * param1.field_a, -110, var3_int, 65280);
-                          break L1;
-                        } else {
-                          if (6 == this.field_m) {
-                            kq.a(1200.0f * param1.field_a, (byte) 80, var4, 16776960, var3_int);
-                            if ((this.field_l ^ -1) > -1) {
-                              var5 = cab.field_p / 2 >> -1899314136;
-                              var6 = 0;
-                              L2: while (true) {
-                                if ((var6 ^ -1) <= -9) {
-                                  break L1;
-                                } else {
-                                  var7 = (int)((float)(var5 * (fc.a(this.field_o + var6 << 1783446309, (byte) 33) >> 423143112)) * param1.field_a) + var3_int;
-                                  var8 = (int)((float)((eu.a(this.field_o + var6 << 402066693, 62) >> -1291582136) * var5) * param1.field_a) + var4;
-                                  hha.a(var3_int, (byte) 66, var7, var4, 65280, var8, 23);
-                                  var6++;
-                                  continue L2;
+              L2: {
+                var3_int = param1.a(this.field_d, (byte) 127);
+                var4 = param1.b(true, this.field_e);
+                if (param0 == this.field_m) {
+                  var5 = param1.a(this.field_d - this.field_f, (byte) 123);
+                  var6 = param1.b(true, -this.field_h + this.field_e);
+                  c.a(var6, var5, var3_int, var4, -16777216, 16776977);
+                  break L2;
+                } else {
+                  if (-5 != (this.field_m ^ -1)) {
+                    if ((this.field_m ^ -1) != -4) {
+                      if (2 == this.field_m) {
+                        ena.a(var4, param1.field_a * 400.0f, param0 + -106, var3_int, 65280);
+                        break L1;
+                      } else {
+                        if (this.field_m != 5) {
+                          if (1 == this.field_m) {
+                            kq.a(2400.0f * param1.field_a, (byte) 96, var4, 65280, var3_int);
+                            ena.a(var4, 1600.0f * param1.field_a, -110, var3_int, 65280);
+                            break L1;
+                          } else {
+                            if (6 == this.field_m) {
+                              kq.a(1200.0f * param1.field_a, (byte) 80, var4, 16776960, var3_int);
+                              if ((this.field_l ^ -1) > -1) {
+                                var5 = cab.field_p / 2 >> -1899314136;
+                                var6 = 0;
+                                L3: while (true) {
+                                  if ((var6 ^ -1) <= -9) {
+                                    break L2;
+                                  } else {
+                                    var7 = (int)((float)(var5 * (fc.a(this.field_o + var6 << 1783446309, (byte) 33) >> 423143112)) * param1.field_a) + var3_int;
+                                    var8 = (int)((float)((eu.a(this.field_o + var6 << 402066693, 62) >> -1291582136) * var5) * param1.field_a) + var4;
+                                    hha.a(var3_int, (byte) 66, var7, var4, 65280, var8, 23);
+                                    var6++;
+                                    continue L3;
+                                  }
                                 }
+                              } else {
+                                break L1;
                               }
                             } else {
                               break L1;
                             }
-                          } else {
-                            break L1;
                           }
+                        } else {
+                          ena.a(var4, param1.field_a * 400.0f, -100, var3_int, 65280);
+                          break L1;
                         }
-                      } else {
-                        ena.a(var4, param1.field_a * 400.0f, -100, var3_int, 65280);
-                        break L1;
                       }
+                    } else {
+                      L4: {
+                        var5 = param1.a(-this.field_f + this.field_d, (byte) 112);
+                        var6 = param1.b(true, this.field_e - this.field_h);
+                        var7 = qpb.a(false, this.field_p, 13894143);
+                        var8 = 255 * this.field_j / hrb.field_a;
+                        kra.a(var7, 3, 16994, var4, var8 >> -1114096927, var3_int, var5, var6);
+                        if (0 >= this.field_i) {
+                          break L4;
+                        } else {
+                          jj.a(var7, (byte) 7, var4, Math.max(3.0f, (float)var8 * (11.0f * param1.field_a)), var8 >> 762269377, var3_int);
+                          jj.a(var7, (byte) 7, var4, Math.max(2.0f, 8.0f * param1.field_a * (float)var8), var8, var3_int);
+                          break L4;
+                        }
+                      }
+                      jj.a(var7, (byte) 7, var6, Math.max(2.0f, param1.field_a * 8.0f * (float)var8), var8 >> 502021857, var5);
+                      jj.a(var7, (byte) 7, var6, Math.max(1.0f, (float)var8 * (param1.field_a * 4.0f)), var8, var5);
+                      hha.a(var3_int, (byte) 66, var5, var4, var7, var6, var8);
+                      break L1;
                     }
                   } else {
-                    L3: {
-                      var5 = param1.a(-this.field_f + this.field_d, (byte) 112);
-                      var6 = param1.b(true, this.field_e - this.field_h);
-                      var7 = qpb.a(false, this.field_p, 13894143);
-                      var8 = 255 * this.field_j / hrb.field_a;
-                      kra.a(var7, 3, 16994, var4, var8 >> -1114096927, var3_int, var5, var6);
-                      if (0 >= this.field_i) {
-                        break L3;
-                      } else {
-                        jj.a(var7, (byte) 7, var4, Math.max(3.0f, (float)var8 * (11.0f * param1.field_a)), var8 >> 762269377, var3_int);
-                        jj.a(var7, (byte) 7, var4, Math.max(2.0f, 8.0f * param1.field_a * (float)var8), var8, var3_int);
-                        break L3;
-                      }
-                    }
-                    jj.a(var7, (byte) 7, var6, Math.max(2.0f, param1.field_a * 8.0f * (float)var8), var8 >> 502021857, var5);
-                    jj.a(var7, (byte) 7, var6, Math.max(1.0f, (float)var8 * (param1.field_a * 4.0f)), var8, var5);
-                    hha.a(var3_int, (byte) 66, var5, var4, var7, var6, var8);
+                    var5 = param1.a(-this.field_f + this.field_d, (byte) 119);
+                    var6 = param1.b(true, this.field_e - this.field_h);
+                    c.a(var6, var5, var3_int, var4, param0 ^ -16777216, 16746632);
                     break L1;
                   }
-                } else {
-                  var5 = param1.a(-this.field_f + this.field_d, (byte) 119);
-                  var6 = param1.b(true, this.field_e - this.field_h);
-                  c.a(var6, var5, var3_int, var4, param0 ^ -16777216, 16746632);
-                  break L1;
                 }
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var3 = decompiledCaughtException;
             stackIn_25_0 = (RuntimeException) (var3);
 
@@ -441,12 +444,12 @@ final class tj extends ara implements ntb {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');

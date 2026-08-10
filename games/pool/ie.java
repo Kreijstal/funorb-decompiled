@@ -77,55 +77,58 @@ final class ie {
               var8 = (lk) ((Object) var7.b((byte) -92));
               L4: while (true) {
                 L5: {
-                  if (var8 == null) {
-                    break L5;
-                  } else {
-                    if (var4 >= 230) {
-                      break L5;
+                  L6: {
+                    if (var8 == null) {
+                      break L6;
                     } else {
-                      if (var8.field_n == null) {
-                        var8.c(-1);
-                        break L5;
+                      if (var4 >= 230) {
+                        break L6;
                       } else {
-                        L6: {
-                          stackIn_21_0 = (lk) (var8);
+                        if (var8.field_n == null) {
+                          var8.c(-1);
+                          break L5;
+                        } else {
+                          L7: {
+                            stackIn_21_0 = (lk) (var8);
 
-                          stackIn_21_1 = var8.field_p;
+                            stackIn_21_1 = var8.field_p;
 
-                          if (var3_int != 0) {
-                            stackIn_22_0 = (lk) ((Object) stackIn_21_0);
-                            stackIn_22_1 = stackIn_21_1;
-                            stackIn_22_2 = var5;
-                            break L6;
-                          } else {
-                            stackIn_22_0 = (lk) ((Object) stackIn_21_0);
-                            stackIn_22_1 = stackIn_21_1;
-                            stackIn_22_2 = var8.field_q;
-                            break L6;
-                          }
-                        }
-                        L7: {
-                          stackIn_22_0.field_p = stackIn_22_1 - stackIn_22_2;
-                          if (var8.field_p >= -var8.field_n.field_z) {
-                            break L7;
-                          } else {
-                            fieldTemp$0 = var8.field_l - 1;
-                            var8.field_l = var8.field_l - 1;
-                            if (-1 == (fieldTemp$0 ^ -1)) {
-                              var8.a((byte) -117);
+                            if (var3_int != 0) {
+                              stackIn_22_0 = (lk) ((Object) stackIn_21_0);
+                              stackIn_22_1 = stackIn_21_1;
+                              stackIn_22_2 = var5;
                               break L7;
                             } else {
-                              var8.field_p = var8.field_p + (4 + var8.field_n.field_z);
+                              stackIn_22_0 = (lk) ((Object) stackIn_21_0);
+                              stackIn_22_1 = stackIn_21_1;
+                              stackIn_22_2 = var8.field_q;
                               break L7;
                             }
                           }
+                          L8: {
+                            stackIn_22_0.field_p = stackIn_22_1 - stackIn_22_2;
+                            if (var8.field_p >= -var8.field_n.field_z) {
+                              break L8;
+                            } else {
+                              fieldTemp$0 = var8.field_l - 1;
+                              var8.field_l = var8.field_l - 1;
+                              if (-1 == (fieldTemp$0 ^ -1)) {
+                                var8.a((byte) -117);
+                                break L8;
+                              } else {
+                                var8.field_p = var8.field_p + (4 + var8.field_n.field_z);
+                                break L8;
+                              }
+                            }
+                          }
+                          var4 = var8.field_l * (4 + var8.field_n.field_z) + var8.field_p;
+                          var8 = (lk) ((Object) var7.b(-86));
+                          continue L4;
                         }
-                        var4 = var8.field_l * (4 + var8.field_n.field_z) + var8.field_p;
-                        var8 = (lk) ((Object) var7.b(-86));
-                        continue L4;
                       }
                     }
                   }
+                  break L5;
                 }
                 decompiledRegionSelector0 = 1;
                 break L0;

@@ -147,68 +147,65 @@ final class fe {
                 break L0;
               }
             }
-            if (cb.field_j == null) {
-              na.field_r.field_i = 0;
-              return;
-            } else {
-              L1: {
-                if (param1 < 0) {
-                  if (na.field_r.field_i == 0) {
-                    if (id.a(90) <= ua.field_E - -10000L) {
+            L1: {
+              if (cb.field_j == null) {
+                break L1;
+              } else {
+                L2: {
+                  if (param1 >= 0) {
+                    if (ra.field_b != ad.field_q) {
                       break L1;
                     } else {
-                      na.field_r.h(param1, 0);
-                      break L1;
+                      if (na.field_r.field_i != 0) {
+                        break L2;
+                      } else {
+                        if (id.a(90) <= ua.field_E - -10000L) {
+                          break L2;
+                        } else {
+                          na.field_r.h(param1, 0);
+                          break L2;
+                        }
+                      }
                     }
                   } else {
                     if (na.field_r.field_i != 0) {
-                      break L1;
+                      break L2;
                     } else {
                       if (id.a(90) <= ua.field_E - -10000L) {
-                        break L1;
+                        break L2;
                       } else {
                         na.field_r.h(param1, 0);
-                        break L1;
+                        break L2;
                       }
                     }
                   }
-                } else {
-                  if (na.field_r.field_i != 0) {
-                    break L1;
+                }
+                L3: {
+                  if (na.field_r.field_i <= 0) {
+                    break L3;
                   } else {
-                    if (id.a(90) <= ua.field_E - -10000L) {
-                      break L1;
-                    } else {
-                      na.field_r.h(param1, 0);
-                      break L1;
+                    try {
+                      L4: {
+                        cb.field_j.a(0, (byte) -89, na.field_r.field_i, na.field_r.field_g);
+                        ua.field_E = id.a(125);
+                        break L4;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        var2 = (IOException) (Object) decompiledCaughtException;
+                        mc.a((byte) -126);
+                        break L5;
+                      }
                     }
+                    na.field_r.field_i = 0;
+                    break L3;
                   }
                 }
+                return;
               }
-              L2: {
-                if (na.field_r.field_i <= 0) {
-                  break L2;
-                } else {
-                  try {
-                    L3: {
-                      cb.field_j.a(0, (byte) -89, na.field_r.field_i, na.field_r.field_g);
-                      ua.field_E = id.a(125);
-                      break L3;
-                    }
-                  } catch (java.io.IOException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L4: {
-                      var2 = (IOException) (Object) decompiledCaughtException;
-                      mc.a((byte) -126);
-                      break L4;
-                    }
-                  }
-                  na.field_r.field_i = 0;
-                  break L2;
-                }
-              }
-              return;
             }
+            na.field_r.field_i = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

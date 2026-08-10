@@ -251,80 +251,28 @@ class sl extends fe {
     }
 
     void a(ei param0, int param1, int param2, int param3) {
-        RuntimeException runtimeException = null;
-        int var6 = 0;
         io var7 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        int var6 = 0;
         try {
-          L0: {
-            L1: {
-              super.a(param0, param1, param2, param3);
-              this.k(-20923);
-              if (this.field_n != 1) {
-                break L1;
-              } else {
-                L2: {
-                  if (this.field_z instanceof io) {
+            super.a(param0, param1, param2, param3);
+            this.k(-20923);
+            if (this.field_n == 1) {
+                if (!(!(this.field_z instanceof io))) {
                     var7 = (io) ((Object) this.field_z);
                     var6 = var7.a(param3, wn.field_i, gg.field_f, (ei) (this), param1 + -882, param2);
-                    if (-1 == var6) {
-                      break L2;
-                    } else {
-                      L3: {
-                        if (!this.field_Q) {
-                          break L3;
-                        } else {
-                          if (var6 >= this.field_Z) {
-                            break L3;
-                          } else {
-                            if (var6 > this.field_N) {
-                              var6 = this.field_Z;
-                              break L3;
-                            } else {
-                              break L3;
+                    if (-1 != var6) {
+                        if (this.field_Q && var6 < this.field_Z) {
+                            if (!(var6 <= this.field_N)) {
+                                var6 = this.field_Z;
                             }
-                          }
                         }
-                      }
-                      this.field_R = var6;
-                      break L2;
+                        this.field_R = var6;
                     }
-                  } else {
-                    break L2;
-                  }
                 }
                 this.field_T = rl.a((byte) -126);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (runtimeException);
-
-            stackIn_14_1 = new StringBuilder().append("sl.S(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
-          }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) ((Object) runtimeException), "sl.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

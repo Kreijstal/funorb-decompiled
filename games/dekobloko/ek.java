@@ -434,71 +434,19 @@ class ek extends ce {
     }
 
     void a(ce param0, int param1, int param2, int param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 >= 38) {
-                break L1;
-              } else {
+            if (param1 < 38) {
                 this.field_H = true;
-                break L1;
-              }
             }
-            L2: {
-              super.a(param0, 94, param2, param3);
-              if (this.field_o == 0) {
-                break L2;
-              } else {
-                if (be.field_n == this.field_o) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (!this.a(bh.field_g, (byte) -124, param2, pm.field_f, param3)) {
-                      break L3;
-                    } else {
-                      if (be.field_n != 0) {
-                        break L3;
-                      } else {
-                        this.b(-param3 + bh.field_g, pm.field_f + -param2, this.field_o, 520);
-                        break L3;
-                      }
-                    }
-                  }
-                  this.a(pm.field_f, 64, param3, param0, param2, bh.field_g);
-                  break L2;
+            super.a(param0, 94, param2, param3);
+            if (this.field_o != 0 && be.field_n != this.field_o) {
+                if (this.a(bh.field_g, (byte) -124, param2, pm.field_f, param3) && be.field_n == 0) {
+                    this.b(-param3 + bh.field_g, pm.field_f + -param2, this.field_o, 520);
                 }
-              }
+                this.a(pm.field_f, 64, param3, param0, param2, bh.field_g);
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (runtimeException);
-
-            stackIn_11_1 = new StringBuilder().append("ek.A(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L4;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L4;
-            }
-          }
-          throw dh.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) ((Object) runtimeException), "ek.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

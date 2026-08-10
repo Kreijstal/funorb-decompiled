@@ -311,93 +311,18 @@ final class whb implements ntb {
     }
 
     public final void b(faa param0, int param1) {
-        RuntimeException runtimeException = null;
-        faa stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        faa stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        int stackIn_5_2 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param1 < -109) {
-              L1: {
-                stackIn_4_0 = (faa) (param0);
-
-                stackIn_4_1 = -100;
-
-                if (this.field_b == null) {
-                  stackIn_5_0 = (faa) ((Object) stackIn_4_0);
-                  stackIn_5_1 = stackIn_4_1;
-                  stackIn_5_2 = 0;
-                  break L1;
-                } else {
-                  stackIn_5_0 = (faa) ((Object) stackIn_4_0);
-                  stackIn_5_1 = stackIn_4_1;
-                  stackIn_5_2 = 1;
-                  break L1;
-                }
-              }
-              L2: {
-                if (!vq.a(stackIn_5_0, stackIn_5_1, stackIn_5_2 != 0)) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (this.field_b.getClass() == mo.class) {
-                      param0.a(-632, 0, 1);
-                      break L3;
-                    } else {
-                      if (this.field_b.getClass() != af.class) {
-                        break L3;
-                      } else {
-                        param0.a(-632, 1, 1);
-                        break L3;
-                      }
-                    }
-                  }
-                  this.field_b.b(param0, -122);
-                  break L2;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (runtimeException);
-
-            stackIn_14_1 = new StringBuilder().append("whb.B(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
+        if (param1 >= -109) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            if (vq.a(param0, -100, this.field_b != null ? true : false)) {
+                if (this.field_b.getClass() == mo.class || this.field_b.getClass() == af.class) {
+                    param0.a(-632, 0, 1);
+                }
+                this.field_b.b(param0, -122);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "whb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

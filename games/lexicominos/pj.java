@@ -238,35 +238,28 @@ final class pj extends nb implements ue, jk, ag {
     }
 
     public final void a(int param0, int param1, int param2, int param3, kf param4) {
-        boolean discarded$1 = false;
+        boolean discarded$0 = false;
         RuntimeException var6 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             L1: {
-              L2: {
-                if (param4 == this.field_P) {
-                  break L2;
+              if (param4 == this.field_P) {
+                ga.b(0);
+                break L1;
+              } else {
+                if (this.field_I != param4) {
+                  break L1;
                 } else {
-                  if (this.field_I != param4) {
-                    break L1;
-                  } else {
-                    discarded$1 = this.e(true);
-                    if (!Lexicominos.field_L) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
+                  discarded$0 = this.e(true);
+                  break L1;
                 }
               }
-              ga.b(0);
-              break L1;
             }
             if (param2 == 215535458) {
               break L0;
@@ -277,25 +270,25 @@ final class pj extends nb implements ue, jk, ag {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var6 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var6);
+            stackIn_9_0 = (RuntimeException) (var6);
 
-            stackIn_10_1 = new StringBuilder().append("pj.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+            stackIn_9_1 = new StringBuilder().append("pj.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 
             if (param4 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
+              break L2;
             } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
+              break L2;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
     }
 
@@ -452,44 +445,30 @@ final class pj extends nb implements ue, jk, ag {
         RuntimeException var5 = null;
         int var6 = 0;
         String var7 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if (-1 != (param2 ^ -1)) {
-                  break L2;
-                } else {
-                  jl.a("terms.ws", (byte) 80);
-                  if (var6 == 0) {
+              if (-1 != (param2 ^ -1)) {
+                if (1 != param2) {
+                  if ((param2 ^ -1) != -3) {
                     break L1;
                   } else {
-                    break L2;
+                    jl.a("conduct.ws", (byte) -45);
+                    break L1;
                   }
-                }
-              }
-              L3: {
-                if (1 != param2) {
-                  break L3;
                 } else {
                   jl.a("privacy.ws", (byte) 37);
-                  if (var6 == 0) {
-                    break L1;
-                  } else {
-                    break L3;
-                  }
+                  break L1;
                 }
-              }
-              if ((param2 ^ -1) != -3) {
-                break L1;
               } else {
-                jl.a("conduct.ws", (byte) -45);
+                jl.a("terms.ws", (byte) 80);
                 break L1;
               }
             }
@@ -503,25 +482,25 @@ final class pj extends nb implements ue, jk, ag {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var5 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var5);
+            stackIn_12_0 = (RuntimeException) (var5);
 
-            stackIn_14_1 = new StringBuilder().append("pj.IA(").append(param0).append(',');
+            stackIn_12_1 = new StringBuilder().append("pj.IA(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
             } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ',' + param3 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

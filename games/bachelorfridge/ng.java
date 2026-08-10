@@ -672,118 +672,121 @@ final class ng {
                               }
                             }
                           }
-                          if ((this.field_h.field_vb ^ -1) >= -51) {
-                            break L0;
-                          } else {
-                            if (!this.field_h.field_T) {
-                              break L0;
+                          L19: {
+                            if ((this.field_h.field_vb ^ -1) >= -51) {
+                              break L19;
                             } else {
-                              if (var10 == null) {
-                                break L0;
+                              if (!this.field_h.field_T) {
+                                break L19;
                               } else {
-                                L19: {
-                                  var31 = al.a(-128, var10.field_g);
-                                  var12 = mk.field_p - -4;
-                                  var13 = gd.field_m - -4;
-                                  var14 = var31.a((byte) 37);
-                                  var15 = var31.field_k;
-                                  if (-2 != (var31.field_a ^ -1)) {
-                                    stackIn_199_0 = 0;
-                                    break L19;
-                                  } else {
-                                    stackIn_199_0 = 1;
-                                    break L19;
+                                if (var10 == null) {
+                                  break L19;
+                                } else {
+                                  L20: {
+                                    var31 = al.a(-128, var10.field_g);
+                                    var12 = mk.field_p - -4;
+                                    var13 = gd.field_m - -4;
+                                    var14 = var31.a((byte) 37);
+                                    var15 = var31.field_k;
+                                    if (-2 != (var31.field_a ^ -1)) {
+                                      stackIn_199_0 = 0;
+                                      break L20;
+                                    } else {
+                                      stackIn_199_0 = 1;
+                                      break L20;
+                                    }
                                   }
-                                }
-                                L20: {
-                                  var16 = stackIn_199_0;
-                                  var17 = 10 + ad.field_h.c(var15, 200);
-                                  if ((var17 + var12 ^ -1) >= -621) {
-                                    break L20;
-                                  } else {
-                                    var12 = var12 + (-var17 + -var12 + 620);
-                                    break L20;
+                                  L21: {
+                                    var16 = stackIn_199_0;
+                                    var17 = 10 + ad.field_h.c(var15, 200);
+                                    if ((var17 + var12 ^ -1) >= -621) {
+                                      break L21;
+                                    } else {
+                                      var12 = var12 + (-var17 + -var12 + 620);
+                                      break L21;
+                                    }
                                   }
-                                }
-                                L21: {
-                                  stackIn_203_0 = ad.field_h.a(var15, 200, 10);
+                                  L22: {
+                                    stackIn_203_0 = ad.field_h.a(var15, 200, 10);
 
-                                  stackIn_203_1 = ad.field_h.field_F;
+                                    stackIn_203_1 = ad.field_h.field_F;
 
-                                  if (var16 == 0) {
-                                    stackIn_204_0 = stackIn_203_0;
-                                    stackIn_204_1 = stackIn_203_1;
-                                    stackIn_204_2 = 1;
-                                    break L21;
-                                  } else {
-                                    stackIn_204_0 = stackIn_203_0;
-                                    stackIn_204_1 = stackIn_203_1;
-                                    stackIn_204_2 = 2;
-                                    break L21;
+                                    if (var16 == 0) {
+                                      stackIn_204_0 = stackIn_203_0;
+                                      stackIn_204_1 = stackIn_203_1;
+                                      stackIn_204_2 = 1;
+                                      break L22;
+                                    } else {
+                                      stackIn_204_0 = stackIn_203_0;
+                                      stackIn_204_1 = stackIn_203_1;
+                                      stackIn_204_2 = 2;
+                                      break L22;
+                                    }
                                   }
-                                }
-                                L22: {
-                                  var18 = stackIn_204_0 + (stackIn_204_1 << stackIn_204_2);
-                                  if (i.field_a.field_rb >= var13 + var18) {
-                                    break L22;
-                                  } else {
-                                    var13 = var13 + (i.field_a.field_rb + -var13 - var18);
-                                    break L22;
-                                  }
-                                }
-                                dg.a(var12 - -13, var13, 6 + var17, var18, 10, 65793, 164);
-                                ad.field_h.c(var14, 20 + var12, var13 + 20, 0, -1);
-                                ad.field_h.a(var15, 20 + var12, var13 + 24, 200, 200, 0, -1, 0, 0, 10);
-                                var19 = ad.field_h.a(var15, 200, 8);
-                                if (var16 != 0) {
                                   L23: {
+                                    var18 = stackIn_204_0 + (stackIn_204_1 << stackIn_204_2);
+                                    if (i.field_a.field_rb >= var13 + var18) {
+                                      break L23;
+                                    } else {
+                                      var13 = var13 + (i.field_a.field_rb + -var13 - var18);
+                                      break L23;
+                                    }
+                                  }
+                                  dg.a(var12 - -13, var13, 6 + var17, var18, 10, 65793, 164);
+                                  ad.field_h.c(var14, 20 + var12, var13 + 20, 0, -1);
+                                  ad.field_h.a(var15, 20 + var12, var13 + 24, 200, 200, 0, -1, 0, 0, 10);
+                                  var19 = ad.field_h.a(var15, 200, 8);
+                                  if (var16 != 0) {
                                     L24: {
-                                      var20 = ((t) ((Object) var31)).field_q;
-                                      var21 = ((t) ((Object) var31)).field_u;
-                                      var22 = 2;
-                                      if (-2 == (((t) ((Object) var31)).field_p ^ -1)) {
-                                        break L24;
-                                      } else {
-                                        if (((t) ((Object) var31)).field_p == 4) {
-                                          break L24;
+                                      L25: {
+                                        var20 = ((t) ((Object) var31)).field_q;
+                                        var21 = ((t) ((Object) var31)).field_u;
+                                        var22 = 2;
+                                        if (-2 == (((t) ((Object) var31)).field_p ^ -1)) {
+                                          break L25;
                                         } else {
-                                          break L23;
+                                          if (((t) ((Object) var31)).field_p == 4) {
+                                            break L25;
+                                          } else {
+                                            break L24;
+                                          }
                                         }
                                       }
+                                      var22 = 3;
+                                      break L24;
                                     }
-                                    var22 = 3;
-                                    break L23;
-                                  }
-                                  L25: {
-                                    if ((var20 ^ -1) > -1) {
-                                      break L25;
+                                    L26: {
+                                      if ((var20 ^ -1) > -1) {
+                                        break L26;
+                                      } else {
+                                        var20 = (int)((double)var20 * it.field_c[var25.field_s.field_k[var22]] / 100.0);
+                                        break L26;
+                                      }
+                                    }
+                                    ad.field_h.c("Damage " + var20, 20 + var12, var19 + 48 + var13, 0, -1);
+                                    if (-1 == (var21 ^ -1)) {
+                                      break L19;
                                     } else {
-                                      var20 = (int)((double)var20 * it.field_c[var25.field_s.field_k[var22]] / 100.0);
-                                      break L25;
+                                      ad.field_h.b("Status effect " + kna.field_g[var21], var12 + (var17 + 10), 44 + (var13 - -var19), 0, -1);
+                                      break L0;
                                     }
-                                  }
-                                  ad.field_h.c("Damage " + var20, 20 + var12, var19 + 48 + var13, 0, -1);
-                                  if (-1 == (var21 ^ -1)) {
-                                    break L0;
                                   } else {
-                                    ad.field_h.b("Status effect " + kna.field_g[var21], var12 + (var17 + 10), 44 + (var13 - -var19), 0, -1);
                                     break L0;
                                   }
-                                } else {
-                                  break L0;
                                 }
                               }
                             }
                           }
+                          break L0;
                         } else {
-                          L26: {
+                          L27: {
                             if (!var8.field_T) {
-                              break L26;
+                              break L27;
                             } else {
                               if (50 >= var8.field_vb) {
-                                break L26;
+                                break L27;
                               } else {
-                                L27: {
+                                L28: {
                                   var28 = al.a(117, var8.field_zb);
                                   var12 = 620;
                                   var13 = i.field_a.field_rb;
@@ -792,43 +795,43 @@ final class ng {
                                   if (!var8.field_yb) {
                                     if (var25.field_s.f(0, var8.field_zb)) {
                                       stackIn_175_0 = 1;
-                                      break L27;
+                                      break L28;
                                     } else {
                                       stackIn_175_0 = 0;
-                                      break L27;
+                                      break L28;
                                     }
                                   } else {
                                     stackIn_175_0 = 0;
-                                    break L27;
-                                  }
-                                }
-                                L28: {
-                                  var16 = stackIn_175_0;
-                                  if (!var8.field_yb) {
-                                    if (!var25.field_s.c((byte) -10, var8.field_zb)) {
-                                      stackIn_181_0 = 1;
-                                      break L28;
-                                    } else {
-                                      stackIn_181_0 = 0;
-                                      break L28;
-                                    }
-                                  } else {
-                                    stackIn_181_0 = 0;
                                     break L28;
                                   }
                                 }
                                 L29: {
-                                  var17 = stackIn_181_0;
-                                  if (!var25.field_s.a(false, var8.field_zb)) {
-                                    break L29;
+                                  var16 = stackIn_175_0;
+                                  if (!var8.field_yb) {
+                                    if (!var25.field_s.c((byte) -10, var8.field_zb)) {
+                                      stackIn_181_0 = 1;
+                                      break L29;
+                                    } else {
+                                      stackIn_181_0 = 0;
+                                      break L29;
+                                    }
                                   } else {
-                                    var17 = 1;
-                                    var16 = 0;
+                                    stackIn_181_0 = 0;
                                     break L29;
                                   }
                                 }
+                                L30: {
+                                  var17 = stackIn_181_0;
+                                  if (!var25.field_s.a(false, var8.field_zb)) {
+                                    break L30;
+                                  } else {
+                                    var17 = 1;
+                                    var16 = 0;
+                                    break L30;
+                                  }
+                                }
                                 bi.a(var13, var17 != 0, 20, var28, var14_int, var12, var15_int, var16 != 0, var25.field_s.a(var28, -5313));
-                                break L26;
+                                break L27;
                               }
                             }
                           }
@@ -840,351 +843,351 @@ final class ng {
                       break L0;
                     }
                   } else {
-                    L30: {
+                    L31: {
                       var24 = al.a(-95, var8.field_zb);
                       var27 = var24;
                       dg.b(11 + var8.field_kb + this.field_d.field_kb, 11 + var8.field_rb + this.field_d.field_rb, 15, 65793);
                       if (!(var27 instanceof tv)) {
                         if (var27 instanceof hd) {
-                          L31: {
-                            L32: {
-                              if (var10 == null) {
-                                break L32;
-                              } else {
-                                if (var8.field_zb == var10.field_g) {
-                                  break L31;
-                                } else {
-                                  break L32;
-                                }
-                              }
-                            }
+                          L32: {
                             L33: {
-                              if (this.field_m.field_Z == null) {
+                              if (var10 == null) {
                                 break L33;
                               } else {
-                                if (var8.field_zb == this.field_m.field_Z.field_g) {
-                                  break L31;
+                                if (var8.field_zb == var10.field_g) {
+                                  break L32;
                                 } else {
                                   break L33;
                                 }
                               }
                             }
                             L34: {
-                              if (var8.field_yb) {
+                              if (this.field_m.field_Z == null) {
                                 break L34;
                               } else {
-                                if (var25.field_s.c((byte) -10, var8.field_zb)) {
-                                  nia.field_l[var27.field_b].e(-5 + var8.field_kb + this.field_d.field_kb, -5 + (var8.field_rb + this.field_d.field_rb), 11250603);
-                                  break L30;
+                                if (var8.field_zb == this.field_m.field_Z.field_g) {
+                                  break L32;
                                 } else {
                                   break L34;
                                 }
                               }
                             }
+                            L35: {
+                              if (var8.field_yb) {
+                                break L35;
+                              } else {
+                                if (var25.field_s.c((byte) -10, var8.field_zb)) {
+                                  nia.field_l[var27.field_b].e(-5 + var8.field_kb + this.field_d.field_kb, -5 + (var8.field_rb + this.field_d.field_rb), 11250603);
+                                  break L31;
+                                } else {
+                                  break L35;
+                                }
+                              }
+                            }
                             nia.field_l[ur.field_e[var8.field_zb].field_b].e(-5 + this.field_d.field_kb + var8.field_kb, -5 + this.field_d.field_rb - -var8.field_rb, 14964736);
-                            break L30;
+                            break L31;
                           }
                           nia.field_l[var27.field_b].e(-5 + this.field_d.field_kb - -var8.field_kb, this.field_d.field_rb - (-var8.field_rb + 5), 16769792);
-                          break L30;
+                          break L31;
                         } else {
                           if (!(var27 instanceof t)) {
-                            break L30;
+                            break L31;
                           } else {
-                            L35: {
+                            L36: {
                               if (1 == ((t) ((Object) var27)).field_p) {
-                                break L35;
+                                break L36;
                               } else {
                                 if (2 != ((t) ((Object) var27)).field_p) {
                                   if (-5 != (((t) ((Object) var27)).field_p ^ -1)) {
-                                    L36: {
-                                      L37: {
-                                        if (var10 == null) {
-                                          break L37;
-                                        } else {
-                                          if (var10.field_g == var8.field_zb) {
-                                            break L36;
-                                          } else {
-                                            break L37;
-                                          }
-                                        }
-                                      }
+                                    L37: {
                                       L38: {
-                                        if (null == this.field_m.field_Z) {
+                                        if (var10 == null) {
                                           break L38;
                                         } else {
-                                          if (var8.field_zb == this.field_m.field_Z.field_g) {
-                                            break L36;
+                                          if (var10.field_g == var8.field_zb) {
+                                            break L37;
                                           } else {
                                             break L38;
                                           }
                                         }
                                       }
                                       L39: {
-                                        if (var8.field_yb) {
+                                        if (null == this.field_m.field_Z) {
                                           break L39;
                                         } else {
-                                          if (var25.field_s.c((byte) -10, var8.field_zb)) {
-                                            nia.field_l[var27.field_b].e(-5 + this.field_d.field_kb + var8.field_kb, this.field_d.field_rb - (-var8.field_rb + 5), 11250603);
-                                            break L30;
+                                          if (var8.field_zb == this.field_m.field_Z.field_g) {
+                                            break L37;
                                           } else {
                                             break L39;
                                           }
                                         }
                                       }
+                                      L40: {
+                                        if (var8.field_yb) {
+                                          break L40;
+                                        } else {
+                                          if (var25.field_s.c((byte) -10, var8.field_zb)) {
+                                            nia.field_l[var27.field_b].e(-5 + this.field_d.field_kb + var8.field_kb, this.field_d.field_rb - (-var8.field_rb + 5), 11250603);
+                                            break L31;
+                                          } else {
+                                            break L40;
+                                          }
+                                        }
+                                      }
                                       nia.field_l[ur.field_e[var8.field_zb].field_b].e(this.field_d.field_kb - -var8.field_kb + -5, this.field_d.field_rb + (var8.field_rb - 5), 15204352);
-                                      break L30;
+                                      break L31;
                                     }
                                     nia.field_l[var27.field_b].e(-5 + (this.field_d.field_kb + var8.field_kb), this.field_d.field_rb + var8.field_rb + -5, 16725815);
-                                    break L30;
+                                    break L31;
                                   } else {
-                                    L40: {
-                                      L41: {
+                                    L41: {
+                                      L42: {
                                         if (var10 == null) {
-                                          break L41;
+                                          break L42;
                                         } else {
                                           if (var10.field_g == var8.field_zb) {
-                                            break L40;
+                                            break L41;
+                                          } else {
+                                            break L42;
+                                          }
+                                        }
+                                      }
+                                      L43: {
+                                        if (this.field_m.field_Z == null) {
+                                          break L43;
+                                        } else {
+                                          if (var8.field_zb != this.field_m.field_Z.field_g) {
+                                            break L43;
                                           } else {
                                             break L41;
                                           }
                                         }
                                       }
-                                      L42: {
-                                        if (this.field_m.field_Z == null) {
-                                          break L42;
-                                        } else {
-                                          if (var8.field_zb != this.field_m.field_Z.field_g) {
-                                            break L42;
-                                          } else {
-                                            break L40;
-                                          }
-                                        }
-                                      }
-                                      L43: {
+                                      L44: {
                                         if (var8.field_yb) {
-                                          break L43;
+                                          break L44;
                                         } else {
                                           if (!var25.field_s.c((byte) -10, var8.field_zb)) {
-                                            break L43;
+                                            break L44;
                                           } else {
                                             nia.field_l[var27.field_b].e(this.field_d.field_kb + (var8.field_kb + -5), this.field_d.field_rb + (var8.field_rb - 5), 11250603);
-                                            break L30;
+                                            break L31;
                                           }
                                         }
                                       }
                                       nia.field_l[ur.field_e[var8.field_zb].field_b].e(var8.field_kb + (this.field_d.field_kb - 5), this.field_d.field_rb - (-var8.field_rb + 5), 16754688);
-                                      break L30;
+                                      break L31;
                                     }
                                     nia.field_l[var27.field_b].e(-5 + var8.field_kb + this.field_d.field_kb, -5 + this.field_d.field_rb - -var8.field_rb, 16769792);
-                                    break L30;
+                                    break L31;
                                   }
                                 } else {
-                                  break L35;
+                                  break L36;
                                 }
                               }
                             }
-                            L44: {
-                              L45: {
+                            L45: {
+                              L46: {
                                 if (var10 == null) {
-                                  break L45;
+                                  break L46;
                                 } else {
                                   if (var10.field_g == var8.field_zb) {
-                                    break L44;
+                                    break L45;
+                                  } else {
+                                    break L46;
+                                  }
+                                }
+                              }
+                              L47: {
+                                if (this.field_m.field_Z == null) {
+                                  break L47;
+                                } else {
+                                  if (this.field_m.field_Z.field_g != var8.field_zb) {
+                                    break L47;
                                   } else {
                                     break L45;
                                   }
                                 }
                               }
-                              L46: {
-                                if (this.field_m.field_Z == null) {
-                                  break L46;
-                                } else {
-                                  if (this.field_m.field_Z.field_g != var8.field_zb) {
-                                    break L46;
-                                  } else {
-                                    break L44;
-                                  }
-                                }
-                              }
-                              L47: {
+                              L48: {
                                 if (var8.field_yb) {
-                                  break L47;
+                                  break L48;
                                 } else {
                                   if (var25.field_s.c((byte) -10, var8.field_zb)) {
                                     nia.field_l[var27.field_b].e(-5 + (var8.field_kb + this.field_d.field_kb), this.field_d.field_rb + (var8.field_rb - 5), 11250603);
-                                    break L30;
+                                    break L31;
                                   } else {
-                                    break L47;
+                                    break L48;
                                   }
                                 }
                               }
                               nia.field_l[ur.field_e[var8.field_zb].field_b].e(this.field_d.field_kb - (-var8.field_kb + 5), -5 + (this.field_d.field_rb + var8.field_rb), 818659);
-                              break L30;
+                              break L31;
                             }
                             nia.field_l[var27.field_b].e(-5 + this.field_d.field_kb + var8.field_kb, -5 + var8.field_rb + this.field_d.field_rb, 4564479);
-                            break L30;
+                            break L31;
                           }
                         }
                       } else {
-                        L48: {
-                          L49: {
-                            if (var10 == null) {
-                              break L49;
-                            } else {
-                              if (var10.field_g == var8.field_zb) {
-                                break L48;
-                              } else {
-                                break L49;
-                              }
-                            }
-                          }
+                        L49: {
                           L50: {
-                            if (this.field_m.field_Z == null) {
+                            if (var10 == null) {
                               break L50;
                             } else {
-                              if (var8.field_zb == this.field_m.field_Z.field_g) {
-                                break L48;
+                              if (var10.field_g == var8.field_zb) {
+                                break L49;
                               } else {
                                 break L50;
                               }
                             }
                           }
                           L51: {
-                            if (var8.field_yb) {
+                            if (this.field_m.field_Z == null) {
                               break L51;
                             } else {
-                              if (!var25.field_s.c((byte) -10, var8.field_zb)) {
+                              if (var8.field_zb == this.field_m.field_Z.field_g) {
+                                break L49;
+                              } else {
                                 break L51;
+                              }
+                            }
+                          }
+                          L52: {
+                            if (var8.field_yb) {
+                              break L52;
+                            } else {
+                              if (!var25.field_s.c((byte) -10, var8.field_zb)) {
+                                break L52;
                               } else {
                                 nia.field_l[var24.field_b].e(this.field_d.field_kb - -var8.field_kb - 5, -5 + this.field_d.field_rb - -var8.field_rb, 11250603);
-                                break L30;
+                                break L31;
                               }
                             }
                           }
                           nia.field_l[ur.field_e[var8.field_zb].field_b].e(-5 + (this.field_d.field_kb - -var8.field_kb), this.field_d.field_rb + var8.field_rb + -5, 51233);
-                          break L30;
+                          break L31;
                         }
                         nia.field_l[var27.field_b].e(-5 + (var8.field_kb + this.field_d.field_kb), var8.field_rb + this.field_d.field_rb - 5, 4388192);
-                        break L30;
-                      }
-                    }
-                    L52: {
-                      if (-1 == var8.field_zb) {
-                        break L52;
-                      } else {
-                        if (-4 == (al.a(102, var8.field_zb).field_a ^ -1)) {
-                          break L52;
-                        } else {
-                          wca.a(true, -4 + this.field_d.field_rb - -var8.field_rb, var8.field_kb + (this.field_d.field_kb - 4), var8.field_zb, 90);
-                          break L52;
-                        }
+                        break L31;
                       }
                     }
                     L53: {
-                      L54: {
+                      if (-1 == var8.field_zb) {
+                        break L53;
+                      } else {
+                        if (-4 == (al.a(102, var8.field_zb).field_a ^ -1)) {
+                          break L53;
+                        } else {
+                          wca.a(true, -4 + this.field_d.field_rb - -var8.field_rb, var8.field_kb + (this.field_d.field_kb - 4), var8.field_zb, 90);
+                          break L53;
+                        }
+                      }
+                    }
+                    L54: {
+                      L55: {
                         var12 = 0;
                         if (this.field_m.field_P.field_s.field_y == 40) {
-                          break L54;
+                          break L55;
                         } else {
                           if ((this.field_m.field_P.field_s.field_y ^ -1) == -43) {
-                            break L54;
+                            break L55;
                           } else {
                             if (this.field_m.field_P.field_s.field_y != 39) {
                               if (2 != var27.field_a) {
                                 if ((var27.field_a ^ -1) != -2) {
-                                  L55: {
-                                    L56: {
+                                  L56: {
+                                    L57: {
                                       if (this.field_m.field_h.a(this.field_m.field_Y, false) <= 0) {
-                                        break L56;
+                                        break L57;
                                       } else {
                                         if (-5 != (var27.field_a ^ -1)) {
-                                          break L56;
+                                          break L57;
                                         } else {
                                           stackIn_152_0 = 0;
-                                          break L55;
+                                          break L56;
                                         }
                                       }
                                     }
                                     if (var25.field_s.c((byte) -10, var27.field_j)) {
                                       stackIn_152_0 = 1;
-                                      break L55;
+                                      break L56;
                                     } else {
                                       stackIn_152_0 = 0;
-                                      break L55;
+                                      break L56;
                                     }
                                   }
                                   var12 = stackIn_152_0;
-                                  break L53;
+                                  break L54;
                                 } else {
-                                  L57: {
+                                  L58: {
                                     if (-3 == (this.field_m.field_M ^ -1)) {
                                       if (var25.field_s.c((byte) -10, var27.field_j)) {
                                         stackIn_143_0 = 1;
-                                        break L57;
+                                        break L58;
                                       } else {
                                         stackIn_143_0 = 0;
-                                        break L57;
+                                        break L58;
                                       }
                                     } else {
                                       stackIn_143_0 = 0;
-                                      break L57;
+                                      break L58;
                                     }
                                   }
                                   var12 = stackIn_143_0;
-                                  break L53;
+                                  break L54;
                                 }
                               } else {
-                                L58: {
+                                L59: {
                                   if (-2 != (this.field_m.field_M ^ -1)) {
                                     stackIn_135_0 = 0;
-                                    break L58;
+                                    break L59;
                                   } else {
                                     stackIn_135_0 = 1;
-                                    break L58;
+                                    break L59;
                                   }
                                 }
                                 var12 = stackIn_135_0;
-                                break L53;
+                                break L54;
                               }
                             } else {
-                              break L54;
+                              break L55;
                             }
                           }
                         }
                       }
                       var12 = 0;
-                      break L53;
+                      break L54;
                     }
-                    L59: {
-                      L60: {
+                    L60: {
+                      L61: {
                         if (!var8.field_yb) {
-                          break L60;
+                          break L61;
                         } else {
                           if (var12 != 0) {
-                            break L59;
-                          } else {
                             break L60;
+                          } else {
+                            break L61;
                           }
                         }
                       }
-                      L61: {
+                      L62: {
                         if (var25.field_s.f(0, var8.field_zb)) {
                           var13_ref_oha = ur.field_e[var8.field_zb];
                           var14_int = var25.field_s.b(var8.field_zb, (byte) -110);
                           var15_int = -var25.field_s.field_K[var14_int] + var13_ref_oha.field_g;
                           if ((var15_int ^ -1) != 1) {
                             ad.field_h.c(Integer.toString(var15_int), 2 + (this.field_d.field_kb - -var8.field_kb), var8.field_rb + this.field_d.field_rb - -20, 2, -1);
-                            break L61;
+                            break L62;
                           } else {
-                            break L61;
+                            break L62;
                           }
                         } else {
-                          break L61;
+                          break L62;
                         }
                       }
                       dg.d(this.field_d.field_kb - -var8.field_kb, this.field_d.field_rb + var8.field_rb, (var8.field_sb >> 8365345) + var8.field_kb + this.field_d.field_kb - -6, 6 + (var8.field_rb + this.field_d.field_rb) - -(var8.field_p >> -2138002559), 65793, 4);
                       dg.d(this.field_d.field_kb - -var8.field_kb - -1, 1 + (this.field_d.field_rb + var8.field_rb), 5 + ((var8.field_sb >> -538919711) + var8.field_kb + this.field_d.field_kb), 5 + (var8.field_p >> 286502977) + (var8.field_rb + this.field_d.field_rb), 16711680, 2);
-                      break L59;
+                      break L60;
                     }
                     var8 = (jj) ((Object) this.field_d.field_z.c(0));
                     continue L14;

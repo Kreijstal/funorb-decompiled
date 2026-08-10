@@ -191,75 +191,19 @@ class ng extends ee {
     }
 
     void a(ee param0, int param1, byte param2, int param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            super.a(param0, param1, (byte) -112, param3);
-            if (param2 < -97) {
-              L1: {
-                if (-1 == (this.field_z ^ -1)) {
-                  break L1;
-                } else {
-                  if (this.field_z == wh.field_e) {
-                    break L1;
-                  } else {
-                    L2: {
-                      if (!this.a(ph.field_d, kc.field_u, param3, -29991, param1)) {
-                        break L2;
-                      } else {
-                        if (wh.field_e != 0) {
-                          break L2;
-                        } else {
-                          this.a(-param3 + ph.field_d, -13461, kc.field_u + -param1, this.field_z);
-                          break L2;
-                        }
-                      }
-                    }
-                    this.a(param3, (byte) 119, param0, param1, kc.field_u, ph.field_d);
-                    break L1;
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (runtimeException);
-
-            stackIn_11_1 = new StringBuilder().append("ng.U(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
-          }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        super.a(param0, param1, (byte) -112, param3);
+        if (param2 >= -97) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            if (-1 != (this.field_z ^ -1) && this.field_z != wh.field_e) {
+                if (this.a(ph.field_d, kc.field_u, param3, -29991, param1) && wh.field_e == 0) {
+                    this.a(-param3 + ph.field_d, -13461, kc.field_u + -param1, this.field_z);
+                }
+                this.a(param3, (byte) 119, param0, param1, kc.field_u, ph.field_d);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) ((Object) runtimeException), "ng.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

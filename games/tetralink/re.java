@@ -85,71 +85,38 @@ final class re extends ae {
     }
 
     final static void e(byte param0) {
-        RuntimeException runtimeException = null;
-        int var1_int = 0;
         gd var2 = null;
-        int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var3 = TetraLink.field_J;
+        int var3 = TetraLink.field_J;
         try {
-          L0: {
-            L1: {
-              kl.field_a = false;
-              qe.field_a = null;
-              qb.field_N = null;
-              if (gl.field_p != null) {
+            kl.field_a = false;
+            qe.field_a = null;
+            qb.field_N = null;
+            if (!(gl.field_p == null)) {
                 gl.field_p.b(1);
                 gl.field_p = null;
-                break L1;
-              } else {
-                break L1;
-              }
             }
-            L2: {
-              db.field_a = null;
-              if (null == jl.field_a) {
-                break L2;
-              } else {
+            db.field_a = null;
+            if (null != jl.field_a) {
                 jl.field_a.b(1);
                 jl.field_a = null;
-                break L2;
-              }
             }
-            L3: {
-              db.field_e = null;
-              var1_int = 39 / ((param0 - 14) / 42);
-              if (ui.field_d != null) {
+            db.field_e = null;
+            int var1_int = 39 / ((param0 - 14) / 42);
+            if (!(ui.field_d == null)) {
                 ui.field_d.b(1);
                 ui.field_d = null;
-                break L3;
-              } else {
-                break L3;
-              }
             }
-            L4: {
-              dg.field_g = null;
-              if (null == db.field_a) {
-                break L4;
-              } else {
+            dg.field_g = null;
+            if (null != db.field_a) {
                 var2 = (gd) ((Object) db.field_a.b(-104));
-                L5: while (true) {
-                  if (var2 == null) {
-                    db.field_a = null;
-                    break L4;
-                  } else {
+                while (var2 != null) {
                     var2.e(0);
                     var2 = (gd) ((Object) db.field_a.d(-1));
-                    continue L5;
-                  }
                 }
-              }
+                db.field_a = null;
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw oi.a((Throwable) ((Object) runtimeException), "re.C(" + param0 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) ((Object) runtimeException), "re.C(" + param0 + ')');
         }
     }
 

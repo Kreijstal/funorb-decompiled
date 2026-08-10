@@ -98,59 +98,40 @@ final class hl {
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
-        int var4 = 0;
-        int var7 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_13_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
+        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        int var7 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_10_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
             var3_int = 2147483647;
             var4 = 0;
             if (param0 == 1) {
-              stackIn_6_0 = 17;
               L1: while (true) {
-                L2: {
-                  L3: {
-                    if (stackIn_6_0 <= var4) {
-                      break L3;
+                if (17 <= var4) {
+                  stackIn_10_0 = var3_int;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L2: {
+                    var5 = -param2 + (int)pe.field_d[var4].field_e[0];
+                    var6 = (int)pe.field_d[var4].field_e[1] + -param1;
+                    if (var5 * var5 + var6 * var6 < var3_int) {
+                      var3_int = var6 * var6 + var5 * var5;
+                      break L2;
                     } else {
-                      var5 = -param2 + (int)pe.field_d[var4].field_e[0];
-                      var6 = (int)pe.field_d[var4].field_e[1] + -param1;
-                      stackIn_13_0 = var5 * var5 + var6 * var6;
-
-                      if (var7 != 0) {
-                        break L2;
-                      } else {
-                        L4: {
-                          if (stackIn_13_0 < var3_int) {
-                            var3_int = var6 * var6 + var5 * var5;
-                            break L4;
-                          } else {
-                            break L4;
-                          }
-                        }
-                        var4++;
-                        if (var7 == 0) {
-                          stackIn_6_0 = 17;
-                          continue L1;
-                        } else {
-                          break L3;
-                        }
-                      }
+                      break L2;
                     }
                   }
-                  stackIn_13_0 = var3_int;
-                  break L2;
+                  var4++;
+                  continue L1;
                 }
-                decompiledRegionSelector0 = 1;
-                break L0;
               }
             } else {
               stackIn_3_0 = -108;
@@ -166,7 +147,7 @@ final class hl {
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0;
         } else {
-          return stackIn_13_0;
+          return stackIn_10_0;
         }
     }
 
@@ -197,24 +178,13 @@ final class hl {
     }
 
     hl(boolean param0) {
-        L0: {
-          L1: {
-            this.field_e = o.field_c;
-            this.field_k = c.field_b;
-            this.field_g = sd.field_b;
-            if (param0) {
-              break L1;
-            } else {
-              this.field_l = null;
-              if (!MonkeyPuzzle2.field_F) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          this.field_l = wh.field_e;
-          break L0;
+        this.field_e = o.field_c;
+        this.field_k = c.field_b;
+        this.field_g = sd.field_b;
+        if (!param0) {
+            this.field_l = null;
+        } else {
+            this.field_l = wh.field_e;
         }
         this.field_h = i.field_h;
         this.field_i = lf.field_c;

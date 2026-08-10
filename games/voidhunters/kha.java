@@ -656,40 +656,43 @@ final class kha {
         try {
           L0: {
             L1: {
-              this.field_t = param0;
-              if (!this.field_t.field_U) {
-                break L1;
-              } else {
-                if (!this.field_t.field_g) {
-                  break L1;
+              L2: {
+                this.field_t = param0;
+                if (!this.field_t.field_U) {
+                  break L2;
                 } else {
-                  dupTemp$2 = new rpa(this.field_t);
-                  this.field_o = dupTemp$2;
-                  this.field_h = dupTemp$2;
-                  if (1 >= this.field_t.field_Kc) {
-                    break L1;
+                  if (!this.field_t.field_g) {
+                    break L2;
                   } else {
-                    if (!this.field_t.field_Ob) {
-                      break L1;
+                    dupTemp$2 = new rpa(this.field_t);
+                    this.field_o = dupTemp$2;
+                    this.field_h = dupTemp$2;
+                    if (1 >= this.field_t.field_Kc) {
+                      break L2;
                     } else {
-                      if (!this.field_t.field_gb) {
-                        break L1;
+                      if (!this.field_t.field_Ob) {
+                        break L2;
                       } else {
-                        dupTemp$3 = new rpa(this.field_t);
-                        this.field_s = dupTemp$3;
-                        this.field_h = dupTemp$3;
-                        break L1;
+                        if (!this.field_t.field_gb) {
+                          break L1;
+                        } else {
+                          dupTemp$3 = new rpa(this.field_t);
+                          this.field_s = dupTemp$3;
+                          this.field_h = dupTemp$3;
+                          break L2;
+                        }
                       }
                     }
                   }
                 }
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             runtimeException = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (runtimeException);
 
@@ -699,12 +702,12 @@ final class kha {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L2;
+              break L3;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L2;
+              break L3;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');

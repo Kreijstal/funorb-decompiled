@@ -5042,23 +5042,26 @@ final class hi implements uj {
                                     break L28;
                                   }
                                 }
-                                if ((var10 ^ -1) >= -1) {
-                                  break L24;
-                                } else {
-                                  if (!param2) {
-                                    break L24;
+                                L41: {
+                                  if ((var10 ^ -1) >= -1) {
+                                    break L41;
                                   } else {
-                                    throw new RuntimeException("After full attack movement, " + this.field_w.field_t + " still hasn't sent enough fleets to " + param1.field_n.field_I);
+                                    if (!param2) {
+                                      break L41;
+                                    } else {
+                                      throw new RuntimeException("After full attack movement, " + this.field_w.field_t + " still hasn't sent enough fleets to " + param1.field_n.field_I);
+                                    }
                                   }
                                 }
+                                break L24;
                               } else {
                                 var13 = 0;
                                 var15 = 0;
-                                L41: while (true) {
+                                L42: while (true) {
                                   if (var15 >= -1 + var29.length) {
                                     continue L26;
                                   } else {
-                                    L42: {
+                                    L43: {
                                       if (q.field_Ab[var29[var15].field_p] > q.field_Ab[var12[var15 + 1].field_p]) {
                                         var14 = var29[var15];
                                         var19 = var14;
@@ -5066,13 +5069,13 @@ final class hi implements uj {
                                         var12[var15] = var12[var15 + 1];
                                         var13 = 1;
                                         var12[1 + var15] = var14;
-                                        break L42;
+                                        break L43;
                                       } else {
-                                        break L42;
+                                        break L43;
                                       }
                                     }
                                     var15++;
-                                    continue L41;
+                                    continue L42;
                                   }
                                 }
                               }
@@ -5084,12 +5087,12 @@ final class hi implements uj {
                         decompiledRegionSelector0 = 0;
                         break L0;
                       } else {
-                        L43: {
+                        L44: {
                           if ((this.field_n[var10] ^ -1) <= (var32[var10] ^ -1)) {
-                            break L43;
+                            break L44;
                           } else {
                             var8[var10] = this.field_n[var10];
-                            break L43;
+                            break L44;
                           }
                         }
                         var9 = var9 + var32[var10];
@@ -5098,13 +5101,13 @@ final class hi implements uj {
                       }
                     }
                   } else {
-                    L44: {
+                    L45: {
                       if (0 == (var35[var9] ^ -1)) {
-                        break L44;
+                        break L45;
                       } else {
                         dupTemp$0 = var35[var9];
                         var8[dupTemp$0] = var8[dupTemp$0] + q.field_Ab[var23[var9].field_p];
-                        break L44;
+                        break L45;
                       }
                     }
                     var9++;
@@ -5112,23 +5115,23 @@ final class hi implements uj {
                   }
                 }
               } else {
-                L45: {
+                L46: {
                   if (var23[var8_int].field_y == this.field_w) {
                     var7 = 0;
                     var6 = 0;
                     var9_ref_sd = (sd) ((Object) this.field_w.field_i.d(0));
-                    L46: while (true) {
-                      L47: {
+                    L47: while (true) {
+                      L48: {
                         if (var9_ref_sd == null) {
-                          break L47;
+                          break L48;
                         } else {
                           if (var23[var8_int].field_R != var9_ref_sd) {
                             var6++;
                             var9_ref_sd = (sd) ((Object) this.field_w.field_i.a((byte) -71));
-                            continue L46;
+                            continue L47;
                           } else {
                             var7 = 1;
-                            break L47;
+                            break L48;
                           }
                         }
                       }
@@ -5136,12 +5139,12 @@ final class hi implements uj {
                         throw new RuntimeException("Can't find the Territory of a star owned by the AI: " + var23[var8_int].field_I);
                       } else {
                         var35[var8_int] = var6;
-                        break L45;
+                        break L46;
                       }
                     }
                   } else {
                     var35[var8_int] = -1;
-                    break L45;
+                    break L46;
                   }
                 }
                 var8_int++;
@@ -5151,7 +5154,7 @@ final class hi implements uj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L48: {
+          L49: {
             var4_ref = decompiledCaughtException;
             stackIn_155_0 = (RuntimeException) (var4_ref);
 
@@ -5161,12 +5164,12 @@ final class hi implements uj {
               stackIn_156_0 = (RuntimeException) ((Object) stackIn_155_0);
               stackIn_156_1 = (StringBuilder) ((Object) stackIn_155_1);
               stackIn_156_2 = "null";
-              break L48;
+              break L49;
             } else {
               stackIn_156_0 = (RuntimeException) ((Object) stackIn_155_0);
               stackIn_156_1 = (StringBuilder) ((Object) stackIn_155_1);
               stackIn_156_2 = "{...}";
-              break L48;
+              break L49;
             }
           }
           throw r.a((Throwable) ((Object) stackIn_156_0), stackIn_156_2 + ',' + param2 + ')');

@@ -94,7 +94,24 @@ final class of {
               }
             }
             L2: {
-              if (this.field_c == 0) {
+              if (this.field_c != 0) {
+                L3: {
+                  if (0 != wh.field_f) {
+                    L4: {
+                      if (-1 > (this.field_d ^ -1)) {
+                        break L4;
+                      } else {
+                        this.field_d = jh.field_f;
+                        this.field_l = this.field_c;
+                        break L4;
+                      }
+                    }
+                    this.field_d = this.field_d - 1;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
                 if (-1 != (th.field_d ^ -1)) {
                   break L2;
                 } else {
@@ -118,39 +135,39 @@ final class of {
                 }
               }
             }
-            L3: {
+            L5: {
               if (this.field_c != 0) {
-                break L3;
+                break L5;
               } else {
-                L4: {
+                L6: {
                   if (this.field_e) {
-                    break L4;
+                    break L6;
                   } else {
                     if (lf.field_O) {
-                      break L4;
+                      break L6;
                     } else {
-                      break L3;
+                      break L5;
                     }
                   }
                 }
                 if ((param2 ^ -1) > -1) {
                   if (this.field_e) {
                     this.field_h = -1;
-                    break L3;
+                    break L5;
                   } else {
-                    break L3;
+                    break L5;
                   }
                 } else {
-                  L5: {
+                  L7: {
                     if (param2 == this.field_h) {
-                      break L5;
+                      break L7;
                     } else {
-                      break L5;
+                      break L7;
                     }
                   }
                   this.field_h = param2;
                   this.field_e = true;
-                  break L3;
+                  break L5;
                 }
               }
             }

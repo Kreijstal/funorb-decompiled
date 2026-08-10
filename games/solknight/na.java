@@ -22,45 +22,30 @@ final class na implements Runnable {
             Object var2 = null;
             Throwable var3 = null;
             int var4 = 0;
-            int stackIn_7_0 = 0;
             Throwable decompiledCaughtException = null;
             var4 = SolKnight.field_L ? 1 : 0;
             try {
               L0: while (true) {
                 L1: {
-                  L2: {
-                    if (this.field_g.field_m >= this.field_g.field_l.length) {
-                      break L2;
+                  if (this.field_g.field_m >= this.field_g.field_l.length) {
+                    break L1;
+                  } else {
+                    var1_int = this.field_d.read(this.field_g.field_l, this.field_g.field_m, this.field_g.field_l.length - this.field_g.field_m);
+                    if (var1_int < 0) {
+                      break L1;
                     } else {
-                      var1_int = this.field_d.read(this.field_g.field_l, this.field_g.field_m, this.field_g.field_l.length - this.field_g.field_m);
-                      stackIn_7_0 = var1_int;
-
-                      if (var4 != 0) {
-                        break L1;
-                      } else {
-                        if (stackIn_7_0 < 0) {
-                          break L2;
-                        } else {
-                          this.field_g.field_m = this.field_g.field_m + var1_int;
-                          if (var4 == 0) {
-                            continue L0;
-                          } else {
-                            break L2;
-                          }
-                        }
-                      }
+                      this.field_g.field_m = this.field_g.field_m + var1_int;
+                      continue L0;
                     }
                   }
-                  stackIn_7_0 = this.field_g.field_l.length ^ -1;
-                  break L1;
                 }
-                if (stackIn_7_0 != (this.field_g.field_m ^ -1)) {
+                if (this.field_g.field_l.length != this.field_g.field_m) {
                   var1 = this;
                   synchronized (var1) {
-                    L3: {
+                    L2: {
                       this.finalize();
                       this.field_c = 3;
-                      break L3;
+                      break L2;
                     }
                   }
                   return;
@@ -73,10 +58,10 @@ final class na implements Runnable {
               var1 = (Exception) (Object) decompiledCaughtException;
               var2 = this;
               synchronized (var2) {
-                L4: {
+                L3: {
                   this.finalize();
                   this.field_c = this.field_c + 1;
-                  break L4;
+                  break L3;
                 }
               }
               return;
@@ -184,26 +169,26 @@ final class na implements Runnable {
 
     final static String a(String param0, java.applet.Applet param1, int param2) {
         try {
-            RuntimeException var3 = null;
+            String var3 = null;
             String[] var4 = null;
             int var5 = 0;
             int var6 = 0;
             int var7 = 0;
-            String var8 = null;
-            String stackIn_11_0 = null;
-            Object stackIn_16_0 = null;
-            RuntimeException stackIn_19_0 = null;
-            StringBuilder stackIn_19_1 = null;
-            RuntimeException stackIn_20_0 = null;
+            String stackIn_9_0 = null;
+            Object stackIn_14_0 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            String stackIn_18_2 = null;
             StringBuilder stackIn_20_1 = null;
-            String stackIn_20_2 = null;
-            StringBuilder stackIn_22_1 = null;
-            StringBuilder stackIn_23_1 = null;
-            String stackIn_23_2 = null;
+            StringBuilder stackIn_21_1 = null;
+            String stackIn_21_2 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
             Throwable var3_ref = null;
+            RuntimeException var3_ref2 = null;
             var7 = SolKnight.field_L ? 1 : 0;
             try {
               L0: {
@@ -217,54 +202,43 @@ final class na implements Runnable {
                 }
                 try {
                   L2: {
-                    var8 = (String) (fd.a(param1, "getcookies", (byte) 100));
-                    var4 = b.a(var8, ';', true);
+                    var3 = (String) (fd.a(param1, "getcookies", (byte) 100));
+                    var4 = b.a(var3, ';', true);
                     var5 = 0;
                     L3: while (true) {
-                      L4: {
-                        if (var4.length <= var5) {
-                          break L4;
-                        } else {
+                      if (var4.length <= var5) {
+                        decompiledRegionSelector0 = 0;
+                        break L2;
+                      } else {
+                        L4: {
                           var6 = var4[var5].indexOf('=');
-                          if (var7 == 0) {
-                            L5: {
-                              if (0 > var6) {
-                                break L5;
-                              } else {
-                                if (var4[var5].substring(0, var6).trim().equals(param0)) {
-                                  stackIn_11_0 = var4[var5].substring(var6 + 1).trim();
-                                  decompiledRegionSelector0 = 1;
-                                  break L2;
-                                } else {
-                                  break L5;
-                                }
-                              }
-                            }
-                            var5++;
-                            if (var7 == 0) {
-                              continue L3;
+                          if (0 > var6) {
+                            break L4;
+                          } else {
+                            if (var4[var5].substring(0, var6).trim().equals(param0)) {
+                              stackIn_9_0 = var4[var5].substring(var6 + 1).trim();
+                              decompiledRegionSelector0 = 1;
+                              break L2;
                             } else {
                               break L4;
                             }
-                          } else {
-                            return null;
                           }
                         }
+                        var5++;
+                        continue L3;
                       }
-                      decompiledRegionSelector0 = 0;
-                      break L2;
                     }
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L6: {
+                  L5: {
                     var3_ref = decompiledCaughtException;
                     decompiledRegionSelector0 = 0;
-                    break L6;
+                    break L5;
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
-                  stackIn_16_0 = null;
+                  stackIn_14_0 = null;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 } else {
@@ -274,47 +248,47 @@ final class na implements Runnable {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L7: {
-                var3 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_19_0 = (RuntimeException) (var3);
+              L6: {
+                var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_17_0 = (RuntimeException) (var3_ref2);
 
-                stackIn_19_1 = new StringBuilder().append("na.A(");
+                stackIn_17_1 = new StringBuilder().append("na.A(");
 
                 if (param0 == null) {
-                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackIn_20_2 = "null";
-                  break L7;
+                  stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+                  stackIn_18_2 = "null";
+                  break L6;
                 } else {
-                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackIn_20_2 = "{...}";
-                  break L7;
+                  stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+                  stackIn_18_2 = "{...}";
+                  break L6;
                 }
               }
-              L8: {
+              L7: {
 
 
-                stackIn_22_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
+                stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
 
                 if (param1 == null) {
-                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-                  stackIn_23_2 = "null";
-                  break L8;
+                  stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+                  stackIn_21_2 = "null";
+                  break L7;
                 } else {
-                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-                  stackIn_23_2 = "{...}";
-                  break L8;
+                  stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+                  stackIn_21_2 = "{...}";
+                  break L7;
                 }
               }
-              throw fc.a((Throwable) ((Object) stackIn_20_0), stackIn_23_2 + ',' + param2 + ')');
+              throw fc.a((Throwable) ((Object) stackIn_18_0), stackIn_21_2 + ',' + param2 + ')');
             }
             if (decompiledRegionSelector1 == 0) {
-              return (String) ((Object) stackIn_16_0);
+              return (String) ((Object) stackIn_14_0);
             } else {
-              return stackIn_11_0;
+              return stackIn_9_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

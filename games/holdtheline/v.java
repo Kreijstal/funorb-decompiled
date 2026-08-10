@@ -581,6 +581,7 @@ class v extends n implements jm {
     }
 
     final void a(int param0, n param1, int param2, int param3, byte param4, int param5) {
+        RuntimeException runtimeException = null;
         tm var7 = null;
         n var8 = null;
         int var9 = 0;
@@ -591,7 +592,6 @@ class v extends n implements jm {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
         var9 = HoldTheLine.field_D;
         try {
           L0: {
@@ -623,8 +623,8 @@ class v extends n implements jm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var7_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var7_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
 
             stackIn_10_1 = new StringBuilder().append("v.SA(").append(param0).append(',');
 
@@ -872,6 +872,7 @@ class v extends n implements jm {
     }
 
     void a(int param0, n param1, int param2, byte param3) {
+        RuntimeException runtimeException = null;
         tm var5 = null;
         n var6 = null;
         int var7 = 0;
@@ -881,7 +882,6 @@ class v extends n implements jm {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = HoldTheLine.field_D;
         try {
           L0: {
@@ -908,8 +908,8 @@ class v extends n implements jm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("v.JA(").append(param0).append(',');
 

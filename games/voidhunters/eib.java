@@ -57,12 +57,12 @@ final class eib extends rqa {
     final static void a(int param0, int param1, int param2) {
         qw var3 = null;
         int var3_int = 0;
-        RuntimeException var3_ref = null;
         ana var4 = null;
         qw var5 = null;
         int var6 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3_ref = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {

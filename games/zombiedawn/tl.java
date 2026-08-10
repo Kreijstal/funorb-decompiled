@@ -30,22 +30,45 @@ final class tl implements ug {
     }
 
     final boolean a(int param0, int param1) {
-        if (!(!bb.field_a[param1])) {
+        Object stackIn_10_0 = null;
+        Object stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        if (bb.field_a[param1]) {
+          return true;
+        } else {
+          L0: {
+            this.field_n = true;
+            if (ul.field_b != (long)param0) {
+              break L0;
+            } else {
+              ul.field_b = pd.a(-22826);
+              break L0;
+            }
+          }
+          if (this.a(false, param1, param0 ^ 95)) {
+            L1: {
+              pd.a(-22826);
+              ul.field_b = 0L;
+              stackIn_10_0 = this;
+
+              if (this.c((byte) 126)) {
+                stackIn_11_0 = this;
+                stackIn_11_1 = 0;
+                break L1;
+              } else {
+                stackIn_11_0 = this;
+                stackIn_11_1 = 1;
+                break L1;
+              }
+            }
+            ((tl) (this)).field_n = stackIn_11_1 != 0;
+            bb.field_a[param1] = true;
+            ep.c((byte) -50);
             return true;
-        }
-        this.field_n = true;
-        if (ul.field_b == (long)param0) {
-            ul.field_b = pd.a(-22826);
-        }
-        if (!this.a(false, param1, param0 ^ 95)) {
+          } else {
             return false;
+          }
         }
-        pd.a(-22826);
-        ul.field_b = 0L;
-        this.field_n = !this.c((byte) 126) ? true : false;
-        bb.field_a[param1] = true;
-        ep.c((byte) -50);
-        return true;
     }
 
     public static void d(int param0) {
@@ -56,17 +79,38 @@ final class tl implements ug {
     }
 
     public final void b(int param0) {
-        if (param0 < 72) {
+        dj var3;
+        dj var4;
+        L0: {
+          if (param0 >= 72) {
+            if (aa.field_f == null) {
+              break L0;
+            } else {
+              gl.a(aa.field_f, 734);
+              aa.field_f = null;
+              ep.c((byte) -50);
+              break L0;
+            }
+          } else {
             this.a(-0.6271905303001404f, 80, -50, -1.1520227193832397f);
+            if (aa.field_f == null) {
+              break L0;
+            } else {
+              gl.a(aa.field_f, 734);
+              aa.field_f = null;
+              ep.c((byte) -50);
+              break L0;
+            }
+          }
         }
-        if (aa.field_f != null) {
-            gl.a(aa.field_f, 734);
-            aa.field_f = null;
-            ep.c((byte) -50);
-        }
-        if (!(!ng.field_e)) {
+        L1: {
+          if (ng.field_e) {
             nl.field_p = mm.a(0, (byte) -113);
             gj.field_i = mm.a(1, (byte) -115);
+            break L1;
+          } else {
+            break L1;
+          }
         }
         a.field_h = pb.a(true, false, 2, true, 1);
         ZombieDawn.field_H = mm.a(3, (byte) -115);
@@ -76,8 +120,8 @@ final class tl implements ug {
         an.field_B = pb.a(true, false, 6, true, 1);
         this.field_h = pb.a(true, false, 7, true, 1);
         bp.field_h = new jk(50);
-        dj var4 = nl.field_p;
-        dj var3 = gj.field_i;
+        var4 = nl.field_p;
+        var3 = gj.field_i;
         bp.field_h.a("basic", nb.field_o, el.field_m, var4, (byte) -84);
         bp.field_h.a("arialish12", nb.field_o, el.field_m, var4, (byte) -84);
         bp.field_h.a("arialish12", nb.field_o, el.field_m, var3, (byte) -84);
@@ -529,95 +573,169 @@ final class tl implements ug {
     }
 
     public final boolean a(byte param0) {
-        int stackIn_25_0 = 0;
+        int stackIn_65_0 = 0;
         L0: {
-          if (!this.field_i) {
-            if (!this.field_c) {
-              if (this.b((byte) -110)) {
-                this.field_c = true;
-                break L0;
-              } else {
-                if (this.field_c) {
+          L1: {
+            if (!this.field_i) {
+              if (vm.c(1)) {
+                this.field_i = true;
+                if (param0 == 19) {
                   break L0;
                 } else {
-                  if (!this.b((byte) -110)) {
-                    break L0;
-                  } else {
+                  this.c(59);
+                  break L0;
+                }
+              } else {
+                if (!this.field_c) {
+                  if (this.b((byte) -110)) {
                     this.field_c = true;
-                    break L0;
+                    if (this.field_m) {
+                      break L1;
+                    } else {
+                      if (!this.field_i) {
+                        break L1;
+                      } else {
+                        if (!mm.a(true)) {
+                          break L1;
+                        } else {
+                          this.field_m = true;
+                          if (param0 == 19) {
+                            break L0;
+                          } else {
+                            this.c(59);
+                            break L0;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    if (this.field_m) {
+                      break L1;
+                    } else {
+                      if (!this.field_i) {
+                        break L1;
+                      } else {
+                        if (!mm.a(true)) {
+                          break L1;
+                        } else {
+                          this.field_m = true;
+                          if (param0 == 19) {
+                            break L0;
+                          } else {
+                            this.c(59);
+                            break L0;
+                          }
+                        }
+                      }
+                    }
+                  }
+                } else {
+                  if (this.field_m) {
+                    break L1;
+                  } else {
+                    if (!this.field_i) {
+                      break L1;
+                    } else {
+                      if (!mm.a(true)) {
+                        break L1;
+                      } else {
+                        this.field_m = true;
+                        if (param0 == 19) {
+                          break L0;
+                        } else {
+                          this.c(59);
+                          break L0;
+                        }
+                      }
+                    }
                   }
                 }
               }
             } else {
-              if (this.field_c) {
-                break L0;
-              } else {
-                if (!this.b((byte) -110)) {
-                  break L0;
-                } else {
+              if (!this.field_c) {
+                if (this.b((byte) -110)) {
                   this.field_c = true;
-                  break L0;
+                  if (this.field_m) {
+                    break L1;
+                  } else {
+                    if (!this.field_i) {
+                      break L1;
+                    } else {
+                      if (!mm.a(true)) {
+                        break L1;
+                      } else {
+                        this.field_m = true;
+                        if (param0 == 19) {
+                          break L0;
+                        } else {
+                          this.c(59);
+                          break L0;
+                        }
+                      }
+                    }
+                  }
+                } else {
+                  if (this.field_m) {
+                    break L1;
+                  } else {
+                    if (!this.field_i) {
+                      break L1;
+                    } else {
+                      if (!mm.a(true)) {
+                        break L1;
+                      } else {
+                        this.field_m = true;
+                        break L1;
+                      }
+                    }
+                  }
+                }
+              } else {
+                if (this.field_m) {
+                  break L1;
+                } else {
+                  if (!this.field_i) {
+                    break L1;
+                  } else {
+                    if (!mm.a(true)) {
+                      break L1;
+                    } else {
+                      this.field_m = true;
+                      break L1;
+                    }
+                  }
                 }
               }
             }
-          } else {
-            if (this.field_c) {
-              break L0;
-            } else {
-              if (!this.b((byte) -110)) {
-                break L0;
-              } else {
-                this.field_c = true;
-                break L0;
-              }
-            }
           }
-        }
-        L1: {
-          if (this.field_m) {
-            break L1;
+          if (param0 == 19) {
+            break L0;
           } else {
-            if (!this.field_i) {
-              break L1;
-            } else {
-              if (!mm.a(true)) {
-                break L1;
-              } else {
-                this.field_m = true;
-                break L1;
-              }
-            }
+            this.c(59);
+            break L0;
           }
         }
         L2: {
-          if (param0 == 19) {
-            break L2;
-          } else {
-            this.c(59);
-            break L2;
-          }
-        }
-        L3: {
-          L4: {
+          L3: {
             if (!this.field_i) {
-              break L4;
+              break L3;
             } else {
               if (!this.field_c) {
-                break L4;
+                break L3;
               } else {
                 if (!this.field_m) {
-                  break L4;
-                } else {
-                  stackIn_25_0 = 1;
                   break L3;
+                } else {
+                  stackIn_65_0 = 1;
+                  break L2;
                 }
               }
             }
           }
-          stackIn_25_0 = 0;
-          break L3;
+          stackIn_65_0 = 0;
+          break L2;
         }
-        return stackIn_25_0 != 0;
+        return stackIn_65_0 != 0;
     }
 
     final boolean c(byte param0) {
@@ -770,7 +888,12 @@ final class tl implements ug {
             var2 = 0;
             L1: while (true) {
               if (var2 >= 2) {
-                break L0;
+                if (param0 == -110) {
+                  break L0;
+                } else {
+                  this.field_b = -1.1267826557159424f;
+                  break L0;
+                }
               } else {
                 this.field_q[var2] = m.a((byte) -119, 1, 5, var2);
                 var2++;
@@ -778,31 +901,28 @@ final class tl implements ug {
               }
             }
           } else {
-            break L0;
-          }
-        }
-        L2: {
-          if (param0 == -110) {
-            break L2;
-          } else {
-            this.field_b = -1.1267826557159424f;
-            break L2;
+            if (param0 == -110) {
+              break L0;
+            } else {
+              this.field_b = -1.1267826557159424f;
+              break L0;
+            }
           }
         }
         var2 = 1;
         var3 = 0;
-        L3: while (true) {
+        L2: while (true) {
           if (-3 >= (var3 ^ -1)) {
             return var2 != 0;
           } else {
             if (null != this.field_q[var3]) {
               if (this.field_q[var3].field_h) {
-                L4: {
+                L3: {
                   if (this.field_q[var3].field_o[0] <= to.field_b[var3]) {
-                    break L4;
+                    break L3;
                   } else {
                     to.field_b[var3] = this.field_q[var3].field_o[0];
-                    break L4;
+                    break L3;
                   }
                 }
                 if (be.field_j <= 0) {
@@ -810,48 +930,63 @@ final class tl implements ug {
                     to.field_b[var3] = 0;
                     this.field_q[var3] = null;
                     var3++;
-                    continue L3;
+                    continue L2;
                   } else {
                     this.field_q[var3] = null;
                     var3++;
-                    continue L3;
+                    continue L2;
                   }
                 } else {
                   var3++;
-                  continue L3;
+                  continue L2;
                 }
               } else {
                 var2 = 0;
                 var3++;
-                continue L3;
+                continue L2;
               }
             } else {
               var3++;
-              continue L3;
+              continue L2;
             }
           }
         }
     }
 
     final boolean a(boolean param0, int param1) {
-        int var3 = 0;
-        int var4 = ZombieDawn.field_J;
-        if (!(!bb.field_a[param1])) {
-            return false;
-        }
-        if (param0) {
-            this.field_h = (dj) null;
-        }
-        for (var3 = 0; this.field_f > var3; var3++) {
-            if (param1 == this.field_r[var3]) {
-                return false;
+        int fieldTemp$1 = 0;
+        int var3;
+        int var4;
+        var4 = ZombieDawn.field_J;
+        if (bb.field_a[param1]) {
+          return false;
+        } else {
+          L0: {
+            if (!param0) {
+              break L0;
+            } else {
+              this.field_h = (dj) null;
+              break L0;
             }
+          }
+          var3 = 0;
+          L1: while (true) {
+            if (this.field_f <= var3) {
+              fieldTemp$1 = this.field_f;
+              this.field_f = this.field_f + 1;
+              this.field_r[fieldTemp$1] = param1;
+              this.field_p = this.field_p + eo.field_h[param1];
+              return true;
+            } else {
+              if (param1 != this.field_r[var3]) {
+                var3++;
+                continue L1;
+              } else {
+                return false;
+              }
+            }
+          }
         }
-        int fieldTemp$0 = this.field_f;
-        this.field_f = this.field_f + 1;
-        this.field_r[fieldTemp$0] = param1;
-        this.field_p = this.field_p + eo.field_h[param1];
-        return true;
     }
 
     private final void a(int param0, String param1, float param2, boolean param3, float param4) {
@@ -954,9 +1089,19 @@ final class tl implements ug {
                   if ((this.field_f ^ -1) >= -1) {
                     this.field_n = false;
                     this.field_a = 0;
-                    break L0;
+                    if (param0 > 37) {
+                      break L0;
+                    } else {
+                      tl.d(2);
+                      break L0;
+                    }
                   } else {
-                    break L0;
+                    if (param0 > 37) {
+                      break L0;
+                    } else {
+                      tl.d(2);
+                      break L0;
+                    }
                   }
                 } else {
                   this.field_r[var4] = this.field_r[var4 - -1];
@@ -976,18 +1121,20 @@ final class tl implements ug {
                 }
               }
               this.field_l = var4_long;
-              break L0;
+              if (param0 > 37) {
+                break L0;
+              } else {
+                tl.d(2);
+                break L0;
+              }
             }
           } else {
-            break L0;
-          }
-        }
-        L6: {
-          if (param0 > 37) {
-            break L6;
-          } else {
-            tl.d(2);
-            break L6;
+            if (param0 > 37) {
+              break L0;
+            } else {
+              tl.d(2);
+              break L0;
+            }
           }
         }
     }
@@ -1001,8 +1148,8 @@ final class tl implements ug {
     private final boolean a(boolean param0, int param1, int param2) {
         String stackIn_10_0 = null;
         int stackIn_52_0 = 0;
-        String stackIn_103_0 = null;
-        int stackIn_112_0 = 0;
+        String stackIn_108_0 = null;
+        int stackIn_117_0 = 0;
         int var4;
         int var5;
         String var5_ref_String;
@@ -1236,24 +1383,30 @@ final class tl implements ug {
                             break L3;
                           } else {
                             if (8 == var7) {
-                              L11: {
-                                if (lc.field_k != null) {
-                                  break L11;
-                                } else {
+                              if (lc.field_k != null) {
+                                L11: {
+                                  if (null != ob.field_c) {
+                                    break L11;
+                                  } else {
+                                    ob.field_c = vm.a((byte) -77, "glass", "gameuk", a.field_h);
+                                    break L11;
+                                  }
+                                }
+                                tf.field_b = vm.a((byte) 20, "bulletcasing", "gameuk", a.field_h);
+                                break L3;
+                              } else {
+                                L12: {
                                   lc.field_k = vm.a((byte) -90, "spotlight", "gameuk", a.field_h);
-                                  break L11;
+                                  if (null != ob.field_c) {
+                                    break L12;
+                                  } else {
+                                    ob.field_c = vm.a((byte) -77, "glass", "gameuk", a.field_h);
+                                    break L12;
+                                  }
                                 }
+                                tf.field_b = vm.a((byte) 20, "bulletcasing", "gameuk", a.field_h);
+                                break L3;
                               }
-                              L12: {
-                                if (null != ob.field_c) {
-                                  break L12;
-                                } else {
-                                  ob.field_c = vm.a((byte) -77, "glass", "gameuk", a.field_h);
-                                  break L12;
-                                }
-                              }
-                              tf.field_b = vm.a((byte) 20, "bulletcasing", "gameuk", a.field_h);
-                              break L3;
                             } else {
                               if (var7 != 6) {
                                 if (var7 == 0) {
@@ -1306,30 +1459,32 @@ final class tl implements ug {
                     L14: {
                       if (we.field_Ub == null) {
                         we.field_Ub = gf.a(a.field_h, "intro_1", 8, "intro");
-                        break L14;
+                        if (null != pg.field_t) {
+                          break L14;
+                        } else {
+                          pg.field_t = gf.a(a.field_h, "intro_2", 8, "intro");
+                          break L14;
+                        }
                       } else {
-                        break L14;
+                        if (null != pg.field_t) {
+                          break L14;
+                        } else {
+                          pg.field_t = gf.a(a.field_h, "intro_2", 8, "intro");
+                          break L14;
+                        }
                       }
                     }
                     L15: {
-                      if (null != pg.field_t) {
-                        break L15;
-                      } else {
-                        pg.field_t = gf.a(a.field_h, "intro_2", 8, "intro");
-                        break L15;
-                      }
-                    }
-                    L16: {
                       if (nn.field_j == null) {
-                        break L16;
+                        break L15;
                       } else {
                         if (we.field_Ub == null) {
-                          break L16;
+                          break L15;
                         } else {
                           if (pg.field_t != null) {
                             break L3;
                           } else {
-                            break L16;
+                            break L15;
                           }
                         }
                       }
@@ -1348,54 +1503,54 @@ final class tl implements ug {
             }
           }
         }
-        L17: {
+        L16: {
           if (9 <= param1) {
-            break L17;
+            break L16;
           } else {
             if (param0) {
               ll.a(param1, 4767999);
-              break L17;
+              break L16;
             } else {
-              L18: {
+              L17: {
                 if (-2 == (tk.a(param1, 126) ^ -1)) {
-                  stackIn_103_0 = "gameuk";
-                  break L18;
+                  stackIn_108_0 = "gameuk";
+                  break L17;
                 } else {
-                  stackIn_103_0 = "game";
-                  break L18;
+                  stackIn_108_0 = "game";
+                  break L17;
                 }
               }
-              var12 = stackIn_103_0;
+              var12 = stackIn_108_0;
               var5_ref_String = var12;
               ab.a(vm.a((byte) -104, we.field_Sb[param1] + "_floor", var12, a.field_h), (byte) 112, param1);
               gk.a(param1, vm.a((byte) -18, we.field_Sb[param1] + "_tiles", var12, a.field_h), true);
               qj.field_j[param1] = vm.a((byte) 107, "dimming" + param1, "basic", a.field_h);
-              break L17;
+              break L16;
             }
           }
         }
-        L19: {
+        L18: {
           if (-16 < (param1 ^ -1)) {
-            break L19;
+            break L18;
           } else {
             if ((param1 ^ -1) > -30) {
               var5 = param1 + -15;
               if (param0) {
-                break L19;
+                break L18;
               } else {
-                L20: {
+                L19: {
                   if (!this.a(tc.field_v[var5], 0, var5)) {
-                    stackIn_112_0 = 0;
-                    break L20;
+                    stackIn_117_0 = 0;
+                    break L19;
                   } else {
-                    stackIn_112_0 = 1;
-                    break L20;
+                    stackIn_117_0 = 1;
+                    break L19;
                   }
                 }
-                return stackIn_112_0 != 0;
+                return stackIn_117_0 != 0;
               }
             } else {
-              break L19;
+              break L18;
             }
           }
         }

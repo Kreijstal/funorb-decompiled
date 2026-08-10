@@ -89,8 +89,8 @@ final class jq implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
+        RuntimeException runtimeException = null;
         int var2_int = 0;
-        RuntimeException var2 = null;
         int var3 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -184,8 +184,8 @@ final class jq implements java.awt.event.KeyListener, java.awt.event.FocusListen
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var2 = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var2);
+            runtimeException = decompiledCaughtException;
+            stackIn_24_0 = (RuntimeException) (runtimeException);
 
             stackIn_24_1 = new StringBuilder().append("jq.keyPressed(");
 

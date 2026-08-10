@@ -279,14 +279,14 @@ final class hc {
                             dupTemp$3 = mo.field_x[this.field_o[var21_int][var22]];
                             var26[4] = dupTemp$3;
                             var25_ref_double__[4] = dupTemp$3;
-                            if (param1[3] <= param0 + 1.0) {
+                            if (var25_ref_double__[3] <= param0 + 1.0) {
                               ol.a(var25_ref_double__, (byte) 89);
                               break L10;
                             } else {
                               break L10;
                             }
                           }
-                          if (param1[3] > 1.0 + param0) {
+                          if (var26[3] > 1.0 + param0) {
                             break L8;
                           } else {
                             ol.a(var26, (byte) 95);

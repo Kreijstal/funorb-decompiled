@@ -165,26 +165,29 @@ abstract class jc {
               }
             }
             L12: {
-              if (param4 < qg.field_k) {
-                break L12;
-              } else {
-                if (qg.field_l > var6) {
-                  var11 = var7 + (var6 * qg.field_g + (1 & -param4 + var6));
-                  var12 = -var7 + (1 + var9) >> 1935860129;
-                  L13: while (true) {
-                    var12--;
-                    if (0 > var12) {
-                      break L12;
-                    } else {
-                      qg.field_i[var11] = 16777215;
-                      var11 += 2;
-                      continue L13;
-                    }
-                  }
+              L13: {
+                if (param4 < qg.field_k) {
+                  break L13;
                 } else {
-                  break L12;
+                  if (qg.field_l > var6) {
+                    var11 = var7 + (var6 * qg.field_g + (1 & -param4 + var6));
+                    var12 = -var7 + (1 + var9) >> 1935860129;
+                    L14: while (true) {
+                      var12--;
+                      if (0 > var12) {
+                        break L13;
+                      } else {
+                        qg.field_i[var11] = 16777215;
+                        var11 += 2;
+                        continue L14;
+                      }
+                    }
+                  } else {
+                    break L12;
+                  }
                 }
               }
+              break L12;
             }
             break L0;
           }

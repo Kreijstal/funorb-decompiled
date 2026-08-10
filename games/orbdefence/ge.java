@@ -130,14 +130,12 @@ abstract class ge {
                 throw new RuntimeException();
             }
             this.field_d.a(-62, var8);
-            if (!OrbDefence.field_D) {
-                return var8;
+        } else {
+            if (!(this.b(109) < 20)) {
+                throw new RuntimeException();
             }
+            this.field_k.a(-50, var8);
         }
-        if (!(this.b(109) < 20)) {
-            throw new RuntimeException();
-        }
-        this.field_k.a(-50, var8);
         return var8;
     }
 

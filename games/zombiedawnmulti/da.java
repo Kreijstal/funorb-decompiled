@@ -140,12 +140,12 @@ final class da {
 
     final static void b(int param0) {
         try {
-            IOException iOException = null;
-            IOException var2_ref = null;
-            RuntimeException runtimeException = null;
-            int var1_int = 0;
-            int var3 = 0;
             Throwable decompiledCaughtException = null;
+            IOException var1 = null;
+            int var1_int = 0;
+            RuntimeException var1_ref = null;
+            IOException var2 = null;
+            int var3 = 0;
             var3 = ZombieDawnMulti.field_E ? 1 : 0;
             try {
               L0: {
@@ -185,7 +185,7 @@ final class da {
                     } catch (java.io.IOException decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
+                        var1 = (IOException) (Object) decompiledCaughtException;
                         break L6;
                       }
                     }
@@ -195,42 +195,31 @@ final class da {
                 if (null != rl.field_r) {
                   var1_int = 0;
                   L7: while (true) {
-                    L8: {
-                      if (rl.field_r.length <= var1_int) {
-                        break L8;
-                      } else {
-                        if (var3 == 0) {
-                          L9: {
-                            if (rl.field_r[var1_int] != null) {
-                              try {
-                                L10: {
-                                  rl.field_r[var1_int].a((byte) -125);
-                                  break L10;
-                                }
-                              } catch (java.io.IOException decompiledCaughtParameter1) {
-                                decompiledCaughtException = decompiledCaughtParameter1;
-                                L11: {
-                                  var2_ref = (IOException) (Object) decompiledCaughtException;
-                                  break L11;
-                                }
-                              }
-                              break L9;
-                            } else {
+                    if (rl.field_r.length <= var1_int) {
+                      break L0;
+                    } else {
+                      L8: {
+                        if (rl.field_r[var1_int] != null) {
+                          try {
+                            L9: {
+                              rl.field_r[var1_int].a((byte) -125);
                               break L9;
                             }
+                          } catch (java.io.IOException decompiledCaughtParameter1) {
+                            decompiledCaughtException = decompiledCaughtParameter1;
+                            L10: {
+                              var2 = (IOException) (Object) decompiledCaughtException;
+                              break L10;
+                            }
                           }
-                          var1_int++;
-                          if (var3 == 0) {
-                            continue L7;
-                          } else {
-                            break L8;
-                          }
+                          break L8;
                         } else {
-                          return;
+                          break L8;
                         }
                       }
+                      var1_int++;
+                      continue L7;
                     }
-                    break L0;
                   }
                 } else {
                   return;
@@ -238,8 +227,8 @@ final class da {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
-              runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-              throw fa.a((Throwable) ((Object) runtimeException), "da.B(" + param0 + ')');
+              var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+              throw fa.a((Throwable) ((Object) var1_ref), "da.B(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

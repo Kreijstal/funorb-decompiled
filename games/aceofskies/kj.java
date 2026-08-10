@@ -870,114 +870,117 @@ final class kj extends ha {
                         }
                       }
                     }
-                    if (param5 != 1) {
-                      if (param5 != 2) {
-                        throw new IllegalArgumentException();
-                      } else {
-                        L16: while (true) {
-                          if (param0 > param2) {
-                            break L1;
-                          } else {
-                            L17: {
-                              var9 = param1 >> 16;
-                              if (var9 < this.field_w) {
-                                break L17;
-                              } else {
-                                if (var9 >= this.field_D) {
-                                  break L17;
+                    L16: {
+                      if (param5 != 1) {
+                        if (param5 != 2) {
+                          throw new IllegalArgumentException();
+                        } else {
+                          L17: while (true) {
+                            if (param0 > param2) {
+                              break L16;
+                            } else {
+                              L18: {
+                                var9 = param1 >> 16;
+                                if (var9 < this.field_w) {
+                                  break L18;
                                 } else {
-                                  var10 = param0 + var9 * this.field_f;
-                                  var11 = this.field_E[var10];
-                                  var12 = param4 + var11;
-                                  var13 = (param4 & 16711935) + (var11 & 16711935);
-                                  var11 = (var13 & 16777472) + (var12 - var13 & 65536);
-                                  this.field_E[var10] = var12 - var11 | var11 - (var11 >>> 8);
-                                  break L17;
+                                  if (var9 >= this.field_D) {
+                                    break L18;
+                                  } else {
+                                    var10 = param0 + var9 * this.field_f;
+                                    var11 = this.field_E[var10];
+                                    var12 = param4 + var11;
+                                    var13 = (param4 & 16711935) + (var11 & 16711935);
+                                    var11 = (var13 & 16777472) + (var12 - var13 & 65536);
+                                    this.field_E[var10] = var12 - var11 | var11 - (var11 >>> 8);
+                                    break L18;
+                                  }
+                                }
+                              }
+                              param1 = param1 + var7;
+                              param0++;
+                              continue L17;
+                            }
+                          }
+                        }
+                      } else {
+                        param4 = ((param4 & 16711935) * var8 >> 8 & 16711935) + ((param4 & 65280) * var8 >> 8 & 65280) + (var8 << 24);
+                        var9 = 256 - var8;
+                        L19: while (true) {
+                          if (param0 > param2) {
+                            break L16;
+                          } else {
+                            L20: {
+                              var10 = param1 >> 16;
+                              if (var10 < this.field_w) {
+                                break L20;
+                              } else {
+                                if (var10 >= this.field_D) {
+                                  break L20;
+                                } else {
+                                  var11 = param0 + var10 * this.field_f;
+                                  var12 = this.field_E[var11];
+                                  var12 = ((var12 & 16711935) * var9 >> 8 & 16711935) + ((var12 & 65280) * var9 >> 8 & 65280);
+                                  this.field_E[var11] = param4 + var12;
+                                  break L20;
                                 }
                               }
                             }
                             param1 = param1 + var7;
                             param0++;
-                            continue L16;
+                            continue L19;
                           }
-                        }
-                      }
-                    } else {
-                      param4 = ((param4 & 16711935) * var8 >> 8 & 16711935) + ((param4 & 65280) * var8 >> 8 & 65280) + (var8 << 24);
-                      var9 = 256 - var8;
-                      L18: while (true) {
-                        if (param0 > param2) {
-                          break L1;
-                        } else {
-                          L19: {
-                            var10 = param1 >> 16;
-                            if (var10 < this.field_w) {
-                              break L19;
-                            } else {
-                              if (var10 >= this.field_D) {
-                                break L19;
-                              } else {
-                                var11 = param0 + var10 * this.field_f;
-                                var12 = this.field_E[var11];
-                                var12 = ((var12 & 16711935) * var9 >> 8 & 16711935) + ((var12 & 65280) * var9 >> 8 & 65280);
-                                this.field_E[var11] = param4 + var12;
-                                break L19;
-                              }
-                            }
-                          }
-                          param1 = param1 + var7;
-                          param0++;
-                          continue L18;
                         }
                       }
                     }
+                    break L1;
                   }
                 }
-                L20: while (true) {
+                L21: while (true) {
                   if (param0 > param2) {
                     break L1;
                   } else {
-                    L21: {
+                    L22: {
                       var9 = param1 >> 16;
                       if (var9 < this.field_w) {
-                        break L21;
+                        break L22;
                       } else {
                         if (var9 >= this.field_D) {
-                          break L21;
+                          break L22;
                         } else {
                           this.field_E[param0 + var9 * this.field_f] = param4;
-                          break L21;
+                          break L22;
                         }
                       }
                     }
                     param1 = param1 + var7;
                     param0++;
-                    continue L20;
+                    continue L21;
                   }
                 }
               }
             }
             return;
           } else {
-            L22: {
+            L23: {
               if (param3 < 0) {
                 this.b(param0, param1 + param3, -param3 + 1, param4, param5);
-                break L22;
+                break L23;
               } else {
                 this.b(param0, param1, param3 + 1, param4, param5);
-                break L22;
+                break L23;
               }
             }
             return;
           }
         } else {
-          L23: {
+          L24: {
             if (param2 < 0) {
               this.U(param0 + param2, param1, -param2 + 1, param4, param5);
-              break L23;
+              break L24;
             } else {
               this.U(param0, param1, param2 + 1, param4, param5);
-              break L23;
+              break L24;
             }
           }
           return;
@@ -1247,38 +1250,41 @@ final class kj extends ha {
             if (var2 == null) {
               break L0;
             } else {
-              this.field_l = param0;
-              var3 = param0.getSize();
-              this.field_q = var3.width;
-              this.field_n = var3.height;
-              this.field_p = var2;
-              if (this.field_C != null) {
-                break L0;
-              } else {
-                L1: {
+              L1: {
+                this.field_l = param0;
+                var3 = param0.getSize();
+                this.field_q = var3.width;
+                this.field_n = var3.height;
+                this.field_p = var2;
+                if (this.field_C != null) {
+                  break L1;
+                } else {
                   L2: {
-                    this.field_E = var2.field_e;
-                    this.field_f = var2.field_g;
-                    this.field_v = var2.field_h;
-                    if (this.field_f != this.field_x) {
-                      break L2;
-                    } else {
-                      if (this.field_v == this.field_m) {
-                        break L1;
+                    L3: {
+                      this.field_E = var2.field_e;
+                      this.field_f = var2.field_g;
+                      this.field_v = var2.field_h;
+                      if (this.field_f != this.field_x) {
+                        break L3;
                       } else {
-                        break L2;
+                        if (this.field_v == this.field_m) {
+                          break L2;
+                        } else {
+                          break L3;
+                        }
                       }
                     }
+                    this.field_x = this.field_f;
+                    this.field_s = this.field_f;
+                    this.field_m = this.field_v;
+                    this.field_t = this.field_v;
+                    break L2;
                   }
-                  this.field_x = this.field_f;
-                  this.field_s = this.field_f;
-                  this.field_m = this.field_v;
-                  this.field_t = this.field_v;
+                  this.g();
                   break L1;
                 }
-                this.g();
-                break L0;
               }
+              break L0;
             }
           }
         }

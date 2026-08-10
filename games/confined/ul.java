@@ -219,23 +219,46 @@ class ul extends rg {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        pj var5 = null;
-        long var6 = 0L;
-        if (param2 <= 36) {
-            return;
-        }
-        if (this.field_n != null && -1 == (param1 ^ -1)) {
-            this.field_n.a((byte) -122, param3, this.field_L, (fj) (this), param0);
-            if (!(!(this.field_n instanceof pj))) {
-                var5 = (pj) ((Object) this.field_n);
-                if (!(this.field_Q == this.field_R)) {
-                    var5.a(param3, (fj) (this), 0, this.field_R, param0, this.field_Q);
+        pj var5;
+        long var6;
+        if (param2 > 36) {
+          L0: {
+            if (this.field_n == null) {
+              break L0;
+            } else {
+              L1: {
+                if (-1 != (param1 ^ -1)) {
+                  break L1;
+                } else {
+                  this.field_n.a((byte) -122, param3, this.field_L, (fj) (this), param0);
+                  if (this.field_n instanceof pj) {
+                    L2: {
+                      var5 = (pj) ((Object) this.field_n);
+                      if (this.field_Q != this.field_R) {
+                        var5.a(param3, (fj) (this), 0, this.field_R, param0, this.field_Q);
+                        break L2;
+                      } else {
+                        break L2;
+                      }
+                    }
+                    var6 = ri.a(-3);
+                    if (500L <= (var6 - this.field_Y) % 1000L) {
+                      break L1;
+                    } else {
+                      var5.a(param3, (fj) (this), param0, -71, this.field_Q);
+                      break L0;
+                    }
+                  } else {
+                    break L0;
+                  }
                 }
-                var6 = ri.a(-3);
-                if (500L > (var6 - this.field_Y) % 1000L) {
-                    var5.a(param3, (fj) (this), param0, -71, this.field_Q);
-                }
+              }
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 
@@ -877,48 +900,14 @@ class ul extends rg {
     }
 
     final static void a(int param0, String param1, int param2, int param3, int param4) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              nn.field_t[param2].d(param0, param4);
-              pn.field_a.c(param1, 2 + param0, 14 + param4, 16777215, -1);
-              if (param3 == -4245) {
-                break L1;
-              } else {
+            nn.field_t[param2].d(param0, param4);
+            pn.field_a.c(param1, 2 + param0, 14 + param4, 16777215, -1);
+            if (param3 != -4245) {
                 ul.k(69);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ul.L(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "ul.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

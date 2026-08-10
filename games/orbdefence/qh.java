@@ -81,11 +81,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         break L3;
                       } else {
                         var2_int = nd.field_a[var2_int] & -129;
-                        if (!OrbDefence.field_D) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
+                        break L2;
                       }
                     }
                   }
@@ -140,15 +136,15 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
-        RuntimeException runtimeException = null;
         int var2_int = 0;
-        int var3 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
         try {
           L0: {
             L1: {
@@ -168,11 +164,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         var2_int = nd.field_a[var2_int];
                         if (-1 != (var2_int & 128 ^ -1)) {
                           var2_int = -1;
-                          if (!OrbDefence.field_D) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
+                          break L2;
                         } else {
                           break L2;
                         }
@@ -240,8 +232,8 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
-            runtimeException = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (runtimeException);
+            var2 = decompiledCaughtException;
+            stackIn_24_0 = (RuntimeException) (var2);
 
             stackIn_24_1 = new StringBuilder().append("qh.keyPressed(");
 

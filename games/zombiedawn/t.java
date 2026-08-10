@@ -144,100 +144,41 @@ final class t implements io {
     }
 
     public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
-        RuntimeException runtimeException = null;
+        fp var14 = null;
         int var7 = 0;
         int var8 = 0;
+        int var13 = 0;
         double var9 = 0.0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        fp var14 = null;
-        ga stackIn_3_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!(param3 instanceof fp)) {
-                stackIn_3_0 = null;
-                break L1;
-              } else {
-                stackIn_3_0 = (ga) (param3);
-                break L1;
-              }
-            }
-            L2: {
-              var14 = (fp) ((Object) stackIn_3_0);
-              bi.b(param3.field_k + param4, param3.field_j + param2, param3.field_i, param3.field_n, this.field_a);
-              if (param0 == 16777215) {
-                break L2;
-              } else {
+            var14 = param3 instanceof fp ? (fp) ((Object) param3) : null;
+            bi.b(param3.field_k + param4, param3.field_j + param2, param3.field_i, param3.field_n, this.field_a);
+            if (param0 != 16777215) {
                 this.field_g = (rb) null;
-                break L2;
-              }
             }
-            L3: {
-              if (var14 == null) {
-                break L3;
-              } else {
-                break L3;
-              }
+            if (var14 != null) {
             }
-            L4: {
-              var7 = var14.field_K + (param4 + param3.field_k);
-              var8 = var14.field_G + param3.field_j + param2;
-              bi.g(var7, var8, var14.field_I, this.field_j);
-              if (-1 == var14.field_E) {
-                break L4;
-              } else {
+            var7 = var14.field_K + (param4 + param3.field_k);
+            var8 = var14.field_G + param3.field_j + param2;
+            bi.g(var7, var8, var14.field_I, this.field_j);
+            if (-1 != var14.field_E) {
                 var9 = 2.0 * (3.141592653589793 * (double)var14.field_E) / (double)var14.field_L;
                 var11 = (int)(-Math.sin(var9) * (double)var14.field_I);
                 var12 = (int)(Math.cos(var9) * (double)var14.field_I);
                 bi.g(var11 + var7, var8 + var12, 1, this.field_d);
-                break L4;
-              }
             }
-            L5: {
-              bi.g(var7, var8, 2, 1);
-              var9 = 2.0 * ((double)var14.field_J * 3.141592653589793) / (double)var14.field_L;
-              var11 = (int)(-Math.sin(var9) * (double)var14.field_I);
-              var12 = (int)(Math.cos(var9) * (double)var14.field_I);
-              bi.e(var7, var8, var7 + var11, var8 - -var12, 1);
-              if (null == this.field_g) {
-                break L5;
-              } else {
+            bi.g(var7, var8, 2, 1);
+            var9 = 2.0 * ((double)var14.field_J * 3.141592653589793) / (double)var14.field_L;
+            var11 = (int)(-Math.sin(var9) * (double)var14.field_I);
+            var12 = (int)(Math.cos(var9) * (double)var14.field_I);
+            bi.e(var7, var8, var7 + var11, var8 - -var12, 1);
+            if (null != this.field_g) {
                 var13 = this.field_e + (var14.field_I + var14.field_K);
                 this.field_g.a(param3.field_o, var13 + param4 + param3.field_k, this.field_k + param3.field_j + param2, -this.field_e - (var13 - param3.field_i), param3.field_n - (this.field_e << -1077052639), this.field_l, this.field_f, 1, 1, 0);
-                break L5;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("t.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L6;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L6;
-            }
-          }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param4 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) ((Object) runtimeException), "t.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

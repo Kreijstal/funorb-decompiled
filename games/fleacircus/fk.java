@@ -12,8 +12,7 @@ final class fk extends dl {
     static String field_x;
 
     final static void a(String param0, int param1, boolean param2, String[] param3) {
-        RuntimeException runtimeException = null;
-        String[] var4 = null;
+        RuntimeException var4 = null;
         int var5 = 0;
         String[] var6 = null;
         int stackIn_12_0 = 0;
@@ -27,58 +26,43 @@ final class fk extends dl {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        String[] var4_array = null;
         var5 = fleas.field_A ? 1 : 0;
         try {
           L0: {
             if (!param2) {
-              L1: {
-                L2: {
-                  ui.field_kb = ui.field_ob;
-                  if (param1 == 255) {
-                    break L2;
-                  } else {
-                    L3: {
-                      if ((param1 ^ -1) > -101) {
-                        break L3;
-                      } else {
-                        if (105 < param1) {
-                          break L3;
-                        } else {
-                          var4 = param3;
-                          m.a(-100, var4);
-                          kh.field_a = ha.a(param3, -21916);
-                          if (var5 == 0) {
-                            break L1;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                    }
-                    kh.field_a = af.a((byte) 36, param1, param0);
-                    if (var5 == 0) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                L4: {
+              ui.field_kb = ui.field_ob;
+              if (param1 == 255) {
+                L1: {
                   if (ug.field_c >= 13) {
                     stackIn_12_0 = 0;
-                    break L4;
+                    break L1;
                   } else {
                     stackIn_12_0 = 1;
-                    break L4;
+                    break L1;
                   }
                 }
                 kh.field_a = ld.a(stackIn_12_0 != 0, (byte) 42);
                 var6 = (String[]) null;
                 m.a(-44, (String[]) null);
-                break L1;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              } else {
+                if ((param1 ^ -1) > -101) {
+                  kh.field_a = af.a((byte) 36, param1, param0);
+                  return;
+                } else {
+                  if (105 < param1) {
+                    kh.field_a = af.a((byte) 36, param1, param0);
+                    return;
+                  } else {
+                    var4_array = param3;
+                    m.a(-100, var4_array);
+                    kh.field_a = ha.a(param3, -21916);
+                    return;
+                  }
+                }
               }
-              decompiledRegionSelector0 = 1;
-              break L0;
             } else {
               decompiledRegionSelector0 = 0;
               break L0;
@@ -86,9 +70,9 @@ final class fk extends dl {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (runtimeException);
+          L2: {
+            var4 = decompiledCaughtException;
+            stackIn_16_0 = (RuntimeException) (var4);
 
             stackIn_16_1 = new StringBuilder().append("fk.E(");
 
@@ -96,15 +80,15 @@ final class fk extends dl {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "null";
-              break L5;
+              break L2;
             } else {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackIn_17_2 = "{...}";
-              break L5;
+              break L2;
             }
           }
-          L6: {
+          L3: {
 
 
             stackIn_19_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',');
@@ -113,12 +97,12 @@ final class fk extends dl {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackIn_20_2 = "null";
-              break L6;
+              break L3;
             } else {
               stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackIn_20_2 = "{...}";
-              break L6;
+              break L3;
             }
           }
           throw pf.a((Throwable) ((Object) stackIn_17_0), stackIn_20_2 + ')');

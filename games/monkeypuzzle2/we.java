@@ -101,31 +101,34 @@ class we extends ug {
               }
             }
             L7: {
-              if (null == this.field_o) {
-                break L7;
-              } else {
-                L8: {
-                  discarded$6 = param2.append(" listener=");
-                  if (!(this.field_o instanceof we)) {
-                    break L8;
-                  } else {
-                    param2 = this.a(false, param2, param0, 1 + param1);
-                    if (var6 == 0) {
-                      break L7;
+              L8: {
+                if (null == this.field_o) {
+                  break L8;
+                } else {
+                  L9: {
+                    discarded$6 = param2.append(" listener=");
+                    if (!(this.field_o instanceof we)) {
+                      break L9;
                     } else {
-                      break L8;
+                      param2 = this.a(false, param2, param0, 1 + param1);
+                      if (var6 == 0) {
+                        break L8;
+                      } else {
+                        break L9;
+                      }
                     }
                   }
+                  discarded$7 = param2.append(this.field_o);
+                  break L7;
                 }
-                discarded$7 = param2.append(this.field_o);
-                break L7;
               }
+              break L7;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L10: {
             var5 = decompiledCaughtException;
             stackIn_24_0 = (RuntimeException) (var5);
 
@@ -135,15 +138,15 @@ class we extends ug {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "null";
-              break L9;
+              break L10;
             } else {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "{...}";
-              break L9;
+              break L10;
             }
           }
-          L10: {
+          L11: {
 
 
             stackIn_27_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param1).append(',');
@@ -152,12 +155,12 @@ class we extends ug {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackIn_28_2 = "null";
-              break L10;
+              break L11;
             } else {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackIn_28_2 = "{...}";
-              break L10;
+              break L11;
             }
           }
           throw la.a((Throwable) ((Object) stackIn_25_0), stackIn_28_2 + ',' + param3 + ')');
@@ -807,41 +810,44 @@ class we extends ug {
               }
             }
             L2: {
-              var5_int = this.a(ei.field_a, param1, param2, p.field_a, (byte) 45) ? 1 : 0;
-              if (var5_int == (this.field_g ? 1 : 0)) {
-                break L2;
-              } else {
-                L3: {
-                  stackIn_5_0 = this;
-
-                  if (var5_int == 0) {
-                    stackIn_6_0 = this;
-                    stackIn_6_1 = 0;
-                    break L3;
-                  } else {
-                    stackIn_6_0 = this;
-                    stackIn_6_1 = 1;
-                    break L3;
-                  }
-                }
-                ((we) (this)).field_g = stackIn_6_1 != 0;
-                if (null == this.field_o) {
-                  break L2;
+              L3: {
+                var5_int = this.a(ei.field_a, param1, param2, p.field_a, (byte) 45) ? 1 : 0;
+                if (var5_int == (this.field_g ? 1 : 0)) {
+                  break L3;
                 } else {
-                  if (!(this.field_o instanceof jd)) {
-                    break L2;
+                  L4: {
+                    stackIn_5_0 = this;
+
+                    if (var5_int == 0) {
+                      stackIn_6_0 = this;
+                      stackIn_6_1 = 0;
+                      break L4;
+                    } else {
+                      stackIn_6_0 = this;
+                      stackIn_6_1 = 1;
+                      break L4;
+                    }
+                  }
+                  ((we) (this)).field_g = stackIn_6_1 != 0;
+                  if (null == this.field_o) {
+                    break L3;
                   } else {
-                    ((jd) ((Object) this.field_o)).a(var5_int != 0, (we) (this), 25982);
-                    break L2;
+                    if (!(this.field_o instanceof jd)) {
+                      break L3;
+                    } else {
+                      ((jd) ((Object) this.field_o)).a(var5_int != 0, (we) (this), 25982);
+                      break L2;
+                    }
                   }
                 }
               }
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var5 = decompiledCaughtException;
             stackIn_12_0 = (RuntimeException) (var5);
 
@@ -851,12 +857,12 @@ class we extends ug {
               stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackIn_13_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackIn_13_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw la.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');

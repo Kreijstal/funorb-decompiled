@@ -126,77 +126,40 @@ final class ec extends ml {
     }
 
     final static void e(byte param0) {
-        RuntimeException runtimeException = null;
-        int var2 = 0;
         mj var3 = null;
-        RuntimeException decompiledCaughtException = null;
-        var2 = ShatteredPlansClient.field_F ? 1 : 0;
+        int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              he.field_p = null;
-              np.field_a = null;
-              k.field_i = false;
-              if (null != gr.field_p) {
+            he.field_p = null;
+            np.field_a = null;
+            k.field_i = false;
+            if (!(null == gr.field_p)) {
                 gr.field_p.a(param0 + 66);
                 gr.field_p = null;
-                break L1;
-              } else {
-                break L1;
-              }
             }
-            L2: {
-              if (param0 == -66) {
-                break L2;
-              } else {
+            if (param0 != -66) {
                 field_v = (String[]) null;
-                break L2;
-              }
             }
-            L3: {
-              ShatteredPlansClient.field_H = null;
-              if (null == kj.field_a) {
-                break L3;
-              } else {
+            ShatteredPlansClient.field_H = null;
+            if (null != kj.field_a) {
                 kj.field_a.a(param0 + 66);
                 kj.field_a = null;
-                break L3;
-              }
             }
-            L4: {
-              ea.field_b = null;
-              if (uo.field_a == null) {
-                break L4;
-              } else {
+            ea.field_b = null;
+            if (uo.field_a != null) {
                 uo.field_a.a(0);
                 uo.field_a = null;
-                break L4;
-              }
             }
-            L5: {
-              qp.field_w = null;
-              if (ShatteredPlansClient.field_H == null) {
-                break L5;
-              } else {
+            qp.field_w = null;
+            if (ShatteredPlansClient.field_H != null) {
                 var3 = (mj) ((Object) ShatteredPlansClient.field_H.c((byte) -102));
-                L6: while (true) {
-                  if (var3 == null) {
-                    ShatteredPlansClient.field_H = null;
-                    break L5;
-                  } else {
+                while (var3 != null) {
                     var3.a(16);
                     var3 = (mj) ((Object) ShatteredPlansClient.field_H.b((byte) -107));
-                    continue L6;
-                  }
                 }
-              }
+                ShatteredPlansClient.field_H = null;
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) ((Object) runtimeException), "ec.S(" + param0 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) ((Object) runtimeException), "ec.S(" + param0 + ')');
         }
     }
 

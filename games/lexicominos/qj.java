@@ -13,201 +13,58 @@ final class qj extends re {
 
     public static void g(boolean param0) {
         if (!param0) {
-          field_db = (String) null;
-          field_db = null;
-          field_fb = null;
-          field_eb = null;
-          return;
-        } else {
-          field_db = null;
-          field_fb = null;
-          field_eb = null;
-          return;
+            field_db = (String) null;
         }
+        field_db = null;
+        field_fb = null;
+        field_eb = null;
     }
 
     final static String h(int param0) {
-        String var1 = null;
         int var2 = 0;
+        String var7 = null;
         int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
         String var8 = null;
-        String stackIn_8_0 = null;
-        String stackIn_18_0 = null;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var5 = Lexicominos.field_L ? 1 : 0;
-                    var6 = "(" + vh.field_b + " " + df.field_a + " " + wl.field_i + ") " + pg.field_d;
-                    var1 = var6;
-                    if (param0 <= -83) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return (String) null;
-                }
-                case 2: {
-                    if (0 < a.field_c) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return var1;
-                }
-                case 4: {
-                    var1 = var6 + ":";
-                    var2 = 0;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (var2 < a.field_c) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    return var1;
-                }
-                case 7: {
-                    stackIn_18_0 = var1 + ' ';
-                    stackIn_8_0 = stackIn_18_0;
-                    if (var5 != 0) {
-                        statePc = 18;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    var7 = stackIn_8_0;
-                    var3 = 255 & ig.field_a.field_j[var2];
-                    var4 = var3 >> -363051100;
-                    var3 = var3 & 15;
-                    if ((var4 ^ -1) > -11) {
-                        statePc = 11;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
+        int var5 = Lexicominos.field_L ? 1 : 0;
+        String var6 = "(" + vh.field_b + " " + df.field_a + " " + wl.field_i + ") " + pg.field_d;
+        String var1 = var6;
+        if (param0 > -83) {
+            return (String) null;
+        }
+        if (0 < a.field_c) {
+            var1 = var6 + ":";
+            for (var2 = 0; var2 < a.field_c; var2++) {
+                var7 = var1 + ' ';
+                var3 = 255 & ig.field_a.field_j[var2];
+                var4 = var3 >> -363051100;
+                var3 = var3 & 15;
+                if ((var4 ^ -1) <= -11) {
                     var4 += 55;
-                    if (var5 == 0) {
-                        statePc = 12;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
+                } else {
                     var4 += 48;
-                    statePc = 12;
-                    continue stateLoop;
                 }
-                case 12: {
-                    if (-11 < (var3 ^ -1)) {
-                        statePc = 15;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 13: {
+                if (-11 >= (var3 ^ -1)) {
                     var3 += 55;
-                    if (var5 == 0) {
-                        statePc = 16;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 15: {
+                } else {
                     var3 += 48;
-                    statePc = 16;
-                    continue stateLoop;
                 }
-                case 16: {
-                    var8 = var7 + (char)var4;
-                    var1 = var8 + (char)var3;
-                    var2++;
-                    if (var5 == 0) {
-                        statePc = 5;
-                    } else {
-                        statePc = 17;
-                    }
-                    continue stateLoop;
-                }
-                case 17: {
-                    stackIn_18_0 = (String) (var1);
-                    statePc = 18;
-                    continue stateLoop;
-                }
-                case 18: {
-                    return stackIn_18_0;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                var8 = var7 + (char)var4;
+                var1 = var8 + (char)var3;
             }
         }
+        return var1;
     }
 
     final void b(int param0, w param1) {
-        RuntimeException runtimeException = null;
-        w var4 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.b(127, param1);
-              if (param0 >= 115) {
-                break L1;
-              } else {
-                var4 = (w) null;
+            super.b(127, param1);
+            if (param0 < 115) {
+                w var4 = (w) null;
                 this.b(90, (w) null);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("qj.AA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw ld.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) ((Object) runtimeException), "qj.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

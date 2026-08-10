@@ -10,60 +10,30 @@ final class je extends hf {
 
     final static void c(byte param0) {
         p var1 = null;
-        int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
-        var2 = Geoblox.field_C;
+        int var2 = Geoblox.field_C;
         try {
-          L0: {
-            L1: {
-              if (hj.field_c) {
-                break L1;
-              } else {
-                if (null == vk.field_b) {
-                  break L1;
-                } else {
-                  if (vk.field_b.field_f) {
+            if (!hj.field_c && null != vk.field_b) {
+                if (!(!vk.field_b.field_f)) {
                     ra.field_d = vk.field_b.field_j;
                     hj.field_c = true;
                     ug.field_c = ug.field_c & (ra.field_d ^ -1);
                     vl.field_p = vl.field_p | ra.field_d;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
                 }
-              }
             }
-            L2: {
-              if (param0 < -119) {
-                break L2;
-              } else {
+            if (param0 >= -119) {
                 field_j = (wl) null;
-                break L2;
-              }
             }
-            L3: {
-              if (fh.c(-91)) {
-                break L3;
-              } else {
-                L4: while (true) {
-                  var1 = (p) ((Object) ja.field_A.b((byte) -118));
-                  if (var1 == null) {
-                    break L3;
-                  } else {
+            if (!fh.c(-91)) {
+                while (true) {
+                    var1 = (p) ((Object) ja.field_A.b((byte) -118));
+                    if (var1 == null) {
+                        break;
+                    }
                     sj.a(var1, -56, 4);
-                    continue L4;
-                  }
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) ((Object) var1_ref), "je.C(" + param0 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "je.C(" + param0 + ')');
         }
     }
 

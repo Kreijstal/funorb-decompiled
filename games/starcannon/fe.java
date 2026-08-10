@@ -937,92 +937,31 @@ class fe extends dk {
     }
 
     void a(int param0, int param1, uj param2, int param3) {
-        RuntimeException runtimeException = null;
-        int var6 = 0;
         lg var7 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
+        int var6 = 0;
+        super.a(60, param1, param2, param3);
+        this.e(0);
+        if (param0 < 27) {
+            return;
+        }
         try {
-          L0: {
-            super.a(60, param1, param2, param3);
-            this.e(0);
-            if (param0 >= 27) {
-              L1: {
-                if (this.field_l != 1) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (this.field_o instanceof lg) {
-                      var7 = (lg) ((Object) this.field_o);
-                      var6 = var7.a(pe.field_d, la.field_c, (uj) (this), param1, param3, true);
-                      if (0 != (var6 ^ -1)) {
-                        L3: {
-                          if (!this.field_G) {
-                            break L3;
-                          } else {
-                            if (var6 >= this.field_C) {
-                              break L3;
-                            } else {
-                              if (this.field_D < var6) {
+            if (this.field_l == 1) {
+                if (!(!(this.field_o instanceof lg))) {
+                    var7 = (lg) ((Object) this.field_o);
+                    var6 = var7.a(pe.field_d, la.field_c, (uj) (this), param1, param3, true);
+                    if (!(0 == (var6 ^ -1))) {
+                        if (this.field_G && var6 < this.field_C) {
+                            if (!(this.field_D >= var6)) {
                                 var6 = this.field_C;
-                                break L3;
-                              } else {
-                                break L3;
-                              }
                             }
-                          }
                         }
                         this.field_B = var6;
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    } else {
-                      break L2;
                     }
-                  }
-                  this.field_F = dd.b(122);
-                  break L1;
                 }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+                this.field_F = dd.b(122);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (runtimeException);
-
-            stackIn_17_1 = new StringBuilder().append("fe.U(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L4;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L4;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "fe.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

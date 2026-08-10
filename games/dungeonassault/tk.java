@@ -272,11 +272,26 @@ final class tk {
     }
 
     final void a(int param0) {
+        int stackIn_19_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_20_1 = 0;
+        int stackIn_22_1;
+        cn[] stackIn_22_2;
+        int stackIn_22_3;
+        int stackIn_22_4;
+        int stackIn_23_1;
+        cn[] stackIn_23_2;
+        int stackIn_23_3;
+        int stackIn_23_4;
+        int stackIn_23_5;
         int var2;
-        int var10;
         int var3;
         int var4;
         double var5;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         L0: {
           var10 = DungeonAssault.field_K;
           var2 = 0;
@@ -308,7 +323,68 @@ final class tk {
                 L3: {
                   gf.b(0, 0, gf.field_i, this.field_r, 0);
                   gf.b(0, gf.field_c + -this.field_r, gf.field_i, this.field_r, 0);
-                  if (this.field_o == null) {
+                  if (this.field_o != null) {
+                    L4: {
+                      if (this.field_t[var2] != null) {
+                        L5: {
+                          var7 = this.field_o.field_E + this.field_o.field_H;
+                          var8 = this.field_o.b(this.field_t[var2], 616);
+                          var9 = this.field_o.c(this.field_t[var2], 616);
+                          if (this.field_p == null) {
+                            break L5;
+                          } else {
+                            L6: {
+                              stackIn_19_0 = 116;
+
+                              if ((var9 ^ -1) <= -3) {
+                                stackIn_20_0 = stackIn_19_0;
+                                stackIn_20_1 = 100;
+                                break L6;
+                              } else {
+                                stackIn_20_0 = stackIn_19_0;
+                                stackIn_20_1 = var7;
+                                break L6;
+                              }
+                            }
+                            L7: {
+
+
+                              stackIn_22_1 = stackIn_20_1 + 2;
+
+                              stackIn_22_2 = this.field_p;
+
+                              stackIn_22_3 = 4;
+
+                              stackIn_22_4 = 460;
+
+                              if ((var9 ^ -1) <= -3) {
+
+                                stackIn_23_1 = stackIn_22_1;
+                                stackIn_23_2 = (cn[]) ((Object) stackIn_22_2);
+                                stackIn_23_3 = stackIn_22_3;
+                                stackIn_23_4 = stackIn_22_4;
+                                stackIn_23_5 = var7;
+                                break L7;
+                              } else {
+
+                                stackIn_23_1 = stackIn_22_1;
+                                stackIn_23_2 = (cn[]) ((Object) stackIn_22_2);
+                                stackIn_23_3 = stackIn_22_3;
+                                stackIn_23_4 = stackIn_22_4;
+                                stackIn_23_5 = 0;
+                                break L7;
+                              }
+                            }
+                            sn.a(stackIn_20_0, stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4 + -stackIn_23_5 - this.field_o.field_H, var8 - -22);
+                            break L5;
+                          }
+                        }
+                        this.field_o.a(this.field_t[var2], 12, 415, 616, 60, 16777215, 0, 1, 1, var7);
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
                     if (-26 >= (var3 ^ -1)) {
                       break L3;
                     } else {

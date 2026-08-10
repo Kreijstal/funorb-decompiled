@@ -395,26 +395,29 @@ final class ed {
               }
             }
             L12: {
-              if (param2 < l.field_d) {
-                break L12;
-              } else {
-                if (var6 < l.field_c) {
-                  var11 = (1 & -param2 + var6) + (var6 * l.field_k - -var7);
-                  var12 = var9 + (1 + -var7) >> -950067807;
-                  L13: while (true) {
-                    var12--;
-                    if (-1 < (var12 ^ -1)) {
-                      break L12;
-                    } else {
-                      l.field_i[var11] = 16777215;
-                      var11 += 2;
-                      continue L13;
-                    }
-                  }
+              L13: {
+                if (param2 < l.field_d) {
+                  break L13;
                 } else {
-                  break L12;
+                  if (var6 < l.field_c) {
+                    var11 = (1 & -param2 + var6) + (var6 * l.field_k - -var7);
+                    var12 = var9 + (1 + -var7) >> -950067807;
+                    L14: while (true) {
+                      var12--;
+                      if (-1 < (var12 ^ -1)) {
+                        break L13;
+                      } else {
+                        l.field_i[var11] = 16777215;
+                        var11 += 2;
+                        continue L14;
+                      }
+                    }
+                  } else {
+                    break L12;
+                  }
                 }
               }
+              break L12;
             }
             break L0;
           }

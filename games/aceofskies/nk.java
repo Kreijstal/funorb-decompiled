@@ -731,374 +731,377 @@ final class nk {
             var5 = var4;
             if (var5 != 0) {
               if (-20 != (var5 ^ -1)) {
-                if ((var5 ^ -1) != -23) {
-                  if ((var5 ^ -1) == -2) {
-                    if (!this.field_i.e((byte) 114)) {
-                      break L1;
+                L2: {
+                  if ((var5 ^ -1) != -23) {
+                    if ((var5 ^ -1) == -2) {
+                      if (!this.field_i.e((byte) 114)) {
+                        break L2;
+                      } else {
+                        eu.a((byte) 33, -1, param0);
+                        sg.field_c.e(-112);
+                        co.field_b = 0;
+                        break L1;
+                      }
                     } else {
-                      eu.a((byte) 33, -1, param0);
-                      sg.field_c.e(-112);
+                      if (5 != var5) {
+                        if (16 == var5) {
+                          if (this.field_i.e((byte) 120)) {
+                            eu.a((byte) -117, 0, param0);
+                            r.field_n = 0;
+                            hg.field_D = 0;
+                            sb.field_c.c(268435455);
+                            break L1;
+                          } else {
+                            break L1;
+                          }
+                        } else {
+                          if (14 == var5) {
+                            if (!this.field_i.e((byte) 127)) {
+                              break L2;
+                            } else {
+                              eu.a((byte) 98, 4, param0);
+                              co.field_b = this.field_d;
+                              break L1;
+                            }
+                          } else {
+                            if (-4 == (var5 ^ -1)) {
+                              if (this.field_i.e((byte) 82)) {
+                                vq.field_w = 0;
+                                eu.a((byte) -94, 3, param0);
+                                co.field_b = this.field_d;
+                                break L1;
+                              } else {
+                                break L1;
+                              }
+                            } else {
+                              if (6 == var5) {
+                                if (this.field_i.e((byte) 104)) {
+                                  eu.a((byte) -80, co.field_b, param0);
+                                  break L1;
+                                } else {
+                                  break L1;
+                                }
+                              } else {
+                                if (-3 != (var5 ^ -1)) {
+                                  if (12 == var5) {
+                                    L3: {
+                                      if (!this.field_i.d(55)) {
+                                        break L3;
+                                      } else {
+                                        rt.b(0, (byte) -117);
+                                        lq.a(fd.field_b[3], 110);
+                                        break L3;
+                                      }
+                                    }
+                                    L4: {
+                                      if (this.field_i.b(-99)) {
+                                        rt.b(256, (byte) 59);
+                                        lq.a(fd.field_b[3], param1 ^ -10);
+                                        break L4;
+                                      } else {
+                                        break L4;
+                                      }
+                                    }
+                                    L5: {
+                                      if (this.field_i.a(-78)) {
+                                        r.e(param1 + -14601);
+                                        lq.a(fd.field_b[3], 70);
+                                        break L5;
+                                      } else {
+                                        break L5;
+                                      }
+                                    }
+                                    L6: {
+                                      if (this.field_i.b((byte) -102)) {
+                                        dq.a((byte) -2);
+                                        lq.a(fd.field_b[3], -126);
+                                        break L6;
+                                      } else {
+                                        break L6;
+                                      }
+                                    }
+                                    if (this.field_i.a((byte) 98)) {
+                                      L7: {
+                                        var5 = 137 + oq.field_K;
+                                        var6 = (this.a(param2, param1 + 197) - -this.c(param1 + 121, param2) + -var5 >> 38244609) - -oq.field_K + 8;
+                                        var7 = ic.field_b + -var6 << -1845905119;
+                                        if (-1 <= (var7 ^ -1)) {
+                                          rt.b(0, (byte) 70);
+                                          break L7;
+                                        } else {
+                                          if (256 <= var7) {
+                                            rt.b(256, (byte) -114);
+                                            break L7;
+                                          } else {
+                                            rt.b(var7, (byte) -123);
+                                            break L7;
+                                          }
+                                        }
+                                      }
+                                      if (-1 > (this.field_h ^ -1)) {
+                                        break L1;
+                                      } else {
+                                        lq.a(fd.field_b[3], 81);
+                                        this.field_h = 10;
+                                        break L1;
+                                      }
+                                    } else {
+                                      break L1;
+                                    }
+                                  } else {
+                                    if ((var5 ^ -1) != -14) {
+                                      if (-5 == (var5 ^ -1)) {
+                                        if (this.field_i.e((byte) 126)) {
+                                          if (jf.field_a != null) {
+                                            tt.b(-32546);
+                                            break L1;
+                                          } else {
+                                            ql.a((byte) -103, param0);
+                                            break L1;
+                                          }
+                                        } else {
+                                          break L1;
+                                        }
+                                      } else {
+                                        if ((var5 ^ -1) != -8) {
+                                          if ((var5 ^ -1) != -9) {
+                                            if ((var5 ^ -1) != -10) {
+                                              if ((var5 ^ -1) == -11) {
+                                                if (this.field_i.e((byte) 87)) {
+                                                  oc.field_e = 2;
+                                                  break L1;
+                                                } else {
+                                                  break L1;
+                                                }
+                                              } else {
+                                                if (15 == var5) {
+                                                  if (!this.field_i.e((byte) 97)) {
+                                                    break L2;
+                                                  } else {
+                                                    L8: {
+                                                      if (this.field_d == 4) {
+                                                        break L8;
+                                                      } else {
+                                                        if (this.field_d == 2) {
+                                                          break L8;
+                                                        } else {
+                                                          if ((this.field_d ^ -1) == -7) {
+                                                            L9: {
+                                                              stackIn_127_0 = param1 + 25365;
+
+                                                              stackIn_127_1 = 6;
+
+                                                              if (0 == r.field_n) {
+                                                                stackIn_128_0 = stackIn_127_0;
+                                                                stackIn_128_1 = stackIn_127_1;
+                                                                stackIn_128_2 = 2;
+                                                                break L9;
+                                                              } else {
+                                                                stackIn_128_0 = stackIn_127_0;
+                                                                stackIn_128_1 = stackIn_127_1;
+                                                                stackIn_128_2 = 5;
+                                                                break L9;
+                                                              }
+                                                            }
+                                                            nf.a(stackIn_128_0, stackIn_128_1, stackIn_128_2);
+                                                            break L1;
+                                                          } else {
+                                                            break L1;
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                    nf.a(25368, this.field_d, this.field_d);
+                                                    break L1;
+                                                  }
+                                                } else {
+                                                  if (var5 != 18) {
+                                                    if (17 != var5) {
+                                                      if (11 == var5) {
+                                                        if (this.field_i.e((byte) 113)) {
+                                                          L10: {
+                                                            if (jf.field_a == null) {
+                                                              break L10;
+                                                            } else {
+                                                              tt.b(-32546);
+                                                              break L10;
+                                                            }
+                                                          }
+                                                          rr.a((byte) -56, bm.m(param1 + 106));
+                                                          break L1;
+                                                        } else {
+                                                          break L1;
+                                                        }
+                                                      } else {
+                                                        if (-21 == (var5 ^ -1)) {
+                                                          if (this.field_i.e((byte) 106)) {
+                                                            ql.field_r = null;
+                                                            cs.field_a = 1;
+                                                            break L1;
+                                                          } else {
+                                                            break L1;
+                                                          }
+                                                        } else {
+                                                          if (21 == var5) {
+                                                            if (!this.field_i.e((byte) 110)) {
+                                                              break L2;
+                                                            } else {
+                                                              cs.field_a = 0;
+                                                              ql.field_r = null;
+                                                              break L1;
+                                                            }
+                                                          } else {
+                                                            break L1;
+                                                          }
+                                                        }
+                                                      }
+                                                    } else {
+                                                      if (!this.field_i.e((byte) 112)) {
+                                                        break L2;
+                                                      } else {
+                                                        if (!this.a(param2, (byte) -17)) {
+                                                          break L2;
+                                                        } else {
+                                                          vq.field_w = vq.field_w + 1;
+                                                          if (!this.a(param2, (byte) -17)) {
+                                                            this.field_i.field_g = 0;
+                                                            break L1;
+                                                          } else {
+                                                            break L1;
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  } else {
+                                                    if (!this.field_i.e((byte) 101)) {
+                                                      break L2;
+                                                    } else {
+                                                      if (this.a(param2, (byte) -17)) {
+                                                        vq.field_w = vq.field_w - 1;
+                                                        if (this.a(param2, (byte) -17)) {
+                                                          break L2;
+                                                        } else {
+                                                          this.field_i.field_g = 2;
+                                                          break L1;
+                                                        }
+                                                      } else {
+                                                        break L1;
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            } else {
+                                              if (this.field_i.e((byte) 88)) {
+                                                oc.field_e = 1;
+                                                break L1;
+                                              } else {
+                                                break L1;
+                                              }
+                                            }
+                                          } else {
+                                            if (this.field_i.e((byte) 124)) {
+                                              oc.field_e = 0;
+                                              break L1;
+                                            } else {
+                                              break L1;
+                                            }
+                                          }
+                                        } else {
+                                          if (!this.field_i.e((byte) 82)) {
+                                            break L2;
+                                          } else {
+                                            sg.field_c.a(param0, false, 100);
+                                            break L1;
+                                          }
+                                        }
+                                      }
+                                    } else {
+                                      L11: {
+                                        if (this.field_i.d(param1 + 50)) {
+                                          ve.a((byte) 43, 0);
+                                          break L11;
+                                        } else {
+                                          break L11;
+                                        }
+                                      }
+                                      L12: {
+                                        if (this.field_i.b(-39)) {
+                                          ve.a((byte) 43, 256);
+                                          break L12;
+                                        } else {
+                                          break L12;
+                                        }
+                                      }
+                                      L13: {
+                                        if (this.field_i.a(param1 + -11)) {
+                                          lj.a(100);
+                                          break L13;
+                                        } else {
+                                          break L13;
+                                        }
+                                      }
+                                      L14: {
+                                        if (this.field_i.b((byte) -102)) {
+                                          wk.c((byte) -118);
+                                          break L14;
+                                        } else {
+                                          break L14;
+                                        }
+                                      }
+                                      if (this.field_i.a((byte) 119)) {
+                                        var5 = 128 + oq.field_K + 9;
+                                        var6 = (-var5 + this.a(param2, 200) - -this.c(param1 ^ 124, param2) >> 2081852321) - (-oq.field_K + -8);
+                                        var7 = ic.field_b + -var6 << 2069087649;
+                                        if (-1 > (var7 ^ -1)) {
+                                          if ((var7 ^ -1) > -257) {
+                                            ve.a((byte) 43, var7);
+                                            break L1;
+                                          } else {
+                                            ve.a((byte) 43, 256);
+                                            break L1;
+                                          }
+                                        } else {
+                                          ve.a((byte) 43, 0);
+                                          break L1;
+                                        }
+                                      } else {
+                                        break L1;
+                                      }
+                                    }
+                                  }
+                                } else {
+                                  if (!this.field_i.e((byte) 98)) {
+                                    break L2;
+                                  } else {
+                                    eu.a((byte) 90, 2, param0);
+                                    break L1;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      } else {
+                        if (!this.field_i.e((byte) 86)) {
+                          break L2;
+                        } else {
+                          eu.a((byte) 115, 0, param0);
+                          break L1;
+                        }
+                      }
+                    }
+                  } else {
+                    if (!this.field_i.e((byte) 81)) {
+                      break L2;
+                    } else {
+                      eu.a((byte) 122, 7, param0);
                       co.field_b = 0;
                       break L1;
                     }
-                  } else {
-                    if (5 != var5) {
-                      if (16 == var5) {
-                        if (this.field_i.e((byte) 120)) {
-                          eu.a((byte) -117, 0, param0);
-                          r.field_n = 0;
-                          hg.field_D = 0;
-                          sb.field_c.c(268435455);
-                          break L1;
-                        } else {
-                          break L1;
-                        }
-                      } else {
-                        if (14 == var5) {
-                          if (!this.field_i.e((byte) 127)) {
-                            break L1;
-                          } else {
-                            eu.a((byte) 98, 4, param0);
-                            co.field_b = this.field_d;
-                            break L1;
-                          }
-                        } else {
-                          if (-4 == (var5 ^ -1)) {
-                            if (this.field_i.e((byte) 82)) {
-                              vq.field_w = 0;
-                              eu.a((byte) -94, 3, param0);
-                              co.field_b = this.field_d;
-                              break L1;
-                            } else {
-                              break L1;
-                            }
-                          } else {
-                            if (6 == var5) {
-                              if (this.field_i.e((byte) 104)) {
-                                eu.a((byte) -80, co.field_b, param0);
-                                break L1;
-                              } else {
-                                break L1;
-                              }
-                            } else {
-                              if (-3 != (var5 ^ -1)) {
-                                if (12 == var5) {
-                                  L2: {
-                                    if (!this.field_i.d(55)) {
-                                      break L2;
-                                    } else {
-                                      rt.b(0, (byte) -117);
-                                      lq.a(fd.field_b[3], 110);
-                                      break L2;
-                                    }
-                                  }
-                                  L3: {
-                                    if (this.field_i.b(-99)) {
-                                      rt.b(256, (byte) 59);
-                                      lq.a(fd.field_b[3], param1 ^ -10);
-                                      break L3;
-                                    } else {
-                                      break L3;
-                                    }
-                                  }
-                                  L4: {
-                                    if (this.field_i.a(-78)) {
-                                      r.e(param1 + -14601);
-                                      lq.a(fd.field_b[3], 70);
-                                      break L4;
-                                    } else {
-                                      break L4;
-                                    }
-                                  }
-                                  L5: {
-                                    if (this.field_i.b((byte) -102)) {
-                                      dq.a((byte) -2);
-                                      lq.a(fd.field_b[3], -126);
-                                      break L5;
-                                    } else {
-                                      break L5;
-                                    }
-                                  }
-                                  if (this.field_i.a((byte) 98)) {
-                                    L6: {
-                                      var5 = 137 + oq.field_K;
-                                      var6 = (this.a(param2, param1 + 197) - -this.c(param1 + 121, param2) + -var5 >> 38244609) - -oq.field_K + 8;
-                                      var7 = ic.field_b + -var6 << -1845905119;
-                                      if (-1 <= (var7 ^ -1)) {
-                                        rt.b(0, (byte) 70);
-                                        break L6;
-                                      } else {
-                                        if (256 <= var7) {
-                                          rt.b(256, (byte) -114);
-                                          break L6;
-                                        } else {
-                                          rt.b(var7, (byte) -123);
-                                          break L6;
-                                        }
-                                      }
-                                    }
-                                    if (-1 > (this.field_h ^ -1)) {
-                                      break L1;
-                                    } else {
-                                      lq.a(fd.field_b[3], 81);
-                                      this.field_h = 10;
-                                      break L1;
-                                    }
-                                  } else {
-                                    break L1;
-                                  }
-                                } else {
-                                  if ((var5 ^ -1) != -14) {
-                                    if (-5 == (var5 ^ -1)) {
-                                      if (this.field_i.e((byte) 126)) {
-                                        if (jf.field_a != null) {
-                                          tt.b(-32546);
-                                          break L1;
-                                        } else {
-                                          ql.a((byte) -103, param0);
-                                          break L1;
-                                        }
-                                      } else {
-                                        break L1;
-                                      }
-                                    } else {
-                                      if ((var5 ^ -1) != -8) {
-                                        if ((var5 ^ -1) != -9) {
-                                          if ((var5 ^ -1) != -10) {
-                                            if ((var5 ^ -1) == -11) {
-                                              if (this.field_i.e((byte) 87)) {
-                                                oc.field_e = 2;
-                                                break L1;
-                                              } else {
-                                                break L1;
-                                              }
-                                            } else {
-                                              if (15 == var5) {
-                                                if (!this.field_i.e((byte) 97)) {
-                                                  break L1;
-                                                } else {
-                                                  L7: {
-                                                    if (this.field_d == 4) {
-                                                      break L7;
-                                                    } else {
-                                                      if (this.field_d == 2) {
-                                                        break L7;
-                                                      } else {
-                                                        if ((this.field_d ^ -1) == -7) {
-                                                          L8: {
-                                                            stackIn_127_0 = param1 + 25365;
-
-                                                            stackIn_127_1 = 6;
-
-                                                            if (0 == r.field_n) {
-                                                              stackIn_128_0 = stackIn_127_0;
-                                                              stackIn_128_1 = stackIn_127_1;
-                                                              stackIn_128_2 = 2;
-                                                              break L8;
-                                                            } else {
-                                                              stackIn_128_0 = stackIn_127_0;
-                                                              stackIn_128_1 = stackIn_127_1;
-                                                              stackIn_128_2 = 5;
-                                                              break L8;
-                                                            }
-                                                          }
-                                                          nf.a(stackIn_128_0, stackIn_128_1, stackIn_128_2);
-                                                          break L1;
-                                                        } else {
-                                                          break L1;
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                  nf.a(25368, this.field_d, this.field_d);
-                                                  break L1;
-                                                }
-                                              } else {
-                                                if (var5 != 18) {
-                                                  if (17 != var5) {
-                                                    if (11 == var5) {
-                                                      if (this.field_i.e((byte) 113)) {
-                                                        L9: {
-                                                          if (jf.field_a == null) {
-                                                            break L9;
-                                                          } else {
-                                                            tt.b(-32546);
-                                                            break L9;
-                                                          }
-                                                        }
-                                                        rr.a((byte) -56, bm.m(param1 + 106));
-                                                        break L1;
-                                                      } else {
-                                                        break L1;
-                                                      }
-                                                    } else {
-                                                      if (-21 == (var5 ^ -1)) {
-                                                        if (this.field_i.e((byte) 106)) {
-                                                          ql.field_r = null;
-                                                          cs.field_a = 1;
-                                                          break L1;
-                                                        } else {
-                                                          break L1;
-                                                        }
-                                                      } else {
-                                                        if (21 == var5) {
-                                                          if (!this.field_i.e((byte) 110)) {
-                                                            break L1;
-                                                          } else {
-                                                            cs.field_a = 0;
-                                                            ql.field_r = null;
-                                                            break L1;
-                                                          }
-                                                        } else {
-                                                          break L1;
-                                                        }
-                                                      }
-                                                    }
-                                                  } else {
-                                                    if (!this.field_i.e((byte) 112)) {
-                                                      break L1;
-                                                    } else {
-                                                      if (!this.a(param2, (byte) -17)) {
-                                                        break L1;
-                                                      } else {
-                                                        vq.field_w = vq.field_w + 1;
-                                                        if (!this.a(param2, (byte) -17)) {
-                                                          this.field_i.field_g = 0;
-                                                          break L1;
-                                                        } else {
-                                                          break L1;
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                } else {
-                                                  if (!this.field_i.e((byte) 101)) {
-                                                    break L1;
-                                                  } else {
-                                                    if (this.a(param2, (byte) -17)) {
-                                                      vq.field_w = vq.field_w - 1;
-                                                      if (this.a(param2, (byte) -17)) {
-                                                        break L1;
-                                                      } else {
-                                                        this.field_i.field_g = 2;
-                                                        break L1;
-                                                      }
-                                                    } else {
-                                                      break L1;
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          } else {
-                                            if (this.field_i.e((byte) 88)) {
-                                              oc.field_e = 1;
-                                              break L1;
-                                            } else {
-                                              break L1;
-                                            }
-                                          }
-                                        } else {
-                                          if (this.field_i.e((byte) 124)) {
-                                            oc.field_e = 0;
-                                            break L1;
-                                          } else {
-                                            break L1;
-                                          }
-                                        }
-                                      } else {
-                                        if (!this.field_i.e((byte) 82)) {
-                                          break L1;
-                                        } else {
-                                          sg.field_c.a(param0, false, 100);
-                                          break L1;
-                                        }
-                                      }
-                                    }
-                                  } else {
-                                    L10: {
-                                      if (this.field_i.d(param1 + 50)) {
-                                        ve.a((byte) 43, 0);
-                                        break L10;
-                                      } else {
-                                        break L10;
-                                      }
-                                    }
-                                    L11: {
-                                      if (this.field_i.b(-39)) {
-                                        ve.a((byte) 43, 256);
-                                        break L11;
-                                      } else {
-                                        break L11;
-                                      }
-                                    }
-                                    L12: {
-                                      if (this.field_i.a(param1 + -11)) {
-                                        lj.a(100);
-                                        break L12;
-                                      } else {
-                                        break L12;
-                                      }
-                                    }
-                                    L13: {
-                                      if (this.field_i.b((byte) -102)) {
-                                        wk.c((byte) -118);
-                                        break L13;
-                                      } else {
-                                        break L13;
-                                      }
-                                    }
-                                    if (this.field_i.a((byte) 119)) {
-                                      var5 = 128 + oq.field_K + 9;
-                                      var6 = (-var5 + this.a(param2, 200) - -this.c(param1 ^ 124, param2) >> 2081852321) - (-oq.field_K + -8);
-                                      var7 = ic.field_b + -var6 << 2069087649;
-                                      if (-1 > (var7 ^ -1)) {
-                                        if ((var7 ^ -1) > -257) {
-                                          ve.a((byte) 43, var7);
-                                          break L1;
-                                        } else {
-                                          ve.a((byte) 43, 256);
-                                          break L1;
-                                        }
-                                      } else {
-                                        ve.a((byte) 43, 0);
-                                        break L1;
-                                      }
-                                    } else {
-                                      break L1;
-                                    }
-                                  }
-                                }
-                              } else {
-                                if (!this.field_i.e((byte) 98)) {
-                                  break L1;
-                                } else {
-                                  eu.a((byte) 90, 2, param0);
-                                  break L1;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      if (!this.field_i.e((byte) 86)) {
-                        break L1;
-                      } else {
-                        eu.a((byte) 115, 0, param0);
-                        break L1;
-                      }
-                    }
-                  }
-                } else {
-                  if (!this.field_i.e((byte) 81)) {
-                    break L1;
-                  } else {
-                    eu.a((byte) 122, 7, param0);
-                    co.field_b = 0;
-                    break L1;
                   }
                 }
+                break L1;
               } else {
                 if (this.field_i.e((byte) 104)) {
                   sg.field_c.a(61, true);
@@ -1445,70 +1448,16 @@ final class nk {
     }
 
     final static void a(byte param0, gk param1, gk param2) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        StringBuilder stackIn_8_1 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              ka.field_a = qg.a((byte) 3, param1, "", "frame");
-              rg.field_F = qg.a((byte) 3, param1, "", "button_raised");
-              wt.field_h = qg.a((byte) 3, param1, "", "button_frame");
-              bo.field_a = (hc) ((Object) gl.a(param1, "b12", "", param2, param0 ^ -48));
-              if (param0 == -56) {
-                break L1;
-              } else {
+            ka.field_a = qg.a((byte) 3, param1, "", "frame");
+            rg.field_F = qg.a((byte) 3, param1, "", "button_raised");
+            wt.field_h = qg.a((byte) 3, param1, "", "button_frame");
+            bo.field_a = (hc) ((Object) gl.a(param1, "b12", "", param2, param0 ^ -48));
+            if (param0 != -56) {
                 field_g = (kp) null;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("nk.S(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          L3: {
-
-
-            stackIn_8_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
-
-            if (param2 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
-          }
-          throw pn.a((Throwable) ((Object) stackIn_6_0), stackIn_9_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) ((Object) runtimeException), "nk.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

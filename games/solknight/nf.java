@@ -147,13 +147,18 @@ final class nf extends ld implements ka {
     }
 
     final static boolean a(int param0, boolean param1, String param2, String param3, rf param4, String param5, byte param6) {
+        jk var7 = null;
+        RuntimeException var7_ref = null;
         jk var8 = null;
         int stackIn_3_0 = 0;
         int stackIn_10_0 = 0;
-        int stackIn_15_0 = 0;
-        RuntimeException stackIn_18_0 = null;
+        int stackIn_12_0 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
@@ -162,12 +167,8 @@ final class nf extends ld implements ka {
         StringBuilder stackIn_24_1 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        StringBuilder stackIn_27_1 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
         try {
           L0: {
             if (ma.field_o != el.field_p) {
@@ -183,57 +184,67 @@ final class nf extends ld implements ka {
                   break L1;
                 }
               }
-              L2: {
-                var8 = new jk(u.field_b, param4);
-                u.field_b.b(var8, -113);
-                if (rb.a(-1)) {
-                  var8.h((byte) -63);
-                  break L2;
-                } else {
-                  L3: {
-                    lf.field_e = param5;
-                    ug.field_d = param2;
-                    ma.field_o = gf.field_Z;
-                    if (!param1) {
-                      stackIn_10_0 = 0;
-                      break L3;
-                    } else {
-                      stackIn_10_0 = 1;
-                      break L3;
-                    }
-                  }
-                  og.field_b = stackIn_10_0 != 0;
-                  te.field_K = param3;
-                  vb.field_j = null;
-                  uh.field_d = param0;
-                  if (!SolKnight.field_L) {
+              var8 = new jk(u.field_b, param4);
+              var7 = var8;
+              u.field_b.b(var8, -113);
+              if (rb.a(-1)) {
+                var8.h((byte) -63);
+                stackIn_12_0 = 1;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              } else {
+                L2: {
+                  lf.field_e = param5;
+                  ug.field_d = param2;
+                  ma.field_o = gf.field_Z;
+                  if (!param1) {
+                    stackIn_10_0 = 0;
                     break L2;
                   } else {
-                    var8.h((byte) -63);
+                    stackIn_10_0 = 1;
                     break L2;
                   }
                 }
+                og.field_b = stackIn_10_0 != 0;
+                te.field_K = param3;
+                vb.field_j = null;
+                uh.field_d = param0;
+                return true;
               }
-              stackIn_15_0 = 1;
-              decompiledRegionSelector0 = 1;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var7 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var7);
+          L3: {
+            var7_ref = decompiledCaughtException;
+            stackIn_15_0 = (RuntimeException) (var7_ref);
 
-            stackIn_18_1 = new StringBuilder().append("nf.QA(").append(param0).append(',').append(param1).append(',');
+            stackIn_15_1 = new StringBuilder().append("nf.QA(").append(param0).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L3;
+            } else {
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L3;
+            }
+          }
+          L4: {
+
+
+            stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
+
+            if (param3 == null) {
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackIn_19_2 = "null";
               break L4;
             } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackIn_19_2 = "{...}";
               break L4;
@@ -244,13 +255,13 @@ final class nf extends ld implements ka {
 
             stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
 
-            if (param3 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+            if (param4 == null) {
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "null";
               break L5;
             } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "{...}";
               break L5;
@@ -261,41 +272,24 @@ final class nf extends ld implements ka {
 
             stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
 
-            if (param4 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+            if (param5 == null) {
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "null";
               break L6;
             } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "{...}";
               break L6;
             }
           }
-          L7: {
-
-
-            stackIn_27_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
-
-            if (param5 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "null";
-              break L7;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "{...}";
-              break L7;
-            }
-          }
-          throw fc.a((Throwable) ((Object) stackIn_19_0), stackIn_28_2 + ',' + param6 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_16_0), stackIn_25_2 + ',' + param6 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0 != 0;
         } else {
-          return stackIn_15_0 != 0;
+          return stackIn_12_0 != 0;
         }
     }
 

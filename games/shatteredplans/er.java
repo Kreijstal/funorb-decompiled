@@ -195,27 +195,30 @@ final class er {
             }
             L3: {
               if (sr.field_h) {
-                ca.a(param3, param0, param0, param2, param7, param1, -10, 20, param6);
-                fa.field_X.a(param5, -20429);
-                if (!param5) {
-                  break L3;
-                } else {
-                  L4: {
-                    if (hd.field_m.field_rb == 0) {
-                      break L4;
-                    } else {
+                L4: {
+                  ca.a(param3, param0, param0, param2, param7, param1, -10, 20, param6);
+                  fa.field_X.a(param5, -20429);
+                  if (!param5) {
+                    break L4;
+                  } else {
+                    L5: {
+                      if (hd.field_m.field_rb == 0) {
+                        break L5;
+                      } else {
+                        sr.field_h = false;
+                        break L5;
+                      }
+                    }
+                    if (-1 != (cb.field_l.field_rb ^ -1)) {
+                      qq.c(false);
                       sr.field_h = false;
                       break L4;
+                    } else {
+                      break L3;
                     }
                   }
-                  if (-1 != (cb.field_l.field_rb ^ -1)) {
-                    qq.c(false);
-                    sr.field_h = false;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
                 }
+                break L3;
               } else {
                 break L3;
               }
@@ -224,7 +227,7 @@ final class er {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var8 = decompiledCaughtException;
             stackIn_18_0 = (RuntimeException) (var8);
 
@@ -234,12 +237,12 @@ final class er {
               stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
               stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackIn_19_2 = "null";
-              break L5;
+              break L6;
             } else {
               stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
               stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackIn_19_2 = "{...}";
-              break L5;
+              break L6;
             }
           }
           throw r.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');

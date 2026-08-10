@@ -19,26 +19,30 @@ final class ll {
           return var3;
         } else {
           L0: {
-            L1: {
-              if (32768 > param1) {
-                break L1;
-              } else {
-                var4 = this.field_b.a(1, param0 ^ -48, 32767 & param1);
-                if (!Lexicominos.field_L) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
+            if (32768 > param1) {
+              var4 = this.field_d.a(1, -27493, param1);
+              break L0;
+            } else {
+              var4 = this.field_b.a(1, param0 ^ -48, 32767 & param1);
+              break L0;
             }
-            var4 = this.field_d.a(1, -27493, param1);
-            break L0;
           }
           var5 = new me();
           if (param0 == 27467) {
             if (var4 != null) {
-              L2: {
+              L1: {
                 var5.a(new wf(var4), 0);
+                if ((param1 ^ -1) <= -32769) {
+                  var5.d((byte) -80);
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              this.field_g.a(var5, -25253, (long)param1);
+              return var5;
+            } else {
+              L2: {
                 if ((param1 ^ -1) <= -32769) {
                   var5.d((byte) -80);
                   break L2;
@@ -48,7 +52,10 @@ final class ll {
               }
               this.field_g.a(var5, -25253, (long)param1);
               return var5;
-            } else {
+            }
+          } else {
+            this.a(-98, 88);
+            if (var4 == null) {
               L3: {
                 if ((param1 ^ -1) <= -32769) {
                   var5.d((byte) -80);
@@ -59,28 +66,14 @@ final class ll {
               }
               this.field_g.a(var5, -25253, (long)param1);
               return var5;
-            }
-          } else {
-            this.a(-98, 88);
-            if (var4 == null) {
-              L4: {
-                if ((param1 ^ -1) <= -32769) {
-                  var5.d((byte) -80);
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              this.field_g.a(var5, -25253, (long)param1);
-              return var5;
             } else {
-              L5: {
+              L4: {
                 var5.a(new wf(var4), 0);
                 if ((param1 ^ -1) <= -32769) {
                   var5.d((byte) -80);
-                  break L5;
+                  break L4;
                 } else {
-                  break L5;
+                  break L4;
                 }
               }
               this.field_g.a(var5, -25253, (long)param1);

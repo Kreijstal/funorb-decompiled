@@ -151,11 +151,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         break L3;
                       } else {
                         var2_int = vc.field_K[var2_int] & -129;
-                        if (!Lexicominos.field_L) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
+                        break L2;
                       }
                     }
                   }
@@ -247,135 +243,94 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (null == ol.field_l) {
-                break L1;
-              } else {
+            if (null != ol.field_l) {
                 vg.field_b = -1;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("bi.focusLost(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw ld.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) ((Object) runtimeException), "bi.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
         int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
         try {
           L0: {
             if (ol.field_l != null) {
               L1: {
                 L2: {
-                  L3: {
-                    tb.field_b = 0;
-                    var2_int = param0.getKeyCode();
-                    if (var2_int < 0) {
-                      break L3;
-                    } else {
-                      if (vc.field_K.length > var2_int) {
-                        break L2;
+                  tb.field_b = 0;
+                  var2_int = param0.getKeyCode();
+                  if (var2_int < 0) {
+                    break L2;
+                  } else {
+                    if (vc.field_K.length > var2_int) {
+                      var2_int = vc.field_K[var2_int];
+                      if (-1 == (128 & var2_int ^ -1)) {
+                        break L1;
                       } else {
-                        break L3;
+                        var2_int = -1;
+                        break L1;
                       }
+                    } else {
+                      break L2;
                     }
                   }
-                  var2_int = -1;
-                  if (!Lexicominos.field_L) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
                 }
-                var2_int = vc.field_K[var2_int];
-                if (-1 == (128 & var2_int ^ -1)) {
-                  break L1;
-                } else {
-                  var2_int = -1;
-                  break L1;
-                }
+                var2_int = -1;
+                break L1;
               }
-              L4: {
+              L3: {
                 if (0 > vg.field_b) {
-                  break L4;
+                  break L3;
                 } else {
                   if (-1 < (var2_int ^ -1)) {
-                    break L4;
+                    break L3;
                   } else {
                     ji.field_e[vg.field_b] = var2_int;
                     vg.field_b = 1 + vg.field_b & 127;
                     if (ud.field_a == vg.field_b) {
                       vg.field_b = -1;
-                      break L4;
+                      break L3;
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                 }
               }
-              L5: {
+              L4: {
                 if (var2_int >= 0) {
                   var3 = 127 & 1 + Lexicominos.field_G;
                   if (tj.field_h == var3) {
-                    break L5;
+                    break L4;
                   } else {
                     gj.field_x[Lexicominos.field_G] = var2_int;
                     ok.field_q[Lexicominos.field_G] = (char)0;
                     Lexicominos.field_G = var3;
-                    break L5;
+                    break L4;
                   }
                 } else {
-                  break L5;
+                  break L4;
                 }
               }
-              L6: {
+              L5: {
                 var3 = param0.getModifiers();
                 if (0 != (var3 & 10)) {
-                  break L6;
+                  break L5;
                 } else {
                   if (var2_int == 85) {
-                    break L6;
+                    break L5;
                   } else {
                     if ((var2_int ^ -1) == -11) {
-                      break L6;
+                      break L5;
                     } else {
                       return;
                     }
@@ -390,7 +345,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var2 = decompiledCaughtException;
             stackIn_25_0 = (RuntimeException) (var2);
 
@@ -400,12 +355,12 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "null";
-              break L7;
+              break L6;
             } else {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "{...}";
-              break L7;
+              break L6;
             }
           }
           throw ld.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');

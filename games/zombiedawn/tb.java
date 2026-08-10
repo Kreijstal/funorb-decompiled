@@ -177,82 +177,27 @@ class tb extends an {
     }
 
     void a(ga param0, byte param1, int param2, int param3) {
-        RuntimeException runtimeException = null;
-        int var5_int = 0;
         ak var6 = null;
         int var7 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var5_int = 108 / ((46 - param1) / 42);
-              super.a(param0, (byte) 119, param2, param3);
-              this.i(-94);
-              if (1 != this.field_m) {
-                break L1;
-              } else {
-                L2: {
-                  if (this.field_h instanceof ak) {
+            int var5_int = 108 / ((46 - param1) / 42);
+            super.a(param0, (byte) 119, param2, param3);
+            this.i(-94);
+            if (1 == this.field_m) {
+                if (!(!(this.field_h instanceof ak))) {
                     var6 = (ak) ((Object) this.field_h);
                     var7 = var6.a((ga) (this), -1, param2, ha.field_b, ei.field_K, param3);
-                    if (-1 == var7) {
-                      break L2;
-                    } else {
-                      L3: {
-                        if (!this.field_F) {
-                          break L3;
-                        } else {
-                          if (var7 >= this.field_L) {
-                            break L3;
-                          } else {
-                            if (this.field_H >= var7) {
-                              break L3;
-                            } else {
-                              var7 = this.field_L;
-                              break L3;
-                            }
-                          }
+                    if (-1 != var7) {
+                        if (this.field_F && var7 < this.field_L && this.field_H < var7) {
+                            var7 = this.field_L;
                         }
-                      }
-                      this.field_N = var7;
-                      break L2;
+                        this.field_N = var7;
                     }
-                  } else {
-                    break L2;
-                  }
                 }
                 this.field_M = pd.a(-22826);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("tb.D(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
-          }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) ((Object) runtimeException), "tb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -316,23 +261,49 @@ class tb extends an {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        ak var8 = null;
-        long var6 = 0L;
-        if (param3 != 0) {
+        long var6;
+        ak var8;
+        L0: {
+          if (param3 == 0) {
+            break L0;
+          } else {
             tb.a('ﾲ', 59);
+            break L0;
+          }
         }
-        if (this.field_h != null && param1 == 0) {
-            this.field_h.a(16777215, this.field_C, param0, (ga) (this), param2);
-            if (!(!(this.field_h instanceof ak))) {
-                var8 = (ak) ((Object) this.field_h);
-                if (!(this.field_H == this.field_N)) {
-                    var8.a(-118, this.field_H, param0, (ga) (this), param2, this.field_N);
-                }
-                var6 = pd.a(-22826);
-                if (!(((var6 + -this.field_M) % 1000L ^ -1L) <= -501L)) {
+        L1: {
+          if (this.field_h == null) {
+            break L1;
+          } else {
+            L2: {
+              if (param1 != 0) {
+                break L2;
+              } else {
+                this.field_h.a(16777215, this.field_C, param0, (ga) (this), param2);
+                if (this.field_h instanceof ak) {
+                  L3: {
+                    var8 = (ak) ((Object) this.field_h);
+                    if (this.field_H != this.field_N) {
+                      var8.a(-118, this.field_H, param0, (ga) (this), param2, this.field_N);
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                  var6 = pd.a(-22826);
+                  if (((var6 + -this.field_M) % 1000L ^ -1L) > -501L) {
                     var8.a(this.field_N, param2, param0, param3 ^ -39, (ga) (this));
+                    break L2;
+                  } else {
+                    break L1;
+                  }
+                } else {
+                  break L1;
                 }
+              }
             }
+            break L1;
+          }
         }
     }
 

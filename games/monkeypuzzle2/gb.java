@@ -84,65 +84,51 @@ final class gb extends ug {
         float[] var9;
         if (param0 != 122) {
           L0: {
-            L1: {
-              this.field_k = (wg) null;
-              if (this.field_m) {
-                break L1;
-              } else {
-                var8 = ac.a(this.field_k.field_e, 123, this.field_e.field_e);
-                var6 = var8;
-                var4 = var6;
-                var2 = var4;
-                var3 = wg.a(var8, (byte) 115);
-                oa.a(this.field_l / (var3 + this.field_l) - 0.5f, var8, 107);
-                mh.a(this.field_k.field_e, (byte) -126, var8);
-                wj.a(this.field_e.field_e, -74, var8);
-                if (!MonkeyPuzzle2.field_F) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
+            this.field_k = (wg) null;
+            if (this.field_m) {
+              var9 = ac.a(this.field_k.field_e, 114, this.field_g);
+              var7 = var9;
+              var5 = var7;
+              var2 = var5;
+              var3 = wg.a(var9, (byte) 120);
+              oa.a((-0.5f + this.field_l / (this.field_l + var3)) * 2.0f, var9, 126);
+              mh.a(this.field_k.field_e, (byte) -125, var9);
+              break L0;
+            } else {
+              var8 = ac.a(this.field_k.field_e, 123, this.field_e.field_e);
+              var6 = var8;
+              var4 = var6;
+              var2 = var4;
+              var3 = wg.a(var8, (byte) 115);
+              oa.a(this.field_l / (var3 + this.field_l) - 0.5f, var8, 107);
+              mh.a(this.field_k.field_e, (byte) -126, var8);
+              wj.a(this.field_e.field_e, -74, var8);
+              break L0;
             }
-            var9 = ac.a(this.field_k.field_e, 114, this.field_g);
-            var7 = var9;
-            var5 = var7;
-            var2 = var5;
-            var3 = wg.a(var9, (byte) 120);
-            oa.a((-0.5f + this.field_l / (this.field_l + var3)) * 2.0f, var9, 126);
-            mh.a(this.field_k.field_e, (byte) -125, var9);
-            break L0;
           }
           return;
         } else {
-          L2: {
-            L3: {
-              if (this.field_m) {
-                break L3;
-              } else {
-                var8 = ac.a(this.field_k.field_e, 123, this.field_e.field_e);
-                var6 = var8;
-                var4 = var6;
-                var2 = var4;
-                var3 = wg.a(var8, (byte) 115);
-                oa.a(this.field_l / (var3 + this.field_l) - 0.5f, var8, 107);
-                mh.a(this.field_k.field_e, (byte) -126, var8);
-                wj.a(this.field_e.field_e, -74, var8);
-                if (!MonkeyPuzzle2.field_F) {
-                  break L2;
-                } else {
-                  break L3;
-                }
-              }
+          L1: {
+            if (this.field_m) {
+              var9 = ac.a(this.field_k.field_e, 114, this.field_g);
+              var7 = var9;
+              var5 = var7;
+              var2 = var5;
+              var3 = wg.a(var9, (byte) 120);
+              oa.a((-0.5f + this.field_l / (this.field_l + var3)) * 2.0f, var9, 126);
+              mh.a(this.field_k.field_e, (byte) -125, var9);
+              break L1;
+            } else {
+              var8 = ac.a(this.field_k.field_e, 123, this.field_e.field_e);
+              var6 = var8;
+              var4 = var6;
+              var2 = var4;
+              var3 = wg.a(var8, (byte) 115);
+              oa.a(this.field_l / (var3 + this.field_l) - 0.5f, var8, 107);
+              mh.a(this.field_k.field_e, (byte) -126, var8);
+              wj.a(this.field_e.field_e, -74, var8);
+              break L1;
             }
-            var9 = ac.a(this.field_k.field_e, 114, this.field_g);
-            var7 = var9;
-            var5 = var7;
-            var2 = var5;
-            var3 = wg.a(var9, (byte) 120);
-            oa.a((-0.5f + this.field_l / (this.field_l + var3)) * 2.0f, var9, 126);
-            mh.a(this.field_k.field_e, (byte) -125, var9);
-            break L2;
           }
           return;
         }

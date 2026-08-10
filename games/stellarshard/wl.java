@@ -134,127 +134,48 @@ abstract class wl extends tb {
     }
 
     final static void a(int param0, int param1, String param2) {
-        RuntimeException runtimeException = null;
         int var3_int = 0;
-        String var4 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              ie.field_r = false;
-              ck.field_db = false;
-              if (param1 == -8440) {
-                break L1;
-              } else {
-                var4 = (String) null;
+            ie.field_r = false;
+            ck.field_db = false;
+            if (param1 != -8440) {
+                String var4 = (String) null;
                 wl.a(-111, -58, (String) null);
-                break L1;
-              }
             }
-            L2: {
-              if (ei.field_G == null) {
-                break L2;
-              } else {
-                if (!ei.field_G.field_G) {
-                  break L2;
+            if (ei.field_G != null && ei.field_G.field_G) {
+                var3_int = 1;
+                if (8 != param0) {
                 } else {
-                  L3: {
-                    var3_int = 1;
-                    if (8 == param0) {
-                      L4: {
-                        if (!gk.field_a) {
-                          param2 = dd.field_f;
-                          break L4;
-                        } else {
-                          param2 = ce.field_g;
-                          break L4;
-                        }
-                      }
-                      param0 = 2;
-                      af.field_r.b(va.field_a, 15);
-                      break L3;
+                    if (gk.field_a) {
+                        param2 = ce.field_g;
                     } else {
-                      break L3;
+                        param2 = dd.field_f;
                     }
-                  }
-                  L5: {
-                    if (-11 != (param0 ^ -1)) {
-                      break L5;
-                    } else {
-                      var3_int = 0;
-                      pi.a(false);
-                      break L5;
-                    }
-                  }
-                  L6: {
-                    if (var3_int != 0) {
-                      L7: {
-                        if (!ie.field_r) {
-                          break L7;
-                        } else {
-                          param2 = h.a(oa.field_F, 0, new String[]{param2});
-                          break L7;
-                        }
-                      }
-                      L8: {
-                        if (!ak.field_a) {
-                          break L8;
-                        } else {
-                          param2 = sj.field_E;
-                          break L8;
-                        }
-                      }
-                      ei.field_G.a(param2, param0, param1 + 8517);
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
-                  if ((param0 ^ -1) == -257) {
-                    break L2;
-                  } else {
-                    if (param0 == 10) {
-                      break L2;
-                    } else {
-                      if (!gk.field_a) {
-                        af.field_r.e((byte) 41);
-                        break L2;
-                      } else {
-                        return;
-                      }
-                    }
-                  }
+                    param0 = 2;
+                    af.field_r.b(va.field_a, 15);
                 }
-              }
+                if (-11 == (param0 ^ -1)) {
+                    var3_int = 0;
+                    pi.a(false);
+                }
+                if (!(var3_int == 0)) {
+                    if (ie.field_r) {
+                        param2 = h.a(oa.field_F, 0, new String[]{param2});
+                    }
+                    if (ak.field_a) {
+                        param2 = sj.field_E;
+                    }
+                    ei.field_G.a(param2, param0, param1 + 8517);
+                }
+                if ((param0 ^ -1) != -257 && param0 != 10) {
+                    if (gk.field_a) {
+                        return;
+                    }
+                    af.field_r.e((byte) 41);
+                }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            runtimeException = decompiledCaughtException;
-            stackIn_27_0 = (RuntimeException) (runtimeException);
-
-            stackIn_27_1 = new StringBuilder().append("wl.EB(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "null";
-              break L9;
-            } else {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "{...}";
-              break L9;
-            }
-          }
-          throw ma.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) ((Object) runtimeException), "wl.EB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

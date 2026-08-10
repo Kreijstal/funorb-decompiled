@@ -809,88 +809,33 @@ final class rsb extends tja implements ntb, utb {
     }
 
     final void a(tja param0, int param1, int param2, boolean param3) {
-        int var5_int = 0;
         tfa var6 = null;
-        int var7 = 0;
         int var8 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        var7 = VoidHunters.field_G;
+        int var5_int = 0;
+        int var7 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              ka.a(param1, param2 ^ -19265);
-              this.field_f.a((byte) 125);
-              this.field_g.a(1799937864, param3, this.field_d, (tfa[]) ((Object) param0.field_c), this.field_e, param1, (tfa[]) ((Object) this.field_c));
-              this.field_e.a((rsb) (this), param1, (byte) -19);
-              if (param2 == fra.field_a) {
-                var5_int = 0;
-                L2: while (true) {
-                  if (this.field_c.length <= var5_int) {
-                    break L1;
-                  } else {
+            ka.a(param1, param2 ^ -19265);
+            this.field_f.a((byte) 125);
+            this.field_g.a(1799937864, param3, this.field_d, (tfa[]) ((Object) param0.field_c), this.field_e, param1, (tfa[]) ((Object) this.field_c));
+            this.field_e.a((rsb) (this), param1, (byte) -19);
+            if (!(param2 != fra.field_a)) {
+                for (var5_int = 0; this.field_c.length > var5_int; var5_int++) {
                     var6 = (tfa) ((Object) this.field_c[var5_int]);
                     var6.field_f = -17 & var6.field_f;
-                    var5_int++;
-                    continue L2;
-                  }
                 }
-              } else {
-                break L1;
-              }
             }
-            L3: {
-              if (null == this.field_c) {
-                break L3;
-              } else {
+            if (null != this.field_c) {
                 var8 = 0;
                 var5_int = var8;
-                L4: while (true) {
-                  if (this.field_c.length <= var8) {
-                    break L3;
-                  } else {
-                    L5: {
-                      if (this.field_c[var8] != null) {
+                while (this.field_c.length > var8) {
+                    if (!(this.field_c[var8] == null)) {
                         ((tfa) ((Object) this.field_c[var8])).c((byte) 11);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
                     }
                     var8++;
-                    continue L4;
-                  }
                 }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var5 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var5);
-
-            stackIn_16_1 = new StringBuilder().append("rsb.A(");
-
-            if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L6;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L6;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "rsb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

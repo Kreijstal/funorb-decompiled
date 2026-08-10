@@ -2363,7 +2363,7 @@ abstract class ch extends lh implements lm {
                   } else {
                     var10 = var12[var9];
                     if (var11 != 0) {
-                      decompiledRegionSelector0 = 2;
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       L3: {
@@ -2383,7 +2383,7 @@ abstract class ch extends lh implements lm {
                     }
                   }
                 }
-                decompiledRegionSelector0 = 1;
+                decompiledRegionSelector0 = 2;
                 break L0;
               }
             } else {
@@ -2746,7 +2746,7 @@ abstract class ch extends lh implements lm {
                     } else {
                       var7 = var9[var6];
                       if (var8 != 0) {
-                        decompiledRegionSelector0 = 3;
+                        decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         L3: {
@@ -2766,7 +2766,7 @@ abstract class ch extends lh implements lm {
                       }
                     }
                   }
-                  decompiledRegionSelector0 = 2;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 }
               }

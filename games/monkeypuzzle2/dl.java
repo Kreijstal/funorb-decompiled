@@ -21,79 +21,25 @@ final class dl {
     }
 
     final void c(int param0) {
-        bf var2 = null;
-        int var3 = 0;
-        String var4 = null;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = MonkeyPuzzle2.field_F ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    var2 = this.field_d.field_g;
-                    if (this.field_d == var2) {
-                        statePc = 3;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var2.a(7847);
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (var3 != 0) {
-                        statePc = 7;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (var3 == 0) {
-                        statePc = 8;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    var2.a(7847);
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 7: {
-                    if (var3 == 0) {
-                        statePc = 1;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    this.field_e = null;
-                    if (param0 == 32) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    var4 = (String) null;
-                    dl.a((java.applet.Applet) null, 95, (String) null);
-                    return;
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        bf var2;
+        int var3;
+        String var4;
+        var3 = MonkeyPuzzle2.field_F ? 1 : 0;
+        L0: while (true) {
+          var2 = this.field_d.field_g;
+          if (this.field_d != var2) {
+            var2.a(7847);
+            continue L0;
+          } else {
+            this.field_e = null;
+            if (param0 == 32) {
+              return;
+            } else {
+              var4 = (String) null;
+              dl.a((java.applet.Applet) null, 95, (String) null);
+              return;
             }
+          }
         }
     }
 
@@ -161,72 +107,58 @@ final class dl {
           dl.a((java.applet.Applet) null, -12, (String) null);
           var3 = this.field_d.field_g;
           L0: while (true) {
-            L1: {
-              if (var3 == this.field_d) {
-                break L1;
-              } else {
-                var3 = var3.field_g;
-                var2++;
-                if (var4 == 0) {
-                  continue L0;
-                } else {
-                  break L1;
-                }
-              }
+            if (var3 == this.field_d) {
+              return var2;
+            } else {
+              var3 = var3.field_g;
+              var2++;
+              continue L0;
             }
-            return var2;
           }
         } else {
           var3 = this.field_d.field_g;
-          L2: while (true) {
-            L3: {
-              if (var3 == this.field_d) {
-                break L3;
-              } else {
-                var3 = var3.field_g;
-                var2++;
-                if (var4 == 0) {
-                  continue L2;
-                } else {
-                  break L3;
-                }
-              }
+          L1: while (true) {
+            if (var3 == this.field_d) {
+              return var2;
+            } else {
+              var3 = var3.field_g;
+              var2++;
+              continue L1;
             }
-            return var2;
           }
         }
     }
 
     final static String a(java.applet.Applet param0, int param1, String param2) {
         try {
-            RuntimeException var3 = null;
+            String var3 = null;
             String[] var4 = null;
             int var5 = 0;
             int var6 = 0;
             int var7 = 0;
-            String var8 = null;
-            String stackIn_10_0 = null;
-            Object stackIn_15_0 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
-            RuntimeException stackIn_19_0 = null;
+            String stackIn_8_0 = null;
+            Object stackIn_13_0 = null;
+            RuntimeException stackIn_16_0 = null;
+            StringBuilder stackIn_16_1 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            String stackIn_17_2 = null;
             StringBuilder stackIn_19_1 = null;
-            String stackIn_19_2 = null;
-            StringBuilder stackIn_21_1 = null;
-            StringBuilder stackIn_22_1 = null;
-            String stackIn_22_2 = null;
+            StringBuilder stackIn_20_1 = null;
+            String stackIn_20_2 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
             Throwable var3_ref = null;
+            RuntimeException var3_ref2 = null;
             var7 = MonkeyPuzzle2.field_F ? 1 : 0;
             try {
               L0: {
                 try {
                   L1: {
                     L2: {
-                      var8 = (String) (mf.a(param1 ^ -20969, "getcookies", param0));
-                      var4 = ma.a(127, ';', var8);
+                      var3 = (String) (mf.a(param1 ^ -20969, "getcookies", param0));
+                      var4 = ma.a(127, ';', var3);
                       var5 = 0;
                       if (param1 == 14278) {
                         break L2;
@@ -236,50 +168,39 @@ final class dl {
                       }
                     }
                     L3: while (true) {
-                      L4: {
-                        if (var4.length <= var5) {
-                          break L4;
-                        } else {
+                      if (var4.length <= var5) {
+                        decompiledRegionSelector0 = 0;
+                        break L1;
+                      } else {
+                        L4: {
                           var6 = var4[var5].indexOf('=');
-                          if (var7 == 0) {
-                            L5: {
-                              if (-1 < (var6 ^ -1)) {
-                                break L5;
-                              } else {
-                                if (var4[var5].substring(0, var6).trim().equals(param2)) {
-                                  stackIn_10_0 = var4[var5].substring(var6 - -1).trim();
-                                  decompiledRegionSelector0 = 1;
-                                  break L1;
-                                } else {
-                                  break L5;
-                                }
-                              }
-                            }
-                            var5++;
-                            if (var7 == 0) {
-                              continue L3;
+                          if (-1 < (var6 ^ -1)) {
+                            break L4;
+                          } else {
+                            if (var4[var5].substring(0, var6).trim().equals(param2)) {
+                              stackIn_8_0 = var4[var5].substring(var6 - -1).trim();
+                              decompiledRegionSelector0 = 1;
+                              break L1;
                             } else {
                               break L4;
                             }
-                          } else {
-                            return null;
                           }
                         }
+                        var5++;
+                        continue L3;
                       }
-                      decompiledRegionSelector0 = 0;
-                      break L1;
                     }
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L6: {
+                  L5: {
                     var3_ref = decompiledCaughtException;
                     decompiledRegionSelector0 = 0;
-                    break L6;
+                    break L5;
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
-                  stackIn_15_0 = null;
+                  stackIn_13_0 = null;
                   decompiledRegionSelector1 = 0;
                   break L0;
                 } else {
@@ -289,47 +210,47 @@ final class dl {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L7: {
-                var3 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_18_0 = (RuntimeException) (var3);
+              L6: {
+                var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_16_0 = (RuntimeException) (var3_ref2);
 
-                stackIn_18_1 = new StringBuilder().append("dl.G(");
+                stackIn_16_1 = new StringBuilder().append("dl.G(");
 
                 if (param0 == null) {
-                  stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackIn_19_2 = "null";
-                  break L7;
+                  stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+                  stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+                  stackIn_17_2 = "null";
+                  break L6;
                 } else {
-                  stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackIn_19_2 = "{...}";
-                  break L7;
+                  stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+                  stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+                  stackIn_17_2 = "{...}";
+                  break L6;
                 }
               }
-              L8: {
+              L7: {
 
 
-                stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(param1).append(',');
+                stackIn_19_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param1).append(',');
 
                 if (param2 == null) {
-                  stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-                  stackIn_22_2 = "null";
-                  break L8;
+                  stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "null";
+                  break L7;
                 } else {
-                  stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-                  stackIn_22_2 = "{...}";
-                  break L8;
+                  stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackIn_20_2 = "{...}";
+                  break L7;
                 }
               }
-              throw la.a((Throwable) ((Object) stackIn_19_0), stackIn_22_2 + ')');
+              throw la.a((Throwable) ((Object) stackIn_17_0), stackIn_20_2 + ')');
             }
             if (decompiledRegionSelector1 == 0) {
-              return (String) ((Object) stackIn_15_0);
+              return (String) ((Object) stackIn_13_0);
             } else {
-              return stackIn_10_0;
+              return stackIn_8_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

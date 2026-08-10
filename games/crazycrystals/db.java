@@ -630,7 +630,7 @@ final class db {
                           break L10;
                         }
                       }
-                      throw dn.a((Throwable) ((Object) stackIn_37_0), (stackIn_37_2 != 0) + " " + param0 + " " + param1.length + " " + gi.a(param1.length, var9, 26009) + " " + gi.a(-2 + param1.length, var9, param3 + -4502) + " " + this.field_b.field_n[param0] + " " + this.field_b.field_b);
+                      throw dn.a((Throwable) ((Object) stackIn_37_0), (stackIn_37_2 != 0) + " " + param0 + " " + var9.length + " " + gi.a(var9.length, var9, 26009) + " " + gi.a(-2 + var9.length, var9, param3 + -4502) + " " + this.field_b.field_n[param0] + " " + this.field_b.field_b);
                     }
                     L11: {
                       if (this.field_c) {

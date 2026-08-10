@@ -13,9 +13,8 @@ final class id {
 
     final static sg a(boolean param0, byte param1) {
         int stackIn_3_0 = 0;
-        int stackIn_13_0 = 0;
-        int[] stackIn_29_0 = null;
-        int decompiledRegionSelector0 = 0;
+        int stackIn_11_0 = 0;
+        int[] stackIn_25_0 = null;
         Throwable decompiledCaughtException = null;
         int var3 = 0;
         int var4 = 0;
@@ -48,13 +47,7 @@ final class id {
           } else {
             u.field_d = var8.a((byte) -108);
             jd.field_b = var8.g((byte) 124);
-            if (var7 == 0) {
-              break L1;
-            } else {
-              jd.field_b = 0;
-              u.field_d = 0;
-              break L1;
-            }
+            break L1;
           }
         }
         L2: {
@@ -67,96 +60,71 @@ final class id {
         }
         L3: {
           if ((var8.d((byte) 92) ^ -1) != -2) {
-            stackIn_13_0 = 0;
+            stackIn_11_0 = 0;
             break L3;
           } else {
-            stackIn_13_0 = 1;
+            stackIn_11_0 = 1;
             break L3;
           }
         }
         L4: {
-          L5: {
-            var4 = stackIn_13_0;
-            kb.field_o = var8.g(12248);
-            if (var4 != 0) {
-              break L5;
-            } else {
-              fd.field_i = kb.field_o;
-              if (var7 == 0) {
-                break L4;
-              } else {
-                break L5;
-              }
-            }
+          var4 = stackIn_11_0;
+          kb.field_o = var8.g(12248);
+          if (var4 != 0) {
+            fd.field_i = var8.g(param1 ^ 12241);
+            break L4;
+          } else {
+            fd.field_i = kb.field_o;
+            break L4;
           }
-          fd.field_i = var8.g(param1 ^ 12241);
-          break L4;
         }
-        L6: {
+        L5: {
           if (-2 == (kd.field_a ^ -1)) {
             var8.a((byte) -90);
             var8.g(12248);
-            break L6;
+            break L5;
           } else {
             if (-5 != (kd.field_a ^ -1)) {
-              break L6;
+              break L5;
             } else {
               var8.a((byte) -90);
               var8.g(12248);
-              break L6;
+              break L5;
             }
           }
         }
-        L7: {
-          L8: {
-            if (param0) {
-              break L8;
-            } else {
-              l.field_c = u.a(false, 80, var8);
-              a.field_T = null;
-              if (var7 == 0) {
-                break L7;
-              } else {
-                break L8;
-              }
-            }
-          }
+        if (param0) {
           var5 = var8.a((byte) -110);
           try {
-            L9: {
-              L10: {
+            L6: {
+              L7: {
                 var9 = vl.field_C.b(1, var5);
                 l.field_c = var9.d((byte) -127);
                 if (!fd.field_i.equals(w.field_a)) {
-                  stackIn_29_0 = var9.field_m;
-                  break L10;
+                  stackIn_25_0 = var9.field_m;
+                  break L7;
                 } else {
-                  stackIn_29_0 = null;
-                  break L10;
+                  stackIn_25_0 = null;
+                  break L7;
                 }
               }
-              a.field_T = stackIn_29_0;
-              decompiledRegionSelector0 = 0;
-              break L9;
+              a.field_T = stackIn_25_0;
+              break L6;
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            L11: {
-              var6 = (Exception) (Object) decompiledCaughtException;
-              d.a((Throwable) ((Object) var6), -120, "CC1");
-              a.field_T = null;
-              l.field_c = null;
-              decompiledRegionSelector0 = 1;
-              break L11;
-            }
-          }
-          if (decompiledRegionSelector0 == 0) {
+            var6 = (Exception) (Object) decompiledCaughtException;
+            d.a((Throwable) ((Object) var6), -120, "CC1");
+            a.field_T = null;
+            l.field_c = null;
             return new sg(param0);
-          } else {
-            break L7;
           }
+          return new sg(param0);
+        } else {
+          l.field_c = u.a(false, 80, var8);
+          a.field_T = null;
+          return new sg(param0);
         }
-        return new sg(param0);
     }
 
     static {

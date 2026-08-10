@@ -33,29 +33,13 @@ final class kj extends jk {
     }
 
     final static void a(boolean param0, int param1) {
-        L0: {
-          jk.field_u = jk.field_u + uj.field_h;
-          if ((jk.field_u ^ -1) > param1) {
+        jk.field_u = jk.field_u + uj.field_h;
+        if (!((jk.field_u ^ -1) <= param1)) {
             ck.field_b = -1;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (-31 > (jk.field_u ^ -1)) {
-          if (0 <= ck.field_b) {
-            if (param0) {
-              uj.field_h = uj.field_h * -1;
-              jk.field_u = 30;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
-          return;
+        if (-31 > (jk.field_u ^ -1) && 0 <= ck.field_b && param0) {
+            uj.field_h = uj.field_h * -1;
+            jk.field_u = 30;
         }
     }
 
@@ -113,100 +97,42 @@ final class kj extends jk {
     }
 
     final void k(int param0) {
-        ck var2 = null;
-        rh var3 = null;
-        int var4 = 0;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-                    var2 = new ck(this.field_D);
-                    var3 = (rh) ((Object) var2.a((byte) -37));
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (var3 == null) {
-                        statePc = 9;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var3.field_z = false;
-                    var3 = (rh) ((Object) var2.a(true));
-                    if (var4 == 0) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    if (var4 == 0) {
-                        statePc = 1;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (param0 <= 43) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    this.field_v = null;
-                    return;
-                }
-                case 7: {
-                    return;
-                }
-                case 9: {
-                    if (param0 <= 43) {
-                        statePc = 11;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
-                    this.field_v = null;
-                    return;
-                }
-                case 11: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
+        ck var2 = new ck(this.field_D);
+        rh var3 = (rh) ((Object) var2.a((byte) -37));
+        while (var3 != null) {
+            var3.field_z = false;
+            var3 = (rh) ((Object) var2.a(true));
         }
+        if (param0 <= 43) {
+            return;
+        }
+        this.field_v = null;
     }
 
     final we a(int param0) {
-        int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (param0 != -1) {
-            return (we) null;
-        }
-        ck var2 = new ck(this.field_D);
-        rh var3 = (rh) ((Object) var2.a((byte) -37));
-        do {
-            if (var3 == null) {
-                return null;
-            }
-            if (!(!var3.field_z)) {
+        ck var2;
+        rh var3;
+        int var4;
+        var4 = MonkeyPuzzle2.field_F ? 1 : 0;
+        if (param0 == -1) {
+          var2 = new ck(this.field_D);
+          var3 = (rh) ((Object) var2.a((byte) -37));
+          L0: while (true) {
+            if (var3 != null) {
+              if (var3.field_z) {
                 return var3.a(true);
+              } else {
+                var3 = (rh) ((Object) var2.a(true));
+                continue L0;
+              }
+            } else {
+              return null;
             }
-            var3 = (rh) ((Object) var2.a(true));
-        } while (var4 == 0);
-        return null;
+          }
+        } else {
+          return (we) null;
+        }
     }
 
     final static boolean m(int param0) {
@@ -233,47 +159,40 @@ final class kj extends jk {
             } else {
               var2 = param0;
               L1: while (true) {
-                L2: {
-                  if (var2 >= var1.field_e) {
-                    break L2;
-                  } else {
-                    L3: {
-                      if (null != var4.field_k[var2]) {
-                        if (var4.field_k[var2].field_g == 0) {
-                          stackIn_12_0 = 0;
-                          decompiledRegionSelector0 = 1;
-                          break L0;
-                        } else {
-                          break L3;
-                        }
+                if (var2 >= var1.field_e) {
+                  stackIn_21_0 = 1;
+                  decompiledRegionSelector0 = 3;
+                  break L0;
+                } else {
+                  L2: {
+                    if (null != var4.field_k[var2]) {
+                      if (var4.field_k[var2].field_g == 0) {
+                        stackIn_12_0 = 0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       } else {
-                        break L3;
+                        break L2;
                       }
-                    }
-                    L4: {
-                      if (var4.field_s[var2] != null) {
-                        if (0 == var4.field_s[var2].field_g) {
-                          stackIn_18_0 = 0;
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        } else {
-                          break L4;
-                        }
-                      } else {
-                        break L4;
-                      }
-                    }
-                    var2++;
-                    if (var3 == 0) {
-                      continue L1;
                     } else {
                       break L2;
                     }
                   }
+                  L3: {
+                    if (var4.field_s[var2] != null) {
+                      if (0 == var4.field_s[var2].field_g) {
+                        stackIn_18_0 = 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
+                      } else {
+                        break L3;
+                      }
+                    } else {
+                      break L3;
+                    }
+                  }
+                  var2++;
+                  continue L1;
                 }
-                stackIn_21_0 = 1;
-                decompiledRegionSelector0 = 3;
-                break L0;
               }
             }
           }
@@ -304,330 +223,49 @@ final class kj extends jk {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        ck var5 = null;
-        we var6 = null;
-        int var7 = 0;
-        we var8 = null;
-        ck var9 = null;
-        ck var10 = null;
-        ck var11 = null;
-        ck var12 = null;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var7 = MonkeyPuzzle2.field_F ? 1 : 0;
-                    if (param0 == 30) {
-                        statePc = 21;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var8 = (we) null;
-                    this.b((byte) -88, (we) null);
-                    if (this.field_h == null) {
-                        statePc = 3;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    this.field_h.a(true, (we) (this), param2, param3, 55);
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 3: {
-                    var9 = new ck(this.field_D);
-                    var5 = var9;
-                    var6 = (we) ((Object) var9.b((byte) -103));
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (var6 != null) {
-                        statePc = 7;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    return;
-                }
-                case 7: {
-                    var6.a(30, param1, this.field_e + param2, param3 - -this.field_r);
-                    var6 = (we) ((Object) var9.a(param0 + -3733));
-                    if (var7 == 0) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                case 9: {
-                    if (var7 == 0) {
-                        statePc = 4;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
-                    return;
-                }
-                case 12: {
-                    var10 = new ck(this.field_D);
-                    var5 = var10;
-                    var6 = (we) ((Object) var10.b((byte) -103));
-                    statePc = 13;
-                    continue stateLoop;
-                }
-                case 13: {
-                    if (var6 != null) {
-                        statePc = 16;
-                    } else {
-                        statePc = 14;
-                    }
-                    continue stateLoop;
-                }
-                case 14: {
-                    return;
-                }
-                case 16: {
-                    var6.a(30, param1, this.field_e + param2, param3 - -this.field_r);
-                    var6 = (we) ((Object) var10.a(param0 + -3733));
-                    if (var7 == 0) {
-                        statePc = 18;
-                    } else {
-                        statePc = 17;
-                    }
-                    continue stateLoop;
-                }
-                case 17: {
-                    return;
-                }
-                case 18: {
-                    if (var7 == 0) {
-                        statePc = 13;
-                    } else {
-                        statePc = 19;
-                    }
-                    continue stateLoop;
-                }
-                case 19: {
-                    return;
-                }
-                case 21: {
-                    if (this.field_h == null) {
-                        statePc = 23;
-                    } else {
-                        statePc = 22;
-                    }
-                    continue stateLoop;
-                }
-                case 22: {
-                    this.field_h.a(true, (we) (this), param2, param3, 55);
-                    statePc = 31;
-                    continue stateLoop;
-                }
-                case 23: {
-                    var11 = new ck(this.field_D);
-                    var5 = var11;
-                    var6 = (we) ((Object) var11.b((byte) -103));
-                    statePc = 24;
-                    continue stateLoop;
-                }
-                case 24: {
-                    if (var6 != null) {
-                        statePc = 27;
-                    } else {
-                        statePc = 25;
-                    }
-                    continue stateLoop;
-                }
-                case 25: {
-                    return;
-                }
-                case 27: {
-                    var6.a(30, param1, this.field_e + param2, param3 - -this.field_r);
-                    var6 = (we) ((Object) var11.a(param0 + -3733));
-                    if (var7 == 0) {
-                        statePc = 29;
-                    } else {
-                        statePc = 28;
-                    }
-                    continue stateLoop;
-                }
-                case 28: {
-                    return;
-                }
-                case 29: {
-                    if (var7 == 0) {
-                        statePc = 24;
-                    } else {
-                        statePc = 30;
-                    }
-                    continue stateLoop;
-                }
-                case 30: {
-                    return;
-                }
-                case 31: {
-                    var12 = new ck(this.field_D);
-                    var5 = var12;
-                    var6 = (we) ((Object) var12.b((byte) -103));
-                    statePc = 32;
-                    continue stateLoop;
-                }
-                case 32: {
-                    if (var6 == null) {
-                        statePc = 38;
-                    } else {
-                        statePc = 33;
-                    }
-                    continue stateLoop;
-                }
-                case 33: {
-                    var6.a(30, param1, this.field_e + param2, param3 - -this.field_r);
-                    var6 = (we) ((Object) var12.a(param0 + -3733));
-                    if (var7 == 0) {
-                        statePc = 35;
-                    } else {
-                        statePc = 34;
-                    }
-                    continue stateLoop;
-                }
-                case 34: {
-                    return;
-                }
-                case 35: {
-                    if (var7 == 0) {
-                        statePc = 32;
-                    } else {
-                        statePc = 36;
-                    }
-                    continue stateLoop;
-                }
-                case 36: {
-                    return;
-                }
-                case 38: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
+        if (param0 != 30) {
+            we var8 = (we) null;
+            this.b((byte) -88, (we) null);
+        }
+        if (this.field_h != null) {
+            this.field_h.a(true, (we) (this), param2, param3, 55);
+        }
+        ck var5 = new ck(this.field_D);
+        we var6 = (we) ((Object) var5.b((byte) -103));
+        while (var6 != null) {
+            var6.a(30, param1, this.field_e + param2, param3 - -this.field_r);
+            var6 = (we) ((Object) var5.a(param0 + -3733));
         }
     }
 
     final void a(boolean param0) {
-        ck var2;
-        rh var3;
-        int var4;
-        var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (param0) {
-          var2 = new ck(this.field_D);
-          var3 = (rh) ((Object) var2.a((byte) -37));
-          L0: while (true) {
-            if (var3 != null) {
-              if (var4 == 0) {
-                L1: {
-                  if (var3.b(false)) {
-                    var3.c(-19822);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                var3 = (rh) ((Object) var2.a(true));
-                if (var4 == 0) {
-                  continue L0;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              return;
+        int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
+        if (!param0) {
+            field_F = (le) null;
+        }
+        ck var2 = new ck(this.field_D);
+        rh var3 = (rh) ((Object) var2.a((byte) -37));
+        while (var3 != null) {
+            if (!(!var3.b(false))) {
+                var3.c(-19822);
             }
-          }
-        } else {
-          field_F = (le) null;
-          var2 = new ck(this.field_D);
-          var3 = (rh) ((Object) var2.a((byte) -37));
-          L2: while (true) {
-            if (var3 != null) {
-              if (var4 == 0) {
-                L3: {
-                  if (var3.b(false)) {
-                    var3.c(-19822);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                var3 = (rh) ((Object) var2.a(true));
-                if (var4 == 0) {
-                  continue L2;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
-          }
+            var3 = (rh) ((Object) var2.a(true));
         }
     }
 
     final void l(int param0) {
-        ck var2;
-        rh var3;
-        int var4;
-        int var5;
-        var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-        var4 = -104 / ((75 - param0) / 44);
-        var2 = new ck(this.field_D);
-        var3 = (rh) ((Object) var2.a((byte) -37));
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (var3 == null) {
-                break L2;
-              } else {
-                if (var5 != 0) {
-                  break L1;
-                } else {
-                  L3: {
-                    if (!var3.k(-23913)) {
-                      break L3;
-                    } else {
-                      var3.c(-19822);
-                      break L3;
-                    }
-                  }
-                  var3 = (rh) ((Object) var2.a(true));
-                  if (var5 == 0) {
-                    continue L0;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
+        int var5 = MonkeyPuzzle2.field_F ? 1 : 0;
+        int var4 = -104 / ((75 - param0) / 44);
+        ck var2 = new ck(this.field_D);
+        rh var3 = (rh) ((Object) var2.a((byte) -37));
+        while (var3 != null) {
+            if (var3.k(-23913)) {
+                var3.c(-19822);
             }
-            this.field_v = (we) ((Object) this.j(-73));
-            break L1;
-          }
-          return;
+            var3 = (rh) ((Object) var2.a(true));
         }
+        this.field_v = (we) ((Object) this.j(-73));
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, String param6, long param7, boolean param8, int param9, int param10, byte param11, int param12, md param13) {
@@ -752,50 +390,20 @@ final class kj extends jk {
     }
 
     final rh j(int param0) {
-        ck var2;
-        rh var3;
-        int var4;
-        boolean stackIn_3_0 = false;
-        int stackIn_8_0 = 0;
-        boolean stackOut_2_0;
-        var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        var2 = new ck(this.field_D);
-        var3 = (rh) ((Object) var2.a((byte) -37));
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (var3 == null) {
-                break L2;
-              } else {
-                stackOut_2_0 = var3.field_z;
-                stackIn_8_0 = stackOut_2_0 ? 1 : 0;
-                stackIn_3_0 = stackOut_2_0;
-                if (var4 != 0) {
-                  break L1;
-                } else {
-                  if (stackIn_3_0) {
-                    return var3;
-                  } else {
-                    var3 = (rh) ((Object) var2.a(true));
-                    if (var4 == 0) {
-                      continue L0;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-              }
+        int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
+        ck var2 = new ck(this.field_D);
+        rh var3 = (rh) ((Object) var2.a((byte) -37));
+        while (var3 != null) {
+            if (!(!var3.field_z)) {
+                return var3;
             }
-            stackIn_8_0 = param0;
-            break L1;
-          }
-          if (stackIn_8_0 <= -32) {
-            return null;
-          } else {
-            this.a(false);
-            return null;
-          }
+            var3 = (rh) ((Object) var2.a(true));
         }
+        if (param0 <= -32) {
+            return null;
+        }
+        this.a(false);
+        return null;
     }
 
     static {

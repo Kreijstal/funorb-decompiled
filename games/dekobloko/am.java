@@ -8,62 +8,50 @@ final class am {
     static boolean field_c;
 
     final static kc a(int param0, boolean param1, int param2, int param3, int param4) {
-        vj stackIn_10_0 = null;
-        vj stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        vj stackIn_22_0 = null;
-        vj stackIn_23_0 = null;
-        int stackIn_23_1 = 0;
+        vj stackIn_8_0 = null;
+        vj stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        vj stackIn_18_0 = null;
+        vj stackIn_19_0 = null;
+        int stackIn_19_1 = 0;
         Object var5;
         kc var5_ref;
         int var6;
+        kc var7;
+        kc var8;
         var5 = null;
         var6 = client.field_A ? 1 : 0;
         if (!param1) {
           var5_ref = (kc) ((Object) dg.field_e.c((byte) 49));
           L0: while (true) {
             if (var5_ref != null) {
-              if (var6 == 0) {
-                if (param3 != var5_ref.field_n) {
-                  L1: {
-                    stackIn_22_0 = dg.field_e;
+              if (param3 != var5_ref.field_n) {
+                L1: {
+                  stackIn_18_0 = dg.field_e;
 
-                    if (param1) {
-                      stackIn_23_0 = (vj) ((Object) stackIn_22_0);
-                      stackIn_23_1 = 0;
-                      break L1;
-                    } else {
-                      stackIn_23_0 = (vj) ((Object) stackIn_22_0);
-                      stackIn_23_1 = 1;
-                      break L1;
-                    }
-                  }
-                  var5_ref = (kc) ((Object) ((vj) (Object) stackIn_23_0).d(stackIn_23_1 != 0));
-                  if (var6 == 0) {
-                    continue L0;
+                  if (param1) {
+                    stackIn_19_0 = (vj) ((Object) stackIn_18_0);
+                    stackIn_19_1 = 0;
+                    break L1;
                   } else {
-                    var5_ref = new kc();
-                    var5_ref.field_n = param3;
-                    var5_ref.field_o = param4;
-                    var5_ref.field_v = param2;
-                    dg.field_e.a(var5_ref, 2777);
-                    wb.a(var5_ref, param0, 60);
-                    return var5_ref;
+                    stackIn_19_0 = (vj) ((Object) stackIn_18_0);
+                    stackIn_19_1 = 1;
+                    break L1;
                   }
-                } else {
-                  return var5_ref;
                 }
+                var5_ref = (kc) ((Object) ((vj) (Object) stackIn_19_0).d(stackIn_19_1 != 0));
+                continue L0;
               } else {
                 return var5_ref;
               }
             } else {
-              var5_ref = new kc();
-              var5_ref.field_n = param3;
-              var5_ref.field_o = param4;
-              var5_ref.field_v = param2;
-              dg.field_e.a(var5_ref, 2777);
-              wb.a(var5_ref, param0, 60);
-              return var5_ref;
+              var8 = new kc();
+              var8.field_n = param3;
+              var8.field_o = param4;
+              var8.field_v = param2;
+              dg.field_e.a(var8, 2777);
+              wb.a(var8, param0, 60);
+              return var8;
             }
           }
         } else {
@@ -71,47 +59,33 @@ final class am {
           var5_ref = (kc) ((Object) dg.field_e.c((byte) 49));
           L2: while (true) {
             if (var5_ref != null) {
-              if (var6 == 0) {
-                if (param3 != var5_ref.field_n) {
-                  L3: {
-                    stackIn_10_0 = dg.field_e;
+              if (param3 != var5_ref.field_n) {
+                L3: {
+                  stackIn_8_0 = dg.field_e;
 
-                    if (param1) {
-                      stackIn_11_0 = (vj) ((Object) stackIn_10_0);
-                      stackIn_11_1 = 0;
-                      break L3;
-                    } else {
-                      stackIn_11_0 = (vj) ((Object) stackIn_10_0);
-                      stackIn_11_1 = 1;
-                      break L3;
-                    }
-                  }
-                  var5_ref = (kc) ((Object) ((vj) (Object) stackIn_11_0).d(stackIn_11_1 != 0));
-                  if (var6 == 0) {
-                    continue L2;
+                  if (param1) {
+                    stackIn_9_0 = (vj) ((Object) stackIn_8_0);
+                    stackIn_9_1 = 0;
+                    break L3;
                   } else {
-                    var5_ref = new kc();
-                    var5_ref.field_n = param3;
-                    var5_ref.field_o = param4;
-                    var5_ref.field_v = param2;
-                    dg.field_e.a(var5_ref, 2777);
-                    wb.a(var5_ref, param0, 60);
-                    return var5_ref;
+                    stackIn_9_0 = (vj) ((Object) stackIn_8_0);
+                    stackIn_9_1 = 1;
+                    break L3;
                   }
-                } else {
-                  return var5_ref;
                 }
+                var5_ref = (kc) ((Object) ((vj) (Object) stackIn_9_0).d(stackIn_9_1 != 0));
+                continue L2;
               } else {
                 return var5_ref;
               }
             } else {
-              var5_ref = new kc();
-              var5_ref.field_n = param3;
-              var5_ref.field_o = param4;
-              var5_ref.field_v = param2;
-              dg.field_e.a(var5_ref, 2777);
-              wb.a(var5_ref, param0, 60);
-              return var5_ref;
+              var7 = new kc();
+              var7.field_n = param3;
+              var7.field_o = param4;
+              var7.field_v = param2;
+              dg.field_e.a(var7, 2777);
+              wb.a(var7, param0, 60);
+              return var7;
             }
           }
         }

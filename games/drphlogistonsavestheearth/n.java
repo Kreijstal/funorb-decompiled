@@ -25,101 +25,104 @@ final class n implements Runnable {
             var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
             L0: while (true) {
               L1: {
-                if (this.field_a) {
-                  break L1;
-                } else {
-                  var2_ref = this.field_b;
-                  synchronized (var2_ref) {
-                    L2: {
-                      var6 = (bi) ((Object) this.field_b.d(5518));
-                      if (var5 != 0) {
-                        decompiledRegionSelector0 = 0;
-                        break L2;
-                      } else {
-                        L3: {
-                          L4: {
-                            if (var6 == null) {
-                              break L4;
-                            } else {
-                              this.field_e = this.field_e - 1;
-                              if (var5 == 0) {
-                                break L3;
-                              } else {
-                                break L4;
-                              }
-                            }
-                          }
-                          try {
-                            L5: {
-                              this.field_b.wait();
-                              break L5;
-                            }
-                          } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                            decompiledCaughtException = decompiledCaughtParameter0;
-                            L6: {
-                              interruptedException = (InterruptedException) (Object) decompiledCaughtException;
-                              break L6;
-                            }
-                          }
-                          if (var5 == 0) {
-                            decompiledRegionSelector0 = 1;
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        }
-                        decompiledRegionSelector0 = 2;
-                        break L2;
-                      }
-                    }
-                  }
-                  if (decompiledRegionSelector0 == 0) {
-                    break L1;
+                L2: {
+                  if (this.field_a) {
+                    break L2;
                   } else {
-                    if (decompiledRegionSelector0 == 1) {
-                      continue L0;
-                    } else {
-                      try {
-                        L7: {
-                          L8: {
-                            L9: {
-                              if ((var6.field_G ^ -1) == -3) {
-                                break L9;
+                    var2_ref = this.field_b;
+                    synchronized (var2_ref) {
+                      L3: {
+                        var6 = (bi) ((Object) this.field_b.d(5518));
+                        if (var5 != 0) {
+                          decompiledRegionSelector0 = 0;
+                          break L3;
+                        } else {
+                          L4: {
+                            L5: {
+                              if (var6 == null) {
+                                break L5;
                               } else {
-                                if (-4 == (var6.field_G ^ -1)) {
-                                  var6.field_F = var6.field_H.a((int)var6.field_t, 3);
-                                  if (var5 == 0) {
-                                    break L8;
-                                  } else {
-                                    break L9;
-                                  }
+                                this.field_e = this.field_e - 1;
+                                if (var5 == 0) {
+                                  break L4;
                                 } else {
-                                  break L8;
+                                  break L5;
                                 }
                               }
                             }
-                            var6.field_H.a((byte) 107, var6.field_F.length, var6.field_F, (int)var6.field_t);
-                            break L8;
+                            try {
+                              L6: {
+                                this.field_b.wait();
+                                break L6;
+                              }
+                            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                              decompiledCaughtException = decompiledCaughtParameter0;
+                              L7: {
+                                interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+                                break L7;
+                              }
+                            }
+                            if (var5 == 0) {
+                              decompiledRegionSelector0 = 1;
+                              break L3;
+                            } else {
+                              break L4;
+                            }
                           }
-                          break L7;
-                        }
-                      } catch (java.lang.Exception decompiledCaughtParameter1) {
-                        decompiledCaughtException = decompiledCaughtParameter1;
-                        L10: {
-                          var2_ref2 = (Exception) (Object) decompiledCaughtException;
-                          gb.a((Throwable) ((Object) var2_ref2), (String) null, 10);
-                          break L10;
+                          decompiledRegionSelector0 = 2;
+                          break L3;
                         }
                       }
-                      var6.field_u = false;
-                      if (var5 == 0) {
+                    }
+                    if (decompiledRegionSelector0 == 0) {
+                      break L1;
+                    } else {
+                      if (decompiledRegionSelector0 == 1) {
                         continue L0;
                       } else {
-                        break L1;
+                        try {
+                          L8: {
+                            L9: {
+                              L10: {
+                                if ((var6.field_G ^ -1) == -3) {
+                                  break L10;
+                                } else {
+                                  if (-4 == (var6.field_G ^ -1)) {
+                                    var6.field_F = var6.field_H.a((int)var6.field_t, 3);
+                                    if (var5 == 0) {
+                                      break L9;
+                                    } else {
+                                      break L10;
+                                    }
+                                  } else {
+                                    break L9;
+                                  }
+                                }
+                              }
+                              var6.field_H.a((byte) 107, var6.field_F.length, var6.field_F, (int)var6.field_t);
+                              break L9;
+                            }
+                            break L8;
+                          }
+                        } catch (java.lang.Exception decompiledCaughtParameter1) {
+                          decompiledCaughtException = decompiledCaughtParameter1;
+                          L11: {
+                            var2_ref2 = (Exception) (Object) decompiledCaughtException;
+                            gb.a((Throwable) ((Object) var2_ref2), (String) null, 10);
+                            break L11;
+                          }
+                        }
+                        var6.field_u = false;
+                        if (var5 == 0) {
+                          continue L0;
+                        } else {
+                          break L2;
+                        }
                       }
                     }
                   }
                 }
+                break L1;
               }
               return;
             }

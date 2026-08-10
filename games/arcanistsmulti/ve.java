@@ -113,7 +113,7 @@ abstract class ve extends tf {
                 if (dg.field_u <= var7_int) {
                   break L1;
                 } else {
-                  param2[var7_int] = 10;
+                  var23[var7_int] = 10;
                   var7_int++;
                   continue L5;
                 }

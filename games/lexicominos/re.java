@@ -18,8 +18,6 @@ abstract class re extends ql {
     boolean f(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
         int var3;
         var3 = Lexicominos.field_L ? 1 : 0;
         if (this.field_R != null) {
@@ -28,29 +26,20 @@ abstract class re extends ql {
             this.field_V = this.field_V + 1;
             if (fieldTemp$0 != this.field_S) {
               this.field_U.field_E = -((this.field_V << -265658136) / this.field_S) + 256;
-              if (param0 < -21) {
-                return super.f((byte) -102);
-              } else {
+              if (param0 >= -21) {
                 return false;
+              } else {
+                return super.f((byte) -102);
               }
             } else {
               this.field_R = fb.field_f;
               this.a(12 + this.field_W.field_j, (byte) -91, this.field_Y, this.field_ab + 12 + this.field_W.field_v);
               this.field_U.field_E = 0;
               this.field_V = 0;
-              if (var3 != 0) {
-                this.field_U.field_E = -((this.field_V << -265658136) / this.field_S) + 256;
-                if (param0 < -21) {
-                  return super.f((byte) -102);
-                } else {
-                  return false;
-                }
+              if (param0 >= -21) {
+                return false;
               } else {
-                if (param0 < -21) {
-                  return super.f((byte) -102);
-                } else {
-                  return false;
-                }
+                return super.f((byte) -102);
               }
             }
           } else {
@@ -60,91 +49,17 @@ abstract class re extends ql {
               if (fieldTemp$1 == this.field_bb) {
                 this.field_U.field_E = 256;
                 this.field_R = null;
-                if (var3 != 0) {
-                  fieldTemp$2 = this.field_V + 1;
-                  this.field_V = this.field_V + 1;
-                  if (fieldTemp$2 != this.field_S) {
-                    this.field_U.field_E = -((this.field_V << -265658136) / this.field_S) + 256;
-                    if (param0 < -21) {
-                      return super.f((byte) -102);
-                    } else {
-                      return false;
-                    }
-                  } else {
-                    this.field_R = fb.field_f;
-                    this.a(12 + this.field_W.field_j, (byte) -91, this.field_Y, this.field_ab + 12 + this.field_W.field_v);
-                    this.field_U.field_E = 0;
-                    this.field_V = 0;
-                    if (var3 == 0) {
-                      if (param0 < -21) {
-                        return super.f((byte) -102);
-                      } else {
-                        return false;
-                      }
-                    } else {
-                      this.field_U.field_E = -((this.field_V << -265658136) / this.field_S) + 256;
-                      if (param0 < -21) {
-                        return super.f((byte) -102);
-                      } else {
-                        return false;
-                      }
-                    }
-                  }
+                if (param0 >= -21) {
+                  return false;
                 } else {
-                  if (param0 >= -21) {
-                    return false;
-                  } else {
-                    return super.f((byte) -102);
-                  }
+                  return super.f((byte) -102);
                 }
               } else {
                 this.field_U.field_E = (this.field_V << 303147688) / this.field_bb;
-                if (var3 != 0) {
-                  this.field_U.field_E = 256;
-                  this.field_R = null;
-                  if (var3 != 0) {
-                    fieldTemp$3 = this.field_V + 1;
-                    this.field_V = this.field_V + 1;
-                    if (fieldTemp$3 != this.field_S) {
-                      this.field_U.field_E = -((this.field_V << -265658136) / this.field_S) + 256;
-                      if (param0 >= -21) {
-                        return false;
-                      } else {
-                        return super.f((byte) -102);
-                      }
-                    } else {
-                      this.field_R = fb.field_f;
-                      this.a(12 + this.field_W.field_j, (byte) -91, this.field_Y, this.field_ab + 12 + this.field_W.field_v);
-                      this.field_U.field_E = 0;
-                      this.field_V = 0;
-                      if (var3 == 0) {
-                        if (param0 >= -21) {
-                          return false;
-                        } else {
-                          return super.f((byte) -102);
-                        }
-                      } else {
-                        this.field_U.field_E = -((this.field_V << -265658136) / this.field_S) + 256;
-                        if (param0 >= -21) {
-                          return false;
-                        } else {
-                          return super.f((byte) -102);
-                        }
-                      }
-                    }
-                  } else {
-                    if (param0 >= -21) {
-                      return false;
-                    } else {
-                      return super.f((byte) -102);
-                    }
-                  }
+                if (param0 >= -21) {
+                  return false;
                 } else {
-                  if (param0 >= -21) {
-                    return false;
-                  } else {
-                    return super.f((byte) -102);
-                  }
+                  return super.f((byte) -102);
                 }
               }
             } else {
@@ -261,75 +176,24 @@ abstract class re extends ql {
     }
 
     private final void a(w param0, byte param1) {
-        RuntimeException runtimeException = null;
-        w var4 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 125) {
-                break L1;
-              } else {
-                var4 = (w) null;
+            if (param1 != 125) {
+                w var4 = (w) null;
                 this.a((w) null, (byte) -90);
-                break L1;
-              }
             }
-            L2: {
-              if (null != this.field_U) {
+            if (!(null == this.field_U)) {
                 this.field_U.b((byte) -118);
-                break L2;
-              } else {
-                break L2;
-              }
             }
-            L3: {
-              L4: {
-                if (param0 != null) {
-                  break L4;
-                } else {
-                  this.field_U = new ia();
-                  if (!Lexicominos.field_L) {
-                    break L3;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              param0.a(param0.field_v, param0.field_j, true, this.field_ab + 6, 6);
-              this.field_U = new ia(param0);
-              break L3;
+            if (param0 == null) {
+                this.field_U = new ia();
+            } else {
+                param0.a(param0.field_v, param0.field_j, true, this.field_ab + 6, 6);
+                this.field_U = new ia(param0);
             }
             this.b((byte) 57, (w) (this.field_U));
             this.field_W = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("re.DA(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L5;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L5;
-            }
-          }
-          throw ld.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) ((Object) runtimeException), "re.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -412,42 +276,32 @@ abstract class re extends ql {
     }
 
     void b(int param0, w param1) {
-        RuntimeException runtimeException = null;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             if (param0 >= 115) {
-              L1: {
-                L2: {
-                  this.field_W = param1;
-                  if (fb.field_f != this.field_R) {
-                    break L2;
-                  } else {
-                    this.a(this.field_W.field_j + 12, (byte) -125, this.field_Y, this.field_W.field_v + (12 - -this.field_ab));
-                    this.field_V = 0;
-                    if (!Lexicominos.field_L) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
+              this.field_W = param1;
+              if (fb.field_f != this.field_R) {
                 if (this.field_R != ok.field_k) {
                   this.field_R = ok.field_k;
                   this.field_V = 0;
-                  break L1;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 } else {
                   return;
                 }
+              } else {
+                this.a(this.field_W.field_j + 12, (byte) -125, this.field_Y, this.field_W.field_v + (12 - -this.field_ab));
+                this.field_V = 0;
+                return;
               }
-              decompiledRegionSelector0 = 1;
-              break L0;
             } else {
               decompiledRegionSelector0 = 0;
               break L0;
@@ -455,25 +309,25 @@ abstract class re extends ql {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (runtimeException);
+          L1: {
+            var3 = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (var3);
 
-            stackIn_11_1 = new StringBuilder().append("re.AA(").append(param0).append(',');
+            stackIn_10_1 = new StringBuilder().append("re.AA(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
+              break L1;
             } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
+              break L1;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

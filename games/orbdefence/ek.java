@@ -71,31 +71,18 @@ final class ek implements Iterable {
         ca var4;
         ca var5;
         int var6;
-        Object stackIn_5_0 = null;
         var6 = OrbDefence.field_D ? 1 : 0;
         var4 = this.field_b[(int)((long)(param1 + this.field_d) & param0)];
         this.field_f = var4.field_e;
         L0: while (true) {
           if (this.field_f != var4) {
-            stackIn_5_0 = this;
-
-            if (var6 == 0) {
-              if (((ek) (this)).field_f.field_d == param0) {
-                var5 = this.field_f;
-                this.field_f = this.field_f.field_e;
-                return var5;
-              } else {
-                this.field_f = this.field_f.field_e;
-                if (var6 == 0) {
-                  continue L0;
-                } else {
-                  this.field_f = null;
-                  return null;
-                }
-              }
+            if (this.field_f.field_d == param0) {
+              var5 = this.field_f;
+              this.field_f = this.field_f.field_e;
+              return var5;
             } else {
-              ((ek) (this)).field_f = null;
-              return null;
+              this.field_f = this.field_f.field_e;
+              continue L0;
             }
           } else {
             this.field_f = null;

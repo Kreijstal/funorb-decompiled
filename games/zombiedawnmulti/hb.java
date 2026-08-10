@@ -14,13 +14,13 @@ final class hb {
     }
 
     final static byte[] a(byte[] param0, int param1) {
-        byte[] stackIn_20_0 = null;
-        byte[] stackIn_22_0 = null;
+        byte[] stackIn_19_0 = null;
+        byte[] stackIn_21_0 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -60,7 +60,7 @@ final class hb {
                   var11 = var13;
                   var5 = var11;
                   var9.a(0, param1 ^ -6351, var4, var13);
-                  stackIn_22_0 = (byte[]) (var5);
+                  stackIn_21_0 = (byte[]) (var5);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -81,31 +81,24 @@ final class hb {
                         }
                       }
                       L5: {
-                        L6: {
-                          var12 = new byte[var5_int];
-                          var10 = var12;
-                          var6 = var10;
-                          if (-2 == (var3 ^ -1)) {
-                            break L6;
-                          } else {
-                            var7 = hg.field_wb;
-                            synchronized (var7) {
-                              L7: {
-                                hg.field_wb.a(var12, var9, param1 + 27);
-                                break L7;
-                              }
-                            }
-                            if (!ZombieDawnMulti.field_E) {
-                              break L5;
-                            } else {
+                        var12 = new byte[var5_int];
+                        var10 = var12;
+                        var6 = var10;
+                        if (-2 == (var3 ^ -1)) {
+                          wo.a(var12, var5_int, param0, var4, 9);
+                          break L5;
+                        } else {
+                          var7 = hg.field_wb;
+                          synchronized (var7) {
+                            L6: {
+                              hg.field_wb.a(var12, var9, param1 + 27);
                               break L6;
                             }
                           }
+                          break L5;
                         }
-                        wo.a(var12, var5_int, param0, var4, 9);
-                        break L5;
                       }
-                      stackIn_20_0 = (byte[]) (var6);
+                      stackIn_19_0 = (byte[]) (var6);
                       decompiledRegionSelector0 = 0;
                       break L0;
                     }
@@ -118,30 +111,30 @@ final class hb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var2);
+            stackIn_24_0 = (RuntimeException) (var2);
 
-            stackIn_25_1 = new StringBuilder().append("hb.D(");
+            stackIn_24_1 = new StringBuilder().append("hb.D(");
 
             if (param0 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L8;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
+              break L7;
             } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L8;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
+              break L7;
             }
           }
-          throw fa.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_20_0;
+          return stackIn_19_0;
         } else {
-          return stackIn_22_0;
+          return stackIn_21_0;
         }
     }
 

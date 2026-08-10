@@ -209,107 +209,34 @@ final class ne {
     }
 
     final void a(int param0, jg param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (!param1.field_i) {
-              L1: {
-                this.field_i = param1.field_m;
-                if (param0 == 19) {
-                  break L1;
-                } else {
-                  this.field_m = (int[]) null;
-                  break L1;
-                }
-              }
-              L2: {
-                if (param1.field_m == 0) {
-                  L3: {
-                    if (0 == on.field_h) {
-                      this.field_l.a(12, fg.field_g, (byte) -26);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  this.field_l.a(13, jg.field_j, (byte) -26);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L4: {
-                if (-2 == (param1.field_m ^ -1)) {
-                  L5: {
-                    if (-1 != (ra.field_m ^ -1)) {
-                      break L5;
-                    } else {
-                      this.field_l.a(12, go.field_a, (byte) -26);
-                      break L5;
-                    }
-                  }
-                  this.field_l.a(13, dm.field_J, (byte) -26);
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L6: {
-                if ((param1.field_m ^ -1) != -3) {
-                  break L6;
-                } else {
-                  L7: {
-                    if (hd.field_b == 0) {
-                      this.field_l.a(12, va.field_d, (byte) -26);
-                      break L7;
-                    } else {
-                      break L7;
-                    }
-                  }
-                  this.field_l.a(13, ol.field_c, (byte) -26);
-                  break L6;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            runtimeException = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (runtimeException);
-
-            stackIn_23_1 = new StringBuilder().append("ne.O(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L8;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L8;
-            }
-          }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+        if (param1.field_i) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            this.field_i = param1.field_m;
+            if (param0 != 19) {
+                this.field_m = (int[]) null;
+            }
+            if (!(param1.field_m != 0)) {
+                if (!(0 != on.field_h)) {
+                    this.field_l.a(12, fg.field_g, (byte) -26);
+                }
+                this.field_l.a(13, jg.field_j, (byte) -26);
+            }
+            if (!(-2 != (param1.field_m ^ -1))) {
+                if (-1 == (ra.field_m ^ -1)) {
+                    this.field_l.a(12, go.field_a, (byte) -26);
+                }
+                this.field_l.a(13, dm.field_J, (byte) -26);
+            }
+            if ((param1.field_m ^ -1) == -3) {
+                if (!(hd.field_b != 0)) {
+                    this.field_l.a(12, va.field_d, (byte) -26);
+                }
+                this.field_l.a(13, ol.field_c, (byte) -26);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) ((Object) runtimeException), "ne.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

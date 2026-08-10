@@ -21,45 +21,41 @@ final class pi {
     }
 
     final int b(byte param0) {
-        if (param0 == -42) {
-          if (null != this.field_d) {
-            if (this.field_d.length == 0) {
-              return 0;
-            } else {
-              return this.field_d[this.field_d.length + -1];
-            }
+        int stackIn_6_0 = 0;
+        L0: {
+          if (param0 == -42) {
+            break L0;
           } else {
-            return 0;
-          }
-        } else {
-          this.a(85, 27);
-          if (null != this.field_d) {
-            if (this.field_d.length == 0) {
-              return 0;
-            } else {
-              return this.field_d[this.field_d.length + -1];
-            }
-          } else {
-            return 0;
+            this.a(85, 27);
+            break L0;
           }
         }
+        L1: {
+          L2: {
+            if (null == this.field_d) {
+              break L2;
+            } else {
+              if (this.field_d.length == 0) {
+                break L2;
+              } else {
+                stackIn_6_0 = this.field_d[this.field_d.length + -1];
+                break L1;
+              }
+            }
+          }
+          stackIn_6_0 = 0;
+          break L1;
+        }
+        return stackIn_6_0;
     }
 
     final static void c(byte param0) {
-        CharSequence var2;
-        CharSequence var3;
         if (param0 != 15) {
-          pi.a((byte) -9);
-          b.field_e = ae.field_a.h(0);
-          var2 = (CharSequence) ((Object) b.field_e);
-          ma.field_a = uk.a(param0 + -127, var2);
-          return;
-        } else {
-          b.field_e = ae.field_a.h(0);
-          var3 = (CharSequence) ((Object) b.field_e);
-          ma.field_a = uk.a(param0 + -127, var3);
-          return;
+            pi.a((byte) -9);
         }
+        b.field_e = ae.field_a.h(0);
+        CharSequence var2 = (CharSequence) ((Object) b.field_e);
+        ma.field_a = uk.a(param0 + -127, var2);
     }
 
     public static void a(byte param0) {
@@ -73,48 +69,20 @@ final class pi {
     }
 
     final int a(int param0, int param1) {
-        int var3;
-        int var4;
-        int stackIn_12_0 = 0;
-        int stackIn_12_1 = 0;
-        var4 = fleas.field_A ? 1 : 0;
-        if (this.field_d != null) {
-          if (this.field_d.length != 0) {
-            if (param0 == 6759) {
-              var3 = 1;
-              L0: while (true) {
-                if (var3 < this.field_d.length) {
-                  stackIn_12_0 = param1;
-
-                  stackIn_12_1 = this.field_d[var3 + -1] + this.field_d[var3] >> -1248493535;
-
-                  if (var4 == 0) {
-                    if (stackIn_12_0 >= stackIn_12_1) {
-                      var3++;
-                      if (var4 == 0) {
-                        continue L0;
-                      } else {
-                        return this.field_d.length + -1;
-                      }
-                    } else {
-                      return var3 + -1;
-                    }
-                  } else {
-                    return stackIn_12_0 + stackIn_12_1;
-                  }
-                } else {
-                  return this.field_d.length + -1;
-                }
-              }
-            } else {
-              return -64;
-            }
-          } else {
+        int var3 = 0;
+        int var4 = fleas.field_A ? 1 : 0;
+        if (this.field_d == null || this.field_d.length == 0) {
             return 0;
-          }
-        } else {
-          return 0;
         }
+        if (param0 != 6759) {
+            return -64;
+        }
+        for (var3 = 1; var3 < this.field_d.length; var3++) {
+            if (param1 < this.field_d[var3 + -1] + this.field_d[var3] >> -1248493535) {
+                return var3 + -1;
+            }
+        }
+        return this.field_d.length + -1;
     }
 
     pi(int param0, int param1, int param2) {

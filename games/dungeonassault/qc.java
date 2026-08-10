@@ -353,164 +353,167 @@ final class qc extends qe {
           }
         }
         L2: {
-          var6 = var4;
-          if (-14 == (var6 ^ -1)) {
-            L3: {
-              var5 = 0;
-              if (!this.field_x.b(-1)) {
-                break L3;
-              } else {
-                if ((oo.field_d ^ -1) < -1) {
-                  var5 = 1;
-                  this.c(0, -2);
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-            }
-            L4: {
-              if (!this.field_x.a(false)) {
-                break L4;
-              } else {
-                if (256 > oo.field_d) {
-                  var5 = 1;
-                  this.c(256, -2);
+          L3: {
+            var6 = var4;
+            if (-14 == (var6 ^ -1)) {
+              L4: {
+                var5 = 0;
+                if (!this.field_x.b(-1)) {
                   break L4;
                 } else {
-                  break L4;
-                }
-              }
-            }
-            L5: {
-              if (!this.field_x.b((byte) -48)) {
-                break L5;
-              } else {
-                L6: {
-                  var6 = -120 + (this.e(param1, 82) - -this.f(-77, param1)) + qi.field_b >> 497822913;
-                  var7 = hj.field_S + -var6;
-                  var8 = 256 * var7 / 120;
-                  if (var8 <= 0) {
+                  if ((oo.field_d ^ -1) < -1) {
+                    var5 = 1;
                     this.c(0, -2);
-                    break L6;
+                    break L4;
                   } else {
-                    if (var8 >= 256) {
-                      this.c(256, -2);
-                      break L6;
-                    } else {
-                      this.c(var8, -2);
-                      break L6;
-                    }
+                    break L4;
                   }
                 }
-                var5 = 1;
-                break L5;
               }
-            }
-            L7: {
-              if (!this.field_x.a(0)) {
-                break L7;
-              } else {
-                if ((oo.field_d ^ -1) >= -1) {
-                  break L7;
+              L5: {
+                if (!this.field_x.a(false)) {
+                  break L5;
                 } else {
-                  ig.c(-89);
-                  var5 = 1;
-                  break L7;
+                  if (256 > oo.field_d) {
+                    var5 = 1;
+                    this.c(256, -2);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
                 }
               }
-            }
-            L8: {
-              if (!this.field_x.c((byte) 109)) {
-                break L8;
-              } else {
-                if (256 <= oo.field_d) {
-                  break L8;
+              L6: {
+                if (!this.field_x.b((byte) -48)) {
+                  break L6;
                 } else {
-                  m.b((byte) 64);
+                  L7: {
+                    var6 = -120 + (this.e(param1, 82) - -this.f(-77, param1)) + qi.field_b >> 497822913;
+                    var7 = hj.field_S + -var6;
+                    var8 = 256 * var7 / 120;
+                    if (var8 <= 0) {
+                      this.c(0, -2);
+                      break L7;
+                    } else {
+                      if (var8 >= 256) {
+                        this.c(256, -2);
+                        break L7;
+                      } else {
+                        this.c(var8, -2);
+                        break L7;
+                      }
+                    }
+                  }
                   var5 = 1;
-                  break L8;
+                  break L6;
                 }
               }
-            }
-            if (var5 != 0) {
+              L8: {
+                if (!this.field_x.a(0)) {
+                  break L8;
+                } else {
+                  if ((oo.field_d ^ -1) >= -1) {
+                    break L8;
+                  } else {
+                    ig.c(-89);
+                    var5 = 1;
+                    break L8;
+                  }
+                }
+              }
               L9: {
-                if (!this.field_x.b((byte) 127)) {
+                if (!this.field_x.c((byte) 109)) {
                   break L9;
                 } else {
-                  if (mo.field_a <= ia.field_X) {
-                    break L2;
+                  if (256 <= oo.field_d) {
+                    break L9;
                   } else {
+                    m.b((byte) 64);
+                    var5 = 1;
                     break L9;
                   }
                 }
               }
-              var6_ref_cf__ = eb.field_O;
-              var7 = oi.b(0, var6_ref_cf__.length);
-              var8_ref_cf = var6_ref_cf__[var7];
-              cf.a(100, var8_ref_cf.field_e, var8_ref_cf.field_a << -165524030);
-              ia.field_X = 20 + mo.field_a;
-              break L2;
-            } else {
-              break L2;
-            }
-          } else {
-            if (-15 != (var6 ^ -1)) {
-              break L2;
-            } else {
-              L10: {
-                if (this.field_x.b(-1)) {
-                  um.a(0, false);
-                  break L10;
-                } else {
-                  break L10;
-                }
-              }
-              L11: {
-                if (this.field_x.a(false)) {
-                  um.a(256, false);
-                  break L11;
-                } else {
-                  break L11;
-                }
-              }
-              L12: {
-                if (this.field_x.b((byte) -87)) {
-                  var6 = -120 + (this.e(param1, 82) + (this.f(76, param1) + qi.field_b)) >> -752482207;
-                  var7 = hj.field_S + -var6;
-                  var8 = 256 * var7 / 120;
-                  if ((var8 ^ -1) < -1) {
-                    if (var8 >= 256) {
-                      um.a(256, false);
-                      break L12;
-                    } else {
-                      um.a(var8, false);
-                      break L12;
-                    }
+              if (var5 != 0) {
+                L10: {
+                  if (!this.field_x.b((byte) 127)) {
+                    break L10;
                   } else {
-                    um.a(0, false);
-                    break L12;
+                    if (mo.field_a <= ia.field_X) {
+                      break L3;
+                    } else {
+                      break L10;
+                    }
                   }
-                } else {
-                  break L12;
                 }
-              }
-              L13: {
-                if (!this.field_x.a(0)) {
-                  break L13;
-                } else {
-                  jd.b(true);
-                  break L13;
-                }
-              }
-              if (this.field_x.c((byte) 66)) {
-                mi.b(210041889);
+                var6_ref_cf__ = eb.field_O;
+                var7 = oi.b(0, var6_ref_cf__.length);
+                var8_ref_cf = var6_ref_cf__[var7];
+                cf.a(100, var8_ref_cf.field_e, var8_ref_cf.field_a << -165524030);
+                ia.field_X = 20 + mo.field_a;
                 break L2;
               } else {
                 break L2;
               }
+            } else {
+              if (-15 != (var6 ^ -1)) {
+                break L2;
+              } else {
+                L11: {
+                  if (this.field_x.b(-1)) {
+                    um.a(0, false);
+                    break L11;
+                  } else {
+                    break L11;
+                  }
+                }
+                L12: {
+                  if (this.field_x.a(false)) {
+                    um.a(256, false);
+                    break L12;
+                  } else {
+                    break L12;
+                  }
+                }
+                L13: {
+                  if (this.field_x.b((byte) -87)) {
+                    var6 = -120 + (this.e(param1, 82) + (this.f(76, param1) + qi.field_b)) >> -752482207;
+                    var7 = hj.field_S + -var6;
+                    var8 = 256 * var7 / 120;
+                    if ((var8 ^ -1) < -1) {
+                      if (var8 >= 256) {
+                        um.a(256, false);
+                        break L13;
+                      } else {
+                        um.a(var8, false);
+                        break L13;
+                      }
+                    } else {
+                      um.a(0, false);
+                      break L13;
+                    }
+                  } else {
+                    break L13;
+                  }
+                }
+                L14: {
+                  if (!this.field_x.a(0)) {
+                    break L14;
+                  } else {
+                    jd.b(true);
+                    break L14;
+                  }
+                }
+                if (this.field_x.c((byte) 66)) {
+                  mi.b(210041889);
+                  break L3;
+                } else {
+                  break L2;
+                }
+              }
             }
           }
+          break L2;
         }
     }
 

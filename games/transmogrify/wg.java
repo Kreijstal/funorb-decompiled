@@ -12,16 +12,14 @@ final class wg implements Iterator {
     private ri field_b;
 
     final static void b(int param0) {
-        int stackIn_26_0 = 0;
-        int stackIn_26_1 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        he var3_ref_he = null;
         int var3 = 0;
-        int var4_int = 0;
+        he var3_ref_he = null;
         gh var4 = null;
+        int var4_int = 0;
         Object var5 = null;
         int var6 = 0;
         hj var8 = null;
@@ -30,112 +28,67 @@ final class wg implements Iterator {
         try {
           L0: {
             L1: {
-              L2: {
-                var8 = nf.field_l;
-                var2 = var8.d((byte) 59);
-                if (-1 != (var2 ^ -1)) {
-                  break L2;
-                } else {
-                  var3_ref_he = (he) ((Object) pj.field_A.a((byte) -95));
-                  if (var3_ref_he != null) {
+              var8 = nf.field_l;
+              var2 = var8.d((byte) 59);
+              if (-1 != (var2 ^ -1)) {
+                if (1 == var2) {
+                  var3 = var8.c((byte) -122);
+                  var4 = (gh) ((Object) mf.field_b.a((byte) -95));
+                  L2: while (true) {
                     L3: {
-                      L4: {
-                        var4_int = var8.d((byte) 85);
-                        if (0 != var4_int) {
-                          break L4;
+                      if (var4 == null) {
+                        break L3;
+                      } else {
+                        if (var4.field_j != var3) {
+                          var4 = (gh) ((Object) mf.field_b.a(true));
+                          continue L2;
                         } else {
-                          var5 = null;
-                          if (var6 == 0) {
-                            break L3;
-                          } else {
-                            break L4;
-                          }
+                          break L3;
                         }
                       }
-                      var12 = new byte[var4_int];
-                      var8.a(var4_int, 2, var12, 0);
-                      break L3;
                     }
-                    var8.field_h = var8.field_h + 4;
-                    if (!var8.d(5432)) {
+                    if (var4 == null) {
                       pc.a(param0 + -3);
-                      decompiledRegionSelector0 = 1;
+                      decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
-                      var3_ref_he.c(param0 ^ 1);
-                      if (var6 == 0) {
-                        break L1;
-                      } else {
-                        break L2;
-                      }
+                      var4.c(5);
+                      break L1;
                     }
-                  } else {
-                    pc.a(param0 ^ 5);
-                    decompiledRegionSelector0 = 0;
-                    break L0;
                   }
-                }
-              }
-              L5: {
-                if (1 == var2) {
-                  break L5;
                 } else {
                   d.a((Throwable) null, 13, "A1: " + ik.q(48));
                   pc.a(1);
-                  if (var6 == 0) {
-                    break L1;
-                  } else {
-                    break L5;
-                  }
+                  break L1;
                 }
-              }
-              var3 = var8.c((byte) -122);
-              var4 = (gh) ((Object) mf.field_b.a((byte) -95));
-              L6: while (true) {
-                L7: {
-                  L8: {
-                    if (var4 == null) {
-                      break L8;
+              } else {
+                var3_ref_he = (he) ((Object) pj.field_A.a((byte) -95));
+                if (var3_ref_he != null) {
+                  L4: {
+                    var4_int = var8.d((byte) 85);
+                    if (0 != var4_int) {
+                      var12 = new byte[var4_int];
+                      var8.a(var4_int, 2, var12, 0);
+                      break L4;
                     } else {
-                      stackIn_26_0 = var4.field_j;
-
-                      stackIn_26_1 = var3;
-
-                      if (var6 != 0) {
-                        break L7;
-                      } else {
-                        L9: {
-                          if (stackIn_26_0 != stackIn_26_1) {
-                            break L9;
-                          } else {
-                            if (var6 == 0) {
-                              break L8;
-                            } else {
-                              break L9;
-                            }
-                          }
-                        }
-                        var4 = (gh) ((Object) mf.field_b.a(true));
-                        if (var6 == 0) {
-                          continue L6;
-                        } else {
-                          break L8;
-                        }
-                      }
+                      var5 = null;
+                      break L4;
                     }
                   }
-                  if (var4 == null) {
-                    stackIn_26_0 = param0;
-                    stackIn_26_1 = -3;
-                    break L7;
+                  var8.field_h = var8.field_h + 4;
+                  if (!var8.d(5432)) {
+                    pc.a(param0 + -3);
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
-                    var4.c(5);
+                    var3_ref_he.c(param0 ^ 1);
                     break L1;
                   }
+                } else {
+                  pc.a(param0 ^ 5);
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
-                pc.a(stackIn_26_0 + stackIn_26_1);
-                decompiledRegionSelector0 = 2;
-                break L0;
               }
             }
             if (param0 == 4) {
@@ -175,25 +128,15 @@ final class wg implements Iterator {
     }
 
     public final Object next() {
-        Object var1;
-        var1 = this.field_b;
+        Object var1 = this.field_b;
         if (var1 != this.field_c.field_e) {
-          this.field_b = ((ri) (var1)).field_h;
-          if (Transmogrify.field_A) {
+            this.field_b = ((ri) (var1)).field_h;
+        } else {
             this.field_b = null;
             var1 = null;
-            this.field_a = (ri) (var1);
-            return var1;
-          } else {
-            this.field_a = (ri) (var1);
-            return var1;
-          }
-        } else {
-          this.field_b = null;
-          var1 = null;
-          this.field_a = (ri) (var1);
-          return var1;
         }
+        this.field_a = (ri) (var1);
+        return var1;
     }
 
     public static void a(int param0) {

@@ -366,38 +366,28 @@ final class ga extends ki implements ge, ka {
 
     public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
         RuntimeException var6 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             if (param4) {
-              L1: {
-                L2: {
-                  if (param3 != this.field_I) {
-                    break L2;
-                  } else {
-                    ok.a((byte) 119);
-                    if (!SolKnight.field_L) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
+              if (param3 != this.field_I) {
                 if (param3 != this.field_J) {
-                  break L1;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 } else {
                   this.f((byte) 59);
                   return;
                 }
+              } else {
+                ok.a((byte) 119);
+                return;
               }
-              decompiledRegionSelector0 = 1;
-              break L0;
             } else {
               decompiledRegionSelector0 = 0;
               break L0;
@@ -405,25 +395,25 @@ final class ga extends ki implements ge, ka {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L1: {
             var6 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var6);
+            stackIn_9_0 = (RuntimeException) (var6);
 
-            stackIn_10_1 = new StringBuilder().append("ga.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_9_1 = new StringBuilder().append("ga.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
             if (param3 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
+              break L1;
             } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
+              break L1;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param4 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param4 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

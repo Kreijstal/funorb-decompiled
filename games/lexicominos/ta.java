@@ -43,20 +43,13 @@ final class ta {
         try {
           L0: {
             L1: {
-              L2: {
-                if (param0 != null) {
-                  break L2;
-                } else {
-                  var3 = this.field_a.field_b.field_f;
-                  if (!Lexicominos.field_L) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              if (param0 != null) {
+                var3 = param0;
+                break L1;
+              } else {
+                var3 = this.field_a.field_b.field_f;
+                break L1;
               }
-              var3 = param0;
-              break L1;
             }
             if (var3 == this.field_a.field_b) {
               this.field_c = null;
@@ -64,12 +57,12 @@ final class ta {
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
-              L3: {
+              L2: {
                 if (param1 <= -126) {
-                  break L3;
+                  break L2;
                 } else {
                   this.e(-9);
-                  break L3;
+                  break L2;
                 }
               }
               this.field_c = var3.field_f;
@@ -80,7 +73,7 @@ final class ta {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3_ref = decompiledCaughtException;
             stackIn_13_0 = (RuntimeException) (var3_ref);
 
@@ -90,12 +83,12 @@ final class ta {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw ld.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
@@ -312,29 +305,22 @@ final class ta {
         try {
           L0: {
             L1: {
-              L2: {
-                if (param0 == null) {
-                  break L2;
-                } else {
-                  var3 = param0;
-                  if (!Lexicominos.field_L) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              if (param0 == null) {
+                var3 = this.field_a.field_b.field_c;
+                break L1;
+              } else {
+                var3 = param0;
+                break L1;
               }
-              var3 = this.field_a.field_b.field_c;
-              break L1;
             }
             if (var3 != this.field_a.field_b) {
-              L3: {
+              L2: {
                 this.field_c = var3.field_c;
                 if (param1 >= 126) {
-                  break L3;
+                  break L2;
                 } else {
                   this.field_c = (kd) null;
-                  break L3;
+                  break L2;
                 }
               }
               stackIn_9_0 = (kd) (var3);
@@ -349,7 +335,7 @@ final class ta {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3_ref = decompiledCaughtException;
             stackIn_12_0 = (RuntimeException) (var3_ref);
 
@@ -359,12 +345,12 @@ final class ta {
               stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackIn_13_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackIn_13_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw ld.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');

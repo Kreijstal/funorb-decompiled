@@ -12,49 +12,51 @@ final class ld {
     private Object[][] field_d;
 
     final Object b(int param0) {
-        Object var4 = null;
-        int fieldTemp$0 = 0;
-        int var5 = Transmogrify.field_A ? 1 : 0;
-        if (0 > this.field_g) {
+        int fieldTemp$3 = 0;
+        Object[] var2;
+        long[] var3;
+        Object var4;
+        int var5;
+        Object[] var6;
+        var5 = Transmogrify.field_A ? 1 : 0;
+        if (0 <= this.field_g) {
+          var6 = this.field_d[(int)((long)(-1 + this.field_b) & this.field_a)];
+          var2 = var6;
+          var3 = this.field_c[(int)(this.field_a & (long)(this.field_b + -1))];
+          L0: while (true) {
+            L1: {
+              if (var6.length <= this.field_g) {
+                break L1;
+              } else {
+                var4 = var6[this.field_g];
+                if (var4 == null) {
+                  break L1;
+                } else {
+                  fieldTemp$3 = this.field_g;
+                  this.field_g = this.field_g + 1;
+                  if ((this.field_a ^ -1L) == (var3[fieldTemp$3] ^ -1L)) {
+                    return var4;
+                  } else {
+                    continue L0;
+                  }
+                }
+              }
+            }
+            this.field_g = param0;
             return null;
+          }
+        } else {
+          return null;
         }
-        Object[] var6 = this.field_d[(int)((long)(-1 + this.field_b) & this.field_a)];
-        Object[] var2 = var6;
-        long[] var3 = this.field_c[(int)(this.field_a & (long)(this.field_b + -1))];
-        do {
-            if (var6.length <= this.field_g) {
-                this.field_g = param0;
-                return null;
-            }
-            var4 = var6[this.field_g];
-            if (var5 != 0) {
-                return null;
-            }
-            if (var4 == null) {
-                this.field_g = param0;
-                return null;
-            }
-            fieldTemp$0 = this.field_g;
-            this.field_g = this.field_g + 1;
-            if (!((this.field_a ^ -1L) != (var3[fieldTemp$0] ^ -1L))) {
-                return var4;
-            }
-        } while (var5 == 0);
-        this.field_g = param0;
-        return null;
     }
 
     final Object a(int param0, long param1) {
         if (param0 > -123) {
-          field_f = (String[]) null;
-          this.field_a = param1;
-          this.field_g = 0;
-          return this.b(-1);
-        } else {
-          this.field_a = param1;
-          this.field_g = 0;
-          return this.b(-1);
+            field_f = (String[]) null;
         }
+        this.field_a = param1;
+        this.field_g = 0;
+        return this.b(-1);
     }
 
     public static void a(int param0) {
@@ -68,12 +70,11 @@ final class ld {
     final void a(Object param0, byte param1, long param2) {
         Object[] array$0 = null;
         long[] array$1 = null;
-        Object[] stackIn_15_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object[] var5 = null;
@@ -97,78 +98,61 @@ final class ld {
               var6 = var11;
               var7_int = 0;
               L1: while (true) {
-                L2: {
-                  L3: {
-                    if (var7_int >= var10.length) {
-                      break L3;
-                    } else {
-                      stackIn_15_0 = (Object[]) (var5);
-
-                      if (var9 != 0) {
-                        break L2;
-                      } else {
-                        if (stackIn_15_0[var7_int] == null) {
-                          var5[var7_int] = param0;
-                          var11[var7_int] = param2;
-                          decompiledRegionSelector0 = 0;
-                          break L0;
-                        } else {
-                          var7_int++;
-                          if (var9 == 0) {
-                            continue L1;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                    }
-                  }
+                if (var7_int >= var10.length) {
                   if (param1 == 26) {
-                    stackIn_15_0 = (Object[]) (var5);
-                    break L2;
+                    var7 = var5;
+                    var8 = var6;
+                    array$0 = new Object[var7.length + this.field_h];
+                    var5 = array$0;
+                    this.field_d[(int)ej.a((long)(this.field_b + -1), param2)] = array$0;
+                    array$1 = new long[var8.length + this.field_h];
+                    var6 = array$1;
+                    this.field_c[(int)ej.a(param2, (long)(-1 + this.field_b))] = array$1;
+                    ji.a(var7, 0, var5, 0, var7.length);
+                    ji.a(var8, 0, var6, 0, var8.length);
+                    var5[var7.length] = param0;
+                    var6[var8.length] = param2;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     decompiledRegionSelector0 = 1;
                     break L0;
                   }
+                } else {
+                  if (var10[var7_int] == null) {
+                    var5[var7_int] = param0;
+                    var11[var7_int] = param2;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
+                  } else {
+                    var7_int++;
+                    continue L1;
+                  }
                 }
-                var7 = stackIn_15_0;
-                var8 = var6;
-                array$0 = new Object[var7.length + this.field_h];
-                var5 = array$0;
-                this.field_d[(int)ej.a((long)(this.field_b + -1), param2)] = array$0;
-                array$1 = new long[var8.length + this.field_h];
-                var6 = array$1;
-                this.field_c[(int)ej.a(param2, (long)(-1 + this.field_b))] = array$1;
-                ji.a(var7, 0, var5, 0, var7.length);
-                ji.a(var8, 0, var6, 0, var8.length);
-                var5[var7.length] = param0;
-                var6[var8.length] = param2;
-                decompiledRegionSelector0 = 2;
-                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var5_ref = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var5_ref);
+            stackIn_17_0 = (RuntimeException) (var5_ref);
 
-            stackIn_19_1 = new StringBuilder().append("ld.D(");
+            stackIn_17_1 = new StringBuilder().append("ld.D(");
 
             if (param0 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L4;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
+              break L2;
             } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L4;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
+              break L2;
             }
           }
-          throw ch.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ',' + param2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -182,60 +166,18 @@ final class ld {
     }
 
     ld(int param0, int param1, int param2) {
-        Object[] array$2 = null;
-        long[] array$3 = null;
         int var4 = 0;
-        int var5 = 0;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var5 = Transmogrify.field_A ? 1 : 0;
-                    this.field_h = param2;
-                    this.field_b = param0;
-                    this.field_d = new Object[this.field_b][];
-                    this.field_c = new long[this.field_b][];
-                    var4 = 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (this.field_b <= var4) {
-                        statePc = 5;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    array$2 = new Object[param1];
-                    this.field_d[var4] = array$2;
-                    array$3 = new long[param1];
-                    this.field_c[var4] = array$3;
-                    var4++;
-                    if (var5 == 0) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    if (var5 == 0) {
-                        statePc = 1;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Object[] array$0 = null;
+        long[] array$1 = null;
+        this.field_h = param2;
+        this.field_b = param0;
+        this.field_d = new Object[this.field_b][];
+        this.field_c = new long[this.field_b][];
+        for (var4 = 0; this.field_b > var4; var4++) {
+            array$0 = new Object[param1];
+            this.field_d[var4] = array$0;
+            array$1 = new long[param1];
+            this.field_c[var4] = array$1;
         }
     }
 

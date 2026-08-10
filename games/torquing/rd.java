@@ -158,6 +158,7 @@ final class rd extends am {
 
     final static void b(int param0) {
         try {
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int var1 = 0;
             java.lang.reflect.Method var2 = null;
@@ -170,35 +171,44 @@ final class rd extends am {
             try {
               L0: {
                 L1: {
-                  var2 = Runtime.class.getMethod("maxMemory", new Class[]{});
-                  if (var2 == null) {
-                    break L1;
-                  } else {
-                    try {
-                      L2: {
-                        var3 = Runtime.getRuntime();
-                        var5 = (Object[]) null;
-                        var4 = (Long) (var2.invoke((Object) (var3), (Object[]) null));
-                        df.field_u = 1 + (int)(var4.longValue() / 1048576L);
+                  L2: {
+                    var2 = Runtime.class.getMethod("maxMemory", new Class[]{});
+                    if (var2 == null) {
+                      break L2;
+                    } else {
+                      try {
+                        L3: {
+                          var3 = Runtime.getRuntime();
+                          var5 = (Object[]) null;
+                          var4 = (Long) (var2.invoke((Object) (var3), (Object[]) null));
+                          df.field_u = 1 + (int)(var4.longValue() / 1048576L);
+                          decompiledRegionSelector0 = 0;
+                          break L3;
+                        }
+                      } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L4: {
+                          var3_ref = decompiledCaughtException;
+                          decompiledRegionSelector0 = 1;
+                          break L4;
+                        }
+                      }
+                      if (decompiledRegionSelector0 == 0) {
+                        break L1;
+                      } else {
                         break L2;
                       }
-                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L3: {
-                        var3_ref = decompiledCaughtException;
-                        break L3;
-                      }
                     }
-                    break L1;
                   }
+                  break L1;
                 }
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
+              L5: {
                 var2_ref = (Exception) (Object) decompiledCaughtException;
-                break L4;
+                break L5;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

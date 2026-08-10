@@ -39,38 +39,31 @@ final class cj extends kd {
               }
               var3 = (hc) ((Object) cl.field_P.a((long)var2.hashCode(), true));
               L2: while (true) {
-                L3: {
-                  if (var3 == null) {
-                    break L3;
-                  } else {
-                    L4: {
-                      var7 = (CharSequence) ((Object) var3.field_R);
-                      var4_ref_String = ck.a(var7, (byte) -48);
-                      if (var4_ref_String == null) {
-                        var4_ref_String = var3.field_R;
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    if (var4_ref_String.equals(var2)) {
-                      stackIn_15_0 = (hc) (var3);
-                      decompiledRegionSelector0 = 0;
-                      break L0;
+                if (var3 == null) {
+                  var4 = -88 % ((-51 - param0) / 52);
+                  stackIn_18_0 = null;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L3: {
+                    var7 = (CharSequence) ((Object) var3.field_R);
+                    var4_ref_String = ck.a(var7, (byte) -48);
+                    if (var4_ref_String == null) {
+                      var4_ref_String = var3.field_R;
+                      break L3;
                     } else {
-                      var3 = (hc) ((Object) cl.field_P.b(-99));
-                      if (var5 == 0) {
-                        continue L2;
-                      } else {
-                        break L3;
-                      }
+                      break L3;
                     }
                   }
+                  if (var4_ref_String.equals(var2)) {
+                    stackIn_15_0 = (hc) (var3);
+                    decompiledRegionSelector0 = 0;
+                    break L0;
+                  } else {
+                    var3 = (hc) ((Object) cl.field_P.b(-99));
+                    continue L2;
+                  }
                 }
-                var4 = -88 % ((-51 - param0) / 52);
-                stackIn_18_0 = null;
-                decompiledRegionSelector0 = 1;
-                break L0;
               }
             } else {
               return null;
@@ -78,7 +71,7 @@ final class cj extends kd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var2_ref = decompiledCaughtException;
             stackIn_21_0 = (RuntimeException) (var2_ref);
 
@@ -88,12 +81,12 @@ final class cj extends kd {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "null";
-              break L5;
+              break L4;
             } else {
               stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
               stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackIn_22_2 = "{...}";
-              break L5;
+              break L4;
             }
           }
           throw ld.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');

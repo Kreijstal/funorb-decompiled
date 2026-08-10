@@ -88,55 +88,20 @@ final class vq extends vh {
     }
 
     final void a(String param0, int param1, int param2) {
-        RuntimeException runtimeException = null;
-        String var5 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Tb, (dd) null, param0);
-              this.field_Rb[this.field_Nb].field_Gb = this.field_Pb;
-              this.field_Rb[this.field_Nb].field_J = true;
-              this.field_Rb[this.field_Nb].field_cb = 1;
-              this.a(-103, this.field_Rb[this.field_Nb]);
-              this.field_dc[this.field_Nb] = param2;
-              this.field_Nb = this.field_Nb + 1;
-              if (param1 == 17130) {
-                break L1;
-              } else {
-                var5 = (String) null;
+            this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Tb, (dd) null, param0);
+            this.field_Rb[this.field_Nb].field_Gb = this.field_Pb;
+            this.field_Rb[this.field_Nb].field_J = true;
+            this.field_Rb[this.field_Nb].field_cb = 1;
+            this.a(-103, this.field_Rb[this.field_Nb]);
+            this.field_dc[this.field_Nb] = param2;
+            this.field_Nb = this.field_Nb + 1;
+            if (param1 != 17130) {
+                String var5 = (String) null;
                 this.a(-100, (byte) -124, (dd) null, (String) null);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("vq.G(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) ((Object) runtimeException), "vq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

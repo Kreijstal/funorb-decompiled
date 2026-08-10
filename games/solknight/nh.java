@@ -17,27 +17,14 @@ final class nh {
           }
         } else {
           mi.a();
-          if (!SolKnight.field_L) {
-            if (param0 >= -28) {
-              var4 = (String) null;
-              nh.a((da) null, (String) null, 2, (String) null);
-              uf.a(false, param1);
-              return;
-            } else {
-              uf.a(false, param1);
-              return;
-            }
+          if (param0 < -28) {
+            uf.a(false, param1);
+            return;
           } else {
-            mi.a(0, 0, mi.field_a, mi.field_d, 0, 192);
-            if (param0 < -28) {
-              uf.a(false, param1);
-              return;
-            } else {
-              var4 = (String) null;
-              nh.a((da) null, (String) null, 2, (String) null);
-              uf.a(false, param1);
-              return;
-            }
+            var4 = (String) null;
+            nh.a((da) null, (String) null, 2, (String) null);
+            uf.a(false, param1);
+            return;
           }
         }
     }

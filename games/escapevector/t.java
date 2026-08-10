@@ -346,8 +346,8 @@ final class t {
     }
 
     private final boolean a(int param0, boolean param1) {
-        int stackIn_44_0 = 0;
-        int stackIn_83_0 = 0;
+        int stackIn_43_0 = 0;
+        int stackIn_82_0 = 0;
         int var3;
         int var4;
         int var5;
@@ -371,16 +371,10 @@ final class t {
         }
         L1: {
           var3 = this.b(123);
-          if (var3 != 0) {
-            if ((var3 ^ -1) == -2) {
-              if (!this.field_b.b((byte) -18)) {
-                break L1;
-              } else {
-                wk.field_c = true;
-                aj.field_a.a(param1, (byte) 47);
-                mj.field_d = 0;
-                break L1;
-              }
+          if (var3 == 0) {
+            if (this.field_b.b((byte) -18)) {
+              oe.c(param1, 2560);
+              return true;
             } else {
               if ((var3 ^ -1) != -2) {
                 break L1;
@@ -489,15 +483,15 @@ final class t {
                 var4 = fh.field_g.b(oi.field_N);
                 var5 = fh.field_g.b(ee.field_d);
                 if (var4 <= var5) {
-                  stackIn_44_0 = var5;
+                  stackIn_43_0 = var5;
                   break L10;
                 } else {
-                  stackIn_44_0 = var4;
+                  stackIn_43_0 = var4;
                   break L10;
                 }
               }
               L11: {
-                var6 = stackIn_44_0;
+                var6 = stackIn_43_0;
                 var7 = 320 + (var6 - 68) / 2;
                 var8 = -var7 - 2 + dh.field_d;
                 if (-1 < (var8 ^ -1)) {
@@ -625,15 +619,15 @@ final class t {
                 var4 = fh.field_g.b(oi.field_N);
                 var5 = fh.field_g.b(ee.field_d);
                 if (var4 <= var5) {
-                  stackIn_83_0 = var5;
+                  stackIn_82_0 = var5;
                   break L20;
                 } else {
-                  stackIn_83_0 = var4;
+                  stackIn_82_0 = var4;
                   break L20;
                 }
               }
               L21: {
-                var6 = stackIn_83_0;
+                var6 = stackIn_82_0;
                 var7 = 320 - -((-68 + var6) / 2);
                 var8 = dh.field_d + -2 + -var7;
                 if (0 <= var8) {

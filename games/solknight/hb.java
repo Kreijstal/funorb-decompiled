@@ -1378,20 +1378,23 @@ final class hb {
               }
             }
             L92: {
-              if ((lh.field_s ^ -1) > -3) {
-                break L92;
-              } else {
-                if (!fh.field_d[33]) {
-                  break L92;
+              L93: {
+                if ((lh.field_s ^ -1) > -3) {
+                  break L93;
                 } else {
-                  bi.field_h = 2;
-                  oa.field_n = true;
-                  fg.field_a = 500;
-                  ic.field_t = ic.field_t - 1;
-                  lc.field_p = lc.field_p + 1;
-                  break L92;
+                  if (!fh.field_d[33]) {
+                    break L93;
+                  } else {
+                    bi.field_h = 2;
+                    oa.field_n = true;
+                    fg.field_a = 500;
+                    ic.field_t = ic.field_t - 1;
+                    lc.field_p = lc.field_p + 1;
+                    break L92;
+                  }
                 }
               }
+              break L92;
             }
             break L0;
           }

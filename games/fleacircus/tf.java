@@ -202,10 +202,8 @@ final class tf extends dk {
     final static int b(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int stackIn_12_0 = 0;
         int stackIn_14_0 = 0;
-        int stackIn_16_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -222,52 +220,29 @@ final class tf extends dk {
               }
             }
             L2: while (true) {
-              L3: {
-                L4: {
-                  L5: {
-                    if ((param1 ^ -1) >= -2) {
-                      break L5;
-                    } else {
-                      var6 = 1 & param1 ^ -1;
-                      var5 = -1;
-                      if (var4 != 0) {
-                        if (var5 == var6) {
-                          break L3;
-                        } else {
-                          break L4;
-                        }
-                      } else {
-                        L6: {
-                          if (var5 != var6) {
-                            var3_int = var3_int * param0;
-                            break L6;
-                          } else {
-                            break L6;
-                          }
-                        }
-                        param0 = param0 * param0;
-                        param1 = param1 >> 1;
-                        if (var4 == 0) {
-                          continue L2;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                  }
-                  if (1 == param1) {
+              if ((param1 ^ -1) >= -2) {
+                if (1 == param1) {
+                  stackIn_12_0 = var3_int * param0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
+                } else {
+                  stackIn_14_0 = var3_int;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                }
+              } else {
+                L3: {
+                  if (-1 != (1 & param1 ^ -1)) {
+                    var3_int = var3_int * param0;
                     break L3;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
-                stackIn_16_0 = var3_int;
-                decompiledRegionSelector0 = 1;
-                break L0;
+                param0 = param0 * param0;
+                param1 = param1 >> 1;
+                continue L2;
               }
-              stackIn_14_0 = var3_int * param0;
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -276,9 +251,9 @@ final class tf extends dk {
           throw pf.a((Throwable) ((Object) var3), "tf.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_14_0;
+          return stackIn_12_0;
         } else {
-          return stackIn_16_0;
+          return stackIn_14_0;
         }
     }
 

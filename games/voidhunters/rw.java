@@ -300,18 +300,21 @@ final class rw extends le {
               if (var2 < 1) {
                 break L1;
               } else {
-                var3 = this.field_m[var2];
-                if ((var3 ^ -1) < -9) {
-                  break L1;
-                } else {
-                  if (7 < (var3 ^ -1)) {
-                    break L1;
+                L2: {
+                  var3 = this.field_m[var2];
+                  if ((var3 ^ -1) < -9) {
+                    break L2;
                   } else {
-                    this.field_r = this.field_r - 1;
-                    var2--;
-                    continue L0;
+                    if (7 < (var3 ^ -1)) {
+                      break L2;
+                    } else {
+                      this.field_r = this.field_r - 1;
+                      var2--;
+                      continue L0;
+                    }
                   }
                 }
+                break L1;
               }
             }
             return;

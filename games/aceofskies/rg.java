@@ -199,62 +199,18 @@ abstract class rg extends gm {
     }
 
     final static void a(int param0, boolean param1, rh param2, int param3) {
-        RuntimeException runtimeException = null;
-        rh var5 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param2 == null) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                param2.b(-2580, param0);
-                param2.a(-128, param3);
-                if (!param1) {
-                  break L1;
-                } else {
-                  var5 = (rh) null;
-                  rg.a(53, false, (rh) null, -102);
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("rg.MA(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
-          }
-          throw pn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
+        if (!(param2 != null)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            param2.b(-2580, param0);
+            param2.a(-128, param3);
+            if (param1) {
+                rh var5 = (rh) null;
+                rg.a(53, false, (rh) null, -102);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) ((Object) runtimeException), "rg.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

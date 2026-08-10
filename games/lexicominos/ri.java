@@ -135,11 +135,11 @@ abstract class ri implements ma {
     }
 
     final static void a(boolean param0, boolean param1, kb param2, byte param3, int param4) {
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -166,12 +166,7 @@ abstract class ri implements ma {
                 break L1;
               } else {
                 ed.field_q.c(16, -1);
-                if (!Lexicominos.field_L) {
-                  break L1;
-                } else {
-                  ed.field_q.c(18, -1);
-                  break L1;
-                }
+                break L1;
               }
             }
             L2: {
@@ -247,23 +242,23 @@ abstract class ri implements ma {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var5 = decompiledCaughtException;
-            stackIn_26_0 = (RuntimeException) (var5);
+            stackIn_24_0 = (RuntimeException) (var5);
 
-            stackIn_26_1 = new StringBuilder().append("ri.Q(").append(param0).append(',').append(param1).append(',');
+            stackIn_24_1 = new StringBuilder().append("ri.Q(").append(param0).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "null";
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
               break L9;
             } else {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "{...}";
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
               break L9;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param3 + ',' + param4 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

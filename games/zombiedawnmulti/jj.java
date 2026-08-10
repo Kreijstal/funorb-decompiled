@@ -347,14 +347,14 @@ final class jj extends id {
     }
 
     final void a(int param0, nm param1) {
+        ja stackIn_9_0 = null;
         ja stackIn_10_0 = null;
-        ja stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
+        int stackIn_10_1 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        String stackIn_17_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -381,38 +381,31 @@ final class jj extends id {
               break L0;
             } else {
               L2: {
-                L3: {
-                  var5 = this.field_Q;
-                  var6 = op.field_m.field_D[var5][0];
-                  var7 = op.field_m.field_D[var5][1];
-                  var8 = am.a(this.field_R, var7, this.field_C, param0 ^ -10135, var6);
-                  if (this.field_G) {
-                    break L3;
-                  } else {
-                    var8.c(var3_int, var4, this.field_N);
-                    if (!ZombieDawnMulti.field_E) {
-                      break L2;
+                var5 = this.field_Q;
+                var6 = op.field_m.field_D[var5][0];
+                var7 = op.field_m.field_D[var5][1];
+                var8 = am.a(this.field_R, var7, this.field_C, param0 ^ -10135, var6);
+                if (this.field_G) {
+                  L3: {
+                    stackIn_9_0 = ig.field_d[1];
+
+                    if (3 != this.field_J) {
+                      stackIn_10_0 = (ja) ((Object) stackIn_9_0);
+                      stackIn_10_1 = var3_int;
+                      break L3;
                     } else {
+                      stackIn_10_0 = (ja) ((Object) stackIn_9_0);
+                      stackIn_10_1 = -5 + var3_int;
                       break L3;
                     }
                   }
+                  g.a(stackIn_10_0, stackIn_10_1 + 12, 43 + var4);
+                  var8.g(var3_int, var4);
+                  break L2;
+                } else {
+                  var8.c(var3_int, var4, this.field_N);
+                  break L2;
                 }
-                L4: {
-                  stackIn_10_0 = ig.field_d[1];
-
-                  if (3 != this.field_J) {
-                    stackIn_11_0 = (ja) ((Object) stackIn_10_0);
-                    stackIn_11_1 = var3_int;
-                    break L4;
-                  } else {
-                    stackIn_11_0 = (ja) ((Object) stackIn_10_0);
-                    stackIn_11_1 = -5 + var3_int;
-                    break L4;
-                  }
-                }
-                g.a(stackIn_11_0, stackIn_11_1 + 12, 43 + var4);
-                var8.g(var3_int, var4);
-                break L2;
               }
               if (!this.field_O) {
                 decompiledRegionSelector0 = 1;
@@ -425,25 +418,25 @@ final class jj extends id {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var3 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var3);
+            stackIn_16_0 = (RuntimeException) (var3);
 
-            stackIn_17_1 = new StringBuilder().append("jj.H(").append(param0).append(',');
+            stackIn_16_1 = new StringBuilder().append("jj.H(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L5;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
+              break L4;
             } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L5;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
+              break L4;
             }
           }
-          throw fa.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

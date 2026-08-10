@@ -32,12 +32,12 @@ final class wa extends kd {
 
     final static void a(int param0) {
         try {
-            IOException iOException = null;
-            IOException var2_ref = null;
-            RuntimeException runtimeException = null;
-            int var1_int = 0;
-            int var3 = 0;
             Throwable decompiledCaughtException = null;
+            IOException var1 = null;
+            int var1_int = 0;
+            RuntimeException var1_ref = null;
+            IOException var2 = null;
+            int var3 = 0;
             var3 = Lexicominos.field_L ? 1 : 0;
             try {
               L0: {
@@ -77,7 +77,7 @@ final class wa extends kd {
                     } catch (java.io.IOException decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
+                        var1 = (IOException) (Object) decompiledCaughtException;
                         break L6;
                       }
                     }
@@ -93,35 +93,27 @@ final class wa extends kd {
                       if (bd.field_i.length <= var1_int) {
                         break L7;
                       } else {
-                        if (var3 == 0) {
-                          L9: {
-                            if (null == bd.field_i[var1_int]) {
-                              break L9;
-                            } else {
-                              try {
-                                L10: {
-                                  bd.field_i[var1_int].c(0);
-                                  break L10;
-                                }
-                              } catch (java.io.IOException decompiledCaughtParameter1) {
-                                decompiledCaughtException = decompiledCaughtParameter1;
-                                L11: {
-                                  var2_ref = (IOException) (Object) decompiledCaughtException;
-                                  break L11;
-                                }
-                              }
-                              break L9;
-                            }
-                          }
-                          var1_int++;
-                          if (var3 == 0) {
-                            continue L8;
+                        L9: {
+                          if (null == bd.field_i[var1_int]) {
+                            break L9;
                           } else {
-                            break L7;
+                            try {
+                              L10: {
+                                bd.field_i[var1_int].c(0);
+                                break L10;
+                              }
+                            } catch (java.io.IOException decompiledCaughtParameter1) {
+                              decompiledCaughtException = decompiledCaughtParameter1;
+                              L11: {
+                                var2 = (IOException) (Object) decompiledCaughtException;
+                                break L11;
+                              }
+                            }
+                            break L9;
                           }
-                        } else {
-                          return;
                         }
+                        var1_int++;
+                        continue L8;
                       }
                     }
                   }
@@ -130,8 +122,8 @@ final class wa extends kd {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
-              runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-              throw ld.a((Throwable) ((Object) runtimeException), "wa.C(" + param0 + ')');
+              var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+              throw ld.a((Throwable) ((Object) var1_ref), "wa.C(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

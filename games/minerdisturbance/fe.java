@@ -211,40 +211,43 @@ class fe extends pi {
               }
             }
             L3: {
-              if ((stackIn_5_0 ? 1 : 0) != stackIn_5_1) {
-                break L3;
-              } else {
-                L4: {
-                  stackIn_8_0 = this;
-
-                  if (var5_int == 0) {
-                    stackIn_9_0 = this;
-                    stackIn_9_1 = 0;
-                    break L4;
-                  } else {
-                    stackIn_9_0 = this;
-                    stackIn_9_1 = 1;
-                    break L4;
-                  }
-                }
-                ((fe) (this)).field_x = stackIn_9_1 != 0;
-                if (this.field_y == null) {
-                  break L3;
+              L4: {
+                if ((stackIn_5_0 ? 1 : 0) != stackIn_5_1) {
+                  break L4;
                 } else {
-                  if (!(this.field_y instanceof qb)) {
-                    break L3;
+                  L5: {
+                    stackIn_8_0 = this;
+
+                    if (var5_int == 0) {
+                      stackIn_9_0 = this;
+                      stackIn_9_1 = 0;
+                      break L5;
+                    } else {
+                      stackIn_9_0 = this;
+                      stackIn_9_1 = 1;
+                      break L5;
+                    }
+                  }
+                  ((fe) (this)).field_x = stackIn_9_1 != 0;
+                  if (this.field_y == null) {
+                    break L4;
                   } else {
-                    ((qb) ((Object) this.field_y)).a(-14656, (fe) (this), var5_int != 0);
-                    break L3;
+                    if (!(this.field_y instanceof qb)) {
+                      break L4;
+                    } else {
+                      ((qb) ((Object) this.field_y)).a(-14656, (fe) (this), var5_int != 0);
+                      break L3;
+                    }
                   }
                 }
               }
+              break L3;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var5 = decompiledCaughtException;
             stackIn_15_0 = (RuntimeException) (var5);
 
@@ -254,12 +257,12 @@ class fe extends pi {
               stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackIn_16_2 = "null";
-              break L5;
+              break L6;
             } else {
               stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackIn_16_2 = "{...}";
-              break L5;
+              break L6;
             }
           }
           throw lj.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');

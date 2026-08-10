@@ -352,129 +352,50 @@ final class fh {
     }
 
     final static void a(int param0, byte param1, String param2) {
-        RuntimeException runtimeException = null;
         int var3_int = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            s.field_K = false;
-            if (param1 == -1) {
-              L1: {
-                jd.field_c = false;
-                if (ki.field_c == null) {
-                  break L1;
-                } else {
-                  if (!ki.field_c.field_H) {
-                    break L1;
-                  } else {
-                    L2: {
-                      var3_int = 1;
-                      if (param0 == 8) {
-                        L3: {
-                          if (!rk.field_f) {
-                            param2 = ml.field_b;
-                            break L3;
-                          } else {
-                            param2 = bg.field_e;
-                            break L3;
-                          }
-                        }
-                        param0 = 2;
-                        om.field_p.a(0, kj.field_c);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    L4: {
-                      if ((param0 ^ -1) != -11) {
-                        break L4;
-                      } else {
-                        ib.c(false);
-                        var3_int = 0;
-                        break L4;
-                      }
-                    }
-                    L5: {
-                      if (var3_int == 0) {
-                        break L5;
-                      } else {
-                        L6: {
-                          if (!jd.field_c) {
-                            break L6;
-                          } else {
-                            param2 = b.a(new String[]{param2}, cg.field_c, param1 + 1178);
-                            break L6;
-                          }
-                        }
-                        L7: {
-                          if (!pc.field_f) {
-                            break L7;
-                          } else {
-                            param2 = gj.field_c;
-                            break L7;
-                          }
-                        }
-                        ki.field_c.a(param2, param0, false);
-                        break L5;
-                      }
-                    }
-                    if (param0 == 256) {
-                      break L1;
-                    } else {
-                      if (10 != param0) {
-                        if (!rk.field_f) {
-                          om.field_p.g((byte) -104);
-                          break L1;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        return;
-                      }
-                    }
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            runtimeException = decompiledCaughtException;
-            stackIn_27_0 = (RuntimeException) (runtimeException);
-
-            stackIn_27_1 = new StringBuilder().append("fh.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "null";
-              break L8;
-            } else {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "{...}";
-              break L8;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
+        s.field_K = false;
+        if (param1 != -1) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            jd.field_c = false;
+            if (ki.field_c != null && ki.field_c.field_H) {
+                var3_int = 1;
+                if (param0 != 8) {
+                } else {
+                    if (rk.field_f) {
+                        param2 = bg.field_e;
+                    } else {
+                        param2 = ml.field_b;
+                    }
+                    param0 = 2;
+                    om.field_p.a(0, kj.field_c);
+                }
+                if ((param0 ^ -1) == -11) {
+                    ib.c(false);
+                    var3_int = 0;
+                }
+                if (var3_int != 0) {
+                    if (jd.field_c) {
+                        param2 = b.a(new String[]{param2}, cg.field_c, param1 + 1178);
+                    }
+                    if (pc.field_f) {
+                        param2 = gj.field_c;
+                    }
+                    ki.field_c.a(param2, param0, false);
+                }
+                if (param0 != 256) {
+                    if (10 == param0) {
+                        return;
+                    }
+                    if (rk.field_f) {
+                        return;
+                    }
+                    om.field_p.g((byte) -104);
+                }
+            }
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "fh.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

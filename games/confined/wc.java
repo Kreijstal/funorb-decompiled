@@ -804,25 +804,31 @@ final class wc extends id {
                   }
                 }
                 if (pi.field_U[this.field_Zb] <= this.field_Xb) {
-                  if (!this.field_Jb) {
-                    if (!this.field_dc) {
-                      break L8;
-                    } else {
-                      if (this.field_sb == 0) {
-                        this.field_sb = 40;
-                        this.field_W = 1;
+                  if (this.field_Jb) {
+                    if (-1 == (this.field_wb ^ -1)) {
+                      this.field_Bb = 1;
+                      this.field_wb = 6;
+                      if (!this.field_dc) {
                         break L8;
                       } else {
-                        if (!this.field_dc) {
+                        if (this.field_sb != 0) {
                           break L8;
                         } else {
-                          if (this.field_sb != 0) {
-                            break L8;
-                          } else {
-                            this.field_sb = 40;
-                            this.field_W = 1;
-                            break L8;
-                          }
+                          this.field_sb = 40;
+                          this.field_W = 1;
+                          break L8;
+                        }
+                      }
+                    } else {
+                      if (!this.field_dc) {
+                        break L8;
+                      } else {
+                        if (this.field_sb != 0) {
+                          break L8;
+                        } else {
+                          this.field_sb = 40;
+                          this.field_W = 1;
+                          break L8;
                         }
                       }
                     }

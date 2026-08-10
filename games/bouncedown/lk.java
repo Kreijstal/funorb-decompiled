@@ -302,31 +302,34 @@ class lk extends ai {
               }
             }
             L7: {
-              if (null == this.field_n) {
-                break L7;
-              } else {
-                L8: {
-                  discarded$6 = param1.append(" listener=");
-                  if (!(this.field_n instanceof lk)) {
-                    break L8;
-                  } else {
-                    param1 = this.a(1 + param0, true, param2, param1);
-                    if (var6 == 0) {
-                      break L7;
+              L8: {
+                if (null == this.field_n) {
+                  break L8;
+                } else {
+                  L9: {
+                    discarded$6 = param1.append(" listener=");
+                    if (!(this.field_n instanceof lk)) {
+                      break L9;
                     } else {
-                      break L8;
+                      param1 = this.a(1 + param0, true, param2, param1);
+                      if (var6 == 0) {
+                        break L8;
+                      } else {
+                        break L9;
+                      }
                     }
                   }
+                  discarded$7 = param1.append(this.field_n);
+                  break L7;
                 }
-                discarded$7 = param1.append(this.field_n);
-                break L7;
               }
+              break L7;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L10: {
             var5 = decompiledCaughtException;
             stackIn_22_0 = (RuntimeException) (var5);
 
@@ -336,15 +339,15 @@ class lk extends ai {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "null";
-              break L9;
+              break L10;
             } else {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "{...}";
-              break L9;
+              break L10;
             }
           }
-          L10: {
+          L11: {
 
 
             stackIn_25_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
@@ -353,12 +356,12 @@ class lk extends ai {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "null";
-              break L10;
+              break L11;
             } else {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "{...}";
-              break L10;
+              break L11;
             }
           }
           throw ii.a((Throwable) ((Object) stackIn_23_0), stackIn_26_2 + ',' + param3 + ')');

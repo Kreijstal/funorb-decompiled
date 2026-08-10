@@ -236,14 +236,14 @@ abstract class ti extends id {
     final boolean k(int param0) {
         int stackIn_16_0 = 0;
         int stackIn_28_0 = 0;
-        int stackIn_63_0 = 0;
-        int stackIn_112_0 = 0;
-        int stackIn_146_0 = 0;
-        int stackIn_195_0 = 0;
-        int stackIn_222_0 = 0;
-        int stackIn_234_0 = 0;
-        int stackIn_270_0 = 0;
-        int stackIn_369_0 = 0;
+        int stackIn_62_0 = 0;
+        int stackIn_107_0 = 0;
+        int stackIn_139_0 = 0;
+        int stackIn_184_0 = 0;
+        int stackIn_209_0 = 0;
+        int stackIn_221_0 = 0;
+        int stackIn_255_0 = 0;
+        int stackIn_341_0 = 0;
         int var2;
         int var3;
         int var4;
@@ -281,30 +281,30 @@ abstract class ti extends id {
                             if (this.field_E <= var3) {
                               break L3;
                             } else {
-                              stackIn_270_0 = 1;
+                              stackIn_255_0 = 1;
                               break L2;
                             }
                           }
                         }
                         if (this.field_S < 0) {
                           if (var3 > this.field_E) {
-                            stackIn_270_0 = 1;
+                            stackIn_255_0 = 1;
                             break L2;
                           } else {
-                            stackIn_270_0 = 0;
+                            stackIn_255_0 = 0;
                             break L2;
                           }
                         } else {
-                          stackIn_270_0 = 0;
+                          stackIn_255_0 = 0;
                           break L2;
                         }
                       } else {
-                        stackIn_270_0 = 1;
+                        stackIn_255_0 = 1;
                         break L2;
                       }
                     }
                     L4: {
-                      var5 = stackIn_270_0;
+                      var5 = stackIn_255_0;
                       if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
                         break L4;
                       } else {
@@ -318,18 +318,18 @@ abstract class ti extends id {
                       }
                     }
                     L5: {
-                      L6: {
-                        if (var4 == 0) {
-                          break L6;
+                      if (var4 == 0) {
+                        break L5;
+                      } else {
+                        if (var5 != 0) {
+                          break L5;
                         } else {
-                          if (var5 == 0) {
-                            this.field_X = 0;
-                            break L5;
-                          } else {
-                            break L6;
-                          }
+                          this.field_X = 0;
+                          return false;
                         }
                       }
+                    }
+                    L6: {
                       L7: {
                         if (var4 != 0) {
                           break L7;
@@ -338,17 +338,11 @@ abstract class ti extends id {
                             break L7;
                           } else {
                             this.field_S = 0;
-                            if (!ZombieDawnMulti.field_E) {
-                              break L5;
-                            } else {
-                              break L7;
-                            }
+                            break L6;
                           }
                         }
                       }
-                      if (var4 == 0) {
-                        break L5;
-                      } else {
+                      if (var4 != 0) {
                         if (var5 != 0) {
                           this.field_E = this.field_P << 484587952;
                           this.field_z = this.field_O << 2020526896;
@@ -362,8 +356,10 @@ abstract class ti extends id {
                             return true;
                           }
                         } else {
-                          break L5;
+                          break L6;
                         }
+                      } else {
+                        return false;
                       }
                     }
                     return false;
@@ -404,32 +400,7 @@ abstract class ti extends id {
                                   break L11;
                                 } else {
                                   this.field_S = 0;
-                                  if (!ZombieDawnMulti.field_E) {
-                                    break L10;
-                                  } else {
-                                    L12: {
-                                      if (var4 == 0) {
-                                        break L12;
-                                      } else {
-                                        if (var5 != 0) {
-                                          this.field_E = this.field_P << 484587952;
-                                          this.field_z = this.field_O << 2020526896;
-                                          if (this.field_R) {
-                                            this.field_R = false;
-                                            this.field_O = this.field_V;
-                                            this.field_P = this.field_L;
-                                            this.d(6, this.field_T);
-                                            return false;
-                                          } else {
-                                            return true;
-                                          }
-                                        } else {
-                                          break L12;
-                                        }
-                                      }
-                                    }
-                                    return false;
-                                  }
+                                  return false;
                                 }
                               }
                             }
@@ -457,37 +428,30 @@ abstract class ti extends id {
                               this.field_X = 0;
                               break L10;
                             } else {
-                              L13: {
-                                L14: {
-                                  if (var4 != 0) {
-                                    break L14;
+                              L12: {
+                                if (var4 != 0) {
+                                  if (var4 == 0) {
+                                    break L12;
                                   } else {
-                                    this.field_S = 0;
-                                    if (!ZombieDawnMulti.field_E) {
-                                      break L13;
+                                    if (var5 != 0) {
+                                      this.field_E = this.field_P << 484587952;
+                                      this.field_z = this.field_O << 2020526896;
+                                      if (this.field_R) {
+                                        this.field_R = false;
+                                        this.field_O = this.field_V;
+                                        this.field_P = this.field_L;
+                                        this.d(6, this.field_T);
+                                        return false;
+                                      } else {
+                                        return true;
+                                      }
                                     } else {
-                                      break L14;
+                                      break L12;
                                     }
                                   }
-                                }
-                                if (var4 == 0) {
-                                  break L13;
                                 } else {
-                                  if (var5 != 0) {
-                                    this.field_E = this.field_P << 484587952;
-                                    this.field_z = this.field_O << 2020526896;
-                                    if (this.field_R) {
-                                      this.field_R = false;
-                                      this.field_O = this.field_V;
-                                      this.field_P = this.field_L;
-                                      this.d(6, this.field_T);
-                                      return false;
-                                    } else {
-                                      return true;
-                                    }
-                                  } else {
-                                    break L13;
-                                  }
+                                  this.field_S = 0;
+                                  break L12;
                                 }
                               }
                               return false;
@@ -498,58 +462,36 @@ abstract class ti extends id {
                       }
                     }
                   }
-                  L15: {
+                  L13: {
                     var5 = 0;
                     if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
-                      break L15;
+                      break L13;
                     } else {
                       if (Math.abs(this.field_E + -var3) >= wc.field_O) {
-                        break L15;
+                        break L13;
                       } else {
                         var4 = 1;
                         var5 = 1;
-                        break L15;
+                        break L13;
                       }
                     }
                   }
-                  L16: {
+                  L14: {
                     if (var4 == 0) {
-                      L17: {
+                      L15: {
                         if (var4 != 0) {
-                          break L17;
+                          break L15;
                         } else {
                           if (var5 == 0) {
-                            break L17;
+                            break L15;
                           } else {
                             this.field_S = 0;
-                            if (!ZombieDawnMulti.field_E) {
-                              break L16;
-                            } else {
-                              if (var4 == 0) {
-                                return false;
-                              } else {
-                                if (var5 != 0) {
-                                  this.field_E = this.field_P << 484587952;
-                                  this.field_z = this.field_O << 2020526896;
-                                  if (this.field_R) {
-                                    this.field_R = false;
-                                    this.field_O = this.field_V;
-                                    this.field_P = this.field_L;
-                                    this.d(6, this.field_T);
-                                    return false;
-                                  } else {
-                                    return true;
-                                  }
-                                } else {
-                                  return false;
-                                }
-                              }
-                            }
+                            return false;
                           }
                         }
                       }
                       if (var4 == 0) {
-                        break L16;
+                        break L14;
                       } else {
                         if (var5 != 0) {
                           this.field_E = this.field_P << 484587952;
@@ -570,125 +512,93 @@ abstract class ti extends id {
                     } else {
                       if (var5 == 0) {
                         this.field_X = 0;
-                        break L16;
+                        break L14;
                       } else {
-                        L18: {
-                          if (var4 != 0) {
-                            if (var4 == 0) {
-                              break L18;
-                            } else {
-                              if (var5 != 0) {
-                                this.field_E = this.field_P << 484587952;
-                                this.field_z = this.field_O << 2020526896;
-                                if (this.field_R) {
-                                  this.field_R = false;
-                                  this.field_O = this.field_V;
-                                  this.field_P = this.field_L;
-                                  this.d(6, this.field_T);
-                                  return false;
-                                } else {
-                                  return true;
-                                }
-                              } else {
-                                return false;
-                              }
-                            }
+                        if (var4 != 0) {
+                          if (var4 == 0) {
+                            return false;
                           } else {
-                            this.field_S = 0;
-                            if (!ZombieDawnMulti.field_E) {
-                              break L18;
-                            } else {
-                              L19: {
-                                if (var4 == 0) {
-                                  break L19;
-                                } else {
-                                  if (var5 != 0) {
-                                    this.field_E = this.field_P << 484587952;
-                                    this.field_z = this.field_O << 2020526896;
-                                    if (this.field_R) {
-                                      this.field_R = false;
-                                      this.field_O = this.field_V;
-                                      this.field_P = this.field_L;
-                                      this.d(6, this.field_T);
-                                      return false;
-                                    } else {
-                                      return true;
-                                    }
-                                  } else {
-                                    break L19;
-                                  }
-                                }
+                            if (var5 != 0) {
+                              this.field_E = this.field_P << 484587952;
+                              this.field_z = this.field_O << 2020526896;
+                              if (this.field_R) {
+                                this.field_R = false;
+                                this.field_O = this.field_V;
+                                this.field_P = this.field_L;
+                                this.d(6, this.field_T);
+                                return false;
+                              } else {
+                                return true;
                               }
+                            } else {
                               return false;
                             }
                           }
+                        } else {
+                          this.field_S = 0;
+                          return false;
                         }
-                        return false;
                       }
                     }
                   }
                   return false;
                 } else {
                   if (this.field_E <= var3) {
-                    L20: {
+                    L16: {
                       if (this.field_S < 0) {
                         if (var3 <= this.field_E) {
-                          stackIn_369_0 = 0;
-                          break L20;
+                          stackIn_341_0 = 0;
+                          break L16;
                         } else {
-                          stackIn_369_0 = 1;
-                          break L20;
+                          stackIn_341_0 = 1;
+                          break L16;
                         }
                       } else {
-                        stackIn_369_0 = 0;
-                        break L20;
+                        stackIn_341_0 = 0;
+                        break L16;
                       }
                     }
-                    L21: {
-                      var5 = stackIn_369_0;
+                    L17: {
+                      var5 = stackIn_341_0;
                       if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
-                        break L21;
+                        break L17;
                       } else {
                         if (Math.abs(this.field_E + -var3) >= wc.field_O) {
-                          break L21;
+                          break L17;
                         } else {
                           var4 = 1;
                           var5 = 1;
-                          break L21;
+                          break L17;
                         }
                       }
                     }
-                    L22: {
-                      L23: {
+                    L18: {
+                      L19: {
                         if (var4 == 0) {
-                          break L23;
+                          break L19;
                         } else {
                           if (var5 == 0) {
                             this.field_X = 0;
-                            break L22;
+                            break L18;
                           } else {
-                            break L23;
+                            break L19;
                           }
                         }
                       }
-                      L24: {
+                      L20: {
                         if (var4 != 0) {
-                          break L24;
+                          break L20;
                         } else {
                           if (var5 == 0) {
-                            break L24;
+                            break L20;
                           } else {
                             this.field_S = 0;
-                            if (!ZombieDawnMulti.field_E) {
-                              break L22;
-                            } else {
-                              break L24;
-                            }
+                            break L18;
                           }
                         }
                       }
                       if (var4 == 0) {
-                        break L22;
+                        break L18;
                       } else {
                         if (var5 != 0) {
                           this.field_E = this.field_P << 484587952;
@@ -703,105 +613,63 @@ abstract class ti extends id {
                             return true;
                           }
                         } else {
-                          break L22;
+                          break L18;
                         }
                       }
                     }
                     return false;
                   } else {
-                    L25: {
+                    L21: {
                       var5 = 1;
                       if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
-                        break L25;
+                        break L21;
                       } else {
                         if (Math.abs(this.field_E + -var3) >= wc.field_O) {
-                          break L25;
+                          break L21;
                         } else {
                           var4 = 1;
                           var5 = 1;
-                          break L25;
+                          break L21;
                         }
                       }
                     }
-                    L26: {
-                      if (var4 == 0) {
-                        L27: {
-                          if (var4 != 0) {
-                            break L27;
-                          } else {
-                            if (var5 == 0) {
-                              break L27;
-                            } else {
-                              this.field_S = 0;
-                              if (!ZombieDawnMulti.field_E) {
-                                break L26;
-                              } else {
-                                L28: {
-                                  if (var4 == 0) {
-                                    break L28;
-                                  } else {
-                                    if (var5 != 0) {
-                                      this.field_E = this.field_P << 484587952;
-                                      this.field_z = this.field_O << 2020526896;
-                                      if (this.field_R) {
-                                        this.field_R = false;
-                                        this.field_O = this.field_V;
-                                        this.field_P = this.field_L;
-                                        this.d(6, this.field_T);
-                                        return false;
-                                      } else {
-                                        return true;
-                                      }
-                                    } else {
-                                      break L28;
-                                    }
-                                  }
-                                }
-                                return false;
-                              }
-                            }
-                          }
-                        }
-                        if (var4 == 0) {
-                          break L26;
+                    if (var4 == 0) {
+                      L22: {
+                        if (var4 != 0) {
+                          break L22;
                         } else {
-                          if (var5 != 0) {
-                            this.field_E = this.field_P << 484587952;
-                            this.field_z = this.field_O << 2020526896;
-                            if (this.field_R) {
-                              this.field_R = false;
-                              this.field_O = this.field_V;
-                              this.field_P = this.field_L;
-                              this.d(6, this.field_T);
-                              return false;
-                            } else {
-                              return true;
-                            }
+                          if (var5 == 0) {
+                            break L22;
                           } else {
+                            this.field_S = 0;
                             return false;
                           }
                         }
-                      } else {
-                        if (var5 == 0) {
-                          this.field_X = 0;
-                          break L26;
+                      }
+                      if (var4 != 0) {
+                        if (var5 != 0) {
+                          this.field_E = this.field_P << 484587952;
+                          this.field_z = this.field_O << 2020526896;
+                          if (this.field_R) {
+                            this.field_R = false;
+                            this.field_O = this.field_V;
+                            this.field_P = this.field_L;
+                            this.d(6, this.field_T);
+                            return false;
+                          } else {
+                            return true;
+                          }
                         } else {
-                          L29: {
-                            L30: {
-                              if (var4 != 0) {
-                                break L30;
-                              } else {
-                                this.field_S = 0;
-                                if (!ZombieDawnMulti.field_E) {
-                                  break L29;
-                                } else {
-                                  break L30;
-                                }
-                              }
-                            }
-                            if (var4 == 0) {
-                              break L29;
-                            } else {
+                          return false;
+                        }
+                      } else {
+                        return false;
+                      }
+                    } else {
+                      if (var5 != 0) {
+                        L23: {
+                          if (var4 != 0) {
+                            if (var4 != 0) {
                               if (var5 != 0) {
                                 this.field_E = this.field_P << 484587952;
                                 this.field_z = this.field_O << 2020526896;
@@ -815,111 +683,76 @@ abstract class ti extends id {
                                   return true;
                                 }
                               } else {
-                                break L29;
+                                break L23;
                               }
+                            } else {
+                              return false;
                             }
-                          }
-                          return false;
-                        }
-                      }
-                    }
-                    return false;
-                  }
-                }
-              } else {
-                L31: {
-                  var5 = 1;
-                  if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
-                    break L31;
-                  } else {
-                    if (Math.abs(this.field_E + -var3) >= wc.field_O) {
-                      break L31;
-                    } else {
-                      var4 = 1;
-                      var5 = 1;
-                      break L31;
-                    }
-                  }
-                }
-                L32: {
-                  if (var4 == 0) {
-                    L33: {
-                      if (var4 != 0) {
-                        break L33;
-                      } else {
-                        if (var5 == 0) {
-                          break L33;
-                        } else {
-                          this.field_S = 0;
-                          if (!ZombieDawnMulti.field_E) {
-                            break L32;
                           } else {
-                            L34: {
-                              if (var4 == 0) {
-                                break L34;
-                              } else {
-                                if (var5 != 0) {
-                                  this.field_E = this.field_P << 484587952;
-                                  this.field_z = this.field_O << 2020526896;
-                                  if (this.field_R) {
-                                    this.field_R = false;
-                                    this.field_O = this.field_V;
-                                    this.field_P = this.field_L;
-                                    this.d(6, this.field_T);
-                                    return false;
-                                  } else {
-                                    return true;
-                                  }
-                                } else {
-                                  break L34;
-                                }
-                              }
-                            }
-                            return false;
+                            this.field_S = 0;
+                            break L23;
                           }
                         }
-                      }
-                    }
-                    if (var4 == 0) {
-                      break L32;
-                    } else {
-                      if (var5 != 0) {
-                        this.field_E = this.field_P << 484587952;
-                        this.field_z = this.field_O << 2020526896;
-                        if (this.field_R) {
-                          this.field_R = false;
-                          this.field_O = this.field_V;
-                          this.field_P = this.field_L;
-                          this.d(6, this.field_T);
-                          return false;
-                        } else {
-                          return true;
-                        }
+                        return false;
                       } else {
+                        this.field_X = 0;
                         return false;
                       }
                     }
+                  }
+                }
+              } else {
+                L24: {
+                  var5 = 1;
+                  if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
+                    break L24;
                   } else {
-                    if (var5 == 0) {
-                      this.field_X = 0;
-                      break L32;
+                    if (Math.abs(this.field_E + -var3) >= wc.field_O) {
+                      break L24;
                     } else {
-                      L35: {
-                        L36: {
-                          if (var4 != 0) {
-                            break L36;
-                          } else {
-                            this.field_S = 0;
-                            if (!ZombieDawnMulti.field_E) {
-                              break L35;
-                            } else {
-                              break L36;
-                            }
-                          }
-                        }
-                        if (var4 == 0) {
-                          break L35;
-                        } else {
+                      var4 = 1;
+                      var5 = 1;
+                      break L24;
+                    }
+                  }
+                }
+                if (var4 == 0) {
+                  L25: {
+                    if (var4 != 0) {
+                      break L25;
+                    } else {
+                      if (var5 == 0) {
+                        break L25;
+                      } else {
+                        this.field_S = 0;
+                        return false;
+                      }
+                    }
+                  }
+                  if (var4 != 0) {
+                    if (var5 != 0) {
+                      this.field_E = this.field_P << 484587952;
+                      this.field_z = this.field_O << 2020526896;
+                      if (this.field_R) {
+                        this.field_R = false;
+                        this.field_O = this.field_V;
+                        this.field_P = this.field_L;
+                        this.d(6, this.field_T);
+                        return false;
+                      } else {
+                        return true;
+                      }
+                    } else {
+                      return false;
+                    }
+                  } else {
+                    return false;
+                  }
+                } else {
+                  if (var5 != 0) {
+                    L26: {
+                      if (var4 != 0) {
+                        if (var4 != 0) {
                           if (var5 != 0) {
                             this.field_E = this.field_P << 484587952;
                             this.field_z = this.field_O << 2020526896;
@@ -933,171 +766,258 @@ abstract class ti extends id {
                               return true;
                             }
                           } else {
-                            break L35;
+                            break L26;
                           }
+                        } else {
+                          return false;
                         }
+                      } else {
+                        this.field_S = 0;
+                        break L26;
                       }
-                      return false;
                     }
+                    return false;
+                  } else {
+                    this.field_X = 0;
+                    return false;
                   }
                 }
-                return false;
               }
             } else {
               if (this.field_z <= var2) {
-                L37: {
+                L27: {
                   if ((this.field_X ^ -1) > -1) {
                     if (this.field_z >= var2) {
-                      stackIn_222_0 = 0;
-                      break L37;
+                      stackIn_209_0 = 0;
+                      break L27;
                     } else {
-                      stackIn_222_0 = 1;
-                      break L37;
+                      stackIn_209_0 = 1;
+                      break L27;
                     }
                   } else {
-                    stackIn_222_0 = 0;
-                    break L37;
+                    stackIn_209_0 = 0;
+                    break L27;
                   }
                 }
-                L38: {
-                  var4 = stackIn_222_0;
+                L28: {
+                  var4 = stackIn_209_0;
                   if (this.field_S != 0) {
-                    L39: {
+                    L29: {
                       if (-1 <= (this.field_S ^ -1)) {
-                        break L39;
+                        break L29;
                       } else {
                         if (this.field_E <= var3) {
-                          break L39;
+                          break L29;
                         } else {
-                          stackIn_234_0 = 1;
-                          break L38;
+                          stackIn_221_0 = 1;
+                          break L28;
                         }
                       }
                     }
                     if (this.field_S < 0) {
                       if (var3 > this.field_E) {
-                        stackIn_234_0 = 1;
-                        break L38;
+                        stackIn_221_0 = 1;
+                        break L28;
                       } else {
-                        stackIn_234_0 = 0;
-                        break L38;
+                        stackIn_221_0 = 0;
+                        break L28;
                       }
                     } else {
-                      stackIn_234_0 = 0;
-                      break L38;
+                      stackIn_221_0 = 0;
+                      break L28;
                     }
                   } else {
-                    stackIn_234_0 = 1;
-                    break L38;
+                    stackIn_221_0 = 1;
+                    break L28;
                   }
                 }
-                L40: {
-                  var5 = stackIn_234_0;
+                L30: {
+                  var5 = stackIn_221_0;
                   if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
-                    break L40;
+                    break L30;
                   } else {
                     if (Math.abs(this.field_E + -var3) >= wc.field_O) {
-                      break L40;
+                      break L30;
                     } else {
                       var4 = 1;
                       var5 = 1;
-                      break L40;
+                      break L30;
                     }
                   }
                 }
-                L41: {
+                L31: {
                   if (var4 == 0) {
-                    break L41;
+                    break L31;
                   } else {
                     if (var5 != 0) {
-                      break L41;
+                      break L31;
                     } else {
                       this.field_X = 0;
                       return false;
                     }
                   }
                 }
-                L42: {
-                  if (var4 != 0) {
-                    break L42;
-                  } else {
-                    if (var5 == 0) {
-                      break L42;
+                L32: {
+                  L33: {
+                    if (var4 != 0) {
+                      break L33;
                     } else {
-                      this.field_S = 0;
-                      if (ZombieDawnMulti.field_E) {
-                        break L42;
+                      if (var5 == 0) {
+                        break L33;
                       } else {
-                        return false;
+                        this.field_S = 0;
+                        break L32;
                       }
                     }
                   }
-                }
-                if (var4 != 0) {
-                  if (var5 != 0) {
-                    this.field_E = this.field_P << 484587952;
-                    this.field_z = this.field_O << 2020526896;
-                    if (this.field_R) {
-                      this.field_R = false;
-                      this.field_O = this.field_V;
-                      this.field_P = this.field_L;
-                      this.d(6, this.field_T);
-                      return false;
+                  if (var4 != 0) {
+                    if (var5 != 0) {
+                      this.field_E = this.field_P << 484587952;
+                      this.field_z = this.field_O << 2020526896;
+                      if (this.field_R) {
+                        this.field_R = false;
+                        this.field_O = this.field_V;
+                        this.field_P = this.field_L;
+                        this.d(6, this.field_T);
+                        return false;
+                      } else {
+                        return true;
+                      }
                     } else {
-                      return true;
+                      break L32;
                     }
                   } else {
                     return false;
                   }
-                } else {
-                  return false;
                 }
+                return false;
               } else {
-                L43: {
+                L34: {
                   var4 = 1;
                   if (this.field_S != 0) {
                     if (-1 <= (this.field_S ^ -1)) {
                       if (this.field_S < 0) {
                         if (var3 > this.field_E) {
-                          L44: {
+                          L35: {
                             var5 = 1;
                             if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
-                              break L44;
+                              break L35;
                             } else {
                               if (Math.abs(this.field_E + -var3) >= wc.field_O) {
-                                break L44;
+                                break L35;
                               } else {
                                 var4 = 1;
                                 var5 = 1;
-                                break L44;
+                                break L35;
                               }
                             }
                           }
-                          L45: {
+                          L36: {
                             if (var4 == 0) {
-                              break L45;
+                              break L36;
                             } else {
                               if (var5 != 0) {
-                                break L45;
+                                break L36;
                               } else {
                                 this.field_X = 0;
                                 return false;
                               }
                             }
                           }
-                          L46: {
+                          L37: {
+                            L38: {
+                              if (var4 != 0) {
+                                break L38;
+                              } else {
+                                if (var5 == 0) {
+                                  break L38;
+                                } else {
+                                  this.field_S = 0;
+                                  break L37;
+                                }
+                              }
+                            }
                             if (var4 != 0) {
-                              break L46;
+                              if (var5 != 0) {
+                                this.field_E = this.field_P << 484587952;
+                                this.field_z = this.field_O << 2020526896;
+                                if (this.field_R) {
+                                  this.field_R = false;
+                                  this.field_O = this.field_V;
+                                  this.field_P = this.field_L;
+                                  this.d(6, this.field_T);
+                                  return false;
+                                } else {
+                                  return true;
+                                }
+                              } else {
+                                break L37;
+                              }
+                            } else {
+                              return false;
+                            }
+                          }
+                          return false;
+                        } else {
+                          stackIn_184_0 = 0;
+                          break L34;
+                        }
+                      } else {
+                        stackIn_184_0 = 0;
+                        break L34;
+                      }
+                    } else {
+                      if (this.field_E <= var3) {
+                        L39: {
+                          if (this.field_S < 0) {
+                            if (var3 <= this.field_E) {
+                              stackIn_139_0 = 0;
+                              break L39;
+                            } else {
+                              stackIn_139_0 = 1;
+                              break L39;
+                            }
+                          } else {
+                            stackIn_139_0 = 0;
+                            break L39;
+                          }
+                        }
+                        L40: {
+                          var5 = stackIn_139_0;
+                          if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
+                            break L40;
+                          } else {
+                            if (Math.abs(this.field_E + -var3) >= wc.field_O) {
+                              break L40;
+                            } else {
+                              var4 = 1;
+                              var5 = 1;
+                              break L40;
+                            }
+                          }
+                        }
+                        L41: {
+                          if (var4 == 0) {
+                            break L41;
+                          } else {
+                            if (var5 != 0) {
+                              break L41;
+                            } else {
+                              this.field_X = 0;
+                              return false;
+                            }
+                          }
+                        }
+                        L42: {
+                          L43: {
+                            if (var4 != 0) {
+                              break L43;
                             } else {
                               if (var5 == 0) {
-                                break L46;
+                                break L43;
                               } else {
                                 this.field_S = 0;
-                                if (ZombieDawnMulti.field_E) {
-                                  break L46;
-                                } else {
-                                  return false;
-                                }
+                                break L42;
                               }
                             }
                           }
@@ -1115,74 +1035,128 @@ abstract class ti extends id {
                                 return true;
                               }
                             } else {
-                              return false;
+                              break L42;
                             }
                           } else {
                             return false;
                           }
-                        } else {
-                          stackIn_195_0 = 0;
-                          break L43;
                         }
+                        return false;
                       } else {
-                        stackIn_195_0 = 0;
-                        break L43;
+                        stackIn_184_0 = 1;
+                        break L34;
+                      }
+                    }
+                  } else {
+                    stackIn_184_0 = 1;
+                    break L34;
+                  }
+                }
+                L44: {
+                  var5 = stackIn_184_0;
+                  if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
+                    break L44;
+                  } else {
+                    if (Math.abs(this.field_E + -var3) >= wc.field_O) {
+                      break L44;
+                    } else {
+                      var4 = 1;
+                      var5 = 1;
+                      break L44;
+                    }
+                  }
+                }
+                L45: {
+                  if (var4 == 0) {
+                    break L45;
+                  } else {
+                    if (var5 != 0) {
+                      break L45;
+                    } else {
+                      this.field_X = 0;
+                      return false;
+                    }
+                  }
+                }
+                L46: {
+                  L47: {
+                    if (var4 != 0) {
+                      break L47;
+                    } else {
+                      if (var5 == 0) {
+                        break L47;
+                      } else {
+                        this.field_S = 0;
+                        break L46;
+                      }
+                    }
+                  }
+                  if (var4 != 0) {
+                    if (var5 != 0) {
+                      this.field_E = this.field_P << 484587952;
+                      this.field_z = this.field_O << 2020526896;
+                      if (this.field_R) {
+                        this.field_R = false;
+                        this.field_O = this.field_V;
+                        this.field_P = this.field_L;
+                        this.d(6, this.field_T);
+                        return false;
+                      } else {
+                        return true;
                       }
                     } else {
-                      if (this.field_E <= var3) {
-                        L47: {
-                          if (this.field_S < 0) {
-                            if (var3 <= this.field_E) {
-                              stackIn_146_0 = 0;
-                              break L47;
-                            } else {
-                              stackIn_146_0 = 1;
-                              break L47;
-                            }
-                          } else {
-                            stackIn_146_0 = 0;
-                            break L47;
-                          }
-                        }
-                        L48: {
-                          var5 = stackIn_146_0;
-                          if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
-                            break L48;
-                          } else {
-                            if (Math.abs(this.field_E + -var3) >= wc.field_O) {
-                              break L48;
-                            } else {
-                              var4 = 1;
-                              var5 = 1;
-                              break L48;
-                            }
-                          }
-                        }
-                        L49: {
-                          if (var4 == 0) {
+                      break L46;
+                    }
+                  } else {
+                    return false;
+                  }
+                }
+                return false;
+              }
+            }
+          } else {
+            L48: {
+              var4 = 1;
+              if (this.field_S != 0) {
+                if (-1 <= (this.field_S ^ -1)) {
+                  if (this.field_S < 0) {
+                    if (var3 > this.field_E) {
+                      L49: {
+                        var5 = 1;
+                        if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
+                          break L49;
+                        } else {
+                          if (Math.abs(this.field_E + -var3) >= wc.field_O) {
                             break L49;
                           } else {
-                            if (var5 != 0) {
-                              break L49;
-                            } else {
-                              this.field_X = 0;
-                              return false;
-                            }
+                            var4 = 1;
+                            var5 = 1;
+                            break L49;
                           }
                         }
-                        L50: {
-                          if (var4 != 0) {
+                      }
+                      L50: {
+                        if (var4 == 0) {
+                          break L50;
+                        } else {
+                          if (var5 != 0) {
                             break L50;
                           } else {
+                            this.field_X = 0;
+                            return false;
+                          }
+                        }
+                      }
+                      L51: {
+                        L52: {
+                          if (var4 != 0) {
+                            break L52;
+                          } else {
                             if (var5 == 0) {
-                              break L50;
+                              break L52;
                             } else {
                               this.field_S = 0;
-                              if (ZombieDawnMulti.field_E) {
-                                break L50;
-                              } else {
-                                return false;
-                              }
+                              break L51;
                             }
                           }
                         }
@@ -1200,117 +1174,64 @@ abstract class ti extends id {
                               return true;
                             }
                           } else {
-                            return false;
+                            break L51;
                           }
                         } else {
                           return false;
                         }
-                      } else {
-                        stackIn_195_0 = 1;
-                        break L43;
                       }
-                    }
-                  } else {
-                    stackIn_195_0 = 1;
-                    break L43;
-                  }
-                }
-                L51: {
-                  var5 = stackIn_195_0;
-                  if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
-                    break L51;
-                  } else {
-                    if (Math.abs(this.field_E + -var3) >= wc.field_O) {
-                      break L51;
-                    } else {
-                      var4 = 1;
-                      var5 = 1;
-                      break L51;
-                    }
-                  }
-                }
-                L52: {
-                  if (var4 == 0) {
-                    break L52;
-                  } else {
-                    if (var5 != 0) {
-                      break L52;
-                    } else {
-                      this.field_X = 0;
-                      return false;
-                    }
-                  }
-                }
-                L53: {
-                  if (var4 != 0) {
-                    break L53;
-                  } else {
-                    if (var5 == 0) {
-                      break L53;
-                    } else {
-                      this.field_S = 0;
-                      if (ZombieDawnMulti.field_E) {
-                        break L53;
-                      } else {
-                        return false;
-                      }
-                    }
-                  }
-                }
-                if (var4 != 0) {
-                  if (var5 != 0) {
-                    this.field_E = this.field_P << 484587952;
-                    this.field_z = this.field_O << 2020526896;
-                    if (this.field_R) {
-                      this.field_R = false;
-                      this.field_O = this.field_V;
-                      this.field_P = this.field_L;
-                      this.d(6, this.field_T);
                       return false;
                     } else {
-                      return true;
+                      stackIn_107_0 = 0;
+                      break L48;
                     }
                   } else {
-                    return false;
+                    stackIn_107_0 = 0;
+                    break L48;
                   }
                 } else {
-                  return false;
-                }
-              }
-            }
-          } else {
-            L54: {
-              var4 = 1;
-              if (this.field_S != 0) {
-                if (-1 <= (this.field_S ^ -1)) {
-                  if (this.field_S < 0) {
-                    if (var3 > this.field_E) {
-                      L55: {
-                        var5 = 1;
-                        if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
+                  if (this.field_E <= var3) {
+                    L53: {
+                      if (this.field_S < 0) {
+                        if (var3 <= this.field_E) {
+                          stackIn_62_0 = 0;
+                          break L53;
+                        } else {
+                          stackIn_62_0 = 1;
+                          break L53;
+                        }
+                      } else {
+                        stackIn_62_0 = 0;
+                        break L53;
+                      }
+                    }
+                    L54: {
+                      var5 = stackIn_62_0;
+                      if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
+                        break L54;
+                      } else {
+                        if (Math.abs(this.field_E + -var3) >= wc.field_O) {
+                          break L54;
+                        } else {
+                          var4 = 1;
+                          var5 = 1;
+                          break L54;
+                        }
+                      }
+                    }
+                    L55: {
+                      if (var4 == 0) {
+                        break L55;
+                      } else {
+                        if (var5 != 0) {
                           break L55;
                         } else {
-                          if (Math.abs(this.field_E + -var3) >= wc.field_O) {
-                            break L55;
-                          } else {
-                            var4 = 1;
-                            var5 = 1;
-                            break L55;
-                          }
+                          this.field_X = 0;
+                          return false;
                         }
                       }
-                      L56: {
-                        if (var4 == 0) {
-                          break L56;
-                        } else {
-                          if (var5 != 0) {
-                            break L56;
-                          } else {
-                            this.field_X = 0;
-                            return false;
-                          }
-                        }
-                      }
+                    }
+                    L56: {
                       L57: {
                         if (var4 != 0) {
                           break L57;
@@ -1319,11 +1240,7 @@ abstract class ti extends id {
                             break L57;
                           } else {
                             this.field_S = 0;
-                            if (ZombieDawnMulti.field_E) {
-                              break L57;
-                            } else {
-                              return false;
-                            }
+                            break L56;
                           }
                         }
                       }
@@ -1341,285 +1258,197 @@ abstract class ti extends id {
                             return true;
                           }
                         } else {
-                          return false;
+                          break L56;
                         }
                       } else {
                         return false;
                       }
-                    } else {
-                      stackIn_112_0 = 0;
-                      break L54;
                     }
+                    return false;
                   } else {
-                    stackIn_112_0 = 0;
-                    break L54;
-                  }
-                } else {
-                  if (this.field_E <= var3) {
-                    L58: {
-                      if (this.field_S < 0) {
-                        if (var3 <= this.field_E) {
-                          stackIn_63_0 = 0;
-                          break L58;
-                        } else {
-                          stackIn_63_0 = 1;
-                          break L58;
-                        }
-                      } else {
-                        stackIn_63_0 = 0;
-                        break L58;
-                      }
-                    }
-                    L59: {
-                      var5 = stackIn_63_0;
-                      if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
-                        break L59;
-                      } else {
-                        if (Math.abs(this.field_E + -var3) >= wc.field_O) {
-                          break L59;
-                        } else {
-                          var4 = 1;
-                          var5 = 1;
-                          break L59;
-                        }
-                      }
-                    }
-                    L60: {
-                      if (var4 == 0) {
-                        break L60;
-                      } else {
-                        if (var5 != 0) {
-                          break L60;
-                        } else {
-                          this.field_X = 0;
-                          return false;
-                        }
-                      }
-                    }
-                    L61: {
-                      if (var4 != 0) {
-                        break L61;
-                      } else {
-                        if (var5 == 0) {
-                          break L61;
-                        } else {
-                          this.field_S = 0;
-                          if (ZombieDawnMulti.field_E) {
-                            break L61;
-                          } else {
-                            return false;
-                          }
-                        }
-                      }
-                    }
-                    if (var4 != 0) {
-                      if (var5 != 0) {
-                        this.field_E = this.field_P << 484587952;
-                        this.field_z = this.field_O << 2020526896;
-                        if (this.field_R) {
-                          this.field_R = false;
-                          this.field_O = this.field_V;
-                          this.field_P = this.field_L;
-                          this.d(6, this.field_T);
-                          return false;
-                        } else {
-                          return true;
-                        }
-                      } else {
-                        return false;
-                      }
-                    } else {
-                      return false;
-                    }
-                  } else {
-                    stackIn_112_0 = 1;
-                    break L54;
+                    stackIn_107_0 = 1;
+                    break L48;
                   }
                 }
               } else {
-                stackIn_112_0 = 1;
-                break L54;
+                stackIn_107_0 = 1;
+                break L48;
               }
             }
-            L62: {
-              var5 = stackIn_112_0;
+            L58: {
+              var5 = stackIn_107_0;
               if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
-                break L62;
+                break L58;
               } else {
                 if (Math.abs(this.field_E + -var3) >= wc.field_O) {
-                  break L62;
+                  break L58;
                 } else {
                   var4 = 1;
                   var5 = 1;
-                  break L62;
+                  break L58;
                 }
               }
             }
-            L63: {
+            L59: {
               if (var4 == 0) {
-                break L63;
+                break L59;
               } else {
                 if (var5 != 0) {
-                  break L63;
+                  break L59;
                 } else {
                   this.field_X = 0;
                   return false;
                 }
               }
             }
-            L64: {
-              if (var4 != 0) {
-                break L64;
-              } else {
-                if (var5 == 0) {
-                  break L64;
+            L60: {
+              L61: {
+                if (var4 != 0) {
+                  break L61;
                 } else {
-                  this.field_S = 0;
-                  if (ZombieDawnMulti.field_E) {
-                    break L64;
+                  if (var5 == 0) {
+                    break L61;
                   } else {
-                    return false;
+                    this.field_S = 0;
+                    break L60;
                   }
                 }
               }
-            }
-            if (var4 != 0) {
-              if (var5 != 0) {
-                this.field_E = this.field_P << 484587952;
-                this.field_z = this.field_O << 2020526896;
-                if (this.field_R) {
-                  this.field_R = false;
-                  this.field_O = this.field_V;
-                  this.field_P = this.field_L;
-                  this.d(6, this.field_T);
-                  return false;
+              if (var4 != 0) {
+                if (var5 != 0) {
+                  this.field_E = this.field_P << 484587952;
+                  this.field_z = this.field_O << 2020526896;
+                  if (this.field_R) {
+                    this.field_R = false;
+                    this.field_O = this.field_V;
+                    this.field_P = this.field_L;
+                    this.d(6, this.field_T);
+                    return false;
+                  } else {
+                    return true;
+                  }
                 } else {
-                  return true;
+                  break L60;
                 }
               } else {
                 return false;
               }
-            } else {
-              return false;
             }
+            return false;
           }
         } else {
-          L65: {
+          L62: {
             this.field_X = 119;
             var2 = this.field_O << -143654544;
             var3 = this.field_P << -1371553200;
             if (this.field_X != 0) {
-              break L65;
+              break L62;
             } else {
               if (this.field_S != 0) {
-                break L65;
+                break L62;
               } else {
                 return false;
               }
             }
           }
-          L66: {
+          L63: {
             if (this.field_X != 0) {
-              L67: {
+              L64: {
                 if (this.field_X <= 0) {
-                  break L67;
+                  break L64;
                 } else {
                   if (this.field_z <= var2) {
-                    break L67;
+                    break L64;
                   } else {
                     stackIn_16_0 = 1;
-                    break L66;
+                    break L63;
                   }
                 }
               }
               if ((this.field_X ^ -1) > -1) {
                 if (this.field_z < var2) {
                   stackIn_16_0 = 1;
-                  break L66;
+                  break L63;
                 } else {
                   stackIn_16_0 = 0;
-                  break L66;
+                  break L63;
                 }
               } else {
                 stackIn_16_0 = 0;
-                break L66;
+                break L63;
               }
             } else {
               stackIn_16_0 = 1;
-              break L66;
+              break L63;
             }
           }
-          L68: {
+          L65: {
             var4 = stackIn_16_0;
             if (this.field_S != 0) {
-              L69: {
+              L66: {
                 if (-1 <= (this.field_S ^ -1)) {
-                  break L69;
+                  break L66;
                 } else {
                   if (this.field_E <= var3) {
-                    break L69;
+                    break L66;
                   } else {
                     stackIn_28_0 = 1;
-                    break L68;
+                    break L65;
                   }
                 }
               }
               if (this.field_S < 0) {
                 if (var3 > this.field_E) {
                   stackIn_28_0 = 1;
-                  break L68;
+                  break L65;
                 } else {
                   stackIn_28_0 = 0;
-                  break L68;
+                  break L65;
                 }
               } else {
                 stackIn_28_0 = 0;
-                break L68;
+                break L65;
               }
             } else {
               stackIn_28_0 = 1;
-              break L68;
+              break L65;
             }
           }
-          L70: {
+          L67: {
             var5 = stackIn_28_0;
             if (Math.abs(-var2 + this.field_z) >= wc.field_O) {
-              break L70;
+              break L67;
             } else {
               if (Math.abs(this.field_E + -var3) >= wc.field_O) {
-                break L70;
+                break L67;
               } else {
                 var4 = 1;
                 var5 = 1;
-                break L70;
+                break L67;
               }
             }
           }
-          L71: {
+          L68: {
             if (var4 == 0) {
-              break L71;
+              break L68;
             } else {
               if (var5 != 0) {
-                break L71;
+                break L68;
               } else {
                 this.field_X = 0;
                 return false;
               }
             }
           }
-          L72: {
+          L69: {
             if (var4 != 0) {
-              break L72;
+              break L69;
             } else {
               if (var5 == 0) {
-                break L72;
+                break L69;
               } else {
                 this.field_S = 0;
-                if (ZombieDawnMulti.field_E) {
-                  break L72;
-                } else {
-                  return false;
-                }
+                return false;
               }
             }
           }
@@ -1655,22 +1484,22 @@ abstract class ti extends id {
     }
 
     final void d(int param0, int param1) {
+        Object stackIn_7_0 = null;
+        Object stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
+        Object stackIn_12_0 = null;
+        Object stackIn_13_0 = null;
+        int stackIn_13_1 = 0;
+        Object stackIn_17_0 = null;
+        Object stackIn_18_0 = null;
+        int stackIn_18_1 = 0;
+        Object stackIn_23_0 = null;
+        Object stackIn_24_0 = null;
+        int stackIn_24_1 = 0;
         int var3;
         int var4;
         int var5;
         int var6;
-        Object stackIn_7_0 = null;
-        Object stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        Object stackIn_14_0 = null;
-        Object stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
-        Object stackIn_21_0 = null;
-        Object stackIn_22_0 = null;
-        int stackIn_22_1 = 0;
-        Object stackIn_29_0 = null;
-        Object stackIn_30_0 = null;
-        int stackIn_30_1 = 0;
         L0: {
           var3 = this.field_O - this.g(param0 + 68);
           var4 = this.field_P + -this.h(-80);
@@ -1688,108 +1517,72 @@ abstract class ti extends id {
               if (6 != this.field_K) {
                 if (this.field_K == 7) {
                   L1: {
-                    stackIn_29_0 = this;
+                    stackIn_23_0 = this;
 
                     if (!(this instanceof gm)) {
-                      stackIn_30_0 = this;
-                      stackIn_30_1 = 4;
+                      stackIn_24_0 = this;
+                      stackIn_24_1 = 4;
                       break L1;
                     } else {
-                      stackIn_30_0 = this;
-                      stackIn_30_1 = 0;
+                      stackIn_24_0 = this;
+                      stackIn_24_1 = 0;
                       break L1;
                     }
                   }
-                  L2: {
-                    this.b(stackIn_30_1, param0 + -27661);
-                    if (!ZombieDawnMulti.field_E) {
-                      break L2;
-                    } else {
-                      var6 = param1 / var5;
-                      this.a(var6 * var4, var6 * var3, (byte) -121);
-                      break L2;
-                    }
-                  }
+                  this.b(stackIn_24_1, param0 + -27661);
                   return;
                 } else {
                   return;
                 }
               } else {
-                L3: {
-                  stackIn_21_0 = this;
+                L2: {
+                  stackIn_17_0 = this;
 
                   if (!(this instanceof gm)) {
-                    stackIn_22_0 = this;
-                    stackIn_22_1 = 4;
-                    break L3;
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = 4;
+                    break L2;
                   } else {
-                    stackIn_22_0 = this;
-                    stackIn_22_1 = 0;
-                    break L3;
+                    stackIn_18_0 = this;
+                    stackIn_18_1 = 0;
+                    break L2;
                   }
                 }
-                L4: {
-                  this.b(stackIn_22_1, param0 + -27661);
-                  if (!ZombieDawnMulti.field_E) {
-                    break L4;
-                  } else {
-                    var6 = param1 / var5;
-                    this.a(var6 * var4, var6 * var3, (byte) -121);
-                    break L4;
-                  }
-                }
+                this.b(stackIn_18_1, param0 + -27661);
                 return;
               }
             } else {
-              L5: {
-                stackIn_14_0 = this;
+              L3: {
+                stackIn_12_0 = this;
 
                 if (!(this instanceof gm)) {
-                  stackIn_15_0 = this;
-                  stackIn_15_1 = 4;
-                  break L5;
+                  stackIn_13_0 = this;
+                  stackIn_13_1 = 4;
+                  break L3;
                 } else {
-                  stackIn_15_0 = this;
-                  stackIn_15_1 = 0;
-                  break L5;
+                  stackIn_13_0 = this;
+                  stackIn_13_1 = 0;
+                  break L3;
                 }
               }
-              L6: {
-                this.b(stackIn_15_1, param0 + -27661);
-                if (!ZombieDawnMulti.field_E) {
-                  break L6;
-                } else {
-                  var6 = param1 / var5;
-                  this.a(var6 * var4, var6 * var3, (byte) -121);
-                  break L6;
-                }
-              }
+              this.b(stackIn_13_1, param0 + -27661);
               return;
             }
           } else {
-            L7: {
+            L4: {
               stackIn_7_0 = this;
 
               if (!(this instanceof gm)) {
                 stackIn_8_0 = this;
                 stackIn_8_1 = 4;
-                break L7;
+                break L4;
               } else {
                 stackIn_8_0 = this;
                 stackIn_8_1 = 0;
-                break L7;
+                break L4;
               }
             }
-            L8: {
-              this.b(stackIn_8_1, param0 + -27661);
-              if (!ZombieDawnMulti.field_E) {
-                break L8;
-              } else {
-                var6 = param1 / var5;
-                this.a(var6 * var4, var6 * var3, (byte) -121);
-                break L8;
-              }
-            }
+            this.b(stackIn_8_1, param0 + -27661);
             return;
           }
         } else {

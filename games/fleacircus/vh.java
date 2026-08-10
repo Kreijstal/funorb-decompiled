@@ -43,12 +43,7 @@ final class vh extends lh {
           if (param0 % 10L == 0L) {
             df.a(-122, -1L + param0);
             df.a(71, 1L);
-            if (fleas.field_A) {
-              df.a(-119, param0);
-              return;
-            } else {
-              return;
-            }
+            return;
           } else {
             df.a(-119, param0);
             return;

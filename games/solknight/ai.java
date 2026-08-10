@@ -90,14 +90,8 @@ final class ai {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   ef.field_e = wc.field_f;
-                  if (SolKnight.field_L) {
-                    ef.field_e = wc.field_f;
-                    bk.field_a = null;
-                    return true;
-                  } else {
-                    bk.field_a = null;
-                    return true;
-                  }
+                  bk.field_a = null;
+                  return true;
                 }
                 bk.field_a = null;
                 return true;

@@ -44,574 +44,177 @@ final class tj {
     final int b(int param0) {
         if (param0 != 1) {
             field_e = (le) null;
-            return this.field_b + 1;
         }
         return this.field_b + 1;
     }
 
     private final void a(int param0, int param1, int param2) {
-        L0: {
-          if (param0 > this.field_b) {
+        if (!(param0 <= this.field_b)) {
             this.field_b = param0;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        L1: {
-          if (this.field_c.length <= param0) {
+        if (!(this.field_c.length > param0)) {
             this.a(param0, true);
-            break L1;
-          } else {
-            break L1;
-          }
         }
         this.field_c[param0] = param1;
         if (param2 != -11784) {
-          this.field_f = true;
-          return;
-        } else {
-          return;
+            this.field_f = true;
         }
     }
 
     private final int c(int param0, int param1) {
-        boolean stackIn_4_0 = false;
-        int stackIn_10_0 = 0;
-        boolean stackIn_14_0 = false;
-        int stackIn_20_0 = 0;
-        boolean stackOut_3_0;
-        boolean stackOut_13_0;
-        int statePc = 0;
-        int var3 = 0;
-        int var4 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = OrbDefence.field_D ? 1 : 0;
-                    if (param1 != -1) {
-                        statePc = 11;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var3 = this.field_c.length;
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (var3 > param0) {
-                        statePc = 9;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    stackOut_3_0 = this.field_f;
-                    stackIn_10_0 = stackOut_3_0 ? 1 : 0;
-                    stackIn_4_0 = stackOut_3_0;
-                    if (var4 != 0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (stackIn_4_0) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    var3 = var3 + this.field_d;
-                    if (var4 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    if (0 == var3) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    var3 = var3 * this.field_d;
-                    if (var4 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    var3 = 1;
-                    if (var4 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    stackIn_10_0 = var3;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    return stackIn_10_0;
-                }
-                case 11: {
-                    field_e = (le) null;
-                    var3 = this.field_c.length;
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 12: {
-                    if (var3 > param0) {
-                        statePc = 19;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 13: {
-                    stackOut_13_0 = this.field_f;
-                    stackIn_20_0 = stackOut_13_0 ? 1 : 0;
-                    stackIn_14_0 = stackOut_13_0;
-                    if (var4 != 0) {
-                        statePc = 20;
-                    } else {
-                        statePc = 14;
-                    }
-                    continue stateLoop;
-                }
-                case 14: {
-                    if (stackIn_14_0) {
-                        statePc = 16;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 15: {
-                    var3 = var3 + this.field_d;
-                    if (var4 == 0) {
-                        statePc = 12;
-                    } else {
-                        statePc = 16;
-                    }
-                    continue stateLoop;
-                }
-                case 16: {
-                    if (0 == var3) {
-                        statePc = 18;
-                    } else {
-                        statePc = 17;
-                    }
-                    continue stateLoop;
-                }
-                case 17: {
-                    var3 = var3 * this.field_d;
-                    if (var4 == 0) {
-                        statePc = 12;
-                    } else {
-                        statePc = 18;
-                    }
-                    continue stateLoop;
-                }
-                case 18: {
-                    var3 = 1;
-                    if (var4 == 0) {
-                        statePc = 12;
-                    } else {
-                        statePc = 19;
-                    }
-                    continue stateLoop;
-                }
-                case 19: {
-                    stackIn_20_0 = var3;
-                    statePc = 20;
-                    continue stateLoop;
-                }
-                case 20: {
-                    return stackIn_20_0;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int var3;
+        int var4;
+        L0: {
+          var4 = OrbDefence.field_D ? 1 : 0;
+          if (param1 == -1) {
+            break L0;
+          } else {
+            field_e = (le) null;
+            break L0;
+          }
+        }
+        var3 = this.field_c.length;
+        L1: while (true) {
+          if (var3 > param0) {
+            return var3;
+          } else {
+            if (this.field_f) {
+              if (0 == var3) {
+                var3 = 1;
+                continue L1;
+              } else {
+                var3 = var3 * this.field_d;
+                continue L1;
+              }
+            } else {
+              var3 = var3 + this.field_d;
+              continue L1;
             }
+          }
         }
     }
 
     final int a(boolean param0, int param1) {
-        if (param0) {
-          if (this.field_b < param1) {
-            throw new ArrayIndexOutOfBoundsException(param1);
-          } else {
-            return this.field_c[param1];
-          }
-        } else {
-          this.field_b = -70;
-          if (this.field_b < param1) {
-            throw new ArrayIndexOutOfBoundsException(param1);
-          } else {
-            return this.field_c[param1];
-          }
+        if (!param0) {
+            this.field_b = -70;
         }
+        if (this.field_b < param1) {
+            throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        return this.field_c[param1];
     }
 
     final static String a(int param0, boolean param1, boolean param2, boolean param3) {
-        int var4;
-        var4 = 0;
-        if (!param2) {
-          if (!param1) {
-            if (param0 != -14189) {
-              return (String) null;
-            } else {
-              L0: {
-                if (param3) {
-                  var4++;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              return ee.field_d[var4];
-            }
-          } else {
-            var4 += 2;
-            if (param0 != -14189) {
-              return (String) null;
-            } else {
-              L1: {
-                if (param3) {
-                  var4++;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              return ee.field_d[var4];
-            }
-          }
-        } else {
-          var4 += 4;
-          if (param1) {
-            var4 += 2;
-            if (param0 != -14189) {
-              return (String) null;
-            } else {
-              L2: {
-                if (param3) {
-                  var4++;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return ee.field_d[var4];
-            }
-          } else {
-            if (param0 != -14189) {
-              return (String) null;
-            } else {
-              L3: {
-                if (param3) {
-                  var4++;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              return ee.field_d[var4];
-            }
-          }
+        int var4 = 0;
+        if (param2) {
+            var4 += 4;
         }
+        if (param1) {
+            var4 += 2;
+        }
+        if (param0 != -14189) {
+            return (String) null;
+        }
+        if (!(!param3)) {
+            var4++;
+        }
+        return ee.field_d[var4];
     }
 
     final static void a(be param0, java.awt.Frame param1, int param2) {
         eb var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_16_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         CharSequence var5 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = OrbDefence.field_D ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var3 = param0.a((byte) -120, param1);
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (-1 != (var3.field_a ^ -1)) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        hb.a(10L, 109);
-                        if (var4 != 0) {
-                            statePc = 11;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if ((var3.field_a ^ -1) != -2) {
-                            statePc = 9;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 12;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        hb.a(100L, 101);
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        hb.a(100L, 101);
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 1;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        param1.setVisible(false);
-                        param1.dispose();
-                        if (param2 == -23144) {
-                            statePc = 22;
-                        } else {
-                            statePc = 13;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
+        var4 = OrbDefence.field_D ? 1 : 0;
+        try {
+          L0: {
+            L1: while (true) {
+              var3 = param0.a((byte) -120, param1);
+              L2: while (true) {
+                if (-1 != (var3.field_a ^ -1)) {
+                  if ((var3.field_a ^ -1) != -2) {
+                    hb.a(100L, 101);
+                    continue L1;
+                  } else {
+                    L3: {
+                      param1.setVisible(false);
+                      param1.dispose();
+                      if (param2 == -23144) {
+                        break L3;
+                      } else {
                         var5 = (CharSequence) null;
                         tj.a(false, -4, (CharSequence) null);
-                        return;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 15;
-                        continue stateLoop;
+                        break L3;
+                      }
                     }
+                    break L0;
+                  }
+                } else {
+                  hb.a(10L, 109);
+                  continue L2;
                 }
-                case 15: {
-                    var3_ref = (RuntimeException) ((Object) caughtException);
-                    stackIn_17_0 = (RuntimeException) (var3_ref);
-                    stackIn_16_0 = stackIn_17_0;
-                    stackIn_17_1 = new StringBuilder().append("tj.F(");
-                    stackIn_16_1 = stackIn_17_1;
-                    if (param0 == null) {
-                        statePc = 17;
-                    } else {
-                        statePc = 16;
-                    }
-                    continue stateLoop;
-                }
-                case 16: {
-                    stackIn_18_0 = (RuntimeException) ((Object) stackIn_16_0);
-                    stackIn_18_1 = (StringBuilder) ((Object) stackIn_16_1);
-                    stackIn_18_2 = "{...}";
-                    statePc = 18;
-                    continue stateLoop;
-                }
-                case 17: {
-                    stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-                    stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-                    stackIn_18_2 = "null";
-                    statePc = 18;
-                    continue stateLoop;
-                }
-                case 18: {
-                    stackIn_20_0 = (RuntimeException) ((Object) stackIn_18_0);
-                    stackIn_19_0 = stackIn_20_0;
-                    stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
-                    stackIn_19_1 = stackIn_20_1;
-                    if (param1 == null) {
-                        statePc = 20;
-                    } else {
-                        statePc = 19;
-                    }
-                    continue stateLoop;
-                }
-                case 19: {
-                    stackIn_21_0 = (RuntimeException) ((Object) stackIn_19_0);
-                    stackIn_21_1 = (StringBuilder) ((Object) stackIn_19_1);
-                    stackIn_21_2 = "{...}";
-                    statePc = 21;
-                    continue stateLoop;
-                }
-                case 20: {
-                    stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-                    stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-                    stackIn_21_2 = "null";
-                    statePc = 21;
-                    continue stateLoop;
-                }
-                case 21: {
-                    throw dd.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param2 + ')');
-                }
-                case 22: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3_ref = decompiledCaughtException;
+            stackIn_12_0 = (RuntimeException) (var3_ref);
+
+            stackIn_12_1 = new StringBuilder().append("tj.F(");
+
+            if (param0 == null) {
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L4;
+            } else {
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L4;
+            }
+          }
+          L5: {
+
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
+
+            if (param1 == null) {
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L5;
+            } else {
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L5;
+            }
+          }
+          throw dd.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ',' + param2 + ')');
         }
     }
 
     private final void a(int param0, boolean param1) {
-        int[] var3;
-        int[] var4;
         if (!param1) {
-          field_a = (String) null;
-          var4 = new int[this.c(param0, -1)];
-          var3 = var4;
-          mk.a(this.field_c, 0, var4, 0, this.field_c.length);
-          this.field_c = var4;
-          return;
-        } else {
-          var4 = new int[this.c(param0, -1)];
-          var3 = var4;
-          mk.a(this.field_c, 0, var4, 0, this.field_c.length);
-          this.field_c = var4;
-          return;
+            field_a = (String) null;
         }
+        int[] var4 = new int[this.c(param0, -1)];
+        int[] var3 = var4;
+        mk.a(this.field_c, 0, var4, 0, this.field_c.length);
+        this.field_c = var4;
     }
 
     public static void a(byte param0) {
@@ -631,245 +234,84 @@ final class tj {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        char[] var10 = null;
-        char[] var11 = null;
-        char[] var12 = null;
-        String stackIn_15_0 = null;
+        String stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var9 = OrbDefence.field_D ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var12 = new char[param0];
-                        var11 = var12;
-                        var10 = var11;
-                        var4 = var10;
-                        var5 = 0;
-                        var6 = param2;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (var6 >= param0) {
-                            statePc = 14;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var7 = 255 & param3[var6 + param1];
-                        if (-1 != (var7 ^ -1)) {
-                            statePc = 6;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var9 == 0) {
-                            statePc = 13;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (128 > var7) {
-                            statePc = 12;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var9 = OrbDefence.field_D ? 1 : 0;
+        try {
+          L0: {
+            var4 = new char[param0];
+            var5 = 0;
+            var6 = param2;
+            L1: while (true) {
+              if (var6 >= param0) {
+                stackIn_14_0 = new String(var4, 0, var5);
+                break L0;
+              } else {
+                L2: {
+                  var7 = 255 & param3[var6 + param1];
+                  if (-1 != (var7 ^ -1)) {
+                    L3: {
+                      if (128 > var7) {
+                        break L3;
+                      } else {
                         if (var7 >= 160) {
-                            statePc = 12;
+                          break L3;
                         } else {
-                            statePc = 8;
+                          L4: {
+                            var8 = fe.field_a[var7 - 128];
+                            if (var8 == 0) {
+                              var8 = 63;
+                              break L4;
+                            } else {
+                              break L4;
+                            }
+                          }
+                          var7 = var8;
+                          break L3;
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 16;
-                        continue stateLoop;
+                      }
                     }
+                    incrementValue$1 = var5;
+                    var5++;
+                    var4[incrementValue$1] = (char)var7;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
                 }
-                case 8: {
-                    try {
-                        var8 = fe.field_a[var7 - 128];
-                        if (var8 == 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var8 = 63;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        var7 = var8;
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        incrementValue$1 = var5;
-                        var5++;
-                        var10[incrementValue$1] = (char)var7;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        var6++;
-                        if (var9 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        stackIn_15_0 = new String(var12, 0, var5);
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    return stackIn_15_0;
-                }
-                case 16: {
-                    var4_ref = (RuntimeException) ((Object) caughtException);
-                    stackIn_18_0 = (RuntimeException) (var4_ref);
-                    stackIn_17_0 = stackIn_18_0;
-                    stackIn_18_1 = new StringBuilder().append("tj.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-                    stackIn_17_1 = stackIn_18_1;
-                    if (param3 == null) {
-                        statePc = 18;
-                    } else {
-                        statePc = 17;
-                    }
-                    continue stateLoop;
-                }
-                case 17: {
-                    stackIn_19_0 = (RuntimeException) ((Object) stackIn_17_0);
-                    stackIn_19_1 = (StringBuilder) ((Object) stackIn_17_1);
-                    stackIn_19_2 = "{...}";
-                    statePc = 19;
-                    continue stateLoop;
-                }
-                case 18: {
-                    stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-                    stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-                    stackIn_19_2 = "null";
-                    statePc = 19;
-                    continue stateLoop;
-                }
-                case 19: {
-                    throw dd.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                var6++;
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var4_ref = decompiledCaughtException;
+            stackIn_17_0 = (RuntimeException) (var4_ref);
+
+            stackIn_17_1 = new StringBuilder().append("tj.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
+            if (param3 == null) {
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
+              break L5;
+            } else {
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
+              break L5;
+            }
+          }
+          throw dd.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
+        return stackIn_14_0;
     }
 
     final static boolean a(boolean param0, int param1, CharSequence param2) {
@@ -877,54 +319,35 @@ final class tj {
         RuntimeException var3 = null;
         int var4 = 0;
         int stackIn_3_0 = 0;
-        boolean stackIn_7_0 = false;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_16_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_6_0;
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
             if (vl.a(param0, param2, -125)) {
               var3_int = param1;
               L1: while (true) {
-                L2: {
-                  L3: {
-                    if (var3_int >= param2.length()) {
-                      break L3;
-                    } else {
-                      stackOut_6_0 = vg.a(param2.charAt(var3_int), -22118);
-                      stackIn_13_0 = stackOut_6_0 ? 1 : 0;
-                      stackIn_7_0 = stackOut_6_0;
-                      if (var4 != 0) {
-                        break L2;
-                      } else {
-                        if (!stackIn_7_0) {
-                          stackIn_10_0 = 0;
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        } else {
-                          var3_int++;
-                          if (var4 == 0) {
-                            continue L1;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                    }
+                if (var3_int >= param2.length()) {
+                  stackIn_12_0 = 1;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                } else {
+                  if (!vg.a(param2.charAt(var3_int), -22118)) {
+                    stackIn_9_0 = 0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  } else {
+                    var3_int++;
+                    continue L1;
                   }
-                  stackIn_13_0 = 1;
-                  break L2;
                 }
-                decompiledRegionSelector0 = 1;
-                break L0;
               }
             } else {
               stackIn_3_0 = 0;
@@ -934,33 +357,33 @@ final class tj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var3);
+            stackIn_15_0 = (RuntimeException) (var3);
 
-            stackIn_16_1 = new StringBuilder().append("tj.A(").append(param0).append(',').append(param1).append(',');
+            stackIn_15_1 = new StringBuilder().append("tj.A(").append(param0).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L4;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L2;
             } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L4;
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L2;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0 != 0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_13_0 != 0;
+            return stackIn_9_0 != 0;
           } else {
-            return stackIn_10_0 != 0;
+            return stackIn_12_0 != 0;
           }
         }
     }
@@ -970,58 +393,20 @@ final class tj {
     }
 
     final static hj c(int param0) {
-        int var1;
-        int[] var3;
-        int var4_int;
-        hj var4;
-        int var5;
-        byte[] var7;
-        var5 = OrbDefence.field_D ? 1 : 0;
-        var1 = wh.field_b[0] * m.field_a[0];
-        var7 = fl.field_a[0];
-        var3 = new int[var1];
+        int var4_int = 0;
+        int var5 = OrbDefence.field_D ? 1 : 0;
+        int var1 = wh.field_b[0] * m.field_a[0];
+        byte[] var2 = fl.field_a[0];
+        int[] var3 = new int[var1];
         if (param0 < 95) {
-          field_a = (String) null;
-          var4_int = 0;
-          L0: while (true) {
-            L1: {
-              if (var4_int >= var1) {
-                break L1;
-              } else {
-                var3[var4_int] = vc.field_g[vi.a(255, (int) var7[var4_int])];
-                var4_int++;
-                if (var5 == 0) {
-                  continue L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            var4 = new hj(sg.field_B, he.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], var3);
-            md.a((byte) -125);
-            return var4;
-          }
-        } else {
-          var4_int = 0;
-          L2: while (true) {
-            L3: {
-              if (var4_int >= var1) {
-                break L3;
-              } else {
-                var3[var4_int] = vc.field_g[vi.a(255, (int) var7[var4_int])];
-                var4_int++;
-                if (var5 == 0) {
-                  continue L2;
-                } else {
-                  break L3;
-                }
-              }
-            }
-            var4 = new hj(sg.field_B, he.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], var3);
-            md.a((byte) -125);
-            return var4;
-          }
+            field_a = (String) null;
         }
+        for (var4_int = 0; var4_int < var1; var4_int++) {
+            var3[var4_int] = vc.field_g[vi.a(255, (int) var2[var4_int])];
+        }
+        hj var4 = new hj(sg.field_B, he.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], var3);
+        md.a((byte) -125);
+        return var4;
     }
 
     private tj() throws Throwable {
@@ -1029,34 +414,35 @@ final class tj {
     }
 
     final void a(int param0, int param1) {
-        if (-1 >= (param0 ^ -1)) {
-          if (this.field_b >= param0) {
-            if (param1 == -3344) {
-              if (param0 != this.field_b) {
-                mk.a(this.field_c, 1 + param0, this.field_c, param0, this.field_b + -param0);
-                this.field_b = this.field_b - 1;
-                return;
-              } else {
-                this.field_b = this.field_b - 1;
-                return;
-              }
-            } else {
-              tj.a(-117);
-              if (param0 != this.field_b) {
-                mk.a(this.field_c, 1 + param0, this.field_c, param0, this.field_b + -param0);
-                this.field_b = this.field_b - 1;
-                return;
-              } else {
-                this.field_b = this.field_b - 1;
-                return;
-              }
-            }
+        L0: {
+          if (-1 < (param0 ^ -1)) {
+            break L0;
           } else {
-            throw new ArrayIndexOutOfBoundsException(param0);
+            if (this.field_b < param0) {
+              break L0;
+            } else {
+              L1: {
+                if (param1 == -3344) {
+                  break L1;
+                } else {
+                  tj.a(-117);
+                  break L1;
+                }
+              }
+              L2: {
+                if (param0 == this.field_b) {
+                  break L2;
+                } else {
+                  mk.a(this.field_c, 1 + param0, this.field_c, param0, this.field_b + -param0);
+                  break L2;
+                }
+              }
+              this.field_b = this.field_b - 1;
+              return;
+            }
           }
-        } else {
-          throw new ArrayIndexOutOfBoundsException(param0);
         }
+        throw new ArrayIndexOutOfBoundsException(param0);
     }
 
     static {

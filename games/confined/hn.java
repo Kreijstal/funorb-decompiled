@@ -369,7 +369,10 @@ final class hn {
             L3: while (true) {
               if (var8 == null) {
                 L4: {
-                  if (var5 == 0) {
+                  if (var5 != 0) {
+                    this.a(true, var5 != 0, var6, true);
+                    var5 = 0;
+                    this.a(var6, 0, (byte) 77);
                     this.a(true, var5 != 0, -1.7976931348623157e+308, false);
                     this.field_k.a(true);
                     this.field_O.a(true);
@@ -765,7 +768,7 @@ final class hn {
                         }
                       }
                       L7: {
-                        var8_ref = var7;
+                        var8_ref = var4;
                         if (var8_ref != null) {
                           break L7;
                         } else {
@@ -856,7 +859,7 @@ final class hn {
                             }
                           }
                           L18: {
-                            var10 = var7;
+                            var10 = var4;
                             if (var10 != null) {
                               break L18;
                             } else {
@@ -937,7 +940,7 @@ final class hn {
                   }
                 }
                 L26: {
-                  var10 = var7;
+                  var10 = var5;
                   if (var10 != null) {
                     break L26;
                   } else {
@@ -2076,7 +2079,15 @@ final class hn {
                       }
                     }
                     L26: {
-                      if (this.field_J.field_o < 3) {
+                      if (this.field_J.field_o >= 3) {
+                        L27: {
+                          if (-1 == (this.field_c ^ -1)) {
+                            di.a(param0 ^ -30867, 243, 12);
+                            break L27;
+                          } else {
+                            break L27;
+                          }
+                        }
                         if (this.field_u.a(102) == null) {
                           break L26;
                         } else {
@@ -2112,12 +2123,12 @@ final class hn {
                   }
                 }
               } else {
-                L27: {
+                L28: {
                   if (!var2_ref_pm.field_z) {
-                    break L27;
+                    break L28;
                   } else {
                     var2_ref_pm.a(true);
-                    break L27;
+                    break L28;
                   }
                 }
                 var2_ref_pm = (pm) ((Object) this.field_g.d(param0 ^ 2123));
@@ -2125,29 +2136,29 @@ final class hn {
               }
             }
           } else {
-            L28: while (true) {
-              L29: {
+            L29: while (true) {
+              L30: {
                 if (-2 + this.field_x.field_a <= var2_int) {
-                  break L29;
+                  break L30;
                 } else {
                   if (this.field_x.field_r[var2_int - -1] > var3.field_D) {
-                    break L29;
+                    break L30;
                   } else {
                     var2_int++;
-                    continue L28;
+                    continue L29;
                   }
                 }
               }
-              L30: while (true) {
-                L31: {
+              L31: while (true) {
+                L32: {
                   if (var2_int <= 0) {
-                    break L31;
+                    break L32;
                   } else {
                     if (var3.field_D >= this.field_x.field_r[var2_int]) {
-                      break L31;
+                      break L32;
                     } else {
                       var2_int--;
-                      continue L30;
+                      continue L31;
                     }
                   }
                 }

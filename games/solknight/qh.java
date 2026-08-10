@@ -42,7 +42,6 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
-        RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -50,33 +49,27 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
               if (null != i.field_J) {
                 L2: {
                   L3: {
-                    L4: {
-                      lf.field_c = 0;
-                      var2_int = param0.getKeyCode();
-                      if ((var2_int ^ -1) > -1) {
-                        break L4;
+                    lf.field_c = 0;
+                    var2_int = param0.getKeyCode();
+                    if ((var2_int ^ -1) > -1) {
+                      break L3;
+                    } else {
+                      if (var2_int < sg.field_b.length) {
+                        var2_int = -129 & sg.field_b[var2_int];
+                        break L2;
                       } else {
-                        if (var2_int < sg.field_b.length) {
-                          break L3;
-                        } else {
-                          break L4;
-                        }
+                        break L3;
                       }
                     }
-                    var2_int = -1;
-                    if (!SolKnight.field_L) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
                   }
-                  var2_int = -129 & sg.field_b[var2_int];
+                  var2_int = -1;
                   break L2;
                 }
                 if (-1 < (fg.field_b ^ -1)) {
@@ -104,9 +97,9 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            runtimeException = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (runtimeException);
+          L4: {
+            var2 = decompiledCaughtException;
+            stackIn_17_0 = (RuntimeException) (var2);
 
             stackIn_17_1 = new StringBuilder().append("qh.keyReleased(");
 
@@ -114,12 +107,12 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "null";
-              break L5;
+              break L4;
             } else {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "{...}";
-              break L5;
+              break L4;
             }
           }
           throw fc.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
@@ -128,14 +121,14 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
         int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
         try {
           L0: {
             L1: {
@@ -144,64 +137,57 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               } else {
                 L2: {
                   L3: {
-                    L4: {
-                      lf.field_c = 0;
-                      var2_int = param0.getKeyCode();
-                      if ((var2_int ^ -1) > -1) {
-                        break L4;
-                      } else {
-                        if (sg.field_b.length > var2_int) {
-                          break L3;
+                    lf.field_c = 0;
+                    var2_int = param0.getKeyCode();
+                    if ((var2_int ^ -1) > -1) {
+                      break L3;
+                    } else {
+                      if (sg.field_b.length > var2_int) {
+                        var2_int = sg.field_b[var2_int];
+                        if ((128 & var2_int) == 0) {
+                          break L2;
                         } else {
-                          break L4;
+                          var2_int = -1;
+                          break L2;
                         }
+                      } else {
+                        break L3;
                       }
                     }
-                    var2_int = -1;
-                    if (!SolKnight.field_L) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
                   }
-                  var2_int = sg.field_b[var2_int];
-                  if ((128 & var2_int) == 0) {
-                    break L2;
-                  } else {
-                    var2_int = -1;
-                    break L2;
-                  }
+                  var2_int = -1;
+                  break L2;
                 }
-                L5: {
+                L4: {
                   if ((fg.field_b ^ -1) > -1) {
-                    break L5;
+                    break L4;
                   } else {
                     if (var2_int >= 0) {
                       ci.field_qb[fg.field_b] = var2_int;
                       fg.field_b = fg.field_b + 1 & 127;
                       if (qd.field_d != fg.field_b) {
-                        break L5;
+                        break L4;
                       } else {
                         fg.field_b = -1;
-                        break L5;
+                        break L4;
                       }
                     } else {
-                      break L5;
+                      break L4;
                     }
                   }
                 }
-                L6: {
+                L5: {
                   if (-1 < (var2_int ^ -1)) {
-                    break L6;
+                    break L5;
                   } else {
                     var3 = 127 & 1 + rh.field_e;
                     if (var3 == pf.field_a) {
-                      break L6;
+                      break L5;
                     } else {
                       lb.field_V[rh.field_e] = var2_int;
                       r.field_g[rh.field_e] = (char)0;
                       rh.field_e = var3;
-                      break L6;
+                      break L5;
                     }
                   }
                 }
@@ -228,7 +214,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var2 = decompiledCaughtException;
             stackIn_25_0 = (RuntimeException) (var2);
 
@@ -238,12 +224,12 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "null";
-              break L7;
+              break L6;
             } else {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "{...}";
-              break L7;
+              break L6;
             }
           }
           throw fc.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');

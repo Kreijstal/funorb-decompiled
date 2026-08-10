@@ -110,27 +110,139 @@ final class aa {
 
     final void d(byte param0) {
         int stackIn_5_0 = 0;
-        Object stackIn_52_0 = null;
-        int stackIn_52_1 = 0;
+        int stackIn_50_0 = 0;
+        rk[] stackIn_50_1 = null;
+        int stackIn_50_2 = 0;
+        int stackIn_50_3 = 0;
+        int stackIn_50_4 = 0;
+        int stackIn_50_5 = 0;
+        int stackIn_50_6 = 0;
+        int stackIn_50_7 = 0;
+        int stackIn_50_8 = 0;
+        boolean stackIn_50_9 = false;
+        int stackIn_51_0 = 0;
+        rk[] stackIn_51_1 = null;
+        int stackIn_51_2 = 0;
+        int stackIn_51_3 = 0;
+        int stackIn_51_4 = 0;
+        int stackIn_51_5 = 0;
+        int stackIn_51_6 = 0;
+        int stackIn_51_7 = 0;
+        int stackIn_51_8 = 0;
+        boolean stackIn_51_9 = false;
+        int stackIn_52_0 = 0;
+        rk[] stackIn_52_1 = null;
         int stackIn_52_2 = 0;
         int stackIn_52_3 = 0;
-        Object stackIn_53_0 = null;
-        int stackIn_53_1 = 0;
+        int stackIn_52_4 = 0;
+        int stackIn_52_5 = 0;
+        int stackIn_52_6 = 0;
+        int stackIn_52_7 = 0;
+        int stackIn_52_8 = 0;
+        boolean stackIn_52_9 = false;
+        int stackIn_52_10 = 0;
+        int stackIn_53_0 = 0;
+        rk[] stackIn_53_1 = null;
         int stackIn_53_2 = 0;
         int stackIn_53_3 = 0;
-        Object stackIn_54_0 = null;
-        int stackIn_54_1 = 0;
+        int stackIn_53_4 = 0;
+        int stackIn_53_5 = 0;
+        int stackIn_53_6 = 0;
+        int stackIn_53_7 = 0;
+        int stackIn_53_8 = 0;
+        int stackIn_54_0 = 0;
+        rk[] stackIn_54_1 = null;
         int stackIn_54_2 = 0;
         int stackIn_54_3 = 0;
-        Object stackIn_55_0 = null;
-        int stackIn_55_1 = 0;
+        int stackIn_54_4 = 0;
+        int stackIn_54_5 = 0;
+        int stackIn_54_6 = 0;
+        int stackIn_54_7 = 0;
+        int stackIn_54_8 = 0;
+        int stackIn_55_0 = 0;
+        rk[] stackIn_55_1 = null;
         int stackIn_55_2 = 0;
         int stackIn_55_3 = 0;
         int stackIn_55_4 = 0;
-        Object stackIn_76_0 = null;
-        int stackIn_76_1 = 0;
-        int stackIn_76_2 = 0;
-        int stackIn_76_3 = 0;
+        int stackIn_55_5 = 0;
+        int stackIn_55_6 = 0;
+        int stackIn_55_7 = 0;
+        int stackIn_55_8 = 0;
+        int stackIn_55_9 = 0;
+        int stackIn_56_0 = 0;
+        rk[] stackIn_56_1 = null;
+        int stackIn_56_2 = 0;
+        int stackIn_56_3 = 0;
+        int stackIn_56_4 = 0;
+        int stackIn_56_5 = 0;
+        int stackIn_56_6 = 0;
+        int stackIn_56_7 = 0;
+        boolean stackIn_56_8 = false;
+        int stackIn_57_0 = 0;
+        rk[] stackIn_57_1 = null;
+        int stackIn_57_2 = 0;
+        int stackIn_57_3 = 0;
+        int stackIn_57_4 = 0;
+        int stackIn_57_5 = 0;
+        int stackIn_57_6 = 0;
+        int stackIn_57_7 = 0;
+        boolean stackIn_57_8 = false;
+        int stackIn_58_0 = 0;
+        rk[] stackIn_58_1 = null;
+        int stackIn_58_2 = 0;
+        int stackIn_58_3 = 0;
+        int stackIn_58_4 = 0;
+        int stackIn_58_5 = 0;
+        int stackIn_58_6 = 0;
+        int stackIn_58_7 = 0;
+        boolean stackIn_58_8 = false;
+        int stackIn_58_9 = 0;
+        int stackIn_59_0 = 0;
+        rk[] stackIn_59_1 = null;
+        int stackIn_59_2 = 0;
+        int stackIn_59_3 = 0;
+        int stackIn_59_4 = 0;
+        int stackIn_59_5 = 0;
+        int stackIn_59_6 = 0;
+        int stackIn_59_7 = 0;
+        int stackIn_60_0 = 0;
+        rk[] stackIn_60_1 = null;
+        int stackIn_60_2 = 0;
+        int stackIn_60_3 = 0;
+        int stackIn_60_4 = 0;
+        int stackIn_60_5 = 0;
+        int stackIn_60_6 = 0;
+        int stackIn_60_7 = 0;
+        int stackIn_61_0 = 0;
+        rk[] stackIn_61_1 = null;
+        int stackIn_61_2 = 0;
+        int stackIn_61_3 = 0;
+        int stackIn_61_4 = 0;
+        int stackIn_61_5 = 0;
+        int stackIn_61_6 = 0;
+        int stackIn_61_7 = 0;
+        int stackIn_61_8 = 0;
+        Object stackIn_68_0 = null;
+        int stackIn_68_1 = 0;
+        int stackIn_68_2 = 0;
+        int stackIn_68_3 = 0;
+        Object stackIn_69_0 = null;
+        int stackIn_69_1 = 0;
+        int stackIn_69_2 = 0;
+        int stackIn_69_3 = 0;
+        Object stackIn_70_0 = null;
+        int stackIn_70_1 = 0;
+        int stackIn_70_2 = 0;
+        int stackIn_70_3 = 0;
+        Object stackIn_71_0 = null;
+        int stackIn_71_1 = 0;
+        int stackIn_71_2 = 0;
+        int stackIn_71_3 = 0;
+        int stackIn_71_4 = 0;
+        Object stackIn_92_0 = null;
+        int stackIn_92_1 = 0;
+        int stackIn_92_2 = 0;
+        int stackIn_92_3 = 0;
         int statePc = 0;
         int var2 = 0;
         int var3 = 0;
@@ -412,7 +524,7 @@ final class aa {
                 }
                 case 41: {
                     this.f(var2, -7098);
-                    if (uh.i(param0 + 23097) == null) {
+                    if (uh.i(param0 + 23097) != null) {
                         statePc = 45;
                     } else {
                         statePc = 42;
@@ -421,7 +533,7 @@ final class aa {
                 }
                 case 42: {
                     if (this.field_c >= dc.field_n.length) {
-                        statePc = 49;
+                        statePc = 65;
                     } else {
                         statePc = 43;
                     }
@@ -429,7 +541,7 @@ final class aa {
                 }
                 case 43: {
                     if (dc.field_n[this.field_c] == null) {
-                        statePc = 49;
+                        statePc = 65;
                     } else {
                         statePc = 44;
                     }
@@ -437,11 +549,11 @@ final class aa {
                 }
                 case 44: {
                     dc.field_n[this.field_c].a(var2, 0);
-                    statePc = 49;
+                    statePc = 65;
                     continue stateLoop;
                 }
                 case 45: {
-                    if (this.field_c >= dc.field_n.length) {
+                    if (-2 == (this.field_c ^ -1)) {
                         statePc = 49;
                     } else {
                         statePc = 46;
@@ -449,7 +561,7 @@ final class aa {
                     continue stateLoop;
                 }
                 case 46: {
-                    if (dc.field_n[this.field_c] == null) {
+                    if (2 == this.field_c) {
                         statePc = 49;
                     } else {
                         statePc = 47;
@@ -457,50 +569,92 @@ final class aa {
                     continue stateLoop;
                 }
                 case 47: {
-                    dc.field_n[this.field_c].a(var2, 0);
-                    statePc = 49;
+                    if (this.field_c == 11) {
+                        statePc = 49;
+                    } else {
+                        statePc = 62;
+                    }
                     continue stateLoop;
                 }
                 case 49: {
-                    var8 = 0;
-                    var9 = ak.field_m[this.field_c];
-                    statePc = 50;
+                    ek.a(16777215, ak.field_m[this.field_c] + -50, -100 + (var2 - -320), 10, ak.field_m[this.field_c] - 25, 0, (byte) 63, 100 + var2 + 320);
+                    stackIn_51_0 = 16777215;
+                    stackIn_50_0 = stackIn_51_0;
+                    stackIn_51_1 = pg.field_v;
+                    stackIn_50_1 = stackIn_51_1;
+                    stackIn_51_2 = 320 + (var2 - 90);
+                    stackIn_50_2 = stackIn_51_2;
+                    stackIn_51_3 = ak.field_m[this.field_c] - 50;
+                    stackIn_50_3 = stackIn_51_3;
+                    stackIn_51_4 = 3;
+                    stackIn_50_4 = stackIn_51_4;
+                    stackIn_51_5 = 60;
+                    stackIn_50_5 = stackIn_51_5;
+                    stackIn_51_6 = 0;
+                    stackIn_50_6 = stackIn_51_6;
+                    stackIn_51_7 = uh.i(23156).field_e / 50;
+                    stackIn_50_7 = stackIn_51_7;
+                    stackIn_51_8 = 3;
+                    stackIn_50_8 = stackIn_51_8;
+                    stackIn_51_9 = uh.i(param0 ^ 23119).field_b;
+                    stackIn_50_9 = stackIn_51_9;
+                    if (0 != (r.field_Eb / 50 & 1)) {
+                        statePc = 51;
+                    } else {
+                        statePc = 50;
+                    }
                     continue stateLoop;
                 }
                 case 50: {
-                    if (var8 >= this.field_e.field_f) {
-                        statePc = 56;
-                    } else {
-                        statePc = 51;
-                    }
+                    stackIn_52_0 = stackIn_50_0;
+                    stackIn_52_1 = (rk[]) ((Object) stackIn_50_1);
+                    stackIn_52_2 = stackIn_50_2;
+                    stackIn_52_3 = stackIn_50_3;
+                    stackIn_52_4 = stackIn_50_4;
+                    stackIn_52_5 = stackIn_50_5;
+                    stackIn_52_6 = stackIn_50_6;
+                    stackIn_52_7 = stackIn_50_7;
+                    stackIn_52_8 = stackIn_50_8;
+                    stackIn_52_9 = stackIn_50_9;
+                    stackIn_52_10 = 1;
+                    statePc = 52;
                     continue stateLoop;
                 }
                 case 51: {
-                    stackIn_76_0 = this;
-                    stackIn_52_0 = stackIn_76_0;
-                    stackIn_76_1 = 0;
-                    stackIn_52_1 = stackIn_76_1;
-                    stackIn_76_2 = var8;
-                    stackIn_52_2 = stackIn_76_2;
-                    stackIn_76_3 = var9;
-                    stackIn_52_3 = stackIn_76_3;
-                    if (var10 != 0) {
-                        statePc = 76;
-                    } else {
-                        statePc = 52;
-                    }
+                    stackIn_52_0 = stackIn_51_0;
+                    stackIn_52_1 = (rk[]) ((Object) stackIn_51_1);
+                    stackIn_52_2 = stackIn_51_2;
+                    stackIn_52_3 = stackIn_51_3;
+                    stackIn_52_4 = stackIn_51_4;
+                    stackIn_52_5 = stackIn_51_5;
+                    stackIn_52_6 = stackIn_51_6;
+                    stackIn_52_7 = stackIn_51_7;
+                    stackIn_52_8 = stackIn_51_8;
+                    stackIn_52_9 = stackIn_51_9;
+                    stackIn_52_10 = 0;
+                    statePc = 52;
                     continue stateLoop;
                 }
                 case 52: {
-                    stackIn_54_0 = this;
+                    stackIn_54_0 = stackIn_52_0;
                     stackIn_53_0 = stackIn_54_0;
-                    stackIn_54_1 = stackIn_52_1;
+                    stackIn_54_1 = (rk[]) ((Object) stackIn_52_1);
                     stackIn_53_1 = stackIn_54_1;
                     stackIn_54_2 = stackIn_52_2;
                     stackIn_53_2 = stackIn_54_2;
                     stackIn_54_3 = stackIn_52_3;
                     stackIn_53_3 = stackIn_54_3;
-                    if (this.field_e.field_h != var8) {
+                    stackIn_54_4 = stackIn_52_4;
+                    stackIn_53_4 = stackIn_54_4;
+                    stackIn_54_5 = stackIn_52_5;
+                    stackIn_53_5 = stackIn_54_5;
+                    stackIn_54_6 = stackIn_52_6;
+                    stackIn_53_6 = stackIn_54_6;
+                    stackIn_54_7 = stackIn_52_7;
+                    stackIn_53_7 = stackIn_54_7;
+                    stackIn_54_8 = stackIn_52_8;
+                    stackIn_53_8 = stackIn_54_8;
+                    if (stackIn_52_9 | stackIn_52_10 == 0) {
                         statePc = 54;
                     } else {
                         statePc = 53;
@@ -508,231 +662,436 @@ final class aa {
                     continue stateLoop;
                 }
                 case 53: {
-                    stackIn_55_0 = this;
-                    stackIn_55_1 = stackIn_53_1;
+                    stackIn_55_0 = stackIn_53_0;
+                    stackIn_55_1 = (rk[]) ((Object) stackIn_53_1);
                     stackIn_55_2 = stackIn_53_2;
                     stackIn_55_3 = stackIn_53_3;
-                    stackIn_55_4 = 1;
+                    stackIn_55_4 = stackIn_53_4;
+                    stackIn_55_5 = stackIn_53_5;
+                    stackIn_55_6 = stackIn_53_6;
+                    stackIn_55_7 = stackIn_53_7;
+                    stackIn_55_8 = stackIn_53_8;
+                    stackIn_55_9 = 32;
                     statePc = 55;
                     continue stateLoop;
                 }
                 case 54: {
-                    stackIn_55_0 = this;
-                    stackIn_55_1 = stackIn_54_1;
+                    stackIn_55_0 = stackIn_54_0;
+                    stackIn_55_1 = (rk[]) ((Object) stackIn_54_1);
                     stackIn_55_2 = stackIn_54_2;
                     stackIn_55_3 = stackIn_54_3;
-                    stackIn_55_4 = 0;
+                    stackIn_55_4 = stackIn_54_4;
+                    stackIn_55_5 = stackIn_54_5;
+                    stackIn_55_6 = stackIn_54_6;
+                    stackIn_55_7 = stackIn_54_7;
+                    stackIn_55_8 = stackIn_54_8;
+                    stackIn_55_9 = 0;
                     statePc = 55;
                     continue stateLoop;
                 }
                 case 55: {
-                    this.a(stackIn_55_1 != 0, stackIn_55_2, stackIn_55_3, stackIn_55_4 != 0, var2);
-                    var9 = var9 + ak.field_y[this.field_c];
-                    var8++;
-                    if (var10 == 0) {
-                        statePc = 50;
+                    se.a(stackIn_55_0, stackIn_55_1, stackIn_55_2, stackIn_55_3, stackIn_55_4, stackIn_55_5, stackIn_55_6, stackIn_55_7, stackIn_55_8 | stackIn_55_9, da.field_y);
+                    stackIn_57_0 = 16711680;
+                    stackIn_56_0 = stackIn_57_0;
+                    stackIn_57_1 = pg.field_v;
+                    stackIn_56_1 = stackIn_57_1;
+                    stackIn_57_2 = 10 + (320 + var2);
+                    stackIn_56_2 = stackIn_57_2;
+                    stackIn_57_3 = -50 + ak.field_m[this.field_c];
+                    stackIn_56_3 = stackIn_57_3;
+                    stackIn_57_4 = 3;
+                    stackIn_56_4 = stackIn_57_4;
+                    stackIn_57_5 = 60;
+                    stackIn_56_5 = stackIn_57_5;
+                    stackIn_57_6 = 0;
+                    stackIn_56_6 = stackIn_57_6;
+                    stackIn_57_7 = uh.i(23156).field_v / 50;
+                    stackIn_56_7 = stackIn_57_7;
+                    stackIn_57_8 = uh.i(param0 ^ 23119).field_b;
+                    stackIn_56_8 = stackIn_57_8;
+                    if (-1 != (r.field_Eb / 50 & 1 ^ -1)) {
+                        statePc = 57;
                     } else {
                         statePc = 56;
                     }
                     continue stateLoop;
                 }
                 case 56: {
-                    if ((var3 ^ -1) == -4) {
-                        statePc = 59;
-                    } else {
-                        statePc = 57;
-                    }
+                    stackIn_58_0 = stackIn_56_0;
+                    stackIn_58_1 = (rk[]) ((Object) stackIn_56_1);
+                    stackIn_58_2 = stackIn_56_2;
+                    stackIn_58_3 = stackIn_56_3;
+                    stackIn_58_4 = stackIn_56_4;
+                    stackIn_58_5 = stackIn_56_5;
+                    stackIn_58_6 = stackIn_56_6;
+                    stackIn_58_7 = stackIn_56_7;
+                    stackIn_58_8 = stackIn_56_8;
+                    stackIn_58_9 = 1;
+                    statePc = 58;
                     continue stateLoop;
                 }
                 case 57: {
-                    if (-11 != (var3 ^ -1)) {
-                        statePc = 64;
+                    stackIn_58_0 = stackIn_57_0;
+                    stackIn_58_1 = (rk[]) ((Object) stackIn_57_1);
+                    stackIn_58_2 = stackIn_57_2;
+                    stackIn_58_3 = stackIn_57_3;
+                    stackIn_58_4 = stackIn_57_4;
+                    stackIn_58_5 = stackIn_57_5;
+                    stackIn_58_6 = stackIn_57_6;
+                    stackIn_58_7 = stackIn_57_7;
+                    stackIn_58_8 = stackIn_57_8;
+                    stackIn_58_9 = 0;
+                    statePc = 58;
+                    continue stateLoop;
+                }
+                case 58: {
+                    stackIn_60_0 = stackIn_58_0;
+                    stackIn_59_0 = stackIn_60_0;
+                    stackIn_60_1 = (rk[]) ((Object) stackIn_58_1);
+                    stackIn_59_1 = stackIn_60_1;
+                    stackIn_60_2 = stackIn_58_2;
+                    stackIn_59_2 = stackIn_60_2;
+                    stackIn_60_3 = stackIn_58_3;
+                    stackIn_59_3 = stackIn_60_3;
+                    stackIn_60_4 = stackIn_58_4;
+                    stackIn_59_4 = stackIn_60_4;
+                    stackIn_60_5 = stackIn_58_5;
+                    stackIn_59_5 = stackIn_60_5;
+                    stackIn_60_6 = stackIn_58_6;
+                    stackIn_59_6 = stackIn_60_6;
+                    stackIn_60_7 = stackIn_58_7;
+                    stackIn_59_7 = stackIn_60_7;
+                    if (stackIn_58_8 | stackIn_58_9 != 0) {
+                        statePc = 60;
                     } else {
                         statePc = 59;
                     }
                     continue stateLoop;
                 }
                 case 59: {
-                    var8 = 0;
-                    statePc = 60;
+                    stackIn_61_0 = stackIn_59_0;
+                    stackIn_61_1 = (rk[]) ((Object) stackIn_59_1);
+                    stackIn_61_2 = stackIn_59_2;
+                    stackIn_61_3 = stackIn_59_3;
+                    stackIn_61_4 = stackIn_59_4;
+                    stackIn_61_5 = stackIn_59_5;
+                    stackIn_61_6 = stackIn_59_6;
+                    stackIn_61_7 = stackIn_59_7;
+                    stackIn_61_8 = 0;
+                    statePc = 61;
                     continue stateLoop;
                 }
                 case 60: {
-                    if (5 <= var8) {
-                        statePc = 64;
-                    } else {
-                        statePc = 61;
-                    }
+                    stackIn_61_0 = stackIn_60_0;
+                    stackIn_61_1 = (rk[]) ((Object) stackIn_60_1);
+                    stackIn_61_2 = stackIn_60_2;
+                    stackIn_61_3 = stackIn_60_3;
+                    stackIn_61_4 = stackIn_60_4;
+                    stackIn_61_5 = stackIn_60_5;
+                    stackIn_61_6 = stackIn_60_6;
+                    stackIn_61_7 = stackIn_60_7;
+                    stackIn_61_8 = 32;
+                    statePc = 61;
                     continue stateLoop;
                 }
                 case 61: {
-                    ok.field_Ib[var8].c((byte) 56);
-                    var8++;
-                    if (var10 != 0) {
-                        statePc = 77;
-                    } else {
-                        statePc = 62;
-                    }
+                    se.a(stackIn_61_0, stackIn_61_1, stackIn_61_2, stackIn_61_3, stackIn_61_4, stackIn_61_5, stackIn_61_6, stackIn_61_7, stackIn_61_8 | 3, da.field_y);
+                    statePc = 62;
                     continue stateLoop;
                 }
                 case 62: {
-                    if (var10 == 0) {
-                        statePc = 60;
+                    if (this.field_c >= dc.field_n.length) {
+                        statePc = 65;
+                    } else {
+                        statePc = 63;
+                    }
+                    continue stateLoop;
+                }
+                case 63: {
+                    if (dc.field_n[this.field_c] == null) {
+                        statePc = 65;
                     } else {
                         statePc = 64;
                     }
                     continue stateLoop;
                 }
                 case 64: {
-                    if (this.field_c == 4) {
-                        statePc = 77;
-                    } else {
-                        statePc = 65;
-                    }
+                    dc.field_n[this.field_c].a(var2, 0);
+                    statePc = 65;
                     continue stateLoop;
                 }
                 case 65: {
-                    if (5 != this.field_c) {
-                        statePc = 68;
-                    } else {
-                        statePc = 66;
-                    }
+                    var8 = 0;
+                    var9 = ak.field_m[this.field_c];
+                    statePc = 66;
                     continue stateLoop;
                 }
                 case 66: {
-                    this.b(var2, true);
-                    if (var10 == 0) {
-                        statePc = 78;
+                    if (var8 >= this.field_e.field_f) {
+                        statePc = 72;
+                    } else {
+                        statePc = 67;
+                    }
+                    continue stateLoop;
+                }
+                case 67: {
+                    stackIn_92_0 = this;
+                    stackIn_68_0 = stackIn_92_0;
+                    stackIn_92_1 = 0;
+                    stackIn_68_1 = stackIn_92_1;
+                    stackIn_92_2 = var8;
+                    stackIn_68_2 = stackIn_92_2;
+                    stackIn_92_3 = var9;
+                    stackIn_68_3 = stackIn_92_3;
+                    if (var10 != 0) {
+                        statePc = 92;
                     } else {
                         statePc = 68;
                     }
                     continue stateLoop;
                 }
                 case 68: {
-                    if (this.field_c == 6) {
-                        statePc = 75;
+                    stackIn_70_0 = this;
+                    stackIn_69_0 = stackIn_70_0;
+                    stackIn_70_1 = stackIn_68_1;
+                    stackIn_69_1 = stackIn_70_1;
+                    stackIn_70_2 = stackIn_68_2;
+                    stackIn_69_2 = stackIn_70_2;
+                    stackIn_70_3 = stackIn_68_3;
+                    stackIn_69_3 = stackIn_70_3;
+                    if (this.field_e.field_h != var8) {
+                        statePc = 70;
                     } else {
                         statePc = 69;
                     }
                     continue stateLoop;
                 }
                 case 69: {
-                    if (this.field_c != 7) {
-                        statePc = 72;
-                    } else {
-                        statePc = 70;
-                    }
+                    stackIn_71_0 = this;
+                    stackIn_71_1 = stackIn_69_1;
+                    stackIn_71_2 = stackIn_69_2;
+                    stackIn_71_3 = stackIn_69_3;
+                    stackIn_71_4 = 1;
+                    statePc = 71;
                     continue stateLoop;
                 }
                 case 70: {
-                    this.a(-18210, true, var2);
+                    stackIn_71_0 = this;
+                    stackIn_71_1 = stackIn_70_1;
+                    stackIn_71_2 = stackIn_70_2;
+                    stackIn_71_3 = stackIn_70_3;
+                    stackIn_71_4 = 0;
+                    statePc = 71;
+                    continue stateLoop;
+                }
+                case 71: {
+                    this.a(stackIn_71_1 != 0, stackIn_71_2, stackIn_71_3, stackIn_71_4 != 0, var2);
+                    var9 = var9 + ak.field_y[this.field_c];
+                    var8++;
                     if (var10 == 0) {
-                        statePc = 78;
+                        statePc = 66;
                     } else {
                         statePc = 72;
                     }
                     continue stateLoop;
                 }
                 case 72: {
-                    if (this.field_c == 8) {
-                        statePc = 74;
+                    if ((var3 ^ -1) == -4) {
+                        statePc = 75;
                     } else {
-                        statePc = 78;
+                        statePc = 73;
                     }
                     continue stateLoop;
                 }
-                case 74: {
-                    ek.a(16777215, 155, 50 - -var2, 10, ak.field_m[this.field_c] - 30, 0, (byte) 63, var2 + 590);
-                    v.field_j.a(ad.field_d, var2 + 50, 155, 540, 480, 16444375, -1, 0, 0, v.field_j.field_q);
-                    if (var10 == 0) {
-                        statePc = 78;
+                case 73: {
+                    if (-11 != (var3 ^ -1)) {
+                        statePc = 80;
                     } else {
                         statePc = 75;
                     }
                     continue stateLoop;
                 }
                 case 75: {
-                    stackIn_76_0 = this;
-                    stackIn_76_1 = -18210;
-                    stackIn_76_2 = 0;
-                    stackIn_76_3 = var2;
+                    var8 = 0;
                     statePc = 76;
                     continue stateLoop;
                 }
                 case 76: {
-                    this.a(stackIn_76_1, stackIn_76_2 != 0, stackIn_76_3);
-                    if (var10 == 0) {
-                        statePc = 78;
+                    if (5 <= var8) {
+                        statePc = 80;
                     } else {
                         statePc = 77;
                     }
                     continue stateLoop;
                 }
                 case 77: {
-                    this.b(-481, var2);
-                    statePc = 78;
-                    continue stateLoop;
-                }
-                case 78: {
-                    wb.a(var14, var6, var7);
-                    if (null == b.field_a) {
-                        statePc = 85;
+                    ok.field_Ib[var8].c((byte) 56);
+                    var8++;
+                    if (var10 != 0) {
+                        statePc = 93;
                     } else {
-                        statePc = 79;
+                        statePc = 78;
                     }
                     continue stateLoop;
                 }
-                case 79: {
-                    if (2 != rn.field_b) {
-                        statePc = 85;
+                case 78: {
+                    if (var10 == 0) {
+                        statePc = 76;
                     } else {
                         statePc = 80;
                     }
                     continue stateLoop;
                 }
                 case 80: {
-                    if (uh.i(23156) == null) {
-                        statePc = 84;
+                    if (this.field_c == 4) {
+                        statePc = 93;
                     } else {
                         statePc = 81;
                     }
                     continue stateLoop;
                 }
                 case 81: {
-                    if (!uh.i(23156).field_g) {
-                        statePc = 85;
+                    if (5 != this.field_c) {
+                        statePc = 84;
                     } else {
                         statePc = 82;
                     }
                     continue stateLoop;
                 }
                 case 82: {
-                    if (nc.field_T == 0) {
+                    this.b(var2, true);
+                    if (var10 == 0) {
+                        statePc = 94;
+                    } else {
                         statePc = 84;
+                    }
+                    continue stateLoop;
+                }
+                case 84: {
+                    if (this.field_c == 6) {
+                        statePc = 91;
                     } else {
                         statePc = 85;
                     }
                     continue stateLoop;
                 }
-                case 84: {
-                    b.field_a.b(0, 0, var4 << 546974337);
-                    statePc = 85;
+                case 85: {
+                    if (this.field_c != 7) {
+                        statePc = 88;
+                    } else {
+                        statePc = 86;
+                    }
                     continue stateLoop;
                 }
-                case 85: {
-                    if (oc.field_p != null) {
-                        statePc = 87;
+                case 86: {
+                    this.a(-18210, true, var2);
+                    if (var10 == 0) {
+                        statePc = 94;
                     } else {
                         statePc = 88;
                     }
                     continue stateLoop;
                 }
-                case 87: {
-                    sf.b(16777215);
-                    statePc = 88;
+                case 88: {
+                    if (this.field_c == 8) {
+                        statePc = 90;
+                    } else {
+                        statePc = 94;
+                    }
                     continue stateLoop;
                 }
-                case 88: {
+                case 90: {
+                    ek.a(16777215, 155, 50 - -var2, 10, ak.field_m[this.field_c] - 30, 0, (byte) 63, var2 + 590);
+                    v.field_j.a(ad.field_d, var2 + 50, 155, 540, 480, 16444375, -1, 0, 0, v.field_j.field_q);
+                    if (var10 == 0) {
+                        statePc = 94;
+                    } else {
+                        statePc = 91;
+                    }
+                    continue stateLoop;
+                }
+                case 91: {
+                    stackIn_92_0 = this;
+                    stackIn_92_1 = -18210;
+                    stackIn_92_2 = 0;
+                    stackIn_92_3 = var2;
+                    statePc = 92;
+                    continue stateLoop;
+                }
+                case 92: {
+                    this.a(stackIn_92_1, stackIn_92_2 != 0, stackIn_92_3);
+                    if (var10 == 0) {
+                        statePc = 94;
+                    } else {
+                        statePc = 93;
+                    }
+                    continue stateLoop;
+                }
+                case 93: {
+                    this.b(-481, var2);
+                    statePc = 94;
+                    continue stateLoop;
+                }
+                case 94: {
+                    wb.a(var14, var6, var7);
+                    if (null == b.field_a) {
+                        statePc = 101;
+                    } else {
+                        statePc = 95;
+                    }
+                    continue stateLoop;
+                }
+                case 95: {
+                    if (2 != rn.field_b) {
+                        statePc = 101;
+                    } else {
+                        statePc = 96;
+                    }
+                    continue stateLoop;
+                }
+                case 96: {
+                    if (uh.i(23156) == null) {
+                        statePc = 100;
+                    } else {
+                        statePc = 97;
+                    }
+                    continue stateLoop;
+                }
+                case 97: {
+                    if (!uh.i(23156).field_g) {
+                        statePc = 101;
+                    } else {
+                        statePc = 98;
+                    }
+                    continue stateLoop;
+                }
+                case 98: {
+                    if (nc.field_T == 0) {
+                        statePc = 100;
+                    } else {
+                        statePc = 101;
+                    }
+                    continue stateLoop;
+                }
+                case 100: {
+                    b.field_a.b(0, 0, var4 << 546974337);
+                    statePc = 101;
+                    continue stateLoop;
+                }
+                case 101: {
+                    if (oc.field_p != null) {
+                        statePc = 103;
+                    } else {
+                        statePc = 104;
+                    }
+                    continue stateLoop;
+                }
+                case 103: {
+                    sf.b(16777215);
+                    statePc = 104;
+                    continue stateLoop;
+                }
+                case 104: {
                     return;
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
@@ -2103,322 +2462,324 @@ final class aa {
                                                           L27: {
                                                             L28: {
                                                               L29: {
-                                                                var9 = var4;
-                                                                if (var9 == 0) {
-                                                                  break L29;
-                                                                } else {
-                                                                  L30: {
-                                                                    if (-2 != (var9 ^ -1)) {
-                                                                      break L30;
-                                                                    } else {
-                                                                      if (var11 == 0) {
-                                                                        break L28;
-                                                                      } else {
-                                                                        break L30;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                  L31: {
-                                                                    if (var9 != 2) {
-                                                                      break L31;
-                                                                    } else {
-                                                                      if (var11 == 0) {
-                                                                        break L27;
-                                                                      } else {
-                                                                        break L31;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                  L32: {
-                                                                    if ((var9 ^ -1) != -38) {
-                                                                      break L32;
-                                                                    } else {
-                                                                      if (var11 == 0) {
-                                                                        break L27;
-                                                                      } else {
-                                                                        break L32;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                  L33: {
-                                                                    if ((var9 ^ -1) != -7) {
-                                                                      break L33;
-                                                                    } else {
-                                                                      if (var11 == 0) {
-                                                                        break L26;
-                                                                      } else {
-                                                                        break L33;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                  L34: {
-                                                                    if (18 != var9) {
-                                                                      break L34;
-                                                                    } else {
-                                                                      if (var11 == 0) {
-                                                                        break L25;
-                                                                      } else {
-                                                                        break L34;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                  L35: {
-                                                                    if ((var9 ^ -1) != -17) {
-                                                                      break L35;
-                                                                    } else {
-                                                                      if (var11 == 0) {
-                                                                        break L24;
-                                                                      } else {
-                                                                        break L35;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                  L36: {
-                                                                    if ((var9 ^ -1) != -5) {
-                                                                      break L36;
-                                                                    } else {
-                                                                      if (var11 == 0) {
-                                                                        break L23;
-                                                                      } else {
-                                                                        break L36;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                  L37: {
-                                                                    if (var9 != 7) {
-                                                                      break L37;
-                                                                    } else {
-                                                                      if (var11 == 0) {
-                                                                        break L22;
-                                                                      } else {
-                                                                        break L37;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                  L38: {
-                                                                    if ((var9 ^ -1) != -4) {
-                                                                      break L38;
-                                                                    } else {
-                                                                      if (var11 == 0) {
-                                                                        break L21;
-                                                                      } else {
-                                                                        break L38;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                  L39: {
-                                                                    if ((var9 ^ -1) != -15) {
-                                                                      break L39;
-                                                                    } else {
-                                                                      if (var11 == 0) {
-                                                                        break L20;
-                                                                      } else {
-                                                                        break L39;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                  if ((var9 ^ -1) == -16) {
-                                                                    break L19;
+                                                                L30: {
+                                                                  var9 = var4;
+                                                                  if (var9 == 0) {
+                                                                    break L30;
                                                                   } else {
-                                                                    if (var9 == 5) {
-                                                                      break L18;
-                                                                    } else {
-                                                                      L40: {
-                                                                        if (var9 != 26) {
-                                                                          break L40;
-                                                                        } else {
-                                                                          if (var11 == 0) {
-                                                                            break L17;
-                                                                          } else {
-                                                                            break L40;
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                      L41: {
-                                                                        if (8 != var9) {
-                                                                          break L41;
-                                                                        } else {
-                                                                          if (var11 == 0) {
-                                                                            break L16;
-                                                                          } else {
-                                                                            break L41;
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                      if (-10 == (var9 ^ -1)) {
-                                                                        break L15;
+                                                                    L31: {
+                                                                      if (-2 != (var9 ^ -1)) {
+                                                                        break L31;
                                                                       } else {
-                                                                        if (10 == var9) {
-                                                                          break L14;
+                                                                        if (var11 == 0) {
+                                                                          break L29;
                                                                         } else {
-                                                                          if (11 == var9) {
-                                                                            break L13;
+                                                                          break L31;
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                    L32: {
+                                                                      if (var9 != 2) {
+                                                                        break L32;
+                                                                      } else {
+                                                                        if (var11 == 0) {
+                                                                          break L28;
+                                                                        } else {
+                                                                          break L32;
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                    L33: {
+                                                                      if ((var9 ^ -1) != -38) {
+                                                                        break L33;
+                                                                      } else {
+                                                                        if (var11 == 0) {
+                                                                          break L28;
+                                                                        } else {
+                                                                          break L33;
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                    L34: {
+                                                                      if ((var9 ^ -1) != -7) {
+                                                                        break L34;
+                                                                      } else {
+                                                                        if (var11 == 0) {
+                                                                          break L27;
+                                                                        } else {
+                                                                          break L34;
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                    L35: {
+                                                                      if (18 != var9) {
+                                                                        break L35;
+                                                                      } else {
+                                                                        if (var11 == 0) {
+                                                                          break L26;
+                                                                        } else {
+                                                                          break L35;
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                    L36: {
+                                                                      if ((var9 ^ -1) != -17) {
+                                                                        break L36;
+                                                                      } else {
+                                                                        if (var11 == 0) {
+                                                                          break L25;
+                                                                        } else {
+                                                                          break L36;
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                    L37: {
+                                                                      if ((var9 ^ -1) != -5) {
+                                                                        break L37;
+                                                                      } else {
+                                                                        if (var11 == 0) {
+                                                                          break L24;
+                                                                        } else {
+                                                                          break L37;
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                    L38: {
+                                                                      if (var9 != 7) {
+                                                                        break L38;
+                                                                      } else {
+                                                                        if (var11 == 0) {
+                                                                          break L23;
+                                                                        } else {
+                                                                          break L38;
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                    L39: {
+                                                                      if ((var9 ^ -1) != -4) {
+                                                                        break L39;
+                                                                      } else {
+                                                                        if (var11 == 0) {
+                                                                          break L22;
+                                                                        } else {
+                                                                          break L39;
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                    L40: {
+                                                                      if ((var9 ^ -1) != -15) {
+                                                                        break L40;
+                                                                      } else {
+                                                                        if (var11 == 0) {
+                                                                          break L21;
+                                                                        } else {
+                                                                          break L40;
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                    if ((var9 ^ -1) == -16) {
+                                                                      break L20;
+                                                                    } else {
+                                                                      if (var9 == 5) {
+                                                                        break L19;
+                                                                      } else {
+                                                                        L41: {
+                                                                          if (var9 != 26) {
+                                                                            break L41;
                                                                           } else {
-                                                                            L42: {
-                                                                              if (-13 != (var9 ^ -1)) {
-                                                                                break L42;
-                                                                              } else {
-                                                                                if (var11 == 0) {
-                                                                                  break L12;
-                                                                                } else {
-                                                                                  break L42;
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                            L43: {
-                                                                              if (-18 != (var9 ^ -1)) {
-                                                                                break L43;
-                                                                              } else {
-                                                                                if (var11 == 0) {
-                                                                                  break L11;
-                                                                                } else {
-                                                                                  break L43;
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                            L44: {
-                                                                              if (-14 != (var9 ^ -1)) {
-                                                                                break L44;
-                                                                              } else {
-                                                                                if (var11 == 0) {
-                                                                                  break L10;
-                                                                                } else {
-                                                                                  break L44;
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                            L45: {
-                                                                              if (30 != var9) {
-                                                                                break L45;
-                                                                              } else {
-                                                                                if (var11 == 0) {
-                                                                                  break L9;
-                                                                                } else {
-                                                                                  break L45;
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                            if ((var9 ^ -1) == -28) {
-                                                                              break L8;
+                                                                            if (var11 == 0) {
+                                                                              break L18;
                                                                             } else {
-                                                                              if (28 == var9) {
-                                                                                break L7;
-                                                                              } else {
-                                                                                L46: {
-                                                                                  if (29 != var9) {
-                                                                                    break L46;
+                                                                              break L41;
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                        L42: {
+                                                                          if (8 != var9) {
+                                                                            break L42;
+                                                                          } else {
+                                                                            if (var11 == 0) {
+                                                                              break L17;
+                                                                            } else {
+                                                                              break L42;
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                        if (-10 == (var9 ^ -1)) {
+                                                                          break L16;
+                                                                        } else {
+                                                                          if (10 == var9) {
+                                                                            break L15;
+                                                                          } else {
+                                                                            if (11 == var9) {
+                                                                              break L14;
+                                                                            } else {
+                                                                              L43: {
+                                                                                if (-13 != (var9 ^ -1)) {
+                                                                                  break L43;
+                                                                                } else {
+                                                                                  if (var11 == 0) {
+                                                                                    break L13;
                                                                                   } else {
-                                                                                    if (var11 == 0) {
-                                                                                      break L6;
-                                                                                    } else {
-                                                                                      break L46;
-                                                                                    }
+                                                                                    break L43;
                                                                                   }
                                                                                 }
-                                                                                if (var9 == 31) {
-                                                                                  break L5;
+                                                                              }
+                                                                              L44: {
+                                                                                if (-18 != (var9 ^ -1)) {
+                                                                                  break L44;
+                                                                                } else {
+                                                                                  if (var11 == 0) {
+                                                                                    break L12;
+                                                                                  } else {
+                                                                                    break L44;
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                              L45: {
+                                                                                if (-14 != (var9 ^ -1)) {
+                                                                                  break L45;
+                                                                                } else {
+                                                                                  if (var11 == 0) {
+                                                                                    break L11;
+                                                                                  } else {
+                                                                                    break L45;
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                              L46: {
+                                                                                if (30 != var9) {
+                                                                                  break L46;
+                                                                                } else {
+                                                                                  if (var11 == 0) {
+                                                                                    break L10;
+                                                                                  } else {
+                                                                                    break L46;
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                              if ((var9 ^ -1) == -28) {
+                                                                                break L9;
+                                                                              } else {
+                                                                                if (28 == var9) {
+                                                                                  break L8;
                                                                                 } else {
                                                                                   L47: {
-                                                                                    if ((var9 ^ -1) != -20) {
+                                                                                    if (29 != var9) {
                                                                                       break L47;
                                                                                     } else {
                                                                                       if (var11 == 0) {
-                                                                                        break L4;
+                                                                                        break L7;
                                                                                       } else {
                                                                                         break L47;
                                                                                       }
                                                                                     }
                                                                                   }
-                                                                                  L48: {
-                                                                                    if (-21 != (var9 ^ -1)) {
-                                                                                      break L48;
-                                                                                    } else {
-                                                                                      if (var11 == 0) {
-                                                                                        break L4;
-                                                                                      } else {
-                                                                                        break L48;
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                  L49: {
-                                                                                    if (-22 != (var9 ^ -1)) {
-                                                                                      break L49;
-                                                                                    } else {
-                                                                                      if (var11 == 0) {
-                                                                                        break L4;
-                                                                                      } else {
-                                                                                        break L49;
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                  L50: {
-                                                                                    if (22 != var9) {
-                                                                                      break L50;
-                                                                                    } else {
-                                                                                      if (var11 == 0) {
-                                                                                        break L4;
-                                                                                      } else {
-                                                                                        break L50;
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                  L51: {
-                                                                                    if ((var9 ^ -1) != -24) {
-                                                                                      break L51;
-                                                                                    } else {
-                                                                                      if (var11 == 0) {
-                                                                                        break L4;
-                                                                                      } else {
-                                                                                        break L51;
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                  L52: {
-                                                                                    if (var9 != 24) {
-                                                                                      break L52;
-                                                                                    } else {
-                                                                                      if (var11 == 0) {
-                                                                                        break L4;
-                                                                                      } else {
-                                                                                        break L52;
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                  if (-26 == (var9 ^ -1)) {
-                                                                                    break L4;
+                                                                                  if (var9 == 31) {
+                                                                                    break L6;
                                                                                   } else {
-                                                                                    if (var9 == 33) {
-                                                                                      break L2;
-                                                                                    } else {
-                                                                                      L53: {
-                                                                                        if (var9 != 34) {
-                                                                                          break L53;
-                                                                                        } else {
-                                                                                          if (var11 == 0) {
-                                                                                            break L2;
-                                                                                          } else {
-                                                                                            break L53;
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                      L54: {
-                                                                                        if (var9 != 35) {
-                                                                                          break L54;
-                                                                                        } else {
-                                                                                          if (var11 == 0) {
-                                                                                            break L2;
-                                                                                          } else {
-                                                                                            break L54;
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                      if (32 != var9) {
-                                                                                        break L2;
+                                                                                    L48: {
+                                                                                      if ((var9 ^ -1) != -20) {
+                                                                                        break L48;
                                                                                       } else {
                                                                                         if (var11 == 0) {
+                                                                                          break L5;
+                                                                                        } else {
+                                                                                          break L48;
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                    L49: {
+                                                                                      if (-21 != (var9 ^ -1)) {
+                                                                                        break L49;
+                                                                                      } else {
+                                                                                        if (var11 == 0) {
+                                                                                          break L5;
+                                                                                        } else {
+                                                                                          break L49;
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                    L50: {
+                                                                                      if (-22 != (var9 ^ -1)) {
+                                                                                        break L50;
+                                                                                      } else {
+                                                                                        if (var11 == 0) {
+                                                                                          break L5;
+                                                                                        } else {
+                                                                                          break L50;
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                    L51: {
+                                                                                      if (22 != var9) {
+                                                                                        break L51;
+                                                                                      } else {
+                                                                                        if (var11 == 0) {
+                                                                                          break L5;
+                                                                                        } else {
+                                                                                          break L51;
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                    L52: {
+                                                                                      if ((var9 ^ -1) != -24) {
+                                                                                        break L52;
+                                                                                      } else {
+                                                                                        if (var11 == 0) {
+                                                                                          break L5;
+                                                                                        } else {
+                                                                                          break L52;
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                    L53: {
+                                                                                      if (var9 != 24) {
+                                                                                        break L53;
+                                                                                      } else {
+                                                                                        if (var11 == 0) {
+                                                                                          break L5;
+                                                                                        } else {
+                                                                                          break L53;
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                    if (-26 == (var9 ^ -1)) {
+                                                                                      break L5;
+                                                                                    } else {
+                                                                                      if (var9 == 33) {
+                                                                                        break L2;
+                                                                                      } else {
+                                                                                        L54: {
+                                                                                          if (var9 != 34) {
+                                                                                            break L54;
+                                                                                          } else {
+                                                                                            if (var11 == 0) {
+                                                                                              break L3;
+                                                                                            } else {
+                                                                                              break L54;
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                        L55: {
+                                                                                          if (var9 != 35) {
+                                                                                            break L55;
+                                                                                          } else {
+                                                                                            if (var11 == 0) {
+                                                                                              break L3;
+                                                                                            } else {
+                                                                                              break L55;
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                        if (32 != var9) {
                                                                                           break L3;
                                                                                         } else {
-                                                                                          break L29;
+                                                                                          if (var11 == 0) {
+                                                                                            break L4;
+                                                                                          } else {
+                                                                                            break L30;
+                                                                                          }
                                                                                         }
                                                                                       }
                                                                                     }
@@ -2432,74 +2793,85 @@ final class aa {
                                                                     }
                                                                   }
                                                                 }
-                                                              }
-                                                              if (this.field_e.d((byte) 34)) {
-                                                                qk.field_h = -3;
-                                                                ph.a(-7125);
-                                                                if (var11 == 0) {
+                                                                if (this.field_e.d((byte) 34)) {
+                                                                  qk.field_h = -3;
+                                                                  ph.a(-7125);
+                                                                  if (var11 == 0) {
+                                                                    break L3;
+                                                                  } else {
+                                                                    break L29;
+                                                                  }
+                                                                } else {
                                                                   break L2;
+                                                                }
+                                                              }
+                                                              if (!this.field_e.d((byte) 34)) {
+                                                                break L3;
+                                                              } else {
+                                                                L56: {
+                                                                  if (vi.a(-3)) {
+                                                                    break L56;
+                                                                  } else {
+                                                                    var9 = param0 ? 1 : 0;
+                                                                    uk.a(qk.field_h, var9 != 0, 28333, -4);
+                                                                    if (var11 == 0) {
+                                                                      break L3;
+                                                                    } else {
+                                                                      break L56;
+                                                                    }
+                                                                  }
+                                                                }
+                                                                ca.a(0, v.field_j.field_t + (v.field_j.field_H + -2), v.field_j.field_H, gh.field_b, (byte) 113, 320, 240, gh.field_b, an.field_d, 8, 2, v.field_j, param0, 8, true);
+                                                                if (var11 == 0) {
+                                                                  break L3;
                                                                 } else {
                                                                   break L28;
                                                                 }
-                                                              } else {
-                                                                break L2;
                                                               }
                                                             }
-                                                            if (!this.field_e.d((byte) 34)) {
-                                                              break L2;
+                                                            if (!this.field_e.d((byte) 84)) {
+                                                              break L3;
                                                             } else {
-                                                              L55: {
-                                                                if (vi.a(-3)) {
-                                                                  break L55;
-                                                                } else {
-                                                                  var9 = param0 ? 1 : 0;
-                                                                  uk.a(qk.field_h, var9 != 0, 28333, -4);
-                                                                  if (var11 == 0) {
-                                                                    break L2;
-                                                                  } else {
-                                                                    break L55;
-                                                                  }
-                                                                }
-                                                              }
-                                                              ca.a(0, v.field_j.field_t + (v.field_j.field_H + -2), v.field_j.field_H, gh.field_b, (byte) 113, 320, 240, gh.field_b, an.field_d, 8, 2, v.field_j, param0, 8, true);
+                                                              var9 = param0 ? 1 : 0;
+                                                              uk.a(qk.field_h, var9 != 0, 28333, -1);
                                                               if (var11 == 0) {
-                                                                break L2;
+                                                                break L3;
                                                               } else {
                                                                 break L27;
                                                               }
                                                             }
                                                           }
-                                                          if (!this.field_e.d((byte) 84)) {
-                                                            break L2;
+                                                          if (!this.field_e.d((byte) 35)) {
+                                                            break L3;
                                                           } else {
                                                             var9 = param0 ? 1 : 0;
-                                                            uk.a(qk.field_h, var9 != 0, 28333, -1);
+                                                            uk.a(qk.field_h, var9 != 0, 28333, 0);
+                                                            ma.field_D = false;
                                                             if (var11 == 0) {
-                                                              break L2;
+                                                              break L3;
                                                             } else {
                                                               break L26;
                                                             }
                                                           }
                                                         }
-                                                        if (!this.field_e.d((byte) 35)) {
-                                                          break L2;
-                                                        } else {
+                                                        if (this.field_e.d((byte) 36)) {
                                                           var9 = param0 ? 1 : 0;
                                                           uk.a(qk.field_h, var9 != 0, 28333, 0);
-                                                          ma.field_D = false;
+                                                          mf.field_o = true;
                                                           if (var11 == 0) {
-                                                            break L2;
+                                                            break L3;
                                                           } else {
                                                             break L25;
                                                           }
+                                                        } else {
+                                                          break L2;
                                                         }
                                                       }
-                                                      if (this.field_e.d((byte) 36)) {
+                                                      if (this.field_e.d((byte) 101)) {
                                                         var9 = param0 ? 1 : 0;
-                                                        uk.a(qk.field_h, var9 != 0, 28333, 0);
-                                                        mf.field_o = true;
+                                                        uk.a(qk.field_h, var9 != 0, param1 + 28331, 6);
                                                         if (var11 == 0) {
-                                                          break L2;
+                                                          break L3;
                                                         } else {
                                                           break L24;
                                                         }
@@ -2507,11 +2879,11 @@ final class aa {
                                                         break L2;
                                                       }
                                                     }
-                                                    if (this.field_e.d((byte) 101)) {
+                                                    if (this.field_e.d((byte) 64)) {
                                                       var9 = param0 ? 1 : 0;
-                                                      uk.a(qk.field_h, var9 != 0, param1 + 28331, 6);
+                                                      uk.a(qk.field_h, var9 != 0, param1 ^ 28335, 5);
                                                       if (var11 == 0) {
-                                                        break L2;
+                                                        break L3;
                                                       } else {
                                                         break L23;
                                                       }
@@ -2519,11 +2891,12 @@ final class aa {
                                                       break L2;
                                                     }
                                                   }
-                                                  if (this.field_e.d((byte) 64)) {
-                                                    var9 = param0 ? 1 : 0;
-                                                    uk.a(qk.field_h, var9 != 0, param1 ^ 28335, 5);
+                                                  if (this.field_e.d((byte) 40)) {
+                                                    var9 = pg.field_s;
+                                                    var10 = param0 ? 1 : 0;
+                                                    uk.a(qk.field_h, var10 != 0, 28333, var9);
                                                     if (var11 == 0) {
-                                                      break L2;
+                                                      break L3;
                                                     } else {
                                                       break L22;
                                                     }
@@ -2531,264 +2904,263 @@ final class aa {
                                                     break L2;
                                                   }
                                                 }
-                                                if (this.field_e.d((byte) 40)) {
-                                                  var9 = pg.field_s;
-                                                  var10 = param0 ? 1 : 0;
-                                                  uk.a(qk.field_h, var10 != 0, 28333, var9);
+                                                if (!this.field_e.d((byte) 101)) {
+                                                  break L3;
+                                                } else {
+                                                  var9 = param0 ? 1 : 0;
+                                                  uk.a(qk.field_h, var9 != 0, 28333, 4);
                                                   if (var11 == 0) {
-                                                    break L2;
+                                                    break L3;
                                                   } else {
                                                     break L21;
                                                   }
-                                                } else {
-                                                  break L2;
                                                 }
                                               }
-                                              if (!this.field_e.d((byte) 101)) {
-                                                break L2;
+                                              L57: {
+                                                var5 = lf.field_S;
+                                                if (!this.field_e.a((byte) 94)) {
+                                                  break L57;
+                                                } else {
+                                                  an.a(0, (byte) 81);
+                                                  break L57;
+                                                }
+                                              }
+                                              L58: {
+                                                if (this.field_e.a(true)) {
+                                                  an.a(80, (byte) 84);
+                                                  break L58;
+                                                } else {
+                                                  break L58;
+                                                }
+                                              }
+                                              L59: {
+                                                if (!this.field_e.b(false)) {
+                                                  break L59;
+                                                } else {
+                                                  L60: {
+                                                    mi.field_q.c((byte) 57);
+                                                    if (mi.field_q.field_d) {
+                                                      break L60;
+                                                    } else {
+                                                      L61: {
+                                                        if (mi.field_q.field_i <= hn.field_k) {
+                                                          break L61;
+                                                        } else {
+                                                          an.a(0, (byte) 87);
+                                                          if (var11 == 0) {
+                                                            break L59;
+                                                          } else {
+                                                            break L61;
+                                                          }
+                                                        }
+                                                      }
+                                                      an.a(80, (byte) 99);
+                                                      if (var11 == 0) {
+                                                        break L59;
+                                                      } else {
+                                                        break L60;
+                                                      }
+                                                    }
+                                                  }
+                                                  an.a(mi.field_q.field_x, (byte) 95);
+                                                  break L59;
+                                                }
+                                              }
+                                              L62: {
+                                                if (this.field_e.a(-97)) {
+                                                  dm.a(false);
+                                                  break L62;
+                                                } else {
+                                                  break L62;
+                                                }
+                                              }
+                                              L63: {
+                                                if (this.field_e.b(97)) {
+                                                  vm.g(1);
+                                                  break L63;
+                                                } else {
+                                                  break L63;
+                                                }
+                                              }
+                                              if (lf.field_S == var5) {
+                                                break L3;
                                               } else {
-                                                var9 = param0 ? 1 : 0;
-                                                uk.a(qk.field_h, var9 != 0, 28333, 4);
+                                                mi.field_q.field_x = lf.field_S;
+                                                wf.a(um.field_l[0], 18);
                                                 if (var11 == 0) {
-                                                  break L2;
+                                                  break L3;
                                                 } else {
                                                   break L20;
                                                 }
                                               }
                                             }
-                                            L56: {
-                                              var5 = lf.field_S;
-                                              if (!this.field_e.a((byte) 94)) {
-                                                break L56;
+                                            L64: {
+                                              var5 = bc.field_b;
+                                              if (this.field_e.a((byte) 94)) {
+                                                rf.b(80, 0);
+                                                break L64;
                                               } else {
-                                                an.a(0, (byte) 81);
-                                                break L56;
+                                                break L64;
                                               }
                                             }
-                                            L57: {
+                                            L65: {
                                               if (this.field_e.a(true)) {
-                                                an.a(80, (byte) 84);
-                                                break L57;
+                                                rf.b(80, 80);
+                                                break L65;
                                               } else {
-                                                break L57;
+                                                break L65;
                                               }
                                             }
-                                            L58: {
-                                              if (!this.field_e.b(false)) {
-                                                break L58;
-                                              } else {
-                                                L59: {
-                                                  mi.field_q.c((byte) 57);
-                                                  if (mi.field_q.field_d) {
-                                                    break L59;
-                                                  } else {
-                                                    L60: {
-                                                      if (mi.field_q.field_i <= hn.field_k) {
-                                                        break L60;
-                                                      } else {
-                                                        an.a(0, (byte) 87);
-                                                        if (var11 == 0) {
-                                                          break L58;
-                                                        } else {
-                                                          break L60;
-                                                        }
-                                                      }
-                                                    }
-                                                    an.a(80, (byte) 99);
-                                                    if (var11 == 0) {
-                                                      break L58;
-                                                    } else {
-                                                      break L59;
-                                                    }
-                                                  }
-                                                }
-                                                an.a(mi.field_q.field_x, (byte) 95);
-                                                break L58;
-                                              }
-                                            }
-                                            L61: {
-                                              if (this.field_e.a(-97)) {
-                                                dm.a(false);
-                                                break L61;
-                                              } else {
-                                                break L61;
-                                              }
-                                            }
-                                            L62: {
-                                              if (this.field_e.b(97)) {
-                                                vm.g(1);
-                                                break L62;
-                                              } else {
-                                                break L62;
-                                              }
-                                            }
-                                            if (lf.field_S == var5) {
-                                              break L2;
-                                            } else {
-                                              mi.field_q.field_x = lf.field_S;
-                                              wf.a(um.field_l[0], 18);
-                                              if (var11 == 0) {
-                                                break L2;
-                                              } else {
-                                                break L19;
-                                              }
-                                            }
-                                          }
-                                          L63: {
-                                            var5 = bc.field_b;
-                                            if (this.field_e.a((byte) 94)) {
-                                              rf.b(80, 0);
-                                              break L63;
-                                            } else {
-                                              break L63;
-                                            }
-                                          }
-                                          L64: {
-                                            if (this.field_e.a(true)) {
-                                              rf.b(80, 80);
-                                              break L64;
-                                            } else {
-                                              break L64;
-                                            }
-                                          }
-                                          L65: {
-                                            if (this.field_e.b(false)) {
-                                              L66: {
-                                                hg.field_b.c((byte) 90);
-                                                if (!hg.field_b.field_d) {
-                                                  break L66;
-                                                } else {
-                                                  rf.b(80, hg.field_b.field_x);
-                                                  if (var11 == 0) {
-                                                    break L65;
-                                                  } else {
-                                                    break L66;
-                                                  }
-                                                }
-                                              }
-                                              L67: {
-                                                if (hg.field_b.field_i <= hn.field_k) {
-                                                  break L67;
-                                                } else {
-                                                  rf.b(param1 ^ 82, 0);
-                                                  if (var11 == 0) {
-                                                    break L65;
-                                                  } else {
+                                            L66: {
+                                              if (this.field_e.b(false)) {
+                                                L67: {
+                                                  hg.field_b.c((byte) 90);
+                                                  if (!hg.field_b.field_d) {
                                                     break L67;
+                                                  } else {
+                                                    rf.b(80, hg.field_b.field_x);
+                                                    if (var11 == 0) {
+                                                      break L66;
+                                                    } else {
+                                                      break L67;
+                                                    }
                                                   }
                                                 }
-                                              }
-                                              rf.b(param1 + 78, 80);
-                                              break L65;
-                                            } else {
-                                              break L65;
-                                            }
-                                          }
-                                          L68: {
-                                            if (!this.field_e.a(param1 ^ -99)) {
-                                              break L68;
-                                            } else {
-                                              cm.d((byte) -104);
-                                              break L68;
-                                            }
-                                          }
-                                          L69: {
-                                            if (this.field_e.b(97)) {
-                                              cl.a((byte) 27);
-                                              break L69;
-                                            } else {
-                                              break L69;
-                                            }
-                                          }
-                                          L70: {
-                                            if (var5 == bc.field_b) {
-                                              break L70;
-                                            } else {
-                                              hg.field_b.field_x = bc.field_b;
-                                              wf.a(um.field_l[0], -77);
-                                              break L70;
-                                            }
-                                          }
-                                          ib.field_a = bc.field_b;
-                                          if (var11 == 0) {
-                                            break L2;
-                                          } else {
-                                            break L18;
-                                          }
-                                        }
-                                        if (!this.field_e.d((byte) 111)) {
-                                          break L2;
-                                        } else {
-                                          L71: {
-                                            if (rm.field_R == null) {
-                                              break L71;
-                                            } else {
-                                              b.a(true);
-                                              if (var11 == 0) {
-                                                break L2;
+                                                L68: {
+                                                  if (hg.field_b.field_i <= hn.field_k) {
+                                                    break L68;
+                                                  } else {
+                                                    rf.b(param1 ^ 82, 0);
+                                                    if (var11 == 0) {
+                                                      break L66;
+                                                    } else {
+                                                      break L68;
+                                                    }
+                                                  }
+                                                }
+                                                rf.b(param1 + 78, 80);
+                                                break L66;
                                               } else {
+                                                break L66;
+                                              }
+                                            }
+                                            L69: {
+                                              if (!this.field_e.a(param1 ^ -99)) {
+                                                break L69;
+                                              } else {
+                                                cm.d((byte) -104);
+                                                break L69;
+                                              }
+                                            }
+                                            L70: {
+                                              if (this.field_e.b(97)) {
+                                                cl.a((byte) 27);
+                                                break L70;
+                                              } else {
+                                                break L70;
+                                              }
+                                            }
+                                            L71: {
+                                              if (var5 == bc.field_b) {
+                                                break L71;
+                                              } else {
+                                                hg.field_b.field_x = bc.field_b;
+                                                wf.a(um.field_l[0], -77);
                                                 break L71;
                                               }
                                             }
+                                            ib.field_a = bc.field_b;
+                                            if (var11 == 0) {
+                                              break L3;
+                                            } else {
+                                              break L19;
+                                            }
                                           }
-                                          fk.a(param0, 15);
+                                          if (!this.field_e.d((byte) 111)) {
+                                            break L3;
+                                          } else {
+                                            L72: {
+                                              if (rm.field_R == null) {
+                                                break L72;
+                                              } else {
+                                                b.a(true);
+                                                if (var11 == 0) {
+                                                  break L3;
+                                                } else {
+                                                  break L72;
+                                                }
+                                              }
+                                            }
+                                            fk.a(param0, 15);
+                                            if (var11 == 0) {
+                                              break L3;
+                                            } else {
+                                              break L18;
+                                            }
+                                          }
+                                        }
+                                        L73: {
+                                          var6 = rn.field_b;
+                                          if (this.field_e.c(84)) {
+                                            rn.field_b = rn.field_b + 1;
+                                            break L73;
+                                          } else {
+                                            break L73;
+                                          }
+                                        }
+                                        L74: {
+                                          if (!this.field_e.e(0)) {
+                                            break L74;
+                                          } else {
+                                            rn.field_b = rn.field_b - 1;
+                                            break L74;
+                                          }
+                                        }
+                                        L75: {
+                                          if (2 >= rn.field_b) {
+                                            break L75;
+                                          } else {
+                                            rn.field_b = 0;
+                                            break L75;
+                                          }
+                                        }
+                                        L76: {
+                                          if (0 <= rn.field_b) {
+                                            break L76;
+                                          } else {
+                                            rn.field_b = 2;
+                                            break L76;
+                                          }
+                                        }
+                                        if (rn.field_b == var6) {
+                                          break L3;
+                                        } else {
+                                          ph.a(-7125);
                                           if (var11 == 0) {
-                                            break L2;
+                                            break L3;
                                           } else {
                                             break L17;
                                           }
                                         }
                                       }
-                                      L72: {
-                                        var6 = rn.field_b;
-                                        if (this.field_e.c(84)) {
-                                          rn.field_b = rn.field_b + 1;
-                                          break L72;
-                                        } else {
-                                          break L72;
-                                        }
-                                      }
-                                      L73: {
-                                        if (!this.field_e.e(0)) {
-                                          break L73;
-                                        } else {
-                                          rn.field_b = rn.field_b - 1;
-                                          break L73;
-                                        }
-                                      }
-                                      L74: {
-                                        if (2 >= rn.field_b) {
-                                          break L74;
-                                        } else {
-                                          rn.field_b = 0;
-                                          break L74;
-                                        }
-                                      }
-                                      L75: {
-                                        if (0 <= rn.field_b) {
-                                          break L75;
-                                        } else {
-                                          rn.field_b = 2;
-                                          break L75;
-                                        }
-                                      }
-                                      if (rn.field_b == var6) {
-                                        break L2;
-                                      } else {
-                                        ph.a(-7125);
+                                      if (this.field_e.d((byte) 99)) {
+                                        lc.field_q = true;
+                                        qk.field_h = 0;
+                                        ma.field_D = false;
                                         if (var11 == 0) {
-                                          break L2;
+                                          break L3;
                                         } else {
                                           break L16;
                                         }
+                                      } else {
+                                        break L2;
                                       }
                                     }
-                                    if (this.field_e.d((byte) 99)) {
-                                      lc.field_q = true;
-                                      qk.field_h = 0;
-                                      ma.field_D = false;
+                                    if (this.field_e.d((byte) 63)) {
+                                      oc.field_p.h(28);
+                                      qk.field_h = -1;
                                       if (var11 == 0) {
-                                        break L2;
+                                        break L3;
                                       } else {
                                         break L15;
                                       }
@@ -2796,137 +3168,136 @@ final class aa {
                                       break L2;
                                     }
                                   }
-                                  if (this.field_e.d((byte) 63)) {
-                                    oc.field_p.h(28);
-                                    qk.field_h = -1;
+                                  if (!this.field_e.d((byte) 92)) {
+                                    break L3;
+                                  } else {
+                                    oc.field_p.b(true);
                                     if (var11 == 0) {
-                                      break L2;
+                                      break L3;
                                     } else {
                                       break L14;
                                     }
-                                  } else {
-                                    break L2;
                                   }
                                 }
-                                if (!this.field_e.d((byte) 92)) {
-                                  break L2;
-                                } else {
-                                  oc.field_p.b(true);
+                                if (this.field_e.d((byte) 92)) {
+                                  this.a(param1 + 9, param0);
                                   if (var11 == 0) {
-                                    break L2;
+                                    break L3;
                                   } else {
                                     break L13;
                                   }
-                                }
-                              }
-                              if (this.field_e.d((byte) 92)) {
-                                this.a(param1 + 9, param0);
-                                if (var11 == 0) {
+                                } else {
                                   break L2;
-                                } else {
-                                  break L12;
                                 }
-                              } else {
-                                break L2;
                               }
-                            }
-                            L76: {
-                              if (this.field_e.e(0)) {
-                                tk.field_e = tk.field_e - 1;
-                                if (tk.field_e >= 0) {
-                                  break L76;
-                                } else {
-                                  tk.field_e = -1 + cm.field_r.length;
-                                  break L76;
-                                }
-                              } else {
-                                break L76;
-                              }
-                            }
-                            if (this.field_e.c(84)) {
-                              tk.field_e = tk.field_e + 1;
-                              if (cm.field_r.length == tk.field_e) {
-                                tk.field_e = 0;
-                                if (var11 == 0) {
-                                  break L2;
-                                } else {
-                                  break L11;
-                                }
-                              } else {
-                                break L2;
-                              }
-                            } else {
-                              break L2;
-                            }
-                          }
-                          if (!this.field_e.d((byte) 68)) {
-                            break L2;
-                          } else {
-                            L77: {
-                              if ((this.field_c ^ -1) == -8) {
-                                break L77;
-                              } else {
-                                L78: {
-                                  if (-7 == (this.field_c ^ -1)) {
-                                    break L78;
+                              L77: {
+                                if (this.field_e.e(0)) {
+                                  tk.field_e = tk.field_e - 1;
+                                  if (tk.field_e >= 0) {
+                                    break L77;
                                   } else {
-                                    if (4 != jc.field_f) {
-                                      break L2;
-                                    } else {
-                                      break L78;
-                                    }
+                                    tk.field_e = -1 + cm.field_r.length;
+                                    break L77;
                                   }
-                                }
-                                hj.a(this.field_c, this.field_c, false);
-                                if (var11 == 0) {
-                                  break L2;
                                 } else {
                                   break L77;
                                 }
                               }
+                              if (this.field_e.c(84)) {
+                                tk.field_e = tk.field_e + 1;
+                                if (cm.field_r.length == tk.field_e) {
+                                  tk.field_e = 0;
+                                  if (var11 == 0) {
+                                    break L3;
+                                  } else {
+                                    break L12;
+                                  }
+                                } else {
+                                  break L2;
+                                }
+                              } else {
+                                break L2;
+                              }
                             }
-                            hj.a(this.field_c, this.field_c, false);
+                            if (!this.field_e.d((byte) 68)) {
+                              break L3;
+                            } else {
+                              L78: {
+                                if ((this.field_c ^ -1) == -8) {
+                                  break L78;
+                                } else {
+                                  L79: {
+                                    if (-7 == (this.field_c ^ -1)) {
+                                      break L79;
+                                    } else {
+                                      if (4 != jc.field_f) {
+                                        break L3;
+                                      } else {
+                                        break L79;
+                                      }
+                                    }
+                                  }
+                                  hj.a(this.field_c, this.field_c, false);
+                                  if (var11 == 0) {
+                                    break L3;
+                                  } else {
+                                    break L78;
+                                  }
+                                }
+                              }
+                              hj.a(this.field_c, this.field_c, false);
+                              if (var11 == 0) {
+                                break L3;
+                              } else {
+                                break L11;
+                              }
+                            }
+                          }
+                          if (!this.field_e.d((byte) 116)) {
+                            break L3;
+                          } else {
+                            L80: {
+                              if (rm.field_R != null) {
+                                b.a(true);
+                                break L80;
+                              } else {
+                                break L80;
+                              }
+                            }
+                            dh.a(bh.i(81), true);
                             if (var11 == 0) {
-                              break L2;
+                              break L3;
                             } else {
                               break L10;
                             }
                           }
                         }
-                        if (!this.field_e.d((byte) 116)) {
-                          break L2;
+                        if (!this.field_e.d((byte) 123)) {
+                          break L3;
                         } else {
-                          L79: {
-                            if (rm.field_R != null) {
-                              b.a(true);
-                              break L79;
-                            } else {
-                              break L79;
-                            }
-                          }
-                          dh.a(bh.i(81), true);
+                          this.a((byte) 110, 5);
                           if (var11 == 0) {
-                            break L2;
+                            break L3;
                           } else {
                             break L9;
                           }
                         }
                       }
-                      if (!this.field_e.d((byte) 123)) {
-                        break L2;
-                      } else {
-                        this.a((byte) 110, 5);
+                      if (this.field_e.d((byte) 119)) {
+                        this.a((byte) 125, 4);
                         if (var11 == 0) {
-                          break L2;
+                          break L3;
                         } else {
                           break L8;
                         }
+                      } else {
+                        break L2;
                       }
                     }
-                    if (this.field_e.d((byte) 119)) {
-                      this.a((byte) 125, 4);
+                    if (this.field_e.d((byte) 38)) {
+                      this.a((byte) 112, 2);
                       if (var11 == 0) {
-                        break L2;
+                        break L3;
                       } else {
                         break L7;
                       }
@@ -2934,138 +3305,129 @@ final class aa {
                       break L2;
                     }
                   }
-                  if (this.field_e.d((byte) 38)) {
-                    this.a((byte) 112, 2);
+                  if (!this.field_e.d((byte) 114)) {
+                    break L3;
+                  } else {
+                    this.a((byte) 118, 3);
                     if (var11 == 0) {
-                      break L2;
+                      break L3;
                     } else {
                       break L6;
                     }
-                  } else {
-                    break L2;
                   }
                 }
-                if (!this.field_e.d((byte) 114)) {
-                  break L2;
+                if (!this.field_e.d((byte) 43)) {
+                  break L3;
                 } else {
-                  this.a((byte) 118, 3);
+                  oc.field_p.field_t.a(-1, false, -1);
+                  qk.field_h = -1;
                   if (var11 == 0) {
-                    break L2;
+                    break L3;
                   } else {
                     break L5;
                   }
                 }
               }
-              if (!this.field_e.d((byte) 43)) {
-                break L2;
-              } else {
-                oc.field_p.field_t.a(-1, false, -1);
-                qk.field_h = -1;
-                if (var11 == 0) {
-                  break L2;
+              L81: {
+                if (!this.field_e.field_e) {
+                  break L81;
                 } else {
-                  break L4;
+                  if (!this.field_e.d((byte) 84)) {
+                    break L3;
+                  } else {
+                    break L81;
+                  }
                 }
               }
-            }
-            L80: {
-              if (!this.field_e.field_e) {
-                break L80;
-              } else {
-                if (!this.field_e.d((byte) 84)) {
-                  break L2;
-                } else {
-                  break L80;
-                }
-              }
-            }
-            this.field_h = var4;
-            if (var11 == 0) {
-              break L2;
-            } else {
-              break L3;
-            }
-          }
-          L81: {
-            var7 = nb.field_Fb;
-            if (var7 != null) {
-              break L81;
-            } else {
+              this.field_h = var4;
               if (var11 == 0) {
-                break L2;
+                break L3;
               } else {
-                break L81;
+                break L4;
               }
             }
-          }
-          L82: {
-            var7.c((byte) -119);
-            if (null != uh.i(param1 + 23154)) {
-              var7.field_y = uh.i(param1 ^ 23158).field_t.a((byte) -113);
-              if (var7.field_x != -1) {
+            L82: {
+              var7 = nb.field_Fb;
+              if (var7 != null) {
                 break L82;
               } else {
-                var7.field_x = var7.field_y;
-                break L82;
-              }
-            } else {
-              break L82;
-            }
-          }
-          L83: {
-            var8 = 0;
-            if (this.field_e.b(97)) {
-              L84: {
-                nb.field_Fb.field_x = nb.field_Fb.field_x + 1;
-                if (nb.field_Fb.field_y >= nb.field_Fb.field_x) {
-                  break L84;
+                if (var11 == 0) {
+                  break L3;
                 } else {
-                  nb.field_Fb.field_x = nb.field_Fb.field_y;
-                  break L84;
+                  break L82;
                 }
               }
-              var8 = 1;
-              break L83;
-            } else {
-              break L83;
             }
-          }
-          L85: {
-            if (!this.field_e.a(param1 + -99)) {
-              break L85;
-            } else {
-              L86: {
-                nb.field_Fb.field_x = nb.field_Fb.field_x - 1;
-                if (0 > nb.field_Fb.field_x) {
-                  nb.field_Fb.field_x = 0;
-                  break L86;
+            L83: {
+              var7.c((byte) -119);
+              if (null != uh.i(param1 + 23154)) {
+                var7.field_y = uh.i(param1 ^ 23158).field_t.a((byte) -113);
+                if (var7.field_x != -1) {
+                  break L83;
                 } else {
-                  break L86;
+                  var7.field_x = var7.field_y;
+                  break L83;
                 }
+              } else {
+                break L83;
               }
-              var8 = 1;
-              break L85;
             }
-          }
-          L87: {
-            if (!var7.field_d) {
-              break L87;
-            } else {
-              if (nb.field_Fb.field_x != uh.i(23156).field_t.field_o) {
+            L84: {
+              var8 = 0;
+              if (this.field_e.b(97)) {
+                L85: {
+                  nb.field_Fb.field_x = nb.field_Fb.field_x + 1;
+                  if (nb.field_Fb.field_y >= nb.field_Fb.field_x) {
+                    break L85;
+                  } else {
+                    nb.field_Fb.field_x = nb.field_Fb.field_y;
+                    break L85;
+                  }
+                }
                 var8 = 1;
-                break L87;
+                break L84;
               } else {
-                break L87;
+                break L84;
               }
             }
+            L86: {
+              if (!this.field_e.a(param1 + -99)) {
+                break L86;
+              } else {
+                L87: {
+                  nb.field_Fb.field_x = nb.field_Fb.field_x - 1;
+                  if (0 > nb.field_Fb.field_x) {
+                    nb.field_Fb.field_x = 0;
+                    break L87;
+                  } else {
+                    break L87;
+                  }
+                }
+                var8 = 1;
+                break L86;
+              }
+            }
+            L88: {
+              if (!var7.field_d) {
+                break L88;
+              } else {
+                if (nb.field_Fb.field_x != uh.i(23156).field_t.field_o) {
+                  var8 = 1;
+                  break L88;
+                } else {
+                  break L88;
+                }
+              }
+            }
+            if (var8 == 0) {
+              break L3;
+            } else {
+              uh.i(23156).field_t.field_o = nb.field_Fb.field_x;
+              wf.a(um.field_l[0], param1 + 122);
+              break L2;
+            }
           }
-          if (var8 == 0) {
-            break L2;
-          } else {
-            uh.i(23156).field_t.field_o = nb.field_Fb.field_x;
-            wf.a(um.field_l[0], param1 + 122);
-            break L2;
-          }
+          break L2;
         }
     }
 

@@ -234,7 +234,7 @@ final class cm {
                           break L9;
                         }
                       }
-                      throw ci.a((Throwable) ((Object) stackIn_37_0), (stackIn_37_2 != 0) + " " + param1 + " " + param3.length + " " + ba.a((byte) -107, var9, param3.length) + " " + ba.a((byte) -107, var9, param3.length + -2) + " " + this.field_a.field_a[param1] + " " + this.field_a.field_e);
+                      throw ci.a((Throwable) ((Object) stackIn_37_0), (stackIn_37_2 != 0) + " " + param1 + " " + var9.length + " " + ba.a((byte) -107, var9, var9.length) + " " + ba.a((byte) -107, var9, var9.length + -2) + " " + this.field_a.field_a[param1] + " " + this.field_a.field_e);
                     }
                     L10: {
                       if (this.field_f) {

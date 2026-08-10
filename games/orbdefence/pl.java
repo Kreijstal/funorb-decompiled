@@ -25,17 +25,12 @@ final class pl implements Iterator {
               fieldTemp$2 = this.field_e.field_b;
               fieldTemp$3 = this.field_b;
               this.field_b = this.field_b + 1;
-              if (fieldTemp$2[fieldTemp$3].field_e == this.field_e.field_b[-1 + this.field_b]) {
-                this.field_c = this.field_e.field_b[-1 + this.field_b];
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  this.field_c = this.field_e.field_b[this.field_b + -1].field_e;
-                  return true;
-                }
-              } else {
+              if (fieldTemp$2[fieldTemp$3].field_e != this.field_e.field_b[-1 + this.field_b]) {
                 this.field_c = this.field_e.field_b[this.field_b + -1].field_e;
                 return true;
+              } else {
+                this.field_c = this.field_e.field_b[-1 + this.field_b];
+                continue L0;
               }
             } else {
               return false;
@@ -65,11 +60,7 @@ final class pl implements Iterator {
                 this.field_g = var3;
                 return var3;
               } else {
-                if (var2 == 0) {
-                  continue L0;
-                } else {
-                  return null;
-                }
+                continue L0;
               }
             } else {
               return null;

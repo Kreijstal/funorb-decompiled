@@ -988,19 +988,22 @@ class cf extends br {
               L6: {
                 if (null != this.field_A) {
                   L7: {
-                    discarded$6 = param1.append(" listener=");
-                    if (this.field_A instanceof cf) {
-                      break L7;
-                    } else {
-                      discarded$7 = param1.append(this.field_A);
-                      if (var6 == 0) {
-                        break L6;
+                    L8: {
+                      discarded$6 = param1.append(" listener=");
+                      if (this.field_A instanceof cf) {
+                        break L8;
                       } else {
-                        break L7;
+                        discarded$7 = param1.append(this.field_A);
+                        if (var6 == 0) {
+                          break L7;
+                        } else {
+                          break L8;
+                        }
                       }
                     }
+                    param1 = this.a(7, param3, param0 - -1, param1);
+                    break L7;
                   }
-                  param1 = this.a(7, param3, param0 - -1, param1);
                   break L6;
                 } else {
                   break L6;
@@ -1015,7 +1018,7 @@ class cf extends br {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L9: {
             var5 = decompiledCaughtException;
             stackIn_25_0 = (RuntimeException) (var5);
 
@@ -1025,15 +1028,15 @@ class cf extends br {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "null";
-              break L8;
+              break L9;
             } else {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "{...}";
-              break L8;
+              break L9;
             }
           }
-          L9: {
+          L10: {
 
 
             stackIn_28_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param2).append(',');
@@ -1042,12 +1045,12 @@ class cf extends br {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_26_0);
               stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackIn_29_2 = "null";
-              break L9;
+              break L10;
             } else {
               stackIn_26_0 = (RuntimeException) ((Object) stackIn_26_0);
               stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackIn_29_2 = "{...}";
-              break L9;
+              break L10;
             }
           }
           throw fa.a((Throwable) ((Object) stackIn_26_0), stackIn_29_2 + ')');
@@ -1303,17 +1306,20 @@ class cf extends br {
                       break L2;
                     }
                   }
-                  ((cf) (this)).field_l = stackIn_7_1 != 0;
-                  if (this.field_A == null) {
-                    break L1;
-                  } else {
-                    if (!(this.field_A instanceof ar)) {
-                      break L1;
+                  L3: {
+                    ((cf) (this)).field_l = stackIn_7_1 != 0;
+                    if (this.field_A == null) {
+                      break L3;
                     } else {
-                      ((ar) ((Object) this.field_A)).a((cf) (this), -14339, var5_int != 0);
-                      break L1;
+                      if (!(this.field_A instanceof ar)) {
+                        break L3;
+                      } else {
+                        ((ar) ((Object) this.field_A)).a((cf) (this), -14339, var5_int != 0);
+                        break L1;
+                      }
                     }
                   }
+                  break L1;
                 } else {
                   break L1;
                 }
@@ -1327,7 +1333,7 @@ class cf extends br {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var5 = decompiledCaughtException;
             stackIn_13_0 = (RuntimeException) (var5);
 
@@ -1337,12 +1343,12 @@ class cf extends br {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "null";
-              break L3;
+              break L4;
             } else {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "{...}";
-              break L3;
+              break L4;
             }
           }
           throw fa.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ')');

@@ -109,42 +109,25 @@ final class le {
     final int a(int param0, boolean param1) {
         int var3;
         int var4;
-        int stackIn_10_0 = 0;
-        int stackIn_10_1 = 0;
         var4 = SolKnight.field_L ? 1 : 0;
         if (null != this.field_c) {
           if (-1 != (this.field_c.length ^ -1)) {
             var3 = 1;
             L0: while (true) {
-              L1: {
-                if (this.field_c.length <= var3) {
-                  break L1;
+              if (this.field_c.length <= var3) {
+                if (param1) {
+                  field_d = (o[]) null;
+                  return this.field_c.length + -1;
                 } else {
-                  stackIn_10_0 = param0 ^ -1;
-
-                  stackIn_10_1 = this.field_c[var3] + this.field_c[var3 - 1] >> 873698625 ^ -1;
-
-                  if (var4 == 0) {
-                    if (stackIn_10_0 > stackIn_10_1) {
-                      return -1 + var3;
-                    } else {
-                      var3++;
-                      if (var4 == 0) {
-                        continue L0;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  } else {
-                    return stackIn_10_0 + stackIn_10_1;
-                  }
+                  return this.field_c.length + -1;
                 }
-              }
-              if (param1) {
-                field_d = (o[]) null;
-                return this.field_c.length + -1;
               } else {
-                return this.field_c.length + -1;
+                if ((param0 ^ -1) > (this.field_c[var3] + this.field_c[var3 - 1] >> 873698625 ^ -1)) {
+                  return -1 + var3;
+                } else {
+                  var3++;
+                  continue L0;
+                }
               }
             }
           } else {

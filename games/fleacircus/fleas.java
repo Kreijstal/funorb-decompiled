@@ -550,15 +550,18 @@ public final class fleas extends wb {
                   }
                 }
               }
-              if (-2 == (param4 ^ -1)) {
-                break L46;
-              } else {
-                if (-1 != md.field_L) {
-                  break L46;
+              L49: {
+                if (-2 == (param4 ^ -1)) {
+                  break L49;
                 } else {
-                  break L47;
+                  if (-1 != md.field_L) {
+                    break L49;
+                  } else {
+                    break L47;
+                  }
                 }
               }
+              break L46;
             }
             cl.field_d[param2] = 1;
             fh.a((byte) 87, kc.field_e, 100, 63);
@@ -2382,123 +2385,136 @@ public final class fleas extends wb {
             if ((param1 ^ -1) <= -339) {
               break L0;
             } else {
-              if (-3 < (param1 ^ -1)) {
-                break L0;
-              } else {
-                if (2 > param2) {
-                  break L0;
+              L1: {
+                if (-3 < (param1 ^ -1)) {
+                  break L1;
                 } else {
-                  if (-643 >= (param2 ^ -1)) {
-                    break L0;
+                  if (2 > param2) {
+                    break L1;
                   } else {
-                    var4 = param2 / 16;
-                    var5 = param1 / 16;
-                    var7 = 4 * var5;
-                    var6 = var4 * 4;
-                    if ((var4 ^ -1) > -1) {
-                      return;
+                    if (-643 >= (param2 ^ -1)) {
+                      break L1;
                     } else {
-                      L1: {
-                        if (0 > var5) {
-                          break L1;
-                        } else {
-                          if (40 <= var4) {
-                            break L1;
+                      var4 = param2 / 16;
+                      var5 = param1 / 16;
+                      var7 = 4 * var5;
+                      var6 = var4 * 4;
+                      if ((var4 ^ -1) > -1) {
+                        return;
+                      } else {
+                        L2: {
+                          if (0 > var5) {
+                            break L2;
                           } else {
-                            if (-22 >= (var5 ^ -1)) {
-                              break L1;
+                            if (40 <= var4) {
+                              break L2;
                             } else {
-                              param2 = var6;
-                              L2: while (true) {
-                                if (param2 >= var6 - -4) {
-                                  L3: {
-                                    stackIn_25_0 = -109;
+                              if (-22 >= (var5 ^ -1)) {
+                                break L2;
+                              } else {
+                                param2 = var6;
+                                L3: while (true) {
+                                  if (param2 >= var6 - -4) {
+                                    L4: {
+                                      stackIn_25_0 = -109;
 
-                                    if (mh.field_u != 1) {
-                                      stackIn_26_0 = stackIn_25_0;
-                                      stackIn_26_1 = el.field_C;
-                                      break L3;
-                                    } else {
-                                      stackIn_26_0 = stackIn_25_0;
-                                      stackIn_26_1 = rl.field_g;
-                                      break L3;
+                                      if (mh.field_u != 1) {
+                                        stackIn_26_0 = stackIn_25_0;
+                                        stackIn_26_1 = el.field_C;
+                                        break L4;
+                                      } else {
+                                        stackIn_26_0 = stackIn_25_0;
+                                        stackIn_26_1 = rl.field_g;
+                                        break L4;
+                                      }
                                     }
-                                  }
-                                  fh.a((byte) stackIn_26_0, stackIn_26_1, 100, 63);
-                                  ik.field_R = false;
-                                  fl.field_c[var4][var5] = (char)(1 + mh.field_u);
-                                  this.a((byte) -91, var5, var4);
-                                  param2 = var6;
-                                  L4: while (true) {
-                                    if (param2 >= 4 + var6) {
-                                      break L0;
-                                    } else {
-                                      param1 = var7;
-                                      L5: while (true) {
-                                        if (var7 - -4 <= param1) {
-                                          param2++;
-                                          continue L4;
-                                        } else {
-                                          L6: {
-                                            if (-2 == (mh.field_u ^ -1)) {
-                                              lh.field_e[param2][param1] = 1;
-                                              break L6;
-                                            } else {
-                                              break L6;
-                                            }
-                                          }
-                                          L7: {
-                                            if (-3 != (mh.field_u ^ -1)) {
-                                              if (-4 != (mh.field_u ^ -1)) {
+                                    fh.a((byte) stackIn_26_0, stackIn_26_1, 100, 63);
+                                    ik.field_R = false;
+                                    fl.field_c[var4][var5] = (char)(1 + mh.field_u);
+                                    this.a((byte) -91, var5, var4);
+                                    param2 = var6;
+                                    L5: while (true) {
+                                      if (param2 >= 4 + var6) {
+                                        break L1;
+                                      } else {
+                                        param1 = var7;
+                                        L6: while (true) {
+                                          if (var7 - -4 <= param1) {
+                                            param2++;
+                                            continue L5;
+                                          } else {
+                                            L7: {
+                                              if (-2 == (mh.field_u ^ -1)) {
+                                                lh.field_e[param2][param1] = 1;
                                                 break L7;
                                               } else {
-                                                if (-var7 + param1 != -var6 + param2) {
-                                                  break L7;
-                                                } else {
-                                                  lh.field_e[param2][param1] = 1;
-                                                  break L7;
-                                                }
-                                              }
-                                            } else {
-                                              if (-4 != (mh.field_u ^ -1)) {
                                                 break L7;
-                                              } else {
-                                                if (-var7 + param1 != -var6 + param2) {
-                                                  break L7;
+                                              }
+                                            }
+                                            L8: {
+                                              if (-3 == (mh.field_u ^ -1)) {
+                                                L9: {
+                                                  if (param2 - var6 == -param1 + (var7 + 3)) {
+                                                    lh.field_e[param2][param1] = 1;
+                                                    break L9;
+                                                  } else {
+                                                    break L9;
+                                                  }
+                                                }
+                                                if (-4 == (mh.field_u ^ -1)) {
+                                                  if (-var7 + param1 == -var6 + param2) {
+                                                    break L8;
+                                                  } else {
+                                                    param1++;
+                                                    continue L6;
+                                                  }
                                                 } else {
-                                                  lh.field_e[param2][param1] = 1;
-                                                  break L7;
+                                                  param1++;
+                                                  continue L6;
+                                                }
+                                              } else {
+                                                if (-4 == (mh.field_u ^ -1)) {
+                                                  if (-var7 + param1 == -var6 + param2) {
+                                                    break L8;
+                                                  } else {
+                                                    param1++;
+                                                    continue L6;
+                                                  }
+                                                } else {
+                                                  param1++;
+                                                  continue L6;
                                                 }
                                               }
                                             }
+                                            lh.field_e[param2][param1] = 1;
+                                            param1++;
+                                            continue L6;
                                           }
-                                          param1++;
-                                          continue L5;
                                         }
                                       }
                                     }
-                                  }
-                                } else {
-                                  param1 = var7;
-                                  L8: while (true) {
-                                    if (4 + var7 <= param1) {
-                                      param2++;
-                                      continue L2;
-                                    } else {
-                                      if (0 == lh.field_e[param2][param1]) {
-                                        param1++;
-                                        continue L8;
+                                  } else {
+                                    param1 = var7;
+                                    L10: while (true) {
+                                      if (4 + var7 <= param1) {
+                                        param2++;
+                                        continue L3;
                                       } else {
-                                        L9: {
-                                          if (ik.field_R) {
-                                            fh.a((byte) 107, gi.field_d, 100, 96);
-                                            ik.field_R = false;
-                                            break L9;
-                                          } else {
-                                            break L9;
+                                        if (0 == lh.field_e[param2][param1]) {
+                                          param1++;
+                                          continue L10;
+                                        } else {
+                                          L11: {
+                                            if (ik.field_R) {
+                                              fh.a((byte) 107, gi.field_d, 100, 96);
+                                              ik.field_R = false;
+                                              break L11;
+                                            } else {
+                                              break L11;
+                                            }
                                           }
+                                          return;
                                         }
-                                        return;
                                       }
                                     }
                                   }
@@ -2507,12 +2523,13 @@ public final class fleas extends wb {
                             }
                           }
                         }
+                        return;
                       }
-                      return;
                     }
                   }
                 }
               }
+              break L0;
             }
           }
           return;
@@ -2621,14 +2638,14 @@ public final class fleas extends wb {
         int[] dupTemp$3 = null;
         int dupTemp$4 = 0;
         StringBuilder discarded$5 = null;
+        int stackIn_64_0 = 0;
         int stackIn_67_0 = 0;
-        int stackIn_70_0 = 0;
+        vg stackIn_72_0 = null;
+        vg stackIn_73_0 = null;
+        int stackIn_73_1 = 0;
         vg stackIn_75_0 = null;
         vg stackIn_76_0 = null;
         int stackIn_76_1 = 0;
-        vg stackIn_78_0 = null;
-        vg stackIn_79_0 = null;
-        int stackIn_79_1 = 0;
         int var2;
         int var3;
         int var4;
@@ -2787,37 +2804,37 @@ public final class fleas extends wb {
                       if (pl.field_f < var16.field_e) {
                         if (qe.field_k >= 2) {
                           if (ji.field_a == 2) {
-                            stackIn_67_0 = 1;
+                            stackIn_64_0 = 1;
                             break L15;
                           } else {
-                            stackIn_67_0 = 0;
+                            stackIn_64_0 = 0;
                             break L15;
                           }
                         } else {
-                          stackIn_67_0 = 0;
+                          stackIn_64_0 = 0;
                           break L15;
                         }
                       } else {
-                        stackIn_67_0 = 1;
+                        stackIn_64_0 = 1;
                         break L15;
                       }
                     } else {
-                      stackIn_67_0 = 1;
+                      stackIn_64_0 = 1;
                       break L15;
                     }
                   }
                   L16: {
-                    var17 = stackIn_67_0;
+                    var17 = stackIn_64_0;
                     if (var16.field_e <= var16.field_f - jg.field_e) {
-                      stackIn_70_0 = 0;
+                      stackIn_67_0 = 0;
                       break L16;
                     } else {
-                      stackIn_70_0 = 1;
+                      stackIn_67_0 = 1;
                       break L16;
                     }
                   }
                   L17: {
-                    var18 = stackIn_70_0;
+                    var18 = stackIn_67_0;
                     if (var18 == 0) {
                       break L17;
                     } else {
@@ -2830,34 +2847,34 @@ public final class fleas extends wb {
                     }
                   }
                   L18: {
-                    stackIn_75_0 = lk.field_D;
+                    stackIn_72_0 = lk.field_D;
 
                     if (var17 == 0) {
-                      stackIn_76_0 = (vg) ((Object) stackIn_75_0);
-                      stackIn_76_1 = 0;
+                      stackIn_73_0 = (vg) ((Object) stackIn_72_0);
+                      stackIn_73_1 = 0;
                       break L18;
                     } else {
-                      stackIn_76_0 = (vg) ((Object) stackIn_75_0);
-                      stackIn_76_1 = 1;
+                      stackIn_73_0 = (vg) ((Object) stackIn_72_0);
+                      stackIn_73_1 = 1;
                       break L18;
                     }
                   }
                   L19: {
-                    stackIn_76_0.field_k = stackIn_76_1 != 0;
-                    stackIn_78_0 = si.field_y;
+                    stackIn_73_0.field_k = stackIn_73_1 != 0;
+                    stackIn_75_0 = si.field_y;
 
                     if (lk.field_D.field_k) {
-                      stackIn_79_0 = (vg) ((Object) stackIn_78_0);
-                      stackIn_79_1 = 0;
+                      stackIn_76_0 = (vg) ((Object) stackIn_75_0);
+                      stackIn_76_1 = 0;
                       break L19;
                     } else {
-                      stackIn_79_0 = (vg) ((Object) stackIn_78_0);
-                      stackIn_79_1 = 1;
+                      stackIn_76_0 = (vg) ((Object) stackIn_75_0);
+                      stackIn_76_1 = 1;
                       break L19;
                     }
                   }
                   L20: {
-                    stackIn_79_0.field_k = stackIn_79_1 != 0;
+                    stackIn_76_0.field_k = stackIn_76_1 != 0;
                     if (var17 == 0) {
                       break L20;
                     } else {
@@ -2902,7 +2919,15 @@ public final class fleas extends wb {
                       }
                       if (pl.field_f == ml.field_O) {
                         L24: {
-                          if (0 != tj.field_a) {
+                          if (0 == tj.field_a) {
+                            L25: {
+                              if (field_E == 1) {
+                                hg.a(-25389, 5, 250, tj.field_a);
+                                break L25;
+                              } else {
+                                break L25;
+                              }
+                            }
                             if (-2 != (tj.field_a ^ -1)) {
                               break L24;
                             } else {
@@ -2923,27 +2948,15 @@ public final class fleas extends wb {
                                 hg.a(-25389, 6, 249, tj.field_a);
                                 break L24;
                               }
-                            }
-                          }
-                        }
-                        L25: {
-                          if (-3 != (tj.field_a ^ -1)) {
-                            break L25;
-                          } else {
-                            if (field_E == 1) {
-                              hg.a(-25389, 7, 248, tj.field_a);
-                              break L25;
-                            } else {
-                              break L25;
                             }
                           }
                         }
                         L26: {
-                          if (3 != tj.field_a) {
+                          if (-3 != (tj.field_a ^ -1)) {
                             break L26;
                           } else {
                             if (field_E == 1) {
-                              hg.a(-25389, 8, 247, tj.field_a);
+                              hg.a(-25389, 7, 248, tj.field_a);
                               break L26;
                             } else {
                               break L26;
@@ -2951,14 +2964,26 @@ public final class fleas extends wb {
                           }
                         }
                         L27: {
-                          if ((tj.field_a ^ -1) != -5) {
+                          if (3 != tj.field_a) {
                             break L27;
                           } else {
-                            if ((field_E ^ -1) == -2) {
-                              hg.a(-25389, 9, 246, tj.field_a);
+                            if (field_E == 1) {
+                              hg.a(-25389, 8, 247, tj.field_a);
                               break L27;
                             } else {
                               break L27;
+                            }
+                          }
+                        }
+                        L28: {
+                          if ((tj.field_a ^ -1) != -5) {
+                            break L28;
+                          } else {
+                            if ((field_E ^ -1) == -2) {
+                              hg.a(-25389, 9, 246, tj.field_a);
+                              break L28;
+                            } else {
+                              break L28;
                             }
                           }
                         }
@@ -2969,42 +2994,42 @@ public final class fleas extends wb {
                       }
                     }
                   }
-                  L28: {
+                  L29: {
                     ol.field_f.field_t = fl.field_f;
                     ol.field_f.c(47);
                     fl.field_f = ol.field_f.field_t;
                     if (fl.field_f) {
-                      L29: {
+                      L30: {
                         var19 = ag.field_f / 16;
                         var20 = kc.field_b / 16;
                         var21 = -1;
                         if ((var20 ^ -1) <= -22) {
-                          break L29;
+                          break L30;
                         } else {
                           if (var19 >= 40) {
-                            break L29;
+                            break L30;
                           } else {
                             if ((var20 ^ -1) > -1) {
-                              break L29;
+                              break L30;
                             } else {
                               if (0 <= var19) {
                                 var21 = fl.field_c[var19][var20];
-                                break L29;
+                                break L30;
                               } else {
-                                break L29;
+                                break L30;
                               }
                             }
                           }
                         }
                       }
                       var22 = ob.field_c.length + -1;
-                      L30: while (true) {
+                      L31: while (true) {
                         if (var22 < 0) {
-                          break L28;
+                          break L29;
                         } else {
-                          L31: {
+                          L32: {
                             if ((var22 ^ -1) == (var21 ^ -1)) {
-                              L32: {
+                              L33: {
                                 ob.field_c[var22].field_l = var19 * 16;
                                 ob.field_c[var22].field_a = var20 * 16;
                                 dupTemp$0 = ob.field_c[var22];
@@ -3021,155 +3046,155 @@ public final class fleas extends wb {
                                 var25.field_G = 16;
                                 if ((ob.field_c[var22].field_l ^ -1) > -1) {
                                   ob.field_c[var22].field_l = 0;
-                                  break L32;
+                                  break L33;
                                 } else {
-                                  break L32;
+                                  break L33;
                                 }
                               }
-                              L33: {
+                              L34: {
                                 if (ob.field_c[var22].field_a >= 0) {
-                                  break L33;
+                                  break L34;
                                 } else {
                                   ob.field_c[var22].field_a = 0;
-                                  break L33;
+                                  break L34;
                                 }
                               }
                               if (ob.field_c[var22].field_l - -ob.field_c[var22].field_n <= 640) {
-                                break L31;
+                                break L32;
                               } else {
                                 ob.field_c[var22].field_l = 640 + -ob.field_c[var22].field_n;
-                                break L31;
+                                break L32;
                               }
                             } else {
                               var23 = ob.field_c[var22];
                               ob.field_c[var22].field_z = 0;
                               var23.field_G = 0;
-                              break L31;
+                              break L32;
                             }
                           }
                           ob.field_c[var22].d(98);
                           var22--;
-                          continue L30;
+                          continue L31;
                         }
                       }
                     } else {
-                      break L28;
-                    }
-                  }
-                  L34: {
-                    if (kc.field_f == 1) {
-                      if (oa.field_n) {
-                        break L34;
-                      } else {
-                        this.b(-94, kc.field_b, ag.field_f);
-                        break L34;
-                      }
-                    } else {
-                      oa.field_n = false;
-                      break L34;
+                      break L29;
                     }
                   }
                   L35: {
+                    if (kc.field_f == 1) {
+                      if (oa.field_n) {
+                        break L35;
+                      } else {
+                        this.b(-94, kc.field_b, ag.field_f);
+                        break L35;
+                      }
+                    } else {
+                      oa.field_n = false;
+                      break L35;
+                    }
+                  }
+                  L36: {
                     lk.field_D.b(true);
                     si.field_y.b(true);
                     if (lk.field_D.field_g) {
                       oa.a(10, true, 91);
                       ik.a(wj.field_b[0], (byte) -84);
-                      break L35;
-                    } else {
-                      break L35;
-                    }
-                  }
-                  L36: {
-                    if (!si.field_y.field_g) {
                       break L36;
                     } else {
-                      L37: {
+                      break L36;
+                    }
+                  }
+                  L37: {
+                    if (!si.field_y.field_g) {
+                      break L37;
+                    } else {
+                      L38: {
                         if (0 >= qg.field_c) {
-                          break L37;
+                          break L38;
                         } else {
                           if (0 == nb.field_b) {
-                            break L36;
-                          } else {
                             break L37;
+                          } else {
+                            break L38;
                           }
                         }
                       }
                       cf.a(-25319);
                       ik.a(wj.field_b[0], (byte) -84);
-                      break L36;
+                      break L37;
                     }
                   }
-                  L38: {
+                  L39: {
                     if (var17 != 0) {
-                      L39: {
+                      L40: {
                         if (120 > pg.field_f) {
                           pg.field_f = pg.field_f + 1;
-                          break L39;
+                          break L40;
                         } else {
-                          break L39;
+                          break L40;
                         }
                       }
                       if (-11 != (jk.field_l ^ -1)) {
-                        break L38;
+                        break L39;
                       } else {
                         if (-361 >= (pg.field_f ^ -1)) {
-                          break L38;
+                          break L39;
                         } else {
                           if (em.field_b != 0) {
-                            break L38;
+                            break L39;
                           } else {
                             if (qh.field_y != 0) {
-                              break L38;
+                              break L39;
                             } else {
                               pg.field_f = pg.field_f + 1;
-                              break L38;
+                              break L39;
                             }
                           }
                         }
                       }
                     } else {
-                      break L38;
+                      break L39;
                     }
                   }
                   if (-1 == (ni.field_j & 1 ^ -1)) {
                     kb.field_i = (kb.field_i + 1) % 8;
                     var3 = 0;
-                    L40: while (true) {
-                      L41: {
+                    L41: while (true) {
+                      L42: {
                         if (var3 >= oe.field_a) {
-                          break L41;
+                          break L42;
                         } else {
-                          L42: while (true) {
-                            L43: {
+                          L43: while (true) {
+                            L44: {
                               var4 = fl.field_c[id.field_h[var3]][uf.field_e[var3]];
                               if (var4 == ci.field_c[var3]) {
-                                break L43;
+                                break L44;
                               } else {
                                 if (fg.field_u[var3] == var4) {
-                                  break L43;
+                                  break L44;
                                 } else {
                                   var3++;
-                                  continue L40;
+                                  continue L41;
                                 }
                               }
                             }
                             if (0 == ok.field_s[var3]) {
-                              L44: {
+                              L45: {
                                 if (-1 == (kb.field_i ^ -1)) {
                                   fl.field_c[id.field_h[var3]][uf.field_e[var3]] = (char)ci.field_c[var3];
-                                  break L44;
+                                  break L45;
                                 } else {
-                                  break L44;
+                                  break L45;
                                 }
                               }
                               if (-5 == (kb.field_i ^ -1)) {
                                 fl.field_c[id.field_h[var3]][uf.field_e[var3]] = (char)fg.field_u[var3];
                                 var3++;
-                                continue L40;
+                                continue L41;
                               } else {
                                 var3++;
-                                continue L40;
+                                continue L41;
                               }
                             } else {
                               if (-9 == (ci.field_c[var3] ^ -1)) {
@@ -3177,31 +3202,31 @@ public final class fleas extends wb {
                                 var13 = 0;
                                 var8 = uf.field_e[var3] * 16;
                                 var4 = 0;
-                                L45: while (true) {
+                                L46: while (true) {
                                   if (var4 >= nb.field_b) {
                                     if (1 == var13) {
-                                      L46: {
+                                      L47: {
                                         if (-9 != (fl.field_c[id.field_h[var3]][uf.field_e[var3]] ^ -1)) {
-                                          break L46;
+                                          break L47;
                                         } else {
                                           fh.a((byte) -91, bf.field_d, 100, 63);
-                                          break L46;
+                                          break L47;
                                         }
                                       }
                                       fl.field_c[id.field_h[var3]][uf.field_e[var3]] = (char)9;
                                       var3++;
                                       if (var3 >= oe.field_a) {
-                                        break L41;
+                                        break L42;
                                       } else {
-                                        continue L42;
+                                        continue L43;
                                       }
                                     } else {
                                       fl.field_c[id.field_h[var3]][uf.field_e[var3]] = (char)8;
                                       var3++;
                                       if (var3 >= oe.field_a) {
-                                        break L41;
+                                        break L42;
                                       } else {
-                                        continue L42;
+                                        continue L43;
                                       }
                                     }
                                   } else {
@@ -3212,74 +3237,74 @@ public final class fleas extends wb {
                                             if (dh.field_b[var4] < var8 - -16) {
                                               var13 = 1;
                                               var4++;
-                                              continue L45;
+                                              continue L46;
                                             } else {
                                               var4++;
-                                              continue L45;
+                                              continue L46;
                                             }
                                           } else {
                                             var4++;
-                                            continue L45;
+                                            continue L46;
                                           }
                                         } else {
                                           var4++;
-                                          continue L45;
+                                          continue L46;
                                         }
                                       } else {
                                         var4++;
-                                        continue L45;
+                                        continue L46;
                                       }
                                     } else {
                                       var4++;
-                                      continue L45;
+                                      continue L46;
                                     }
                                   }
                                 }
                               } else {
                                 var3++;
-                                continue L40;
+                                continue L41;
                               }
                             }
                           }
                         }
                       }
-                      L47: {
+                      L48: {
                         if (ml.field_O <= nb.field_b) {
                           qg.field_c = -1;
-                          break L47;
+                          break L48;
                         } else {
                           qg.field_c = qg.field_c - 1;
                           if (1 <= qg.field_c) {
-                            break L47;
+                            break L48;
                           } else {
                             nb.field_b = nb.field_b + 1;
                             qg.field_c = 6;
                             fh.a((byte) 105, ic.field_ab, 100, 63);
-                            break L47;
+                            break L48;
                           }
                         }
                       }
                       var19 = 0;
                       var3 = 0;
-                      L48: while (true) {
+                      L49: while (true) {
                         if (nb.field_b <= var3) {
                           oj.field_i.i((int)(32.0 * Math.log((double)(1 + var19))));
                           var3 = 0;
-                          L49: while (true) {
+                          L50: while (true) {
                             if (var3 >= gh.field_q) {
                               var3 = 0;
-                              L50: while (true) {
+                              L51: while (true) {
                                 if (pl.field_g <= var3) {
                                   var6 = 20;
-                                  L51: while (true) {
+                                  L52: while (true) {
                                     if ((var6 ^ -1) > -1) {
                                       if (param0 > 126) {
-                                        L52: {
+                                        L53: {
                                           if (0 < we.field_c) {
                                             we.field_c = we.field_c - 1;
-                                            break L52;
+                                            break L53;
                                           } else {
-                                            break L52;
+                                            break L53;
                                           }
                                         }
                                         return;
@@ -3288,10 +3313,10 @@ public final class fleas extends wb {
                                       }
                                     } else {
                                       var5 = 39;
-                                      L53: while (true) {
+                                      L54: while (true) {
                                         if (-1 < (var5 ^ -1)) {
                                           var6--;
-                                          continue L51;
+                                          continue L52;
                                         } else {
                                           if (fl.field_c[var5][var6] == 33) {
                                             dupTemp$3 = field_G[var5];
@@ -3300,14 +3325,14 @@ public final class fleas extends wb {
                                             if (dupTemp$4 < 0) {
                                               fl.field_c[var5][var6] = (char)6;
                                               var5--;
-                                              continue L53;
+                                              continue L54;
                                             } else {
                                               var5--;
-                                              continue L53;
+                                              continue L54;
                                             }
                                           } else {
                                             var5--;
-                                            continue L53;
+                                            continue L54;
                                           }
                                         }
                                       }
@@ -3319,96 +3344,96 @@ public final class fleas extends wb {
                                   var7 = 16 * var5;
                                   var8 = (-2 + var6) * 16 - -hl.field_C[var3];
                                   var4 = 0;
-                                  L54: while (true) {
+                                  L55: while (true) {
                                     if (var4 >= nb.field_b) {
-                                      L55: {
+                                      L56: {
                                         hl.field_C[var3] = hl.field_C[var3] + uf.field_b[var3];
                                         if (hl.field_C[var3] >= 16) {
                                           hl.field_C[var3] = 16;
                                           uf.field_b[var3] = -4;
-                                          break L55;
+                                          break L56;
                                         } else {
-                                          break L55;
+                                          break L56;
                                         }
                                       }
                                       if (0 == hl.field_C[var3]) {
                                         fl.field_c[var5][-2 + var6] = (char)15;
                                         this.a((byte) -86, var6 - 2, var5);
                                         var4 = var3;
-                                        L56: while (true) {
+                                        L57: while (true) {
                                           if (var4 >= pl.field_g) {
                                             pl.field_g = pl.field_g - 1;
                                             var3++;
-                                            continue L50;
+                                            continue L51;
                                           } else {
                                             f.field_F[var4] = f.field_F[1 + var4];
                                             ek.field_b[var4] = ek.field_b[1 + var4];
                                             hl.field_C[var4] = hl.field_C[1 + var4];
                                             uf.field_b[var4] = uf.field_b[var4 + 1];
                                             var4++;
-                                            continue L56;
+                                            continue L57;
                                           }
                                         }
                                       } else {
                                         var3++;
-                                        continue L50;
+                                        continue L51;
                                       }
                                     } else {
                                       if (qg.field_a[var4] >= -4 + var7) {
                                         if (20 + var7 > qg.field_a[var4]) {
                                           if (var8 <= dh.field_b[var4]) {
                                             if (var8 - -20 > dh.field_b[var4]) {
-                                              L57: {
+                                              L58: {
                                                 if (0 != cl.field_d[var4]) {
-                                                  break L57;
+                                                  break L58;
                                                 } else {
                                                   cl.field_d[var4] = 1;
                                                   fh.a((byte) 93, fi.field_n, 100, 63);
-                                                  break L57;
+                                                  break L58;
                                                 }
                                               }
                                               lh.field_e[qg.field_a[var4] / 4][dh.field_b[var4] / 4] = 0;
                                               var4++;
-                                              continue L54;
+                                              continue L55;
                                             } else {
                                               var4++;
-                                              continue L54;
+                                              continue L55;
                                             }
                                           } else {
                                             var4++;
-                                            continue L54;
+                                            continue L55;
                                           }
                                         } else {
                                           var4++;
-                                          continue L54;
+                                          continue L55;
                                         }
                                       } else {
                                         var4++;
-                                        continue L54;
+                                        continue L55;
                                       }
                                     }
                                   }
                                 }
                               }
                             } else {
-                              L58: {
+                              L59: {
                                 var5 = rf.field_e[var3];
                                 var6 = hf.field_d[var3];
                                 var4 = wh.field_d[var3];
                                 if (-1 != (cl.field_d[var4] ^ -1)) {
-                                  break L58;
+                                  break L59;
                                 } else {
                                   if (jd.field_o[var4] != 0) {
-                                    break L58;
+                                    break L59;
                                   } else {
                                     if (qg.field_a[var4] / 16 != var5) {
-                                      break L58;
+                                      break L59;
                                     } else {
                                       if (var6 * 4 - 1 != dh.field_b[var4] / 4) {
-                                        break L58;
+                                        break L59;
                                       } else {
                                         var3++;
-                                        continue L49;
+                                        continue L50;
                                       }
                                     }
                                   }
@@ -3418,7 +3443,7 @@ public final class fleas extends wb {
                               fl.field_c[var5][var6] = (char)0;
                               this.a((byte) -79, var6, var5);
                               var20 = 0;
-                              L59: while (true) {
+                              L60: while (true) {
                                 if (-5 >= (var20 ^ -1)) {
                                   gh.field_q = gh.field_q - 1;
                                   rf.field_e[var3] = rf.field_e[gh.field_q];
@@ -3426,17 +3451,17 @@ public final class fleas extends wb {
                                   wh.field_d[var3] = wh.field_d[gh.field_q];
                                   var3--;
                                   var3++;
-                                  continue L49;
+                                  continue L50;
                                 } else {
                                   var21 = 0;
-                                  L60: while (true) {
+                                  L61: while (true) {
                                     if (var21 >= 4) {
                                       var20++;
-                                      continue L59;
+                                      continue L60;
                                     } else {
                                       lh.field_e[var5 * 4 - -var20][var21 + 4 * var6] = 0;
                                       var21++;
-                                      continue L60;
+                                      continue L61;
                                     }
                                   }
                                 }
@@ -3444,70 +3469,70 @@ public final class fleas extends wb {
                             }
                           }
                         } else {
-                          L61: {
+                          L62: {
                             if (cl.field_d[var3] != 0) {
-                              break L61;
+                              break L62;
                             } else {
                               if ((jd.field_o[var3] ^ -1) == -2) {
-                                break L61;
+                                break L62;
                               } else {
                                 if (fl.field_c[qg.field_a[var3] / 16][dh.field_b[var3] / 16] != 2) {
-                                  break L61;
+                                  break L62;
                                 } else {
                                   cl.field_d[var3] = 1;
                                   fh.a((byte) -77, fi.field_n, 100, 63);
-                                  break L61;
+                                  break L62;
                                 }
                               }
                             }
                           }
                           if (-1 == (cl.field_d[var3] ^ -1)) {
-                            L62: {
+                            L63: {
                               var7 = qg.field_a[var3];
                               var8 = dh.field_b[var3];
                               var9 = ge.field_a[var3];
                               var10 = var7 / 4;
                               if (-1 >= (var9 ^ -1)) {
                                 va.field_t[var3] = 2 + kb.field_i % 2;
-                                break L62;
+                                break L63;
                               } else {
                                 va.field_t[var3] = kb.field_i % 2;
-                                break L62;
+                                break L63;
                               }
                             }
                             var12 = var9 / 4;
                             var11 = var8 / 4;
                             var14 = 0;
                             var4 = 0;
-                            L63: while (true) {
+                            L64: while (true) {
                               if (qi.field_f <= var4) {
-                                L64: {
+                                L65: {
                                   if (jd.field_o[var3] != 0) {
-                                    L65: {
+                                    L66: {
                                       if (-2 != (jd.field_o[var3] ^ -1)) {
-                                        break L65;
+                                        break L66;
                                       } else {
-                                        L66: {
+                                        L67: {
                                           var5 = var7 / 16;
                                           var8 = var8 - ue.field_d;
                                           var6 = var8 / 16;
                                           if (0 > var6) {
-                                            break L66;
+                                            break L67;
                                           } else {
                                             if (21 <= var6) {
-                                              break L66;
+                                              break L67;
                                             } else {
                                               if (fl.field_c[var5][var6] != 11) {
-                                                break L65;
+                                                break L66;
                                               } else {
                                                 if (var8 % 16 == 4) {
                                                   jd.field_o[var3] = 0;
                                                   var9 = -4;
                                                   ge.field_a[var3] = -4;
                                                   fh.a((byte) 89, hg.field_n, 100, 63);
-                                                  break L65;
+                                                  break L66;
                                                 } else {
-                                                  break L65;
+                                                  break L66;
                                                 }
                                               }
                                             }
@@ -3515,23 +3540,23 @@ public final class fleas extends wb {
                                         }
                                         cl.field_d[var3] = 1;
                                         fh.a((byte) 86, fi.field_n, 100, 63);
-                                        break L65;
+                                        break L66;
                                       }
                                     }
                                     if (2 != jd.field_o[var3]) {
-                                      break L64;
+                                      break L65;
                                     } else {
-                                      L67: {
+                                      L68: {
                                         lh.field_e[var10][var11] = 0;
                                         if ((lh.field_e[var10][-md.field_L + var11] ^ -1) != -3) {
-                                          break L67;
+                                          break L68;
                                         } else {
                                           this.a((var11 + -1) / 4, true, var3, var10 / 4, 3);
-                                          break L67;
+                                          break L68;
                                         }
                                       }
-                                      L68: {
-                                        L69: {
+                                      L69: {
+                                        L70: {
                                           var9 = ge.field_a[var3];
                                           var7 = qg.field_a[var3];
                                           var8 = dh.field_b[var3];
@@ -3541,43 +3566,31 @@ public final class fleas extends wb {
                                           var8 = var8 - ue.field_d;
                                           var11 = var11 - md.field_L;
                                           if (lh.field_e[var10][var11] > 0) {
-                                            break L69;
+                                            break L70;
                                           } else {
                                             if (-1 == (var14 ^ -1)) {
-                                              break L68;
-                                            } else {
                                               break L69;
+                                            } else {
+                                              break L70;
                                             }
                                           }
                                         }
                                         var8 = var8 + ue.field_d;
                                         var11 = var11 + md.field_L;
                                         jd.field_o[var3] = 0;
-                                        break L68;
+                                        break L69;
                                       }
                                       lh.field_e[var10][var11] = 1;
-                                      break L64;
+                                      break L65;
                                     }
                                   } else {
-                                    L70: {
+                                    L71: {
                                       lh.field_e[var10][var11] = 0;
                                       if ((lh.field_e[var10][var11 + md.field_L] ^ -1) != -3) {
-                                        break L70;
-                                      } else {
-                                        if (-1 == (var14 ^ -1)) {
-                                          this.a((md.field_L + var11) / 4, true, var3, var10 / 4, 2);
-                                          break L70;
-                                        } else {
-                                          break L70;
-                                        }
-                                      }
-                                    }
-                                    L71: {
-                                      if ((lh.field_e[var10][var11 - md.field_L] ^ -1) != -3) {
                                         break L71;
                                       } else {
                                         if (-1 == (var14 ^ -1)) {
-                                          this.a((var11 - md.field_L) / 4, true, var3, var10 / 4, 3);
+                                          this.a((md.field_L + var11) / 4, true, var3, var10 / 4, 2);
                                           break L71;
                                         } else {
                                           break L71;
@@ -3585,25 +3598,37 @@ public final class fleas extends wb {
                                       }
                                     }
                                     L72: {
-                                      L73: {
+                                      if ((lh.field_e[var10][var11 - md.field_L] ^ -1) != -3) {
+                                        break L72;
+                                      } else {
+                                        if (-1 == (var14 ^ -1)) {
+                                          this.a((var11 - md.field_L) / 4, true, var3, var10 / 4, 3);
+                                          break L72;
+                                        } else {
+                                          break L72;
+                                        }
+                                      }
+                                    }
+                                    L73: {
+                                      L74: {
                                         if (0 < lh.field_e[var10][var11 - -md.field_L]) {
-                                          break L73;
+                                          break L74;
                                         } else {
                                           if (var14 == 0) {
-                                            break L72;
-                                          } else {
                                             break L73;
+                                          } else {
+                                            break L74;
                                           }
                                         }
                                       }
                                       if ((lh.field_e[var10 - -var12][var11] ^ -1) != -3) {
-                                        break L72;
+                                        break L73;
                                       } else {
                                         this.a(var11 / 4, true, var3, (var10 + var12) / 4, var12);
-                                        break L72;
+                                        break L73;
                                       }
                                     }
-                                    L74: {
+                                    L75: {
                                       var7 = qg.field_a[var3];
                                       var8 = dh.field_b[var3];
                                       var9 = ge.field_a[var3];
@@ -3611,60 +3636,60 @@ public final class fleas extends wb {
                                       var12 = var9 / 4;
                                       var11 = var8 / 4;
                                       if (-3 != (jd.field_o[var3] ^ -1)) {
-                                        L75: {
+                                        L76: {
                                           if (lh.field_e[var10][md.field_L + var11] > 0) {
-                                            break L75;
+                                            break L76;
                                           } else {
                                             if (var14 == 0) {
                                               var8 = var8 + ue.field_d;
-                                              break L74;
-                                            } else {
                                               break L75;
+                                            } else {
+                                              break L76;
                                             }
                                           }
                                         }
-                                        L76: {
+                                        L77: {
                                           if ((lh.field_e[var12 + var10][var11] ^ -1) >= -1) {
-                                            break L76;
+                                            break L77;
                                           } else {
                                             if (lh.field_e[var10][-md.field_L + var11] > 0) {
-                                              break L76;
+                                              break L77;
                                             } else {
                                               if ((lh.field_e[var12 + var10][var11 - md.field_L] ^ -1) < -1) {
-                                                break L76;
+                                                break L77;
                                               } else {
                                                 var8 = var8 - ue.field_d;
                                                 var7 = var7 + var9;
-                                                break L74;
+                                                break L75;
                                               }
                                             }
                                           }
                                         }
                                         if (0 < lh.field_e[var12 + var10][var11]) {
                                           var9 = -var9;
-                                          break L74;
+                                          break L75;
                                         } else {
                                           var7 = var7 + var9;
-                                          break L74;
+                                          break L75;
                                         }
                                       } else {
-                                        break L74;
+                                        break L75;
                                       }
                                     }
                                     var10 = var7 / 4;
                                     var11 = var8 / 4;
                                     if (1 == jd.field_o[var3]) {
-                                      break L64;
+                                      break L65;
                                     } else {
                                       if (-1 == (cl.field_d[var3] ^ -1)) {
                                         lh.field_e[var10][var11] = 1;
-                                        break L64;
+                                        break L65;
                                       } else {
                                         qg.field_a[var3] = var7;
                                         dh.field_b[var3] = var8;
                                         ge.field_a[var3] = var9;
                                         var3++;
-                                        continue L48;
+                                        continue L49;
                                       }
                                     }
                                   }
@@ -3673,24 +3698,24 @@ public final class fleas extends wb {
                                 dh.field_b[var3] = var8;
                                 ge.field_a[var3] = var9;
                                 var3++;
-                                continue L48;
+                                continue L49;
                               } else {
                                 if (var7 >= oa.field_m[var4]) {
                                   if (var7 < lc.field_v[var4]) {
                                     if (var8 >= uh.field_n[var4]) {
                                       if (ca.field_G[var4] > var8) {
                                         if (me.field_i[var4] == 0) {
-                                          L77: {
+                                          L78: {
                                             if (var7 / 16 <= rk.field_u[var4]) {
                                               ge.field_a[var3] = -4;
                                               var12 = -1;
                                               var9 = -4;
-                                              break L77;
+                                              break L78;
                                             } else {
                                               ge.field_a[var3] = 4;
                                               var9 = 4;
                                               var12 = 1;
-                                              break L77;
+                                              break L78;
                                             }
                                           }
                                           var19++;
@@ -3699,40 +3724,40 @@ public final class fleas extends wb {
                                             if (ia.field_m[field_E][var2].field_f == qh.field_z) {
                                               hg.a(-25389, 11, 244, var2);
                                               var4++;
-                                              continue L63;
+                                              continue L64;
                                             } else {
                                               var4++;
-                                              continue L63;
+                                              continue L64;
                                             }
                                           } else {
                                             var4++;
-                                            continue L63;
+                                            continue L64;
                                           }
                                         } else {
                                           var4++;
-                                          continue L63;
+                                          continue L64;
                                         }
                                       } else {
                                         var4++;
-                                        continue L63;
+                                        continue L64;
                                       }
                                     } else {
                                       var4++;
-                                      continue L63;
+                                      continue L64;
                                     }
                                   } else {
                                     var4++;
-                                    continue L63;
+                                    continue L64;
                                   }
                                 } else {
                                   var4++;
-                                  continue L63;
+                                  continue L64;
                                 }
                               }
                             }
                           } else {
                             var3++;
-                            continue L48;
+                            continue L49;
                           }
                         }
                       }
@@ -3756,58 +3781,52 @@ public final class fleas extends wb {
               return;
             }
           } else {
-            L78: {
-              var3 = id.field_b;
-              if (-33 == (var3 ^ -1)) {
-                L79: {
-                  if (uc.field_a.length() < 16) {
-                    discarded$5 = uc.field_a.append((char) var3);
-                    break L79;
-                  } else {
-                    break L79;
-                  }
-                }
-                if (-86 != (ji.field_a ^ -1)) {
-                  break L78;
+            L79: {
+              L80: {
+                var3 = id.field_b;
+                if (-33 == (var3 ^ -1)) {
+                  break L80;
                 } else {
-                  if (uc.field_a.length() <= 0) {
-                    break L78;
+                  if (ii.a(1, (char) var3)) {
+                    break L80;
                   } else {
-                    uf.a(-1 + uc.field_a.length(), uc.field_a, ' ', -120);
-                    break L78;
-                  }
-                }
-              } else {
-                if (!ii.a(1, (char) var3)) {
-                  if (-86 != (ji.field_a ^ -1)) {
-                    break L78;
-                  } else {
-                    if (uc.field_a.length() <= 0) {
-                      break L78;
+                    if (-86 != (ji.field_a ^ -1)) {
+                      break L79;
                     } else {
-                      uf.a(-1 + uc.field_a.length(), uc.field_a, ' ', -120);
-                      break L78;
-                    }
-                  }
-                } else {
-                  if (-86 != (ji.field_a ^ -1)) {
-                    break L78;
-                  } else {
-                    if (uc.field_a.length() <= 0) {
-                      break L78;
-                    } else {
-                      uf.a(-1 + uc.field_a.length(), uc.field_a, ' ', -120);
-                      break L78;
+                      if (uc.field_a.length() <= 0) {
+                        break L79;
+                      } else {
+                        uf.a(-1 + uc.field_a.length(), uc.field_a, ' ', -120);
+                        break L79;
+                      }
                     }
                   }
                 }
               }
-            }
-            L80: {
-              if (-85 == (ji.field_a ^ -1)) {
-                break L80;
+              L81: {
+                if (uc.field_a.length() < 16) {
+                  discarded$5 = uc.field_a.append((char) var3);
+                  break L81;
+                } else {
+                  break L81;
+                }
+              }
+              if (-86 != (ji.field_a ^ -1)) {
+                break L79;
               } else {
-                break L80;
+                if (uc.field_a.length() <= 0) {
+                  break L79;
+                } else {
+                  uf.a(-1 + uc.field_a.length(), uc.field_a, ' ', -120);
+                  break L79;
+                }
+              }
+            }
+            L82: {
+              if (-85 == (ji.field_a ^ -1)) {
+                break L82;
+              } else {
+                break L82;
               }
             }
             if (ji.field_a != 13) {

@@ -850,70 +850,73 @@ final class fi extends qe {
                   break L2;
                 }
               }
-              if (kn.field_e) {
-                break L1;
-              } else {
-                L3: {
-                  if ((var4 ^ -1) == -26) {
-                    break L3;
-                  } else {
-                    if (var4 == 24) {
-                      break L3;
-                    } else {
-                      if (26 == var4) {
-                        break L3;
-                      } else {
-                        hm.a(var4, param2, param0, param1 ^ -221);
-                        break L1;
-                      }
-                    }
-                  }
-                }
-                L4: {
-                  if (-27 != (var4 ^ -1)) {
+              L3: {
+                if (kn.field_e) {
+                  break L3;
+                } else {
+                  L4: {
                     if ((var4 ^ -1) == -26) {
-                      this.field_B = 1;
                       break L4;
                     } else {
-                      if (24 == var4) {
-                        this.field_B = 0;
+                      if (var4 == 24) {
                         break L4;
                       } else {
-                        break L4;
+                        if (26 == var4) {
+                          break L4;
+                        } else {
+                          hm.a(var4, param2, param0, param1 ^ -221);
+                          break L1;
+                        }
                       }
                     }
-                  } else {
-                    this.field_B = 2;
-                    break L4;
                   }
-                }
-                L5: {
-                  kn.field_e = true;
-                  if (!param0) {
-                    nk.field_Jb.field_b = 6;
-                    break L5;
-                  } else {
-                    break L5;
+                  L5: {
+                    if (-27 != (var4 ^ -1)) {
+                      if ((var4 ^ -1) == -26) {
+                        this.field_B = 1;
+                        break L5;
+                      } else {
+                        if (24 == var4) {
+                          this.field_B = 0;
+                          break L5;
+                        } else {
+                          break L5;
+                        }
+                      }
+                    } else {
+                      this.field_B = 2;
+                      break L5;
+                    }
                   }
-                }
-                L6: {
-                  if (this.field_B != 0) {
-                    var5 = 167;
-                    var6 = 154;
-                    var7 = 306;
-                    var8 = 204;
-                    break L6;
-                  } else {
-                    var6 = 104;
-                    var7 = 486;
-                    var8 = 254;
-                    var5 = 77;
-                    break L6;
+                  L6: {
+                    kn.field_e = true;
+                    if (!param0) {
+                      nk.field_Jb.field_b = 6;
+                      break L6;
+                    } else {
+                      break L6;
+                    }
                   }
+                  L7: {
+                    if (this.field_B != 0) {
+                      var5 = 167;
+                      var6 = 154;
+                      var7 = 306;
+                      var8 = 204;
+                      break L7;
+                    } else {
+                      var6 = 104;
+                      var7 = 486;
+                      var8 = 254;
+                      var5 = 77;
+                      break L7;
+                    }
+                  }
+                  this.field_z.a(var6, var7, var5, -23241, var8);
+                  break L3;
                 }
-                this.field_z.a(var6, var7, var5, -23241, var8);
-                break L1;
               }
+              break L1;
             } else {
               break L1;
             }

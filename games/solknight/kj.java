@@ -24,6 +24,7 @@ class kj extends pj {
     final static void a(java.applet.Applet param0, int param1, String param2) {
         try {
             java.net.URL var3 = null;
+            String var4 = null;
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
             RuntimeException stackIn_9_0 = null;
@@ -44,6 +45,7 @@ class kj extends pj {
                       if (param1 >= 103) {
                         break L2;
                       } else {
+                        var4 = (String) null;
                         kj.a((String) null, (byte) -16);
                         break L2;
                       }
@@ -259,26 +261,28 @@ class kj extends pj {
         String var11;
         int var12;
         int var13;
-        ve var14;
-        StringWriter var15;
-        String var16;
+        String var14;
+        ve var15;
+        StringWriter var16;
         String var17;
         String var18;
         String var19;
+        String var20;
         L0: {
           var13 = SolKnight.field_L ? 1 : 0;
           if (param0 == 105) {
             break L0;
           } else {
+            var14 = (String) null;
             kj.a((java.applet.Applet) null, 117, (String) null);
             break L0;
           }
         }
         L1: {
           if (param1 instanceof ve) {
-            var14 = (ve) ((Object) param1);
-            param1 = var14.field_c;
-            var2 = var14.field_d + " | ";
+            var15 = (ve) ((Object) param1);
+            param1 = var15.field_c;
+            var2 = var15.field_d + " | ";
             var11 = var2;
             break L1;
           } else {
@@ -286,11 +290,11 @@ class kj extends pj {
             break L1;
           }
         }
-        var15 = new StringWriter();
-        var4 = new PrintWriter((Writer) ((Object) var15));
+        var16 = new StringWriter();
+        var4 = new PrintWriter((Writer) ((Object) var16));
         param1.printStackTrace(var4);
         var4.close();
-        var5 = var15.toString();
+        var5 = var16.toString();
         var2 = var5;
         var11 = var5;
         var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
@@ -317,19 +321,19 @@ class kj extends pj {
               }
             }
             L4: {
-              var16 = var11.trim();
-              var2 = var16;
-              var2 = var16;
-              var17 = var16.substring(1 + var16.lastIndexOf(' '));
+              var17 = var11.trim();
               var2 = var17;
               var2 = var17;
-              var18 = var17.substring(var17.lastIndexOf('\t') + 1);
+              var18 = var17.substring(1 + var17.lastIndexOf(' '));
               var2 = var18;
               var2 = var18;
-              var19 = var2 + var18;
+              var19 = var18.substring(var18.lastIndexOf('\t') + 1);
               var2 = var19;
               var2 = var19;
-              var2 = var19;
+              var20 = var2 + var19;
+              var2 = var20;
+              var2 = var20;
+              var2 = var20;
               if (0 == (var9 ^ -1)) {
                 break L4;
               } else {
@@ -338,7 +342,7 @@ class kj extends pj {
                   if ((var12 ^ -1) > -1) {
                     break L4;
                   } else {
-                    var2 = var19 + var8.substring(var12 - -5, var10);
+                    var2 = var20 + var8.substring(var12 - -5, var10);
                     break L4;
                   }
                 } else {
@@ -360,23 +364,24 @@ class kj extends pj {
     }
 
     final void a(int param0, String param1, int param2) {
-        String[] var7 = null;
         String[] var8 = null;
+        String[] var9 = null;
         int var5 = 0;
         int var6 = SolKnight.field_L ? 1 : 0;
         try {
             if (null == this.field_M || param0 >= this.field_M.length) {
-                var7 = new String[param0 + 1];
-                var8 = var7;
-                String[] var4 = var8;
+                var8 = new String[param0 + 1];
+                var9 = var8;
+                String[] var4 = var9;
                 if (!(this.field_M == null)) {
                     for (var5 = 0; this.field_M.length > var5; var5++) {
-                        var7[var5] = this.field_M[var5];
+                        var8[var5] = this.field_M[var5];
                     }
                 }
-                this.field_M = var8;
+                this.field_M = var9;
             }
             if (param2 != 1) {
+                String var7 = (String) null;
                 kj.a((java.applet.Applet) null, -17, (String) null);
             }
             this.field_M[param0] = param1;
@@ -389,6 +394,7 @@ class kj extends pj {
         field_N = null;
         field_K = null;
         if (param0 != 2) {
+            String var2 = (String) null;
             kj.a((java.applet.Applet) null, 14, (String) null);
         }
         field_J = null;

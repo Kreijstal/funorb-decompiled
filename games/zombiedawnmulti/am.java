@@ -15,18 +15,16 @@ final class am {
 
     final static boolean a(char param0, byte param1) {
         char[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        int var7 = 0;
-        int var8 = 0;
         int stackIn_8_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_23_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_21_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -55,55 +53,38 @@ final class am {
               }
             }
             L3: {
-              L4: {
-                L5: {
-                  if (0 == param0) {
-                    break L5;
+              if (0 == param0) {
+                break L3;
+              } else {
+                var6 = vg.field_s;
+                var2 = var6;
+                var3 = 0;
+                L4: while (true) {
+                  if (var3 >= var6.length) {
+                    break L3;
                   } else {
-                    var6 = vg.field_s;
-                    var2 = var6;
-                    var3 = 0;
-                    L6: while (true) {
-                      if (var3 >= var6.length) {
-                        break L5;
-                      } else {
-                        var4 = var6[var3];
-                        var8 = param0 ^ -1;
-                        var7 = var4 ^ -1;
-                        if (var5 != 0) {
-                          if (var7 >= var8) {
-                            break L3;
-                          } else {
-                            break L4;
-                          }
-                        } else {
-                          if (var7 != var8) {
-                            var3++;
-                            if (var5 == 0) {
-                              continue L6;
-                            } else {
-                              break L5;
-                            }
-                          } else {
-                            stackIn_18_0 = 1;
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          }
-                        }
-                      }
+                    var4 = var6[var3];
+                    if ((var4 ^ -1) != (param0 ^ -1)) {
+                      var3++;
+                      continue L4;
+                    } else {
+                      stackIn_16_0 = 1;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     }
                   }
                 }
-                if (param1 >= 42) {
-                  break L3;
-                } else {
-                  break L4;
-                }
               }
-              field_b = 89;
-              break L3;
             }
-            stackIn_23_0 = 0;
+            L5: {
+              if (param1 >= 42) {
+                break L5;
+              } else {
+                field_b = 89;
+                break L5;
+              }
+            }
+            stackIn_21_0 = 0;
             decompiledRegionSelector0 = 2;
             break L0;
           }
@@ -116,28 +97,40 @@ final class am {
           return stackIn_8_0 != 0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_18_0 != 0;
+            return stackIn_16_0 != 0;
           } else {
-            return stackIn_23_0 != 0;
+            return stackIn_21_0 != 0;
           }
         }
     }
 
     final static boolean a(int param0) {
+        int stackIn_8_0 = 0;
         if (param0 < -97) {
-          if (-11 != (pl.field_I ^ -1)) {
-            if (-7 == pl.field_I) {
-              if (!df.field_I) {
-                return true;
+          L0: {
+            L1: {
+              if (-11 == (pl.field_I ^ -1)) {
+                break L1;
               } else {
-                return false;
+                L2: {
+                  if (-7 != pl.field_I) {
+                    break L2;
+                  } else {
+                    if (df.field_I) {
+                      break L2;
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+                stackIn_8_0 = 0;
+                break L0;
               }
-            } else {
-              return false;
             }
-          } else {
-            return true;
+            stackIn_8_0 = 1;
+            break L0;
           }
+          return stackIn_8_0 != 0;
         } else {
           return true;
         }
@@ -145,11 +138,9 @@ final class am {
 
     final static ja a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 1) {
-          am.a('ﾘ', (byte) -57);
-          return nk.a(no.field_Hb[param2][param0], param1, 255, param4);
-        } else {
-          return nk.a(no.field_Hb[param2][param0], param1, 255, param4);
+            am.a('ﾘ', (byte) -57);
         }
+        return nk.a(no.field_Hb[param2][param0], param1, 255, param4);
     }
 
     static {

@@ -358,25 +358,85 @@ final class nl {
                         break L5;
                       } else {
                         wh.field_e.b(20, 76);
-                        if (-21 < (ef.field_j ^ -1)) {
-                          qh.field_b.b(520, 76);
-                          if (ef.field_j < 520) {
-                            break L5;
-                          } else {
-                            if (jb.field_b < 76) {
-                              break L5;
-                            } else {
-                              if (-621 > (ef.field_j ^ -1)) {
+                        if (-21 >= (ef.field_j ^ -1)) {
+                          if (-77 >= (jb.field_b ^ -1)) {
+                            if (120 >= ef.field_j) {
+                              L6: {
+                                if (-105 <= (jb.field_b ^ -1)) {
+                                  l.d(20, 76, 100, 28, 16777215, 128);
+                                  break L6;
+                                } else {
+                                  break L6;
+                                }
+                              }
+                              qh.field_b.b(520, 76);
+                              if (ef.field_j < 520) {
                                 break L5;
                               } else {
-                                if (jb.field_b > 104) {
+                                if (jb.field_b < 76) {
                                   break L5;
                                 } else {
-                                  if (-1 < (ef.field_j ^ -1)) {
+                                  if (-621 > (ef.field_j ^ -1)) {
                                     break L5;
                                   } else {
-                                    l.d(520, 76, 100, 28, 16777215, 128);
+                                    if (jb.field_b > 104) {
+                                      break L5;
+                                    } else {
+                                      if (-1 < (ef.field_j ^ -1)) {
+                                        break L5;
+                                      } else {
+                                        l.d(520, 76, 100, 28, 16777215, 128);
+                                        break L5;
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            } else {
+                              qh.field_b.b(520, 76);
+                              if (ef.field_j < 520) {
+                                break L5;
+                              } else {
+                                if (jb.field_b < 76) {
+                                  break L5;
+                                } else {
+                                  if (-621 > (ef.field_j ^ -1)) {
                                     break L5;
+                                  } else {
+                                    if (jb.field_b > 104) {
+                                      break L5;
+                                    } else {
+                                      if (-1 < (ef.field_j ^ -1)) {
+                                        break L5;
+                                      } else {
+                                        l.d(520, 76, 100, 28, 16777215, 128);
+                                        break L5;
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          } else {
+                            qh.field_b.b(520, 76);
+                            if (ef.field_j < 520) {
+                              break L5;
+                            } else {
+                              if (jb.field_b < 76) {
+                                break L5;
+                              } else {
+                                if (-621 > (ef.field_j ^ -1)) {
+                                  break L5;
+                                } else {
+                                  if (jb.field_b > 104) {
+                                    break L5;
+                                  } else {
+                                    if (-1 < (ef.field_j ^ -1)) {
+                                      break L5;
+                                    } else {
+                                      l.d(520, 76, 100, 28, 16777215, 128);
+                                      break L5;
+                                    }
                                   }
                                 }
                               }
@@ -414,40 +474,40 @@ final class nl {
                 }
               }
               if (rf.field_B[7].field_d) {
-                L6: {
+                L7: {
                   wh.field_e.b(20, 76);
                   if (-21 < (ef.field_j ^ -1)) {
-                    break L6;
+                    break L7;
                   } else {
                     if (-77 < (jb.field_b ^ -1)) {
-                      break L6;
+                      break L7;
                     } else {
                       if (120 < ef.field_j) {
-                        break L6;
+                        break L7;
                       } else {
                         if (-105 <= (jb.field_b ^ -1)) {
                           l.d(20, 76, 100, 28, 16777215, 128);
-                          break L6;
+                          break L7;
                         } else {
-                          L7: {
+                          L8: {
                             qh.field_b.b(520, 76);
                             if (ef.field_j < 520) {
-                              break L7;
+                              break L8;
                             } else {
                               if (jb.field_b < 76) {
-                                break L7;
+                                break L8;
                               } else {
                                 if (-621 > (ef.field_j ^ -1)) {
-                                  break L7;
+                                  break L8;
                                 } else {
                                   if (jb.field_b > 104) {
-                                    break L7;
+                                    break L8;
                                   } else {
                                     if (-1 < (ef.field_j ^ -1)) {
-                                      break L7;
+                                      break L8;
                                     } else {
                                       l.d(520, 76, 100, 28, 16777215, 128);
-                                      break L7;
+                                      break L8;
                                     }
                                   }
                                 }
@@ -487,30 +547,90 @@ final class nl {
                 return;
               }
             } else {
-              L8: {
+              L9: {
                 if (!rf.field_B[7].field_d) {
-                  break L8;
+                  break L9;
                 } else {
                   wh.field_e.b(20, 76);
-                  if (-21 < (ef.field_j ^ -1)) {
-                    qh.field_b.b(520, 76);
-                    if (ef.field_j < 520) {
-                      break L8;
-                    } else {
-                      if (jb.field_b < 76) {
-                        break L8;
-                      } else {
-                        if (-621 > (ef.field_j ^ -1)) {
-                          break L8;
-                        } else {
-                          if (jb.field_b > 104) {
-                            break L8;
+                  if (-21 >= (ef.field_j ^ -1)) {
+                    if (-77 >= (jb.field_b ^ -1)) {
+                      if (120 >= ef.field_j) {
+                        L10: {
+                          if (-105 <= (jb.field_b ^ -1)) {
+                            l.d(20, 76, 100, 28, 16777215, 128);
+                            break L10;
                           } else {
-                            if (-1 < (ef.field_j ^ -1)) {
-                              break L8;
+                            break L10;
+                          }
+                        }
+                        qh.field_b.b(520, 76);
+                        if (ef.field_j < 520) {
+                          break L9;
+                        } else {
+                          if (jb.field_b < 76) {
+                            break L9;
+                          } else {
+                            if (-621 > (ef.field_j ^ -1)) {
+                              break L9;
                             } else {
-                              l.d(520, 76, 100, 28, 16777215, 128);
-                              break L8;
+                              if (jb.field_b > 104) {
+                                break L9;
+                              } else {
+                                if (-1 < (ef.field_j ^ -1)) {
+                                  break L9;
+                                } else {
+                                  l.d(520, 76, 100, 28, 16777215, 128);
+                                  break L9;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      } else {
+                        qh.field_b.b(520, 76);
+                        if (ef.field_j < 520) {
+                          break L9;
+                        } else {
+                          if (jb.field_b < 76) {
+                            break L9;
+                          } else {
+                            if (-621 > (ef.field_j ^ -1)) {
+                              break L9;
+                            } else {
+                              if (jb.field_b > 104) {
+                                break L9;
+                              } else {
+                                if (-1 < (ef.field_j ^ -1)) {
+                                  break L9;
+                                } else {
+                                  l.d(520, 76, 100, 28, 16777215, 128);
+                                  break L9;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    } else {
+                      qh.field_b.b(520, 76);
+                      if (ef.field_j < 520) {
+                        break L9;
+                      } else {
+                        if (jb.field_b < 76) {
+                          break L9;
+                        } else {
+                          if (-621 > (ef.field_j ^ -1)) {
+                            break L9;
+                          } else {
+                            if (jb.field_b > 104) {
+                              break L9;
+                            } else {
+                              if (-1 < (ef.field_j ^ -1)) {
+                                break L9;
+                              } else {
+                                l.d(520, 76, 100, 28, 16777215, 128);
+                                break L9;
+                              }
                             }
                           }
                         }
@@ -519,22 +639,22 @@ final class nl {
                   } else {
                     qh.field_b.b(520, 76);
                     if (ef.field_j < 520) {
-                      break L8;
+                      break L9;
                     } else {
                       if (jb.field_b < 76) {
-                        break L8;
+                        break L9;
                       } else {
                         if (-621 > (ef.field_j ^ -1)) {
-                          break L8;
+                          break L9;
                         } else {
                           if (jb.field_b > 104) {
-                            break L8;
+                            break L9;
                           } else {
                             if (-1 < (ef.field_j ^ -1)) {
-                              break L8;
+                              break L9;
                             } else {
                               l.d(520, 76, 100, 28, 16777215, 128);
-                              break L8;
+                              break L9;
                             }
                           }
                         }
@@ -546,30 +666,90 @@ final class nl {
               return;
             }
           } else {
-            L9: {
+            L11: {
               if (!rf.field_B[7].field_d) {
-                break L9;
+                break L11;
               } else {
                 wh.field_e.b(20, 76);
-                if (-21 < (ef.field_j ^ -1)) {
-                  qh.field_b.b(520, 76);
-                  if (ef.field_j < 520) {
-                    break L9;
-                  } else {
-                    if (jb.field_b < 76) {
-                      break L9;
-                    } else {
-                      if (-621 > (ef.field_j ^ -1)) {
-                        break L9;
-                      } else {
-                        if (jb.field_b > 104) {
-                          break L9;
+                if (-21 >= (ef.field_j ^ -1)) {
+                  if (-77 >= (jb.field_b ^ -1)) {
+                    if (120 >= ef.field_j) {
+                      L12: {
+                        if (-105 <= (jb.field_b ^ -1)) {
+                          l.d(20, 76, 100, 28, 16777215, 128);
+                          break L12;
                         } else {
-                          if (-1 < (ef.field_j ^ -1)) {
-                            break L9;
+                          break L12;
+                        }
+                      }
+                      qh.field_b.b(520, 76);
+                      if (ef.field_j < 520) {
+                        break L11;
+                      } else {
+                        if (jb.field_b < 76) {
+                          break L11;
+                        } else {
+                          if (-621 > (ef.field_j ^ -1)) {
+                            break L11;
                           } else {
-                            l.d(520, 76, 100, 28, 16777215, 128);
-                            break L9;
+                            if (jb.field_b > 104) {
+                              break L11;
+                            } else {
+                              if (-1 < (ef.field_j ^ -1)) {
+                                break L11;
+                              } else {
+                                l.d(520, 76, 100, 28, 16777215, 128);
+                                break L11;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    } else {
+                      qh.field_b.b(520, 76);
+                      if (ef.field_j < 520) {
+                        break L11;
+                      } else {
+                        if (jb.field_b < 76) {
+                          break L11;
+                        } else {
+                          if (-621 > (ef.field_j ^ -1)) {
+                            break L11;
+                          } else {
+                            if (jb.field_b > 104) {
+                              break L11;
+                            } else {
+                              if (-1 < (ef.field_j ^ -1)) {
+                                break L11;
+                              } else {
+                                l.d(520, 76, 100, 28, 16777215, 128);
+                                break L11;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    qh.field_b.b(520, 76);
+                    if (ef.field_j < 520) {
+                      break L11;
+                    } else {
+                      if (jb.field_b < 76) {
+                        break L11;
+                      } else {
+                        if (-621 > (ef.field_j ^ -1)) {
+                          break L11;
+                        } else {
+                          if (jb.field_b > 104) {
+                            break L11;
+                          } else {
+                            if (-1 < (ef.field_j ^ -1)) {
+                              break L11;
+                            } else {
+                              l.d(520, 76, 100, 28, 16777215, 128);
+                              break L11;
+                            }
                           }
                         }
                       }
@@ -578,22 +758,22 @@ final class nl {
                 } else {
                   qh.field_b.b(520, 76);
                   if (ef.field_j < 520) {
-                    break L9;
+                    break L11;
                   } else {
                     if (jb.field_b < 76) {
-                      break L9;
+                      break L11;
                     } else {
                       if (-621 > (ef.field_j ^ -1)) {
-                        break L9;
+                        break L11;
                       } else {
                         if (jb.field_b > 104) {
-                          break L9;
+                          break L11;
                         } else {
                           if (-1 < (ef.field_j ^ -1)) {
-                            break L9;
+                            break L11;
                           } else {
                             l.d(520, 76, 100, 28, 16777215, 128);
-                            break L9;
+                            break L11;
                           }
                         }
                       }

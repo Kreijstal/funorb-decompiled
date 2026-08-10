@@ -430,68 +430,22 @@ final class pe extends hn implements wm, ng {
     }
 
     final static void a(byte param0, double param1) {
-        RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
-        int var5 = 0;
-        int[] stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        int[] stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        int stackIn_9_2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var5 = Torquing.field_u;
+        int var5 = Torquing.field_u;
         try {
-          L0: {
-            L1: {
-              if (param0 < -97) {
-                break L1;
-              } else {
+            if (param0 >= -97) {
                 field_H = (char[]) null;
-                break L1;
-              }
             }
-            L2: {
-              if (param1 == eq.field_a) {
-                break L2;
-              } else {
-                var3_int = 0;
-                L3: while (true) {
-                  if (-257 >= (var3_int ^ -1)) {
-                    eq.field_a = param1;
-                    break L2;
-                  } else {
-                    L4: {
-                      var4 = (int)(Math.pow((double)var3_int / 255.0, param1) * 255.0);
-                      stackIn_8_0 = uk.field_b;
-
-                      stackIn_8_1 = var3_int;
-
-                      if (255 < var4) {
-                        stackIn_9_0 = (int[]) ((Object) stackIn_8_0);
-                        stackIn_9_1 = stackIn_8_1;
-                        stackIn_9_2 = 255;
-                        break L4;
-                      } else {
-                        stackIn_9_0 = (int[]) ((Object) stackIn_8_0);
-                        stackIn_9_1 = stackIn_8_1;
-                        stackIn_9_2 = var4;
-                        break L4;
-                      }
-                    }
-                    stackIn_9_0[stackIn_9_1] = stackIn_9_2;
-                    var3_int++;
-                    continue L3;
-                  }
+            if (param1 != eq.field_a) {
+                for (var3_int = 0; -257 < (var3_int ^ -1); var3_int++) {
+                    var4 = (int)(Math.pow((double)var3_int / 255.0, param1) * 255.0);
+                    uk.field_b[var3_int] = 255 >= var4 ? var4 : 255;
                 }
-              }
+                eq.field_a = param1;
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) runtimeException), "pe.C(" + param0 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) ((Object) runtimeException), "pe.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -522,46 +476,12 @@ final class pe extends hn implements wm, ng {
     }
 
     public final void a(int param0, tk param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 > 3) {
-                break L1;
-              } else {
+            if (param0 <= 3) {
                 this.i(127);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("pe.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw rb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

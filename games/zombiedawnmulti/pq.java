@@ -217,105 +217,44 @@ final class pq extends br {
               }
             } else {
               this.field_j = this.field_j - this.field_n;
-              if (ZombieDawnMulti.field_E) {
-                this.field_k = this.field_k + 1;
-                if (this.field_j >= 256) {
-                  var2 = 2 / ((53 - param0) / 35);
-                  if (256 >= this.field_j) {
-                    if ((this.field_j ^ -1) <= -1) {
-                      return;
-                    } else {
-                      this.field_j = 0;
-                      return;
-                    }
-                  } else {
-                    this.field_j = 256;
-                    if ((this.field_j ^ -1) <= -1) {
-                      return;
-                    } else {
-                      this.field_j = 0;
-                      return;
-                    }
-                  }
+              var2 = 2 / ((53 - param0) / 35);
+              if (256 >= this.field_j) {
+                if ((this.field_j ^ -1) > -1) {
+                  this.field_j = 0;
+                  return;
                 } else {
-                  this.field_j = this.field_j + this.field_n;
-                  var2 = 2 / ((53 - param0) / 35);
-                  if (256 >= this.field_j) {
-                    if ((this.field_j ^ -1) <= -1) {
-                      return;
-                    } else {
-                      this.field_j = 0;
-                      return;
-                    }
-                  } else {
-                    this.field_j = 256;
-                    if ((this.field_j ^ -1) > -1) {
-                      this.field_j = 0;
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
+                  return;
                 }
               } else {
-                var2 = 2 / ((53 - param0) / 35);
-                if (256 >= this.field_j) {
-                  if ((this.field_j ^ -1) <= -1) {
-                    return;
-                  } else {
-                    this.field_j = 0;
-                    return;
-                  }
+                this.field_j = 256;
+                if ((this.field_j ^ -1) > -1) {
+                  this.field_j = 0;
+                  return;
                 } else {
-                  this.field_j = 256;
-                  if ((this.field_j ^ -1) <= -1) {
-                    return;
-                  } else {
-                    this.field_j = 0;
-                    return;
-                  }
+                  return;
                 }
               }
             }
           } else {
             this.field_h = 0;
-            if (this.field_k >= this.field_i) {
-              this.field_j = this.field_j - this.field_n;
-              if (ZombieDawnMulti.field_E) {
-                this.field_k = this.field_k + 1;
-                if (this.field_j >= 256) {
-                  var2 = 2 / ((53 - param0) / 35);
-                  if (256 >= this.field_j) {
-                    if ((this.field_j ^ -1) > -1) {
-                      this.field_j = 0;
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    this.field_j = 256;
-                    if ((this.field_j ^ -1) <= -1) {
-                      return;
-                    } else {
-                      this.field_j = 0;
-                      return;
-                    }
-                  }
-                } else {
-                  L0: {
-                    this.field_j = this.field_j + this.field_n;
-                    var2 = 2 / ((53 - param0) / 35);
-                    if (256 >= this.field_j) {
-                      break L0;
-                    } else {
-                      this.field_j = 256;
-                      break L0;
-                    }
-                  }
-                  if ((this.field_j ^ -1) <= -1) {
+            if (this.field_k < this.field_i) {
+              this.field_k = this.field_k + 1;
+              if (this.field_j < 256) {
+                this.field_j = this.field_j + this.field_n;
+                var2 = 2 / ((53 - param0) / 35);
+                if (256 < this.field_j) {
+                  this.field_j = 256;
+                  if ((this.field_j ^ -1) > -1) {
+                    this.field_j = 0;
                     return;
                   } else {
+                    return;
+                  }
+                } else {
+                  if ((this.field_j ^ -1) > -1) {
                     this.field_j = 0;
+                    return;
+                  } else {
                     return;
                   }
                 }
@@ -329,46 +268,34 @@ final class pq extends br {
                     return;
                   }
                 } else {
-                  L1: {
-                    this.field_j = 256;
-                    if ((this.field_j ^ -1) <= -1) {
-                      break L1;
-                    } else {
-                      this.field_j = 0;
-                      break L1;
-                    }
+                  this.field_j = 256;
+                  if ((this.field_j ^ -1) > -1) {
+                    this.field_j = 0;
+                    return;
+                  } else {
+                    return;
                   }
-                  return;
                 }
               }
             } else {
-              L2: {
-                this.field_k = this.field_k + 1;
-                if (this.field_j >= 256) {
-                  break L2;
-                } else {
-                  this.field_j = this.field_j + this.field_n;
-                  break L2;
-                }
-              }
-              L3: {
-                var2 = 2 / ((53 - param0) / 35);
-                if (256 >= this.field_j) {
-                  break L3;
-                } else {
-                  this.field_j = 256;
-                  break L3;
-                }
-              }
-              L4: {
-                if ((this.field_j ^ -1) <= -1) {
-                  break L4;
-                } else {
+              this.field_j = this.field_j - this.field_n;
+              var2 = 2 / ((53 - param0) / 35);
+              if (256 < this.field_j) {
+                this.field_j = 256;
+                if ((this.field_j ^ -1) > -1) {
                   this.field_j = 0;
-                  break L4;
+                  return;
+                } else {
+                  return;
+                }
+              } else {
+                if ((this.field_j ^ -1) > -1) {
+                  this.field_j = 0;
+                  return;
+                } else {
+                  return;
                 }
               }
-              return;
             }
           }
         }

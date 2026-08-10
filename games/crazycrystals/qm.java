@@ -158,17 +158,20 @@ class qm extends jb {
                     break L2;
                   }
                 }
-                ((qm) (this)).field_m = stackIn_5_1 != 0;
-                if (this.field_l == null) {
-                  break L1;
-                } else {
-                  if (!(this.field_l instanceof t)) {
-                    break L1;
+                L3: {
+                  ((qm) (this)).field_m = stackIn_5_1 != 0;
+                  if (this.field_l == null) {
+                    break L3;
                   } else {
-                    ((t) ((Object) this.field_l)).a(var5_int != 0, -2095, (qm) (this));
-                    break L1;
+                    if (!(this.field_l instanceof t)) {
+                      break L3;
+                    } else {
+                      ((t) ((Object) this.field_l)).a(var5_int != 0, -2095, (qm) (this));
+                      break L1;
+                    }
                   }
                 }
+                break L1;
               } else {
                 break L1;
               }
@@ -177,7 +180,7 @@ class qm extends jb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var5 = decompiledCaughtException;
             stackIn_11_0 = (RuntimeException) (var5);
 
@@ -187,12 +190,12 @@ class qm extends jb {
               stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
               stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackIn_12_2 = "null";
-              break L3;
+              break L4;
             } else {
               stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
               stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackIn_12_2 = "{...}";
-              break L3;
+              break L4;
             }
           }
           throw dn.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');

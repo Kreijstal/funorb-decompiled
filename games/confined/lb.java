@@ -85,62 +85,65 @@ final class lb extends jl {
             }
             L2: {
               if (1 != param2) {
-                if (param2 != 2) {
-                  if (param2 != 3) {
-                    if ((param2 ^ -1) == -5) {
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    var4_int = param1.c(32);
-                    this.field_v = new int[var4_int];
-                    this.field_t = new int[var4_int][];
-                    var5 = 0;
-                    L3: while (true) {
-                      if (var4_int <= var5) {
-                        break L2;
+                L3: {
+                  if (param2 != 2) {
+                    if (param2 != 3) {
+                      if ((param2 ^ -1) == -5) {
+                        break L3;
                       } else {
-                        L4: {
-                          var6 = param1.a((byte) 25);
-                          var7 = jf.a((byte) 126, var6);
-                          if (var7 == null) {
-                            break L4;
-                          } else {
-                            this.field_v[var5] = var6;
-                            array$0 = new int[var7.field_b];
-                            this.field_t[var5] = array$0;
-                            var8 = 0;
-                            L5: while (true) {
-                              if (var7.field_b <= var8) {
-                                break L4;
-                              } else {
-                                this.field_t[var5][var8] = param1.a((byte) 25);
-                                var8++;
-                                continue L5;
+                        break L2;
+                      }
+                    } else {
+                      var4_int = param1.c(32);
+                      this.field_v = new int[var4_int];
+                      this.field_t = new int[var4_int][];
+                      var5 = 0;
+                      L4: while (true) {
+                        if (var4_int <= var5) {
+                          break L3;
+                        } else {
+                          L5: {
+                            var6 = param1.a((byte) 25);
+                            var7 = jf.a((byte) 126, var6);
+                            if (var7 == null) {
+                              break L5;
+                            } else {
+                              this.field_v[var5] = var6;
+                              array$0 = new int[var7.field_b];
+                              this.field_t[var5] = array$0;
+                              var8 = 0;
+                              L6: while (true) {
+                                if (var7.field_b <= var8) {
+                                  break L5;
+                                } else {
+                                  this.field_t[var5][var8] = param1.a((byte) 25);
+                                  var8++;
+                                  continue L6;
+                                }
                               }
                             }
                           }
+                          var5++;
+                          continue L4;
                         }
+                      }
+                    }
+                  } else {
+                    var4_int = param1.c(param0 + 32);
+                    this.field_s = new int[var4_int];
+                    var5 = 0;
+                    L7: while (true) {
+                      if (var4_int <= var5) {
+                        break L3;
+                      } else {
+                        this.field_s[var5] = param1.a((byte) 25);
                         var5++;
-                        continue L3;
+                        continue L7;
                       }
                     }
                   }
-                } else {
-                  var4_int = param1.c(param0 + 32);
-                  this.field_s = new int[var4_int];
-                  var5 = 0;
-                  L6: while (true) {
-                    if (var4_int <= var5) {
-                      break L2;
-                    } else {
-                      this.field_s[var5] = param1.a((byte) 25);
-                      var5++;
-                      continue L6;
-                    }
-                  }
                 }
+                break L2;
               } else {
                 this.field_w = ij.a(0, '<', param1.d(true));
                 break L2;
@@ -150,7 +153,7 @@ final class lb extends jl {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var4 = decompiledCaughtException;
             stackIn_22_0 = (RuntimeException) (var4);
 
@@ -160,12 +163,12 @@ final class lb extends jl {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw sd.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param2 + ')');

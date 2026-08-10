@@ -19,75 +19,28 @@ final class lf {
     }
 
     private final void a(Object param0, int param1, int param2, long param3) {
-        RuntimeException runtimeException = null;
         dl var6 = null;
         hc var6_ref = null;
-        int var7 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = Transmogrify.field_A ? 1 : 0;
+        int var7 = Transmogrify.field_A ? 1 : 0;
         try {
-          L0: {
-            if (param1 > this.field_g) {
-              throw new IllegalStateException();
-            } else {
-              this.a((byte) -116, param3);
-              this.field_a = this.field_a - param1;
-              L1: while (true) {
-                L2: {
-                  if (this.field_a >= 0) {
-                    break L2;
-                  } else {
-                    var6 = (dl) ((Object) this.field_f.a(false));
-                    this.a(0, var6);
-                    if (var7 == 0) {
-                      continue L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                L3: {
-                  var6_ref = new hc(param0, param1);
-                  if (param2 < -73) {
-                    break L3;
-                  } else {
-                    this.field_a = 94;
-                    break L3;
-                  }
-                }
-                this.field_b.a(var6_ref, (byte) 63, param3);
-                this.field_f.a(false, var6_ref);
-                ((dl) ((Object) var6_ref)).field_j = 0L;
-                break L0;
-              }
+            if (!(param1 <= this.field_g)) {
+                throw new IllegalStateException();
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("lf.D(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
+            this.a((byte) -116, param3);
+            this.field_a = this.field_a - param1;
+            while (this.field_a < 0) {
+                var6 = (dl) ((Object) this.field_f.a(false));
+                this.a(0, var6);
             }
-          }
-          throw ch.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            var6_ref = new hc(param0, param1);
+            if (param2 >= -73) {
+                this.field_a = 94;
+            }
+            this.field_b.a(var6_ref, (byte) 63, param3);
+            this.field_f.a(false, var6_ref);
+            ((dl) ((Object) var6_ref)).field_j = 0L;
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) ((Object) runtimeException), "lf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -195,10 +148,8 @@ final class lf {
     }
 
     final Object a(int param0, long param1) {
-        Object var5;
         hc var6;
         byte[] var7;
-        dl var8;
         dl var9;
         Object var10;
         dl var11;
@@ -213,29 +164,22 @@ final class lf {
               this.field_a = this.field_a + var11.field_o;
               return null;
             } else {
-              if (!var11.d(8)) {
-                this.field_f.a(false, var11);
-                var11.field_j = 0L;
-                if (Transmogrify.field_A) {
+              L0: {
+                if (var11.d(8)) {
                   var6 = new hc(var12, var11.field_o);
                   this.field_b.a(var6, (byte) 93, var11.field_c);
                   this.field_f.a(false, var6);
                   ((dl) ((Object) var6)).field_j = 0L;
                   var11.c(param0 + -17694);
                   var11.b((byte) -69);
-                  return var12;
+                  break L0;
                 } else {
-                  return var12;
+                  this.field_f.a(false, var11);
+                  var11.field_j = 0L;
+                  break L0;
                 }
-              } else {
-                var6 = new hc(var12, var11.field_o);
-                this.field_b.a(var6, (byte) 93, var11.field_c);
-                this.field_f.a(false, var6);
-                ((dl) ((Object) var6)).field_j = 0L;
-                var11.c(param0 + -17694);
-                var11.b((byte) -69);
-                return var12;
               }
+              return var12;
             }
           } else {
             return null;
@@ -244,39 +188,30 @@ final class lf {
           var7 = (byte[]) null;
           lf.a((byte) 50, false, (byte[]) null);
           var9 = (dl) ((Object) this.field_b.a(-1, param1));
-          var8 = var9;
           if (var9 != null) {
             var10 = var9.c((byte) -82);
-            var5 = var10;
             if (var10 == null) {
               var9.c(5);
               var9.b((byte) -121);
               this.field_a = this.field_a + var9.field_o;
               return null;
             } else {
-              if (!var9.d(8)) {
-                this.field_f.a(false, var9);
-                var9.field_j = 0L;
-                if (!Transmogrify.field_A) {
-                  return var10;
-                } else {
+              L1: {
+                if (var9.d(8)) {
                   var6 = new hc(var10, var9.field_o);
                   this.field_b.a(var6, (byte) 93, var9.field_c);
                   this.field_f.a(false, var6);
                   ((dl) ((Object) var6)).field_j = 0L;
                   var9.c(param0 + -17694);
                   var9.b((byte) -69);
-                  return var10;
+                  break L1;
+                } else {
+                  this.field_f.a(false, var9);
+                  var9.field_j = 0L;
+                  break L1;
                 }
-              } else {
-                var6 = new hc(var10, var9.field_o);
-                this.field_b.a(var6, (byte) 93, var9.field_c);
-                this.field_f.a(false, var6);
-                ((dl) ((Object) var6)).field_j = 0L;
-                var9.c(param0 + -17694);
-                var9.b((byte) -69);
-                return var10;
               }
+              return var10;
             }
           } else {
             return null;
@@ -340,14 +275,8 @@ final class lf {
         if (-225 < (kc.field_g ^ -1)) {
           var1 = kc.field_g % 32;
           ec.a(kc.field_g + (32 + -var1), 9956);
-          if (Transmogrify.field_A) {
-            ec.a(256, 9956);
-            var1 = 4 / ((param0 - 58) / 47);
-            return;
-          } else {
-            var1 = 4 / ((param0 - 58) / 47);
-            return;
-          }
+          var1 = 4 / ((param0 - 58) / 47);
+          return;
         } else {
           ec.a(256, 9956);
           var1 = 4 / ((param0 - 58) / 47);

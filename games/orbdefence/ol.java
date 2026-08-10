@@ -16,25 +16,15 @@ final class ol implements Iterator {
     static int field_j;
 
     public final Object next() {
-        Object var1;
-        var1 = this.field_i;
+        Object var1 = this.field_i;
         if (var1 != this.field_g.field_a) {
-          this.field_i = ((o) (var1)).field_f;
-          if (OrbDefence.field_D) {
+            this.field_i = ((o) (var1)).field_f;
+        } else {
             this.field_i = null;
             var1 = null;
-            this.field_c = (o) (var1);
-            return var1;
-          } else {
-            this.field_c = (o) (var1);
-            return var1;
-          }
-        } else {
-          this.field_i = null;
-          var1 = null;
-          this.field_c = (o) (var1);
-          return var1;
         }
+        this.field_c = (o) (var1);
+        return var1;
     }
 
     public final boolean hasNext() {

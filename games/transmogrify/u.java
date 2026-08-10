@@ -8,39 +8,20 @@ final class u {
     static qh field_a;
 
     final static int a(int param0, int param1) {
-        hj var3;
         param1--;
         param1 = param1 | param1 >>> -816856703;
         param1 = param1 | param1 >>> -343087198;
         param1 = param1 | param1 >>> -1759701692;
         param1 = param1 | param1 >>> 476893576;
         if (param0 != -816856703) {
-          var3 = (hj) null;
-          u.a((hj) null, (byte) 92);
-          param1 = param1 | param1 >>> 155990192;
-          return 1 + param1;
-        } else {
-          param1 = param1 | param1 >>> 155990192;
-          return 1 + param1;
+            hj var3 = (hj) null;
+            u.a((hj) null, (byte) 92);
         }
+        param1 = param1 | param1 >>> 155990192;
+        return 1 + param1;
     }
 
     final static oe[] a(hj param0, byte param1) {
-        Object stackIn_3_0 = null;
-        boolean stackIn_7_0 = false;
-        int stackIn_12_0 = 0;
-        oe[] stackIn_13_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
-        boolean stackOut_6_0;
-        int statePc = 0;
-        Throwable caughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -49,208 +30,84 @@ final class u {
         oe var6_ref_oe = null;
         int var6 = 0;
         int var7 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var7 = Transmogrify.field_A ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var2_int = param0.k(8, 1522829539);
-                        if (-1 <= (var2_int ^ -1)) {
-                            statePc = 4;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        stackIn_3_0 = null;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return (oe[]) ((Object) stackIn_3_0);
-                }
-                case 4: {
-                    try {
-                        var3 = param0.k(12, 1522829539);
-                        var4 = new oe[var3];
-                        var5 = 0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (var5 >= var3) {
-                            statePc = 11;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        stackOut_6_0 = w.a(-1, param0);
-                        stackIn_12_0 = stackOut_6_0 ? 1 : 0;
-                        stackIn_7_0 = stackOut_6_0;
-                        if (var7 != 0) {
-                            statePc = 12;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (!stackIn_7_0) {
-                            statePc = 9;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        var6_ref_oe = new oe();
-                        param0.k(24, 1522829539);
-                        param0.k(24, 1522829539);
-                        var6_ref_oe.field_b = param0.k(24, 1522829539);
-                        param0.k(9, 1522829539);
-                        param0.k(12, 1522829539);
-                        param0.k(12, 1522829539);
-                        param0.k(12, 1522829539);
-                        var4[var5] = var6_ref_oe;
-                        if (var7 == 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        var6 = param0.k(ol.a(-23755, var5 + -1), 1522829539);
-                        var4[var5] = var4[var6];
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var5++;
-                        if (var7 == 0) {
-                            statePc = 5;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        stackIn_12_0 = 70 / ((param1 - -47) / 36);
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        var5 = stackIn_12_0;
-                        stackIn_13_0 = (oe[]) (var4);
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    return stackIn_13_0;
-                }
-                case 14: {
-                    var2 = (RuntimeException) ((Object) caughtException);
-                    stackIn_16_0 = (RuntimeException) (var2);
-                    stackIn_15_0 = stackIn_16_0;
-                    stackIn_16_1 = new StringBuilder().append("u.A(");
-                    stackIn_15_1 = stackIn_16_1;
-                    if (param0 == null) {
-                        statePc = 16;
+        Object stackIn_3_0 = null;
+        oe[] stackIn_11_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var7 = Transmogrify.field_A ? 1 : 0;
+        try {
+          L0: {
+            var2_int = param0.k(8, 1522829539);
+            if (-1 <= (var2_int ^ -1)) {
+              var3 = param0.k(12, 1522829539);
+              var4 = new oe[var3];
+              var5 = 0;
+              L1: while (true) {
+                if (var5 >= var3) {
+                  var5 = 70 / ((param1 - -47) / 36);
+                  stackIn_11_0 = (oe[]) (var4);
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L2: {
+                    if (!w.a(-1, param0)) {
+                      var6 = param0.k(ol.a(-23755, var5 + -1), 1522829539);
+                      var4[var5] = var4[var6];
+                      break L2;
                     } else {
-                        statePc = 15;
+                      var6_ref_oe = new oe();
+                      param0.k(24, 1522829539);
+                      param0.k(24, 1522829539);
+                      var6_ref_oe.field_b = param0.k(24, 1522829539);
+                      param0.k(9, 1522829539);
+                      param0.k(12, 1522829539);
+                      param0.k(12, 1522829539);
+                      param0.k(12, 1522829539);
+                      var4[var5] = var6_ref_oe;
+                      break L2;
                     }
-                    continue stateLoop;
+                  }
+                  var5++;
+                  continue L1;
                 }
-                case 15: {
-                    stackIn_17_0 = (RuntimeException) ((Object) stackIn_15_0);
-                    stackIn_17_1 = (StringBuilder) ((Object) stackIn_15_1);
-                    stackIn_17_2 = "{...}";
-                    statePc = 17;
-                    continue stateLoop;
-                }
-                case 16: {
-                    stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-                    stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-                    stackIn_17_2 = "null";
-                    statePc = 17;
-                    continue stateLoop;
-                }
-                case 17: {
-                    throw ch.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ')');
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+            } else {
+              stackIn_3_0 = null;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackIn_14_0 = (RuntimeException) (var2);
+
+            stackIn_14_1 = new StringBuilder().append("u.A(");
+
+            if (param0 == null) {
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
+              break L3;
+            } else {
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
+              break L3;
+            }
+          }
+          throw ch.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return (oe[]) ((Object) stackIn_3_0);
+        } else {
+          return stackIn_11_0;
         }
     }
 
@@ -441,18 +298,12 @@ final class u {
     }
 
     public static void a(byte param0) {
-        ci var2;
         if (param0 < 99) {
-          var2 = (ci) null;
-          u.a((String) null, (String) null, (ci) null, false);
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
-          field_c = null;
-          field_a = null;
-          return;
+            ci var2 = (ci) null;
+            u.a((String) null, (String) null, (ci) null, false);
         }
+        field_c = null;
+        field_a = null;
     }
 
     static {

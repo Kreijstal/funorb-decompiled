@@ -193,63 +193,66 @@ final class vcb extends oda implements oo {
               }
             }
             L4: {
-              if (!this.field_N.field_x) {
-                break L4;
-              } else {
-                if (1 != this.field_N.field_z) {
-                  break L4;
+              L5: {
+                if (!this.field_N.field_x) {
+                  break L5;
                 } else {
-                  if (this.field_G) {
-                    if (this.field_w) {
-                      var5_int = -this.field_P.field_g + -(this.field_P.field_h >> 856790913) + (-param1 + kc.field_b) + -this.field_g;
-                      var6 = uia.field_b + -param0 + (-this.field_r - (this.field_P.field_r + (this.field_P.field_f >> 171921409)));
-                      if (Math.abs(var6) <= Math.abs(var5_int)) {
-                        if ((var5_int ^ -1) >= -1) {
-                          this.a(-116, this.field_M + -this.field_x);
-                          break L4;
+                  if (1 != this.field_N.field_z) {
+                    break L5;
+                  } else {
+                    if (this.field_G) {
+                      if (this.field_w) {
+                        var5_int = -this.field_P.field_g + -(this.field_P.field_h >> 856790913) + (-param1 + kc.field_b) + -this.field_g;
+                        var6 = uia.field_b + -param0 + (-this.field_r - (this.field_P.field_r + (this.field_P.field_f >> 171921409)));
+                        if (Math.abs(var6) <= Math.abs(var5_int)) {
+                          if ((var5_int ^ -1) >= -1) {
+                            this.a(-116, this.field_M + -this.field_x);
+                            break L4;
+                          } else {
+                            this.a(-15, this.field_x + this.field_M);
+                            break L4;
+                          }
                         } else {
-                          this.a(-15, this.field_x + this.field_M);
-                          break L4;
+                          if (0 < var6) {
+                            this.a((byte) -17, this.field_L - -this.field_F);
+                            break L4;
+                          } else {
+                            this.a((byte) -17, -this.field_F + this.field_L);
+                            break L4;
+                          }
                         }
                       } else {
-                        if (0 < var6) {
+                        if (uia.field_b <= param0 - (-this.field_P.field_r + -(this.field_P.field_f >> 870890145))) {
+                          this.a((byte) -17, this.field_L - this.field_F);
+                          break L4;
+                        } else {
                           this.a((byte) -17, this.field_L - -this.field_F);
                           break L4;
-                        } else {
-                          this.a((byte) -17, -this.field_F + this.field_L);
-                          break L4;
                         }
                       }
                     } else {
-                      if (uia.field_b <= param0 - (-this.field_P.field_r + -(this.field_P.field_f >> 870890145))) {
-                        this.a((byte) -17, this.field_L - this.field_F);
-                        break L4;
+                      if (!this.field_w) {
+                        break L5;
                       } else {
-                        this.a((byte) -17, this.field_L - -this.field_F);
-                        break L4;
-                      }
-                    }
-                  } else {
-                    if (!this.field_w) {
-                      break L4;
-                    } else {
-                      if ((this.field_P.field_h >> -2115708159) + (this.field_P.field_g + param1) >= kc.field_b) {
-                        this.a(107, -this.field_x + this.field_M);
-                        break L4;
-                      } else {
-                        this.a(-102, this.field_M - -this.field_x);
-                        break L4;
+                        if ((this.field_P.field_h >> -2115708159) + (this.field_P.field_g + param1) >= kc.field_b) {
+                          this.a(107, -this.field_x + this.field_M);
+                          break L4;
+                        } else {
+                          this.a(-102, this.field_M - -this.field_x);
+                          break L4;
+                        }
                       }
                     }
                   }
                 }
               }
+              break L4;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var5 = decompiledCaughtException;
             stackIn_39_0 = (RuntimeException) (var5);
 
@@ -259,12 +262,12 @@ final class vcb extends oda implements oo {
               stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
               stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
               stackIn_40_2 = "null";
-              break L5;
+              break L6;
             } else {
               stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
               stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
               stackIn_40_2 = "{...}";
-              break L5;
+              break L6;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_40_0), stackIn_40_2 + ')');

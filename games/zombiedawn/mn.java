@@ -64,7 +64,6 @@ final class mn extends le {
     }
 
     final void a(wk param0, int param1) {
-        RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -72,73 +71,29 @@ final class mn extends le {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == -516) {
-                break L1;
-              } else {
+            if (param1 != -516) {
                 this.field_q = 34;
-                break L1;
-              }
             }
-            L2: {
-              var3_int = param0.a(24 * this.field_q, (byte) -118);
-              var4 = param0.a(24 * this.field_j, 0);
-              var5 = 50;
-              if (this.field_l != 0) {
-                if (2 != this.field_l) {
-                  break L2;
-                } else {
-                  var5 = this.field_o;
-                  break L2;
-                }
-              } else {
+            var3_int = param0.a(24 * this.field_q, (byte) -118);
+            var4 = param0.a(24 * this.field_j, 0);
+            var5 = 50;
+            if (this.field_l == 0) {
                 var5 = this.field_h + -this.field_o;
-                break L2;
-              }
+            } else {
+                if (2 == this.field_l) {
+                    var5 = this.field_o;
+                }
             }
-            L3: {
-              var6 = 0;
-              var7 = 0;
-              if (0 != this.field_k) {
-                break L3;
-              } else {
+            var6 = 0;
+            var7 = 0;
+            if (0 == this.field_k) {
                 var8 = 47;
                 var9 = var8 + (50 - var5) * (-var8 + 255) / 50;
                 this.field_r.e(var6 + var3_int, var4 - -var7, var9);
-                break L3;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (runtimeException);
-
-            stackIn_11_1 = new StringBuilder().append("mn.C(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L4;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L4;
-            }
-          }
-          throw sh.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) ((Object) runtimeException), "mn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

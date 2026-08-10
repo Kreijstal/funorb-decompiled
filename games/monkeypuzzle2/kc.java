@@ -50,106 +50,64 @@ abstract class kc {
     }
 
     final static void a(byte param0) {
+        Object var1 = null;
         int var2 = 0;
         int var4 = 0;
-        int stackIn_19_0 = 0;
         Throwable decompiledCaughtException = null;
-        Object var1 = null;
         RuntimeException var1_ref = null;
+        int var5 = 0;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            var1 = wj.field_k;
-            synchronized (var1) {
+          var1 = wj.field_k;
+          synchronized (var1) {
+            L0: {
               L1: {
-                L2: {
-                  o.field_b = bh.field_e;
-                  je.field_c = je.field_c + 1;
-                  if (param0 >= 86) {
-                    break L2;
-                  } else {
-                    field_b = (Boolean) null;
-                    break L2;
-                  }
+                o.field_b = bh.field_e;
+                je.field_c = je.field_c + 1;
+                if (param0 >= 86) {
+                  break L1;
+                } else {
+                  field_b = (Boolean) null;
+                  break L1;
                 }
-                L3: {
-                  L4: {
-                    L5: {
-                      L6: {
-                        if (0 > vf.field_a) {
-                          break L6;
-                        } else {
-                          L7: while (true) {
-                            if (sl.field_j == vf.field_a) {
-                              break L5;
-                            } else {
-                              var2 = ia.field_g[sl.field_j];
-                              sl.field_j = 127 & sl.field_j + 1;
-                              stackIn_19_0 = -1;
-
-                              if (var4 != 0) {
-                                break L4;
-                              } else {
-                                L8: {
-                                  L9: {
-                                    if (stackIn_19_0 < (var2 ^ -1)) {
-                                      break L9;
-                                    } else {
-                                      dl.field_c[var2] = true;
-                                      if (var4 == 0) {
-                                        break L8;
-                                      } else {
-                                        break L9;
-                                      }
-                                    }
-                                  }
-                                  dl.field_c[var2 ^ -1] = false;
-                                  break L8;
-                                }
-                                if (var4 == 0) {
-                                  continue L7;
-                                } else {
-                                  break L6;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                      var2 = 0;
-                      L10: while (true) {
-                        L11: {
-                          if (112 <= var2) {
-                            break L11;
-                          } else {
-                            dl.field_c[var2] = false;
-                            var2++;
-                            if (var4 != 0) {
-                              break L3;
-                            } else {
-                              if (var4 == 0) {
-                                continue L10;
-                              } else {
-                                break L11;
-                              }
-                            }
-                          }
-                        }
-                        vf.field_a = sl.field_j;
-                        break L5;
+              }
+              L2: {
+                if (0 > vf.field_a) {
+                  var5 = 0;
+                  var2 = var5;
+                  L3: while (true) {
+                    if (112 <= var5) {
+                      vf.field_a = sl.field_j;
+                      break L2;
+                    } else {
+                      dl.field_c[var5] = false;
+                      var5++;
+                      continue L3;
+                    }
+                  }
+                } else {
+                  L4: while (true) {
+                    if (sl.field_j == vf.field_a) {
+                      break L2;
+                    } else {
+                      var2 = ia.field_g[sl.field_j];
+                      sl.field_j = 127 & sl.field_j + 1;
+                      if (-1 < (var2 ^ -1)) {
+                        dl.field_c[var2 ^ -1] = false;
+                        continue L4;
+                      } else {
+                        dl.field_c[var2] = true;
+                        continue L4;
                       }
                     }
-                    stackIn_19_0 = jk.field_w;
-                    break L4;
                   }
-                  bh.field_e = stackIn_19_0;
-                  break L3;
                 }
-                break L1;
               }
+              bh.field_e = jk.field_w;
+              break L0;
             }
-            break L0;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;

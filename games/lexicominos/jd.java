@@ -184,56 +184,35 @@ final class jd {
               var3 = 0;
               var4 = param0;
               L0: while (true) {
-                L1: {
-                  if ((var4 ^ -1L) == -1L) {
-                    break L1;
-                  } else {
-                    var3++;
-                    var4 = var4 / 37L;
-                    if (var11 == 0) {
-                      continue L0;
+                if ((var4 ^ -1L) == -1L) {
+                  var6 = new StringBuilder(var3);
+                  L1: while (true) {
+                    if (-1L == (param0 ^ -1L)) {
+                      var6.reverse();
+                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+                      return var6.toString();
                     } else {
-                      break L1;
-                    }
-                  }
-                }
-                var6 = new StringBuilder(var3);
-                L2: while (true) {
-                  L3: {
-                    L4: {
-                      if (-1L == (param0 ^ -1L)) {
-                        break L4;
-                      } else {
+                      L2: {
                         var7 = param0;
                         param0 = param0 / 37L;
                         var9 = jj.field_b[(int)(-(37L * param0) + var7)];
-                        if (var11 != 0) {
-                          break L3;
+                        if (95 == var9) {
+                          var10 = -1 + var6.length();
+                          var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
+                          var9 = 160;
+                          break L2;
                         } else {
-                          L5: {
-                            if (95 == var9) {
-                              var10 = -1 + var6.length();
-                              var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
-                              var9 = 160;
-                              break L5;
-                            } else {
-                              break L5;
-                            }
-                          }
-                          discarded$1 = var6.append((char) var9);
-                          if (var11 == 0) {
-                            continue L2;
-                          } else {
-                            break L4;
-                          }
+                          break L2;
                         }
                       }
+                      discarded$1 = var6.append((char) var9);
+                      continue L1;
                     }
-                    var6.reverse();
-                    var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
-                    break L3;
                   }
-                  return var6.toString();
+                } else {
+                  var3++;
+                  var4 = var4 / 37L;
+                  continue L0;
                 }
               }
             }

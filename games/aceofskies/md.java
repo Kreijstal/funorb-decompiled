@@ -843,48 +843,51 @@ final class md extends o {
                       }
                     }
                     L12: {
-                      param2.b((double)(-var4_int), 128);
-                      if (!uh.a(param1 + 30, param2.field_d, 500.0, this.field_d)) {
-                        break L12;
-                      } else {
-                        if (100 > this.field_j) {
-                          if (ro.field_u != this.field_r) {
-                            if (0 == var13) {
-                              this.field_l = true;
-                              break L12;
+                      L13: {
+                        param2.b((double)(-var4_int), 128);
+                        if (!uh.a(param1 + 30, param2.field_d, 500.0, this.field_d)) {
+                          break L13;
+                        } else {
+                          if (100 > this.field_j) {
+                            if (ro.field_u != this.field_r) {
+                              if (0 == var13) {
+                                this.field_l = true;
+                                break L13;
+                              } else {
+                                break L12;
+                              }
                             } else {
-                              break L12;
+                              kp.field_a.a(10.0, (double)this.field_f + this.field_e, 121);
+                              rc.field_d.a(this.field_d, true);
+                              rc.field_d.a(param2.field_d, param1 ^ -30562);
+                              var14 = kp.field_a.a(rc.field_d, (byte) -118) / rc.field_d.a((byte) -74);
+                              if (9.5 < var14) {
+                                this.field_l = true;
+                                this.field_w = 0;
+                                if (pd.field_a != this.field_u) {
+                                  break L12;
+                                } else {
+                                  this.field_u = ht.field_i;
+                                  break L12;
+                                }
+                              } else {
+                                fieldTemp$1 = this.field_w + 1;
+                                this.field_w = this.field_w + 1;
+                                if (-151 >= (fieldTemp$1 ^ -1)) {
+                                  this.field_u = pd.field_a;
+                                  this.field_w = 150;
+                                  break L12;
+                                } else {
+                                  break L12;
+                                }
+                              }
                             }
                           } else {
-                            kp.field_a.a(10.0, (double)this.field_f + this.field_e, 121);
-                            rc.field_d.a(this.field_d, true);
-                            rc.field_d.a(param2.field_d, param1 ^ -30562);
-                            var14 = kp.field_a.a(rc.field_d, (byte) -118) / rc.field_d.a((byte) -74);
-                            if (9.5 < var14) {
-                              this.field_l = true;
-                              this.field_w = 0;
-                              if (pd.field_a != this.field_u) {
-                                break L12;
-                              } else {
-                                this.field_u = ht.field_i;
-                                break L12;
-                              }
-                            } else {
-                              fieldTemp$1 = this.field_w + 1;
-                              this.field_w = this.field_w + 1;
-                              if (-151 >= (fieldTemp$1 ^ -1)) {
-                                this.field_u = pd.field_a;
-                                this.field_w = 150;
-                                break L12;
-                              } else {
-                                break L12;
-                              }
-                            }
+                            break L12;
                           }
-                        } else {
-                          break L12;
                         }
                       }
+                      break L12;
                     }
                     decompiledRegionSelector0 = 2;
                     break L0;
@@ -900,7 +903,7 @@ final class md extends o {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L13: {
+          L14: {
             var4 = decompiledCaughtException;
             stackIn_67_0 = (RuntimeException) (var4);
 
@@ -910,12 +913,12 @@ final class md extends o {
               stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
               stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
               stackIn_68_2 = "null";
-              break L13;
+              break L14;
             } else {
               stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
               stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
               stackIn_68_2 = "{...}";
-              break L13;
+              break L14;
             }
           }
           throw pn.a((Throwable) ((Object) stackIn_68_0), stackIn_68_2 + ')');

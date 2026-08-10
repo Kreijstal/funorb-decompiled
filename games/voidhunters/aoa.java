@@ -229,71 +229,21 @@ final class aoa implements ntb {
     }
 
     public final void a(tv param0, int param1) {
-        RuntimeException runtimeException = null;
-        aoa var3 = null;
+        aoa var3 = (aoa) ((Object) param0);
         int var4 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            L1: {
-              var3 = (aoa) ((Object) param0);
-              var4 = 0;
-              if (var3.field_b == this.field_b) {
-                break L1;
-              } else {
-                var4 = 1;
-                System.out.println("int parent_player has changed. before=" + var3.field_b + ", now=" + this.field_b);
-                break L1;
-              }
-            }
-            if (param1 < -19) {
-              L2: {
-                if (var4 == 0) {
-                  break L2;
-                } else {
-                  System.out.println("This instance of ShipAI has changed");
-                  break L2;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (runtimeException);
-
-            stackIn_9_1 = new StringBuilder().append("aoa.F(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+        if (var3.field_b != this.field_b) {
+            var4 = 1;
+            System.out.println("int parent_player has changed. before=" + var3.field_b + ", now=" + this.field_b);
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        if (param1 >= -19) {
+            return;
+        }
+        try {
+            if (var4 != 0) {
+                System.out.println("This instance of ShipAI has changed");
+            }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "aoa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

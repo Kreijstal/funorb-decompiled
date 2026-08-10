@@ -243,122 +243,33 @@ final class qj {
     }
 
     final void g(int param0) {
-        int statePc = 0;
-        int var3 = 0;
-        wf var4 = null;
-        wf var5 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = Transmogrify.field_A ? 1 : 0;
-                    if (param0 == -1) {
-                        statePc = 10;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    qj.b((byte) 115);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    var5 = this.field_d.field_b;
-                    if (this.field_d == var5) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var5.c(5);
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (var3 != 0) {
-                        statePc = 8;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (var3 == 0) {
-                        statePc = 9;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    var5.c(5);
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    if (var3 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    this.field_b = null;
-                    return;
-                }
-                case 10: {
-                    var4 = this.field_d.field_b;
-                    if (this.field_d != var4) {
-                        statePc = 14;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
-                    if (var3 != 0) {
-                        statePc = 16;
-                    } else {
-                        statePc = 12;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    if (var3 == 0) {
-                        statePc = 17;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 14: {
-                    var4.c(5);
-                    statePc = 16;
-                    continue stateLoop;
-                }
-                case 15: {
-                    var4.c(5);
-                    statePc = 16;
-                    continue stateLoop;
-                }
-                case 16: {
-                    if (var3 == 0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 17;
-                    }
-                    continue stateLoop;
-                }
-                case 17: {
-                    this.field_b = null;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int var3;
+        wf var5;
+        wf var4;
+        var3 = Transmogrify.field_A ? 1 : 0;
+        if (param0 == -1) {
+          L0: while (true) {
+            var4 = this.field_d.field_b;
+            if (this.field_d != var4) {
+              var4.c(5);
+              continue L0;
+            } else {
+              this.field_b = null;
+              return;
             }
+          }
+        } else {
+          qj.b((byte) 115);
+          L1: while (true) {
+            var5 = this.field_d.field_b;
+            if (this.field_d != var5) {
+              var5.c(5);
+              continue L1;
+            } else {
+              this.field_b = null;
+              return;
+            }
+          }
         }
     }
 
@@ -436,70 +347,30 @@ final class qj {
     }
 
     final static void e(int param0) {
-        int var1;
-        if (param0 <= -65) {
-          if ((kc.field_g ^ -1) >= -33) {
-            ec.a(0, 9956);
-            if (Transmogrify.field_A) {
-              L0: {
-                var1 = kc.field_g % 32;
-                if (var1 == 0) {
-                  var1 = 32;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              ec.a(-var1 + kc.field_g, 9956);
-              return;
+        int var1 = 0;
+        if (param0 > -65) {
+            field_a = (String[]) null;
+            if ((kc.field_g ^ -1) >= -33) {
+                ec.a(0, 9956);
             } else {
-              return;
+                var1 = kc.field_g % 32;
+                if (!(var1 != 0)) {
+                    var1 = 32;
+                }
+                ec.a(-var1 + kc.field_g, 9956);
+                return;
             }
-          } else {
-            L1: {
-              var1 = kc.field_g % 32;
-              if (var1 == 0) {
-                var1 = 32;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            ec.a(-var1 + kc.field_g, 9956);
             return;
-          }
+        }
+        if ((kc.field_g ^ -1) >= -33) {
+            ec.a(0, 9956);
         } else {
-          field_a = (String[]) null;
-          if ((kc.field_g ^ -1) >= -33) {
-            ec.a(0, 9956);
-            if (Transmogrify.field_A) {
-              L2: {
-                var1 = kc.field_g % 32;
-                if (var1 == 0) {
-                  var1 = 32;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              ec.a(-var1 + kc.field_g, 9956);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            L3: {
-              var1 = kc.field_g % 32;
-              if (var1 == 0) {
+            var1 = kc.field_g % 32;
+            if (!(var1 != 0)) {
                 var1 = 32;
-                break L3;
-              } else {
-                break L3;
-              }
             }
             ec.a(-var1 + kc.field_g, 9956);
             return;
-          }
         }
     }
 

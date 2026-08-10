@@ -40,92 +40,24 @@ final class wd extends se implements in {
     }
 
     private final void a(int param0, int param1) {
-        gn[] var3 = null;
-        int[] var4 = null;
         int var5 = 0;
-        int var6 = 0;
-        gn[] var7 = null;
-        gn[] var8 = null;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var6 = ZombieDawnMulti.field_E ? 1 : 0;
-                    if (this.field_J < param1) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    if (param0 == -3481) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    var7 = new gn[param1];
-                    var8 = var7;
-                    var3 = var8;
-                    var4 = new int[param1];
-                    var5 = 0;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (var5 < this.field_J) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    this.field_J = param1;
-                    this.field_H = var8;
-                    this.field_N = var4;
-                    return;
-                }
-                case 7: {
-                    var7[var5] = this.field_H[var5];
-                    var4[var5] = this.field_N[var5];
-                    var5++;
-                    if (var6 == 0) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                case 9: {
-                    if (var6 == 0) {
-                        statePc = 5;
-                    } else {
-                        statePc = 12;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    this.field_J = param1;
-                    this.field_H = var8;
-                    this.field_N = var4;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        int var6 = ZombieDawnMulti.field_E ? 1 : 0;
+        if (this.field_J >= param1) {
+            return;
         }
+        if (param0 != -3481) {
+            return;
+        }
+        gn[] var7 = new gn[param1];
+        gn[] var3 = var7;
+        int[] var4 = new int[param1];
+        for (var5 = 0; var5 < this.field_J; var5++) {
+            var7[var5] = this.field_H[var5];
+            var4[var5] = this.field_N[var5];
+        }
+        this.field_J = param1;
+        this.field_H = var3;
+        this.field_N = var4;
     }
 
     final static void a(int param0, int param1, ga param2, int param3, int param4, int param5) {
@@ -257,67 +189,45 @@ final class wd extends se implements in {
 
     public final void a(int param0, int param1, gn param2, int param3, int param4) {
         int var6_int = 0;
-        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
             var6_int = 0;
             L1: while (true) {
               L2: {
-                L3: {
-                  if (var6_int >= this.field_J) {
-                    break L3;
+                if (var6_int >= this.field_J) {
+                  break L2;
+                } else {
+                  if (param2 != this.field_H[var6_int]) {
+                    var6_int++;
+                    continue L1;
                   } else {
-                    if (var8 != 0) {
+                    var7 = this.field_N[var6_int];
+                    if (0 == (var7 ^ -1)) {
+                      this.field_R.m(-7435);
                       break L2;
                     } else {
-                      L4: {
-                        if (param2 != this.field_H[var6_int]) {
-                          break L4;
-                        } else {
-                          L5: {
-                            var7 = this.field_N[var6_int];
-                            if (0 == (var7 ^ -1)) {
-                              break L5;
-                            } else {
-                              fb.a(this.field_N[var6_int], 111);
-                              if (var8 == 0) {
-                                break L3;
-                              } else {
-                                break L5;
-                              }
-                            }
-                          }
-                          this.field_R.m(-7435);
-                          if (var8 == 0) {
-                            break L3;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
-                      var6_int++;
-                      if (var8 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
+                      fb.a(this.field_N[var6_int], 111);
+                      break L2;
                     }
                   }
                 }
+              }
+              L3: {
                 if (param3 < -83) {
-                  break L2;
+                  break L3;
                 } else {
                   this.a(115, -39, -122, -67);
-                  return;
+                  break L3;
                 }
               }
               break L0;
@@ -325,25 +235,25 @@ final class wd extends se implements in {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L4: {
             var6 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var6);
+            stackIn_13_0 = (RuntimeException) (var6);
 
-            stackIn_17_1 = new StringBuilder().append("wd.E(").append(param0).append(',').append(param1).append(',');
+            stackIn_13_1 = new StringBuilder().append("wd.E(").append(param0).append(',').append(param1).append(',');
 
             if (param2 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L6;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "null";
+              break L4;
             } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L6;
+              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackIn_14_2 = "{...}";
+              break L4;
             }
           }
-          throw fa.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param3 + ',' + param4 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

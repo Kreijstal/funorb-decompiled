@@ -71,62 +71,16 @@ final class te {
     }
 
     final static void a(int param0, hj[] param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param0 == -4) {
-              L1: {
-                qk.field_y = param1;
-                if (null == qk.field_y) {
-                  break L1;
-                } else {
-                  if ((param1.length ^ -1) <= -4) {
-                    break L1;
-                  } else {
-                    throw new IllegalArgumentException("");
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var2);
-
-            stackIn_8_1 = new StringBuilder().append("te.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
-          }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+        if (param0 != -4) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            qk.field_y = param1;
+            if (null != qk.field_y && (param1.length ^ -1) > -4) {
+                throw new IllegalArgumentException("");
+            }
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

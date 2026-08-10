@@ -40,21 +40,14 @@ final class we {
         try {
           L0: {
             L1: {
-              L2: {
-                var4 = -117 % ((param0 - 66) / 60);
-                if (param1 != null) {
-                  break L2;
-                } else {
-                  var3 = this.field_b.field_e.field_h;
-                  if (!fleas.field_A) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              var4 = -117 % ((param0 - 66) / 60);
+              if (param1 != null) {
+                var3 = param1;
+                break L1;
+              } else {
+                var3 = this.field_b.field_e.field_h;
+                break L1;
               }
-              var3 = param1;
-              break L1;
             }
             if (this.field_b.field_e != var3) {
               this.field_a = var3.field_h;
@@ -70,7 +63,7 @@ final class we {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3_ref = decompiledCaughtException;
             stackIn_10_0 = (RuntimeException) (var3_ref);
 
@@ -80,12 +73,12 @@ final class we {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "null";
-              break L3;
+              break L2;
             } else {
               stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
               stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackIn_11_2 = "{...}";
-              break L3;
+              break L2;
             }
           }
           throw pf.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
@@ -168,27 +161,20 @@ final class we {
         try {
           L0: {
             L1: {
-              L2: {
-                if (param1 != null) {
-                  break L2;
-                } else {
-                  var3 = this.field_b.field_e.field_a;
-                  if (!fleas.field_A) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              if (param1 != null) {
+                var3 = param1;
+                break L1;
+              } else {
+                var3 = this.field_b.field_e.field_a;
+                break L1;
               }
-              var3 = param1;
-              break L1;
             }
-            L3: {
+            L2: {
               if (param0 < -107) {
-                break L3;
+                break L2;
               } else {
                 this.field_a = (lh) null;
-                break L3;
+                break L2;
               }
             }
             if (this.field_b.field_e == var3) {
@@ -205,7 +191,7 @@ final class we {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3_ref = decompiledCaughtException;
             stackIn_13_0 = (RuntimeException) (var3_ref);
 
@@ -215,12 +201,12 @@ final class we {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "null";
-              break L4;
+              break L3;
             } else {
               stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
               stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackIn_14_2 = "{...}";
-              break L4;
+              break L3;
             }
           }
           throw pf.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');

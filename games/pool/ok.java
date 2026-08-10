@@ -21,62 +21,17 @@ abstract class ok extends tj {
     }
 
     void d(ei param0, int param1) {
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 30) {
-                break L1;
-              } else {
+            if (param1 != 30) {
                 this.field_ib = (sh) null;
-                break L1;
-              }
             }
-            L2: {
-              this.field_lb = param0;
-              if (db.field_Ub == this.field_gb) {
+            this.field_lb = param0;
+            if (db.field_Ub == this.field_gb || dj.field_c != this.field_gb) {
                 this.a((byte) -77, this.field_lb.field_y + (12 - -this.field_jb), 12 - -this.field_lb.field_l, this.field_nb);
                 this.field_hb = 0;
-                break L2;
-              } else {
-                if (dj.field_c == this.field_gb) {
-                  break L2;
-                } else {
-                  this.field_gb = dj.field_c;
-                  this.field_hb = 0;
-                  break L2;
-                }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("ok.O(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
-          }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) ((Object) runtimeException), "ok.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

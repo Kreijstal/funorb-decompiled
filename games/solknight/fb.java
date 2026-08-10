@@ -7,8 +7,8 @@ final class fb {
     static boolean field_a;
 
     final static void a(int param0, String[] param1, int param2, String param3) {
-        RuntimeException runtimeException = null;
         String[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         String[] var6 = null;
         int stackIn_12_0 = 0;
@@ -34,66 +34,47 @@ final class fb {
                 break L1;
               }
             }
-            L2: {
-              L3: {
-                gb.field_i = da.field_d;
-                if (param2 == 255) {
-                  break L3;
-                } else {
-                  L4: {
-                    L5: {
-                      if ((param2 ^ -1) > -101) {
-                        break L5;
-                      } else {
-                        if ((param2 ^ -1) >= -106) {
-                          break L4;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    a.field_h = mh.a(param2, true, param3);
-                    if (var5 == 0) {
-                      break L2;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  var4 = param1;
-                  kf.a(1, var4);
-                  a.field_h = wk.a((byte) 17, param1);
-                  if (var5 == 0) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              L6: {
+            gb.field_i = da.field_d;
+            if (param2 == 255) {
+              L2: {
                 stackIn_12_0 = 0;
 
                 if (13 <= uh.field_d) {
                   stackIn_13_0 = stackIn_12_0;
                   stackIn_13_1 = 0;
-                  break L6;
+                  break L2;
                 } else {
                   stackIn_13_0 = stackIn_12_0;
                   stackIn_13_1 = 1;
-                  break L6;
+                  break L2;
                 }
               }
               a.field_h = di.a(stackIn_13_0 != 0, stackIn_13_1 != 0);
               var6 = (String[]) null;
               kf.a(1, (String[]) null);
-              break L2;
+              break L0;
+            } else {
+              if ((param2 ^ -1) > -101) {
+                a.field_h = mh.a(param2, true, param3);
+                return;
+              } else {
+                if ((param2 ^ -1) >= -106) {
+                  var4 = param1;
+                  kf.a(1, var4);
+                  a.field_h = wk.a((byte) 17, param1);
+                  return;
+                } else {
+                  a.field_h = mh.a(param2, true, param3);
+                  return;
+                }
+              }
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            runtimeException = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (runtimeException);
+          L3: {
+            var4_ref = decompiledCaughtException;
+            stackIn_17_0 = (RuntimeException) (var4_ref);
 
             stackIn_17_1 = new StringBuilder().append("fb.C(").append(param0).append(',');
 
@@ -101,15 +82,15 @@ final class fb {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "null";
-              break L7;
+              break L3;
             } else {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "{...}";
-              break L7;
+              break L3;
             }
           }
-          L8: {
+          L4: {
 
 
             stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param2).append(',');
@@ -118,12 +99,12 @@ final class fb {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
               stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackIn_21_2 = "null";
-              break L8;
+              break L4;
             } else {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
               stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackIn_21_2 = "{...}";
-              break L8;
+              break L4;
             }
           }
           throw fc.a((Throwable) ((Object) stackIn_18_0), stackIn_21_2 + ')');

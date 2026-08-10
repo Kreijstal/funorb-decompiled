@@ -511,6 +511,7 @@ class pe extends ub implements bg {
     }
 
     void a(int param0, int param1, int param2, ub param3) {
+        RuntimeException runtimeException = null;
         pf var5 = null;
         ub var6 = null;
         int var7 = 0;
@@ -520,7 +521,6 @@ class pe extends ub implements bg {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = wizardrun.field_H;
         try {
           L0: {
@@ -547,8 +547,8 @@ class pe extends ub implements bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("pe.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
@@ -872,6 +872,7 @@ class pe extends ub implements bg {
     }
 
     final void a(int param0, int param1, int param2, int param3, ub param4, int param5) {
+        RuntimeException runtimeException = null;
         pf var7 = null;
         ub var8 = null;
         int var9 = 0;
@@ -881,7 +882,6 @@ class pe extends ub implements bg {
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
         var9 = wizardrun.field_H;
         try {
           L0: {
@@ -915,8 +915,8 @@ class pe extends ub implements bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var7_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var7_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
 
             stackIn_10_1 = new StringBuilder().append("pe.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 

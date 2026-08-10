@@ -12,69 +12,48 @@ final class jf {
 
     final static void a(java.awt.Canvas param0, boolean param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
         var4 = client.field_A ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if (ca.field_vb >= 10) {
-                  break L2;
+              if (ca.field_vb >= 10) {
+                if (!dl.a(480)) {
+                  hk.b();
+                  qc.a(240, 320, param2 ^ -21986);
+                  mf.a(1, 0, 0, param0);
+                  break L1;
                 } else {
-                  L3: {
-                    var3_int = 0;
-                    if (cd.field_g) {
-                      var3_int = 1;
-                      cd.field_g = false;
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  bf.a(cn.b(true), var3_int != 0, 6, cf.a(-11777), fb.field_g);
-                  if (var4 == 0) {
+                  if (hc.field_d != 0) {
+                    cn.a(true, param0);
                     break L1;
+                  } else {
+                    uc.a(false, param1, 78);
+                    mf.a(1, 0, 0, param0);
+                    break L1;
+                  }
+                }
+              } else {
+                L2: {
+                  var3_int = 0;
+                  if (cd.field_g) {
+                    var3_int = 1;
+                    cd.field_g = false;
+                    break L2;
                   } else {
                     break L2;
                   }
                 }
+                bf.a(cn.b(true), var3_int != 0, 6, cf.a(-11777), fb.field_g);
+                break L1;
               }
-              L4: {
-                if (!dl.a(480)) {
-                  break L4;
-                } else {
-                  L5: {
-                    if (hc.field_d != 0) {
-                      break L5;
-                    } else {
-                      uc.a(false, param1, 78);
-                      mf.a(1, 0, 0, param0);
-                      if (var4 == 0) {
-                        break L1;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  cn.a(true, param0);
-                  if (var4 == 0) {
-                    break L1;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              hk.b();
-              qc.a(240, 320, param2 ^ -21986);
-              mf.a(1, 0, 0, param0);
-              break L1;
             }
             if (param2 == -6351) {
               break L0;
@@ -85,25 +64,25 @@ final class jf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L3: {
             var3 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var3);
+            stackIn_16_0 = (RuntimeException) (var3);
 
-            stackIn_18_1 = new StringBuilder().append("jf.B(");
+            stackIn_16_1 = new StringBuilder().append("jf.B(");
 
             if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L6;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
+              break L3;
             } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L6;
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
+              break L3;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -118,20 +118,12 @@ final class pd extends lh {
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (param1) {
-          gb.g(0, 0, gb.field_d, gb.field_k, 0, 192);
-          if (!fleas.field_A) {
+            gb.g(0, 0, gb.field_d, gb.field_k, 0, 192);
             kb.a(param2, param1);
             return;
-          } else {
-            gb.c();
-            kb.a(param2, param1);
-            return;
-          }
-        } else {
-          gb.c();
-          kb.a(param2, param1);
-          return;
         }
+        gb.c();
+        kb.a(param2, param1);
     }
 
     final static n a(byte[] param0, boolean param1) {

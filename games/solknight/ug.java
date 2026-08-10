@@ -125,7 +125,6 @@ abstract class ug {
 
     final static ia a(String param0, int param1) {
         String var2 = null;
-        RuntimeException var2_ref = null;
         ia var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -133,14 +132,14 @@ abstract class ug {
         CharSequence var7 = null;
         ia stackIn_6_0 = null;
         ia stackIn_18_0 = null;
-        Object stackIn_21_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var5 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
@@ -171,13 +170,7 @@ abstract class ug {
                     }
                     if (!var4.equals(var2)) {
                       var3 = (ia) ((Object) lc.field_m.a((byte) -9));
-                      if (var5 == 0) {
-                        continue L2;
-                      } else {
-                        stackIn_21_0 = null;
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      }
+                      continue L2;
                     } else {
                       stackIn_18_0 = (ia) (var3);
                       decompiledRegionSelector0 = 1;
@@ -200,32 +193,28 @@ abstract class ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2_ref = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var2_ref);
+            stackIn_23_0 = (RuntimeException) (var2_ref);
 
-            stackIn_24_1 = new StringBuilder().append("ug.N(");
+            stackIn_23_1 = new StringBuilder().append("ug.N(");
 
             if (param0 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "null";
               break L4;
             } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
+              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackIn_24_2 = "{...}";
               break L4;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_6_0;
         } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_18_0;
-          } else {
-            return (ia) ((Object) stackIn_21_0);
-          }
+          return stackIn_18_0;
         }
     }
 

@@ -80,84 +80,28 @@ abstract class oda extends shb implements nea {
     }
 
     void a(int param0, int param1, int param2, shb param3) {
-        RuntimeException runtimeException = null;
-        shb[] var5 = null;
+        shb[] var9 = null;
         int var6 = 0;
         shb var7 = null;
-        int var8 = 0;
-        shb[] var9 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var8 = VoidHunters.field_G;
-        try {
-          L0: {
-            super.a(param0, param1, param2 ^ 0, param3);
-            if (null == this.field_u) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              var9 = this.field_u;
-              var5 = var9;
-              var6 = 0;
-              L1: while (true) {
-                if (var6 >= var9.length) {
-                  L2: {
-                    if (param2 == -981) {
-                      break L2;
-                    } else {
-                      field_t = (String) null;
-                      break L2;
-                    }
-                  }
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L3: {
-                    var7 = var9[var6];
-                    if (var7 != null) {
-                      var7.a(param0 - -this.field_r, this.field_g + param1, -981, param3);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  var6++;
-                  continue L1;
-                }
-              }
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (runtimeException);
-
-            stackIn_15_1 = new StringBuilder().append("oda.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L4;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L4;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+        int var8 = VoidHunters.field_G;
+        super.a(param0, param1, param2 ^ 0, param3);
+        if (!(null != this.field_u)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            var9 = this.field_u;
+            shb[] var5 = var9;
+            for (var6 = 0; var6 < var9.length; var6++) {
+                var7 = var9[var6];
+                if (!(var7 == null)) {
+                    var7.a(param0 - -this.field_r, this.field_g + param1, -981, param3);
+                }
+            }
+            if (param2 != -981) {
+                field_t = (String) null;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "oda.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

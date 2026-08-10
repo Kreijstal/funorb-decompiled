@@ -250,76 +250,79 @@ final class gi {
                 }
               }
               L6: {
-                if (null == oi.field_i) {
-                  break L6;
-                } else {
-                  var1_int = 1;
-                  var6 = 0;
-                  var2_int = var6;
-                  L7: while (true) {
-                    if (var6 >= rg.field_f.length) {
-                      if (var1_int == 0) {
-                        break L6;
-                      } else {
-                        L8: {
-                          var2 = ol.field_g.field_l;
-                          if (var2 != null) {
-                            break L8;
-                          } else {
-                            if ((ge.field_i ^ -1) >= -1) {
-                              break L8;
-                            } else {
-                              fieldTemp$1 = ge.field_i - 1;
-                              ge.field_i = ge.field_i - 1;
-                              var2 = js.field_b[fieldTemp$1];
-                              break L8;
-                            }
-                          }
-                        }
-                        if (is.field_b) {
+                L7: {
+                  if (null == oi.field_i) {
+                    break L7;
+                  } else {
+                    var1_int = 1;
+                    var6 = 0;
+                    var2_int = var6;
+                    L8: while (true) {
+                      if (var6 >= rg.field_f.length) {
+                        if (var1_int == 0) {
+                          break L7;
+                        } else {
                           L9: {
-                            is.field_b = false;
-                            var3 = js.field_b[ge.field_i];
-                            if (var3 == null) {
+                            var2 = ol.field_g.field_l;
+                            if (var2 != null) {
                               break L9;
                             } else {
-                              if (var3 != ol.field_g) {
-                                lp.a(1546006977, var3);
-                                break L6;
+                              if ((ge.field_i ^ -1) >= -1) {
+                                break L9;
                               } else {
+                                fieldTemp$1 = ge.field_i - 1;
+                                ge.field_i = ge.field_i - 1;
+                                var2 = js.field_b[fieldTemp$1];
                                 break L9;
                               }
                             }
                           }
-                          lp.a(1546006977, var2);
-                          break L6;
-                        } else {
-                          lp.a(1546006977, var2);
-                          break L6;
+                          if (is.field_b) {
+                            L10: {
+                              is.field_b = false;
+                              var3 = js.field_b[ge.field_i];
+                              if (var3 == null) {
+                                break L10;
+                              } else {
+                                if (var3 != ol.field_g) {
+                                  lp.a(1546006977, var3);
+                                  break L6;
+                                } else {
+                                  break L10;
+                                }
+                              }
+                            }
+                            lp.a(1546006977, var2);
+                            break L6;
+                          } else {
+                            lp.a(1546006977, var2);
+                            break L6;
+                          }
                         }
-                      }
-                    } else {
-                      L10: {
-                        if (rg.field_f[var6] <= 0) {
-                          break L10;
-                        } else {
-                          rg.field_f[var6] = rg.field_f[var6] + 1;
-                          break L10;
+                      } else {
+                        L11: {
+                          if (rg.field_f[var6] <= 0) {
+                            break L11;
+                          } else {
+                            rg.field_f[var6] = rg.field_f[var6] + 1;
+                            break L11;
+                          }
                         }
-                      }
-                      L11: {
-                        if (rg.field_f[var6] < 48) {
-                          var1_int = 0;
-                          break L11;
-                        } else {
-                          break L11;
+                        L12: {
+                          if (rg.field_f[var6] < 48) {
+                            var1_int = 0;
+                            break L12;
+                          } else {
+                            break L12;
+                          }
                         }
+                        var6++;
+                        continue L8;
                       }
-                      var6++;
-                      continue L7;
                     }
                   }
                 }
+                break L6;
               }
               decompiledRegionSelector0 = 1;
               break L0;

@@ -24,12 +24,7 @@ final class mj extends cj {
         var5 = 23 % ((-22 - param0) / 57);
         if (this.field_Jb) {
           this.c(0, param1, param3, param2);
-          if (ZombieDawnMulti.field_E) {
-            this.b(param2, param1, param3, 126);
-            return;
-          } else {
-            return;
-          }
+          return;
         } else {
           this.b(param2, param1, param3, 126);
           return;
@@ -53,46 +48,22 @@ final class mj extends cj {
             break L0;
           }
         }
-        L1: {
-          L2: {
-            if (!param1) {
-              break L2;
-            } else {
-              L3: {
-                if ((var5 ^ -1) <= -1) {
-                  break L3;
-                } else {
-                  var5 = 0;
-                  break L3;
-                }
-              }
-              if (var5 > -param2 + param0) {
-                var5 = param0 - param2;
-                if (!ZombieDawnMulti.field_E) {
-                  break L1;
-                } else {
-                  break L2;
-                }
-              } else {
-                if (param3 != -10596) {
-                  return -51;
-                } else {
-                  return var5;
-                }
-              }
-            }
-          }
-          L4: {
+        if (!param1) {
+          L1: {
             if (param0 + -param2 >= var5) {
-              break L4;
+              break L1;
             } else {
               var5 = param0 - param2;
-              break L4;
+              break L1;
             }
           }
           if (0 > var5) {
             var5 = 0;
-            break L1;
+            if (param3 != -10596) {
+              return -51;
+            } else {
+              return var5;
+            }
           } else {
             if (param3 != -10596) {
               return -51;
@@ -100,11 +71,29 @@ final class mj extends cj {
               return var5;
             }
           }
-        }
-        if (param3 != -10596) {
-          return -51;
         } else {
-          return var5;
+          L2: {
+            if ((var5 ^ -1) <= -1) {
+              break L2;
+            } else {
+              var5 = 0;
+              break L2;
+            }
+          }
+          if (var5 > -param2 + param0) {
+            var5 = param0 - param2;
+            if (param3 != -10596) {
+              return -51;
+            } else {
+              return var5;
+            }
+          } else {
+            if (param3 != -10596) {
+              return -51;
+            } else {
+              return var5;
+            }
+          }
         }
     }
 
@@ -262,106 +251,35 @@ final class mj extends cj {
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var14;
-        cj var15;
-        cj var16;
-        cj var17;
-        cj var18;
-        cj var19;
-        cj var20;
-        cj stackIn_13_0 = null;
-        cj stackIn_13_1 = null;
-        cj stackIn_13_2 = null;
-        cj stackIn_14_0 = null;
-        cj stackIn_14_1 = null;
-        cj stackIn_14_2 = null;
-        int stackIn_14_3 = 0;
-        cj stackIn_17_0 = null;
-        cj stackIn_17_1 = null;
-        cj stackIn_17_2 = null;
-        cj stackIn_18_0 = null;
-        cj stackIn_18_1 = null;
-        cj stackIn_18_2 = null;
-        int stackIn_18_3 = 0;
-        cj stackIn_25_0 = null;
-        cj stackIn_25_1 = null;
-        cj stackIn_25_2 = null;
-        cj stackIn_26_0 = null;
-        cj stackIn_26_1 = null;
-        cj stackIn_26_2 = null;
-        int stackIn_26_3 = 0;
-        cj stackIn_29_0 = null;
-        cj stackIn_29_1 = null;
-        cj stackIn_29_2 = null;
-        cj stackIn_30_0 = null;
-        cj stackIn_30_1 = null;
-        cj stackIn_30_2 = null;
-        int stackIn_30_3 = 0;
-        L0: {
-          L1: {
-            var14 = ZombieDawnMulti.field_E ? 1 : 0;
-            if (this.field_zb < 2 * this.field_z) {
-              break L1;
-            } else {
-              var6 = this.field_zb + -this.field_z;
-              var5 = this.field_z;
-              if (var14 == 0) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          var6 = this.field_zb / 2;
-          var5 = this.field_zb / 2;
-          break L0;
+        int var6 = 0;
+        int var5 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        cj var15 = null;
+        cj var16 = null;
+        cj var17 = null;
+        cj var18 = null;
+        cj var19 = null;
+        cj var20 = null;
+        int var14 = ZombieDawnMulti.field_E ? 1 : 0;
+        if (this.field_zb >= 2 * this.field_z) {
+            var6 = this.field_zb + -this.field_z;
+            var5 = this.field_z;
+        } else {
+            var6 = this.field_zb / 2;
+            var5 = this.field_zb / 2;
         }
-        L2: {
-          L3: {
-            var7 = var6 - var5;
-            var8 = var7;
-            if (param1 < param0) {
-              break L3;
-            } else {
-              var7 = 0;
-              if (var14 == 0) {
-                break L2;
-              } else {
-                break L3;
-              }
-            }
-          }
-          L4: {
-            var8 = var8 * param1 / param0;
-            if (this.field_z <= var8) {
-              break L4;
-            } else {
-              var8 = this.field_z;
-              break L4;
-            }
-          }
-          if (var8 > var7) {
-            var8 = var7;
-            break L2;
-          } else {
-            L5: {
-              var9 = param0 + -param1;
-              var10 = -var8 + var7;
-              var11 = 0;
-              if ((var9 ^ -1) >= -1) {
-                break L5;
-              } else {
+        int var7 = var6 - var5;
+        int var8 = var7;
+        if (param1 >= param0) {
+            var7 = 0;
+            var9 = param0 + -param1;
+            var10 = -var8 + var7;
+            var11 = 0;
+            if ((var9 ^ -1) < -1) {
                 var11 = (param2 * var10 + var9 / 2) / var9;
-                break L5;
-              }
             }
             var12 = var8 / 2 + var11;
             var15 = this.field_Tb;
@@ -385,7 +303,6 @@ final class mj extends cj {
             var18.field_Q = 0;
             var18.field_z = this.field_z;
             if (param3 <= 120) {
-              L6: {
                 this.field_Jb = false;
                 var19 = this.field_Qb;
                 var19.field_Q = 0;
@@ -394,35 +311,62 @@ final class mj extends cj {
                 var19.field_z = this.field_z;
                 var20 = this.field_Lb;
                 var20.field_z = this.field_z;
-                stackIn_17_0 = this.field_Tb;
-
-                stackIn_17_1 = this.field_Nb;
-
-                stackIn_17_2 = this.field_Gb;
-
-                if (param1 >= param0) {
-                  stackIn_18_0 = (cj) ((Object) stackIn_17_0);
-                  stackIn_18_1 = (cj) ((Object) stackIn_17_1);
-                  stackIn_18_2 = (cj) ((Object) stackIn_17_2);
-                  stackIn_18_3 = 0;
-                  break L6;
-                } else {
-                  stackIn_18_0 = (cj) ((Object) stackIn_17_0);
-                  stackIn_18_1 = (cj) ((Object) stackIn_17_1);
-                  stackIn_18_2 = (cj) ((Object) stackIn_17_2);
-                  stackIn_18_3 = 1;
-                  break L6;
-                }
-              }
-              stackIn_18_2.field_Z = stackIn_18_3 != 0;
-              stackIn_18_1.field_Z = stackIn_18_3 != 0;
-              stackIn_18_0.field_Z = stackIn_18_3 != 0;
-              var20.field_x = var11;
-              var20.field_zb = var8;
-              var20.field_Q = 0;
-              return;
-            } else {
-              L7: {
+                this.field_Gb.field_Z = param1 < param0 ? true : false;
+                this.field_Nb.field_Z = param1 < param0 ? true : false;
+                this.field_Tb.field_Z = param1 < param0 ? true : false;
+                var20.field_x = var11;
+                var20.field_zb = var8;
+                var20.field_Q = 0;
+                return;
+            }
+            var19 = this.field_Qb;
+            var19.field_Q = 0;
+            var19.field_x = var12;
+            var19.field_zb = var7 + -var12;
+            var19.field_z = this.field_z;
+            var20 = this.field_Lb;
+            var20.field_z = this.field_z;
+            this.field_Gb.field_Z = param1 < param0 ? true : false;
+            this.field_Nb.field_Z = param1 < param0 ? true : false;
+            this.field_Tb.field_Z = param1 < param0 ? true : false;
+            var20.field_x = var11;
+            var20.field_zb = var8;
+            var20.field_Q = 0;
+            return;
+        }
+        var8 = var8 * param1 / param0;
+        if (this.field_z > var8) {
+            var8 = this.field_z;
+        }
+        if (var8 <= var7) {
+            var9 = param0 + -param1;
+            var10 = -var8 + var7;
+            var11 = 0;
+            if ((var9 ^ -1) < -1) {
+                var11 = (param2 * var10 + var9 / 2) / var9;
+            }
+            var12 = var8 / 2 + var11;
+            var15 = this.field_Tb;
+            var15.field_Q = 0;
+            var15.field_zb = var5;
+            var15.field_z = this.field_z;
+            var15.field_x = 0;
+            var16 = this.field_Nb;
+            var16.field_Q = 0;
+            var16.field_z = this.field_z;
+            var16.field_zb = this.field_zb - var6;
+            var16.field_x = var6;
+            var17 = this.field_Gb;
+            var17.field_z = this.field_z;
+            var17.field_zb = var7;
+            var17.field_x = var5;
+            var17.field_Q = 0;
+            var18 = this.field_Pb;
+            var18.field_zb = var12;
+            var18.field_x = 0;
+            var18.field_Q = 0;
+            var18.field_z = this.field_z;
+            if (param3 > 120) {
                 var19 = this.field_Qb;
                 var19.field_Q = 0;
                 var19.field_x = var12;
@@ -430,46 +374,36 @@ final class mj extends cj {
                 var19.field_z = this.field_z;
                 var20 = this.field_Lb;
                 var20.field_z = this.field_z;
-                stackIn_13_0 = this.field_Tb;
-
-                stackIn_13_1 = this.field_Nb;
-
-                stackIn_13_2 = this.field_Gb;
-
-                if (param1 >= param0) {
-                  stackIn_14_0 = (cj) ((Object) stackIn_13_0);
-                  stackIn_14_1 = (cj) ((Object) stackIn_13_1);
-                  stackIn_14_2 = (cj) ((Object) stackIn_13_2);
-                  stackIn_14_3 = 0;
-                  break L7;
-                } else {
-                  stackIn_14_0 = (cj) ((Object) stackIn_13_0);
-                  stackIn_14_1 = (cj) ((Object) stackIn_13_1);
-                  stackIn_14_2 = (cj) ((Object) stackIn_13_2);
-                  stackIn_14_3 = 1;
-                  break L7;
-                }
-              }
-              stackIn_14_2.field_Z = stackIn_14_3 != 0;
-              stackIn_14_1.field_Z = stackIn_14_3 != 0;
-              stackIn_14_0.field_Z = stackIn_14_3 != 0;
-              var20.field_x = var11;
-              var20.field_zb = var8;
-              var20.field_Q = 0;
-              return;
+                this.field_Gb.field_Z = param1 < param0 ? true : false;
+                this.field_Nb.field_Z = param1 < param0 ? true : false;
+                this.field_Tb.field_Z = param1 < param0 ? true : false;
+                var20.field_x = var11;
+                var20.field_zb = var8;
+                var20.field_Q = 0;
+                return;
             }
-          }
+            this.field_Jb = false;
+            var19 = this.field_Qb;
+            var19.field_Q = 0;
+            var19.field_x = var12;
+            var19.field_zb = var7 + -var12;
+            var19.field_z = this.field_z;
+            var20 = this.field_Lb;
+            var20.field_z = this.field_z;
+            this.field_Gb.field_Z = param1 < param0 ? true : false;
+            this.field_Nb.field_Z = param1 < param0 ? true : false;
+            this.field_Tb.field_Z = param1 < param0 ? true : false;
+            var20.field_x = var11;
+            var20.field_zb = var8;
+            var20.field_Q = 0;
+            return;
         }
-        L8: {
-          var9 = param0 + -param1;
-          var10 = -var8 + var7;
-          var11 = 0;
-          if ((var9 ^ -1) >= -1) {
-            break L8;
-          } else {
+        var8 = var7;
+        var9 = param0 + -param1;
+        var10 = -var8 + var7;
+        var11 = 0;
+        if ((var9 ^ -1) < -1) {
             var11 = (param2 * var10 + var9 / 2) / var9;
-            break L8;
-          }
         }
         var12 = var8 / 2 + var11;
         var15 = this.field_Tb;
@@ -492,44 +426,7 @@ final class mj extends cj {
         var18.field_x = 0;
         var18.field_Q = 0;
         var18.field_z = this.field_z;
-        if (param3 > 120) {
-          L9: {
-            var19 = this.field_Qb;
-            var19.field_Q = 0;
-            var19.field_x = var12;
-            var19.field_zb = var7 + -var12;
-            var19.field_z = this.field_z;
-            var20 = this.field_Lb;
-            var20.field_z = this.field_z;
-            stackIn_29_0 = this.field_Tb;
-
-            stackIn_29_1 = this.field_Nb;
-
-            stackIn_29_2 = this.field_Gb;
-
-            if (param1 >= param0) {
-              stackIn_30_0 = (cj) ((Object) stackIn_29_0);
-              stackIn_30_1 = (cj) ((Object) stackIn_29_1);
-              stackIn_30_2 = (cj) ((Object) stackIn_29_2);
-              stackIn_30_3 = 0;
-              break L9;
-            } else {
-              stackIn_30_0 = (cj) ((Object) stackIn_29_0);
-              stackIn_30_1 = (cj) ((Object) stackIn_29_1);
-              stackIn_30_2 = (cj) ((Object) stackIn_29_2);
-              stackIn_30_3 = 1;
-              break L9;
-            }
-          }
-          stackIn_30_2.field_Z = stackIn_30_3 != 0;
-          stackIn_30_1.field_Z = stackIn_30_3 != 0;
-          stackIn_30_0.field_Z = stackIn_30_3 != 0;
-          var20.field_x = var11;
-          var20.field_zb = var8;
-          var20.field_Q = 0;
-          return;
-        } else {
-          L10: {
+        if (param3 <= 120) {
             this.field_Jb = false;
             var19 = this.field_Qb;
             var19.field_Q = 0;
@@ -538,280 +435,60 @@ final class mj extends cj {
             var19.field_z = this.field_z;
             var20 = this.field_Lb;
             var20.field_z = this.field_z;
-            stackIn_25_0 = this.field_Tb;
-
-            stackIn_25_1 = this.field_Nb;
-
-            stackIn_25_2 = this.field_Gb;
-
-            if (param1 >= param0) {
-              stackIn_26_0 = (cj) ((Object) stackIn_25_0);
-              stackIn_26_1 = (cj) ((Object) stackIn_25_1);
-              stackIn_26_2 = (cj) ((Object) stackIn_25_2);
-              stackIn_26_3 = 0;
-              break L10;
-            } else {
-              stackIn_26_0 = (cj) ((Object) stackIn_25_0);
-              stackIn_26_1 = (cj) ((Object) stackIn_25_1);
-              stackIn_26_2 = (cj) ((Object) stackIn_25_2);
-              stackIn_26_3 = 1;
-              break L10;
-            }
-          }
-          stackIn_26_2.field_Z = stackIn_26_3 != 0;
-          stackIn_26_1.field_Z = stackIn_26_3 != 0;
-          stackIn_26_0.field_Z = stackIn_26_3 != 0;
-          var20.field_x = var11;
-          var20.field_zb = var8;
-          var20.field_Q = 0;
-          return;
+            this.field_Gb.field_Z = param1 < param0 ? true : false;
+            this.field_Nb.field_Z = param1 < param0 ? true : false;
+            this.field_Tb.field_Z = param1 < param0 ? true : false;
+            var20.field_x = var11;
+            var20.field_zb = var8;
+            var20.field_Q = 0;
+            return;
         }
+        var19 = this.field_Qb;
+        var19.field_Q = 0;
+        var19.field_x = var12;
+        var19.field_zb = var7 + -var12;
+        var19.field_z = this.field_z;
+        var20 = this.field_Lb;
+        var20.field_z = this.field_z;
+        this.field_Gb.field_Z = param1 < param0 ? true : false;
+        this.field_Nb.field_Z = param1 < param0 ? true : false;
+        this.field_Tb.field_Z = param1 < param0 ? true : false;
+        var20.field_x = var11;
+        var20.field_zb = var8;
+        var20.field_Q = 0;
     }
 
     private final void c(int param0, int param1, int param2, int param3) {
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var14;
-        cj var15;
-        cj var16;
-        cj var17;
-        cj var18;
-        cj var19;
-        cj var20;
-        cj stackIn_14_0 = null;
-        cj stackIn_14_1 = null;
-        cj stackIn_14_2 = null;
-        cj stackIn_15_0 = null;
-        cj stackIn_15_1 = null;
-        cj stackIn_15_2 = null;
-        int stackIn_15_3 = 0;
-        cj stackIn_27_0 = null;
-        cj stackIn_27_1 = null;
-        cj stackIn_27_2 = null;
-        cj stackIn_28_0 = null;
-        cj stackIn_28_1 = null;
-        cj stackIn_28_2 = null;
-        int stackIn_28_3 = 0;
-        cj stackIn_34_0 = null;
-        cj stackIn_34_1 = null;
-        cj stackIn_34_2 = null;
-        cj stackIn_35_0 = null;
-        cj stackIn_35_1 = null;
-        cj stackIn_35_2 = null;
-        int stackIn_35_3 = 0;
-        L0: {
-          L1: {
-            var14 = ZombieDawnMulti.field_E ? 1 : 0;
-            if (2 * this.field_zb > this.field_z) {
-              break L1;
-            } else {
-              var5 = this.field_zb;
-              var6 = -this.field_zb + this.field_z;
-              if (var14 == 0) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          var6 = this.field_z / 2;
-          var5 = this.field_z / 2;
-          break L0;
-        }
-        var7 = -var5 + var6;
-        var8 = var7;
-        if (param1 >= param3) {
-          var7 = 0;
-          if (var14 == 0) {
-            L2: {
-              var9 = -param1 + param3;
-              var10 = -var8 + var7;
-              var11 = 0;
-              if (param0 < var9) {
-                var11 = (var9 / 2 + param2 * var10) / var9;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              var12 = var8 / 2 + var11;
-              var15 = this.field_Tb;
-              var15.field_z = var5;
-              var15.field_zb = this.field_zb;
-              var15.field_Q = 0;
-              var15.field_x = 0;
-              var16 = this.field_Nb;
-              var16.field_x = 0;
-              var16.field_zb = this.field_zb;
-              var16.field_Q = var6;
-              var16.field_z = this.field_z - var6;
-              var17 = this.field_Gb;
-              var17.field_zb = this.field_zb;
-              var17.field_z = var7;
-              var17.field_x = 0;
-              var17.field_Q = var5;
-              var18 = this.field_Pb;
-              var18.field_x = 0;
-              var18.field_z = var12;
-              var18.field_Q = 0;
-              var18.field_zb = this.field_zb;
-              var19 = this.field_Qb;
-              var19.field_Q = var12;
-              var19.field_z = -var12 + var7;
-              var19.field_x = 0;
-              var19.field_zb = this.field_zb;
-              var20 = this.field_Lb;
-              var20.field_Q = var11;
-              var20.field_z = var8;
-              var20.field_zb = this.field_zb;
-              var20.field_x = 0;
-              stackIn_34_0 = this.field_Tb;
-
-              stackIn_34_1 = this.field_Nb;
-
-              stackIn_34_2 = this.field_Gb;
-
-              if (param1 >= param3) {
-                stackIn_35_0 = (cj) ((Object) stackIn_34_0);
-                stackIn_35_1 = (cj) ((Object) stackIn_34_1);
-                stackIn_35_2 = (cj) ((Object) stackIn_34_2);
-                stackIn_35_3 = 0;
-                break L3;
-              } else {
-                stackIn_35_0 = (cj) ((Object) stackIn_34_0);
-                stackIn_35_1 = (cj) ((Object) stackIn_34_1);
-                stackIn_35_2 = (cj) ((Object) stackIn_34_2);
-                stackIn_35_3 = 1;
-                break L3;
-              }
-            }
-            stackIn_35_2.field_Z = stackIn_35_3 != 0;
-            stackIn_35_1.field_Z = stackIn_35_3 != 0;
-            stackIn_35_0.field_Z = stackIn_35_3 != 0;
-            return;
-          } else {
-            L4: {
-              var8 = var8 * param1 / param3;
-              if (var8 < this.field_zb) {
-                var8 = this.field_zb;
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            L5: {
-              if (var7 >= var8) {
-                break L5;
-              } else {
-                var8 = var7;
-                break L5;
-              }
-            }
-            L6: {
-              var9 = -param1 + param3;
-              var10 = -var8 + var7;
-              var11 = 0;
-              if (param0 < var9) {
-                var11 = (var9 / 2 + param2 * var10) / var9;
-                break L6;
-              } else {
-                break L6;
-              }
-            }
-            L7: {
-              var12 = var8 / 2 + var11;
-              var15 = this.field_Tb;
-              var15.field_z = var5;
-              var15.field_zb = this.field_zb;
-              var15.field_Q = 0;
-              var15.field_x = 0;
-              var16 = this.field_Nb;
-              var16.field_x = 0;
-              var16.field_zb = this.field_zb;
-              var16.field_Q = var6;
-              var16.field_z = this.field_z - var6;
-              var17 = this.field_Gb;
-              var17.field_zb = this.field_zb;
-              var17.field_z = var7;
-              var17.field_x = 0;
-              var17.field_Q = var5;
-              var18 = this.field_Pb;
-              var18.field_x = 0;
-              var18.field_z = var12;
-              var18.field_Q = 0;
-              var18.field_zb = this.field_zb;
-              var19 = this.field_Qb;
-              var19.field_Q = var12;
-              var19.field_z = -var12 + var7;
-              var19.field_x = 0;
-              var19.field_zb = this.field_zb;
-              var20 = this.field_Lb;
-              var20.field_Q = var11;
-              var20.field_z = var8;
-              var20.field_zb = this.field_zb;
-              var20.field_x = 0;
-              stackIn_27_0 = this.field_Tb;
-
-              stackIn_27_1 = this.field_Nb;
-
-              stackIn_27_2 = this.field_Gb;
-
-              if (param1 >= param3) {
-                stackIn_28_0 = (cj) ((Object) stackIn_27_0);
-                stackIn_28_1 = (cj) ((Object) stackIn_27_1);
-                stackIn_28_2 = (cj) ((Object) stackIn_27_2);
-                stackIn_28_3 = 0;
-                break L7;
-              } else {
-                stackIn_28_0 = (cj) ((Object) stackIn_27_0);
-                stackIn_28_1 = (cj) ((Object) stackIn_27_1);
-                stackIn_28_2 = (cj) ((Object) stackIn_27_2);
-                stackIn_28_3 = 1;
-                break L7;
-              }
-            }
-            stackIn_28_2.field_Z = stackIn_28_3 != 0;
-            stackIn_28_1.field_Z = stackIn_28_3 != 0;
-            stackIn_28_0.field_Z = stackIn_28_3 != 0;
-            return;
-          }
+        int var5 = 0;
+        int var6 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        cj var15 = null;
+        cj var16 = null;
+        cj var17 = null;
+        cj var18 = null;
+        cj var19 = null;
+        cj var20 = null;
+        int var14 = ZombieDawnMulti.field_E ? 1 : 0;
+        if (2 * this.field_zb <= this.field_z) {
+            var5 = this.field_zb;
+            var6 = -this.field_zb + this.field_z;
         } else {
-          L8: {
-            var8 = var8 * param1 / param3;
-            if (var8 < this.field_zb) {
-              var8 = this.field_zb;
-              break L8;
-            } else {
-              break L8;
-            }
-          }
-          L9: {
-            if (var7 >= var8) {
-              break L9;
-            } else {
-              var8 = var7;
-              break L9;
-            }
-          }
-          L10: {
+            var6 = this.field_z / 2;
+            var5 = this.field_z / 2;
+        }
+        int var7 = -var5 + var6;
+        int var8 = var7;
+        if (param1 >= param3) {
+            var7 = 0;
             var9 = -param1 + param3;
             var10 = -var8 + var7;
             var11 = 0;
-            if (param0 < var9) {
-              var11 = (var9 / 2 + param2 * var10) / var9;
-              break L10;
-            } else {
-              break L10;
+            if (!(param0 >= var9)) {
+                var11 = (var9 / 2 + param2 * var10) / var9;
             }
-          }
-          L11: {
             var12 = var8 / 2 + var11;
             var15 = this.field_Tb;
             var15.field_z = var5;
@@ -843,31 +520,58 @@ final class mj extends cj {
             var20.field_z = var8;
             var20.field_zb = this.field_zb;
             var20.field_x = 0;
-            stackIn_14_0 = this.field_Tb;
-
-            stackIn_14_1 = this.field_Nb;
-
-            stackIn_14_2 = this.field_Gb;
-
-            if (param1 >= param3) {
-              stackIn_15_0 = (cj) ((Object) stackIn_14_0);
-              stackIn_15_1 = (cj) ((Object) stackIn_14_1);
-              stackIn_15_2 = (cj) ((Object) stackIn_14_2);
-              stackIn_15_3 = 0;
-              break L11;
-            } else {
-              stackIn_15_0 = (cj) ((Object) stackIn_14_0);
-              stackIn_15_1 = (cj) ((Object) stackIn_14_1);
-              stackIn_15_2 = (cj) ((Object) stackIn_14_2);
-              stackIn_15_3 = 1;
-              break L11;
-            }
-          }
-          stackIn_15_2.field_Z = stackIn_15_3 != 0;
-          stackIn_15_1.field_Z = stackIn_15_3 != 0;
-          stackIn_15_0.field_Z = stackIn_15_3 != 0;
-          return;
+            this.field_Gb.field_Z = param1 < param3 ? true : false;
+            this.field_Nb.field_Z = param1 < param3 ? true : false;
+            this.field_Tb.field_Z = param1 < param3 ? true : false;
+            return;
         }
+        var8 = var8 * param1 / param3;
+        if (!(var8 >= this.field_zb)) {
+            var8 = this.field_zb;
+        }
+        if (var7 < var8) {
+            var8 = var7;
+        }
+        var9 = -param1 + param3;
+        var10 = -var8 + var7;
+        var11 = 0;
+        if (!(param0 >= var9)) {
+            var11 = (var9 / 2 + param2 * var10) / var9;
+        }
+        var12 = var8 / 2 + var11;
+        var15 = this.field_Tb;
+        var15.field_z = var5;
+        var15.field_zb = this.field_zb;
+        var15.field_Q = 0;
+        var15.field_x = 0;
+        var16 = this.field_Nb;
+        var16.field_x = 0;
+        var16.field_zb = this.field_zb;
+        var16.field_Q = var6;
+        var16.field_z = this.field_z - var6;
+        var17 = this.field_Gb;
+        var17.field_zb = this.field_zb;
+        var17.field_z = var7;
+        var17.field_x = 0;
+        var17.field_Q = var5;
+        var18 = this.field_Pb;
+        var18.field_x = 0;
+        var18.field_z = var12;
+        var18.field_Q = 0;
+        var18.field_zb = this.field_zb;
+        var19 = this.field_Qb;
+        var19.field_Q = var12;
+        var19.field_z = -var12 + var7;
+        var19.field_x = 0;
+        var19.field_zb = this.field_zb;
+        var20 = this.field_Lb;
+        var20.field_Q = var11;
+        var20.field_z = var8;
+        var20.field_zb = this.field_zb;
+        var20.field_x = 0;
+        this.field_Gb.field_Z = param1 < param3 ? true : false;
+        this.field_Nb.field_Z = param1 < param3 ? true : false;
+        this.field_Tb.field_Z = param1 < param3 ? true : false;
     }
 
     private final int a(int param0, boolean param1, int param2, int param3) {
@@ -898,47 +602,27 @@ final class mj extends cj {
               break L1;
             }
           }
-          if (var5 > param0 - param3) {
-            var5 = -param3 + param0;
-            if (ZombieDawnMulti.field_E) {
-              L2: {
-                if (var5 > -param3 + param0) {
-                  var5 = -param3 + param0;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if ((var5 ^ -1) <= -1) {
-                  break L3;
-                } else {
-                  var5 = 0;
-                  break L3;
-                }
-              }
-              return var5;
-            } else {
-              return var5;
-            }
+          if (var5 <= param0 - param3) {
+            return var5;
           } else {
+            var5 = -param3 + param0;
             return var5;
           }
         } else {
-          L4: {
+          L2: {
             if (var5 > -param3 + param0) {
               var5 = -param3 + param0;
-              break L4;
+              break L2;
             } else {
-              break L4;
+              break L2;
             }
           }
-          L5: {
+          L3: {
             if ((var5 ^ -1) <= -1) {
-              break L5;
+              break L3;
             } else {
               var5 = 0;
-              break L5;
+              break L3;
             }
           }
           return var5;

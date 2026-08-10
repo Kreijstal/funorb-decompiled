@@ -9,29 +9,15 @@ final class lk {
     static String field_a;
 
     final synchronized static long a(int param0) {
-        long var1;
-        if (param0 == 0) {
-          var1 = System.currentTimeMillis();
-          if ((var1 ^ -1L) > (cl.field_y ^ -1L)) {
-            vl.field_B = vl.field_B + (cl.field_y - var1);
-            cl.field_y = var1;
-            return var1 + vl.field_B;
-          } else {
-            cl.field_y = var1;
-            return var1 + vl.field_B;
-          }
-        } else {
-          field_b = (fe) null;
-          var1 = System.currentTimeMillis();
-          if ((var1 ^ -1L) <= (cl.field_y ^ -1L)) {
-            cl.field_y = var1;
-            return var1 + vl.field_B;
-          } else {
-            vl.field_B = vl.field_B + (cl.field_y - var1);
-            cl.field_y = var1;
-            return var1 + vl.field_B;
-          }
+        if (param0 != 0) {
+            field_b = (fe) null;
         }
+        long var1 = System.currentTimeMillis();
+        if ((var1 ^ -1L) > (cl.field_y ^ -1L)) {
+            vl.field_B = vl.field_B + (cl.field_y - var1);
+        }
+        cl.field_y = var1;
+        return var1 + vl.field_B;
     }
 
     public static void a(byte param0) {
@@ -45,44 +31,40 @@ final class lk {
     }
 
     final static void b(boolean param0) {
-        Object var1 = null;
-        Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (null == hi.field_e) {
-          if (param0) {
-            field_d = (int[]) null;
-            return;
+        Object var1 = null;
+        L0: {
+          if (null == hi.field_e) {
+            break L0;
           } else {
-            return;
-          }
-        } else {
-          var1 = hi.field_e;
-          synchronized (var1) {
-            L0: {
-              hi.field_e = null;
-              break L0;
+            var1 = hi.field_e;
+            synchronized (var1) {
+              L1: {
+                hi.field_e = null;
+                break L1;
+              }
             }
+            break L0;
           }
-          L1: {
-            if (!param0) {
-              break L1;
-            } else {
-              field_d = (int[]) null;
-              break L1;
-            }
+        }
+        L2: {
+          if (!param0) {
+            break L2;
+          } else {
+            field_d = (int[]) null;
+            break L2;
           }
-          return;
         }
     }
 
     final static byte[] a(int param0, byte[] param1) {
         byte[] stackIn_7_0 = null;
-        byte[] stackIn_22_0 = null;
+        byte[] stackIn_21_0 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -137,31 +119,24 @@ final class lk {
                         }
                       }
                       L5: {
-                        L6: {
-                          var14 = new byte[var6];
-                          var12 = var14;
-                          var7 = var12;
-                          if (-2 == (var4 ^ -1)) {
-                            break L6;
-                          } else {
-                            var8 = je.field_d;
-                            synchronized (var8) {
-                              L7: {
-                                je.field_d.a(var10, -115, var14);
-                                break L7;
-                              }
-                            }
-                            if (!Transmogrify.field_A) {
-                              break L5;
-                            } else {
+                        var14 = new byte[var6];
+                        var12 = var14;
+                        var7 = var12;
+                        if (-2 == (var4 ^ -1)) {
+                          gf.a(var14, var6, param1, var5, 9);
+                          break L5;
+                        } else {
+                          var8 = je.field_d;
+                          synchronized (var8) {
+                            L6: {
+                              je.field_d.a(var10, -115, var14);
                               break L6;
                             }
                           }
+                          break L5;
                         }
-                        gf.a(var14, var6, param1, var5, 9);
-                        break L5;
                       }
-                      stackIn_22_0 = (byte[]) (var7);
+                      stackIn_21_0 = (byte[]) (var7);
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
@@ -182,67 +157,48 @@ final class lk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var2);
+            stackIn_24_0 = (RuntimeException) (var2);
 
-            stackIn_25_1 = new StringBuilder().append("lk.E(").append(param0).append(',');
+            stackIn_24_1 = new StringBuilder().append("lk.E(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L8;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "null";
+              break L7;
             } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L8;
+              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackIn_25_2 = "{...}";
+              break L7;
             }
           }
-          throw ch.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_7_0;
         } else {
-          return stackIn_22_0;
+          return stackIn_21_0;
         }
     }
 
     final static ti a(boolean param0) {
-        int var1;
-        byte[] var2;
-        int[] var3;
-        int var4_int;
-        ti var4;
-        int var5;
-        var5 = Transmogrify.field_A ? 1 : 0;
-        var1 = wk.field_b[0] * ql.field_b[0];
-        var2 = re.field_K[0];
-        var3 = new int[var1];
+        int var4_int = 0;
+        int var5 = Transmogrify.field_A ? 1 : 0;
+        int var1 = wk.field_b[0] * ql.field_b[0];
+        byte[] var2 = re.field_K[0];
+        int[] var3 = new int[var1];
         if (!param0) {
-          return (ti) null;
-        } else {
-          var4_int = 0;
-          L0: while (true) {
-            L1: {
-              if (var4_int >= var1) {
-                break L1;
-              } else {
-                var3[var4_int] = rg.field_D[vg.c(255, (int) var2[var4_int])];
-                var4_int++;
-                if (var5 == 0) {
-                  continue L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            var4 = new ti(pj.field_y, ll.field_U, gj.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[0], var3);
-            wd.d(126);
-            return var4;
-          }
+            return (ti) null;
         }
+        for (var4_int = 0; var4_int < var1; var4_int++) {
+            var3[var4_int] = rg.field_D[vg.c(255, (int) var2[var4_int])];
+        }
+        ti var4 = new ti(pj.field_y, ll.field_U, gj.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[0], var3);
+        wd.d(126);
+        return var4;
     }
 
     static {

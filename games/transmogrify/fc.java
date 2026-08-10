@@ -42,15 +42,15 @@ final class fc {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_16_0 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
+        int stackIn_14_0 = 0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
-        StringBuilder stackIn_22_1 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
@@ -64,97 +64,83 @@ final class fc {
               }
             }
             L2: {
-              L3: {
-                var3_int = -param1.field_hb + param2.field_hb;
-                if (param2.field_fb == bd.field_v) {
-                  break L3;
-                } else {
-                  if (param2.field_fb != null) {
-                    break L2;
-                  } else {
-                    var3_int += 200;
-                    if (var4 == 0) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-              }
-              var3_int -= 200;
-              break L2;
-            }
-            L4: {
-              L5: {
-                if (bd.field_v != param1.field_fb) {
-                  break L5;
+              var3_int = -param1.field_hb + param2.field_hb;
+              if (param2.field_fb == bd.field_v) {
+                var3_int -= 200;
+                break L2;
+              } else {
+                if (param2.field_fb != null) {
+                  break L2;
                 } else {
                   var3_int += 200;
-                  if (var4 == 0) {
-                    break L4;
-                  } else {
-                    break L5;
-                  }
+                  break L2;
                 }
               }
-              if (null != param1.field_fb) {
-                break L4;
+            }
+            L3: {
+              if (bd.field_v != param1.field_fb) {
+                if (null != param1.field_fb) {
+                  break L3;
+                } else {
+                  var3_int -= 200;
+                  break L3;
+                }
               } else {
-                var3_int -= 200;
-                break L4;
+                var3_int += 200;
+                break L3;
               }
             }
-            L6: {
+            L4: {
               if ((var3_int ^ -1) >= -1) {
-                stackIn_16_0 = 0;
-                break L6;
+                stackIn_14_0 = 0;
+                break L4;
               } else {
-                stackIn_16_0 = 1;
-                break L6;
+                stackIn_14_0 = 1;
+                break L4;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L5: {
             var3 = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var3);
+            stackIn_17_0 = (RuntimeException) (var3);
 
-            stackIn_19_1 = new StringBuilder().append("fc.C(").append(param0).append(',');
+            stackIn_17_1 = new StringBuilder().append("fc.C(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L7;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
+              break L5;
             } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L7;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
+              break L5;
             }
           }
-          L8: {
+          L6: {
 
 
-            stackIn_22_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
+            stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
 
             if (param2 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L8;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "null";
+              break L6;
             } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L8;
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackIn_21_2 = "{...}";
+              break L6;
             }
           }
-          throw ch.a((Throwable) ((Object) stackIn_20_0), stackIn_23_2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_18_0), stackIn_21_2 + ')');
         }
-        return stackIn_16_0 != 0;
+        return stackIn_14_0 != 0;
     }
 
     final static boolean a(byte param0, String param1, String param2) {

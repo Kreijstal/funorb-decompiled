@@ -16,57 +16,22 @@ final class ie {
     final static void a(int param0) {
         int var1_int = 0;
         double var2 = 0.0;
-        int var4 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        var4 = Torquing.field_u;
+        int var4 = Torquing.field_u;
+        if (param0 != 14837) {
+            return;
+        }
         try {
-          L0: {
-            if (param0 == 14837) {
-              L1: {
-                L2: {
-                  if (null == jh.field_x) {
-                    break L2;
-                  } else {
-                    if (null != de.field_d) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
+            if (null == jh.field_x || null == de.field_d) {
                 jh.field_x = new int[256];
                 de.field_d = new int[256];
-                var1_int = 0;
-                L3: while (true) {
-                  if (256 <= var1_int) {
-                    break L1;
-                  } else {
+                for (var1_int = 0; 256 > var1_int; var1_int++) {
                     var2 = 6.283185307179586 * ((double)var1_int / 255.0);
                     jh.field_x[var1_int] = (int)(4096.0 * Math.sin(var2));
                     de.field_d[var1_int] = (int)(Math.cos(var2) * 4096.0);
-                    var1_int++;
-                    continue L3;
-                  }
                 }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw rb.a((Throwable) ((Object) var1), "ie.D(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) ((Object) runtimeException), "ie.D(" + param0 + ')');
         }
     }
 

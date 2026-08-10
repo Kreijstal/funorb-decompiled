@@ -551,49 +551,14 @@ class kj extends ee implements gk {
     }
 
     final void a(int param0, ee param1) {
-        RuntimeException runtimeException = null;
-        StringBuilder var4 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_F.a(param1, param0 + -128);
-              if (param0 == 0) {
-                break L1;
-              } else {
-                var4 = (StringBuilder) null;
+            this.field_F.a(param1, param0 + -128);
+            if (param0 != 0) {
+                StringBuilder var4 = (StringBuilder) null;
                 this.a((Hashtable) null, 58, (StringBuilder) null, true);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("kj.AC(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) ((Object) runtimeException), "kj.AC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -790,6 +755,7 @@ class kj extends ee implements gk {
     }
 
     void a(ee param0, int param1, byte param2, int param3) {
+        RuntimeException runtimeException = null;
         nj var5 = null;
         ee var6 = null;
         int var7 = 0;
@@ -799,7 +765,6 @@ class kj extends ee implements gk {
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -834,8 +799,8 @@ class kj extends ee implements gk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var5_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
 
             stackIn_10_1 = new StringBuilder().append("kj.U(");
 

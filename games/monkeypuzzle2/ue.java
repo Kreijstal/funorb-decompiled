@@ -128,99 +128,63 @@ final class ue extends jk {
         vk var3;
         int var4;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (param0 != 122) {
-          L0: {
-            L1: {
-              field_D = 13;
-              if ((af.field_c ^ -1) < -1) {
-                break L1;
-              } else {
-                L2: {
-                  if (!ok.a(false)) {
-                    break L2;
-                  } else {
-                    var2 = 0;
-                    if (var4 == 0) {
-                      break L0;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                var2 = 1;
-                if (var4 == 0) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
+        if (param0 == 122) {
+          if ((af.field_c ^ -1) < -1) {
+            ba.field_f = qg.a(640, 480, 0, rc.field_k, (byte) -73, 0);
+            if (null != ba.field_f) {
+              af.a(20, ba.field_f);
+              var2 = 2;
+              var3 = pl.field_e;
+              ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
+              return;
+            } else {
+              var2 = 3;
+              var3 = pl.field_e;
+              ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
+              return;
             }
-            L3: {
-              ba.field_f = qg.a(640, 480, 0, rc.field_k, (byte) -73, 0);
-              if (null == ba.field_f) {
-                break L3;
-              } else {
-                af.a(20, ba.field_f);
-                var2 = 2;
-                if (var4 == 0) {
-                  break L0;
-                } else {
-                  break L3;
-                }
-              }
+          } else {
+            if (ok.a(false)) {
+              var2 = 0;
+              var3 = pl.field_e;
+              ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
+              return;
+            } else {
+              var2 = 1;
+              var3 = pl.field_e;
+              ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
+              return;
             }
-            var2 = 3;
-            break L0;
           }
-          var3 = pl.field_e;
-          ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
-          return;
         } else {
-          L4: {
-            L5: {
-              if ((af.field_c ^ -1) < -1) {
-                break L5;
-              } else {
-                L6: {
-                  if (!ok.a(false)) {
-                    break L6;
-                  } else {
-                    var2 = 0;
-                    if (var4 == 0) {
-                      break L4;
-                    } else {
-                      break L6;
-                    }
-                  }
-                }
-                var2 = 1;
-                if (var4 == 0) {
-                  break L4;
-                } else {
-                  break L5;
-                }
-              }
+          field_D = 13;
+          if ((af.field_c ^ -1) < -1) {
+            ba.field_f = qg.a(640, 480, 0, rc.field_k, (byte) -73, 0);
+            if (null != ba.field_f) {
+              af.a(20, ba.field_f);
+              var2 = 2;
+              var3 = pl.field_e;
+              ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
+              return;
+            } else {
+              var2 = 3;
+              var3 = pl.field_e;
+              ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
+              return;
             }
-            L7: {
-              ba.field_f = qg.a(640, 480, 0, rc.field_k, (byte) -73, 0);
-              if (null == ba.field_f) {
-                break L7;
-              } else {
-                af.a(20, ba.field_f);
-                var2 = 2;
-                if (var4 == 0) {
-                  break L4;
-                } else {
-                  break L7;
-                }
-              }
+          } else {
+            if (ok.a(false)) {
+              var2 = 0;
+              var3 = pl.field_e;
+              ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
+              return;
+            } else {
+              var2 = 1;
+              var3 = pl.field_e;
+              ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
+              return;
             }
-            var2 = 3;
-            break L4;
           }
-          var3 = pl.field_e;
-          ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
-          return;
         }
     }
 

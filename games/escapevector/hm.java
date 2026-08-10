@@ -1211,19 +1211,22 @@ class hm extends hg {
             L6: {
               if (null != this.field_q) {
                 L7: {
-                  discarded$6 = param1.append(" listener=");
-                  if (this.field_q instanceof hm) {
-                    break L7;
-                  } else {
-                    discarded$7 = param1.append(this.field_q);
-                    if (var6 == 0) {
-                      break L6;
+                  L8: {
+                    discarded$6 = param1.append(" listener=");
+                    if (this.field_q instanceof hm) {
+                      break L8;
                     } else {
-                      break L7;
+                      discarded$7 = param1.append(this.field_q);
+                      if (var6 == 0) {
+                        break L7;
+                      } else {
+                        break L8;
+                      }
                     }
                   }
+                  param1 = this.a(param3 + -1, param0, param1, 1 + param2);
+                  break L7;
                 }
-                param1 = this.a(param3 + -1, param0, param1, 1 + param2);
                 break L6;
               } else {
                 break L6;
@@ -1233,7 +1236,7 @@ class hm extends hg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L9: {
             var5 = decompiledCaughtException;
             stackIn_22_0 = (RuntimeException) (var5);
 
@@ -1243,15 +1246,15 @@ class hm extends hg {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "null";
-              break L8;
+              break L9;
             } else {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
               stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackIn_23_2 = "{...}";
-              break L8;
+              break L9;
             }
           }
-          L9: {
+          L10: {
 
 
             stackIn_25_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
@@ -1260,12 +1263,12 @@ class hm extends hg {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "null";
-              break L9;
+              break L10;
             } else {
               stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
               stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackIn_26_2 = "{...}";
-              break L9;
+              break L10;
             }
           }
           throw t.a((Throwable) ((Object) stackIn_23_0), stackIn_26_2 + ',' + param2 + ',' + param3 + ')');
@@ -1484,17 +1487,20 @@ class hm extends hg {
                       break L3;
                     }
                   }
-                  ((hm) (this)).field_u = stackIn_10_1 != 0;
-                  if (this.field_q == null) {
-                    break L2;
-                  } else {
-                    if (this.field_q instanceof nj) {
-                      ((nj) ((Object) this.field_q)).a((hm) (this), -27200, var5_int != 0);
-                      break L2;
+                  L4: {
+                    ((hm) (this)).field_u = stackIn_10_1 != 0;
+                    if (this.field_q == null) {
+                      break L4;
                     } else {
-                      break L2;
+                      if (this.field_q instanceof nj) {
+                        ((nj) ((Object) this.field_q)).a((hm) (this), -27200, var5_int != 0);
+                        break L4;
+                      } else {
+                        break L2;
+                      }
                     }
                   }
+                  break L2;
                 } else {
                   break L2;
                 }
@@ -1508,7 +1514,7 @@ class hm extends hg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var5 = decompiledCaughtException;
             stackIn_17_0 = (RuntimeException) (var5);
 
@@ -1518,12 +1524,12 @@ class hm extends hg {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "null";
-              break L4;
+              break L5;
             } else {
               stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
               stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackIn_18_2 = "{...}";
-              break L4;
+              break L5;
             }
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');

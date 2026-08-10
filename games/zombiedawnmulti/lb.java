@@ -156,249 +156,42 @@ final class lb {
         if (!df.field_H) {
           return;
         } else {
-          if (-1 == param0) {
-            fk.a(hl.field_d[12], true);
-            if (var4 != 0) {
-              if (0 == param2) {
-                fk.a(hl.field_d[1], true);
-                if (!param1) {
-                  return;
-                } else {
-                  field_c = (int[]) null;
-                  return;
-                }
-              } else {
-                L0: {
-                  if (-2 == (param2 ^ -1)) {
-                    fk.a(hl.field_d[2], true);
-                    if (var4 == 0) {
-                      break L0;
-                    } else {
-                      fk.a(hl.field_d[1], true);
-                      if (!param1) {
-                        return;
-                      } else {
-                        field_c = (int[]) null;
-                        return;
-                      }
-                    }
-                  } else {
-                    if (param2 == 2) {
-                      fk.a(hl.field_d[3], true);
-                      if (var4 == 0) {
-                        break L0;
-                      } else {
-                        fk.a(hl.field_d[2], true);
-                        if (var4 == 0) {
-                          if (!param1) {
-                            return;
-                          } else {
-                            field_c = (int[]) null;
-                            return;
-                          }
-                        } else {
-                          fk.a(hl.field_d[1], true);
-                          if (!param1) {
-                            return;
-                          } else {
-                            field_c = (int[]) null;
-                            return;
-                          }
-                        }
-                      }
-                    } else {
-                      if (-4 != (param2 ^ -1)) {
-                        if (4 == param2) {
-                          fk.a(hl.field_d[1], true);
-                          if (var4 == 0) {
-                            break L0;
-                          } else {
-                            L1: {
-                              fk.a(hl.field_d[3], true);
-                              if (var4 == 0) {
-                                break L1;
-                              } else {
-                                fk.a(hl.field_d[2], true);
-                                if (var4 == 0) {
-                                  break L1;
-                                } else {
-                                  fk.a(hl.field_d[1], true);
-                                  if (!param1) {
-                                    return;
-                                  } else {
-                                    field_c = (int[]) null;
-                                    return;
-                                  }
-                                }
-                              }
-                            }
-                            if (!param1) {
-                              return;
-                            } else {
-                              field_c = (int[]) null;
-                              return;
-                            }
-                          }
-                        } else {
-                          if (!param1) {
-                            return;
-                          } else {
-                            field_c = (int[]) null;
-                            return;
-                          }
-                        }
-                      } else {
-                        fk.a(hl.field_d[4], true);
-                        if (var4 != 0) {
-                          L2: {
-                            if (4 != param2) {
-                              break L2;
-                            } else {
-                              fk.a(hl.field_d[1], true);
-                              if (var4 == 0) {
-                                break L2;
-                              } else {
-                                fk.a(hl.field_d[3], true);
-                                if (var4 == 0) {
-                                  break L2;
-                                } else {
-                                  fk.a(hl.field_d[2], true);
-                                  if (var4 == 0) {
-                                    break L2;
-                                  } else {
-                                    fk.a(hl.field_d[1], true);
-                                    if (!param1) {
-                                      return;
-                                    } else {
-                                      field_c = (int[]) null;
-                                      return;
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          if (!param1) {
-                            return;
-                          } else {
-                            field_c = (int[]) null;
-                            return;
-                          }
-                        } else {
-                          if (!param1) {
-                            return;
-                          } else {
-                            field_c = (int[]) null;
-                            return;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-                if (!param1) {
-                  return;
-                } else {
-                  field_c = (int[]) null;
-                  return;
-                }
-              }
-            } else {
-              if (!param1) {
-                return;
-              } else {
-                field_c = (int[]) null;
-                return;
-              }
-            }
-          } else {
+          if (-1 != param0) {
             if (0 == param2) {
               fk.a(hl.field_d[1], true);
-              if (!param1) {
+              if (param1) {
+                field_c = (int[]) null;
                 return;
               } else {
-                field_c = (int[]) null;
                 return;
               }
             } else {
               if (-2 == (param2 ^ -1)) {
                 fk.a(hl.field_d[2], true);
-                if (var4 == 0) {
-                  if (!param1) {
-                    return;
-                  } else {
-                    field_c = (int[]) null;
-                    return;
-                  }
+                if (param1) {
+                  field_c = (int[]) null;
+                  return;
                 } else {
-                  fk.a(hl.field_d[1], true);
-                  if (!param1) {
-                    return;
-                  } else {
-                    field_c = (int[]) null;
-                    return;
-                  }
+                  return;
                 }
               } else {
                 if (param2 == 2) {
                   fk.a(hl.field_d[3], true);
-                  if (var4 != 0) {
-                    fk.a(hl.field_d[2], true);
-                    if (var4 == 0) {
-                      if (!param1) {
-                        return;
-                      } else {
-                        field_c = (int[]) null;
-                        return;
-                      }
-                    } else {
-                      L3: {
-                        fk.a(hl.field_d[1], true);
-                        if (!param1) {
-                          break L3;
-                        } else {
-                          field_c = (int[]) null;
-                          break L3;
-                        }
-                      }
-                      return;
-                    }
+                  if (param1) {
+                    field_c = (int[]) null;
+                    return;
                   } else {
-                    if (!param1) {
-                      return;
-                    } else {
-                      field_c = (int[]) null;
-                      return;
-                    }
+                    return;
                   }
                 } else {
                   if (-4 != (param2 ^ -1)) {
                     if (4 == param2) {
                       fk.a(hl.field_d[1], true);
-                      if (var4 != 0) {
-                        L4: {
-                          fk.a(hl.field_d[3], true);
-                          if (var4 == 0) {
-                            break L4;
-                          } else {
-                            fk.a(hl.field_d[2], true);
-                            fk.a(hl.field_d[1], true);
-                            break L4;
-                          }
-                        }
-                        if (param1) {
-                          field_c = (int[]) null;
-                          return;
-                        } else {
-                          return;
-                        }
+                      if (param1) {
+                        field_c = (int[]) null;
+                        return;
                       } else {
-                        if (param1) {
-                          field_c = (int[]) null;
-                          return;
-                        } else {
-                          return;
-                        }
+                        return;
                       }
                     } else {
                       if (param1) {
@@ -410,38 +203,23 @@ final class lb {
                     }
                   } else {
                     fk.a(hl.field_d[4], true);
-                    if (var4 == 0) {
-                      if (param1) {
-                        field_c = (int[]) null;
-                        return;
-                      } else {
-                        return;
-                      }
+                    if (!param1) {
+                      return;
                     } else {
-                      L5: {
-                        if (4 != param2) {
-                          break L5;
-                        } else {
-                          fk.a(hl.field_d[1], true);
-                          fk.a(hl.field_d[3], true);
-                          fk.a(hl.field_d[2], true);
-                          fk.a(hl.field_d[1], true);
-                          break L5;
-                        }
-                      }
-                      L6: {
-                        if (!param1) {
-                          break L6;
-                        } else {
-                          field_c = (int[]) null;
-                          break L6;
-                        }
-                      }
+                      field_c = (int[]) null;
                       return;
                     }
                   }
                 }
               }
+            }
+          } else {
+            fk.a(hl.field_d[12], true);
+            if (param1) {
+              field_c = (int[]) null;
+              return;
+            } else {
+              return;
             }
           }
         }

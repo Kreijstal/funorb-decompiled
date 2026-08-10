@@ -99,119 +99,30 @@ final class qqb implements ntb {
     }
 
     public final void b(faa param0, int param1) {
-        faa var3 = null;
-        wna[] var4 = null;
         int var5 = 0;
         wna[] var6 = null;
         int var7 = 0;
         wna var8 = null;
-        int var9 = 0;
-        int stackIn_6_0 = 0;
-        faa stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        faa stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        int stackIn_12_2 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
-        var9 = VoidHunters.field_G;
-        try {
-          L0: {
-            var3 = param0;
-            var4 = this.field_a;
-            if (param1 < -109) {
-              L1: {
-                if (var4 == null) {
-                  stackIn_6_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_6_0 = var4.length;
-                  break L1;
-                }
-              }
-              L2: {
-                var5 = stackIn_6_0;
-                var3.a(-632, var5, 8);
-                if (-1 == (var5 ^ -1)) {
-                  break L2;
-                } else {
-                  var6 = var4;
-                  var7 = 0;
-                  L3: while (true) {
-                    if (var6.length <= var7) {
-                      break L2;
-                    } else {
-                      L4: {
-                        var8 = var6[var7];
-                        stackIn_11_0 = (faa) (var3);
-
-                        stackIn_11_1 = 86;
-
-                        if (var8 == null) {
-                          stackIn_12_0 = (faa) ((Object) stackIn_11_0);
-                          stackIn_12_1 = stackIn_11_1;
-                          stackIn_12_2 = 0;
-                          break L4;
-                        } else {
-                          stackIn_12_0 = (faa) ((Object) stackIn_11_0);
-                          stackIn_12_1 = stackIn_11_1;
-                          stackIn_12_2 = 1;
-                          break L4;
-                        }
-                      }
-                      L5: {
-                        if (vq.a(stackIn_12_0, stackIn_12_1, stackIn_12_2 != 0)) {
-                          stb.a(2, 1, var3, var8);
-                          break L5;
-                        } else {
-                          break L5;
-                        }
-                      }
-                      var7++;
-                      continue L3;
-                    }
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var3_ref = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var3_ref);
-
-            stackIn_19_1 = new StringBuilder().append("qqb.B(");
-
-            if (param0 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L6;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L6;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ')');
+        int var9 = VoidHunters.field_G;
+        faa var3 = param0;
+        wna[] var4 = this.field_a;
+        if (param1 >= -109) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            var5 = var4 != null ? var4.length : 0;
+            var3.a(-632, var5, 8);
+            if (-1 != (var5 ^ -1)) {
+                var6 = var4;
+                for (var7 = 0; var6.length > var7; var7++) {
+                    var8 = var6[var7];
+                    if (!(!vq.a(var3, 86, var8 != null ? true : false))) {
+                        stb.a(2, 1, var3, var8);
+                    }
+                }
+            }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "qqb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -259,47 +170,13 @@ final class qqb implements ntb {
     }
 
     public final void a(faa param0, boolean param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_a = (wna[]) ((Object) kcb.a(8, lm.field_b, param0, 1, -62, this.field_a));
-              if (!param1) {
-                break L1;
-              } else {
+            this.field_a = (wna[]) ((Object) kcb.a(8, lm.field_b, param0, 1, -62, this.field_a));
+            if (param1) {
                 field_b = 39;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("qqb.H(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "qqb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

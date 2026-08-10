@@ -3,49 +3,22 @@
  */
 final class taa extends rqa {
     final static void e(byte param0) {
-        int var1_int = 0;
         int var2 = 0;
         double var3 = 0.0;
-        int var5 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        var5 = VoidHunters.field_G;
+        int var5 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              L2: {
-                var1_int = 3 / ((param0 - 64) / 44);
-                if (null == qta.field_o) {
-                  break L2;
-                } else {
-                  if (null != jmb.field_q) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
+            int var1_int = 3 / ((param0 - 64) / 44);
+            if (null == qta.field_o || null == jmb.field_q) {
+                jmb.field_q = new int[256];
+                qta.field_o = new int[256];
+                for (var2 = 0; 256 > var2; var2++) {
+                    var3 = (double)var2 / 255.0 * 6.283185307179586;
+                    qta.field_o[var2] = (int)(4096.0 * Math.sin(var3));
+                    jmb.field_q[var2] = (int)(Math.cos(var3) * 4096.0);
                 }
-              }
-              jmb.field_q = new int[256];
-              qta.field_o = new int[256];
-              var2 = 0;
-              L3: while (true) {
-                if (256 <= var2) {
-                  break L1;
-                } else {
-                  var3 = (double)var2 / 255.0 * 6.283185307179586;
-                  qta.field_o[var2] = (int)(4096.0 * Math.sin(var3));
-                  jmb.field_q[var2] = (int)(Math.cos(var3) * 4096.0);
-                  var2++;
-                  continue L3;
-                }
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1), "taa.B(" + param0 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "taa.B(" + param0 + ')');
         }
     }
 

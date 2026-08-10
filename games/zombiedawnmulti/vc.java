@@ -93,164 +93,53 @@ final class vc {
     }
 
     final static void a(boolean param0) {
-        int[] array$1 = null;
-        RuntimeException runtimeException = null;
-        int[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int[] var4 = null;
-        int[] var5 = null;
         int[] var6 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = ZombieDawnMulti.field_E ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param0) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_h = (String) null;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        wm.field_Q[0] = ah.field_e.e(16711680);
-                        wm.field_Q[1] = ah.field_e.e(7829248);
-                        wm.field_Q[2] = ah.field_e.e(16776960);
-                        wm.field_Q[3] = ah.field_e.e(30464);
-                        wm.field_Q[4] = ah.field_e.e(65280);
-                        wm.field_Q[5] = ah.field_e.e(30583);
-                        wm.field_Q[6] = ah.field_e.e(65535);
-                        wm.field_Q[7] = ah.field_e.e(119);
-                        wm.field_Q[8] = ah.field_e.e(255);
-                        wm.field_Q[9] = ah.field_e.e(16745473);
-                        ia.field_s = ah.field_e.e(16777215);
-                        rj.field_F = ah.field_e.e(6710886);
-                        var6 = ah.field_e.field_P[0];
-                        var5 = var6;
-                        var4 = var5;
-                        var1 = var4;
-                        ah.field_e.field_P = new int[13][];
-                        ah.field_e.field_P[0] = var6;
-                        array$1 = new int[ah.field_e.field_P[0].length];
-                        ah.field_e.field_P[4] = array$1;
-                        var2 = 0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (ah.field_e.field_P[4].length <= var2) {
-                            statePc = 8;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        ah.field_e.field_P[4][var2] = 16777215;
-                        var2++;
-                        if (var3 != 0) {
-                            statePc = 11;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (var3 == 0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        ke.a(16777215, 2, -17895, 65793, 13369344);
-                        ke.a(4194304, 0, -17895, 8388608, 16711680);
-                        ke.a(16777215, 1, -17895, 65793, 5481009);
-                        ke.a(4210688, 3, -17895, 8421376, 16776960);
-                        ke.a(0, 5, -17895, 0, 0);
-                        ke.a(0, 6, -17895, 4473924, 10066329);
-                        ke.a(16777215, 7, -17895, 4473924, 10066329);
-                        ke.a(0, 8, -17895, 4996418, 14540253);
-                        ke.a(0, 9, -17895, 16777215, 14540253);
-                        ke.a(4096, 10, -17895, 16384, 5481009);
-                        ke.a(16777215, 11, -17895, 4473924, 5481009);
-                        ke.a(4096, 12, -17895, 16384, 16556032);
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    runtimeException = (RuntimeException) ((Object) caughtException);
-                    throw fa.a((Throwable) ((Object) runtimeException), "vc.D(" + param0 + ')');
-                }
-                case 11: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int[] var5 = null;
+        int[] var4 = null;
+        int[] array$0 = null;
+        int var2 = 0;
+        int var3 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+            if (!param0) {
+                field_h = (String) null;
             }
+            wm.field_Q[0] = ah.field_e.e(16711680);
+            wm.field_Q[1] = ah.field_e.e(7829248);
+            wm.field_Q[2] = ah.field_e.e(16776960);
+            wm.field_Q[3] = ah.field_e.e(30464);
+            wm.field_Q[4] = ah.field_e.e(65280);
+            wm.field_Q[5] = ah.field_e.e(30583);
+            wm.field_Q[6] = ah.field_e.e(65535);
+            wm.field_Q[7] = ah.field_e.e(119);
+            wm.field_Q[8] = ah.field_e.e(255);
+            wm.field_Q[9] = ah.field_e.e(16745473);
+            ia.field_s = ah.field_e.e(16777215);
+            rj.field_F = ah.field_e.e(6710886);
+            var6 = ah.field_e.field_P[0];
+            var5 = var6;
+            var4 = var5;
+            int[] var1 = var4;
+            ah.field_e.field_P = new int[13][];
+            ah.field_e.field_P[0] = var6;
+            array$0 = new int[ah.field_e.field_P[0].length];
+            ah.field_e.field_P[4] = array$0;
+            for (var2 = 0; ah.field_e.field_P[4].length > var2; var2++) {
+                ah.field_e.field_P[4][var2] = 16777215;
+            }
+            ke.a(16777215, 2, -17895, 65793, 13369344);
+            ke.a(4194304, 0, -17895, 8388608, 16711680);
+            ke.a(16777215, 1, -17895, 65793, 5481009);
+            ke.a(4210688, 3, -17895, 8421376, 16776960);
+            ke.a(0, 5, -17895, 0, 0);
+            ke.a(0, 6, -17895, 4473924, 10066329);
+            ke.a(16777215, 7, -17895, 4473924, 10066329);
+            ke.a(0, 8, -17895, 4996418, 14540253);
+            ke.a(0, 9, -17895, 16777215, 14540253);
+            ke.a(4096, 10, -17895, 16384, 5481009);
+            ke.a(16777215, 11, -17895, 4473924, 5481009);
+            ke.a(4096, 12, -17895, 16384, 16556032);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) ((Object) runtimeException), "vc.D(" + param0 + ')');
         }
     }
 

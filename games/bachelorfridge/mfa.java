@@ -18,90 +18,93 @@ final class mfa implements java.awt.event.KeyListener, java.awt.event.FocusListe
         try {
           L0: {
             L1: {
-              if (vv.field_e == null) {
-                break L1;
-              } else {
-                L2: {
-                  L3: {
-                    ce.field_x = 0;
-                    var2_int = param0.getKeyCode();
-                    if (-1 < (var2_int ^ -1)) {
-                      break L3;
-                    } else {
-                      if (ru.field_d.length > var2_int) {
-                        var2_int = ru.field_d[var2_int];
-                        if ((var2_int & 128) == 0) {
-                          break L2;
-                        } else {
-                          var2_int = -1;
-                          break L2;
-                        }
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  var2_int = -1;
+              L2: {
+                if (vv.field_e == null) {
                   break L2;
-                }
-                L4: {
-                  if (gfa.field_c < 0) {
-                    break L4;
-                  } else {
-                    if ((var2_int ^ -1) > -1) {
-                      break L4;
-                    } else {
-                      wd.field_x[gfa.field_c] = var2_int;
-                      gfa.field_c = gfa.field_c - -1 & 127;
-                      if (cj.field_i != gfa.field_c) {
+                } else {
+                  L3: {
+                    L4: {
+                      ce.field_x = 0;
+                      var2_int = param0.getKeyCode();
+                      if (-1 < (var2_int ^ -1)) {
                         break L4;
                       } else {
-                        gfa.field_c = -1;
-                        break L4;
+                        if (ru.field_d.length > var2_int) {
+                          var2_int = ru.field_d[var2_int];
+                          if ((var2_int & 128) == 0) {
+                            break L3;
+                          } else {
+                            var2_int = -1;
+                            break L3;
+                          }
+                        } else {
+                          break L4;
+                        }
+                      }
+                    }
+                    var2_int = -1;
+                    break L3;
+                  }
+                  L5: {
+                    if (gfa.field_c < 0) {
+                      break L5;
+                    } else {
+                      if ((var2_int ^ -1) > -1) {
+                        break L5;
+                      } else {
+                        wd.field_x[gfa.field_c] = var2_int;
+                        gfa.field_c = gfa.field_c - -1 & 127;
+                        if (cj.field_i != gfa.field_c) {
+                          break L5;
+                        } else {
+                          gfa.field_c = -1;
+                          break L5;
+                        }
                       }
                     }
                   }
-                }
-                L5: {
-                  if (0 <= var2_int) {
-                    var3 = lma.field_x - -1 & 127;
-                    if (gha.field_q != var3) {
-                      aq.field_a[lma.field_x] = var2_int;
-                      dla.field_i[lma.field_x] = (char)0;
-                      lma.field_x = var3;
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  } else {
-                    break L5;
-                  }
-                }
-                L6: {
-                  var3 = param0.getModifiers();
-                  if ((var3 & 10) != 0) {
-                    break L6;
-                  } else {
-                    if (var2_int == 85) {
-                      break L6;
-                    } else {
-                      if (-11 == (var2_int ^ -1)) {
+                  L6: {
+                    if (0 <= var2_int) {
+                      var3 = lma.field_x - -1 & 127;
+                      if (gha.field_q != var3) {
+                        aq.field_a[lma.field_x] = var2_int;
+                        dla.field_i[lma.field_x] = (char)0;
+                        lma.field_x = var3;
                         break L6;
                       } else {
-                        break L1;
+                        break L6;
+                      }
+                    } else {
+                      break L6;
+                    }
+                  }
+                  L7: {
+                    var3 = param0.getModifiers();
+                    if ((var3 & 10) != 0) {
+                      break L7;
+                    } else {
+                      if (var2_int == 85) {
+                        break L7;
+                      } else {
+                        if (-11 == (var2_int ^ -1)) {
+                          break L7;
+                        } else {
+                          break L1;
+                        }
                       }
                     }
                   }
+                  param0.consume();
+                  break L2;
                 }
-                param0.consume();
-                break L1;
               }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var2 = decompiledCaughtException;
             stackIn_24_0 = (RuntimeException) (var2);
 
@@ -111,12 +114,12 @@ final class mfa implements java.awt.event.KeyListener, java.awt.event.FocusListe
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw pe.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
@@ -351,46 +354,12 @@ final class mfa implements java.awt.event.KeyListener, java.awt.event.FocusListe
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (null == vv.field_e) {
-                break L1;
-              } else {
+            if (null != vv.field_e) {
                 gfa.field_c = -1;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("mfa.focusLost(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) ((Object) runtimeException), "mfa.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

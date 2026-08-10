@@ -27,47 +27,13 @@ class fj extends rk {
     static bi field_G;
 
     void a(int param0, int param1, int param2, fj param3, int param4, int param5) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_o = 0;
-              if (param0 <= -18) {
-                break L1;
-              } else {
+            this.field_o = 0;
+            if (param0 > -18) {
                 this.a(-49, 87, 70, 119, -98);
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("fj.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param4 + ',' + param5 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "fj.K(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -950,19 +916,96 @@ class fj extends rk {
 
     final boolean a(boolean param0, boolean param1, int param2, int param3) {
         int var5;
+        qe var6;
         int var7;
         L0: {
           var7 = Confined.field_J ? 1 : 0;
           this.a((fj) (this), 11579568, param3, param2);
           var5 = this.e((byte) -24) ? 1 : 0;
-          if (!param1) {
-            if (var5 == 0) {
+          if (param1) {
+            L1: {
+              if (il.field_cb == 0) {
+                break L1;
+              } else {
+                if (var5 == 0) {
+                  break L1;
+                } else {
+                  this.a(ld.field_l, param3, (byte) 36, (fj) (this), param2, il.field_cb, jh.field_R);
+                  break L1;
+                }
+              }
+            }
+            L2: {
+              if (-1 == (rh.field_X ^ -1)) {
+                break L2;
+              } else {
+                L3: {
+                  if (this.a(param3, wm.field_hb, (byte) 91, param2, (fj) (this), m.field_a, rh.field_X)) {
+                    break L3;
+                  } else {
+                    if (var5 == 0) {
+                      break L2;
+                    } else {
+                      this.b(84);
+                      if (var7 == 0) {
+                        break L2;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                }
+                param1 = false;
+                break L2;
+              }
+            }
+            if (Confined.field_I != 0) {
               break L0;
             } else {
-              if (rh.field_X == 0) {
-                break L0;
+              if (-1 != (i.field_w ^ -1)) {
+                this.a(-102, param2, ld.field_l, (fj) (this), jh.field_R, param3);
+                var6 = rk.field_k;
+                if (var6 != null) {
+                  L4: {
+                    if (!(var6.field_t instanceof sn)) {
+                      break L4;
+                    } else {
+                      ((sn) ((Object) var6.field_t)).a((s) null, var6, (byte) 104);
+                      break L4;
+                    }
+                  }
+                  rk.field_k = null;
+                  if (var7 == 0) {
+                    break L0;
+                  } else {
+                    if (var5 == 0) {
+                      break L0;
+                    } else {
+                      if (rh.field_X == 0) {
+                        break L0;
+                      } else {
+                        this.b(84);
+                        break L0;
+                      }
+                    }
+                  }
+                } else {
+                  if (var7 == 0) {
+                    break L0;
+                  } else {
+                    if (var5 == 0) {
+                      break L0;
+                    } else {
+                      if (rh.field_X == 0) {
+                        break L0;
+                      } else {
+                        this.b(84);
+                        break L0;
+                      }
+                    }
+                  }
+                }
               } else {
-                this.b(84);
                 break L0;
               }
             }
@@ -979,14 +1022,14 @@ class fj extends rk {
             }
           }
         }
-        L1: {
+        L5: {
           i.field_w = Confined.field_I;
           hb.a((byte) 122, this.f((byte) -108));
           if (param0) {
-            break L1;
+            break L5;
           } else {
             this.field_B = (String) null;
-            break L1;
+            break L5;
           }
         }
         return param1;

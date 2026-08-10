@@ -249,109 +249,35 @@ final class pf {
     }
 
     final void a(fj param0, int param1) {
-        RuntimeException runtimeException = null;
-        int[] var4 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param0.field_l) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                this.field_f = param0.field_i;
-                if (param0.field_i != 0) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (ik.field_e == 0) {
-                      this.field_j.a(qk.field_b, 1, 12);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  this.field_j.a(df.field_b, 1, 13);
-                  break L1;
-                }
-              }
-              L3: {
-                if (param1 == 12) {
-                  break L3;
-                } else {
-                  var4 = (int[]) null;
-                  this.a(20, (int[]) null, true);
-                  break L3;
-                }
-              }
-              L4: {
-                if (1 != param0.field_i) {
-                  break L4;
-                } else {
-                  L5: {
-                    if (me.field_b != 0) {
-                      break L5;
-                    } else {
-                      this.field_j.a(kf.field_a, param1 + -11, 12);
-                      break L5;
-                    }
-                  }
-                  this.field_j.a(md.field_H, 1, 13);
-                  break L4;
-                }
-              }
-              L6: {
-                if (param0.field_i != 2) {
-                  break L6;
-                } else {
-                  L7: {
-                    if (mc.field_f == 0) {
-                      this.field_j.a(jn.field_a, param1 + -11, 12);
-                      break L7;
-                    } else {
-                      break L7;
-                    }
-                  }
-                  this.field_j.a(mc.field_a, 1, 13);
-                  break L6;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            runtimeException = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (runtimeException);
-
-            stackIn_22_1 = new StringBuilder().append("pf.N(");
-
-            if (param0 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L8;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L8;
-            }
-          }
-          throw oi.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ')');
+        if (!(!param0.field_l)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            this.field_f = param0.field_i;
+            if (param0.field_i == 0) {
+                if (!(ik.field_e != 0)) {
+                    this.field_j.a(qk.field_b, 1, 12);
+                }
+                this.field_j.a(df.field_b, 1, 13);
+            }
+            if (param1 != 12) {
+                int[] var4 = (int[]) null;
+                this.a(20, (int[]) null, true);
+            }
+            if (1 == param0.field_i) {
+                if (me.field_b == 0) {
+                    this.field_j.a(kf.field_a, param1 + -11, 12);
+                }
+                this.field_j.a(md.field_H, 1, 13);
+            }
+            if (param0.field_i == 2) {
+                if (!(mc.field_f != 0)) {
+                    this.field_j.a(jn.field_a, param1 + -11, 12);
+                }
+                this.field_j.a(mc.field_a, 1, 13);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) ((Object) runtimeException), "pf.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

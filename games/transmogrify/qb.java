@@ -233,54 +233,32 @@ final class qb implements Runnable {
             Object var2 = null;
             Throwable var3 = null;
             int var4 = 0;
-            int stackIn_9_0 = 0;
             Throwable decompiledCaughtException = null;
             var4 = Transmogrify.field_A ? 1 : 0;
             try {
               L0: while (true) {
                 L1: {
-                  L2: {
-                    if (this.field_h.field_h >= this.field_h.field_g.length) {
-                      break L2;
+                  if (this.field_h.field_h >= this.field_h.field_g.length) {
+                    break L1;
+                  } else {
+                    var1_int = this.field_g.read(this.field_h.field_g, this.field_h.field_h, this.field_h.field_g.length - this.field_h.field_h);
+                    if (var1_int >= 0) {
+                      this.field_h.field_h = this.field_h.field_h + var1_int;
+                      continue L0;
                     } else {
-                      var1_int = this.field_g.read(this.field_h.field_g, this.field_h.field_h, this.field_h.field_g.length - this.field_h.field_h);
-                      stackIn_9_0 = var1_int;
-
-                      if (var4 != 0) {
-                        break L1;
-                      } else {
-                        L3: {
-                          if (stackIn_9_0 >= 0) {
-                            break L3;
-                          } else {
-                            if (var4 == 0) {
-                              break L2;
-                            } else {
-                              break L3;
-                            }
-                          }
-                        }
-                        this.field_h.field_h = this.field_h.field_h + var1_int;
-                        if (var4 == 0) {
-                          continue L0;
-                        } else {
-                          break L2;
-                        }
-                      }
+                      break L1;
                     }
                   }
-                  stackIn_9_0 = this.field_h.field_g.length;
-                  break L1;
                 }
-                if (stackIn_9_0 == this.field_h.field_h) {
+                if (this.field_h.field_g.length == this.field_h.field_h) {
                   throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.field_g.length + " " + this.field_b));
                 } else {
                   var1 = this;
                   synchronized (var1) {
-                    L4: {
+                    L2: {
                       this.finalize();
                       this.field_c = 3;
-                      break L4;
+                      break L2;
                     }
                   }
                   return;
@@ -291,10 +269,10 @@ final class qb implements Runnable {
               var1 = (Exception) (Object) decompiledCaughtException;
               var2 = this;
               synchronized (var2) {
-                L5: {
+                L3: {
                   this.finalize();
                   this.field_c = this.field_c + 1;
-                  break L5;
+                  break L3;
                 }
               }
               return;
@@ -317,51 +295,17 @@ final class qb implements Runnable {
     }
 
     final static void a(int param0, int param1, oa param2, int param3, int param4) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              param2.f(6389, 12);
-              param2.c(17, -159688920);
-              param2.c(param4, -159688920);
-              param2.c(param1, -159688920);
-              param2.f(6389, param3);
-              if (param0 >= 112) {
-                break L1;
-              } else {
+            param2.f(6389, 12);
+            param2.c(17, -159688920);
+            param2.c(param4, -159688920);
+            param2.c(param1, -159688920);
+            param2.f(6389, param3);
+            if (param0 < 112) {
                 field_k = -61L;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("qb.C(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw ch.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param3 + ',' + param4 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) ((Object) runtimeException), "qb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -740,12 +740,7 @@ final class dk extends cj {
                         } else {
                           this.field_wb = this.field_Hb.toString();
                           this.field_Fb = 2;
-                          if (!ZombieDawnMulti.field_E) {
-                            break L4;
-                          } else {
-                            this.field_Fb = 1;
-                            break L4;
-                          }
+                          break L4;
                         }
                       }
                     }
@@ -777,12 +772,7 @@ final class dk extends cj {
                     } else {
                       this.field_wb = this.field_Hb.toString();
                       this.field_Fb = 2;
-                      if (!ZombieDawnMulti.field_E) {
-                        break L6;
-                      } else {
-                        this.field_Fb = 1;
-                        break L6;
-                      }
+                      break L6;
                     }
                   }
                 }
@@ -798,213 +788,184 @@ final class dk extends cj {
                 }
               } else {
                 if (!vh.a((char) var2, (byte) 85)) {
-                  L7: {
-                    if (sj.field_p != 84) {
-                      break L7;
-                    } else {
-                      if (0 >= this.field_Hb.length()) {
-                        this.field_Fb = 1;
-                        if (param0 >= 123) {
-                          if (-14 != (sj.field_p ^ -1)) {
-                            return true;
-                          } else {
-                            this.field_Fb = 1;
-                            return true;
-                          }
-                        } else {
-                          return true;
-                        }
+                  if (sj.field_p != 84) {
+                    if (param0 >= 123) {
+                      if (-14 != (sj.field_p ^ -1)) {
+                        return true;
                       } else {
-                        this.field_wb = this.field_Hb.toString();
-                        this.field_Fb = 2;
-                        if (!ZombieDawnMulti.field_E) {
-                          break L7;
-                        } else {
-                          this.field_Fb = 1;
-                          if (param0 >= 123) {
-                            if (-14 != (sj.field_p ^ -1)) {
-                              return true;
-                            } else {
-                              this.field_Fb = 1;
-                              return true;
-                            }
-                          } else {
-                            return true;
-                          }
-                        }
+                        this.field_Fb = 1;
+                        return true;
                       }
-                    }
-                  }
-                  if (param0 >= 123) {
-                    if (-14 != (sj.field_p ^ -1)) {
-                      return true;
                     } else {
-                      this.field_Fb = 1;
                       return true;
                     }
                   } else {
-                    return true;
+                    if (0 >= this.field_Hb.length()) {
+                      this.field_Fb = 1;
+                      if (param0 >= 123) {
+                        if (-14 != (sj.field_p ^ -1)) {
+                          return true;
+                        } else {
+                          this.field_Fb = 1;
+                          return true;
+                        }
+                      } else {
+                        return true;
+                      }
+                    } else {
+                      this.field_wb = this.field_Hb.toString();
+                      this.field_Fb = 2;
+                      if (param0 >= 123) {
+                        if (-14 != (sj.field_p ^ -1)) {
+                          return true;
+                        } else {
+                          this.field_Fb = 1;
+                          return true;
+                        }
+                      } else {
+                        return true;
+                      }
+                    }
                   }
                 } else {
-                  L8: {
-                    discarded$4 = this.field_Hb.append((char) var2);
-                    if (sj.field_p != 84) {
-                      break L8;
-                    } else {
-                      if (0 >= this.field_Hb.length()) {
-                        this.field_Fb = 1;
-                        if (param0 >= 123) {
-                          L9: {
-                            if (-14 != (sj.field_p ^ -1)) {
-                              break L9;
-                            } else {
-                              this.field_Fb = 1;
-                              break L9;
-                            }
-                          }
-                          return true;
-                        } else {
-                          return true;
-                        }
+                  discarded$4 = this.field_Hb.append((char) var2);
+                  if (sj.field_p != 84) {
+                    if (param0 >= 123) {
+                      if (-14 != (sj.field_p ^ -1)) {
+                        return true;
                       } else {
-                        this.field_wb = this.field_Hb.toString();
-                        this.field_Fb = 2;
-                        if (!ZombieDawnMulti.field_E) {
-                          break L8;
-                        } else {
-                          this.field_Fb = 1;
-                          if (param0 >= 123) {
-                            if (-14 != (sj.field_p ^ -1)) {
-                              return true;
-                            } else {
-                              this.field_Fb = 1;
-                              return true;
-                            }
-                          } else {
-                            return true;
-                          }
-                        }
+                        this.field_Fb = 1;
+                        return true;
                       }
-                    }
-                  }
-                  if (param0 >= 123) {
-                    if (-14 != (sj.field_p ^ -1)) {
-                      return true;
                     } else {
-                      this.field_Fb = 1;
                       return true;
                     }
                   } else {
-                    return true;
+                    if (0 >= this.field_Hb.length()) {
+                      this.field_Fb = 1;
+                      if (param0 >= 123) {
+                        if (-14 != (sj.field_p ^ -1)) {
+                          return true;
+                        } else {
+                          this.field_Fb = 1;
+                          return true;
+                        }
+                      } else {
+                        return true;
+                      }
+                    } else {
+                      this.field_wb = this.field_Hb.toString();
+                      this.field_Fb = 2;
+                      if (param0 >= 123) {
+                        L7: {
+                          if (-14 != (sj.field_p ^ -1)) {
+                            break L7;
+                          } else {
+                            this.field_Fb = 1;
+                            break L7;
+                          }
+                        }
+                        return true;
+                      } else {
+                        return true;
+                      }
+                    }
                   }
                 }
               }
             } else {
-              L10: {
-                if (sj.field_p != 84) {
-                  break L10;
-                } else {
-                  if (0 >= this.field_Hb.length()) {
-                    this.field_Fb = 1;
-                    if (param0 < 123) {
-                      return true;
-                    } else {
-                      L11: {
-                        if (-14 != (sj.field_p ^ -1)) {
-                          break L11;
-                        } else {
-                          this.field_Fb = 1;
-                          break L11;
-                        }
-                      }
-                      return true;
-                    }
+              if (sj.field_p != 84) {
+                if (param0 >= 123) {
+                  if (-14 != (sj.field_p ^ -1)) {
+                    return true;
                   } else {
-                    this.field_wb = this.field_Hb.toString();
-                    this.field_Fb = 2;
-                    if (!ZombieDawnMulti.field_E) {
-                      break L10;
-                    } else {
-                      this.field_Fb = 1;
-                      if (param0 < 123) {
-                        return true;
-                      } else {
-                        L12: {
-                          if (-14 != (sj.field_p ^ -1)) {
-                            break L12;
-                          } else {
-                            this.field_Fb = 1;
-                            break L12;
-                          }
-                        }
-                        return true;
-                      }
-                    }
+                    this.field_Fb = 1;
+                    return true;
                   }
-                }
-              }
-              if (param0 >= 123) {
-                if (-14 != (sj.field_p ^ -1)) {
-                  return true;
                 } else {
-                  this.field_Fb = 1;
                   return true;
                 }
               } else {
-                return true;
+                if (0 >= this.field_Hb.length()) {
+                  this.field_Fb = 1;
+                  if (param0 < 123) {
+                    return true;
+                  } else {
+                    L8: {
+                      if (-14 != (sj.field_p ^ -1)) {
+                        break L8;
+                      } else {
+                        this.field_Fb = 1;
+                        break L8;
+                      }
+                    }
+                    return true;
+                  }
+                } else {
+                  this.field_wb = this.field_Hb.toString();
+                  this.field_Fb = 2;
+                  if (param0 < 123) {
+                    return true;
+                  } else {
+                    L9: {
+                      if (-14 != (sj.field_p ^ -1)) {
+                        break L9;
+                      } else {
+                        this.field_Fb = 1;
+                        break L9;
+                      }
+                    }
+                    return true;
+                  }
+                }
               }
             }
           } else {
-            L13: {
+            L10: {
               if (this.field_Hb.length() >= 12) {
-                break L13;
+                break L10;
               } else {
-                L14: {
+                L11: {
                   var2 = Character.toLowerCase(pn.field_d);
                   if (32 != var2) {
-                    break L14;
+                    break L11;
                   } else {
                     var2 = 95;
-                    break L14;
+                    break L11;
                   }
                 }
-                L15: {
+                L12: {
                   if (var2 != 95) {
-                    break L15;
+                    break L12;
                   } else {
                     if ((this.field_Hb.length() ^ -1) >= -1) {
-                      break L15;
+                      break L12;
                     } else {
-                      L16: {
+                      L13: {
                         discarded$5 = this.field_Hb.append((char) var2);
                         if (hd.a(-24315, (char) var2)) {
                           discarded$6 = this.field_Hb.append((char) var2);
-                          break L16;
+                          break L13;
                         } else {
                           if (!vh.a((char) var2, (byte) 85)) {
-                            break L16;
+                            break L13;
                           } else {
                             discarded$7 = this.field_Hb.append((char) var2);
-                            break L16;
+                            break L13;
                           }
                         }
                       }
-                      L17: {
+                      L14: {
                         if (sj.field_p != 84) {
-                          break L17;
+                          break L14;
                         } else {
                           if (0 >= this.field_Hb.length()) {
                             this.field_Fb = 1;
-                            break L17;
+                            break L14;
                           } else {
                             this.field_wb = this.field_Hb.toString();
                             this.field_Fb = 2;
-                            if (!ZombieDawnMulti.field_E) {
-                              break L17;
-                            } else {
-                              this.field_Fb = 1;
-                              break L17;
-                            }
+                            break L14;
                           }
                         }
                       }
@@ -1022,72 +983,62 @@ final class dk extends cj {
                   }
                 }
                 if (hd.a(-24315, (char) var2)) {
-                  L18: {
+                  L15: {
                     discarded$8 = this.field_Hb.append((char) var2);
                     if (sj.field_p != 84) {
-                      break L18;
+                      break L15;
                     } else {
                       if (0 >= this.field_Hb.length()) {
                         this.field_Fb = 1;
-                        break L18;
+                        break L15;
                       } else {
                         this.field_wb = this.field_Hb.toString();
                         this.field_Fb = 2;
-                        if (!ZombieDawnMulti.field_E) {
-                          break L18;
-                        } else {
-                          this.field_Fb = 1;
-                          break L18;
-                        }
+                        break L15;
                       }
                     }
                   }
                   if (param0 < 123) {
                     return true;
                   } else {
-                    L19: {
+                    L16: {
                       if (-14 != (sj.field_p ^ -1)) {
-                        break L19;
+                        break L16;
                       } else {
                         this.field_Fb = 1;
-                        break L19;
+                        break L16;
                       }
                     }
                     return true;
                   }
                 } else {
                   if (!vh.a((char) var2, (byte) 85)) {
-                    break L13;
+                    break L10;
                   } else {
-                    L20: {
+                    L17: {
                       discarded$9 = this.field_Hb.append((char) var2);
                       if (sj.field_p != 84) {
-                        break L20;
+                        break L17;
                       } else {
                         if (0 >= this.field_Hb.length()) {
                           this.field_Fb = 1;
-                          break L20;
+                          break L17;
                         } else {
                           this.field_wb = this.field_Hb.toString();
                           this.field_Fb = 2;
-                          if (!ZombieDawnMulti.field_E) {
-                            break L20;
-                          } else {
-                            this.field_Fb = 1;
-                            break L20;
-                          }
+                          break L17;
                         }
                       }
                     }
                     if (param0 < 123) {
                       return true;
                     } else {
-                      L21: {
+                      L18: {
                         if (-14 != (sj.field_p ^ -1)) {
-                          break L21;
+                          break L18;
                         } else {
                           this.field_Fb = 1;
-                          break L21;
+                          break L18;
                         }
                       }
                       return true;
@@ -1096,58 +1047,50 @@ final class dk extends cj {
                 }
               }
             }
-            L22: {
-              if (sj.field_p != 84) {
-                break L22;
-              } else {
-                if (0 >= this.field_Hb.length()) {
+            if (sj.field_p != 84) {
+              if (param0 >= 123) {
+                if (-14 == (sj.field_p ^ -1)) {
                   this.field_Fb = 1;
-                  if (param0 < 123) {
-                    return true;
-                  } else {
-                    L23: {
-                      if (-14 != (sj.field_p ^ -1)) {
-                        break L23;
-                      } else {
-                        this.field_Fb = 1;
-                        break L23;
-                      }
-                    }
-                    return true;
-                  }
+                  return true;
                 } else {
-                  this.field_wb = this.field_Hb.toString();
-                  this.field_Fb = 2;
-                  if (!ZombieDawnMulti.field_E) {
-                    break L22;
-                  } else {
-                    this.field_Fb = 1;
-                    if (param0 < 123) {
-                      return true;
-                    } else {
-                      L24: {
-                        if (-14 != (sj.field_p ^ -1)) {
-                          break L24;
-                        } else {
-                          this.field_Fb = 1;
-                          break L24;
-                        }
-                      }
-                      return true;
-                    }
-                  }
+                  return true;
                 }
-              }
-            }
-            if (param0 >= 123) {
-              if (-14 == (sj.field_p ^ -1)) {
-                this.field_Fb = 1;
-                return true;
               } else {
                 return true;
               }
             } else {
-              return true;
+              if (0 >= this.field_Hb.length()) {
+                this.field_Fb = 1;
+                if (param0 < 123) {
+                  return true;
+                } else {
+                  L19: {
+                    if (-14 != (sj.field_p ^ -1)) {
+                      break L19;
+                    } else {
+                      this.field_Fb = 1;
+                      break L19;
+                    }
+                  }
+                  return true;
+                }
+              } else {
+                this.field_wb = this.field_Hb.toString();
+                this.field_Fb = 2;
+                if (param0 < 123) {
+                  return true;
+                } else {
+                  L20: {
+                    if (-14 != (sj.field_p ^ -1)) {
+                      break L20;
+                    } else {
+                      this.field_Fb = 1;
+                      break L20;
+                    }
+                  }
+                  return true;
+                }
+              }
             }
           }
         } else {
@@ -1170,111 +1113,72 @@ final class dk extends cj {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         int var4;
-        int var5;
-        int var6;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         this.a(-11838, param1);
         if (param1) {
           L0: while (true) {
             if (ba.c(-1)) {
-              var6 = -86;
-              var5 = sj.field_p ^ -1;
-              if (var4 != 0) {
-                if (var5 >= var6) {
-                  if (param1) {
-                    if (kd.field_b != 0) {
-                      if (this.field_T == 0) {
-                        this.field_Fb = 1;
-                        return this.field_Fb;
-                      } else {
-                        return this.field_Fb;
-                      }
-                    } else {
-                      return this.field_Fb;
-                    }
-                  } else {
-                    return this.field_Fb;
-                  }
+              L1: {
+                if ((sj.field_p ^ -1) != -86) {
+                  break L1;
                 } else {
-                  this.field_Hb = (StringBuilder) null;
-                  if (param1) {
-                    if (kd.field_b != 0) {
-                      if (this.field_T != 0) {
-                        return this.field_Fb;
-                      } else {
-                        this.field_Fb = 1;
-                        return this.field_Fb;
-                      }
-                    } else {
-                      return this.field_Fb;
-                    }
-                  } else {
-                    return this.field_Fb;
-                  }
-                }
-              } else {
-                L1: {
-                  if (var5 != var6) {
+                  if (-1 > (this.field_Hb.length() ^ -1)) {
+                    lf.a(' ', this.field_Hb.length() + -1, 0, this.field_Hb);
                     break L1;
                   } else {
-                    if (-1 > (this.field_Hb.length() ^ -1)) {
-                      lf.a(' ', this.field_Hb.length() + -1, 0, this.field_Hb);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
+                    break L1;
                   }
                 }
-                L2: {
-                  if (ck.a(pn.field_d, -1, (CharSequence) ((Object) this.field_Hb))) {
-                    discarded$0 = this.field_Hb.append(pn.field_d);
+              }
+              L2: {
+                if (ck.a(pn.field_d, -1, (CharSequence) ((Object) this.field_Hb))) {
+                  discarded$0 = this.field_Hb.append(pn.field_d);
+                  break L2;
+                } else {
+                  L3: {
+                    if (0 != this.field_Hb.length()) {
+                      break L3;
+                    } else {
+                      if (pn.field_d == 91) {
+                        discarded$1 = this.field_Hb.append(pn.field_d);
+                        break L2;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                  L4: {
+                    if ((this.field_Hb.length() ^ -1) != -2) {
+                      break L4;
+                    } else {
+                      if (pn.field_d == 35) {
+                        discarded$2 = this.field_Hb.append(pn.field_d);
+                        break L2;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
+                  if (pn.field_d == 93) {
+                    discarded$3 = this.field_Hb.append(pn.field_d);
                     break L2;
                   } else {
-                    L3: {
-                      if (0 != this.field_Hb.length()) {
-                        break L3;
-                      } else {
-                        if (pn.field_d == 91) {
-                          discarded$1 = this.field_Hb.append(pn.field_d);
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                    L4: {
-                      if ((this.field_Hb.length() ^ -1) != -2) {
-                        break L4;
-                      } else {
-                        if (pn.field_d == 35) {
-                          discarded$2 = this.field_Hb.append(pn.field_d);
-                          break L2;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    if (pn.field_d == 93) {
-                      discarded$3 = this.field_Hb.append(pn.field_d);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
+                    break L2;
                   }
                 }
-                if (-85 == (sj.field_p ^ -1)) {
-                  if (this.field_Hb.length() <= 0) {
-                    return 1;
-                  } else {
-                    this.field_wb = this.field_Hb.toString();
-                    return 2;
-                  }
+              }
+              if (-85 == (sj.field_p ^ -1)) {
+                if (this.field_Hb.length() <= 0) {
+                  return 1;
                 } else {
-                  if (sj.field_p == 13) {
-                    return 1;
-                  } else {
-                    continue L0;
-                  }
+                  this.field_wb = this.field_Hb.toString();
+                  return 2;
+                }
+              } else {
+                if (sj.field_p == 13) {
+                  return 1;
+                } else {
+                  continue L0;
                 }
               }
             } else {

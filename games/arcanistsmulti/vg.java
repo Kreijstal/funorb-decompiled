@@ -54,7 +54,15 @@ final class vg {
           return;
         } else {
           L0: {
-            if (-72 != (vn.field_d ^ -1)) {
+            if (-72 == (vn.field_d ^ -1)) {
+              L1: {
+                if (mj.field_p > 0) {
+                  df.a((byte) 65, mj.field_p - 1);
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
               if ((vn.field_d ^ -1) != -73) {
                 break L0;
               } else {
@@ -75,27 +83,15 @@ final class vg {
                   df.a((byte) -125, mj.field_p + 1);
                   break L0;
                 }
-              }
-            }
-          }
-          L1: {
-            if (-34 != (vn.field_d ^ -1)) {
-              break L1;
-            } else {
-              if (0 < ed.field_Cb) {
-                ed.field_Cb = ed.field_Cb - 1;
-                break L1;
-              } else {
-                break L1;
               }
             }
           }
           L2: {
-            if (vn.field_d != 34) {
+            if (-34 != (vn.field_d ^ -1)) {
               break L2;
             } else {
-              if (-9 < (ed.field_Cb ^ -1)) {
-                ed.field_Cb = ed.field_Cb + 1;
+              if (0 < ed.field_Cb) {
+                ed.field_Cb = ed.field_Cb - 1;
                 break L2;
               } else {
                 break L2;
@@ -103,11 +99,23 @@ final class vg {
             }
           }
           L3: {
-            if (vn.field_d == 35) {
-              ed.field_Cb = 6;
+            if (vn.field_d != 34) {
               break L3;
             } else {
-              break L3;
+              if (-9 < (ed.field_Cb ^ -1)) {
+                ed.field_Cb = ed.field_Cb + 1;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+          }
+          L4: {
+            if (vn.field_d == 35) {
+              ed.field_Cb = 6;
+              break L4;
+            } else {
+              break L4;
             }
           }
           var1 = 36 / ((21 - param0) / 50);

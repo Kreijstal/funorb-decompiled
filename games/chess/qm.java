@@ -712,28 +712,55 @@ final class qm {
     }
 
     final static void a(int param0) {
-        if (param0 < 70) {
-            return;
-        }
-        if (hm.field_g) {
-            return;
-        }
-        if (!(null != gf.field_d)) {
-            gf.field_d = vc.a(-122, 4);
-        }
-        if (!(!gf.field_d.field_m)) {
-            vk.field_b = vk.field_b & (gf.field_d.field_j ^ -1);
-            wc.field_w = wc.field_w | gf.field_d.field_j;
-            gf.field_d = null;
-            hm.field_g = true;
-        }
-        if (hm.field_g) {
-            dn.a(true);
-            df.a((byte) 102);
-            if (6 == jc.field_f && vk.field_b == 0) {
-                jc.field_f = 0;
-                uk.a(qk.field_h, false, 28333, 0);
+        if (param0 >= 70) {
+          if (!hm.field_g) {
+            L0: {
+              if (null == gf.field_d) {
+                gf.field_d = vc.a(-122, 4);
+                break L0;
+              } else {
+                break L0;
+              }
             }
+            L1: {
+              if (gf.field_d.field_m) {
+                vk.field_b = vk.field_b & (gf.field_d.field_j ^ -1);
+                wc.field_w = wc.field_w | gf.field_d.field_j;
+                gf.field_d = null;
+                hm.field_g = true;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              if (!hm.field_g) {
+                break L2;
+              } else {
+                L3: {
+                  dn.a(true);
+                  df.a((byte) 102);
+                  if (6 != jc.field_f) {
+                    break L3;
+                  } else {
+                    if (vk.field_b != 0) {
+                      break L3;
+                    } else {
+                      jc.field_f = 0;
+                      uk.a(qk.field_h, false, 28333, 0);
+                      break L2;
+                    }
+                  }
+                }
+                break L2;
+              }
+            }
+            return;
+          } else {
+            return;
+          }
+        } else {
+          return;
         }
     }
 

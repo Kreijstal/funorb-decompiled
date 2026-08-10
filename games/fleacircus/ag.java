@@ -13,114 +13,37 @@ final class ag {
     static volatile boolean field_a;
 
     final void a(Object param0, byte param1, long param2) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.a(1, param2, param0, -127);
-              if (param1 == -122) {
-                break L1;
-              } else {
+            this.a(1, param2, param0, -127);
+            if (param1 != -122) {
                 field_a = true;
-                break L1;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (runtimeException);
-
-            stackIn_5_1 = new StringBuilder().append("ag.B(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L2;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L2;
-            }
-          }
-          throw pf.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) ((Object) runtimeException), "ag.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     private final void a(int param0, long param1, Object param2, int param3) {
-        RuntimeException runtimeException = null;
         cb var6 = null;
-        int var6_int = 0;
         pj var7 = null;
-        int var8 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var8 = fleas.field_A ? 1 : 0;
+        int var8 = fleas.field_A ? 1 : 0;
         try {
-          L0: {
-            if (param0 > this.field_g) {
-              throw new IllegalStateException();
-            } else {
-              this.a(param1, (byte) 94);
-              this.field_d = this.field_d - param0;
-              L1: while (true) {
-                L2: {
-                  if (this.field_d >= 0) {
-                    break L2;
-                  } else {
-                    var6 = (cb) ((Object) this.field_c.d(-27593));
-                    this.a(var6, 28);
-                    if (var8 == 0) {
-                      continue L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                var6_int = -125 % ((48 - param3) / 46);
-                var7 = new pj(param2, param0);
-                this.field_b.a(param1, var7, (byte) 43);
-                this.field_c.a(-99, var7);
-                ((cb) ((Object) var7)).field_j = 0L;
-                break L0;
-              }
+            if (!(param0 <= this.field_g)) {
+                throw new IllegalStateException();
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (runtimeException);
-
-            stackIn_11_1 = new StringBuilder().append("ag.C(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
+            this.a(param1, (byte) 94);
+            this.field_d = this.field_d - param0;
+            while (this.field_d < 0) {
+                var6 = (cb) ((Object) this.field_c.d(-27593));
+                this.a(var6, 28);
             }
-          }
-          throw pf.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param3 + ')');
+            int var6_int = -125 % ((48 - param3) / 46);
+            var7 = new pj(param2, param0);
+            this.field_b.a(param1, var7, (byte) 43);
+            this.field_c.a(-99, var7);
+            ((cb) ((Object) var7)).field_j = 0L;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) ((Object) runtimeException), "ag.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -224,35 +147,28 @@ final class ag {
         var5 = 60 / ((-15 - param0) / 34);
         if (var8 != null) {
           var6 = var8.g(5);
-          if (var6 != null) {
-            if (!var8.c((byte) -52)) {
-              this.field_c.a(-123, var8);
-              var8.field_j = 0L;
-              if (fleas.field_A) {
+          if (var6 == null) {
+            var8.c(-1);
+            var8.e(30);
+            this.field_d = this.field_d + var8.field_r;
+            return null;
+          } else {
+            L0: {
+              if (var8.c((byte) -52)) {
                 var7 = new pj(var6, var8.field_r);
                 this.field_b.a(var8.field_c, var7, (byte) 43);
                 this.field_c.a(-36, var7);
                 ((cb) ((Object) var7)).field_j = 0L;
                 var8.c(-1);
                 var8.e(90);
-                return var6;
+                break L0;
               } else {
-                return var6;
+                this.field_c.a(-123, var8);
+                var8.field_j = 0L;
+                break L0;
               }
-            } else {
-              var7 = new pj(var6, var8.field_r);
-              this.field_b.a(var8.field_c, var7, (byte) 43);
-              this.field_c.a(-36, var7);
-              ((cb) ((Object) var7)).field_j = 0L;
-              var8.c(-1);
-              var8.e(90);
-              return var6;
             }
-          } else {
-            var8.c(-1);
-            var8.e(30);
-            this.field_d = this.field_d + var8.field_r;
-            return null;
+            return var6;
           }
         } else {
           return null;

@@ -74,32 +74,25 @@ abstract class wl {
               break L0;
             }
           }
-          L1: {
-            stackIn_16_0.field_m = stackIn_16_1 != 0;
-            var8.field_f = var6;
-            if (param3) {
-              break L1;
+          stackIn_16_0.field_m = stackIn_16_1 != 0;
+          var8.field_f = var6;
+          if (param3) {
+            if (20 <= this.c(24547)) {
+              throw new RuntimeException();
             } else {
-              if ((this.d((byte) -25) ^ -1) > -21) {
-                this.field_i.a(var8, (byte) -105);
-                if (MonkeyPuzzle2.field_F) {
-                  break L1;
-                } else {
-                  return var8;
-                }
-              } else {
-                throw new RuntimeException();
-              }
+              this.field_n.a(var8, (byte) -73);
+              return var8;
+            }
+          } else {
+            if ((this.d((byte) -25) ^ -1) > -21) {
+              this.field_i.a(var8, (byte) -105);
+              return var8;
+            } else {
+              throw new RuntimeException();
             }
           }
-          if (20 <= this.c(24547)) {
-            throw new RuntimeException();
-          } else {
-            this.field_n.a(var8, (byte) -73);
-            return var8;
-          }
         } else {
-          L2: {
+          L1: {
             field_d = (pj) null;
             var8 = new ob();
             var8.field_q = param4;
@@ -108,36 +101,29 @@ abstract class wl {
             if (!param3) {
               stackIn_4_0 = (ob) ((Object) stackIn_3_0);
               stackIn_4_1 = 0;
-              break L2;
+              break L1;
             } else {
               stackIn_4_0 = (ob) ((Object) stackIn_3_0);
               stackIn_4_1 = 1;
-              break L2;
+              break L1;
             }
           }
-          L3: {
-            stackIn_4_0.field_m = stackIn_4_1 != 0;
-            var8.field_f = var6;
-            if (param3) {
-              break L3;
+          stackIn_4_0.field_m = stackIn_4_1 != 0;
+          var8.field_f = var6;
+          if (param3) {
+            if (20 <= this.c(24547)) {
+              throw new RuntimeException();
             } else {
-              if ((this.d((byte) -25) ^ -1) > -21) {
-                this.field_i.a(var8, (byte) -105);
-                if (MonkeyPuzzle2.field_F) {
-                  break L3;
-                } else {
-                  return var8;
-                }
-              } else {
-                throw new RuntimeException();
-              }
+              this.field_n.a(var8, (byte) -73);
+              return var8;
             }
-          }
-          if (20 <= this.c(24547)) {
-            throw new RuntimeException();
           } else {
-            this.field_n.a(var8, (byte) -73);
-            return var8;
+            if ((this.d((byte) -25) ^ -1) > -21) {
+              this.field_i.a(var8, (byte) -105);
+              return var8;
+            } else {
+              throw new RuntimeException();
+            }
           }
         }
     }

@@ -1273,7 +1273,7 @@ final class pf {
                           break L9;
                         }
                       }
-                      throw ma.a((Throwable) ((Object) stackIn_36_0), (stackIn_36_2 != 0) + " " + param1 + " " + param3.length + " " + bg.a(param3.length, var9, 0) + " " + bg.a(param3.length + -2, var9, 0) + " " + this.field_h.field_l[param1] + " " + this.field_h.field_m);
+                      throw ma.a((Throwable) ((Object) stackIn_36_0), (stackIn_36_2 != 0) + " " + param1 + " " + var9.length + " " + bg.a(var9.length, var9, 0) + " " + bg.a(var9.length + -2, var9, 0) + " " + this.field_h.field_l[param1] + " " + this.field_h.field_m);
                     }
                     L10: {
                       if (this.field_a) {

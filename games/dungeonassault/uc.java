@@ -408,23 +408,26 @@ final class uc extends lm {
               }
             }
             L2: {
-              if (!this.field_R) {
-                break L2;
-              } else {
-                this.field_O = this.field_O + 1;
-                if (2 * this.field_B < this.field_O) {
-                  this.field_O = this.field_O - 2 * this.field_B;
-                  break L2;
+              L3: {
+                if (!this.field_R) {
+                  break L3;
                 } else {
-                  break L2;
+                  this.field_O = this.field_O + 1;
+                  if (2 * this.field_B < this.field_O) {
+                    this.field_O = this.field_O - 2 * this.field_B;
+                    break L3;
+                  } else {
+                    break L2;
+                  }
                 }
               }
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var5 = decompiledCaughtException;
             stackIn_9_0 = (RuntimeException) (var5);
 
@@ -434,12 +437,12 @@ final class uc extends lm {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "null";
-              break L3;
+              break L4;
             } else {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "{...}";
-              break L3;
+              break L4;
             }
           }
           throw vk.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ')');

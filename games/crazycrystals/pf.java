@@ -108,69 +108,19 @@ final class pf extends pn implements Cloneable {
     }
 
     final void a(f[][] param0, int param1, int param2, boolean param3) {
-        RuntimeException runtimeException = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_p = this.field_x;
-              this.field_r = this.field_t;
-              stackIn_2_0 = this;
-
-              if (!param3) {
-                stackIn_3_0 = this;
-                stackIn_3_1 = 0;
-                break L1;
-              } else {
-                stackIn_3_0 = this;
-                stackIn_3_1 = 1;
-                break L1;
-              }
-            }
-            L2: {
-              ((pf) (this)).field_t = stackIn_3_1 != 0;
-              if (!this.field_y) {
-                break L2;
-              } else {
+            this.field_p = this.field_x;
+            this.field_r = this.field_t;
+            this.field_t = param3 ? true : false;
+            if (this.field_y) {
                 param0[param2][-1 + param1] = param0[param2][-1 + param1].a(param2, (byte) -110, -1 + param1);
                 param0[param2][param1 + 1] = param0[param2][1 + param1].a(param2, (byte) -110, 1 + param1);
                 param0[param2 - 1][param1] = param0[param2 + -1][param1].a(-1 + param2, (byte) -110, param1);
                 param0[param2 + 1][param1] = param0[param2 - -1][param1].a(param2 - -1, (byte) -110, param1);
                 this.field_y = false;
-                break L2;
-              }
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("pf.UA(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
-          }
-          throw dn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) ((Object) runtimeException), "pf.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -386,30 +336,33 @@ final class pf extends pn implements Cloneable {
               }
             }
             L2: {
-              if ((this.field_q ^ -1) > -65) {
-                break L2;
-              } else {
-                if (param1 > this.field_x) {
-                  this.field_x = param1;
-                  this.field_u = param6;
-                  b.field_a = b.field_a + 20;
-                  fp.field_a = fp.field_a + 40;
-                  je.field_j = je.field_j + 20;
-                  we.field_h = we.field_h + 40;
-                  this.field_t = true;
-                  this.field_v = param2;
-                  this.field_w = param4;
-                  break L2;
+              L3: {
+                if ((this.field_q ^ -1) > -65) {
+                  break L3;
                 } else {
-                  break L2;
+                  if (param1 > this.field_x) {
+                    this.field_x = param1;
+                    this.field_u = param6;
+                    b.field_a = b.field_a + 20;
+                    fp.field_a = fp.field_a + 40;
+                    je.field_j = je.field_j + 20;
+                    we.field_h = we.field_h + 40;
+                    this.field_t = true;
+                    this.field_v = param2;
+                    this.field_w = param4;
+                    break L3;
+                  } else {
+                    break L2;
+                  }
                 }
               }
+              break L2;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var9 = decompiledCaughtException;
             stackIn_9_0 = (RuntimeException) (var9);
 
@@ -419,12 +372,12 @@ final class pf extends pn implements Cloneable {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "null";
-              break L3;
+              break L4;
             } else {
               stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
               stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackIn_10_2 = "{...}";
-              break L3;
+              break L4;
             }
           }
           throw dn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');

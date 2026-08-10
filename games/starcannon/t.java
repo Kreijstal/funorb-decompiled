@@ -678,37 +678,40 @@ final class t extends ti {
           if (!this.field_z) {
             break L16;
           } else {
-            if (this.field_o > dd.b(119)) {
-              break L16;
-            } else {
-              var2 = (ik) ((Object) this.field_w.a(-1));
-              L17: while (true) {
-                if (var2 == null) {
-                  this.field_o = dd.b(114) + 1000L;
-                  break L16;
-                } else {
-                  L18: {
-                    if (var2.field_r) {
-                      break L18;
-                    } else {
-                      if (!var2.field_n) {
-                        var2.field_n = true;
-                        break L18;
+            L17: {
+              if (this.field_o > dd.b(119)) {
+                break L17;
+              } else {
+                var2 = (ik) ((Object) this.field_w.a(-1));
+                L18: while (true) {
+                  if (var2 == null) {
+                    this.field_o = dd.b(114) + 1000L;
+                    break L17;
+                  } else {
+                    L19: {
+                      if (var2.field_r) {
+                        break L19;
                       } else {
-                        if (var2.field_o) {
-                          var2.b(4);
-                          break L18;
+                        if (!var2.field_n) {
+                          var2.field_n = true;
+                          break L19;
                         } else {
-                          throw new RuntimeException();
+                          if (var2.field_o) {
+                            var2.b(4);
+                            break L19;
+                          } else {
+                            throw new RuntimeException();
+                          }
                         }
                       }
                     }
+                    var2 = (ik) ((Object) this.field_w.a((byte) -64));
+                    continue L18;
                   }
-                  var2 = (ik) ((Object) this.field_w.a((byte) -64));
-                  continue L17;
                 }
               }
             }
+            break L16;
           }
         }
     }

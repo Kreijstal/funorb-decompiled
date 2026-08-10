@@ -201,26 +201,29 @@ final class id {
                 }
               }
               L11: {
-                if (param1 < ra.field_i) {
-                  break L11;
-                } else {
-                  if (var6 < ra.field_g) {
-                    var11 = var6 * ra.field_f + var7 - -(var6 + -param1 & 1);
-                    var12 = 1 - -var9 - var7 >> 965384033;
-                    L12: while (true) {
-                      var12--;
-                      if (var12 < 0) {
-                        break L11;
-                      } else {
-                        ra.field_b[var11] = 16777215;
-                        var11 += 2;
-                        continue L12;
-                      }
-                    }
+                L12: {
+                  if (param1 < ra.field_i) {
+                    break L12;
                   } else {
-                    break L11;
+                    if (var6 < ra.field_g) {
+                      var11 = var6 * ra.field_f + var7 - -(var6 + -param1 & 1);
+                      var12 = 1 - -var9 - var7 >> 965384033;
+                      L13: while (true) {
+                        var12--;
+                        if (var12 < 0) {
+                          break L12;
+                        } else {
+                          ra.field_b[var11] = 16777215;
+                          var11 += 2;
+                          continue L13;
+                        }
+                      }
+                    } else {
+                      break L11;
+                    }
                   }
                 }
+                break L11;
               }
               decompiledRegionSelector0 = 1;
               break L0;

@@ -487,17 +487,20 @@ final class mo {
               }
             }
             L7: {
-              if (null == jl.field_h) {
-                break L7;
-              } else {
-                stackIn_19_0 = jl.field_h.e((byte) -8);
-                if (stackIn_19_0) {
-                  break L7;
+              L8: {
+                if (null == jl.field_h) {
+                  break L8;
                 } else {
-                  f.field_g = null;
-                  break L7;
+                  stackIn_19_0 = jl.field_h.e((byte) -8);
+                  if (stackIn_19_0) {
+                    break L8;
+                  } else {
+                    f.field_g = null;
+                    break L7;
+                  }
                 }
               }
+              break L7;
             }
             break L0;
           }

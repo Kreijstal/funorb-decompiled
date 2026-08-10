@@ -110,10 +110,8 @@ final class ng {
     final static int a(byte param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int stackIn_12_0 = 0;
         int stackIn_14_0 = 0;
-        int stackIn_16_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -123,57 +121,37 @@ final class ng {
           L0: {
             var3_int = 1;
             L1: while (true) {
-              L2: {
-                L3: {
-                  L4: {
-                    if (1 >= param1) {
-                      break L4;
-                    } else {
-                      var7 = param1 & 1;
-                      var6 = 0;
-                      if (var4 != 0) {
-                        if (var6 == var7) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        L5: {
-                          if (var6 != var7) {
-                            var3_int = var3_int * param2;
-                            break L5;
-                          } else {
-                            break L5;
-                          }
-                        }
-                        param2 = param2 * param2;
-                        param1 = param1 >> 1;
-                        if (var4 == 0) {
-                          continue L1;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                  }
+              if (1 >= param1) {
+                L2: {
                   if (param0 == -11) {
                     break L2;
+                  } else {
+                    var5 = (le) null;
+                    ng.a(56, (le) null, (byte) 99, (le) null);
+                    break L2;
+                  }
+                }
+                if (param1 != 1) {
+                  stackIn_14_0 = var3_int;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  stackIn_12_0 = var3_int * param2;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
+                }
+              } else {
+                L3: {
+                  if (0 != (param1 & 1)) {
+                    var3_int = var3_int * param2;
+                    break L3;
                   } else {
                     break L3;
                   }
                 }
-                var5 = (le) null;
-                ng.a(56, (le) null, (byte) 99, (le) null);
-                break L2;
-              }
-              if (param1 != 1) {
-                stackIn_16_0 = var3_int;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                stackIn_14_0 = var3_int * param2;
-                decompiledRegionSelector0 = 0;
-                break L0;
+                param2 = param2 * param2;
+                param1 = param1 >> 1;
+                continue L1;
               }
             }
           }
@@ -183,9 +161,9 @@ final class ng {
           throw ld.a((Throwable) ((Object) var3), "ng.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_14_0;
+          return stackIn_12_0;
         } else {
-          return stackIn_16_0;
+          return stackIn_14_0;
         }
     }
 
@@ -215,95 +193,25 @@ final class ng {
     }
 
     final void g(int param0) {
-        kd var2 = null;
-        int var3 = 0;
-        int statePc = 0;
-        ng var4 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = Lexicominos.field_L ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    var2 = this.field_b.field_f;
-                    if (this.field_b == var2) {
-                        statePc = 5;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var2.b((byte) -117);
-                    if (var3 != 0) {
-                        statePc = 13;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (var3 == 0) {
-                        statePc = 1;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    this.field_a = null;
-                    if (param0 <= -74) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    var4 = (ng) null;
-                    this.a((ng) null, 9);
-                    return;
-                }
-                case 7: {
-                    return;
-                }
-                case 9: {
-                    this.field_a = null;
-                    if (param0 <= -74) {
-                        statePc = 11;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
-                    var4 = (ng) null;
-                    this.a((ng) null, 9);
-                    return;
-                }
-                case 11: {
-                    return;
-                }
-                case 13: {
-                    if (param0 <= -74) {
-                        statePc = 15;
-                    } else {
-                        statePc = 14;
-                    }
-                    continue stateLoop;
-                }
-                case 14: {
-                    var4 = (ng) null;
-                    this.a((ng) null, 9);
-                    return;
-                }
-                case 15: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        kd var2;
+        int var3;
+        ng var4;
+        var3 = Lexicominos.field_L ? 1 : 0;
+        L0: while (true) {
+          var2 = this.field_b.field_f;
+          if (this.field_b == var2) {
+            this.field_a = null;
+            if (param0 <= -74) {
+              return;
+            } else {
+              var4 = (ng) null;
+              this.a((ng) null, 9);
+              return;
             }
+          } else {
+            var2.b((byte) -117);
+            continue L0;
+          }
         }
     }
 
@@ -483,20 +391,13 @@ final class ng {
         var3 = this.field_b.field_f;
         if (param0 == 2) {
           L0: while (true) {
-            L1: {
-              if (var3 == this.field_b) {
-                break L1;
-              } else {
-                var3 = var3.field_f;
-                var2++;
-                if (var4 == 0) {
-                  continue L0;
-                } else {
-                  break L1;
-                }
-              }
+            if (var3 == this.field_b) {
+              return var2;
+            } else {
+              var3 = var3.field_f;
+              var2++;
+              continue L0;
             }
-            return var2;
           }
         } else {
           return 80;

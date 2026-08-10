@@ -493,61 +493,64 @@ final class kg extends ji {
                   this.field_E = param2.h(-11);
                   break L2;
                 } else {
-                  if (-3 != (var4_int ^ -1)) {
-                    if (-4 != (var4_int ^ -1)) {
-                      if (var4_int == 4) {
-                        this.field_C = param2.h(-11);
-                        break L2;
-                      } else {
-                        if (var4_int != 5) {
-                          if (var4_int != 6) {
-                            break L2;
+                  L3: {
+                    if (-3 != (var4_int ^ -1)) {
+                      if (-4 != (var4_int ^ -1)) {
+                        if (var4_int == 4) {
+                          this.field_C = param2.h(-11);
+                          break L2;
+                        } else {
+                          if (var4_int != 5) {
+                            if (var4_int != 6) {
+                              break L3;
+                            } else {
+                              this.field_A = param2.h(param0 + -121);
+                              break L2;
+                            }
                           } else {
-                            this.field_A = param2.h(param0 + -121);
+                            this.field_F = param2.h(-11);
                             break L2;
                           }
-                        } else {
-                          this.field_F = param2.h(-11);
-                          break L2;
                         }
+                      } else {
+                        dupTemp$0 = param2.h(param0 ^ -101);
+                        this.field_A = dupTemp$0;
+                        this.field_F = dupTemp$0;
+                        break L2;
                       }
                     } else {
-                      dupTemp$0 = param2.h(param0 ^ -101);
-                      this.field_A = dupTemp$0;
-                      this.field_F = dupTemp$0;
-                      break L2;
-                    }
-                  } else {
-                    this.field_H = param2.n(param0 + -108);
-                    if (this.field_H < 0) {
-                      this.field_K = new short[this.field_E];
-                      var4_int = 0;
-                      L3: while (true) {
-                        if (this.field_E <= var4_int) {
-                          break L2;
-                        } else {
-                          this.field_K[var4_int] = (short)param2.n(2);
-                          var4_int++;
-                          continue L3;
+                      this.field_H = param2.n(param0 + -108);
+                      if (this.field_H < 0) {
+                        this.field_K = new short[this.field_E];
+                        var4_int = 0;
+                        L4: while (true) {
+                          if (this.field_E <= var4_int) {
+                            break L3;
+                          } else {
+                            this.field_K[var4_int] = (short)param2.n(2);
+                            var4_int++;
+                            continue L4;
+                          }
                         }
+                      } else {
+                        break L2;
                       }
-                    } else {
-                      break L2;
                     }
                   }
+                  break L2;
                 }
               } else {
-                L4: {
+                L5: {
                   stackIn_17_0 = this;
 
                   if (-2 != (param2.h(-11) ^ -1)) {
                     stackIn_18_0 = this;
                     stackIn_18_1 = 0;
-                    break L4;
+                    break L5;
                   } else {
                     stackIn_18_0 = this;
                     stackIn_18_1 = 1;
-                    break L4;
+                    break L5;
                   }
                 }
                 ((kg) (this)).field_D = stackIn_18_1 != 0;
@@ -558,7 +561,7 @@ final class kg extends ji {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var4 = decompiledCaughtException;
             stackIn_32_0 = (RuntimeException) (var4);
 
@@ -568,12 +571,12 @@ final class kg extends ji {
               stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
               stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackIn_33_2 = "null";
-              break L5;
+              break L6;
             } else {
               stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
               stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackIn_33_2 = "{...}";
-              break L5;
+              break L6;
             }
           }
           throw wn.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ')');

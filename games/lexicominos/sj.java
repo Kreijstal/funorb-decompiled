@@ -13,11 +13,11 @@ final class sj extends kd {
 
     final static void a(int param0, String param1) {
         int stackIn_16_0 = 0;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        String stackIn_46_2 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -80,81 +80,67 @@ final class sj extends kd {
                   ug.field_m = 0;
                   break L5;
                 } else {
-                  L6: {
-                    if (af.field_b) {
-                      break L6;
-                    } else {
-                      if (var2_int == 0) {
-                        ug.field_m = 0;
-                        break L5;
-                      } else {
-                        break L6;
-                      }
-                    }
-                  }
-                  ug.field_m = dj.field_b;
-                  if (var3 == 0) {
+                  if (af.field_b) {
+                    ug.field_m = dj.field_b;
                     break L5;
                   } else {
-                    ug.field_m = 0;
-                    break L5;
+                    if (var2_int == 0) {
+                      ug.field_m = 0;
+                      break L5;
+                    } else {
+                      ug.field_m = dj.field_b;
+                      break L5;
+                    }
                   }
                 }
               }
-              L7: {
-                L8: {
-                  vf.field_r = fk.field_e;
-                  if (param1 == null) {
-                    break L8;
+              L6: {
+                vf.field_r = fk.field_e;
+                if (param1 == null) {
+                  if (var2_int != 0) {
+                    af.field_b = true;
+                    break L6;
                   } else {
-                    af.field_b = false;
-                    if (var3 == 0) {
-                      break L7;
-                    } else {
-                      break L8;
-                    }
+                    break L6;
                   }
-                }
-                if (var2_int != 0) {
-                  af.field_b = true;
-                  break L7;
                 } else {
-                  break L7;
+                  af.field_b = false;
+                  break L6;
                 }
               }
               bf.field_g = ch.field_e;
               break L2;
             }
-            L9: {
+            L7: {
               if (af.field_b) {
-                break L9;
+                break L7;
               } else {
                 if (dj.field_b <= ug.field_m) {
-                  break L9;
+                  break L7;
                 } else {
                   if (ob.field_c) {
                     ug.field_m = 0;
                     vf.field_r = fk.field_e;
                     bf.field_g = ch.field_e;
-                    break L9;
+                    break L7;
                   } else {
-                    break L9;
+                    break L7;
                   }
                 }
               }
             }
-            L10: {
+            L8: {
               nc.field_p = param1;
               fk.field_e = -1;
               if (!af.field_b) {
-                break L10;
+                break L8;
               } else {
                 if (ug.field_m == v.field_u) {
                   af.field_b = false;
                   ug.field_m = 0;
-                  break L10;
+                  break L8;
                 } else {
-                  break L10;
+                  break L8;
                 }
               }
             }
@@ -163,25 +149,25 @@ final class sj extends kd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L9: {
             var2 = decompiledCaughtException;
-            stackIn_45_0 = (RuntimeException) (var2);
+            stackIn_43_0 = (RuntimeException) (var2);
 
-            stackIn_45_1 = new StringBuilder().append("sj.A(").append(param0).append(',');
+            stackIn_43_1 = new StringBuilder().append("sj.A(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackIn_46_2 = "null";
-              break L11;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "null";
+              break L9;
             } else {
-              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackIn_46_2 = "{...}";
-              break L11;
+              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackIn_44_2 = "{...}";
+              break L9;
             }
           }
-          throw ld.a((Throwable) ((Object) stackIn_46_0), stackIn_46_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_44_0), stackIn_44_2 + ')');
         }
     }
 

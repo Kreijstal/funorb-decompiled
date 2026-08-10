@@ -35,7 +35,6 @@ final class qk extends ug {
         StringBuilder stackIn_13_3;
         String stackIn_13_4;
         java.net.Socket stackIn_24_0 = null;
-        java.net.Socket stackIn_32_0 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         List var3 = null;
@@ -146,67 +145,51 @@ final class qk extends ug {
         var8 = var6_array;
         var9 = 0;
         L6: while (true) {
-          L7: {
-            if (var8.length <= var9) {
-              break L7;
+          if (var8.length <= var9) {
+            if (var7 != null) {
+              throw qk.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
             } else {
-              var10 = var8[var9];
-              var11 = (java.net.Proxy) (var10);
-              try {
-                L8: {
-                  var12 = this.a(var11, 80);
-                  stackIn_32_0 = (java.net.Socket) (var12);
-
-                  if (var13 != 0) {
-                    decompiledRegionSelector0 = 0;
-                    break L8;
-                  } else {
-                    if (stackIn_32_0 == null) {
-                      decompiledRegionSelector0 = 1;
-                      break L8;
-                    } else {
-                      stackIn_24_0 = (java.net.Socket) (var12);
-                      decompiledRegionSelector0 = 2;
-                      break L8;
-                    }
-                  }
-                }
-              } catch (cb decompiledCaughtParameter1) {
-                decompiledCaughtException = decompiledCaughtParameter1;
-                L9: {
-                  var12_ref = (cb) (Object) decompiledCaughtException;
-                  var7 = var12_ref;
+              return this.a(param0 ^ -48);
+            }
+          } else {
+            var10 = var8[var9];
+            var11 = (java.net.Proxy) (var10);
+            try {
+              L7: {
+                var12 = this.a(var11, 80);
+                if (var12 != null) {
+                  stackIn_24_0 = (java.net.Socket) (var12);
                   decompiledRegionSelector0 = 1;
-                  break L9;
-                }
-              } catch (java.io.IOException decompiledCaughtParameter2) {
-                decompiledCaughtException = decompiledCaughtParameter2;
-                L10: {
-                  var12_ref2 = (IOException) (Object) decompiledCaughtException;
-                  decompiledRegionSelector0 = 1;
-                  break L10;
+                  break L7;
+                } else {
+                  var9++;
+                  decompiledRegionSelector0 = 0;
+                  break L7;
                 }
               }
-              if (decompiledRegionSelector0 == 0) {
-                return stackIn_32_0;
-              } else {
-                if (decompiledRegionSelector0 == 1) {
-                  var9++;
-                  if (var13 == 0) {
-                    continue L6;
-                  } else {
-                    break L7;
-                  }
-                } else {
-                  return stackIn_24_0;
-                }
+            } catch (cb decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L8: {
+                var12_ref = (cb) (Object) decompiledCaughtException;
+                var7 = var12_ref;
+                var9++;
+                decompiledRegionSelector0 = 0;
+                break L8;
+              }
+            } catch (java.io.IOException decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
+              L9: {
+                var12_ref2 = (IOException) (Object) decompiledCaughtException;
+                var9++;
+                decompiledRegionSelector0 = 0;
+                break L9;
               }
             }
-          }
-          if (var7 != null) {
-            throw qk.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
-          } else {
-            return this.a(param0 ^ -48);
+            if (decompiledRegionSelector0 == 0) {
+              continue L6;
+            } else {
+              return stackIn_24_0;
+            }
           }
         }
     }
@@ -219,192 +202,60 @@ final class qk extends ug {
 
     final static void e(int param0) {
         int var1_int = 0;
-        RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = SolKnight.field_L ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
+        int var5 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        var4 = SolKnight.field_L ? 1 : 0;
+        try {
+          L0: {
+            hk.a();
+            pj.field_H = 11;
+            ud.field_i = new int[260];
+            var1_int = param0;
+            L1: while (true) {
+              if (-257 >= (var1_int ^ -1)) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (var5 >= ud.field_i.length) {
+                    break L0;
+                  } else {
+                    ud.field_i[var5] = 255;
+                    var5++;
+                    continue L2;
+                  }
                 }
-                case 1: {
-                    try {
-                        hk.a();
-                        pj.field_H = 11;
-                        ud.field_i = new int[260];
-                        var1_int = param0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (-257 >= (var1_int ^ -1)) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var2 = 15.0;
-                        ud.field_i[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
-                        var1_int++;
-                        if (var4 != 0) {
-                            statePc = 7;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var1_int = 256;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (var1_int >= ud.field_i.length) {
-                            statePc = 14;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        ud.field_i[var1_int] = 255;
-                        var1_int++;
-                        if (var4 == 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 7;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    var1 = (RuntimeException) ((Object) caughtException);
-                    throw fc.a((Throwable) ((Object) var1), "qk.E(" + param0 + ')');
-                }
-                case 14: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                var2 = 15.0;
+                ud.field_i[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+                var1_int++;
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw fc.a((Throwable) ((Object) var1), "qk.E(" + param0 + ')');
         }
     }
 
     final static void d(int param0) {
-        if (param0 == 14995) {
-          if (dj.field_k == null) {
+        if (param0 != 14995) {
             return;
-          } else {
-            nc.a((byte) 86, dj.field_k);
-            dj.field_k.a(-3680, wh.field_c);
-            dj.field_k = null;
-            if (fc.field_l != null) {
-              fc.field_l.a(false);
-              dc.field_q.requestFocus();
-              return;
-            } else {
-              dc.field_q.requestFocus();
-              return;
-            }
-          }
-        } else {
-          return;
         }
+        if (!(dj.field_k != null)) {
+            return;
+        }
+        nc.a((byte) 86, dj.field_k);
+        dj.field_k.a(-3680, wh.field_c);
+        dj.field_k = null;
+        if (fc.field_l != null) {
+            fc.field_l.a(false);
+        }
+        dc.field_q.requestFocus();
     }
 
     final static boolean a(CharSequence param0, boolean param1, int param2) {
@@ -412,18 +263,15 @@ final class qk extends ug {
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
-        boolean stackIn_23_0 = false;
-        int stackIn_30_0 = 0;
+        int stackIn_28_0 = 0;
         int stackIn_33_0 = 0;
-        int stackIn_36_0 = 0;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_40_2 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        RuntimeException stackIn_37_0 = null;
+        StringBuilder stackIn_37_1 = null;
+        String stackIn_37_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_22_0;
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -462,65 +310,40 @@ final class qk extends ug {
                               var5 = 0;
                               var6 = 0;
                               L3: while (true) {
-                                L4: {
+                                if (var6 >= param0.length()) {
+                                  if ((var5 ^ -1) < -1) {
+                                    stackIn_33_0 = 0;
+                                    decompiledRegionSelector0 = 5;
+                                    break L0;
+                                  } else {
+                                    return true;
+                                  }
+                                } else {
+                                  L4: {
+                                    var7 = param0.charAt(var6);
+                                    if (!ck.a((char) var7, true)) {
+                                      var5 = 0;
+                                      break L4;
+                                    } else {
+                                      var5++;
+                                      break L4;
+                                    }
+                                  }
                                   L5: {
-                                    if (var6 >= param0.length()) {
+                                    if ((var5 ^ -1) > -3) {
                                       break L5;
                                     } else {
-                                      var7 = param0.charAt(var6);
-                                      stackOut_22_0 = ck.a((char) var7, true);
-                                      stackIn_33_0 = stackOut_22_0 ? 1 : 0;
-                                      stackIn_23_0 = stackOut_22_0;
-                                      if (var8 != 0) {
-                                        break L4;
+                                      if (param1) {
+                                        break L5;
                                       } else {
-                                        L6: {
-                                          L7: {
-                                            if (!stackIn_23_0) {
-                                              break L7;
-                                            } else {
-                                              var5++;
-                                              if (var8 == 0) {
-                                                break L6;
-                                              } else {
-                                                break L7;
-                                              }
-                                            }
-                                          }
-                                          var5 = 0;
-                                          break L6;
-                                        }
-                                        L8: {
-                                          if ((var5 ^ -1) > -3) {
-                                            break L8;
-                                          } else {
-                                            if (param1) {
-                                              break L8;
-                                            } else {
-                                              stackIn_30_0 = 0;
-                                              decompiledRegionSelector0 = 4;
-                                              break L0;
-                                            }
-                                          }
-                                        }
-                                        var6++;
-                                        if (var8 == 0) {
-                                          continue L3;
-                                        } else {
-                                          break L5;
-                                        }
+                                        stackIn_28_0 = 0;
+                                        decompiledRegionSelector0 = 4;
+                                        break L0;
                                       }
                                     }
                                   }
-                                  stackIn_33_0 = var5 ^ -1;
-                                  break L4;
-                                }
-                                if (stackIn_33_0 < -1) {
-                                  stackIn_36_0 = 0;
-                                  decompiledRegionSelector0 = 5;
-                                  break L0;
-                                } else {
-                                  return true;
+                                  var6++;
+                                  continue L3;
                                 }
                               }
                             }
@@ -545,25 +368,25 @@ final class qk extends ug {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L6: {
             var3 = decompiledCaughtException;
-            stackIn_39_0 = (RuntimeException) (var3);
+            stackIn_36_0 = (RuntimeException) (var3);
 
-            stackIn_39_1 = new StringBuilder().append("qk.G(");
+            stackIn_36_1 = new StringBuilder().append("qk.G(");
 
             if (param0 == null) {
-              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackIn_40_2 = "null";
-              break L9;
+              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "null";
+              break L6;
             } else {
-              stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackIn_40_2 = "{...}";
-              break L9;
+              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackIn_37_2 = "{...}";
+              break L6;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_40_0), stackIn_40_2 + ',' + param1 + ',' + param2 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_37_0), stackIn_37_2 + ',' + param1 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0 != 0;
@@ -578,9 +401,9 @@ final class qk extends ug {
                 return stackIn_19_0 != 0;
               } else {
                 if (decompiledRegionSelector0 == 4) {
-                  return stackIn_30_0 != 0;
+                  return stackIn_28_0 != 0;
                 } else {
-                  return stackIn_36_0 != 0;
+                  return stackIn_33_0 != 0;
                 }
               }
             }
@@ -589,17 +412,17 @@ final class qk extends ug {
     }
 
     private final java.net.Socket a(int param0, String param1, String param2, int param3) throws IOException {
-        java.net.Socket stackIn_7_0 = null;
-        java.net.Socket stackIn_14_0 = null;
-        Object stackIn_29_0 = null;
+        java.net.Socket stackIn_6_0 = null;
+        java.net.Socket stackIn_13_0 = null;
+        Object stackIn_28_0 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        String stackIn_32_2 = null;
+        StringBuilder stackIn_34_1 = null;
         StringBuilder stackIn_35_1 = null;
-        StringBuilder stackIn_36_1 = null;
-        String stackIn_36_2 = null;
+        String stackIn_35_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
@@ -616,45 +439,38 @@ final class qk extends ug {
         try {
           L0: {
             L1: {
-              L2: {
-                var13 = new java.net.Socket(param2, param3);
-                var13.setSoTimeout(10000);
-                var6 = var13.getOutputStream();
-                if (param1 != null) {
-                  break L2;
-                } else {
-                  var6.write(("CONNECT " + this.field_c + ":" + this.field_b + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
-                  if (var12 == 0) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              var13 = new java.net.Socket(param2, param3);
+              var13.setSoTimeout(10000);
+              var6 = var13.getOutputStream();
+              if (param1 != null) {
+                var6.write(("CONNECT " + this.field_c + ":" + this.field_b + " HTTP/1.0\n" + param1 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                break L1;
+              } else {
+                var6.write(("CONNECT " + this.field_c + ":" + this.field_b + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                break L1;
               }
-              var6.write(("CONNECT " + this.field_c + ":" + this.field_b + " HTTP/1.0\n" + param1 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
-              break L1;
             }
             var6.flush();
             var7 = new BufferedReader((Reader) ((Object) new InputStreamReader(var13.getInputStream())));
             if (param0 >= 72) {
-              L3: {
+              L2: {
                 var8 = var7.readLine();
                 if (var8 != null) {
-                  L4: {
+                  L3: {
                     if (var8.startsWith("HTTP/1.0 200")) {
-                      break L4;
+                      break L3;
                     } else {
                       if (var8.startsWith("HTTP/1.1 200")) {
-                        break L4;
+                        break L3;
                       } else {
-                        L5: {
+                        L4: {
                           if (var8.startsWith("HTTP/1.0 407")) {
-                            break L5;
+                            break L4;
                           } else {
                             if (!var8.startsWith("HTTP/1.1 407")) {
-                              break L3;
+                              break L2;
                             } else {
-                              break L5;
+                              break L4;
                             }
                           }
                         }
@@ -663,37 +479,33 @@ final class qk extends ug {
                         var10 = "proxy-authenticate: ";
                         var8 = var10;
                         var8 = var10;
-                        L6: while (true) {
-                          L7: {
+                        L5: while (true) {
+                          L6: {
                             if (var8 == null) {
-                              break L7;
+                              break L6;
                             } else {
                               if (var9 >= 50) {
-                                break L7;
+                                break L6;
                               } else {
                                 if (var8.toLowerCase().startsWith(var10)) {
-                                  L8: {
+                                  L7: {
                                     var14 = var8.substring(var10.length()).trim();
                                     var8 = var14;
                                     var8 = var14;
                                     var8 = var14;
                                     var11 = var14.indexOf(' ');
                                     if (0 == (var11 ^ -1)) {
-                                      break L8;
+                                      break L7;
                                     } else {
                                       var8 = var14.substring(0, var11);
-                                      break L8;
+                                      break L7;
                                     }
                                   }
                                   throw new cb(var8);
                                 } else {
                                   var8 = var7.readLine();
                                   var9++;
-                                  if (var12 == 0) {
-                                    continue L6;
-                                  } else {
-                                    break L7;
-                                  }
+                                  continue L5;
                                 }
                               }
                             }
@@ -703,71 +515,71 @@ final class qk extends ug {
                       }
                     }
                   }
-                  stackIn_14_0 = (java.net.Socket) (var13);
+                  stackIn_13_0 = (java.net.Socket) (var13);
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  break L3;
+                  break L2;
                 }
               }
               var6.close();
               var7.close();
               var13.close();
-              stackIn_29_0 = null;
+              stackIn_28_0 = null;
               decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackIn_7_0 = (java.net.Socket) null;
+              stackIn_6_0 = (java.net.Socket) null;
               decompiledRegionSelector0 = 0;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var5 = decompiledCaughtException;
-            stackIn_32_0 = (RuntimeException) (var5);
+            stackIn_31_0 = (RuntimeException) (var5);
 
-            stackIn_32_1 = new StringBuilder().append("qk.F(").append(param0).append(',');
+            stackIn_31_1 = new StringBuilder().append("qk.F(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackIn_33_2 = "null";
-              break L9;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "null";
+              break L8;
             } else {
-              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackIn_33_2 = "{...}";
-              break L9;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackIn_32_2 = "{...}";
+              break L8;
             }
           }
-          L10: {
+          L9: {
 
 
-            stackIn_35_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',');
+            stackIn_34_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',');
 
             if (param2 == null) {
-              stackIn_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackIn_36_2 = "null";
-              break L10;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "null";
+              break L9;
             } else {
-              stackIn_33_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
-              stackIn_36_2 = "{...}";
-              break L10;
+              stackIn_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackIn_35_2 = "{...}";
+              break L9;
             }
           }
-          throw fc.a((Throwable) ((Object) stackIn_33_0), stackIn_36_2 + ',' + param3 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_32_0), stackIn_35_2 + ',' + param3 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_7_0;
+          return stackIn_6_0;
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return stackIn_14_0;
+            return stackIn_13_0;
           } else {
-            return (java.net.Socket) ((Object) stackIn_29_0);
+            return (java.net.Socket) ((Object) stackIn_28_0);
           }
         }
     }
@@ -782,15 +594,10 @@ final class qk extends ug {
         field_j = null;
         field_h = null;
         if (param0 != -25904) {
-          field_j = (String) null;
-          field_l = null;
-          field_k = null;
-          return;
-        } else {
-          field_l = null;
-          field_k = null;
-          return;
+            field_j = (String) null;
         }
+        field_l = null;
+        field_k = null;
     }
 
     private final java.net.Socket a(java.net.Proxy param0, int param1) throws IOException {

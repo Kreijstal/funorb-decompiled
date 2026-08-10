@@ -37,24 +37,17 @@ final class kb {
                 break L0;
               }
             }
-            L1: {
-              if (var4 >= 10) {
-                break L1;
+            if (var4 >= 10) {
+              if (var4 > -40 + dh.field_j.field_p) {
+                var4 = dh.field_j.field_p + -40;
+                gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
+                return;
               } else {
-                var4 = 10;
-                if (!SolKnight.field_L) {
-                  gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
-                  return;
-                } else {
-                  break L1;
-                }
+                gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
+                return;
               }
-            }
-            if (var4 > -40 + dh.field_j.field_p) {
-              var4 = dh.field_j.field_p + -40;
-              gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
-              return;
             } else {
+              var4 = 10;
               gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
               return;
             }

@@ -1043,92 +1043,29 @@ class qn extends fb {
     }
 
     void a(int param0, int param1, mf param2, int param3) {
-        RuntimeException runtimeException = null;
         mg var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
+        super.a(param0, -51, param2, param3);
+        if (param1 >= -6) {
+            return;
+        }
         try {
-          L0: {
-            super.a(param0, -51, param2, param3);
-            if (param1 < -6) {
-              L1: {
-                this.d(true);
-                if (1 != this.field_q) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (this.field_n instanceof mg) {
-                      var5 = (mg) ((Object) this.field_n);
-                      var6 = var5.a(rf.field_b, param3, -4, param0, (mf) (this), hn.field_k);
-                      if (0 != (var6 ^ -1)) {
-                        L3: {
-                          if (!this.field_S) {
-                            break L3;
-                          } else {
-                            if (this.field_N <= var6) {
-                              break L3;
-                            } else {
-                              if (this.field_X >= var6) {
-                                break L3;
-                              } else {
-                                var6 = this.field_N;
-                                break L3;
-                              }
-                            }
-                          }
+            this.d(true);
+            if (1 == this.field_q) {
+                if (!(!(this.field_n instanceof mg))) {
+                    var5 = (mg) ((Object) this.field_n);
+                    var6 = var5.a(rf.field_b, param3, -4, param0, (mf) (this), hn.field_k);
+                    if (!(0 == (var6 ^ -1))) {
+                        if (this.field_S && this.field_N > var6 && this.field_X < var6) {
+                            var6 = this.field_N;
                         }
                         this.field_Q = var6;
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    } else {
-                      break L2;
                     }
-                  }
-                  this.field_V = ud.a(2);
-                  break L1;
                 }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+                this.field_V = ud.a(2);
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (runtimeException);
-
-            stackIn_16_1 = new StringBuilder().append("qn.G(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L4;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L4;
-            }
-          }
-          throw fk.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) ((Object) runtimeException), "qn.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

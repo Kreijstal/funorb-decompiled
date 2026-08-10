@@ -598,7 +598,7 @@ final class ja {
                       }
                     }
                   } else {
-                    decompiledRegionSelector0 = 2;
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 } else {
@@ -633,7 +633,7 @@ final class ja {
                   }
                 }
               }
-              decompiledRegionSelector0 = 1;
+              decompiledRegionSelector0 = 2;
               break L0;
             } else {
               decompiledRegionSelector0 = 0;

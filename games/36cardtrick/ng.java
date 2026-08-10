@@ -67,17 +67,20 @@ final class ng extends lk {
           L0: {
             if (param3 == 3) {
               L1: {
-                if (!this.field_I) {
-                  break L1;
-                } else {
-                  this.field_B = this.field_B + 1;
-                  if (this.field_B <= 2 * this.field_G) {
-                    break L1;
+                L2: {
+                  if (!this.field_I) {
+                    break L2;
                   } else {
-                    this.field_B = this.field_B - 2 * this.field_G;
-                    break L1;
+                    this.field_B = this.field_B + 1;
+                    if (this.field_B <= 2 * this.field_G) {
+                      break L2;
+                    } else {
+                      this.field_B = this.field_B - 2 * this.field_G;
+                      break L1;
+                    }
                   }
                 }
+                break L1;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -88,7 +91,7 @@ final class ng extends lk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var5 = decompiledCaughtException;
             stackIn_8_0 = (RuntimeException) (var5);
 
@@ -98,12 +101,12 @@ final class ng extends lk {
               stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
               stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackIn_9_2 = "null";
-              break L2;
+              break L3;
             } else {
               stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
               stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackIn_9_2 = "{...}";
-              break L2;
+              break L3;
             }
           }
           throw ma.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');

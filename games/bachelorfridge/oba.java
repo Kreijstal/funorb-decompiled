@@ -184,54 +184,57 @@ final class oba extends k {
               var4_int = param2;
               if (0 != var4_int) {
                 if (1 != var4_int) {
-                  if (-3 != (var4_int ^ -1)) {
-                    break L2;
-                  } else {
-                    L3: {
-                      stackIn_19_0 = this;
+                  L3: {
+                    if (-3 != (var4_int ^ -1)) {
+                      break L3;
+                    } else {
+                      L4: {
+                        stackIn_19_0 = this;
 
-                      if (-2 != (param1.b(16711935) ^ -1)) {
-                        stackIn_20_0 = this;
-                        stackIn_20_1 = 0;
-                        break L3;
-                      } else {
-                        stackIn_20_0 = this;
-                        stackIn_20_1 = 1;
-                        break L3;
+                        if (-2 != (param1.b(16711935) ^ -1)) {
+                          stackIn_20_0 = this;
+                          stackIn_20_1 = 0;
+                          break L4;
+                        } else {
+                          stackIn_20_0 = this;
+                          stackIn_20_1 = 1;
+                          break L4;
+                        }
                       }
+                      ((oba) (this)).field_f = stackIn_20_1 != 0;
+                      break L3;
                     }
-                    ((oba) (this)).field_f = stackIn_20_1 != 0;
-                    break L2;
                   }
+                  break L2;
                 } else {
-                  L4: {
+                  L5: {
                     stackIn_15_0 = this;
 
                     if (-2 != (param1.b(16711935) ^ -1)) {
                       stackIn_16_0 = this;
                       stackIn_16_1 = 0;
-                      break L4;
+                      break L5;
                     } else {
                       stackIn_16_0 = this;
                       stackIn_16_1 = 1;
-                      break L4;
+                      break L5;
                     }
                   }
                   ((oba) (this)).field_l = stackIn_16_1 != 0;
                   break L2;
                 }
               } else {
-                L5: {
+                L6: {
                   stackIn_11_0 = this;
 
                   if (1 != param1.b(16711935)) {
                     stackIn_12_0 = this;
                     stackIn_12_1 = 0;
-                    break L5;
+                    break L6;
                   } else {
                     stackIn_12_0 = this;
                     stackIn_12_1 = 1;
-                    break L5;
+                    break L6;
                   }
                 }
                 ((oba) (this)).field_k = stackIn_12_1 != 0;
@@ -242,7 +245,7 @@ final class oba extends k {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var4 = decompiledCaughtException;
             stackIn_24_0 = (RuntimeException) (var4);
 
@@ -252,12 +255,12 @@ final class oba extends k {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "null";
-              break L6;
+              break L7;
             } else {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "{...}";
-              break L6;
+              break L7;
             }
           }
           throw pe.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param2 + ')');

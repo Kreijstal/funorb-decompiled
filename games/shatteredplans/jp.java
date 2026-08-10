@@ -1067,66 +1067,18 @@ final class jp extends qr {
     }
 
     final static void a(String[] args, boolean param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            L1: {
-              if (null == an.field_b) {
-                break L1;
-              } else {
-                an.field_b.field_D.a(args, 0);
-                break L1;
-              }
-            }
-            if (!param1) {
-              L2: {
-                if (sj.field_b == null) {
-                  break L2;
-                } else {
-                  sj.field_b.field_F.a(args, 0);
-                  break L2;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (runtimeException);
-
-            stackIn_9_1 = new StringBuilder().append("jp.D(");
-
-            if (args == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
-          }
-          throw r.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+        if (null != an.field_b) {
+            an.field_b.field_D.a(args, 0);
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        if (param1) {
+            return;
+        }
+        try {
+            if (sj.field_b != null) {
+                sj.field_b.field_F.a(args, 0);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) ((Object) runtimeException), "jp.D(" + (args != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

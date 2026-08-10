@@ -87,25 +87,28 @@ class ek implements ci, ne {
                   if (-4 == (var6 ^ -1)) {
                     break L6;
                   } else {
-                    if (1 != var6) {
-                      if ((var6 ^ -1) == -3) {
-                        if (param0.field_s instanceof ub) {
-                          ((ub) ((Object) param0.field_s)).a(this.b(69, param0), (byte) -109, var5, this.field_c, var3_int);
-                          break L5;
+                    L7: {
+                      if (1 != var6) {
+                        if ((var6 ^ -1) == -3) {
+                          if (param0.field_s instanceof ub) {
+                            ((ub) ((Object) param0.field_s)).a(this.b(69, param0), (byte) -109, var5, this.field_c, var3_int);
+                            break L7;
+                          } else {
+                            break L5;
+                          }
                         } else {
                           break L5;
                         }
                       } else {
-                        break L5;
-                      }
-                    } else {
-                      if (!(param0.field_s instanceof ub)) {
-                        break L5;
-                      } else {
-                        ((ub) ((Object) param0.field_s)).a(this.field_c, var5, this.b(-123, param0), -102, var3_int >> -1115151007);
-                        break L5;
+                        if (!(param0.field_s instanceof ub)) {
+                          break L7;
+                        } else {
+                          ((ub) ((Object) param0.field_s)).a(this.field_c, var5, this.b(-123, param0), -102, var3_int >> -1115151007);
+                          break L5;
+                        }
                       }
                     }
+                    break L5;
                   }
                 } else {
                   break L6;
@@ -122,7 +125,7 @@ class ek implements ci, ne {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var3 = decompiledCaughtException;
             stackIn_32_0 = (RuntimeException) (var3);
 
@@ -132,12 +135,12 @@ class ek implements ci, ne {
               stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
               stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackIn_33_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
               stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackIn_33_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw ma.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ',' + param1 + ')');
@@ -979,62 +982,18 @@ class ek implements ci, ne {
     }
 
     public void a(int param0, lk param1, int param2, int param3, boolean param4) {
-        int discarded$1 = 0;
-        RuntimeException runtimeException = null;
-        lk var7 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (null == this.field_c) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                this.a(param3, param1, param0, param2 ^ 11445);
-                if (param2 == 11447) {
-                  break L1;
-                } else {
-                  var7 = (lk) null;
-                  discarded$1 = this.a((lk) null, -92, 108, -40);
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("ek.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
-          }
-          throw ma.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        int discarded$0 = 0;
+        if (!(null != this.field_c)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            this.a(param3, param1, param0, param2 ^ 11445);
+            if (param2 != 11447) {
+                lk var7 = (lk) null;
+                discarded$0 = this.a((lk) null, -92, 108, -40);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) ((Object) runtimeException), "ek.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -837,7 +837,7 @@ final class cm extends le {
                     }
                   }
                 }
-                decompiledRegionSelector0 = 1;
+                decompiledRegionSelector0 = 0;
                 break L0;
               } else {
                 if (hob.field_d >= param3 - -param1) {
@@ -868,7 +868,7 @@ final class cm extends le {
                 }
               }
             }
-            decompiledRegionSelector0 = 0;
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

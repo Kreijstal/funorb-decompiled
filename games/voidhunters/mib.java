@@ -277,7 +277,7 @@ final class mib implements ntb {
                         if (var7.a((byte) -51, var8)) {
                           break L4;
                         } else {
-                          var5 = var8;
+                          var5 = var7;
                           var6 = var8;
                           break L2;
                         }
@@ -1042,85 +1042,88 @@ final class mib implements ntb {
               if (null == this.field_d) {
                 break L9;
               } else {
-                if (var3 == null) {
-                  break L9;
-                } else {
-                  var6 = ((bhb) (var3)).c(-80);
-                  if (var6 != this.field_g) {
-                    break L9;
+                L10: {
+                  if (var3 == null) {
+                    break L10;
                   } else {
-                    var7 = System.out;
-                    var14 = new StringBuilder();
-                    var9 = new PrintStream((OutputStream) ((Object) new hp(var14)));
-                    System.setOut(var9);
-                    var10 = ((bhb) (var3)).d(0);
-                    var10.a(this.field_a[this.field_i], -100);
-                    System.setOut(var7);
-                    this.field_j = var14.toString();
-                    iva.a(param1 ^ -7026, "\n>>>>>> Black box recording debug diffs start");
-                    ubb.a(var14.toString(), 0);
-                    iva.a(-6940, "<<<<<< Black box recording debug diffs end\n");
-                    break L9;
+                    var6 = ((bhb) (var3)).c(-80);
+                    if (var6 != this.field_g) {
+                      break L10;
+                    } else {
+                      var7 = System.out;
+                      var14 = new StringBuilder();
+                      var9 = new PrintStream((OutputStream) ((Object) new hp(var14)));
+                      System.setOut(var9);
+                      var10 = ((bhb) (var3)).d(0);
+                      var10.a(this.field_a[this.field_i], -100);
+                      System.setOut(var7);
+                      this.field_j = var14.toString();
+                      iva.a(param1 ^ -7026, "\n>>>>>> Black box recording debug diffs start");
+                      ubb.a(var14.toString(), 0);
+                      iva.a(-6940, "<<<<<< Black box recording debug diffs end\n");
+                      break L10;
+                    }
                   }
                 }
+                break L9;
               }
             }
             return;
           } else {
-            L10: {
+            L11: {
               if (this.field_g + -this.field_a.length > var6_ref_uqb.field_e) {
                 var6_ref_uqb.b(-3846);
-                break L10;
+                break L11;
               } else {
-                L11: {
+                L12: {
                   if (var6_ref_uqb.field_f) {
-                    break L11;
+                    break L12;
                   } else {
                     if (var5 <= var6_ref_uqb.field_e) {
-                      break L11;
+                      break L12;
                     } else {
                       var7_int = 0;
                       var13 = new wc(this.field_f);
                       var12 = (uqb) ((Object) var13.c(570));
-                      L12: while (true) {
-                        L13: {
+                      L13: while (true) {
+                        L14: {
                           if (var12 == null) {
-                            break L13;
+                            break L14;
                           } else {
-                            L14: {
+                            L15: {
                               if (var6_ref_uqb == var12) {
-                                break L14;
+                                break L15;
                               } else {
                                 if (var12.a((byte) -55, var6_ref_uqb)) {
-                                  break L14;
+                                  break L15;
                                 } else {
                                   var7_int = 1;
-                                  break L13;
+                                  break L14;
                                 }
                               }
                             }
                             var12 = (uqb) ((Object) var13.a(19072));
-                            continue L12;
+                            continue L13;
                           }
                         }
                         if (var7_int != 0) {
-                          break L11;
+                          break L12;
                         } else {
                           var5 = -2 + var6_ref_uqb.field_e;
-                          break L11;
+                          break L12;
                         }
                       }
                     }
                   }
                 }
                 if (!var6_ref_uqb.field_g) {
-                  break L10;
+                  break L11;
                 } else {
                   if (var6_ref_uqb.field_e >= var4) {
-                    break L10;
+                    break L11;
                   } else {
                     var4 = var6_ref_uqb.field_e;
-                    break L10;
+                    break L11;
                   }
                 }
               }

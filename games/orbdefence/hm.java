@@ -176,74 +176,60 @@ final class hm extends ta implements ai {
     }
 
     public final void a(byte param0, int param1, int param2, s param3, int param4) {
-        RuntimeException runtimeException = null;
-        int var6_int = 0;
         int var7 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
             L1: {
-              L2: {
-                if (param3 == this.field_B) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (this.field_D != param3) {
-                      break L3;
-                    } else {
-                      d.c((byte) -126);
-                      if (var7 == 0) {
-                        break L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
+              if (param3 == this.field_B) {
+                sg.k(-16);
+                break L1;
+              } else {
+                if (this.field_D != param3) {
                   if (this.field_E != param3) {
                     break L1;
                   } else {
                     kj.j(4);
-                    if (var7 == 0) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
+                    break L1;
                   }
+                } else {
+                  d.c((byte) -126);
+                  break L1;
                 }
               }
-              sg.k(-16);
-              break L1;
             }
             var6_int = -128 % ((param0 - -3) / 62);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
+          L2: {
+            var6 = decompiledCaughtException;
+            stackIn_11_0 = (RuntimeException) (var6);
 
-            stackIn_13_1 = new StringBuilder().append("hm.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_11_1 = new StringBuilder().append("hm.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
             if (param3 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
+              break L2;
             } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
+              break L2;
             }
           }
-          throw dd.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param4 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param4 + ')');
         }
     }
 

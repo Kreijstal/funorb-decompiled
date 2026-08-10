@@ -90,13 +90,9 @@ final class kc extends pj {
         int var10;
         int var11;
         o var12;
-        o var14;
+        o var13;
         o var15;
         o var16;
-        o var17;
-        o var18;
-        o var19;
-        o var20;
         var11 = SolKnight.field_L ? 1 : 0;
         super.a(param0, param1, param2, 0);
         if (param1 == param3) {
@@ -106,184 +102,50 @@ final class kc extends pj {
           if (hg.field_E != var8) {
             if (db.field_u != var8) {
               if (var8 != rg.field_f) {
-                if (var8 == ph.field_g) {
+                if (var8 != ph.field_g) {
+                  return;
+                } else {
                   var12 = gb.field_k[1];
                   var12.a(-(var12.field_p >> 1223456929) + var5, -(var12.field_t >> -1670607551) + var6, 256);
-                  if (var11 != 0) {
-                    var19 = gb.field_k[2];
-                    var19.a(var5 - (var19.field_p >> 129803233), -(var19.field_t >> -757397119) + var6, 256);
-                    if (var11 != 0) {
-                      L0: {
-                        var20 = gb.field_k[0];
-                        var14 = var20;
-                        var9 = var20.field_q << -951560671;
-                        var10 = var20.field_r << -71652927;
-                        if (null == pk.field_Y) {
-                          break L0;
-                        } else {
-                          if (var9 > pk.field_Y.field_p) {
-                            break L0;
-                          } else {
-                            if (pk.field_Y.field_t < var10) {
-                              pk.field_Y = new o(var9, var10);
-                              cl.a(-116, pk.field_Y);
-                              if (var11 != 0) {
-                                cl.a(-97, pk.field_Y);
-                                mi.a();
-                                var20.b(112, 144, var20.field_q << 158897700, var20.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                                mf.e(param3 + 4096);
-                                pk.field_Y.a(-var20.field_q + var5, -var20.field_r + var6, 256);
-                                return;
-                              } else {
-                                var20.b(112, 144, var20.field_q << 158897700, var20.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                                mf.e(param3 + 4096);
-                                pk.field_Y.a(-var20.field_q + var5, -var20.field_r + var6, 256);
-                                return;
-                              }
-                            } else {
-                              cl.a(-97, pk.field_Y);
-                              mi.a();
-                              var20.b(112, 144, var20.field_q << 158897700, var20.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                              mf.e(param3 + 4096);
-                              pk.field_Y.a(-var20.field_q + var5, -var20.field_r + var6, 256);
-                              return;
-                            }
-                          }
-                        }
-                      }
-                      pk.field_Y = new o(var9, var10);
-                      cl.a(-116, pk.field_Y);
-                      if (var11 != 0) {
-                        cl.a(-97, pk.field_Y);
-                        mi.a();
-                        var20.b(112, 144, var20.field_q << 158897700, var20.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                        mf.e(param3 + 4096);
-                        pk.field_Y.a(-var20.field_q + var5, -var20.field_r + var6, 256);
-                        return;
-                      } else {
-                        var20.b(112, 144, var20.field_q << 158897700, var20.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                        mf.e(param3 + 4096);
-                        pk.field_Y.a(-var20.field_q + var5, -var20.field_r + var6, 256);
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
                   return;
                 }
               } else {
-                var17 = gb.field_k[2];
-                var17.a(var5 - (var17.field_p >> 129803233), -(var17.field_t >> -757397119) + var6, 256);
-                if (var11 != 0) {
-                  L1: {
-                    var18 = gb.field_k[0];
-                    var9 = var18.field_q << -951560671;
-                    var10 = var18.field_r << -71652927;
-                    if (null == pk.field_Y) {
-                      break L1;
-                    } else {
-                      if (var9 > pk.field_Y.field_p) {
-                        break L1;
-                      } else {
-                        if (pk.field_Y.field_t < var10) {
-                          pk.field_Y = new o(var9, var10);
-                          cl.a(-116, pk.field_Y);
-                          if (var11 != 0) {
-                            cl.a(-97, pk.field_Y);
-                            mi.a();
-                            var18.b(112, 144, var18.field_q << 158897700, var18.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                            mf.e(param3 + 4096);
-                            pk.field_Y.a(-var18.field_q + var5, -var18.field_r + var6, 256);
-                            return;
-                          } else {
-                            var18.b(112, 144, var18.field_q << 158897700, var18.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                            mf.e(param3 + 4096);
-                            pk.field_Y.a(-var18.field_q + var5, -var18.field_r + var6, 256);
-                            return;
-                          }
-                        } else {
-                          cl.a(-97, pk.field_Y);
-                          mi.a();
-                          var18.b(112, 144, var18.field_q << 158897700, var18.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                          mf.e(param3 + 4096);
-                          pk.field_Y.a(-var18.field_q + var5, -var18.field_r + var6, 256);
-                          return;
-                        }
-                      }
-                    }
-                  }
-                  pk.field_Y = new o(var9, var10);
-                  cl.a(-116, pk.field_Y);
-                  if (var11 != 0) {
-                    cl.a(-97, pk.field_Y);
-                    mi.a();
-                    var18.b(112, 144, var18.field_q << 158897700, var18.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                    mf.e(param3 + 4096);
-                    pk.field_Y.a(-var18.field_q + var5, -var18.field_r + var6, 256);
-                    return;
-                  } else {
-                    var18.b(112, 144, var18.field_q << 158897700, var18.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                    mf.e(param3 + 4096);
-                    pk.field_Y.a(-var18.field_q + var5, -var18.field_r + var6, 256);
-                    return;
-                  }
-                } else {
-                  return;
-                }
+                var13 = gb.field_k[2];
+                var13.a(var5 - (var13.field_p >> 129803233), -(var13.field_t >> -757397119) + var6, 256);
+                return;
               }
             } else {
-              L2: {
-                var16 = gb.field_k[0];
-                var14 = var16;
-                var9 = var16.field_q << -951560671;
-                var10 = var16.field_r << -71652927;
-                if (null == pk.field_Y) {
-                  break L2;
-                } else {
-                  if (var9 > pk.field_Y.field_p) {
-                    break L2;
+              var16 = gb.field_k[0];
+              var9 = var16.field_q << -951560671;
+              var10 = var16.field_r << -71652927;
+              if (null != pk.field_Y) {
+                if (var9 <= pk.field_Y.field_p) {
+                  if (pk.field_Y.field_t < var10) {
+                    pk.field_Y = new o(var9, var10);
+                    cl.a(-116, pk.field_Y);
+                    var16.b(112, 144, var16.field_q << 158897700, var16.field_r << -1606311388, -this.field_N << -1580442358, 4096);
+                    mf.e(param3 + 4096);
+                    pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
+                    return;
                   } else {
-                    if (pk.field_Y.field_t < var10) {
-                      pk.field_Y = new o(var9, var10);
-                      cl.a(-116, pk.field_Y);
-                      if (var11 != 0) {
-                        cl.a(-97, pk.field_Y);
-                        mi.a();
-                        var16.b(112, 144, var16.field_q << 158897700, var16.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                        mf.e(param3 + 4096);
-                        pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
-                        return;
-                      } else {
-                        var16.b(112, 144, var16.field_q << 158897700, var16.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                        mf.e(param3 + 4096);
-                        pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
-                        return;
-                      }
-                    } else {
-                      cl.a(-97, pk.field_Y);
-                      mi.a();
-                      var16.b(112, 144, var16.field_q << 158897700, var16.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                      mf.e(param3 + 4096);
-                      pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
-                      return;
-                    }
+                    cl.a(-97, pk.field_Y);
+                    mi.a();
+                    var16.b(112, 144, var16.field_q << 158897700, var16.field_r << -1606311388, -this.field_N << -1580442358, 4096);
+                    mf.e(param3 + 4096);
+                    pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
+                    return;
                   }
+                } else {
+                  pk.field_Y = new o(var9, var10);
+                  cl.a(-116, pk.field_Y);
+                  var16.b(112, 144, var16.field_q << 158897700, var16.field_r << -1606311388, -this.field_N << -1580442358, 4096);
+                  mf.e(param3 + 4096);
+                  pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
+                  return;
                 }
-              }
-              pk.field_Y = new o(var9, var10);
-              cl.a(-116, pk.field_Y);
-              if (var11 != 0) {
-                cl.a(-97, pk.field_Y);
-                mi.a();
-                var16.b(112, 144, var16.field_q << 158897700, var16.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                mf.e(param3 + 4096);
-                pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
-                return;
               } else {
+                pk.field_Y = new o(var9, var10);
+                cl.a(-116, pk.field_Y);
                 var16.b(112, 144, var16.field_q << 158897700, var16.field_r << -1606311388, -this.field_N << -1580442358, 4096);
                 mf.e(param3 + 4096);
                 pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
@@ -291,53 +153,37 @@ final class kc extends pj {
               }
             }
           } else {
-            L3: {
-              var15 = gb.field_k[0];
-              var9 = var15.field_q << -951560671;
-              var10 = var15.field_r << -71652927;
-              if (null == pk.field_Y) {
-                break L3;
-              } else {
-                if (var9 > pk.field_Y.field_p) {
-                  break L3;
+            var15 = gb.field_k[0];
+            var9 = var15.field_q << -951560671;
+            var10 = var15.field_r << -71652927;
+            if (null != pk.field_Y) {
+              if (var9 <= pk.field_Y.field_p) {
+                if (pk.field_Y.field_t < var10) {
+                  pk.field_Y = new o(var9, var10);
+                  cl.a(-116, pk.field_Y);
+                  var15.b(112, 144, var15.field_q << 158897700, var15.field_r << -1606311388, -this.field_N << -1580442358, 4096);
+                  mf.e(param3 + 4096);
+                  pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
+                  return;
                 } else {
-                  if (pk.field_Y.field_t < var10) {
-                    L4: {
-                      pk.field_Y = new o(var9, var10);
-                      cl.a(-116, pk.field_Y);
-                      if (var11 == 0) {
-                        break L4;
-                      } else {
-                        cl.a(-97, pk.field_Y);
-                        mi.a();
-                        break L4;
-                      }
-                    }
-                    var15.b(112, 144, var15.field_q << 158897700, var15.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                    mf.e(param3 + 4096);
-                    pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
-                    return;
-                  } else {
-                    cl.a(-97, pk.field_Y);
-                    mi.a();
-                    var15.b(112, 144, var15.field_q << 158897700, var15.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-                    mf.e(param3 + 4096);
-                    pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
-                    return;
-                  }
+                  cl.a(-97, pk.field_Y);
+                  mi.a();
+                  var15.b(112, 144, var15.field_q << 158897700, var15.field_r << -1606311388, -this.field_N << -1580442358, 4096);
+                  mf.e(param3 + 4096);
+                  pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
+                  return;
                 }
+              } else {
+                pk.field_Y = new o(var9, var10);
+                cl.a(-116, pk.field_Y);
+                var15.b(112, 144, var15.field_q << 158897700, var15.field_r << -1606311388, -this.field_N << -1580442358, 4096);
+                mf.e(param3 + 4096);
+                pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
+                return;
               }
-            }
-            pk.field_Y = new o(var9, var10);
-            cl.a(-116, pk.field_Y);
-            if (var11 != 0) {
-              cl.a(-97, pk.field_Y);
-              mi.a();
-              var15.b(112, 144, var15.field_q << 158897700, var15.field_r << -1606311388, -this.field_N << -1580442358, 4096);
-              mf.e(param3 + 4096);
-              pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
-              return;
             } else {
+              pk.field_Y = new o(var9, var10);
+              cl.a(-116, pk.field_Y);
               var15.b(112, 144, var15.field_q << 158897700, var15.field_r << -1606311388, -this.field_N << -1580442358, 4096);
               mf.e(param3 + 4096);
               pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);

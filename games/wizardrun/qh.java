@@ -742,23 +742,26 @@ class qh {
               }
             }
             L4: {
-              if (this.field_f.field_a < 240) {
-                break L4;
-              } else {
-                if (this.field_i.field_a < 15) {
-                  this.field_f.field_a = this.field_f.field_a - 240;
-                  this.field_i.field_a = this.field_i.field_a + 1;
-                  break L4;
+              L5: {
+                if (this.field_f.field_a < 240) {
+                  break L5;
                 } else {
-                  break L4;
+                  if (this.field_i.field_a < 15) {
+                    this.field_f.field_a = this.field_f.field_a - 240;
+                    this.field_i.field_a = this.field_i.field_a + 1;
+                    break L5;
+                  } else {
+                    break L4;
+                  }
                 }
               }
+              break L4;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var3 = decompiledCaughtException;
             stackIn_15_0 = (RuntimeException) (var3);
 
@@ -768,12 +771,12 @@ class qh {
               stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackIn_16_2 = "null";
-              break L5;
+              break L6;
             } else {
               stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackIn_16_2 = "{...}";
-              break L5;
+              break L6;
             }
           }
           throw bd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ')');

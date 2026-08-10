@@ -124,91 +124,21 @@ class hk extends el {
     }
 
     void a(boolean param0, int param1, el param2, int param3) {
-        RuntimeException runtimeException = null;
-        Object stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        int stackIn_9_2 = 0;
-        Object stackIn_10_0;
-        int stackIn_10_1;
-        int stackIn_10_2;
-        int stackIn_10_3;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.a(param0, param1, param2, param3);
-              if (0 == this.field_f) {
-                break L1;
-              } else {
-                if (gf.field_a != this.field_f) {
-                  L2: {
-                    if (!this.a(qa.field_a, -1, ue.field_e, param1, param3)) {
-                      break L2;
-                    } else {
-                      if (-1 == (gf.field_a ^ -1)) {
-                        this.a(ue.field_e - param1, -28922, qa.field_a + -param3, this.field_f);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  L3: {
-                    stackIn_9_0 = this;
-
-                    stackIn_9_1 = param3;
-
-                    stackIn_9_2 = qa.field_a;
-
-                    if (param0) {
-                      stackIn_10_0 = this;
-                      stackIn_10_1 = stackIn_9_1;
-                      stackIn_10_2 = stackIn_9_2;
-                      stackIn_10_3 = 0;
-                      break L3;
-                    } else {
-                      stackIn_10_0 = this;
-                      stackIn_10_1 = stackIn_9_1;
-                      stackIn_10_2 = stackIn_9_2;
-                      stackIn_10_3 = 1;
-                      break L3;
-                    }
-                  }
-                  this.a(stackIn_10_1, stackIn_10_2, stackIn_10_3 != 0, param2, param1, ue.field_e);
-                  break L1;
-                } else {
-                  return;
+            super.a(param0, param1, param2, param3);
+            if (0 != this.field_f) {
+                if (gf.field_a == this.field_f) {
+                    return;
                 }
-              }
+                if (this.a(qa.field_a, -1, ue.field_e, param1, param3)) {
+                    if (!(-1 != (gf.field_a ^ -1))) {
+                        this.a(ue.field_e - param1, -28922, qa.field_a + -param3, this.field_f);
+                    }
+                }
+                this.a(param3, qa.field_a, !param0 ? true : false, param2, param1, ue.field_e);
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (runtimeException);
-
-            stackIn_14_1 = new StringBuilder().append("hk.H(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
-          }
-          throw t.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param3 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "hk.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

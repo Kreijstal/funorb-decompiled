@@ -109,98 +109,36 @@ final class lf {
 
     final static void a(boolean param0) {
         try {
-            IOException iOException = null;
-            IOException var2_ref = null;
             int var1_int = 0;
-            int var3 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var1 = null;
-            var3 = Terraphoenix.field_V;
+            int var3 = Terraphoenix.field_V;
             try {
-              L0: {
-                L1: {
-                  if (null == jg.field_kb) {
-                    break L1;
-                  } else {
+                if (null != jg.field_kb) {
                     jg.field_kb.a(-103);
-                    break L1;
-                  }
                 }
-                L2: {
-                  if (null != t.field_c) {
+                if (!(null == t.field_c)) {
                     t.field_c.a(-109);
-                    break L2;
-                  } else {
-                    break L2;
-                  }
                 }
-                L3: {
-                  if (param0) {
-                    break L3;
-                  } else {
+                if (!param0) {
                     lf.a(true);
-                    break L3;
-                  }
                 }
-                L4: {
-                  if (null != ad.field_x) {
+                if (!(null == ad.field_x)) {
                     try {
-                      L5: {
                         ad.field_x.b((byte) -28);
-                        break L5;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        break L6;
-                      }
+                    } catch (IOException iOException) {
                     }
-                    break L4;
-                  } else {
-                    break L4;
-                  }
                 }
-                L7: {
-                  if (wb.field_b == null) {
-                    break L7;
-                  } else {
-                    var1_int = 0;
-                    L8: while (true) {
-                      if (var1_int >= wb.field_b.length) {
-                        break L7;
-                      } else {
-                        L9: {
-                          if (null != wb.field_b[var1_int]) {
+                if (wb.field_b != null) {
+                    for (var1_int = 0; var1_int < wb.field_b.length; var1_int++) {
+                        if (!(null == wb.field_b[var1_int])) {
                             try {
-                              L10: {
                                 wb.field_b[var1_int].b((byte) -54);
-                                break L10;
-                              }
-                            } catch (java.io.IOException decompiledCaughtParameter1) {
-                              decompiledCaughtException = decompiledCaughtParameter1;
-                              L11: {
-                                var2_ref = (IOException) (Object) decompiledCaughtException;
-                                break L11;
-                              }
+                            } catch (IOException var2_ref) {
                             }
-                            break L9;
-                          } else {
-                            break L9;
-                          }
                         }
-                        var1_int++;
-                        continue L8;
-                      }
                     }
-                  }
                 }
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw qk.a((Throwable) ((Object) var1), "lf.D(" + param0 + ')');
+            } catch (RuntimeException runtimeException) {
+                throw qk.a((Throwable) ((Object) runtimeException), "lf.D(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

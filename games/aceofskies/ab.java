@@ -702,6 +702,7 @@ class ab extends ea implements vm {
     }
 
     final void a(int param0, int param1, int param2, int param3, ea param4, byte param5) {
+        RuntimeException runtimeException = null;
         an var7 = null;
         ea var8 = null;
         int var9 = 0;
@@ -712,7 +713,6 @@ class ab extends ea implements vm {
         String stackIn_11_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
         var9 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -744,8 +744,8 @@ class ab extends ea implements vm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var7_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var7_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
 
             stackIn_10_1 = new StringBuilder().append("ab.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 

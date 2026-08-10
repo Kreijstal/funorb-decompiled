@@ -18,107 +18,34 @@ final class kn {
     vq field_n;
 
     final void a(pn param0, boolean param1) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param0.field_g) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                this.field_a = param0.field_p;
-                if (!param1) {
-                  break L1;
-                } else {
-                  this.field_b = 59;
-                  break L1;
-                }
-              }
-              L2: {
-                if (param0.field_p == 0) {
-                  L3: {
-                    if (ec.field_i == 0) {
-                      this.field_n.a(cl.field_a, 17130, 12);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  this.field_n.a(Pool.field_K, 17130, 13);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L4: {
-                if (param0.field_p == 1) {
-                  L5: {
-                    if (ol.field_e != 0) {
-                      break L5;
-                    } else {
-                      this.field_n.a(wi.field_e, 17130, 12);
-                      break L5;
-                    }
-                  }
-                  this.field_n.a(op.field_c, 17130, 13);
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L6: {
-                if (param0.field_p != 2) {
-                  break L6;
-                } else {
-                  L7: {
-                    if (-1 == (di.field_e ^ -1)) {
-                      this.field_n.a(mc.field_i, 17130, 12);
-                      break L7;
-                    } else {
-                      break L7;
-                    }
-                  }
-                  this.field_n.a(me.field_v, 17130, 13);
-                  break L6;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            runtimeException = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (runtimeException);
-
-            stackIn_24_1 = new StringBuilder().append("kn.J(");
-
-            if (param0 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L8;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L8;
-            }
-          }
-          throw wm.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
+        if (!(!param0.field_g)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            this.field_a = param0.field_p;
+            if (param1) {
+                this.field_b = 59;
+            }
+            if (!(param0.field_p != 0)) {
+                if (!(ec.field_i != 0)) {
+                    this.field_n.a(cl.field_a, 17130, 12);
+                }
+                this.field_n.a(Pool.field_K, 17130, 13);
+            }
+            if (!(param0.field_p != 1)) {
+                if (ol.field_e == 0) {
+                    this.field_n.a(wi.field_e, 17130, 12);
+                }
+                this.field_n.a(op.field_c, 17130, 13);
+            }
+            if (param0.field_p == 2) {
+                if (!(-1 != (di.field_e ^ -1))) {
+                    this.field_n.a(mc.field_i, 17130, 12);
+                }
+                this.field_n.a(me.field_v, 17130, 13);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) ((Object) runtimeException), "kn.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -377,17 +377,20 @@ final class hd extends vg {
           L0: {
             if (param3 < -127) {
               L1: {
-                if (!this.field_E) {
-                  break L1;
-                } else {
-                  this.field_z = this.field_z + 1;
-                  if (this.field_z <= 2 * this.field_J) {
-                    break L1;
+                L2: {
+                  if (!this.field_E) {
+                    break L2;
                   } else {
-                    this.field_z = this.field_z - 2 * this.field_J;
-                    break L1;
+                    this.field_z = this.field_z + 1;
+                    if (this.field_z <= 2 * this.field_J) {
+                      break L2;
+                    } else {
+                      this.field_z = this.field_z - 2 * this.field_J;
+                      break L1;
+                    }
                   }
                 }
+                break L1;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -398,7 +401,7 @@ final class hd extends vg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var5 = decompiledCaughtException;
             stackIn_8_0 = (RuntimeException) (var5);
 
@@ -408,12 +411,12 @@ final class hd extends vg {
               stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
               stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackIn_9_2 = "null";
-              break L2;
+              break L3;
             } else {
               stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
               stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackIn_9_2 = "{...}";
-              break L2;
+              break L3;
             }
           }
           throw ie.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');

@@ -197,51 +197,54 @@ final class kda {
                             break L4;
                           }
                         }
-                        stackIn_23_0.field_k = stackIn_23_1 != 0;
-                        if (!param0.field_k) {
-                          break L2;
-                        } else {
-                          if (this.field_e) {
-                            break L2;
+                        L5: {
+                          stackIn_23_0.field_k = stackIn_23_1 != 0;
+                          if (!param0.field_k) {
+                            break L5;
                           } else {
-                            if (lw.field_f) {
-                              L5: {
-                                this.field_e = true;
-                                iva.a(-6940, "Carousel_clientgame: Now out of sync for server tick " + param3 + ", which is " + -var6_int + " ticks back, so dumping state");
-                                if (null == this.field_j) {
-                                  this.field_j = new ova(kha.field_v);
+                            if (this.field_e) {
+                              break L5;
+                            } else {
+                              if (lw.field_f) {
+                                L6: {
+                                  this.field_e = true;
+                                  iva.a(-6940, "Carousel_clientgame: Now out of sync for server tick " + param3 + ", which is " + -var6_int + " ticks back, so dumping state");
+                                  if (null == this.field_j) {
+                                    this.field_j = new ova(kha.field_v);
+                                    break L6;
+                                  } else {
+                                    break L6;
+                                  }
+                                }
+                                if (!this.field_j.a(param2 + -1000)) {
                                   break L5;
                                 } else {
+                                  iva.a(-6940, "Carousel_clientgame: Sending the state dump to the server");
+                                  var13 = new bhb(-var10 + param0.field_g, bk.field_w);
+                                  var14 = new lla();
+                                  var14.a(84, 0, var13.field_d, var13.field_d.length);
+                                  var20 = wi.a((byte) 10, var14.field_f);
+                                  this.field_j.a(var20, 0);
                                   break L5;
                                 }
-                              }
-                              if (!this.field_j.a(param2 + -1000)) {
-                                break L2;
                               } else {
-                                iva.a(-6940, "Carousel_clientgame: Sending the state dump to the server");
-                                var13 = new bhb(-var10 + param0.field_g, bk.field_w);
-                                var14 = new lla();
-                                var14.a(84, 0, var13.field_d, var13.field_d.length);
-                                var20 = wi.a((byte) 10, var14.field_f);
-                                this.field_j.a(var20, 0);
                                 break L2;
                               }
-                            } else {
-                              break L2;
                             }
                           }
                         }
+                        break L2;
                       } else {
-                        L6: {
+                        L7: {
                           if (var11.a(115)) {
-                            break L6;
+                            break L7;
                           } else {
                             if (-var10 + param0.field_g >= var11.field_e) {
                               iva.a(-6940, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back when unconfirmed event was back by " + (-var11.field_e + param0.field_g));
                               decompiledRegionSelector0 = 3;
                               break L0;
                             } else {
-                              break L6;
+                              break L7;
                             }
                           }
                         }
@@ -263,7 +266,7 @@ final class kda {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var6 = decompiledCaughtException;
             stackIn_35_0 = (RuntimeException) (var6);
 
@@ -273,12 +276,12 @@ final class kda {
               stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
               stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackIn_36_2 = "null";
-              break L7;
+              break L8;
             } else {
               stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
               stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackIn_36_2 = "{...}";
-              break L7;
+              break L8;
             }
           }
           throw rta.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

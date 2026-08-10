@@ -38,7 +38,6 @@ final class v {
                       var7 = var6 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
                       var5 = var7;
                       var5 = var7;
-                      var5 = var7;
                       if (param0 == 0) {
                         break L2;
                       } else {
@@ -47,29 +46,22 @@ final class v {
                       }
                     }
                     L3: {
-                      L4: {
-                        if (-1 != (param1.length() ^ -1)) {
-                          break L4;
-                        } else {
-                          var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                          if (!Transmogrify.field_A) {
-                            break L3;
-                          } else {
-                            break L4;
-                          }
-                        }
+                      if (-1 != (param1.length() ^ -1)) {
+                        var5 = var7 + "; Expires=" + e.a(lk.a(0) + 94608000000L, (byte) -122) + "; Max-Age=" + 94608000L;
+                        break L3;
+                      } else {
+                        var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                        break L3;
                       }
-                      var5 = var5 + "; Expires=" + e.a(lk.a(0) + 94608000000L, (byte) -122) + "; Max-Age=" + 94608000L;
-                      break L3;
                     }
                     kj.a(-124, "document.cookie=\"" + var5 + "\"", param2);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L5: {
+                  L4: {
                     var3 = decompiledCaughtException;
-                    break L5;
+                    break L4;
                   }
                 }
                 ok.a(param0 ^ 9507, param2);
@@ -77,7 +69,7 @@ final class v {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L6: {
+              L5: {
                 var3_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackIn_13_0 = (RuntimeException) (var3_ref);
 
@@ -87,15 +79,15 @@ final class v {
                   stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
                   stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
                   stackIn_14_2 = "null";
-                  break L6;
+                  break L5;
                 } else {
                   stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
                   stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
                   stackIn_14_2 = "{...}";
-                  break L6;
+                  break L5;
                 }
               }
-              L7: {
+              L6: {
 
 
                 stackIn_16_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
@@ -104,12 +96,12 @@ final class v {
                   stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
                   stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
                   stackIn_17_2 = "null";
-                  break L7;
+                  break L6;
                 } else {
                   stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
                   stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
                   stackIn_17_2 = "{...}";
-                  break L7;
+                  break L6;
                 }
               }
               throw ch.a((Throwable) ((Object) stackIn_14_0), stackIn_17_2 + ')');

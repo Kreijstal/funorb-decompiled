@@ -19,137 +19,27 @@ final class qg {
             if (param2 >= param4) {
               if (param7 < param4) {
                 oe.a((byte) 106, param3, lf.field_b, param0, param6, param7, param2, param1, param4);
-                if (var9 != 0) {
-                  oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
-                  return;
-                } else {
-                  return;
-                }
+                return;
               } else {
                 oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
                 return;
               }
             } else {
               oe.a((byte) 113, param6, lf.field_b, param0, param3, param7, param4, param1, param2);
-              if (var9 != 0) {
-                if (param7 >= param4) {
-                  oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
-                  return;
-                } else {
-                  oe.a((byte) 106, param3, lf.field_b, param0, param6, param7, param2, param1, param4);
-                  oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
-                  return;
-                }
-              } else {
-                return;
-              }
+              return;
             }
           } else {
-            if (param4 > param7) {
-              oe.a((byte) 74, param6, lf.field_b, param0, param1, param2, param4, param3, param7);
-              if (var9 != 0) {
-                if (param2 >= param4) {
-                  if (param7 < param4) {
-                    oe.a((byte) 106, param3, lf.field_b, param0, param6, param7, param2, param1, param4);
-                    if (var9 != 0) {
-                      oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
-                    return;
-                  }
-                } else {
-                  oe.a((byte) 113, param6, lf.field_b, param0, param3, param7, param4, param1, param2);
-                  if (var9 != 0) {
-                    L0: {
-                      if (param7 >= param4) {
-                        oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
-                        break L0;
-                      } else {
-                        oe.a((byte) 106, param3, lf.field_b, param0, param6, param7, param2, param1, param4);
-                        oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
-                        break L0;
-                      }
-                    }
-                    return;
-                  } else {
-                    return;
-                  }
-                }
+            if (param4 <= param7) {
+              if (param4 <= param2) {
+                oe.a((byte) 91, param1, lf.field_b, param0, param3, param4, param7, param6, param2);
+                return;
               } else {
+                oe.a((byte) 113, param1, lf.field_b, param0, param6, param2, param7, param3, param4);
                 return;
               }
             } else {
-              if (param4 > param2) {
-                oe.a((byte) 113, param1, lf.field_b, param0, param6, param2, param7, param3, param4);
-                if (var9 != 0) {
-                  oe.a((byte) 74, param6, lf.field_b, param0, param1, param2, param4, param3, param7);
-                  if (var9 != 0) {
-                    L1: {
-                      if (param2 >= param4) {
-                        break L1;
-                      } else {
-                        oe.a((byte) 113, param6, lf.field_b, param0, param3, param7, param4, param1, param2);
-                        break L1;
-                      }
-                    }
-                    if (param7 >= param4) {
-                      oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
-                      return;
-                    } else {
-                      oe.a((byte) 106, param3, lf.field_b, param0, param6, param7, param2, param1, param4);
-                      if (var9 != 0) {
-                        oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
-                        return;
-                      } else {
-                        return;
-                      }
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                oe.a((byte) 91, param1, lf.field_b, param0, param3, param4, param7, param6, param2);
-                if (var9 != 0) {
-                  oe.a((byte) 113, param1, lf.field_b, param0, param6, param2, param7, param3, param4);
-                  if (var9 == 0) {
-                    return;
-                  } else {
-                    L2: {
-                      oe.a((byte) 74, param6, lf.field_b, param0, param1, param2, param4, param3, param7);
-                      if (param2 >= param4) {
-                        break L2;
-                      } else {
-                        oe.a((byte) 113, param6, lf.field_b, param0, param3, param7, param4, param1, param2);
-                        break L2;
-                      }
-                    }
-                    L3: {
-                      if (param7 >= param4) {
-                        oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
-                        break L3;
-                      } else {
-                        oe.a((byte) 106, param3, lf.field_b, param0, param6, param7, param2, param1, param4);
-                        if (var9 == 0) {
-                          break L3;
-                        } else {
-                          oe.a((byte) 106, param3, lf.field_b, param0, param1, param4, param2, param6, param7);
-                          break L3;
-                        }
-                      }
-                    }
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              }
+              oe.a((byte) 74, param6, lf.field_b, param0, param1, param2, param4, param3, param7);
+              return;
             }
           }
         } else {

@@ -193,7 +193,6 @@ final class m {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -210,124 +209,54 @@ final class m {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        int var21 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_13_0 = 0;
-        String stackIn_21_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        var21 = SteelSentinels.field_G;
+        int var21 = SteelSentinels.field_G;
         try {
-          L0: {
-            L1: {
-              if (param2 == 7786) {
-                break L1;
-              } else {
+            if (param2 != 7786) {
                 field_d = (gh) null;
-                break L1;
-              }
             }
-            L2: {
-              var6_int = 1021128;
-              var7 = param1 - 6;
-              var8 = param3 + 3;
-              var9 = param0 + -6;
-              var10 = 3 + param5;
-              var11 = var7 * param4 / 12200;
-              fk.field_d.c("<img=1>", param3, param5 - -param0, 1021128, -1);
-              if (-12201 <= (param4 ^ -1)) {
-                break L2;
-              } else {
+            var6_int = 1021128;
+            var7 = param1 - 6;
+            var8 = param3 + 3;
+            var9 = param0 + -6;
+            var10 = 3 + param5;
+            var11 = var7 * param4 / 12200;
+            fk.field_d.c("<img=1>", param3, param5 - -param0, 1021128, -1);
+            if (-12201 > (param4 ^ -1)) {
                 var6_int = 1044724;
                 var11 = var7;
-                break L2;
-              }
             }
-            L3: {
-              pb.a(var8, var10, var11, var9, var6_int);
-              pb.h(param3, param5, param1, param0, 4408131);
-              pb.d(6100 * param1 / 12200 + param3, param5, param0, 4408131);
-              var12 = ej.field_C;
-              var13 = param3 - -(param1 / 4);
-              if (6100 >= param4) {
-                stackIn_8_0 = 1400960;
-                break L3;
-              } else {
-                stackIn_8_0 = 4210752;
-                break L3;
-              }
-            }
-            var14 = stackIn_8_0;
-            var15_int = 0;
-            L4: while (true) {
-              if (-3 >= (var15_int ^ -1)) {
-                L5: {
-                  if (oh.field_f < param3) {
-                    break L5;
-                  } else {
-                    if (oh.field_f >= param1 + param3) {
-                      break L5;
-                    } else {
-                      if (param5 > pi.field_c) {
-                        break L5;
-                      } else {
-                        if (pi.field_c >= param0 + param5) {
-                          break L5;
-                        } else {
-                          L6: {
-                            if (6100 >= param4) {
-                              stackIn_21_0 = ej.field_C;
-                              break L6;
-                            } else {
-                              stackIn_21_0 = fi.field_z;
-                              break L6;
-                            }
-                          }
-                          var15 = stackIn_21_0;
-                          var16 = db.a(bf.field_zb, param2 + -7846, new String[]{Integer.toString(param4), var15});
-                          var17 = param3 - -(param1 / 2);
-                          var18 = param5 + -18;
-                          var19 = 8 + fk.field_d.c(var16);
-                          var20 = 13;
-                          var17 = var17 - var19 / 2;
-                          pb.c(var17 - 4, var18, var19, var20, 0, 192);
-                          pb.h(-4 + var17, var18, var19, var20, 1400960, 192);
-                          fk.field_d.b(var16, var17, var18 + 10, 41727, -1);
-                          break L5;
-                        }
-                      }
-                    }
-                  }
-                }
-                break L0;
-              } else {
-                L7: {
-                  pb.d(var13 + -(var7 / 4), -4 + param5, 3, var14);
-                  pb.d(var7 / 4 + var13, -4 + param5, 3, var14);
-                  pb.g(var13 - var7 / 4, -4 + param5, var7 / 2, var14);
-                  pb.d(var13 - var7 / 4, param5 + (param0 + 1), 2, var14);
-                  pb.d(var13 + var7 / 4, param5 + param0 - -1, 2, var14);
-                  pb.g(var13 - var7 / 4, 3 + (param5 - -param0), var7 / 2, var14);
-                  fk.field_d.a(var12, var13, -5 + param5, var14, -1);
-                  if (-6101 <= (param4 ^ -1)) {
-                    stackIn_13_0 = 4210752;
-                    break L7;
-                  } else {
-                    stackIn_13_0 = 1400960;
-                    break L7;
-                  }
-                }
-                var14 = stackIn_13_0;
+            pb.a(var8, var10, var11, var9, var6_int);
+            pb.h(param3, param5, param1, param0, 4408131);
+            pb.d(6100 * param1 / 12200 + param3, param5, param0, 4408131);
+            var12 = ej.field_C;
+            var13 = param3 - -(param1 / 4);
+            var14 = 6100 < param4 ? 4210752 : 1400960;
+            for (var15_int = 0; -3 < (var15_int ^ -1); var15_int++) {
+                pb.d(var13 + -(var7 / 4), -4 + param5, 3, var14);
+                pb.d(var7 / 4 + var13, -4 + param5, 3, var14);
+                pb.g(var13 - var7 / 4, -4 + param5, var7 / 2, var14);
+                pb.d(var13 - var7 / 4, param5 + (param0 + 1), 2, var14);
+                pb.d(var13 + var7 / 4, param5 + param0 - -1, 2, var14);
+                pb.g(var13 - var7 / 4, 3 + (param5 - -param0), var7 / 2, var14);
+                fk.field_d.a(var12, var13, -5 + param5, var14, -1);
+                var14 = -6101 > (param4 ^ -1) ? 1400960 : 4210752;
                 var12 = fi.field_z;
                 var13 = var13 + param1 / 2;
-                var15_int++;
-                continue L4;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) runtimeException), "m.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+            if (oh.field_f >= param3 && oh.field_f < param1 + param3 && param5 <= pi.field_c && pi.field_c < param0 + param5) {
+                var15 = 6100 < param4 ? fi.field_z : ej.field_C;
+                var16 = db.a(bf.field_zb, param2 + -7846, new String[]{Integer.toString(param4), var15});
+                var17 = param3 - -(param1 / 2);
+                var18 = param5 + -18;
+                var19 = 8 + fk.field_d.c(var16);
+                var20 = 13;
+                var17 = var17 - var19 / 2;
+                pb.c(var17 - 4, var18, var19, var20, 0, 192);
+                pb.h(-4 + var17, var18, var19, var20, 1400960, 192);
+                fk.field_d.b(var16, var17, var18 + 10, 41727, -1);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) ((Object) runtimeException), "m.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

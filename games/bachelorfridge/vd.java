@@ -655,6 +655,7 @@ class vd extends wj implements e {
     }
 
     void a(int param0, int param1, wj param2, int param3) {
+        RuntimeException runtimeException = null;
         rna var5 = null;
         wj var6 = null;
         int var7 = 0;
@@ -664,7 +665,6 @@ class vd extends wj implements e {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = BachelorFridge.field_y;
         try {
           L0: {
@@ -691,8 +691,8 @@ class vd extends wj implements e {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("vd.O(").append(param0).append(',').append(param1).append(',');
 

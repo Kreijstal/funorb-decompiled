@@ -1735,7 +1735,7 @@ final class mf {
                           break L10;
                         }
                       }
-                      throw t.a((Throwable) ((Object) stackIn_37_0), (stackIn_37_2 != 0) + " " + param3 + " " + param0.length + " " + ji.a(255, param0.length, var9) + " " + ji.a(255, -2 + param0.length, var9) + " " + this.field_g.field_l[param3] + " " + this.field_g.field_b);
+                      throw t.a((Throwable) ((Object) stackIn_37_0), (stackIn_37_2 != 0) + " " + param3 + " " + var9.length + " " + ji.a(255, var9.length, var9) + " " + ji.a(255, -2 + var9.length, var9) + " " + this.field_g.field_l[param3] + " " + this.field_g.field_b);
                     }
                     L11: {
                       if (!this.field_c) {

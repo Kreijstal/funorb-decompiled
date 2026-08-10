@@ -10,196 +10,90 @@ final class bc {
 
     final static void b(int param0) {
         gi.field_i = null;
-        if (param0 == 10) {
-            return;
+        if (param0 != 10) {
+            field_d = (String) null;
         }
-        field_d = (String) null;
     }
 
     public static void c(int param0) {
         if (param0 != 22382) {
-          field_d = (String) null;
-          field_b = null;
-          field_d = null;
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
-          field_b = null;
-          field_d = null;
-          field_c = null;
-          field_a = null;
-          return;
+            field_d = (String) null;
         }
+        field_b = null;
+        field_d = null;
+        field_c = null;
+        field_a = null;
     }
 
     final static void a(int param0, int param1, byte param2, boolean param3) {
         int var4;
-        if (param2 == -59) {
-          L0: {
-            er.field_j.g(param0, param1);
-            if (param3) {
-              L1: {
-                var4 = fn.field_c % er.field_j.field_x * 2;
-                if (var4 < er.field_j.field_x) {
-                  break L1;
-                } else {
-                  var4 = er.field_j.field_x + -var4 + er.field_j.field_x;
-                  break L1;
-                }
-              }
-              L2: {
-                if (var4 < 10) {
-                  break L2;
-                } else {
-                  if (-40 + er.field_j.field_x < var4) {
-                    var4 = -40 + er.field_j.field_x;
-                    if (ZombieDawnMulti.field_E) {
-                      break L2;
-                    } else {
-                      ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
-                      return;
-                    }
-                  } else {
-                    ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
-                    return;
-                  }
-                }
-              }
-              var4 = 10;
-              ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return;
-        } else {
-          L3: {
+        L0: {
+          if (param2 == -59) {
+            break L0;
+          } else {
             bc.a((byte) 86);
-            er.field_j.g(param0, param1);
-            if (param3) {
-              L4: {
-                var4 = fn.field_c % er.field_j.field_x * 2;
-                if (var4 < er.field_j.field_x) {
-                  break L4;
-                } else {
-                  var4 = er.field_j.field_x + -var4 + er.field_j.field_x;
-                  break L4;
-                }
-              }
-              L5: {
-                if (var4 < 10) {
-                  break L5;
-                } else {
-                  if (-40 + er.field_j.field_x < var4) {
-                    var4 = -40 + er.field_j.field_x;
-                    if (ZombieDawnMulti.field_E) {
-                      break L5;
-                    } else {
-                      ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
-                      return;
-                    }
-                  } else {
-                    ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
-                    return;
-                  }
-                }
-              }
-              var4 = 10;
-              ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
-              break L3;
-            } else {
-              break L3;
-            }
+            break L0;
           }
-          return;
+        }
+        L1: {
+          er.field_j.g(param0, param1);
+          if (param3) {
+            L2: {
+              var4 = fn.field_c % er.field_j.field_x * 2;
+              if (var4 < er.field_j.field_x) {
+                break L2;
+              } else {
+                var4 = er.field_j.field_x + -var4 + er.field_j.field_x;
+                break L2;
+              }
+            }
+            L3: {
+              if (var4 < 10) {
+                var4 = 10;
+                break L3;
+              } else {
+                if (-40 + er.field_j.field_x < var4) {
+                  var4 = -40 + er.field_j.field_x;
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+            }
+            ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
+            break L1;
+          } else {
+            break L1;
+          }
         }
     }
 
     final static void a(byte param0) {
-        int var1;
-        L0: {
-          iq.a((byte) -78);
-          ok.field_l = ah.field_e.a(we.field_g[12]);
-          var1 = ah.field_e.a(we.field_g[13]);
-          if (var1 > ok.field_l) {
+        iq.a((byte) -78);
+        ok.field_l = ah.field_e.a(we.field_g[12]);
+        int var1 = ah.field_e.a(we.field_g[13]);
+        if (!(var1 <= ok.field_l)) {
             ok.field_l = var1;
-            break L0;
-          } else {
-            break L0;
-          }
         }
         ((ho) ((Object) mj.field_Hb[1])).c((byte) 74);
-        if (param0 >= 8) {
-          return;
-        } else {
-          bc.a((byte) -52);
-          return;
+        if (param0 < 8) {
+            bc.a((byte) -52);
         }
     }
 
     final static ri[] a(int param0) {
-        ri[] var1 = null;
+        int var3 = ZombieDawnMulti.field_E ? 1 : 0;
+        ri[] var1 = new ri[qc.field_v];
         int var2 = 0;
-        int var3 = 0;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = ZombieDawnMulti.field_E ? 1 : 0;
-                    var1 = new ri[qc.field_v];
-                    var2 = 0;
-                    if (param0 == 2) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return (ri[]) null;
-                }
-                case 2: {
-                    if (var2 < qc.field_v) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    fd.h((byte) 125);
-                    return var1;
-                }
-                case 4: {
-                    var1[var2] = new ri(ie.field_nb, hj.field_a, k.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], qp.field_t[var2], tp.field_t);
-                    var2++;
-                    if (var3 == 0) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    return var1;
-                }
-                case 6: {
-                    if (var3 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    fd.h((byte) 125);
-                    return var1;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        if (param0 != 2) {
+            return (ri[]) null;
         }
+        while (var2 < qc.field_v) {
+            var1[var2] = new ri(ie.field_nb, hj.field_a, k.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], qp.field_t[var2], tp.field_t);
+            var2++;
+        }
+        fd.h((byte) 125);
+        return var1;
     }
 
     static {

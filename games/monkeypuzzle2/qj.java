@@ -141,13 +141,13 @@ final class qj extends t {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, we param4, int param5, int param6) {
-        int stackIn_25_0 = 0;
-        int stackIn_29_0 = 0;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        int stackIn_22_0 = 0;
+        int stackIn_26_0 = 0;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
@@ -158,8 +158,6 @@ final class qj extends t {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
         var14 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
@@ -172,7 +170,7 @@ final class qj extends t {
                   break L1;
                 }
               }
-              stackIn_29_0 = 0;
+              stackIn_26_0 = 0;
               decompiledRegionSelector0 = 1;
               break L0;
             } else {
@@ -195,102 +193,75 @@ final class qj extends t {
                 }
               }
               L4: {
-                L5: {
-                  var8_int = this.field_G * var8_int / var9;
-                  if ((param2 ^ -1) != -2) {
-                    break L5;
-                  } else {
-                    this.field_I.b(var8_int, -105);
-                    if (var14 == 0) {
-                      break L4;
-                    } else {
-                      break L5;
-                    }
-                  }
-                }
-                if (param2 == 2) {
-                  var10 = 2147483647;
-                  var11 = -1;
-                  var12 = 0;
-                  L6: while (true) {
-                    L7: {
-                      L8: {
-                        if (var12 >= this.field_I.b(param3 ^ 1624)) {
-                          break L8;
+                var8_int = this.field_G * var8_int / var9;
+                if ((param2 ^ -1) != -2) {
+                  if (param2 == 2) {
+                    var10 = 2147483647;
+                    var11 = -1;
+                    var12 = 0;
+                    L5: while (true) {
+                      if (var12 >= this.field_I.b(param3 ^ 1624)) {
+                        if (0 <= var11) {
+                          this.field_I.a((byte) 107, var11);
+                          break L4;
                         } else {
+                          break L4;
+                        }
+                      } else {
+                        L6: {
                           var13 = this.field_I.d(-22544, var12) + -var8_int;
                           var13 = var13 * var13;
-                          var16 = var10;
-                          var15 = var13;
-                          if (var14 != 0) {
-                            if (var15 <= var16) {
-                              break L7;
-                            } else {
-                              break L4;
-                            }
+                          if (var13 < var10) {
+                            var11 = var12;
+                            var10 = var13;
+                            break L6;
                           } else {
-                            L9: {
-                              if (var15 < var16) {
-                                var11 = var12;
-                                var10 = var13;
-                                break L9;
-                              } else {
-                                break L9;
-                              }
-                            }
-                            var12++;
-                            if (var14 == 0) {
-                              continue L6;
-                            } else {
-                              break L8;
-                            }
+                            break L6;
                           }
                         }
-                      }
-                      if (0 <= var11) {
-                        break L7;
-                      } else {
-                        break L4;
+                        var12++;
+                        continue L5;
                       }
                     }
-                    this.field_I.a((byte) 107, var11);
-                    break L4;
+                  } else {
+                    return true;
                   }
                 } else {
-                  return true;
+                  this.field_I.b(var8_int, -105);
+                  break L4;
                 }
               }
-              stackIn_25_0 = 1;
+              stackIn_22_0 = 1;
               decompiledRegionSelector0 = 0;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L7: {
             var8 = decompiledCaughtException;
-            stackIn_32_0 = (RuntimeException) (var8);
+            stackIn_29_0 = (RuntimeException) (var8);
 
-            stackIn_32_1 = new StringBuilder().append("qj.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+            stackIn_29_1 = new StringBuilder().append("qj.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 
             if (param4 == null) {
-              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackIn_33_2 = "null";
-              break L10;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "null";
+              break L7;
             } else {
-              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackIn_33_2 = "{...}";
-              break L10;
+              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackIn_30_2 = "{...}";
+              break L7;
             }
           }
-          throw la.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ',' + param5 + ',' + param6 + ')');
+          throw la.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param5 + ',' + param6 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return stackIn_25_0 != 0;
+          return stackIn_22_0 != 0;
         } else {
-          return stackIn_29_0 != 0;
+          return stackIn_26_0 != 0;
         }
     }
 
@@ -304,21 +275,27 @@ final class qj extends t {
 
     final int a(boolean param0, int param1) {
         String var4;
-        if (param1 >= 0) {
-          if (this.field_I.b(-1) > param1) {
-            if (param0) {
-              var4 = (String) null;
-              qj.a((String) null, false, (String) null);
-              return this.field_I.d(-22544, param1);
+        L0: {
+          if (param1 < 0) {
+            break L0;
+          } else {
+            if (this.field_I.b(-1) <= param1) {
+              break L0;
             } else {
+              L1: {
+                if (!param0) {
+                  break L1;
+                } else {
+                  var4 = (String) null;
+                  qj.a((String) null, false, (String) null);
+                  break L1;
+                }
+              }
               return this.field_I.d(-22544, param1);
             }
-          } else {
-            return -1;
           }
-        } else {
-          return -1;
         }
+        return -1;
     }
 
     private qj() throws Throwable {

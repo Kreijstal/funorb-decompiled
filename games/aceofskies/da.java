@@ -1034,62 +1034,18 @@ abstract class da {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, String param5) {
-        RuntimeException runtimeException = null;
-        String var8 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param5 == null) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                this.a(param2, -1, param1);
-                this.a(0, (pa[]) null, -(this.field_c.a((byte) 94, param5) / 2) + param4, param5, (byte) 5, (int[]) null, param3, (aa) null, 0);
-                if (param0 >= 95) {
-                  break L1;
-                } else {
-                  var8 = (String) null;
-                  this.a((String) null, 1, -72, -15, 80, (byte) -125);
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("da.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
-          }
-          throw pn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+        if (!(param5 != null)) {
+            return;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        try {
+            this.a(param2, -1, param1);
+            this.a(0, (pa[]) null, -(this.field_c.a((byte) 94, param5) / 2) + param4, param5, (byte) 5, (int[]) null, param3, (aa) null, 0);
+            if (param0 < 95) {
+                String var8 = (String) null;
+                this.a((String) null, 1, -72, -15, 80, (byte) -125);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) ((Object) runtimeException), "da.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

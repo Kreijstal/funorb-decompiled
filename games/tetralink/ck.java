@@ -252,13 +252,16 @@ final class ck extends fk {
             } else {
               if (var6 != ug.field_cb) {
                 if (db.field_h != var6) {
-                  if (pf.field_a != var6) {
-                    break L5;
-                  } else {
-                    var21 = fj.field_q[1];
-                    var21.b(var9, -(var21.field_E >> 1188696801) + var10, 256);
-                    break L5;
+                  L7: {
+                    if (pf.field_a != var6) {
+                      break L7;
+                    } else {
+                      var21 = fj.field_q[1];
+                      var21.b(var9, -(var21.field_E >> 1188696801) + var10, 256);
+                      break L7;
+                    }
                   }
+                  break L5;
                 } else {
                   var20 = fj.field_q[2];
                   var20.b(var9, -(var20.field_E >> -955698719) + var10, 256);
@@ -269,30 +272,30 @@ final class ck extends fk {
               }
             }
           }
-          L7: {
-            L8: {
+          L8: {
+            L9: {
               var19 = fj.field_q[0];
               var11 = var19.field_t << 514006337;
               var12 = var19.field_F << 1226850081;
               if (null == this.field_cb) {
-                break L8;
+                break L9;
               } else {
                 if (this.field_cb.field_u < var11) {
-                  break L8;
+                  break L9;
                 } else {
                   if (var12 <= this.field_cb.field_E) {
                     sk.a((byte) 118, this.field_cb);
                     ra.a();
-                    break L7;
-                  } else {
                     break L8;
+                  } else {
+                    break L9;
                   }
                 }
               }
             }
             this.field_cb = new oh(var11, var12);
             sk.a((byte) 111, this.field_cb);
-            break L7;
+            break L8;
           }
           var19.a(112, 144, var19.field_t << -306759068, var19.field_F << -406597212, -this.field_ab << -2142941174, 4096);
           dh.a(-581);

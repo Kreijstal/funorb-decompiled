@@ -225,55 +225,58 @@ final class rq extends kd {
                 }
               }
               L13: {
-                if (null == this.field_v) {
-                  break L13;
-                } else {
-                  if (0 != this.field_I) {
-                    L14: {
+                L14: {
+                  if (null == this.field_v) {
+                    break L14;
+                  } else {
+                    if (0 != this.field_I) {
                       L15: {
-                        if (null == this.field_u) {
-                          break L15;
-                        } else {
-                          if (var6 <= this.field_u.length) {
-                            qn.a(this.field_u, 0, var6);
-                            break L14;
+                        L16: {
+                          if (null == this.field_u) {
+                            break L16;
                           } else {
-                            break L15;
+                            if (var6 <= this.field_u.length) {
+                              qn.a(this.field_u, 0, var6);
+                              break L15;
+                            } else {
+                              break L16;
+                            }
                           }
                         }
+                        this.field_u = new int[var6];
+                        this.field_C = new int[var6];
+                        break L15;
                       }
-                      this.field_u = new int[var6];
-                      this.field_C = new int[var6];
-                      break L14;
-                    }
-                    L16: {
-                      this.field_p.a(this.field_u, 0, param2);
-                      if (!bp.field_r) {
-                        stackIn_65_0 = param1;
-                        break L16;
-                      } else {
-                        param1 = param1 << 1;
-                        stackIn_65_0 = param1 << 1;
-                        break L16;
+                      L17: {
+                        this.field_p.a(this.field_u, 0, param2);
+                        if (!bp.field_r) {
+                          stackIn_65_0 = param1;
+                          break L17;
+                        } else {
+                          param1 = param1 << 1;
+                          stackIn_65_0 = param1 << 1;
+                          break L17;
+                        }
                       }
-                    }
-                    var7 = stackIn_65_0;
-                    var8 = this.field_I * this.field_F / 256;
-                    var9 = this.field_F + -var8;
-                    var10 = 0;
-                    L17: while (true) {
-                      if (var10 >= var6) {
-                        break L13;
-                      } else {
-                        param0[var10 + var7] = var9 * param0[var10 + var7] - -(var8 * this.field_u[var10]) >> -1937225080;
-                        var10++;
-                        continue L17;
+                      var7 = stackIn_65_0;
+                      var8 = this.field_I * this.field_F / 256;
+                      var9 = this.field_F + -var8;
+                      var10 = 0;
+                      L18: while (true) {
+                        if (var10 >= var6) {
+                          break L14;
+                        } else {
+                          param0[var10 + var7] = var9 * param0[var10 + var7] - -(var8 * this.field_u[var10]) >> -1937225080;
+                          var10++;
+                          continue L18;
+                        }
                       }
+                    } else {
+                      break L13;
                     }
-                  } else {
-                    break L13;
                   }
                 }
+                break L13;
               }
               decompiledRegionSelector0 = 1;
               break L0;
@@ -281,7 +284,7 @@ final class rq extends kd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L18: {
+          L19: {
             var4 = decompiledCaughtException;
             stackIn_71_0 = (RuntimeException) (var4);
 
@@ -291,12 +294,12 @@ final class rq extends kd {
               stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
               stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
               stackIn_72_2 = "null";
-              break L18;
+              break L19;
             } else {
               stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
               stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
               stackIn_72_2 = "{...}";
-              break L18;
+              break L19;
             }
           }
           throw wm.a((Throwable) ((Object) stackIn_72_0), stackIn_72_2 + ',' + param1 + ',' + param2 + ')');
@@ -457,31 +460,66 @@ final class rq extends kd {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        wg.field_Nb[jh.field_c] = param1;
-        ep.field_H[jh.field_c] = jh.field_c;
-        kb.field_g[jh.field_c] = param3;
-        if (q.field_a < param3) {
+        int var6;
+        int var7;
+        L0: {
+          wg.field_Nb[jh.field_c] = param1;
+          ep.field_H[jh.field_c] = jh.field_c;
+          kb.field_g[jh.field_c] = param3;
+          if (q.field_a >= param3) {
+            break L0;
+          } else {
             jl.field_c = param3;
+            break L0;
+          }
         }
-        if (!(gr.field_z <= param3)) {
+        L1: {
+          if (gr.field_z > param3) {
             rn.field_d = param3;
+            break L1;
+          } else {
+            break L1;
+          }
         }
         ob.field_y[jh.field_c] = param4;
         om.field_s[jh.field_c] = param5;
         gd.field_d[jh.field_c] = param0;
-        if (!param2) {
-            return;
+        if (param2) {
+          L2: {
+            var6 = param5 + (param4 + param0);
+            if (var6 != 0) {
+              var7 = 1000 * param4 / var6;
+              ah.field_c[jh.field_c] = var7;
+              if (var7 >= rn.field_d) {
+                break L2;
+              } else {
+                rn.field_d = var7;
+                break L2;
+              }
+            } else {
+              var7 = 0;
+              ah.field_c[jh.field_c] = var7;
+              if (var7 >= rn.field_d) {
+                break L2;
+              } else {
+                rn.field_d = var7;
+                break L2;
+              }
+            }
+          }
+          L3: {
+            if (var7 > jl.field_c) {
+              jl.field_c = var7;
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          jh.field_c = jh.field_c + 1;
+          return;
+        } else {
+          return;
         }
-        int var6 = param5 + (param4 + param0);
-        int var7 = var6 == 0 ? 0 : 1000 * param4 / var6;
-        ah.field_c[jh.field_c] = var7;
-        if (var7 < rn.field_d) {
-            rn.field_d = var7;
-        }
-        if (!(var7 <= jl.field_c)) {
-            jl.field_c = var7;
-        }
-        jh.field_c = jh.field_c + 1;
     }
 
     final synchronized void a(int param0) {
@@ -489,7 +527,8 @@ final class rq extends kd {
         L0: {
           var3 = Pool.field_O;
           if (this.field_t > 0) {
-            if (null == this.field_D) {
+            if (null != this.field_D) {
+              this.field_z.a(param0);
               if (-1048577 < (this.field_t ^ -1)) {
                 if (null != this.field_E) {
                   this.field_w.a(param0);
@@ -528,20 +567,58 @@ final class rq extends kd {
                 }
               }
             } else {
-              if ((this.field_I ^ -1) >= -1) {
-                break L0;
+              if (-1048577 < (this.field_t ^ -1)) {
+                if (null != this.field_E) {
+                  this.field_w.a(param0);
+                  if ((this.field_I ^ -1) >= -1) {
+                    break L0;
+                  } else {
+                    if (null == this.field_v) {
+                      break L0;
+                    } else {
+                      this.field_p.a(param0);
+                      this.field_w.a(param0);
+                      if ((this.field_I ^ -1) >= -1) {
+                        break L0;
+                      } else {
+                        if (null == this.field_v) {
+                          break L0;
+                        } else {
+                          this.field_p.a(param0);
+                          break L0;
+                        }
+                      }
+                    }
+                  }
+                } else {
+                  if ((this.field_I ^ -1) >= -1) {
+                    break L0;
+                  } else {
+                    if (null == this.field_v) {
+                      break L0;
+                    } else {
+                      this.field_p.a(param0);
+                      break L0;
+                    }
+                  }
+                }
               } else {
-                if (null == this.field_v) {
+                if ((this.field_I ^ -1) >= -1) {
                   break L0;
                 } else {
-                  this.field_p.a(param0);
-                  break L0;
+                  if (null == this.field_v) {
+                    break L0;
+                  } else {
+                    this.field_p.a(param0);
+                    break L0;
+                  }
                 }
               }
             }
           } else {
             if (-1048577 < (this.field_t ^ -1)) {
-              if (null == this.field_E) {
+              if (null != this.field_E) {
+                this.field_w.a(param0);
                 if ((this.field_I ^ -1) >= -1) {
                   break L0;
                 } else {

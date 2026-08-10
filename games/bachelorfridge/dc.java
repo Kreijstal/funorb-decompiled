@@ -567,22 +567,25 @@ final class dc extends k {
               } else {
                 if (1 != var4_int) {
                   if ((var4_int ^ -1) == -3) {
-                    this.field_t = param1.c((byte) -85);
-                    if (0 <= this.field_t) {
-                      break L2;
-                    } else {
-                      this.field_q = new short[this.field_n];
-                      var4_int = 0;
-                      L4: while (true) {
-                        if (this.field_n <= var4_int) {
-                          break L2;
-                        } else {
-                          this.field_q[var4_int] = (short)param1.c((byte) -85);
-                          var4_int++;
-                          continue L4;
+                    L4: {
+                      this.field_t = param1.c((byte) -85);
+                      if (0 <= this.field_t) {
+                        break L4;
+                      } else {
+                        this.field_q = new short[this.field_n];
+                        var4_int = 0;
+                        L5: while (true) {
+                          if (this.field_n <= var4_int) {
+                            break L4;
+                          } else {
+                            this.field_q[var4_int] = (short)param1.c((byte) -85);
+                            var4_int++;
+                            continue L5;
+                          }
                         }
                       }
                     }
+                    break L2;
                   } else {
                     if (var4_int != 3) {
                       if (-5 != (var4_int ^ -1)) {
@@ -618,7 +621,7 @@ final class dc extends k {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var4 = decompiledCaughtException;
             stackIn_31_0 = (RuntimeException) (var4);
 
@@ -628,12 +631,12 @@ final class dc extends k {
               stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
               stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackIn_32_2 = "null";
-              break L5;
+              break L6;
             } else {
               stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
               stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackIn_32_2 = "{...}";
-              break L5;
+              break L6;
             }
           }
           throw pe.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param2 + ')');

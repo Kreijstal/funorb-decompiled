@@ -53,7 +53,6 @@ final class pt extends rqa {
                     }
                   }
                   param2 = param3.a(11995, var6_int);
-                  param2 = param2;
                   break L2;
                 }
                 var8 = 0;

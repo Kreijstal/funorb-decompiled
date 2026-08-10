@@ -129,43 +129,35 @@ final class hi {
                 try {
                   L1: {
                     L2: {
-                      L3: {
-                        var8 = param4.getParameter("cookiehost");
-                        var7 = var8;
-                        var7 = var8;
-                        var9 = param2 + "=" + param3 + "; version=1; path=/; domain=" + var8;
-                        var7 = var9;
-                        var7 = var9;
-                        var7 = var9;
-                        if (param1 < (long)param0) {
-                          break L3;
-                        } else {
-                          var7 = var9 + "; Expires=" + e.a(lk.a(0) + param1 * 1000L, (byte) -78) + "; Max-Age=" + param1;
-                          if (!Transmogrify.field_A) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        }
+                      var8 = param4.getParameter("cookiehost");
+                      var7 = var8;
+                      var7 = var8;
+                      var9 = param2 + "=" + param3 + "; version=1; path=/; domain=" + var8;
+                      var7 = var9;
+                      var7 = var9;
+                      if (param1 < (long)param0) {
+                        var7 = var9 + "; Discard;";
+                        break L2;
+                      } else {
+                        var7 = var9 + "; Expires=" + e.a(lk.a(0) + param1 * 1000L, (byte) -78) + "; Max-Age=" + param1;
+                        break L2;
                       }
-                      var7 = var7 + "; Discard;";
-                      break L2;
                     }
                     kj.a(12, "document.cookie=\"" + var7 + "\"", param4);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L4: {
+                  L3: {
                     var6 = decompiledCaughtException;
-                    break L4;
+                    break L3;
                   }
                 }
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L5: {
+              L4: {
                 var6_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackIn_9_0 = (RuntimeException) (var6_ref);
 
@@ -175,15 +167,15 @@ final class hi {
                   stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
                   stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
                   stackIn_10_2 = "null";
-                  break L5;
+                  break L4;
                 } else {
                   stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
                   stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
                   stackIn_10_2 = "{...}";
-                  break L5;
+                  break L4;
                 }
               }
-              L6: {
+              L5: {
 
 
                 stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
@@ -192,15 +184,15 @@ final class hi {
                   stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
                   stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
                   stackIn_13_2 = "null";
-                  break L6;
+                  break L5;
                 } else {
                   stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
                   stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
                   stackIn_13_2 = "{...}";
-                  break L6;
+                  break L5;
                 }
               }
-              L7: {
+              L6: {
 
 
                 stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
@@ -209,12 +201,12 @@ final class hi {
                   stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
                   stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackIn_16_2 = "null";
-                  break L7;
+                  break L6;
                 } else {
                   stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
                   stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackIn_16_2 = "{...}";
-                  break L7;
+                  break L6;
                 }
               }
               throw ch.a((Throwable) ((Object) stackIn_10_0), stackIn_16_2 + ')');

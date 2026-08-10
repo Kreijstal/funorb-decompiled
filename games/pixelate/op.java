@@ -333,40 +333,43 @@ final class op extends de {
                           }
                         }
                       }
-                      var4 = (-ip.field_A + 532) / 2;
-                      if (var2 != 0) {
-                        L9: {
-                          this.field_g.a(false, -1 + var3);
-                          if (this.b(115, this.field_g.field_j) >= var4) {
+                      L9: {
+                        var4 = (-ip.field_A + 532) / 2;
+                        if (var2 != 0) {
+                          L10: {
+                            this.field_g.a(false, -1 + var3);
+                            if (this.b(115, this.field_g.field_j) >= var4) {
+                              break L10;
+                            } else {
+                              this.field_o = this.field_o - ip.field_A;
+                              break L10;
+                            }
+                          }
+                          if (0 > this.field_o) {
+                            this.field_o = 0;
                             break L9;
                           } else {
-                            this.field_o = this.field_o - ip.field_A;
+                            break L1;
+                          }
+                        } else {
+                          L11: {
+                            this.field_g.a(false, var3 + 1);
+                            if (this.b(69, this.field_g.field_j) <= var4) {
+                              break L11;
+                            } else {
+                              this.field_o = this.field_o + ip.field_A;
+                              break L11;
+                            }
+                          }
+                          if (this.field_o <= bh.field_k) {
                             break L9;
-                          }
-                        }
-                        if (0 > this.field_o) {
-                          this.field_o = 0;
-                          break L1;
-                        } else {
-                          break L1;
-                        }
-                      } else {
-                        L10: {
-                          this.field_g.a(false, var3 + 1);
-                          if (this.b(69, this.field_g.field_j) <= var4) {
-                            break L10;
                           } else {
-                            this.field_o = this.field_o + ip.field_A;
-                            break L10;
+                            this.field_o = bh.field_k;
+                            break L1;
                           }
-                        }
-                        if (this.field_o <= bh.field_k) {
-                          break L1;
-                        } else {
-                          this.field_o = bh.field_k;
-                          break L1;
                         }
                       }
+                      break L1;
                     }
                     this.field_g.a(false, 0);
                     break L1;

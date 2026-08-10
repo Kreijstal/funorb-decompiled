@@ -10,203 +10,65 @@ final class sb implements Runnable {
     static int field_d;
 
     public final void run() {
-        Exception exception = null;
         int var1_int = 0;
         gj var2 = null;
         int var4 = 0;
+        Throwable decompiledCaughtException = null;
+        Exception var1 = null;
+        Throwable var3 = null;
         Object var5 = null;
         String var6 = null;
-        int decompiledRegionSelector0 = 0;
-        int decompiledRegionSelector1 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        Throwable var3 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = SolKnight.field_L ? 1 : 0;
-                    this.field_f = true;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (this.field_e) {
-                            statePc = 11;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = ((Object) stateCaught_1 instanceof Exception ? 12 : 14);
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (var4 != 0) {
-                            statePc = 16;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = ((Object) stateCaught_2 instanceof Exception ? 12 : 14);
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var1_int = 0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = ((Object) stateCaught_3 instanceof Exception ? 12 : 14);
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (2 <= var1_int) {
-                            statePc = 9;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = ((Object) stateCaught_4 instanceof Exception ? 12 : 14);
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = this.field_a[var1_int];
-                        if (var4 != 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = ((Object) stateCaught_5 instanceof Exception ? 12 : 14);
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (var2 == null) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = ((Object) stateCaught_6 instanceof Exception ? 12 : 14);
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var2.b();
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = ((Object) stateCaught_7 instanceof Exception ? 12 : 14);
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        var1_int++;
-                        if (var4 == 0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = ((Object) stateCaught_8 instanceof Exception ? 12 : 14);
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
+        var4 = SolKnight.field_L ? 1 : 0;
+        this.field_f = true;
+        try {
+          L0: {
+            try {
+              L1: {
+                L2: while (true) {
+                  if (this.field_e) {
+                    break L1;
+                  } else {
+                    var1_int = 0;
+                    L3: while (true) {
+                      if (2 <= var1_int) {
                         i.a((byte) 18, 10L);
                         var5 = (Object) null;
                         pb.a(this.field_b, (Object) null, (byte) 106);
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = ((Object) stateCaught_9 instanceof Exception ? 12 : 14);
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 1;
-                        } else {
-                            statePc = 11;
+                        continue L2;
+                      } else {
+                        L4: {
+                          var2 = this.field_a[var1_int];
+                          if (var2 == null) {
+                            break L4;
+                          } else {
+                            var2.b();
+                            break L4;
+                          }
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = ((Object) stateCaught_10 instanceof Exception ? 12 : 14);
-                        continue stateLoop;
+                        var1_int++;
+                        continue L3;
+                      }
                     }
+                  }
                 }
-                case 11: {
-                    this.field_f = false;
-                    statePc = 16;
-                    continue stateLoop;
-                }
-                case 12: {
-                    try {
-                        exception = (Exception) ((Object) caughtException);
-                        var6 = (String) null;
-                        hi.a((Throwable) ((Object) exception), (String) null, 1);
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    this.field_f = false;
-                    return;
-                }
-                case 14: {
-                    try {
-                        var3 = caughtException;
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    this.field_f = false;
-                    throw sb.<RuntimeException>$cfr$sneakyThrow(var3);
-                }
-                case 16: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = (Exception) (Object) decompiledCaughtException;
+              var6 = (String) null;
+              hi.a((Throwable) ((Object) var1), (String) null, 1);
+              this.field_f = false;
+              return;
             }
+            break L0;
+          }
+        } catch (java.lang.Throwable decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var3 = decompiledCaughtException;
+          this.field_f = false;
+          throw sb.<RuntimeException>$cfr$sneakyThrow(var3);
         }
+        this.field_f = false;
     }
 
     final static int a(int param0, int param1, int param2) {

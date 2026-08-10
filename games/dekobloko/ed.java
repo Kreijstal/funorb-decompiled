@@ -106,7 +106,6 @@ final class ed {
 
     final static wb a(String param0, byte param1) {
         String var2 = null;
-        RuntimeException var2_ref = null;
         int var3 = 0;
         wb var4 = null;
         String var5 = null;
@@ -114,14 +113,13 @@ final class ed {
         CharSequence var7 = null;
         CharSequence var8 = null;
         wb stackIn_17_0 = null;
-        Object stackIn_20_0 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
-        int decompiledRegionSelector0 = 0;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
         var6 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -139,17 +137,10 @@ final class ed {
                         var5 = kf.a(var8, (byte) 2);
                         if (var5.equals(var2)) {
                           stackIn_17_0 = (wb) (var4);
-                          decompiledRegionSelector0 = 0;
                           break L0;
                         } else {
                           var4 = (wb) ((Object) mc.field_a.d(-17713));
-                          if (var6 == 0) {
-                            continue L1;
-                          } else {
-                            stackIn_20_0 = null;
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          }
+                          continue L1;
                         }
                       } else {
                         return null;
@@ -172,29 +163,25 @@ final class ed {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var2_ref);
+            stackIn_22_0 = (RuntimeException) (var2_ref);
 
-            stackIn_23_1 = new StringBuilder().append("ed.B(");
+            stackIn_22_1 = new StringBuilder().append("ed.B(");
 
             if (param0 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
               break L2;
             } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
               break L2;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_17_0;
-        } else {
-          return (wb) ((Object) stackIn_20_0);
-        }
+        return stackIn_17_0;
     }
 
     static {

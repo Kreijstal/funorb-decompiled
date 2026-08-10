@@ -427,6 +427,7 @@ class bj extends hm implements ba {
     }
 
     void a(int param0, int param1, int param2, hm param3) {
+        RuntimeException runtimeException = null;
         wf var5 = null;
         hm var6 = null;
         int var7 = 0;
@@ -436,7 +437,6 @@ class bj extends hm implements ba {
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         var7 = EscapeVector.field_A;
         try {
           L0: {
@@ -463,8 +463,8 @@ class bj extends hm implements ba {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
 
             stackIn_8_1 = new StringBuilder().append("bj.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 

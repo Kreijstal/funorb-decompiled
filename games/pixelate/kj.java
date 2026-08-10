@@ -31,77 +31,40 @@ final class kj {
     }
 
     final static void a(int param0) {
-        RuntimeException runtimeException = null;
-        int var2 = 0;
         uj var3 = null;
-        RuntimeException decompiledCaughtException = null;
-        var2 = Pixelate.field_H ? 1 : 0;
+        int var2 = Pixelate.field_H ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              rl.field_r = false;
-              io.field_c = null;
-              bn.field_S = null;
-              if (null == i.field_n) {
-                break L1;
-              } else {
+            rl.field_r = false;
+            io.field_c = null;
+            bn.field_S = null;
+            if (null != i.field_n) {
                 i.field_n.e(-123);
                 i.field_n = null;
-                break L1;
-              }
             }
-            L2: {
-              if (param0 == 23949) {
-                break L2;
-              } else {
+            if (param0 != 23949) {
                 field_s = 72;
-                break L2;
-              }
             }
-            L3: {
-              il.field_d = null;
-              if (null == nk.field_a) {
-                break L3;
-              } else {
+            il.field_d = null;
+            if (null != nk.field_a) {
                 nk.field_a.e(117);
                 nk.field_a = null;
-                break L3;
-              }
             }
-            L4: {
-              dg.field_f = null;
-              if (null != wi.field_a) {
+            dg.field_f = null;
+            if (!(null == wi.field_a)) {
                 wi.field_a.e(126);
                 wi.field_a = null;
-                break L4;
-              } else {
-                break L4;
-              }
             }
-            L5: {
-              eh.field_f = null;
-              if (il.field_d == null) {
-                break L5;
-              } else {
+            eh.field_f = null;
+            if (il.field_d != null) {
                 var3 = (uj) ((Object) il.field_d.a(-109));
-                L6: while (true) {
-                  if (var3 == null) {
-                    il.field_d = null;
-                    break L5;
-                  } else {
+                while (var3 != null) {
                     var3.e(17);
                     var3 = (uj) ((Object) il.field_d.a((byte) 50));
-                    continue L6;
-                  }
                 }
-              }
+                il.field_d = null;
             }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "kj.C(" + param0 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) ((Object) runtimeException), "kj.C(" + param0 + ')');
         }
     }
 
