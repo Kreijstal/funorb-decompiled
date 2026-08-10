@@ -11,11 +11,16 @@ over the obfuscated gamepacks by the pipeline in
 
 ## What changed in this regeneration
 
-The 2026-08-09 regeneration updates all 44 games from tracked-clean generator
+The 2026-08-10 regeneration updates all 44 games from tracked-clean generator
 commits. Every game has a complete source set and passed the transformed-bytecode
 verifier and a whole-game `javac` compilation. The exact generator commits,
 arguments, gates, destination base, and synchronized game list are recorded in
 [`decompilation-provenance.json`](decompilation-provenance.json).
+
+This clean rerun produced the same 18,481 Java source files as the previous
+publication while advancing the recorded `java-tools` generator revision. It
+therefore revalidates the complete source corpus without introducing incidental
+source churn.
 
 This publication uses the verifier-safe bytecode profile plus the closed-world
 fixed-point proof for mutually guarded default-false static fields. It does not

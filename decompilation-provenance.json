@@ -1,13 +1,13 @@
 {
   "formatVersion": 1,
-  "capturedAt": "2026-08-09T23:44:01.016Z",
+  "capturedAt": "2026-08-10T03:23:03.219Z",
   "generators": {
     "dekoblokoWork": {
       "commit": "f86d79b8537a5e0ac43000455df6be17f16e37b4",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "7ebf724f85e1a49c2d7f6d4a31a1afe6a604405a",
+      "commit": "d877f14df59837190d2bb006bfae4f62e77420ea",
       "trackedClean": true
     }
   },
@@ -32,8 +32,8 @@
     }
   },
   "publication": {
-    "synchronizedAt": "2026-08-10T02:11:31.378Z",
-    "destinationBaseCommit": "8246e45521753539de984a8829d8b3ffe3f820c3",
+    "synchronizedAt": "2026-08-10T05:43:07.272Z",
+    "destinationBaseCommit": "76100482efcc46f0ccfb849b94b366be872756d2",
     "syncedGames": [
       "36cardtrick",
       "aceofskies",
