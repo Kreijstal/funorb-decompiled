@@ -11,7 +11,7 @@ over the obfuscated gamepacks by the pipeline in
 
 ## What changed in this regeneration
 
-The 2026-08-16 regeneration updates all 44 games from tracked-clean generator
+The 2026-08-17 regeneration updates all 44 games from tracked-clean generator
 commits. Every game has a complete source set and passed the transformed-bytecode
 verifier and a whole-game `javac` compilation: 18,481 Java sources for 18,481
 input classes, with zero pipeline, verifier, decompiler, or `javac` failures.
@@ -20,17 +20,29 @@ synchronized game list are recorded in
 [`decompilation-provenance.json`](decompilation-provenance.json).
 
 Unlike the previous rerun, this one changes source content. The file set is
-unchanged — no source was added or removed — but **390 of the 18,481 files have
+unchanged — no source was added or removed — but **389 of the 18,481 files have
 different contents**, concentrated in each gamepack's largest and most
 control-flow-heavy classes. Two causes account for the churn:
 
-- Two decompiler defects that silently corrupted output were fixed. A
+- Three decompiler defects that silently corrupted output were fixed. A
   short-circuit `||` reconstruction merged branch predecessors without checking
   that the last branch actually fell through, which dropped a call that sat
-  between them; and `dup` duplicated the *expression* rather than the value, so
+  between them; `dup` duplicated the *expression* rather than the value, so
   a chained assignment re-evaluated its operand after the first store had
-  already overwritten it. Both were localized by bisecting a recompiled gamepack
-  against the original, and both change emitted behaviour, not just formatting.
+  already overwritten it; and an array literal held on the operand stack kept
+  its already-collected elements as lazily rendered local reads, so an element
+  whose local a later store overwrote reported the value at render time instead
+  of the value at its own position in the sequence. All three change emitted
+  behaviour, not just formatting.
+
+  The first two were localized by bisecting a recompiled gamepack against the
+  original. The third surfaced only by booting the recompiled tree on a native
+  JRE, and is a good illustration of why compiling is not evidence of
+  correctness: it left one game's generated config geometry a single entry
+  short, so a later index ran one past the end of an array sized from that
+  length. The `ArrayIndexOutOfBoundsException` was swallowed by the game's own
+  top-level handler, which killed the loading thread without printing a trace —
+  the applet did not crash, it simply sat at a blank loading screen forever.
 - Methods with a high conditional fan-in (six or more conditional edges sharing
   one target — the shape obfuscated boolean guards produce) now prefer the owned
   CFG structurer over the legacy range recognizer, which restructures those
@@ -48,8 +60,21 @@ initializers using parsed Java declaration nodes, which is what lets the
 special cases.
 
 Compilation is not correctness: these gates prove every game recompiles, not
-that every game still behaves identically. Native-JRE original-versus-recompiled
-startup comparison for this tree is in progress and is not yet reflected here.
+that every game still behaves identically. To check behaviour rather than
+compilability, every game in this tree was booted on a native JRE (HotSpot) as
+both the original gamepack and the recompiled class tree, and timed from the
+moment the Jagex logo finishes to the moment its main menu is on screen. All 44
+games reach their main menu in both variants, giving 44 paired measurements and
+no timeouts; the paired median difference is +1.4% (median 5.73 s original
+versus 6.28 s recompiled). Reaching the menu at all is the substantive result —
+it is a whole-startup behavioural check, and it is what the array-literal defect
+above used to fail.
+
+The per-game percentages are not: the same sweep run twice moves an individual
+game's figure by 33 percentage points at the median, and the original gamepack
+alone — identical bytes both times — drifts 14% between runs. Startup is
+dominated by disk and cache state, and one run per variant cannot resolve
+anything smaller than that. Treat only the aggregate as meaningful.
 
 ## What "obfuscated" means here
 

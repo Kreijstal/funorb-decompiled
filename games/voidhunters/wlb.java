@@ -474,27 +474,35 @@ final class wlb extends rqa {
                                 var4 = -var1_int;
                                 var5 = var1_int;
                                 var4 += 0;
-                                int localTemp$78 = var5 - 2 * var1_int;
-                                var5 = localTemp$78;
+                                int localTemp$116 = var5;
+                                int localTemp$117 = var5 - 2 * var1_int;
+                                var5 = localTemp$117;
                                 var4 += 0;
-                                int localTemp$79 = var5 - var1_int * 2;
-                                var5 = localTemp$79;
-                                int localTemp$80 = var4 + 2 * var1_int;
-                                var4 = localTemp$80;
+                                int localTemp$118 = var5 - var1_int * 2;
+                                var5 = localTemp$118;
+                                int localTemp$119 = var4;
+                                int localTemp$120 = var4;
+                                int localTemp$121 = var4;
+                                int localTemp$122 = var4 + 2 * var1_int;
+                                var4 = localTemp$122;
                                 var5 += 0;
                                 var4 += 0;
-                                int localTemp$81 = var5 + var1_int * 2;
-                                var5 = localTemp$81;
+                                int localTemp$123 = var5;
+                                int localTemp$124 = var5 + var1_int * 2;
+                                var5 = localTemp$124;
                                 var4 += 0;
-                                int localTemp$82 = var5 + 2 * var1_int;
-                                var5 = localTemp$82;
+                                int localTemp$125 = var5 + 2 * var1_int;
+                                var5 = localTemp$125;
                                 var4 += 0;
-                                int localTemp$83 = var5 + var1_int * 2;
-                                var5 = localTemp$83;
-                                int localTemp$84 = var4 - 2 * var1_int;
-                                var4 = localTemp$84;
+                                int localTemp$126 = var5 + var1_int * 2;
+                                var5 = localTemp$126;
+                                int localTemp$127 = var4;
+                                int localTemp$128 = var4;
+                                int localTemp$129 = var4;
+                                int localTemp$130 = var4 - 2 * var1_int;
+                                var4 = localTemp$130;
                                 var5 += 0;
-                                var21 = new int[]{var4, var5, var4, localTemp$78, var4, localTemp$79, localTemp$80, var5, var4, localTemp$81, var4, localTemp$82, var4, localTemp$83, localTemp$84, var5};
+                                var21 = new int[]{localTemp$119, localTemp$116, localTemp$120, localTemp$117, localTemp$121, localTemp$118, localTemp$122, localTemp$123, localTemp$127, localTemp$124, localTemp$128, localTemp$125, localTemp$129, localTemp$126, localTemp$130, var5};
                                 var6 = var21;
                                 var22_ref = new wfb(var6, -var1_int, 0);
                                 ta.a(var21, 124, var22_ref);
@@ -522,25 +530,28 @@ final class wlb extends rqa {
                                 var25_ref.field_q = 0;
                                 var4 = 0;
                                 var5 = 2 * -var2 + -var1_int;
-                                int localTemp$85 = var4 + var1_int;
-                                var4 = localTemp$85;
-                                int localTemp$86 = var5 + 2 * var2;
-                                var5 = localTemp$86;
+                                int localTemp$131 = var4;
+                                int localTemp$132 = var4 + var1_int;
+                                var4 = localTemp$132;
+                                int localTemp$133 = var5;
+                                int localTemp$134 = var5 + 2 * var2;
+                                var5 = localTemp$134;
                                 var4 += 0;
-                                int localTemp$87 = var5 + var1_int * 2;
-                                var5 = localTemp$87;
-                                int localTemp$88 = var4 - var1_int;
-                                var4 = localTemp$88;
-                                int localTemp$89 = var5 + var2 * 2;
-                                var5 = localTemp$89;
-                                int localTemp$90 = var4 - var1_int;
-                                var4 = localTemp$90;
-                                int localTemp$91 = var5 - var2 * 2;
-                                var5 = localTemp$91;
+                                int localTemp$135 = var5 + var1_int * 2;
+                                var5 = localTemp$135;
+                                int localTemp$136 = var4;
+                                int localTemp$137 = var4 - var1_int;
+                                var4 = localTemp$137;
+                                int localTemp$138 = var5 + var2 * 2;
+                                var5 = localTemp$138;
+                                int localTemp$139 = var4 - var1_int;
+                                var4 = localTemp$139;
+                                int localTemp$140 = var5 - var2 * 2;
+                                var5 = localTemp$140;
                                 var4 += 0;
-                                int localTemp$92 = var5 - var1_int * 2;
-                                var5 = localTemp$92;
-                                var26 = new int[]{var4, var5, localTemp$85, localTemp$86, var4, localTemp$87, localTemp$88, localTemp$89, localTemp$90, localTemp$91, var4, localTemp$92};
+                                int localTemp$141 = var5 - var1_int * 2;
+                                var5 = localTemp$141;
+                                var26 = new int[]{localTemp$131, localTemp$133, localTemp$132, localTemp$134, localTemp$136, localTemp$135, localTemp$137, localTemp$138, localTemp$139, localTemp$140, var4, localTemp$141};
                                 var6 = var26;
                                 var27_ref = new wfb(var6, -var1_int, 0);
                                 ta.a(var26, 127, var27_ref);
@@ -550,31 +561,36 @@ final class wlb extends rqa {
                                 var4 = 5120;
                                 var5 = 0;
                                 var6_int = -fnb.field_a + -(var4 / 2);
-                                int localTemp$93 = var5 + var4 / 2;
-                                var5 = localTemp$93;
-                                int localTemp$94 = var6_int + fnb.field_a;
-                                var6_int = localTemp$94;
-                                int localTemp$95 = var5 + var4;
-                                var5 = localTemp$95;
+                                int localTemp$142 = var5;
+                                int localTemp$143 = var5 + var4 / 2;
+                                var5 = localTemp$143;
+                                int localTemp$144 = var6_int;
+                                int localTemp$145 = var6_int + fnb.field_a;
+                                var6_int = localTemp$145;
+                                int localTemp$146 = var5 + var4;
+                                var5 = localTemp$146;
                                 var6_int += 0;
                                 var5 += 0;
-                                int localTemp$96 = var6_int + var4;
-                                var6_int = localTemp$96;
-                                int localTemp$97 = var5 - var4;
-                                var5 = localTemp$97;
+                                int localTemp$147 = var6_int;
+                                int localTemp$148 = var6_int + var4;
+                                var6_int = localTemp$148;
+                                int localTemp$149 = var5;
+                                int localTemp$150 = var5 - var4;
+                                var5 = localTemp$150;
                                 var6_int += 0;
-                                int localTemp$98 = var5 - var4 / 2;
-                                var5 = localTemp$98;
-                                int localTemp$99 = var6_int + fnb.field_a;
-                                var6_int = localTemp$99;
-                                int localTemp$100 = var5 - var4 / 2;
-                                var5 = localTemp$100;
-                                int localTemp$101 = var6_int - fnb.field_a;
-                                var6_int = localTemp$101;
+                                int localTemp$151 = var5 - var4 / 2;
+                                var5 = localTemp$151;
+                                int localTemp$152 = var6_int;
+                                int localTemp$153 = var6_int + fnb.field_a;
+                                var6_int = localTemp$153;
+                                int localTemp$154 = var5 - var4 / 2;
+                                var5 = localTemp$154;
+                                int localTemp$155 = var6_int - fnb.field_a;
+                                var6_int = localTemp$155;
                                 var5 += 0;
-                                int localTemp$102 = var6_int - var4;
-                                var6_int = localTemp$102;
-                                var28 = new int[]{var5, var6_int, localTemp$93, localTemp$94, localTemp$95, var6_int, var5, localTemp$96, localTemp$97, var6_int, localTemp$98, localTemp$99, localTemp$100, localTemp$101, var5, localTemp$102};
+                                int localTemp$156 = var6_int - var4;
+                                var6_int = localTemp$156;
+                                var28 = new int[]{localTemp$142, localTemp$144, localTemp$143, localTemp$145, localTemp$146, localTemp$147, localTemp$149, localTemp$148, localTemp$150, localTemp$152, localTemp$151, localTemp$153, localTemp$154, localTemp$155, var5, localTemp$156};
                                 var7_ref_int__ = var28;
                                 var29_ref = new wfb(var7_ref_int__, -var4 / 2, 0);
                                 ta.a(var28, 114, var29_ref);
@@ -670,37 +686,40 @@ final class wlb extends rqa {
                                 var40_ref.field_B = 896;
                                 var4 = 6 * -var1_int;
                                 var5 = 0;
-                                int localTemp$103 = var4 + var1_int;
-                                var4 = localTemp$103;
-                                int localTemp$104 = var5 + -var2 * 2;
-                                var5 = localTemp$104;
-                                int localTemp$105 = var4 + 2 * var2;
-                                var4 = localTemp$105;
-                                int localTemp$106 = var5 - var1_int;
-                                var5 = localTemp$106;
-                                int localTemp$107 = var4 + var2 * 2;
-                                var4 = localTemp$107;
-                                int localTemp$108 = var5 - var1_int;
-                                var5 = localTemp$108;
-                                int localTemp$109 = var4 + 2 * var2;
-                                var4 = localTemp$109;
-                                int localTemp$110 = var5 + var1_int;
-                                var5 = localTemp$110;
-                                int localTemp$111 = var4 + 2 * var1_int;
-                                var4 = localTemp$111;
+                                int localTemp$157 = var4;
+                                int localTemp$158 = var4 + var1_int;
+                                var4 = localTemp$158;
+                                int localTemp$159 = var5;
+                                int localTemp$160 = var5 + -var2 * 2;
+                                var5 = localTemp$160;
+                                int localTemp$161 = var4 + 2 * var2;
+                                var4 = localTemp$161;
+                                int localTemp$162 = var5 - var1_int;
+                                var5 = localTemp$162;
+                                int localTemp$163 = var4 + var2 * 2;
+                                var4 = localTemp$163;
+                                int localTemp$164 = var5 - var1_int;
+                                var5 = localTemp$164;
+                                int localTemp$165 = var4 + 2 * var2;
+                                var4 = localTemp$165;
+                                int localTemp$166 = var5 + var1_int;
+                                var5 = localTemp$166;
+                                int localTemp$167 = var4 + 2 * var1_int;
+                                var4 = localTemp$167;
                                 var5 += 0;
-                                int localTemp$112 = var4 + var2 * 2;
-                                var4 = localTemp$112;
-                                int localTemp$113 = var5 - var1_int;
-                                var5 = localTemp$113;
-                                int localTemp$114 = var4 + var1_int;
-                                var4 = localTemp$114;
-                                int localTemp$115 = var5 + var2 * 2;
-                                var5 = localTemp$115;
+                                int localTemp$168 = var4 + var2 * 2;
+                                var4 = localTemp$168;
+                                int localTemp$169 = var5;
+                                int localTemp$170 = var5 - var1_int;
+                                var5 = localTemp$170;
+                                int localTemp$171 = var4 + var1_int;
+                                var4 = localTemp$171;
+                                int localTemp$172 = var5 + var2 * 2;
+                                var5 = localTemp$172;
                                 var4 += 0;
-                                int localTemp$116 = var5 + 2 * var1_int;
-                                var5 = localTemp$116;
-                                var41 = new int[]{var4, var5, localTemp$103, localTemp$104, localTemp$105, localTemp$106, localTemp$107, localTemp$108, localTemp$109, localTemp$110, localTemp$111, var5, localTemp$112, localTemp$113, localTemp$114, localTemp$115, var4, localTemp$116};
+                                int localTemp$173 = var5 + 2 * var1_int;
+                                var5 = localTemp$173;
+                                var41 = new int[]{localTemp$157, localTemp$159, localTemp$158, localTemp$160, localTemp$161, localTemp$162, localTemp$163, localTemp$164, localTemp$165, localTemp$166, localTemp$167, localTemp$169, localTemp$168, localTemp$170, localTemp$171, localTemp$172, var4, localTemp$173};
                                 var90 = gca.a((byte) 104, var41);
                                 var91 = qfa.a(1, var90);
                                 var44_ref = new wfb(var91, 0, 0);
@@ -917,6 +936,13 @@ final class wlb extends rqa {
                                 continue stateLoop;
                             }
                         }
+                        default: return;
+                    }
+                }
+            }
+            void runPartition2() {
+                stateLoop: while (true) {
+                    switch (statePc) {
                         case 16: {
                             try {
                                 gn.field_m = gn.field_m + 1;
@@ -956,13 +982,6 @@ final class wlb extends rqa {
                                 continue stateLoop;
                             }
                         }
-                        default: return;
-                    }
-                }
-            }
-            void runPartition2() {
-                stateLoop: while (true) {
-                    switch (statePc) {
                         case 19: {
                             try {
                                 statePc = 21;
@@ -1149,7 +1168,7 @@ final class wlb extends rqa {
                     if (statePc <= 8) {
                         runPartition0();
                     }
-                    else if (statePc <= 18) {
+                    else if (statePc <= 15) {
                         runPartition1();
                     }
                     else if (statePc <= 35) {
