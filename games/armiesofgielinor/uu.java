@@ -2786,20 +2786,62 @@ final class uu {
     }
 
     final static boolean a(boolean param0, char param1) {
-        if (!param0) {
-            byte[] var3 = (byte[]) null;
+        byte[] var3;
+        L0: {
+          if (param0) {
+            break L0;
+          } else {
+            var3 = (byte[]) null;
             uu.a((byte[]) null, (byte) -92);
+            break L0;
+          }
         }
-        if (param1 >= 32 && param1 <= 126) {
-            return true;
+        L1: {
+          if (param1 < 32) {
+            break L1;
+          } else {
+            if (param1 > 126) {
+              break L1;
+            } else {
+              return true;
+            }
+          }
         }
-        if (160 <= param1 && param1 <= 255) {
-            return true;
+        L2: {
+          if (160 > param1) {
+            break L2;
+          } else {
+            if (param1 > 255) {
+              break L2;
+            } else {
+              return true;
+            }
+          }
         }
-        if (8364 == param1 || 338 == param1 || param1 == 8212 || param1 == 339 || 376 == param1) {
-            return true;
+        L3: {
+          if (8364 == param1) {
+            break L3;
+          } else {
+            if (338 == param1) {
+              break L3;
+            } else {
+              if (param1 == 8212) {
+                break L3;
+              } else {
+                if (param1 == 339) {
+                  break L3;
+                } else {
+                  if (376 != param1) {
+                    return false;
+                  } else {
+                    return true;
+                  }
+                }
+              }
+            }
+          }
         }
-        return false;
+        return true;
     }
 
     public static void a(byte param0) {

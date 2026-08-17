@@ -12,17 +12,36 @@ final class oh {
     static String field_g;
 
     final static boolean a(int param0, boolean param1, int param2, int param3) {
-        if ((param3 ^ -1) > -1 || -12 > (param3 ^ -1)) {
+        cm var5;
+        if ((param3 ^ -1) > -1) {
+          return false;
+        } else {
+          if (-12 <= (param3 ^ -1)) {
+            L0: {
+              if (param2 < 1) {
+                break L0;
+              } else {
+                if (nk.b(-14487, param3, param0) >= param2) {
+                  L1: {
+                    if (param1) {
+                      break L1;
+                    } else {
+                      var5 = (cm) null;
+                      oh.a(-54, (int[]) null, (String[]) null, (String[][]) null, (String[]) null, 77, (String[][]) null, -51, (wk[][]) null, (wk[][]) null, 31, (String[]) null, (byte[]) null, (byte[]) null, (cm) null);
+                      break L1;
+                    }
+                  }
+                  return true;
+                } else {
+                  break L0;
+                }
+              }
+            }
             return false;
-        }
-        if (param2 < 1 || nk.b(-14487, param3, param0) < param2) {
+          } else {
             return false;
+          }
         }
-        if (!param1) {
-            cm var5 = (cm) null;
-            oh.a(-54, (int[]) null, (String[]) null, (String[][]) null, (String[]) null, 77, (String[][]) null, -51, (wk[][]) null, (wk[][]) null, 31, (String[]) null, (byte[]) null, (byte[]) null, (cm) null);
-        }
-        return true;
     }
 
     final static void a(int param0, int[] param1, String[] param2, String[][] param3, String[] param4, int param5, String[][] param6, int param7, wk[][] param8, wk[][] param9, int param10, String[] param11, byte[] param12, byte[] param13, cm param14) {

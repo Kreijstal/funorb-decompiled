@@ -98,6 +98,8 @@ final class eg extends in {
     }
 
     final void b(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_32_0 = 0;
         int stackIn_47_0 = 0;
         int stackIn_60_0 = 0;
@@ -265,8 +267,9 @@ final class eg extends in {
                           stackIn_47_0 = param1;
                           break L11;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_47_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_47_0 = localTemp$0;
                           break L11;
                         }
                       }
@@ -321,8 +324,9 @@ final class eg extends in {
                         stackIn_60_0 = param1;
                         break L16;
                       } else {
-                        param1 = param1 << 1;
-                        stackIn_60_0 = param1 << 1;
+                        localTemp$1 = param1 << 1;
+                        param1 = localTemp$1;
+                        stackIn_60_0 = localTemp$1;
                         break L16;
                       }
                     }

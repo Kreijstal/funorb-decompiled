@@ -9,80 +9,95 @@ final class hg {
     static ck field_a;
 
     final static void a(boolean param0, int param1) {
-        int var3;
-        L0: {
-          var3 = client.field_A ? 1 : 0;
-          if (!param0) {
-            if (null != cd.field_m) {
-              L1: {
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        var3 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                if (param0) {
+                  break L2;
+                } else {
+                  if (null != cd.field_m) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              dn.field_k = false;
+              break L1;
+            }
+            L3: {
+              if (param0) {
+                if (0 < lg.field_W) {
+                  lg.field_W = lg.field_W - 1;
+                  break L3;
+                } else {
+                  if ((bf.field_r ^ -1) < -1) {
+                    bf.field_r = bf.field_r - 1;
+                    break L3;
+                  } else {
+                    if (tg.field_e <= 0) {
+                      break L3;
+                    } else {
+                      tg.field_e = tg.field_e - 1;
+                      break L3;
+                    }
+                  }
+                }
+              } else {
                 if (null == cd.field_m) {
                   if (null == g.field_N) {
                     dn.field_k = false;
-                    if (-1 <= (bf.field_r ^ -1)) {
+                    if (-1 > (bf.field_r ^ -1)) {
+                      bf.field_r = bf.field_r - 1;
+                      break L3;
+                    } else {
                       if (tg.field_e > 0) {
-                        L2: {
-                          tg.field_e = tg.field_e - 1;
-                          if (param1 == -1843) {
-                            break L2;
-                          } else {
-                            field_b = -111;
-                            break L2;
-                          }
-                        }
-                        return;
+                        tg.field_e = tg.field_e - 1;
+                        break L3;
                       } else {
                         if (dl.field_M <= lg.field_W) {
-                          break L1;
+                          break L3;
                         } else {
-                          L3: {
+                          L4: {
                             if (-1 == (lg.field_W ^ -1)) {
                               tj.h((byte) -40);
-                              break L3;
+                              break L4;
                             } else {
-                              break L3;
+                              break L4;
                             }
                           }
                           lg.field_W = lg.field_W + 1;
-                          break L1;
+                          break L3;
                         }
                       }
-                    } else {
-                      L4: {
-                        bf.field_r = bf.field_r - 1;
-                        if (param1 == -1843) {
-                          break L4;
-                        } else {
-                          field_b = -111;
-                          break L4;
-                        }
-                      }
-                      return;
                     }
                   } else {
                     if (lg.field_W > 0) {
                       lg.field_W = lg.field_W - 1;
-                      break L1;
+                      break L3;
                     } else {
                       if ((tg.field_e ^ -1) < -1) {
                         tg.field_e = tg.field_e - 1;
-                        break L1;
+                        break L3;
                       } else {
                         if (dl.field_M > bf.field_r) {
-                          if (0 == bf.field_r) {
-                            mg.b(param1 + 1843, true);
-                            bf.field_r = bf.field_r + 1;
-                            break L1;
-                          } else {
-                            bf.field_r = bf.field_r + 1;
-                            if (param1 != -1843) {
-                              field_b = -111;
-                              return;
+                          L5: {
+                            if (0 != bf.field_r) {
+                              break L5;
                             } else {
-                              return;
+                              mg.b(param1 + 1843, true);
+                              break L5;
                             }
                           }
+                          bf.field_r = bf.field_r + 1;
+                          break L3;
                         } else {
-                          break L1;
+                          break L3;
                         }
                       }
                     }
@@ -90,205 +105,42 @@ final class hg {
                 } else {
                   if (0 < lg.field_W) {
                     lg.field_W = lg.field_W - 1;
-                    break L1;
+                    break L3;
                   } else {
                     if (0 < bf.field_r) {
                       bf.field_r = bf.field_r - 1;
-                      break L1;
+                      break L3;
                     } else {
-                      if (tg.field_e < dl.field_M) {
-                        L5: {
+                      if (tg.field_e >= dl.field_M) {
+                        break L3;
+                      } else {
+                        L6: {
                           if (tg.field_e == 0) {
                             mg.b(0, false);
-                            break L5;
+                            break L6;
                           } else {
-                            break L5;
+                            break L6;
                           }
                         }
                         tg.field_e = tg.field_e + 1;
-                        break L1;
-                      } else {
-                        if (param1 != -1843) {
-                          field_b = -111;
-                          return;
-                        } else {
-                          return;
-                        }
+                        break L3;
                       }
                     }
                   }
                 }
               }
-              if (param1 != -1843) {
-                field_b = -111;
-                return;
-              } else {
-                return;
-              }
-            } else {
-              dn.field_k = false;
+            }
+            if (param1 == -1843) {
               break L0;
-            }
-          } else {
-            dn.field_k = false;
-            break L0;
-          }
-        }
-        L6: {
-          if (param0) {
-            if (0 < lg.field_W) {
-              lg.field_W = lg.field_W - 1;
-              if (param1 == -1843) {
-                return;
-              } else {
-                field_b = -111;
-                return;
-              }
             } else {
-              if ((bf.field_r ^ -1) < -1) {
-                bf.field_r = bf.field_r - 1;
-                if (param1 == -1843) {
-                  return;
-                } else {
-                  field_b = -111;
-                  return;
-                }
-              } else {
-                if (tg.field_e <= 0) {
-                  break L6;
-                } else {
-                  tg.field_e = tg.field_e - 1;
-                  if (param1 == -1843) {
-                    return;
-                  } else {
-                    field_b = -111;
-                    return;
-                  }
-                }
-              }
-            }
-          } else {
-            if (null == cd.field_m) {
-              if (null == g.field_N) {
-                dn.field_k = false;
-                if (-1 > (bf.field_r ^ -1)) {
-                  bf.field_r = bf.field_r - 1;
-                  if (param1 == -1843) {
-                    return;
-                  } else {
-                    field_b = -111;
-                    return;
-                  }
-                } else {
-                  if (tg.field_e > 0) {
-                    tg.field_e = tg.field_e - 1;
-                    if (param1 == -1843) {
-                      return;
-                    } else {
-                      field_b = -111;
-                      return;
-                    }
-                  } else {
-                    if (dl.field_M > lg.field_W) {
-                      L7: {
-                        if (-1 == (lg.field_W ^ -1)) {
-                          tj.h((byte) -40);
-                          break L7;
-                        } else {
-                          break L7;
-                        }
-                      }
-                      lg.field_W = lg.field_W + 1;
-                      if (param1 == -1843) {
-                        return;
-                      } else {
-                        field_b = -111;
-                        return;
-                      }
-                    } else {
-                      if (param1 == -1843) {
-                        return;
-                      } else {
-                        field_b = -111;
-                        return;
-                      }
-                    }
-                  }
-                }
-              } else {
-                if (lg.field_W > 0) {
-                  lg.field_W = lg.field_W - 1;
-                  if (param1 == -1843) {
-                    return;
-                  } else {
-                    field_b = -111;
-                    return;
-                  }
-                } else {
-                  if ((tg.field_e ^ -1) < -1) {
-                    tg.field_e = tg.field_e - 1;
-                    if (param1 != -1843) {
-                      field_b = -111;
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    if (dl.field_M > bf.field_r) {
-                      L8: {
-                        if (0 != bf.field_r) {
-                          break L8;
-                        } else {
-                          mg.b(param1 + 1843, true);
-                          break L8;
-                        }
-                      }
-                      bf.field_r = bf.field_r + 1;
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
-                }
-              }
-            } else {
-              if (0 < lg.field_W) {
-                lg.field_W = lg.field_W - 1;
-                break L6;
-              } else {
-                if (0 < bf.field_r) {
-                  bf.field_r = bf.field_r - 1;
-                  break L6;
-                } else {
-                  if (tg.field_e < dl.field_M) {
-                    L9: {
-                      if (tg.field_e == 0) {
-                        mg.b(0, false);
-                        break L9;
-                      } else {
-                        break L9;
-                      }
-                    }
-                    tg.field_e = tg.field_e + 1;
-                    break L6;
-                  } else {
-                    if (param1 != -1843) {
-                      field_b = -111;
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-              }
+              field_b = -111;
+              return;
             }
           }
-        }
-        if (param1 == -1843) {
-          return;
-        } else {
-          field_b = -111;
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw dh.a((Throwable) ((Object) var2), "hg.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -299,11 +151,11 @@ final class hg {
         int fieldTemp$8 = 0;
         int fieldTemp$9 = 0;
         RuntimeException runtimeException = null;
+        int var9 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         int[] var7 = null;
         int var8 = 0;
-        int var9 = 0;
-        RuntimeException decompiledCaughtException = null;
         var9 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -378,9 +230,13 @@ final class hg {
         if (param0 <= 87) {
             return;
         }
-        field_d = null;
-        field_c = null;
-        field_a = null;
+        try {
+            field_d = null;
+            field_c = null;
+            field_a = null;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) ((Object) runtimeException), "hg.A(" + param0 + ')');
+        }
     }
 
     static {

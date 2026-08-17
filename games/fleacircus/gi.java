@@ -10,16 +10,34 @@ abstract class gi {
     static sf field_d;
 
     final static boolean a(int param0, char param1) {
-        if (Character.isISOControl(param1)) {
-            return false;
-        }
-        if (!(!ii.a(1, param1))) {
+        if (!Character.isISOControl(param1)) {
+          if (ii.a(1, param1)) {
             return true;
-        }
-        if (param1 == (char)param0 || 160 == param1 || 32 == param1 || 95 == param1) {
+          } else {
+            L0: {
+              if (param1 == (char)param0) {
+                break L0;
+              } else {
+                if (160 == param1) {
+                  break L0;
+                } else {
+                  if (32 == param1) {
+                    break L0;
+                  } else {
+                    if (95 != param1) {
+                      return false;
+                    } else {
+                      return true;
+                    }
+                  }
+                }
+              }
+            }
             return true;
+          }
+        } else {
+          return false;
         }
-        return false;
     }
 
     final static boolean a(int param0, boolean param1) {

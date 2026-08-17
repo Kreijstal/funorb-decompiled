@@ -213,9 +213,28 @@ final class vc extends pi {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 88 / ((param0 - 55) / 51);
-        if (kj.a(false) || null == aa.field_j || !aa.field_j.a(param2, param1, (byte) 113)) {
-            pj.field_c.a(param2, param1, -123);
+        int var3;
+        L0: {
+          L1: {
+            var3 = 88 / ((param0 - 55) / 51);
+            if (kj.a(false)) {
+              break L1;
+            } else {
+              if (null == aa.field_j) {
+                break L1;
+              } else {
+                if (aa.field_j.a(param2, param1, (byte) 113)) {
+                  break L0;
+                } else {
+                  aa.field_j.a(param2, param1, -117);
+                  ck.a(-30833);
+                  break L0;
+                }
+              }
+            }
+          }
+          pj.field_c.a(param2, param1, -123);
+          break L0;
         }
     }
 

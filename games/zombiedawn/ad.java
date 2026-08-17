@@ -1011,31 +1011,6 @@ final class ad extends vg {
     }
 
     final static void a(boolean param0, int[] param1, gd param2, byte param3, boolean param4, boolean param5, int[] param6) {
-        RuntimeException runtimeException = null;
-        int var7_int = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_62_0 = 0;
@@ -1065,6 +1040,31 @@ final class ad extends vg {
         String stackIn_81_2 = null;
         int statePc = 0;
         Throwable caughtException = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var19 = 0;
+        int var20 = 0;
+        int var21 = 0;
+        int var22 = 0;
+        int var23 = 0;
+        int var24 = 0;
+        int var25 = 0;
+        int var26 = 0;
+        int var27 = 0;
+        int var28 = 0;
+        int var29 = 0;
+        int var30 = 0;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
@@ -1781,8 +1781,8 @@ final class ad extends vg {
                     }
                 }
                 case 69: {
-                    runtimeException = (RuntimeException) ((Object) caughtException);
-                    stackIn_72_0 = (RuntimeException) (runtimeException);
+                    var7 = (RuntimeException) ((Object) caughtException);
+                    stackIn_72_0 = (RuntimeException) (var7);
                     stackIn_70_0 = stackIn_72_0;
                     stackIn_72_1 = new StringBuilder().append("ad.K(").append(param0).append(',');
                     stackIn_70_1 = stackIn_72_1;

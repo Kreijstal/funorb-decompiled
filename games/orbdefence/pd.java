@@ -343,11 +343,11 @@ final class pd extends ca {
     }
 
     private final void d(int param0) {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         L0: {
-          fieldTemp$1 = this.field_q - 1;
+          fieldTemp$0 = this.field_q - 1;
           this.field_q = this.field_q - 1;
-          if (-1 < (fieldTemp$1 ^ -1)) {
+          if (-1 < (fieldTemp$0 ^ -1)) {
             this.field_q = 5;
             this.field_x = this.field_x + 1;
             if (2 < this.field_x) {

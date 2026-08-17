@@ -187,13 +187,19 @@ final class mg {
     }
 
     final int a(boolean param0) {
-        if (param0) {
-            return 7;
-        }
-        if (null == this.field_i || 0 >= this.field_i.length) {
+        if (!param0) {
+          if (null == this.field_i) {
             return 0;
+          } else {
+            if (0 < this.field_i.length) {
+              return this.field_i[this.field_l];
+            } else {
+              return 0;
+            }
+          }
+        } else {
+          return 7;
         }
-        return this.field_i[this.field_l];
     }
 
     final static boolean a(byte param0, int param1, int param2) {

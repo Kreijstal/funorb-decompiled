@@ -642,6 +642,8 @@ final class kd extends tj {
     }
 
     final void b(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_32_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_62_0 = 0;
@@ -806,8 +808,9 @@ final class kd extends tj {
                         this.field_F.b(this.field_m, 0, param2);
                         this.field_C.b(this.field_o, 0, param2);
                         if (ug.field_b) {
-                          param1 = param1 << 1;
-                          stackIn_48_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_48_0 = localTemp$0;
                           break L11;
                         } else {
                           stackIn_48_0 = param1;
@@ -861,8 +864,9 @@ final class kd extends tj {
                       L17: {
                         this.field_n.b(this.field_m, 0, param2);
                         if (ug.field_b) {
-                          param1 = param1 << 1;
-                          stackIn_62_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_62_0 = localTemp$1;
                           break L17;
                         } else {
                           stackIn_62_0 = param1;

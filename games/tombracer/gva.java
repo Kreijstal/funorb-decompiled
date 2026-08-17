@@ -350,8 +350,8 @@ final class gva implements mb {
                   break L0;
                 } else {
                   var16 = (int)((float)var16 * (float)var12 / (float)var10);
-                  var25 = za.a(0, (byte) 92, ((Object[]) (var23)).length + -1, ((Object[]) (var23)).length + -(int)(var13 * (float)(-1 + ((Object[]) (var23)).length)));
-                  var26 = Math.min(var25, ((Object[]) (var23)).length - 1);
+                  var25 = za.a(0, (byte) 92, java.lang.reflect.Array.getLength(var23) + -1, java.lang.reflect.Array.getLength(var23) + -(int)(var13 * (float)(-1 + java.lang.reflect.Array.getLength(var23))));
+                  var26 = Math.min(var25, java.lang.reflect.Array.getLength(var23) - 1);
                   fja.a(var8, ((int[]) (var23))[var26], (byte) 123, 128, var16, var9);
                   decompiledRegionSelector0 = 4;
                   break L0;

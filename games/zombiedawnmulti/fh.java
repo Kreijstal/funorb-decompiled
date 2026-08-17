@@ -268,27 +268,76 @@ final class fh {
     }
 
     final boolean a(int param0, boolean param1, boolean param2, int param3) {
-        int var5 = param0 / 24;
-        int var6 = param3 / 24;
-        if (-1 < (var5 ^ -1) || (var6 ^ -1) > -1 || this.field_i.field_e <= var6 || var5 >= this.field_i.field_d) {
-            return false;
-        }
-        if (!param1) {
-            nm var10 = (nm) null;
-            this.a(110, false, (nm) null, -115);
-        }
-        int var7 = param0 % 24;
-        int var8 = 1;
-        if (param2) {
-            if (!(8 >= var7)) {
-                var8 = (byte)(var8 | 4);
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        nm var10;
+        int stackIn_18_0 = 0;
+        L0: {
+          var5 = param0 / 24;
+          var6 = param3 / 24;
+          if (-1 < (var5 ^ -1)) {
+            break L0;
+          } else {
+            if ((var6 ^ -1) > -1) {
+              break L0;
+            } else {
+              if (this.field_i.field_e <= var6) {
+                break L0;
+              } else {
+                if (var5 < this.field_i.field_d) {
+                  L1: {
+                    if (param1) {
+                      break L1;
+                    } else {
+                      var10 = (nm) null;
+                      this.a(110, false, (nm) null, -115);
+                      break L1;
+                    }
+                  }
+                  L2: {
+                    var7 = param0 % 24;
+                    var8 = 1;
+                    if (!param2) {
+                      break L2;
+                    } else {
+                      L3: {
+                        if (8 < var7) {
+                          var8 = (byte)(var8 | 4);
+                          break L3;
+                        } else {
+                          break L3;
+                        }
+                      }
+                      if (16 > var7) {
+                        var8 = (byte)(var8 | 2);
+                        break L2;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  L4: {
+                    var9 = (byte)(this.field_i.field_k[var6][var5] & 7);
+                    if (var8 != (var8 & var9)) {
+                      stackIn_18_0 = 0;
+                      break L4;
+                    } else {
+                      stackIn_18_0 = 1;
+                      break L4;
+                    }
+                  }
+                  return stackIn_18_0 != 0;
+                } else {
+                  return false;
+                }
+              }
             }
-            if (!(16 <= var7)) {
-                var8 = (byte)(var8 | 2);
-            }
+          }
         }
-        int var9 = (byte)(this.field_i.field_k[var6][var5] & 7);
-        return var8 == (var8 & var9) ? true : false;
+        return false;
     }
 
     final int a(int param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6) {

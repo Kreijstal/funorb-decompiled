@@ -192,17 +192,36 @@ final class wb extends ji {
     }
 
     final static boolean a(char param0, byte param1) {
-        if (Character.isISOControl(param0)) {
-            return false;
-        }
-        int var2 = 65 / ((param1 - 54) / 56);
-        if (d.a(param0, 2)) {
+        int var2;
+        if (!Character.isISOControl(param0)) {
+          var2 = 65 / ((param1 - 54) / 56);
+          if (!d.a(param0, 2)) {
+            L0: {
+              if (45 == param0) {
+                break L0;
+              } else {
+                if (param0 == 160) {
+                  break L0;
+                } else {
+                  if (param0 == 32) {
+                    break L0;
+                  } else {
+                    if (param0 != 95) {
+                      return false;
+                    } else {
+                      return true;
+                    }
+                  }
+                }
+              }
+            }
             return true;
-        }
-        if (45 == param0 || param0 == 160 || param0 == 32 || param0 == 95) {
+          } else {
             return true;
+          }
+        } else {
+          return false;
         }
-        return false;
     }
 
     final void a(byte param0, int param1, ed param2) {

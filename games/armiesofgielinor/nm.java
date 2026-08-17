@@ -23,6 +23,8 @@ final class nm extends hn {
     private um field_A;
 
     final void b(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_32_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_62_0 = 0;
@@ -191,8 +193,9 @@ final class nm extends hn {
                           stackIn_48_0 = param1;
                           break L11;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_48_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_48_0 = localTemp$0;
                           break L11;
                         }
                       }
@@ -245,8 +248,9 @@ final class nm extends hn {
                           stackIn_62_0 = param1;
                           break L17;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_62_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_62_0 = localTemp$1;
                           break L17;
                         }
                       }

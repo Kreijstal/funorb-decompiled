@@ -25,6 +25,7 @@ final class ed extends rh {
     final static void a(String[] args, int param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
+        String[] var5 = null;
         int var6 = 0;
         String[] var7 = null;
         int stackIn_5_0 = 0;
@@ -37,7 +38,6 @@ final class ed extends rh {
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] var5 = null;
         var6 = TrackController.field_F ? 1 : 0;
         try {
           var4_int = 67 / ((param3 - -20) / 57);

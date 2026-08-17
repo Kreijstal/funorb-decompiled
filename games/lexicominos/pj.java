@@ -238,7 +238,7 @@ final class pj extends nb implements ue, jk, ag {
     }
 
     public final void a(int param0, int param1, int param2, int param3, kf param4) {
-        boolean discarded$0 = false;
+        boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -256,7 +256,7 @@ final class pj extends nb implements ue, jk, ag {
                 if (this.field_I != param4) {
                   break L1;
                 } else {
-                  discarded$0 = this.e(true);
+                  discarded$1 = this.e(true);
                   break L1;
                 }
               }

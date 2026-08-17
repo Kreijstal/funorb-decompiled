@@ -363,10 +363,15 @@ final class op extends wk implements ec {
     }
 
     public final boolean a(int param0) {
-        if (this.field_o || this.a(param0, (byte) 98).field_h) {
+        if (this.field_o) {
+          return true;
+        } else {
+          if (!this.a(param0, (byte) 98).field_h) {
+            return false;
+          } else {
             return true;
+          }
         }
-        return false;
     }
 
     static {

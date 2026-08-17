@@ -132,11 +132,10 @@ final class uh extends lf {
     }
 
     private final void a(lf param0, int param1) {
-        kl var1 = null;
         if (param1 > 0) {
-            var1 = qc.a(param1, (byte) -112, param0);
+            param0 = (lf) ((Object) qc.a(param1, (byte) -112, param0));
         }
-        this.b(var1);
+        this.b(param0);
     }
 
     final void a(gg param0, int param1, int param2, int param3) {

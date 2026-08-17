@@ -64,19 +64,42 @@ final class jl {
     }
 
     final static boolean a(byte param0, char param1) {
-        if (Character.isISOControl(param1)) {
-            return false;
-        }
-        if (!(!qw.a(57, param1))) {
+        if (!Character.isISOControl(param1)) {
+          if (qw.a(57, param1)) {
             return true;
-        }
-        if (param1 == 45 || 160 == param1 || param1 == 32 || param1 == 95) {
+          } else {
+            L0: {
+              if (param1 == 45) {
+                break L0;
+              } else {
+                if (160 == param1) {
+                  break L0;
+                } else {
+                  if (param1 == 32) {
+                    break L0;
+                  } else {
+                    if (param1 != 95) {
+                      L1: {
+                        if (param0 == 110) {
+                          break L1;
+                        } else {
+                          field_a = (uw) null;
+                          break L1;
+                        }
+                      }
+                      return false;
+                    } else {
+                      return true;
+                    }
+                  }
+                }
+              }
+            }
             return true;
+          }
+        } else {
+          return false;
         }
-        if (param0 != 110) {
-            field_a = (uw) null;
-        }
-        return false;
     }
 
     final static void a(int param0, boolean param1) {

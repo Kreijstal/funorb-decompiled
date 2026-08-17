@@ -668,6 +668,8 @@ final class vi extends sj {
     }
 
     final void b(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_31_0 = 0;
         int stackIn_46_0 = 0;
         int stackIn_60_0 = 0;
@@ -831,8 +833,9 @@ final class vi extends sj {
                           stackIn_46_0 = param1;
                           break L11;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_46_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_46_0 = localTemp$0;
                           break L11;
                         }
                       }
@@ -886,8 +889,9 @@ final class vi extends sj {
                           stackIn_60_0 = param1;
                           break L17;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_60_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_60_0 = localTemp$1;
                           break L17;
                         }
                       }

@@ -12,20 +12,33 @@ final class jba extends ana {
     private boolean field_v;
 
     final boolean c(byte param0) {
-        if (this.field_m.a((byte) -106) || this.field_y.a((byte) -106)) {
-            return false;
-        }
-        int fieldTemp$0 = this.field_l - 1;
-        this.field_l = this.field_l - 1;
-        if (!(fieldTemp$0 <= 0)) {
-            if (!this.field_v) {
-                this.e((byte) 47);
+        int fieldTemp$1 = 0;
+        int var2;
+        if (this.field_m.a((byte) -106)) {
+          return false;
+        } else {
+          if (!this.field_y.a((byte) -106)) {
+            fieldTemp$1 = this.field_l - 1;
+            this.field_l = this.field_l - 1;
+            if (fieldTemp$1 > 0) {
+              L0: {
+                if (this.field_v) {
+                  break L0;
+                } else {
+                  this.e((byte) 47);
+                  break L0;
+                }
+              }
+              return false;
+            } else {
+              var2 = 92 % ((param0 - 71) / 47);
+              this.b(true);
+              return true;
             }
+          } else {
             return false;
+          }
         }
-        int var2 = 92 % ((param0 - 71) / 47);
-        this.b(true);
-        return true;
     }
 
     private final void b(boolean param0) {

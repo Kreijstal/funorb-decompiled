@@ -12771,7 +12771,7 @@ public final class Terraphoenix extends gf {
                   L30: {
                     if (null != var8) {
                       L31: {
-                        var10 = 340 + -((1 + ((Object[]) (var8)).length) * 13) + -22;
+                        var10 = 340 + -((1 + java.lang.reflect.Array.getLength(var8)) * 13) + -22;
                         if (-22 + var10 + -96 == ej.field_V) {
                           break L31;
                         } else {
@@ -12785,7 +12785,7 @@ public final class Terraphoenix extends gf {
                       var10 += 8;
                       var11_int = 0;
                       L32: while (true) {
-                        if ((var11_int ^ -1) <= (((Object[]) (var8)).length ^ -1)) {
+                        if ((var11_int ^ -1) <= (java.lang.reflect.Array.getLength(var8) ^ -1)) {
                           break L30;
                         } else {
                           var10 = var10 + 13 * ji.a(50, 13, 16777215, var10, ic.field_x[((int[]) (var8))[var11_int]], (byte) 114, 415);
@@ -12806,17 +12806,17 @@ public final class Terraphoenix extends gf {
                       l.c(0, 96, 640, ej.field_V + 96);
                       var10 = 0;
                       L34: while (true) {
-                        if (var10 >= ((Object[]) (var7)).length) {
+                        if (var10 >= java.lang.reflect.Array.getLength(var7)) {
                           var6 = bc.field_a;
                           l.c(0, 94, 640, 96);
                           var10 = 0;
                           L35: while (true) {
-                            if (var10 >= ((Object[]) (var7)).length) {
+                            if (var10 >= java.lang.reflect.Array.getLength(var7)) {
                               var6 = bc.field_a;
                               l.c(0, ej.field_V + 96, 640, 96 - -ej.field_V - -2);
                               var10 = 0;
                               L36: while (true) {
-                                if (var10 >= ((Object[]) (var7)).length) {
+                                if (var10 >= java.lang.reflect.Array.getLength(var7)) {
                                   l.c();
                                   bc.field_a = var6 + (-bc.field_a - 8);
                                   break L33;

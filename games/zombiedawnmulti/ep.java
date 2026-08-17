@@ -207,6 +207,12 @@ final class ep {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
+        int localTemp$2 = 0;
+        int localTemp$3 = 0;
+        int localTemp$4 = 0;
+        int localTemp$5 = 0;
         int var7;
         int var8;
         int var9;
@@ -263,8 +269,9 @@ final class ep {
                 }
                 if (param1 >= param2) {
                   L6: {
-                    param3 = param3 << 16;
-                    param4 = param3 << 16;
+                    localTemp$0 = param3 << 16;
+                    param3 = localTemp$0;
+                    param4 = localTemp$0;
                     if (param0 >= 0) {
                       break L6;
                     } else {
@@ -364,8 +371,9 @@ final class ep {
                   }
                 } else {
                   L15: {
-                    param3 = param3 << 16;
-                    param5 = param3 << 16;
+                    localTemp$1 = param3 << 16;
+                    param3 = localTemp$1;
+                    param5 = localTemp$1;
                     if (param0 >= 0) {
                       break L15;
                     } else {
@@ -490,8 +498,9 @@ final class ep {
             }
             if (param0 >= param1) {
               L26: {
-                param5 = param5 << 16;
-                param3 = param5 << 16;
+                localTemp$2 = param5 << 16;
+                param5 = localTemp$2;
+                param3 = localTemp$2;
                 if (param2 >= 0) {
                   break L26;
                 } else {
@@ -570,8 +579,9 @@ final class ep {
               }
             } else {
               L32: {
-                param5 = param5 << 16;
-                param4 = param5 << 16;
+                localTemp$3 = param5 << 16;
+                param5 = localTemp$3;
+                param4 = localTemp$3;
                 if (param2 >= 0) {
                   break L32;
                 } else {
@@ -672,8 +682,9 @@ final class ep {
             }
             if (param2 >= param0) {
               L40: {
-                param4 = param4 << 16;
-                param5 = param4 << 16;
+                localTemp$4 = param4 << 16;
+                param4 = localTemp$4;
+                param5 = localTemp$4;
                 if (param1 >= 0) {
                   break L40;
                 } else {
@@ -752,8 +763,9 @@ final class ep {
               }
             } else {
               L46: {
-                param4 = param4 << 16;
-                param3 = param4 << 16;
+                localTemp$5 = param4 << 16;
+                param4 = localTemp$5;
+                param3 = localTemp$5;
                 if (param1 >= 0) {
                   break L46;
                 } else {

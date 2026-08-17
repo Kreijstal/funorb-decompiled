@@ -44,15 +44,9 @@ final class mb extends he {
     mb(Object param0, int param1) {
         super(param1);
         try {
-            try {
-                this.field_r = new java.lang.ref.SoftReference(param0);
-            } catch (RuntimeException runtimeException) {
-                throw pn.a((Throwable) ((Object) runtimeException), "mb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
-            }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+            this.field_r = new java.lang.ref.SoftReference(param0);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) ((Object) runtimeException), "mb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

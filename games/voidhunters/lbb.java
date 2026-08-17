@@ -1525,14 +1525,25 @@ final class lbb implements ntb {
     }
 
     final int a(boolean param0, int param1) {
-        if (param0) {
-            tv var4 = (tv) null;
+        tv var4;
+        L0: {
+          if (!param0) {
+            break L0;
+          } else {
+            var4 = (tv) null;
             this.a((byte) 66, (tv) null);
+            break L0;
+          }
         }
-        if (-1 < (param1 ^ -1) || param1 >= this.field_j.length) {
+        if (-1 < (param1 ^ -1)) {
+          return 0;
+        } else {
+          if (param1 < this.field_j.length) {
+            return this.field_j[param1];
+          } else {
             return 0;
+          }
         }
-        return this.field_j[param1];
     }
 
     private final void b(int param0) {

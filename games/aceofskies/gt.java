@@ -144,6 +144,7 @@ final class gt extends wt {
         RuntimeException var4 = null;
         int var5 = 0;
         String[] var6 = null;
+        String[] var7 = null;
         int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
@@ -156,7 +157,6 @@ final class gt extends wt {
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] var7 = null;
         var5 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {

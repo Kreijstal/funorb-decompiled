@@ -1141,6 +1141,7 @@ abstract class pm extends jl {
     }
 
     private final sk a(double param0, od param1, double[] param2, int param3, vg param4, double param5, oi param6, mn param7) {
+        double localTemp$0 = 0.0;
         sk stackIn_20_0 = null;
         sk stackIn_25_0 = null;
         sk stackIn_27_0 = null;
@@ -1231,8 +1232,9 @@ abstract class pm extends jl {
                                 if (this == var22_ref_oi.field_r) {
                                   break L4;
                                 } else {
-                                  var31 = var31 * (-(var23 * var22_ref_oi.field_m + var22_ref_oi.field_x * var25_double + var27_double * var22_ref_oi.field_v) / var33);
-                                  if (0.0 < var31 * (-(var23 * var22_ref_oi.field_m + var22_ref_oi.field_x * var25_double + var27_double * var22_ref_oi.field_v) / var33)) {
+                                  localTemp$0 = var31 * (-(var23 * var22_ref_oi.field_m + var22_ref_oi.field_x * var25_double + var27_double * var22_ref_oi.field_v) / var33);
+                                  var31 = localTemp$0;
+                                  if (0.0 < localTemp$0) {
                                     break L4;
                                   } else {
                                     break L3;

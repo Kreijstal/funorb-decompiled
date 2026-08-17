@@ -9,19 +9,41 @@ final class mca {
     short[] field_c;
 
     final static boolean a(byte param0, int param1) {
-        if (0 == param1 || pl.a((byte) 64) == param1) {
+        int stackIn_12_0 = 0;
+        if (0 == param1) {
+          return true;
+        } else {
+          if (pl.a((byte) 64) != param1) {
+            L0: {
+              if (param0 == 6) {
+                break L0;
+              } else {
+                mca.a((byte) 65, -116);
+                break L0;
+              }
+            }
+            if (!vpa.a(114)) {
+              if (mq.field_e == null) {
+                return false;
+              } else {
+                L1: {
+                  if (mq.field_e.a((byte) -102, param1)) {
+                    stackIn_12_0 = 1;
+                    break L1;
+                  } else {
+                    stackIn_12_0 = 0;
+                    break L1;
+                  }
+                }
+                return stackIn_12_0 != 0;
+              }
+            } else {
+              return false;
+            }
+          } else {
             return true;
+          }
         }
-        if (param0 != 6) {
-            mca.a((byte) 65, -116);
-        }
-        if (vpa.a(114)) {
-            return false;
-        }
-        if (mq.field_e != null) {
-            return !mq.field_e.a((byte) -102, param1) ? false : true;
-        }
-        return false;
     }
 
     final static void a(kb param0, int param1, int param2) {

@@ -28,6 +28,8 @@ final class tn extends qd {
     }
 
     final void b(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_33_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_63_0 = 0;
@@ -196,8 +198,9 @@ final class tn extends qd {
                           stackIn_49_0 = param1;
                           break L11;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_49_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_49_0 = localTemp$0;
                           break L11;
                         }
                       }
@@ -247,8 +250,9 @@ final class tn extends qd {
                       L17: {
                         this.field_z.b(this.field_q, 0, param2);
                         if (tj.field_g) {
-                          param1 = param1 << 1;
-                          stackIn_63_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_63_0 = localTemp$1;
                           break L17;
                         } else {
                           stackIn_63_0 = param1;

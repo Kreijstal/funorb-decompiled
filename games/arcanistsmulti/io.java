@@ -423,6 +423,8 @@ final class io extends sg {
     }
 
     final void a(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_33_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_62_0 = 0;
@@ -591,8 +593,9 @@ final class io extends sg {
                           stackIn_48_0 = param1;
                           break L11;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_48_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_48_0 = localTemp$0;
                           break L11;
                         }
                       }
@@ -643,8 +646,9 @@ final class io extends sg {
                     L16: {
                       this.field_k.a(this.field_p, 0, param2);
                       if (lb.field_i) {
-                        param1 = param1 << 1;
-                        stackIn_62_0 = param1 << 1;
+                        localTemp$1 = param1 << 1;
+                        param1 = localTemp$1;
+                        stackIn_62_0 = localTemp$1;
                         break L16;
                       } else {
                         stackIn_62_0 = param1;

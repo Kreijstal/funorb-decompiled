@@ -486,7 +486,23 @@ final class ou {
     }
 
     final static void a(pu param0, boolean param1, boolean param2, boolean param3, boolean param4, int[] param5, int[] param6) {
+        int stackIn_58_0 = 0;
+        int stackIn_58_1 = 0;
+        RuntimeException stackIn_68_0 = null;
+        StringBuilder stackIn_68_1 = null;
+        RuntimeException stackIn_69_0 = null;
+        StringBuilder stackIn_69_1 = null;
+        String stackIn_69_2 = null;
+        StringBuilder stackIn_72_1 = null;
+        StringBuilder stackIn_73_1 = null;
+        String stackIn_73_2 = null;
+        StringBuilder stackIn_76_1 = null;
+        StringBuilder stackIn_77_1 = null;
+        String stackIn_77_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -510,22 +526,6 @@ final class ou {
         int var28 = 0;
         int var29 = 0;
         int var30 = 0;
-        int stackIn_58_0 = 0;
-        int stackIn_58_1 = 0;
-        RuntimeException stackIn_68_0 = null;
-        StringBuilder stackIn_68_1 = null;
-        RuntimeException stackIn_69_0 = null;
-        StringBuilder stackIn_69_1 = null;
-        String stackIn_69_2 = null;
-        StringBuilder stackIn_72_1 = null;
-        StringBuilder stackIn_73_1 = null;
-        String stackIn_73_2 = null;
-        StringBuilder stackIn_76_1 = null;
-        StringBuilder stackIn_77_1 = null;
-        String stackIn_77_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
         var30 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {

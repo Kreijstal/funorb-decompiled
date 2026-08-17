@@ -189,31 +189,53 @@ final class fs {
     }
 
     final void d(byte param0) {
-        int var2 = 0;
-        pf var3 = null;
-        int var4 = 0;
-        if (param0 != -16) {
+        int var2;
+        pf var3;
+        int var4;
+        L0: {
+          if (param0 == -16) {
+            break L0;
+          } else {
             field_e = (int[]) null;
+            break L0;
+          }
         }
-        if (this.field_a || 0 == this.field_b.field_M) {
-            if (this.field_c) {
-                return;
+        L1: {
+          if (this.field_a) {
+            if (!this.field_c) {
+              sja.field_fb.c(96, (byte) 102);
+              this.field_c = true;
+              var2 = this.field_b.field_h.c((byte) -81);
+              if (-4 <= (this.field_b.field_h.field_A ^ -1)) {
+                break L1;
+              } else {
+                if (this.field_b.field_g == var2) {
+                  break L1;
+                } else {
+                  var3 = sja.field_fb;
+                  var3.c(97, (byte) 97);
+                  var3.field_g = var3.field_g + 2;
+                  var4 = var3.field_g;
+                  var3.e(var2, -1615464796);
+                  var3.e(this.field_b.field_g, -1615464796);
+                  this.field_b.field_h.b((lu) (var3), (byte) 127);
+                  var3.a((byte) -88, var3.field_g + -var4);
+                  hna.a(0, param0 ^ -100);
+                  vc.a((byte) -99);
+                  break L1;
+                }
+              }
+            } else {
+              return;
             }
-            sja.field_fb.c(96, (byte) 102);
-            this.field_c = true;
-            var2 = this.field_b.field_h.c((byte) -81);
-            if (-4 > (this.field_b.field_h.field_A ^ -1) && this.field_b.field_g != var2) {
-                var3 = sja.field_fb;
-                var3.c(97, (byte) 97);
-                var3.field_g = var3.field_g + 2;
-                var4 = var3.field_g;
-                var3.e(var2, -1615464796);
-                var3.e(this.field_b.field_g, -1615464796);
-                this.field_b.field_h.b((lu) (var3), (byte) 127);
-                var3.a((byte) -88, var3.field_g + -var4);
-                hna.a(0, param0 ^ -100);
-                vc.a((byte) -99);
+          } else {
+            if (0 != this.field_b.field_M) {
+              break L1;
+            } else {
+              this.field_b.c(false);
+              break L1;
             }
+          }
         }
     }
 

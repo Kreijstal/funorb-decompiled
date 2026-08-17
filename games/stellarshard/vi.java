@@ -11,7 +11,23 @@ abstract class vi {
     static int field_a;
 
     final static void a(n param0, byte param1, int[] param2, boolean param3, boolean param4, int[] param5, boolean param6) {
+        int stackIn_58_0 = 0;
+        int stackIn_58_1 = 0;
+        int stackIn_61_0 = 0;
+        RuntimeException stackIn_70_0 = null;
+        StringBuilder stackIn_70_1 = null;
+        RuntimeException stackIn_71_0 = null;
+        StringBuilder stackIn_71_1 = null;
+        String stackIn_71_2 = null;
+        StringBuilder stackIn_74_1 = null;
+        StringBuilder stackIn_75_1 = null;
+        String stackIn_75_2 = null;
+        StringBuilder stackIn_78_1 = null;
+        StringBuilder stackIn_79_1 = null;
+        String stackIn_79_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -36,22 +52,6 @@ abstract class vi {
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
-        int stackIn_58_0 = 0;
-        int stackIn_58_1 = 0;
-        int stackIn_61_0 = 0;
-        RuntimeException stackIn_70_0 = null;
-        StringBuilder stackIn_70_1 = null;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
-        String stackIn_71_2 = null;
-        StringBuilder stackIn_74_1 = null;
-        StringBuilder stackIn_75_1 = null;
-        String stackIn_75_2 = null;
-        StringBuilder stackIn_78_1 = null;
-        StringBuilder stackIn_79_1 = null;
-        String stackIn_79_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
         var31 = stellarshard.field_B;
         try {
           L0: {

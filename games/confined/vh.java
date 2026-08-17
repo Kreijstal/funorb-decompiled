@@ -41,30 +41,42 @@ final class vh {
     }
 
     final static void b(int param0) {
-        if (param0 != -4749) {
-            field_e = (pf[]) null;
-            if ((rk.field_e ^ -1) == -11) {
-                ec.a((byte) 126);
-                rk.field_e = 11;
-                mk.field_o = true;
-                return;
-            }
+        if (param0 == -4749) {
+          if ((rk.field_e ^ -1) == -11) {
+            ec.a((byte) 126);
+            rk.field_e = 11;
+            mk.field_o = true;
+            return;
+          } else {
             if (ja.c((byte) -126)) {
-                mk.field_o = true;
-                return;
+              mk.field_o = true;
+              return;
+            } else {
+              ec.a((byte) 126);
+              rk.field_e = 11;
+              mk.field_o = true;
+              return;
             }
+          }
+        } else {
+          field_e = (pf[]) null;
+          if ((rk.field_e ^ -1) != -11) {
+            if (!ja.c((byte) -126)) {
+              ec.a((byte) 126);
+              rk.field_e = 11;
+              mk.field_o = true;
+              return;
+            } else {
+              mk.field_o = true;
+              return;
+            }
+          } else {
             ec.a((byte) 126);
             rk.field_e = 11;
             mk.field_o = true;
             return;
+          }
         }
-        if ((rk.field_e ^ -1) == -11 || !ja.c((byte) -126)) {
-            ec.a((byte) 126);
-            rk.field_e = 11;
-            mk.field_o = true;
-            return;
-        }
-        mk.field_o = true;
     }
 
     final rk a(int param0) {

@@ -479,8 +479,6 @@ final class oq implements ntb {
     }
 
     public final boolean a(byte param0, tv param1) {
-        oq var3 = null;
-        int var4 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -488,7 +486,9 @@ final class oq implements ntb {
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
+        oq var3 = null;
         RuntimeException var3_ref = null;
+        int var4 = 0;
         try {
           L0: {
             L1: {

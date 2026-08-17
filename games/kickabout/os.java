@@ -197,7 +197,23 @@ final class os {
     }
 
     final static void a(kk param0, boolean param1, int[] param2, int[] param3, byte param4, boolean param5, boolean param6) {
+        int stackIn_55_0 = 0;
+        int stackIn_55_1 = 0;
+        int stackIn_58_0 = 0;
+        RuntimeException stackIn_67_0 = null;
+        StringBuilder stackIn_67_1 = null;
+        RuntimeException stackIn_68_0 = null;
+        StringBuilder stackIn_68_1 = null;
+        String stackIn_68_2 = null;
+        StringBuilder stackIn_71_1 = null;
+        StringBuilder stackIn_72_1 = null;
+        String stackIn_72_2 = null;
+        StringBuilder stackIn_75_1 = null;
+        StringBuilder stackIn_76_1 = null;
+        String stackIn_76_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -221,22 +237,6 @@ final class os {
         int var28 = 0;
         int var29 = 0;
         int var30 = 0;
-        int stackIn_55_0 = 0;
-        int stackIn_55_1 = 0;
-        int stackIn_58_0 = 0;
-        RuntimeException stackIn_67_0 = null;
-        StringBuilder stackIn_67_1 = null;
-        RuntimeException stackIn_68_0 = null;
-        StringBuilder stackIn_68_1 = null;
-        String stackIn_68_2 = null;
-        StringBuilder stackIn_71_1 = null;
-        StringBuilder stackIn_72_1 = null;
-        String stackIn_72_2 = null;
-        StringBuilder stackIn_75_1 = null;
-        StringBuilder stackIn_76_1 = null;
-        String stackIn_76_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
         var30 = Kickabout.field_G;
         try {
           L0: {

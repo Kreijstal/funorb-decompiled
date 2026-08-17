@@ -1213,8 +1213,9 @@ final class uf {
                 var2 = this.field_v;
             }
         }
-        var2 = var2 == 1 ? 0 : 1;
-        this.field_v = var2 == 1 ? 0 : 1;
+        int localTemp$0 = var2 == 1 ? 0 : 1;
+        var2 = localTemp$0;
+        this.field_v = localTemp$0;
         this.a(var2, 0, param0 + 21428);
     }
 

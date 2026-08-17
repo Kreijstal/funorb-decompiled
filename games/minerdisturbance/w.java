@@ -122,254 +122,349 @@ final class w extends tn {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        String var17 = null;
-        cf var18_ref = null;
-        ea var19 = null;
-        ea var20 = null;
-        ea var21 = null;
-        String var22 = null;
-        cf var23_ref = null;
-        ea var24 = null;
-        ea var25 = null;
-        ea var26 = null;
-        cf var28_ref = null;
-        ea var29 = null;
-        ea var30 = null;
-        ea var31 = null;
-        ea var34 = null;
-        ea var35 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        Object var18 = null;
-        Object var23 = null;
-        Object var28 = null;
-        Object var33 = null;
-        int var13 = MinerDisturbance.field_ab;
-        ag var6 = this.field_V.b(24595);
-        if (nn.field_f == var6) {
-            var17 = in.field_c;
-            if (!var17.equals(this.field_s)) {
-                this.field_s = var17;
-                this.a((byte) -108);
+        ag var6;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        ea var16;
+        String var17;
+        Object var18;
+        cf var18_ref;
+        ea var19;
+        ea var20;
+        ea var21;
+        String var22;
+        Object var23;
+        cf var23_ref;
+        ea var24;
+        ea var25;
+        ea var26;
+        String var27;
+        Object var28;
+        cf var28_ref;
+        ea var29;
+        ea var30;
+        ea var31;
+        String var32;
+        Object var33;
+        cf var33_ref;
+        ea var34;
+        ea var35;
+        ea var36;
+        var18 = null;
+        var23 = null;
+        var28 = null;
+        var33 = null;
+        var13 = MinerDisturbance.field_ab;
+        var6 = this.field_V.b(24595);
+        if (nn.field_f != var6) {
+          if (var6 != bm.field_o) {
+            var27 = this.field_V.a(param0 + 7316);
+            if (var27 == null) {
+              L0: {
+                var32 = this.field_U;
+                if (var32.equals(this.field_s)) {
+                  break L0;
+                } else {
+                  this.field_s = var32;
+                  this.a((byte) -108);
+                  break L0;
+                }
+              }
+              L1: {
+                super.a(param0, param1, param2, param3);
+                var6 = this.field_V.b(24595);
+                var33_ref = (cf) ((Object) this.field_A);
+                var9 = this.field_u + param1;
+                var10 = var33_ref.b(100, (fe) (this), param2) + (var33_ref.c(param0 ^ 4, (fe) (this)).b(117) >> -2023520415);
+                if (var6 == nn.field_f) {
+                  break L1;
+                } else {
+                  if (var6 == bm.field_o) {
+                    break L1;
+                  } else {
+                    if (fg.field_d != var6) {
+                      if (sc.field_a != var6) {
+                        return;
+                      } else {
+                        var35 = ed.field_g[1];
+                        var35.g(var9, var10 + -(var35.field_C >> -1275696383), 256);
+                        return;
+                      }
+                    } else {
+                      var34 = ed.field_g[2];
+                      var34.g(var9, var10 + -(var34.field_C >> 1480013185), 256);
+                      return;
+                    }
+                  }
+                }
+              }
+              var36 = ed.field_g[0];
+              var16 = var36;
+              var11 = var36.field_x << 1272395393;
+              var12 = var36.field_A << -1150482015;
+              if (null != this.field_Q) {
+                if (this.field_Q.field_y < var11) {
+                  this.field_Q = new ea(var11, var12);
+                  vb.a(this.field_Q, 126);
+                  var36.b(112, 144, var36.field_x << 1836675524, var36.field_A << 928229764, -this.field_O << 1011006122, 4096);
+                  tk.b(true);
+                  this.field_Q.g(var9 + -(var36.field_x >> -65904031), var10 + -var36.field_A, 256);
+                  return;
+                } else {
+                  if (this.field_Q.field_C >= var12) {
+                    vb.a(this.field_Q, 127);
+                    eh.d();
+                    var36.b(112, 144, var36.field_x << 1836675524, var36.field_A << 928229764, -this.field_O << 1011006122, 4096);
+                    tk.b(true);
+                    this.field_Q.g(var9 + -(var36.field_x >> -65904031), var10 + -var36.field_A, 256);
+                    return;
+                  } else {
+                    this.field_Q = new ea(var11, var12);
+                    vb.a(this.field_Q, 126);
+                    var36.b(112, 144, var36.field_x << 1836675524, var36.field_A << 928229764, -this.field_O << 1011006122, 4096);
+                    tk.b(true);
+                    this.field_Q.g(var9 + -(var36.field_x >> -65904031), var10 + -var36.field_A, 256);
+                    return;
+                  }
+                }
+              } else {
+                this.field_Q = new ea(var11, var12);
+                vb.a(this.field_Q, 126);
+                var36.b(112, 144, var36.field_x << 1836675524, var36.field_A << 928229764, -this.field_O << 1011006122, 4096);
+                tk.b(true);
+                this.field_Q.g(var9 + -(var36.field_x >> -65904031), var10 + -var36.field_A, 256);
+                return;
+              }
+            } else {
+              L2: {
+                if (var27.equals(this.field_s)) {
+                  break L2;
+                } else {
+                  this.field_s = var27;
+                  this.a((byte) -108);
+                  break L2;
+                }
+              }
+              L3: {
+                super.a(param0, param1, param2, param3);
+                var6 = this.field_V.b(24595);
+                var28_ref = (cf) ((Object) this.field_A);
+                var9 = this.field_u + param1;
+                var10 = var28_ref.b(100, (fe) (this), param2) + (var28_ref.c(param0 ^ 4, (fe) (this)).b(117) >> -2023520415);
+                if (var6 == nn.field_f) {
+                  break L3;
+                } else {
+                  if (var6 == bm.field_o) {
+                    break L3;
+                  } else {
+                    if (fg.field_d != var6) {
+                      if (sc.field_a == var6) {
+                        var30 = ed.field_g[1];
+                        var30.g(var9, var10 + -(var30.field_C >> -1275696383), 256);
+                        return;
+                      } else {
+                        return;
+                      }
+                    } else {
+                      var29 = ed.field_g[2];
+                      var29.g(var9, var10 + -(var29.field_C >> 1480013185), 256);
+                      return;
+                    }
+                  }
+                }
+              }
+              var31 = ed.field_g[0];
+              var11 = var31.field_x << 1272395393;
+              var12 = var31.field_A << -1150482015;
+              if (null != this.field_Q) {
+                if (this.field_Q.field_y >= var11) {
+                  if (this.field_Q.field_C >= var12) {
+                    vb.a(this.field_Q, 127);
+                    eh.d();
+                    var31.b(112, 144, var31.field_x << 1836675524, var31.field_A << 928229764, -this.field_O << 1011006122, 4096);
+                    tk.b(true);
+                    this.field_Q.g(var9 + -(var31.field_x >> -65904031), var10 + -var31.field_A, 256);
+                    return;
+                  } else {
+                    this.field_Q = new ea(var11, var12);
+                    vb.a(this.field_Q, 126);
+                    var31.b(112, 144, var31.field_x << 1836675524, var31.field_A << 928229764, -this.field_O << 1011006122, 4096);
+                    tk.b(true);
+                    this.field_Q.g(var9 + -(var31.field_x >> -65904031), var10 + -var31.field_A, 256);
+                    return;
+                  }
+                } else {
+                  this.field_Q = new ea(var11, var12);
+                  vb.a(this.field_Q, 126);
+                  var31.b(112, 144, var31.field_x << 1836675524, var31.field_A << 928229764, -this.field_O << 1011006122, 4096);
+                  tk.b(true);
+                  this.field_Q.g(var9 + -(var31.field_x >> -65904031), var10 + -var31.field_A, 256);
+                  return;
+                }
+              } else {
+                this.field_Q = new ea(var11, var12);
+                vb.a(this.field_Q, 126);
+                var31.b(112, 144, var31.field_x << 1836675524, var31.field_A << 928229764, -this.field_O << 1011006122, 4096);
+                tk.b(true);
+                this.field_Q.g(var9 + -(var31.field_x >> -65904031), var10 + -var31.field_A, 256);
+                return;
+              }
             }
+          } else {
+            L4: {
+              var22 = in.field_c;
+              if (var22.equals(this.field_s)) {
+                break L4;
+              } else {
+                this.field_s = var22;
+                this.a((byte) -108);
+                break L4;
+              }
+            }
+            L5: {
+              super.a(param0, param1, param2, param3);
+              var6 = this.field_V.b(24595);
+              var23_ref = (cf) ((Object) this.field_A);
+              var9 = this.field_u + param1;
+              var10 = var23_ref.b(100, (fe) (this), param2) + (var23_ref.c(param0 ^ 4, (fe) (this)).b(117) >> -2023520415);
+              if (var6 == nn.field_f) {
+                break L5;
+              } else {
+                if (var6 == bm.field_o) {
+                  break L5;
+                } else {
+                  if (fg.field_d != var6) {
+                    if (sc.field_a != var6) {
+                      return;
+                    } else {
+                      var25 = ed.field_g[1];
+                      var25.g(var9, var10 + -(var25.field_C >> -1275696383), 256);
+                      return;
+                    }
+                  } else {
+                    var24 = ed.field_g[2];
+                    var24.g(var9, var10 + -(var24.field_C >> 1480013185), 256);
+                    return;
+                  }
+                }
+              }
+            }
+            var26 = ed.field_g[0];
+            var11 = var26.field_x << 1272395393;
+            var12 = var26.field_A << -1150482015;
+            if (null != this.field_Q) {
+              if (this.field_Q.field_y >= var11) {
+                if (this.field_Q.field_C < var12) {
+                  this.field_Q = new ea(var11, var12);
+                  vb.a(this.field_Q, 126);
+                  var26.b(112, 144, var26.field_x << 1836675524, var26.field_A << 928229764, -this.field_O << 1011006122, 4096);
+                  tk.b(true);
+                  this.field_Q.g(var9 + -(var26.field_x >> -65904031), var10 + -var26.field_A, 256);
+                  return;
+                } else {
+                  vb.a(this.field_Q, 127);
+                  eh.d();
+                  var26.b(112, 144, var26.field_x << 1836675524, var26.field_A << 928229764, -this.field_O << 1011006122, 4096);
+                  tk.b(true);
+                  this.field_Q.g(var9 + -(var26.field_x >> -65904031), var10 + -var26.field_A, 256);
+                  return;
+                }
+              } else {
+                this.field_Q = new ea(var11, var12);
+                vb.a(this.field_Q, 126);
+                var26.b(112, 144, var26.field_x << 1836675524, var26.field_A << 928229764, -this.field_O << 1011006122, 4096);
+                tk.b(true);
+                this.field_Q.g(var9 + -(var26.field_x >> -65904031), var10 + -var26.field_A, 256);
+                return;
+              }
+            } else {
+              this.field_Q = new ea(var11, var12);
+              vb.a(this.field_Q, 126);
+              var26.b(112, 144, var26.field_x << 1836675524, var26.field_A << 928229764, -this.field_O << 1011006122, 4096);
+              tk.b(true);
+              this.field_Q.g(var9 + -(var26.field_x >> -65904031), var10 + -var26.field_A, 256);
+              return;
+            }
+          }
+        } else {
+          L6: {
+            var17 = in.field_c;
+            if (var17.equals(this.field_s)) {
+              break L6;
+            } else {
+              this.field_s = var17;
+              this.a((byte) -108);
+              break L6;
+            }
+          }
+          L7: {
             super.a(param0, param1, param2, param3);
             var6 = this.field_V.b(24595);
             var18_ref = (cf) ((Object) this.field_A);
             var9 = this.field_u + param1;
             var10 = var18_ref.b(100, (fe) (this), param2) + (var18_ref.c(param0 ^ 4, (fe) (this)).b(117) >> -2023520415);
-            if (var6 != nn.field_f && var6 != bm.field_o) {
-                if (fg.field_d == var6) {
-                    var19 = ed.field_g[2];
-                    var19.g(var9, var10 + -(var19.field_C >> 1480013185), 256);
+            if (var6 == nn.field_f) {
+              break L7;
+            } else {
+              if (var6 == bm.field_o) {
+                break L7;
+              } else {
+                if (fg.field_d != var6) {
+                  if (sc.field_a != var6) {
                     return;
-                }
-                if (sc.field_a == var6) {
+                  } else {
                     var20 = ed.field_g[1];
                     var20.g(var9, var10 + -(var20.field_C >> -1275696383), 256);
                     return;
+                  }
+                } else {
+                  var19 = ed.field_g[2];
+                  var19.g(var9, var10 + -(var19.field_C >> 1480013185), 256);
+                  return;
                 }
-                return;
+              }
             }
-            var21 = ed.field_g[0];
-            var11 = var21.field_x << 1272395393;
-            var12 = var21.field_A << -1150482015;
-            if (null == this.field_Q) {
+          }
+          var21 = ed.field_g[0];
+          var11 = var21.field_x << 1272395393;
+          var12 = var21.field_A << -1150482015;
+          if (null != this.field_Q) {
+            if (this.field_Q.field_y >= var11) {
+              if (this.field_Q.field_C < var12) {
                 this.field_Q = new ea(var11, var12);
                 vb.a(this.field_Q, 126);
                 var21.b(112, 144, var21.field_x << 1836675524, var21.field_A << 928229764, -this.field_O << 1011006122, 4096);
                 tk.b(true);
                 this.field_Q.g(var9 + -(var21.field_x >> -65904031), var10 + -var21.field_A, 256);
                 return;
-            }
-            if (this.field_Q.field_y < var11) {
-                this.field_Q = new ea(var11, var12);
-                vb.a(this.field_Q, 126);
-                var21.b(112, 144, var21.field_x << 1836675524, var21.field_A << 928229764, -this.field_O << 1011006122, 4096);
-                tk.b(true);
-                this.field_Q.g(var9 + -(var21.field_x >> -65904031), var10 + -var21.field_A, 256);
-                return;
-            }
-            if (this.field_Q.field_C >= var12) {
+              } else {
                 vb.a(this.field_Q, 127);
                 eh.d();
                 var21.b(112, 144, var21.field_x << 1836675524, var21.field_A << 928229764, -this.field_O << 1011006122, 4096);
                 tk.b(true);
                 this.field_Q.g(var9 + -(var21.field_x >> -65904031), var10 + -var21.field_A, 256);
                 return;
+              }
+            } else {
+              this.field_Q = new ea(var11, var12);
+              vb.a(this.field_Q, 126);
+              var21.b(112, 144, var21.field_x << 1836675524, var21.field_A << 928229764, -this.field_O << 1011006122, 4096);
+              tk.b(true);
+              this.field_Q.g(var9 + -(var21.field_x >> -65904031), var10 + -var21.field_A, 256);
+              return;
             }
+          } else {
             this.field_Q = new ea(var11, var12);
             vb.a(this.field_Q, 126);
             var21.b(112, 144, var21.field_x << 1836675524, var21.field_A << 928229764, -this.field_O << 1011006122, 4096);
             tk.b(true);
             this.field_Q.g(var9 + -(var21.field_x >> -65904031), var10 + -var21.field_A, 256);
             return;
+          }
         }
-        if (var6 == bm.field_o) {
-            var22 = in.field_c;
-            if (!var22.equals(this.field_s)) {
-                this.field_s = var22;
-                this.a((byte) -108);
-            }
-            super.a(param0, param1, param2, param3);
-            var6 = this.field_V.b(24595);
-            var23_ref = (cf) ((Object) this.field_A);
-            var9 = this.field_u + param1;
-            var10 = var23_ref.b(100, (fe) (this), param2) + (var23_ref.c(param0 ^ 4, (fe) (this)).b(117) >> -2023520415);
-            if (var6 != nn.field_f && var6 != bm.field_o) {
-                if (fg.field_d == var6) {
-                    var24 = ed.field_g[2];
-                    var24.g(var9, var10 + -(var24.field_C >> 1480013185), 256);
-                    return;
-                }
-                if (sc.field_a == var6) {
-                    var25 = ed.field_g[1];
-                    var25.g(var9, var10 + -(var25.field_C >> -1275696383), 256);
-                    return;
-                }
-                return;
-            }
-            var26 = ed.field_g[0];
-            var11 = var26.field_x << 1272395393;
-            var12 = var26.field_A << -1150482015;
-            if (null == this.field_Q) {
-                this.field_Q = new ea(var11, var12);
-                vb.a(this.field_Q, 126);
-                var26.b(112, 144, var26.field_x << 1836675524, var26.field_A << 928229764, -this.field_O << 1011006122, 4096);
-                tk.b(true);
-                this.field_Q.g(var9 + -(var26.field_x >> -65904031), var10 + -var26.field_A, 256);
-                return;
-            }
-            if (this.field_Q.field_y < var11) {
-                this.field_Q = new ea(var11, var12);
-                vb.a(this.field_Q, 126);
-                var26.b(112, 144, var26.field_x << 1836675524, var26.field_A << 928229764, -this.field_O << 1011006122, 4096);
-                tk.b(true);
-                this.field_Q.g(var9 + -(var26.field_x >> -65904031), var10 + -var26.field_A, 256);
-                return;
-            }
-            if (this.field_Q.field_C >= var12) {
-                vb.a(this.field_Q, 127);
-                eh.d();
-                var26.b(112, 144, var26.field_x << 1836675524, var26.field_A << 928229764, -this.field_O << 1011006122, 4096);
-                tk.b(true);
-                this.field_Q.g(var9 + -(var26.field_x >> -65904031), var10 + -var26.field_A, 256);
-                return;
-            }
-            this.field_Q = new ea(var11, var12);
-            vb.a(this.field_Q, 126);
-            var26.b(112, 144, var26.field_x << 1836675524, var26.field_A << 928229764, -this.field_O << 1011006122, 4096);
-            tk.b(true);
-            this.field_Q.g(var9 + -(var26.field_x >> -65904031), var10 + -var26.field_A, 256);
-            return;
-        }
-        String var27 = this.field_V.a(param0 + 7316);
-        if (var27 != null) {
-            if (!var27.equals(this.field_s)) {
-                this.field_s = var27;
-                this.a((byte) -108);
-            }
-            super.a(param0, param1, param2, param3);
-            var6 = this.field_V.b(24595);
-            var28_ref = (cf) ((Object) this.field_A);
-            var9 = this.field_u + param1;
-            var10 = var28_ref.b(100, (fe) (this), param2) + (var28_ref.c(param0 ^ 4, (fe) (this)).b(117) >> -2023520415);
-            if (var6 != nn.field_f && var6 != bm.field_o) {
-                if (fg.field_d == var6) {
-                    var29 = ed.field_g[2];
-                    var29.g(var9, var10 + -(var29.field_C >> 1480013185), 256);
-                    return;
-                }
-                if (sc.field_a != var6) {
-                    return;
-                }
-                var30 = ed.field_g[1];
-                var30.g(var9, var10 + -(var30.field_C >> -1275696383), 256);
-                return;
-            }
-            var31 = ed.field_g[0];
-            var11 = var31.field_x << 1272395393;
-            var12 = var31.field_A << -1150482015;
-            if (null == this.field_Q) {
-                this.field_Q = new ea(var11, var12);
-                vb.a(this.field_Q, 126);
-                var31.b(112, 144, var31.field_x << 1836675524, var31.field_A << 928229764, -this.field_O << 1011006122, 4096);
-                tk.b(true);
-                this.field_Q.g(var9 + -(var31.field_x >> -65904031), var10 + -var31.field_A, 256);
-                return;
-            }
-            if (this.field_Q.field_y < var11) {
-                this.field_Q = new ea(var11, var12);
-                vb.a(this.field_Q, 126);
-                var31.b(112, 144, var31.field_x << 1836675524, var31.field_A << 928229764, -this.field_O << 1011006122, 4096);
-                tk.b(true);
-                this.field_Q.g(var9 + -(var31.field_x >> -65904031), var10 + -var31.field_A, 256);
-                return;
-            }
-            if (this.field_Q.field_C < var12) {
-                this.field_Q = new ea(var11, var12);
-                vb.a(this.field_Q, 126);
-                var31.b(112, 144, var31.field_x << 1836675524, var31.field_A << 928229764, -this.field_O << 1011006122, 4096);
-                tk.b(true);
-                this.field_Q.g(var9 + -(var31.field_x >> -65904031), var10 + -var31.field_A, 256);
-                return;
-            }
-            vb.a(this.field_Q, 127);
-            eh.d();
-            var31.b(112, 144, var31.field_x << 1836675524, var31.field_A << 928229764, -this.field_O << 1011006122, 4096);
-            tk.b(true);
-            this.field_Q.g(var9 + -(var31.field_x >> -65904031), var10 + -var31.field_A, 256);
-            return;
-        }
-        String var32 = this.field_U;
-        if (!var32.equals(this.field_s)) {
-            this.field_s = var32;
-            this.a((byte) -108);
-        }
-        super.a(param0, param1, param2, param3);
-        var6 = this.field_V.b(24595);
-        cf var33_ref = (cf) ((Object) this.field_A);
-        var9 = this.field_u + param1;
-        var10 = var33_ref.b(100, (fe) (this), param2) + (var33_ref.c(param0 ^ 4, (fe) (this)).b(117) >> -2023520415);
-        if (var6 != nn.field_f && var6 != bm.field_o) {
-            if (fg.field_d == var6) {
-                var34 = ed.field_g[2];
-                var34.g(var9, var10 + -(var34.field_C >> 1480013185), 256);
-                return;
-            }
-            if (sc.field_a == var6) {
-                var35 = ed.field_g[1];
-                var35.g(var9, var10 + -(var35.field_C >> -1275696383), 256);
-                return;
-            }
-            return;
-        }
-        ea var36 = ed.field_g[0];
-        ea var16 = var36;
-        var11 = var36.field_x << 1272395393;
-        var12 = var36.field_A << -1150482015;
-        if (null == this.field_Q) {
-            this.field_Q = new ea(var11, var12);
-            vb.a(this.field_Q, 126);
-            var36.b(112, 144, var36.field_x << 1836675524, var36.field_A << 928229764, -this.field_O << 1011006122, 4096);
-            tk.b(true);
-            this.field_Q.g(var9 + -(var36.field_x >> -65904031), var10 + -var36.field_A, 256);
-            return;
-        }
-        if (this.field_Q.field_y < var11 || this.field_Q.field_C < var12) {
-            this.field_Q = new ea(var11, var12);
-            vb.a(this.field_Q, 126);
-            var36.b(112, 144, var36.field_x << 1836675524, var36.field_A << 928229764, -this.field_O << 1011006122, 4096);
-            tk.b(true);
-            this.field_Q.g(var9 + -(var36.field_x >> -65904031), var10 + -var36.field_A, 256);
-            return;
-        }
-        vb.a(this.field_Q, 127);
-        eh.d();
-        var36.b(112, 144, var36.field_x << 1836675524, var36.field_A << 928229764, -this.field_O << 1011006122, 4096);
-        tk.b(true);
-        this.field_Q.g(var9 + -(var36.field_x >> -65904031), var10 + -var36.field_A, 256);
     }
 
     w(jm param0, String param1, int param2, int param3, int param4, int param5) {

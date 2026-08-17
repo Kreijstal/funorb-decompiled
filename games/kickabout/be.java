@@ -627,15 +627,48 @@ abstract class be implements hc {
     }
 
     private final void c(byte param0) {
-        this.field_h = !this.field_h ? true : false;
-        if (this.field_h || null != this.field_l) {
-            this.field_e = 15;
-            if (!(this.field_l == null)) {
-                this.field_l.a(-95, this.field_k);
-            }
+        Object stackIn_2_0 = null;
+        Object stackIn_3_0 = null;
+        int stackIn_3_1 = 0;
+        L0: {
+          stackIn_2_0 = this;
+
+          if (this.field_h) {
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
+            break L0;
+          } else {
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
+            break L0;
+          }
         }
-        if (param0 != -23) {
+        L1: {
+          ((be) (this)).field_h = stackIn_3_1 != 0;
+          if (this.field_h) {
+            this.field_e = 15;
+            if (this.field_l != null) {
+              this.field_l.a(-95, this.field_k);
+              break L1;
+            } else {
+              break L1;
+            }
+          } else {
+            if (null == this.field_l) {
+              break L1;
+            } else {
+              this.field_l.a(param0 ^ -100, (hd) null);
+              break L1;
+            }
+          }
+        }
+        L2: {
+          if (param0 == -23) {
+            break L2;
+          } else {
             this.field_a = (String) null;
+            break L2;
+          }
         }
     }
 

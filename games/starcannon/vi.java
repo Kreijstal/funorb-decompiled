@@ -28,11 +28,10 @@ final class vi extends c {
     }
 
     private final void a(c param0, int param1) {
-        ed var1 = null;
         if (param1 > 0) {
-            var1 = eg.a(29723, param1, param0);
+            param0 = (c) ((Object) eg.a(29723, param1, param0));
         }
-        this.b(var1);
+        this.b(param0);
     }
 
     final synchronized void a(oa param0) {

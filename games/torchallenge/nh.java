@@ -292,19 +292,43 @@ final class nh extends v implements sg {
         super(param0, 200, 150);
         Object var3 = null;
         ee var4 = null;
+        Object stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        Object stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            var3 = null;
-            if (dj.field_P == param1) {
-                var3 = d.field_z;
-            } else {
-                if (de.field_b == param1 || tj.field_d == param1) {
-                    this.field_l = this.field_l + 10;
-                    var3 = uc.field_T;
-                    if (nh.g((byte) 94)) {
-                        this.field_l = this.field_l + 20;
-                        var3 = hd.field_g;
-                    }
+          L0: {
+            L1: {
+              var3 = null;
+              if (dj.field_P != param1) {
+                if (de.field_b == param1) {
+                  this.field_l = this.field_l + 10;
+                  var3 = uc.field_T;
+                  if (!nh.g((byte) 94)) {
+                    break L1;
+                  } else {
+                    this.field_l = this.field_l + 20;
+                    var3 = hd.field_g;
+                    break L1;
+                  }
+                } else {
+                  if (tj.field_d != param1) {
+                    break L1;
+                  } else {
+                    var3 = jd.field_d;
+                    this.field_l = this.field_l + 30;
+                    break L1;
+                  }
                 }
+              } else {
+                var3 = d.field_z;
+                break L1;
+              }
             }
             var4 = new ee((String) (var3), (gg) null);
             var4.field_m = 0;
@@ -314,8 +338,46 @@ final class nh extends v implements sg {
             var4.field_q = (j) ((Object) new bc(ug.field_f, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
             this.a(0, var4);
             this.field_gb = this.a(ab.field_n, 2, (gg) (this));
-        } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "nh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackIn_12_0 = var3;
+
+            stackIn_12_1 = new StringBuilder().append("nh.<init>(");
+
+            if (param0 == null) {
+              stackIn_13_0 = stackIn_12_0;
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
+            } else {
+              stackIn_13_0 = stackIn_12_0;
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
+            }
+          }
+          L3: {
+
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
+
+            if (param1 == null) {
+
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L3;
+            } else {
+
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L3;
+            }
+          }
+          throw oj.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ')');
         }
     }
 

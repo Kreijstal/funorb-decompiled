@@ -6715,27 +6715,68 @@ final class oe {
     }
 
     private final boolean d(int param0, int param1, int param2) {
-        int var11 = EscapeVector.field_A;
-        int var4 = this.field_H >> 1102145317;
-        var4 = var4 + (this.field_n << -1910936437);
-        int var5 = this.field_p >> -179025595;
-        int var6 = -24576 + var4;
-        int var7 = -24576 + var5;
-        int var8 = 24576 + var4;
-        param2 = param2 << 11;
-        int var9 = var5 + 24576;
-        if (param1 != 32) {
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int stackIn_13_0 = 0;
+        L0: {
+          var11 = EscapeVector.field_A;
+          var4 = this.field_H >> 1102145317;
+          var4 = var4 + (this.field_n << -1910936437);
+          var5 = this.field_p >> -179025595;
+          var6 = -24576 + var4;
+          var7 = -24576 + var5;
+          var8 = 24576 + var4;
+          param2 = param2 << 11;
+          var9 = var5 + 24576;
+          if (param1 == 32) {
+            break L0;
+          } else {
             this.field_q = true;
+            break L0;
+          }
         }
-        for (param0 = param0 << 11; (param0 ^ -1) > (var6 ^ -1); param0 = param0 + (this.field_n << 1519147275)) {
-        }
-        if (var8 < param0 || (var7 ^ -1) < (param2 ^ -1) || (param2 ^ -1) < (var9 ^ -1)) {
+        param0 = param0 << 11;
+        L1: while (true) {
+          if ((param0 ^ -1) <= (var6 ^ -1)) {
+            L2: {
+              if (var8 < param0) {
+                break L2;
+              } else {
+                if ((var7 ^ -1) < (param2 ^ -1)) {
+                  break L2;
+                } else {
+                  if ((param2 ^ -1) >= (var9 ^ -1)) {
+                    L3: {
+                      param0 = param0 - var4;
+                      param2 = param2 - var5;
+                      var10 = param2 * param2 + param0 * param0;
+                      if ((var10 ^ -1) <= -603979777) {
+                        stackIn_13_0 = 0;
+                        break L3;
+                      } else {
+                        stackIn_13_0 = 1;
+                        break L3;
+                      }
+                    }
+                    return stackIn_13_0 != 0;
+                  } else {
+                    return false;
+                  }
+                }
+              }
+            }
             return false;
+          } else {
+            param0 = param0 + (this.field_n << 1519147275);
+            continue L1;
+          }
         }
-        param0 = param0 - var4;
-        param2 = param2 - var5;
-        int var10 = param2 * param2 + param0 * param0;
-        return (var10 ^ -1) > -603979777 ? true : false;
     }
 
     private final void a(boolean param0, byte[] param1, boolean param2) {

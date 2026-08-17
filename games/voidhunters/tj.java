@@ -571,8 +571,6 @@ final class tj extends ara implements ntb {
     }
 
     public final boolean a(byte param0, tv param1) {
-        tj var3 = null;
-        int var4 = 0;
         int stackIn_11_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -580,7 +578,9 @@ final class tj extends ara implements ntb {
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
+        tj var3 = null;
         RuntimeException var3_ref = null;
+        int var4 = 0;
         try {
           L0: {
             L1: {

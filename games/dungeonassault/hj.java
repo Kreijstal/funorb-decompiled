@@ -93,18 +93,33 @@ final class hj extends gd {
     }
 
     final void a(int param0, int param1, byte param2) {
-        if (!this.field_F) {
-            return;
+        int var4;
+        int var5;
+        int var6;
+        if (this.field_F) {
+          L0: {
+            var4 = this.field_t - -param0;
+            var6 = 77 % ((41 - param2) / 61);
+            var5 = param1 + this.field_i;
+            if (0 != (4 & this.field_V.field_o)) {
+              gf.b(var4 - -5, var5 - -5, this.field_q + -10, this.field_x + -10, 16711680, 64);
+              break L0;
+            } else {
+              if (-1 == (2 & this.field_V.field_o ^ -1)) {
+                break L0;
+              } else {
+                gf.b(var4 - -5, 5 + var5, this.field_q - 10, -10 + this.field_x, 16776960, 64);
+                break L0;
+              }
+            }
+          }
+          gf.e(var4, var5, 40, 40, 0);
+          gf.e(4 + var4, 4 + var5, 32, 32, 0);
+          rp.a(6, 32, (byte) 108, 4 + var4, 32, kc.field_S, 4 + var5);
+          return;
+        } else {
+          return;
         }
-        int var4 = this.field_t - -param0;
-        int var6 = 77 % ((41 - param2) / 61);
-        int var5 = param1 + this.field_i;
-        if (0 != (4 & this.field_V.field_o) || -1 != (2 & this.field_V.field_o ^ -1)) {
-            gf.b(var4 - -5, var5 - -5, this.field_q + -10, this.field_x + -10, 16711680, 64);
-        }
-        gf.e(var4, var5, 40, 40, 0);
-        gf.e(4 + var4, 4 + var5, 32, 32, 0);
-        rp.a(6, 32, (byte) 108, 4 + var4, 32, kc.field_S, 4 + var5);
     }
 
     final static cn[] a(int param0, int param1, byte param2, int param3, int param4) {

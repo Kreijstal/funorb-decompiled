@@ -244,7 +244,7 @@ final class bd extends en {
             break L2;
           } else {
             stackIn_9_0 = stackIn_8_0;
-            stackIn_9_1 = 2 + ((Object[]) (var3)).length;
+            stackIn_9_1 = 2 + java.lang.reflect.Array.getLength(var3);
             break L2;
           }
         }

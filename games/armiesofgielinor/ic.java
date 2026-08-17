@@ -8786,9 +8786,9 @@ final class ic {
     }
 
     private final boolean a(boolean param0) {
-        RuntimeException var2 = null;
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {

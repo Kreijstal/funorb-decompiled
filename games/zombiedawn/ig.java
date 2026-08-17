@@ -396,24 +396,35 @@ final class ig extends wo {
 
     final void g(int param0) {
         super.g(107);
-        if (param0 < 95) {
-            this.g(18);
-            if (this.f(237239984) + -48 > dj.field_e.field_H.field_p) {
-                this.b(-27598);
-                this.d(0);
-                return;
-            }
+        if (param0 >= 95) {
+          if (this.f(237239984) + -48 > dj.field_e.field_H.field_p) {
+            this.b(-27598);
+            this.d(0);
+            return;
+          } else {
             if (this.a(true) + -48 <= dj.field_e.field_H.field_u) {
-                return;
+              return;
+            } else {
+              this.b(-27598);
+              this.d(0);
+              return;
             }
+          }
+        } else {
+          this.g(18);
+          if (this.f(237239984) + -48 <= dj.field_e.field_H.field_p) {
+            if (this.a(true) + -48 > dj.field_e.field_H.field_u) {
+              this.b(-27598);
+              this.d(0);
+              return;
+            } else {
+              return;
+            }
+          } else {
             this.b(-27598);
             this.d(0);
             return;
-        }
-        if (this.f(237239984) + -48 > dj.field_e.field_H.field_p || this.a(true) + -48 > dj.field_e.field_H.field_u) {
-            this.b(-27598);
-            this.d(0);
-            return;
+          }
         }
     }
 

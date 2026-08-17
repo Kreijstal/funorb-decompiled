@@ -1035,19 +1035,38 @@ final class rb {
     }
 
     final static boolean a(byte param0, char param1) {
-        if (Character.isISOControl(param1)) {
-            return false;
-        }
-        if (!(!fg.a(-1975005818, param1))) {
+        if (!Character.isISOControl(param1)) {
+          if (fg.a(-1975005818, param1)) {
             return true;
-        }
-        if (45 == param1 || param1 == 160 || param1 == 32 || param1 == 95) {
+          } else {
+            L0: {
+              if (45 == param1) {
+                break L0;
+              } else {
+                if (param1 == 160) {
+                  break L0;
+                } else {
+                  if (param1 == 32) {
+                    break L0;
+                  } else {
+                    if (param1 != 95) {
+                      if (param0 > 117) {
+                        return false;
+                      } else {
+                        return false;
+                      }
+                    } else {
+                      return true;
+                    }
+                  }
+                }
+              }
+            }
             return true;
+          }
+        } else {
+          return false;
         }
-        if (param0 <= 117) {
-            return false;
-        }
-        return false;
     }
 
     final boolean b(int param0, int param1, byte param2) {

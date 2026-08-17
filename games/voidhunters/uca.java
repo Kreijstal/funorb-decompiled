@@ -5800,6 +5800,7 @@ final class uca {
         RuntimeException var3 = null;
         int var4 = 0;
         Object var5 = null;
+        String var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         String var9 = null;
@@ -5819,18 +5820,18 @@ final class uca {
                     if (var4 != 0) {
                       break L3;
                     } else {
-                      var5 = ks.field_o;
+                      var5_ref = ks.field_o;
                       break L2;
                     }
                   }
                 }
                 if (var3_int == 0) {
-                  var5 = isa.a(llb.field_H, new String[]{glb.field_c[0]}, param1 + 74);
+                  var5_ref = isa.a(llb.field_H, new String[]{glb.field_c[0]}, param1 + 74);
                   var6 = qpb.a(false, 0, 13894143);
                   break L2;
                 } else {
                   if (var4 == 0) {
-                    var5 = isa.a(llb.field_H, new String[]{glb.field_c[1]}, 99);
+                    var5_ref = isa.a(llb.field_H, new String[]{glb.field_c[1]}, 99);
                     var6 = qpb.a(false, 1, 13894143);
                     break L2;
                   } else {
@@ -5849,10 +5850,10 @@ final class uca {
                 }
               }
               L5: {
-                if (var5 == null) {
+                if (var5_ref == null) {
                   break L5;
                 } else {
-                  var10 = ((String) (var5)).toUpperCase();
+                  var10 = var5_ref.toUpperCase();
                   var7 = 2;
                   pm.a(jea.field_p - tea.a(var7, var10, param1 + 13878) / 2, 1, pqa.a(false, var7) + 42, var10, var7, var6, (byte) -84);
                   break L5;
@@ -13937,31 +13938,62 @@ final class uca {
     }
 
     final void d(byte param0) {
-        int var3 = 0;
-        int var2 = 0;
-        int var4 = VoidHunters.field_G;
-        if ((pma.field_o ^ -1) == -81 && this.field_N && this.field_L < 0) {
-            this.a(false);
-        }
-        if (13 == pma.field_o) {
-            if (ck.b(false)) {
+        int var2;
+        int var3;
+        int var4;
+        L0: {
+          var4 = VoidHunters.field_G;
+          if ((pma.field_o ^ -1) != -81) {
+            break L0;
+          } else {
+            if (!this.field_N) {
+              break L0;
             } else {
-                var2 = 0;
-                if (this.field_N || null != vqa.field_g) {
-                    if (-1 < (this.field_L ^ -1)) {
-                        var2 = 4;
-                    } else {
-                        if (!this.field_m.field_e) {
-                            var2 = 2;
-                        } else {
-                            var2 = 3;
-                        }
-                    }
-                }
-                var3 = var2;
-                lha.a(wgb.field_f, false, (byte) -85, var3);
-                return;
+              if (this.field_L >= 0) {
+                break L0;
+              } else {
+                this.a(false);
+                break L0;
+              }
             }
+          }
+        }
+        L1: {
+          if (13 != pma.field_o) {
+            break L1;
+          } else {
+            if (!ck.b(false)) {
+              L2: {
+                var2 = 0;
+                if (this.field_N) {
+                  if (-1 >= (this.field_L ^ -1)) {
+                    if (this.field_m.field_e) {
+                      var2 = 3;
+                      break L2;
+                    } else {
+                      var2 = 2;
+                      break L2;
+                    }
+                  } else {
+                    var2 = 4;
+                    break L2;
+                  }
+                } else {
+                  if (null == vqa.field_g) {
+                    break L2;
+                  } else {
+                    var2 = 1;
+                    break L2;
+                  }
+                }
+              }
+              var3 = var2;
+              lha.a(wgb.field_f, false, (byte) -85, var3);
+              return;
+            } else {
+              break L1;
+            }
+          }
         }
         var2 = 61 / ((param0 - -72) / 38);
     }

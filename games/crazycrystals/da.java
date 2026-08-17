@@ -165,18 +165,30 @@ final class da extends ue {
     }
 
     private final boolean f(int param0, int param1) {
-        if (!(param0 >= this.field_s)) {
-            return true;
-        }
-        if (param1 <= 1) {
-            return false;
-        }
-        if (this.field_r == 1) {
-            if (-21 == (param0 ^ -1) || 40 == param0) {
-                return true;
+        if (param0 < this.field_s) {
+          return true;
+        } else {
+          if (param1 > 1) {
+            L0: {
+              if (this.field_r != 1) {
+                break L0;
+              } else {
+                if (-21 == (param0 ^ -1)) {
+                  return true;
+                } else {
+                  if (40 != param0) {
+                    break L0;
+                  } else {
+                    return true;
+                  }
+                }
+              }
             }
+            return false;
+          } else {
+            return false;
+          }
         }
-        return false;
     }
 
     da(re param0, int param1, int param2, int param3) {
@@ -2411,12 +2423,28 @@ final class da extends ue {
     }
 
     private final void e(int param0) {
-        int var2 = this.c((byte) -99);
-        if (-7 < (this.field_j ^ -1) || var2 < this.field_j) {
+        int var2;
+        L0: {
+          var2 = this.c((byte) -99);
+          if (-7 < (this.field_j ^ -1)) {
             this.field_j = 6;
+            break L0;
+          } else {
+            if (var2 >= this.field_j) {
+              break L0;
+            } else {
+              this.field_j = var2;
+              break L0;
+            }
+          }
         }
-        if (param0 != 17832) {
+        L1: {
+          if (param0 == 17832) {
+            break L1;
+          } else {
             this.a(true);
+            break L1;
+          }
         }
     }
 

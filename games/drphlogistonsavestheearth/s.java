@@ -120,7 +120,24 @@ final class s {
     }
 
     final static void a(boolean param0, int[] param1, boolean param2, int[] param3, boolean param4, ja param5, int param6) {
+        int stackIn_61_0 = 0;
+        int stackIn_61_1 = 0;
+        int stackIn_64_0 = 0;
+        int stackIn_64_1 = 0;
+        RuntimeException stackIn_73_0 = null;
+        StringBuilder stackIn_73_1 = null;
+        RuntimeException stackIn_74_0 = null;
+        StringBuilder stackIn_74_1 = null;
+        String stackIn_74_2 = null;
+        StringBuilder stackIn_77_1 = null;
+        StringBuilder stackIn_78_1 = null;
+        String stackIn_78_2 = null;
+        StringBuilder stackIn_81_1 = null;
+        StringBuilder stackIn_82_1 = null;
+        String stackIn_82_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -145,23 +162,6 @@ final class s {
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
-        int stackIn_61_0 = 0;
-        int stackIn_61_1 = 0;
-        int stackIn_64_0 = 0;
-        int stackIn_64_1 = 0;
-        RuntimeException stackIn_73_0 = null;
-        StringBuilder stackIn_73_1 = null;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
-        String stackIn_74_2 = null;
-        StringBuilder stackIn_77_1 = null;
-        StringBuilder stackIn_78_1 = null;
-        String stackIn_78_2 = null;
-        StringBuilder stackIn_81_1 = null;
-        StringBuilder stackIn_82_1 = null;
-        String stackIn_82_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
         var31 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {

@@ -96,21 +96,38 @@ abstract class lg {
     }
 
     final static int b(byte param0, int param1) {
-        if (param0 != 84) {
-            return -106;
+        int[] var2;
+        int[] var3;
+        if (param0 == 84) {
+          L0: {
+            var3 = bj.field_d;
+            var2 = var3;
+            if (var3[4] == param1) {
+              break L0;
+            } else {
+              if (var3[3] == param1) {
+                break L0;
+              } else {
+                if (var3[2] != param1) {
+                  if (param1 != var3[1]) {
+                    if (var3[0] != param1) {
+                      return -1;
+                    } else {
+                      return 2;
+                    }
+                  } else {
+                    return 4;
+                  }
+                } else {
+                  return 0;
+                }
+              }
+            }
+          }
+          return 0;
+        } else {
+          return -106;
         }
-        int[] var3 = bj.field_d;
-        int[] var2 = var3;
-        if (var3[4] == param1 || var3[3] == param1 || var3[2] == param1) {
-            return 0;
-        }
-        if (param1 == var3[1]) {
-            return 4;
-        }
-        if (var3[0] == param1) {
-            return 2;
-        }
-        return -1;
     }
 
     final int a(String param0, int param1, byte param2, int param3) {

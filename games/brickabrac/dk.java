@@ -844,21 +844,40 @@ final class dk extends ib implements ha, en, vf {
     }
 
     private final boolean h(int param0) {
-        if (param0 != 10000536) {
+        L0: {
+          if (param0 == 10000536) {
+            break L0;
+          } else {
             this.field_H = (sf) null;
+            break L0;
+          }
         }
-        if (this.a(60, this.field_J)) {
-            if (this.a(60, this.field_M)) {
-                if (this.a(60, this.field_H)) {
-                    if (this.a(60, this.field_O)) {
-                        if (this.a(60, this.field_L)) {
-                            if (this.a(60, this.field_S)) {
-                                return true;
-                            }
-                        }
+        L1: {
+          if (!this.a(60, this.field_J)) {
+            break L1;
+          } else {
+            if (!this.a(60, this.field_M)) {
+              break L1;
+            } else {
+              if (!this.a(60, this.field_H)) {
+                break L1;
+              } else {
+                if (!this.a(60, this.field_O)) {
+                  break L1;
+                } else {
+                  if (!this.a(60, this.field_L)) {
+                    break L1;
+                  } else {
+                    if (!this.a(60, this.field_S)) {
+                      break L1;
+                    } else {
+                      return true;
                     }
+                  }
                 }
+              }
             }
+          }
         }
         return false;
     }

@@ -1922,14 +1922,28 @@ final class fsa extends vg implements lj, ew, fo, gma, ffa, noa, qn, t {
     }
 
     final boolean s(byte param0) {
-        if (!(this.f(false))) {
-            return false;
+        int var2;
+        if (!this.f(false)) {
+          return false;
+        } else {
+          L0: {
+            if (this.j(-1)) {
+              break L0;
+            } else {
+              if (this.h(18407)) {
+                break L0;
+              } else {
+                if (this.field_f >= 1) {
+                  var2 = -59 % ((param0 - -33) / 62);
+                  return true;
+                } else {
+                  return false;
+                }
+              }
+            }
+          }
+          return false;
         }
-        if (this.j(-1) || this.h(18407) || this.field_f < 1) {
-            return false;
-        }
-        int var2 = -59 % ((param0 - -33) / 62);
-        return true;
     }
 
     public final int g(byte param0) {

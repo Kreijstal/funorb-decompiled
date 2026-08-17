@@ -9,6 +9,7 @@ final class i {
         int var5 = 0;
         byte[] var6 = null;
         String[] var7 = null;
+        String[] var8 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -19,7 +20,6 @@ final class i {
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] var8 = null;
         var5 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {

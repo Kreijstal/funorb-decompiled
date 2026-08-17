@@ -117,17 +117,56 @@ class nk extends ik {
     }
 
     nk(int param0, int param1, String param2, int param3) {
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            this.field_i = param2;
-            this.field_a = param0;
-            this.field_d = param1;
-            this.field_b = go.field_l.a(param2);
-            if (-2 == (param3 ^ -1) || (param3 ^ -1) == -3) {
+          L0: {
+            L1: {
+              this.field_i = param2;
+              this.field_a = param0;
+              this.field_d = param1;
+              this.field_b = go.field_l.a(param2);
+              if (-2 == (param3 ^ -1)) {
                 this.field_a = this.field_a - this.field_b;
+                break L1;
+              } else {
+                if ((param3 ^ -1) != -3) {
+                  break L1;
+                } else {
+                  this.field_a = this.field_a - this.field_b / 2;
+                  break L1;
+                }
+              }
             }
             this.field_c = 20;
-        } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "nk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackIn_9_0 = (RuntimeException) (runtimeException);
+
+            stackIn_9_1 = new StringBuilder().append("nk.<init>(").append(param0).append(',').append(param1).append(',');
+
+            if (param2 == null) {
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
+              break L2;
+            } else {
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
+              break L2;
+            }
+          }
+          throw dn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ')');
         }
     }
 

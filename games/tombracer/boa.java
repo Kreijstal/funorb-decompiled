@@ -233,8 +233,8 @@ final class boa extends dg {
     }
 
     private final boolean i(int param0) {
-        kh var3;
         int stackIn_14_0 = 0;
+        kh var3;
         L0: {
           if (param0 == 77) {
             break L0;

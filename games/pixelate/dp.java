@@ -234,13 +234,14 @@ final class dp extends de {
 
     final void c(int param0) {
         Object var2;
+        ii var2_ref;
         ii var3;
         ii var4;
         ii var5;
         var2 = null;
         if ((this.field_l ^ -1) == -2) {
           var4 = ro.field_e;
-          var2 = var4;
+          var2_ref = var4;
           if (var4 == null) {
             super.c(0);
             return;

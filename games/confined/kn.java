@@ -118,6 +118,13 @@ final class kn {
     }
 
     final void a(int param0, double param1, double param2, double param3, vg param4, int param5) {
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        String stackIn_33_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var10 = null;
         double var11 = 0.0;
         double var13 = 0.0;
         double var15 = 0.0;
@@ -150,13 +157,6 @@ final class kn {
         int var62 = 0;
         vg var63 = null;
         kh var64 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var10 = null;
         var62 = Confined.field_J ? 1 : 0;
         try {
           L0: {

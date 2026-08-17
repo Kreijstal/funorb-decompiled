@@ -383,6 +383,8 @@ final class fk extends sn {
     }
 
     final void b(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_34_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_63_0 = 0;
@@ -550,8 +552,9 @@ final class fk extends sn {
                           stackIn_48_0 = param1;
                           break L11;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_48_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_48_0 = localTemp$0;
                           break L11;
                         }
                       }
@@ -599,8 +602,9 @@ final class fk extends sn {
                     L16: {
                       this.field_z.b(this.field_t, 0, param2);
                       if (dd.field_h) {
-                        param1 = param1 << 1;
-                        stackIn_63_0 = param1 << 1;
+                        localTemp$1 = param1 << 1;
+                        param1 = localTemp$1;
+                        stackIn_63_0 = localTemp$1;
                         break L16;
                       } else {
                         stackIn_63_0 = param1;

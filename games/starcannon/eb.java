@@ -11,7 +11,22 @@ final class eb {
     static String[] field_d;
 
     final static void a(int param0) {
+        int stackIn_48_0 = 0;
+        int stackIn_48_1 = 0;
+        int stackIn_49_0 = 0;
+        int stackIn_49_1 = 0;
+        int stackIn_49_2 = 0;
+        int stackIn_53_0 = 0;
+        int stackIn_54_0 = 0;
+        int stackIn_54_1 = 0;
+        int stackIn_61_0 = 0;
+        int stackIn_62_0 = 0;
+        int stackIn_62_1 = 0;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         hl var2_ref_hl = null;
         int var3 = 0;
@@ -32,21 +47,6 @@ final class eb {
         int[] var29 = null;
         int[] var30 = null;
         int[] var31 = null;
-        int stackIn_48_0 = 0;
-        int stackIn_48_1 = 0;
-        int stackIn_49_0 = 0;
-        int stackIn_49_1 = 0;
-        int stackIn_49_2 = 0;
-        int stackIn_53_0 = 0;
-        int stackIn_54_0 = 0;
-        int stackIn_54_1 = 0;
-        int stackIn_61_0 = 0;
-        int stackIn_62_0 = 0;
-        int stackIn_62_1 = 0;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
         var10 = StarCannon.field_A;
         try {
           L0: {

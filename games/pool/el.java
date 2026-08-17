@@ -443,17 +443,34 @@ final class el extends ob {
     }
 
     private final void a(boolean param0, byte param1) {
-        int var3 = 0;
-        kh.field_Gc = this.a(wn.field_i, param0, gg.field_f, false);
-        if ((ne.field_s ^ -1) == -2) {
+        int var3;
+        L0: {
+          kh.field_Gc = this.a(wn.field_i, param0, gg.field_f, false);
+          if ((ne.field_s ^ -1) != -2) {
+            break L0;
+          } else {
             vj.a((byte) -27, il.field_c[0]);
             var3 = this.a(lq.field_W, param0, ua.field_o, false);
-            if (uk.field_j == var3 || (var3 ^ -1) != 0) {
-                uk.field_j = -1;
+            if (uk.field_j == var3) {
+              uk.field_j = -1;
+              break L0;
+            } else {
+              if ((var3 ^ -1) == 0) {
+                break L0;
+              } else {
+                uk.field_j = var3;
+                break L0;
+              }
             }
+          }
         }
-        if (param1 != -98) {
+        L1: {
+          if (param1 == -98) {
+            break L1;
+          } else {
             field_I = (int[]) null;
+            break L1;
+          }
         }
     }
 

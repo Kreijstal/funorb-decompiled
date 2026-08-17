@@ -18,11 +18,22 @@ final class rj extends id {
 
     rj(int param0, int param1, int param2) {
         super(param0, param1, param2);
-        this.field_G = false;
-        this.field_H = false;
-        int var4 = hp.a((byte) 104, g.field_a, 2);
-        if (var4 == 1 || 2 == var4) {
+        int var4;
+        L0: {
+          this.field_G = false;
+          this.field_H = false;
+          var4 = hp.a((byte) 104, g.field_a, 2);
+          if (var4 == 1) {
             this.field_G = true;
+            break L0;
+          } else {
+            if (2 != var4) {
+              break L0;
+            } else {
+              this.field_H = true;
+              break L0;
+            }
+          }
         }
     }
 

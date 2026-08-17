@@ -25,8 +25,21 @@ final class bg extends gi {
     }
 
     final static void d(int param0) {
+        int stackIn_51_0 = 0;
+        int stackIn_51_1 = 0;
+        int stackIn_51_2 = 0;
+        int stackIn_52_0 = 0;
+        int stackIn_52_1 = 0;
+        int stackIn_52_2 = 0;
+        int stackIn_52_3 = 0;
+        int stackIn_58_0 = 0;
+        int stackIn_67_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         nh var1 = null;
         int var1_int = 0;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -46,19 +59,6 @@ final class bg extends gi {
         int[] var29 = null;
         int[] var30 = null;
         int[] var31 = null;
-        int stackIn_51_0 = 0;
-        int stackIn_51_1 = 0;
-        int stackIn_51_2 = 0;
-        int stackIn_52_0 = 0;
-        int stackIn_52_1 = 0;
-        int stackIn_52_2 = 0;
-        int stackIn_52_3 = 0;
-        int stackIn_58_0 = 0;
-        int stackIn_67_0 = 0;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {

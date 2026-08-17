@@ -4170,15 +4170,38 @@ class kv extends go {
     }
 
     final boolean a(int param0, int param1, int param2, int param3) {
+        int stackIn_11_0 = 0;
         param2 = param2 - (param0 + this.field_t);
-        if (param2 < 0 || param2 >= this.field_q) {
+        if (param2 < 0) {
+          return false;
+        } else {
+          if (param2 < this.field_q) {
+            L0: {
+              param3 = param3 - (param1 + this.field_u);
+              if (param3 < 0) {
+                break L0;
+              } else {
+                if (param3 < this.field_p) {
+                  L1: {
+                    if (this.field_v[param3 * this.field_q + param2] == 0) {
+                      stackIn_11_0 = 0;
+                      break L1;
+                    } else {
+                      stackIn_11_0 = 1;
+                      break L1;
+                    }
+                  }
+                  return stackIn_11_0 != 0;
+                } else {
+                  break L0;
+                }
+              }
+            }
             return false;
-        }
-        param3 = param3 - (param1 + this.field_u);
-        if (param3 < 0 || param3 >= this.field_p) {
+          } else {
             return false;
+          }
         }
-        return this.field_v[param3 * this.field_q + param2] != 0 ? true : false;
     }
 
     final void g() {

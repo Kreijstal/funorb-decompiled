@@ -15691,13 +15691,44 @@ final class ha {
     }
 
     final boolean c(int param0, int param1, int param2) {
-        if (param1 != -16985) {
+        int stackIn_11_0 = 0;
+        L0: {
+          if (param1 == -16985) {
+            break L0;
+          } else {
             this.field_o = false;
+            break L0;
+          }
         }
-        if (0 == (param0 ^ -1) || (param2 ^ -1) == 0 || -256 == (param0 ^ -1) || (param2 ^ -1) == -256) {
-            return false;
+        L1: {
+          if (0 == (param0 ^ -1)) {
+            break L1;
+          } else {
+            if ((param2 ^ -1) == 0) {
+              break L1;
+            } else {
+              if (-256 == (param0 ^ -1)) {
+                break L1;
+              } else {
+                if ((param2 ^ -1) != -256) {
+                  L2: {
+                    if (this.field_yb[param2] != this.field_yb[param0]) {
+                      stackIn_11_0 = 0;
+                      break L2;
+                    } else {
+                      stackIn_11_0 = 1;
+                      break L2;
+                    }
+                  }
+                  return stackIn_11_0 != 0;
+                } else {
+                  return false;
+                }
+              }
+            }
+          }
         }
-        return this.field_yb[param2] == this.field_yb[param0] ? true : false;
+        return false;
     }
 
     private final void a(byte param0, vh param1) {
@@ -17098,21 +17129,38 @@ final class ha {
     }
 
     final int i(int param0, int param1) {
-        if (null == this.field_fb) {
+        int var3;
+        if (null != this.field_fb) {
+          if (-1 < (param0 ^ -1)) {
             return 0;
+          } else {
+            if ((param0 ^ -1) > (this.field_W ^ -1)) {
+              L0: {
+                var3 = 25 * param0;
+                var3 = var3 + this.field_fb[this.field_yb[param0]];
+                if ((var3 ^ -1) < (this.field_xb ^ -1)) {
+                  var3 = this.field_xb;
+                  break L0;
+                } else {
+                  break L0;
+                }
+              }
+              L1: {
+                if (param1 == -12710) {
+                  break L1;
+                } else {
+                  this.field_A = -76;
+                  break L1;
+                }
+              }
+              return var3;
+            } else {
+              return 0;
+            }
+          }
+        } else {
+          return 0;
         }
-        if (-1 < (param0 ^ -1) || (param0 ^ -1) <= (this.field_W ^ -1)) {
-            return 0;
-        }
-        int var3 = 25 * param0;
-        var3 = var3 + this.field_fb[this.field_yb[param0]];
-        if (!((var3 ^ -1) >= (this.field_xb ^ -1))) {
-            var3 = this.field_xb;
-        }
-        if (param1 != -12710) {
-            this.field_A = -76;
-        }
-        return var3;
     }
 
     public static void c(int param0) {
@@ -17769,27 +17817,68 @@ final class ha {
     }
 
     final int c(int param0, int param1, int param2, int param3) {
-        if (!(0 <= param3)) {
-            return 0;
+        int var6;
+        ne var7;
+        if (0 > param3) {
+          return 0;
+        } else {
+          L0: {
+            if (param0 < 0) {
+              break L0;
+            } else {
+              if (0 > param2) {
+                break L0;
+              } else {
+                if ((param0 ^ -1) <= (this.field_v ^ -1)) {
+                  break L0;
+                } else {
+                  if ((param2 ^ -1) > (this.field_db ^ -1)) {
+                    var7 = this.field_Eb[this.field_v * param2 + param0];
+                    if (var7.field_c == null) {
+                      L1: {
+                        var6 = this.c(param3, -16985, var7.field_a) ? 1 : 0;
+                        if (var6 == 0) {
+                          break L1;
+                        } else {
+                          if (7 != var7.field_h) {
+                            break L1;
+                          } else {
+                            return 65535;
+                          }
+                        }
+                      }
+                      L2: {
+                        if (param1 == -27300) {
+                          break L2;
+                        } else {
+                          this.a(41, 1, 42, (byte) 14);
+                          break L2;
+                        }
+                      }
+                      L3: {
+                        if (var6 == 0) {
+                          break L3;
+                        } else {
+                          if (-12 != (var7.field_h ^ -1)) {
+                            break L3;
+                          } else {
+                            return 1 << var7.field_g;
+                          }
+                        }
+                      }
+                      return 0;
+                    } else {
+                      return 0;
+                    }
+                  } else {
+                    return 0;
+                  }
+                }
+              }
+            }
+          }
+          return 0;
         }
-        if (param0 < 0 || 0 > param2 || (param0 ^ -1) <= (this.field_v ^ -1) || (param2 ^ -1) <= (this.field_db ^ -1)) {
-            return 0;
-        }
-        ne var7 = this.field_Eb[this.field_v * param2 + param0];
-        if (var7.field_c != null) {
-            return 0;
-        }
-        int var6 = this.c(param3, -16985, var7.field_a) ? 1 : 0;
-        if (var6 != 0 && 7 == var7.field_h) {
-            return 65535;
-        }
-        if (param1 != -27300) {
-            this.a(41, 1, 42, (byte) 14);
-        }
-        if (var6 != 0 && -12 == (var7.field_h ^ -1)) {
-            return 1 << var7.field_g;
-        }
-        return 0;
     }
 
     final void a(int param0, int param1) {

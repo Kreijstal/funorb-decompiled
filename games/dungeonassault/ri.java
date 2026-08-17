@@ -30,7 +30,8 @@ final class ri {
     }
 
     final static void a(String param0, String[] param1, int param2, int param3) {
-        RuntimeException var4 = null;
+        String[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         String[] var6 = null;
         int stackIn_11_0 = 0;
@@ -45,7 +46,6 @@ final class ri {
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] var4_array = null;
         var5 = DungeonAssault.field_K;
         try {
           L0: {
@@ -85,8 +85,8 @@ final class ri {
                   ll.field_p = p.a(param2, param0, -28323);
                   return;
                 } else {
-                  var4_array = param1;
-                  ok.a(2, var4_array);
+                  var4 = param1;
+                  ok.a(2, var4);
                   ll.field_p = em.a(param1, 8082);
                   return;
                 }
@@ -96,8 +96,8 @@ final class ri {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var4 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var4);
+            var4_ref = decompiledCaughtException;
+            stackIn_16_0 = (RuntimeException) (var4_ref);
 
             stackIn_16_1 = new StringBuilder().append("ri.C(");
 

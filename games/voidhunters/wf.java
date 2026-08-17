@@ -667,39 +667,70 @@ final class wf {
     }
 
     private final void d(byte param0) {
-        String var20 = null;
-        String var21 = null;
-        int var19 = VoidHunters.field_G;
-        int var2 = 4;
-        int var3 = pob.field_b;
-        int var4 = 0;
-        if (var3 >= 16 || 0 < var3) {
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var19;
+        String var20;
+        String var21;
+        L0: {
+          var19 = VoidHunters.field_G;
+          var2 = 4;
+          var3 = pob.field_b;
+          var4 = 0;
+          if (var3 >= 16) {
             var4 = (-mg.f(255) + 255) * 4;
+            break L0;
+          } else {
+            if (0 >= var3) {
+              break L0;
+            } else {
+              var4 = mg.f(255) * 4;
+              break L0;
+            }
+          }
         }
-        int var5 = var4 + (ip.field_p.width + -dma.field_g) / 2;
-        int var6 = (-dma.field_j + ip.field_p.height) / 2;
-        int var7 = 20;
-        int var8 = 20;
-        int var10 = -32 % ((param0 - 3) / 51);
-        af.a((byte) -115, 200, var8 * 2 + ko.field_e[6].field_n + (ko.field_e[0].field_n + 180 - -55), 80 - -var5 + (-ko.field_e[0].field_m + -var7), -var8 + (160 + var6 - ko.field_e[0].field_n) - 55, 2 * var7 + (480 - -ko.field_e[0].field_m) + ko.field_e[2].field_m);
-        int var9 = 16;
-        int var11 = 50;
-        int var12 = var11 + (-55 + -ko.field_e[0].field_n) + (var6 + 160) + -var8;
-        int var13 = 2 * var8 + 180 - -ko.field_e[0].field_n + (ko.field_e[6].field_n - 10);
-        ga.a(150, false, -var7 + var5 + 80 - (ko.field_e[0].field_m - var9), var12, var13, -(var9 * 2) + ko.field_e[0].field_m + 480 - (-ko.field_e[2].field_m + -(2 * var7)), 1);
-        int var14 = 50;
-        int var15 = -var7 + (-ko.field_e[0].field_m + (var5 + 80 + var9)) + var14;
-        int var16 = 2 * var7 + (ko.field_e[0].field_m + 480 + -(var14 * 2)) + (ko.field_e[2].field_m - var9 * 2);
-        int var17 = 13421772;
-        if (op.field_o != 0) {
+        L1: {
+          var5 = var4 + (ip.field_p.width + -dma.field_g) / 2;
+          var6 = (-dma.field_j + ip.field_p.height) / 2;
+          var7 = 20;
+          var8 = 20;
+          var10 = -32 % ((param0 - 3) / 51);
+          af.a((byte) -115, 200, var8 * 2 + ko.field_e[6].field_n + (ko.field_e[0].field_n + 180 - -55), 80 - -var5 + (-ko.field_e[0].field_m + -var7), -var8 + (160 + var6 - ko.field_e[0].field_n) - 55, 2 * var7 + (480 - -ko.field_e[0].field_m) + ko.field_e[2].field_m);
+          var9 = 16;
+          var11 = 50;
+          var12 = var11 + (-55 + -ko.field_e[0].field_n) + (var6 + 160) + -var8;
+          var13 = 2 * var8 + 180 - -ko.field_e[0].field_n + (ko.field_e[6].field_n - 10);
+          ga.a(150, false, -var7 + var5 + 80 - (ko.field_e[0].field_m - var9), var12, var13, -(var9 * 2) + ko.field_e[0].field_m + 480 - (-ko.field_e[2].field_m + -(2 * var7)), 1);
+          var14 = 50;
+          var15 = -var7 + (-ko.field_e[0].field_m + (var5 + 80 + var9)) + var14;
+          var16 = 2 * var7 + (ko.field_e[0].field_m + 480 + -(var14 * 2)) + (ko.field_e[2].field_m - var9 * 2);
+          var17 = 13421772;
+          if (op.field_o == 0) {
+            var12 += 50;
+            nua.a(-1, var13, var15, pqa.a(false, var2), 0, mb.field_k[op.field_o], var17, var16, -55, var12, 0, var2);
+            nua.a(-1, var13, 140 + var15, pqa.a(false, var2), 0, lu.field_a, 16755200, var16, -51, var12, 0, var2);
+            break L1;
+          } else {
             var12 -= 10;
             var20 = this.a("<savekey>", (byte) 119, mb.field_k[op.field_o], ve.field_p);
             var21 = this.a("<loadkey>", (byte) 63, var20, gg.field_j);
             nua.a(-1, var13, var15, pqa.a(false, var2), 1, var21, var17, var16, -42, var12, 0, var2);
-        } else {
-            var12 += 50;
-            nua.a(-1, var13, var15, pqa.a(false, var2), 0, mb.field_k[op.field_o], var17, var16, -55, var12, 0, var2);
-            nua.a(-1, var13, 140 + var15, pqa.a(false, var2), 0, lu.field_a, 16755200, var16, -51, var12, 0, var2);
+            break L1;
+          }
         }
         pm.a(80 - -var5, -1, -50 + var6 + 160, pt.a(op.field_o, -98), 1, 16738305, (byte) -96);
     }

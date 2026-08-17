@@ -13,6 +13,7 @@ final class nla {
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int localTemp$0 = 0;
         int stackIn_5_0 = 0;
         int stackIn_8_1 = 0;
         int stackIn_45_0 = 0;
@@ -56,8 +57,9 @@ final class nla {
                   var11 = (var9 << param5) / var8;
                   break L2;
                 } else {
-                  var8 = var8 >> param5 + -var10;
-                  if (-1 == (var8 >> param5 + -var10 ^ -1)) {
+                  localTemp$0 = var8 >> param5 + -var10;
+                  var8 = localTemp$0;
+                  if (-1 == (localTemp$0 ^ -1)) {
                     return -1;
                   } else {
                     var11 = (var9 << var10) / var8;

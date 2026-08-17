@@ -1035,8 +1035,6 @@ final class bf extends rf {
     }
 
     private final void a(StarCannon param0, int param1, d[] param2, byte param3, vi param4) {
-        int var6_int = 0;
-        int var7 = 0;
         RuntimeException stackIn_108_0 = null;
         StringBuilder stackIn_108_1 = null;
         RuntimeException stackIn_109_0 = null;
@@ -1050,7 +1048,9 @@ final class bf extends rf {
         String stackIn_115_2 = null;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
+        int var6_int = 0;
         RuntimeException var6 = null;
+        int var7 = 0;
         vi var8 = null;
         var7 = StarCannon.field_A;
         try {

@@ -2327,19 +2327,47 @@ final class op {
     }
 
     final boolean e(int param0, int param1, int param2) {
-        if (this.field_a[param0][param1].field_l != null) {
-            return false;
-        }
-        if (20 != this.field_a[param0][param1].field_n && this.field_a[param0][param1].field_n != 22 && -22 != (this.field_a[param0][param1].field_n ^ -1) && (this.field_a[param0][param1].field_n ^ -1) != -24 && this.field_a[param0][param1].field_n != 24 && -26 != (this.field_a[param0][param1].field_n ^ -1)) {
-            if (!(this.field_a[param0][param1].field_n == 26)) {
-                return true;
+        if (this.field_a[param0][param1].field_l == null) {
+          L0: {
+            if (20 == this.field_a[param0][param1].field_n) {
+              break L0;
+            } else {
+              if (this.field_a[param0][param1].field_n == 22) {
+                break L0;
+              } else {
+                if (-22 == (this.field_a[param0][param1].field_n ^ -1)) {
+                  break L0;
+                } else {
+                  if ((this.field_a[param0][param1].field_n ^ -1) == -24) {
+                    break L0;
+                  } else {
+                    if (this.field_a[param0][param1].field_n == 24) {
+                      break L0;
+                    } else {
+                      if (-26 == (this.field_a[param0][param1].field_n ^ -1)) {
+                        break L0;
+                      } else {
+                        if (this.field_a[param0][param1].field_n != 26) {
+                          return true;
+                        } else {
+                          break L0;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
-        }
-        if (param2 != -11066) {
+          }
+          if (param2 == -11066) {
+            return false;
+          } else {
             this.field_f = -16;
             return false;
+          }
+        } else {
+          return false;
         }
-        return false;
     }
 
     private final void c(lu param0, byte param1) {

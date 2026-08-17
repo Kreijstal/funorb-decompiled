@@ -141,27 +141,6 @@ final class ae {
     }
 
     final static void a(int param0) {
-        dd var1 = null;
-        int var1_int = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String var5_ref_String = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        dd var9 = null;
-        int var10 = 0;
-        dd var11 = null;
-        dd var12 = null;
-        String var14 = null;
-        dd var16 = null;
-        int[] var27 = null;
-        int[] var28 = null;
-        int[] var29 = null;
-        int[] var30 = null;
         int stackIn_52_0 = 0;
         int stackIn_52_1 = 0;
         int stackIn_52_2 = 0;
@@ -182,7 +161,28 @@ final class ae {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
+        dd var1 = null;
+        int var1_int = 0;
         RuntimeException var1_ref = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        String var5_ref_String = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9_int = 0;
+        dd var9 = null;
+        int var10 = 0;
+        dd var11 = null;
+        dd var12 = null;
+        String var14 = null;
+        dd var16 = null;
+        int[] var27 = null;
+        int[] var28 = null;
+        int[] var29 = null;
+        int[] var30 = null;
         var10 = Pool.field_O;
         try {
           L0: {

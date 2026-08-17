@@ -288,6 +288,8 @@ final class tp extends sp {
     }
 
     final void a(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_33_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_64_0 = 0;
@@ -453,8 +455,9 @@ final class tp extends sp {
                         this.field_v.a(this.field_z, 0, param2);
                         this.field_t.a(this.field_q, 0, param2);
                         if (qf.field_l) {
-                          param1 = param1 << 1;
-                          stackIn_49_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_49_0 = localTemp$0;
                           break L11;
                         } else {
                           stackIn_49_0 = param1;
@@ -507,8 +510,9 @@ final class tp extends sp {
                       L17: {
                         this.field_s.a(this.field_z, 0, param2);
                         if (qf.field_l) {
-                          param1 = param1 << 1;
-                          stackIn_64_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_64_0 = localTemp$1;
                           break L17;
                         } else {
                           stackIn_64_0 = param1;

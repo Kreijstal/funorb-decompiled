@@ -334,7 +334,7 @@ final class kh extends vk implements dc, ga, qk {
     }
 
     public final void a(dk param0, int param1, boolean param2, int param3, int param4) {
-        boolean discarded$0 = false;
+        boolean discarded$1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -360,7 +360,7 @@ final class kh extends vk implements dc, ga, qk {
                 if (param0 != this.field_M) {
                   break L2;
                 } else {
-                  discarded$0 = this.i(-1);
+                  discarded$1 = this.i(-1);
                   break L2;
                 }
               }
@@ -580,21 +580,40 @@ final class kh extends vk implements dc, ga, qk {
 
     private final boolean k(int param0) {
         String discarded$0 = null;
-        if (param0 != -1) {
+        L0: {
+          if (param0 == -1) {
+            break L0;
+          } else {
             discarded$0 = this.g((byte) 86);
+            break L0;
+          }
         }
-        if (this.a(param0 ^ -2, (ub) (this.field_J))) {
-            if (this.a(param0 + 2, (ub) (this.field_z))) {
-                if (this.a(1, (ub) (this.field_E))) {
-                    if (this.a(1, (ub) (this.field_L))) {
-                        if (this.a(1, (ub) (this.field_G))) {
-                            if (this.a(1, (ub) (this.field_K))) {
-                                return true;
-                            }
-                        }
+        L1: {
+          if (!this.a(param0 ^ -2, (ub) (this.field_J))) {
+            break L1;
+          } else {
+            if (!this.a(param0 + 2, (ub) (this.field_z))) {
+              break L1;
+            } else {
+              if (!this.a(1, (ub) (this.field_E))) {
+                break L1;
+              } else {
+                if (!this.a(1, (ub) (this.field_L))) {
+                  break L1;
+                } else {
+                  if (!this.a(1, (ub) (this.field_G))) {
+                    break L1;
+                  } else {
+                    if (!this.a(1, (ub) (this.field_K))) {
+                      break L1;
+                    } else {
+                      return true;
                     }
+                  }
                 }
+              }
             }
+          }
         }
         return false;
     }

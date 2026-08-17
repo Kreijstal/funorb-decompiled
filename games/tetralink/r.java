@@ -528,6 +528,8 @@ final class r extends eb {
     }
 
     final void b(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_33_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_63_0 = 0;
@@ -691,8 +693,9 @@ final class r extends eb {
                         this.field_A.b(this.field_x, 0, param2);
                         this.field_u.b(this.field_F, 0, param2);
                         if (nk.field_s) {
-                          param1 = param1 << 1;
-                          stackIn_48_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_48_0 = localTemp$0;
                           break L11;
                         } else {
                           stackIn_48_0 = param1;
@@ -746,8 +749,9 @@ final class r extends eb {
                           stackIn_63_0 = param1;
                           break L17;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_63_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_63_0 = localTemp$1;
                           break L17;
                         }
                       }

@@ -21,15 +21,9 @@ final class bna extends is {
     bna(Object param0, int param1) {
         super(param1);
         try {
-            try {
-                this.field_l = new java.lang.ref.SoftReference(param0);
-            } catch (RuntimeException runtimeException) {
-                throw rta.a((Throwable) ((Object) runtimeException), "bna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
-            }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+            this.field_l = new java.lang.ref.SoftReference(param0);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "bna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -1043,25 +1043,63 @@ final class ne extends dj {
     }
 
     final boolean a(int param0, int param1, char param2) {
-        if (param1 >= -5) {
+        L0: {
+          if (param1 < -5) {
+            break L0;
+          } else {
             ne.k((byte) 83);
+            break L0;
+          }
         }
-        if (!(0 != this.field_C)) {
-            if (-99 == (param0 ^ -1) || 99 == param0 || -97 == (param0 ^ -1) || 97 == param0) {
-                return true;
-            }
-            if ((param0 ^ -1) == -84) {
-                if (bk.field_a[0].field_u == 0) {
-                    bk.field_a[0].a((byte) -31, 4);
+        L1: {
+          if (0 == this.field_C) {
+            L2: {
+              if (-99 == (param0 ^ -1)) {
+                break L2;
+              } else {
+                if (99 == param0) {
+                  break L2;
+                } else {
+                  if (-97 == (param0 ^ -1)) {
+                    break L2;
+                  } else {
+                    if (97 != param0) {
+                      if ((param0 ^ -1) != -84) {
+                        if (param0 == 82) {
+                          L3: {
+                            if (0 != bk.field_a[1].field_u) {
+                              break L3;
+                            } else {
+                              bk.field_a[1].a((byte) -31, 4);
+                              break L3;
+                            }
+                          }
+                          return true;
+                        } else {
+                          break L1;
+                        }
+                      } else {
+                        L4: {
+                          if (bk.field_a[0].field_u != 0) {
+                            break L4;
+                          } else {
+                            bk.field_a[0].a((byte) -31, 4);
+                            break L4;
+                          }
+                        }
+                        return true;
+                      }
+                    } else {
+                      return true;
+                    }
+                  }
                 }
-                return true;
+              }
             }
-            if (!(param0 != 82)) {
-                if (0 == bk.field_a[1].field_u) {
-                    bk.field_a[1].a((byte) -31, 4);
-                }
-                return true;
-            }
+            return true;
+          } else {
+            break L1;
+          }
         }
         return super.a(param0, -78, param2);
     }

@@ -422,11 +422,11 @@ final class wb extends ti {
     }
 
     final boolean o(int param0) {
-        RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_46_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             if (param0 > 86) {

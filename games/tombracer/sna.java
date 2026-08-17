@@ -233,16 +233,39 @@ final class sna {
     }
 
     final void a(byte param0) {
-        int var3 = TombRacer.field_G ? 1 : 0;
-        mga var2 = (mga) ((Object) this.field_c.f(-80));
-        while (var2 != null) {
-            if (var2.field_k > 0 || !this.field_l.d(0)) {
+        mga var2;
+        int var3;
+        var3 = TombRacer.field_G ? 1 : 0;
+        var2 = (mga) ((Object) this.field_c.f(-80));
+        L0: while (true) {
+          if (var2 == null) {
+            L1: {
+              if (param0 == 44) {
+                break L1;
+              } else {
+                this.a(1);
+                break L1;
+              }
+            }
+            return;
+          } else {
+            L2: {
+              if (var2.field_k > 0) {
                 var2.field_k = var2.field_k - 1;
+                break L2;
+              } else {
+                if (this.field_l.d(0)) {
+                  break L2;
+                } else {
+                  this.field_l.a(var2.field_h, param0 ^ 644);
+                  var2.p(param0 ^ 18);
+                  break L2;
+                }
+              }
             }
             var2 = (mga) ((Object) this.field_c.e(108));
-        }
-        if (param0 != 44) {
-            this.a(1);
+            continue L0;
+          }
         }
     }
 

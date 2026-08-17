@@ -442,14 +442,26 @@ final class ina extends bi {
     }
 
     final void e(int param0) {
-        int var2 = 0;
-        this.field_p = this.a((byte) -117, mk.field_p, gd.field_m);
-        if (1 == lf.field_c) {
+        int var2;
+        L0: {
+          this.field_p = this.a((byte) -117, mk.field_p, gd.field_m);
+          if (1 != lf.field_c) {
+            break L0;
+          } else {
             ol.a(kea.field_r[0], true);
             var2 = this.a((byte) -123, nfa.field_a, jc.field_r);
-            if (this.field_t == var2 || (var2 ^ -1) != 0) {
-                this.field_t = -1;
+            if (this.field_t == var2) {
+              this.field_t = -1;
+              break L0;
+            } else {
+              if ((var2 ^ -1) == 0) {
+                break L0;
+              } else {
+                this.field_t = var2;
+                break L0;
+              }
             }
+          }
         }
         super.e(param0);
     }

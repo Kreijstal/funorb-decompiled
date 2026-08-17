@@ -198,20 +198,53 @@ class lf {
     }
 
     final void b(int param0) {
-        if (-1 > (this.field_d ^ -1) || this.field_e != null) {
-            if (null == this.field_e && null != ua.field_c && -1 + ua.field_c.length > this.field_c) {
-                if (!(null == ua.field_c[-1 + this.field_c])) {
+        L0: {
+          if (-1 > (this.field_d ^ -1)) {
+            if (null != this.field_e) {
+              break L0;
+            } else {
+              if (null == ua.field_c) {
+                break L0;
+              } else {
+                if (-1 + ua.field_c.length <= this.field_c) {
+                  break L0;
+                } else {
+                  if (null != ua.field_c[-1 + this.field_c]) {
                     this.field_e = b.a(ua.field_c[-1 + this.field_c], 100, this.field_d);
                     this.field_e.d(-1);
                     eh.field_c.b(this.field_e);
+                    break L0;
+                  } else {
+                    break L0;
+                  }
                 }
+              }
             }
+          } else {
+            if (this.field_e == null) {
+              break L0;
+            } else {
+              eh.field_c.a(this.field_e);
+              this.field_e = null;
+              break L0;
+            }
+          }
         }
-        if (param0 <= 25) {
+        L1: {
+          if (param0 > 25) {
+            break L1;
+          } else {
             lf.a((byte) -50);
+            break L1;
+          }
         }
-        if (!(this.field_e == null)) {
+        L2: {
+          if (this.field_e != null) {
             this.field_e.f(this.field_d * uh.field_i / 64);
+            break L2;
+          } else {
+            break L2;
+          }
         }
     }
 

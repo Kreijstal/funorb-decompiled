@@ -489,6 +489,8 @@ final class fj extends qd {
     }
 
     final void b(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_35_0 = 0;
         int stackIn_50_0 = 0;
         int stackIn_65_0 = 0;
@@ -656,8 +658,9 @@ final class fj extends qd {
                         this.field_B.b(this.field_u, 0, param2);
                         this.field_v.b(this.field_q, 0, param2);
                         if (kh.field_g) {
-                          param1 = param1 << 1;
-                          stackIn_50_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_50_0 = localTemp$0;
                           break L11;
                         } else {
                           stackIn_50_0 = param1;
@@ -708,8 +711,9 @@ final class fj extends qd {
                       L17: {
                         this.field_D.b(this.field_u, 0, param2);
                         if (kh.field_g) {
-                          param1 = param1 << 1;
-                          stackIn_65_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_65_0 = localTemp$1;
                           break L17;
                         } else {
                           stackIn_65_0 = param1;

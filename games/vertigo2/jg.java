@@ -1187,9 +1187,9 @@ class jg extends bg {
     }
 
     boolean b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var7 = null;
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
         try {
           L0: {
             L1: {

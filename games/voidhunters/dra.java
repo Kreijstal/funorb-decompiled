@@ -20,6 +20,8 @@ final class dra extends f {
     private int field_t;
 
     final void a(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_34_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_63_0 = 0;
@@ -190,8 +192,9 @@ final class dra extends f {
                         this.field_k.a(this.field_r, 0, param2);
                         this.field_j.a(this.field_p, 0, param2);
                         if (vka.field_r) {
-                          param1 = param1 << 1;
-                          stackIn_48_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_48_0 = localTemp$0;
                           break L11;
                         } else {
                           stackIn_48_0 = param1;
@@ -239,8 +242,9 @@ final class dra extends f {
                       L17: {
                         this.field_l.a(this.field_r, 0, param2);
                         if (vka.field_r) {
-                          param1 = param1 << 1;
-                          stackIn_63_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_63_0 = localTemp$1;
                           break L17;
                         } else {
                           stackIn_63_0 = param1;

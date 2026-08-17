@@ -80,6 +80,7 @@ abstract class a {
     final static void a(String param0, byte param1, int param2, String[] param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
+        String[] var5 = null;
         int var6 = 0;
         String[] var7 = null;
         int stackIn_10_0 = 0;
@@ -92,7 +93,6 @@ abstract class a {
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] var5 = null;
         var6 = SteelSentinels.field_G;
         try {
           L0: {

@@ -91,21 +91,35 @@ final class me extends wo {
     }
 
     final void l(byte param0) {
+        int var2;
+        int var3;
         this.field_F = 0;
         super.l(param0);
-        int var2 = this.field_Eb;
-        int var3 = 672;
-        if (var3 - 24 <= this.f(237239984) || this.f(237239984) < 96) {
+        var2 = this.field_Eb;
+        var3 = 672;
+        if (var3 - 24 <= this.f(237239984)) {
+          this.field_Y = this.a(true);
+          this.field_X = 48 + this.f(param0 + 237239932);
+          this.c(0, this.field_D);
+          this.e(1, param0 + -6956);
+          this.g(param0 + 45);
+          return;
+        } else {
+          if (this.f(237239984) >= 96) {
+            if (this.field_F != 0) {
+              return;
+            } else {
+              this.a(var2, (byte) 115, var3);
+              return;
+            }
+          } else {
             this.field_Y = this.a(true);
             this.field_X = 48 + this.f(param0 + 237239932);
             this.c(0, this.field_D);
             this.e(1, param0 + -6956);
             this.g(param0 + 45);
             return;
-        }
-        if (this.field_F == 0) {
-            this.a(var2, (byte) 115, var3);
-            return;
+          }
         }
     }
 

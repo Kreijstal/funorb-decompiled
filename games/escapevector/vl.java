@@ -185,21 +185,38 @@ final class vl {
     }
 
     final int a(byte param0, int param1) {
-        int var4 = EscapeVector.field_A;
-        if (this.field_b == null || 0 == this.field_b.length) {
-            return 0;
-        }
-        int var3 = 1;
-        if (param0 != 52) {
-            this.a((byte) -102, -12);
-        }
-        while (this.field_b.length > var3) {
-            if (this.field_b[var3] + this.field_b[-1 + var3] >> 1601182817 > param1) {
-                return -1 + var3;
+        int var3;
+        int var4;
+        var4 = EscapeVector.field_A;
+        if (this.field_b == null) {
+          return 0;
+        } else {
+          if (0 != this.field_b.length) {
+            L0: {
+              var3 = 1;
+              if (param0 == 52) {
+                break L0;
+              } else {
+                this.a((byte) -102, -12);
+                break L0;
+              }
             }
-            var3++;
+            L1: while (true) {
+              if (this.field_b.length <= var3) {
+                return this.field_b.length - 1;
+              } else {
+                if (this.field_b[var3] + this.field_b[-1 + var3] >> 1601182817 <= param1) {
+                  var3++;
+                  continue L1;
+                } else {
+                  return -1 + var3;
+                }
+              }
+            }
+          } else {
+            return 0;
+          }
         }
-        return this.field_b.length - 1;
     }
 
     vl(int param0, int param1, int param2) {

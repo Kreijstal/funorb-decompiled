@@ -272,27 +272,6 @@ final class we implements j {
     }
 
     final static void a(boolean param0) {
-        o var1 = null;
-        int var1_int = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        o var9 = null;
-        int var10 = 0;
-        o var11 = null;
-        o var12 = null;
-        String var14 = null;
-        o var16 = null;
-        String var17 = null;
-        int[] var28 = null;
-        int[] var29 = null;
-        int[] var30 = null;
-        int[] var31 = null;
         int stackIn_50_0 = 0;
         int stackIn_50_1 = 0;
         int stackIn_51_0 = 0;
@@ -316,7 +295,28 @@ final class we implements j {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
+        o var1 = null;
+        int var1_int = 0;
         RuntimeException var1_ref = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9_int = 0;
+        o var9 = null;
+        int var10 = 0;
+        o var11 = null;
+        o var12 = null;
+        String var14 = null;
+        o var16 = null;
+        String var17 = null;
+        int[] var28 = null;
+        int[] var29 = null;
+        int[] var30 = null;
+        int[] var31 = null;
         var10 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {

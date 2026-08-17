@@ -64,27 +64,52 @@ final class je extends haa {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 100 / ((-38 - param2) / 50);
+        int var6;
+        var6 = 100 / ((-38 - param2) / 50);
         this.field_H = -1;
-        if (!(this.field_J.field_G)) {
+        if (!this.field_J.field_G) {
+          return false;
+        } else {
+          if (!this.field_J.field_F.field_A.field_f) {
             return false;
+          } else {
+            if (this.field_I == null) {
+              return super.a(param0, param1, -107, param3, param4);
+            } else {
+              L0: {
+                param0 = param0 - (param1 - -this.field_i);
+                param3 = param3 - (this.field_n + param4);
+                if (param0 < 0) {
+                  break L0;
+                } else {
+                  if (0 > param3) {
+                    break L0;
+                  } else {
+                    if (param0 > this.field_m) {
+                      break L0;
+                    } else {
+                      if (param3 <= this.field_p) {
+                        L1: {
+                          this.field_H = param3 / this.field_K;
+                          if (this.field_I.length > this.field_H) {
+                            break L1;
+                          } else {
+                            this.field_H = -1;
+                            break L1;
+                          }
+                        }
+                        return true;
+                      } else {
+                        return false;
+                      }
+                    }
+                  }
+                }
+              }
+              return false;
+            }
+          }
         }
-        if (!(this.field_J.field_F.field_A.field_f)) {
-            return false;
-        }
-        if (!(this.field_I != null)) {
-            return super.a(param0, param1, -107, param3, param4);
-        }
-        param0 = param0 - (param1 - -this.field_i);
-        param3 = param3 - (this.field_n + param4);
-        if (param0 < 0 || 0 > param3 || param0 > this.field_m || param3 > this.field_p) {
-            return false;
-        }
-        this.field_H = param3 / this.field_K;
-        if (this.field_I.length <= this.field_H) {
-            this.field_H = -1;
-        }
-        return true;
     }
 
     final static iu a(byte param0) {

@@ -574,30 +574,60 @@ final class lma extends dg {
     }
 
     final void h(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        fh var4 = null;
-        int var5 = 0;
-        int var6 = TombRacer.field_G ? 1 : 0;
+        int var2;
+        int var3;
+        fh var4;
+        int var5;
+        int var6;
+        var6 = TombRacer.field_G ? 1 : 0;
         super.h(109);
-        if (!(this.field_x != null)) {
-            return;
-        }
-        for (var2 = 0; this.field_q > var2; var2++) {
-            for (var3 = 0; this.field_w > var3; var3++) {
-                var4 = this.field_x[var2][var3];
-                var5 = bl.field_c[var4.field_a];
-                var4.field_o = dfa.a(-var4.field_o + var5, 2048, -73);
-                var4.field_l = -var4.field_l;
-                var4.field_i = sw.a(var4.field_i, 6);
-                if ((var4.field_a ^ -1) == -12 || -13 == (var4.field_a ^ -1)) {
-                    var4.field_a = 12;
+        if (this.field_x == null) {
+          return;
+        } else {
+          var2 = 0;
+          L0: while (true) {
+            if (this.field_q <= var2) {
+              L1: {
+                if (param0 > 0) {
+                  break L1;
+                } else {
+                  this.m((byte) 122);
+                  break L1;
                 }
-                var4.a(0);
+              }
+              return;
+            } else {
+              var3 = 0;
+              L2: while (true) {
+                if (this.field_w <= var3) {
+                  var2++;
+                  continue L0;
+                } else {
+                  L3: {
+                    var4 = this.field_x[var2][var3];
+                    var5 = bl.field_c[var4.field_a];
+                    var4.field_o = dfa.a(-var4.field_o + var5, 2048, -73);
+                    var4.field_l = -var4.field_l;
+                    var4.field_i = sw.a(var4.field_i, 6);
+                    if ((var4.field_a ^ -1) == -12) {
+                      var4.field_a = 12;
+                      break L3;
+                    } else {
+                      if (-13 != (var4.field_a ^ -1)) {
+                        break L3;
+                      } else {
+                        var4.field_a = 11;
+                        break L3;
+                      }
+                    }
+                  }
+                  var4.a(0);
+                  var3++;
+                  continue L2;
+                }
+              }
             }
-        }
-        if (param0 <= 0) {
-            this.m((byte) 122);
+          }
         }
     }
 

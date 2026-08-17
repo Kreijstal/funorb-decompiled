@@ -12,16 +12,30 @@ final class cl {
     static String field_h;
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
-        if (!param0) {
+        if (param0) {
+          if (-1 < (param3 ^ -1)) {
             return false;
+          } else {
+            if (param3 <= 11) {
+              L0: {
+                if (1 > param2) {
+                  break L0;
+                } else {
+                  if (rp.a(param3, param1, -126) >= param2) {
+                    return true;
+                  } else {
+                    break L0;
+                  }
+                }
+              }
+              return false;
+            } else {
+              return false;
+            }
+          }
+        } else {
+          return false;
         }
-        if (-1 < (param3 ^ -1) || param3 > 11) {
-            return false;
-        }
-        if (1 > param2 || rp.a(param3, param1, -126) < param2) {
-            return false;
-        }
-        return true;
     }
 
     public static void a(int param0) {

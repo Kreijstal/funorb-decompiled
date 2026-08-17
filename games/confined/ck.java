@@ -51,7 +51,24 @@ abstract class ck {
     }
 
     final static void a(int[] param0, int param1, boolean param2, int[] param3, boolean param4, boolean param5, rm param6) {
+        int stackIn_57_0 = 0;
+        int stackIn_57_1 = 0;
+        int stackIn_60_0 = 0;
+        int stackIn_60_1 = 0;
+        RuntimeException stackIn_69_0 = null;
+        StringBuilder stackIn_69_1 = null;
+        RuntimeException stackIn_70_0 = null;
+        StringBuilder stackIn_70_1 = null;
+        String stackIn_70_2 = null;
+        StringBuilder stackIn_73_1 = null;
+        StringBuilder stackIn_74_1 = null;
+        String stackIn_74_2 = null;
+        StringBuilder stackIn_77_1 = null;
+        StringBuilder stackIn_78_1 = null;
+        String stackIn_78_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -76,23 +93,6 @@ abstract class ck {
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
-        int stackIn_57_0 = 0;
-        int stackIn_57_1 = 0;
-        int stackIn_60_0 = 0;
-        int stackIn_60_1 = 0;
-        RuntimeException stackIn_69_0 = null;
-        StringBuilder stackIn_69_1 = null;
-        RuntimeException stackIn_70_0 = null;
-        StringBuilder stackIn_70_1 = null;
-        String stackIn_70_2 = null;
-        StringBuilder stackIn_73_1 = null;
-        StringBuilder stackIn_74_1 = null;
-        String stackIn_74_2 = null;
-        StringBuilder stackIn_77_1 = null;
-        StringBuilder stackIn_78_1 = null;
-        String stackIn_78_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
         var31 = Confined.field_J ? 1 : 0;
         try {
           L0: {

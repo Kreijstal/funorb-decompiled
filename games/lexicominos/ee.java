@@ -461,17 +461,36 @@ abstract class ee {
     }
 
     final static boolean a(int param0, char param1) {
-        if (!(!Character.isISOControl(param1))) {
-            return false;
-        }
-        if (!(!jd.a((byte) -16, param1))) {
+        int var2;
+        if (Character.isISOControl(param1)) {
+          return false;
+        } else {
+          if (jd.a((byte) -16, param1)) {
             return true;
-        }
-        if (param1 == 45 || 160 == param1 || param1 == 32 || 95 == param1) {
+          } else {
+            L0: {
+              if (param1 == 45) {
+                break L0;
+              } else {
+                if (160 == param1) {
+                  break L0;
+                } else {
+                  if (param1 == 32) {
+                    break L0;
+                  } else {
+                    if (95 != param1) {
+                      var2 = -12 % ((-54 - param0) / 63);
+                      return false;
+                    } else {
+                      return true;
+                    }
+                  }
+                }
+              }
+            }
             return true;
+          }
         }
-        int var2 = -12 % ((-54 - param0) / 63);
-        return false;
     }
 
     static {

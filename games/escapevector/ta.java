@@ -990,37 +990,66 @@ final class ta {
     }
 
     private final void d(int param0, int param1) {
-        int discarded$0 = 0;
-        int var3 = 640;
-        int var4 = 480;
-        ed var5 = new ed(var3, var4);
-        int[] var20 = new int[4];
-        dk[] var7 = this.field_p[this.field_h];
-        em.a(var20);
-        if (param0 != 4551) {
-            discarded$0 = this.l(122);
+        int discarded$1 = 0;
+        int var3;
+        int var4;
+        ed var5;
+        dk[] var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        gb var15;
+        gb var16;
+        int[] var20;
+        L0: {
+          var3 = 640;
+          var4 = 480;
+          var5 = new ed(var3, var4);
+          var20 = new int[4];
+          var7 = this.field_p[this.field_h];
+          em.a(var20);
+          if (param0 == 4551) {
+            break L0;
+          } else {
+            discarded$1 = this.l(122);
+            break L0;
+          }
         }
-        var5.g();
-        nm.a((byte) -103, -1, var7);
-        md.field_D.a(124);
-        em.b(var20);
-        var5.f();
-        int var8 = qm.a(var7, (byte) 26);
-        int var9 = on.a(var7, -49);
-        int var10 = vg.a(var7, (byte) -122);
-        int var11 = pb.a((byte) 2, var7);
-        var5.field_z = var11 + -var10;
-        var5.field_q = var5.field_q - var8;
-        var5.field_A = var9 + -var8;
-        var5.field_v = var5.field_v - var10;
-        int var12 = 40;
-        int var13 = 0;
-        if (pf.field_i == param1 || lj.field_f == param1) {
+        L1: {
+          var5.g();
+          nm.a((byte) -103, -1, var7);
+          md.field_D.a(124);
+          em.b(var20);
+          var5.f();
+          var8 = qm.a(var7, (byte) 26);
+          var9 = on.a(var7, -49);
+          var10 = vg.a(var7, (byte) -122);
+          var11 = pb.a((byte) 2, var7);
+          var5.field_z = var11 + -var10;
+          var5.field_q = var5.field_q - var8;
+          var5.field_A = var9 + -var8;
+          var5.field_v = var5.field_v - var10;
+          var12 = 40;
+          var13 = 0;
+          if (pf.field_i == param1) {
             var13 = 0;
+            break L1;
+          } else {
+            if (lj.field_f != param1) {
+              break L1;
+            } else {
+              var13 = -var5.field_A + var3 - 1;
+              break L1;
+            }
+          }
         }
-        int var14 = var8;
-        gb var15 = new gb(var13, var10);
-        gb var16 = new gb(var14, var10);
+        var14 = var8;
+        var15 = new gb(var13, var10);
+        var16 = new gb(var14, var10);
         this.field_s = new ea(var15, var16, var5, var12);
     }
 

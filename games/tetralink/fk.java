@@ -254,16 +254,34 @@ class fk extends ae {
     }
 
     final static boolean a(int param0, byte param1, int param2, int param3) {
-        if ((param3 ^ -1) > -1 || param3 > 11) {
+        if ((param3 ^ -1) > -1) {
+          return false;
+        } else {
+          if (param3 <= 11) {
+            L0: {
+              if (-2 < (param2 ^ -1)) {
+                break L0;
+              } else {
+                if (oj.a(param3, param0, 10121) >= param2) {
+                  L1: {
+                    if (param1 == -40) {
+                      break L1;
+                    } else {
+                      field_R = (String) null;
+                      break L1;
+                    }
+                  }
+                  return true;
+                } else {
+                  break L0;
+                }
+              }
+            }
             return false;
-        }
-        if (-2 < (param2 ^ -1) || oj.a(param3, param0, 10121) < param2) {
+          } else {
             return false;
+          }
         }
-        if (param1 != -40) {
-            field_R = (String) null;
-        }
-        return true;
     }
 
     public static void g(int param0) {

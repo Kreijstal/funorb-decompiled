@@ -7,19 +7,40 @@ final class ig {
 
     public final void showcursor(java.awt.Component param0, boolean param1) {
         try {
-            if (param1 || param0 == null) {
+            L0: {
+              if (param1) {
                 param0 = null;
+                break L0;
+              } else {
+                if (param0 != null) {
+                  break L0;
+                } else {
+                  throw new NullPointerException();
+                }
+              }
             }
-            if (!(this.field_b != param0)) {
-                return;
-            }
-            if (!(null == this.field_b)) {
-                this.field_b.setCursor((java.awt.Cursor) null);
-                this.field_b = null;
-            }
-            if (!(param0 == null)) {
-                param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
-                this.field_b = param0;
+            if (this.field_b == param0) {
+              return;
+            } else {
+              L1: {
+                if (null != this.field_b) {
+                  this.field_b.setCursor((java.awt.Cursor) null);
+                  this.field_b = null;
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              L2: {
+                if (param0 != null) {
+                  param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
+                  this.field_b = param0;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

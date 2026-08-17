@@ -12,7 +12,8 @@ final class fk extends dl {
     static String field_x;
 
     final static void a(String param0, int param1, boolean param2, String[] param3) {
-        RuntimeException var4 = null;
+        String[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         String[] var6 = null;
         int stackIn_12_0 = 0;
@@ -26,7 +27,6 @@ final class fk extends dl {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String[] var4_array = null;
         var5 = fleas.field_A ? 1 : 0;
         try {
           L0: {
@@ -56,8 +56,8 @@ final class fk extends dl {
                     kh.field_a = af.a((byte) 36, param1, param0);
                     return;
                   } else {
-                    var4_array = param3;
-                    m.a(-100, var4_array);
+                    var4 = param3;
+                    m.a(-100, var4);
                     kh.field_a = ha.a(param3, -21916);
                     return;
                   }
@@ -71,8 +71,8 @@ final class fk extends dl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
-            var4 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var4);
+            var4_ref = decompiledCaughtException;
+            stackIn_16_0 = (RuntimeException) (var4_ref);
 
             stackIn_16_1 = new StringBuilder().append("fk.E(");
 

@@ -266,21 +266,45 @@ final class pd extends rj {
     }
 
     final void a(int param0, byte param1, int param2) {
-        if (param1 > -59) {
+        int var4;
+        if (param1 <= -59) {
+          if (this.field_F == 0) {
             return;
-        }
-        if (!(this.field_F != 0)) {
+          } else {
+            L0: {
+              var4 = this.a(param0, true);
+              if (var4 > this.field_z) {
+                this.field_z = this.field_z + this.field_D;
+                break L0;
+              } else {
+                if (var4 >= this.field_z) {
+                  break L0;
+                } else {
+                  this.field_z = this.field_z - this.field_D;
+                  break L0;
+                }
+              }
+            }
+            L1: {
+              if (this.field_C >= this.field_z) {
+                break L1;
+              } else {
+                this.field_z = this.field_C;
+                break L1;
+              }
+            }
+            L2: {
+              if (this.field_z >= 0) {
+                break L2;
+              } else {
+                this.field_z = 0;
+                break L2;
+              }
+            }
             return;
-        }
-        int var4 = this.a(param0, true);
-        if (var4 > this.field_z || var4 < this.field_z) {
-            this.field_z = this.field_z + this.field_D;
-        }
-        if (this.field_C < this.field_z) {
-            this.field_z = this.field_C;
-        }
-        if (this.field_z < 0) {
-            this.field_z = 0;
+          }
+        } else {
+          return;
         }
     }
 

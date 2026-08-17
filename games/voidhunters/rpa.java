@@ -14,338 +14,274 @@ final class rpa implements jaa {
     private mda[] field_h;
 
     final void b(int param0, int param1) {
-        if (0 == (this.field_d ^ -1)) {
-          throw new RuntimeException();
-        } else {
-          jaggl.OpenGL.glReadBuffer(vbb.field_o[param1]);
-          if (param0 <= 118) {
-            this.field_g = 14;
-            return;
-          } else {
-            return;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          L0: {
+            if (0 == (this.field_d ^ -1)) {
+              throw new RuntimeException();
+            } else {
+              jaggl.OpenGL.glReadBuffer(vbb.field_o[param1]);
+              if (param0 > 118) {
+                break L0;
+              } else {
+                this.field_g = 14;
+                return;
+              }
+            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw rta.a((Throwable) ((Object) var3), "rpa.M(" + param0 + ',' + param1 + ')');
         }
     }
 
     public final void d(int param0) {
-        if (param0 <= 7) {
-          this.field_i = -33;
-          jaggl.OpenGL.glBindFramebufferEXT(36008, 0);
-          this.field_a = this.field_a & -2;
-          this.field_d = this.e(2);
-          return;
-        } else {
-          jaggl.OpenGL.glBindFramebufferEXT(36008, 0);
-          this.field_a = this.field_a & -2;
-          this.field_d = this.e(2);
-          return;
+        try {
+            if (param0 <= 7) {
+                this.field_i = -33;
+            }
+            jaggl.OpenGL.glBindFramebufferEXT(36008, 0);
+            this.field_a = this.field_a & -2;
+            this.field_d = this.e(2);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "rpa.E(" + param0 + ')');
         }
     }
 
     public final void b(int param0) {
         if (param0 != -5574) {
-          return;
-        } else {
-          jaggl.OpenGL.glBindFramebufferEXT(36160, this.field_e);
-          this.field_a = this.field_a | 4;
-          this.field_d = this.e(2);
-          return;
+            return;
+        }
+        try {
+            jaggl.OpenGL.glBindFramebufferEXT(36160, this.field_e);
+            this.field_a = this.field_a | 4;
+            this.field_d = this.e(2);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "rpa.F(" + param0 + ')');
         }
     }
 
     final static sg a(int param0, int param1, boolean param2) {
-        ml var4;
-        int var5;
-        int var6;
-        sg var7;
-        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        sg stackIn_9_0 = null;
+        sg stackIn_64_0 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        ml var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        sg var7 = null;
         var6 = VoidHunters.field_G;
-        if (param0 == 0) {
+        try {
           L0: {
-            if (param2) {
-              stackIn_5_0 = 0;
-              break L0;
-            } else {
-              stackIn_5_0 = 1;
-              break L0;
-            }
-          }
-          return gqb.a(stackIn_5_0 != 0);
-        } else {
-          L1: {
-            var7 = new sg();
-            var4 = new ml(param0);
-            var5 = param0;
-            if (-4 == (var5 ^ -1)) {
-              waa.a(var4, 18632);
-              break L1;
-            } else {
-              if (var5 != 7) {
-                if (-9 == (var5 ^ -1)) {
-                  mc.a(var4, 27);
+            if (param0 == 0) {
+              L1: {
+                if (param2) {
+                  stackIn_8_0 = 0;
                   break L1;
                 } else {
-                  if (-10 != (var5 ^ -1)) {
-                    if (10 == var5) {
-                      hr.a(var4, 116);
-                      var7.field_k = var4;
-                      if (!param2) {
-                        field_c = (uja) null;
-                        var7.e((byte) 119);
-                        var7.field_k.a((byte) -128, (anb) (var7));
-                        return var7;
-                      } else {
-                        var7.e((byte) 119);
-                        var7.field_k.a((byte) -128, (anb) (var7));
-                        return var7;
-                      }
+                  stackIn_8_0 = 1;
+                  break L1;
+                }
+              }
+              stackIn_9_0 = gqb.a(stackIn_8_0 != 0);
+              decompiledRegionSelector0 = 0;
+              break L0;
+            } else {
+              L2: {
+                var7 = new sg();
+                var4 = new ml(param0);
+                var5 = param0;
+                if (-4 == (var5 ^ -1)) {
+                  waa.a(var4, 18632);
+                  break L2;
+                } else {
+                  if (var5 != 7) {
+                    if (-9 == (var5 ^ -1)) {
+                      mc.a(var4, 27);
+                      break L2;
                     } else {
-                      if (var5 == 11) {
-                        bab.a(param2, var4);
-                        var7.field_k = var4;
-                        if (!param2) {
-                          field_c = (uja) null;
-                          var7.e((byte) 119);
-                          var7.field_k.a((byte) -128, (anb) (var7));
-                          return var7;
+                      if (-10 != (var5 ^ -1)) {
+                        if (10 == var5) {
+                          hr.a(var4, 116);
+                          break L2;
                         } else {
-                          var7.e((byte) 119);
-                          var7.field_k.a((byte) -128, (anb) (var7));
-                          return var7;
-                        }
-                      } else {
-                        if ((var5 ^ -1) == -5) {
-                          lhb.a((byte) 127, var4);
-                          var7.field_k = var4;
-                          if (!param2) {
-                            field_c = (uja) null;
-                            var7.e((byte) 119);
-                            var7.field_k.a((byte) -128, (anb) (var7));
-                            return var7;
+                          if (var5 == 11) {
+                            bab.a(param2, var4);
+                            break L2;
                           } else {
-                            var7.e((byte) 119);
-                            var7.field_k.a((byte) -128, (anb) (var7));
-                            return var7;
-                          }
-                        } else {
-                          if (-6 == (var5 ^ -1)) {
-                            lc.a(38, var4);
-                            var7.field_k = var4;
-                            if (param2) {
-                              var7.e((byte) 119);
-                              var7.field_k.a((byte) -128, (anb) (var7));
-                              return var7;
+                            if ((var5 ^ -1) == -5) {
+                              lhb.a((byte) 127, var4);
+                              break L2;
                             } else {
-                              field_c = (uja) null;
-                              var7.e((byte) 119);
-                              var7.field_k.a((byte) -128, (anb) (var7));
-                              return var7;
-                            }
-                          } else {
-                            if ((var5 ^ -1) != -7) {
-                              if (-2 == (var5 ^ -1)) {
-                                if (-1 == (param1 ^ -1)) {
-                                  qu.a(var4, -14);
-                                  var7.field_k = var4;
-                                  if (param2) {
-                                    var7.e((byte) 119);
-                                    var7.field_k.a((byte) -128, (anb) (var7));
-                                    return var7;
-                                  } else {
-                                    field_c = (uja) null;
-                                    var7.e((byte) 119);
-                                    var7.field_k.a((byte) -128, (anb) (var7));
-                                    return var7;
-                                  }
-                                } else {
-                                  if (1 == param1) {
-                                    vab.a((byte) -94, var4);
-                                    var7.field_k = var4;
-                                    if (param2) {
-                                      var7.e((byte) 119);
-                                      var7.field_k.a((byte) -128, (anb) (var7));
-                                      return var7;
-                                    } else {
-                                      field_c = (uja) null;
-                                      var7.e((byte) 119);
-                                      var7.field_k.a((byte) -128, (anb) (var7));
-                                      return var7;
-                                    }
-                                  } else {
-                                    var7.field_k = var4;
-                                    if (param2) {
-                                      var7.e((byte) 119);
-                                      var7.field_k.a((byte) -128, (anb) (var7));
-                                      return var7;
-                                    } else {
-                                      field_c = (uja) null;
-                                      var7.e((byte) 119);
-                                      var7.field_k.a((byte) -128, (anb) (var7));
-                                      return var7;
-                                    }
-                                  }
-                                }
+                              if (-6 == (var5 ^ -1)) {
+                                lc.a(38, var4);
+                                break L2;
                               } else {
-                                if ((var5 ^ -1) != -3) {
-                                  var7.field_k = var4;
-                                  if (!param2) {
-                                    field_c = (uja) null;
-                                    var7.e((byte) 119);
-                                    var7.field_k.a((byte) -128, (anb) (var7));
-                                    return var7;
-                                  } else {
-                                    var7.e((byte) 119);
-                                    var7.field_k.a((byte) -128, (anb) (var7));
-                                    return var7;
-                                  }
-                                } else {
-                                  if (param1 == 0) {
-                                    mb.a(-1688588312, var4);
-                                    var7.field_k = var4;
-                                    if (!param2) {
-                                      field_c = (uja) null;
-                                      var7.e((byte) 119);
-                                      var7.field_k.a((byte) -128, (anb) (var7));
-                                      return var7;
+                                if ((var5 ^ -1) != -7) {
+                                  if (-2 == (var5 ^ -1)) {
+                                    if (-1 == (param1 ^ -1)) {
+                                      qu.a(var4, -14);
+                                      break L2;
                                     } else {
-                                      var7.e((byte) 119);
-                                      var7.field_k.a((byte) -128, (anb) (var7));
-                                      return var7;
+                                      if (1 != param1) {
+                                        break L2;
+                                      } else {
+                                        vab.a((byte) -94, var4);
+                                        break L2;
+                                      }
                                     }
                                   } else {
-                                    if ((param1 ^ -1) != -2) {
-                                      L2: {
-                                        if (param1 != 2) {
-                                          break L2;
+                                    if ((var5 ^ -1) != -3) {
+                                      break L2;
+                                    } else {
+                                      if (param1 == 0) {
+                                        mb.a(-1688588312, var4);
+                                        break L2;
+                                      } else {
+                                        if ((param1 ^ -1) != -2) {
+                                          if (param1 != 2) {
+                                            break L2;
+                                          } else {
+                                            wnb.a(var4, (byte) -10);
+                                            break L2;
+                                          }
                                         } else {
-                                          wnb.a(var4, (byte) -10);
+                                          eqb.a(var4, 14670);
                                           break L2;
                                         }
                                       }
-                                      var7.field_k = var4;
-                                      if (!param2) {
-                                        field_c = (uja) null;
-                                        var7.e((byte) 119);
-                                        var7.field_k.a((byte) -128, (anb) (var7));
-                                        return var7;
-                                      } else {
-                                        var7.e((byte) 119);
-                                        var7.field_k.a((byte) -128, (anb) (var7));
-                                        return var7;
-                                      }
-                                    } else {
-                                      eqb.a(var4, 14670);
-                                      var7.field_k = var4;
-                                      if (!param2) {
-                                        field_c = (uja) null;
-                                        var7.e((byte) 119);
-                                        var7.field_k.a((byte) -128, (anb) (var7));
-                                        return var7;
-                                      } else {
-                                        var7.e((byte) 119);
-                                        var7.field_k.a((byte) -128, (anb) (var7));
-                                        return var7;
-                                      }
                                     }
                                   }
+                                } else {
+                                  ir.a(var4, (byte) 127);
+                                  break L2;
                                 }
-                              }
-                            } else {
-                              ir.a(var4, (byte) 127);
-                              var7.field_k = var4;
-                              if (param2) {
-                                var7.e((byte) 119);
-                                var7.field_k.a((byte) -128, (anb) (var7));
-                                return var7;
-                              } else {
-                                field_c = (uja) null;
-                                var7.e((byte) 119);
-                                var7.field_k.a((byte) -128, (anb) (var7));
-                                return var7;
                               }
                             }
                           }
                         }
+                      } else {
+                        tkb.a(var4, -77);
+                        break L2;
                       }
                     }
                   } else {
-                    tkb.a(var4, -77);
-                    break L1;
+                    leb.a((byte) -107, var4);
+                    break L2;
                   }
                 }
-              } else {
-                leb.a((byte) -107, var4);
-                break L1;
               }
+              L3: {
+                var7.field_k = var4;
+                if (param2) {
+                  break L3;
+                } else {
+                  field_c = (uja) null;
+                  break L3;
+                }
+              }
+              var7.e((byte) 119);
+              var7.field_k.a((byte) -128, (anb) (var7));
+              stackIn_64_0 = (sg) (var7);
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
-          var7.field_k = var4;
-          if (param2) {
-            var7.e((byte) 119);
-            var7.field_k.a((byte) -128, (anb) (var7));
-            return var7;
-          } else {
-            field_c = (uja) null;
-            var7.e((byte) 119);
-            var7.field_k.a((byte) -128, (anb) (var7));
-            return var7;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw rta.a((Throwable) ((Object) var3), "rpa.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_9_0;
+        } else {
+          return stackIn_64_0;
         }
     }
 
     final void a(int param0, int param1) {
-        if ((this.field_d ^ -1) == param0) {
-            throw new RuntimeException();
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          L0: {
+            if ((this.field_d ^ -1) != param0) {
+              jaggl.OpenGL.glDrawBuffer(vbb.field_o[param1]);
+              break L0;
+            } else {
+              throw new RuntimeException();
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw rta.a((Throwable) ((Object) var3), "rpa.O(" + param0 + ',' + param1 + ')');
         }
-        jaggl.OpenGL.glDrawBuffer(vbb.field_o[param1]);
     }
 
     final boolean g(int param0) {
-        int var2;
-        int var3;
-        var2 = jaggl.OpenGL.glCheckFramebufferStatusEXT(this.field_d);
-        var3 = 10 % ((28 - param0) / 58);
-        if (var2 == 36053) {
-          return true;
-        } else {
-          return false;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            var2_int = jaggl.OpenGL.glCheckFramebufferStatusEXT(this.field_d);
+            var3 = 10 % ((28 - param0) / 58);
+            if (var2_int != 36053) {
+              stackIn_4_0 = 0;
+              break L0;
+            } else {
+              return true;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw rta.a((Throwable) ((Object) var2), "rpa.H(" + param0 + ')');
         }
+        return stackIn_4_0 != 0;
     }
 
     public final void c(int param0) {
         if (param0 != 31636) {
-          return;
-        } else {
-          jaggl.OpenGL.glBindFramebufferEXT(36009, this.field_e);
-          this.field_a = this.field_a | 2;
-          this.field_d = this.e(param0 + -31634);
-          return;
+            return;
+        }
+        try {
+            jaggl.OpenGL.glBindFramebufferEXT(36009, this.field_e);
+            this.field_a = this.field_a | 2;
+            this.field_d = this.e(param0 + -31634);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "rpa.B(" + param0 + ')');
         }
     }
 
     public final void b(byte param0) {
-        jaggl.OpenGL.glBindFramebufferEXT(36160, 0);
-        if (param0 > -42) {
-          this.field_e = 16;
-          this.field_a = this.field_a & -5;
-          this.field_d = this.e(2);
-          return;
-        } else {
-          this.field_a = this.field_a & -5;
-          this.field_d = this.e(2);
-          return;
+        try {
+            jaggl.OpenGL.glBindFramebufferEXT(36160, 0);
+            if (param0 > -42) {
+                this.field_e = 16;
+            }
+            this.field_a = this.field_a & -5;
+            this.field_d = this.e(2);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "rpa.A(" + param0 + ')');
         }
     }
 
     private final void a(aia param0, int param1, int param2, int param3) {
-        RuntimeException runtimeException = null;
         int var5_int = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
         try {
           L0: {
             if ((this.field_d ^ -1) != 0) {
@@ -389,42 +325,46 @@ final class rpa implements jaa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (runtimeException);
+            var5 = decompiledCaughtException;
+            stackIn_17_0 = (RuntimeException) (var5);
 
-            stackIn_14_1 = new StringBuilder().append("rpa.N(");
+            stackIn_17_1 = new StringBuilder().append("rpa.N(");
 
             if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
               break L4;
             } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
               break L4;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     protected final void finalize() throws Throwable {
-        this.field_f.a((byte) 107, this.field_e);
-        super.finalize();
+        try {
+            this.field_f.a((byte) 107, this.field_e);
+            super.finalize();
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "rpa.finalize()");
+        }
     }
 
     final void a(int param0, nv param1, byte param2) {
-        RuntimeException runtimeException = null;
-        int var4_int = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         try {
           L0: {
             if (-1 == this.field_d) {
@@ -466,24 +406,24 @@ final class rpa implements jaa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (runtimeException);
+            var4 = decompiledCaughtException;
+            stackIn_19_0 = (RuntimeException) (var4);
 
-            stackIn_15_1 = new StringBuilder().append("rpa.K(").append(param0).append(',');
+            stackIn_19_1 = new StringBuilder().append("rpa.K(").append(param0).append(',');
 
             if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "null";
               break L3;
             } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
+              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackIn_20_2 = "{...}";
               break L3;
             }
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -493,81 +433,193 @@ final class rpa implements jaa {
     }
 
     final void a(int param0, byte param1) {
-        int var3;
-        if (this.field_h[param0] != null) {
-          this.field_h[param0].a(31294);
-          var3 = 115 / ((53 - param1) / 55);
-          this.field_g = this.field_g & (1 << param0 ^ -1);
-          this.field_h[param0] = null;
-          return;
-        } else {
-          var3 = 115 / ((53 - param1) / 55);
-          this.field_g = this.field_g & (1 << param0 ^ -1);
-          this.field_h[param0] = null;
-          return;
+        try {
+            if (this.field_h[param0] != null) {
+                this.field_h[param0].a(31294);
+            }
+            int var3_int = 115 / ((53 - param1) / 55);
+            this.field_g = this.field_g & (1 << param0 ^ -1);
+            this.field_h[param0] = null;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "rpa.I(" + param0 + ',' + param1 + ')');
         }
     }
 
     public final void a(byte param0) {
-        jaggl.OpenGL.glBindFramebufferEXT(36009, 0);
-        this.field_a = this.field_a & -3;
-        this.field_d = this.e(2);
-        if (param0 <= 52) {
-            this.field_d = 85;
+        try {
+            jaggl.OpenGL.glBindFramebufferEXT(36009, 0);
+            this.field_a = this.field_a & -3;
+            this.field_d = this.e(2);
+            if (param0 <= 52) {
+                this.field_d = 85;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "rpa.D(" + param0 + ')');
         }
     }
 
     public static void f(int param0) {
-        field_c = null;
-        if (param0 != 1) {
-            field_c = (uja) null;
+        try {
+            field_c = null;
+            if (param0 != 1) {
+                field_c = (uja) null;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "rpa.P(" + param0 + ')');
         }
     }
 
     public final void a(int param0) {
-        jaggl.OpenGL.glBindFramebufferEXT(36008, this.field_e);
-        int var2 = 32 / ((param0 - 3) / 57);
-        this.field_a = this.field_a | 1;
-        this.field_d = this.e(2);
+        try {
+            jaggl.OpenGL.glBindFramebufferEXT(36008, this.field_e);
+            int var2_int = 32 / ((param0 - 3) / 57);
+            this.field_a = this.field_a | 1;
+            this.field_d = this.e(2);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) ((Object) runtimeException), "rpa.C(" + param0 + ')');
+        }
     }
 
     private final int e(int param0) {
-        if (!((4 & this.field_a) == 0)) {
-            return 36160;
+        int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_14_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        try {
+          L0: {
+            if ((4 & this.field_a) != 0) {
+              stackIn_4_0 = 36160;
+              decompiledRegionSelector0 = 0;
+              break L0;
+            } else {
+              if ((param0 & this.field_a) == 0) {
+                if ((1 & this.field_a) != 0) {
+                  stackIn_12_0 = 36008;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                } else {
+                  stackIn_14_0 = -1;
+                  decompiledRegionSelector0 = 3;
+                  break L0;
+                }
+              } else {
+                stackIn_7_0 = 36009;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw rta.a((Throwable) ((Object) var2), "rpa.G(" + param0 + ')');
         }
-        if ((param0 & this.field_a) != 0) {
-            return 36009;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_12_0;
+            } else {
+              return stackIn_14_0;
+            }
+          }
         }
-        if (!((1 & this.field_a) == 0)) {
-            return 36008;
-        }
-        return -1;
     }
 
     final void a(int param0, byte param1, aia param2) {
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            this.a(param2, 0, param0, 77);
-            if (param1 > -124) {
+          L0: {
+            L1: {
+              this.a(param2, 0, param0, 77);
+              if (param1 <= -124) {
+                break L1;
+              } else {
                 this.field_e = -30;
+                break L1;
+              }
             }
-        } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "rpa.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackIn_6_0 = (RuntimeException) (runtimeException);
+
+            stackIn_6_1 = new StringBuilder().append("rpa.L(").append(param0).append(',').append(param1).append(',');
+
+            if (param2 == null) {
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "null";
+              break L2;
+            } else {
+              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackIn_7_2 = "{...}";
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 
     rpa(qfa param0) {
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
         this.field_a = 0;
         this.field_d = -1;
         this.field_h = new mda[9];
         try {
-            if (!param0.field_U) {
-                throw new IllegalStateException("");
+          L0: {
+            if (param0.field_U) {
+              this.field_f = param0;
+              jaggl.OpenGL.glGenFramebuffersEXT(1, qea.field_r, 0);
+              this.field_e = qea.field_r[0];
+              break L0;
+            } else {
+              throw new IllegalStateException("");
             }
-            this.field_f = param0;
-            jaggl.OpenGL.glGenFramebuffersEXT(1, qea.field_r, 0);
-            this.field_e = qea.field_r[0];
-        } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "rpa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
+
+            stackIn_8_1 = new StringBuilder().append("rpa.<init>(");
+
+            if (param0 == null) {
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
+              break L1;
+            } else {
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
+              break L1;
+            }
+          }
+          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 

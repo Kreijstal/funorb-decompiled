@@ -317,19 +317,41 @@ final class uma extends sh {
     }
 
     final boolean k(int param0) {
-        if (null == this.field_Q.field_w || 0 == this.field_Q.field_w.length()) {
+        if (null == this.field_Q.field_w) {
+          return true;
+        } else {
+          if (0 != this.field_Q.field_w.length()) {
+            if (param0 < -54) {
+              L0: {
+                if (null == this.field_N.field_w) {
+                  break L0;
+                } else {
+                  if (0 != this.field_N.field_w.length()) {
+                    L1: {
+                      if (this.field_L.field_w == null) {
+                        break L1;
+                      } else {
+                        if (0 != this.field_L.field_w.length()) {
+                          return false;
+                        } else {
+                          break L1;
+                        }
+                      }
+                    }
+                    return true;
+                  } else {
+                    break L0;
+                  }
+                }
+              }
+              return true;
+            } else {
+              return true;
+            }
+          } else {
             return true;
+          }
         }
-        if (param0 >= -54) {
-            return true;
-        }
-        if (null == this.field_N.field_w || 0 == this.field_N.field_w.length()) {
-            return true;
-        }
-        if (this.field_L.field_w == null || 0 == this.field_L.field_w.length()) {
-            return true;
-        }
-        return false;
     }
 
     final int d(byte param0) {

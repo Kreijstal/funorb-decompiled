@@ -37,20 +37,38 @@ final class kha {
     }
 
     final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = TombRacer.field_G ? 1 : 0;
-        if (this.field_c == null || 0 == this.field_c.length) {
-            return 0;
-        }
-        for (var3 = 1; var3 < this.field_c.length; var3++) {
-            if ((param0 ^ -1) > (this.field_c[var3 - 1] - -this.field_c[var3] >> 1614274689 ^ -1)) {
-                return var3 + -1;
+        int var3;
+        int var4;
+        var4 = TombRacer.field_G ? 1 : 0;
+        if (this.field_c == null) {
+          return 0;
+        } else {
+          if (0 != this.field_c.length) {
+            var3 = 1;
+            L0: while (true) {
+              if (var3 >= this.field_c.length) {
+                L1: {
+                  if (param1 == -1) {
+                    break L1;
+                  } else {
+                    field_a = (String) null;
+                    break L1;
+                  }
+                }
+                return -1 + this.field_c.length;
+              } else {
+                if ((param0 ^ -1) <= (this.field_c[var3 - 1] - -this.field_c[var3] >> 1614274689 ^ -1)) {
+                  var3++;
+                  continue L0;
+                } else {
+                  return var3 + -1;
+                }
+              }
             }
+          } else {
+            return 0;
+          }
         }
-        if (param1 != -1) {
-            field_a = (String) null;
-        }
-        return -1 + this.field_c.length;
     }
 
     public static void a(int param0) {

@@ -585,8 +585,8 @@ final class md extends km {
     }
 
     final boolean a(int param0, boolean param1, byte param2) {
+        int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
         int var4;
         q var5;
         int var6;
@@ -614,9 +614,9 @@ final class md extends km {
                 break L1;
               } else {
                 L2: {
-                  fieldTemp$2 = this.field_u + 1;
+                  fieldTemp$1 = this.field_u + 1;
                   this.field_u = this.field_u + 1;
-                  if (fieldTemp$2 >= gh.field_b.length) {
+                  if (fieldTemp$1 >= gh.field_b.length) {
                     this.field_u = gh.field_b.length - 1;
                     break L2;
                   } else {
@@ -651,9 +651,9 @@ final class md extends km {
                   break L1;
                 } else {
                   L4: {
-                    fieldTemp$3 = this.field_u - 1;
+                    fieldTemp$2 = this.field_u - 1;
                     this.field_u = this.field_u - 1;
-                    if (0 <= fieldTemp$3) {
+                    if (0 <= fieldTemp$2) {
                       break L4;
                     } else {
                       this.field_u = 0;

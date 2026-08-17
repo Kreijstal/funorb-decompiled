@@ -295,8 +295,6 @@ final class mqb extends anb implements ntb, utb {
     }
 
     public final boolean a(byte param0, tv param1) {
-        int var4 = 0;
-        mqb var5 = null;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -306,6 +304,8 @@ final class mqb extends anb implements ntb, utb {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
+        int var4 = 0;
+        mqb var5 = null;
         try {
           L0: {
             L1: {

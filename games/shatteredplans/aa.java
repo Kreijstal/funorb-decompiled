@@ -1044,7 +1044,7 @@ final class aa extends f implements op, bp, dl {
     }
 
     public final void a(kg param0, int param1, int param2, int param3, int param4) {
-        boolean discarded$0 = false;
+        boolean discarded$1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -1062,7 +1062,7 @@ final class aa extends f implements op, bp, dl {
                 if (param0 != this.field_E) {
                   break L1;
                 } else {
-                  discarded$0 = this.d(false);
+                  discarded$1 = this.d(false);
                   break L1;
                 }
               }

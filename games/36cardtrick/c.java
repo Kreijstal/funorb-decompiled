@@ -18,8 +18,8 @@ abstract class c extends fj {
     static ee field_u;
 
     final void k(byte param0) {
+        int discarded$2 = 0;
         int discarded$3 = 0;
-        int discarded$4 = 0;
         int var2_int = 0;
         int var3 = 0;
         Object stackIn_23_0 = null;
@@ -47,7 +47,7 @@ abstract class c extends fj {
                           if ((cd.field_e ^ -1) != -1) {
                             break L4;
                           } else {
-                            discarded$3 = this.a(false, false, 10);
+                            discarded$2 = this.a(false, false, 10);
                             if (var3 == 0) {
                               break L1;
                             } else {
@@ -86,7 +86,7 @@ abstract class c extends fj {
                   break L5;
                 }
               }
-              discarded$4 = this.a(stackIn_26_1 != 0, false, 10);
+              discarded$3 = this.a(stackIn_26_1 != 0, false, 10);
               break L1;
             }
             var2_int = -98 % ((param0 - -32) / 51);

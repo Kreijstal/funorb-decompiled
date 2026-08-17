@@ -46,227 +46,293 @@ final class ng extends nk {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        String var17 = null;
-        gm var31 = null;
-        mg var20 = null;
-        mg var19 = null;
-        mg var21 = null;
-        gm var32 = null;
-        mg var23 = null;
-        mg var24 = null;
-        mg var26 = null;
-        mg var25 = null;
-        mg var29 = null;
-        mg var28 = null;
-        String var5 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        Object var18 = null;
-        Object var22 = null;
-        Object var27 = null;
-        int var13 = Virogrid.field_F ? 1 : 0;
-        wl var6 = this.field_R.a(-22243);
-        if (var6 == gd.field_r) {
-            var17 = eg.field_s;
-            if (!var17.equals(this.field_n)) {
-                this.field_n = var17;
-                this.e(-115);
-            }
-            super.a(param0, param1, param2, param3);
-            var6 = this.field_R.a(param0 + -22280);
-            var31 = (gm) ((Object) this.field_w);
-            var9 = this.field_l + param1;
-            var10 = var31.b(-587719039, (fi) (this), param2) + (var31.a((fi) (this), (byte) -123).a((byte) 20) >> -43842047);
-            if (gd.field_r != var6 && te.field_d != var6) {
-                if (var6 == ee.field_c) {
-                    var20 = bf.field_p[2];
-                    var20.e(var9, var10 + -(var20.field_p >> 899381985), 256);
-                    return;
-                }
-                if (bm.field_i == var6) {
-                    var19 = bf.field_p[1];
-                    var19.e(var9, var10 - (var19.field_p >> 2125725985), 256);
-                    return;
-                }
-                return;
-            }
-            var21 = bf.field_p[0];
-            var11 = var21.field_u << -5697663;
-            var12 = var21.field_z << -1759717407;
-            if (this.field_S == null) {
-                this.field_S = new mg(var11, var12);
-                kb.a(this.field_S, 16865);
-                var21.a(112, 144, var21.field_u << -1040172092, var21.field_z << -1359129436, -this.field_U << -1147490198, 4096);
-                ai.a(true);
-                this.field_S.e(var9 + -(var21.field_u >> -1857178367), -var21.field_z + var10, 256);
-                return;
-            }
-            if (this.field_S.field_w < var11) {
-                this.field_S = new mg(var11, var12);
-                kb.a(this.field_S, 16865);
-                var21.a(112, 144, var21.field_u << -1040172092, var21.field_z << -1359129436, -this.field_U << -1147490198, 4096);
-                ai.a(true);
-                this.field_S.e(var9 + -(var21.field_u >> -1857178367), -var21.field_z + var10, 256);
-                return;
-            }
-            if (var12 <= this.field_S.field_p) {
-                kb.a(this.field_S, 16865);
-                df.c();
-                var21.a(112, 144, var21.field_u << -1040172092, var21.field_z << -1359129436, -this.field_U << -1147490198, 4096);
-                ai.a(true);
-                this.field_S.e(var9 + -(var21.field_u >> -1857178367), -var21.field_z + var10, 256);
-                return;
-            }
-            this.field_S = new mg(var11, var12);
-            kb.a(this.field_S, 16865);
-            var21.a(112, 144, var21.field_u << -1040172092, var21.field_z << -1359129436, -this.field_U << -1147490198, 4096);
-            ai.a(true);
-            this.field_S.e(var9 + -(var21.field_u >> -1857178367), -var21.field_z + var10, 256);
-            return;
-        }
-        if (te.field_d == var6) {
-            var5 = eg.field_s;
-        } else {
-            var5 = this.field_R.b(28433);
-            if (var5 == null) {
+        String var5;
+        wl var6;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        mg var16;
+        String var17;
+        Object var18;
+        mg var19;
+        mg var20;
+        mg var21;
+        Object var22;
+        mg var23;
+        mg var24;
+        mg var25;
+        mg var26;
+        Object var27;
+        mg var28;
+        mg var29;
+        mg var30;
+        gm var31;
+        gm var32;
+        gm var33;
+        var18 = null;
+        var22 = null;
+        var27 = null;
+        var13 = Virogrid.field_F ? 1 : 0;
+        var6 = this.field_R.a(-22243);
+        if (var6 != gd.field_r) {
+          L0: {
+            if (te.field_d != var6) {
+              var5 = this.field_R.b(28433);
+              if (var5 != null) {
+                break L0;
+              } else {
                 var5 = this.field_W;
+                break L0;
+              }
+            } else {
+              var5 = eg.field_s;
+              break L0;
             }
-        }
-        if (var5.equals(this.field_n)) {
+          }
+          if (!var5.equals(this.field_n)) {
+            L1: {
+              this.field_n = var5;
+              this.e(-115);
+              super.a(param0, param1, param2, param3);
+              var6 = this.field_R.a(param0 + -22280);
+              var33 = (gm) ((Object) this.field_w);
+              var9 = this.field_l + param1;
+              var10 = var33.b(-587719039, (fi) (this), param2) + (var33.a((fi) (this), (byte) -123).a((byte) 20) >> -43842047);
+              if (gd.field_r == var6) {
+                break L1;
+              } else {
+                if (te.field_d == var6) {
+                  break L1;
+                } else {
+                  if (var6 != ee.field_c) {
+                    if (bm.field_i != var6) {
+                      return;
+                    } else {
+                      var28 = bf.field_p[1];
+                      var28.e(var9, var10 - (var28.field_p >> 2125725985), 256);
+                      return;
+                    }
+                  } else {
+                    var29 = bf.field_p[2];
+                    var29.e(var9, var10 + -(var29.field_p >> 899381985), 256);
+                    return;
+                  }
+                }
+              }
+            }
+            var30 = bf.field_p[0];
+            var11 = var30.field_u << -5697663;
+            var12 = var30.field_z << -1759717407;
+            if (this.field_S != null) {
+              if (this.field_S.field_w < var11) {
+                this.field_S = new mg(var11, var12);
+                kb.a(this.field_S, 16865);
+                var30.a(112, 144, var30.field_u << -1040172092, var30.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+                ai.a(true);
+                this.field_S.e(var9 + -(var30.field_u >> -1857178367), -var30.field_z + var10, 256);
+                return;
+              } else {
+                if (var12 <= this.field_S.field_p) {
+                  kb.a(this.field_S, 16865);
+                  df.c();
+                  var30.a(112, 144, var30.field_u << -1040172092, var30.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+                  ai.a(true);
+                  this.field_S.e(var9 + -(var30.field_u >> -1857178367), -var30.field_z + var10, 256);
+                  return;
+                } else {
+                  this.field_S = new mg(var11, var12);
+                  kb.a(this.field_S, 16865);
+                  var30.a(112, 144, var30.field_u << -1040172092, var30.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+                  ai.a(true);
+                  this.field_S.e(var9 + -(var30.field_u >> -1857178367), -var30.field_z + var10, 256);
+                  return;
+                }
+              }
+            } else {
+              this.field_S = new mg(var11, var12);
+              kb.a(this.field_S, 16865);
+              var30.a(112, 144, var30.field_u << -1040172092, var30.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+              ai.a(true);
+              this.field_S.e(var9 + -(var30.field_u >> -1857178367), -var30.field_z + var10, 256);
+              return;
+            }
+          } else {
             super.a(param0, param1, param2, param3);
             var6 = this.field_R.a(param0 + -22280);
             var32 = (gm) ((Object) this.field_w);
             var9 = this.field_l + param1;
             var10 = var32.b(-587719039, (fi) (this), param2) + (var32.a((fi) (this), (byte) -123).a((byte) 20) >> -43842047);
-            if (gd.field_r == var6) {
-                var23 = bf.field_p[0];
-                var11 = var23.field_u << -5697663;
-                var12 = var23.field_z << -1759717407;
-                if (this.field_S == null) {
+            if (gd.field_r != var6) {
+              if (te.field_d != var6) {
+                if (var6 != ee.field_c) {
+                  if (bm.field_i == var6) {
+                    var25 = bf.field_p[1];
+                    var25.e(var9, var10 - (var25.field_p >> 2125725985), 256);
+                    return;
+                  } else {
+                    return;
+                  }
+                } else {
+                  var26 = bf.field_p[2];
+                  var26.e(var9, var10 + -(var26.field_p >> 899381985), 256);
+                  return;
+                }
+              } else {
+                var24 = bf.field_p[0];
+                var16 = var24;
+                var11 = var24.field_u << -5697663;
+                var12 = var24.field_z << -1759717407;
+                if (this.field_S != null) {
+                  if (this.field_S.field_w >= var11) {
+                    if (var12 <= this.field_S.field_p) {
+                      kb.a(this.field_S, 16865);
+                      df.c();
+                      var24.a(112, 144, var24.field_u << -1040172092, var24.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+                      ai.a(true);
+                      this.field_S.e(var9 + -(var24.field_u >> -1857178367), -var24.field_z + var10, 256);
+                      return;
+                    } else {
+                      this.field_S = new mg(var11, var12);
+                      kb.a(this.field_S, 16865);
+                      var24.a(112, 144, var24.field_u << -1040172092, var24.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+                      ai.a(true);
+                      this.field_S.e(var9 + -(var24.field_u >> -1857178367), -var24.field_z + var10, 256);
+                      return;
+                    }
+                  } else {
+                    this.field_S = new mg(var11, var12);
+                    kb.a(this.field_S, 16865);
+                    var24.a(112, 144, var24.field_u << -1040172092, var24.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+                    ai.a(true);
+                    this.field_S.e(var9 + -(var24.field_u >> -1857178367), -var24.field_z + var10, 256);
+                    return;
+                  }
+                } else {
+                  this.field_S = new mg(var11, var12);
+                  kb.a(this.field_S, 16865);
+                  var24.a(112, 144, var24.field_u << -1040172092, var24.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+                  ai.a(true);
+                  this.field_S.e(var9 + -(var24.field_u >> -1857178367), -var24.field_z + var10, 256);
+                  return;
+                }
+              }
+            } else {
+              var23 = bf.field_p[0];
+              var11 = var23.field_u << -5697663;
+              var12 = var23.field_z << -1759717407;
+              if (this.field_S != null) {
+                if (this.field_S.field_w >= var11) {
+                  if (var12 > this.field_S.field_p) {
                     this.field_S = new mg(var11, var12);
                     kb.a(this.field_S, 16865);
                     var23.a(112, 144, var23.field_u << -1040172092, var23.field_z << -1359129436, -this.field_U << -1147490198, 4096);
                     ai.a(true);
                     this.field_S.e(var9 + -(var23.field_u >> -1857178367), -var23.field_z + var10, 256);
                     return;
-                }
-                if (this.field_S.field_w < var11) {
-                    this.field_S = new mg(var11, var12);
-                    kb.a(this.field_S, 16865);
-                    var23.a(112, 144, var23.field_u << -1040172092, var23.field_z << -1359129436, -this.field_U << -1147490198, 4096);
-                    ai.a(true);
-                    this.field_S.e(var9 + -(var23.field_u >> -1857178367), -var23.field_z + var10, 256);
-                    return;
-                }
-                if (var12 <= this.field_S.field_p) {
+                  } else {
                     kb.a(this.field_S, 16865);
                     df.c();
                     var23.a(112, 144, var23.field_u << -1040172092, var23.field_z << -1359129436, -this.field_U << -1147490198, 4096);
                     ai.a(true);
                     this.field_S.e(var9 + -(var23.field_u >> -1857178367), -var23.field_z + var10, 256);
                     return;
+                  }
+                } else {
+                  this.field_S = new mg(var11, var12);
+                  kb.a(this.field_S, 16865);
+                  var23.a(112, 144, var23.field_u << -1040172092, var23.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+                  ai.a(true);
+                  this.field_S.e(var9 + -(var23.field_u >> -1857178367), -var23.field_z + var10, 256);
+                  return;
                 }
+              } else {
                 this.field_S = new mg(var11, var12);
                 kb.a(this.field_S, 16865);
                 var23.a(112, 144, var23.field_u << -1040172092, var23.field_z << -1359129436, -this.field_U << -1147490198, 4096);
                 ai.a(true);
                 this.field_S.e(var9 + -(var23.field_u >> -1857178367), -var23.field_z + var10, 256);
                 return;
+              }
             }
-            if (te.field_d == var6) {
-                var24 = bf.field_p[0];
-                mg var16 = var24;
-                var11 = var24.field_u << -5697663;
-                var12 = var24.field_z << -1759717407;
-                if (this.field_S == null) {
-                    this.field_S = new mg(var11, var12);
-                    kb.a(this.field_S, 16865);
-                    var24.a(112, 144, var24.field_u << -1040172092, var24.field_z << -1359129436, -this.field_U << -1147490198, 4096);
-                    ai.a(true);
-                    this.field_S.e(var9 + -(var24.field_u >> -1857178367), -var24.field_z + var10, 256);
+          }
+        } else {
+          L2: {
+            var17 = eg.field_s;
+            if (var17.equals(this.field_n)) {
+              break L2;
+            } else {
+              this.field_n = var17;
+              this.e(-115);
+              break L2;
+            }
+          }
+          L3: {
+            super.a(param0, param1, param2, param3);
+            var6 = this.field_R.a(param0 + -22280);
+            var31 = (gm) ((Object) this.field_w);
+            var9 = this.field_l + param1;
+            var10 = var31.b(-587719039, (fi) (this), param2) + (var31.a((fi) (this), (byte) -123).a((byte) 20) >> -43842047);
+            if (gd.field_r == var6) {
+              break L3;
+            } else {
+              if (te.field_d == var6) {
+                break L3;
+              } else {
+                if (var6 != ee.field_c) {
+                  if (bm.field_i != var6) {
                     return;
-                }
-                if (this.field_S.field_w < var11) {
-                    this.field_S = new mg(var11, var12);
-                    kb.a(this.field_S, 16865);
-                    var24.a(112, 144, var24.field_u << -1040172092, var24.field_z << -1359129436, -this.field_U << -1147490198, 4096);
-                    ai.a(true);
-                    this.field_S.e(var9 + -(var24.field_u >> -1857178367), -var24.field_z + var10, 256);
+                  } else {
+                    var19 = bf.field_p[1];
+                    var19.e(var9, var10 - (var19.field_p >> 2125725985), 256);
                     return;
+                  }
+                } else {
+                  var20 = bf.field_p[2];
+                  var20.e(var9, var10 + -(var20.field_p >> 899381985), 256);
+                  return;
                 }
-                if (var12 > this.field_S.field_p) {
-                    this.field_S = new mg(var11, var12);
-                    kb.a(this.field_S, 16865);
-                    var24.a(112, 144, var24.field_u << -1040172092, var24.field_z << -1359129436, -this.field_U << -1147490198, 4096);
-                    ai.a(true);
-                    this.field_S.e(var9 + -(var24.field_u >> -1857178367), -var24.field_z + var10, 256);
-                    return;
-                }
+              }
+            }
+          }
+          var21 = bf.field_p[0];
+          var11 = var21.field_u << -5697663;
+          var12 = var21.field_z << -1759717407;
+          if (this.field_S != null) {
+            if (this.field_S.field_w >= var11) {
+              if (var12 > this.field_S.field_p) {
+                this.field_S = new mg(var11, var12);
+                kb.a(this.field_S, 16865);
+                var21.a(112, 144, var21.field_u << -1040172092, var21.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+                ai.a(true);
+                this.field_S.e(var9 + -(var21.field_u >> -1857178367), -var21.field_z + var10, 256);
+                return;
+              } else {
                 kb.a(this.field_S, 16865);
                 df.c();
-                var24.a(112, 144, var24.field_u << -1040172092, var24.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+                var21.a(112, 144, var21.field_u << -1040172092, var21.field_z << -1359129436, -this.field_U << -1147490198, 4096);
                 ai.a(true);
-                this.field_S.e(var9 + -(var24.field_u >> -1857178367), -var24.field_z + var10, 256);
+                this.field_S.e(var9 + -(var21.field_u >> -1857178367), -var21.field_z + var10, 256);
                 return;
+              }
+            } else {
+              this.field_S = new mg(var11, var12);
+              kb.a(this.field_S, 16865);
+              var21.a(112, 144, var21.field_u << -1040172092, var21.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+              ai.a(true);
+              this.field_S.e(var9 + -(var21.field_u >> -1857178367), -var21.field_z + var10, 256);
+              return;
             }
-            if (var6 == ee.field_c) {
-                var26 = bf.field_p[2];
-                var26.e(var9, var10 + -(var26.field_p >> 899381985), 256);
-                return;
-            }
-            if (bm.field_i != var6) {
-                return;
-            }
-            var25 = bf.field_p[1];
-            var25.e(var9, var10 - (var25.field_p >> 2125725985), 256);
-            return;
-        }
-        this.field_n = var5;
-        this.e(-115);
-        super.a(param0, param1, param2, param3);
-        var6 = this.field_R.a(param0 + -22280);
-        gm var33 = (gm) ((Object) this.field_w);
-        var9 = this.field_l + param1;
-        var10 = var33.b(-587719039, (fi) (this), param2) + (var33.a((fi) (this), (byte) -123).a((byte) 20) >> -43842047);
-        if (gd.field_r != var6 && te.field_d != var6) {
-            if (var6 == ee.field_c) {
-                var29 = bf.field_p[2];
-                var29.e(var9, var10 + -(var29.field_p >> 899381985), 256);
-                return;
-            }
-            if (bm.field_i == var6) {
-                var28 = bf.field_p[1];
-                var28.e(var9, var10 - (var28.field_p >> 2125725985), 256);
-                return;
-            }
-            return;
-        }
-        mg var30 = bf.field_p[0];
-        var11 = var30.field_u << -5697663;
-        var12 = var30.field_z << -1759717407;
-        if (this.field_S == null) {
+          } else {
             this.field_S = new mg(var11, var12);
             kb.a(this.field_S, 16865);
-            var30.a(112, 144, var30.field_u << -1040172092, var30.field_z << -1359129436, -this.field_U << -1147490198, 4096);
+            var21.a(112, 144, var21.field_u << -1040172092, var21.field_z << -1359129436, -this.field_U << -1147490198, 4096);
             ai.a(true);
-            this.field_S.e(var9 + -(var30.field_u >> -1857178367), -var30.field_z + var10, 256);
+            this.field_S.e(var9 + -(var21.field_u >> -1857178367), -var21.field_z + var10, 256);
             return;
+          }
         }
-        if (this.field_S.field_w < var11 || var12 > this.field_S.field_p) {
-            this.field_S = new mg(var11, var12);
-            kb.a(this.field_S, 16865);
-            var30.a(112, 144, var30.field_u << -1040172092, var30.field_z << -1359129436, -this.field_U << -1147490198, 4096);
-            ai.a(true);
-            this.field_S.e(var9 + -(var30.field_u >> -1857178367), -var30.field_z + var10, 256);
-            return;
-        }
-        kb.a(this.field_S, 16865);
-        df.c();
-        var30.a(112, 144, var30.field_u << -1040172092, var30.field_z << -1359129436, -this.field_U << -1147490198, 4096);
-        ai.a(true);
-        this.field_S.e(var9 + -(var30.field_u >> -1857178367), -var30.field_z + var10, 256);
     }
 
     final boolean a(fi param0, int param1) {

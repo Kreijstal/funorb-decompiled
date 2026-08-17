@@ -668,12 +668,27 @@ abstract class f {
     }
 
     final void a(int param0, boolean param1, int param2) {
-        if (this.field_a < param2 || param2 == this.field_b) {
+        L0: {
+          if (this.field_a < param2) {
             this.field_b = param0;
             this.field_a = param2;
+            break L0;
+          } else {
+            if (param2 != this.field_b) {
+              break L0;
+            } else {
+              this.field_b = this.field_b | param0;
+              break L0;
+            }
+          }
         }
-        if (!param1) {
+        L1: {
+          if (param1) {
+            break L1;
+          } else {
             this.clone();
+            break L1;
+          }
         }
     }
 

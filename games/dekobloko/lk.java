@@ -376,23 +376,67 @@ final class lk {
     }
 
     final int a(int param0, int param1, int param2) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var4 = 0;
-        if (param0 >= 0 && -1 >= (param2 ^ -1) && param0 < this.field_O && this.field_a > param2) {
-            var4 = this.field_P[param0 + this.field_O * param2];
-        }
-        int var5 = 101 / ((param1 - 24) / 52);
-        if (this.field_C != 0 && !this.field_S) {
-            var6 = -this.field_q + param0;
-            var7 = -this.field_L + param2;
-            if ((var6 ^ -1) <= -1 && -1 >= (var7 ^ -1) && this.field_C > var6 && this.field_zb > var7) {
-                var8 = this.field_T[var7 * this.field_C + var6];
-                if (!(var8 == 0)) {
-                    var4 = var8;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        L0: {
+          var4 = 0;
+          if (param0 < 0) {
+            break L0;
+          } else {
+            if (-1 < (param2 ^ -1)) {
+              break L0;
+            } else {
+              if (param0 >= this.field_O) {
+                break L0;
+              } else {
+                if (this.field_a <= param2) {
+                  break L0;
+                } else {
+                  var4 = this.field_P[param0 + this.field_O * param2];
+                  break L0;
                 }
+              }
             }
+          }
+        }
+        L1: {
+          var5 = 101 / ((param1 - 24) / 52);
+          if (this.field_C == 0) {
+            break L1;
+          } else {
+            if (this.field_S) {
+              break L1;
+            } else {
+              var6 = -this.field_q + param0;
+              var7 = -this.field_L + param2;
+              if ((var6 ^ -1) > -1) {
+                break L1;
+              } else {
+                if (-1 < (var7 ^ -1)) {
+                  break L1;
+                } else {
+                  if (this.field_C <= var6) {
+                    break L1;
+                  } else {
+                    if (this.field_zb <= var7) {
+                      break L1;
+                    } else {
+                      var8 = this.field_T[var7 * this.field_C + var6];
+                      if (var8 != 0) {
+                        var4 = var8;
+                        break L1;
+                      } else {
+                        break L1;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
         return var4;
     }

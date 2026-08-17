@@ -69,20 +69,34 @@ final class pi {
     }
 
     final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = fleas.field_A ? 1 : 0;
-        if (this.field_d == null || this.field_d.length == 0) {
-            return 0;
-        }
-        if (param0 != 6759) {
-            return -64;
-        }
-        for (var3 = 1; var3 < this.field_d.length; var3++) {
-            if (param1 < this.field_d[var3 + -1] + this.field_d[var3] >> -1248493535) {
-                return var3 + -1;
+        int var3;
+        int var4;
+        var4 = fleas.field_A ? 1 : 0;
+        if (this.field_d == null) {
+          return 0;
+        } else {
+          if (this.field_d.length != 0) {
+            if (param0 == 6759) {
+              var3 = 1;
+              L0: while (true) {
+                if (var3 >= this.field_d.length) {
+                  return this.field_d.length + -1;
+                } else {
+                  if (param1 >= this.field_d[var3 + -1] + this.field_d[var3] >> -1248493535) {
+                    var3++;
+                    continue L0;
+                  } else {
+                    return var3 + -1;
+                  }
+                }
+              }
+            } else {
+              return -64;
             }
+          } else {
+            return 0;
+          }
         }
-        return this.field_d.length + -1;
     }
 
     pi(int param0, int param1, int param2) {

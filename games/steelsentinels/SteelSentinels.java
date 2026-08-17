@@ -3896,7 +3896,7 @@ public final class SteelSentinels extends n {
                     continue stateLoop;
                 }
                 case 198: {
-                    if (var3 >= ((Object[]) (var2)).length) {
+                    if (var3 >= java.lang.reflect.Array.getLength(var2)) {
                         statePc = 200;
                     } else {
                         statePc = 199;

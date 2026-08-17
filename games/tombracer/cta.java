@@ -73,25 +73,39 @@ public final class cta extends eo {
     }
 
     private final static int a(int param0, iw param1) {
-        if (param0 < 105) {
+        L0: {
+          if (param0 >= 105) {
+            break L0;
+          } else {
             field_fd = (int[]) null;
+            break L0;
+          }
         }
-        if (io.field_c == param1) {
-            return 2;
-        }
-        if (param1 == di.field_d) {
+        if (io.field_c != param1) {
+          if (param1 != di.field_d) {
+            if (param1 != nj.field_r) {
+              if (param1 != fma.field_f) {
+                if (vs.field_T == param1) {
+                  return 6;
+                } else {
+                  if (nb.field_b != param1) {
+                    throw new IllegalArgumentException("");
+                  } else {
+                    return 5;
+                  }
+                }
+              } else {
+                return 4;
+              }
+            } else {
+              return 1;
+            }
+          } else {
             return 3;
+          }
+        } else {
+          return 2;
         }
-        if (param1 == nj.field_r) {
-            return 1;
-        }
-        if (param1 == fma.field_f) {
-            return 4;
-        }
-        if (vs.field_T == param1 || nb.field_b == param1) {
-            return 6;
-        }
-        throw new IllegalArgumentException("");
     }
 
     private cta(int param0, int param1, java.awt.Canvas param2, jaclib.peer.sha param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, gua param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, cn param10, int param11) {

@@ -2721,8 +2721,8 @@ final class ip extends ki {
     }
 
     final boolean b(byte param0) {
-        om var3;
         int stackIn_13_0 = 0;
+        om var3;
         L0: {
           if (param0 < -91) {
             break L0;

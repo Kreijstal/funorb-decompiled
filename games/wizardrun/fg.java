@@ -415,20 +415,38 @@ final class fg {
     }
 
     final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = wizardrun.field_H;
-        if (null == this.field_e || 0 == this.field_e.length) {
-            return 0;
-        }
-        if (param0 != -1) {
-            fg.a((byte) -28);
-        }
-        for (var3 = 1; var3 < this.field_e.length; var3++) {
-            if (!((param1 ^ -1) <= (this.field_e[var3 - 1] + this.field_e[var3] >> -1327339679 ^ -1))) {
-                return var3 - 1;
+        int var3;
+        int var4;
+        var4 = wizardrun.field_H;
+        if (null == this.field_e) {
+          return 0;
+        } else {
+          if (0 != this.field_e.length) {
+            L0: {
+              if (param0 == -1) {
+                break L0;
+              } else {
+                fg.a((byte) -28);
+                break L0;
+              }
             }
+            var3 = 1;
+            L1: while (true) {
+              if (var3 >= this.field_e.length) {
+                return -1 + this.field_e.length;
+              } else {
+                if ((param1 ^ -1) > (this.field_e[var3 - 1] + this.field_e[var3] >> -1327339679 ^ -1)) {
+                  return var3 - 1;
+                } else {
+                  var3++;
+                  continue L1;
+                }
+              }
+            }
+          } else {
+            return 0;
+          }
         }
-        return -1 + this.field_e.length;
     }
 
     static {

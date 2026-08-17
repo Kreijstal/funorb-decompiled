@@ -194,6 +194,7 @@ final class v {
         RuntimeException var4 = null;
         int var5 = 0;
         String[] var6 = null;
+        String[] var7 = null;
         int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
@@ -206,7 +207,6 @@ final class v {
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] var7 = null;
         var5 = Chess.field_G;
         try {
           L0: {

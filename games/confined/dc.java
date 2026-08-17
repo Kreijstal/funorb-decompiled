@@ -56,6 +56,9 @@ abstract class dc extends jl {
     }
 
     void a(int param0, int param1, int param2, int param3) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
+        int localTemp$2 = 0;
         int var5;
         int var6;
         int var7;
@@ -432,8 +435,9 @@ abstract class dc extends jl {
                                   if (0 <= var24) {
                                     break L35;
                                   } else {
-                                    var24 = -var24;
-                                    if (-257 >= (-var24 ^ -1)) {
+                                    localTemp$0 = -var24;
+                                    var24 = localTemp$0;
+                                    if (-257 >= (localTemp$0 ^ -1)) {
                                       break L34;
                                     } else {
                                       break L35;
@@ -488,8 +492,9 @@ abstract class dc extends jl {
                                   if ((var24 ^ -1) <= -1) {
                                     break L37;
                                   } else {
-                                    var24 = -var24;
-                                    if (-var24 < 256) {
+                                    localTemp$1 = -var24;
+                                    var24 = localTemp$1;
+                                    if (localTemp$1 < 256) {
                                       break L37;
                                     } else {
                                       var11 += 16;
@@ -543,8 +548,9 @@ abstract class dc extends jl {
                             if (0 <= var24) {
                               break L38;
                             } else {
-                              var24 = -var24;
-                              if (256 > -var24) {
+                              localTemp$2 = -var24;
+                              var24 = localTemp$2;
+                              if (256 > localTemp$2) {
                                 break L38;
                               } else {
                                 var20++;

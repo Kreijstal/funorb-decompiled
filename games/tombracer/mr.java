@@ -820,7 +820,7 @@ final class mr extends b implements tma, tsa, mia {
     }
 
     public final void a(int param0, int param1, rj param2, int param3, byte param4) {
-        boolean discarded$0 = false;
+        boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -838,7 +838,7 @@ final class mr extends b implements tma, tsa, mia {
                 if (param2 != this.field_F) {
                   break L1;
                 } else {
-                  discarded$0 = this.c(-1);
+                  discarded$1 = this.c(-1);
                   break L1;
                 }
               }

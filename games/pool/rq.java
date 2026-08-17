@@ -31,6 +31,8 @@ final class rq extends kd {
     }
 
     final void a(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_36_0 = 0;
         int stackIn_50_0 = 0;
         int stackIn_65_0 = 0;
@@ -201,8 +203,9 @@ final class rq extends kd {
                           stackIn_50_0 = param1;
                           break L11;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_50_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_50_0 = localTemp$0;
                           break L11;
                         }
                       }
@@ -253,8 +256,9 @@ final class rq extends kd {
                           stackIn_65_0 = param1;
                           break L17;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_65_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_65_0 = localTemp$1;
                           break L17;
                         }
                       }

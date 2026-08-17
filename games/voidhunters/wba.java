@@ -6,7 +6,6 @@ final class wba extends rqa {
     static ge field_p;
 
     final static aja a(byte param0, ha param1, phb param2) {
-        jva var2 = null;
         aja var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -42,7 +41,7 @@ final class wba extends rqa {
                 var4 = 0;
                 L2: while (true) {
                   if (var6.field_r.length <= var4) {
-                    var2 = var6;
+                    param2 = (phb) ((Object) var6);
                     break L1;
                   } else {
                     L3: {
@@ -50,10 +49,10 @@ final class wba extends rqa {
 
                       stackIn_6_1 = var4;
 
-                      if (0 != ((phb) ((Object) var2)).field_r[var4]) {
+                      if (0 != param2.field_r[var4]) {
                         stackIn_7_0 = (int[]) ((Object) stackIn_6_0);
                         stackIn_7_1 = stackIn_6_1;
-                        stackIn_7_2 = knb.a(-16777216, ((phb) ((Object) var2)).field_r[var4]);
+                        stackIn_7_2 = knb.a(-16777216, param2.field_r[var4]);
                         break L3;
                       } else {
                         stackIn_7_0 = (int[]) ((Object) stackIn_6_0);
@@ -77,7 +76,7 @@ final class wba extends rqa {
                 break L4;
               }
             }
-            var3 = param1.a(((phb) ((Object) var2)).field_m, ((phb) ((Object) var2)).field_m, ((phb) ((Object) var2)).field_r, 0, (byte) 64, ((phb) ((Object) var2)).field_n);
+            var3 = param1.a(param2.field_m, param2.field_m, param2.field_r, 0, (byte) 64, param2.field_n);
             stackIn_12_0 = (aja) (var3);
             break L0;
           }
@@ -106,7 +105,7 @@ final class wba extends rqa {
 
             stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
 
-            if (var2 == null) {
+            if (param2 == null) {
               stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
               stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackIn_19_2 = "null";

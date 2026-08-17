@@ -104,21 +104,34 @@ final class tp extends ana {
     }
 
     final boolean c(byte param0) {
-        int var2 = -68 / ((71 - param0) / 47);
-        if (this.field_m.a((byte) -106) || this.field_y.a((byte) -106)) {
-            return false;
-        }
-        int fieldTemp$0 = this.field_l - 1;
-        this.field_l = this.field_l - 1;
-        if (fieldTemp$0 >= 0) {
-            if (this.field_l == 75) {
-                jja.a(256, -1, 57);
-                this.d(17);
+        int fieldTemp$1 = 0;
+        int var2;
+        var2 = -68 / ((71 - param0) / 47);
+        if (this.field_m.a((byte) -106)) {
+          return false;
+        } else {
+          if (!this.field_y.a((byte) -106)) {
+            fieldTemp$1 = this.field_l - 1;
+            this.field_l = this.field_l - 1;
+            if (fieldTemp$1 < 0) {
+              this.e(-1);
+              return true;
+            } else {
+              L0: {
+                if (this.field_l != 75) {
+                  break L0;
+                } else {
+                  jja.a(256, -1, 57);
+                  this.d(17);
+                  break L0;
+                }
+              }
+              return false;
             }
+          } else {
             return false;
+          }
         }
-        this.e(-1);
-        return true;
     }
 
     public static void e(byte param0) {

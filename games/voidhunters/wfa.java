@@ -696,6 +696,18 @@ final class wfa extends oi {
     }
 
     final void b(int param0, int param1) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
         int incrementValue$12 = 0;
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
@@ -711,19 +723,8 @@ final class wfa extends oi {
         int incrementValue$24 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
-        int incrementValue$27 = 0;
-        int incrementValue$28 = 0;
-        int incrementValue$29 = 0;
-        int incrementValue$30 = 0;
-        int incrementValue$31 = 0;
-        int incrementValue$32 = 0;
-        int incrementValue$33 = 0;
-        int incrementValue$34 = 0;
-        int incrementValue$35 = 0;
-        int incrementValue$36 = 0;
-        int incrementValue$37 = 0;
-        int incrementValue$38 = 0;
         int[] var3;
+        int var4;
         int var5;
         int var6;
         int var7;
@@ -742,8 +743,6 @@ final class wfa extends oi {
         int var20;
         int var21;
         int[] var22;
-        int[] var31;
-        int var4;
         int[] var23;
         int[] var24;
         int[] var25;
@@ -752,6 +751,7 @@ final class wfa extends oi {
         int[] var28;
         int[] var29;
         int[] var30;
+        int[] var31;
         int[] var32;
         int[] var33;
         int[] var34;
@@ -827,9 +827,9 @@ final class wfa extends oi {
                         } else {
                           L7: {
                             var10 = (var8 >> 12) * this.field_e + (var7 >> 12);
-                            incrementValue$12 = var6;
+                            incrementValue$0 = var6;
                             var6++;
-                            var11 = incrementValue$12;
+                            var11 = incrementValue$0;
                             var39 = var3;
                             var30 = var39;
                             var12 = var30;
@@ -982,9 +982,9 @@ final class wfa extends oi {
                                       break L7;
                                     }
                                   } else {
-                                    incrementValue$13 = var10;
+                                    incrementValue$1 = var10;
                                     var10++;
-                                    var15 = this.field_F[incrementValue$13];
+                                    var15 = this.field_F[incrementValue$1];
                                     var16 = field_y;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -993,9 +993,9 @@ final class wfa extends oi {
                                     break L7;
                                   }
                                 } else {
-                                  incrementValue$14 = var10;
+                                  incrementValue$2 = var10;
                                   var10++;
-                                  var15 = this.field_F[incrementValue$14];
+                                  var15 = this.field_F[incrementValue$2];
                                   var16 = (var15 & 16711680) * field_x & -16777216;
                                   var17 = (var15 & 65280) * field_s & 16711680;
                                   var18 = (var15 & 255) * field_E & 65280;
@@ -1079,9 +1079,9 @@ final class wfa extends oi {
                         } else {
                           L15: {
                             var10 = (var8 >> 12) * this.field_e + (var7 >> 12);
-                            incrementValue$15 = var6;
+                            incrementValue$3 = var6;
                             var6++;
-                            var11 = incrementValue$15;
+                            var11 = incrementValue$3;
                             var38 = var3;
                             var29 = var38;
                             var12 = var29;
@@ -1234,9 +1234,9 @@ final class wfa extends oi {
                                       break L15;
                                     }
                                   } else {
-                                    incrementValue$16 = var10;
+                                    incrementValue$4 = var10;
                                     var10++;
-                                    var15 = this.field_F[incrementValue$16];
+                                    var15 = this.field_F[incrementValue$4];
                                     var16 = field_y;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1245,9 +1245,9 @@ final class wfa extends oi {
                                     break L15;
                                   }
                                 } else {
-                                  incrementValue$17 = var10;
+                                  incrementValue$5 = var10;
                                   var10++;
-                                  var15 = this.field_F[incrementValue$17];
+                                  var15 = this.field_F[incrementValue$5];
                                   var16 = (var15 & 16711680) * field_x & -16777216;
                                   var17 = (var15 & 65280) * field_s & 16711680;
                                   var18 = (var15 & 255) * field_E & 65280;
@@ -1308,9 +1308,9 @@ final class wfa extends oi {
                             } else {
                               L22: {
                                 var10 = (var8 >> 12) * this.field_e + (var7 >> 12);
-                                incrementValue$18 = var6;
+                                incrementValue$6 = var6;
                                 var6++;
-                                var11 = incrementValue$18;
+                                var11 = incrementValue$6;
                                 var37 = var3;
                                 var28 = var37;
                                 var12 = var28;
@@ -1463,9 +1463,9 @@ final class wfa extends oi {
                                           break L22;
                                         }
                                       } else {
-                                        incrementValue$19 = var10;
+                                        incrementValue$7 = var10;
                                         var10++;
-                                        var15 = this.field_F[incrementValue$19];
+                                        var15 = this.field_F[incrementValue$7];
                                         var16 = field_y;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1474,9 +1474,9 @@ final class wfa extends oi {
                                         break L22;
                                       }
                                     } else {
-                                      incrementValue$20 = var10;
+                                      incrementValue$8 = var10;
                                       var10++;
-                                      var15 = this.field_F[incrementValue$20];
+                                      var15 = this.field_F[incrementValue$8];
                                       var16 = (var15 & 16711680) * field_x & -16777216;
                                       var17 = (var15 & 65280) * field_s & 16711680;
                                       var18 = (var15 & 255) * field_E & 65280;
@@ -1574,9 +1574,9 @@ final class wfa extends oi {
                         } else {
                           L30: {
                             var10 = (var8 >> 12) * this.field_e + (var7 >> 12);
-                            incrementValue$21 = var6;
+                            incrementValue$9 = var6;
                             var6++;
-                            var11 = incrementValue$21;
+                            var11 = incrementValue$9;
                             var36 = var3;
                             var27 = var36;
                             var12 = var27;
@@ -1729,9 +1729,9 @@ final class wfa extends oi {
                                       break L30;
                                     }
                                   } else {
-                                    incrementValue$22 = var10;
+                                    incrementValue$10 = var10;
                                     var10++;
-                                    var15 = this.field_F[incrementValue$22];
+                                    var15 = this.field_F[incrementValue$10];
                                     var16 = field_y;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1740,9 +1740,9 @@ final class wfa extends oi {
                                     break L30;
                                   }
                                 } else {
-                                  incrementValue$23 = var10;
+                                  incrementValue$11 = var10;
                                   var10++;
-                                  var15 = this.field_F[incrementValue$23];
+                                  var15 = this.field_F[incrementValue$11];
                                   var16 = (var15 & 16711680) * field_x & -16777216;
                                   var17 = (var15 & 65280) * field_s & 16711680;
                                   var18 = (var15 & 255) * field_E & 65280;
@@ -1827,9 +1827,9 @@ final class wfa extends oi {
                         } else {
                           L38: {
                             var10 = (var8 >> 12) * this.field_e + (var7 >> 12);
-                            incrementValue$24 = var6;
+                            incrementValue$12 = var6;
                             var6++;
-                            var11 = incrementValue$24;
+                            var11 = incrementValue$12;
                             var35 = var3;
                             var26 = var35;
                             var12 = var26;
@@ -1982,9 +1982,9 @@ final class wfa extends oi {
                                       break L38;
                                     }
                                   } else {
-                                    incrementValue$25 = var10;
+                                    incrementValue$13 = var10;
                                     var10++;
-                                    var15 = this.field_F[incrementValue$25];
+                                    var15 = this.field_F[incrementValue$13];
                                     var16 = field_y;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1993,9 +1993,9 @@ final class wfa extends oi {
                                     break L38;
                                   }
                                 } else {
-                                  incrementValue$26 = var10;
+                                  incrementValue$14 = var10;
                                   var10++;
-                                  var15 = this.field_F[incrementValue$26];
+                                  var15 = this.field_F[incrementValue$14];
                                   var16 = (var15 & 16711680) * field_x & -16777216;
                                   var17 = (var15 & 65280) * field_s & 16711680;
                                   var18 = (var15 & 255) * field_E & 65280;
@@ -2057,9 +2057,9 @@ final class wfa extends oi {
                             } else {
                               L45: {
                                 var10 = (var8 >> 12) * this.field_e + (var7 >> 12);
-                                incrementValue$27 = var6;
+                                incrementValue$15 = var6;
                                 var6++;
-                                var11 = incrementValue$27;
+                                var11 = incrementValue$15;
                                 var34 = var3;
                                 var25 = var34;
                                 var12 = var25;
@@ -2212,9 +2212,9 @@ final class wfa extends oi {
                                           break L45;
                                         }
                                       } else {
-                                        incrementValue$28 = var10;
+                                        incrementValue$16 = var10;
                                         var10++;
-                                        var15 = this.field_F[incrementValue$28];
+                                        var15 = this.field_F[incrementValue$16];
                                         var16 = field_y;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2223,9 +2223,9 @@ final class wfa extends oi {
                                         break L45;
                                       }
                                     } else {
-                                      incrementValue$29 = var10;
+                                      incrementValue$17 = var10;
                                       var10++;
-                                      var15 = this.field_F[incrementValue$29];
+                                      var15 = this.field_F[incrementValue$17];
                                       var16 = (var15 & 16711680) * field_x & -16777216;
                                       var17 = (var15 & 65280) * field_s & 16711680;
                                       var18 = (var15 & 255) * field_E & 65280;
@@ -2299,9 +2299,9 @@ final class wfa extends oi {
                             } else {
                               L52: {
                                 var10 = (var8 >> 12) * this.field_e + (var7 >> 12);
-                                incrementValue$30 = var6;
+                                incrementValue$18 = var6;
                                 var6++;
-                                var11 = incrementValue$30;
+                                var11 = incrementValue$18;
                                 var33 = var3;
                                 var24 = var33;
                                 var12 = var24;
@@ -2454,9 +2454,9 @@ final class wfa extends oi {
                                           break L52;
                                         }
                                       } else {
-                                        incrementValue$31 = var10;
+                                        incrementValue$19 = var10;
                                         var10++;
-                                        var15 = this.field_F[incrementValue$31];
+                                        var15 = this.field_F[incrementValue$19];
                                         var16 = field_y;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2465,9 +2465,9 @@ final class wfa extends oi {
                                         break L52;
                                       }
                                     } else {
-                                      incrementValue$32 = var10;
+                                      incrementValue$20 = var10;
                                       var10++;
-                                      var15 = this.field_F[incrementValue$32];
+                                      var15 = this.field_F[incrementValue$20];
                                       var16 = (var15 & 16711680) * field_x & -16777216;
                                       var17 = (var15 & 65280) * field_s & 16711680;
                                       var18 = (var15 & 255) * field_E & 65280;
@@ -2538,9 +2538,9 @@ final class wfa extends oi {
                             } else {
                               L59: {
                                 var10 = (var8 >> 12) * this.field_e + (var7 >> 12);
-                                incrementValue$33 = var6;
+                                incrementValue$21 = var6;
                                 var6++;
-                                var11 = incrementValue$33;
+                                var11 = incrementValue$21;
                                 var32 = var3;
                                 var23 = var32;
                                 var12 = var23;
@@ -2693,9 +2693,9 @@ final class wfa extends oi {
                                           break L59;
                                         }
                                       } else {
-                                        incrementValue$34 = var10;
+                                        incrementValue$22 = var10;
                                         var10++;
-                                        var15 = this.field_F[incrementValue$34];
+                                        var15 = this.field_F[incrementValue$22];
                                         var16 = field_y;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2704,9 +2704,9 @@ final class wfa extends oi {
                                         break L59;
                                       }
                                     } else {
-                                      incrementValue$35 = var10;
+                                      incrementValue$23 = var10;
                                       var10++;
-                                      var15 = this.field_F[incrementValue$35];
+                                      var15 = this.field_F[incrementValue$23];
                                       var16 = (var15 & 16711680) * field_x & -16777216;
                                       var17 = (var15 & 65280) * field_s & 16711680;
                                       var18 = (var15 & 255) * field_E & 65280;
@@ -2759,9 +2759,9 @@ final class wfa extends oi {
                               } else {
                                 L64: {
                                   var10 = (var8 >> 12) * this.field_e + (var7 >> 12);
-                                  incrementValue$36 = var6;
+                                  incrementValue$24 = var6;
                                   var6++;
-                                  var11 = incrementValue$36;
+                                  var11 = incrementValue$24;
                                   var31 = var3;
                                   var22 = var31;
                                   var12 = var22;
@@ -2914,9 +2914,9 @@ final class wfa extends oi {
                                             break L64;
                                           }
                                         } else {
-                                          incrementValue$37 = var10;
+                                          incrementValue$25 = var10;
                                           var10++;
-                                          var15 = this.field_F[incrementValue$37];
+                                          var15 = this.field_F[incrementValue$25];
                                           var16 = field_y;
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2925,9 +2925,9 @@ final class wfa extends oi {
                                           break L64;
                                         }
                                       } else {
-                                        incrementValue$38 = var10;
+                                        incrementValue$26 = var10;
                                         var10++;
-                                        var15 = this.field_F[incrementValue$38];
+                                        var15 = this.field_F[incrementValue$26];
                                         var16 = (var15 & 16711680) * field_x & -16777216;
                                         var17 = (var15 & 65280) * field_s & 16711680;
                                         var18 = (var15 & 255) * field_E & 65280;
@@ -2990,6 +2990,7 @@ final class wfa extends oi {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
@@ -3003,7 +3004,6 @@ final class wfa extends oi {
         int incrementValue$11 = 0;
         int incrementValue$12 = 0;
         int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
         int var9;
         int var10;
         int var11;
@@ -3019,8 +3019,6 @@ final class wfa extends oi {
         int var20;
         int var21;
         int var22;
-        int[] var33;
-        int[] var34;
         int var23;
         int var24;
         int var25;
@@ -3031,6 +3029,8 @@ final class wfa extends oi {
         int var30;
         int var31;
         int var32;
+        int[] var33;
+        int[] var34;
         if (!this.field_w.g()) {
           L0: {
             if (param2 <= 0) {
@@ -3172,9 +3172,9 @@ final class wfa extends oi {
                                             var29 = var27 + var28;
                                             var30 = (var27 & 16711935) + (var28 & 16711935);
                                             var28 = (var30 & 16777472) + (var29 - var30 & 65536);
-                                            incrementValue$1 = var16;
+                                            incrementValue$0 = var16;
                                             var16++;
-                                            var18[incrementValue$1] = var29 - var28 | var28 - (var28 >>> 8);
+                                            var18[incrementValue$0] = var29 - var28 | var28 - (var28 >>> 8);
                                             break L12;
                                           }
                                         }
@@ -3212,9 +3212,9 @@ final class wfa extends oi {
                                       var24 = var23 + var26;
                                       var25 = (var23 & 16711935) + (var26 & 16711935);
                                       var26 = (var25 & 16777472) + (var24 - var25 & 65536);
-                                      incrementValue$2 = var16;
+                                      incrementValue$1 = var16;
                                       var16++;
-                                      var18[incrementValue$2] = var24 - var26 | var26 - (var26 >>> 8);
+                                      var18[incrementValue$1] = var24 - var26 | var26 - (var26 >>> 8);
                                       var9 = var9 + var14;
                                       var22++;
                                       continue L14;
@@ -3257,9 +3257,9 @@ final class wfa extends oi {
                                         var31 = var26 + var30;
                                         var32 = (var26 & 16711935) + (var30 & 16711935);
                                         var30 = (var32 & 16777472) + (var31 - var32 & 65536);
-                                        incrementValue$3 = var16;
+                                        incrementValue$2 = var16;
                                         var16++;
-                                        var18[incrementValue$3] = var31 - var30 | var30 - (var30 >>> 8);
+                                        var18[incrementValue$2] = var31 - var30 | var30 - (var30 >>> 8);
                                         break L17;
                                       }
                                     }
@@ -3298,9 +3298,9 @@ final class wfa extends oi {
                                       var25 = var23 + var24;
                                       var26 = (var23 & 16711935) + (var24 & 16711935);
                                       var24 = (var26 & 16777472) + (var25 - var26 & 65536);
-                                      incrementValue$4 = var16;
+                                      incrementValue$3 = var16;
                                       var16++;
-                                      var18[incrementValue$4] = var25 - var24 | var24 - (var24 >>> 8);
+                                      var18[incrementValue$3] = var25 - var24 | var24 - (var24 >>> 8);
                                       break L20;
                                     }
                                   }
@@ -3348,9 +3348,9 @@ final class wfa extends oi {
                                       var22 = (var27 & 65280) * var19 & 16711680;
                                       var27 = ((var21 | var22) >>> 8) + param5;
                                       var30 = var34[var16];
-                                      incrementValue$5 = var16;
+                                      incrementValue$4 = var16;
                                       var16++;
-                                      var18[incrementValue$5] = ((var27 & 16711935) * var28 + (var30 & 16711935) * var29 & -16711936) + ((var27 & 65280) * var28 + (var30 & 65280) * var29 & 16711680) >> 8;
+                                      var18[incrementValue$4] = ((var27 & 16711935) * var28 + (var30 & 16711935) * var29 & -16711936) + ((var27 & 65280) * var28 + (var30 & 65280) * var29 & 16711680) >> 8;
                                       var9 = var9 + var14;
                                       var26++;
                                       continue L22;
@@ -3393,9 +3393,9 @@ final class wfa extends oi {
                                         break L25;
                                       }
                                     }
-                                    incrementValue$6 = var16;
+                                    incrementValue$5 = var16;
                                     var16++;
-                                    var18[incrementValue$6] = var26;
+                                    var18[incrementValue$5] = var26;
                                     var9 = var9 + var14;
                                     var22++;
                                     continue L24;
@@ -3433,9 +3433,9 @@ final class wfa extends oi {
                                         var29 = (var26 & 16711680) * var20 & -16777216;
                                         var30 = (var26 & 65280) * var21 & 16711680;
                                         var31 = (var26 & 255) * var22 & 65280;
-                                        incrementValue$7 = var16;
+                                        incrementValue$6 = var16;
                                         var16++;
-                                        var18[incrementValue$7] = (var29 | var30 | var31) >>> 8;
+                                        var18[incrementValue$6] = (var29 | var30 | var31) >>> 8;
                                         break L28;
                                       } else {
                                         var29 = (var26 & 16711680) * var20 & -16777216;
@@ -3443,9 +3443,9 @@ final class wfa extends oi {
                                         var31 = (var26 & 255) * var22 & 65280;
                                         var26 = (var29 | var30 | var31) >>> 8;
                                         var32 = var34[var16];
-                                        incrementValue$8 = var16;
+                                        incrementValue$7 = var16;
                                         var16++;
-                                        var18[incrementValue$8] = ((var26 & 16711935) * var27 + (var32 & 16711935) * var28 & -16711936) + ((var26 & 65280) * var27 + (var32 & 65280) * var28 & 16711680) >> 8;
+                                        var18[incrementValue$7] = ((var26 & 16711935) * var27 + (var32 & 16711935) * var28 & -16711936) + ((var26 & 65280) * var27 + (var32 & 65280) * var28 & 16711680) >> 8;
                                         break L28;
                                       }
                                     }
@@ -3476,9 +3476,9 @@ final class wfa extends oi {
                                     var24 = (var23 >>> 24) * (param5 >>> 24) >> 8;
                                     var25 = 256 - var24;
                                     var26 = var34[var16];
-                                    incrementValue$9 = var16;
+                                    incrementValue$8 = var16;
                                     var16++;
-                                    var18[incrementValue$9] = ((var23 & 16711935) * var24 + (var26 & 16711935) * var25 & -16711936) + ((var23 & 65280) * var24 + (var26 & 65280) * var25 & 16711680) >> 8;
+                                    var18[incrementValue$8] = ((var23 & 16711935) * var24 + (var26 & 16711935) * var25 & -16711936) + ((var23 & 65280) * var24 + (var26 & 65280) * var25 & 16711680) >> 8;
                                     var9 = var9 + var14;
                                     var22++;
                                     continue L30;
@@ -3509,9 +3509,9 @@ final class wfa extends oi {
                                 var24 = var23 >>> 24;
                                 var25 = 256 - var24;
                                 var26 = var34[var16];
-                                incrementValue$10 = var16;
+                                incrementValue$9 = var16;
                                 var16++;
-                                var18[incrementValue$10] = (((var23 & 16711935) * var24 + (var26 & 16711935) * var25 & -16711936) >> 8) + (((var23 & -16711936) >>> 8) * var24 + ((var26 & -16711936) >>> 8) * var25 & -16711936);
+                                var18[incrementValue$9] = (((var23 & 16711935) * var24 + (var26 & 16711935) * var25 & -16711936) >> 8) + (((var23 & -16711936) >>> 8) * var24 + ((var26 & -16711936) >>> 8) * var25 & -16711936);
                                 var9 = var9 + var14;
                                 var22++;
                                 continue L32;
@@ -3552,9 +3552,9 @@ final class wfa extends oi {
                                     var27 = this.field_F[(var9 >> 16) + var25];
                                     var21 = (var27 & 16711935) * var19 & -16711936;
                                     var22 = (var27 & 65280) * var19 & 16711680;
-                                    incrementValue$11 = var16;
+                                    incrementValue$10 = var16;
                                     var16++;
-                                    var18[incrementValue$11] = ((var21 | var22) >>> 8) + param5;
+                                    var18[incrementValue$10] = ((var21 | var22) >>> 8) + param5;
                                     var9 = var9 + var14;
                                     var26++;
                                     continue L34;
@@ -3584,9 +3584,9 @@ final class wfa extends oi {
                                   var24 = var23 + param5;
                                   var25 = (var23 & 16711935) + (param5 & 16711935);
                                   var26 = (var25 & 16777472) + (var24 - var25 & 65536);
-                                  incrementValue$12 = var16;
+                                  incrementValue$11 = var16;
                                   var16++;
-                                  var18[incrementValue$12] = var24 - var26 | var26 - (var26 >>> 8);
+                                  var18[incrementValue$11] = var24 - var26 | var26 - (var26 >>> 8);
                                   var9 = var9 + var14;
                                   var22++;
                                   continue L36;
@@ -3619,9 +3619,9 @@ final class wfa extends oi {
                                 var27 = (var26 & 16711680) * var19 & -16777216;
                                 var28 = (var26 & 65280) * var20 & 16711680;
                                 var29 = (var26 & 255) * var21 & 65280;
-                                incrementValue$13 = var16;
+                                incrementValue$12 = var16;
                                 var16++;
-                                var18[incrementValue$13] = (var27 | var28 | var29) >>> 8;
+                                var18[incrementValue$12] = (var27 | var28 | var29) >>> 8;
                                 var9 = var9 + var14;
                                 var25++;
                                 continue L38;
@@ -3647,9 +3647,9 @@ final class wfa extends oi {
                               var20++;
                               continue L39;
                             } else {
-                              incrementValue$14 = var16;
+                              incrementValue$13 = var16;
                               var16++;
-                              var18[incrementValue$14] = this.field_F[(var9 >> 16) + var21];
+                              var18[incrementValue$13] = this.field_F[(var9 >> 16) + var21];
                               var9 = var9 + var14;
                               var22++;
                               continue L40;

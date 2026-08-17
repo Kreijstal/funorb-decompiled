@@ -62,6 +62,7 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
         RuntimeException var4 = null;
         int var5 = 0;
         String[] var6 = null;
+        String[] var7 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -72,7 +73,6 @@ final class vj extends ci implements java.awt.image.ImageProducer, java.awt.imag
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] var7 = null;
         var5 = MinerDisturbance.field_ab;
         try {
           L0: {

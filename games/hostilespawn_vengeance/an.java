@@ -381,14 +381,21 @@ final class an extends ql {
     }
 
     final String a(boolean param0) {
-        if (param0) {
-            return (String) null;
-        }
-        int var2 = ha.field_t;
-        if (-10 == (var2 ^ -1) || var2 != 0) {
+        int var2;
+        if (!param0) {
+          var2 = ha.field_t;
+          if (-10 == (var2 ^ -1)) {
             return ih.field_u;
+          } else {
+            if (var2 == 0) {
+              return q.field_a;
+            } else {
+              return null;
+            }
+          }
+        } else {
+          return (String) null;
         }
-        return q.field_a;
     }
 
     final void c(int param0) {

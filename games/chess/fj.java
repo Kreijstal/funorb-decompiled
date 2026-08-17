@@ -13,20 +13,34 @@ final class fj {
     int field_d;
 
     final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = Chess.field_G;
-        if (param1 != -1) {
-            return 55;
-        }
-        if (this.field_i == null || -1 == (this.field_i.length ^ -1)) {
+        int var3;
+        int var4;
+        var4 = Chess.field_G;
+        if (param1 == -1) {
+          if (this.field_i == null) {
             return 0;
-        }
-        for (var3 = 1; var3 < this.field_i.length; var3++) {
-            if (!(this.field_i[var3] + this.field_i[-1 + var3] >> -144935775 <= param0)) {
-                return var3 - 1;
+          } else {
+            if (-1 != (this.field_i.length ^ -1)) {
+              var3 = 1;
+              L0: while (true) {
+                if (var3 >= this.field_i.length) {
+                  return this.field_i.length + -1;
+                } else {
+                  if (this.field_i[var3] + this.field_i[-1 + var3] >> -144935775 > param0) {
+                    return var3 - 1;
+                  } else {
+                    var3++;
+                    continue L0;
+                  }
+                }
+              }
+            } else {
+              return 0;
             }
+          }
+        } else {
+          return 55;
         }
-        return this.field_i.length + -1;
     }
 
     public static void a(byte param0) {

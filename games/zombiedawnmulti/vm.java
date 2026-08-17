@@ -35,19 +35,43 @@ final class vm extends al implements in {
         super(param0, 200, 150);
         Object var3 = null;
         cf var4 = null;
+        Object stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        Object stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            var3 = null;
-            if (param1 == gb.field_c) {
-                var3 = aa.field_j;
-            } else {
-                if (hl.field_b == param1 || param1 == lp.field_s) {
-                    this.field_w = this.field_w + 10;
-                    var3 = on.field_cb;
-                    if (gj.b(-26966)) {
-                        var3 = sk.field_r;
-                        this.field_w = this.field_w + 20;
-                    }
+          L0: {
+            L1: {
+              var3 = null;
+              if (param1 != gb.field_c) {
+                if (hl.field_b == param1) {
+                  this.field_w = this.field_w + 10;
+                  var3 = on.field_cb;
+                  if (!gj.b(-26966)) {
+                    break L1;
+                  } else {
+                    var3 = sk.field_r;
+                    this.field_w = this.field_w + 20;
+                    break L1;
+                  }
+                } else {
+                  if (param1 != lp.field_s) {
+                    break L1;
+                  } else {
+                    var3 = ga.field_t;
+                    this.field_w = this.field_w + 30;
+                    break L1;
+                  }
                 }
+              } else {
+                var3 = aa.field_j;
+                break L1;
+              }
             }
             var4 = new cf((String) (var3), (bj) null);
             var4.field_n = this.field_n;
@@ -57,8 +81,46 @@ final class vm extends al implements in {
             var4.field_h = (nl) ((Object) new hq(cp.field_H, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
             this.b((byte) 70, var4);
             this.field_kb = this.a((byte) -103, (bj) (this), ic.field_f);
-        } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "vm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackIn_12_0 = var3;
+
+            stackIn_12_1 = new StringBuilder().append("vm.<init>(");
+
+            if (param0 == null) {
+              stackIn_13_0 = stackIn_12_0;
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
+            } else {
+              stackIn_13_0 = stackIn_12_0;
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
+            }
+          }
+          L3: {
+
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
+
+            if (param1 == null) {
+
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L3;
+            } else {
+
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L3;
+            }
+          }
+          throw fa.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ')');
         }
     }
 

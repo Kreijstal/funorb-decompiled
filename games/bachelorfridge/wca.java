@@ -20,10 +20,6 @@ final class wca {
     si field_k;
 
     final int a(pd param0, int param1, boolean[] param2) {
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -37,6 +33,10 @@ final class wca {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
         var6 = BachelorFridge.field_y;
         try {
           L0: {

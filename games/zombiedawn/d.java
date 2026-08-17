@@ -8,23 +8,62 @@ final class d {
     static int field_b;
 
     final static boolean a(int param0, boolean param1, int param2) {
-        if (!df.field_h || !nm.field_b || -1 <= (vj.field_o ^ -1)) {
-            return false;
-        }
-        int var3 = nh.field_P * 7 / 8 - te.field_bb;
-        if (param1) {
-            field_b = 33;
-        }
-        int var4 = 100 + (vh.field_b - -(-vj.field_o + 400 >> 2024535745));
-        int var5 = vj.field_o + 40;
-        if (var4 < param2 && param0 > var3 && var5 + var4 > param2) {
-            if (!(te.field_bb + var3 <= param0)) {
-                if (!(-3 != ma.field_r)) {
-                    vj.field_q = 500;
+        int var3;
+        int var4;
+        int var5;
+        L0: {
+          if (!df.field_h) {
+            break L0;
+          } else {
+            if (!nm.field_b) {
+              break L0;
+            } else {
+              if (-1 > (vj.field_o ^ -1)) {
+                L1: {
+                  var3 = nh.field_P * 7 / 8 - te.field_bb;
+                  if (!param1) {
+                    break L1;
+                  } else {
+                    field_b = 33;
+                    break L1;
+                  }
                 }
-                ck.a(-2, 6836);
-                return true;
+                L2: {
+                  var4 = 100 + (vh.field_b - -(-vj.field_o + 400 >> 2024535745));
+                  var5 = vj.field_o + 40;
+                  if (var4 >= param2) {
+                    break L2;
+                  } else {
+                    if (param0 <= var3) {
+                      break L2;
+                    } else {
+                      if (var5 + var4 <= param2) {
+                        break L2;
+                      } else {
+                        if (te.field_bb + var3 > param0) {
+                          L3: {
+                            if (-3 == ma.field_r) {
+                              vj.field_q = 500;
+                              break L3;
+                            } else {
+                              break L3;
+                            }
+                          }
+                          ck.a(-2, 6836);
+                          return true;
+                        } else {
+                          break L2;
+                        }
+                      }
+                    }
+                  }
+                }
+                return false;
+              } else {
+                return false;
+              }
             }
+          }
         }
         return false;
     }

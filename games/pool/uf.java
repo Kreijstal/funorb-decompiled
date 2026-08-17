@@ -5793,9 +5793,9 @@ final class uf {
     }
 
     private final void i(byte param0) {
-        RuntimeException runtimeException = null;
-        int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {
@@ -5840,8 +5840,8 @@ final class uf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) runtimeException), "uf.VB(" + param0 + ')');
+          var2 = decompiledCaughtException;
+          throw wm.a((Throwable) ((Object) var2), "uf.VB(" + param0 + ')');
         }
     }
 
@@ -11752,7 +11752,7 @@ final class uf {
                   }
                 }
                 if (null != var3) {
-                  gj.a(true, 5, (String) (((Object[]) (var3))[ga.a(((Object[]) (var3)).length, true, ea.field_r)]), (String) null);
+                  gj.a(true, 5, (String) (((Object[]) (var3))[ga.a(java.lang.reflect.Array.getLength(var3), true, ea.field_r)]), (String) null);
                   break L34;
                 } else {
                   break L34;

@@ -576,19 +576,43 @@ final class ib extends t implements vn {
         super(param0, 200, 150);
         Object var3 = null;
         ce var4 = null;
+        Object stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        Object stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            var3 = null;
-            if (param1 == qb.field_s) {
-                var3 = si.field_c;
-            } else {
-                if (kl.field_p == param1 || gd.field_c == param1) {
-                    var3 = dc.field_g;
-                    this.field_y = this.field_y + 10;
-                    if (wj.r(98)) {
-                        this.field_y = this.field_y + 20;
-                        var3 = wm.field_g;
-                    }
+          L0: {
+            L1: {
+              var3 = null;
+              if (param1 != qb.field_s) {
+                if (kl.field_p == param1) {
+                  var3 = dc.field_g;
+                  this.field_y = this.field_y + 10;
+                  if (!wj.r(98)) {
+                    break L1;
+                  } else {
+                    this.field_y = this.field_y + 20;
+                    var3 = wm.field_g;
+                    break L1;
+                  }
+                } else {
+                  if (gd.field_c != param1) {
+                    break L1;
+                  } else {
+                    this.field_y = this.field_y + 30;
+                    var3 = gd.field_i;
+                    break L1;
+                  }
                 }
+              } else {
+                var3 = si.field_c;
+                break L1;
+              }
             }
             var4 = new ce((String) (var3), (kg) null);
             var4.field_t = this.field_t;
@@ -598,8 +622,46 @@ final class ib extends t implements vn {
             var4.field_p = (gl) ((Object) new a(bj.field_f, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
             this.b(var4, (byte) -55);
             this.field_lb = this.a((kg) (this), og.field_gb, (byte) -90);
-        } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "ib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackIn_12_0 = var3;
+
+            stackIn_12_1 = new StringBuilder().append("ib.<init>(");
+
+            if (param0 == null) {
+              stackIn_13_0 = stackIn_12_0;
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
+            } else {
+              stackIn_13_0 = stackIn_12_0;
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
+            }
+          }
+          L3: {
+
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
+
+            if (param1 == null) {
+
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L3;
+            } else {
+
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L3;
+            }
+          }
+          throw dh.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ')');
         }
     }
 

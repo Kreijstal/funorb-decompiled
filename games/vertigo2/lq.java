@@ -41,20 +41,38 @@ final class lq {
     }
 
     final int a(int param0, boolean param1) {
-        int var3 = 0;
-        int var4 = Vertigo2.field_L ? 1 : 0;
-        if (null == this.field_c || 0 == this.field_c.length) {
-            return 0;
-        }
-        if (param1) {
-            this.field_f = 59;
-        }
-        for (var3 = 1; var3 < this.field_c.length; var3++) {
-            if (this.field_c[var3] + this.field_c[var3 + -1] >> 501033697 > param0) {
-                return -1 + var3;
+        int var3;
+        int var4;
+        var4 = Vertigo2.field_L ? 1 : 0;
+        if (null == this.field_c) {
+          return 0;
+        } else {
+          if (0 != this.field_c.length) {
+            L0: {
+              if (!param1) {
+                break L0;
+              } else {
+                this.field_f = 59;
+                break L0;
+              }
             }
+            var3 = 1;
+            L1: while (true) {
+              if (var3 >= this.field_c.length) {
+                return this.field_c.length + -1;
+              } else {
+                if (this.field_c[var3] + this.field_c[var3 + -1] >> 501033697 <= param0) {
+                  var3++;
+                  continue L1;
+                } else {
+                  return -1 + var3;
+                }
+              }
+            }
+          } else {
+            return 0;
+          }
         }
-        return this.field_c.length + -1;
     }
 
     public static void a(boolean param0) {

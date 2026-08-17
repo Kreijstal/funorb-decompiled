@@ -15,20 +15,38 @@ final class rj {
     }
 
     final int a(int param0, byte param1) {
-        int var3 = 0;
-        int var4 = Lexicominos.field_L ? 1 : 0;
-        if (param1 != -100) {
+        int var3;
+        int var4;
+        L0: {
+          var4 = Lexicominos.field_L ? 1 : 0;
+          if (param1 == -100) {
+            break L0;
+          } else {
             this.field_c = -22;
+            break L0;
+          }
         }
-        if (this.field_a == null || this.field_a.length == 0) {
-            return 0;
-        }
-        for (var3 = 1; var3 < this.field_a.length; var3++) {
-            if (!(param0 >= this.field_a[var3] + this.field_a[-1 + var3] >> 525366881)) {
-                return var3 - 1;
+        if (this.field_a == null) {
+          return 0;
+        } else {
+          if (this.field_a.length != 0) {
+            var3 = 1;
+            L1: while (true) {
+              if (var3 >= this.field_a.length) {
+                return -1 + this.field_a.length;
+              } else {
+                if (param0 < this.field_a[var3] + this.field_a[-1 + var3] >> 525366881) {
+                  return var3 - 1;
+                } else {
+                  var3++;
+                  continue L1;
+                }
+              }
             }
+          } else {
+            return 0;
+          }
         }
-        return -1 + this.field_a.length;
     }
 
     final int a(byte param0) {

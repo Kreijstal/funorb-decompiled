@@ -1825,11 +1825,17 @@ final class rk {
     }
 
     private final ft a(int param0, int param1, int param2) {
-        if (-1 == (param0 ^ -1) || param0 == 1) {
-            return new ft(80, param1 * 80 >> 548922530);
+        int var4;
+        if (-1 == (param0 ^ -1)) {
+          return new ft(80, param1 * 80 >> 548922530);
+        } else {
+          if (param0 != 1) {
+            var4 = -19 / ((param2 - -8) / 40);
+            return null;
+          } else {
+            return new ft(0, -(80 * param1) + 320 >> -2099785982);
+          }
         }
-        int var4 = -19 / ((param2 - -8) / 40);
-        return null;
     }
 
     private final wk b(int param0, int param1) {
@@ -2128,7 +2134,7 @@ final class rk {
 
     private final void j(int param0) {
         int var2 = 0;
-        Object var3 = null;
+        wp var3 = null;
         if (param0 != -302977872) {
             this.field_hb = (hh) null;
         }
@@ -2137,10 +2143,10 @@ final class rk {
             var2 = this.field_ab.field_i >> -302977872;
             var3 = we.a(var2, true);
             if (!(this.field_ab != null)) {
-                var3 = null;
+                Object var3_ref = null;
                 return;
             }
-            io.a((wp) (var3), (byte) -34);
+            io.a(var3, (byte) -34);
         } else {
             this.f(-11195);
         }

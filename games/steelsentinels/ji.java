@@ -163,11 +163,11 @@ final class ji {
     }
 
     private final int b(int param0, int param1) {
-        RuntimeException var3 = null;
         int stackIn_31_0 = 0;
         int stackIn_36_0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
         try {
           L0: {
             L1: {

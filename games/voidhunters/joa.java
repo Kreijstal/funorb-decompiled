@@ -63,6 +63,7 @@ final class joa {
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int localTemp$0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;
         int stackIn_30_0 = 0;
@@ -108,8 +109,9 @@ final class joa {
                 var11 = (var9 << param4) / var8;
                 break L2;
               } else {
-                var8 = var8 >> -var10 + param4;
-                if (var8 >> -var10 + param4 == 0) {
+                localTemp$0 = var8 >> -var10 + param4;
+                var8 = localTemp$0;
+                if (localTemp$0 == 0) {
                   return -1;
                 } else {
                   var11 = (var9 << var10) / var8;

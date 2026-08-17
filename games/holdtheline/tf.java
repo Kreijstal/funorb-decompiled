@@ -296,6 +296,8 @@ final class tf extends tj {
     }
 
     final void b(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_30_0 = 0;
         int stackIn_44_0 = 0;
         int stackIn_57_0 = 0;
@@ -463,8 +465,9 @@ final class tf extends tj {
                         this.field_q.b(this.field_v, 0, param2);
                         this.field_C.b(this.field_u, 0, param2);
                         if (lo.field_t) {
-                          param1 = param1 << 1;
-                          stackIn_44_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_44_0 = localTemp$0;
                           break L11;
                         } else {
                           stackIn_44_0 = param1;
@@ -519,8 +522,9 @@ final class tf extends tj {
                         stackIn_57_0 = param1;
                         break L16;
                       } else {
-                        param1 = param1 << 1;
-                        stackIn_57_0 = param1 << 1;
+                        localTemp$1 = param1 << 1;
+                        param1 = localTemp$1;
+                        stackIn_57_0 = localTemp$1;
                         break L16;
                       }
                     }

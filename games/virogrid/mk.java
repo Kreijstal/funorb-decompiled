@@ -211,19 +211,43 @@ final class mk extends dc implements ta {
         super(param0, 200, 150);
         Object var3 = null;
         fi var4 = null;
+        Object stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        Object stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            var3 = null;
-            if (param1 == bj.field_h) {
-                var3 = fd.field_x;
-            } else {
-                if (rg.field_b == param1 || param1 == lb.field_a) {
-                    var3 = tl.field_j;
-                    this.field_m = this.field_m + 10;
-                    if (pb.a(4)) {
-                        this.field_m = this.field_m + 20;
-                        var3 = ob.field_d;
-                    }
+          L0: {
+            L1: {
+              var3 = null;
+              if (param1 != bj.field_h) {
+                if (rg.field_b == param1) {
+                  var3 = tl.field_j;
+                  this.field_m = this.field_m + 10;
+                  if (!pb.a(4)) {
+                    break L1;
+                  } else {
+                    this.field_m = this.field_m + 20;
+                    var3 = ob.field_d;
+                    break L1;
+                  }
+                } else {
+                  if (param1 != lb.field_a) {
+                    break L1;
+                  } else {
+                    this.field_m = this.field_m + 30;
+                    var3 = el.field_i;
+                    break L1;
+                  }
                 }
+              } else {
+                var3 = fd.field_x;
+                break L1;
+              }
             }
             var4 = new fi((String) (var3), (cd) null);
             var4.field_u = 50;
@@ -233,8 +257,46 @@ final class mk extends dc implements ta {
             var4.field_w = (ol) ((Object) new aj(dk.field_j, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
             this.a(var4, (byte) -78);
             this.field_db = this.a(je.field_I, (cd) (this), (byte) 75);
-        } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackIn_12_0 = var3;
+
+            stackIn_12_1 = new StringBuilder().append("mk.<init>(");
+
+            if (param0 == null) {
+              stackIn_13_0 = stackIn_12_0;
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
+            } else {
+              stackIn_13_0 = stackIn_12_0;
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
+            }
+          }
+          L3: {
+
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
+
+            if (param1 == null) {
+
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L3;
+            } else {
+
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L3;
+            }
+          }
+          throw kg.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ')');
         }
     }
 

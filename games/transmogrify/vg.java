@@ -94,37 +94,85 @@ final class vg {
     }
 
     private final boolean a(int param0, boolean param1) {
-        if (param1) {
-            return false;
-        }
-        if (!(3 != this.field_i)) {
-            if (param0 == 0) {
-                if (!(ra.field_a != 0)) {
+        if (!param1) {
+          L0: {
+            if (3 == this.field_i) {
+              L1: {
+                if (param0 != 0) {
+                  break L1;
+                } else {
+                  if (ra.field_a == 0) {
                     return false;
+                  } else {
+                    break L1;
+                  }
                 }
-            }
-            if (2 == param0) {
-                if (!(ra.field_a != -1 + db.field_b.length)) {
+              }
+              L2: {
+                if (2 != param0) {
+                  break L2;
+                } else {
+                  if (ra.field_a == -1 + db.field_b.length) {
                     return false;
+                  } else {
+                    break L2;
+                  }
                 }
-            }
-            if ((param0 ^ -1) == -4) {
-                if (!(-1 + db.field_b.length == ra.field_a)) {
+              }
+              L3: {
+                if ((param0 ^ -1) != -4) {
+                  break L3;
+                } else {
+                  if (-1 + db.field_b.length != ra.field_a) {
                     return false;
+                  } else {
+                    break L3;
+                  }
                 }
-            }
-            if (-4 == (param0 ^ -1)) {
-                if (wc.field_d == 1 || -8 == (wc.field_d ^ -1)) {
+              }
+              if (-4 != (param0 ^ -1)) {
+                break L0;
+              } else {
+                if (wc.field_d == 1) {
+                  return false;
+                } else {
+                  if (-8 != (wc.field_d ^ -1)) {
+                    break L0;
+                  } else {
                     return false;
+                  }
                 }
+              }
+            } else {
+              break L0;
             }
-        }
-        if ((this.field_i ^ -1) == -2 || -8 == (this.field_i ^ -1)) {
-            if ((fd.field_h[this.field_i][param0] ^ -1) == -5 && wj.field_o <= 0) {
+          }
+          L4: {
+            L5: {
+              if ((this.field_i ^ -1) == -2) {
+                break L5;
+              } else {
+                if (-8 != (this.field_i ^ -1)) {
+                  break L4;
+                } else {
+                  break L5;
+                }
+              }
+            }
+            if ((fd.field_h[this.field_i][param0] ^ -1) != -5) {
+              break L4;
+            } else {
+              if (wj.field_o > 0) {
+                break L4;
+              } else {
                 return false;
+              }
             }
+          }
+          return true;
+        } else {
+          return false;
         }
-        return true;
     }
 
     private final int a(int param0, byte param1) {

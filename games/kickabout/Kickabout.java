@@ -384,26 +384,64 @@ public final class Kickabout extends tu {
     }
 
     private final void w(int param0) {
-        int var5 = 0;
-        int var6 = 0;
-        if (param0 < 95) {
-            return;
-        }
-        ot var7 = null == jm.field_g ? (ot) ((Object) sf.field_C) : jm.field_g;
-        int var3 = 640 - var7.field_o >> -546195231;
-        int var4 = ak.a(cq.field_h, 4);
-        if (ra.field_G != null) {
-            var5 = ak.a(ra.field_G, 4);
-            if (var4 > var5 || var5 > var4) {
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        ot var7;
+        Object stackIn_5_0 = null;
+        if (param0 >= 95) {
+          L0: {
+            if (null != jm.field_g) {
+              stackIn_5_0 = jm.field_g;
+              break L0;
+            } else {
+              stackIn_5_0 = sf.field_C;
+              break L0;
+            }
+          }
+          L1: {
+            var7 = (ot) ((Object) stackIn_5_0);
+            var3 = 640 - var7.field_o >> -546195231;
+            var4 = ak.a(cq.field_h, 4);
+            if (ra.field_G == null) {
+              break L1;
+            } else {
+              var5 = ak.a(ra.field_G, 4);
+              if (var4 > var5) {
                 var6 = Math.min(256, (ce.field_I << 2124633513) / 24);
                 var4 = var4 + ((-var4 + var5) * var6 >> -1826280728);
+                break L1;
+              } else {
+                if (var5 <= var4) {
+                  break L1;
+                } else {
+                  var6 = Math.max(0, -256 + 2 * ((ce.field_I << 2140220136) / 24));
+                  var4 = var4 + ((-var4 + var5) * var6 >> 958509256);
+                  break L1;
+                }
+              }
             }
-        }
-        if (256 == var4) {
-            var7.c(var3, 10);
-        }
-        if (!(0 == var4)) {
-            var7.b(var3, 10, var4);
+          }
+          L2: {
+            if (256 != var4) {
+              break L2;
+            } else {
+              var7.c(var3, 10);
+              break L2;
+            }
+          }
+          L3: {
+            if (0 != var4) {
+              var7.b(var3, 10, var4);
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

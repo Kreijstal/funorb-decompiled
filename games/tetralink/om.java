@@ -1592,19 +1592,38 @@ final class om extends hl {
     }
 
     final static boolean a(char param0, boolean param1) {
-        if (param1) {
-            return true;
-        }
-        if (Character.isISOControl(param0)) {
+        if (!param1) {
+          if (!Character.isISOControl(param0)) {
+            if (!ka.a(65, param0)) {
+              L0: {
+                if (param0 == 45) {
+                  break L0;
+                } else {
+                  if (param0 == 160) {
+                    break L0;
+                  } else {
+                    if (param0 == 32) {
+                      break L0;
+                    } else {
+                      if (95 != param0) {
+                        return false;
+                      } else {
+                        return true;
+                      }
+                    }
+                  }
+                }
+              }
+              return true;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
+        } else {
+          return true;
         }
-        if (ka.a(65, param0)) {
-            return true;
-        }
-        if (param0 == 45 || param0 == 160 || param0 == 32 || 95 == param0) {
-            return true;
-        }
-        return false;
     }
 
     public static void c(boolean param0) {

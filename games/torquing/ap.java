@@ -137,50 +137,70 @@ final class ap {
     }
 
     final static void a(double param0, double param1, double param2, double param3, double param4, double param5, double param6, double param7, double param8, double param9, double param10, double param11, double[] param12) {
-        param12[0] = param9 - param6;
-        param12[1] = param10 - param7;
-        param12[2] = param11 - param8;
-        param12[3] = param0 - param6;
-        param12[4] = param1 - param7;
-        param12[5] = param2 - param8;
-        double var25 = ap.a(param12, 0, param12, 3) / ap.a(param12, 0, param12, 0);
-        var25 = Math.max(Math.min(var25, 1.0), 0.0);
-        double var27 = 1.0 - var25;
-        param12[0] = param3 - param6;
-        param12[1] = param4 - param7;
-        param12[2] = param5 - param8;
-        double var29 = ap.a(param12, 0, param12, 3) / ap.a(param12, 0, param12, 0);
-        var29 = Math.max(Math.min(var29, 1.0), 0.0);
-        double var31 = 1.0 - var29;
-        param12[0] = param9 - param3;
-        param12[1] = param10 - param4;
-        param12[2] = param11 - param5;
-        param12[3] = param0 - param3;
-        param12[4] = param1 - param4;
-        param12[5] = param2 - param5;
-        double var33 = ap.a(param12, 0, param12, 3) / ap.a(param12, 0, param12, 0);
-        var33 = Math.max(Math.min(var33, 1.0), 0.0);
-        double var35 = 1.0 - var33;
-        param12[0] = var27 * param6 + var25 * param9;
-        param12[1] = var27 * param7 + var25 * param10;
-        param12[2] = var27 * param8 + var25 * param11;
-        param12[3] = var31 * param6 + var29 * param3;
-        param12[4] = var31 * param7 + var29 * param4;
-        param12[5] = var31 * param8 + var29 * param5;
-        param12[6] = var35 * param3 + var33 * param9;
-        param12[7] = var35 * param4 + var33 * param10;
-        param12[8] = var35 * param5 + var33 * param11;
-        double var37 = ap.a(param12, 0, param0, param1, param2);
-        double var39 = ap.a(param12, 3, param0, param1, param2);
-        double var41 = ap.a(param12, 6, param0, param1, param2);
-        if (var37 >= var39 || var37 < var41) {
-            if (var39 < var41) {
-                param12[0] = param12[3];
-                param12[1] = param12[4];
-                param12[2] = param12[5];
-                param12[3] = var39;
-                return;
+        double var25;
+        double var27;
+        double var29;
+        double var31;
+        double var33;
+        double var35;
+        double var37;
+        double var39;
+        double var41;
+        L0: {
+          param12[0] = param9 - param6;
+          param12[1] = param10 - param7;
+          param12[2] = param11 - param8;
+          param12[3] = param0 - param6;
+          param12[4] = param1 - param7;
+          param12[5] = param2 - param8;
+          var25 = ap.a(param12, 0, param12, 3) / ap.a(param12, 0, param12, 0);
+          var25 = Math.max(Math.min(var25, 1.0), 0.0);
+          var27 = 1.0 - var25;
+          param12[0] = param3 - param6;
+          param12[1] = param4 - param7;
+          param12[2] = param5 - param8;
+          var29 = ap.a(param12, 0, param12, 3) / ap.a(param12, 0, param12, 0);
+          var29 = Math.max(Math.min(var29, 1.0), 0.0);
+          var31 = 1.0 - var29;
+          param12[0] = param9 - param3;
+          param12[1] = param10 - param4;
+          param12[2] = param11 - param5;
+          param12[3] = param0 - param3;
+          param12[4] = param1 - param4;
+          param12[5] = param2 - param5;
+          var33 = ap.a(param12, 0, param12, 3) / ap.a(param12, 0, param12, 0);
+          var33 = Math.max(Math.min(var33, 1.0), 0.0);
+          var35 = 1.0 - var33;
+          param12[0] = var27 * param6 + var25 * param9;
+          param12[1] = var27 * param7 + var25 * param10;
+          param12[2] = var27 * param8 + var25 * param11;
+          param12[3] = var31 * param6 + var29 * param3;
+          param12[4] = var31 * param7 + var29 * param4;
+          param12[5] = var31 * param8 + var29 * param5;
+          param12[6] = var35 * param3 + var33 * param9;
+          param12[7] = var35 * param4 + var33 * param10;
+          param12[8] = var35 * param5 + var33 * param11;
+          var37 = ap.a(param12, 0, param0, param1, param2);
+          var39 = ap.a(param12, 3, param0, param1, param2);
+          var41 = ap.a(param12, 6, param0, param1, param2);
+          if (var37 >= var39) {
+            if (var39 >= var41) {
+              break L0;
+            } else {
+              param12[0] = param12[3];
+              param12[1] = param12[4];
+              param12[2] = param12[5];
+              param12[3] = var39;
+              return;
             }
+          } else {
+            if (var37 >= var41) {
+              break L0;
+            } else {
+              param12[3] = var37;
+              return;
+            }
+          }
         }
         param12[0] = param12[6];
         param12[1] = param12[7];

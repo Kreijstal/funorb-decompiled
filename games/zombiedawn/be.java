@@ -240,16 +240,55 @@ final class be extends im {
     }
 
     final void a(byte param0) {
-        if (param0 != 44) {
-            String var3 = (String) null;
+        int fieldTemp$1 = 0;
+        String var3;
+        byte[] stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
+        byte[] stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        int stackIn_9_2 = 0;
+        L0: {
+          if (param0 == 44) {
+            break L0;
+          } else {
+            var3 = (String) null;
             be.a((String) null, (byte) -57);
+            break L0;
+          }
         }
-        if (4095 < (this.field_m ^ -1) || (this.field_m ^ -1) < -4097) {
+        L1: {
+          if (4095 < (this.field_m ^ -1)) {
             this.field_m = -4096;
+            break L1;
+          } else {
+            if ((this.field_m ^ -1) >= -4097) {
+              break L1;
+            } else {
+              this.field_m = 4096;
+              break L1;
+            }
+          }
         }
-        int fieldTemp$0 = this.field_k;
-        this.field_k = this.field_k + 1;
-        this.field_n[fieldTemp$0] = (byte)((this.field_h ? 2048 + (this.field_m >> -1728161183) : this.field_m) >> -154155708);
+        L2: {
+          fieldTemp$1 = this.field_k;
+          this.field_k = this.field_k + 1;
+          stackIn_8_0 = this.field_n;
+
+          stackIn_8_1 = fieldTemp$1;
+
+          if (!this.field_h) {
+            stackIn_9_0 = (byte[]) ((Object) stackIn_8_0);
+            stackIn_9_1 = stackIn_8_1;
+            stackIn_9_2 = this.field_m;
+            break L2;
+          } else {
+            stackIn_9_0 = (byte[]) ((Object) stackIn_8_0);
+            stackIn_9_1 = stackIn_8_1;
+            stackIn_9_2 = 2048 + (this.field_m >> -1728161183);
+            break L2;
+          }
+        }
+        stackIn_9_0[stackIn_9_1] = (byte)(stackIn_9_2 >> -154155708);
         this.field_m = 0;
     }
 

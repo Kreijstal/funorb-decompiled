@@ -305,21 +305,78 @@ final class bta extends vw {
     }
 
     final void a(int param0, iva param1, int param2) {
-        if (param2 != 24595) {
-            return;
-        }
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         try {
-            if (param1 != null || !this.field_j) {
-                if (this.field_j) {
-                    this.field_c.a(ej.field_c, 0, param2 ^ -24583);
-                    this.field_c.a(0, false, ej.field_c);
-                    this.field_j = false;
+          L0: {
+            if (param2 == 24595) {
+              L1: {
+                if (param1 != null) {
+                  L2: {
+                    if (!this.field_j) {
+                      break L2;
+                    } else {
+                      this.field_c.a(ej.field_c, 0, param2 ^ -24583);
+                      this.field_c.a(0, false, ej.field_c);
+                      this.field_j = false;
+                      break L2;
+                    }
+                  }
+                  this.field_c.a(true, param1);
+                  this.field_c.a((byte) 114, param0);
+                  break L1;
+                } else {
+                  if (this.field_j) {
+                    break L1;
+                  } else {
+                    this.field_c.a(true, this.field_c.field_Jb);
+                    this.field_c.a((byte) 120, 1);
+                    this.field_c.a(lja.field_j, 0, -21);
+                    this.field_c.a(0, false, lja.field_j);
+                    this.field_j = true;
+                    return;
+                  }
                 }
-                this.field_c.a(true, param1);
-                this.field_c.a((byte) 114, param0);
+              }
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-        } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "bta.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            runtimeException = decompiledCaughtException;
+            stackIn_11_0 = (RuntimeException) (runtimeException);
+
+            stackIn_11_1 = new StringBuilder().append("bta.E(").append(param0).append(',');
+
+            if (param1 == null) {
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
+              break L3;
+            } else {
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 

@@ -1576,12 +1576,28 @@ final class fq extends ea implements Cloneable {
     }
 
     private final void e(byte param0) {
-        int var2 = -37 / ((param0 - -26) / 56);
-        if (!(null == this.field_H)) {
-            if (this.field_H.field_z == this || this.field_H.field_C == this) {
+        int var2;
+        L0: {
+          var2 = -37 / ((param0 - -26) / 56);
+          if (null != this.field_H) {
+            L1: {
+              if (this.field_H.field_z == this) {
                 this.field_H.field_z = null;
+                break L1;
+              } else {
+                if (this.field_H.field_C != this) {
+                  break L1;
+                } else {
+                  this.field_H.field_C = null;
+                  break L1;
+                }
+              }
             }
             this.field_H = null;
+            break L0;
+          } else {
+            break L0;
+          }
         }
     }
 

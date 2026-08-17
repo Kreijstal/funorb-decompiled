@@ -8,8 +8,27 @@ final class fm {
     static int[] field_d;
 
     final static void a(int param0) {
+        int stackIn_49_0 = 0;
+        int stackIn_49_1 = 0;
+        int stackIn_50_0 = 0;
+        int stackIn_50_1 = 0;
+        int stackIn_50_2 = 0;
+        int stackIn_55_0 = 0;
+        int stackIn_55_1 = 0;
+        int stackIn_56_0 = 0;
+        int stackIn_56_1 = 0;
+        int stackIn_56_2 = 0;
+        int stackIn_64_0 = 0;
+        int stackIn_64_1 = 0;
+        int stackIn_65_0 = 0;
+        int stackIn_65_1 = 0;
+        int stackIn_65_2 = 0;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         hj var1 = null;
         int var1_int = 0;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -29,25 +48,6 @@ final class fm {
         int[] var29 = null;
         int[] var30 = null;
         int[] var31 = null;
-        int stackIn_49_0 = 0;
-        int stackIn_49_1 = 0;
-        int stackIn_50_0 = 0;
-        int stackIn_50_1 = 0;
-        int stackIn_50_2 = 0;
-        int stackIn_55_0 = 0;
-        int stackIn_55_1 = 0;
-        int stackIn_56_0 = 0;
-        int stackIn_56_1 = 0;
-        int stackIn_56_2 = 0;
-        int stackIn_64_0 = 0;
-        int stackIn_64_1 = 0;
-        int stackIn_65_0 = 0;
-        int stackIn_65_1 = 0;
-        int stackIn_65_2 = 0;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
         var10 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {

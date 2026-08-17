@@ -829,38 +829,66 @@ class rn extends ag {
     }
 
     private final void h(byte param0) {
-        int var8 = ArcanistsMulti.field_G ? 1 : 0;
-        if (!this.field_M) {
-            this.field_i = 0;
-            this.field_h = 0;
-            return;
-        }
-        if (!(this.field_r instanceof ac)) {
-            return;
-        }
-        ac var9 = (ac) ((Object) this.field_r);
-        kh var3 = var9.a((qm) (this), -46);
-        int var4 = var3.b((byte) 121);
-        int var5 = var9.a((qm) (this), (byte) 101);
-        if (param0 > -38) {
-            return;
-        }
-        int var6 = var9.a(27184) >> 559979617;
-        if (!(-var6 + var5 <= var4)) {
-            this.field_i = 0;
-            this.field_h = 0;
-            return;
-        }
-        int var7 = this.field_h - -var3.a(this.field_N, 0);
-        if (-var6 + var5 < var7) {
-            this.field_h = this.field_h - (var7 - -var6 - var5);
-        } else {
-            if (var7 < var6) {
-                this.field_h = this.field_h + (-var7 + var6);
+        kh var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        ac var9;
+        var8 = ArcanistsMulti.field_G ? 1 : 0;
+        if (this.field_M) {
+          if (this.field_r instanceof ac) {
+            var9 = (ac) ((Object) this.field_r);
+            var3 = var9.a((qm) (this), -46);
+            var4 = var3.b((byte) 121);
+            var5 = var9.a((qm) (this), (byte) 101);
+            if (param0 <= -38) {
+              var6 = var9.a(27184) >> 559979617;
+              if (-var6 + var5 > var4) {
+                this.field_i = 0;
+                this.field_h = 0;
+                return;
+              } else {
+                L0: {
+                  var7 = this.field_h - -var3.a(this.field_N, 0);
+                  if (-var6 + var5 >= var7) {
+                    if (var7 >= var6) {
+                      break L0;
+                    } else {
+                      this.field_h = this.field_h + (-var7 + var6);
+                      break L0;
+                    }
+                  } else {
+                    this.field_h = this.field_h - (var7 - -var6 - var5);
+                    break L0;
+                  }
+                }
+                L1: {
+                  if (0 < this.field_h) {
+                    this.field_h = 0;
+                    break L1;
+                  } else {
+                    if (this.field_h >= -var5 + var6) {
+                      break L1;
+                    } else {
+                      this.field_h = var6 + -var5;
+                      break L1;
+                    }
+                  }
+                }
+                return;
+              }
+            } else {
+              return;
             }
-        }
-        if (0 < this.field_h || this.field_h < -var5 + var6) {
-            this.field_h = 0;
+          } else {
+            return;
+          }
+        } else {
+          this.field_i = 0;
+          this.field_h = 0;
+          return;
         }
     }
 

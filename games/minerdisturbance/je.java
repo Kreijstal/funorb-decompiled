@@ -6048,10 +6048,15 @@ final class je {
     }
 
     final boolean g() {
-        if (this.field_a || this.field_b) {
+        if (this.field_a) {
+          return true;
+        } else {
+          if (!this.field_b) {
+            return false;
+          } else {
             return true;
+          }
         }
-        return false;
     }
 
     private je() {

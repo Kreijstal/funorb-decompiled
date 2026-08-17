@@ -578,28 +578,82 @@ final class fr extends ha {
     }
 
     final void a(int param0, ht param1) {
+        RuntimeException runtimeException = null;
         ht var3 = null;
-        int var4 = Sumoblitz.field_L ? 1 : 0;
+        int var4 = 0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-            if (param0 < 8) {
+          L0: {
+            L1: {
+              if (param0 >= 8) {
+                break L1;
+              } else {
                 this.r(75);
+                break L1;
+              }
             }
-            var3 = this.field_ib[this.field_Vb];
-            if (param1 == var3) {
-            } else {
-                if (param1 != null) {
-                    if (var3 == null || param1.field_c != var3.field_c) {
+            L2: {
+              var3 = this.field_ib[this.field_Vb];
+              if (param1 != var3) {
+                L3: {
+                  if (param1 == null) {
+                    jaggl.OpenGL.glDisable(var3.field_c);
+                    break L3;
+                  } else {
+                    L4: {
+                      if (var3 == null) {
                         jaggl.OpenGL.glEnable(param1.field_c);
+                        break L4;
+                      } else {
+                        if (param1.field_c == var3.field_c) {
+                          break L4;
+                        } else {
+                          jaggl.OpenGL.glDisable(var3.field_c);
+                          jaggl.OpenGL.glEnable(param1.field_c);
+                          break L4;
+                        }
+                      }
                     }
                     jaggl.OpenGL.glBindTexture(param1.field_c, param1.c(-113));
-                } else {
-                    jaggl.OpenGL.glDisable(var3.field_c);
+                    break L3;
+                  }
                 }
                 this.field_ib[this.field_Vb] = param1;
+                break L2;
+              } else {
+                break L2;
+              }
             }
             this.field_nb = this.field_nb & -2;
-        } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "fr.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            runtimeException = decompiledCaughtException;
+            stackIn_17_0 = (RuntimeException) (runtimeException);
+
+            stackIn_17_1 = new StringBuilder().append("fr.L(").append(param0).append(',');
+
+            if (param1 == null) {
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
+              break L5;
+            } else {
+              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
+              break L5;
+            }
+          }
+          throw qo.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
     }
 
@@ -2522,14 +2576,33 @@ final class fr extends ha {
     }
 
     final void f(int param0, int param1) {
-        if (param0 != this.field_sc || this.field_Cb != param1) {
-            this.field_sc = param0;
-            this.field_Cb = param1;
-            this.o(770);
-            this.i(3089);
-            if ((this.field_Q ^ -1) == -4 || (this.field_Q ^ -1) == -3) {
-                this.p(-15048);
+        L0: {
+          L1: {
+            if (param0 != this.field_sc) {
+              break L1;
+            } else {
+              if (this.field_Cb == param1) {
+                break L0;
+              } else {
+                break L1;
+              }
             }
+          }
+          this.field_sc = param0;
+          this.field_Cb = param1;
+          this.o(770);
+          this.i(3089);
+          if ((this.field_Q ^ -1) == -4) {
+            this.p(-15048);
+            break L0;
+          } else {
+            if ((this.field_Q ^ -1) != -3) {
+              break L0;
+            } else {
+              this.b((byte) -110);
+              break L0;
+            }
+          }
         }
     }
 

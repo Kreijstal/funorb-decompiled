@@ -101,6 +101,8 @@ final class h extends tn {
     }
 
     final void b(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_35_0 = 0;
         int stackIn_50_0 = 0;
         int stackIn_64_0 = 0;
@@ -269,8 +271,9 @@ final class h extends tn {
                           stackIn_50_0 = param1;
                           break L11;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_50_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_50_0 = localTemp$0;
                           break L11;
                         }
                       }
@@ -320,8 +323,9 @@ final class h extends tn {
                       L17: {
                         this.field_m.b(this.field_D, 0, param2);
                         if (ap.field_h) {
-                          param1 = param1 << 1;
-                          stackIn_64_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_64_0 = localTemp$1;
                           break L17;
                         } else {
                           stackIn_64_0 = param1;

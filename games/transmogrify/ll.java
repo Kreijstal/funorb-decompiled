@@ -209,19 +209,43 @@ final class ll extends bi implements df {
         super(param0, 200, 150);
         Object var3 = null;
         qg var4 = null;
+        Object stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        Object stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            var3 = null;
-            if (param1 == ni.field_o) {
-                var3 = nh.field_m;
-            } else {
-                if (fi.field_w == param1 || ge.field_A == param1) {
-                    this.field_h = this.field_h + 10;
-                    var3 = n.field_b;
-                    if (hi.b(-106)) {
-                        this.field_h = this.field_h + 20;
-                        var3 = lk.field_a;
-                    }
+          L0: {
+            L1: {
+              var3 = null;
+              if (param1 != ni.field_o) {
+                if (fi.field_w == param1) {
+                  this.field_h = this.field_h + 10;
+                  var3 = n.field_b;
+                  if (!hi.b(-106)) {
+                    break L1;
+                  } else {
+                    this.field_h = this.field_h + 20;
+                    var3 = lk.field_a;
+                    break L1;
+                  }
+                } else {
+                  if (ge.field_A != param1) {
+                    break L1;
+                  } else {
+                    var3 = dg.field_e;
+                    this.field_h = this.field_h + 30;
+                    break L1;
+                  }
                 }
+              } else {
+                var3 = nh.field_m;
+                break L1;
+              }
             }
             var4 = new qg((String) (var3), (ma) null);
             var4.field_l = this.field_l;
@@ -231,8 +255,46 @@ final class ll extends bi implements df {
             var4.field_q = (ui) ((Object) new h(al.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
             this.a(var4, (byte) -82);
             this.field_P = this.a(oe.field_a, (ma) (this), -3);
-        } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "ll.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackIn_12_0 = var3;
+
+            stackIn_12_1 = new StringBuilder().append("ll.<init>(");
+
+            if (param0 == null) {
+              stackIn_13_0 = stackIn_12_0;
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
+            } else {
+              stackIn_13_0 = stackIn_12_0;
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
+            }
+          }
+          L3: {
+
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
+
+            if (param1 == null) {
+
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L3;
+            } else {
+
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L3;
+            }
+          }
+          throw ch.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ')');
         }
     }
 

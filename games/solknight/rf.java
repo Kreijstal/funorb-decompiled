@@ -827,7 +827,7 @@ final class rf extends ki implements re, ka, ge {
     }
 
     public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
-        boolean discarded$0 = false;
+        boolean discarded$1 = false;
         RuntimeException var6 = null;
         kj var7 = null;
         RuntimeException stackIn_9_0 = null;
@@ -846,7 +846,7 @@ final class rf extends ki implements re, ka, ge {
                 if (this.field_R != param3) {
                   break L1;
                 } else {
-                  discarded$0 = this.i(11608);
+                  discarded$1 = this.i(11608);
                   break L1;
                 }
               }

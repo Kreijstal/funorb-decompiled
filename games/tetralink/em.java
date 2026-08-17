@@ -681,30 +681,59 @@ final class em {
         if (-1 != (var2 ^ -1) && (var2 ^ -1) != -2) {
             var2 = this.field_g;
         }
-        var2 = (var2 ^ -1) == -2 ? 0 : 1;
-        this.field_g = (var2 ^ -1) == -2 ? 0 : 1;
+        int localTemp$0 = (var2 ^ -1) == -2 ? 0 : 1;
+        var2 = localTemp$0;
+        this.field_g = localTemp$0;
         int var3 = -112 % ((-76 - param0) / 33);
         this.a(0, 18936, var2);
     }
 
     final boolean b(int param0, int param1, int param2) {
-        if (param1 > 6 || (param1 ^ -1) > -1) {
+        int var4;
+        if (param1 > 6) {
+          return false;
+        } else {
+          if ((param1 ^ -1) <= -1) {
+            L0: {
+              if (5 < param0) {
+                break L0;
+              } else {
+                if ((param0 ^ -1) <= -1) {
+                  var4 = 1 << param1;
+                  if (((this.field_p[param0] | this.field_e[param0]) & var4) == 0) {
+                    L1: {
+                      if (param2 <= -120) {
+                        break L1;
+                      } else {
+                        this.field_l = true;
+                        break L1;
+                      }
+                    }
+                    L2: {
+                      if (0 >= param0) {
+                        break L2;
+                      } else {
+                        if (-1 != ((this.field_p[param0 + -1] | this.field_e[-1 + param0]) & var4 ^ -1)) {
+                          break L2;
+                        } else {
+                          return false;
+                        }
+                      }
+                    }
+                    return true;
+                  } else {
+                    return false;
+                  }
+                } else {
+                  break L0;
+                }
+              }
+            }
             return false;
-        }
-        if (5 < param0 || (param0 ^ -1) > -1) {
+          } else {
             return false;
+          }
         }
-        int var4 = 1 << param1;
-        if (((this.field_p[param0] | this.field_e[param0]) & var4) != 0) {
-            return false;
-        }
-        if (param2 > -120) {
-            this.field_l = true;
-        }
-        if (0 < param0 && -1 == ((this.field_p[param0 + -1] | this.field_e[-1 + param0]) & var4 ^ -1)) {
-            return false;
-        }
-        return true;
     }
 
     final void a(boolean param0) {

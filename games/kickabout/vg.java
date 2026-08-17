@@ -844,20 +844,43 @@ final class vg extends hd {
     }
 
     final void a(int param0, byte param1, int param2) {
-        int var5 = Kickabout.field_G;
-        int var4 = this.field_Ub.length();
-        if (-1 < (param0 ^ -1) || var4 < param0) {
+        int var4;
+        int var5;
+        L0: {
+          var5 = Kickabout.field_G;
+          var4 = this.field_Ub.length();
+          if (-1 < (param0 ^ -1)) {
             param0 = 0;
-        }
-        if (param1 >= -83) {
-            this.c(false);
-        }
-        if (param2 < 0) {
-            param2 = 0;
-        } else {
-            if (!(var4 >= param2)) {
-                param2 = var4;
+            break L0;
+          } else {
+            if (var4 >= param0) {
+              break L0;
+            } else {
+              param0 = var4;
+              break L0;
             }
+          }
+        }
+        L1: {
+          if (param1 < -83) {
+            break L1;
+          } else {
+            this.c(false);
+            break L1;
+          }
+        }
+        L2: {
+          if (param2 >= 0) {
+            if (var4 < param2) {
+              param2 = var4;
+              break L2;
+            } else {
+              break L2;
+            }
+          } else {
+            param2 = 0;
+            break L2;
+          }
         }
         this.field_Mb = param0;
         this.field_Fb = param2;

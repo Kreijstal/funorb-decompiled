@@ -11,16 +11,30 @@ over the obfuscated gamepacks by the pipeline in
 
 ## What changed in this regeneration
 
-The 2026-08-10 regeneration updates all 44 games from tracked-clean generator
+The 2026-08-16 regeneration updates all 44 games from tracked-clean generator
 commits. Every game has a complete source set and passed the transformed-bytecode
-verifier and a whole-game `javac` compilation. The exact generator commits,
-arguments, gates, destination base, and synchronized game list are recorded in
+verifier and a whole-game `javac` compilation: 18,481 Java sources for 18,481
+input classes, with zero pipeline, verifier, decompiler, or `javac` failures.
+The exact generator commits, arguments, gates, destination base, and
+synchronized game list are recorded in
 [`decompilation-provenance.json`](decompilation-provenance.json).
 
-This clean rerun produced the same 18,481 Java source files as the previous
-publication while advancing the recorded `java-tools` generator revision. It
-therefore revalidates the complete source corpus without introducing incidental
-source churn.
+Unlike the previous rerun, this one changes source content. The file set is
+unchanged — no source was added or removed — but **390 of the 18,481 files have
+different contents**, concentrated in each gamepack's largest and most
+control-flow-heavy classes. Two causes account for the churn:
+
+- Two decompiler defects that silently corrupted output were fixed. A
+  short-circuit `||` reconstruction merged branch predecessors without checking
+  that the last branch actually fell through, which dropped a call that sat
+  between them; and `dup` duplicated the *expression* rather than the value, so
+  a chained assignment re-evaluated its operand after the first store had
+  already overwritten it. Both were localized by bisecting a recompiled gamepack
+  against the original, and both change emitted behaviour, not just formatting.
+- Methods with a high conditional fan-in (six or more conditional edges sharing
+  one target — the shape obfuscated boolean guards produce) now prefer the owned
+  CFG structurer over the legacy range recognizer, which restructures those
+  methods in a single pass. This reshapes the affected method bodies.
 
 This publication uses the verifier-safe bytecode profile plus the closed-world
 fixed-point proof for mutually guarded default-false static fields. It does not
@@ -28,9 +42,14 @@ enable the broader experimental interclass constant-argument, signature
 compaction, or checked-catch cleanup gates. Consequently, this snapshot retains
 the original method descriptors and contains no `signature-map.json` files.
 
-The owned decompiler also now normalizes duplicate JVM-slot declarations in
-static initializers using parsed Java declaration nodes. This fixes a real
-865-class Bachelor Fridge failure without class or method-name special cases.
+The owned decompiler normalizes duplicate JVM-slot declarations in static
+initializers using parsed Java declaration nodes, which is what lets the
+865-class Bachelor Fridge gamepack decompile without class or method-name
+special cases.
+
+Compilation is not correctness: these gates prove every game recompiles, not
+that every game still behaves identically. Native-JRE original-versus-recompiled
+startup comparison for this tree is in progress and is not yet reflected here.
 
 ## What "obfuscated" means here
 

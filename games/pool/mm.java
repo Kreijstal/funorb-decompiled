@@ -19,39 +19,91 @@ final class mm {
     double field_k;
 
     final void a(int[] param0, boolean param1) {
-        double[] var9 = null;
+        RuntimeException runtimeException = null;
+        double var4 = 0.0;
         double[] var6 = null;
+        double[] var8 = null;
+        double[] var9 = null;
         double[] var16 = null;
         double[] var17 = null;
-        param0[0] = cr.a(4885, this.field_d);
-        param0[1] = cr.a(4885, this.field_a);
-        param0[2] = cr.a(4885, this.field_h);
-        double[] var8 = new double[]{-this.field_d + this.field_f, this.field_m - this.field_a, -this.field_h + this.field_k};
-        double var4 = Math.atan2(Math.sqrt(var8[1] * var8[1] + var8[0] * var8[0]), var8[2]);
-        if (!param1) {
-            return;
-        }
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
         try {
-            n.a(-126, var8);
-            var9 = new double[]{-this.field_f + this.field_d, -this.field_m + this.field_a, 0.0};
-            var6 = var9;
-            if (var4 < 0.04908738521234052 || var4 < 0.7853981633974483) {
-                var6[1] = 1.0;
-                var6[0] = 0.0;
+          L0: {
+            param0[0] = cr.a(4885, this.field_d);
+            param0[1] = cr.a(4885, this.field_a);
+            param0[2] = cr.a(4885, this.field_h);
+            var8 = new double[]{-this.field_d + this.field_f, this.field_m - this.field_a, -this.field_h + this.field_k};
+            var4 = Math.atan2(Math.sqrt(var8[1] * var8[1] + var8[0] * var8[0]), var8[2]);
+            if (param1) {
+              L1: {
+                n.a(-126, var8);
+                var9 = new double[]{-this.field_f + this.field_d, -this.field_m + this.field_a, 0.0};
+                var6 = var9;
+                if (var4 < 0.04908738521234052) {
+                  var6[1] = 1.0;
+                  var6[0] = 0.0;
+                  break L1;
+                } else {
+                  if (var4 >= 0.7853981633974483) {
+                    break L1;
+                  } else {
+                    var4 = (-Math.cos((var4 - 0.04908738521234052) * 3.141592653589793 / 0.7363107781851077) + 1.0) / 2.0;
+                    var6[0] = var4 * var9[0];
+                    var6[1] = 1.0 - var4 + var9[1] * var4;
+                    break L1;
+                  }
+                }
+              }
+              var16 = n.a(-128, lf.a(2, var8, var9));
+              var17 = n.a(-126, lf.a(2, var16, var8));
+              param0[3] = mf.a(16, var16[0]);
+              param0[4] = mf.a(16, var16[1]);
+              param0[5] = mf.a(16, var16[2]);
+              param0[6] = mf.a(16, var17[0]);
+              param0[7] = mf.a(16, var17[1]);
+              param0[8] = mf.a(16, var17[2]);
+              param0[9] = mf.a(16, var8[0]);
+              param0[10] = mf.a(16, var8[1]);
+              param0[11] = mf.a(16, var8[2]);
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            var16 = n.a(-128, lf.a(2, var8, var9));
-            var17 = n.a(-126, lf.a(2, var16, var8));
-            param0[3] = mf.a(16, var16[0]);
-            param0[4] = mf.a(16, var16[1]);
-            param0[5] = mf.a(16, var16[2]);
-            param0[6] = mf.a(16, var17[0]);
-            param0[7] = mf.a(16, var17[1]);
-            param0[8] = mf.a(16, var17[2]);
-            param0[9] = mf.a(16, var8[0]);
-            param0[10] = mf.a(16, var8[1]);
-            param0[11] = mf.a(16, var8[2]);
-        } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "mm.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackIn_10_0 = (RuntimeException) (runtimeException);
+
+            stackIn_10_1 = new StringBuilder().append("mm.L(");
+
+            if (param0 == null) {
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "null";
+              break L2;
+            } else {
+              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackIn_11_2 = "{...}";
+              break L2;
+            }
+          }
+          throw wm.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 

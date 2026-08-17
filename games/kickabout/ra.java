@@ -268,22 +268,47 @@ final class ra extends dj {
     }
 
     final static int[] a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = Kickabout.field_G;
-        if (param3 != 0) {
+        int[] var5;
+        int var6;
+        int[] var7;
+        int[] var8;
+        L0: {
+          var6 = Kickabout.field_G;
+          if (param3 == 0) {
+            break L0;
+          } else {
             field_L = (ot) null;
+            break L0;
+          }
         }
-        int[] var7 = new int[]{param0, param4};
-        int[] var8 = var7;
-        int[] var5 = var8;
-        if (-639 > (param0 - -param2 ^ -1) || (param0 ^ -1) > -3) {
+        L1: {
+          var7 = new int[]{param0, param4};
+          var8 = var7;
+          var5 = var8;
+          if (-639 > (param0 - -param2 ^ -1)) {
             var5[0] = -param2 + 638;
-        }
-        if (-479 > (param1 + param4 ^ -1)) {
-            var5[1] = 478 + -param1;
-        } else {
-            if (!(param4 >= 2)) {
-                var8[1] = 2;
+            break L1;
+          } else {
+            if ((param0 ^ -1) <= -3) {
+              break L1;
+            } else {
+              var7[0] = 2;
+              break L1;
             }
+          }
+        }
+        L2: {
+          if (-479 <= (param1 + param4 ^ -1)) {
+            if (param4 < 2) {
+              var8[1] = 2;
+              break L2;
+            } else {
+              break L2;
+            }
+          } else {
+            var5[1] = 478 + -param1;
+            break L2;
+          }
         }
         return var5;
     }

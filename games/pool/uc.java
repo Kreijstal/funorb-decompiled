@@ -14,19 +14,42 @@ final class uc {
     }
 
     final static boolean a(char param0, byte param1) {
-        if (!(!Character.isISOControl(param0))) {
-            return false;
-        }
-        if (td.a(param0, (byte) 5)) {
+        if (Character.isISOControl(param0)) {
+          return false;
+        } else {
+          if (!td.a(param0, (byte) 5)) {
+            L0: {
+              if (param1 == -51) {
+                break L0;
+              } else {
+                uc.a(80);
+                break L0;
+              }
+            }
+            L1: {
+              if (param0 == 45) {
+                break L1;
+              } else {
+                if (param0 == 160) {
+                  break L1;
+                } else {
+                  if (param0 == 32) {
+                    break L1;
+                  } else {
+                    if (95 != param0) {
+                      return false;
+                    } else {
+                      return true;
+                    }
+                  }
+                }
+              }
+            }
             return true;
-        }
-        if (param1 != -51) {
-            uc.a(80);
-        }
-        if (param0 == 45 || param0 == 160 || param0 == 32 || 95 == param0) {
+          } else {
             return true;
+          }
         }
-        return false;
     }
 
     final static boolean a(int param0) {

@@ -189,6 +189,8 @@ final class jt extends rf {
     }
 
     final void b(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_34_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_64_0 = 0;
@@ -354,8 +356,9 @@ final class jt extends rf {
                         this.field_n.b(this.field_i, 0, param2);
                         this.field_p.b(this.field_o, 0, param2);
                         if (tk.field_r) {
-                          param1 = param1 << 1;
-                          stackIn_49_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_49_0 = localTemp$0;
                           break L11;
                         } else {
                           stackIn_49_0 = param1;
@@ -408,8 +411,9 @@ final class jt extends rf {
                       L17: {
                         this.field_y.b(this.field_i, 0, param2);
                         if (tk.field_r) {
-                          param1 = param1 << 1;
-                          stackIn_64_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_64_0 = localTemp$1;
                           break L17;
                         } else {
                           stackIn_64_0 = param1;

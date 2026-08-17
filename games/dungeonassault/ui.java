@@ -6,9 +6,9 @@ final class ui {
     static int field_a;
 
     final static String a(int param0, int param1) {
+        String stackIn_16_0 = null;
         String var2;
         String var3;
-        String stackIn_16_0 = null;
         L0: {
           if (param1 == 19435) {
             break L0;

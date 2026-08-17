@@ -474,15 +474,32 @@ class mh extends gf implements qd {
     }
 
     final void l(int param0) {
-        if (param0 != -27697) {
+        L0: {
+          if (param0 == -27697) {
+            break L0;
+          } else {
             field_sb = (String[]) null;
+            break L0;
+          }
         }
-        if (!(this.field_H)) {
-            return;
-        }
-        this.field_H = false;
-        if (this.field_rb || this.field_nb) {
-            uk.a(19702);
+        if (!this.field_H) {
+          return;
+        } else {
+          L1: {
+            this.field_H = false;
+            if (this.field_rb) {
+              uk.a(19702);
+              break L1;
+            } else {
+              if (!this.field_nb) {
+                break L1;
+              } else {
+                me.a(param0 ^ -27704);
+                break L1;
+              }
+            }
+          }
+          return;
         }
     }
 

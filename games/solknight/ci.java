@@ -208,16 +208,34 @@ class ci extends gf implements ka {
     }
 
     final void f(boolean param0) {
-        if (!this.field_J) {
-            return;
-        }
-        this.field_J = false;
-        if (this.field_ob || this.field_rb) {
-            fj.a((byte) 85);
-        }
-        if (!param0) {
-            aa var3 = (aa) null;
-            ci.a(47, true, 62, (aa) null, true);
+        aa var3;
+        if (this.field_J) {
+          L0: {
+            this.field_J = false;
+            if (this.field_ob) {
+              fj.a((byte) 85);
+              break L0;
+            } else {
+              if (!this.field_rb) {
+                break L0;
+              } else {
+                ie.b(-102);
+                break L0;
+              }
+            }
+          }
+          L1: {
+            if (param0) {
+              break L1;
+            } else {
+              var3 = (aa) null;
+              ci.a(47, true, 62, (aa) null, true);
+              break L1;
+            }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

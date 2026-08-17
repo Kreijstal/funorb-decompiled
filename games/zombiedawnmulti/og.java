@@ -56,19 +56,60 @@ final class og extends ek {
     }
 
     final static boolean a(char param0, byte param1) {
-        if (param0 >= 32 && param0 <= 126) {
-            return true;
+        L0: {
+          if (param0 < 32) {
+            break L0;
+          } else {
+            if (param0 > 126) {
+              break L0;
+            } else {
+              return true;
+            }
+          }
         }
-        if (param0 >= 160 && param0 <= 255) {
-            return true;
+        L1: {
+          if (param0 < 160) {
+            break L1;
+          } else {
+            if (param0 > 255) {
+              break L1;
+            } else {
+              return true;
+            }
+          }
         }
-        if (param1 <= 98) {
+        L2: {
+          if (param1 > 98) {
+            break L2;
+          } else {
             og.b(64, 2);
+            break L2;
+          }
         }
-        if (8364 == param0 || 338 == param0 || param0 == 8212 || param0 == 339 || 376 == param0) {
-            return true;
+        L3: {
+          if (8364 == param0) {
+            break L3;
+          } else {
+            if (338 == param0) {
+              break L3;
+            } else {
+              if (param0 == 8212) {
+                break L3;
+              } else {
+                if (param0 == 339) {
+                  break L3;
+                } else {
+                  if (376 != param0) {
+                    return false;
+                  } else {
+                    return true;
+                  }
+                }
+              }
+            }
+          }
         }
-        return false;
+        return true;
     }
 
     final void a(int param0, rl param1) {

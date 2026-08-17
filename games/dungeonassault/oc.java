@@ -363,13 +363,30 @@ final class oc extends kl {
     }
 
     private final void d(boolean param0) {
-        if (!param0) {
+        L0: {
+          if (param0) {
+            break L0;
+          } else {
             this.c((byte) 56);
+            break L0;
+          }
         }
-        if (!this.field_x || this.field_n.field_n.field_p != null) {
-            if (!(this.field_n.field_n.field_g == null)) {
-                gd.a(64, this.field_n.field_n.field_g);
+        L1: {
+          if (!this.field_x) {
+            if (this.field_n.field_n.field_g != null) {
+              gd.a(64, this.field_n.field_n.field_g);
+              break L1;
+            } else {
+              break L1;
             }
+          } else {
+            if (this.field_n.field_n.field_p == null) {
+              break L1;
+            } else {
+              gd.a(64, this.field_n.field_n.field_p);
+              break L1;
+            }
+          }
         }
     }
 

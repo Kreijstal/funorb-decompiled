@@ -914,6 +914,12 @@ final class t {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18) {
+        int localTemp$4 = 0;
+        int localTemp$5 = 0;
+        int localTemp$6 = 0;
+        int localTemp$7 = 0;
+        int localTemp$8 = 0;
+        int localTemp$9 = 0;
         int[] var19;
         int var20;
         int var21;
@@ -1038,8 +1044,9 @@ final class t {
                         param6 = (param6 << 9) - var30 * param3 + var30;
                         if (param1 >= param2) {
                           L8: {
-                            param3 = param3 << 16;
-                            param4 = param3 << 16;
+                            localTemp$4 = param3 << 16;
+                            param3 = localTemp$4;
+                            param4 = localTemp$4;
                             if (param0 >= 0) {
                               break L8;
                             } else {
@@ -1160,8 +1167,9 @@ final class t {
                           }
                         } else {
                           L17: {
-                            param3 = param3 << 16;
-                            param5 = param3 << 16;
+                            localTemp$5 = param3 << 16;
+                            param3 = localTemp$5;
+                            param5 = localTemp$5;
                             if (param0 >= 0) {
                               break L17;
                             } else {
@@ -1308,8 +1316,9 @@ final class t {
                     param8 = (param8 << 9) - var30 * param5 + var30;
                     if (param0 >= param1) {
                       L28: {
-                        param5 = param5 << 16;
-                        param3 = param5 << 16;
+                        localTemp$6 = param5 << 16;
+                        param5 = localTemp$6;
+                        param3 = localTemp$6;
                         if (param2 >= 0) {
                           break L28;
                         } else {
@@ -1409,8 +1418,9 @@ final class t {
                       }
                     } else {
                       L34: {
-                        param5 = param5 << 16;
-                        param4 = param5 << 16;
+                        localTemp$7 = param5 << 16;
+                        param5 = localTemp$7;
+                        param4 = localTemp$7;
                         if (param2 >= 0) {
                           break L34;
                         } else {
@@ -1533,8 +1543,9 @@ final class t {
                     param7 = (param7 << 9) - var30 * param4 + var30;
                     if (param2 >= param0) {
                       L42: {
-                        param4 = param4 << 16;
-                        param5 = param4 << 16;
+                        localTemp$8 = param4 << 16;
+                        param4 = localTemp$8;
+                        param5 = localTemp$8;
                         if (param1 >= 0) {
                           break L42;
                         } else {
@@ -1634,8 +1645,9 @@ final class t {
                       }
                     } else {
                       L48: {
-                        param4 = param4 << 16;
-                        param3 = param4 << 16;
+                        localTemp$9 = param4 << 16;
+                        param4 = localTemp$9;
+                        param3 = localTemp$9;
                         if (param1 >= 0) {
                           break L48;
                         } else {
@@ -1974,6 +1986,12 @@ final class t {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
+        int localTemp$2 = 0;
+        int localTemp$3 = 0;
+        int localTemp$4 = 0;
+        int localTemp$5 = 0;
         int var9;
         int var10;
         int var11;
@@ -2050,8 +2068,9 @@ final class t {
                   param6 = (param6 << 8) - var19 * param3 + var19;
                   if (param1 >= param2) {
                     L6: {
-                      param3 = param3 << 16;
-                      param4 = param3 << 16;
+                      localTemp$0 = param3 << 16;
+                      param3 = localTemp$0;
+                      param4 = localTemp$0;
                       if (param0 >= 0) {
                         break L6;
                       } else {
@@ -2156,8 +2175,9 @@ final class t {
                     }
                   } else {
                     L15: {
-                      param3 = param3 << 16;
-                      param5 = param3 << 16;
+                      localTemp$1 = param3 << 16;
+                      param3 = localTemp$1;
+                      param5 = localTemp$1;
                       if (param0 >= 0) {
                         break L15;
                       } else {
@@ -2288,8 +2308,9 @@ final class t {
               param8 = (param8 << 8) - var19 * param5 + var19;
               if (param0 >= param1) {
                 L26: {
-                  param5 = param5 << 16;
-                  param3 = param5 << 16;
+                  localTemp$2 = param5 << 16;
+                  param5 = localTemp$2;
+                  param3 = localTemp$2;
                   if (param2 >= 0) {
                     break L26;
                   } else {
@@ -2373,8 +2394,9 @@ final class t {
                 }
               } else {
                 L32: {
-                  param5 = param5 << 16;
-                  param4 = param5 << 16;
+                  localTemp$3 = param5 << 16;
+                  param5 = localTemp$3;
+                  param4 = localTemp$3;
                   if (param2 >= 0) {
                     break L32;
                   } else {
@@ -2481,8 +2503,9 @@ final class t {
               param7 = (param7 << 8) - var19 * param4 + var19;
               if (param2 >= param0) {
                 L40: {
-                  param4 = param4 << 16;
-                  param5 = param4 << 16;
+                  localTemp$4 = param4 << 16;
+                  param4 = localTemp$4;
+                  param5 = localTemp$4;
                   if (param1 >= 0) {
                     break L40;
                   } else {
@@ -2566,8 +2589,9 @@ final class t {
                 }
               } else {
                 L46: {
-                  param4 = param4 << 16;
-                  param3 = param4 << 16;
+                  localTemp$5 = param4 << 16;
+                  param4 = localTemp$5;
+                  param3 = localTemp$5;
                   if (param1 >= 0) {
                     break L46;
                   } else {
@@ -2681,6 +2705,12 @@ final class t {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
+        int localTemp$2 = 0;
+        int localTemp$3 = 0;
+        int localTemp$4 = 0;
+        int localTemp$5 = 0;
         int var7;
         int var8;
         int var9;
@@ -2737,8 +2767,9 @@ final class t {
                 }
                 if (param1 >= param2) {
                   L6: {
-                    param3 = param3 << 16;
-                    param4 = param3 << 16;
+                    localTemp$0 = param3 << 16;
+                    param3 = localTemp$0;
+                    param4 = localTemp$0;
                     if (param0 >= 0) {
                       break L6;
                     } else {
@@ -2838,8 +2869,9 @@ final class t {
                   }
                 } else {
                   L15: {
-                    param3 = param3 << 16;
-                    param5 = param3 << 16;
+                    localTemp$1 = param3 << 16;
+                    param3 = localTemp$1;
+                    param5 = localTemp$1;
                     if (param0 >= 0) {
                       break L15;
                     } else {
@@ -2964,8 +2996,9 @@ final class t {
             }
             if (param0 >= param1) {
               L26: {
-                param5 = param5 << 16;
-                param3 = param5 << 16;
+                localTemp$2 = param5 << 16;
+                param5 = localTemp$2;
+                param3 = localTemp$2;
                 if (param2 >= 0) {
                   break L26;
                 } else {
@@ -3044,8 +3077,9 @@ final class t {
               }
             } else {
               L32: {
-                param5 = param5 << 16;
-                param4 = param5 << 16;
+                localTemp$3 = param5 << 16;
+                param5 = localTemp$3;
+                param4 = localTemp$3;
                 if (param2 >= 0) {
                   break L32;
                 } else {
@@ -3146,8 +3180,9 @@ final class t {
             }
             if (param2 >= param0) {
               L40: {
-                param4 = param4 << 16;
-                param5 = param4 << 16;
+                localTemp$4 = param4 << 16;
+                param4 = localTemp$4;
+                param5 = localTemp$4;
                 if (param1 >= 0) {
                   break L40;
                 } else {
@@ -3226,8 +3261,9 @@ final class t {
               }
             } else {
               L46: {
-                param4 = param4 << 16;
-                param3 = param4 << 16;
+                localTemp$5 = param4 << 16;
+                param4 = localTemp$5;
+                param3 = localTemp$5;
                 if (param1 >= 0) {
                   break L46;
                 } else {

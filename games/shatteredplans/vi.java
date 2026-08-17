@@ -24867,19 +24867,18 @@ final class vi extends hs {
     }
 
     final l a(int param0, int param1, boolean param2) throws jn {
-        Object var4 = null;
-        RuntimeException var4_ref = null;
-        int var5_int = 0;
-        int var7 = 0;
         l stackIn_3_0 = null;
         l stackIn_96_0 = null;
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        l var4_ref2 = null;
+        l var4 = null;
+        RuntimeException var4_ref = null;
+        int var5_int = 0;
         ln[] var5 = null;
         int var6_int = 0;
         t var6 = null;
+        int var7 = 0;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -24905,7 +24904,7 @@ final class vi extends hs {
                                     break L9;
                                   }
                                 }
-                                var4_ref2 = new l(pe.a((byte) 34, this.field_c), ls.a(this.field_b, 2), this.field_h, this.field_d);
+                                var4 = new l(pe.a((byte) 34, this.field_c), ls.a(this.field_b, 2), this.field_h, this.field_d);
                                 this.field_f[0] = this.a(0, this.field_c, this.field_b, -25, 0);
                                 this.field_f[0].field_I = mh.field_h[21];
                                 if (var7 == 0) {
@@ -24959,7 +24958,7 @@ final class vi extends hs {
                                 break L11;
                               }
                             }
-                            var4_ref2 = this.a(32, 1, false);
+                            var4 = this.a(32, 1, false);
                             this.field_f[1] = this.a(1, this.field_c, this.field_b, -119, 1);
                             this.field_f[1].field_I = mh.field_h[247];
                             if (var7 == 0) {
@@ -24979,7 +24978,7 @@ final class vi extends hs {
                               break L12;
                             }
                           }
-                          var4_ref2 = this.a(23, 2, false);
+                          var4 = this.a(23, 2, false);
                           this.field_f[3] = this.a(3, this.field_c, this.field_b, -54, 2);
                           this.field_f[3].field_I = mh.field_h[206];
                           this.field_f[4] = this.a(4, this.field_c, this.field_b, -71, 3);
@@ -25003,7 +25002,7 @@ final class vi extends hs {
                             break L13;
                           }
                         }
-                        var4_ref2 = this.a(58, 3, false);
+                        var4 = this.a(58, 3, false);
                         this.field_f[this.field_c * 3 + 4] = this.a(3 * this.field_c + 4, this.field_c, this.field_b, -81, 5);
                         this.field_f[this.field_c * 3 + 4].field_I = mh.field_h[186];
                         if (var7 == 0) {
@@ -25023,7 +25022,7 @@ final class vi extends hs {
                           break L14;
                         }
                       }
-                      var4_ref2 = this.a(59, 4, false);
+                      var4 = this.a(59, 4, false);
                       this.field_f[this.field_c * 3 - -3] = this.a(3 + this.field_c * 3, this.field_c, this.field_b, 109, 6);
                       this.field_f[3 + this.field_c * 3].field_I = mh.field_h[231];
                       this.field_f[this.field_c * 4 - -3] = this.a(4 * this.field_c + 3, this.field_c, this.field_b, 114, 7);
@@ -25045,7 +25044,7 @@ final class vi extends hs {
                         break L15;
                       }
                     }
-                    var4_ref2 = this.a(34, 5, false);
+                    var4 = this.a(34, 5, false);
                     this.field_f[this.field_c * 6 + 2] = this.a(this.field_c * 6 + 2, this.field_c, this.field_b, 122, 8);
                     this.field_f[6 * this.field_c - -2].field_I = mh.field_h[149];
                     this.field_f[3 + this.field_c * 6] = this.a(3 + 6 * this.field_c, this.field_c, this.field_b, 121, 9);
@@ -25085,7 +25084,7 @@ final class vi extends hs {
                       break L16;
                     }
                   }
-                  var4_ref2 = this.a(64, 6, false);
+                  var4 = this.a(64, 6, false);
                   this.field_f[7 + 3 * this.field_c] = this.a(3 * this.field_c - -7, this.field_c, this.field_b, 117, 19);
                   this.field_f[3 * this.field_c - -7].field_I = mh.field_h[170];
                   this.field_f[this.field_c * 4 + 8] = this.a(4 * this.field_c - -8, this.field_c, this.field_b, 108, 20);
@@ -25163,7 +25162,7 @@ final class vi extends hs {
                           }
                         }
                       }
-                      var4_ref2.field_e = var5;
+                      var4.field_e = var5;
                       break L19;
                     }
                     L22: {
@@ -25174,9 +25173,9 @@ final class vi extends hs {
                         break L22;
                       }
                     }
-                    var4_ref2.a(26253);
-                    var4_ref2.b((byte) 80);
-                    var6 = new t(var4_ref2.field_e);
+                    var4.a(26253);
+                    var4.b((byte) 80);
+                    var6 = new t(var4.field_e);
                     var6.a(true, 1);
                     this.a(-11);
                     break L17;
@@ -25185,7 +25184,7 @@ final class vi extends hs {
                   break L17;
                 }
               }
-              stackIn_96_0 = (l) (var4_ref2);
+              stackIn_96_0 = (l) (var4);
               decompiledRegionSelector0 = 1;
               break L0;
             } else {

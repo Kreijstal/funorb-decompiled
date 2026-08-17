@@ -118,18 +118,60 @@ final class qm extends cj implements ij {
     }
 
     public final void a(int param0, d param1, byte param2, int param3, int param4) {
-        int var7 = Vertigo2.field_L ? 1 : 0;
+        RuntimeException runtimeException = null;
+        int var6_int = 0;
+        int var7 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var7 = Vertigo2.field_L ? 1 : 0;
         try {
-            if (this.field_E == param1) {
-                sd.f((byte) -1);
-            } else {
-                if (param1 == this.field_F || param1 == this.field_H) {
-                    ff.b((byte) -104);
+          L0: {
+            L1: {
+              if (this.field_E != param1) {
+                if (param1 == this.field_F) {
+                  ff.b((byte) -104);
+                  break L1;
+                } else {
+                  if (param1 != this.field_H) {
+                    break L1;
+                  } else {
+                    wq.i(0);
+                    break L1;
+                  }
                 }
+              } else {
+                sd.f((byte) -1);
+                break L1;
+              }
             }
-            int var6_int = 21 % ((param2 - -63) / 51);
-        } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "qm.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            var6_int = 21 % ((param2 - -63) / 51);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackIn_11_0 = (RuntimeException) (runtimeException);
+
+            stackIn_11_1 = new StringBuilder().append("qm.C(").append(param0).append(',');
+
+            if (param1 == null) {
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
+              break L2;
+            } else {
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
+              break L2;
+            }
+          }
+          throw wn.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

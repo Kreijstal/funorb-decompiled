@@ -335,13 +335,53 @@ final class qk extends og implements fd, vd {
     }
 
     public final void a(byte param0, int param1, int param2, int param3, pc param4) {
+        RuntimeException runtimeException = null;
+        int var6_int = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            if (param4 == this.field_C || this.field_B == param4) {
+          L0: {
+            L1: {
+              if (param4 == this.field_C) {
                 gl.b(-108);
+                break L1;
+              } else {
+                if (this.field_B != param4) {
+                  break L1;
+                } else {
+                  this.i(-25);
+                  break L1;
+                }
+              }
             }
-            int var6_int = 79 % ((83 - param0) / 36);
-        } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "qk.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            var6_int = 79 % ((83 - param0) / 36);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackIn_8_0 = (RuntimeException) (runtimeException);
+
+            stackIn_8_1 = new StringBuilder().append("qk.BA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
+            if (param4 == null) {
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "null";
+              break L2;
+            } else {
+              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackIn_9_2 = "{...}";
+              break L2;
+            }
+          }
+          throw dn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 

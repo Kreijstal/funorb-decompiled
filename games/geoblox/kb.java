@@ -11,6 +11,7 @@ final class kb {
         RuntimeException var4 = null;
         int var5 = 0;
         String[] var6 = null;
+        String[] var7 = null;
         int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
@@ -24,7 +25,6 @@ final class kb {
         String stackIn_20_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String[] var7 = null;
         var5 = Geoblox.field_C;
         try {
           L0: {

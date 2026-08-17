@@ -896,38 +896,66 @@ class dj extends hk {
     }
 
     private final void j(int param0) {
-        int var8 = Geoblox.field_C;
-        if (!(this.field_E)) {
-            this.field_n = 0;
-            this.field_k = 0;
-            return;
-        }
-        if (!(this.field_q instanceof cc)) {
-            return;
-        }
-        cc var9 = (cc) ((Object) this.field_q);
-        if (param0 > -66) {
-            return;
-        }
-        dk var3 = var9.a((byte) 119, (el) (this));
-        int var4 = var3.a(96);
-        int var5 = var9.a((el) (this), -1);
-        int var6 = var9.a(1) >> -2144366815;
-        if (var4 < var5 + -var6) {
-            this.field_k = 0;
-            this.field_n = 0;
-            return;
-        }
-        int var7 = this.field_k + var3.a(this.field_H, 120);
-        if (var7 > var5 - var6 || var7 < var6) {
-            this.field_k = this.field_k - (var7 - -var6 - var5);
-        }
-        if ((this.field_k ^ -1) < -1) {
-            this.field_k = 0;
+        dk var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        cc var9;
+        var8 = Geoblox.field_C;
+        if (!this.field_E) {
+          this.field_n = 0;
+          this.field_k = 0;
+          return;
         } else {
-            if (var6 + -var5 > this.field_k) {
-                this.field_k = var6 + -var5;
+          if (!(this.field_q instanceof cc)) {
+            return;
+          } else {
+            var9 = (cc) ((Object) this.field_q);
+            if (param0 <= -66) {
+              var3 = var9.a((byte) 119, (el) (this));
+              var4 = var3.a(96);
+              var5 = var9.a((el) (this), -1);
+              var6 = var9.a(1) >> -2144366815;
+              if (var4 >= var5 + -var6) {
+                L0: {
+                  var7 = this.field_k + var3.a(this.field_H, 120);
+                  if (var7 > var5 - var6) {
+                    this.field_k = this.field_k - (var7 - -var6 - var5);
+                    break L0;
+                  } else {
+                    if (var7 >= var6) {
+                      break L0;
+                    } else {
+                      this.field_k = this.field_k - (-var6 + var7);
+                      break L0;
+                    }
+                  }
+                }
+                L1: {
+                  if ((this.field_k ^ -1) >= -1) {
+                    if (var6 + -var5 <= this.field_k) {
+                      break L1;
+                    } else {
+                      this.field_k = var6 + -var5;
+                      break L1;
+                    }
+                  } else {
+                    this.field_k = 0;
+                    break L1;
+                  }
+                }
+                return;
+              } else {
+                this.field_k = 0;
+                this.field_n = 0;
+                return;
+              }
+            } else {
+              return;
             }
+          }
         }
     }
 

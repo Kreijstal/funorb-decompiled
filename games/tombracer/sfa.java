@@ -568,10 +568,15 @@ final class sfa extends ha {
     }
 
     final boolean j(int param0) {
-        if (this.field_e || this.field_c.a((byte) -17, param0).field_g) {
+        if (this.field_e) {
+          return true;
+        } else {
+          if (!this.field_c.a((byte) -17, param0).field_g) {
+            return false;
+          } else {
             return true;
+          }
         }
-        return false;
     }
 
     final void a(int param0, int param1) throws qva {

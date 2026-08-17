@@ -16,11 +16,17 @@ final class km extends jtb {
     }
 
     final byte[] a(int param0) {
-        if (this.field_n || this.field_p.field_e < this.field_p.field_h.length - this.field_q) {
+        int var2;
+        if (this.field_n) {
+          throw new RuntimeException();
+        } else {
+          if (this.field_p.field_e >= this.field_p.field_h.length - this.field_q) {
+            var2 = 9 / ((17 - param0) / 58);
+            return this.field_p.field_h;
+          } else {
             throw new RuntimeException();
+          }
         }
-        int var2 = 9 / ((17 - param0) / 58);
-        return this.field_p.field_h;
     }
 
     final static void e(int param0) {
@@ -121,28 +127,42 @@ final class km extends jtb {
     }
 
     final static void f(byte param0) {
-        if (param0 != -119) {
-            km.g((byte) 33);
-            if (-11 == (qmb.field_q ^ -1) || nua.b(true)) {
-                twa.b(param0 ^ -108);
-                qmb.field_q = 11;
-                dga.field_a = true;
-                return;
+        if (param0 == -119) {
+          if (-11 == (qmb.field_q ^ -1)) {
+            twa.b(param0 ^ -108);
+            qmb.field_q = 11;
+            dga.field_a = true;
+            return;
+          } else {
+            if (!nua.b(true)) {
+              twa.b(param0 ^ -108);
+              qmb.field_q = 11;
+              dga.field_a = true;
+              return;
+            } else {
+              dga.field_a = true;
+              return;
             }
+          }
+        } else {
+          km.g((byte) 33);
+          if (-11 == (qmb.field_q ^ -1)) {
             twa.b(param0 ^ -108);
             qmb.field_q = 11;
             dga.field_a = true;
             return;
+          } else {
+            if (!nua.b(true)) {
+              twa.b(param0 ^ -108);
+              qmb.field_q = 11;
+              dga.field_a = true;
+              return;
+            } else {
+              dga.field_a = true;
+              return;
+            }
+          }
         }
-        if (-11 == (qmb.field_q ^ -1) || nua.b(true)) {
-            twa.b(param0 ^ -108);
-            qmb.field_q = 11;
-            dga.field_a = true;
-            return;
-        }
-        twa.b(param0 ^ -108);
-        qmb.field_q = 11;
-        dga.field_a = true;
     }
 
     km() {

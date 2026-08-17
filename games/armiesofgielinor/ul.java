@@ -135,13 +135,30 @@ final class ul {
     private final boolean a(int param0, byte param1, int param2) {
         param0 = 15 + (-this.field_i + param0);
         param2 = param2 - this.field_b - -15;
-        if (param1 != 112) {
-            return false;
+        if (param1 == 112) {
+          L0: {
+            if (-1 < (param0 ^ -1)) {
+              break L0;
+            } else {
+              if (param2 < 0) {
+                break L0;
+              } else {
+                if ((param0 ^ -1) < -31) {
+                  break L0;
+                } else {
+                  if (-31 <= (param2 ^ -1)) {
+                    return this.field_c[param0 - -(30 * param2)];
+                  } else {
+                    return false;
+                  }
+                }
+              }
+            }
+          }
+          return false;
+        } else {
+          return false;
         }
-        if (-1 < (param0 ^ -1) || param2 < 0 || (param0 ^ -1) < -31 || -31 > (param2 ^ -1)) {
-            return false;
-        }
-        return this.field_c[param0 - -(30 * param2)];
     }
 
     public static void b(int param0) {

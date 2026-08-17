@@ -14,7 +14,6 @@ final class ak extends gn {
     private int field_j;
 
     final static int a(js param0, int param1) {
-        RuntimeException var2 = null;
         int stackIn_18_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
@@ -25,6 +24,7 @@ final class ak extends gn {
         String stackIn_28_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
         try {
           L0: {
             L1: {

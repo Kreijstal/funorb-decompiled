@@ -985,18 +985,32 @@ public final class kr extends bf {
     }
 
     final void a(nf param0, boolean param1) {
-        if (param1) {
-            return;
-        }
-        int var3 = 0;
-        if (param0 == rg.field_A) {
-            var3 = 65536;
-        } else {
-            if (param0 == ij.field_g || param0 == gk.field_g) {
+        int var3;
+        if (!param1) {
+          L0: {
+            var3 = 0;
+            if (param0 != rg.field_A) {
+              if (param0 == ij.field_g) {
                 var3 = 131072;
+                break L0;
+              } else {
+                if (param0 != gk.field_g) {
+                  break L0;
+                } else {
+                  var3 = 196608;
+                  break L0;
+                }
+              }
+            } else {
+              var3 = 65536;
+              break L0;
             }
+          }
+          this.field_Rc.SetTextureStageState(this.field_F, 11, this.field_F | var3);
+          return;
+        } else {
+          return;
         }
-        this.field_Rc.SetTextureStageState(this.field_F, 11, this.field_F | var3);
     }
 
     final boolean d() {

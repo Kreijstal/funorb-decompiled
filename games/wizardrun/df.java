@@ -100,9 +100,23 @@ abstract class df {
     }
 
     final static void a(int param0) {
-        RuntimeException runtimeException = null;
+        int stackIn_50_0 = 0;
+        int stackIn_50_1 = 0;
+        int stackIn_51_0 = 0;
+        int stackIn_51_1 = 0;
+        int stackIn_51_2 = 0;
+        int stackIn_56_0 = 0;
+        int stackIn_57_0 = 0;
+        int stackIn_57_1 = 0;
+        int stackIn_65_0 = 0;
+        int stackIn_66_0 = 0;
+        int stackIn_66_1 = 0;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         o var1 = null;
         int var1_int = 0;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -122,20 +136,6 @@ abstract class df {
         int[] var28 = null;
         int[] var29 = null;
         int[] var30 = null;
-        int stackIn_50_0 = 0;
-        int stackIn_50_1 = 0;
-        int stackIn_51_0 = 0;
-        int stackIn_51_1 = 0;
-        int stackIn_51_2 = 0;
-        int stackIn_56_0 = 0;
-        int stackIn_57_0 = 0;
-        int stackIn_57_1 = 0;
-        int stackIn_65_0 = 0;
-        int stackIn_66_0 = 0;
-        int stackIn_66_1 = 0;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
         var10 = wizardrun.field_H;
         try {
           L0: {
@@ -567,8 +567,8 @@ abstract class df {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) runtimeException), "df.E(" + param0 + ')');
+          var1_ref = decompiledCaughtException;
+          throw bd.a((Throwable) ((Object) var1_ref), "df.E(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;

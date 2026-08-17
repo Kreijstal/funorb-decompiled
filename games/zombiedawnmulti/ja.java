@@ -196,15 +196,38 @@ class ja extends nq {
     }
 
     final boolean b(int param0, int param1, int param2, int param3) {
+        int stackIn_11_0 = 0;
         param2 = param2 - (param0 + this.field_r);
-        if (param2 < 0 || param2 >= this.field_x) {
+        if (param2 < 0) {
+          return false;
+        } else {
+          if (param2 < this.field_x) {
+            L0: {
+              param3 = param3 - (param1 + this.field_y);
+              if (param3 < 0) {
+                break L0;
+              } else {
+                if (param3 < this.field_w) {
+                  L1: {
+                    if (this.field_B[param3 * this.field_x + param2] == 0) {
+                      stackIn_11_0 = 0;
+                      break L1;
+                    } else {
+                      stackIn_11_0 = 1;
+                      break L1;
+                    }
+                  }
+                  return stackIn_11_0 != 0;
+                } else {
+                  break L0;
+                }
+              }
+            }
             return false;
-        }
-        param3 = param3 - (param1 + this.field_y);
-        if (param3 < 0 || param3 >= this.field_w) {
+          } else {
             return false;
+          }
         }
-        return this.field_B[param3 * this.field_x + param2] != 0 ? true : false;
     }
 
     final void a(int param0, int param1, int param2) {

@@ -67,10 +67,10 @@ final class se {
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
         var4 = wizardrun.field_H;
         try {
           L0: {

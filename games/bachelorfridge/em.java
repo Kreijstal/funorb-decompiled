@@ -413,19 +413,43 @@ final class em extends am implements lja {
         super(param0, 200, 150);
         Object var3 = null;
         wj var4 = null;
+        Object stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        Object stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            var3 = null;
-            if (dn.field_b == param1) {
-                var3 = qca.field_l;
-            } else {
-                if (r.field_m == param1 || param1 == tma.field_x) {
-                    var3 = cn.field_k;
-                    this.field_q = this.field_q + 10;
-                    if (od.e((byte) -127)) {
-                        this.field_q = this.field_q + 20;
-                        var3 = dm.field_e;
-                    }
+          L0: {
+            L1: {
+              var3 = null;
+              if (dn.field_b != param1) {
+                if (r.field_m == param1) {
+                  var3 = cn.field_k;
+                  this.field_q = this.field_q + 10;
+                  if (!od.e((byte) -127)) {
+                    break L1;
+                  } else {
+                    this.field_q = this.field_q + 20;
+                    var3 = dm.field_e;
+                    break L1;
+                  }
+                } else {
+                  if (param1 != tma.field_x) {
+                    break L1;
+                  } else {
+                    this.field_q = this.field_q + 30;
+                    var3 = jia.field_l;
+                    break L1;
+                  }
                 }
+              } else {
+                var3 = qca.field_l;
+                break L1;
+              }
             }
             var4 = new wj((String) (var3), (pl) null);
             var4.field_v = 50;
@@ -435,8 +459,46 @@ final class em extends am implements lja {
             var4.field_f = (qda) ((Object) new gha(oc.field_l, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
             this.c(var4, 70);
             this.field_U = this.a(-2, ala.field_d, (pl) (this));
-        } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "em.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackIn_12_0 = var3;
+
+            stackIn_12_1 = new StringBuilder().append("em.<init>(");
+
+            if (param0 == null) {
+              stackIn_13_0 = stackIn_12_0;
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
+            } else {
+              stackIn_13_0 = stackIn_12_0;
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
+            }
+          }
+          L3: {
+
+
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
+
+            if (param1 == null) {
+
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L3;
+            } else {
+
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L3;
+            }
+          }
+          throw pe.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ')');
         }
     }
 

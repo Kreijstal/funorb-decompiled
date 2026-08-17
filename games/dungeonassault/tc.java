@@ -47,6 +47,8 @@ final class tc extends qb {
     }
 
     final void b(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_35_0 = 0;
         int stackIn_51_0 = 0;
         int stackIn_66_0 = 0;
@@ -211,8 +213,9 @@ final class tc extends qb {
                           stackIn_51_0 = param1;
                           break L11;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_51_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_51_0 = localTemp$0;
                           break L11;
                         }
                       }
@@ -265,8 +268,9 @@ final class tc extends qb {
                           stackIn_66_0 = param1;
                           break L17;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_66_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_66_0 = localTemp$1;
                           break L17;
                         }
                       }

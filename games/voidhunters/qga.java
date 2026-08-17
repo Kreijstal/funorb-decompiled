@@ -6,7 +6,8 @@ final class qga {
     static long field_a;
 
     final static void a(String param0, int param1, byte param2, String[] param3) {
-        RuntimeException var4 = null;
+        String[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         String[] var6 = null;
         int stackIn_12_0 = 0;
@@ -19,7 +20,6 @@ final class qga {
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[] var4_array = null;
         var5 = VoidHunters.field_G;
         try {
           L0: {
@@ -55,8 +55,8 @@ final class qga {
                   jra.field_a = tma.a(param1, param0, (byte) -124);
                   return;
                 } else {
-                  var4_array = param3;
-                  mfb.a(var4_array, 11113);
+                  var4 = param3;
+                  mfb.a(var4, 11113);
                   jra.field_a = wm.a(param3, (byte) -123);
                   return;
                 }
@@ -66,8 +66,8 @@ final class qga {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var4 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var4);
+            var4_ref = decompiledCaughtException;
+            stackIn_16_0 = (RuntimeException) (var4_ref);
 
             stackIn_16_1 = new StringBuilder().append("qga.A(");
 

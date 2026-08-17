@@ -6,16 +6,6 @@ final class fg extends al {
     static vk field_m;
 
     final void a(byte param0) {
-        int var2;
-        int var3;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var20;
-        int var22;
-        String var23;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         oi stackIn_26_0;
@@ -27,8 +17,15 @@ final class fg extends al {
         int stackIn_27_2 = 0;
         int stackIn_27_3 = 0;
         int stackIn_27_4 = 0;
+        int var2;
+        int var3;
         int var4;
         int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
         int var11;
         int var12;
         int var13;
@@ -38,7 +35,10 @@ final class fg extends al {
         int var17;
         int var18;
         int var19;
+        int var20;
         int var21;
+        int var22;
+        String var23;
         L0: {
           var22 = ZombieDawn.field_J;
           super.a((byte) -75);

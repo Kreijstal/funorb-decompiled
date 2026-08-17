@@ -129,17 +129,32 @@ final class aw extends llb {
         ki.field_o = 1;
         via.field_b = 1;
         wkb.field_c = 1;
-        if (param0) {
-            return;
-        }
-        jnb.field_o = 1;
-        if ((jha.field_p ^ -1) == -3 || 1 == jha.field_p) {
-            ki.field_o = 0;
-            bta.field_q = 0;
-            jnb.field_o = 0;
-            via.field_b = 0;
-            wkb.field_c = 0;
-            tkb.field_p = 0;
+        if (!param0) {
+          L0: {
+            jnb.field_o = 1;
+            if ((jha.field_p ^ -1) == -3) {
+              ki.field_o = 0;
+              bta.field_q = 0;
+              jnb.field_o = 0;
+              via.field_b = 0;
+              wkb.field_c = 0;
+              tkb.field_p = 0;
+              break L0;
+            } else {
+              if (1 != jha.field_p) {
+                break L0;
+              } else {
+                tkb.field_p = 0;
+                ki.field_o = 0;
+                jnb.field_o = 0;
+                bta.field_q = 0;
+                break L0;
+              }
+            }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

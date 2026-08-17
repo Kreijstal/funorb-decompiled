@@ -1454,7 +1454,7 @@ final class ff extends ma {
                         var13 = var10_ref_int__;
                         var14 = 0;
                         L68: while (true) {
-                          if (((Object[]) (var13)).length <= var14) {
+                          if (java.lang.reflect.Array.getLength(var13) <= var14) {
                             L69: {
                               var45 = new StringBuilder("<col=ffffff>");
                               discarded$0 = var45.append(t.field_e[t.field_h]);

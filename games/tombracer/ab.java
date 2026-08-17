@@ -430,25 +430,50 @@ final class ab extends qra {
     }
 
     private final boolean b(int param0, int param1, byte param2) {
-        if (!this.a(true)) {
-            return false;
+        fv var4;
+        if (this.a(true)) {
+          L0: {
+            if ((param1 ^ -1) > -1) {
+              break L0;
+            } else {
+              if ((param0 ^ -1) > -1) {
+                break L0;
+              } else {
+                if (this.field_q <= param1) {
+                  break L0;
+                } else {
+                  if (param0 < this.field_s) {
+                    L1: {
+                      var4 = this.field_p[param1][param0];
+                      if (param2 >= 78) {
+                        break L1;
+                      } else {
+                        this.a(32, 41, (byte) 103);
+                        break L1;
+                      }
+                    }
+                    if (var4 != null) {
+                      if (!this.field_o.a((byte) 119, var4.field_f)) {
+                        return false;
+                      } else {
+                        this.field_m = param0;
+                        this.field_u = param1;
+                        return true;
+                      }
+                    } else {
+                      return false;
+                    }
+                  } else {
+                    return false;
+                  }
+                }
+              }
+            }
+          }
+          return false;
+        } else {
+          return false;
         }
-        if ((param1 ^ -1) > -1 || (param0 ^ -1) > -1 || this.field_q <= param1 || param0 >= this.field_s) {
-            return false;
-        }
-        fv var4 = this.field_p[param1][param0];
-        if (param2 < 78) {
-            this.a(32, 41, (byte) 103);
-        }
-        if (var4 == null) {
-            return false;
-        }
-        if (!(this.field_o.a((byte) 119, var4.field_f))) {
-            return false;
-        }
-        this.field_m = param0;
-        this.field_u = param1;
-        return true;
     }
 
     final boolean e(int param0) {

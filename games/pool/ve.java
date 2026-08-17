@@ -875,7 +875,20 @@ final class ve extends op {
     }
 
     final static void a(int param0, boolean param1, int[] param2, boolean param3, boolean param4, int[] param5, oc param6) {
+        RuntimeException stackIn_64_0 = null;
+        StringBuilder stackIn_64_1 = null;
+        RuntimeException stackIn_65_0 = null;
+        StringBuilder stackIn_65_1 = null;
+        String stackIn_65_2 = null;
+        StringBuilder stackIn_68_1 = null;
+        StringBuilder stackIn_69_1 = null;
+        String stackIn_69_2 = null;
+        StringBuilder stackIn_72_1 = null;
+        StringBuilder stackIn_73_1 = null;
+        String stackIn_73_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -898,19 +911,6 @@ final class ve extends op {
         int var27 = 0;
         int var28 = 0;
         int var29 = 0;
-        RuntimeException stackIn_64_0 = null;
-        StringBuilder stackIn_64_1 = null;
-        RuntimeException stackIn_65_0 = null;
-        StringBuilder stackIn_65_1 = null;
-        String stackIn_65_2 = null;
-        StringBuilder stackIn_68_1 = null;
-        StringBuilder stackIn_69_1 = null;
-        String stackIn_69_2 = null;
-        StringBuilder stackIn_72_1 = null;
-        StringBuilder stackIn_73_1 = null;
-        String stackIn_73_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
         try {
           L0: {
             L1: {

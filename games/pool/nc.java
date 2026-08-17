@@ -382,15 +382,15 @@ final class nc extends fa {
     }
 
     private final void c(int param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
         int var2;
         int var3;
         int var4;
@@ -440,9 +440,9 @@ final class nc extends fa {
                 var14 = (50 - var8) * fb.field_f[var10 - var8];
                 field_H[var4] = var2 + (var11 + ((field_L[var7] - var11) * var14 >> 16) << 9) / 50;
                 field_cb[var4] = var3 + (var12 + ((field_db[var7] - var12) * var14 >> 16) << 9) / 50;
-                incrementValue$9 = var4;
+                incrementValue$0 = var4;
                 var4++;
-                field_p[incrementValue$9] = var13 + (((this.field_J[param0] & 65535) - var13) * var14 >> 16);
+                field_p[incrementValue$0] = var13 + (((this.field_J[param0] & 65535) - var13) * var14 >> 16);
                 break L2;
               }
             }
@@ -452,17 +452,17 @@ final class nc extends fa {
               var14 = (50 - var8) * fb.field_f[var9 - var8];
               field_H[var4] = var2 + (var11 + ((field_L[var6] - var11) * var14 >> 16) << 9) / 50;
               field_cb[var4] = var3 + (var12 + ((field_db[var6] - var12) * var14 >> 16) << 9) / 50;
-              incrementValue$10 = var4;
+              incrementValue$1 = var4;
               var4++;
-              field_p[incrementValue$10] = var13 + (((this.field_y[param0] & 65535) - var13) * var14 >> 16);
+              field_p[incrementValue$1] = var13 + (((this.field_y[param0] & 65535) - var13) * var14 >> 16);
               break L1;
             }
           } else {
             field_H[var4] = field_X[var5];
             field_cb[var4] = field_v[var5];
-            incrementValue$11 = var4;
+            incrementValue$2 = var4;
             var4++;
-            field_p[incrementValue$11] = this.field_W[param0] & 65535;
+            field_p[incrementValue$2] = this.field_W[param0] & 65535;
             break L1;
           }
         }
@@ -478,9 +478,9 @@ final class nc extends fa {
                 var14 = (50 - var9) * fb.field_f[var8 - var9];
                 field_H[var4] = var2 + (var11 + ((field_L[var5] - var11) * var14 >> 16) << 9) / 50;
                 field_cb[var4] = var3 + (var12 + ((field_db[var5] - var12) * var14 >> 16) << 9) / 50;
-                incrementValue$12 = var4;
+                incrementValue$3 = var4;
                 var4++;
-                field_p[incrementValue$12] = var13 + (((this.field_W[param0] & 65535) - var13) * var14 >> 16);
+                field_p[incrementValue$3] = var13 + (((this.field_W[param0] & 65535) - var13) * var14 >> 16);
                 break L4;
               }
             }
@@ -490,17 +490,17 @@ final class nc extends fa {
               var14 = (50 - var9) * fb.field_f[var10 - var9];
               field_H[var4] = var2 + (var11 + ((field_L[var7] - var11) * var14 >> 16) << 9) / 50;
               field_cb[var4] = var3 + (var12 + ((field_db[var7] - var12) * var14 >> 16) << 9) / 50;
-              incrementValue$13 = var4;
+              incrementValue$4 = var4;
               var4++;
-              field_p[incrementValue$13] = var13 + (((this.field_J[param0] & 65535) - var13) * var14 >> 16);
+              field_p[incrementValue$4] = var13 + (((this.field_J[param0] & 65535) - var13) * var14 >> 16);
               break L3;
             }
           } else {
             field_H[var4] = field_X[var6];
             field_cb[var4] = field_v[var6];
-            incrementValue$14 = var4;
+            incrementValue$5 = var4;
             var4++;
-            field_p[incrementValue$14] = this.field_y[param0] & 65535;
+            field_p[incrementValue$5] = this.field_y[param0] & 65535;
             break L3;
           }
         }
@@ -516,9 +516,9 @@ final class nc extends fa {
                 var14 = (50 - var10) * fb.field_f[var9 - var10];
                 field_H[var4] = var2 + (var11 + ((field_L[var6] - var11) * var14 >> 16) << 9) / 50;
                 field_cb[var4] = var3 + (var12 + ((field_db[var6] - var12) * var14 >> 16) << 9) / 50;
-                incrementValue$15 = var4;
+                incrementValue$6 = var4;
                 var4++;
-                field_p[incrementValue$15] = var13 + (((this.field_y[param0] & 65535) - var13) * var14 >> 16);
+                field_p[incrementValue$6] = var13 + (((this.field_y[param0] & 65535) - var13) * var14 >> 16);
                 break L6;
               }
             }
@@ -528,17 +528,17 @@ final class nc extends fa {
               var14 = (50 - var10) * fb.field_f[var8 - var10];
               field_H[var4] = var2 + (var11 + ((field_L[var5] - var11) * var14 >> 16) << 9) / 50;
               field_cb[var4] = var3 + (var12 + ((field_db[var5] - var12) * var14 >> 16) << 9) / 50;
-              incrementValue$16 = var4;
+              incrementValue$7 = var4;
               var4++;
-              field_p[incrementValue$16] = var13 + (((this.field_W[param0] & 65535) - var13) * var14 >> 16);
+              field_p[incrementValue$7] = var13 + (((this.field_W[param0] & 65535) - var13) * var14 >> 16);
               break L5;
             }
           } else {
             field_H[var4] = field_X[var7];
             field_cb[var4] = field_v[var7];
-            incrementValue$17 = var4;
+            incrementValue$8 = var4;
             var4++;
-            field_p[incrementValue$17] = this.field_J[param0] & 65535;
+            field_p[incrementValue$8] = this.field_J[param0] & 65535;
             break L5;
           }
         }

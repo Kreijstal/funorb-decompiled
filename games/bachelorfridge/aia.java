@@ -18,27 +18,6 @@ final class aia extends bw {
     }
 
     final static void d(byte param0) {
-        kv var1 = null;
-        int var1_int = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String var5_ref_String = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        kv var9 = null;
-        int var10 = 0;
-        kv var11 = null;
-        kv var12 = null;
-        String var14 = null;
-        kv var16 = null;
-        int[] var27 = null;
-        int[] var28 = null;
-        int[] var29 = null;
-        int[] var30 = null;
         int stackIn_50_0 = 0;
         int stackIn_50_1 = 0;
         int stackIn_51_0 = 0;
@@ -61,7 +40,28 @@ final class aia extends bw {
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
+        kv var1 = null;
+        int var1_int = 0;
         RuntimeException var1_ref = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        String var5_ref_String = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9_int = 0;
+        kv var9 = null;
+        int var10 = 0;
+        kv var11 = null;
+        kv var12 = null;
+        String var14 = null;
+        kv var16 = null;
+        int[] var27 = null;
+        int[] var28 = null;
+        int[] var29 = null;
+        int[] var30 = null;
         var10 = BachelorFridge.field_y;
         try {
           L0: {

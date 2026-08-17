@@ -420,15 +420,32 @@ class rg extends jk implements sh {
     }
 
     final void s(int param0) {
-        if (!this.field_K) {
-            return;
-        }
-        if (param0 != 2121792) {
-            field_wb = -29;
-        }
-        this.field_K = false;
-        if (this.field_nb || this.field_rb) {
-            fd.a(true);
+        if (this.field_K) {
+          L0: {
+            if (param0 == 2121792) {
+              break L0;
+            } else {
+              field_wb = -29;
+              break L0;
+            }
+          }
+          L1: {
+            this.field_K = false;
+            if (this.field_nb) {
+              fd.a(true);
+              break L1;
+            } else {
+              if (!this.field_rb) {
+                break L1;
+              } else {
+                r.a((byte) -127);
+                break L1;
+              }
+            }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

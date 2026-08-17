@@ -59,7 +59,23 @@ final class eg {
     }
 
     final static void a(wu param0, int[] param1, int param2, boolean param3, boolean param4, int[] param5, boolean param6) {
+        int stackIn_56_0 = 0;
+        int stackIn_56_1 = 0;
+        int stackIn_59_0 = 0;
+        RuntimeException stackIn_68_0 = null;
+        StringBuilder stackIn_68_1 = null;
+        RuntimeException stackIn_69_0 = null;
+        StringBuilder stackIn_69_1 = null;
+        String stackIn_69_2 = null;
+        StringBuilder stackIn_72_1 = null;
+        StringBuilder stackIn_73_1 = null;
+        String stackIn_73_2 = null;
+        StringBuilder stackIn_76_1 = null;
+        StringBuilder stackIn_77_1 = null;
+        String stackIn_77_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -84,22 +100,6 @@ final class eg {
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
-        int stackIn_56_0 = 0;
-        int stackIn_56_1 = 0;
-        int stackIn_59_0 = 0;
-        RuntimeException stackIn_68_0 = null;
-        StringBuilder stackIn_68_1 = null;
-        RuntimeException stackIn_69_0 = null;
-        StringBuilder stackIn_69_1 = null;
-        String stackIn_69_2 = null;
-        StringBuilder stackIn_72_1 = null;
-        StringBuilder stackIn_73_1 = null;
-        String stackIn_73_2 = null;
-        StringBuilder stackIn_76_1 = null;
-        StringBuilder stackIn_77_1 = null;
-        String stackIn_77_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
         var31 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {

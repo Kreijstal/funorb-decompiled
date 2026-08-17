@@ -473,23 +473,38 @@ final class vd extends td implements jg, m, a {
     }
 
     private final boolean j(int param0) {
-        if (param0 != -21109) {
-            return true;
-        }
-        if (this.a((wk) (this.field_F), (byte) 73)) {
-            if (this.a((wk) (this.field_M), (byte) 73)) {
-                if (this.a((wk) (this.field_I), (byte) 73)) {
-                    if (this.a((wk) (this.field_J), (byte) 73)) {
-                        if (this.a((wk) (this.field_E), (byte) 73)) {
-                            if (this.a((wk) (this.field_L), (byte) 73)) {
-                                return true;
-                            }
-                        }
+        if (param0 == -21109) {
+          L0: {
+            if (!this.a((wk) (this.field_F), (byte) 73)) {
+              break L0;
+            } else {
+              if (!this.a((wk) (this.field_M), (byte) 73)) {
+                break L0;
+              } else {
+                if (!this.a((wk) (this.field_I), (byte) 73)) {
+                  break L0;
+                } else {
+                  if (!this.a((wk) (this.field_J), (byte) 73)) {
+                    break L0;
+                  } else {
+                    if (!this.a((wk) (this.field_E), (byte) 73)) {
+                      break L0;
+                    } else {
+                      if (!this.a((wk) (this.field_L), (byte) 73)) {
+                        break L0;
+                      } else {
+                        return true;
+                      }
                     }
+                  }
                 }
+              }
             }
+          }
+          return false;
+        } else {
+          return true;
         }
-        return false;
     }
 
     final boolean a(byte param0, char param1, al param2, int param3) {

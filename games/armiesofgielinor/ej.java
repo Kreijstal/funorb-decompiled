@@ -1337,7 +1337,7 @@ final class ej extends tc implements mm {
                 var13 = 0;
                 var6 = var13;
                 L8: while (true) {
-                  if (((Object[]) (var5)).length <= var13) {
+                  if (java.lang.reflect.Array.getLength(var5) <= var13) {
                     break L7;
                   } else {
                     fs.field_b[var13] = ((float[]) (var5))[var13];

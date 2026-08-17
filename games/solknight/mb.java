@@ -84,7 +84,24 @@ final class mb {
     }
 
     final static void a(uh param0, boolean param1, int[] param2, int[] param3, boolean param4, boolean param5, int param6) {
+        int stackIn_54_0 = 0;
+        int stackIn_54_1 = 0;
+        int stackIn_57_0 = 0;
+        int stackIn_57_1 = 0;
+        RuntimeException stackIn_66_0 = null;
+        StringBuilder stackIn_66_1 = null;
+        RuntimeException stackIn_67_0 = null;
+        StringBuilder stackIn_67_1 = null;
+        String stackIn_67_2 = null;
+        StringBuilder stackIn_70_1 = null;
+        StringBuilder stackIn_71_1 = null;
+        String stackIn_71_2 = null;
+        StringBuilder stackIn_74_1 = null;
+        StringBuilder stackIn_75_1 = null;
+        String stackIn_75_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
+        RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -108,23 +125,6 @@ final class mb {
         int var28 = 0;
         int var29 = 0;
         int var30 = 0;
-        int stackIn_54_0 = 0;
-        int stackIn_54_1 = 0;
-        int stackIn_57_0 = 0;
-        int stackIn_57_1 = 0;
-        RuntimeException stackIn_66_0 = null;
-        StringBuilder stackIn_66_1 = null;
-        RuntimeException stackIn_67_0 = null;
-        StringBuilder stackIn_67_1 = null;
-        String stackIn_67_2 = null;
-        StringBuilder stackIn_70_1 = null;
-        StringBuilder stackIn_71_1 = null;
-        String stackIn_71_2 = null;
-        StringBuilder stackIn_74_1 = null;
-        StringBuilder stackIn_75_1 = null;
-        String stackIn_75_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
         var30 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {

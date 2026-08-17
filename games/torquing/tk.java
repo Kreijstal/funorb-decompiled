@@ -35,35 +35,62 @@ class tk extends lg {
     }
 
     private final void a(boolean param0) {
-        int var8 = Torquing.field_u;
-        if (!(this.field_J)) {
-            this.field_j = 0;
-            this.field_v = 0;
-            return;
-        }
-        if (!(this.field_q instanceof fe)) {
-            return;
-        }
-        fe var9 = (fe) ((Object) this.field_q);
-        uj var3 = var9.b((byte) 105, (gm) (this));
-        int var4 = var3.a(param0);
-        int var5 = var9.b((gm) (this), -1);
-        int var6 = var9.a(false) >> -607291775;
-        if (!(var4 >= -var6 + var5)) {
-            this.field_v = 0;
-            this.field_j = 0;
-            return;
-        }
-        int var7 = this.field_j + var3.a(this.field_G, (byte) -126);
-        if (var7 > var5 + -var6 || var7 < var6) {
-            this.field_j = this.field_j - (-var5 + var6) - var7;
-        }
-        if (-1 > (this.field_j ^ -1)) {
-            this.field_j = 0;
+        uj var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        fe var9;
+        var8 = Torquing.field_u;
+        if (!this.field_J) {
+          this.field_j = 0;
+          this.field_v = 0;
+          return;
         } else {
-            if (!(this.field_j >= var6 + -var5)) {
-                this.field_j = var6 + -var5;
+          if (this.field_q instanceof fe) {
+            var9 = (fe) ((Object) this.field_q);
+            var3 = var9.b((byte) 105, (gm) (this));
+            var4 = var3.a(param0);
+            var5 = var9.b((gm) (this), -1);
+            var6 = var9.a(false) >> -607291775;
+            if (var4 < -var6 + var5) {
+              this.field_v = 0;
+              this.field_j = 0;
+              return;
+            } else {
+              L0: {
+                var7 = this.field_j + var3.a(this.field_G, (byte) -126);
+                if (var7 > var5 + -var6) {
+                  this.field_j = this.field_j - (-var5 + var6) - var7;
+                  break L0;
+                } else {
+                  if (var7 >= var6) {
+                    break L0;
+                  } else {
+                    this.field_j = this.field_j + var6 + -var7;
+                    break L0;
+                  }
+                }
+              }
+              L1: {
+                if (-1 <= (this.field_j ^ -1)) {
+                  if (this.field_j < var6 + -var5) {
+                    this.field_j = var6 + -var5;
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                } else {
+                  this.field_j = 0;
+                  break L1;
+                }
+              }
+              return;
             }
+          } else {
+            return;
+          }
         }
     }
 

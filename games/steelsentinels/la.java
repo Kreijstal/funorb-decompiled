@@ -90,7 +90,28 @@ final class la {
     }
 
     final static void a(int param0) {
+        int stackIn_51_0 = 0;
+        int stackIn_51_1 = 0;
+        int stackIn_51_2 = 0;
+        int stackIn_52_0 = 0;
+        int stackIn_52_1 = 0;
+        int stackIn_52_2 = 0;
+        int stackIn_52_3 = 0;
+        int stackIn_57_0 = 0;
+        int stackIn_57_1 = 0;
+        int stackIn_58_0 = 0;
+        int stackIn_58_1 = 0;
+        int stackIn_58_2 = 0;
+        int stackIn_66_0 = 0;
+        int stackIn_66_1 = 0;
+        int stackIn_67_0 = 0;
+        int stackIn_67_1 = 0;
+        int stackIn_67_2 = 0;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         wk var2_ref_wk = null;
         int var3 = 0;
@@ -112,27 +133,6 @@ final class la {
         int[] var28 = null;
         int[] var29 = null;
         int[] var30 = null;
-        int stackIn_51_0 = 0;
-        int stackIn_51_1 = 0;
-        int stackIn_51_2 = 0;
-        int stackIn_52_0 = 0;
-        int stackIn_52_1 = 0;
-        int stackIn_52_2 = 0;
-        int stackIn_52_3 = 0;
-        int stackIn_57_0 = 0;
-        int stackIn_57_1 = 0;
-        int stackIn_58_0 = 0;
-        int stackIn_58_1 = 0;
-        int stackIn_58_2 = 0;
-        int stackIn_66_0 = 0;
-        int stackIn_66_1 = 0;
-        int stackIn_67_0 = 0;
-        int stackIn_67_1 = 0;
-        int stackIn_67_2 = 0;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
         var11 = SteelSentinels.field_G;
         try {
           L0: {

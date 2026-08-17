@@ -554,15 +554,48 @@ abstract class qc implements kd {
     }
 
     private final void a(boolean param0) {
-        this.field_j = !this.field_j ? true : false;
-        if (this.field_j || null != this.field_m) {
-            this.field_f = 15;
-            if (!(null == this.field_m)) {
-                this.field_m.a(false, this.field_p);
-            }
+        Object stackIn_2_0 = null;
+        Object stackIn_3_0 = null;
+        int stackIn_3_1 = 0;
+        L0: {
+          stackIn_2_0 = this;
+
+          if (this.field_j) {
+            stackIn_3_0 = this;
+            stackIn_3_1 = 0;
+            break L0;
+          } else {
+            stackIn_3_0 = this;
+            stackIn_3_1 = 1;
+            break L0;
+          }
         }
-        if (!param0) {
+        L1: {
+          ((qc) (this)).field_j = stackIn_3_1 != 0;
+          if (this.field_j) {
+            this.field_f = 15;
+            if (null != this.field_m) {
+              this.field_m.a(false, this.field_p);
+              break L1;
+            } else {
+              break L1;
+            }
+          } else {
+            if (null == this.field_m) {
+              break L1;
+            } else {
+              this.field_m.a(false, (llb) null);
+              break L1;
+            }
+          }
+        }
+        L2: {
+          if (param0) {
+            break L2;
+          } else {
             field_g = (ri) null;
+            break L2;
+          }
         }
     }
 

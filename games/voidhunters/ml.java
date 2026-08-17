@@ -4274,16 +4274,27 @@ final class ml implements ntb, utb {
     }
 
     private final int b(byte param0) {
-        if (param0 != 103) {
+        L0: {
+          if (param0 == 103) {
+            break L0;
+          } else {
             this.b(false);
+            break L0;
+          }
         }
-        if (this.field_h != null) {
-            return this.field_h.b((byte) 118);
-        }
-        if (this.field_c != null || null != this.field_k) {
+        if (this.field_h == null) {
+          if (this.field_c != null) {
             return this.field_c.e((byte) -4);
+          } else {
+            if (null == this.field_k) {
+              return 0;
+            } else {
+              return this.field_k.d((byte) 126);
+            }
+          }
+        } else {
+          return this.field_h.b((byte) 118);
         }
-        return 0;
     }
 
     public static void e(int param0) {

@@ -395,14 +395,25 @@ final class pw extends fqa {
     }
 
     final boolean v(int param0) {
-        if (param0 != 555277520) {
+        int var2;
+        L0: {
+          if (param0 == 555277520) {
+            break L0;
+          } else {
             this.field_K = -36;
+            break L0;
+          }
         }
-        int var2 = this.field_m;
-        if (-55 == (var2 ^ -1) || (var2 ^ -1) == -56) {
+        var2 = this.field_m;
+        if (-55 == (var2 ^ -1)) {
+          return true;
+        } else {
+          if ((var2 ^ -1) != -56) {
+            return false;
+          } else {
             return true;
+          }
         }
-        return false;
     }
 
     final void a(boolean param0, kh param1) {

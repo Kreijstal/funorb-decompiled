@@ -6332,7 +6332,7 @@ final class pe implements ntb, utb {
                 if (var5 == null) {
                   break L4;
                 } else {
-                  if (((Object[]) (var5)).length <= var4_int) {
+                  if (java.lang.reflect.Array.getLength(var5) <= var4_int) {
                     break L4;
                   } else {
                     ((Object[]) (var5))[var4_int] = null;
@@ -11574,7 +11574,6 @@ final class pe implements ntb, utb {
         String stackIn_25_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        nbb[] var3 = null;
         RuntimeException var5 = null;
         var7 = VoidHunters.field_G;
         try {
@@ -11598,13 +11597,13 @@ final class pe implements ntb, utb {
                         L3: {
                           if (-2 == (param3 ^ -1)) {
                             this.l(param0 + -29775);
-                            var3 = this.field_m;
+                            param2 = (anb[]) ((Object) this.field_m);
                             break L3;
                           } else {
                             break L3;
                           }
                         }
-                        var3[var5_int] = (nbb) ((Object) param1);
+                        param2[var5_int] = param1;
                         param1.field_l = var6;
                         stackIn_13_0 = 1;
                         decompiledRegionSelector0 = 1;
@@ -11647,7 +11646,7 @@ final class pe implements ntb, utb {
 
             stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
 
-            if (var3 == null) {
+            if (param2 == null) {
               stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackIn_25_2 = "null";

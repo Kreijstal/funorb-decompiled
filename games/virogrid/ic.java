@@ -2427,16 +2427,33 @@ final class ic {
     }
 
     final void b(byte param0) {
-        int var3 = Virogrid.field_F ? 1 : 0;
-        if (this.field_g) {
-            gk.field_g.g(60, param0 + 53);
-        } else {
-            if (this.field_C.field_A == 0 || this.field_C.field_A == 1) {
-                this.field_C.d(param0 + -25, 1);
+        int var3;
+        L0: {
+          var3 = Virogrid.field_F ? 1 : 0;
+          if (!this.field_g) {
+            if (this.field_C.field_A == 0) {
+              this.field_C.d(param0 + -25, 1);
+              break L0;
+            } else {
+              if (this.field_C.field_A != 1) {
+                break L0;
+              } else {
+                this.field_C.d(-35, 0);
+                break L0;
+              }
             }
+          } else {
+            gk.field_g.g(60, param0 + 53);
+            break L0;
+          }
         }
-        if (param0 != -45) {
+        L1: {
+          if (param0 == -45) {
+            break L1;
+          } else {
             ic.c((byte) -78);
+            break L1;
+          }
         }
     }
 

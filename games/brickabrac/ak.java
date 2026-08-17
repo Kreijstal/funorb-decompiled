@@ -2250,12 +2250,30 @@ final class ak {
     }
 
     final boolean b(int param0) {
-        if (param0 < 75) {
+        int var2;
+        L0: {
+          if (param0 >= 75) {
+            break L0;
+          } else {
             field_e = (String) null;
+            break L0;
+          }
         }
-        int var2 = ((this.field_g | this.field_a | this.field_i) ^ -1) & -1 + (1 << this.field_k);
-        if (var2 == 0 || wn.a(var2, (byte) -6)) {
+        L1: {
+          var2 = ((this.field_g | this.field_a | this.field_i) ^ -1) & -1 + (1 << this.field_k);
+          if (var2 == 0) {
             this.a(false);
+            break L1;
+          } else {
+            if (!wn.a(var2, (byte) -6)) {
+              break L1;
+            } else {
+              this.field_h = ed.b(9, var2 + -1);
+              this.field_a = this.field_a | 1 << this.field_h;
+              this.a(false);
+              break L1;
+            }
+          }
         }
         return this.field_c;
     }

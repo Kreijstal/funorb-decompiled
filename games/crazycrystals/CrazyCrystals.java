@@ -1821,7 +1821,7 @@ public final class CrazyCrystals extends eb {
               var7 = bf.a(-1, "bgtiles_grass", "", l.field_d);
               var8_ref_dl__ = bf.a(-1, "bgtiles_metal", "", l.field_d);
               var9 = bf.a(-1, "bgtiles_tiles", "", l.field_d);
-              var10 = var9.length + (var8_ref_dl__.length + var6_ref_dl__.length - -((Object[]) (var7)).length) + -12;
+              var10 = var9.length + (var8_ref_dl__.length + var6_ref_dl__.length - -java.lang.reflect.Array.getLength(var7)) + -12;
               tb.field_e = new dl[4 - -var10];
               tb.field_e[0] = var6_ref_dl__[0];
               tb.field_e[3] = var9[0];
@@ -1843,7 +1843,7 @@ public final class CrazyCrystals extends eb {
                   vp.field_a[1] = var11;
                   var12 = 3;
                   L11: while (true) {
-                    if (var12 >= ((Object[]) (var7)).length) {
+                    if (var12 >= java.lang.reflect.Array.getLength(var7)) {
                       vp.field_a[2] = var11;
                       var12 = 3;
                       L12: while (true) {

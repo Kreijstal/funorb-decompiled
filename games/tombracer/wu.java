@@ -5,41 +5,74 @@ final class wu implements mfa {
     static jta field_a;
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param0 != -17) {
-            return true;
+        int stackIn_2_0 = 0;
+        int stackIn_7_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          L0: {
+            if (param0 == -17) {
+              L1: {
+                if (0 == (2048 & param2)) {
+                  stackIn_7_0 = 0;
+                  break L1;
+                } else {
+                  stackIn_7_0 = 1;
+                  break L1;
+                }
+              }
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              stackIn_2_0 = 1;
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw tba.a((Throwable) ((Object) var3), "wu.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return 0 != (2048 & param2) ? true : false;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_7_0 != 0;
+        }
     }
 
     public final dg a(la param0, kh param1, boolean param2) {
-        ria stackIn_32_0 = null;
-        ioa stackIn_34_0 = null;
-        am stackIn_36_0 = null;
-        gaa stackIn_38_0 = null;
-        lfa stackIn_40_0 = null;
-        boa stackIn_42_0 = null;
-        fu stackIn_44_0 = null;
-        cv stackIn_46_0 = null;
-        kva stackIn_48_0 = null;
-        dc stackIn_50_0 = null;
-        kga stackIn_52_0 = null;
-        oo stackIn_54_0 = null;
-        ki stackIn_56_0 = null;
-        lma stackIn_58_0 = null;
-        nq stackIn_60_0 = null;
-        ce stackIn_62_0 = null;
-        aka stackIn_64_0 = null;
-        vsa stackIn_66_0 = null;
-        pqa stackIn_68_0 = null;
-        ao stackIn_70_0 = null;
-        RuntimeException stackIn_73_0 = null;
-        StringBuilder stackIn_73_1 = null;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
-        String stackIn_74_2 = null;
-        StringBuilder stackIn_76_1 = null;
-        StringBuilder stackIn_77_1 = null;
-        String stackIn_77_2 = null;
+        ria stackIn_41_0 = null;
+        ioa stackIn_43_0 = null;
+        am stackIn_45_0 = null;
+        gaa stackIn_47_0 = null;
+        lfa stackIn_49_0 = null;
+        boa stackIn_51_0 = null;
+        fu stackIn_53_0 = null;
+        cv stackIn_55_0 = null;
+        kva stackIn_57_0 = null;
+        dc stackIn_59_0 = null;
+        kga stackIn_61_0 = null;
+        oo stackIn_63_0 = null;
+        ki stackIn_65_0 = null;
+        lma stackIn_67_0 = null;
+        nq stackIn_69_0 = null;
+        ce stackIn_71_0 = null;
+        aka stackIn_73_0 = null;
+        vsa stackIn_75_0 = null;
+        pqa stackIn_77_0 = null;
+        ao stackIn_79_0 = null;
+        RuntimeException stackIn_83_0 = null;
+        StringBuilder stackIn_83_1 = null;
+        RuntimeException stackIn_84_0 = null;
+        StringBuilder stackIn_84_1 = null;
+        String stackIn_84_2 = null;
+        RuntimeException stackIn_87_0 = null;
+        StringBuilder stackIn_87_1 = null;
+        RuntimeException stackIn_88_0 = null;
+        StringBuilder stackIn_88_1 = null;
+        String stackIn_88_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -60,12 +93,12 @@ final class wu implements mfa {
             }
             var5 = var4_int;
             if (1 == var5) {
-              stackIn_32_0 = new ria(var4_int, param0, param1);
+              stackIn_41_0 = new ria(var4_int, param0, param1);
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
               if (3 == var5) {
-                stackIn_34_0 = new ioa(var4_int, param0, param1);
+                stackIn_43_0 = new ioa(var4_int, param0, param1);
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
@@ -73,104 +106,104 @@ final class wu implements mfa {
                   if (5 != var5) {
                     if ((var5 ^ -1) != -7) {
                       if (var5 == 7) {
-                        stackIn_42_0 = new boa(var4_int, param0, param1);
+                        stackIn_51_0 = new boa(var4_int, param0, param1);
                         decompiledRegionSelector0 = 5;
                         break L0;
                       } else {
                         if ((var5 ^ -1) == -9) {
-                          stackIn_44_0 = new fu(var4_int, param0, param1);
+                          stackIn_53_0 = new fu(var4_int, param0, param1);
                           decompiledRegionSelector0 = 6;
                           break L0;
                         } else {
                           if (9 != var5) {
                             if (10 == var5) {
-                              stackIn_48_0 = new kva(var4_int, param0, param1);
+                              stackIn_57_0 = new kva(var4_int, param0, param1);
                               decompiledRegionSelector0 = 8;
                               break L0;
                             } else {
                               if (-12 != (var5 ^ -1)) {
                                 if (var5 == 12) {
-                                  stackIn_52_0 = new kga(var4_int, param0, param1);
+                                  stackIn_61_0 = new kga(var4_int, param0, param1);
                                   decompiledRegionSelector0 = 10;
                                   break L0;
                                 } else {
                                   if (var5 == 13) {
-                                    stackIn_54_0 = new oo(var4_int, param0, param1);
+                                    stackIn_63_0 = new oo(var4_int, param0, param1);
                                     decompiledRegionSelector0 = 11;
                                     break L0;
                                   } else {
                                     if ((var5 ^ -1) != -15) {
                                       if ((var5 ^ -1) == -16) {
-                                        stackIn_58_0 = new lma(var4_int, param0, param1);
+                                        stackIn_67_0 = new lma(var4_int, param0, param1);
                                         decompiledRegionSelector0 = 13;
                                         break L0;
                                       } else {
                                         if (16 == var5) {
-                                          stackIn_60_0 = new nq(var4_int, param0, param1);
+                                          stackIn_69_0 = new nq(var4_int, param0, param1);
                                           decompiledRegionSelector0 = 14;
                                           break L0;
                                         } else {
                                           if (17 != var5) {
                                             if (-19 != (var5 ^ -1)) {
                                               if (19 == var5) {
-                                                stackIn_66_0 = new vsa(var4_int, param0, param1);
+                                                stackIn_75_0 = new vsa(var4_int, param0, param1);
                                                 decompiledRegionSelector0 = 17;
                                                 break L0;
                                               } else {
                                                 if (-21 == (var5 ^ -1)) {
-                                                  stackIn_68_0 = new pqa(var4_int, param0, param1);
+                                                  stackIn_77_0 = new pqa(var4_int, param0, param1);
                                                   decompiledRegionSelector0 = 18;
                                                   break L0;
                                                 } else {
-                                                  stackIn_70_0 = new ao(var4_int, param0, param1);
+                                                  stackIn_79_0 = new ao(var4_int, param0, param1);
                                                   decompiledRegionSelector0 = 19;
                                                   break L0;
                                                 }
                                               }
                                             } else {
-                                              stackIn_64_0 = new aka(var4_int, param0, param1);
+                                              stackIn_73_0 = new aka(var4_int, param0, param1);
                                               decompiledRegionSelector0 = 16;
                                               break L0;
                                             }
                                           } else {
-                                            stackIn_62_0 = new ce(var4_int, param0, param1);
+                                            stackIn_71_0 = new ce(var4_int, param0, param1);
                                             decompiledRegionSelector0 = 15;
                                             break L0;
                                           }
                                         }
                                       }
                                     } else {
-                                      stackIn_56_0 = new ki(var4_int, param0, param1);
+                                      stackIn_65_0 = new ki(var4_int, param0, param1);
                                       decompiledRegionSelector0 = 12;
                                       break L0;
                                     }
                                   }
                                 }
                               } else {
-                                stackIn_50_0 = new dc(var4_int, param0, param1);
+                                stackIn_59_0 = new dc(var4_int, param0, param1);
                                 decompiledRegionSelector0 = 9;
                                 break L0;
                               }
                             }
                           } else {
-                            stackIn_46_0 = new cv(var4_int, param0, param1);
+                            stackIn_55_0 = new cv(var4_int, param0, param1);
                             decompiledRegionSelector0 = 7;
                             break L0;
                           }
                         }
                       }
                     } else {
-                      stackIn_40_0 = new lfa(var4_int, param0, param1);
+                      stackIn_49_0 = new lfa(var4_int, param0, param1);
                       decompiledRegionSelector0 = 4;
                       break L0;
                     }
                   } else {
-                    stackIn_38_0 = new gaa(var4_int, param0, param1);
+                    stackIn_47_0 = new gaa(var4_int, param0, param1);
                     decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
-                  stackIn_36_0 = new am(var4_int, param0, param1);
+                  stackIn_45_0 = new am(var4_int, param0, param1);
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
@@ -181,99 +214,99 @@ final class wu implements mfa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackIn_73_0 = (RuntimeException) (var4);
+            stackIn_83_0 = (RuntimeException) (var4);
 
-            stackIn_73_1 = new StringBuilder().append("wu.A(");
+            stackIn_83_1 = new StringBuilder().append("wu.A(");
 
             if (param0 == null) {
-              stackIn_74_0 = (RuntimeException) ((Object) stackIn_73_0);
-              stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
-              stackIn_74_2 = "null";
+              stackIn_84_0 = (RuntimeException) ((Object) stackIn_83_0);
+              stackIn_84_1 = (StringBuilder) ((Object) stackIn_83_1);
+              stackIn_84_2 = "null";
               break L2;
             } else {
-              stackIn_74_0 = (RuntimeException) ((Object) stackIn_73_0);
-              stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
-              stackIn_74_2 = "{...}";
+              stackIn_84_0 = (RuntimeException) ((Object) stackIn_83_0);
+              stackIn_84_1 = (StringBuilder) ((Object) stackIn_83_1);
+              stackIn_84_2 = "{...}";
               break L2;
             }
           }
           L3: {
+            stackIn_87_0 = (RuntimeException) ((Object) stackIn_84_0);
 
-
-            stackIn_76_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(',');
+            stackIn_87_1 = ((StringBuilder) (Object) stackIn_84_1).append(stackIn_84_2).append(',');
 
             if (param1 == null) {
-              stackIn_74_0 = (RuntimeException) ((Object) stackIn_74_0);
-              stackIn_77_1 = (StringBuilder) ((Object) stackIn_76_1);
-              stackIn_77_2 = "null";
+              stackIn_88_0 = (RuntimeException) ((Object) stackIn_87_0);
+              stackIn_88_1 = (StringBuilder) ((Object) stackIn_87_1);
+              stackIn_88_2 = "null";
               break L3;
             } else {
-              stackIn_74_0 = (RuntimeException) ((Object) stackIn_74_0);
-              stackIn_77_1 = (StringBuilder) ((Object) stackIn_76_1);
-              stackIn_77_2 = "{...}";
+              stackIn_88_0 = (RuntimeException) ((Object) stackIn_84_0);
+              stackIn_88_1 = (StringBuilder) ((Object) stackIn_87_1);
+              stackIn_88_2 = "{...}";
               break L3;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_74_0), stackIn_77_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_88_0), stackIn_88_2 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
-          return (dg) ((Object) stackIn_32_0);
+          return (dg) ((Object) stackIn_41_0);
         } else {
           if (decompiledRegionSelector0 == 1) {
-            return (dg) ((Object) stackIn_34_0);
+            return (dg) ((Object) stackIn_43_0);
           } else {
             if (decompiledRegionSelector0 == 2) {
-              return (dg) ((Object) stackIn_36_0);
+              return (dg) ((Object) stackIn_45_0);
             } else {
               if (decompiledRegionSelector0 == 3) {
-                return (dg) ((Object) stackIn_38_0);
+                return (dg) ((Object) stackIn_47_0);
               } else {
                 if (decompiledRegionSelector0 == 4) {
-                  return (dg) ((Object) stackIn_40_0);
+                  return (dg) ((Object) stackIn_49_0);
                 } else {
                   if (decompiledRegionSelector0 == 5) {
-                    return (dg) ((Object) stackIn_42_0);
+                    return (dg) ((Object) stackIn_51_0);
                   } else {
                     if (decompiledRegionSelector0 == 6) {
-                      return (dg) ((Object) stackIn_44_0);
+                      return (dg) ((Object) stackIn_53_0);
                     } else {
                       if (decompiledRegionSelector0 == 7) {
-                        return (dg) ((Object) stackIn_46_0);
+                        return (dg) ((Object) stackIn_55_0);
                       } else {
                         if (decompiledRegionSelector0 == 8) {
-                          return (dg) ((Object) stackIn_48_0);
+                          return (dg) ((Object) stackIn_57_0);
                         } else {
                           if (decompiledRegionSelector0 == 9) {
-                            return (dg) ((Object) stackIn_50_0);
+                            return (dg) ((Object) stackIn_59_0);
                           } else {
                             if (decompiledRegionSelector0 == 10) {
-                              return (dg) ((Object) stackIn_52_0);
+                              return (dg) ((Object) stackIn_61_0);
                             } else {
                               if (decompiledRegionSelector0 == 11) {
-                                return (dg) ((Object) stackIn_54_0);
+                                return (dg) ((Object) stackIn_63_0);
                               } else {
                                 if (decompiledRegionSelector0 == 12) {
-                                  return (dg) ((Object) stackIn_56_0);
+                                  return (dg) ((Object) stackIn_65_0);
                                 } else {
                                   if (decompiledRegionSelector0 == 13) {
-                                    return (dg) ((Object) stackIn_58_0);
+                                    return (dg) ((Object) stackIn_67_0);
                                   } else {
                                     if (decompiledRegionSelector0 == 14) {
-                                      return (dg) ((Object) stackIn_60_0);
+                                      return (dg) ((Object) stackIn_69_0);
                                     } else {
                                       if (decompiledRegionSelector0 == 15) {
-                                        return (dg) ((Object) stackIn_62_0);
+                                        return (dg) ((Object) stackIn_71_0);
                                       } else {
                                         if (decompiledRegionSelector0 == 16) {
-                                          return (dg) ((Object) stackIn_64_0);
+                                          return (dg) ((Object) stackIn_73_0);
                                         } else {
                                           if (decompiledRegionSelector0 == 17) {
-                                            return (dg) ((Object) stackIn_66_0);
+                                            return (dg) ((Object) stackIn_75_0);
                                           } else {
                                             if (decompiledRegionSelector0 == 18) {
-                                              return (dg) ((Object) stackIn_68_0);
+                                              return (dg) ((Object) stackIn_77_0);
                                             } else {
-                                              return (dg) ((Object) stackIn_70_0);
+                                              return (dg) ((Object) stackIn_79_0);
                                             }
                                           }
                                         }
@@ -296,233 +329,384 @@ final class wu implements mfa {
     }
 
     public final void a(int param0, kh param1, dg param2) {
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            if (param0 != 15682) {
+          L0: {
+            L1: {
+              if (param0 == 15682) {
+                break L1;
+              } else {
                 field_a = (jta) null;
+                break L1;
+              }
             }
             param1.a((byte) -128, param2.h((byte) 81), 6);
             param2.a((byte) 88, param1);
-        } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "wu.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackIn_7_0 = (RuntimeException) (runtimeException);
+
+            stackIn_7_1 = new StringBuilder().append("wu.B(").append(param0).append(',');
+
+            if (param1 == null) {
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "null";
+              break L2;
+            } else {
+              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackIn_8_2 = "{...}";
+              break L2;
+            }
+          }
+          L3: {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_8_0);
+
+            stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
+
+            if (param2 == null) {
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "null";
+              break L3;
+            } else {
+              stackIn_12_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackIn_12_2 = "{...}";
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
     }
 
     public final dg a(int param0, int param1) {
-        int var3;
-        int var4;
-        kh var5;
+        ria stackIn_41_0 = null;
+        ioa stackIn_43_0 = null;
+        am stackIn_45_0 = null;
+        gaa stackIn_47_0 = null;
+        lfa stackIn_49_0 = null;
+        boa stackIn_51_0 = null;
+        fu stackIn_53_0 = null;
+        cv stackIn_55_0 = null;
+        kva stackIn_57_0 = null;
+        dc stackIn_59_0 = null;
+        kga stackIn_61_0 = null;
+        oo stackIn_63_0 = null;
+        ki stackIn_65_0 = null;
+        lma stackIn_67_0 = null;
+        nq stackIn_69_0 = null;
+        ce stackIn_71_0 = null;
+        aka stackIn_73_0 = null;
+        vsa stackIn_75_0 = null;
+        pqa stackIn_77_0 = null;
+        ao stackIn_79_0 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        kh var5 = null;
         var4 = TombRacer.field_G ? 1 : 0;
-        if (param1 >= 73) {
-          var3 = param0;
-          if (var3 != 1) {
-            if ((var3 ^ -1) != -4) {
-              if (-5 != (var3 ^ -1)) {
-                if ((var3 ^ -1) != -6) {
-                  if ((var3 ^ -1) != -7) {
-                    if (var3 != 7) {
-                      if (var3 != 8) {
-                        if ((var3 ^ -1) != -10) {
-                          if (10 != var3) {
-                            if (11 != var3) {
-                              if (-13 != (var3 ^ -1)) {
-                                if (-14 != (var3 ^ -1)) {
-                                  if (-15 != (var3 ^ -1)) {
-                                    if (var3 != 15) {
-                                      if ((var3 ^ -1) != -17) {
-                                        if ((var3 ^ -1) != -18) {
-                                          if (-19 != (var3 ^ -1)) {
-                                            if (var3 != 19) {
-                                              if (var3 == 20) {
-                                                return (dg) ((Object) new pqa(param0));
-                                              } else {
-                                                return (dg) ((Object) new ao(param0));
-                                              }
+        try {
+          L0: {
+            L1: {
+              if (param1 >= 73) {
+                break L1;
+              } else {
+                var5 = (kh) null;
+                this.a((la) null, (kh) null, false);
+                break L1;
+              }
+            }
+            var3_int = param0;
+            if (var3_int != 1) {
+              if ((var3_int ^ -1) != -4) {
+                if (-5 != (var3_int ^ -1)) {
+                  if ((var3_int ^ -1) != -6) {
+                    if ((var3_int ^ -1) != -7) {
+                      if (var3_int == 7) {
+                        stackIn_51_0 = new boa(param0);
+                        decompiledRegionSelector0 = 5;
+                        break L0;
+                      } else {
+                        if (var3_int == 8) {
+                          stackIn_53_0 = new fu(param0);
+                          decompiledRegionSelector0 = 6;
+                          break L0;
+                        } else {
+                          if ((var3_int ^ -1) != -10) {
+                            if (10 == var3_int) {
+                              stackIn_57_0 = new kva(param0);
+                              decompiledRegionSelector0 = 8;
+                              break L0;
+                            } else {
+                              if (11 == var3_int) {
+                                stackIn_59_0 = new dc(param0);
+                                decompiledRegionSelector0 = 9;
+                                break L0;
+                              } else {
+                                if (-13 != (var3_int ^ -1)) {
+                                  if (-14 == (var3_int ^ -1)) {
+                                    stackIn_63_0 = new oo(param0);
+                                    decompiledRegionSelector0 = 11;
+                                    break L0;
+                                  } else {
+                                    if (-15 == (var3_int ^ -1)) {
+                                      stackIn_65_0 = new ki(param0);
+                                      decompiledRegionSelector0 = 12;
+                                      break L0;
+                                    } else {
+                                      if (var3_int == 15) {
+                                        stackIn_67_0 = new lma(param0);
+                                        decompiledRegionSelector0 = 13;
+                                        break L0;
+                                      } else {
+                                        if ((var3_int ^ -1) == -17) {
+                                          stackIn_69_0 = new nq(param0);
+                                          decompiledRegionSelector0 = 14;
+                                          break L0;
+                                        } else {
+                                          if ((var3_int ^ -1) != -18) {
+                                            if (-19 == (var3_int ^ -1)) {
+                                              stackIn_73_0 = new aka(param0);
+                                              decompiledRegionSelector0 = 16;
+                                              break L0;
                                             } else {
-                                              return (dg) ((Object) new vsa(param0));
+                                              if (var3_int == 19) {
+                                                stackIn_75_0 = new vsa(param0);
+                                                decompiledRegionSelector0 = 17;
+                                                break L0;
+                                              } else {
+                                                if (var3_int != 20) {
+                                                  stackIn_79_0 = new ao(param0);
+                                                  decompiledRegionSelector0 = 19;
+                                                  break L0;
+                                                } else {
+                                                  stackIn_77_0 = new pqa(param0);
+                                                  decompiledRegionSelector0 = 18;
+                                                  break L0;
+                                                }
+                                              }
                                             }
                                           } else {
-                                            return (dg) ((Object) new aka(param0));
+                                            stackIn_71_0 = new ce(param0);
+                                            decompiledRegionSelector0 = 15;
+                                            break L0;
                                           }
-                                        } else {
-                                          return (dg) ((Object) new ce(param0));
                                         }
-                                      } else {
-                                        return (dg) ((Object) new nq(param0));
                                       }
-                                    } else {
-                                      return (dg) ((Object) new lma(param0));
                                     }
-                                  } else {
-                                    return (dg) ((Object) new ki(param0));
                                   }
                                 } else {
-                                  return (dg) ((Object) new oo(param0));
+                                  stackIn_61_0 = new kga(param0);
+                                  decompiledRegionSelector0 = 10;
+                                  break L0;
                                 }
-                              } else {
-                                return (dg) ((Object) new kga(param0));
                               }
-                            } else {
-                              return (dg) ((Object) new dc(param0));
                             }
                           } else {
-                            return (dg) ((Object) new kva(param0));
+                            stackIn_55_0 = new cv(param0);
+                            decompiledRegionSelector0 = 7;
+                            break L0;
                           }
-                        } else {
-                          return (dg) ((Object) new cv(param0));
                         }
-                      } else {
-                        return (dg) ((Object) new fu(param0));
                       }
                     } else {
-                      return (dg) ((Object) new boa(param0));
+                      stackIn_49_0 = new lfa(param0);
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     }
                   } else {
-                    return (dg) ((Object) new lfa(param0));
+                    stackIn_47_0 = new gaa(param0);
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   }
                 } else {
-                  return (dg) ((Object) new gaa(param0));
+                  stackIn_45_0 = new am(param0);
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
-                return (dg) ((Object) new am(param0));
+                stackIn_43_0 = new ioa(param0);
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              return (dg) ((Object) new ioa(param0));
+              stackIn_41_0 = new ria(param0);
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-          } else {
-            return (dg) ((Object) new ria(param0));
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw tba.a((Throwable) ((Object) var3), "wu.C(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return (dg) ((Object) stackIn_41_0);
         } else {
-          var5 = (kh) null;
-          this.a((la) null, (kh) null, false);
-          var3 = param0;
-          if (var3 != 1) {
-            if ((var3 ^ -1) != -4) {
-              if (-5 != (var3 ^ -1)) {
-                if ((var3 ^ -1) != -6) {
-                  if ((var3 ^ -1) != -7) {
-                    if (var3 != 7) {
-                      if (var3 != 8) {
-                        if ((var3 ^ -1) != -10) {
-                          if (10 != var3) {
-                            if (11 != var3) {
-                              if (-13 != (var3 ^ -1)) {
-                                if (-14 != (var3 ^ -1)) {
-                                  if (-15 != (var3 ^ -1)) {
-                                    if (var3 != 15) {
-                                      if ((var3 ^ -1) != -17) {
-                                        if ((var3 ^ -1) != -18) {
-                                          if (-19 != (var3 ^ -1)) {
-                                            if (var3 != 19) {
-                                              if (var3 != 20) {
-                                                return (dg) ((Object) new ao(param0));
-                                              } else {
-                                                return (dg) ((Object) new pqa(param0));
-                                              }
-                                            } else {
-                                              return (dg) ((Object) new vsa(param0));
-                                            }
-                                          } else {
-                                            return (dg) ((Object) new aka(param0));
-                                          }
-                                        } else {
-                                          return (dg) ((Object) new ce(param0));
-                                        }
-                                      } else {
-                                        return (dg) ((Object) new nq(param0));
-                                      }
-                                    } else {
-                                      return (dg) ((Object) new lma(param0));
-                                    }
-                                  } else {
-                                    return (dg) ((Object) new ki(param0));
-                                  }
-                                } else {
-                                  return (dg) ((Object) new oo(param0));
-                                }
-                              } else {
-                                return (dg) ((Object) new kga(param0));
-                              }
-                            } else {
-                              return (dg) ((Object) new dc(param0));
-                            }
-                          } else {
-                            return (dg) ((Object) new kva(param0));
-                          }
-                        } else {
-                          return (dg) ((Object) new cv(param0));
-                        }
-                      } else {
-                        return (dg) ((Object) new fu(param0));
-                      }
-                    } else {
-                      return (dg) ((Object) new boa(param0));
-                    }
-                  } else {
-                    return (dg) ((Object) new lfa(param0));
-                  }
-                } else {
-                  return (dg) ((Object) new gaa(param0));
-                }
-              } else {
-                return (dg) ((Object) new am(param0));
-              }
-            } else {
-              return (dg) ((Object) new ioa(param0));
-            }
+          if (decompiledRegionSelector0 == 1) {
+            return (dg) ((Object) stackIn_43_0);
           } else {
-            return (dg) ((Object) new ria(param0));
+            if (decompiledRegionSelector0 == 2) {
+              return (dg) ((Object) stackIn_45_0);
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return (dg) ((Object) stackIn_47_0);
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return (dg) ((Object) stackIn_49_0);
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return (dg) ((Object) stackIn_51_0);
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return (dg) ((Object) stackIn_53_0);
+                    } else {
+                      if (decompiledRegionSelector0 == 7) {
+                        return (dg) ((Object) stackIn_55_0);
+                      } else {
+                        if (decompiledRegionSelector0 == 8) {
+                          return (dg) ((Object) stackIn_57_0);
+                        } else {
+                          if (decompiledRegionSelector0 == 9) {
+                            return (dg) ((Object) stackIn_59_0);
+                          } else {
+                            if (decompiledRegionSelector0 == 10) {
+                              return (dg) ((Object) stackIn_61_0);
+                            } else {
+                              if (decompiledRegionSelector0 == 11) {
+                                return (dg) ((Object) stackIn_63_0);
+                              } else {
+                                if (decompiledRegionSelector0 == 12) {
+                                  return (dg) ((Object) stackIn_65_0);
+                                } else {
+                                  if (decompiledRegionSelector0 == 13) {
+                                    return (dg) ((Object) stackIn_67_0);
+                                  } else {
+                                    if (decompiledRegionSelector0 == 14) {
+                                      return (dg) ((Object) stackIn_69_0);
+                                    } else {
+                                      if (decompiledRegionSelector0 == 15) {
+                                        return (dg) ((Object) stackIn_71_0);
+                                      } else {
+                                        if (decompiledRegionSelector0 == 16) {
+                                          return (dg) ((Object) stackIn_73_0);
+                                        } else {
+                                          if (decompiledRegionSelector0 == 17) {
+                                            return (dg) ((Object) stackIn_75_0);
+                                          } else {
+                                            if (decompiledRegionSelector0 == 18) {
+                                              return (dg) ((Object) stackIn_77_0);
+                                            } else {
+                                              return (dg) ((Object) stackIn_79_0);
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
     }
 
     public static void a(byte param0) {
-        if (param0 != 91) {
-            field_a = (jta) null;
+        try {
+            if (param0 != 91) {
+                field_a = (jta) null;
+            }
             field_a = null;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) ((Object) runtimeException), "wu.D(" + param0 + ')');
         }
-        field_a = null;
     }
 
     public wu() {
-        int var1 = 0;
-        bb.field_g = new String[21];
-        for (var1 = 0; -22 < (var1 ^ -1); var1++) {
-            bb.field_g[var1] = "(unused, placeholder)";
+        int var1_int = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        try {
+          L0: {
+            bb.field_g = new String[21];
+            var1_int = 0;
+            L1: while (true) {
+              if (-22 >= (var1_int ^ -1)) {
+                bb.field_g[8] = "Hazard";
+                bb.field_g[9] = "Switch";
+                bb.field_g[19] = "Bridge";
+                bb.field_g[13] = "SnakePit";
+                bb.field_g[18] = "Monster";
+                bb.field_g[0] = "OLD directrender";
+                bb.field_g[17] = "Platform";
+                bb.field_g[15] = "Wall";
+                bb.field_g[3] = "OLD switch";
+                bb.field_g[6] = "Doorway";
+                bb.field_g[14] = "Plant";
+                bb.field_g[12] = "Item";
+                bb.field_g[4] = "Furniture";
+                bb.field_g[5] = "Light Source";
+                bb.field_g[16] = "Trap Base";
+                bb.field_g[1] = "TEMP model test";
+                bb.field_g[7] = "Block";
+                bb.field_g[10] = "Pit";
+                bb.field_g[11] = "Crusher";
+                bb.field_g[20] = "Gas Vent";
+                break L0;
+              } else {
+                bb.field_g[var1_int] = "(unused, placeholder)";
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw tba.a((Throwable) ((Object) var1), "wu.<init>()");
         }
-        bb.field_g[8] = "Hazard";
-        bb.field_g[9] = "Switch";
-        bb.field_g[19] = "Bridge";
-        bb.field_g[13] = "SnakePit";
-        bb.field_g[18] = "Monster";
-        bb.field_g[0] = "OLD directrender";
-        bb.field_g[17] = "Platform";
-        bb.field_g[15] = "Wall";
-        bb.field_g[3] = "OLD switch";
-        bb.field_g[6] = "Doorway";
-        bb.field_g[14] = "Plant";
-        bb.field_g[12] = "Item";
-        bb.field_g[4] = "Furniture";
-        bb.field_g[5] = "Light Source";
-        bb.field_g[16] = "Trap Base";
-        bb.field_g[1] = "TEMP model test";
-        bb.field_g[7] = "Block";
-        bb.field_g[10] = "Pit";
-        bb.field_g[11] = "Crusher";
-        bb.field_g[20] = "Gas Vent";
     }
 
     public final dg a(gr param0, gma param1, int param2) {
         dg stackIn_31_0 = null;
         dg stackIn_33_0 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
-        String stackIn_37_2 = null;
-        StringBuilder stackIn_39_1 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_40_2 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        String stackIn_38_2 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        String stackIn_42_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -639,40 +823,40 @@ final class wu implements mfa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackIn_36_0 = (RuntimeException) (var4);
+            stackIn_37_0 = (RuntimeException) (var4);
 
-            stackIn_36_1 = new StringBuilder().append("wu.F(");
+            stackIn_37_1 = new StringBuilder().append("wu.F(");
 
             if (param0 == null) {
-              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackIn_37_2 = "null";
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "null";
               break L6;
             } else {
-              stackIn_37_0 = (RuntimeException) ((Object) stackIn_36_0);
-              stackIn_37_1 = (StringBuilder) ((Object) stackIn_36_1);
-              stackIn_37_2 = "{...}";
+              stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackIn_38_2 = "{...}";
               break L6;
             }
           }
           L7: {
+            stackIn_41_0 = (RuntimeException) ((Object) stackIn_38_0);
 
-
-            stackIn_39_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(',');
+            stackIn_41_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(',');
 
             if (param1 == null) {
-              stackIn_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackIn_40_2 = "null";
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "null";
               break L7;
             } else {
-              stackIn_37_0 = (RuntimeException) ((Object) stackIn_37_0);
-              stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackIn_40_2 = "{...}";
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "{...}";
               break L7;
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_37_0), stackIn_40_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_42_0), stackIn_42_2 + ',' + param2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_31_0;

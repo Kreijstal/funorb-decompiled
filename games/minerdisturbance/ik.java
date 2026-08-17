@@ -184,7 +184,7 @@ final class ik extends kn implements be, sh, f {
     }
 
     public final void a(int param0, byte param1, hc param2, int param3, int param4) {
-        boolean discarded$0 = false;
+        boolean discarded$1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -210,7 +210,7 @@ final class ik extends kn implements be, sh, f {
                 if (this.field_K != param2) {
                   break L2;
                 } else {
-                  discarded$0 = this.o(-1);
+                  discarded$1 = this.o(-1);
                   break L2;
                 }
               }

@@ -49,6 +49,8 @@ final class sj extends we {
     }
 
     final void a(int[] param0, int param1, int param2) {
+        int localTemp$0 = 0;
+        int localTemp$1 = 0;
         int stackIn_33_0 = 0;
         int stackIn_47_0 = 0;
         int stackIn_62_0 = 0;
@@ -216,8 +218,9 @@ final class sj extends we {
                         this.field_O.a(this.field_G, 0, param2);
                         this.field_M.a(this.field_I, 0, param2);
                         if (tb.field_b) {
-                          param1 = param1 << 1;
-                          stackIn_47_0 = param1 << 1;
+                          localTemp$0 = param1 << 1;
+                          param1 = localTemp$0;
+                          stackIn_47_0 = localTemp$0;
                           break L11;
                         } else {
                           stackIn_47_0 = param1;
@@ -271,8 +274,9 @@ final class sj extends we {
                           stackIn_62_0 = param1;
                           break L17;
                         } else {
-                          param1 = param1 << 1;
-                          stackIn_62_0 = param1 << 1;
+                          localTemp$1 = param1 << 1;
+                          param1 = localTemp$1;
+                          stackIn_62_0 = localTemp$1;
                           break L17;
                         }
                       }

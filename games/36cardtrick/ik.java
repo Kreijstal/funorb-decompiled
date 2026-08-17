@@ -240,15 +240,15 @@ final class ik extends m {
     }
 
     private final void c(int param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
         int var2;
         int var3;
         int var4;
@@ -298,9 +298,9 @@ final class ik extends m {
                 var14 = (50 - var8) * jb.field_a[var10 - var8];
                 field_N[var4] = var2 + (var11 + ((field_J[var7] - var11) * var14 >> 16) << 9) / 50;
                 field_p[var4] = var3 + (var12 + ((field_s[var7] - var12) * var14 >> 16) << 9) / 50;
-                incrementValue$9 = var4;
+                incrementValue$0 = var4;
                 var4++;
-                field_g[incrementValue$9] = var13 + (((this.field_I[param0] & 65535) - var13) * var14 >> 16);
+                field_g[incrementValue$0] = var13 + (((this.field_I[param0] & 65535) - var13) * var14 >> 16);
                 break L2;
               }
             }
@@ -310,17 +310,17 @@ final class ik extends m {
               var14 = (50 - var8) * jb.field_a[var9 - var8];
               field_N[var4] = var2 + (var11 + ((field_J[var6] - var11) * var14 >> 16) << 9) / 50;
               field_p[var4] = var3 + (var12 + ((field_s[var6] - var12) * var14 >> 16) << 9) / 50;
-              incrementValue$10 = var4;
+              incrementValue$1 = var4;
               var4++;
-              field_g[incrementValue$10] = var13 + (((this.field_C[param0] & 65535) - var13) * var14 >> 16);
+              field_g[incrementValue$1] = var13 + (((this.field_C[param0] & 65535) - var13) * var14 >> 16);
               break L1;
             }
           } else {
             field_N[var4] = field_G[var5];
             field_p[var4] = field_k[var5];
-            incrementValue$11 = var4;
+            incrementValue$2 = var4;
             var4++;
-            field_g[incrementValue$11] = this.field_t[param0] & 65535;
+            field_g[incrementValue$2] = this.field_t[param0] & 65535;
             break L1;
           }
         }
@@ -336,9 +336,9 @@ final class ik extends m {
                 var14 = (50 - var9) * jb.field_a[var8 - var9];
                 field_N[var4] = var2 + (var11 + ((field_J[var5] - var11) * var14 >> 16) << 9) / 50;
                 field_p[var4] = var3 + (var12 + ((field_s[var5] - var12) * var14 >> 16) << 9) / 50;
-                incrementValue$12 = var4;
+                incrementValue$3 = var4;
                 var4++;
-                field_g[incrementValue$12] = var13 + (((this.field_t[param0] & 65535) - var13) * var14 >> 16);
+                field_g[incrementValue$3] = var13 + (((this.field_t[param0] & 65535) - var13) * var14 >> 16);
                 break L4;
               }
             }
@@ -348,17 +348,17 @@ final class ik extends m {
               var14 = (50 - var9) * jb.field_a[var10 - var9];
               field_N[var4] = var2 + (var11 + ((field_J[var7] - var11) * var14 >> 16) << 9) / 50;
               field_p[var4] = var3 + (var12 + ((field_s[var7] - var12) * var14 >> 16) << 9) / 50;
-              incrementValue$13 = var4;
+              incrementValue$4 = var4;
               var4++;
-              field_g[incrementValue$13] = var13 + (((this.field_I[param0] & 65535) - var13) * var14 >> 16);
+              field_g[incrementValue$4] = var13 + (((this.field_I[param0] & 65535) - var13) * var14 >> 16);
               break L3;
             }
           } else {
             field_N[var4] = field_G[var6];
             field_p[var4] = field_k[var6];
-            incrementValue$14 = var4;
+            incrementValue$5 = var4;
             var4++;
-            field_g[incrementValue$14] = this.field_C[param0] & 65535;
+            field_g[incrementValue$5] = this.field_C[param0] & 65535;
             break L3;
           }
         }
@@ -374,9 +374,9 @@ final class ik extends m {
                 var14 = (50 - var10) * jb.field_a[var9 - var10];
                 field_N[var4] = var2 + (var11 + ((field_J[var6] - var11) * var14 >> 16) << 9) / 50;
                 field_p[var4] = var3 + (var12 + ((field_s[var6] - var12) * var14 >> 16) << 9) / 50;
-                incrementValue$15 = var4;
+                incrementValue$6 = var4;
                 var4++;
-                field_g[incrementValue$15] = var13 + (((this.field_C[param0] & 65535) - var13) * var14 >> 16);
+                field_g[incrementValue$6] = var13 + (((this.field_C[param0] & 65535) - var13) * var14 >> 16);
                 break L6;
               }
             }
@@ -386,17 +386,17 @@ final class ik extends m {
               var14 = (50 - var10) * jb.field_a[var8 - var10];
               field_N[var4] = var2 + (var11 + ((field_J[var5] - var11) * var14 >> 16) << 9) / 50;
               field_p[var4] = var3 + (var12 + ((field_s[var5] - var12) * var14 >> 16) << 9) / 50;
-              incrementValue$16 = var4;
+              incrementValue$7 = var4;
               var4++;
-              field_g[incrementValue$16] = var13 + (((this.field_t[param0] & 65535) - var13) * var14 >> 16);
+              field_g[incrementValue$7] = var13 + (((this.field_t[param0] & 65535) - var13) * var14 >> 16);
               break L5;
             }
           } else {
             field_N[var4] = field_G[var7];
             field_p[var4] = field_k[var7];
-            incrementValue$17 = var4;
+            incrementValue$8 = var4;
             var4++;
-            field_g[incrementValue$17] = this.field_I[param0] & 65535;
+            field_g[incrementValue$8] = this.field_I[param0] & 65535;
             break L5;
           }
         }

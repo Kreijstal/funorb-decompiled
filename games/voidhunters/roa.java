@@ -103,52 +103,14 @@ final class roa extends ka {
 
     roa(pf param0, cbb param1, int param2, int param3, int param4, int param5) {
         this(param0, param2, param5, true, false);
-        int dupTemp$8 = 0;
-        int[] arrayValue$9 = null;
-        int[] array$10 = null;
-        vib dupTemp$11 = null;
-        int fieldTemp$12 = 0;
-        short dupTemp$13 = 0;
-        short dupTemp$14 = 0;
-        short dupTemp$15 = 0;
-        int[] var8 = null;
-        int var9_int = 0;
-        long[] var9 = null;
-        opa var10_ref_opa = null;
-        int var10 = 0;
-        int var11_int = 0;
-        hu[] var11 = null;
-        int var12 = 0;
-        Object var13_ref = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15_int = 0;
-        vib[] var15 = null;
-        int var16 = 0;
-        int var17_int = 0;
-        int var18 = 0;
-        int var19 = 0;
-        bqa var20_ref_bqa = null;
-        int var20 = 0;
-        sr var21_ref_sr = null;
-        int var21 = 0;
-        int var22 = 0;
-        int var23_int = 0;
-        int var24_int = 0;
-        int var25_int = 0;
-        int var26_int = 0;
-        int var27_int = 0;
-        int var28 = 0;
-        d var64 = null;
-        int[] var65 = null;
-        opa var66 = null;
-        opa var67 = null;
-        long[] var68 = null;
-        bqa var69 = null;
-        sr var70 = null;
-        kua var75 = null;
-        int[] var81 = null;
-        long[] var82 = null;
+        int dupTemp$0 = 0;
+        int[] arrayValue$1 = null;
+        int[] array$2 = null;
+        vib dupTemp$3 = null;
+        int fieldTemp$4 = 0;
+        short dupTemp$5 = 0;
+        short dupTemp$6 = 0;
+        short dupTemp$7 = 0;
         int stackIn_15_0 = 0;
         int stackIn_43_0 = 0;
         int stackIn_63_0 = 0;
@@ -170,13 +132,41 @@ final class roa extends ka {
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
+        int[] var8 = null;
+        int var9_int = 0;
+        long[] var9 = null;
+        int var10 = 0;
+        opa var10_ref_opa = null;
+        int var11_int = 0;
+        hu[] var11 = null;
+        int var12 = 0;
+        int var13 = 0;
+        Object var13_ref = null;
+        int var14 = 0;
+        int var15_int = 0;
+        vib[] var15 = null;
+        int var16 = 0;
+        int var17_int = 0;
         int[] var17 = null;
+        int var18 = 0;
+        int var19 = 0;
+        int var20 = 0;
+        bqa var20_ref_bqa = null;
+        int var21 = 0;
+        sr var21_ref_sr = null;
+        int var22 = 0;
         float var22_float = 0.0f;
         float var23 = 0.0f;
+        int var23_int = 0;
         float var24 = 0.0f;
+        int var24_int = 0;
         float var25 = 0.0f;
+        int var25_int = 0;
         float var26 = 0.0f;
+        int var26_int = 0;
         float var27 = 0.0f;
+        int var27_int = 0;
+        int var28 = 0;
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
@@ -225,14 +215,24 @@ final class roa extends ka {
         float var60 = 0.0f;
         float var61 = 0.0f;
         float var62 = 0.0f;
+        d var64 = null;
+        int[] var65 = null;
+        opa var66 = null;
+        opa var67 = null;
+        long[] var68 = null;
+        bqa var69 = null;
+        sr var70 = null;
         hu var71 = null;
         hu var72 = null;
         hu var73 = null;
         opa var74 = null;
+        kua var75 = null;
         hu var77 = null;
         hu var78 = null;
         hu var79 = null;
         int[] var80 = null;
+        int[] var81 = null;
+        long[] var82 = null;
         int[] var84 = null;
         float[] var86 = null;
         try {
@@ -538,10 +538,10 @@ final class roa extends ka {
                                                     if (-1 < (var19 ^ -1)) {
                                                       break L30;
                                                     } else {
-                                                      dupTemp$8 = var17[var19];
-                                                      arrayValue$9 = this.field_a[var19];
-                                                      var17[var19] = dupTemp$8 + 1;
-                                                      arrayValue$9[dupTemp$8] = var18;
+                                                      dupTemp$0 = var17[var19];
+                                                      arrayValue$1 = this.field_a[var19];
+                                                      var17[var19] = dupTemp$0 + 1;
+                                                      arrayValue$1[dupTemp$0] = var18;
                                                       break L30;
                                                     }
                                                   }
@@ -550,8 +550,8 @@ final class roa extends ka {
                                                 }
                                               }
                                             } else {
-                                              array$10 = new int[var84[var18]];
-                                              this.field_a[var18] = array$10;
+                                              array$2 = new int[var84[var18]];
+                                              this.field_a[var18] = array$2;
                                               var84[var18] = 0;
                                               var18++;
                                               continue L28;
@@ -1035,9 +1035,9 @@ final class roa extends ka {
                                                 if (1 != var30) {
                                                   break L51;
                                                 } else {
-                                                  dupTemp$11 = new vib();
-                                                  var15[var16] = dupTemp$11;
-                                                  var31_ref_vib = dupTemp$11;
+                                                  dupTemp$3 = new vib();
+                                                  var15[var16] = dupTemp$3;
+                                                  var31_ref_vib = dupTemp$3;
                                                   var31_ref_vib.field_d = var27_int;
                                                   var31_ref_vib.field_a = var26_int;
                                                   var31_ref_vib.field_c = var28;
@@ -1263,15 +1263,15 @@ final class roa extends ka {
                       }
                     }
                   }
-                  fieldTemp$12 = this.field_v;
+                  fieldTemp$4 = this.field_v;
                   this.field_v = this.field_v + 1;
-                  var8[fieldTemp$12] = var9_int;
-                  dupTemp$13 = param1.field_k[var9_int];
-                  this.field_l[dupTemp$13] = this.field_l[dupTemp$13] + 1;
-                  dupTemp$14 = param1.field_o[var9_int];
-                  this.field_l[dupTemp$14] = this.field_l[dupTemp$14] + 1;
-                  dupTemp$15 = param1.field_K[var9_int];
-                  this.field_l[dupTemp$15] = this.field_l[dupTemp$15] + 1;
+                  var8[fieldTemp$4] = var9_int;
+                  dupTemp$5 = param1.field_k[var9_int];
+                  this.field_l[dupTemp$5] = this.field_l[dupTemp$5] + 1;
+                  dupTemp$6 = param1.field_o[var9_int];
+                  this.field_l[dupTemp$6] = this.field_l[dupTemp$6] + 1;
+                  dupTemp$7 = param1.field_K[var9_int];
+                  this.field_l[dupTemp$7] = this.field_l[dupTemp$7] + 1;
                   break L64;
                 }
                 var9_int++;

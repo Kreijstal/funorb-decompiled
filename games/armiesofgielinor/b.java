@@ -279,33 +279,54 @@ final class b extends tc {
     }
 
     final static int a(int param0, int param1, int param2, byte param3, int param4) {
-        int var7 = 0;
-        int var6 = 0;
-        if (-1 == (param0 ^ -1) || param1 == 0) {
+        int var5;
+        int var6;
+        int var7;
+        if (-1 == (param0 ^ -1)) {
+          return 1;
+        } else {
+          if (param1 != 0) {
+            if (param3 == 25) {
+              L0: {
+                var5 = (-param4 + param0 * 2) * 500 / param0;
+                var5 = Math.max(0, var5);
+                if (-501 > (var5 ^ -1)) {
+                  var6 = var5 - 500;
+                  var5 = var6 / 3 + 500;
+                  if ((var5 ^ -1) < -1001) {
+                    var5 = 1000;
+                    break L0;
+                  } else {
+                    break L0;
+                  }
+                } else {
+                  break L0;
+                }
+              }
+              L1: {
+                var6 = (2 * param1 - param2) * 500 / param1;
+                var6 = Math.max(0, var6);
+                if (var6 > 500) {
+                  var7 = var6 + -500;
+                  var6 = 500 + var7 / 2;
+                  if ((var6 ^ -1) >= -1001) {
+                    break L1;
+                  } else {
+                    var6 = 1000;
+                    break L1;
+                  }
+                } else {
+                  break L1;
+                }
+              }
+              return Math.max(100, Math.min(var5 - -var6, 2000));
+            } else {
+              return -81;
+            }
+          } else {
             return 1;
+          }
         }
-        if (param3 != 25) {
-            return -81;
-        }
-        int var5 = (-param4 + param0 * 2) * 500 / param0;
-        var5 = Math.max(0, var5);
-        if (!(-501 <= (var5 ^ -1))) {
-            var6 = var5 - 500;
-            var5 = var6 / 3 + 500;
-            if (!((var5 ^ -1) >= -1001)) {
-                var5 = 1000;
-            }
-        }
-        var6 = (2 * param1 - param2) * 500 / param1;
-        var6 = Math.max(0, var6);
-        if (!(var6 <= 500)) {
-            var7 = var6 + -500;
-            var6 = 500 + var7 / 2;
-            if ((var6 ^ -1) < -1001) {
-                var6 = 1000;
-            }
-        }
-        return Math.max(100, Math.min(var5 - -var6, 2000));
     }
 
     b() {

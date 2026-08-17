@@ -2983,7 +2983,7 @@ final class cv {
                 }
                 case 13: {
                     try {
-                        if ((((Object[]) (var2)).length ^ -1) >= (var3_int ^ -1)) {
+                        if ((java.lang.reflect.Array.getLength(var2) ^ -1) >= (var3_int ^ -1)) {
                             statePc = 18;
                         } else {
                             statePc = 14;

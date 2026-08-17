@@ -175,20 +175,33 @@ class rk extends bw {
     }
 
     final int c(int param0, int param1) {
-        if (param0 != 87) {
+        t var3;
+        L0: {
+          if (param0 == 87) {
+            break L0;
+          } else {
             this.field_g = (boolean[]) null;
+            break L0;
+          }
         }
-        t var3 = (t) ((Object) al.a(-104, param1));
-        if (var3.field_p != 4) {
-            return var3.field_t;
-        }
-        if (this.a(36, param0 + -78)) {
+        var3 = (t) ((Object) al.a(-104, param1));
+        if (var3.field_p == 4) {
+          if (!this.a(36, param0 + -78)) {
+            if (this.a(35, 9)) {
+              return ((a) ((Object) al.a(param0 ^ 12, 35))).field_r;
+            } else {
+              if (!this.a(34, 9)) {
+                return var3.field_t;
+              } else {
+                return ((a) ((Object) al.a(-42, 34))).field_r;
+              }
+            }
+          } else {
             return ((a) ((Object) al.a(87, 36))).field_r;
+          }
+        } else {
+          return var3.field_t;
         }
-        if (this.a(35, 9) || this.a(34, 9)) {
-            return ((a) ((Object) al.a(param0 ^ 12, 35))).field_r;
-        }
-        return var3.field_t;
     }
 
     void a(byte param0, lu param1) {

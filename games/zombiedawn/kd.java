@@ -825,14 +825,20 @@ final class kd extends g {
     }
 
     final boolean C(int param0) {
-        if (this.n((byte) 25) || this.field_ob) {
+        if (this.n((byte) 25)) {
+          return false;
+        } else {
+          if (!this.field_ob) {
+            this.e(19, -6904);
+            if (param0 <= -57) {
+              return true;
+            } else {
+              return false;
+            }
+          } else {
             return false;
+          }
         }
-        this.e(19, -6904);
-        if (param0 > -57) {
-            return false;
-        }
-        return true;
     }
 
     final void e(int param0, int param1) {
@@ -1236,13 +1242,29 @@ final class kd extends g {
     }
 
     final boolean y(int param0) {
-        if (param0 < 97) {
-            wk var3 = (wk) null;
+        wk var3;
+        L0: {
+          if (param0 >= 97) {
+            break L0;
+          } else {
+            var3 = (wk) null;
             this.a((byte) 118, (wk) null);
+            break L0;
+          }
         }
-        this.field_W = 8;
-        if (5 == this.field_F || 7 == this.field_F) {
+        L1: {
+          this.field_W = 8;
+          if (5 == this.field_F) {
             this.c(0, 57344);
+            break L1;
+          } else {
+            if (7 != this.field_F) {
+              break L1;
+            } else {
+              this.c(0, 114688);
+              break L1;
+            }
+          }
         }
         return true;
     }

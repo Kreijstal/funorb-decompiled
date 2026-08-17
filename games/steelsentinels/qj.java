@@ -735,23 +735,22 @@ final class qj {
     }
 
     final void d(int param0) {
-        int[][] dupTemp$2 = null;
-        int[] array$3 = null;
+        int[][] dupTemp$0 = null;
+        int[] array$1 = null;
         int var2;
         int var3;
         int var4;
         int[] var5_ref_int__;
+        int var5;
         int var6;
+        int var7_int;
+        String var7;
         int var8;
+        int var9;
+        int var10;
         int var11;
         int[] var12;
         int[] var13;
-        int[] var30;
-        int var5;
-        int var7_int;
-        String var7;
-        int var9;
-        int var10;
         String var14;
         String var15;
         String var16;
@@ -768,6 +767,7 @@ final class qj {
         String var27;
         String var28;
         String var29;
+        int[] var30;
         L0: {
           var11 = SteelSentinels.field_G;
           if (null == ka.field_G[o.a((byte) 84, this.field_n)]) {
@@ -787,10 +787,10 @@ final class qj {
                     var3 = 32;
                     var5_ref_int__ = ka.field_G[o.a((byte) 84, this.field_n)][this.field_b];
                     if (var5_ref_int__ == null) {
-                      dupTemp$2 = ka.field_G[o.a((byte) 84, this.field_n)];
-                      array$3 = new int[2 + this.field_l.field_Z.length];
-                      dupTemp$2[this.field_b] = array$3;
-                      var5_ref_int__ = array$3;
+                      dupTemp$0 = ka.field_G[o.a((byte) 84, this.field_n)];
+                      array$1 = new int[2 + this.field_l.field_Z.length];
+                      dupTemp$0[this.field_b] = array$1;
+                      var5_ref_int__ = array$1;
                       break L2;
                     } else {
                       break L2;

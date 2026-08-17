@@ -21,25 +21,58 @@ final class wm extends ee {
     int field_O;
 
     final static void a(boolean param0, boolean param1, int param2) {
-        int var4 = HoldTheLine.field_D;
-        if (param1) {
+        int var4;
+        L0: {
+          var4 = HoldTheLine.field_D;
+          if (!param1) {
+            break L0;
+          } else {
             field_U = (ll) null;
+            break L0;
+          }
         }
         lm.field_a = ej.field_b;
-        if (param2 == dg.field_c) {
-            if (-2 == (ej.field_b ^ -1)) {
-                dg.field_c = 1;
-                ((ti) ((Object) l.field_a[1])).f(0);
-            }
+        if (param2 != dg.field_c) {
+          L1: {
             ej.field_b = param2;
-            return;
-        }
-        ej.field_b = param2;
-        if (13 == dg.field_c || (dg.field_c ^ -1) != 0) {
-            ((ec) ((Object) l.field_a[dg.field_c])).d((byte) -116);
-        }
-        if (ej.field_b == 13 || 0 != (ej.field_b ^ -1)) {
-            ((ec) ((Object) l.field_a[ej.field_b])).a((byte) 69, param0);
+            if (13 == dg.field_c) {
+              ((ec) ((Object) l.field_a[dg.field_c])).d((byte) -116);
+              break L1;
+            } else {
+              if ((dg.field_c ^ -1) == 0) {
+                break L1;
+              } else {
+                ((ti) ((Object) l.field_a[dg.field_c])).i(123);
+                break L1;
+              }
+            }
+          }
+          L2: {
+            if (ej.field_b == 13) {
+              ((ec) ((Object) l.field_a[ej.field_b])).a((byte) 69, param0);
+              break L2;
+            } else {
+              if (0 == (ej.field_b ^ -1)) {
+                break L2;
+              } else {
+                ((ti) ((Object) l.field_a[ej.field_b])).b(param0, -110);
+                break L2;
+              }
+            }
+          }
+          return;
+        } else {
+          L3: {
+            if (-2 != (ej.field_b ^ -1)) {
+              break L3;
+            } else {
+              dg.field_c = 1;
+              ((ti) ((Object) l.field_a[1])).f(0);
+              break L3;
+            }
+          }
+          ej.field_b = param2;
+          return;
         }
     }
 

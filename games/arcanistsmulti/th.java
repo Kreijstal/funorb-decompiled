@@ -231,14 +231,20 @@ final class th {
     }
 
     final boolean a(int param0, int param1) {
-        if (param0 > param1 || param1 >= this.field_h.length) {
+        if (param0 > param1) {
+          return false;
+        } else {
+          if (param1 < this.field_h.length) {
+            if (-1L != this.field_h[param1].field_f) {
+              return false;
+            } else {
+              this.field_h[param1].field_f = this.field_e.a(0);
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        if (!(-1L == this.field_h[param1].field_f)) {
-            return false;
-        }
-        this.field_h[param1].field_f = this.field_e.a(0);
-        return true;
     }
 
     public static void a(byte param0) {

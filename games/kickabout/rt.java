@@ -238,22 +238,53 @@ final class rt extends i {
     }
 
     final void a(int param0, int param1) {
-        hn var4 = null;
-        if (param0 < 60) {
+        hn var4;
+        L0: {
+          if (param0 >= 60) {
+            break L0;
+          } else {
             this.a((byte) 89);
+            break L0;
+          }
         }
-        super.a(62, param1);
-        if (-1 == (param1 ^ -1) && this.field_H != -1 && this.field_M[this.field_H] < 100) {
-            if (cq.field_h instanceof ta) {
-                cu.a((byte) -5, this.field_P, this.field_H);
+        L1: {
+          super.a(62, param1);
+          if (-1 != (param1 ^ -1)) {
+            break L1;
+          } else {
+            if (this.field_H == -1) {
+              break L1;
             } else {
-                if (!(la.a(100))) {
+              if (this.field_M[this.field_H] >= 100) {
+                break L1;
+              } else {
+                if (!(cq.field_h instanceof ta)) {
+                  if (!la.a(100)) {
                     var4 = new hn(3, new int[]{this.field_P, this.field_H});
-                    if (cq.field_h instanceof ap && null != um.field_e && um.field_e.d((byte) 76)) {
-                        um.field_e.a(this.field_N, var4, (byte) -78, this.field_H);
+                    if (!(cq.field_h instanceof ap)) {
+                      break L1;
+                    } else {
+                      if (null == um.field_e) {
+                        break L1;
+                      } else {
+                        if (!um.field_e.d((byte) 76)) {
+                          break L1;
+                        } else {
+                          um.field_e.a(this.field_N, var4, (byte) -78, this.field_H);
+                          break L1;
+                        }
+                      }
                     }
+                  } else {
+                    break L1;
+                  }
+                } else {
+                  cu.a((byte) -5, this.field_P, this.field_H);
+                  break L1;
                 }
+              }
             }
+          }
         }
     }
 

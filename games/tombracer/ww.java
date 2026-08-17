@@ -388,15 +388,15 @@ final class ww extends ka {
     }
 
     private final void b(int param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
         int var2;
         int var3;
         int var4;
@@ -443,9 +443,9 @@ final class ww extends ka {
                 this.field_y[var2] = this.field_F.field_o + (var10 + ((this.field_nb[var6] - var10) * var13 >> 16)) * this.field_d.field_Q / var3;
                 this.field_E[var2] = this.field_F.field_H + (var11 + ((this.field_C[var6] - var11) * var13 >> 16)) * this.field_d.field_C / var3;
                 this.field_yb[var2] = var3;
-                incrementValue$9 = var2;
+                incrementValue$0 = var2;
                 var2++;
-                this.field_hb[incrementValue$9] = var12 + (((this.field_Fb[param0] & 65535) - var12) * var13 >> 16);
+                this.field_hb[incrementValue$0] = var12 + (((this.field_Fb[param0] & 65535) - var12) * var13 >> 16);
                 break L2;
               }
             }
@@ -456,18 +456,18 @@ final class ww extends ka {
               this.field_y[var2] = this.field_F.field_o + (var10 + ((this.field_nb[var5] - var10) * var13 >> 16)) * this.field_d.field_Q / var3;
               this.field_E[var2] = this.field_F.field_H + (var11 + ((this.field_C[var5] - var11) * var13 >> 16)) * this.field_d.field_C / var3;
               this.field_yb[var2] = var3;
-              incrementValue$10 = var2;
+              incrementValue$1 = var2;
               var2++;
-              this.field_hb[incrementValue$10] = var12 + (((this.field_o[param0] & 65535) - var12) * var13 >> 16);
+              this.field_hb[incrementValue$1] = var12 + (((this.field_o[param0] & 65535) - var12) * var13 >> 16);
               break L1;
             }
           } else {
             this.field_y[var2] = this.field_v[var4];
             this.field_E[var2] = this.field_J[var4];
             this.field_yb[var2] = this.field_mb[var4];
-            incrementValue$11 = var2;
+            incrementValue$2 = var2;
             var2++;
-            this.field_hb[incrementValue$11] = this.field_t[param0] & 65535;
+            this.field_hb[incrementValue$2] = this.field_t[param0] & 65535;
             break L1;
           }
         }
@@ -484,9 +484,9 @@ final class ww extends ka {
                 this.field_y[var2] = this.field_F.field_o + (var10 + ((this.field_nb[var4] - var10) * var13 >> 16)) * this.field_d.field_Q / var3;
                 this.field_E[var2] = this.field_F.field_H + (var11 + ((this.field_C[var4] - var11) * var13 >> 16)) * this.field_d.field_C / var3;
                 this.field_yb[var2] = var3;
-                incrementValue$12 = var2;
+                incrementValue$3 = var2;
                 var2++;
-                this.field_hb[incrementValue$12] = var12 + (((this.field_t[param0] & 65535) - var12) * var13 >> 16);
+                this.field_hb[incrementValue$3] = var12 + (((this.field_t[param0] & 65535) - var12) * var13 >> 16);
                 break L4;
               }
             }
@@ -497,18 +497,18 @@ final class ww extends ka {
               this.field_y[var2] = this.field_F.field_o + (var10 + ((this.field_nb[var6] - var10) * var13 >> 16)) * this.field_d.field_Q / var3;
               this.field_E[var2] = this.field_F.field_H + (var11 + ((this.field_C[var6] - var11) * var13 >> 16)) * this.field_d.field_C / var3;
               this.field_yb[var2] = var3;
-              incrementValue$13 = var2;
+              incrementValue$4 = var2;
               var2++;
-              this.field_hb[incrementValue$13] = var12 + (((this.field_Fb[param0] & 65535) - var12) * var13 >> 16);
+              this.field_hb[incrementValue$4] = var12 + (((this.field_Fb[param0] & 65535) - var12) * var13 >> 16);
               break L3;
             }
           } else {
             this.field_y[var2] = this.field_v[var5];
             this.field_E[var2] = this.field_J[var5];
             this.field_yb[var2] = this.field_mb[var5];
-            incrementValue$14 = var2;
+            incrementValue$5 = var2;
             var2++;
-            this.field_hb[incrementValue$14] = this.field_o[param0] & 65535;
+            this.field_hb[incrementValue$5] = this.field_o[param0] & 65535;
             break L3;
           }
         }
@@ -525,9 +525,9 @@ final class ww extends ka {
                 this.field_y[var2] = this.field_F.field_o + (var10 + ((this.field_nb[var5] - var10) * var13 >> 16)) * this.field_d.field_Q / var3;
                 this.field_E[var2] = this.field_F.field_H + (var11 + ((this.field_C[var5] - var11) * var13 >> 16)) * this.field_d.field_C / var3;
                 this.field_yb[var2] = var3;
-                incrementValue$15 = var2;
+                incrementValue$6 = var2;
                 var2++;
-                this.field_hb[incrementValue$15] = var12 + (((this.field_o[param0] & 65535) - var12) * var13 >> 16);
+                this.field_hb[incrementValue$6] = var12 + (((this.field_o[param0] & 65535) - var12) * var13 >> 16);
                 break L6;
               }
             }
@@ -538,18 +538,18 @@ final class ww extends ka {
               this.field_y[var2] = this.field_F.field_o + (var10 + ((this.field_nb[var4] - var10) * var13 >> 16)) * this.field_d.field_Q / var3;
               this.field_E[var2] = this.field_F.field_H + (var11 + ((this.field_C[var4] - var11) * var13 >> 16)) * this.field_d.field_C / var3;
               this.field_yb[var2] = var3;
-              incrementValue$16 = var2;
+              incrementValue$7 = var2;
               var2++;
-              this.field_hb[incrementValue$16] = var12 + (((this.field_t[param0] & 65535) - var12) * var13 >> 16);
+              this.field_hb[incrementValue$7] = var12 + (((this.field_t[param0] & 65535) - var12) * var13 >> 16);
               break L5;
             }
           } else {
             this.field_y[var2] = this.field_v[var6];
             this.field_E[var2] = this.field_J[var6];
             this.field_yb[var2] = this.field_mb[var6];
-            incrementValue$17 = var2;
+            incrementValue$8 = var2;
             var2++;
-            this.field_hb[incrementValue$17] = this.field_Fb[param0] & 65535;
+            this.field_hb[incrementValue$8] = this.field_Fb[param0] & 65535;
             break L5;
           }
         }
@@ -4265,15 +4265,15 @@ final class ww extends ka {
     }
 
     private final void e(int param0) {
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
         int var2;
         int var3;
         int var4;
@@ -4320,9 +4320,9 @@ final class ww extends ka {
                 this.field_y[var2] = this.field_F.field_o + (var10 + ((this.field_nb[var6] - var10) * var13 >> 16)) * this.field_d.field_Q / var3;
                 this.field_E[var2] = this.field_F.field_H + (var11 + ((this.field_C[var6] - var11) * var13 >> 16)) * this.field_d.field_C / var3;
                 this.field_yb[var2] = var3;
-                incrementValue$9 = var2;
+                incrementValue$0 = var2;
                 var2++;
-                this.field_hb[incrementValue$9] = var12 + (((this.field_Fb[param0] & 65535) - var12) * var13 >> 16);
+                this.field_hb[incrementValue$0] = var12 + (((this.field_Fb[param0] & 65535) - var12) * var13 >> 16);
                 break L2;
               }
             }
@@ -4333,18 +4333,18 @@ final class ww extends ka {
               this.field_y[var2] = this.field_F.field_o + (var10 + ((this.field_nb[var5] - var10) * var13 >> 16)) * this.field_d.field_Q / var3;
               this.field_E[var2] = this.field_F.field_H + (var11 + ((this.field_C[var5] - var11) * var13 >> 16)) * this.field_d.field_C / var3;
               this.field_yb[var2] = var3;
-              incrementValue$10 = var2;
+              incrementValue$1 = var2;
               var2++;
-              this.field_hb[incrementValue$10] = var12 + (((this.field_o[param0] & 65535) - var12) * var13 >> 16);
+              this.field_hb[incrementValue$1] = var12 + (((this.field_o[param0] & 65535) - var12) * var13 >> 16);
               break L1;
             }
           } else {
             this.field_y[var2] = this.field_v[var4];
             this.field_E[var2] = this.field_J[var4];
             this.field_yb[var2] = this.field_mb[var4];
-            incrementValue$11 = var2;
+            incrementValue$2 = var2;
             var2++;
-            this.field_hb[incrementValue$11] = this.field_t[param0] & 65535;
+            this.field_hb[incrementValue$2] = this.field_t[param0] & 65535;
             break L1;
           }
         }
@@ -4361,9 +4361,9 @@ final class ww extends ka {
                 this.field_y[var2] = this.field_F.field_o + (var10 + ((this.field_nb[var4] - var10) * var13 >> 16)) * this.field_d.field_Q / var3;
                 this.field_E[var2] = this.field_F.field_H + (var11 + ((this.field_C[var4] - var11) * var13 >> 16)) * this.field_d.field_C / var3;
                 this.field_yb[var2] = var3;
-                incrementValue$12 = var2;
+                incrementValue$3 = var2;
                 var2++;
-                this.field_hb[incrementValue$12] = var12 + (((this.field_t[param0] & 65535) - var12) * var13 >> 16);
+                this.field_hb[incrementValue$3] = var12 + (((this.field_t[param0] & 65535) - var12) * var13 >> 16);
                 break L4;
               }
             }
@@ -4374,18 +4374,18 @@ final class ww extends ka {
               this.field_y[var2] = this.field_F.field_o + (var10 + ((this.field_nb[var6] - var10) * var13 >> 16)) * this.field_d.field_Q / var3;
               this.field_E[var2] = this.field_F.field_H + (var11 + ((this.field_C[var6] - var11) * var13 >> 16)) * this.field_d.field_C / var3;
               this.field_yb[var2] = var3;
-              incrementValue$13 = var2;
+              incrementValue$4 = var2;
               var2++;
-              this.field_hb[incrementValue$13] = var12 + (((this.field_Fb[param0] & 65535) - var12) * var13 >> 16);
+              this.field_hb[incrementValue$4] = var12 + (((this.field_Fb[param0] & 65535) - var12) * var13 >> 16);
               break L3;
             }
           } else {
             this.field_y[var2] = this.field_v[var5];
             this.field_E[var2] = this.field_J[var5];
             this.field_yb[var2] = this.field_mb[var5];
-            incrementValue$14 = var2;
+            incrementValue$5 = var2;
             var2++;
-            this.field_hb[incrementValue$14] = this.field_o[param0] & 65535;
+            this.field_hb[incrementValue$5] = this.field_o[param0] & 65535;
             break L3;
           }
         }
@@ -4402,9 +4402,9 @@ final class ww extends ka {
                 this.field_y[var2] = this.field_F.field_o + (var10 + ((this.field_nb[var5] - var10) * var13 >> 16)) * this.field_d.field_Q / var3;
                 this.field_E[var2] = this.field_F.field_H + (var11 + ((this.field_C[var5] - var11) * var13 >> 16)) * this.field_d.field_C / var3;
                 this.field_yb[var2] = var3;
-                incrementValue$15 = var2;
+                incrementValue$6 = var2;
                 var2++;
-                this.field_hb[incrementValue$15] = var12 + (((this.field_o[param0] & 65535) - var12) * var13 >> 16);
+                this.field_hb[incrementValue$6] = var12 + (((this.field_o[param0] & 65535) - var12) * var13 >> 16);
                 break L6;
               }
             }
@@ -4415,18 +4415,18 @@ final class ww extends ka {
               this.field_y[var2] = this.field_F.field_o + (var10 + ((this.field_nb[var4] - var10) * var13 >> 16)) * this.field_d.field_Q / var3;
               this.field_E[var2] = this.field_F.field_H + (var11 + ((this.field_C[var4] - var11) * var13 >> 16)) * this.field_d.field_C / var3;
               this.field_yb[var2] = var3;
-              incrementValue$16 = var2;
+              incrementValue$7 = var2;
               var2++;
-              this.field_hb[incrementValue$16] = var12 + (((this.field_t[param0] & 65535) - var12) * var13 >> 16);
+              this.field_hb[incrementValue$7] = var12 + (((this.field_t[param0] & 65535) - var12) * var13 >> 16);
               break L5;
             }
           } else {
             this.field_y[var2] = this.field_v[var6];
             this.field_E[var2] = this.field_J[var6];
             this.field_yb[var2] = this.field_mb[var6];
-            incrementValue$17 = var2;
+            incrementValue$8 = var2;
             var2++;
-            this.field_hb[incrementValue$17] = this.field_Fb[param0] & 65535;
+            this.field_hb[incrementValue$8] = this.field_Fb[param0] & 65535;
             break L5;
           }
         }

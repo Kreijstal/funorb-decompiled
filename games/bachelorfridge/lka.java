@@ -493,102 +493,141 @@ class lka extends hf {
     }
 
     private final void d(byte param0) {
-        qka var10 = null;
-        vv var11 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = BachelorFridge.field_y;
-        if (!this.field_D) {
-            this.field_m = 0;
-            this.field_o = 0;
-            return;
-        }
-        if (param0 >= -71) {
-            this.field_J = -15;
-            if (!(this.field_f instanceof qka)) {
-                return;
-            }
-            var10 = (qka) ((Object) this.field_f);
-            var11 = var10.b((wj) (this), false);
-            vv var3 = var11;
-            var4 = var11.b((byte) 124);
-            var5 = var10.a((wj) (this), false);
-            var6 = var10.a(-30983) >> -1925269055;
-            if (-var6 + var5 > var4) {
+        vv var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        qka var10;
+        vv var11;
+        qka var12;
+        vv var13;
+        var8 = BachelorFridge.field_y;
+        if (this.field_D) {
+          if (param0 < -71) {
+            if (this.field_f instanceof qka) {
+              var12 = (qka) ((Object) this.field_f);
+              var13 = var12.b((wj) (this), false);
+              var4 = var13.b((byte) 124);
+              var5 = var12.a((wj) (this), false);
+              var6 = var12.a(-30983) >> -1925269055;
+              if (-var6 + var5 <= var4) {
+                var7 = this.field_m - -var13.a(this.field_H, (byte) -99);
+                if (var7 <= var5 + -var6) {
+                  if (var6 <= var7) {
+                    if (0 < this.field_m) {
+                      this.field_m = 0;
+                      return;
+                    } else {
+                      if (this.field_m >= -var5 - -var6) {
+                        return;
+                      } else {
+                        this.field_m = var6 + -var5;
+                        return;
+                      }
+                    }
+                  } else {
+                    this.field_m = this.field_m + (var6 + -var7);
+                    if (0 < this.field_m) {
+                      this.field_m = 0;
+                      return;
+                    } else {
+                      if (this.field_m >= -var5 - -var6) {
+                        return;
+                      } else {
+                        this.field_m = var6 + -var5;
+                        return;
+                      }
+                    }
+                  }
+                } else {
+                  this.field_m = -var7 + (var5 + -var6 + this.field_m);
+                  if (0 < this.field_m) {
+                    this.field_m = 0;
+                    return;
+                  } else {
+                    if (this.field_m >= -var5 - -var6) {
+                      return;
+                    } else {
+                      this.field_m = var6 + -var5;
+                      return;
+                    }
+                  }
+                }
+              } else {
                 this.field_o = 0;
                 this.field_m = 0;
                 return;
+              }
+            } else {
+              return;
             }
-            var7 = this.field_m - -var11.a(this.field_H, (byte) -99);
-            if (var7 > var5 + -var6) {
-                this.field_m = -var7 + (var5 + -var6 + this.field_m);
-                if (0 < this.field_m) {
+          } else {
+            this.field_J = -15;
+            if (this.field_f instanceof qka) {
+              var10 = (qka) ((Object) this.field_f);
+              var11 = var10.b((wj) (this), false);
+              var3 = var11;
+              var4 = var11.b((byte) 124);
+              var5 = var10.a((wj) (this), false);
+              var6 = var10.a(-30983) >> -1925269055;
+              if (-var6 + var5 <= var4) {
+                var7 = this.field_m - -var11.a(this.field_H, (byte) -99);
+                if (var7 <= var5 + -var6) {
+                  if (var6 > var7) {
+                    this.field_m = this.field_m + (var6 + -var7);
+                    if (0 >= this.field_m) {
+                      if (this.field_m < -var5 - -var6) {
+                        this.field_m = var6 + -var5;
+                        return;
+                      } else {
+                        return;
+                      }
+                    } else {
+                      this.field_m = 0;
+                      return;
+                    }
+                  } else {
+                    if (0 >= this.field_m) {
+                      if (this.field_m < -var5 - -var6) {
+                        this.field_m = var6 + -var5;
+                        return;
+                      } else {
+                        return;
+                      }
+                    } else {
+                      this.field_m = 0;
+                      return;
+                    }
+                  }
+                } else {
+                  this.field_m = -var7 + (var5 + -var6 + this.field_m);
+                  if (0 >= this.field_m) {
+                    if (this.field_m >= -var5 - -var6) {
+                      return;
+                    } else {
+                      this.field_m = var6 + -var5;
+                      return;
+                    }
+                  } else {
                     this.field_m = 0;
                     return;
+                  }
                 }
-                if (this.field_m < -var5 - -var6) {
-                    this.field_m = var6 + -var5;
-                    return;
-                }
-                return;
-            }
-            if (var6 <= var7) {
-                if (0 < this.field_m) {
-                    this.field_m = 0;
-                    return;
-                }
-                if (this.field_m >= -var5 - -var6) {
-                    return;
-                }
-                this.field_m = var6 + -var5;
-                return;
-            }
-            this.field_m = this.field_m + (var6 + -var7);
-            if (0 < this.field_m) {
+              } else {
+                this.field_o = 0;
                 this.field_m = 0;
                 return;
+              }
+            } else {
+              return;
             }
-            if (this.field_m >= -var5 - -var6) {
-                return;
-            }
-            this.field_m = var6 + -var5;
-            return;
-        }
-        if (!(this.field_f instanceof qka)) {
-            return;
-        }
-        qka var12 = (qka) ((Object) this.field_f);
-        vv var13 = var12.b((wj) (this), false);
-        var4 = var13.b((byte) 124);
-        var5 = var12.a((wj) (this), false);
-        var6 = var12.a(-30983) >> -1925269055;
-        if (-var6 + var5 > var4) {
-            this.field_o = 0;
-            this.field_m = 0;
-            return;
-        }
-        var7 = this.field_m - -var13.a(this.field_H, (byte) -99);
-        if (var7 > var5 + -var6) {
-            this.field_m = -var7 + (var5 + -var6 + this.field_m);
-            if (0 < this.field_m || this.field_m < -var5 - -var6) {
-                this.field_m = 0;
-                return;
-            }
-            return;
-        }
-        if (var6 > var7) {
-            this.field_m = this.field_m + (var6 + -var7);
-            if (0 < this.field_m || this.field_m < -var5 - -var6) {
-                this.field_m = 0;
-                return;
-            }
-            return;
-        }
-        if (0 < this.field_m || this.field_m < -var5 - -var6) {
-            this.field_m = 0;
-            return;
+          }
+        } else {
+          this.field_m = 0;
+          this.field_o = 0;
+          return;
         }
     }
 

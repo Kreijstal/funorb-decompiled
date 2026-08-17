@@ -204,6 +204,7 @@ final class tf implements iq {
 
     final static wa a(byte param0) {
         int fieldTemp$0 = 0;
+        wa localTemp$1 = null;
         Object stackIn_11_0 = null;
         int stackIn_13_0 = 0;
         int stackIn_13_1 = 0;
@@ -301,8 +302,9 @@ final class tf implements iq {
                               rd.field_g.field_e = rd.field_g.field_e + var1.field_e;
                               rd.field_g.field_a = rd.field_g.field_a + var1.field_a;
                               var3 = var1;
-                              var1 = var1.field_c;
-                              rd.field_g.field_c = var1.field_c;
+                              localTemp$1 = var1.field_c;
+                              var1 = localTemp$1;
+                              rd.field_g.field_c = localTemp$1;
                               var3.b(56);
                               if (0 != rd.field_g.field_f) {
                                 break L10;

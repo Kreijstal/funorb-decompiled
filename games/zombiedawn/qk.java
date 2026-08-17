@@ -633,36 +633,63 @@ class qk extends ah {
     }
 
     void b(int param0, byte param1, int param2) {
-        int var8 = ZombieDawn.field_J;
-        int var4 = 2 + this.field_Gb;
-        if (!(var4 != 0)) {
-            return;
-        }
-        int var5 = var4;
-        int var6 = var4 / 2;
-        if (param1 > -91) {
-            qk.a(-55, -46, -124, -122, -112);
-        }
-        int var7 = -var4 + 8;
-        if ((this.field_S ^ -1) == -2) {
-            bi.d(-var7 + param0 - -22, -36 + param2, -1 + var5, 0, 64);
-            bi.d(param0 - -17, -36 + param2, -1 + var6, 0, 128);
-            bi.a(-var7 + (22 + param0) << 325871236, param2 - 36 << 1105465508, var5 << 174869764, 250, dm.field_p);
-            bi.a(17 + param0 << 1062093956, param2 + -36 << -2066237084, var6 << -1717074844, 200, dm.field_r);
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        var8 = ZombieDawn.field_J;
+        var4 = 2 + this.field_Gb;
+        if (var4 == 0) {
+          return;
         } else {
-            if (this.field_S == 3) {
+          L0: {
+            var5 = var4;
+            var6 = var4 / 2;
+            if (param1 <= -91) {
+              break L0;
+            } else {
+              qk.a(-55, -46, -124, -122, -112);
+              break L0;
+            }
+          }
+          L1: {
+            var7 = -var4 + 8;
+            if ((this.field_S ^ -1) != -2) {
+              if (this.field_S != 3) {
+                if (0 == this.field_S) {
+                  bi.d(param0 - 2, param2 + -54 + var7, var5, 0, 64);
+                  bi.d(-2 + param0, -50 + param2, var6, 0, 128);
+                  bi.a(-2 + param0 << 21902564, param2 - 54 - -var7 << 1917214564, var5 << -180827548, 250, dm.field_p);
+                  bi.a(-2 + param0 << -1421119132, param2 + -50 << -823603932, var6 << 1995243524, 200, dm.field_r);
+                  break L1;
+                } else {
+                  if ((this.field_S ^ -1) != -3) {
+                    break L1;
+                  } else {
+                    bi.d(-2 + param0, param2 - 10 + -var7, var5 - 1, 0, 64);
+                    bi.d(param0 + -2, param2 - 16, var6 - 1, 0, 128);
+                    bi.a(param0 + -2 << 586646820, param2 + (-10 + -var7) << 1428916612, var5 << 1704937060, 250, dm.field_p);
+                    bi.a(-2 + param0 << 947830404, param2 + -16 << 583654148, var6 << -1361774428, 200, dm.field_r);
+                    break L1;
+                  }
+                }
+              } else {
                 bi.d(var7 + (param0 + -23), -36 + param2, var5, 0, 64);
                 bi.d(-18 + param0, param2 - 36, var6, 0, 128);
                 bi.a(var7 + param0 - 23 << -1991660924, param2 + -36 << 414119172, var5 << -2109650812, 250, dm.field_p);
                 bi.a(-18 + param0 << 736731140, param2 - 36 << 1117055044, var6 << 1943370852, 200, dm.field_r);
+                break L1;
+              }
             } else {
-                if (0 == this.field_S || (this.field_S ^ -1) == -3) {
-                    bi.d(param0 - 2, param2 + -54 + var7, var5, 0, 64);
-                    bi.d(-2 + param0, -50 + param2, var6, 0, 128);
-                    bi.a(-2 + param0 << 21902564, param2 - 54 - -var7 << 1917214564, var5 << -180827548, 250, dm.field_p);
-                    bi.a(-2 + param0 << -1421119132, param2 + -50 << -823603932, var6 << 1995243524, 200, dm.field_r);
-                }
+              bi.d(-var7 + param0 - -22, -36 + param2, -1 + var5, 0, 64);
+              bi.d(param0 - -17, -36 + param2, -1 + var6, 0, 128);
+              bi.a(-var7 + (22 + param0) << 325871236, param2 - 36 << 1105465508, var5 << 174869764, 250, dm.field_p);
+              bi.a(17 + param0 << 1062093956, param2 + -36 << -2066237084, var6 << -1717074844, 200, dm.field_r);
+              break L1;
             }
+          }
+          return;
         }
     }
 

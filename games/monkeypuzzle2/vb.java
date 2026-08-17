@@ -305,25 +305,35 @@ class vb extends bf {
     }
 
     final static boolean a(byte param0, char param1) {
-        if (Character.isISOControl(param1)) {
-            return false;
-        }
-        if (th.a(false, param1)) {
+        if (!Character.isISOControl(param1)) {
+          if (!th.a(false, param1)) {
+            if (param1 != 45) {
+              if (160 != param1) {
+                if (32 == param1) {
+                  return true;
+                } else {
+                  if (param1 != 95) {
+                    if (param0 >= 109) {
+                      return false;
+                    } else {
+                      return true;
+                    }
+                  } else {
+                    return true;
+                  }
+                }
+              } else {
+                return true;
+              }
+            } else {
+              return true;
+            }
+          } else {
             return true;
+          }
+        } else {
+          return false;
         }
-        if (param1 == 45) {
-            return true;
-        }
-        if (160 == param1) {
-            return true;
-        }
-        if (32 == param1 || param1 == 95) {
-            return true;
-        }
-        if (param0 < 109) {
-            return true;
-        }
-        return false;
     }
 
     static {
