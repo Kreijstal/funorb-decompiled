@@ -78,7 +78,6 @@ final class fi {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          jg.e();
           L0: {
             L1: {
               if (param0 == 0) {
