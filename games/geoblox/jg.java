@@ -10,21 +10,8 @@ abstract class jg {
     static int field_g;
     static int[][] field_f;
     static int[][] field_h;
-    private static boolean field_i;
     int field_b;
     static String field_d;
-
-    final static void e() {
-        if (field_i || te.field_c == null) {
-            return;
-        }
-        field_i = true;
-        uh.field_y.a(te.field_c, 0, -1, hf.field_d, sl.field_l);
-        ag.field_j[1] = true;
-        uh.field_y.a(te.field_c, 0, -1, qf.field_bb, sl.field_l);
-        uh.field_y.a(te.field_c, 0, -1, pi.field_S, sl.field_l);
-        uh.field_y.a(te.field_c, 0, -1, ll.field_d, sl.field_l);
-    }
 
     final java.net.Socket a(int param0) throws IOException {
         if (param0 != 1) {
@@ -274,6 +261,11 @@ abstract class jg {
               hf.field_d = rf.a(kf.field_c, "", "sun");
               qf.field_bb = rf.a(kf.field_c, "", "bonus_bubble_jingle");
               te.field_c = new ci(param0, param2);
+              uh.field_y.a(te.field_c, 0, -1, hf.field_d, sl.field_l);
+              ag.field_j[1] = true;
+              uh.field_y.a(te.field_c, 0, -1, qf.field_bb, sl.field_l);
+              uh.field_y.a(te.field_c, 0, -1, pi.field_S, sl.field_l);
+              uh.field_y.a(te.field_c, 0, -1, ll.field_d, sl.field_l);
               var5_int = 0;
               if (param1 >= 69) {
                 break L1;
