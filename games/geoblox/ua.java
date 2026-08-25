@@ -81,12 +81,6 @@ final class ua extends hf {
     }
 
     final gd a(int[] param0) {
-        synchronized (ua.class) {
-            return this.decode(param0);
-        }
-    }
-
-    private gd decode(int[] param0) {
         int incrementValue$0 = 0;
         int var3;
         int var4;
@@ -275,12 +269,6 @@ final class ua extends hf {
     }
 
     final gd c() {
-        synchronized (ua.class) {
-            return this.decodeAll();
-        }
-    }
-
-    private gd decodeAll() {
         int incrementValue$0 = 0;
         byte[] var1;
         int var2;
