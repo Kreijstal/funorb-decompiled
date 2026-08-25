@@ -857,6 +857,14 @@ final class vb {
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
+        // The animated Jagex splash applies this full-surface glow every frame.
+        // On browser JVMs its two software box-blur passes dominate the entire
+        // frame budget. Keep every other regional/gameplay blur, but omit this
+        // cosmetic pass so the logo animation can retain its intended cadence.
+        if (param0 == 2 && param1 == 2 && param2 == 0 && param3 == 0 &&
+            param4 == field_f && param5 == field_b) {
+            return;
+        }
         vb.a(field_c, 0, param2 + param3 * field_f, param0, param2, param4, field_f - param4, param5);
         vb.a(field_c, 0, param2 + param3 * field_f, param1, param3, param5, field_f - param4, param2, param4);
     }
