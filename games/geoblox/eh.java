@@ -7,7 +7,7 @@ final class eh {
     static gk field_b;
     static pk field_d;
 
-    final static void a_old(int param0, int param1, int param2) {
+    final static void a(int param0, int param1, int param2) {
         int var3;
         int var4;
         int var5;
@@ -490,56 +490,6 @@ final class eh {
           }
         } else {
           return;
-        }
-    }
-
-    final static void a(int x, int y, int sentinel) {
-        int progress = gb.field_f;
-        if (progress < 0) {
-            return;
-        }
-
-        int logoX = y - 135;
-        int logoY = x - 35;
-        int opacity = 256;
-        if (progress < 75) {
-            opacity = progress * 256 / 75;
-        } else if (progress > 200) {
-            opacity = (250 - progress) * 256 / 50;
-        }
-
-        Geoblox.a(1, ki.field_c);
-        mh.b();
-        vb.c();
-        ck.a((byte) 123);
-        if (opacity < 256) {
-            vb.b(0, 0, vb.field_f, vb.field_b, 0, 256 - opacity);
-        }
-        id.a(true);
-        if (progress <= 150) {
-            bk.field_b.d(logoX + 15, logoY + 10, opacity);
-        } else {
-            ki.field_c.d(logoX, logoY);
-        }
-
-        int partnerProgress = progress - 125;
-        if (partnerProgress > 0 && partnerProgress < 50) {
-            int partnerOpacity;
-            if (partnerProgress < 20) {
-                partnerOpacity = partnerProgress * 256 / 20;
-            } else if (partnerProgress < 30) {
-                partnerOpacity = 256;
-            } else {
-                partnerOpacity = (50 - partnerProgress) * 256 / 20;
-            }
-            cd.field_l.c(logoX, logoY, partnerOpacity);
-        }
-
-        int textProgress = progress - 140;
-        if (textProgress > 0) {
-            int textOpacity = textProgress < 20 ? textProgress * 256 / 20 : 256;
-            cl.field_b.d(logoX + 15, logoY + 10,
-                opacity * textOpacity >> 8);
         }
     }
 
