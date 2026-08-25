@@ -744,7 +744,9 @@ public final class Geoblox extends wf {
         int var2;
         int var3;
         var3 = field_C;
-        ng.h(78);
+        // The dedicated kh audio thread already services both qk mixers.
+        // Calling them again on the render thread can block presentation on
+        // qk's monitor for seconds while browser JVM audio work yields.
         if (!param0) {
           L0: {
             if (vl.field_n == null) {
