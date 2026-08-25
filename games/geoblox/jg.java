@@ -15,7 +15,7 @@ abstract class jg {
     static String field_d;
 
     final static void e() {
-        if (field_i || te.field_c == null || gb.field_f <= 250) {
+        if (field_i || te.field_c == null) {
             return;
         }
         field_i = true;

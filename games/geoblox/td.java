@@ -298,9 +298,6 @@ final class td extends hk {
         if (gb.field_f != -uf.field_a + 0 && 250 - uf.field_a == gb.field_f) {
         }
         gb.field_f = gb.field_f + 1;
-        if (gb.field_f == 251) {
-            jg.e();
-        }
     }
 
     final boolean a(byte param0, el param1) {
