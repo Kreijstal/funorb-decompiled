@@ -943,8 +943,7 @@ final class vb {
 
     final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 == 2 && param1 == 2 && param2 == 0 && param3 == 0 &&
-            param4 == field_f && param5 == field_b && field_e == 0 &&
-            field_i == 0 && field_k == field_f && field_d == field_b) {
+            param4 == field_f && param5 == field_b) {
             vb.f();
             return;
         }
