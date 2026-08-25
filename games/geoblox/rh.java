@@ -479,6 +479,9 @@ final class rh {
     }
 
     private final synchronized boolean a(int param0, int param1, int[] param2, int param3) {
+        if (param1 == 4) {
+            return this.unpackGroup(param0, param2, param3);
+        }
         Object[] array$0 = null;
         byte[] array$1 = null;
         int stackIn_3_0 = 0;
@@ -931,6 +934,125 @@ final class rh {
             }
           }
         }
+    }
+
+    /** Compact equivalent of the archive group unpacker used by normal file reads. */
+    private boolean unpackGroup(int requestedFile, int[] xteaKey, int group) {
+        if (!this.b(group, 3) || this.field_f[group] == null) {
+            return false;
+        }
+
+        int fileCount = this.field_c.field_a[group];
+        int[] fileIds = this.field_c.field_o[group];
+        if (this.field_e[group] == null) {
+            this.field_e[group] = new Object[this.field_c.field_k[group]];
+        }
+        Object[] files = this.field_e[group];
+
+        boolean complete = true;
+        for (int i = 0; i < fileCount; i++) {
+            int fileId = fileIds == null ? i : fileIds[i];
+            if (files[fileId] == null) {
+                complete = false;
+                break;
+            }
+        }
+        if (complete) {
+            return true;
+        }
+
+        boolean encrypted = xteaKey != null
+            && (xteaKey[0] != 0 || xteaKey[1] != 0 || xteaKey[2] != 0 || xteaKey[3] != 0);
+        byte[] packed = uk.a(encrypted, -110, this.field_f[group]);
+        if (encrypted) {
+            qc buffer = new qc(packed);
+            buffer.a((byte) -125, xteaKey, 5, buffer.field_j.length);
+        }
+        byte[] unpacked = v.a(packed, -1);
+        if (this.field_h) {
+            this.field_f[group] = null;
+        }
+
+        if (fileCount == 1) {
+            int fileId = fileIds == null ? 0 : fileIds[0];
+            files[fileId] = this.field_b == 0 ? hf.a(-122, unpacked, false) : unpacked;
+            return true;
+        }
+
+        int chunks = unpacked[unpacked.length - 1] & 255;
+        int tableOffset = unpacked.length - 1 - chunks * fileCount * 4;
+        qc table = new qc(unpacked);
+        table.field_f = tableOffset;
+
+        if (this.field_b == 2) {
+            int requestedIndex = -1;
+            for (int i = 0; i < fileCount; i++) {
+                if ((fileIds == null ? i : fileIds[i]) == requestedFile) {
+                    requestedIndex = i;
+                    break;
+                }
+            }
+            if (requestedIndex < 0) {
+                return true;
+            }
+            int requestedLength = 0;
+            for (int chunk = 0; chunk < chunks; chunk++) {
+                int cumulative = 0;
+                for (int i = 0; i < fileCount; i++) {
+                    cumulative += table.a((byte) -82);
+                    if (i == requestedIndex) {
+                        requestedLength += cumulative;
+                    }
+                }
+            }
+            byte[] result = new byte[requestedLength];
+            table.field_f = tableOffset;
+            int sourceOffset = 0;
+            int targetOffset = 0;
+            for (int chunk = 0; chunk < chunks; chunk++) {
+                int cumulative = 0;
+                for (int i = 0; i < fileCount; i++) {
+                    cumulative += table.a((byte) -82);
+                    if (i == requestedIndex) {
+                        System.arraycopy(unpacked, sourceOffset, result, targetOffset, cumulative);
+                        targetOffset += cumulative;
+                    }
+                    sourceOffset += cumulative;
+                }
+            }
+            files[requestedFile] = result;
+            return true;
+        }
+
+        int[] lengths = new int[fileCount];
+        for (int chunk = 0; chunk < chunks; chunk++) {
+            int cumulative = 0;
+            for (int i = 0; i < fileCount; i++) {
+                cumulative += table.a((byte) -82);
+                lengths[i] += cumulative;
+            }
+        }
+        byte[][] split = new byte[fileCount][];
+        for (int i = 0; i < fileCount; i++) {
+            split[i] = new byte[lengths[i]];
+            lengths[i] = 0;
+        }
+        table.field_f = tableOffset;
+        int sourceOffset = 0;
+        for (int chunk = 0; chunk < chunks; chunk++) {
+            int cumulative = 0;
+            for (int i = 0; i < fileCount; i++) {
+                cumulative += table.a((byte) -82);
+                System.arraycopy(unpacked, sourceOffset, split[i], lengths[i], cumulative);
+                lengths[i] += cumulative;
+                sourceOffset += cumulative;
+            }
+        }
+        for (int i = 0; i < fileCount; i++) {
+            int fileId = fileIds == null ? i : fileIds[i];
+            files[fileId] = this.field_b == 0 ? hf.a(-122, split[i], false) : split[i];
+        }
+        return true;
     }
 
     final synchronized boolean a(byte param0, int param1, int param2) {
