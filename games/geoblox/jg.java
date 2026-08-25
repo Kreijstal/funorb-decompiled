@@ -275,12 +275,44 @@ abstract class jg {
                 break L1;
               }
             }
-            new Thread(new Runnable() {
-                public void run() {
-                    pk.m();
+            L2: while (true) {
+              if (-34 >= (var5_int ^ -1)) {
+                break L0;
+              } else {
+                L3: {
+                  if (-1 <= (ck.field_c[var5_int] ^ -1)) {
+                    break L3;
+                  } else {
+                    if ((ck.field_c[var5_int] ^ -1) == -2) {
+                      break L3;
+                    } else {
+                      var5_int++;
+                      continue L2;
+                    }
+                  }
                 }
-            }, "GeoBlox sound preloader").start();
-            break L0;
+                L4: {
+                  L5: {
+                    if (-11 < (var5_int ^ -1)) {
+                      break L5;
+                    } else {
+                      if (26 >= var5_int) {
+                        var6 = te.field_c.c(-1879044097, w.field_b[var5_int]);
+                        break L4;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
+                  var6 = te.field_c.b(1, w.field_b[var5_int]);
+                  break L4;
+                }
+                fl.field_c[var5_int] = var6.a(p.field_i);
+                vg.field_j[var5_int] = true;
+                var5_int++;
+                continue L2;
+              }
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
