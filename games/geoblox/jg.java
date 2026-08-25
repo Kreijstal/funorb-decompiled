@@ -275,11 +275,44 @@ abstract class jg {
                 break L1;
               }
             }
-            // Sound effects are decoded by pk.h when their category is first
-            // used. Eagerly decoding all 33 effects here blocks the applet's
-            // loading thread for several seconds and prevents the Jagex splash
-            // from repainting in browser JVMs.
-            break L0;
+            L2: while (true) {
+              if (-34 >= (var5_int ^ -1)) {
+                break L0;
+              } else {
+                L3: {
+                  if (-1 <= (ck.field_c[var5_int] ^ -1)) {
+                    break L3;
+                  } else {
+                    if ((ck.field_c[var5_int] ^ -1) == -2) {
+                      break L3;
+                    } else {
+                      var5_int++;
+                      continue L2;
+                    }
+                  }
+                }
+                L4: {
+                  L5: {
+                    if (-11 < (var5_int ^ -1)) {
+                      break L5;
+                    } else {
+                      if (26 >= var5_int) {
+                        var6 = te.field_c.c(-1879044097, w.field_b[var5_int]);
+                        break L4;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
+                  var6 = te.field_c.b(1, w.field_b[var5_int]);
+                  break L4;
+                }
+                fl.field_c[var5_int] = var6.a(p.field_i);
+                vg.field_j[var5_int] = true;
+                var5_int++;
+                continue L2;
+              }
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
