@@ -275,12 +275,6 @@ abstract class jg {
                 break L1;
               }
             }
-            // Effects are loaded by pk.h when their owning game state becomes
-            // active. Decoding all 33 here stalls the animated startup for
-            // several seconds and duplicates that existing lazy-load path.
-            if (te.field_c != null) {
-              return;
-            }
             L2: while (true) {
               if (-34 >= (var5_int ^ -1)) {
                 break L0;
