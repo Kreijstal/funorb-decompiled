@@ -250,14 +250,6 @@ class qk {
             int var4 = 0;
             if (!this.field_h) {
               var1 = oa.a(-12520);
-              // Browser JVM startup can leave the software mixer seconds
-              // behind wall time. Synthesizing that expired audio blocks the
-              // render thread even though none of the samples can be heard.
-              // Resynchronize after a modest underrun and continue producing
-              // only live audio.
-              if (var1 > this.field_n + 250L) {
-                this.field_n = var1;
-              }
               try {
                 L0: {
                   L1: {
