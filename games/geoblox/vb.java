@@ -14,6 +14,91 @@ final class vb {
     static int[] field_c;
     static int field_e;
     private static int[] field_h;
+    private static int[] field_m;
+
+    private final static void f() {
+        int width = field_f;
+        int height = field_b;
+        int count = width * height;
+        if (field_m == null || field_m.length < count) {
+            field_m = new int[count];
+        }
+        int y;
+        int x;
+        for (y = 0; y < height; y++) {
+            int row = y * width;
+            int red = 0;
+            int green = 0;
+            int blue = 0;
+            int samples = 0;
+            for (x = 0; x < 3 && x < width; x++) {
+                int pixel = field_c[row + x];
+                red += pixel >> 16 & 255;
+                green += pixel >> 8 & 255;
+                blue += pixel & 255;
+                samples++;
+            }
+            for (x = 0; x < width; x++) {
+                if (x > 2) {
+                    int pixel = field_c[row + x - 3];
+                    red -= pixel >> 16 & 255;
+                    green -= pixel >> 8 & 255;
+                    blue -= pixel & 255;
+                    samples--;
+                }
+                if (x + 2 < width && x > 0) {
+                    int pixel = field_c[row + x + 2];
+                    red += pixel >> 16 & 255;
+                    green += pixel >> 8 & 255;
+                    blue += pixel & 255;
+                    samples++;
+                }
+                if (samples == 5) {
+                    field_m[row + x] = (red * 3276 >> 14 << 16) +
+                        (green * 3276 >> 14 << 8) + (blue * 3276 >> 14);
+                } else {
+                    field_m[row + x] = (red / samples << 16) +
+                        (green / samples << 8) + blue / samples;
+                }
+            }
+        }
+        for (x = 0; x < width; x++) {
+            int red = 0;
+            int green = 0;
+            int blue = 0;
+            int samples = 0;
+            for (y = 0; y < 3 && y < height; y++) {
+                int pixel = field_m[y * width + x];
+                red += pixel >> 16 & 255;
+                green += pixel >> 8 & 255;
+                blue += pixel & 255;
+                samples++;
+            }
+            for (y = 0; y < height; y++) {
+                if (y > 2) {
+                    int pixel = field_m[(y - 3) * width + x];
+                    red -= pixel >> 16 & 255;
+                    green -= pixel >> 8 & 255;
+                    blue -= pixel & 255;
+                    samples--;
+                }
+                if (y + 2 < height && y > 0) {
+                    int pixel = field_m[(y + 2) * width + x];
+                    red += pixel >> 16 & 255;
+                    green += pixel >> 8 & 255;
+                    blue += pixel & 255;
+                    samples++;
+                }
+                if (samples == 5) {
+                    field_c[y * width + x] = (red * 3276 >> 14 << 16) +
+                        (green * 3276 >> 14 << 8) + (blue * 3276 >> 14);
+                } else {
+                    field_c[y * width + x] = (red / samples << 16) +
+                        (green / samples << 8) + blue / samples;
+                }
+            }
+        }
+    }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
@@ -857,6 +942,12 @@ final class vb {
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
+        if (param0 == 2 && param1 == 2 && param2 == 0 && param3 == 0 &&
+            param4 == field_f && param5 == field_b && field_e == 0 &&
+            field_i == 0 && field_k == field_f && field_d == field_b) {
+            vb.f();
+            return;
+        }
         vb.a(field_c, 0, param2 + param3 * field_f, param0, param2, param4, field_f - param4, param5);
         vb.a(field_c, 0, param2 + param3 * field_f, param1, param3, param5, field_f - param4, param2, param4);
     }
