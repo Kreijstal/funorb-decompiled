@@ -149,8 +149,7 @@ final class pk extends qc {
                           var3 = te.field_c.b(1, w.field_b[var2_int]);
                           break L4;
                         }
-                        fl.field_c[var2_int] = var3.a(p.field_i);
-                        vg.field_j[var2_int] = true;
+                        pk.l(var2_int);
                         break L3;
                       } else {
                         break L3;
@@ -182,6 +181,31 @@ final class pk extends qc {
           } else {
             return;
           }
+        }
+    }
+
+    /** Decode one effect under the same lock used by the background preloader. */
+    final static synchronized void l(int index) {
+        if (vg.field_j[index]) {
+            return;
+        }
+        gd sound;
+        if (index >= 10 && index <= 26) {
+            sound = te.field_c.c(-1879044097, w.field_b[index]);
+        } else {
+            sound = te.field_c.b(1, w.field_b[index]);
+        }
+        fl.field_c[index] = sound.a(p.field_i);
+        vg.field_j[index] = true;
+    }
+
+    /** Preload effects without holding the game/render thread in the decoder. */
+    final static void m() {
+        for (int index = 0; index < 33; index++) {
+            l(index);
+        }
+        synchronized (pk.class) {
+            p.field_i = null;
         }
     }
 
