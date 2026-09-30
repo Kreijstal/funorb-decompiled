@@ -1,0 +1,165 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class jj {
+    private ra field_e;
+    static String field_c;
+    private int field_d;
+    private gi field_f;
+    static String[] field_a;
+    static int field_g;
+    private int field_b;
+
+    private final void a(long param0, int param1) {
+        fj var4;
+        var4 = (fj) ((Object) this.field_f.a(param0, (byte) -72));
+        this.a(param1 + -117, var4);
+        if (param1 != 0) {
+          field_c = (String) null;
+          return;
+        } else {
+          return;
+        }
+    }
+
+    private final void a(long param0, int param1, boolean param2, Object param3) {
+        fj var6 = null;
+        gj var6_ref = null;
+        int var7 = Geoblox.field_C;
+        try {
+            if (!(param1 <= this.field_b)) {
+                throw new IllegalStateException();
+            }
+            this.a(param0, 0);
+            this.field_d = this.field_d - param1;
+            while (0 > this.field_d) {
+                var6 = (fj) ((Object) this.field_e.a((byte) -41));
+                this.a(114, var6);
+            }
+            var6_ref = new gj(param3, param1);
+            this.field_f.a(param0, -99, var6_ref);
+            if (param2) {
+                jj.b(-85);
+            }
+            this.field_e.a(-1, var6_ref);
+            ((fj) ((Object) var6_ref)).field_i = 0L;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "jj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final Object a(byte param0, long param1) {
+        Object var5;
+        gj var6;
+        fj var7;
+        var7 = (fj) ((Object) this.field_f.a(param1, (byte) 61));
+        if (var7 != null) {
+          var5 = var7.e((byte) 120);
+          if (param0 >= 56) {
+            if (var5 == null) {
+              var7.a(false);
+              var7.a((byte) 92);
+              this.field_d = this.field_d + var7.field_n;
+              return null;
+            } else {
+              if (var7.g(13)) {
+                var6 = new gj(var5, var7.field_n);
+                this.field_f.a(var7.field_a, -81, var6);
+                this.field_e.a(-1, var6);
+                ((fj) ((Object) var6)).field_i = 0L;
+                var7.a(false);
+                var7.a((byte) 93);
+                return var5;
+              } else {
+                this.field_e.a(-1, var7);
+                var7.field_i = 0L;
+                return var5;
+              }
+            }
+          } else {
+            return (Object) null;
+          }
+        } else {
+          return null;
+        }
+    }
+
+    final void a(int param0, long param1, Object param2) {
+        try {
+            int var5_int = 4 / ((param0 - 56) / 59);
+            this.a(param1, 1, false, param2);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void b(int param0) {
+        if (param0 > -96) {
+            field_c = (String) null;
+            jk.field_d = 0;
+            return;
+        }
+        jk.field_d = 0;
+    }
+
+    private final void a(int param0, fj param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            var3_int = -56 % ((61 - param0) / 42);
+            if (param1 == null) {
+              break L0;
+            } else {
+              param1.a(false);
+              param1.a((byte) 75);
+              this.field_d = this.field_d + param1.field_n;
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackIn_5_0 = (RuntimeException) (var3);
+
+            stackIn_5_1 = new StringBuilder().append("jj.B(").append(param0).append(',');
+
+            if (param1 == null) {
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "null";
+              break L1;
+            } else {
+              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackIn_6_2 = "{...}";
+              break L1;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+        }
+    }
+
+    public static void a(int param0) {
+        field_a = null;
+        int var1 = -3 / ((81 - param0) / 41);
+        field_c = null;
+    }
+
+    private jj() throws Throwable {
+        throw new Error();
+    }
+
+    static {
+        field_c = "Login: ";
+        field_a = new String[]{"Showing by rating", "Showing by win percentage"};
+        field_g = 13;
+    }
+}

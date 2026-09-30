@@ -1,0 +1,163 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ek {
+    static IndexedSprite_na[] field_a;
+
+    public static void a(int param0) {
+        if (param0 >= -127) {
+            return;
+        }
+        field_a = null;
+    }
+
+    final static void a(int param0, boolean param1, Sprite_dm param2, int param3, int param4, int param5) {
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        try {
+          L0: {
+            var6_int = param2.width_field_r;
+            var7 = param2.height_field_m;
+            var8 = 0;
+            var9 = 0;
+            if (param1) {
+              L1: {
+                var10 = param2.field_s;
+                var11 = param2.field_o;
+                var12 = (var10 << 1780073008) / param4;
+                var13 = (var11 << -1191763856) / param0;
+                if ((param2.trimX_field_u ^ -1) >= -1) {
+                  break L1;
+                } else {
+                  var14 = ((param2.trimX_field_u << 536850224) + (var12 + -1)) / var12;
+                  var8 = var8 + (-(param2.trimX_field_u << -815064720) + var12 * var14);
+                  param5 = param5 + var14;
+                  break L1;
+                }
+              }
+              L2: {
+                if (var6_int < var10) {
+                  param4 = (var12 + ((var6_int << 1238097680) + (-var8 - 1))) / var12;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              L3: {
+                if ((param2.trimY_field_p ^ -1) < -1) {
+                  var14 = ((param2.trimY_field_p << -93118640) + var13 - 1) / var13;
+                  var9 = var9 + (var14 * var13 - (param2.trimY_field_p << -1049630416));
+                  param3 = param3 + var14;
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+              L4: {
+                if (var11 <= var7) {
+                  break L4;
+                } else {
+                  param0 = (var13 + (-var9 + (var7 << 1965432400)) - 1) / var13;
+                  break L4;
+                }
+              }
+              L5: {
+                var14 = param5 - -(SoftwareRasterizer_vb.stride_field_f * param3);
+                var15 = SoftwareRasterizer_vb.stride_field_f - param4;
+                if (SoftwareRasterizer_vb.clipBottom_field_d < param3 - -param0) {
+                  param0 = param0 - (-SoftwareRasterizer_vb.clipBottom_field_d + param3 + param0);
+                  break L5;
+                } else {
+                  break L5;
+                }
+              }
+              L6: {
+                if (SoftwareRasterizer_vb.clipTop_field_i > param3) {
+                  var16 = SoftwareRasterizer_vb.clipTop_field_i - param3;
+                  var9 = var9 + var13 * var16;
+                  param0 = param0 - var16;
+                  var14 = var14 + SoftwareRasterizer_vb.stride_field_f * var16;
+                  break L6;
+                } else {
+                  break L6;
+                }
+              }
+              L7: {
+                if (param4 + param5 <= SoftwareRasterizer_vb.clipRight_field_k) {
+                  break L7;
+                } else {
+                  var16 = param5 + (param4 - SoftwareRasterizer_vb.clipRight_field_k);
+                  var15 = var15 + var16;
+                  param4 = param4 - var16;
+                  break L7;
+                }
+              }
+              L8: {
+                if (param5 >= SoftwareRasterizer_vb.clipLeft_field_e) {
+                  break L8;
+                } else {
+                  var16 = SoftwareRasterizer_vb.clipLeft_field_e + -param5;
+                  var14 = var14 + var16;
+                  var15 = var15 + var16;
+                  var8 = var8 + var16 * var12;
+                  param4 = param4 - var16;
+                  break L8;
+                }
+              }
+              lc.a(var8, param0, SoftwareRasterizer_vb.framebuffer_field_c, var12, var13, var6_int, var9, var15, var14, param4, (byte) -104, param2.pixels_field_v, 0);
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var6 = decompiledCaughtException;
+            stackIn_26_0 = (RuntimeException) (var6);
+
+            stackIn_26_1 = new StringBuilder().append("ek.A(").append(param0).append(',').append(param1).append(',');
+
+            if (param2 == null) {
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
+              break L9;
+            } else {
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
+              break L9;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
+        }
+    }
+
+    static {
+    }
+}

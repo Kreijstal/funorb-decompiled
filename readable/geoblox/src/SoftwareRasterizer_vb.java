@@ -1,0 +1,2642 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SoftwareRasterizer_vb {
+    private static int[] field_g;
+    static int[] field_l;
+    static int clipBottom_field_d;
+    private static int[] field_j;
+    static int clipRight_field_k;
+    static int[] field_a;
+    static int clipTop_field_i;
+    static int stride_field_f;
+    static int field_b;
+    static int[] framebuffer_field_c;
+    static int clipLeft_field_e;
+    private static int[] field_h;
+
+    final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$0 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        L0: {
+          var6 = 0;
+          var7 = 65536 / param3;
+          if (param0 >= clipLeft_field_e) {
+            break L0;
+          } else {
+            param2 = param2 - (clipLeft_field_e - param0);
+            param0 = clipLeft_field_e;
+            break L0;
+          }
+        }
+        L1: {
+          if (param1 >= clipTop_field_i) {
+            break L1;
+          } else {
+            var6 = var6 + (clipTop_field_i - param1) * var7;
+            param3 = param3 - (clipTop_field_i - param1);
+            param1 = clipTop_field_i;
+            break L1;
+          }
+        }
+        L2: {
+          if (param0 + param2 <= clipRight_field_k) {
+            break L2;
+          } else {
+            param2 = clipRight_field_k - param0;
+            break L2;
+          }
+        }
+        L3: {
+          if (param1 + param3 <= clipBottom_field_d) {
+            break L3;
+          } else {
+            param3 = clipBottom_field_d - param1;
+            break L3;
+          }
+        }
+        var8 = stride_field_f - param2;
+        var9 = param0 + param1 * stride_field_f;
+        var10 = -param3;
+        L4: while (true) {
+          if (var10 >= 0) {
+            return;
+          } else {
+            var11 = 65536 - var6 >> 8;
+            var12 = var6 >> 8;
+            var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
+            var14 = -param2;
+            L5: while (true) {
+              if (var14 >= 0) {
+                var9 = var9 + var8;
+                var6 = var6 + var7;
+                var10++;
+                continue L4;
+              } else {
+                incrementValue$0 = var9;
+                var9++;
+                framebuffer_field_c[incrementValue$0] = var13;
+                var14++;
+                continue L5;
+              }
+            }
+          }
+        }
+    }
+
+    final static void b(int param0, int param1, int param2, int param3) {
+        if (clipLeft_field_e < param0) {
+            clipLeft_field_e = param0;
+        }
+        if (clipTop_field_i < param1) {
+            clipTop_field_i = param1;
+        }
+        if (clipRight_field_k > param2) {
+            clipRight_field_k = param2;
+        }
+        if (clipBottom_field_d > param3) {
+            clipBottom_field_d = param3;
+        }
+        SoftwareRasterizer_vb.b();
+    }
+
+    final static void f(int param0, int param1, int param2, int param3, int param4) {
+        int var6 = 0;
+        int var5 = 0;
+        for (var6 = 0; var6 < 4; var6++) {
+            var5 = 128 - (var6 << 5);
+            SoftwareRasterizer_vb.b(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+            SoftwareRasterizer_vb.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+        }
+    }
+
+    final static void a(int[] param0) {
+        param0[0] = clipLeft_field_e;
+        param0[1] = clipTop_field_i;
+        param0[2] = clipRight_field_k;
+        param0[3] = clipBottom_field_d;
+    }
+
+    final static void a(int param0, int param1, int param2, int param3) {
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int incrementValue$0 = 0;
+        if (param0 < clipLeft_field_e) {
+            param2 = param2 - (clipLeft_field_e - param0);
+            param0 = clipLeft_field_e;
+        }
+        if (param0 + param2 > clipRight_field_k) {
+            param2 = clipRight_field_k - param0;
+        }
+        if (param1 < clipTop_field_i) {
+            param3 = param3 - (clipTop_field_i - param1);
+            param1 = clipTop_field_i;
+        }
+        if (param1 + param3 > clipBottom_field_d) {
+            param3 = clipBottom_field_d - param1;
+        }
+        int var4 = param0 + param1 * stride_field_f;
+        if (param2 > 0) {
+            if (param3 <= 0) {
+                return;
+            }
+            for (var5 = 0; var5 < param3; var5++) {
+                for (var6 = 0; var6 < param2; var6++) {
+                    var7 = framebuffer_field_c[var4];
+                    var8 = var7 >> 15 & 510;
+                    var9 = var7 >> 8 & 255;
+                    var10 = var7 & 255;
+                    var11 = (var10 + var8) / 3 + var9 >> 1;
+                    incrementValue$0 = var4;
+                    var4++;
+                    framebuffer_field_c[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
+                }
+                var4 = var4 + (stride_field_f - param2);
+            }
+            return;
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        if (param4 != 0) {
+          L0: {
+            if (param4 >= 0) {
+              break L0;
+            } else {
+              param4 = -param4;
+              break L0;
+            }
+          }
+          L1: {
+            var6 = param0 + param4;
+            var7 = param1 + param4;
+            var8 = param0 + param2 - param4 - 1;
+            var9 = param1 + param3 - param4 - 1;
+            if (clipRight_field_k <= clipLeft_field_e) {
+              break L1;
+            } else {
+              if (clipBottom_field_d > clipTop_field_i) {
+                if (param0 + param2 <= clipLeft_field_e) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (param0 >= clipRight_field_k) {
+                      break L2;
+                    } else {
+                      if (param1 + param3 < clipTop_field_i) {
+                        break L2;
+                      } else {
+                        if (param1 < clipBottom_field_d) {
+                          L3: {
+                            L4: {
+                              var10 = var6 + (var7 - param4) * stride_field_f;
+                              var11 = var8 + (var7 - param4) * stride_field_f;
+                              var12 = var6 + var7 * stride_field_f;
+                              var13 = var8 + var7 * stride_field_f;
+                              var14 = var6 + var9 * stride_field_f;
+                              var15 = var8 + var9 * stride_field_f;
+                              var16 = var6 + (var9 + param4) * stride_field_f;
+                              var17 = var8 + (var9 + param4) * stride_field_f;
+                              var18 = param4;
+                              var19 = 0;
+                              var20 = param4 * param4;
+                              var21 = var20 - var18;
+                              if (param0 < clipLeft_field_e) {
+                                break L4;
+                              } else {
+                                if (param0 + param2 >= clipRight_field_k) {
+                                  break L4;
+                                } else {
+                                  if (param1 < clipTop_field_i) {
+                                    break L4;
+                                  } else {
+                                    if (param1 + param3 < clipBottom_field_d) {
+                                      var22 = var12;
+                                      L5: while (true) {
+                                        if (var22 > var14) {
+                                          var22 = var13;
+                                          L6: while (true) {
+                                            if (var22 > var15) {
+                                              var22 = var10;
+                                              L7: while (true) {
+                                                if (var22 > var11) {
+                                                  var22 = var16;
+                                                  L8: while (true) {
+                                                    if (var22 > var17) {
+                                                      L9: while (true) {
+                                                        L10: {
+                                                          incrementValue$0 = var19;
+                                                          var19++;
+                                                          var21 = var21 + (incrementValue$0 + var19);
+                                                          var12 = var12 - stride_field_f;
+                                                          var13 = var13 - stride_field_f;
+                                                          var14 = var14 + stride_field_f;
+                                                          var15 = var15 + stride_field_f;
+                                                          if (var21 <= var20) {
+                                                            break L10;
+                                                          } else {
+                                                            var18--;
+                                                            var21 = var21 - (var18 + var18);
+                                                            var10 = var10 + stride_field_f;
+                                                            var11 = var11 + stride_field_f;
+                                                            var16 = var16 - stride_field_f;
+                                                            var17 = var17 - stride_field_f;
+                                                            break L10;
+                                                          }
+                                                        }
+                                                        if (var18 >= var19) {
+                                                          framebuffer_field_c[var10 - var19] = param5;
+                                                          framebuffer_field_c[var11 + var19] = param5;
+                                                          framebuffer_field_c[var12 - var18] = param5;
+                                                          framebuffer_field_c[var13 + var18] = param5;
+                                                          framebuffer_field_c[var14 - var18] = param5;
+                                                          framebuffer_field_c[var15 + var18] = param5;
+                                                          framebuffer_field_c[var16 - var19] = param5;
+                                                          framebuffer_field_c[var17 + var19] = param5;
+                                                          continue L9;
+                                                        } else {
+                                                          break L3;
+                                                        }
+                                                      }
+                                                    } else {
+                                                      framebuffer_field_c[var22] = param5;
+                                                      var22++;
+                                                      continue L8;
+                                                    }
+                                                  }
+                                                } else {
+                                                  framebuffer_field_c[var22] = param5;
+                                                  var22++;
+                                                  continue L7;
+                                                }
+                                              }
+                                            } else {
+                                              framebuffer_field_c[var22 + var18] = param5;
+                                              var22 = var22 + stride_field_f;
+                                              continue L6;
+                                            }
+                                          }
+                                        } else {
+                                          framebuffer_field_c[var22 - var18] = param5;
+                                          var22 = var22 + stride_field_f;
+                                          continue L5;
+                                        }
+                                      }
+                                    } else {
+                                      break L4;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                            SoftwareRasterizer_vb.g(param0, param1 + var18, param3 - var18 - var18, param5);
+                            SoftwareRasterizer_vb.g(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
+                            SoftwareRasterizer_vb.c(param0 + var18, param1, param2 - var18 - var18, param5);
+                            SoftwareRasterizer_vb.c(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+                            L11: while (true) {
+                              L12: {
+                                incrementValue$1 = var19;
+                                var19++;
+                                var21 = var21 + (incrementValue$1 + var19);
+                                var12 = var12 - stride_field_f;
+                                var13 = var13 - stride_field_f;
+                                var14 = var14 + stride_field_f;
+                                var15 = var15 + stride_field_f;
+                                if (var21 <= var20) {
+                                  break L12;
+                                } else {
+                                  var18--;
+                                  var21 = var21 - (var18 + var18);
+                                  var10 = var10 + stride_field_f;
+                                  var11 = var11 + stride_field_f;
+                                  var16 = var16 - stride_field_f;
+                                  var17 = var17 - stride_field_f;
+                                  break L12;
+                                }
+                              }
+                              if (var18 >= var19) {
+                                L13: {
+                                  if (var7 - var18 < clipTop_field_i) {
+                                    break L13;
+                                  } else {
+                                    if (var7 - var18 >= clipBottom_field_d) {
+                                      break L13;
+                                    } else {
+                                      L14: {
+                                        if (var6 - var19 < clipLeft_field_e) {
+                                          break L14;
+                                        } else {
+                                          if (var6 - var19 >= clipRight_field_k) {
+                                            break L14;
+                                          } else {
+                                            framebuffer_field_c[var10 - var19] = param5;
+                                            break L14;
+                                          }
+                                        }
+                                      }
+                                      if (var8 + var19 < clipLeft_field_e) {
+                                        break L13;
+                                      } else {
+                                        if (var8 + var19 >= clipRight_field_k) {
+                                          break L13;
+                                        } else {
+                                          framebuffer_field_c[var11 + var19] = param5;
+                                          break L13;
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                                L15: {
+                                  if (var7 - var19 < clipTop_field_i) {
+                                    break L15;
+                                  } else {
+                                    if (var7 - var19 >= clipBottom_field_d) {
+                                      break L15;
+                                    } else {
+                                      L16: {
+                                        if (var6 - var18 < clipLeft_field_e) {
+                                          break L16;
+                                        } else {
+                                          if (var6 - var18 >= clipRight_field_k) {
+                                            break L16;
+                                          } else {
+                                            framebuffer_field_c[var12 - var18] = param5;
+                                            break L16;
+                                          }
+                                        }
+                                      }
+                                      if (var8 + var18 < clipLeft_field_e) {
+                                        break L15;
+                                      } else {
+                                        if (var8 + var18 >= clipRight_field_k) {
+                                          break L15;
+                                        } else {
+                                          framebuffer_field_c[var13 + var18] = param5;
+                                          break L15;
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                                L17: {
+                                  if (var9 + var19 < clipTop_field_i) {
+                                    break L17;
+                                  } else {
+                                    if (var9 + var19 >= clipBottom_field_d) {
+                                      break L17;
+                                    } else {
+                                      L18: {
+                                        if (var6 - var18 < clipLeft_field_e) {
+                                          break L18;
+                                        } else {
+                                          if (var6 - var18 >= clipRight_field_k) {
+                                            break L18;
+                                          } else {
+                                            framebuffer_field_c[var14 - var18] = param5;
+                                            break L18;
+                                          }
+                                        }
+                                      }
+                                      if (var8 + var18 < clipLeft_field_e) {
+                                        break L17;
+                                      } else {
+                                        if (var8 + var18 >= clipRight_field_k) {
+                                          break L17;
+                                        } else {
+                                          framebuffer_field_c[var15 + var18] = param5;
+                                          break L17;
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                                if (var9 + var18 < clipTop_field_i) {
+                                  continue L11;
+                                } else {
+                                  if (var9 + var18 >= clipBottom_field_d) {
+                                    continue L11;
+                                  } else {
+                                    L19: {
+                                      if (var6 - var19 < clipLeft_field_e) {
+                                        break L19;
+                                      } else {
+                                        if (var6 - var19 >= clipRight_field_k) {
+                                          break L19;
+                                        } else {
+                                          framebuffer_field_c[var16 - var19] = param5;
+                                          break L19;
+                                        }
+                                      }
+                                    }
+                                    if (var8 + var19 < clipLeft_field_e) {
+                                      continue L11;
+                                    } else {
+                                      if (var8 + var19 >= clipRight_field_k) {
+                                        continue L11;
+                                      } else {
+                                        framebuffer_field_c[var17 + var19] = param5;
+                                        continue L11;
+                                      }
+                                    }
+                                  }
+                                }
+                              } else {
+                                break L3;
+                              }
+                            }
+                          }
+                          return;
+                        } else {
+                          break L2;
+                        }
+                      }
+                    }
+                  }
+                  return;
+                }
+              } else {
+                return;
+              }
+            }
+          }
+          return;
+        } else {
+          SoftwareRasterizer_vb.d(param0, param1, param2, param3, param5);
+          return;
+        }
+    }
+
+    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        L0: {
+          var8 = 16384 / (2 * param3 + 1);
+          var9 = 1 + param3 - param5 - param4;
+          if (0 >= var9) {
+            break L0;
+          } else {
+            var9 = 0;
+            break L0;
+          }
+        }
+        L1: {
+          var10 = stride_field_f - param4 - param5 - param3;
+          if (0 >= var10) {
+            break L1;
+          } else {
+            var10 = 0;
+            break L1;
+          }
+        }
+        L2: {
+          var11 = 0;
+          var12 = param4 + param3 + 1;
+          if (stride_field_f >= var12) {
+            break L2;
+          } else {
+            var11 = var12 - stride_field_f;
+            var12 = stride_field_f;
+            break L2;
+          }
+        }
+        var13 = -param7;
+        L3: while (true) {
+          if (var13 >= 0) {
+            return;
+          } else {
+            L4: {
+              var14 = 0;
+              var15 = 0;
+              var16 = 0;
+              var17 = param2 - param3;
+              var18 = var17 - (param3 << 1) - 1;
+              var19 = param4 - param3;
+              if (var19 >= 0) {
+                break L4;
+              } else {
+                var17 = var17 - var19;
+                var18 = var18 - var19;
+                var19 = 0;
+                break L4;
+              }
+            }
+            var20 = var12 - var19;
+            L5: while (true) {
+              if (var19 >= var12) {
+                var18 = var18 + var11;
+                incrementValue$0 = param2;
+                param2++;
+                param0[incrementValue$0] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
+                var19 = 1 - param5;
+                L6: while (true) {
+                  if (var19 >= var9) {
+                    L7: while (true) {
+                      if (var19 >= var10) {
+                        L8: while (true) {
+                          if (var19 >= 0) {
+                            param2 = param2 + param6;
+                            var13++;
+                            continue L3;
+                          } else {
+                            L9: {
+                              incrementValue$1 = var18;
+                              var18++;
+                              param1 = param0[incrementValue$1];
+                              var14 = var14 - (param1 >> 16 & 255);
+                              var15 = var15 - (param1 >> 8 & 255);
+                              var16 = var16 - (param1 & 255);
+                              var20--;
+                              var21 = var14 / var20;
+                              var22 = var15 / var20;
+                              var23 = var16 / var20;
+                              if (var21 >= 0) {
+                                if (var21 <= 255) {
+                                  break L9;
+                                } else {
+                                  var21 = 255;
+                                  break L9;
+                                }
+                              } else {
+                                var21 = 0;
+                                break L9;
+                              }
+                            }
+                            L10: {
+                              if (var22 >= 0) {
+                                if (var22 <= 255) {
+                                  break L10;
+                                } else {
+                                  var22 = 255;
+                                  break L10;
+                                }
+                              } else {
+                                var22 = 0;
+                                break L10;
+                              }
+                            }
+                            L11: {
+                              if (var23 >= 0) {
+                                if (var23 <= 255) {
+                                  break L11;
+                                } else {
+                                  var23 = 255;
+                                  break L11;
+                                }
+                              } else {
+                                var23 = 0;
+                                break L11;
+                              }
+                            }
+                            incrementValue$2 = param2;
+                            param2++;
+                            param0[incrementValue$2] = (var21 << 16) + (var22 << 8) + var23;
+                            var19++;
+                            continue L8;
+                          }
+                        }
+                      } else {
+                        L12: {
+                          incrementValue$3 = var18;
+                          var18++;
+                          param1 = param0[incrementValue$3];
+                          var14 = var14 - (param1 >> 16 & 255);
+                          if (var14 >= 0) {
+                            break L12;
+                          } else {
+                            var14 = 0;
+                            break L12;
+                          }
+                        }
+                        L13: {
+                          var15 = var15 - (param1 >> 8 & 255);
+                          if (var15 >= 0) {
+                            break L13;
+                          } else {
+                            var15 = 0;
+                            break L13;
+                          }
+                        }
+                        L14: {
+                          var16 = var16 - (param1 & 255);
+                          if (var16 >= 0) {
+                            break L14;
+                          } else {
+                            var16 = 0;
+                            break L14;
+                          }
+                        }
+                        L15: {
+                          param1 = param0[var17];
+                          var17++;
+                          var14 = var14 + (param1 >> 16 & 255);
+                          var15 = var15 + (param1 >> 8 & 255);
+                          var16 = var16 + (param1 & 255);
+                          var21 = var14 * var8 >> 14;
+                          var22 = var15 * var8 >> 14;
+                          var23 = var16 * var8 >> 14;
+                          if (var21 <= 255) {
+                            break L15;
+                          } else {
+                            var21 = 255;
+                            break L15;
+                          }
+                        }
+                        L16: {
+                          if (var22 <= 255) {
+                            break L16;
+                          } else {
+                            var22 = 255;
+                            break L16;
+                          }
+                        }
+                        L17: {
+                          if (var23 <= 255) {
+                            break L17;
+                          } else {
+                            var23 = 255;
+                            break L17;
+                          }
+                        }
+                        incrementValue$4 = param2;
+                        param2++;
+                        param0[incrementValue$4] = (var21 << 16) + (var22 << 8) + var23;
+                        var19++;
+                        continue L7;
+                      }
+                    }
+                  } else {
+                    L18: {
+                      var18++;
+                      if (param4 + param5 + var19 + param3 >= clipRight_field_k) {
+                        break L18;
+                      } else {
+                        param1 = param0[var17];
+                        var17++;
+                        var14 = var14 + (param1 >> 16 & 255);
+                        var15 = var15 + (param1 >> 8 & 255);
+                        var16 = var16 + (param1 & 255);
+                        var20++;
+                        break L18;
+                      }
+                    }
+                    var21 = var14 / var20;
+                    var22 = var15 / var20;
+                    var23 = var16 / var20;
+                    incrementValue$5 = param2;
+                    param2++;
+                    param0[incrementValue$5] = (var21 << 16) + (var22 << 8) + var23;
+                    var19++;
+                    continue L6;
+                  }
+                }
+              } else {
+                param1 = param0[var17];
+                var14 = var14 + (param1 >> 16 & 255);
+                var15 = var15 + (param1 >> 8 & 255);
+                var16 = var16 + (param1 & 255);
+                var17++;
+                var18++;
+                var19++;
+                continue L5;
+              }
+            }
+          }
+        }
+    }
+
+    private final static void b(int param0, int param1, int param2, int param3, int param4) {
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var14 = 0;
+        int incrementValue$0 = 0;
+        if (param1 >= clipTop_field_i) {
+            if (param1 >= clipBottom_field_d) {
+                return;
+            }
+            if (param0 < clipLeft_field_e) {
+                param2 = param2 - (clipLeft_field_e - param0);
+                param0 = clipLeft_field_e;
+            }
+            if (param0 + param2 > clipRight_field_k) {
+                param2 = clipRight_field_k - param0;
+            }
+            var5 = 256 - param4;
+            var6 = (param3 >> 16 & 255) * param4;
+            var7 = (param3 >> 8 & 255) * param4;
+            var8 = (param3 & 255) * param4;
+            var12 = param0 + param1 * stride_field_f;
+            for (var13 = 0; var13 < param2; var13++) {
+                var9 = (framebuffer_field_c[var12] >> 16 & 255) * var5;
+                var10 = (framebuffer_field_c[var12] >> 8 & 255) * var5;
+                var11 = (framebuffer_field_c[var12] & 255) * var5;
+                var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
+                incrementValue$0 = var12;
+                var12++;
+                framebuffer_field_c[incrementValue$0] = var14;
+            }
+            return;
+        }
+    }
+
+    private final static void c(int param0, int param1, int param2, int param3, int param4) {
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var14 = 0;
+        if (param0 >= clipLeft_field_e) {
+            if (param0 >= clipRight_field_k) {
+                return;
+            }
+            if (param1 < clipTop_field_i) {
+                param2 = param2 - (clipTop_field_i - param1);
+                param1 = clipTop_field_i;
+            }
+            if (param1 + param2 > clipBottom_field_d) {
+                param2 = clipBottom_field_d - param1;
+            }
+            var5 = 256 - param4;
+            var6 = (param3 >> 16 & 255) * param4;
+            var7 = (param3 >> 8 & 255) * param4;
+            var8 = (param3 & 255) * param4;
+            var12 = param0 + param1 * stride_field_f;
+            for (var13 = 0; var13 < param2; var13++) {
+                var9 = (framebuffer_field_c[var12] >> 16 & 255) * var5;
+                var10 = (framebuffer_field_c[var12] >> 8 & 255) * var5;
+                var11 = (framebuffer_field_c[var12] & 255) * var5;
+                var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
+                framebuffer_field_c[var12] = var14;
+                var12 = var12 + stride_field_f;
+            }
+            return;
+        }
+    }
+
+    public static void a() {
+        framebuffer_field_c = null;
+        field_a = null;
+        field_l = null;
+        field_g = null;
+        field_h = null;
+        field_j = null;
+    }
+
+    final static void a(int param0, int param1, int param2) {
+        if (param0 >= clipLeft_field_e) {
+            if (param1 < clipTop_field_i || param0 >= clipRight_field_k || param1 >= clipBottom_field_d) {
+                return;
+            }
+            framebuffer_field_c[param0 + param1 * stride_field_f] = param2;
+            return;
+        }
+    }
+
+    final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
+        SoftwareRasterizer_vb.a(framebuffer_field_c, 0, param2 + param3 * stride_field_f, param0, param2, param4, stride_field_f - param4, param5);
+        SoftwareRasterizer_vb.a(framebuffer_field_c, 0, param2 + param3 * stride_field_f, param1, param3, param5, stride_field_f - param4, param2, param4);
+    }
+
+    private final static void b() {
+        field_a = null;
+        field_l = null;
+    }
+
+    final static void e(int param0, int param1, int param2, int param3, int param4) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int var24;
+        int var25;
+        if (param4 != 0) {
+          if (param4 != 256) {
+            L0: {
+              if (param2 >= 0) {
+                break L0;
+              } else {
+                param2 = -param2;
+                break L0;
+              }
+            }
+            L1: {
+              var5 = 256 - param4;
+              var6 = (param3 >> 16 & 255) * param4;
+              var7 = (param3 >> 8 & 255) * param4;
+              var8 = (param3 & 255) * param4;
+              var12 = param1 - param2;
+              if (var12 >= clipTop_field_i) {
+                break L1;
+              } else {
+                var12 = clipTop_field_i;
+                break L1;
+              }
+            }
+            L2: {
+              var13 = param1 + param2 + 1;
+              if (var13 <= clipBottom_field_d) {
+                break L2;
+              } else {
+                var13 = clipBottom_field_d;
+                break L2;
+              }
+            }
+            L3: {
+              var14 = var12;
+              var15 = param2 * param2;
+              var16 = 0;
+              var17 = param1 - var14;
+              var18 = var17 * var17;
+              var19 = var18 - var17;
+              if (param1 <= var13) {
+                break L3;
+              } else {
+                param1 = var13;
+                break L3;
+              }
+            }
+            L4: while (true) {
+              if (var14 >= param1) {
+                var16 = param2;
+                var17 = -var17;
+                var19 = var17 * var17 + var15;
+                var18 = var19 - var16;
+                var19 = var19 - var17;
+                L5: while (true) {
+                  if (var14 >= var13) {
+                    return;
+                  } else {
+                    L6: while (true) {
+                      L7: {
+                        if (var19 <= var15) {
+                          break L7;
+                        } else {
+                          if (var18 <= var15) {
+                            break L7;
+                          } else {
+                            incrementValue$0 = var16;
+                            var16--;
+                            var19 = var19 - (incrementValue$0 + var16);
+                            var18 = var18 - (var16 + var16);
+                            continue L6;
+                          }
+                        }
+                      }
+                      L8: {
+                        var20 = param0 - var16;
+                        if (var20 >= clipLeft_field_e) {
+                          break L8;
+                        } else {
+                          var20 = clipLeft_field_e;
+                          break L8;
+                        }
+                      }
+                      L9: {
+                        var21 = param0 + var16;
+                        if (var21 <= clipRight_field_k - 1) {
+                          break L9;
+                        } else {
+                          var21 = clipRight_field_k - 1;
+                          break L9;
+                        }
+                      }
+                      var25 = var20 + var14 * stride_field_f;
+                      var22 = var25;
+                      var23 = var20;
+                      L10: while (true) {
+                        if (var23 > var21) {
+                          var14++;
+                          var19 = var19 + (var17 + var17);
+                          incrementValue$1 = var17;
+                          var17++;
+                          var18 = var18 + (incrementValue$1 + var17);
+                          continue L5;
+                        } else {
+                          var9 = (framebuffer_field_c[var25] >> 16 & 255) * var5;
+                          var10 = (framebuffer_field_c[var25] >> 8 & 255) * var5;
+                          var11 = (framebuffer_field_c[var25] & 255) * var5;
+                          var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
+                          incrementValue$2 = var25;
+                          var25++;
+                          framebuffer_field_c[incrementValue$2] = var24;
+                          var23++;
+                          continue L10;
+                        }
+                      }
+                    }
+                  }
+                }
+              } else {
+                L11: while (true) {
+                  L12: {
+                    if (var19 <= var15) {
+                      break L12;
+                    } else {
+                      if (var18 > var15) {
+                        L13: {
+                          var20 = param0 - var16 + 1;
+                          if (var20 >= clipLeft_field_e) {
+                            break L13;
+                          } else {
+                            var20 = clipLeft_field_e;
+                            break L13;
+                          }
+                        }
+                        L14: {
+                          var21 = param0 + var16;
+                          if (var21 <= clipRight_field_k) {
+                            break L14;
+                          } else {
+                            var21 = clipRight_field_k;
+                            break L14;
+                          }
+                        }
+                        var22 = var20 + var14 * stride_field_f;
+                        var23 = var20;
+                        L15: while (true) {
+                          if (var23 >= var21) {
+                            var14++;
+                            incrementValue$3 = var17;
+                            var17--;
+                            var18 = var18 - (incrementValue$3 + var17);
+                            var19 = var19 - (var17 + var17);
+                            continue L4;
+                          } else {
+                            var9 = (framebuffer_field_c[var22] >> 16 & 255) * var5;
+                            var10 = (framebuffer_field_c[var22] >> 8 & 255) * var5;
+                            var11 = (framebuffer_field_c[var22] & 255) * var5;
+                            var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
+                            incrementValue$4 = var22;
+                            var22++;
+                            framebuffer_field_c[incrementValue$4] = var24;
+                            var23++;
+                            continue L15;
+                          }
+                        }
+                      } else {
+                        break L12;
+                      }
+                    }
+                  }
+                  var18 = var18 + (var16 + var16);
+                  incrementValue$5 = var16;
+                  var16++;
+                  var19 = var19 + (incrementValue$5 + var16);
+                  continue L11;
+                }
+              }
+            }
+          } else {
+            SoftwareRasterizer_vb.d(param0, param1, param2, param3);
+            return;
+          }
+        } else {
+          return;
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
+        int var7 = 0;
+        int var8 = 0;
+        int incrementValue$0 = 0;
+        if (param0 < clipLeft_field_e) {
+            param2 = param2 - (clipLeft_field_e - param0);
+            param0 = clipLeft_field_e;
+        }
+        if (param1 < clipTop_field_i) {
+            param3 = param3 - (clipTop_field_i - param1);
+            param1 = clipTop_field_i;
+        }
+        if (param0 + param2 > clipRight_field_k) {
+            param2 = clipRight_field_k - param0;
+        }
+        if (param1 + param3 > clipBottom_field_d) {
+            param3 = clipBottom_field_d - param1;
+        }
+        int var5 = stride_field_f - param2;
+        int var6 = param0 + param1 * stride_field_f;
+        for (var7 = -param3; var7 < 0; var7++) {
+            for (var8 = -param2; var8 < 0; var8++) {
+                incrementValue$0 = var6;
+                var6++;
+                framebuffer_field_c[incrementValue$0] = param4;
+            }
+            var6 = var6 + var5;
+        }
+    }
+
+    final static void c(int param0, int param1, int param2, int param3) {
+        int var4 = 0;
+        int var5 = 0;
+        if (param1 >= clipTop_field_i) {
+            if (param1 >= clipBottom_field_d) {
+                return;
+            }
+            if (param0 < clipLeft_field_e) {
+                param2 = param2 - (clipLeft_field_e - param0);
+                param0 = clipLeft_field_e;
+            }
+            if (param0 + param2 > clipRight_field_k) {
+                param2 = clipRight_field_k - param0;
+            }
+            var4 = param0 + param1 * stride_field_f;
+            for (var5 = 0; var5 < param2; var5++) {
+                framebuffer_field_c[var4 + var5] = param3;
+            }
+            return;
+        }
+    }
+
+    final static void d(int param0, int param1, int param2, int param3) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        if (param2 != 0) {
+          L0: {
+            if (param2 >= 0) {
+              break L0;
+            } else {
+              param2 = -param2;
+              break L0;
+            }
+          }
+          L1: {
+            var4 = param1 - param2;
+            if (var4 >= clipTop_field_i) {
+              break L1;
+            } else {
+              var4 = clipTop_field_i;
+              break L1;
+            }
+          }
+          L2: {
+            var5 = param1 + param2 + 1;
+            if (var5 <= clipBottom_field_d) {
+              break L2;
+            } else {
+              var5 = clipBottom_field_d;
+              break L2;
+            }
+          }
+          L3: {
+            var6 = var4;
+            var7 = param2 * param2;
+            var8 = 0;
+            var9 = param1 - var6;
+            var10 = var9 * var9;
+            var11 = var10 - var9;
+            if (param1 <= var5) {
+              break L3;
+            } else {
+              param1 = var5;
+              break L3;
+            }
+          }
+          L4: while (true) {
+            if (var6 >= param1) {
+              var8 = param2;
+              var9 = var6 - param1;
+              var11 = var9 * var9 + var7;
+              var10 = var11 - var8;
+              var11 = var11 - var9;
+              L5: while (true) {
+                if (var6 >= var5) {
+                  return;
+                } else {
+                  L6: while (true) {
+                    L7: {
+                      if (var11 <= var7) {
+                        break L7;
+                      } else {
+                        if (var10 <= var7) {
+                          break L7;
+                        } else {
+                          incrementValue$0 = var8;
+                          var8--;
+                          var11 = var11 - (incrementValue$0 + var8);
+                          var10 = var10 - (var8 + var8);
+                          continue L6;
+                        }
+                      }
+                    }
+                    L8: {
+                      var12 = param0 - var8;
+                      if (var12 >= clipLeft_field_e) {
+                        break L8;
+                      } else {
+                        var12 = clipLeft_field_e;
+                        break L8;
+                      }
+                    }
+                    L9: {
+                      var13 = param0 + var8;
+                      if (var13 <= clipRight_field_k - 1) {
+                        break L9;
+                      } else {
+                        var13 = clipRight_field_k - 1;
+                        break L9;
+                      }
+                    }
+                    var14 = var12 + var6 * stride_field_f;
+                    var15 = var12;
+                    L10: while (true) {
+                      if (var15 > var13) {
+                        var6++;
+                        var11 = var11 + (var9 + var9);
+                        incrementValue$1 = var9;
+                        var9++;
+                        var10 = var10 + (incrementValue$1 + var9);
+                        continue L5;
+                      } else {
+                        incrementValue$2 = var14;
+                        var14++;
+                        framebuffer_field_c[incrementValue$2] = param3;
+                        var15++;
+                        continue L10;
+                      }
+                    }
+                  }
+                }
+              }
+            } else {
+              L11: while (true) {
+                L12: {
+                  if (var11 <= var7) {
+                    break L12;
+                  } else {
+                    if (var10 > var7) {
+                      L13: {
+                        var12 = param0 - var8 + 1;
+                        if (var12 >= clipLeft_field_e) {
+                          break L13;
+                        } else {
+                          var12 = clipLeft_field_e;
+                          break L13;
+                        }
+                      }
+                      L14: {
+                        var13 = param0 + var8;
+                        if (var13 <= clipRight_field_k) {
+                          break L14;
+                        } else {
+                          var13 = clipRight_field_k;
+                          break L14;
+                        }
+                      }
+                      var14 = var12 + var6 * stride_field_f;
+                      var15 = var12;
+                      L15: while (true) {
+                        if (var15 >= var13) {
+                          var6++;
+                          incrementValue$3 = var9;
+                          var9--;
+                          var10 = var10 - (incrementValue$3 + var9);
+                          var11 = var11 - (var9 + var9);
+                          continue L4;
+                        } else {
+                          incrementValue$4 = var14;
+                          var14++;
+                          framebuffer_field_c[incrementValue$4] = param3;
+                          var15++;
+                          continue L15;
+                        }
+                      }
+                    } else {
+                      break L12;
+                    }
+                  }
+                }
+                var10 = var10 + (var8 + var8);
+                incrementValue$5 = var8;
+                var8++;
+                var11 = var11 + (incrementValue$5 + var8);
+                continue L11;
+              }
+            }
+          }
+        } else {
+          SoftwareRasterizer_vb.a(param0, param1, param3);
+          return;
+        }
+    }
+
+    final static void g(int param0, int param1, int param2, int param3, int param4) {
+        int var5;
+        int var6;
+        param2 = param2 - param0;
+        param3 = param3 - param1;
+        if (param3 != 0) {
+          if (param2 != 0) {
+            L0: {
+              if (param2 + param3 >= 0) {
+                break L0;
+              } else {
+                param0 = param0 + param2;
+                param2 = -param2;
+                param1 = param1 + param3;
+                param3 = -param3;
+                break L0;
+              }
+            }
+            if (param2 <= param3) {
+              L1: {
+                param0 = param0 << 16;
+                param0 = param0 + 32768;
+                param2 = param2 << 16;
+                var5 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
+                param3 = param3 + param1;
+                if (param1 >= clipTop_field_i) {
+                  break L1;
+                } else {
+                  param0 = param0 + var5 * (clipTop_field_i - param1);
+                  param1 = clipTop_field_i;
+                  break L1;
+                }
+              }
+              L2: {
+                if (param3 < clipBottom_field_d) {
+                  break L2;
+                } else {
+                  param3 = clipBottom_field_d - 1;
+                  break L2;
+                }
+              }
+              L3: while (true) {
+                if (param1 > param3) {
+                  return;
+                } else {
+                  L4: {
+                    var6 = param0 >> 16;
+                    if (var6 < clipLeft_field_e) {
+                      break L4;
+                    } else {
+                      if (var6 >= clipRight_field_k) {
+                        break L4;
+                      } else {
+                        framebuffer_field_c[var6 + param1 * stride_field_f] = param4;
+                        break L4;
+                      }
+                    }
+                  }
+                  param0 = param0 + var5;
+                  param1++;
+                  continue L3;
+                }
+              }
+            } else {
+              L5: {
+                param1 = param1 << 16;
+                param1 = param1 + 32768;
+                param3 = param3 << 16;
+                var5 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
+                param2 = param2 + param0;
+                if (param0 >= clipLeft_field_e) {
+                  break L5;
+                } else {
+                  param1 = param1 + var5 * (clipLeft_field_e - param0);
+                  param0 = clipLeft_field_e;
+                  break L5;
+                }
+              }
+              L6: {
+                if (param2 < clipRight_field_k) {
+                  break L6;
+                } else {
+                  param2 = clipRight_field_k - 1;
+                  break L6;
+                }
+              }
+              L7: while (true) {
+                if (param0 > param2) {
+                  return;
+                } else {
+                  L8: {
+                    var6 = param1 >> 16;
+                    if (var6 < clipTop_field_i) {
+                      break L8;
+                    } else {
+                      if (var6 >= clipBottom_field_d) {
+                        break L8;
+                      } else {
+                        framebuffer_field_c[param0 + var6 * stride_field_f] = param4;
+                        break L8;
+                      }
+                    }
+                  }
+                  param1 = param1 + var5;
+                  param0++;
+                  continue L7;
+                }
+              }
+            }
+          } else {
+            L9: {
+              if (param3 < 0) {
+                SoftwareRasterizer_vb.g(param0, param1 + param3, -param3 + 1, param4);
+                break L9;
+              } else {
+                SoftwareRasterizer_vb.g(param0, param1, param3 + 1, param4);
+                break L9;
+              }
+            }
+            return;
+          }
+        } else {
+          L10: {
+            if (param2 < 0) {
+              SoftwareRasterizer_vb.c(param0 + param2, param1, -param2 + 1, param4);
+              break L10;
+            } else {
+              SoftwareRasterizer_vb.c(param0, param1, param2 + 1, param4);
+              break L10;
+            }
+          }
+          return;
+        }
+    }
+
+    final static void f(int param0, int param1, int param2, int param3) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        if (param2 != 0) {
+          L0: {
+            if (param2 >= 0) {
+              break L0;
+            } else {
+              param2 = -param2;
+              break L0;
+            }
+          }
+          L1: {
+            if (clipRight_field_k <= clipLeft_field_e) {
+              break L1;
+            } else {
+              if (clipBottom_field_d > clipTop_field_i) {
+                if (param0 + param2 < clipLeft_field_e) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (param0 - param2 >= clipRight_field_k) {
+                      break L2;
+                    } else {
+                      if (param1 + param2 < clipTop_field_i) {
+                        break L2;
+                      } else {
+                        if (param1 - param2 < clipBottom_field_d) {
+                          L3: {
+                            L4: {
+                              var4 = param0 + param1 * stride_field_f;
+                              var5 = var4;
+                              var6 = var4 - param2 * stride_field_f;
+                              var7 = var4 + param2 * stride_field_f;
+                              var8 = param2;
+                              var9 = 0;
+                              param2 = param2 * param2;
+                              var10 = param2 - var8;
+                              if (param0 - var8 < clipLeft_field_e) {
+                                break L4;
+                              } else {
+                                if (param0 + var8 >= clipRight_field_k) {
+                                  break L4;
+                                } else {
+                                  if (param1 - var8 < clipTop_field_i) {
+                                    break L4;
+                                  } else {
+                                    if (param1 + var8 < clipBottom_field_d) {
+                                      framebuffer_field_c[var4 - var8] = param3;
+                                      framebuffer_field_c[var4 + var8] = param3;
+                                      framebuffer_field_c[var6] = param3;
+                                      framebuffer_field_c[var7] = param3;
+                                      L5: while (true) {
+                                        L6: {
+                                          incrementValue$0 = var9;
+                                          var9++;
+                                          var10 = var10 + (incrementValue$0 + var9);
+                                          var4 = var4 - stride_field_f;
+                                          var5 = var5 + stride_field_f;
+                                          if (var10 <= param2) {
+                                            break L6;
+                                          } else {
+                                            var8--;
+                                            var10 = var10 - (var8 + var8);
+                                            var6 = var6 + stride_field_f;
+                                            var7 = var7 - stride_field_f;
+                                            break L6;
+                                          }
+                                        }
+                                        if (var8 >= var9) {
+                                          framebuffer_field_c[var6 - var9] = param3;
+                                          framebuffer_field_c[var6 + var9] = param3;
+                                          framebuffer_field_c[var4 - var8] = param3;
+                                          framebuffer_field_c[var4 + var8] = param3;
+                                          framebuffer_field_c[var5 - var8] = param3;
+                                          framebuffer_field_c[var5 + var8] = param3;
+                                          framebuffer_field_c[var7 - var9] = param3;
+                                          framebuffer_field_c[var7 + var9] = param3;
+                                          continue L5;
+                                        } else {
+                                          break L3;
+                                        }
+                                      }
+                                    } else {
+                                      break L4;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                            L7: {
+                              if (param0 - var8 < clipLeft_field_e) {
+                                break L7;
+                              } else {
+                                if (param1 < clipTop_field_i) {
+                                  break L7;
+                                } else {
+                                  if (param1 >= clipBottom_field_d) {
+                                    break L7;
+                                  } else {
+                                    framebuffer_field_c[var4 - var8] = param3;
+                                    break L7;
+                                  }
+                                }
+                              }
+                            }
+                            L8: {
+                              if (param0 + var8 >= clipRight_field_k) {
+                                break L8;
+                              } else {
+                                if (param1 < clipTop_field_i) {
+                                  break L8;
+                                } else {
+                                  if (param1 >= clipBottom_field_d) {
+                                    break L8;
+                                  } else {
+                                    framebuffer_field_c[var4 + var8] = param3;
+                                    break L8;
+                                  }
+                                }
+                              }
+                            }
+                            L9: {
+                              if (param1 - var8 >= clipTop_field_i) {
+                                if (param0 >= clipLeft_field_e) {
+                                  if (param0 < clipRight_field_k) {
+                                    framebuffer_field_c[var6] = param3;
+                                    if (param1 + var8 >= clipBottom_field_d) {
+                                      break L9;
+                                    } else {
+                                      if (param0 < clipLeft_field_e) {
+                                        break L9;
+                                      } else {
+                                        if (param0 >= clipRight_field_k) {
+                                          break L9;
+                                        } else {
+                                          framebuffer_field_c[var7] = param3;
+                                          break L9;
+                                        }
+                                      }
+                                    }
+                                  } else {
+                                    if (param1 + var8 >= clipBottom_field_d) {
+                                      break L9;
+                                    } else {
+                                      if (param0 < clipLeft_field_e) {
+                                        break L9;
+                                      } else {
+                                        if (param0 >= clipRight_field_k) {
+                                          break L9;
+                                        } else {
+                                          framebuffer_field_c[var7] = param3;
+                                          break L9;
+                                        }
+                                      }
+                                    }
+                                  }
+                                } else {
+                                  if (param1 + var8 >= clipBottom_field_d) {
+                                    break L9;
+                                  } else {
+                                    if (param0 < clipLeft_field_e) {
+                                      break L9;
+                                    } else {
+                                      if (param0 >= clipRight_field_k) {
+                                        break L9;
+                                      } else {
+                                        framebuffer_field_c[var7] = param3;
+                                        break L9;
+                                      }
+                                    }
+                                  }
+                                }
+                              } else {
+                                if (param1 + var8 >= clipBottom_field_d) {
+                                  break L9;
+                                } else {
+                                  if (param0 < clipLeft_field_e) {
+                                    break L9;
+                                  } else {
+                                    if (param0 >= clipRight_field_k) {
+                                      break L9;
+                                    } else {
+                                      framebuffer_field_c[var7] = param3;
+                                      break L9;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                            L10: while (true) {
+                              L11: {
+                                incrementValue$1 = var9;
+                                var9++;
+                                var10 = var10 + (incrementValue$1 + var9);
+                                var4 = var4 - stride_field_f;
+                                var5 = var5 + stride_field_f;
+                                if (var10 <= param2) {
+                                  break L11;
+                                } else {
+                                  var8--;
+                                  var10 = var10 - (var8 + var8);
+                                  var6 = var6 + stride_field_f;
+                                  var7 = var7 - stride_field_f;
+                                  break L11;
+                                }
+                              }
+                              if (var8 >= var9) {
+                                L12: {
+                                  if (param1 - var8 < clipTop_field_i) {
+                                    break L12;
+                                  } else {
+                                    if (param1 - var8 >= clipBottom_field_d) {
+                                      break L12;
+                                    } else {
+                                      L13: {
+                                        if (param0 - var9 < clipLeft_field_e) {
+                                          break L13;
+                                        } else {
+                                          if (param0 - var9 >= clipRight_field_k) {
+                                            break L13;
+                                          } else {
+                                            framebuffer_field_c[var6 - var9] = param3;
+                                            break L13;
+                                          }
+                                        }
+                                      }
+                                      if (param0 + var9 < clipLeft_field_e) {
+                                        break L12;
+                                      } else {
+                                        if (param0 + var9 >= clipRight_field_k) {
+                                          break L12;
+                                        } else {
+                                          framebuffer_field_c[var6 + var9] = param3;
+                                          break L12;
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                                L14: {
+                                  if (param1 - var9 < clipTop_field_i) {
+                                    break L14;
+                                  } else {
+                                    if (param1 - var9 >= clipBottom_field_d) {
+                                      break L14;
+                                    } else {
+                                      L15: {
+                                        if (param0 - var8 < clipLeft_field_e) {
+                                          break L15;
+                                        } else {
+                                          if (param0 - var8 >= clipRight_field_k) {
+                                            break L15;
+                                          } else {
+                                            framebuffer_field_c[var4 - var8] = param3;
+                                            break L15;
+                                          }
+                                        }
+                                      }
+                                      if (param0 + var8 < clipLeft_field_e) {
+                                        break L14;
+                                      } else {
+                                        if (param0 + var8 >= clipRight_field_k) {
+                                          break L14;
+                                        } else {
+                                          framebuffer_field_c[var4 + var8] = param3;
+                                          break L14;
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                                L16: {
+                                  if (param1 + var9 < clipTop_field_i) {
+                                    break L16;
+                                  } else {
+                                    if (param1 + var9 >= clipBottom_field_d) {
+                                      break L16;
+                                    } else {
+                                      L17: {
+                                        if (param0 - var8 < clipLeft_field_e) {
+                                          break L17;
+                                        } else {
+                                          if (param0 - var8 >= clipRight_field_k) {
+                                            break L17;
+                                          } else {
+                                            framebuffer_field_c[var5 - var8] = param3;
+                                            break L17;
+                                          }
+                                        }
+                                      }
+                                      if (param0 + var8 < clipLeft_field_e) {
+                                        break L16;
+                                      } else {
+                                        if (param0 + var8 >= clipRight_field_k) {
+                                          break L16;
+                                        } else {
+                                          framebuffer_field_c[var5 + var8] = param3;
+                                          break L16;
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                                if (param1 + var8 < clipTop_field_i) {
+                                  continue L10;
+                                } else {
+                                  if (param1 + var8 >= clipBottom_field_d) {
+                                    continue L10;
+                                  } else {
+                                    L18: {
+                                      if (param0 - var9 < clipLeft_field_e) {
+                                        break L18;
+                                      } else {
+                                        if (param0 - var9 >= clipRight_field_k) {
+                                          break L18;
+                                        } else {
+                                          framebuffer_field_c[var7 - var9] = param3;
+                                          break L18;
+                                        }
+                                      }
+                                    }
+                                    if (param0 + var9 < clipLeft_field_e) {
+                                      continue L10;
+                                    } else {
+                                      if (param0 + var9 >= clipRight_field_k) {
+                                        continue L10;
+                                      } else {
+                                        framebuffer_field_c[var7 + var9] = param3;
+                                        continue L10;
+                                      }
+                                    }
+                                  }
+                                }
+                              } else {
+                                break L3;
+                              }
+                            }
+                          }
+                          return;
+                        } else {
+                          break L2;
+                        }
+                      }
+                    }
+                  }
+                  return;
+                }
+              } else {
+                return;
+              }
+            }
+          }
+          return;
+        } else {
+          SoftwareRasterizer_vb.a(param0, param1, param3);
+          return;
+        }
+    }
+
+    final static void c() {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int var0 = 0;
+        int var1 = stride_field_f * field_b - 7;
+        while (var0 < var1) {
+            incrementValue$0 = var0;
+            var0++;
+            framebuffer_field_c[incrementValue$0] = 0;
+            incrementValue$1 = var0;
+            var0++;
+            framebuffer_field_c[incrementValue$1] = 0;
+            incrementValue$2 = var0;
+            var0++;
+            framebuffer_field_c[incrementValue$2] = 0;
+            incrementValue$3 = var0;
+            var0++;
+            framebuffer_field_c[incrementValue$3] = 0;
+            incrementValue$4 = var0;
+            var0++;
+            framebuffer_field_c[incrementValue$4] = 0;
+            incrementValue$5 = var0;
+            var0++;
+            framebuffer_field_c[incrementValue$5] = 0;
+            incrementValue$6 = var0;
+            var0++;
+            framebuffer_field_c[incrementValue$6] = 0;
+            incrementValue$7 = var0;
+            var0++;
+            framebuffer_field_c[incrementValue$7] = 0;
+        }
+        var1 += 7;
+        while (var0 < var1) {
+            incrementValue$8 = var0;
+            var0++;
+            framebuffer_field_c[incrementValue$8] = 0;
+        }
+    }
+
+    final static void d(int param0, int param1, int param2, int param3, int param4) {
+        SoftwareRasterizer_vb.c(param0, param1, param2, param4);
+        SoftwareRasterizer_vb.c(param0, param1 + param3 - 1, param2, param4);
+        SoftwareRasterizer_vb.g(param0, param1, param3, param4);
+        SoftwareRasterizer_vb.g(param0 + param2 - 1, param1, param3, param4);
+    }
+
+    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int incrementValue$0 = 0;
+        if (param0 < clipLeft_field_e) {
+            param2 = param2 - (clipLeft_field_e - param0);
+            param0 = clipLeft_field_e;
+        }
+        if (param1 < clipTop_field_i) {
+            param3 = param3 - (clipTop_field_i - param1);
+            param1 = clipTop_field_i;
+        }
+        if (param0 + param2 > clipRight_field_k) {
+            param2 = clipRight_field_k - param0;
+        }
+        if (param1 + param3 > clipBottom_field_d) {
+            param3 = clipBottom_field_d - param1;
+        }
+        param4 = ((param4 & 16711935) * param5 >> 8 & 16711935) + ((param4 & 65280) * param5 >> 8 & 65280);
+        int var6 = 256 - param5;
+        int var7 = stride_field_f - param2;
+        int var8 = param0 + param1 * stride_field_f;
+        for (var9 = 0; var9 < param3; var9++) {
+            for (var10 = -param2; var10 < 0; var10++) {
+                var11 = framebuffer_field_c[var8];
+                var11 = ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & 65280) * var6 >> 8 & 65280);
+                incrementValue$0 = var8;
+                var8++;
+                framebuffer_field_c[incrementValue$0] = param4 + var11;
+            }
+            var8 = var8 + var7;
+        }
+    }
+
+    final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        if (param4 != 0) {
+          L0: {
+            if (param4 >= 0) {
+              break L0;
+            } else {
+              param4 = -param4;
+              break L0;
+            }
+          }
+          L1: {
+            var6 = param0 + param4;
+            var7 = param1 + param4;
+            var8 = param1;
+            if (var8 >= clipTop_field_i) {
+              break L1;
+            } else {
+              var8 = clipTop_field_i;
+              break L1;
+            }
+          }
+          L2: {
+            var9 = param1 + param3;
+            if (var9 <= clipBottom_field_d) {
+              break L2;
+            } else {
+              var9 = clipBottom_field_d;
+              break L2;
+            }
+          }
+          L3: {
+            var10 = param2 - param4 - param4 - 1;
+            var11 = var8;
+            var12 = param4 * param4;
+            var13 = 0;
+            var14 = var7 - var11;
+            var15 = var14 * var14;
+            var16 = var15 - var14;
+            if (var7 <= var9) {
+              break L3;
+            } else {
+              var7 = var9;
+              break L3;
+            }
+          }
+          L4: while (true) {
+            if (var11 >= var7) {
+              L5: {
+                var14 = var11 - var7;
+                var17 = param0;
+                if (var17 >= clipLeft_field_e) {
+                  break L5;
+                } else {
+                  var17 = clipLeft_field_e;
+                  break L5;
+                }
+              }
+              L6: {
+                var18 = param0 + param2;
+                if (var18 <= clipRight_field_k) {
+                  break L6;
+                } else {
+                  var18 = clipRight_field_k;
+                  break L6;
+                }
+              }
+              L7: {
+                var19 = var17 + var11 * stride_field_f;
+                var20 = stride_field_f + var17 - var18;
+                var21 = param1 + param3 - param4 - 1;
+                if (var21 <= clipBottom_field_d) {
+                  break L7;
+                } else {
+                  var21 = clipBottom_field_d;
+                  break L7;
+                }
+              }
+              L8: while (true) {
+                if (var11 >= var21) {
+                  var14 = 0;
+                  var13 = param4;
+                  var16 = var14 * var14 + var12;
+                  var15 = var16 - var13;
+                  var16 = var16 - var14;
+                  L9: while (true) {
+                    if (var11 >= var9) {
+                      return;
+                    } else {
+                      L10: while (true) {
+                        L11: {
+                          if (var16 <= var12) {
+                            break L11;
+                          } else {
+                            if (var15 <= var12) {
+                              break L11;
+                            } else {
+                              incrementValue$0 = var13;
+                              var13--;
+                              var16 = var16 - (incrementValue$0 + var13);
+                              var15 = var15 - (var13 + var13);
+                              continue L10;
+                            }
+                          }
+                        }
+                        L12: {
+                          var17 = var6 - var13;
+                          if (var17 >= clipLeft_field_e) {
+                            break L12;
+                          } else {
+                            var17 = clipLeft_field_e;
+                            break L12;
+                          }
+                        }
+                        L13: {
+                          var18 = var6 + var10 + var13;
+                          if (var18 <= clipRight_field_k - 1) {
+                            break L13;
+                          } else {
+                            var18 = clipRight_field_k - 1;
+                            break L13;
+                          }
+                        }
+                        var19 = var17 + var11 * stride_field_f;
+                        var20 = var17;
+                        L14: while (true) {
+                          if (var20 > var18) {
+                            var11++;
+                            var16 = var16 + (var14 + var14);
+                            incrementValue$1 = var14;
+                            var14++;
+                            var15 = var15 + (incrementValue$1 + var14);
+                            continue L9;
+                          } else {
+                            incrementValue$2 = var19;
+                            var19++;
+                            framebuffer_field_c[incrementValue$2] = param5;
+                            var20++;
+                            continue L14;
+                          }
+                        }
+                      }
+                    }
+                  }
+                } else {
+                  var22 = var17;
+                  L15: while (true) {
+                    if (var22 >= var18) {
+                      var11++;
+                      var19 = var19 + var20;
+                      continue L8;
+                    } else {
+                      incrementValue$3 = var19;
+                      var19++;
+                      framebuffer_field_c[incrementValue$3] = param5;
+                      var22++;
+                      continue L15;
+                    }
+                  }
+                }
+              }
+            } else {
+              L16: while (true) {
+                L17: {
+                  if (var16 <= var12) {
+                    break L17;
+                  } else {
+                    if (var15 > var12) {
+                      L18: {
+                        var17 = var6 - var13 + 1;
+                        if (var17 >= clipLeft_field_e) {
+                          break L18;
+                        } else {
+                          var17 = clipLeft_field_e;
+                          break L18;
+                        }
+                      }
+                      L19: {
+                        var18 = var6 + var10 + var13;
+                        if (var18 <= clipRight_field_k) {
+                          break L19;
+                        } else {
+                          var18 = clipRight_field_k;
+                          break L19;
+                        }
+                      }
+                      var19 = var17 + var11 * stride_field_f;
+                      var20 = var17;
+                      L20: while (true) {
+                        if (var20 >= var18) {
+                          var11++;
+                          incrementValue$4 = var14;
+                          var14--;
+                          var15 = var15 - (incrementValue$4 + var14);
+                          var16 = var16 - (var14 + var14);
+                          continue L4;
+                        } else {
+                          incrementValue$5 = var19;
+                          var19++;
+                          framebuffer_field_c[incrementValue$5] = param5;
+                          var20++;
+                          continue L20;
+                        }
+                      }
+                    } else {
+                      break L17;
+                    }
+                  }
+                }
+                var15 = var15 + (var13 + var13);
+                incrementValue$6 = var13;
+                var13++;
+                var16 = var16 + (incrementValue$6 + var13);
+                continue L16;
+              }
+            }
+          }
+        } else {
+          SoftwareRasterizer_vb.a(param0, param1, param2, param3, param5);
+          return;
+        }
+    }
+
+    final static void e(int param0, int param1, int param2, int param3) {
+        if (param0 < 0) {
+            param0 = 0;
+        }
+        if (param1 < 0) {
+            param1 = 0;
+        }
+        if (param2 > stride_field_f) {
+            param2 = stride_field_f;
+        }
+        if (param3 > field_b) {
+            param3 = field_b;
+        }
+        clipLeft_field_e = param0;
+        clipTop_field_i = param1;
+        clipRight_field_k = param2;
+        clipBottom_field_d = param3;
+        SoftwareRasterizer_vb.b();
+    }
+
+    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int[] stackIn_38_0 = null;
+        int stackIn_38_1 = 0;
+        int[] stackIn_39_0 = null;
+        int stackIn_39_1 = 0;
+        int stackIn_39_2 = 0;
+        int[] stackIn_41_0 = null;
+        int stackIn_41_1 = 0;
+        int[] stackIn_42_0 = null;
+        int stackIn_42_1 = 0;
+        int stackIn_42_2 = 0;
+        int[] stackIn_44_0 = null;
+        int stackIn_44_1 = 0;
+        int[] stackIn_45_0 = null;
+        int stackIn_45_1 = 0;
+        int stackIn_45_2 = 0;
+        int[] var9;
+        int[] var10;
+        int[] var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        int var23;
+        int[] var24;
+        int[] var25;
+        int[] var26;
+        int[] var27;
+        int[] var28;
+        int[] var29;
+        L0: {
+          L1: {
+            if (field_g == null) {
+              break L1;
+            } else {
+              if (field_g.length >= param8) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          field_g = new int[param8];
+          field_h = new int[param8];
+          field_j = new int[param8];
+          break L0;
+        }
+        L2: {
+          var27 = field_g;
+          var24 = var27;
+          var9 = var24;
+          var28 = field_h;
+          var25 = var28;
+          var10 = var25;
+          var29 = field_j;
+          var26 = var29;
+          var11 = var26;
+          sf.a(var27, 0, param8);
+          sf.a(var28, 0, param8);
+          sf.a(var29, 0, param8);
+          var12 = 16384 / (2 * param3 + 1);
+          var13 = param4 - param3;
+          if (var13 >= 0) {
+            break L2;
+          } else {
+            var13 = 0;
+            break L2;
+          }
+        }
+        L3: {
+          var14 = param7 + var13 * stride_field_f;
+          var15 = param4 + param3;
+          var16 = 0;
+          if (var15 < field_b) {
+            break L3;
+          } else {
+            var16 = var15 - field_b + 1;
+            var15 = field_b - 1;
+            break L3;
+          }
+        }
+        var17 = var15 - var13 + 1;
+        L4: while (true) {
+          if (var13 > var15) {
+            var14 = var14 + var16 * stride_field_f;
+            var18 = 0;
+            L5: while (true) {
+              if (var18 >= param8) {
+                L6: {
+                  param2 = param2 + param6;
+                  var13 = 1 - param5;
+                  var18 = 1 + param3 - param5 - param4;
+                  if (0 >= var18) {
+                    break L6;
+                  } else {
+                    var18 = 0;
+                    break L6;
+                  }
+                }
+                L7: {
+                  var19 = param7 + (param4 - param3) * stride_field_f;
+                  if (var13 >= var18) {
+                    break L7;
+                  } else {
+                    var19 = var19 + (var18 - var13) * stride_field_f;
+                    break L7;
+                  }
+                }
+                L8: while (true) {
+                  if (var13 >= var18) {
+                    L9: {
+                      var18 = field_b - param4 - param5 - param3;
+                      if (0 >= var18) {
+                        break L9;
+                      } else {
+                        var18 = 0;
+                        break L9;
+                      }
+                    }
+                    L10: while (true) {
+                      if (var13 >= var18) {
+                        L11: while (true) {
+                          if (var13 >= 0) {
+                            return;
+                          } else {
+                            var20 = 0;
+                            L12: while (true) {
+                              if (var20 >= param8) {
+                                var19 = var19 + param6;
+                                var17--;
+                                var20 = 0;
+                                L13: while (true) {
+                                  if (var20 >= param8) {
+                                    param2 = param2 + param6;
+                                    var13++;
+                                    continue L11;
+                                  } else {
+                                    L14: {
+                                      var21 = var27[var20] / var17;
+                                      var22 = var28[var20] / var17;
+                                      var23 = var29[var20] / var17;
+                                      if (var21 >= 0) {
+                                        if (var21 <= 255) {
+                                          break L14;
+                                        } else {
+                                          var21 = 255;
+                                          break L14;
+                                        }
+                                      } else {
+                                        var21 = 0;
+                                        break L14;
+                                      }
+                                    }
+                                    L15: {
+                                      if (var22 >= 0) {
+                                        if (var22 <= 255) {
+                                          break L15;
+                                        } else {
+                                          var22 = 255;
+                                          break L15;
+                                        }
+                                      } else {
+                                        var22 = 0;
+                                        break L15;
+                                      }
+                                    }
+                                    L16: {
+                                      if (var23 >= 0) {
+                                        if (var23 <= 255) {
+                                          break L16;
+                                        } else {
+                                          var23 = 255;
+                                          break L16;
+                                        }
+                                      } else {
+                                        var23 = 0;
+                                        break L16;
+                                      }
+                                    }
+                                    incrementValue$0 = param2;
+                                    param2++;
+                                    param0[incrementValue$0] = (var21 << 16) + (var22 << 8) + var23;
+                                    var20++;
+                                    continue L13;
+                                  }
+                                }
+                              } else {
+                                incrementValue$1 = var19;
+                                var19++;
+                                param1 = param0[incrementValue$1];
+                                var9[var20] = var9[var20] - (param1 >> 16 & 255);
+                                var10[var20] = var10[var20] - (param1 >> 8 & 255);
+                                var11[var20] = var11[var20] - (param1 & 255);
+                                var20++;
+                                continue L12;
+                              }
+                            }
+                          }
+                        }
+                      } else {
+                        var20 = 0;
+                        L17: while (true) {
+                          if (var20 >= param8) {
+                            var19 = var19 + param6;
+                            var20 = 0;
+                            L18: while (true) {
+                              if (var20 >= param8) {
+                                var14 = var14 + param6;
+                                var20 = 0;
+                                L19: while (true) {
+                                  if (var20 >= param8) {
+                                    param2 = param2 + param6;
+                                    var13++;
+                                    continue L10;
+                                  } else {
+                                    L20: {
+                                      var21 = var27[var20] * var12 >> 14;
+                                      var22 = var28[var20] * var12 >> 14;
+                                      var23 = var29[var20] * var12 >> 14;
+                                      if (var21 <= 255) {
+                                        break L20;
+                                      } else {
+                                        var21 = 255;
+                                        break L20;
+                                      }
+                                    }
+                                    L21: {
+                                      if (var22 <= 255) {
+                                        break L21;
+                                      } else {
+                                        var22 = 255;
+                                        break L21;
+                                      }
+                                    }
+                                    L22: {
+                                      if (var23 <= 255) {
+                                        break L22;
+                                      } else {
+                                        var23 = 255;
+                                        break L22;
+                                      }
+                                    }
+                                    incrementValue$2 = param2;
+                                    param2++;
+                                    param0[incrementValue$2] = (var21 << 16) + (var22 << 8) + var23;
+                                    var20++;
+                                    continue L19;
+                                  }
+                                }
+                              } else {
+                                incrementValue$3 = var14;
+                                var14++;
+                                param1 = param0[incrementValue$3];
+                                var9[var20] = var9[var20] + (param1 >> 16 & 255);
+                                var10[var20] = var10[var20] + (param1 >> 8 & 255);
+                                var11[var20] = var11[var20] + (param1 & 255);
+                                var20++;
+                                continue L18;
+                              }
+                            }
+                          } else {
+                            L23: {
+                              incrementValue$4 = var19;
+                              var19++;
+                              param1 = param0[incrementValue$4];
+                              var21 = var27[var20] - (param1 >> 16 & 255);
+                              stackIn_38_0 = (int[]) (var9);
+
+                              stackIn_38_1 = var20;
+
+                              if (var21 >= 0) {
+                                stackIn_39_0 = (int[]) ((Object) stackIn_38_0);
+                                stackIn_39_1 = stackIn_38_1;
+                                stackIn_39_2 = var21;
+                                break L23;
+                              } else {
+                                stackIn_39_0 = (int[]) ((Object) stackIn_38_0);
+                                stackIn_39_1 = stackIn_38_1;
+                                stackIn_39_2 = 0;
+                                break L23;
+                              }
+                            }
+                            L24: {
+                              stackIn_39_0[stackIn_39_1] = stackIn_39_2;
+                              var21 = var28[var20] - (param1 >> 8 & 255);
+                              stackIn_41_0 = (int[]) (var10);
+
+                              stackIn_41_1 = var20;
+
+                              if (var21 >= 0) {
+                                stackIn_42_0 = (int[]) ((Object) stackIn_41_0);
+                                stackIn_42_1 = stackIn_41_1;
+                                stackIn_42_2 = var21;
+                                break L24;
+                              } else {
+                                stackIn_42_0 = (int[]) ((Object) stackIn_41_0);
+                                stackIn_42_1 = stackIn_41_1;
+                                stackIn_42_2 = 0;
+                                break L24;
+                              }
+                            }
+                            L25: {
+                              stackIn_42_0[stackIn_42_1] = stackIn_42_2;
+                              var21 = var29[var20] - (param1 & 255);
+                              stackIn_44_0 = (int[]) (var11);
+
+                              stackIn_44_1 = var20;
+
+                              if (var21 >= 0) {
+                                stackIn_45_0 = (int[]) ((Object) stackIn_44_0);
+                                stackIn_45_1 = stackIn_44_1;
+                                stackIn_45_2 = var21;
+                                break L25;
+                              } else {
+                                stackIn_45_0 = (int[]) ((Object) stackIn_44_0);
+                                stackIn_45_1 = stackIn_44_1;
+                                stackIn_45_2 = 0;
+                                break L25;
+                              }
+                            }
+                            stackIn_45_0[stackIn_45_1] = stackIn_45_2;
+                            var20++;
+                            continue L17;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    L26: {
+                      if (var13 + param4 + param5 + param3 >= clipBottom_field_d) {
+                        var14 = var14 + stride_field_f;
+                        break L26;
+                      } else {
+                        var20 = 0;
+                        L27: while (true) {
+                          if (var20 >= param8) {
+                            var14 = var14 + param6;
+                            var17++;
+                            break L26;
+                          } else {
+                            incrementValue$5 = var14;
+                            var14++;
+                            param1 = param0[incrementValue$5];
+                            var9[var20] = var9[var20] + (param1 >> 16 & 255);
+                            var10[var20] = var10[var20] + (param1 >> 8 & 255);
+                            var11[var20] = var11[var20] + (param1 & 255);
+                            var20++;
+                            continue L27;
+                          }
+                        }
+                      }
+                    }
+                    var20 = 0;
+                    L28: while (true) {
+                      if (var20 >= param8) {
+                        param2 = param2 + param6;
+                        var13++;
+                        continue L8;
+                      } else {
+                        var21 = var27[var20] / var17;
+                        var22 = var28[var20] / var17;
+                        var23 = var29[var20] / var17;
+                        incrementValue$6 = param2;
+                        param2++;
+                        param0[incrementValue$6] = (var21 << 16) + (var22 << 8) + var23;
+                        var20++;
+                        continue L28;
+                      }
+                    }
+                  }
+                }
+              } else {
+                incrementValue$7 = param2;
+                param2++;
+                param0[incrementValue$7] = (var27[var18] / var17 << 16) + (var28[var18] / var17 << 8) + var29[var18] / var17;
+                var18++;
+                continue L5;
+              }
+            }
+          } else {
+            var18 = 0;
+            L29: while (true) {
+              if (var18 >= param8) {
+                var14 = var14 + param6;
+                var13++;
+                continue L4;
+              } else {
+                incrementValue$8 = var14;
+                var14++;
+                param1 = param0[incrementValue$8];
+                var9[var18] = var9[var18] + (param1 >> 16 & 255);
+                var10[var18] = var10[var18] + (param1 >> 8 & 255);
+                var11[var18] = var11[var18] + (param1 & 255);
+                var18++;
+                continue L29;
+              }
+            }
+          }
+        }
+    }
+
+    final static void b(int[] param0) {
+        clipLeft_field_e = param0[0];
+        clipTop_field_i = param0[1];
+        clipRight_field_k = param0[2];
+        clipBottom_field_d = param0[3];
+        SoftwareRasterizer_vb.b();
+    }
+
+    private final static void g(int param0, int param1, int param2, int param3) {
+        int var4 = 0;
+        int var5 = 0;
+        if (param0 >= clipLeft_field_e) {
+            if (param0 >= clipRight_field_k) {
+                return;
+            }
+            if (param1 < clipTop_field_i) {
+                param2 = param2 - (clipTop_field_i - param1);
+                param1 = clipTop_field_i;
+            }
+            if (param1 + param2 > clipBottom_field_d) {
+                param2 = clipBottom_field_d - param1;
+            }
+            var4 = param0 + param1 * stride_field_f;
+            var5 = 0;
+            while (var5 < param2) {
+                framebuffer_field_c[var4] = param3;
+                var5++;
+                var4 = var4 + stride_field_f;
+            }
+            return;
+        }
+    }
+
+    final static void a(int[] param0, int param1, int param2) {
+        framebuffer_field_c = param0;
+        stride_field_f = param1;
+        field_b = param2;
+        SoftwareRasterizer_vb.e(0, 0, param1, param2);
+    }
+
+    static {
+        clipBottom_field_d = 0;
+        clipRight_field_k = 0;
+        clipTop_field_i = 0;
+        clipLeft_field_e = 0;
+    }
+}

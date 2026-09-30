@@ -1,0 +1,129 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class je extends hf {
+    PcmSampleStream_kl field_g;
+    int field_i;
+    static wl field_j;
+    hf field_f;
+    static sk[] field_h;
+
+    final static void c(byte param0) {
+        p var1 = null;
+        int var2 = Geoblox.field_C;
+        try {
+            if (!hj.field_c && null != vk.field_b) {
+                if (!(!vk.field_b.field_f)) {
+                    ra.field_d = vk.field_b.field_j;
+                    hj.field_c = true;
+                    ug.field_c = ug.field_c & (ra.field_d ^ -1);
+                    vl.field_p = vl.field_p | ra.field_d;
+                }
+            }
+            if (param0 >= -119) {
+                field_j = (wl) null;
+            }
+            if (!fh.c(-91)) {
+                while (true) {
+                    var1 = (p) ((Object) GameplayEntity_ja.field_A.b((byte) -118));
+                    if (var1 == null) {
+                        break;
+                    }
+                    sj.a(var1, -56, 4);
+                }
+            }
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "je.C(" + param0 + ')');
+        }
+    }
+
+    final static rh a(int param0, boolean param1, boolean param2, boolean param3, byte param4) {
+        int var5 = 55 / ((param4 - -65) / 46);
+        return am.a(-128, param0, param2, !param1 ? 0 : 1, param3, false);
+    }
+
+    final static void a(byte param0, java.applet.Applet param1) {
+        try {
+            java.net.URL var2 = null;
+            int var2_int = 0;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            String stackIn_8_2 = null;
+            Throwable decompiledCaughtException = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
+            try {
+              L0: {
+                try {
+                  L1: {
+                    var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
+                    param1.getAppletContext().showDocument(wf.a(var2, -84, param1), "_top");
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    var2_ref = (Exception) (Object) decompiledCaughtException;
+                    var2_ref.printStackTrace();
+                    break L2;
+                  }
+                }
+                var2_int = 91 % ((50 - param0) / 49);
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L3: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackIn_7_0 = (RuntimeException) (var2_ref2);
+
+                stackIn_7_1 = new StringBuilder().append("je.D(").append(param0).append(',');
+
+                if (param1 == null) {
+                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+                  stackIn_8_2 = "null";
+                  break L3;
+                } else {
+                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+                  stackIn_8_2 = "{...}";
+                  break L3;
+                }
+              }
+              throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+            }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public static void a(byte param0) {
+        field_j = null;
+        if (param0 <= 49) {
+            je.c((byte) -123);
+            field_h = null;
+            return;
+        }
+        field_h = null;
+    }
+
+    je(PcmSampleStream_kl param0, hf param1) {
+        try {
+            this.field_g = param0;
+            this.field_i = param0.i();
+            this.field_f = param1;
+            this.field_g.f(this.field_i * j.field_gb / 80);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_j = new wl();
+    }
+}

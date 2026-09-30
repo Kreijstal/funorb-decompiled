@@ -1,0 +1,25 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class af {
+    static sk field_b;
+    static Sprite_dm field_a;
+    static sk field_d;
+    static int field_c;
+    private static String field_z;
+
+    public static void a(byte param0) {
+        field_a = null;
+        field_b = null;
+        field_d = null;
+        if (param0 > -86) {
+            field_d = (sk) null;
+        }
+    }
+
+    static {
+        field_z = "af.A(";
+        field_c = 0;
+        field_a = new Sprite_dm(320, 240);
+    }
+}

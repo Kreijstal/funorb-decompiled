@@ -1,0 +1,290 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ec {
+    static int field_b;
+    static String field_a;
+    static Sprite_dm field_c;
+    static String[] field_e;
+    static int field_d;
+
+    final static void a(int param0, int param1) {
+        int var3 = 0;
+        int var4 = 0;
+        ai var5 = null;
+        mg var6 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        var4 = Geoblox.field_C;
+        try {
+          L0: {
+            var3 = 57 % ((param0 - 57) / 46);
+            var5 = (ai) ((Object) nf.field_j.g(0));
+            L1: while (true) {
+              if (var5 == null) {
+                var6 = (mg) ((Object) rh.field_d.g(0));
+                L2: while (true) {
+                  if (var6 == null) {
+                    break L0;
+                  } else {
+                    ib.a(param1, 5, var6);
+                    var6 = (mg) ((Object) rh.field_d.d(1));
+                    continue L2;
+                  }
+                }
+              } else {
+                bm.a(var5, param1, -127);
+                var5 = (ai) ((Object) nf.field_j.d(1));
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw t.a((Throwable) ((Object) var2), "ec.C(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    final static boolean b(int param0) {
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_49_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        GameplayEntity_ja var5 = null;
+        GameplayEntity_ja var6 = null;
+        GameplayEntity_ja var7 = null;
+        int var8 = 0;
+        GameplayEntity_ja var8_ref_ja = null;
+        int var9 = 0;
+        GameplayEntity_ja var9_ref_ja = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        var11 = Geoblox.field_C;
+        try {
+          L0: {
+            L1: {
+              if (0 != h.field_a) {
+                break L1;
+              } else {
+                if (0 < wb.field_b) {
+                  if (!w.field_f) {
+                    L2: {
+                      gf.field_f = 0;
+                      if (el.gameplaySession_field_o.field_T != 463) {
+                        break L2;
+                      } else {
+                        el.gameplaySession_field_o.field_y = 1;
+                        el.gameplaySession_field_o.emitPointsPopup_c(false);
+                        break L2;
+                      }
+                    }
+                    stackIn_9_0 = 0;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
+                  } else {
+                    return false;
+                  }
+                } else {
+                  break L1;
+                }
+              }
+            }
+            if (-1 != (h.field_a ^ -1)) {
+              L3: {
+                if (-6 >= (gf.field_f ^ -1)) {
+                  ra.a(jf.field_g ^ 255, -99, jf.field_g);
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+              L4: {
+                if ((gf.field_f ^ -1) <= -7) {
+                  ra.a(qg.field_d ^ 255, -57, qg.field_d);
+                  break L4;
+                } else {
+                  break L4;
+                }
+              }
+              L5: {
+                if (gf.field_f >= 7) {
+                  ra.a(255 ^ tf.field_f, -97, tf.field_f);
+                  break L5;
+                } else {
+                  break L5;
+                }
+              }
+              var1_int = 1;
+              L6: while (true) {
+                if (var1_int >= h.field_a) {
+                  L7: {
+                    if (param0 == -18913) {
+                      break L7;
+                    } else {
+                      ec.b(-33);
+                      break L7;
+                    }
+                  }
+                  var12 = 0;
+                  var1_int = var12;
+                  L8: while (true) {
+                    if (var12 >= h.field_a) {
+                      h.field_a = 0;
+                      stackIn_49_0 = 1;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
+                    } else {
+                      L9: {
+                        L10: {
+                          if (-1 + h.field_a <= var12) {
+                            break L10;
+                          } else {
+                            if (nk.field_f[var12] != nk.field_f[var12 - -1]) {
+                              break L10;
+                            } else {
+                              nk.field_f[var12] = 0;
+                              break L9;
+                            }
+                          }
+                        }
+                        L11: {
+                          var2 = (nk.field_f[var12] & 1072693248) >> -844054220;
+                          var3 = nk.field_f[var12] >> -1979164054 & 1023;
+                          var4 = 1023 & nk.field_f[var12];
+                          var5 = tl.field_g[var2];
+                          var6 = tl.field_g[var3];
+                          var7 = tl.field_g[var4];
+                          if ((var5.field_E ^ -1) < -1) {
+                            break L11;
+                          } else {
+                            if (-1 > (var6.field_E ^ -1)) {
+                              break L11;
+                            } else {
+                              if (-1 <= (var7.field_E ^ -1)) {
+                                L12: {
+                                  td.a(-348, fl.field_c[31]);
+                                  gf.field_f = gf.field_f + 1;
+                                  if (-2 <= (gf.field_f ^ -1)) {
+                                    break L12;
+                                  } else {
+                                    el.gameplaySession_field_o.field_y = -1;
+                                    break L12;
+                                  }
+                                }
+                                L13: {
+                                  if (-1073741824 == (-1073741824 & nk.field_f[var12])) {
+                                    var8 = 90 * gf.field_f;
+                                    ra.a(fa.field_e ^ 255, -100, fa.field_e);
+                                    break L13;
+                                  } else {
+                                    var8 = 30 * gf.field_f;
+                                    break L13;
+                                  }
+                                }
+                                var9 = 0;
+                                var9 = (int)var5.positionX_field_o;
+                                var10 = 0;
+                                var10 = (int)var5.positionY_field_v;
+                                ug.a(var8, true, var10, gf.field_f, var9);
+                                nk.field_f[var12] = 0;
+                                break L9;
+                              } else {
+                                break L11;
+                              }
+                            }
+                          }
+                        }
+                        var8_ref_ja = var5;
+                        var9_ref_ja = var6;
+                        var7.entityQueue_field_K = null;
+                        var9_ref_ja.entityQueue_field_K = null;
+                        var8_ref_ja.entityQueue_field_K = null;
+                        nk.field_f[var12] = 0;
+                        break L9;
+                      }
+                      var12++;
+                      continue L8;
+                    }
+                  }
+                } else {
+                  var2 = var1_int + -1;
+                  var3 = nk.field_f[var1_int];
+                  L14: while (true) {
+                    L15: {
+                      if (-1 < (var2 ^ -1)) {
+                        break L15;
+                      } else {
+                        if ((nk.field_f[var2] ^ -1) >= (var3 ^ -1)) {
+                          break L15;
+                        } else {
+                          nk.field_f[1 + var2] = nk.field_f[var2];
+                          var2--;
+                          continue L14;
+                        }
+                      }
+                    }
+                    nk.field_f[1 + var2] = var3;
+                    var1_int++;
+                    continue L6;
+                  }
+                }
+              }
+            } else {
+              stackIn_12_0 = 0;
+              decompiledRegionSelector0 = 1;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw t.a((Throwable) ((Object) var1), "ec.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_9_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_12_0 != 0;
+          } else {
+            return stackIn_49_0 != 0;
+          }
+        }
+    }
+
+    final static void a(int param0) {
+        ph var1 = (ph) ((Object) el.field_p.g(param0 ^ param0));
+        if (!(var1 != null)) {
+            jl.a((byte) -122);
+            return;
+        }
+        pk var2 = eh.field_d;
+        var2.a((byte) -102);
+        var2.a((byte) -108);
+        var2.a((byte) -71);
+        var2.a((byte) -83);
+        var1.a(false);
+    }
+
+    public static void a(boolean param0) {
+        if (!param0) {
+            field_a = (String) null;
+        }
+        field_c = null;
+        field_a = null;
+        field_e = null;
+    }
+
+    static {
+        field_b = 0;
+        field_a = "OK";
+        field_e = new String[]{"At any point in the game, you can press the <img=4> key on the top-left of your keyboard to pause the game and bring up the menu from which you can access these instructions.<br><br><br><br>Press the <img=0> and <img=1> arrow keys to rotate the game area anticlockwise and clockwise. You can reverse the directions by pressing <img=7> at any point during the game. If you want to make the next geoblox fall faster, press and hold the <img=6> arrow key.", "Connect falling geoblox into threes, by colour, shape, or colour and shape to score points. Geoblox are considered to be connected when there is no black line between them. If there is a black line, your geoblox are not close enough.<br><br>The geoblox plummet towards your avatar from the outside of the play area. They will stick to the first thing they hit. By getting three of a kind, by colour, shape, or colour and shape, they will disappear and earn you points. Special geoblox, which behave differently, appear later in the game.<br>Once the stacked geoblox reach the edge of the play area, you lose.", "The sequence bonus is awarded for clearing more than one set of geoblox in a row. For clearing two sets of geoblox in a row, the points awarded will be doubled; for clearing three sets in a row, the points awarded will be tripled, and so on. The bonus only applies to an uninterrupted sequence.<br><br>There's a bonus for clearing the avatar of geoblox. Once you reach the end of a stage (the countdown is in the bottom-right of the screen), a bonus bubble will appear. It shrinks from the outer edge of the game area until it touches a geoblox. The longer it takes to reach a geoblox, the higher your reward!", "Special geoblox only crop up in the latter parts of the game, so don't worry about them early on.<br><br><shad=AAAAAA>The amorphous geoblox:</shad> This blob in a jar has a fixed colour, but will assume the shape of the first geoblox it hits. These will only disappear when you connect them to two others of the same colour.<br><br><shad=AAAAAA>The chromatic geoblox:</shad> This has a shape, but no colour. It will assume the colour of the first normal geoblox it hits. These will only disappear when you connect them to two others of the same shape.", "<shad=AAAAAA>The black orb:</shad> Malignant and lazy, this geoblox does nothing but get in your way. Destroy them by using a silver star for a whopping 100 points each! There are no points for stacking them, as they will not react.<br><br><shad=AAAAAA>The silver star:</shad> This star reacts if it comes into contact with your avatar. It unleashes an electric shock that destroys all geoblox touching the avatar, including black orbs. Until then, it's a bit useless! Don't try stacking them as they will just sit there."};
+    }
+}

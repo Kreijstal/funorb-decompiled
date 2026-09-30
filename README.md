@@ -9,6 +9,20 @@ Vineflower, or any other off-the-shelf tool. The decompiler is part of the
 over the obfuscated gamepacks by the pipeline in
 [dekobloko-work](https://github.com/Kreijstal/dekobloko-work).
 
+## Readable GeoBlox export
+
+[`readable/geoblox/src`](readable/geoblox/src) contains a separate GeoBlox source
+export with 420 deterministic naming rules, including the reviewed entity-ID,
+control-flow-guard and shared audio-helper corrections. Its 303 Java files compile
+and preserve all 167,702 recorded source bindings and 388 override relationships.
+The original decompilation remains under `games/`.
+
+The [export instructions](readable/README.md), [frozen rules](readable/geoblox-rules.json),
+[symbol map](readable/geoblox/SYMBOLS.md) and
+[provenance](readable/geoblox/provenance.json) record how to regenerate and check it.
+This is an incremental naming pass; unknown identifiers and decompiled control
+flow remain, and the export has not undergone a new whole-game runtime test.
+
 ## What changed in this regeneration
 
 The 2026-08-17 regeneration updates all 44 games from tracked-clean generator

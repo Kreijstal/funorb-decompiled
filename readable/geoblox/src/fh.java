@@ -1,0 +1,222 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class fh implements dh {
+    private int field_a;
+    private int field_b;
+    private m field_d;
+    static int field_c;
+    static Sprite_dm[] field_e;
+
+    final static void b(int param0) {
+        cf.field_i = false;
+        va.field_d = false;
+        pc.a(-1, false);
+        si.field_g = uf.field_l;
+        kd.field_b = uf.field_l;
+        if (param0 != -6011) {
+            field_c = 36;
+        }
+    }
+
+    public static void a(int param0) {
+        if (param0 != 1) {
+            fh.a(51);
+            field_e = null;
+            return;
+        }
+        field_e = null;
+    }
+
+    final static boolean c(int param0) {
+        if (param0 > -78) {
+            return false;
+        }
+        return hl.field_G;
+    }
+
+    final static String a(long param0, int param1) {
+        StringBuilder discarded$1 = null;
+        int var3;
+        long var4;
+        StringBuilder var6;
+        long var7_long;
+        int var7;
+        int var9;
+        int var10;
+        int var11;
+        var11 = Geoblox.field_C;
+        if ((param0 ^ -1L) < -1L) {
+          if (param0 < 6582952005840035281L) {
+            if (0L == param0 % 37L) {
+              return null;
+            } else {
+              var3 = 0;
+              var4 = param0;
+              L0: while (true) {
+                if (var4 == 0L) {
+                  var6 = new StringBuilder(var3);
+                  L1: while (true) {
+                    if (-1L == (param0 ^ -1L)) {
+                      var6.reverse();
+                      var7 = 49 % ((27 - param1) / 36);
+                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+                      return var6.toString();
+                    } else {
+                      L2: {
+                        var7_long = param0;
+                        param0 = param0 / 37L;
+                        var9 = w.field_c[(int)(-(37L * param0) + var7_long)];
+                        if (95 != var9) {
+                          break L2;
+                        } else {
+                          var10 = -1 + var6.length();
+                          var9 = 160;
+                          var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
+                          break L2;
+                        }
+                      }
+                      discarded$1 = var6.append((char) var9);
+                      continue L1;
+                    }
+                  }
+                } else {
+                  var4 = var4 / 37L;
+                  var3++;
+                  continue L0;
+                }
+              }
+            }
+          } else {
+            return null;
+          }
+        } else {
+          return null;
+        }
+    }
+
+    public final void a(int param0, int param1, int param2, boolean param3, el param4) {
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        var11 = Geoblox.field_C;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                if (param4.field_l) {
+                  break L2;
+                } else {
+                  if (param4.e((byte) 54)) {
+                    break L2;
+                  } else {
+                    stackIn_5_0 = 2188450;
+                    break L1;
+                  }
+                }
+              }
+              stackIn_5_0 = 3249872;
+              break L1;
+            }
+            L3: {
+              var6_int = stackIn_5_0;
+              this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_s + "</u>", param4.field_v + param0, param2 - -param4.field_m, param4.field_r, param4.field_h, var6_int, -1, this.field_b, this.field_a, this.field_d.field_o - -this.field_d.field_q);
+              if (param1 <= -5) {
+                break L3;
+              } else {
+                fh.a(53L, -116);
+                break L3;
+              }
+            }
+            if (param4.e((byte) 54)) {
+              L4: {
+                var7 = this.field_d.a(param4.field_s);
+                var8 = this.field_d.field_q + this.field_d.field_o;
+                var9 = param4.field_v + param0;
+                if ((this.field_b ^ -1) == -3) {
+                  var9 = var9 + (-var7 + param4.field_r);
+                  break L4;
+                } else {
+                  if (-2 != (this.field_b ^ -1)) {
+                    break L4;
+                  } else {
+                    var9 = var9 + (-var7 + param4.field_r >> -1257061119);
+                    break L4;
+                  }
+                }
+              }
+              L5: {
+                var10 = param2 - -param4.field_m;
+                if (-3 == (this.field_a ^ -1)) {
+                  var10 = var10 + (param4.field_h - var8);
+                  break L5;
+                } else {
+                  if (this.field_a == 1) {
+                    var10 = var10 + (param4.field_h - var8 >> 1292510401);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+              }
+              bf.a(var10 - -2, 4 + var7, 14164, var8, -2 + var9);
+              break L0;
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var6 = decompiledCaughtException;
+            stackIn_22_0 = (RuntimeException) (var6);
+
+            stackIn_22_1 = new StringBuilder().append("fh.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
+            if (param4 == null) {
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "null";
+              break L6;
+            } else {
+              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackIn_23_2 = "{...}";
+              break L6;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
+        }
+    }
+
+    public fh() {
+        this.field_a = 1;
+        this.field_b = 1;
+        this.field_d = ng.field_F;
+    }
+
+    fh(m param0, int param1, int param2) {
+        try {
+            this.field_a = param2;
+            this.field_b = param1;
+            this.field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "fh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    static {
+        field_c = 0;
+    }
+}

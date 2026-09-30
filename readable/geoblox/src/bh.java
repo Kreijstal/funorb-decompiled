@@ -1,0 +1,419 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class bh extends java.awt.Canvas {
+    static tf field_c;
+    static Random field_d;
+    private java.awt.Component field_b;
+    static ob field_a;
+
+    final static int a(byte param0, int param1) {
+        if (param0 <= 7) {
+            return -8;
+        }
+        param1 = param1 & 8191;
+        if (param1 < 4096) {
+            return (param1 ^ -1) > -2049 ? ai.field_l[param1] : ai.field_l[4096 - param1];
+        }
+        return param1 >= 6144 ? -ai.field_l[-param1 + 8192] : -ai.field_l[param1 + -4096];
+    }
+
+    public static void a(byte param0) {
+        field_d = null;
+        field_c = null;
+        field_a = null;
+        int var1 = -120 % ((-5 - param0) / 51);
+    }
+
+    public final void update(java.awt.Graphics param0) {
+        try {
+            this.field_b.update(param0);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "bh.update(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(int param0) {
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        re var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6_int = 0;
+        String[][] var6 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        pk var14 = null;
+        int[][] var18 = null;
+        var12 = Geoblox.field_C;
+        try {
+          L0: {
+            var14 = eh.field_d;
+            if (param0 == 2) {
+              var2 = var14.c((byte) 34);
+              var3 = (re) ((Object) PendingActionMarker_nj.field_f.g(0));
+              L1: while (true) {
+                L2: {
+                  if (var3 == null) {
+                    break L2;
+                  } else {
+                    if (var2 != var3.field_k) {
+                      var3 = (re) ((Object) PendingActionMarker_nj.field_f.d(1));
+                      continue L1;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                if (var3 == null) {
+                  jl.a((byte) -122);
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L3: {
+                    var4 = var14.c((byte) 34);
+                    if (var4 != 0) {
+                      oi.field_a[0] = wd.field_f;
+                      var5 = var3.field_g;
+                      var6_int = 1;
+                      L4: while (true) {
+                        if (var4 <= var6_int) {
+                          nf.a(2147483647, var5, var4);
+                          var6_int = 0;
+                          L5: while (true) {
+                            if (var4 <= var6_int) {
+                              kc.a(var5, (byte) -98);
+                              var6 = new String[2][var5];
+                              var18 = new int[2][4 * var5];
+                              var8 = md.field_c;
+                              var9 = 0;
+                              var10 = 0;
+                              L6: while (true) {
+                                if (var9 >= var8) {
+                                  var9 = 0;
+                                  var13 = 0;
+                                  var10 = var13;
+                                  L7: while (true) {
+                                    if (var9 >= var8) {
+                                      var3.a(false);
+                                      break L3;
+                                    } else {
+                                      L8: {
+                                        var11 = qi.field_i[var9 + var5];
+                                        var6[1][var13] = oi.field_a[var11];
+                                        var18[1][4 * var13] = hg.field_a[var11];
+                                        var18[1][1 + 4 * var13] = fb.field_m[var11];
+                                        var18[1][var13 * 4 + 2] = k.field_i[var11];
+                                        var18[1][var13 * 4 - -3] = cj.field_b[var11];
+                                        if (ge.a(oi.field_a[var11], (byte) 12)) {
+                                          if (cj.field_b[var11] + k.field_i[var11] + fb.field_m[var11] != 0) {
+                                            break L8;
+                                          } else {
+                                            var6[1][var13] = null;
+                                            var13--;
+                                            break L8;
+                                          }
+                                        } else {
+                                          break L8;
+                                        }
+                                      }
+                                      var13++;
+                                      var9++;
+                                      continue L7;
+                                    }
+                                  }
+                                } else {
+                                  L9: {
+                                    var11 = qi.field_i[var9];
+                                    var6[0][var10] = oi.field_a[var11];
+                                    var18[0][4 * var10] = hg.field_a[var11];
+                                    var18[0][4 * var10 - -1] = fb.field_m[var11];
+                                    var18[0][4 * var10 - -2] = k.field_i[var11];
+                                    var18[0][4 * var10 + 3] = cj.field_b[var11];
+                                    if (!ge.a(oi.field_a[var11], (byte) 12)) {
+                                      break L9;
+                                    } else {
+                                      if (-1 != (cj.field_b[var11] + (fb.field_m[var11] + k.field_i[var11]) ^ -1)) {
+                                        break L9;
+                                      } else {
+                                        var6[0][var10] = null;
+                                        var10--;
+                                        break L9;
+                                      }
+                                    }
+                                  }
+                                  var9++;
+                                  var10++;
+                                  continue L6;
+                                }
+                              }
+                            } else {
+                              L10: {
+                                me.a(116, var14);
+                                if ((var6_int ^ -1) != -1) {
+                                  nd.a(fe.field_g, var6_int, (byte) 123, rd.field_v, h.field_b, lc.field_b);
+                                  break L10;
+                                } else {
+                                  nd.a(fe.field_g, var6_int, (byte) -97, rd.field_v, h.field_b, lc.field_b);
+                                  break L10;
+                                }
+                              }
+                              var6_int++;
+                              continue L5;
+                            }
+                          }
+                        } else {
+                          oi.field_a[var6_int] = var14.e((byte) 120);
+                          var6_int++;
+                          continue L4;
+                        }
+                      }
+                    } else {
+                      var3.a(false);
+                      break L3;
+                    }
+                  }
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                }
+              }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw t.a((Throwable) ((Object) var1), "bh.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
+        }
+    }
+
+    public final void paint(java.awt.Graphics param0) {
+        try {
+            this.field_b.paint(param0);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "bh.paint(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(boolean param0, GameplayEntity_ja param1, int param2, GameplayEntity_ja param3, boolean param4) {
+        GameplayEntity_ja dupTemp$0 = null;
+        GameplayEntity_ja dupTemp$1 = null;
+        GameplayEntity_ja dupTemp$2 = null;
+        GameplayEntity_ja stackIn_31_0 = null;
+        GameplayEntity_ja stackIn_31_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        String stackIn_42_2 = null;
+        StringBuilder stackIn_44_1 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        wd var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        GameplayEntity_ja var10 = null;
+        int var11 = 0;
+        GameplayEntity_ja var12 = null;
+        int var13 = 0;
+        wd var14 = null;
+        wd var15 = null;
+        var13 = Geoblox.field_C;
+        try {
+          L0: {
+            var14 = new wd();
+            var15 = var14;
+            var6 = new wd();
+            var15.a(-45, param3);
+            var7 = param1.spriteVariantIndex_field_M;
+            var8 = param1.field_z;
+            var9 = param1.entityCategoryKey_field_C;
+            L1: while (true) {
+              dupTemp$0 = (GameplayEntity_ja) ((Object) var15.a(true));
+              var10 = dupTemp$0;
+              if (null == dupTemp$0) {
+                L2: {
+                  if (param2 == 1) {
+                    break L2;
+                  } else {
+                    bh.a((byte) -40);
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                L3: {
+                  if (param4) {
+                    var10.configureEntitySprite_a(param2 + 319, var10.entityCategoryKey_field_C, var7, 0);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                L4: {
+                  if (param0) {
+                    L5: {
+                      if ((var10.field_z ^ -1) == -3) {
+                        var10.field_B = true;
+                        var10.entityQueue_field_K = ji.field_r;
+                        break L5;
+                      } else {
+                        break L5;
+                      }
+                    }
+                    var10.configureEntitySprite_a(320, var9, var10.spriteVariantIndex_field_M, var8);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+                var11 = 0;
+                L6: while (true) {
+                  if (var11 >= var10.relatedEntityCount_field_L) {
+                    var6.a(var10, false);
+                    continue L1;
+                  } else {
+                    L7: {
+                      L8: {
+                        if ((var10.relatedEntities_field_n[var11].field_z ^ -1) != -2) {
+                          break L8;
+                        } else {
+                          if (param4) {
+                            break L7;
+                          } else {
+                            break L8;
+                          }
+                        }
+                      }
+                      if (2 == var10.relatedEntities_field_n[var11].field_z) {
+                        if (param0) {
+                          break L7;
+                        } else {
+                          var11++;
+                          continue L6;
+                        }
+                      } else {
+                        var11++;
+                        continue L6;
+                      }
+                    }
+                    var12 = (GameplayEntity_ja) ((Object) var6.c((byte) 121));
+                    L9: while (true) {
+                      if (var12 == null) {
+                        L10: {
+                          if (!param4) {
+                            break L10;
+                          } else {
+                            var10.sameVariantEntityCount_field_m = var10.sameVariantEntityCount_field_m + 1;
+                            dupTemp$1 = var10.relatedEntities_field_n[var11];
+                            stackIn_31_0 = (GameplayEntity_ja) (dupTemp$1);
+                            stackIn_31_1 = (GameplayEntity_ja) (dupTemp$1);
+                            stackIn_31_0.sameVariantEntityCount_field_m = stackIn_31_1.sameVariantEntityCount_field_m + 1;
+                            break L10;
+                          }
+                        }
+                        L11: {
+                          if (!param0) {
+                            break L11;
+                          } else {
+                            var10.spriteAngleRadians_field_u = param1.spriteAngleRadians_field_u;
+                            var10.sameCategoryEntityCount_field_N = var10.sameCategoryEntityCount_field_N + 1;
+                            dupTemp$2 = var10.relatedEntities_field_n[var11];
+                            dupTemp$2.sameCategoryEntityCount_field_N = dupTemp$2.sameCategoryEntityCount_field_N + 1;
+                            break L11;
+                          }
+                        }
+                        var14.a(var10.relatedEntities_field_n[var11], false);
+                        var11++;
+                        continue L6;
+                      } else {
+                        if (var10 != var12) {
+                          var12 = (GameplayEntity_ja) ((Object) var6.a(param2 + -60));
+                          continue L9;
+                        } else {
+                          var11++;
+                          continue L6;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L12: {
+            var5 = decompiledCaughtException;
+            stackIn_41_0 = (RuntimeException) (var5);
+
+            stackIn_41_1 = new StringBuilder().append("bh.D(").append(param0).append(',');
+
+            if (param1 == null) {
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "null";
+              break L12;
+            } else {
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackIn_42_2 = "{...}";
+              break L12;
+            }
+          }
+          L13: {
+
+
+            stackIn_44_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(',').append(param2).append(',');
+
+            if (param3 == null) {
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "null";
+              break L13;
+            } else {
+              stackIn_42_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackIn_45_2 = "{...}";
+              break L13;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_42_0), stackIn_45_2 + ',' + param4 + ')');
+        }
+    }
+
+    bh(java.awt.Component param0) {
+        try {
+            this.field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_c = new tf();
+        field_d = new Random();
+    }
+}

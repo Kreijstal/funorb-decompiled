@@ -1,0 +1,150 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ki {
+    static Sprite_dm field_c;
+    static rh field_b;
+    static int field_d;
+    static String field_a;
+    static String field_e;
+
+    final static void a(vd param0, int param1) {
+        int dupTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int incrementValue$2 = 0;
+        int dupTemp$3 = 0;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        var5 = Geoblox.field_C;
+        try {
+          L0: {
+            var2_int = 0;
+            L1: while (true) {
+              if (-4 >= (var2_int ^ -1)) {
+                var2_int = 0;
+                L2: while (true) {
+                  if (var2_int >= oj.field_b) {
+                    if (param1 == 31274) {
+                      dupTemp$0 = param0.c(125);
+                      p.field_o[dupTemp$0] = p.field_o[dupTemp$0] + 1;
+                      var2_int = 0;
+                      var3 = 0;
+                      L3: while (true) {
+                        if (oj.field_b <= var3) {
+                          oj.field_b = var2_int;
+                          fieldTemp$1 = oj.field_b;
+                          oj.field_b = oj.field_b + 1;
+                          n.field_k[fieldTemp$1] = param0;
+                          decompiledRegionSelector0 = 1;
+                          break L0;
+                        } else {
+                          L4: {
+                            L5: {
+                              if (param0.field_f == n.field_k[var3].field_f) {
+                                var4 = n.field_k[var3].c(124);
+                                if (p.field_o[var4] > pc.field_v) {
+                                  p.field_o[var4] = p.field_o[var4] - 1;
+                                  break L4;
+                                } else {
+                                  break L5;
+                                }
+                              } else {
+                                break L5;
+                              }
+                            }
+                            incrementValue$2 = var2_int;
+                            var2_int++;
+                            n.field_k[incrementValue$2] = n.field_k[var3];
+                            break L4;
+                          }
+                          var3++;
+                          continue L3;
+                        }
+                      }
+                    } else {
+                      decompiledRegionSelector0 = 0;
+                      break L0;
+                    }
+                  } else {
+                    L6: {
+                      if (n.field_k[var2_int].field_f != param0.field_f) {
+                        break L6;
+                      } else {
+                        dupTemp$3 = n.field_k[var2_int].c(124);
+                        p.field_o[dupTemp$3] = p.field_o[dupTemp$3] + 1;
+                        break L6;
+                      }
+                    }
+                    var2_int++;
+                    continue L2;
+                  }
+                }
+              } else {
+                p.field_o[var2_int] = 0;
+                var2_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var2 = decompiledCaughtException;
+            stackIn_26_0 = (RuntimeException) (var2);
+
+            stackIn_26_1 = new StringBuilder().append("ki.B(");
+
+            if (param0 == null) {
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
+              break L7;
+            } else {
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
+              break L7;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
+        }
+    }
+
+    public static void a(byte param0) {
+        field_e = null;
+        field_c = null;
+        field_a = null;
+        field_b = null;
+        if (param0 != -64) {
+            vd var2 = (vd) null;
+            ki.a((vd) null, -13);
+        }
+    }
+
+    final static void a(int param0) {
+        r.a(rh.field_i, (byte) -61, true, oj.field_a);
+        int var1 = -30 % ((param0 - -30) / 36);
+        mi.field_I = true;
+    }
+
+    static {
+        field_c = new Sprite_dm(540, 140);
+        field_a = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
+        field_e = "Unable to connect to the data server. Please check any firewall you are using.";
+    }
+}

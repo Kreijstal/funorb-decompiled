@@ -1,0 +1,414 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class vh extends ee implements pl {
+    private String[] field_C;
+    private hk[] field_I;
+    private ta field_J;
+    static qg field_D;
+    static Sprite_dm[] field_H;
+    static Sprite_dm field_G;
+    static String field_E;
+
+    final static IndexedSprite_na a(int param0, rh param1, int param2, boolean param3) {
+        RuntimeException var4 = null;
+        rh var5 = null;
+        Object stackIn_2_0 = null;
+        IndexedSprite_na stackIn_6_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            if (mf.a(param0, param2, 123, param1)) {
+              L1: {
+                if (param3) {
+                  break L1;
+                } else {
+                  var5 = (rh) null;
+                  vh.a(110, (rh) null, -39, true);
+                  break L1;
+                }
+              }
+              stackIn_6_0 = ab.a(104);
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              stackIn_2_0 = null;
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackIn_9_0 = (RuntimeException) (var4);
+
+            stackIn_9_1 = new StringBuilder().append("vh.A(").append(param0).append(',');
+
+            if (param1 == null) {
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "null";
+              break L2;
+            } else {
+              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackIn_10_2 = "{...}";
+              break L2;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return (IndexedSprite_na) ((Object) stackIn_2_0);
+        } else {
+          return stackIn_6_0;
+        }
+    }
+
+    final static boolean g(int param0) {
+        int stackIn_6_0 = 0;
+        L0: {
+          if (param0 <= -68) {
+            break L0;
+          } else {
+            field_G = (Sprite_dm) null;
+            break L0;
+          }
+        }
+        L1: {
+          L2: {
+            if (oc.field_e == null) {
+              break L2;
+            } else {
+              if (!pk.field_l.a(true)) {
+                break L2;
+              } else {
+                stackIn_6_0 = 1;
+                break L1;
+              }
+            }
+          }
+          stackIn_6_0 = 0;
+          break L1;
+        }
+        return stackIn_6_0 != 0;
+    }
+
+    final static String f(int param0) {
+        if (param0 != 100) {
+            vh.f(29);
+        }
+        if (kd.field_b == tf.field_d) {
+            return rh.field_i;
+        }
+        if (!ih.field_c.a(-113)) {
+            return ih.field_c.b(param0 + 19391);
+        }
+        if (si.field_g == tf.field_d) {
+            return ih.field_c.b(19491);
+        }
+        return b.field_a;
+    }
+
+    public static void b(boolean param0) {
+        field_H = null;
+        field_D = null;
+        if (!param0) {
+            field_H = (Sprite_dm[]) null;
+        }
+        field_E = null;
+        field_G = null;
+    }
+
+    final void a(int param0, int param1, byte param2, int param3) {
+        super.a(param0, param1, (byte) 88, param3);
+        if (!(-1 == (param3 ^ -1))) {
+            return;
+        }
+        m var5 = ng.field_F;
+        int var6 = -69 / ((1 - param2) / 43);
+        if (!(this.field_C == null)) {
+            var5.a(ab.field_e, this.field_v + param0, param1 + this.field_m, this.field_r, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_o);
+        }
+    }
+
+    vh(ta param0) {
+        super(0, 0, 0, 0, (dh) null);
+        try {
+            this.field_J = param0;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final boolean a(int param0, int param1, char param2, el param3) {
+        RuntimeException var5 = null;
+        int stackIn_5_0 = 0;
+        boolean stackIn_8_0 = false;
+        boolean stackIn_11_0 = false;
+        int stackIn_13_0 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 13) {
+                break L1;
+              } else {
+                field_E = (String) null;
+                break L1;
+              }
+            }
+            if (super.a(param0, param1 + 0, param2, param3)) {
+              stackIn_5_0 = 1;
+              decompiledRegionSelector0 = 0;
+              break L0;
+            } else {
+              if ((param0 ^ -1) != -99) {
+                if (99 != param0) {
+                  stackIn_13_0 = 0;
+                  decompiledRegionSelector0 = 3;
+                  break L0;
+                } else {
+                  stackIn_11_0 = this.a(param3, -110);
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                }
+              } else {
+                stackIn_8_0 = this.a(7305, param3);
+                decompiledRegionSelector0 = 1;
+                break L0;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackIn_16_0 = (RuntimeException) (var5);
+
+            stackIn_16_1 = new StringBuilder().append("vh.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
+            if (param3 == null) {
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "null";
+              break L2;
+            } else {
+              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackIn_17_2 = "{...}";
+              break L2;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_11_0;
+            } else {
+              return stackIn_13_0 != 0;
+            }
+          }
+        }
+    }
+
+    public final void a(int param0, byte param1, int param2, int param3, hk param4) {
+        int var6_int = 0;
+        int var7 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        var7 = Geoblox.field_C;
+        try {
+          L0: {
+            if (param1 == -20) {
+              var6_int = 0;
+              L1: while (true) {
+                if (this.field_C.length <= var6_int) {
+                  L2: {
+                    if (this.field_I[this.field_C.length] != param4) {
+                      break L2;
+                    } else {
+                      this.field_J.a((byte) 83);
+                      break L2;
+                    }
+                  }
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L3: {
+                    if (this.field_I[var6_int] == param4) {
+                      this.field_J.a(this.field_C[var6_int], 20);
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                  var6_int++;
+                  continue L1;
+                }
+              }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var6 = decompiledCaughtException;
+            stackIn_15_0 = (RuntimeException) (var6);
+
+            stackIn_15_1 = new StringBuilder().append("vh.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+
+            if (param4 == null) {
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "null";
+              break L4;
+            } else {
+              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackIn_16_2 = "{...}";
+              break L4;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
+        }
+    }
+
+    final void a(byte param0, String[] param1) {
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4_int = 0;
+        fh var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        var6 = Geoblox.field_C;
+        try {
+          L0: {
+            this.field_z.c((byte) -98);
+            if (param0 == 126) {
+              L1: {
+                if (param1 == null) {
+                  break L1;
+                } else {
+                  if (param1.length != 0) {
+                    var3_int = param1.length;
+                    this.field_C = new String[var3_int];
+                    var4_int = 0;
+                    L2: while (true) {
+                      if (var3_int <= var4_int) {
+                        var4 = new fh(ng.field_F, 0, 1);
+                        this.field_I = new hk[var3_int + 1];
+                        var5 = 0;
+                        L3: while (true) {
+                          if (var5 >= var3_int) {
+                            this.field_I[var3_int] = new hk(ll.field_a, (bb) (this));
+                            this.field_I[var3_int].field_q = (dh) ((Object) var4);
+                            this.field_I[var3_int].a(15, 100, (byte) -59, 16 + (var3_int * 16 + 20), 0);
+                            this.b((byte) -122, this.field_I[var3_int]);
+                            decompiledRegionSelector0 = 2;
+                            break L0;
+                          } else {
+                            this.field_I[var5] = new hk(this.field_C[var5], (bb) (this));
+                            this.field_I[var5].field_q = (dh) ((Object) var4);
+                            this.field_I[var5].field_j = ml.field_u;
+                            this.field_I[var5].a(15, 80, (byte) -14, var5 * 16 + 20, 0);
+                            this.b((byte) -126, this.field_I[var5]);
+                            var5++;
+                            continue L3;
+                          }
+                        }
+                      } else {
+                        this.field_C[var4_int] = p.a((CharSequence) ((Object) param1[var4_int]), param0 + -123).replace(' ', ' ');
+                        var4_int++;
+                        continue L2;
+                      }
+                    }
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              this.field_C = null;
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackIn_18_0 = (RuntimeException) (var3);
+
+            stackIn_18_1 = new StringBuilder().append("vh.E(").append(param0).append(',');
+
+            if (param1 == null) {
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "null";
+              break L4;
+            } else {
+              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackIn_19_2 = "{...}";
+              break L4;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
+        }
+    }
+
+    static {
+        field_D = new qg(0);
+        field_E = "Welcome to Geoblox, a game where you earn points for matching geoblox by shape or colour. Just make sure you don't allow your falling geoblox to get out of control and stack outside of the play area!<br><br>To play Geoblox, you need to rotate the play area by pressing and holding the <img=0> or <img=1> arrow keys. Press <img=2> and then experiment with left and right rotation until the next tip comes up. Press <img=2> to continue.";
+    }
+}

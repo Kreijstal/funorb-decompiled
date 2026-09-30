@@ -1,0 +1,512 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class ba implements Runnable {
+    private int field_k;
+    static int[] field_h;
+    private cb field_m;
+    private int field_e;
+    private int field_b;
+    private byte[] field_d;
+    static int field_c;
+    private InputStream field_g;
+    private boolean field_f;
+    private OutputStream field_a;
+    private java.net.Socket field_j;
+    private d field_l;
+    private boolean field_i;
+
+    protected final void finalize() {
+        this.b(-124);
+    }
+
+    final void b(int param0) {
+        try {
+            InterruptedException var2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            Object var2_ref = null;
+            L0: {
+              if (param0 < -117) {
+                break L0;
+              } else {
+                this.run();
+                break L0;
+              }
+            }
+            if (this.field_f) {
+              return;
+            } else {
+              var2_ref = this;
+              synchronized (var2_ref) {
+                L1: {
+                  this.field_f = true;
+                  this.notifyAll();
+                  break L1;
+                }
+              }
+              if (this.field_m != null) {
+                L2: while (true) {
+                  if (0 != this.field_m.field_a) {
+                    L3: {
+                      if (1 != this.field_m.field_a) {
+                        break L3;
+                      } else {
+                        try {
+                          L4: {
+                            ((Thread) (this.field_m.field_b)).join();
+                            decompiledRegionSelector0 = 0;
+                            break L4;
+                          }
+                        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                          decompiledCaughtException = decompiledCaughtParameter0;
+                          L5: {
+                            var2 = (InterruptedException) (Object) decompiledCaughtException;
+                            decompiledRegionSelector0 = 1;
+                            break L5;
+                          }
+                        }
+                        if (decompiledRegionSelector0 == 0) {
+                          this.field_m = null;
+                          return;
+                        } else {
+                          break L3;
+                        }
+                      }
+                    }
+                    this.field_m = null;
+                    return;
+                  } else {
+                    bc.a(0, 1L);
+                    continue L2;
+                  }
+                }
+              } else {
+                this.field_m = null;
+                return;
+              }
+            }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final void d(int param0) throws IOException {
+        if (this.field_f) {
+          return;
+        } else {
+          if (param0 < -79) {
+            if (this.field_i) {
+              this.field_i = false;
+              throw new IOException();
+            } else {
+              return;
+            }
+          } else {
+            return;
+          }
+        }
+    }
+
+    final int a(byte param0) throws IOException {
+        if (param0 > 71) {
+          if (this.field_f) {
+            return 0;
+          } else {
+            return this.field_g.available();
+          }
+        } else {
+          this.field_g = (InputStream) null;
+          if (this.field_f) {
+            return 0;
+          } else {
+            return this.field_g.available();
+          }
+        }
+    }
+
+    final static cj a(int param0) {
+        if (param0 != 5000) {
+            ba.e(-113);
+            return (cj) ((Object) new cm());
+        }
+        return (cj) ((Object) new cm());
+    }
+
+    final void a(byte[] param0, byte param1, int param2, int param3) throws IOException {
+        int var5_int = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        try {
+          L0: {
+            if (param1 == -97) {
+              if (!this.field_f) {
+                L1: while (true) {
+                  if ((param3 ^ -1) >= -1) {
+                    decompiledRegionSelector0 = 2;
+                    break L0;
+                  } else {
+                    var5_int = this.field_g.read(param0, param2, param3);
+                    if (0 >= var5_int) {
+                      throw new EOFException();
+                    } else {
+                      param3 = param3 - var5_int;
+                      param2 = param2 + var5_int;
+                      continue L1;
+                    }
+                  }
+                }
+              } else {
+                decompiledRegionSelector0 = 1;
+                break L0;
+              }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackIn_12_0 = (RuntimeException) (var5);
+
+            stackIn_12_1 = new StringBuilder().append("ba.B(");
+
+            if (param0 == null) {
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "null";
+              break L2;
+            } else {
+              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackIn_13_2 = "{...}";
+              break L2;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
+        }
+    }
+
+    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        Throwable decompiledCaughtException = null;
+        Object var5 = null;
+        RuntimeException var5_ref = null;
+        int var6 = 0;
+        try {
+          L0: {
+            if (this.field_f) {
+              break L0;
+            } else {
+              if (this.field_i) {
+                this.field_i = false;
+                throw new IOException();
+              } else {
+                L1: {
+                  if (null != this.field_d) {
+                    break L1;
+                  } else {
+                    this.field_d = new byte[this.field_b];
+                    break L1;
+                  }
+                }
+                var5 = this;
+                synchronized (var5) {
+                  L2: {
+                    var6 = 0;
+                    L3: while (true) {
+                      if (param2 <= var6) {
+                        L4: {
+                          if (param0 == 100) {
+                            break L4;
+                          } else {
+                            this.field_a = (OutputStream) null;
+                            break L4;
+                          }
+                        }
+                        L5: {
+                          if (null != this.field_m) {
+                            break L5;
+                          } else {
+                            this.field_m = this.field_l.a((Runnable) (this), 0, 3);
+                            break L5;
+                          }
+                        }
+                        this.notifyAll();
+                        break L2;
+                      } else {
+                        this.field_d[this.field_e] = param3[param1 + var6];
+                        this.field_e = (this.field_e - -1) % this.field_b;
+                        if (this.field_e == (this.field_b + (this.field_k - 100)) % this.field_b) {
+                          throw new IOException();
+                        } else {
+                          var6++;
+                          continue L3;
+                        }
+                      }
+                    }
+                  }
+                }
+                return;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_26_0 = (RuntimeException) (var5_ref);
+
+            stackIn_26_1 = new StringBuilder().append("ba.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+
+            if (param3 == null) {
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "null";
+              break L6;
+            } else {
+              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackIn_27_2 = "{...}";
+              break L6;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
+        }
+    }
+
+    final int c(int param0) throws IOException {
+        if (!(!this.field_f)) {
+            return 0;
+        }
+        if (param0 != -17422) {
+            return -104;
+        }
+        return this.field_g.read();
+    }
+
+    public static void e(int param0) {
+        if (param0 != 21888) {
+            return;
+        }
+        field_h = null;
+    }
+
+    ba(java.net.Socket param0, d param1) throws IOException {
+        this(param0, param1, 5000);
+    }
+
+    public final void run() {
+        try {
+            int var1_int = 0;
+            Object var3 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            IOException var1 = null;
+            Exception var1_ref = null;
+            int var2 = 0;
+            IOException var3_ref = null;
+            InterruptedException var4 = null;
+            String var6 = null;
+            try {
+              L0: {
+                L1: while (true) {
+                  var3 = this;
+                  synchronized (var3) {
+                    L2: {
+                      L3: {
+                        if (this.field_k == this.field_e) {
+                          if (!this.field_f) {
+                            try {
+                              L4: {
+                                this.wait();
+                                break L4;
+                              }
+                            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                              decompiledCaughtException = decompiledCaughtParameter0;
+                              L5: {
+                                var4 = (InterruptedException) (Object) decompiledCaughtException;
+                                break L5;
+                              }
+                            }
+                            break L3;
+                          } else {
+                            decompiledRegionSelector0 = 0;
+                            break L2;
+                          }
+                        } else {
+                          break L3;
+                        }
+                      }
+                      L6: {
+                        var2 = this.field_k;
+                        if (this.field_e < this.field_k) {
+                          var1_int = this.field_b - this.field_k;
+                          break L6;
+                        } else {
+                          var1_int = this.field_e - this.field_k;
+                          break L6;
+                        }
+                      }
+                      decompiledRegionSelector0 = 1;
+                      break L2;
+                    }
+                  }
+                  if (decompiledRegionSelector0 == 0) {
+                    try {
+                      L7: {
+                        L8: {
+                          if (this.field_g == null) {
+                            break L8;
+                          } else {
+                            this.field_g.close();
+                            break L8;
+                          }
+                        }
+                        L9: {
+                          if (this.field_a != null) {
+                            this.field_a.close();
+                            break L9;
+                          } else {
+                            break L9;
+                          }
+                        }
+                        L10: {
+                          if (this.field_j != null) {
+                            this.field_j.close();
+                            break L10;
+                          } else {
+                            break L10;
+                          }
+                        }
+                        break L7;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter1) {
+                      decompiledCaughtException = decompiledCaughtParameter1;
+                      L11: {
+                        var1 = (IOException) (Object) decompiledCaughtException;
+                        break L11;
+                      }
+                    }
+                    this.field_d = null;
+                    break L0;
+                  } else {
+                    if (var1_int <= 0) {
+                      continue L1;
+                    } else {
+                      try {
+                        L12: {
+                          this.field_a.write(this.field_d, var2, var1_int);
+                          break L12;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter2) {
+                        decompiledCaughtException = decompiledCaughtParameter2;
+                        L13: {
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
+                          this.field_i = true;
+                          break L13;
+                        }
+                      }
+                      this.field_k = (var1_int + this.field_k) % this.field_b;
+                      try {
+                        L14: {
+                          L15: {
+                            if (this.field_e == this.field_k) {
+                              this.field_a.flush();
+                              break L15;
+                            } else {
+                              break L15;
+                            }
+                          }
+                          break L14;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter3) {
+                        decompiledCaughtException = decompiledCaughtParameter3;
+                        L16: {
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
+                          this.field_i = true;
+                          break L16;
+                        }
+                      }
+                      continue L1;
+                    }
+                  }
+                }
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter4) {
+              decompiledCaughtException = decompiledCaughtParameter4;
+              L17: {
+                var1_ref = (Exception) (Object) decompiledCaughtException;
+                var6 = (String) null;
+                gi.a((Throwable) ((Object) var1_ref), (String) null, (byte) 125);
+                break L17;
+              }
+            }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static void a(byte param0, java.applet.Applet param1) {
+        try {
+            if (param0 != 116) {
+                java.applet.Applet var3 = (java.applet.Applet) null;
+                ba.a((byte) 45, (java.applet.Applet) null);
+            }
+            va.a("", param1, -1);
+            h.a(param1, false);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "ba.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private ba(java.net.Socket param0, d param1, int param2) throws IOException {
+        this.field_f = false;
+        this.field_e = 0;
+        this.field_k = 0;
+        this.field_i = false;
+        try {
+            this.field_l = param1;
+            this.field_j = param0;
+            this.field_j.setSoTimeout(30000);
+            this.field_j.setTcpNoDelay(true);
+            this.field_g = this.field_j.getInputStream();
+            this.field_a = this.field_j.getOutputStream();
+            this.field_b = param2;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "ba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    static {
+        field_h = new int[8192];
+        field_c = 0;
+    }
+}

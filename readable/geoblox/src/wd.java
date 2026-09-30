@@ -1,0 +1,306 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class wd {
+    static Sprite_dm field_b;
+    static int field_d;
+    static int field_a;
+    static tf field_e;
+    private rc field_g;
+    static String field_f;
+    private rc field_c;
+
+    final rc a(int param0) {
+        rc var2;
+        int var3;
+        var3 = -123 % ((param0 - 21) / 32);
+        var2 = this.field_c;
+        if (this.field_g == var2) {
+          this.field_c = null;
+          return null;
+        } else {
+          this.field_c = var2.field_k;
+          return var2;
+        }
+    }
+
+    public static void b(int param0) {
+        field_b = null;
+        if (param0 != -10943) {
+            field_f = (String) null;
+            field_f = null;
+            field_e = null;
+            return;
+        }
+        field_f = null;
+        field_e = null;
+    }
+
+    final void a(rc param0, boolean param1) {
+        if (!(param0.field_l == null)) {
+            param0.a((byte) 45);
+        }
+        param0.field_k = this.field_g.field_k;
+        param0.field_l = this.field_g;
+        if (param1) {
+            return;
+        }
+        try {
+            param0.field_l.field_k = param0;
+            param0.field_k.field_l = param0;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "wd.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final static void c(int param0) {
+        kb.b(-120);
+        if (param0 != 480) {
+            field_d = -37;
+        }
+    }
+
+    final rc a(boolean param0) {
+        rc var2;
+        var2 = this.field_g.field_k;
+        if (param0) {
+          if (this.field_g == var2) {
+            return null;
+          } else {
+            var2.a((byte) 65);
+            return var2;
+          }
+        } else {
+          wd.a((byte) -92);
+          if (this.field_g == var2) {
+            return null;
+          } else {
+            var2.a((byte) 65);
+            return var2;
+          }
+        }
+    }
+
+    final int b(byte param0) {
+        int var2;
+        rc var3;
+        int var4;
+        var4 = Geoblox.field_C;
+        var2 = 0;
+        if (param0 != 67) {
+          field_b = (Sprite_dm) null;
+          var3 = this.field_g.field_k;
+          L0: while (true) {
+            if (this.field_g == var3) {
+              return var2;
+            } else {
+              var3 = var3.field_k;
+              var2++;
+              continue L0;
+            }
+          }
+        } else {
+          var3 = this.field_g.field_k;
+          L1: while (true) {
+            if (this.field_g == var3) {
+              return var2;
+            } else {
+              var3 = var3.field_k;
+              var2++;
+              continue L1;
+            }
+          }
+        }
+    }
+
+    final void a(int param0, rc param1) {
+        try {
+            if (!(param1.field_l == null)) {
+                param1.a((byte) 62);
+            }
+            int var3_int = -75 % ((param0 - 62) / 46);
+            param1.field_l = this.field_g.field_l;
+            param1.field_k = this.field_g;
+            param1.field_l.field_k = param1;
+            param1.field_k.field_l = param1;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "wd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(byte param0) {
+        jk.field_d = 2;
+        if (param0 < 45) {
+            wd.a(true, -75);
+        }
+    }
+
+    final static void a(boolean param0, int param1) {
+        RuntimeException var2 = null;
+        int var3 = 0;
+        re var4 = null;
+        RuntimeException decompiledCaughtException = null;
+        var3 = Geoblox.field_C;
+        try {
+          L0: {
+            var4 = (re) ((Object) PendingActionMarker_nj.field_f.g(0));
+            L1: while (true) {
+              if (var4 == null) {
+                if (param0) {
+                  break L0;
+                } else {
+                  field_a = -80;
+                  return;
+                }
+              } else {
+                ik.a(var4, param1, (byte) 107);
+                var4 = (re) ((Object) PendingActionMarker_nj.field_f.d(1));
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw t.a((Throwable) ((Object) var2), "wd.K(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    final static void a(byte param0, String param1) {
+        try {
+            if (param0 != 69) {
+                field_a = 99;
+            }
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "wd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public wd() {
+        this.field_g = new rc();
+        this.field_g.field_k = this.field_g;
+        this.field_g.field_l = this.field_g;
+    }
+
+    final static df a(boolean param0, long param1, String param2, String param3, boolean param4) {
+        RuntimeException var6 = null;
+        th stackIn_7_0 = null;
+        nk stackIn_9_0 = null;
+        lf stackIn_11_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        StringBuilder stackIn_17_1 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            L1: {
+              if (param0) {
+                break L1;
+              } else {
+                field_f = (String) null;
+                break L1;
+              }
+            }
+            L2: {
+              if (param1 != 0L) {
+                break L2;
+              } else {
+                if (param2 != null) {
+                  stackIn_9_0 = new nk(param2, param3);
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            if (!param4) {
+              stackIn_11_0 = new lf(param1, param3);
+              decompiledRegionSelector0 = 2;
+              break L0;
+            } else {
+              stackIn_7_0 = new th(param1, param3);
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var6 = decompiledCaughtException;
+            stackIn_14_0 = (RuntimeException) (var6);
+
+            stackIn_14_1 = new StringBuilder().append("wd.G(").append(param0).append(',').append(param1).append(',');
+
+            if (param2 == null) {
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "null";
+              break L3;
+            } else {
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackIn_15_2 = "{...}";
+              break L3;
+            }
+          }
+          L4: {
+
+
+            stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
+
+            if (param3 == null) {
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "null";
+              break L4;
+            } else {
+              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackIn_18_2 = "{...}";
+              break L4;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_15_0), stackIn_18_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return (df) ((Object) stackIn_7_0);
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return (df) ((Object) stackIn_9_0);
+          } else {
+            return (df) ((Object) stackIn_11_0);
+          }
+        }
+    }
+
+    final rc c(byte param0) {
+        rc var2;
+        var2 = this.field_g.field_k;
+        if (var2 != this.field_g) {
+          this.field_c = var2.field_k;
+          if (param0 != 121) {
+            wd.b(67);
+            return var2;
+          } else {
+            return var2;
+          }
+        } else {
+          this.field_c = null;
+          return null;
+        }
+    }
+
+    static {
+        field_b = new Sprite_dm(460, 460);
+        field_d = (-field_b.field_o + 480) / 2;
+        field_a = (640 + -field_b.field_s) / 2;
+        field_e = new tf();
+    }
+}
