@@ -1,8 +1,10 @@
 # Readable source exports
 
-GeoBlox pass 6 has 642 reviewed semantic naming rules: 17 classes, 178 fields,
+GeoBlox pass 7 has 642 reviewed semantic naming rules: 17 classes, 178 fields,
 129 methods, 91 parameters and 227 guarded local declarations. It preserves
-original arithmetic, strings, numeric IDs and control flow. Confirmed names have
+original arithmetic, strings and numeric IDs. The new decompiler renders proven
+single-entry branches as ordinary Java bodies, preserving shared dispatcher joins.
+Confirmed names have
 no opaque suffixes; unknown identifiers remain unchanged. The reverse map keeps
 original JVM identities and exact edit information.
 
@@ -22,20 +24,34 @@ Start with [GameplaySession.java](geoblox/src/GameplaySession.java),
   dependency and output hashes, JDK identity and binding checks.
 - [geoblox-source-pin.json](geoblox-source-pin.json): the exact source commit
   and dependency pin. The input is `games/geoblox` at commit
-  `dd9828b3532fc0cd3f452b6154bee6d9f77c658c`.
+  `1936543883cbb6d694cd72afcab927accf076a10`.
 - [tools/PIN.json](tools/PIN.json): exact bundled naming-tool file digests.
-- [rules](rules): the retained 491-rule manifest and 151 reviewed gameplay
-  additions, with the previous manifest guarded by SHA-256.
+- [rules](rules): the retained 491-rule manifest, 151 gameplay additions,
+  complete pass-6 manifest and explicit pass-7 input migration. Every previous
+  manifest and the changed input are guarded by SHA-256.
 - `funorb-stubs.jar`: the frozen compilation dependency, included byte for byte.
 
-The original decompilation's tool revisions are separate from source-tree hashes:
+The decompilation's tool revisions are separate from game-source hashes:
 
 | Tool | Git commit |
 | --- | --- |
 | Deko | `a572c4dd0f0174bfcd7777be53d7ceba2f970f18` |
-| java-tools | `b1e30cf3e762f15a2a2d639226df7a54ad5f4d81` |
+| java-tools | `cc3be385def11a6ee0fa99a8bdb6fce77d3ad368` |
 | Upstream naming tool in Deko | `d41315508e071f6bd672d65eb2f5a8d428648d6f` |
 | Reviewed names and adapted naming tool | `fd7dbd89304f5c494223df22d6888b35fc65c15d` in `geoblox-readable-next.bundle` |
+
+The decompiler repository source archive has SHA-256
+`62356e5d5e037e482d8dcb170f016d520b4a00182b13591ed1f726c3e9cae7dd`.
+Recreate that identity in the java-tools checkout with:
+
+```sh
+git archive --format=tar cc3be385def11a6ee0fa99a8bdb6fce77d3ad368 | sha256sum
+```
+
+This hashes the tracked **decompiler repository source**, including its commit
+archive metadata. The game-source tree hashes at the end of this document are
+separate identities. The local revision is available in
+`java-tools-readable-state-machines.bundle` pending remote publication.
 
 The generic naming tool belongs to Deko. `tools/` is a frozen publication copy,
 so this checkout can reproduce the export without depending on a mutable sibling
@@ -44,9 +60,9 @@ relationships. The bundled adaptation captures subprocess output in temporary
 regular files for restricted environments; the recorded generator digest covers
 that helper too. The wrapper checks all three frozen tool digests before use.
 
-The decompilation was freshly repeated from the verified transformed bytecode:
-303 sources, zero hard failures and exact equality with the reviewed input.
-A fresh ASM check covered 2,427 methods with zero failures. See
+The decompilation was freshly repeated from the unchanged verified transformed
+bytecode: 303 sources and zero hard failures. The previous ASM check covered
+2,427 methods with zero failures; those bytes have not changed. See
 [GeoBlox decompilation provenance](../decompilation/geoblox-provenance.json)
 for generator commits, input identities, reused pipeline proof and exact verifier
 dependencies. This refresh covers GeoBlox; the other 43 game exports retain their
@@ -58,6 +74,7 @@ From a full Git checkout of this repository, using Node.js and a JDK with javac:
 
 ```sh
 node readable/build-geoblox-rules.mjs --check
+node readable/tests/test-geoblox-rule-builder.mjs
 node readable/reproduce-geoblox.mjs --check
 node readable/tools/test-readable-java.mjs
 node readable/tools/test-capture-process.mjs
@@ -106,7 +123,9 @@ It does not read `games/geoblox` or extract an original input commit.
 3. Review the new source against every affected naming rule. Local declaration
    ordinals can move after control-flow changes: migrate identities and guard
    the original spelling. A changed input needs a reviewed manifest migration;
-   the rule builder refuses to accept a replacement input digest alone.
+   the rule builder refuses to accept a replacement input digest alone. Pass 7
+   retains all 642 guarded identities after reviewing both javac declaration
+   audits; future input or identity changes require a new reviewed migration.
 4. Pin the new source commit in `geoblox-source-pin.json`, retain the reviewed
    rule lineage and rebuild `geoblox-rules.json`. If updating the naming tool,
    import the reviewed tool and update `tools/PIN.json` deliberately.
@@ -122,7 +141,7 @@ unknown symbols are never renamed by guessing during reproduction.
 
 ## Checks and limits
 
-Both complete 303-file corpora compile. All 167,502 bindings and 388 override
+Both complete 303-file corpora compile. All 158,730 bindings and 388 override
 relationships are preserved; generation applies 10,568 identifier edits.
 Rebuilding the rules and regenerating the export is byte-identical, and
 map-only reversal recovers all 303 original files byte for byte.
@@ -133,16 +152,18 @@ popup initialization/progress/draining, cooldown-blocked match batches and
 queue settling. The gameplay harness does not cover popup crediting, successful
 match scoring, full contact physics or asset-dependent session transitions.
 
-The export retains large generated state machines and other decompiler
-scaffolding. It does not claim whole-game runtime equivalence, a multiplayer
+The export reduces dispatcher cases from 3,051 to 1,330; 19 original methods
+still need a dispatcher. See [the renderer report](STATE-MACHINE-READABILITY.md)
+for exact reductions, checks and remaining work. It does not claim whole-game
+runtime equivalence, a multiplayer
 protocol reconstruction, or JVM memory/FPS/phone acceptance. Runtime names,
 reflection, serialization and native/external contracts need separate checks
 before treating the renamed export as a runnable replacement.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Original GeoBlox | `4ffc26d9728c403266022452f0c0ca68ea28ff61c26d108b7bd165e6ab92e24c` |
-| Readable GeoBlox | `f28f79a43671246f825d8709255f295576f06f5ad2d23f6e814d24b024fcdb39` |
+| Original GeoBlox | `bf67d298e8c884958b622e717be6ecd4c3009e033265219b88e9f293d7671fd9` |
+| Readable GeoBlox | `a089cf00e67de55186c734d9769070a4cd4dc7ea7e28b543f4e76c73a382b695` |
 
 These tree digests use `sourceIdentity(sourceInventory(root))` from the naming
 tool. They identify source bytes; the decompiler Git commits are listed above.

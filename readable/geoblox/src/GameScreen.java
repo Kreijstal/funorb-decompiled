@@ -325,23 +325,17 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (!param0) {
                             statePc = 4;
+                            continue stateLoop;
                         } else {
-                            statePc = 2;
+                            /* Inlined CFG state: 2. */
+                            {
+                                this.field_F = 124;
+                                statePc = 4;
+                                continue stateLoop;
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_1) {
                         caughtException = stateCaught_1;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        this.field_F = 124;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
                         statePc = 28;
                         continue stateLoop;
                     }
@@ -363,39 +357,27 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (640 <= var2_int) {
                             statePc = 15;
+                            continue stateLoop;
                         } else {
-                            statePc = 6;
+                            /* Inlined CFG state: 6. */
+                            {
+                                stackIn_16_0 = ee.field_A.field_o + this.field_O + 480;
+                                stackIn_7_0 = stackIn_16_0;
+                                if (var4 != 0) {
+                                    statePc = 16;
+                                    continue stateLoop;
+                                } else {
+                                    /* Inlined CFG state: 7. */
+                                    {
+                                        var3 = stackIn_7_0;
+                                        statePc = 8;
+                                        continue stateLoop;
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_5) {
                         caughtException = stateCaught_5;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        stackIn_16_0 = ee.field_A.field_o + this.field_O + 480;
-                        stackIn_7_0 = stackIn_16_0;
-                        if (var4 != 0) {
-                            statePc = 16;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var3 = stackIn_7_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
                         statePc = 28;
                         continue stateLoop;
                     }
@@ -404,52 +386,34 @@ final class GameScreen extends MenuScreen {
                     try {
                         if ((-ee.field_A.field_o ^ -1) < (var3 ^ -1)) {
                             statePc = 13;
+                            continue stateLoop;
                         } else {
-                            statePc = 9;
+                            /* Inlined CFG state: 9. */
+                            {
+                                ee.field_A.c(var2_int, var3);
+                                var3 = var3 - ee.field_A.field_o;
+                                if (var4 != 0) {
+                                    statePc = 14;
+                                    continue stateLoop;
+                                } else {
+                                    /* Inlined CFG state: 10. */
+                                    {
+                                        if (var4 == 0) {
+                                            statePc = 8;
+                                            continue stateLoop;
+                                        } else {
+                                            /* Inlined CFG state: 11. */
+                                            {
+                                                statePc = 13;
+                                                continue stateLoop;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_8) {
                         caughtException = stateCaught_8;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        ee.field_A.c(var2_int, var3);
-                        var3 = var3 - ee.field_A.field_o;
-                        if (var4 != 0) {
-                            statePc = 14;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 8;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
                         statePc = 28;
                         continue stateLoop;
                     }
@@ -507,37 +471,25 @@ final class GameScreen extends MenuScreen {
                     try {
                         if ((-vc.field_j.field_s ^ -1) < (var2_int ^ -1)) {
                             statePc = 29;
+                            continue stateLoop;
                         } else {
-                            statePc = 18;
+                            /* Inlined CFG state: 18. */
+                            {
+                                if (var4 != 0) {
+                                    statePc = 29;
+                                    continue stateLoop;
+                                } else {
+                                    /* Inlined CFG state: 19. */
+                                    {
+                                        var3 = this.field_I - -vc.field_j.field_o + 480;
+                                        statePc = 20;
+                                        continue stateLoop;
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_17) {
                         caughtException = stateCaught_17;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    try {
-                        if (var4 != 0) {
-                            statePc = 29;
-                        } else {
-                            statePc = 19;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    try {
-                        var3 = this.field_I - -vc.field_j.field_o + 480;
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
                         statePc = 28;
                         continue stateLoop;
                     }
@@ -546,52 +498,34 @@ final class GameScreen extends MenuScreen {
                     try {
                         if ((var3 ^ -1) > (-vc.field_j.field_o ^ -1)) {
                             statePc = 25;
+                            continue stateLoop;
                         } else {
-                            statePc = 21;
+                            /* Inlined CFG state: 21. */
+                            {
+                                vc.field_j.b(var2_int, var3);
+                                var3 = var3 - vc.field_j.field_o;
+                                if (var4 != 0) {
+                                    statePc = 26;
+                                    continue stateLoop;
+                                } else {
+                                    /* Inlined CFG state: 22. */
+                                    {
+                                        if (var4 == 0) {
+                                            statePc = 20;
+                                            continue stateLoop;
+                                        } else {
+                                            /* Inlined CFG state: 23. */
+                                            {
+                                                statePc = 25;
+                                                continue stateLoop;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_20) {
                         caughtException = stateCaught_20;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 21: {
-                    try {
-                        vc.field_j.b(var2_int, var3);
-                        var3 = var3 - vc.field_j.field_o;
-                        if (var4 != 0) {
-                            statePc = 26;
-                        } else {
-                            statePc = 22;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_21) {
-                        caughtException = stateCaught_21;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 22: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 20;
-                        } else {
-                            statePc = 23;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_22) {
-                        caughtException = stateCaught_22;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 23: {
-                    try {
-                        statePc = 25;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_23) {
-                        caughtException = stateCaught_23;
                         statePc = 28;
                         continue stateLoop;
                     }
@@ -1550,47 +1484,30 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (ca.field_f != null) {
                             statePc = 7;
+                            continue stateLoop;
                         } else {
-                            statePc = 2;
+                            /* Inlined CFG state: 2. */
+                            {
+                                if (fh.c(-115)) {
+                                    statePc = 7;
+                                    continue stateLoop;
+                                } else {
+                                    /* Inlined CFG state: 3. */
+                                    {
+                                        /* Sequential CFG blocks: 3, 5. */
+                                        {
+                                        }
+                                        {
+                                            ca.field_f = qb.b(22, 1, 0, 10, 3);
+                                            statePc = 7;
+                                            continue stateLoop;
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_1) {
                         caughtException = stateCaught_1;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (fh.c(-115)) {
-                            statePc = 7;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        ca.field_f = qb.b(22, 1, 0, 10, 3);
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -1599,85 +1516,51 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (0 == da.field_c) {
                             statePc = 20;
+                            continue stateLoop;
                         } else {
-                            statePc = 8;
+                            /* Inlined CFG state: 8. */
+                            {
+                                if (-3 == (da.field_c ^ -1)) {
+                                    statePc = 17;
+                                    continue stateLoop;
+                                } else {
+                                    /* Inlined CFG state: 9. */
+                                    {
+                                        /* Sequential CFG blocks: 9, 11. */
+                                        {
+                                        }
+                                        {
+                                            if (da.field_c != 1) {
+                                                statePc = 22;
+                                                continue stateLoop;
+                                            } else {
+                                                /* Inlined CFG state: 12. */
+                                                {
+                                                    /* Sequential CFG blocks: 12, 14. */
+                                                    {
+                                                    }
+                                                    {
+                                                        kh.field_h[3].b(0, 20);
+                                                        if (var10 == 0) {
+                                                            statePc = 22;
+                                                            continue stateLoop;
+                                                        } else {
+                                                            /* Inlined CFG state: 15. */
+                                                            {
+                                                                statePc = 17;
+                                                                continue stateLoop;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_7) {
                         caughtException = stateCaught_7;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        if (-3 == (da.field_c ^ -1)) {
-                            statePc = 17;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        if (da.field_c != 1) {
-                            statePc = 22;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        kh.field_h[3].b(0, 20);
-                        if (var10 == 0) {
-                            statePc = 22;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -1687,22 +1570,16 @@ final class GameScreen extends MenuScreen {
                         kh.field_h[2].b(0, 20);
                         if (var10 == 0) {
                             statePc = 22;
+                            continue stateLoop;
                         } else {
-                            statePc = 18;
+                            /* Inlined CFG state: 18. */
+                            {
+                                statePc = 20;
+                                continue stateLoop;
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_17) {
                         caughtException = stateCaught_17;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    try {
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -1722,23 +1599,17 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (param0 == 30) {
                             statePc = 25;
+                            continue stateLoop;
                         } else {
-                            statePc = 23;
+                            /* Inlined CFG state: 23. */
+                            {
+                                this.updateTransition(-78);
+                                statePc = 25;
+                                continue stateLoop;
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_22) {
                         caughtException = stateCaught_22;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 23: {
-                    try {
-                        this.updateTransition(-78);
-                        statePc = 25;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_23) {
-                        caughtException = stateCaught_23;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -1747,77 +1618,49 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (null == ca.field_f) {
                             statePc = 72;
+                            continue stateLoop;
                         } else {
-                            statePc = 26;
+                            /* Inlined CFG state: 26. */
+                            {
+                                if (null == ca.field_f.field_k) {
+                                    statePc = 72;
+                                    continue stateLoop;
+                                } else {
+                                    /* Inlined CFG state: 27. */
+                                    {
+                                        /* Sequential CFG blocks: 27, 29. */
+                                        {
+                                        }
+                                        {
+                                            if (ca.field_f.field_j) {
+                                                statePc = 33;
+                                                continue stateLoop;
+                                            } else {
+                                                /* Inlined CFG state: 30. */
+                                                {
+                                                    /* Sequential CFG blocks: 30, 32. */
+                                                    {
+                                                    }
+                                                    {
+                                                        var2 = eb.field_f;
+                                                        var3 = 76 + (150 + dd.field_G.field_o);
+                                                        dd.field_G.b(var2, 322, var3, 0, -1);
+                                                        if (var10 == 0) {
+                                                            statePc = 80;
+                                                        } else {
+                                                            statePc = 33;
+                                                        }
+                                                        continue stateLoop;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_25) {
                         caughtException = stateCaught_25;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 26: {
-                    try {
-                        if (null == ca.field_f.field_k) {
-                            statePc = 72;
-                        } else {
-                            statePc = 27;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_26) {
-                        caughtException = stateCaught_26;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 27: {
-                    try {
-                        statePc = 29;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_27) {
-                        caughtException = stateCaught_27;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 29: {
-                    try {
-                        if (ca.field_f.field_j) {
-                            statePc = 33;
-                        } else {
-                            statePc = 30;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_29) {
-                        caughtException = stateCaught_29;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 30: {
-                    try {
-                        statePc = 32;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_30) {
-                        caughtException = stateCaught_30;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 32: {
-                    try {
-                        var2 = eb.field_f;
-                        var3 = 76 + (150 + dd.field_G.field_o);
-                        dd.field_G.b(var2, 322, var3, 0, -1);
-                        if (var10 == 0) {
-                            statePc = 80;
-                        } else {
-                            statePc = 33;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_32) {
-                        caughtException = stateCaught_32;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -1857,78 +1700,48 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (var8_int >= 10) {
                             statePc = 56;
+                            continue stateLoop;
                         } else {
-                            statePc = 36;
+                            /* Inlined CFG state: 36. */
+                            {
+                                stackIn_59_0 = null;
+                                stackIn_37_0 = stackIn_59_0;
+                                if (var10 != 0) {
+                                    statePc = 59;
+                                    continue stateLoop;
+                                } else {
+                                    /* Inlined CFG state: 37. */
+                                    {
+                                        if (stackIn_37_0 != var3_ref_String__[var8_int]) {
+                                            /* Inlined CFG state: 42. */
+                                            {
+                                                var2_int = 1;
+                                                var9 = var3_ref_String__[var8_int];
+                                                if (var7 != 0) {
+                                                    statePc = 53;
+                                                } else {
+                                                    statePc = 43;
+                                                }
+                                                continue stateLoop;
+                                            }
+                                        } else {
+                                            /* Inlined CFG state: 38. */
+                                            {
+                                                /* Sequential CFG blocks: 38, 40. */
+                                                {
+                                                }
+                                                {
+                                                    statePc = 55;
+                                                    continue stateLoop;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_35) {
                         caughtException = stateCaught_35;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 36: {
-                    try {
-                        stackIn_59_0 = null;
-                        stackIn_37_0 = stackIn_59_0;
-                        if (var10 != 0) {
-                            statePc = 59;
-                        } else {
-                            statePc = 37;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_36) {
-                        caughtException = stateCaught_36;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 37: {
-                    try {
-                        if (stackIn_37_0 != var3_ref_String__[var8_int]) {
-                            statePc = 42;
-                        } else {
-                            statePc = 38;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_37) {
-                        caughtException = stateCaught_37;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 38: {
-                    try {
-                        statePc = 40;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_38) {
-                        caughtException = stateCaught_38;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 40: {
-                    try {
-                        statePc = 55;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_40) {
-                        caughtException = stateCaught_40;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 42: {
-                    try {
-                        var2_int = 1;
-                        var9 = var3_ref_String__[var8_int];
-                        if (var7 != 0) {
-                            statePc = 53;
-                        } else {
-                            statePc = 43;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_42) {
-                        caughtException = stateCaught_42;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -1937,88 +1750,55 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (null == el.gameplaySession) {
                             statePc = 53;
+                            continue stateLoop;
                         } else {
-                            statePc = 44;
+                            /* Inlined CFG state: 44. */
+                            {
+                                /* Sequential CFG blocks: 44, 46. */
+                                {
+                                }
+                                {
+                                    if (var5[var8_int] != Math.abs(el.gameplaySession.score)) {
+                                        statePc = 53;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 47. */
+                                        {
+                                            /* Sequential CFG blocks: 47, 49. */
+                                            {
+                                            }
+                                            {
+                                                if (!ge.a(var9, (byte) 12)) {
+                                                    statePc = 53;
+                                                    continue stateLoop;
+                                                } else {
+                                                    /* Inlined CFG state: 50. */
+                                                    {
+                                                        /* Sequential CFG blocks: 50, 52. */
+                                                        {
+                                                        }
+                                                        {
+                                                            var7 = 1;
+                                                            var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
+                                                            var4.a(var9, 165, var6, 16610816, -1);
+                                                            var4.c(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
+                                                            if (var10 == 0) {
+                                                                statePc = 55;
+                                                            } else {
+                                                                statePc = 53;
+                                                            }
+                                                            continue stateLoop;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_43) {
                         caughtException = stateCaught_43;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 44: {
-                    try {
-                        statePc = 46;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_44) {
-                        caughtException = stateCaught_44;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 46: {
-                    try {
-                        if (var5[var8_int] != Math.abs(el.gameplaySession.score)) {
-                            statePc = 53;
-                        } else {
-                            statePc = 47;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_46) {
-                        caughtException = stateCaught_46;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 47: {
-                    try {
-                        statePc = 49;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_47) {
-                        caughtException = stateCaught_47;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 49: {
-                    try {
-                        if (!ge.a(var9, (byte) 12)) {
-                            statePc = 53;
-                        } else {
-                            statePc = 50;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_49) {
-                        caughtException = stateCaught_49;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 50: {
-                    try {
-                        statePc = 52;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_50) {
-                        caughtException = stateCaught_50;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 52: {
-                    try {
-                        var7 = 1;
-                        var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
-                        var4.a(var9, 165, var6, 16610816, -1);
-                        var4.c(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
-                        if (var10 == 0) {
-                            statePc = 55;
-                        } else {
-                            statePc = 53;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_52) {
-                        caughtException = stateCaught_52;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -2056,23 +1836,17 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (var7 != 0) {
                             statePc = 69;
+                            continue stateLoop;
                         } else {
-                            statePc = 57;
+                            /* Inlined CFG state: 57. */
+                            {
+                                stackIn_59_0 = null;
+                                statePc = 59;
+                                continue stateLoop;
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_56) {
                         caughtException = stateCaught_56;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 57: {
-                    try {
-                        stackIn_59_0 = null;
-                        statePc = 59;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_57) {
-                        caughtException = stateCaught_57;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -2081,83 +1855,48 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (stackIn_59_0 == el.gameplaySession) {
                             statePc = 69;
+                            continue stateLoop;
                         } else {
-                            statePc = 60;
+                            /* Inlined CFG state: 60. */
+                            {
+                                if (-1 == (el.gameplaySession.score ^ -1)) {
+                                    statePc = 69;
+                                    continue stateLoop;
+                                } else {
+                                    /* Inlined CFG state: 61. */
+                                    {
+                                        /* Sequential CFG blocks: 61, 63. */
+                                        {
+                                        }
+                                        {
+                                            if (2147483647 != (el.gameplaySession.score ^ -1)) {
+                                                /* Inlined CFG state: 68. */
+                                                {
+                                                    var8 = wd.field_f;
+                                                    var4.a(var8, 165, var6, 16724225, -1);
+                                                    var4.c(Integer.toString(Math.abs(el.gameplaySession.score)), 500, var6, 16724225, -1);
+                                                    statePc = 69;
+                                                    continue stateLoop;
+                                                }
+                                            } else {
+                                                /* Inlined CFG state: 64. */
+                                                {
+                                                    /* Sequential CFG blocks: 64, 66. */
+                                                    {
+                                                    }
+                                                    {
+                                                        statePc = 69;
+                                                        continue stateLoop;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_59) {
                         caughtException = stateCaught_59;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 60: {
-                    try {
-                        if (-1 == (el.gameplaySession.score ^ -1)) {
-                            statePc = 69;
-                        } else {
-                            statePc = 61;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_60) {
-                        caughtException = stateCaught_60;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 61: {
-                    try {
-                        statePc = 63;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_61) {
-                        caughtException = stateCaught_61;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 63: {
-                    try {
-                        if (2147483647 != (el.gameplaySession.score ^ -1)) {
-                            statePc = 68;
-                        } else {
-                            statePc = 64;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_63) {
-                        caughtException = stateCaught_63;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 64: {
-                    try {
-                        statePc = 66;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_64) {
-                        caughtException = stateCaught_64;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 66: {
-                    try {
-                        statePc = 69;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_66) {
-                        caughtException = stateCaught_66;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 68: {
-                    try {
-                        var8 = wd.field_f;
-                        var4.a(var8, 165, var6, 16724225, -1);
-                        var4.c(Integer.toString(Math.abs(el.gameplaySession.score)), 500, var6, 16724225, -1);
-                        statePc = 69;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_68) {
-                        caughtException = stateCaught_68;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -2166,25 +1905,19 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (var2_int != 0) {
                             statePc = 71;
+                            continue stateLoop;
                         } else {
-                            statePc = 70;
+                            /* Inlined CFG state: 70. */
+                            {
+                                var5_ref = sb.field_f;
+                                var6 = 76 + dd.field_G.field_o + 150;
+                                dd.field_G.b(var5_ref, 322, var6, 0, -1);
+                                statePc = 71;
+                                continue stateLoop;
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_69) {
                         caughtException = stateCaught_69;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 70: {
-                    try {
-                        var5_ref = sb.field_f;
-                        var6 = 76 + dd.field_G.field_o + 150;
-                        dd.field_G.b(var5_ref, 322, var6, 0, -1);
-                        statePc = 71;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_70) {
-                        caughtException = stateCaught_70;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -2207,37 +1940,26 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (fh.c(-89)) {
                             statePc = 76;
+                            continue stateLoop;
                         } else {
-                            statePc = 73;
+                            /* Inlined CFG state: 73. */
+                            {
+                                /* Sequential CFG blocks: 73, 75. */
+                                {
+                                }
+                                {
+                                    var2 = g.field_l;
+                                    if (var10 == 0) {
+                                        statePc = 77;
+                                    } else {
+                                        statePc = 76;
+                                    }
+                                    continue stateLoop;
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_72) {
                         caughtException = stateCaught_72;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 73: {
-                    try {
-                        statePc = 75;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_73) {
-                        caughtException = stateCaught_73;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 75: {
-                    try {
-                        var2 = g.field_l;
-                        if (var10 == 0) {
-                            statePc = 77;
-                        } else {
-                            statePc = 76;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_75) {
-                        caughtException = stateCaught_75;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -2259,23 +1981,17 @@ final class GameScreen extends MenuScreen {
                         dd.field_G.b(var2, 322, var3, 0, -1);
                         if (!fh.c(param0 + -147)) {
                             statePc = 80;
+                            continue stateLoop;
                         } else {
-                            statePc = 78;
+                            /* Inlined CFG state: 78. */
+                            {
+                                dd.field_G.a(ni.field_C, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+                                statePc = 80;
+                                continue stateLoop;
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_77) {
                         caughtException = stateCaught_77;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 78: {
-                    try {
-                        dd.field_G.a(ni.field_C, 125, 350, 395, 100, 0, -1, 1, 0, 26);
-                        statePc = 80;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_78) {
-                        caughtException = stateCaught_78;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -2284,24 +2000,18 @@ final class GameScreen extends MenuScreen {
                     try {
                         if (fh.c(param0 ^ -109)) {
                             statePc = 84;
+                            continue stateLoop;
                         } else {
-                            statePc = 81;
+                            /* Inlined CFG state: 81. */
+                            {
+                                var2 = ue.field_b;
+                                fi.field_d.a(var2, 140, 325, 360, 300, 0, -1, 1, 0, 16);
+                                statePc = 84;
+                                continue stateLoop;
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_80) {
                         caughtException = stateCaught_80;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 81: {
-                    try {
-                        var2 = ue.field_b;
-                        fi.field_d.a(var2, 140, 325, 360, 300, 0, -1, 1, 0, 16);
-                        statePc = 84;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_81) {
-                        caughtException = stateCaught_81;
                         statePc = 83;
                         continue stateLoop;
                     }
@@ -2331,19 +2041,20 @@ final class GameScreen extends MenuScreen {
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
-                    var3 = Geoblox.field_C;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    fieldTemp$0 = this.animationTick + 1;
-                    this.animationTick = this.animationTick + 1;
-                    if (-1 == (fieldTemp$0 % 5 ^ -1)) {
-                        statePc = 4;
-                    } else {
-                        statePc = 5;
+                    /* Sequential CFG blocks: 0, 1. */
+                    {
+                        var3 = Geoblox.field_C;
                     }
-                    continue stateLoop;
+                    {
+                        fieldTemp$0 = this.animationTick + 1;
+                        this.animationTick = this.animationTick + 1;
+                        if (-1 == (fieldTemp$0 % 5 ^ -1)) {
+                            statePc = 4;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    }
                 }
                 case 4: {
                     this.field_O = this.field_O - 1;
@@ -2355,162 +2066,162 @@ final class GameScreen extends MenuScreen {
                 case 5: {
                     if (3 != (this.animationTick & 3)) {
                         statePc = 8;
+                        continue stateLoop;
                     } else {
-                        statePc = 6;
+                        /* Inlined CFG state: 6. */
+                        {
+                            this.field_I = this.field_I - 1;
+                            this.field_u = this.field_u - 1;
+                            statePc = 8;
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 6: {
-                    this.field_I = this.field_I - 1;
-                    this.field_u = this.field_u - 1;
-                    statePc = 8;
-                    continue stateLoop;
                 }
                 case 8: {
                     if (!this.field_E) {
-                        statePc = 11;
+                        /* Inlined CFG state: 11. */
+                        {
+                            jk.field_a = this.field_C;
+                            this.volumePreviewTicks = this.volumePreviewTicks + 1;
+                            this.activeTicks = this.activeTicks + 1;
+                            if (!this.field_C) {
+                                statePc = 20;
+                                continue stateLoop;
+                            } else {
+                                /* Inlined CFG state: 12. */
+                                {
+                                    if (vl.field_n == null) {
+                                        statePc = 20;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 15. */
+                                        {
+                                            if (this.activeTicks <= 1500) {
+                                                statePc = 20;
+                                                continue stateLoop;
+                                            } else {
+                                                /* Inlined CFG state: 18. */
+                                                {
+                                                    em.b(255);
+                                                    this.field_C = false;
+                                                    statePc = 20;
+                                                    continue stateLoop;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     } else {
-                        statePc = 9;
+                        /* Inlined CFG state: 9. */
+                        {
+                            /* Sequential CFG blocks: 9, 10. */
+                            {
+                                this.e((byte) 104);
+                            }
+                            {
+                                return;
+                            }
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 9: {
-                    this.e((byte) 104);
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    return;
-                }
-                case 11: {
-                    jk.field_a = this.field_C;
-                    this.volumePreviewTicks = this.volumePreviewTicks + 1;
-                    this.activeTicks = this.activeTicks + 1;
-                    if (!this.field_C) {
-                        statePc = 20;
-                    } else {
-                        statePc = 12;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    if (vl.field_n == null) {
-                        statePc = 20;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 15: {
-                    if (this.activeTicks <= 1500) {
-                        statePc = 20;
-                    } else {
-                        statePc = 18;
-                    }
-                    continue stateLoop;
-                }
-                case 18: {
-                    em.b(255);
-                    this.field_C = false;
-                    statePc = 20;
-                    continue stateLoop;
                 }
                 case 20: {
                     if (!hh.a(108)) {
                         statePc = 25;
+                        continue stateLoop;
                     } else {
-                        statePc = 21;
+                        /* Inlined CFG state: 21. */
+                        {
+                            this.handleScreenKey((byte) 62);
+                            if (var3 != 0) {
+                                statePc = 37;
+                                continue stateLoop;
+                            } else {
+                                /* Inlined CFG state: 22. */
+                                {
+                                    if (var3 == 0) {
+                                        statePc = 20;
+                                    } else {
+                                        statePc = 25;
+                                    }
+                                    continue stateLoop;
+                                }
+                            }
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 21: {
-                    this.handleScreenKey((byte) 62);
-                    if (var3 != 0) {
-                        statePc = 37;
-                    } else {
-                        statePc = 22;
-                    }
-                    continue stateLoop;
-                }
-                case 22: {
-                    if (var3 == 0) {
-                        statePc = 20;
-                    } else {
-                        statePc = 25;
-                    }
-                    continue stateLoop;
                 }
                 case 25: {
                     if (this.screenId != 3) {
                         statePc = 37;
+                        continue stateLoop;
                     } else {
-                        statePc = 26;
+                        /* Inlined CFG state: 26. */
+                        {
+                            if (this.selectedItemIndex != 0) {
+                                statePc = 37;
+                                continue stateLoop;
+                            } else {
+                                /* Inlined CFG state: 29. */
+                                {
+                                    if (-1 != (this.field_q ^ -1)) {
+                                        statePc = 37;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 32. */
+                                        {
+                                            if (this.field_H) {
+                                                statePc = 37;
+                                                continue stateLoop;
+                                            } else {
+                                                /* Inlined CFG state: 35. */
+                                                {
+                                                    this.selectedItemIndex = this.selectedItemIndex + 1;
+                                                    statePc = 37;
+                                                    continue stateLoop;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 26: {
-                    if (this.selectedItemIndex != 0) {
-                        statePc = 37;
-                    } else {
-                        statePc = 29;
-                    }
-                    continue stateLoop;
-                }
-                case 29: {
-                    if (-1 != (this.field_q ^ -1)) {
-                        statePc = 37;
-                    } else {
-                        statePc = 32;
-                    }
-                    continue stateLoop;
-                }
-                case 32: {
-                    if (this.field_H) {
-                        statePc = 37;
-                    } else {
-                        statePc = 35;
-                    }
-                    continue stateLoop;
-                }
-                case 35: {
-                    this.selectedItemIndex = this.selectedItemIndex + 1;
-                    statePc = 37;
-                    continue stateLoop;
                 }
                 case 37: {
                     if (this.screenId == 3) {
-                        statePc = 40;
+                        /* Inlined CFG state: 40. */
+                        {
+                            if (0 == (1 & this.animationTick)) {
+                                /* Inlined CFG state: 43. */
+                                {
+                                    this.field_z = this.field_z + 1;
+                                    this.field_Z = -(this.field_z >> -137754207) + 60;
+                                    if ((this.field_Z ^ -1) <= -16) {
+                                        statePc = 47;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 44. */
+                                        {
+                                            this.field_Z = 15;
+                                            if (var3 == 0) {
+                                                statePc = 49;
+                                            } else {
+                                                statePc = 47;
+                                            }
+                                            continue stateLoop;
+                                        }
+                                    }
+                                }
+                            } else {
+                                statePc = 49;
+                                continue stateLoop;
+                            }
+                        }
                     } else {
                         statePc = 89;
+                        continue stateLoop;
                     }
-                    continue stateLoop;
-                }
-                case 40: {
-                    if (0 == (1 & this.animationTick)) {
-                        statePc = 43;
-                    } else {
-                        statePc = 49;
-                    }
-                    continue stateLoop;
-                }
-                case 43: {
-                    this.field_z = this.field_z + 1;
-                    this.field_Z = -(this.field_z >> -137754207) + 60;
-                    if ((this.field_Z ^ -1) <= -16) {
-                        statePc = 47;
-                    } else {
-                        statePc = 44;
-                    }
-                    continue stateLoop;
-                }
-                case 44: {
-                    this.field_Z = 15;
-                    if (var3 == 0) {
-                        statePc = 49;
-                    } else {
-                        statePc = 47;
-                    }
-                    continue stateLoop;
                 }
                 case 47: {
                     this.field_A = this.field_A + 0.1;
@@ -2519,89 +2230,89 @@ final class GameScreen extends MenuScreen {
                 }
                 case 49: {
                     if (120 == this.field_z) {
-                        statePc = 52;
+                        /* Inlined CFG state: 52. */
+                        {
+                            this.field_X = qi.b(7, 1);
+                            this.field_L = qi.b(7, 1);
+                            this.field_z = 0;
+                            statePc = 53;
+                            continue stateLoop;
+                        }
                     } else {
                         statePc = 53;
+                        continue stateLoop;
                     }
-                    continue stateLoop;
-                }
-                case 52: {
-                    this.field_X = qi.b(7, 1);
-                    this.field_L = qi.b(7, 1);
-                    this.field_z = 0;
-                    statePc = 53;
-                    continue stateLoop;
                 }
                 case 53: {
                     if (-5 < (this.field_q ^ -1)) {
-                        statePc = 56;
+                        /* Inlined CFG state: 56. */
+                        {
+                            if (this.animationTick % 24 == 0) {
+                                /* Inlined CFG state: 59. */
+                                {
+                                    this.field_w = this.field_w + 1;
+                                    if (-5 >= (this.field_w ^ -1)) {
+                                        /* Inlined CFG state: 62. */
+                                        {
+                                            this.field_w = 0;
+                                            statePc = 63;
+                                            continue stateLoop;
+                                        }
+                                    } else {
+                                        statePc = 63;
+                                        continue stateLoop;
+                                    }
+                                }
+                            } else {
+                                statePc = 63;
+                                continue stateLoop;
+                            }
+                        }
                     } else {
                         statePc = 63;
+                        continue stateLoop;
                     }
-                    continue stateLoop;
-                }
-                case 56: {
-                    if (this.animationTick % 24 == 0) {
-                        statePc = 59;
-                    } else {
-                        statePc = 63;
-                    }
-                    continue stateLoop;
-                }
-                case 59: {
-                    this.field_w = this.field_w + 1;
-                    if (-5 >= (this.field_w ^ -1)) {
-                        statePc = 62;
-                    } else {
-                        statePc = 63;
-                    }
-                    continue stateLoop;
-                }
-                case 62: {
-                    this.field_w = 0;
-                    statePc = 63;
-                    continue stateLoop;
                 }
                 case 63: {
                     if ((this.field_q ^ -1) == -4) {
                         statePc = 85;
+                        continue stateLoop;
                     } else {
-                        statePc = 64;
+                        /* Inlined CFG state: 64. */
+                        {
+                            if (4 == this.field_q) {
+                                /* Inlined CFG state: 69. */
+                                {
+                                    if (49 <= (this.animationTick & 255)) {
+                                        statePc = 82;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 70. */
+                                        {
+                                            if (-1 == (15 & this.animationTick ^ -1)) {
+                                                /* Inlined CFG state: 75. */
+                                                {
+                                                    this.field_w = this.field_w + 1;
+                                                    if ((this.field_w ^ -1) > -5) {
+                                                        statePc = 78;
+                                                    } else {
+                                                        statePc = 76;
+                                                    }
+                                                    continue stateLoop;
+                                                }
+                                            } else {
+                                                statePc = 88;
+                                                continue stateLoop;
+                                            }
+                                        }
+                                    }
+                                }
+                            } else {
+                                statePc = 88;
+                                continue stateLoop;
+                            }
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 64: {
-                    if (4 == this.field_q) {
-                        statePc = 69;
-                    } else {
-                        statePc = 88;
-                    }
-                    continue stateLoop;
-                }
-                case 69: {
-                    if (49 <= (this.animationTick & 255)) {
-                        statePc = 82;
-                    } else {
-                        statePc = 70;
-                    }
-                    continue stateLoop;
-                }
-                case 70: {
-                    if (-1 == (15 & this.animationTick ^ -1)) {
-                        statePc = 75;
-                    } else {
-                        statePc = 88;
-                    }
-                    continue stateLoop;
-                }
-                case 75: {
-                    this.field_w = this.field_w + 1;
-                    if ((this.field_w ^ -1) > -5) {
-                        statePc = 78;
-                    } else {
-                        statePc = 76;
-                    }
-                    continue stateLoop;
                 }
                 case 76: {
                     this.field_w = 0;
@@ -2611,20 +2322,20 @@ final class GameScreen extends MenuScreen {
                 case 78: {
                     this.field_B = this.field_B + 1;
                     if (4 <= this.field_B) {
-                        statePc = 81;
+                        /* Inlined CFG state: 81. */
+                        {
+                            this.field_B = 0;
+                            if (var3 == 0) {
+                                statePc = 88;
+                            } else {
+                                statePc = 82;
+                            }
+                            continue stateLoop;
+                        }
                     } else {
                         statePc = 88;
+                        continue stateLoop;
                     }
-                    continue stateLoop;
-                }
-                case 81: {
-                    this.field_B = 0;
-                    if (var3 == 0) {
-                        statePc = 88;
-                    } else {
-                        statePc = 82;
-                    }
-                    continue stateLoop;
                 }
                 case 82: {
                     this.field_B = 0;
@@ -2672,20 +2383,20 @@ final class GameScreen extends MenuScreen {
                 }
                 case 90: {
                     if ((bi.field_g ^ -1) != -1) {
-                        statePc = 95;
+                        /* Inlined CFG state: 95. */
+                        {
+                            di.field_a = 50;
+                            if (var3 == 0) {
+                                statePc = 98;
+                            } else {
+                                statePc = 96;
+                            }
+                            continue stateLoop;
+                        }
                     } else {
                         statePc = 98;
+                        continue stateLoop;
                     }
-                    continue stateLoop;
-                }
-                case 95: {
-                    di.field_a = 50;
-                    if (var3 == 0) {
-                        statePc = 98;
-                    } else {
-                        statePc = 96;
-                    }
-                    continue stateLoop;
                 }
                 case 96: {
                     bi.field_g = 0;
@@ -2694,27 +2405,27 @@ final class GameScreen extends MenuScreen {
                 }
                 case 98: {
                     if ((bi.field_g ^ -1) != -1) {
-                        statePc = 101;
+                        /* Inlined CFG state: 101. */
+                        {
+                            if ((this.screenId ^ -1) == -6) {
+                                statePc = 107;
+                                continue stateLoop;
+                            } else {
+                                /* Inlined CFG state: 102. */
+                                {
+                                    if (7 == this.screenId) {
+                                        statePc = 107;
+                                    } else {
+                                        statePc = 108;
+                                    }
+                                    continue stateLoop;
+                                }
+                            }
+                        }
                     } else {
                         statePc = 115;
+                        continue stateLoop;
                     }
-                    continue stateLoop;
-                }
-                case 101: {
-                    if ((this.screenId ^ -1) == -6) {
-                        statePc = 107;
-                    } else {
-                        statePc = 102;
-                    }
-                    continue stateLoop;
-                }
-                case 102: {
-                    if (7 == this.screenId) {
-                        statePc = 107;
-                    } else {
-                        statePc = 108;
-                    }
-                    continue stateLoop;
                 }
                 case 107: {
                     oe.a(false, false, param0 ^ 189);
@@ -2723,120 +2434,120 @@ final class GameScreen extends MenuScreen {
                 }
                 case 108: {
                     if (this.screenId == 6) {
-                        statePc = 111;
+                        /* Inlined CFG state: 111. */
+                        {
+                            oe.a(true, false, param0 + 131);
+                            statePc = 112;
+                            continue stateLoop;
+                        }
                     } else {
                         statePc = 112;
+                        continue stateLoop;
                     }
-                    continue stateLoop;
-                }
-                case 111: {
-                    oe.a(true, false, param0 + 131);
-                    statePc = 112;
-                    continue stateLoop;
                 }
                 case 112: {
                     if (-5 != (this.screenId ^ -1)) {
                         statePc = 115;
+                        continue stateLoop;
                     } else {
-                        statePc = 113;
+                        /* Inlined CFG state: 113. */
+                        {
+                            oe.a(true, true, 160);
+                            statePc = 115;
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 113: {
-                    oe.a(true, true, 160);
-                    statePc = 115;
-                    continue stateLoop;
                 }
                 case 115: {
                     if (this.field_C) {
                         statePc = 119;
+                        continue stateLoop;
                     } else {
-                        statePc = 116;
+                        /* Inlined CFG state: 116. */
+                        {
+                            this.updatePointer(true);
+                            if (var3 == 0) {
+                                statePc = 196;
+                            } else {
+                                statePc = 119;
+                            }
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 116: {
-                    this.updatePointer(true);
-                    if (var3 == 0) {
-                        statePc = 196;
-                    } else {
-                        statePc = 119;
-                    }
-                    continue stateLoop;
                 }
                 case 119: {
                     if (bi.field_g != 0) {
-                        statePc = 124;
+                        /* Inlined CFG state: 124. */
+                        {
+                            if (!fh.c(-104)) {
+                                statePc = 158;
+                                continue stateLoop;
+                            } else {
+                                /* Inlined CFG state: 125. */
+                                {
+                                    if (265 >= he.field_d) {
+                                        statePc = 155;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 128. */
+                                        {
+                                            if ((he.field_d ^ -1) <= -300) {
+                                                statePc = 155;
+                                                continue stateLoop;
+                                            } else {
+                                                /* Inlined CFG state: 131. */
+                                                {
+                                                    if (mc.field_a <= 350) {
+                                                        statePc = 140;
+                                                    } else {
+                                                        statePc = 134;
+                                                    }
+                                                    continue stateLoop;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     } else {
                         statePc = 196;
+                        continue stateLoop;
                     }
-                    continue stateLoop;
-                }
-                case 124: {
-                    if (!fh.c(-104)) {
-                        statePc = 158;
-                    } else {
-                        statePc = 125;
-                    }
-                    continue stateLoop;
-                }
-                case 125: {
-                    if (265 >= he.field_d) {
-                        statePc = 155;
-                    } else {
-                        statePc = 128;
-                    }
-                    continue stateLoop;
-                }
-                case 128: {
-                    if ((he.field_d ^ -1) <= -300) {
-                        statePc = 155;
-                    } else {
-                        statePc = 131;
-                    }
-                    continue stateLoop;
-                }
-                case 131: {
-                    if (mc.field_a <= 350) {
-                        statePc = 140;
-                    } else {
-                        statePc = 134;
-                    }
-                    continue stateLoop;
                 }
                 case 134: {
                     if (-471 >= (mc.field_a ^ -1)) {
                         statePc = 140;
+                        continue stateLoop;
                     } else {
-                        statePc = 137;
+                        /* Inlined CFG state: 137. */
+                        {
+                            this.pointerInteractionActive = true;
+                            this.field_C = false;
+                            if (var3 == 0) {
+                                statePc = 196;
+                            } else {
+                                statePc = 140;
+                            }
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 137: {
-                    this.pointerInteractionActive = true;
-                    this.field_C = false;
-                    if (var3 == 0) {
-                        statePc = 196;
-                    } else {
-                        statePc = 140;
-                    }
-                    continue stateLoop;
                 }
                 case 140: {
                     if (-171 <= (mc.field_a ^ -1)) {
                         statePc = 146;
+                        continue stateLoop;
                     } else {
-                        statePc = 143;
+                        /* Inlined CFG state: 143. */
+                        {
+                            if (-291 < (mc.field_a ^ -1)) {
+                                statePc = 149;
+                            } else {
+                                statePc = 146;
+                            }
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 143: {
-                    if (-291 < (mc.field_a ^ -1)) {
-                        statePc = 149;
-                    } else {
-                        statePc = 146;
-                    }
-                    continue stateLoop;
                 }
                 case 146: {
                     this.pointerInteractionActive = false;
@@ -2851,15 +2562,15 @@ final class GameScreen extends MenuScreen {
                     this.pointerInteractionActive = true;
                     if (null == el.gameplaySession) {
                         statePc = 154;
+                        continue stateLoop;
                     } else {
-                        statePc = 152;
+                        /* Inlined CFG state: 152. */
+                        {
+                            el.gameplaySession.submitScore((byte) -70);
+                            statePc = 154;
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 152: {
-                    el.gameplaySession.submitScore((byte) -70);
-                    statePc = 154;
-                    continue stateLoop;
                 }
                 case 154: {
                     ai.requestedScreenId = -1;
@@ -2884,42 +2595,42 @@ final class GameScreen extends MenuScreen {
                 case 158: {
                     if (-1 <= (og.field_n ^ -1)) {
                         statePc = 194;
+                        continue stateLoop;
                     } else {
-                        statePc = 161;
+                        /* Inlined CFG state: 161. */
+                        {
+                            if (null == vl.field_n) {
+                                statePc = 194;
+                                continue stateLoop;
+                            } else {
+                                /* Inlined CFG state: 164. */
+                                {
+                                    if ((he.field_d ^ -1) >= -318) {
+                                        statePc = 191;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 167. */
+                                        {
+                                            if (352 <= he.field_d) {
+                                                statePc = 191;
+                                                continue stateLoop;
+                                            } else {
+                                                /* Inlined CFG state: 170. */
+                                                {
+                                                    if (-351 <= (mc.field_a ^ -1)) {
+                                                        statePc = 176;
+                                                    } else {
+                                                        statePc = 173;
+                                                    }
+                                                    continue stateLoop;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 161: {
-                    if (null == vl.field_n) {
-                        statePc = 194;
-                    } else {
-                        statePc = 164;
-                    }
-                    continue stateLoop;
-                }
-                case 164: {
-                    if ((he.field_d ^ -1) >= -318) {
-                        statePc = 191;
-                    } else {
-                        statePc = 167;
-                    }
-                    continue stateLoop;
-                }
-                case 167: {
-                    if (352 <= he.field_d) {
-                        statePc = 191;
-                    } else {
-                        statePc = 170;
-                    }
-                    continue stateLoop;
-                }
-                case 170: {
-                    if (-351 <= (mc.field_a ^ -1)) {
-                        statePc = 176;
-                    } else {
-                        statePc = 173;
-                    }
-                    continue stateLoop;
                 }
                 case 173: {
                     if (-471 < (mc.field_a ^ -1)) {
@@ -2932,18 +2643,18 @@ final class GameScreen extends MenuScreen {
                 case 176: {
                     if (mc.field_a <= 170) {
                         statePc = 182;
+                        continue stateLoop;
                     } else {
-                        statePc = 179;
+                        /* Inlined CFG state: 179. */
+                        {
+                            if (mc.field_a < 290) {
+                                statePc = 185;
+                            } else {
+                                statePc = 182;
+                            }
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 179: {
-                    if (mc.field_a < 290) {
-                        statePc = 185;
-                    } else {
-                        statePc = 182;
-                    }
-                    continue stateLoop;
                 }
                 case 182: {
                     this.pointerInteractionActive = false;
@@ -2993,18 +2704,18 @@ final class GameScreen extends MenuScreen {
                 case 196: {
                     if (qa.field_a != this.field_s) {
                         statePc = 202;
+                        continue stateLoop;
                     } else {
-                        statePc = 197;
+                        /* Inlined CFG state: 197. */
+                        {
+                            if ((ue.field_e ^ -1) != (this.field_Y ^ -1)) {
+                                statePc = 202;
+                            } else {
+                                statePc = 203;
+                            }
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 197: {
-                    if ((ue.field_e ^ -1) != (this.field_Y ^ -1)) {
-                        statePc = 202;
-                    } else {
-                        statePc = 203;
-                    }
-                    continue stateLoop;
                 }
                 case 202: {
                     this.field_o = -1;
@@ -3015,119 +2726,119 @@ final class GameScreen extends MenuScreen {
                     this.field_Y = ue.field_e;
                     if (param0 == 29) {
                         statePc = 206;
+                        continue stateLoop;
                     } else {
-                        statePc = 204;
+                        /* Inlined CFG state: 204. */
+                        {
+                            this.handleMenuKey(11, 26);
+                            statePc = 206;
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 204: {
-                    this.handleMenuKey(11, 26);
-                    statePc = 206;
-                    continue stateLoop;
                 }
                 case 206: {
                     this.field_s = qa.field_a;
                     if (this.selectedItemIndex != 0) {
-                        statePc = 209;
+                        /* Inlined CFG state: 209. */
+                        {
+                            var2_int = (qa.field_a - -he.field_d - (-kd.field_c - ki.field_d)) % 8;
+                            if (-1 == (var2_int ^ -1)) {
+                                statePc = 252;
+                            } else {
+                                statePc = 210;
+                            }
+                            continue stateLoop;
+                        }
                     } else {
                         statePc = 283;
+                        continue stateLoop;
                     }
-                    continue stateLoop;
-                }
-                case 209: {
-                    var2_int = (qa.field_a - -he.field_d - (-kd.field_c - ki.field_d)) % 8;
-                    if (-1 == (var2_int ^ -1)) {
-                        statePc = 252;
-                    } else {
-                        statePc = 210;
-                    }
-                    continue stateLoop;
                 }
                 case 210: {
                     if ((var2_int ^ -1) == -2) {
                         statePc = 249;
+                        continue stateLoop;
                     } else {
-                        statePc = 213;
+                        /* Inlined CFG state: 213. */
+                        {
+                            if (var2_int == 2) {
+                                statePc = 246;
+                                continue stateLoop;
+                            } else {
+                                /* Inlined CFG state: 216. */
+                                {
+                                    if ((var2_int ^ -1) != -4) {
+                                        statePc = 222;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 219. */
+                                        {
+                                            oa.field_a = oa.field_a - gb.field_g;
+                                            kb.field_d = kb.field_d + 1;
+                                            if (var3 == 0) {
+                                                statePc = 254;
+                                            } else {
+                                                statePc = 222;
+                                            }
+                                            continue stateLoop;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 213: {
-                    if (var2_int == 2) {
-                        statePc = 246;
-                    } else {
-                        statePc = 216;
-                    }
-                    continue stateLoop;
-                }
-                case 216: {
-                    if ((var2_int ^ -1) != -4) {
-                        statePc = 222;
-                    } else {
-                        statePc = 219;
-                    }
-                    continue stateLoop;
-                }
-                case 219: {
-                    oa.field_a = oa.field_a - gb.field_g;
-                    kb.field_d = kb.field_d + 1;
-                    if (var3 == 0) {
-                        statePc = 254;
-                    } else {
-                        statePc = 222;
-                    }
-                    continue stateLoop;
                 }
                 case 222: {
                     if ((var2_int ^ -1) == -5) {
                         statePc = 243;
+                        continue stateLoop;
                     } else {
-                        statePc = 225;
+                        /* Inlined CFG state: 225. */
+                        {
+                            if ((var2_int ^ -1) == -6) {
+                                statePc = 240;
+                                continue stateLoop;
+                            } else {
+                                /* Inlined CFG state: 228. */
+                                {
+                                    if (6 != var2_int) {
+                                        statePc = 234;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 231. */
+                                        {
+                                            gb.field_g = gb.field_g - 1;
+                                            ml.field_r = ml.field_r - kb.field_d;
+                                            if (var3 == 0) {
+                                                statePc = 254;
+                                            } else {
+                                                statePc = 234;
+                                            }
+                                            continue stateLoop;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 225: {
-                    if ((var2_int ^ -1) == -6) {
-                        statePc = 240;
-                    } else {
-                        statePc = 228;
-                    }
-                    continue stateLoop;
-                }
-                case 228: {
-                    if (6 != var2_int) {
-                        statePc = 234;
-                    } else {
-                        statePc = 231;
-                    }
-                    continue stateLoop;
-                }
-                case 231: {
-                    gb.field_g = gb.field_g - 1;
-                    ml.field_r = ml.field_r - kb.field_d;
-                    if (var3 == 0) {
-                        statePc = 254;
-                    } else {
-                        statePc = 234;
-                    }
-                    continue stateLoop;
                 }
                 case 234: {
                     if (-8 == (var2_int ^ -1)) {
-                        statePc = 239;
+                        /* Inlined CFG state: 239. */
+                        {
+                            kb.field_d = kb.field_d - 1;
+                            ml.field_r = ml.field_r - gb.field_g;
+                            if (var3 == 0) {
+                                statePc = 254;
+                            } else {
+                                statePc = 240;
+                            }
+                            continue stateLoop;
+                        }
                     } else {
                         statePc = 254;
+                        continue stateLoop;
                     }
-                    continue stateLoop;
-                }
-                case 239: {
-                    kb.field_d = kb.field_d - 1;
-                    ml.field_r = ml.field_r - gb.field_g;
-                    if (var3 == 0) {
-                        statePc = 254;
-                    } else {
-                        statePc = 240;
-                    }
-                    continue stateLoop;
                 }
                 case 240: {
                     kb.field_d = kb.field_d + 1;
@@ -3179,72 +2890,72 @@ final class GameScreen extends MenuScreen {
                     var2_int = (ki.field_d + qa.field_a - (-he.field_d + -kd.field_c)) % 5;
                     if (0 == var2_int) {
                         statePc = 279;
+                        continue stateLoop;
                     } else {
-                        statePc = 255;
+                        /* Inlined CFG state: 255. */
+                        {
+                            if (var2_int == 1) {
+                                statePc = 276;
+                                continue stateLoop;
+                            } else {
+                                /* Inlined CFG state: 258. */
+                                {
+                                    if ((var2_int ^ -1) != -3) {
+                                        statePc = 264;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 261. */
+                                        {
+                                            el.field_g = el.field_g - sc.field_f;
+                                            lb.field_b = lb.field_b - 1;
+                                            if (var3 == 0) {
+                                                statePc = 283;
+                                            } else {
+                                                statePc = 264;
+                                            }
+                                            continue stateLoop;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 255: {
-                    if (var2_int == 1) {
-                        statePc = 276;
-                    } else {
-                        statePc = 258;
-                    }
-                    continue stateLoop;
-                }
-                case 258: {
-                    if ((var2_int ^ -1) != -3) {
-                        statePc = 264;
-                    } else {
-                        statePc = 261;
-                    }
-                    continue stateLoop;
-                }
-                case 261: {
-                    el.field_g = el.field_g - sc.field_f;
-                    lb.field_b = lb.field_b - 1;
-                    if (var3 == 0) {
-                        statePc = 283;
-                    } else {
-                        statePc = 264;
-                    }
-                    continue stateLoop;
                 }
                 case 264: {
                     if (-4 != (var2_int ^ -1)) {
                         statePc = 270;
+                        continue stateLoop;
                     } else {
-                        statePc = 267;
+                        /* Inlined CFG state: 267. */
+                        {
+                            sc.field_f = sc.field_f + 1;
+                            el.field_g = el.field_g + lb.field_b;
+                            if (var3 == 0) {
+                                statePc = 283;
+                            } else {
+                                statePc = 270;
+                            }
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 267: {
-                    sc.field_f = sc.field_f + 1;
-                    el.field_g = el.field_g + lb.field_b;
-                    if (var3 == 0) {
-                        statePc = 283;
-                    } else {
-                        statePc = 270;
-                    }
-                    continue stateLoop;
                 }
                 case 270: {
                     if ((var2_int ^ -1) != -5) {
                         statePc = 283;
+                        continue stateLoop;
                     } else {
-                        statePc = 273;
+                        /* Inlined CFG state: 273. */
+                        {
+                            el.field_g = el.field_g - lb.field_b;
+                            sc.field_f = sc.field_f - 1;
+                            if (var3 == 0) {
+                                statePc = 283;
+                            } else {
+                                statePc = 276;
+                            }
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 273: {
-                    el.field_g = el.field_g - lb.field_b;
-                    sc.field_f = sc.field_f - 1;
-                    if (var3 == 0) {
-                        statePc = 283;
-                    } else {
-                        statePc = 276;
-                    }
-                    continue stateLoop;
                 }
                 case 276: {
                     el.field_g = el.field_g + sc.field_f;

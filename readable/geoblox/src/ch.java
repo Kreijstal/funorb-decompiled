@@ -348,38 +348,25 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     case 1: {
                         try {
                             if (d.field_o != null) {
-                                statePc = 4;
+                                /* Inlined CFG state: 4. */
+                                {
+                                    var1 = d.field_o.toLowerCase();
+                                    if (-1 != ((String) (var1)).indexOf("sun")) {
+                                        statePc = 8;
+                                    } else {
+                                        statePc = 5;
+                                    }
+                                    continue stateLoop;
+                                }
                             } else {
-                                statePc = 2;
+                                /* Inlined CFG state: 2. */
+                                {
+                                    statePc = 61;
+                                    continue stateLoop;
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_1) {
                             caughtException = stateCaught_1;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            statePc = 61;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            var1 = d.field_o.toLowerCase();
-                            if (-1 != ((String) (var1)).indexOf("sun")) {
-                                statePc = 8;
-                            } else {
-                                statePc = 5;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -388,22 +375,16 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         try {
                             if ((((String) (var1)).indexOf("apple") ^ -1) == 0) {
                                 statePc = 61;
+                                continue stateLoop;
                             } else {
-                                statePc = 6;
+                                /* Inlined CFG state: 6. */
+                                {
+                                    statePc = 8;
+                                    continue stateLoop;
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_5) {
                             caughtException = stateCaught_5;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            statePc = 8;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -427,248 +408,150 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         try {
                             if (var2.startsWith("1.1.")) {
                                 statePc = 41;
+                                continue stateLoop;
                             } else {
-                                statePc = 10;
+                                /* Inlined CFG state: 10. */
+                                {
+                                    /* Sequential CFG blocks: 10, 12. */
+                                    {
+                                    }
+                                    {
+                                        if (var2.equals("1.2")) {
+                                            statePc = 41;
+                                            continue stateLoop;
+                                        } else {
+                                            /* Inlined CFG state: 13. */
+                                            {
+                                                /* Sequential CFG blocks: 13, 15. */
+                                                {
+                                                }
+                                                {
+                                                    if (var2.startsWith("1.2.")) {
+                                                        statePc = 41;
+                                                        continue stateLoop;
+                                                    } else {
+                                                        /* Inlined CFG state: 16. */
+                                                        {
+                                                            /* Sequential CFG blocks: 16, 18. */
+                                                            {
+                                                            }
+                                                            {
+                                                                if (var2.equals("1.3")) {
+                                                                    statePc = 41;
+                                                                    continue stateLoop;
+                                                                } else {
+                                                                    /* Inlined CFG state: 19. */
+                                                                    {
+                                                                        /* Sequential CFG blocks: 19, 21. */
+                                                                        {
+                                                                        }
+                                                                        {
+                                                                            if (var2.startsWith("1.3.")) {
+                                                                                statePc = 41;
+                                                                            } else {
+                                                                                statePc = 22;
+                                                                            }
+                                                                            continue stateLoop;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_9) {
                             caughtException = stateCaught_9;
                             statePc = 108;
                             continue stateLoop;
                         }
                     }
-                    case 10: {
-                        try {
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        try {
-                            if (var2.equals("1.2")) {
-                                statePc = 41;
-                            } else {
-                                statePc = 13;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        try {
-                            statePc = 15;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_13) {
-                            caughtException = stateCaught_13;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 15: {
-                        try {
-                            if (var2.startsWith("1.2.")) {
-                                statePc = 41;
-                            } else {
-                                statePc = 16;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_15) {
-                            caughtException = stateCaught_15;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 16: {
-                        try {
-                            statePc = 18;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 18: {
-                        try {
-                            if (var2.equals("1.3")) {
-                                statePc = 41;
-                            } else {
-                                statePc = 19;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_18) {
-                            caughtException = stateCaught_18;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 19: {
-                        try {
-                            statePc = 21;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_19) {
-                            caughtException = stateCaught_19;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 21: {
-                        try {
-                            if (var2.startsWith("1.3.")) {
-                                statePc = 41;
-                            } else {
-                                statePc = 22;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_21) {
-                            caughtException = stateCaught_21;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
                     case 22: {
                         try {
-                            statePc = 24;
-                            continue stateLoop;
+                            /* Sequential CFG blocks: 22, 24. */
+                            {
+                            }
+                            {
+                                if (var2.equals("1.4")) {
+                                    statePc = 41;
+                                    continue stateLoop;
+                                } else {
+                                    /* Inlined CFG state: 25. */
+                                    {
+                                        /* Sequential CFG blocks: 25, 27. */
+                                        {
+                                        }
+                                        {
+                                            if (var2.startsWith("1.4.")) {
+                                                statePc = 41;
+                                                continue stateLoop;
+                                            } else {
+                                                /* Inlined CFG state: 28. */
+                                                {
+                                                    /* Sequential CFG blocks: 28, 30. */
+                                                    {
+                                                    }
+                                                    {
+                                                        if (var2.equals("1.5")) {
+                                                            statePc = 41;
+                                                            continue stateLoop;
+                                                        } else {
+                                                            /* Inlined CFG state: 31. */
+                                                            {
+                                                                /* Sequential CFG blocks: 31, 33. */
+                                                                {
+                                                                }
+                                                                {
+                                                                    if (var2.startsWith("1.5.")) {
+                                                                        statePc = 41;
+                                                                        continue stateLoop;
+                                                                    } else {
+                                                                        /* Inlined CFG state: 34. */
+                                                                        {
+                                                                            /* Sequential CFG blocks: 34, 36. */
+                                                                            {
+                                                                            }
+                                                                            {
+                                                                                if (var2.equals("1.6.0")) {
+                                                                                    statePc = 41;
+                                                                                } else {
+                                                                                    statePc = 37;
+                                                                                }
+                                                                                continue stateLoop;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         } catch (Throwable stateCaught_22) {
                             caughtException = stateCaught_22;
                             statePc = 108;
                             continue stateLoop;
                         }
                     }
-                    case 24: {
-                        try {
-                            if (var2.equals("1.4")) {
-                                statePc = 41;
-                            } else {
-                                statePc = 25;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_24) {
-                            caughtException = stateCaught_24;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 25: {
-                        try {
-                            statePc = 27;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_25) {
-                            caughtException = stateCaught_25;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 27: {
-                        try {
-                            if (var2.startsWith("1.4.")) {
-                                statePc = 41;
-                            } else {
-                                statePc = 28;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_27) {
-                            caughtException = stateCaught_27;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 28: {
-                        try {
-                            statePc = 30;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_28) {
-                            caughtException = stateCaught_28;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 30: {
-                        try {
-                            if (var2.equals("1.5")) {
-                                statePc = 41;
-                            } else {
-                                statePc = 31;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_30) {
-                            caughtException = stateCaught_30;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 31: {
-                        try {
-                            statePc = 33;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_31) {
-                            caughtException = stateCaught_31;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 33: {
-                        try {
-                            if (var2.startsWith("1.5.")) {
-                                statePc = 41;
-                            } else {
-                                statePc = 34;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_33) {
-                            caughtException = stateCaught_33;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 34: {
-                        try {
-                            statePc = 36;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_34) {
-                            caughtException = stateCaught_34;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 36: {
-                        try {
-                            if (var2.equals("1.6.0")) {
-                                statePc = 41;
-                            } else {
-                                statePc = 37;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_36) {
-                            caughtException = stateCaught_36;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
                     case 37: {
                         try {
-                            statePc = 39;
-                            continue stateLoop;
+                            /* Sequential CFG blocks: 37, 39. */
+                            {
+                            }
+                            {
+                                statePc = 42;
+                                continue stateLoop;
+                            }
                         } catch (Throwable stateCaught_37) {
                             caughtException = stateCaught_37;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 39: {
-                        try {
-                            statePc = 42;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_39) {
-                            caughtException = stateCaught_39;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -692,33 +575,22 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         try {
                             if (!var2.startsWith("1.6.0_")) {
                                 statePc = 61;
+                                continue stateLoop;
                             } else {
-                                statePc = 43;
+                                /* Inlined CFG state: 43. */
+                                {
+                                    /* Sequential CFG blocks: 43, 45. */
+                                    {
+                                    }
+                                    {
+                                        var3 = 6;
+                                        statePc = 46;
+                                        continue stateLoop;
+                                    }
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_42) {
                             caughtException = stateCaught_42;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 43: {
-                        try {
-                            statePc = 45;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_43) {
-                            caughtException = stateCaught_43;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 45: {
-                        try {
-                            var3 = 6;
-                            statePc = 46;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_45) {
-                            caughtException = stateCaught_45;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -727,77 +599,48 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         try {
                             if (var2.length() <= var3) {
                                 statePc = 54;
+                                continue stateLoop;
                             } else {
-                                statePc = 47;
+                                /* Inlined CFG state: 47. */
+                                {
+                                    stackIn_66_0 = DualLinkNode.a(-58, var2.charAt(var3));
+                                    stackIn_48_0 = stackIn_66_0;
+                                    if (var5 != 0) {
+                                        statePc = 66;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 48. */
+                                        {
+                                            if (!stackIn_48_0) {
+                                                statePc = 54;
+                                                continue stateLoop;
+                                            } else {
+                                                /* Inlined CFG state: 49. */
+                                                {
+                                                    /* Sequential CFG blocks: 49, 51. */
+                                                    {
+                                                    }
+                                                    {
+                                                        var3++;
+                                                        if (var5 == 0) {
+                                                            statePc = 46;
+                                                            continue stateLoop;
+                                                        } else {
+                                                            /* Inlined CFG state: 52. */
+                                                            {
+                                                                statePc = 54;
+                                                                continue stateLoop;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_46) {
                             caughtException = stateCaught_46;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 47: {
-                        try {
-                            stackIn_66_0 = DualLinkNode.a(-58, var2.charAt(var3));
-                            stackIn_48_0 = stackIn_66_0;
-                            if (var5 != 0) {
-                                statePc = 66;
-                            } else {
-                                statePc = 48;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_47) {
-                            caughtException = stateCaught_47;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 48: {
-                        try {
-                            if (!stackIn_48_0) {
-                                statePc = 54;
-                            } else {
-                                statePc = 49;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_48) {
-                            caughtException = stateCaught_48;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 49: {
-                        try {
-                            statePc = 51;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_49) {
-                            caughtException = stateCaught_49;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 51: {
-                        try {
-                            var3++;
-                            if (var5 == 0) {
-                                statePc = 46;
-                            } else {
-                                statePc = 52;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_51) {
-                            caughtException = stateCaught_51;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 52: {
-                        try {
-                            statePc = 54;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_52) {
-                            caughtException = stateCaught_52;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -820,48 +663,30 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     case 55: {
                         try {
                             if (ol.a(false, (CharSequence) ((Object) var4)) < 10) {
-                                statePc = 60;
+                                /* Inlined CFG state: 60. */
+                                {
+                                    this.a((byte) 79, "wrongjava");
+                                    if (var5 == 0) {
+                                        statePc = 107;
+                                    } else {
+                                        statePc = 61;
+                                    }
+                                    continue stateLoop;
+                                }
                             } else {
-                                statePc = 56;
+                                /* Inlined CFG state: 56. */
+                                {
+                                    /* Sequential CFG blocks: 56, 58. */
+                                    {
+                                    }
+                                    {
+                                        statePc = 61;
+                                        continue stateLoop;
+                                    }
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_55) {
                             caughtException = stateCaught_55;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 56: {
-                        try {
-                            statePc = 58;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_56) {
-                            caughtException = stateCaught_56;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 58: {
-                        try {
-                            statePc = 61;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_58) {
-                            caughtException = stateCaught_58;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 60: {
-                        try {
-                            this.a((byte) 79, "wrongjava");
-                            if (var5 == 0) {
-                                statePc = 107;
-                            } else {
-                                statePc = 61;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_60) {
-                            caughtException = stateCaught_60;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -870,33 +695,22 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         try {
                             if (d.field_t == null) {
                                 statePc = 81;
+                                continue stateLoop;
                             } else {
-                                statePc = 62;
+                                /* Inlined CFG state: 62. */
+                                {
+                                    /* Sequential CFG blocks: 62, 64. */
+                                    {
+                                    }
+                                    {
+                                        stackIn_66_0 = d.field_t.startsWith("1.");
+                                        statePc = 66;
+                                        continue stateLoop;
+                                    }
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_61) {
                             caughtException = stateCaught_61;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 62: {
-                        try {
-                            statePc = 64;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_62) {
-                            caughtException = stateCaught_62;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 64: {
-                        try {
-                            stackIn_66_0 = d.field_t.startsWith("1.");
-                            statePc = 66;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_64) {
-                            caughtException = stateCaught_64;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -905,24 +719,18 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         try {
                             if (!stackIn_66_0) {
                                 statePc = 81;
+                                continue stateLoop;
                             } else {
-                                statePc = 67;
+                                /* Inlined CFG state: 67. */
+                                {
+                                    var1_int = 2;
+                                    var2_int = 0;
+                                    statePc = 68;
+                                    continue stateLoop;
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_66) {
                             caughtException = stateCaught_66;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 67: {
-                        try {
-                            var1_int = 2;
-                            var2_int = 0;
-                            statePc = 68;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_67) {
-                            caughtException = stateCaught_67;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -931,95 +739,61 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         try {
                             if ((d.field_t.length() ^ -1) >= (var1_int ^ -1)) {
                                 statePc = 77;
+                                continue stateLoop;
                             } else {
-                                statePc = 69;
+                                /* Inlined CFG state: 69. */
+                                {
+                                    var3 = d.field_t.charAt(var1_int);
+                                    stackIn_78_0 = var3;
+                                    stackIn_70_0 = stackIn_78_0;
+                                    stackIn_78_1 = 48;
+                                    stackIn_70_1 = stackIn_78_1;
+                                    if (var5 != 0) {
+                                        statePc = 78;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 70. */
+                                        {
+                                            if (stackIn_70_0 < stackIn_70_1) {
+                                                statePc = 77;
+                                                continue stateLoop;
+                                            } else {
+                                                /* Inlined CFG state: 71. */
+                                                {
+                                                    /* Sequential CFG blocks: 71, 73. */
+                                                    {
+                                                    }
+                                                    {
+                                                        if (-58 > (var3 ^ -1)) {
+                                                            statePc = 77;
+                                                            continue stateLoop;
+                                                        } else {
+                                                            /* Inlined CFG state: 74. */
+                                                            {
+                                                                /* Sequential CFG blocks: 74, 76. */
+                                                                {
+                                                                }
+                                                                {
+                                                                    var2_int = 10 * var2_int - 48 - -var3;
+                                                                    var1_int++;
+                                                                    if (var5 == 0) {
+                                                                        statePc = 68;
+                                                                    } else {
+                                                                        statePc = 77;
+                                                                    }
+                                                                    continue stateLoop;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_68) {
                             caughtException = stateCaught_68;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 69: {
-                        try {
-                            var3 = d.field_t.charAt(var1_int);
-                            stackIn_78_0 = var3;
-                            stackIn_70_0 = stackIn_78_0;
-                            stackIn_78_1 = 48;
-                            stackIn_70_1 = stackIn_78_1;
-                            if (var5 != 0) {
-                                statePc = 78;
-                            } else {
-                                statePc = 70;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_69) {
-                            caughtException = stateCaught_69;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 70: {
-                        try {
-                            if (stackIn_70_0 < stackIn_70_1) {
-                                statePc = 77;
-                            } else {
-                                statePc = 71;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_70) {
-                            caughtException = stateCaught_70;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 71: {
-                        try {
-                            statePc = 73;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_71) {
-                            caughtException = stateCaught_71;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 73: {
-                        try {
-                            if (-58 > (var3 ^ -1)) {
-                                statePc = 77;
-                            } else {
-                                statePc = 74;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_73) {
-                            caughtException = stateCaught_73;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 74: {
-                        try {
-                            statePc = 76;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_74) {
-                            caughtException = stateCaught_74;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 76: {
-                        try {
-                            var2_int = 10 * var2_int - 48 - -var3;
-                            var1_int++;
-                            if (var5 == 0) {
-                                statePc = 68;
-                            } else {
-                                statePc = 77;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_76) {
-                            caughtException = stateCaught_76;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -1040,23 +814,17 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         try {
                             if (stackIn_78_0 > stackIn_78_1) {
                                 statePc = 81;
+                                continue stateLoop;
                             } else {
-                                statePc = 79;
+                                /* Inlined CFG state: 79. */
+                                {
+                                    oe.field_S = true;
+                                    statePc = 81;
+                                    continue stateLoop;
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_78) {
                             caughtException = stateCaught_78;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 79: {
-                        try {
-                            oe.field_S = true;
-                            statePc = 81;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_79) {
-                            caughtException = stateCaught_79;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -1065,34 +833,21 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         try {
                             var1 = qa.field_d;
                             if (null != kg.field_m) {
-                                statePc = 84;
+                                /* Inlined CFG state: 84. */
+                                {
+                                    var1 = kg.field_m;
+                                    statePc = 85;
+                                    continue stateLoop;
+                                }
                             } else {
-                                statePc = 82;
+                                /* Inlined CFG state: 82. */
+                                {
+                                    statePc = 85;
+                                    continue stateLoop;
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_81) {
                             caughtException = stateCaught_81;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 82: {
-                        try {
-                            statePc = 85;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_82) {
-                            caughtException = stateCaught_82;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 84: {
-                        try {
-                            var1 = kg.field_m;
-                            statePc = 85;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_84) {
-                            caughtException = stateCaught_84;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -1173,52 +928,34 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         try {
                             if (0L == MenuScreen.field_a) {
                                 statePc = 97;
+                                continue stateLoop;
                             } else {
-                                statePc = 93;
+                                /* Inlined CFG state: 93. */
+                                {
+                                    stackIn_99_0 = ((MenuScreen.field_a ^ -1L) < (oa.a(-12520) ^ -1L) ? -1 : ((MenuScreen.field_a ^ -1L) == (oa.a(-12520) ^ -1L) ? 0 : 1));
+                                    stackIn_94_0 = stackIn_99_0;
+                                    if (var5 != 0) {
+                                        statePc = 99;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 94. */
+                                        {
+                                            if (stackIn_94_0 >= 0) {
+                                                statePc = 107;
+                                                continue stateLoop;
+                                            } else {
+                                                /* Inlined CFG state: 95. */
+                                                {
+                                                    statePc = 97;
+                                                    continue stateLoop;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_92) {
                             caughtException = stateCaught_92;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 93: {
-                        try {
-                            stackIn_99_0 = ((MenuScreen.field_a ^ -1L) < (oa.a(-12520) ^ -1L) ? -1 : ((MenuScreen.field_a ^ -1L) == (oa.a(-12520) ^ -1L) ? 0 : 1));
-                            stackIn_94_0 = stackIn_99_0;
-                            if (var5 != 0) {
-                                statePc = 99;
-                            } else {
-                                statePc = 94;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_93) {
-                            caughtException = stateCaught_93;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 94: {
-                        try {
-                            if (stackIn_94_0 >= 0) {
-                                statePc = 107;
-                            } else {
-                                statePc = 95;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_94) {
-                            caughtException = stateCaught_94;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 95: {
-                        try {
-                            statePc = 97;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_95) {
-                            caughtException = stateCaught_95;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -1250,52 +987,34 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                         try {
                             if (nf.field_w <= var3) {
                                 statePc = 105;
+                                continue stateLoop;
                             } else {
-                                statePc = 101;
+                                /* Inlined CFG state: 101. */
+                                {
+                                    this.a((byte) -10);
+                                    var3++;
+                                    if (var5 != 0) {
+                                        statePc = 106;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 102. */
+                                        {
+                                            if (var5 == 0) {
+                                                statePc = 100;
+                                                continue stateLoop;
+                                            } else {
+                                                /* Inlined CFG state: 103. */
+                                                {
+                                                    statePc = 105;
+                                                    continue stateLoop;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_100) {
                             caughtException = stateCaught_100;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 101: {
-                        try {
-                            this.a((byte) -10);
-                            var3++;
-                            if (var5 != 0) {
-                                statePc = 106;
-                            } else {
-                                statePc = 102;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_101) {
-                            caughtException = stateCaught_101;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 102: {
-                        try {
-                            if (var5 == 0) {
-                                statePc = 100;
-                            } else {
-                                statePc = 103;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_102) {
-                            caughtException = stateCaught_102;
-                            statePc = 108;
-                            continue stateLoop;
-                        }
-                    }
-                    case 103: {
-                        try {
-                            statePc = 105;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_103) {
-                            caughtException = stateCaught_103;
                             statePc = 108;
                             continue stateLoop;
                         }
@@ -1770,49 +1489,60 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     case 1: {
                         try {
                             if (qa.field_d != null) {
-                                statePc = 4;
+                                /* Inlined CFG state: 4. */
+                                {
+                                    wg.field_j = wg.field_j + 1;
+                                    if ((wg.field_j ^ -1) > -4) {
+                                        /* Inlined CFG state: 7. */
+                                        {
+                                            this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
+                                            statePc = 8;
+                                            continue stateLoop;
+                                        }
+                                    } else {
+                                        /* Inlined CFG state: 5. */
+                                        {
+                                            this.a((byte) 79, "alreadyloaded");
+                                            statePc = 6;
+                                            continue stateLoop;
+                                        }
+                                    }
+                                }
                             } else {
-                                statePc = 2;
+                                /* Inlined CFG state: 2. */
+                                {
+                                    /* Sequential CFG blocks: 2, 9. */
+                                    {
+                                    }
+                                    {
+                                        kk.field_t = param2;
+                                        ok.field_c = param3;
+                                        sd.field_w = param3;
+                                        qa.field_b = 0;
+                                        hk.field_B = 0;
+                                        kh.field_d = param4;
+                                        qb.field_G = param4;
+                                        qa.field_d = (ch) (this);
+                                        GameScreen.field_x = k.c(107);
+                                        if (param1 == -14948) {
+                                            /* Inlined CFG state: 11. */
+                                            {
+                                                dupTemp$0 = new d(param0, param5, param6, true);
+                                                MenuScreen.field_i = dupTemp$0;
+                                                ml.field_s = dupTemp$0;
+                                                var8 = MenuScreen.field_i.a((Runnable) (this), 0, 1);
+                                                statePc = 12;
+                                                continue stateLoop;
+                                            }
+                                        } else {
+                                            statePc = 10;
+                                            continue stateLoop;
+                                        }
+                                    }
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_1) {
                             caughtException = stateCaught_1;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            wg.field_j = wg.field_j + 1;
-                            if ((wg.field_j ^ -1) > -4) {
-                                statePc = 7;
-                            } else {
-                                statePc = 5;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            this.a((byte) 79, "alreadyloaded");
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
                             statePc = 18;
                             continue stateLoop;
                         }
@@ -1820,109 +1550,43 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     case 6: {
                         return;
                     }
-                    case 7: {
-                        try {
-                            this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
-                            statePc = 8;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
                     case 8: {
                         return;
                     }
-                    case 9: {
-                        try {
-                            kk.field_t = param2;
-                            ok.field_c = param3;
-                            sd.field_w = param3;
-                            qa.field_b = 0;
-                            hk.field_B = 0;
-                            kh.field_d = param4;
-                            qb.field_G = param4;
-                            qa.field_d = (ch) (this);
-                            GameScreen.field_x = k.c(107);
-                            if (param1 == -14948) {
-                                statePc = 11;
-                            } else {
-                                statePc = 10;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
                     case 10: {
                         return;
-                    }
-                    case 11: {
-                        try {
-                            dupTemp$0 = new d(param0, param5, param6, true);
-                            MenuScreen.field_i = dupTemp$0;
-                            ml.field_s = dupTemp$0;
-                            var8 = MenuScreen.field_i.a((Runnable) (this), 0, 1);
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
                     }
                     case 12: {
                         try {
                             if (-1 != (var8.field_a ^ -1)) {
                                 statePc = 17;
+                                continue stateLoop;
                             } else {
-                                statePc = 13;
+                                /* Inlined CFG state: 13. */
+                                {
+                                    bc.a(0, 10L);
+                                    if (var9 != 0) {
+                                        statePc = 25;
+                                        continue stateLoop;
+                                    } else {
+                                        /* Inlined CFG state: 14. */
+                                        {
+                                            if (var9 == 0) {
+                                                statePc = 12;
+                                                continue stateLoop;
+                                            } else {
+                                                /* Inlined CFG state: 15. */
+                                                {
+                                                    statePc = 17;
+                                                    continue stateLoop;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            continue stateLoop;
                         } catch (Throwable stateCaught_12) {
                             caughtException = stateCaught_12;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        try {
-                            bc.a(0, 10L);
-                            if (var9 != 0) {
-                                statePc = 25;
-                            } else {
-                                statePc = 14;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_13) {
-                            caughtException = stateCaught_13;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 14: {
-                        try {
-                            if (var9 == 0) {
-                                statePc = 12;
-                            } else {
-                                statePc = 15;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_14) {
-                            caughtException = stateCaught_14;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 15: {
-                        try {
-                            statePc = 17;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_15) {
-                            caughtException = stateCaught_15;
                             statePc = 18;
                             continue stateLoop;
                         }

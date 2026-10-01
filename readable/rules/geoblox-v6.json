@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "1936543883cbb6d694cd72afcab927accf076a10",
+    "commit": "dd9828b3532fc0cd3f452b6154bee6d9f77c658c",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "bf67d298e8c884958b622e717be6ecd4c3009e033265219b88e9f293d7671fd9",
+  "inputTreeSha256": "4ffc26d9728c403266022452f0c0ca68ea28ff61c26d108b7bd165e6ab92e24c",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -3864,23 +3864,17 @@
     }
   ],
   "revision": 4,
-  "previousRulesSha256": "58d4a9d3499d80bd4365d2f46258eecd88e851d302c0d62a6cea0a4f8b95a1b8",
-  "version": 7,
+  "previousRulesSha256": "577b1fa5e00f6dfb94be8eb4f7d7816611bedb161937ec45b72a56651fc63f73",
+  "version": 6,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "cc3be385def11a6ee0fa99a8bdb6fce77d3ad368",
-      "trackedClean": true,
-      "sourceArchive": {
-        "sha256": "62356e5d5e037e482d8dcb170f016d520b4a00182b13591ed1f726c3e9cae7dd",
-        "reproduce": "git archive --format=tar cc3be385def11a6ee0fa99a8bdb6fce77d3ad368 | sha256sum",
-        "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-      }
+      "commit": "b1e30cf3e762f15a2a2d639226df7a54ad5f4d81",
+      "trackedClean": true
     }
   },
-  "upstreamNamingGeneratorCommit": "d41315508e071f6bd672d65eb2f5a8d428648d6f",
-  "namingMigrationSha256": "689cfaf115fb9df4499e487494ed21bfef325569bded0004711da898dd866c0b"
+  "upstreamNamingGeneratorCommit": "d41315508e071f6bd672d65eb2f5a8d428648d6f"
 }

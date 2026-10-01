@@ -11,11 +11,11 @@ over the obfuscated gamepacks by the pipeline in
 
 ## Readable GeoBlox export
 
-[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 6 with
+[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 7 with
 642 reviewed naming rules, including gameplay state, contact/match processing,
 spawning, result sequences and score popups. Confirmed names omit opaque suffixes;
 the dictionary preserves original identities. Both 303-file Java corpora compile
-and preserve all 167,502 recorded bindings and 388 override relationships.
+and preserve all 158,730 recorded bindings and 388 override relationships.
 The original decompilation remains under `games/`.
 
 The [reproduction and update procedure](readable/README.md),
@@ -24,15 +24,16 @@ The [reproduction and update procedure](readable/README.md),
 [symbol map](readable/geoblox/SYMBOLS.md) and
 [provenance](readable/geoblox/provenance.json) describe the export.
 `node readable/reproduce-geoblox.mjs --check` verifies the pinned input and
-bundled tool and checks deterministic regeneration. This is an incremental
-naming pass; unknown identifiers and generated state machines remain.
+bundled tool and checks deterministic regeneration. Pass 7 also reduces generated dispatcher cases from 3,051 to 1,330 through
+reviewed decompiler region rendering. Unknown identifiers and shared joins remain;
+see the [state-machine report](readable/STATE-MACHINE-READABILITY.md).
 
 ## GeoBlox source refresh
 
-GeoBlox has a newer 303-file source export. Its fresh owned-decompiler run is
-byte-identical to the reviewed readability input, and its transformed bytecode
-passes a fresh ASM check covering 2,427 methods with zero failures. The other
-43 games retain the previous full-catalog export.
+GeoBlox has a newer 303-file source export from a pinned owned-decompiler
+revision. It reuses the unchanged transformed bytecode whose previous fresh ASM
+check covered 2,427 methods with zero failures. All regenerated sources compile.
+The other 43 games retain the previous full-catalog export.
 
 [GeoBlox provenance](decompilation/geoblox-provenance.json) records the exact
 Deko and java-tools Git commits, input identities, reused pipeline proof and

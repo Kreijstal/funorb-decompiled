@@ -2,16 +2,21 @@
   "schema": 1,
   "rules": 642,
   "files": 303,
-  "sourceCommit": "dd9828b3532fc0cd3f452b6154bee6d9f77c658c",
+  "sourceCommit": "1936543883cbb6d694cd72afcab927accf076a10",
   "commands": [
     {
       "command": "node readable/build-geoblox-rules.mjs --check",
       "result": "pass"
     },
     {
+      "command": "node readable/tests/test-geoblox-rule-builder.mjs",
+      "result": "pass",
+      "tests": 4
+    },
+    {
       "command": "node readable/reproduce-geoblox.mjs --check",
       "result": "pass",
-      "bindingsCompared": 167502,
+      "bindingsCompared": 158730,
       "overrideRelationships": 388,
       "identifierEdits": 10568
     },
@@ -42,14 +47,28 @@
       "tests": 4
     },
     {
-      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v6",
+      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v7",
       "result": "pass",
       "restoredFiles": 303,
       "originalBytesRecovered": true,
       "originalSourceRequired": false
     }
   ],
-  "inputTreeSha256": "4ffc26d9728c403266022452f0c0ca68ea28ff61c26d108b7bd165e6ab92e24c",
-  "outputTreeSha256": "f28f79a43671246f825d8709255f295576f06f5ad2d23f6e814d24b024fcdb39",
-  "runtimeEquivalenceVerified": false
+  "inputTreeSha256": "bf67d298e8c884958b622e717be6ecd4c3009e033265219b88e9f293d7671fd9",
+  "outputTreeSha256": "a089cf00e67de55186c734d9769070a4cd4dc7ea7e28b543f4e76c73a382b695",
+  "runtimeEquivalenceVerified": false,
+  "version": 7,
+  "stateMachineReadability": {
+    "javaToolsCommit": "cc3be385def11a6ee0fa99a8bdb6fce77d3ad368",
+    "decompilerSourceArchiveSha256": "62356e5d5e037e482d8dcb170f016d520b4a00182b13591ed1f726c3e9cae7dd",
+    "dispatcherCasesBefore": 3051,
+    "dispatcherCasesAfter": 1330,
+    "originalFallbackMethods": 19,
+    "readabilityRegressionTests": 11,
+    "fixturesAssertions": 36,
+    "structuredFeatureAssertions": 26,
+    "additionalFeatureAssertions": 77,
+    "stackOrderingAssertions": 38,
+    "krakatauSuite": "skipped: external binary unavailable"
+  }
 }
