@@ -49,16 +49,18 @@ const rebuiltPassSeven = {...passSix, version: 7, previousRulesSha256: sha256(pa
   source: passSeven.source, generators: passSeven.generators, renames};
 if (passSevenBytes.toString() !== JSON.stringify(rebuiltPassSeven, null, 2) + '\n')
   throw new Error('Retained pass 7 does not match its reviewed rule lineage');
-if (pin.namingMigration !== 'rules/geoblox-v8-migration.json')
+if (pin.namingMigration !== 'rules/geoblox-v9-migration.json')
   throw new Error('Changed input requires reviewed naming-rule migration');
-const latestBytes = read(pin.namingMigration);
+const passEightBytes = read('rules/geoblox-v8.json');
+const passEight = JSON.parse(passEightBytes);
+const latestBytes = read('rules/geoblox-v8-migration.json');
 const latest = JSON.parse(latestBytes);
 const localRules = renames.filter(rule => rule.symbol.startsWith('L:')).length;
 if (latest.schema !== 1 || latest.version !== 8 ||
     latest.previousRulesSha256 !== sha256(passSevenBytes) ||
     latest.previousInputTreeSha256 !== passSeven.inputTreeSha256 ||
-    latest.inputTreeSha256 !== pin.inputTreeSha256 ||
-    latest.javaToolsCommit !== pin.generators.javaTools.commit ||
+    latest.inputTreeSha256 !== passEight.inputTreeSha256 ||
+    latest.javaToolsCommit !== passEight.generators.javaTools.commit ||
     !Array.isArray(latest.identityChanges) ||
     latest.review.rulesRetained !== renames.length ||
     latest.review.originalSpellingGuardsMatched !== renames.length ||
@@ -80,8 +82,29 @@ const migratedRenames = renames.map(rule => ({...rule, symbol: moves.get(rule.sy
   .sort((a, b) => a.symbol < b.symbol ? -1 : a.symbol > b.symbol ? 1 : 0);
 if (new Set(migratedRenames.map(rule => rule.symbol)).size !== migratedRenames.length)
   throw new Error('Migrated naming rules have duplicate identities');
-const rules = {...passSeven, version: 8, previousRulesSha256: sha256(passSevenBytes),
-  namingMigrationSha256: sha256(latestBytes), inputTreeSha256: pin.inputTreeSha256,
+const rebuiltPassEight = {...passSeven, version: 8, previousRulesSha256: sha256(passSevenBytes),
+  namingMigrationSha256: sha256(latestBytes), inputTreeSha256: passEight.inputTreeSha256,
+  source: passEight.source, generators: passEight.generators, renames: migratedRenames};
+if (passEightBytes.toString() !== JSON.stringify(rebuiltPassEight, null, 2) + '\n')
+  throw new Error('Retained pass 8 does not match its reviewed rule lineage');
+const finalMigrationBytes = read(pin.namingMigration);
+const finalMigration = JSON.parse(finalMigrationBytes);
+if (finalMigration.schema !== 1 || finalMigration.version !== 9 ||
+    finalMigration.previousRulesSha256 !== sha256(passEightBytes) ||
+    finalMigration.previousInputTreeSha256 !== passEight.inputTreeSha256 ||
+    finalMigration.inputTreeSha256 !== pin.inputTreeSha256 ||
+    finalMigration.javaToolsCommit !== pin.generators.javaTools.commit ||
+    !Array.isArray(finalMigration.identityChanges) || finalMigration.identityChanges.length !== 0 ||
+    finalMigration.review.rulesRetained !== renames.length ||
+    finalMigration.review.originalSpellingGuardsMatched !== renames.length ||
+    finalMigration.review.namedLocals !== localRules ||
+    finalMigration.review.namedLocalDeclarationIdentitiesUnchanged !== localRules ||
+    finalMigration.review.namedLocalDeclarationIdentitiesMoved !== 0 ||
+    finalMigration.review.namedLocalsUniqueWithinMethodBeforeAndAfter !== true ||
+    finalMigration.review.classFieldMethodParameterIdentitiesUnchanged !== true)
+  throw new Error('Input or declaration identities differ from the reviewed pass-9 migration');
+const rules = {...passEight, version: 9, previousRulesSha256: sha256(passEightBytes),
+  namingMigrationSha256: sha256(finalMigrationBytes), inputTreeSha256: pin.inputTreeSha256,
   source: {repository: pin.sourceRepository, commit: pin.commit, subdirectory: pin.subdirectory},
   generators: pin.generators, renames: migratedRenames};
 const output = JSON.stringify(rules, null, 2) + '\n';

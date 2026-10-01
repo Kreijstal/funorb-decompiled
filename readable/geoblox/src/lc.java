@@ -8,8 +8,7 @@ final class lc {
     static int field_b;
 
     final static void updateSpawnQueue(int param0) {
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         GameplayEntity var1 = null;
         RuntimeException var1_ref = null;
         double var2 = 0.0;
@@ -19,266 +18,80 @@ final class lc {
         float var7 = 0.0f;
         double var8 = 0.0;
         int var10 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var10 = Geoblox.field_C;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var1 = (GameplayEntity) ((Object) wd.spawnQueue.firstForIteration(0));
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 45;
-                        continue stateLoop;
+        var10 = Geoblox.field_C;
+        try {
+          L0: {
+            var1 = (GameplayEntity) ((Object) wd.spawnQueue.firstForIteration(0));
+            L1: while (true) {
+              L2: {
+                if (var1 != null) {
+                  var1.advanceEntityAnimation(true);
+                  var1 = (GameplayEntity) ((Object) wd.spawnQueue.nextForIteration(1));
+                  if (var10 != 0) {
+                    break L2;
+                  } else {
+                    if (var10 == 0) {
+                      continue L1;
                     }
+                  }
                 }
-                case 2: {
-                    try {
-                        if (var1 == null) {
-                            statePc = 7;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 3. */
-                            {
-                                var1.advanceEntityAnimation(true);
-                                var1 = (GameplayEntity) ((Object) wd.spawnQueue.nextForIteration(1));
-                                if (var10 != 0) {
-                                    statePc = 10;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 4. */
-                                    {
-                                        if (var10 == 0) {
-                                            statePc = 2;
-                                            continue stateLoop;
-                                        } else {
-                                            /* Inlined CFG state: 5. */
-                                            {
-                                                statePc = 7;
-                                                continue stateLoop;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 45;
-                        continue stateLoop;
+                if (param0 != 255) {
+                  field_b = -11;
+                }
+              }
+              L4: {
+                L5: {
+                  if (kj.field_o[99]) {
+                    if (ji.movingEntities.isEmpty(13519)) {
+                      break L5;
                     }
-                }
-                case 7: {
-                    try {
-                        if (param0 == 255) {
-                            statePc = 10;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 8. */
-                            {
-                                field_b = -11;
-                                statePc = 10;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 45;
-                        continue stateLoop;
+                  }
+                  if ((kb.field_c ^ -1) <= (kc.field_a ^ -1)) {
+                    if (-1 != (ul.releasedInCurrentTheme ^ -1)) {
+                      break L4;
+                    } else {
+                      if (el.gameplaySession.tutorialMode) {
+                        break L4;
+                      }
                     }
+                  }
                 }
-                case 10: {
-                    try {
-                        if (!kj.field_o[99]) {
-                            statePc = 14;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 11. */
-                            {
-                                if (ji.movingEntities.isEmpty(13519)) {
-                                    statePc = 25;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 12. */
-                                    {
-                                        statePc = 14;
-                                        continue stateLoop;
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 45;
-                        continue stateLoop;
+                if (0 < wd.spawnQueue.countNodes(param0 ^ -170)) {
+                  if (!el.gameplaySession.spawnReleaseDisabled) {
+                    ji.movingEntities.addLast(-48, wd.spawnQueue.removeFirst((byte) -124));
+                    hd.recordEntityRelease(2);
+                    kc.field_a = 0;
+                  }
+                }
+              }
+              kc.field_a = kc.field_a + 1;
+              if (wd.spawnQueue.countNodes(param0 ^ 143) < 3) {
+                if (ma.c((byte) -53)) {
+                  if (!el.gameplaySession.canAdvanceSession(true)) {
+                    var1 = (GameplayEntity) ((Object) ra.availableEntities.removeFirst((byte) -101));
+                    if (null != var1) {
+                      var2 = 2.0 * Math.random() * 3.141592653589793;
+                      var4 = 240.0f * (float)Math.cos(var2) + 320.0f;
+                      var5 = 240.0f + (float)Math.sin(var2) * 240.0f;
+                      var6 = 320.0f - var4;
+                      var7 = -var5 + 240.0f;
+                      var8 = 1.0 / Math.sqrt((double)(var7 * var7 + var6 * var6));
+                      var7 = (float)((double)var7 * var8);
+                      var6 = (float)((double)var6 * var8);
+                      var1.initializeEntityMotion(101, var4, vd.a(param0 ^ 741924143), og.entityMotionSpeed * var6, nf.c((byte) -67), kc.field_a + kb.field_c * (1 + wd.spawnQueue.countNodes(111)), 0.0f, var5, var7 * og.entityMotionSpeed, ij.m(param0 ^ 131), 0.0f);
+                      wd.spawnQueue.addLast(-47, var1);
+                      mf.b(false);
                     }
+                  }
                 }
-                case 14: {
-                    try {
-                        if ((kb.field_c ^ -1) > (kc.field_a ^ -1)) {
-                            statePc = 25;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 15. */
-                            {
-                                /* Sequential CFG blocks: 15, 17. */
-                                {
-                                }
-                                {
-                                    if (-1 != (ul.releasedInCurrentTheme ^ -1)) {
-                                        statePc = 31;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 18. */
-                                        {
-                                            /* Sequential CFG blocks: 18, 20. */
-                                            {
-                                            }
-                                            {
-                                                if (!el.gameplaySession.tutorialMode) {
-                                                    statePc = 25;
-                                                    continue stateLoop;
-                                                } else {
-                                                    /* Inlined CFG state: 21. */
-                                                    {
-                                                        /* Sequential CFG blocks: 21, 23. */
-                                                        {
-                                                        }
-                                                        {
-                                                            statePc = 31;
-                                                            continue stateLoop;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 45;
-                        continue stateLoop;
-                    }
-                }
-                case 25: {
-                    try {
-                        if (0 < wd.spawnQueue.countNodes(param0 ^ -170)) {
-                            /* Inlined CFG state: 28. */
-                            {
-                                if (el.gameplaySession.spawnReleaseDisabled) {
-                                    statePc = 31;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 29. */
-                                    {
-                                        ji.movingEntities.addLast(-48, wd.spawnQueue.removeFirst((byte) -124));
-                                        hd.recordEntityRelease(2);
-                                        kc.field_a = 0;
-                                        statePc = 31;
-                                        continue stateLoop;
-                                    }
-                                }
-                            }
-                        } else {
-                            /* Inlined CFG state: 26. */
-                            {
-                                statePc = 31;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_25) {
-                        caughtException = stateCaught_25;
-                        statePc = 45;
-                        continue stateLoop;
-                    }
-                }
-                case 31: {
-                    try {
-                        kc.field_a = kc.field_a + 1;
-                        if (wd.spawnQueue.countNodes(param0 ^ 143) >= 3) {
-                            statePc = 46;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 32. */
-                            {
-                                if (!ma.c((byte) -53)) {
-                                    statePc = 46;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 33. */
-                                    {
-                                        /* Sequential CFG blocks: 33, 35. */
-                                        {
-                                        }
-                                        {
-                                            if (!el.gameplaySession.canAdvanceSession(true)) {
-                                                /* Inlined CFG state: 40. */
-                                                {
-                                                    var1 = (GameplayEntity) ((Object) ra.availableEntities.removeFirst((byte) -101));
-                                                    if (null != var1) {
-                                                        /* Inlined CFG state: 43. */
-                                                        {
-                                                            var2 = 2.0 * Math.random() * 3.141592653589793;
-                                                            var4 = 240.0f * (float)Math.cos(var2) + 320.0f;
-                                                            var5 = 240.0f + (float)Math.sin(var2) * 240.0f;
-                                                            var6 = 320.0f - var4;
-                                                            var7 = -var5 + 240.0f;
-                                                            var8 = 1.0 / Math.sqrt((double)(var7 * var7 + var6 * var6));
-                                                            var7 = (float)((double)var7 * var8);
-                                                            var6 = (float)((double)var6 * var8);
-                                                            var1.initializeEntityMotion(101, var4, vd.a(param0 ^ 741924143), og.entityMotionSpeed * var6, nf.c((byte) -67), kc.field_a + kb.field_c * (1 + wd.spawnQueue.countNodes(111)), 0.0f, var5, var7 * og.entityMotionSpeed, ij.m(param0 ^ 131), 0.0f);
-                                                            wd.spawnQueue.addLast(-47, var1);
-                                                            mf.b(false);
-                                                            statePc = 46;
-                                                            continue stateLoop;
-                                                        }
-                                                    } else {
-                                                        /* Inlined CFG state: 41. */
-                                                        {
-                                                            statePc = 46;
-                                                            continue stateLoop;
-                                                        }
-                                                    }
-                                                }
-                                            } else {
-                                                /* Inlined CFG state: 36. */
-                                                {
-                                                    /* Sequential CFG blocks: 36, 38. */
-                                                    {
-                                                    }
-                                                    {
-                                                        statePc = 46;
-                                                        continue stateLoop;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_31) {
-                        caughtException = stateCaught_31;
-                        statePc = 45;
-                        continue stateLoop;
-                    }
-                }
-                case 45: {
-                    var1_ref = (RuntimeException) ((Object) caughtException);
-                    throw t.a((Throwable) ((Object) var1_ref), "lc.E(" + param0 + ')');
-                }
-                case 46: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              break L0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw t.a((Throwable) ((Object) var1_ref), "lc.E(" + param0 + ')');
         }
     }
 
@@ -318,24 +131,16 @@ final class lc {
 
     final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, byte param10, int[] param11, int param12) {
         int incrementValue$0 = 0;
-        int stackIn_10_0 = 0;
         int stackIn_23_0 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var13_int = 0;
         RuntimeException var13 = null;
         int var14 = 0;
@@ -362,304 +167,129 @@ final class lc {
         int var35 = 0;
         int var36 = 0;
         int var37 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var37 = Geoblox.field_C;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param10 <= -74) {
-                            statePc = 4;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 2. */
-                            {
-                                field_b = 78;
-                                statePc = 4;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var13_int = param0;
-                        var14 = 1122867;
-                        var15 = (var14 & 16711680) >>> -1079885168;
-                        var16 = var14 & 65280;
-                        var17 = var14 & 255;
-                        var18 = -param1;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if ((var18 ^ -1) <= -1) {
-                            statePc = 34;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 6. */
-                            {
-                                var19 = param5 * (param6 >> -1886768304);
-                                if (var37 != 0) {
-                                    statePc = 34;
-                                } else {
-                                    statePc = 7;
+        var37 = Geoblox.field_C;
+        try {
+          L0: {
+            if (param10 > -74) {
+              field_b = 78;
+            }
+            var13_int = param0;
+            var14 = 1122867;
+            var15 = (var14 & 16711680) >>> -1079885168;
+            var16 = var14 & 65280;
+            var17 = var14 & 255;
+            var18 = -param1;
+            L2: while (true) {
+              L3: {
+                L4: {
+                  if ((var18 ^ -1) > -1) {
+                    var19 = param5 * (param6 >> -1886768304);
+                    if (var37 != 0) {
+                      break L3;
+                    } else {
+                      var20 = -param9;
+                      L5: while (true) {
+                        L6: {
+                          if ((var20 ^ -1) > -1) {
+                            param12 = param11[var19 + (param0 >> -81490640)];
+                            param0 = param0 + param3;
+                            stackIn_23_0 = param12;
+
+                            if (var37 != 0) {
+                              break L6;
+                            } else {
+                              L8: {
+                                if (stackIn_23_0 == 0) {
+                                  param8++;
+                                  if (var37 == 0) {
+                                    break L8;
+                                  }
                                 }
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var20 = -param9;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        if ((var20 ^ -1) <= -1) {
-                            statePc = 22;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 9. */
-                            {
-                                param12 = param11[var19 + (param0 >> -81490640)];
-                                param0 = param0 + param3;
-                                stackIn_23_0 = param12;
-                                stackIn_10_0 = stackIn_23_0;
-                                if (var37 != 0) {
-                                    statePc = 23;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 10. */
-                                    {
-                                        if (stackIn_10_0 != 0) {
-                                            statePc = 16;
-                                            continue stateLoop;
-                                        } else {
-                                            /* Inlined CFG state: 11. */
-                                            {
-                                                /* Sequential CFG blocks: 11, 13. */
-                                                {
-                                                }
-                                                {
-                                                    param8++;
-                                                    if (var37 == 0) {
-                                                        statePc = 21;
-                                                        continue stateLoop;
-                                                    } else {
-                                                        /* Inlined CFG state: 14. */
-                                                        {
-                                                            statePc = 16;
-                                                            continue stateLoop;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
+                                var21 = param2[param8];
+                                if ((var21 ^ -1) == -1) {
+                                  param8++;
+                                  if (var37 == 0) {
+                                    break L8;
+                                  }
                                 }
+                                var22 = 510 & var21 >> 1228331247;
+                                var23 = (var21 & 65429) >> -300055672;
+                                var24 = 255 & var21;
+                                var25 = (var24 + var22) / 3 - -var23 >> -1090345247;
+                                var26 = -(((255 & param12) + (param12 >> 1020607240 & 255) + (param12 >> -1338833040 & 255)) / 3) + 256;
+                                var27 = var15 * (var25 << -1187127344 >>> 543802160) >>> 1389020232;
+                                var28 = (var25 << 1167088136) * var16 >>> 2081269144;
+                                var29 = var17 * var25 >>> 2020048840;
+                                var25 = (var28 << -1742741880) + (var27 << -1929572144) - -var29;
+                                var30 = var26 * ((16711680 & var25) >> -2028626672);
+                                var31 = (255 & var25 >> 123665768) * var26;
+                                var32 = (var25 & 255) * var26;
+                                var33 = ((16711680 & var21) >>> -1099466064) * ((param12 & 16711680) >>> 878755504) >>> 766300104;
+                                var34 = (var21 & 65280) * (param12 & 65280) >>> -1130661960;
+                                var35 = (255 & var21) * (255 & param12) >>> 1483648232;
+                                var36 = 256 + -var26;
+                                var33 = var33 * var36;
+                                var34 = var34 * var36;
+                                var35 = var35 * var36;
+                                incrementValue$0 = param8;
+                                param8++;
+                                param2[incrementValue$0] = (var32 + var35 >> 464198152) + ((var34 + var31 >> 115744520 << 1806472904) + (var30 + var33 >> 1812821320 << 249524688));
+                              }
+                              var20++;
+                              if (var37 == 0) {
+                                continue L5;
+                              }
                             }
+                          }
+                          param6 = param6 + param4;
+                          param8 = param8 + param7;
+                          stackIn_23_0 = var13_int;
                         }
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        var21 = param2[param8];
-                        if ((var21 ^ -1) != -1) {
-                            statePc = 20;
-                        } else {
-                            statePc = 17;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        param8++;
-                        if (var37 == 0) {
-                            statePc = 21;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 18. */
-                            {
-                                statePc = 20;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    try {
-                        var22 = 510 & var21 >> 1228331247;
-                        var23 = (var21 & 65429) >> -300055672;
-                        var24 = 255 & var21;
-                        var25 = (var24 + var22) / 3 - -var23 >> -1090345247;
-                        var26 = -(((255 & param12) + (param12 >> 1020607240 & 255) + (param12 >> -1338833040 & 255)) / 3) + 256;
-                        var27 = var15 * (var25 << -1187127344 >>> 543802160) >>> 1389020232;
-                        var28 = (var25 << 1167088136) * var16 >>> 2081269144;
-                        var29 = var17 * var25 >>> 2020048840;
-                        var25 = (var28 << -1742741880) + (var27 << -1929572144) - -var29;
-                        var30 = var26 * ((16711680 & var25) >> -2028626672);
-                        var31 = (255 & var25 >> 123665768) * var26;
-                        var32 = (var25 & 255) * var26;
-                        var33 = ((16711680 & var21) >>> -1099466064) * ((param12 & 16711680) >>> 878755504) >>> 766300104;
-                        var34 = (var21 & 65280) * (param12 & 65280) >>> -1130661960;
-                        var35 = (255 & var21) * (255 & param12) >>> 1483648232;
-                        var36 = 256 + -var26;
-                        var33 = var33 * var36;
-                        var34 = var34 * var36;
-                        var35 = var35 * var36;
-                        incrementValue$0 = param8;
-                        param8++;
-                        param2[incrementValue$0] = (var32 + var35 >> 464198152) + ((var34 + var31 >> 115744520 << 1806472904) + (var30 + var33 >> 1812821320 << 249524688));
-                        statePc = 21;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                }
-                case 21: {
-                    try {
-                        var20++;
-                        if (var37 == 0) {
-                            statePc = 8;
-                        } else {
-                            statePc = 22;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_21) {
-                        caughtException = stateCaught_21;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                }
-                case 22: {
-                    try {
-                        param6 = param6 + param4;
-                        param8 = param8 + param7;
-                        stackIn_23_0 = var13_int;
-                        statePc = 23;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_22) {
-                        caughtException = stateCaught_22;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                }
-                case 23: {
-                    try {
                         param0 = stackIn_23_0;
                         var18++;
                         if (var37 == 0) {
-                            statePc = 5;
+                          continue L2;
                         } else {
-                            statePc = 34;
+                          break L4;
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_23) {
-                        caughtException = stateCaught_23;
-                        statePc = 25;
-                        continue stateLoop;
+                      }
                     }
+                  }
                 }
-                case 25: {
-                    var13 = (RuntimeException) ((Object) caughtException);
-                    stackIn_28_0 = (RuntimeException) (var13);
-                    stackIn_26_0 = stackIn_28_0;
-                    stackIn_28_1 = new StringBuilder().append("lc.C(").append(param0).append(',').append(param1).append(',');
-                    stackIn_26_1 = stackIn_28_1;
-                    if (param2 == null) {
-                        statePc = 28;
-                    } else {
-                        statePc = 26;
-                    }
-                    continue stateLoop;
-                }
-                case 26: {
-                    stackIn_29_0 = (RuntimeException) ((Object) stackIn_26_0);
-                    stackIn_29_1 = (StringBuilder) ((Object) stackIn_26_1);
-                    stackIn_29_2 = "{...}";
-                    statePc = 29;
-                    continue stateLoop;
-                }
-                case 28: {
-                    stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-                    stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-                    stackIn_29_2 = "null";
-                    statePc = 29;
-                    continue stateLoop;
-                }
-                case 29: {
-                    stackIn_32_0 = (RuntimeException) ((Object) stackIn_29_0);
-                    stackIn_30_0 = stackIn_32_0;
-                    stackIn_32_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
-                    stackIn_30_1 = stackIn_32_1;
-                    if (param11 == null) {
-                        /* Inlined CFG state: 32. */
-                        {
-                            stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-                            stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-                            stackIn_33_2 = "null";
-                            statePc = 33;
-                            continue stateLoop;
-                        }
-                    } else {
-                        /* Inlined CFG state: 30. */
-                        {
-                            stackIn_33_0 = (RuntimeException) ((Object) stackIn_30_0);
-                            stackIn_33_1 = (StringBuilder) ((Object) stackIn_30_1);
-                            stackIn_33_2 = "{...}";
-                            statePc = 33;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 33: {
-                    throw t.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ',' + param12 + ')');
-                }
-                case 34: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              break L0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var13 = decompiledCaughtException;
+          stackIn_28_0 = (RuntimeException) (var13);
+
+          stackIn_28_1 = new StringBuilder().append("lc.C(").append(param0).append(',').append(param1).append(',');
+
+          if (param2 == null) {
+            stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+            stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+            stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+            stackIn_29_2 = "{...}";
+          }
+
+
+          stackIn_32_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
+
+          if (param11 == null) {
+            stackIn_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+            stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+            stackIn_33_2 = "null";
+          } else {
+            stackIn_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+            stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+            stackIn_33_2 = "{...}";
+          }
+          throw t.a((Throwable) ((Object) stackIn_29_0), stackIn_33_2 + ',' + param12 + ')');
         }
     }
 

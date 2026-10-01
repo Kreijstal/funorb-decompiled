@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "131c8befbd8c6608356d34b5b6883e764448d8eb",
+    "commit": "cf3828253ca40154f9663b82b3c2905c7fc8adb0",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "deb64208590f0e4d0d46cbd4d6a87f81fd35df1a27ca0c51dd3f3b1b0010c86d",
+  "inputTreeSha256": "e7e9406eeb406bb265fa0402b76046bfd0bfb36a8b31cba83022a4c0764b3a0b",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -3864,23 +3864,23 @@
     }
   ],
   "revision": 4,
-  "previousRulesSha256": "af636ac09563614bc088d92698050034e22e24e503e26e3a3ac88dbdce4e6dc6",
-  "version": 9,
+  "previousRulesSha256": "0cecb9337a3e546b690f22552c7f5484938c95c057cc40d814d272ac04d8cbaf",
+  "version": 8,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "86e991cc4ab9540489969e77d738f2c9c72750cc",
+      "commit": "e2b82224d6bb50c6e376af24692481581f78baa0",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "05af4cf1d9a8099536342d2ad0835f46e8413369dee6efa925bef072ea212992",
-        "reproduce": "git archive --format=tar 86e991cc4ab9540489969e77d738f2c9c72750cc | sha256sum",
+        "sha256": "a82db967bd98714696f926b44fbd4fdfcf555f5cc66dd6b4b99a79e547a96a02",
+        "reproduce": "git archive --format=tar e2b82224d6bb50c6e376af24692481581f78baa0 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
   },
   "upstreamNamingGeneratorCommit": "d41315508e071f6bd672d65eb2f5a8d428648d6f",
-  "namingMigrationSha256": "741c67b417cfb4b6452c1e50f66875f30a8973a523e0205026e5b36d5a0e58b8"
+  "namingMigrationSha256": "0e1f819caa608c6cc03be28c2ea21fbe70d13672170b1e808d2adab2ea0375cd"
 }

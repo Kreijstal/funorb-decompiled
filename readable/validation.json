@@ -2,7 +2,7 @@
   "schema": 1,
   "rules": 642,
   "files": 303,
-  "sourceCommit": "cf3828253ca40154f9663b82b3c2905c7fc8adb0",
+  "sourceCommit": "131c8befbd8c6608356d34b5b6883e764448d8eb",
   "commands": [
     {
       "command": "node readable/build-geoblox-rules.mjs --check",
@@ -11,12 +11,12 @@
     {
       "command": "node readable/tests/test-geoblox-rule-builder.mjs",
       "result": "pass",
-      "tests": 7
+      "tests": 8
     },
     {
       "command": "node readable/reproduce-geoblox.mjs --check",
       "result": "pass",
-      "bindingsCompared": 158177,
+      "bindingsCompared": 156833,
       "overrideRelationships": 388,
       "identifierEdits": 10568
     },
@@ -47,33 +47,59 @@
       "tests": 4
     },
     {
-      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v8",
+      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v9",
       "result": "pass",
       "restoredFiles": 303,
       "originalBytesRecovered": true,
       "originalSourceRequired": false
     }
   ],
-  "inputTreeSha256": "e7e9406eeb406bb265fa0402b76046bfd0bfb36a8b31cba83022a4c0764b3a0b",
-  "outputTreeSha256": "3e950cfeced37c8c744172caf8ca89e5b02ec96894491e828beb8c99befd3219",
+  "inputTreeSha256": "deb64208590f0e4d0d46cbd4d6a87f81fd35df1a27ca0c51dd3f3b1b0010c86d",
+  "outputTreeSha256": "ba955263537b8b81ce2302edd2d0b5867d49cf25cdbd4f33cdb2849e924f0f3f",
   "runtimeEquivalenceVerified": false,
-  "version": 8,
+  "version": 9,
   "stateMachineReadability": {
-    "javaToolsCommit": "e2b82224d6bb50c6e376af24692481581f78baa0",
-    "decompilerSourceArchiveSha256": "a82db967bd98714696f926b44fbd4fdfcf555f5cc66dd6b4b99a79e547a96a02",
+    "javaToolsCommit": "86e991cc4ab9540489969e77d738f2c9c72750cc",
+    "decompilerSourceArchiveSha256": "05af4cf1d9a8099536342d2ad0835f46e8413369dee6efa925bef072ea212992",
     "dispatcherCasesBefore": 3051,
-    "dispatcherCasesAfter": 1131,
-    "originalFallbackMethods": 16,
+    "dispatcherCasesAfter": 877,
+    "originalFallbackMethods": 4,
     "readabilityRegressionTests": 11,
     "fixturesAssertions": 36,
     "structuredFeatureAssertions": 26,
     "additionalFeatureAssertions": 77,
     "stackOrderingAssertions": 38,
     "krakatauSuite": "skipped: external binary unavailable",
-    "previousPassDispatcherCases": 1330,
-    "largeOriginalMethods": 3,
-    "invariantFanoutDifferentialTests": 4,
-    "invariantFanoutDifferentialComparisons": 384,
-    "namedLocalOrdinalMigrations": 8
+    "previousPassDispatcherCases": 1131,
+    "largeOriginalMethods": 2,
+    "invariantFanoutDifferentialTests": 8,
+    "invariantFanoutDifferentialComparisons": 768,
+    "namedLocalOrdinalMigrations": 0,
+    "nativeExitRuntimeTests": 2,
+    "exceptionStructurerTests": 16,
+    "printerTests": 10,
+    "generatedDispatcherMethods": 21,
+    "generatedLargeDispatcherMethods": 1,
+    "commands": [
+      {
+        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrInvariantFanout.test.js",
+        "tests": 10,
+        "result": "pass"
+      },
+      {
+        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node --test test/structurer.test.js test/exceptionStructurer.test.js test/cfrStateMachineReadability.test.js test/cfrFixtures.test.js test/cfrStructuredFeatures.test.js test/cfrAdditionalFeatures.test.js test/cfrStackOrdering.test.js test/cfrCatchSemanticsRegressions.test.js",
+        "files": 8,
+        "result": "pass"
+      }
+    ],
+    "independentInventory": {
+      "tool": "javac Trees method/switch inventory",
+      "dispatcherCases": 877,
+      "generatedMethods": 21,
+      "largeGeneratedMethods": 1,
+      "screenUpdateLinesBefore": 951,
+      "screenUpdateLinesAfter": 380,
+      "screenUpdateCatchRetained": true
+    }
   }
 }

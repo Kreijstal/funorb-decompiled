@@ -1,9 +1,9 @@
 # Readable source exports
 
-GeoBlox pass 8 has 642 reviewed semantic naming rules: 17 classes, 178 fields,
+GeoBlox pass 9 has 642 reviewed semantic naming rules: 17 classes, 178 fields,
 129 methods, 91 parameters and 227 guarded local declarations. It preserves
 original arithmetic, strings and numeric IDs. The new decompiler renders proven
-single-entry branches as ordinary Java bodies and keeps handler-free invariant
+single-entry branches as ordinary Java bodies and keeps verified exception-region
 loop fanouts structured. Confirmed names have no opaque suffixes; unknown identifiers remain unchanged. The reverse map keeps
 original JVM identities and exact edit information.
 
@@ -23,10 +23,10 @@ Start with [GameplaySession.java](geoblox/src/GameplaySession.java),
   dependency and output hashes, JDK identity and binding checks.
 - [geoblox-source-pin.json](geoblox-source-pin.json): the exact source commit
   and dependency pin. The input is `games/geoblox` at commit
-  `cf3828253ca40154f9663b82b3c2905c7fc8adb0`.
+  `131c8befbd8c6608356d34b5b6883e764448d8eb`.
 - [tools/PIN.json](tools/PIN.json): exact bundled naming-tool file digests.
 - [rules](rules): the retained 491-rule manifest, 151 gameplay additions,
-  complete pass-6/pass-7 manifests and explicit pass-7/pass-8 input migrations.
+  complete pass-6/pass-7/pass-8 manifests and explicit pass-7/pass-8/pass-9 input migrations.
   Every previous manifest and the changed input are guarded by SHA-256.
 - `funorb-stubs.jar`: the frozen compilation dependency, included byte for byte.
 
@@ -35,22 +35,22 @@ The decompilation's tool revisions are separate from game-source hashes:
 | Tool | Git commit |
 | --- | --- |
 | Deko | `a572c4dd0f0174bfcd7777be53d7ceba2f970f18` |
-| java-tools | `e2b82224d6bb50c6e376af24692481581f78baa0` |
+| java-tools | `86e991cc4ab9540489969e77d738f2c9c72750cc` |
 | Upstream naming tool in Deko | `d41315508e071f6bd672d65eb2f5a8d428648d6f` |
 | Reviewed names and adapted naming tool | `fd7dbd89304f5c494223df22d6888b35fc65c15d` in `geoblox-readable-next.bundle` |
 
 The decompiler repository source archive has SHA-256
-`a82db967bd98714696f926b44fbd4fdfcf555f5cc66dd6b4b99a79e547a96a02`.
+`05af4cf1d9a8099536342d2ad0835f46e8413369dee6efa925bef072ea212992`.
 Recreate that identity in the java-tools checkout with:
 
 ```sh
-git archive --format=tar e2b82224d6bb50c6e376af24692481581f78baa0 | sha256sum
+git archive --format=tar 86e991cc4ab9540489969e77d738f2c9c72750cc | sha256sum
 ```
 
 This hashes the tracked **decompiler repository source**, including its commit
 archive metadata. The game-source tree hashes at the end of this document are
 separate identities. The local revision is available in
-`java-tools-invariant-fanout.bundle` pending remote publication.
+`java-tools-exception-region-exits.bundle` pending remote publication.
 
 The generic naming tool belongs to Deko. `tools/` is a frozen publication copy,
 so this checkout can reproduce the export without depending on a mutable sibling
@@ -122,11 +122,11 @@ It does not read `games/geoblox` or extract an original input commit.
 3. Review the new source against every affected naming rule. Local declaration
    ordinals can move after control-flow changes: migrate identities and guard
    the original spelling. A changed input needs a reviewed manifest migration;
-   the rule builder refuses to accept a replacement input digest alone. Pass 8
-   retains all 642 names after reviewing both javac declaration audits; eight
-   local ordinals move when synthetic carriers disappear, and the guarded
-   migration records every old/new identity. Future input or identity changes
-   require another reviewed migration.
+   the rule builder refuses to accept a replacement input digest alone. Pass 9
+   retains all 642 names after reviewing both javac declaration audits; all 227
+   named local identities are unchanged. Pass 8's eight ordinal migrations are
+   retained in its historical manifest. Future input or identity changes require
+   another reviewed migration.
 4. Pin the new source commit in `geoblox-source-pin.json`, retain the reviewed
    rule lineage and rebuild `geoblox-rules.json`. If updating the naming tool,
    import the reviewed tool and update `tools/PIN.json` deliberately.
@@ -142,7 +142,7 @@ unknown symbols are never renamed by guessing during reproduction.
 
 ## Checks and limits
 
-Both complete 303-file corpora compile. All 158,177 bindings and 388 override
+Both complete 303-file corpora compile. All 156,833 bindings and 388 override
 relationships are preserved; generation applies 10,568 identifier edits.
 Rebuilding the rules and regenerating the export is byte-identical, and
 map-only reversal recovers all 303 original files byte for byte.
@@ -153,8 +153,8 @@ popup initialization/progress/draining, cooldown-blocked match batches and
 queue settling. The gameplay harness does not cover popup crediting, successful
 match scoring, full contact physics or asset-dependent session transitions.
 
-The export reduces dispatcher cases from 3,051 to 1,131; 16 original methods
-still need a dispatcher; three have at least 50 cases. See [the renderer report](STATE-MACHINE-READABILITY.md)
+The export reduces dispatcher cases from 3,051 to 877; four original methods
+still need a dispatcher; two have at least 50 cases. See [the renderer report](STATE-MACHINE-READABILITY.md)
 for exact reductions, checks and remaining work. It does not claim whole-game
 runtime equivalence, a multiplayer
 protocol reconstruction, or JVM memory/FPS/phone acceptance. Runtime names,
@@ -163,8 +163,8 @@ before treating the renamed export as a runnable replacement.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Original GeoBlox | `e7e9406eeb406bb265fa0402b76046bfd0bfb36a8b31cba83022a4c0764b3a0b` |
-| Readable GeoBlox | `3e950cfeced37c8c744172caf8ca89e5b02ec96894491e828beb8c99befd3219` |
+| Original GeoBlox | `deb64208590f0e4d0d46cbd4d6a87f81fd35df1a27ca0c51dd3f3b1b0010c86d` |
+| Readable GeoBlox | `ba955263537b8b81ce2302edd2d0b5867d49cf25cdbd4f33cdb2849e924f0f3f` |
 
 These tree digests use `sourceIdentity(sourceInventory(root))` from the naming
 tool. They identify source bytes; the decompiler Git commits are listed above.

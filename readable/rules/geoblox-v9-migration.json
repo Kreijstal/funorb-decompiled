@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "version": 9,
+  "previousRulesSha256": "af636ac09563614bc088d92698050034e22e24e503e26e3a3ac88dbdce4e6dc6",
+  "previousInputTreeSha256": "e7e9406eeb406bb265fa0402b76046bfd0bfb36a8b31cba83022a4c0764b3a0b",
+  "inputTreeSha256": "deb64208590f0e4d0d46cbd4d6a87f81fd35df1a27ca0c51dd3f3b1b0010c86d",
+  "javaToolsCommit": "86e991cc4ab9540489969e77d738f2c9c72750cc",
+  "identityChanges": [],
+  "review": {
+    "rulesRetained": 642,
+    "originalSpellingGuardsMatched": 642,
+    "namedLocals": 227,
+    "namedLocalDeclarationIdentitiesUnchanged": 227,
+    "namedLocalDeclarationIdentitiesMoved": 0,
+    "namedLocalsUniqueWithinMethodBeforeAndAfter": true,
+    "classFieldMethodParameterIdentitiesUnchanged": true,
+    "evidence": "Compared all 642 guarded identities and original spellings against the previous and regenerated javac Trees declaration audits. All 227 named locals retain their ordinal and unique original spelling within their full JVM method. Reviewed the regenerated gameplay screen loops and catch continuation; the screen update flag and reused scratch values retain their existing roles. No renames, evidence or declaration identities changed."
+  }
+}
