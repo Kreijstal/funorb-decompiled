@@ -217,7 +217,7 @@ final class pg {
                 stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
                 stackIn_45_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_42_0), stackIn_45_2 + ')');
+              throw t.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

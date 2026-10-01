@@ -292,7 +292,7 @@ final class bm {
             stackIn_98_1 = (StringBuilder) ((Object) stackIn_97_1);
             stackIn_98_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_98_0), stackIn_98_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_98_2).append(')').toString());
         }
     }
 

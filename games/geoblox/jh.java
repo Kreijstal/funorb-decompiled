@@ -59,7 +59,7 @@ final class jh {
             stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
         return stackIn_9_0 != 0;
     }
@@ -465,7 +465,7 @@ final class jh {
                 stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
                 stackIn_72_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_72_0), stackIn_72_2 + ',' + param4 + ')');
+              throw t.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_72_2).append(',').append(param4).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

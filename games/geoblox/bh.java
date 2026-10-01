@@ -307,7 +307,7 @@ final class bh extends java.awt.Canvas {
             stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
             stackIn_45_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_42_0), stackIn_45_2 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(',').append(param4).append(')').toString());
         }
     }
 

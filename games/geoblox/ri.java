@@ -271,7 +271,7 @@ final class ri {
                 stackIn_109_1 = (StringBuilder) ((Object) stackIn_108_1);
                 stackIn_109_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_106_0), stackIn_109_2 + ',' + param5 + ')');
+              throw t.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_109_2).append(',').append(param5).append(')').toString());
             }
             if (decompiledRegionSelector0 == 0) {
               return stackIn_5_0;

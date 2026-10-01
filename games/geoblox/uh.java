@@ -48,7 +48,7 @@ final class uh extends ac {
             stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
         return stackIn_3_0;
     }
@@ -170,7 +170,7 @@ final class uh extends ac {
             stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
             stackIn_32_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
         return stackIn_28_0;
     }

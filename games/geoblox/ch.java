@@ -81,7 +81,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -248,7 +248,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -303,7 +303,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                 stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
                 stackIn_16_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+              throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
             }
             if (decompiledRegionSelector0 == 0) {
               return;
@@ -779,7 +779,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -873,7 +873,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -998,7 +998,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                 stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
                 stackIn_24_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param6 + ')');
+              throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param6).append(')').toString());
             }
             if (decompiledRegionSelector1 == 0) {
               return;
@@ -1065,7 +1065,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return (String) ((Object) stackIn_4_0);

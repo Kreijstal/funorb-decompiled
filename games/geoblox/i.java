@@ -94,7 +94,7 @@ final class i {
             stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class i {
             stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
             stackIn_69_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_69_0), stackIn_69_2 + ',' + param3 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

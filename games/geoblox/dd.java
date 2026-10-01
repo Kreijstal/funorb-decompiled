@@ -160,7 +160,7 @@ abstract class dd extends ee {
             stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
             stackIn_33_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_30_0), stackIn_33_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0 != 0;

@@ -134,7 +134,7 @@ final class eg extends hf {
             stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
             stackIn_45_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
         return stackIn_41_0;
     }

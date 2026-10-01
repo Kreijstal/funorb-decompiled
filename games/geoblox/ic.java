@@ -129,7 +129,7 @@ final class ic {
                 stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
                 stackIn_20_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_17_0), stackIn_20_2 + ',' + param12 + ',' + param13 + ')');
+              throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

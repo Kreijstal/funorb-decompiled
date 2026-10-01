@@ -147,7 +147,7 @@ final class fh implements dh {
             stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

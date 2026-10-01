@@ -387,7 +387,7 @@ abstract class wh extends rc {
             stackIn_311_1 = (StringBuilder) ((Object) stackIn_310_1);
             stackIn_311_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_311_0), stackIn_311_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_311_0), ((StringBuilder) (Object) stackIn_311_1).append(stackIn_311_2).append(')').toString());
         }
         if (ch.field_h) {
           var3++;
@@ -459,7 +459,7 @@ abstract class wh extends rc {
             stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
         return stackIn_11_0;
     }
@@ -885,7 +885,7 @@ abstract class wh extends rc {
             stackIn_114_1 = (StringBuilder) ((Object) stackIn_113_1);
             stackIn_114_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_114_0), stackIn_114_2 + ',' + param12 + ',' + param13 + ',' + param14 + ',' + param15 + ',' + param16 + ')');
+          throw t.a((Throwable) ((Object) stackIn_114_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_114_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -1023,7 +1023,7 @@ abstract class wh extends rc {
                 stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
                 stackIn_36_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ',' + param1 + ')');
+              throw t.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

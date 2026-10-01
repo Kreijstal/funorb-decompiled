@@ -2,13 +2,13 @@
   "version": "CFR-JS 0.4.0",
   "generatedFiles": 303,
   "hardFailures": 0,
-  "validFallbacks": 3,
+  "validFallbacks": 2,
   "panics": [],
   "totals": {
     "stackUnderflow": 0,
     "rawControlFlow": 0,
     "placeholders": 0,
-    "stateMachineFallback": 3
+    "stateMachineFallback": 2
   },
   "files": [
     {
@@ -46,25 +46,18 @@
           "dispatchStatesAfter": 34
         }
       ]
-    },
-    {
-      "name": "wi.java",
-      "stackUnderflow": 0,
-      "rawControlFlow": 0,
-      "placeholders": 0,
-      "stateMachineFallback": 1,
-      "fallbacks": [
-        {
-          "kind": "stateMachineFallback",
-          "className": "wi",
-          "methodName": "a",
-          "descriptor": "(BLrh;)V",
-          "reason": "partitioned oversized CFG",
-          "dispatchStatesBefore": 1877,
-          "dispatchStatesAfter": 756
-        }
-      ]
     }
   ],
-  "obfuscationGuards": []
+  "obfuscationGuards": [],
+  "structuredPartitions": [
+    {
+      "name": "wi.java",
+      "kind": "structuredMethodPartition",
+      "className": "wi",
+      "methodName": "a",
+      "descriptor": "(BLrh;)V",
+      "helpers": 3,
+      "sharedLocals": 10
+    }
+  ]
 }

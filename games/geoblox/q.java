@@ -127,7 +127,7 @@ abstract class q extends ib implements ga {
             stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ abstract class q extends ib implements ga {
             stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
             stackIn_30_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -287,7 +287,7 @@ abstract class q extends ib implements ga {
             stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_16_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
         }
         return stackIn_3_0;
     }

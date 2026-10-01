@@ -105,7 +105,7 @@ final class ma extends hf {
             stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
         return stackIn_3_0;
     }
@@ -319,7 +319,7 @@ final class ma extends hf {
             stackIn_78_1 = (StringBuilder) ((Object) stackIn_77_1);
             stackIn_78_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_78_0), stackIn_78_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_78_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -427,7 +427,7 @@ final class ma extends hf {
             stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_21_0), stackIn_27_2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0 != 0;

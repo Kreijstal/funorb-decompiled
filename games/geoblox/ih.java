@@ -225,7 +225,7 @@ final class ih {
             stackIn_56_1 = (StringBuilder) ((Object) stackIn_55_1);
             stackIn_56_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_56_0), stackIn_56_2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_56_2).append(',').append(param3).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -269,7 +269,7 @@ final class ih {
             stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_2_0;

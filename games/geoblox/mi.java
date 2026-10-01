@@ -187,7 +187,7 @@ class mi extends kg {
             stackIn_101_1 = (StringBuilder) ((Object) stackIn_100_1);
             stackIn_101_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_101_0), stackIn_101_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_101_2).append(')').toString());
         }
     }
 
@@ -264,7 +264,7 @@ class mi extends kg {
             stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

@@ -91,7 +91,7 @@ final class fe {
                 stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
                 stackIn_19_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_16_0), stackIn_19_2 + ')');
+              throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -203,7 +203,7 @@ final class fe {
             stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0;

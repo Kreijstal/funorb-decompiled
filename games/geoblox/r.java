@@ -109,7 +109,7 @@ final class r extends f implements pl {
             stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
             stackIn_33_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -245,7 +245,7 @@ final class r extends f implements pl {
             stackIn_56_1 = (StringBuilder) ((Object) stackIn_55_1);
             stackIn_56_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_56_0), stackIn_56_2 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0;
