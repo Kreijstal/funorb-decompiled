@@ -445,7 +445,6 @@ final class GameScreen extends MenuScreen {
         int stackIn_144_0 = 0;
         int stackIn_191_0 = 0;
         int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -1461,7 +1460,6 @@ final class GameScreen extends MenuScreen {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         float var2_float = 0.0f;
         int var2_int = 0;
@@ -1849,7 +1847,6 @@ final class GameScreen extends MenuScreen {
         int var8 = 0;
         double var9 = 0.0;
         int var11 = 0;
-        Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         var11 = Geoblox.field_C;
         try {

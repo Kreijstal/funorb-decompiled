@@ -20,7 +20,6 @@ abstract class SpriteState extends DualLinkNode {
         RuntimeException stackIn_311_0 = null;
         StringBuilder stackIn_311_1 = null;
         String stackIn_311_2 = null;
-        Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var2_ref = null;
@@ -474,7 +473,6 @@ abstract class SpriteState extends DualLinkNode {
         StringBuilder stackIn_114_1 = null;
         String stackIn_114_2 = null;
         int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         int var17_int = 0;
         RuntimeException var17 = null;

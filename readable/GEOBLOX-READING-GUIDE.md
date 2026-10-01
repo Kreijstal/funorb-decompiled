@@ -221,10 +221,12 @@ deobfuscation. Large decompiler state machines, unknown flags, guard arguments
 and opaque shared helpers still need investigation. All 642 names from pass 6
 remain. Pass 10 migrates thirteen board-reconciliation local ordinals after
 dispatcher-only carriers disappear, retaining their types, spelling guards and
-semantic evidence. The earlier migrations remain frozen.
+semantic evidence. Pass 11 removes six unused exception locals without changing
+any named identity or semantic rule. The earlier migrations remain frozen.
 
 The decompiler now checks explicit exception-region exit contracts, preserves
-ordinary empty branches as no-ops and refuses internal catch continuations that
+ordinary empty branches as no-ops, requires explicit loop exit targets and
+retains the exception table in large-method fallbacks. It refuses internal catch continuations that
 would restart setup. Gameplay update, rendering, scene transition and screen
 update use labeled loops; board reconciliation now does too, with its runtime
 catch intact. Total

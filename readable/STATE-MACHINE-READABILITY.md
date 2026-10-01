@@ -1,10 +1,12 @@
-# Why GeoBlox fell back, and what pass 10 recovers
+# Why GeoBlox fell back, and how pass 11 preserves its exits
 
 Pass 9 kept explicit exception-region exit identities and refused unsafe
 continuations. Pass 10 recovers nested cycles inside the board-entity protected
 region with bounded, deterministic copies. `kc.reconcileBoardEntities` now uses
 structured loops with its runtime catch intact. Three original methods retain
 dispatchers; the oversized initializer is the only one with at least 50 cases.
+Pass 11 removes large-method shortcuts that dropped exception handlers and
+requires explicit loop exit targets. Dispatcher counts are unchanged.
 Original transformed bytecode is unchanged.
 
 ## Result
@@ -63,8 +65,11 @@ Collapsing a region also mapped any internal continuation to its entry. A catch
 that resumes after setup would run setup twice, and a normal transfer into a
 handler could enter the wrong component. Those shapes now decline structured
 recovery and retain the exact CFG fallback. Retry at the actual try entry
-remains supported. Production exception regions use explicit labeled transfers;
-the legacy `regionExit` shorthand is not their representation.
+remains supported. Production exception regions use explicit labeled transfers.
+Pass 11 requires the legacy `regionExit` shorthand to specify both its enclosing
+loop label and `break`/`continue` mode; it cannot infer the nearest loop or become
+a no-op. Exit contracts now reject missing identities and changed transfer kinds,
+even if a valid sibling still retains the same target.
 
 Multi-value operand-stack safeguards, synchronized-region rules, Java
 source-flow checks and bounded method partitioning remain active. A failed
@@ -189,3 +194,43 @@ and source SHA-256 are in [README.md](README.md), separate from game hashes.
 These checks establish focused fixture behavior and export integrity. They do
 not establish whole-game equivalence, reproduce multiplayer servers, or satisfy
 browser memory, frame-rate or phone acceptance.
+
+## Pass 11: safe exits across fallback paths
+
+Three large-method shortcuts could discard exception semantics after structured
+reconstruction failed: retry with a normal-only CFG, omit dispatcher handlers,
+or render normal-only control flow after Java source-flow validation failed.
+Those shortcuts are removed. Method size cannot prove catch behavior redundant.
+The fallback preserves the exception table; bounded helpers remain available for
+supported oversized shapes. Unsupported shapes must fail rather than silently
+lose protected transfers.
+
+A verified JVM regression exposed the bug using a catch that retries after
+setup. The original returned `1,1`; adding 1,100 no-ops caused the old rebuilt
+method to return `NullPointerException,1`, in both automatic and forced-dispatch
+modes. All four small/large and automatic/forced combinations now match the
+original. Protected fanout and nested-cycle differential fixtures still pass.
+The printer also rejects unspecified loop targets and preserves explicit exits
+to an outer loop across inner loops. The contract verifier rejects missing owner
+or destination metadata and changed transfer kinds.
+
+All 303 GeoBlox sources were freshly exported and compiled. The only raw-source
+changes remove six unused `caughtException` declarations across `c`, `wh` and
+`vl`; no method newly switches to a dispatcher. All 642 spelling guards and all
+227 named-local identities remain unchanged in the
+[reviewed pass-11 migration](rules/geoblox-v11-migration.json). The binding audit
+now covers 156,445 bindings and 388 override relationships. A clean checkout of
+the pinned decompiler reproduces all source and diagnostic bytes.
+
+```sh
+NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/structurer.test.js test/exceptionStructurer.test.js test/cfrInvariantFanout.test.js test/cfrNestedLoopSplitting.test.js # 4 files pass
+NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node --test test/cfrStateMachineReadability.test.js test/cfrFixtures.test.js test/cfrStructuredFeatures.test.js test/cfrAdditionalFeatures.test.js test/cfrStackOrdering.test.js test/cfrCatchSemanticsRegressions.test.js # 6 files pass
+node readable/tests/test-geoblox-rule-builder.mjs # 10 checks pass
+node readable/reproduce-geoblox.mjs --check # exact regeneration, both corpora compile
+```
+
+The frozen naming tool is unchanged. Deque and gameplay helper probes pass for
+both source variants, and dictionary-only reversal restores all 303 originals
+byte for byte. Earlier region-splitting and JIT checks above are retained results
+from pass 10, not fresh runs in this pass. These checks do not establish whole-game
+behavior or browser memory/FPS/phone acceptance.

@@ -275,7 +275,6 @@ final class vl extends IntrusiveNode {
         RuntimeException stackIn_206_0 = null;
         StringBuilder stackIn_206_1 = null;
         String stackIn_206_2 = null;
-        Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;

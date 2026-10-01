@@ -2,7 +2,7 @@
   "schema": 1,
   "rules": 642,
   "files": 303,
-  "sourceCommit": "489a953c6bb32fe6c94070b9fe69d41c38ed6ac1",
+  "sourceCommit": "7bbba268d57c391c47aaeffbf99ee2cf202e83bc",
   "commands": [
     {
       "command": "node readable/build-geoblox-rules.mjs --check",
@@ -11,12 +11,12 @@
     {
       "command": "node readable/tests/test-geoblox-rule-builder.mjs",
       "result": "pass",
-      "tests": 9
+      "tests": 10
     },
     {
       "command": "node readable/reproduce-geoblox.mjs --check",
       "result": "pass",
-      "bindingsCompared": 156457,
+      "bindingsCompared": 156445,
       "overrideRelationships": 388,
       "identifierEdits": 10628
     },
@@ -40,29 +40,29 @@
       "command": "node readable/tools/test-readable-java.mjs",
       "result": "pass",
       "tests": 7,
-      "scope": "Previously passed in pass 9; tool files remain byte-identical and their frozen hashes are rechecked in pass 10."
+      "scope": "Previously passed in pass 9; tool files remain byte-identical and their frozen hashes are rechecked in pass 11."
     },
     {
       "command": "node readable/tools/test-capture-process.mjs",
       "result": "pass",
       "tests": 4,
-      "scope": "Previously passed in pass 9; tool files remain byte-identical and their frozen hashes are rechecked in pass 10."
+      "scope": "Previously passed in pass 9; tool files remain byte-identical and their frozen hashes are rechecked in pass 11."
     },
     {
-      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v10",
+      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v11",
       "result": "pass",
       "restoredFiles": 303,
       "originalBytesRecovered": true,
       "originalSourceRequired": false
     }
   ],
-  "inputTreeSha256": "d20046b48387681742f4fe021d655e68ce4b6ac779d4d45e6ae5fb531a5c7767",
-  "outputTreeSha256": "7b0754e26f3d9cd9df50dc7ed7e45e24dab3d975363cf3d6b6a60afe4015dd5d",
+  "inputTreeSha256": "5840d847b3298140b82e05407399d8df88a588e2f08d890d406fa7c02b8ab66b",
+  "outputTreeSha256": "02bb7f9e2a3ef1726da49452fae5d38e3fdab94bcffa7deb3896dd60e641176f",
   "runtimeEquivalenceVerified": false,
-  "version": 10,
+  "version": 11,
   "stateMachineReadability": {
-    "javaToolsCommit": "c55c4c296d47fb8ca1dccef65e3e9933a5681d63",
-    "decompilerSourceArchiveSha256": "96e061795a91528eb9e278e4fa07ff0959ba804c05eac17f42eb0c22c418b4bc",
+    "javaToolsCommit": "58cc6db28ba70e4bbda5e9c6458df6162be1a448",
+    "decompilerSourceArchiveSha256": "d149a992cc2f57baead66b26ae561541a668936cdff5d6cbe94ac099cce80b1c",
     "dispatcherCasesBefore": 3051,
     "dispatcherCasesAfter": 817,
     "originalFallbackMethods": 3,
@@ -72,36 +72,25 @@
     "additionalFeatureAssertions": 77,
     "stackOrderingAssertions": 38,
     "krakatauSuite": "skipped: external binary unavailable",
-    "previousPassDispatcherCases": 877,
+    "previousPassDispatcherCases": 817,
     "largeOriginalMethods": 1,
     "invariantFanoutDifferentialTests": 8,
     "invariantFanoutDifferentialComparisons": 768,
-    "namedLocalOrdinalMigrations": 13,
-    "nativeExitRuntimeTests": 2,
-    "exceptionStructurerTests": 16,
+    "namedLocalOrdinalMigrations": 0,
+    "nativeExitRuntimeTests": 5,
+    "exceptionStructurerTests": 17,
     "printerTests": 10,
     "generatedDispatcherMethods": 20,
     "generatedLargeDispatcherMethods": 0,
     "commands": [
       {
-        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrInvariantFanout.test.js",
-        "tests": 10,
+        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/structurer.test.js test/exceptionStructurer.test.js test/cfrInvariantFanout.test.js test/cfrNestedLoopSplitting.test.js",
+        "files": 4,
         "result": "pass"
       },
       {
-        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node --test test/structurer.test.js test/exceptionStructurer.test.js test/cfrStateMachineReadability.test.js test/cfrFixtures.test.js test/cfrStructuredFeatures.test.js test/cfrAdditionalFeatures.test.js test/cfrStackOrdering.test.js test/cfrCatchSemanticsRegressions.test.js test/cfrInvariantFanout.test.js",
-        "files": 9,
-        "result": "pass"
-      },
-      {
-        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/exceptionRegionSplitting.test.js",
-        "tests": 4,
-        "result": "pass"
-      },
-      {
-        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrNestedLoopSplitting.test.js",
-        "tests": 3,
-        "comparisons": 840,
+        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node --test test/cfrStateMachineReadability.test.js test/cfrFixtures.test.js test/cfrStructuredFeatures.test.js test/cfrAdditionalFeatures.test.js test/cfrStackOrdering.test.js test/cfrCatchSemanticsRegressions.test.js",
+        "files": 6,
         "result": "pass"
       }
     ],
@@ -111,7 +100,7 @@
       "generatedMethods": 20,
       "largeGeneratedMethods": 0,
       "screenUpdateLinesBefore": 951,
-      "screenUpdateLinesAfter": 380,
+      "screenUpdateLinesAfter": 379,
       "screenUpdateCatchRetained": true,
       "boardReconciliationLinesBefore": 1335,
       "boardReconciliationLinesAfter": 608,
@@ -127,7 +116,27 @@
       "test": "structured JVM SSA splits bounded irreducible integer regions without name gates",
       "selection": "Temporary tape filter selects the existing test unchanged; source remains in test/jitCompiler.test.js.",
       "assertions": 14,
-      "result": "pass"
+      "result": "pass",
+      "scope": "Previously passed in pass 10; unchanged shared region splitter was not modified or rerun in pass 11."
+    },
+    "regionSplittingCheckScope": "The four graph checks and 512 routed traces passed in pass 10; unchanged region splitter was not modified or rerun. Nested-cycle JVM fixtures were rerun and passed in pass 11.",
+    "safeExceptionExitReconstruction": {
+      "explicitLoopTargetRequired": true,
+      "partialExitIdentityRejected": true,
+      "largeMethodHandlerDroppingRemoved": true,
+      "catchReentryDifferentialVariants": 4,
+      "beforeFixLargeMethod": "NullPointerException,1",
+      "expectedAndAfterFix": "1,1",
+      "originalBytecodeVerificationEnabled": true
+    },
+    "exportIntegrity": {
+      "freshSources": 303,
+      "hardFailures": 0,
+      "originalFallbackMethods": 3,
+      "freshCleanDecompilerMatches": true,
+      "rawSourceChangedFiles": 3,
+      "onlyUnusedExceptionDeclarationsRemoved": 6,
+      "namedLocalIdentitiesUnchanged": 227
     }
   }
 }
