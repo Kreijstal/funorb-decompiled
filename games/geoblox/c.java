@@ -306,264 +306,101 @@ final class c extends ka {
     }
 
     private final void b(boolean param0) {
-        int stackIn_7_0 = 0;
         int stackIn_16_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = Geoblox.field_C;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (!param0) {
-                            statePc = 4;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 2. */
-                            {
-                                this.field_F = 124;
-                                statePc = 4;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        this.field_W = this.field_W % ee.field_A.field_s;
-                        this.field_O = this.field_O % ee.field_A.field_o;
-                        var2_int = -ee.field_A.field_s + this.field_W;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (640 <= var2_int) {
-                            statePc = 15;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 6. */
-                            {
-                                stackIn_16_0 = ee.field_A.field_o + this.field_O + 480;
-                                stackIn_7_0 = stackIn_16_0;
-                                if (var4 != 0) {
-                                    statePc = 16;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 7. */
-                                    {
-                                        var3 = stackIn_7_0;
-                                        statePc = 8;
-                                        continue stateLoop;
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        if ((-ee.field_A.field_o ^ -1) < (var3 ^ -1)) {
-                            statePc = 13;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 9. */
-                            {
-                                ee.field_A.c(var2_int, var3);
-                                var3 = var3 - ee.field_A.field_o;
-                                if (var4 != 0) {
-                                    statePc = 14;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 10. */
-                                    {
-                                        if (var4 == 0) {
-                                            statePc = 8;
-                                            continue stateLoop;
-                                        } else {
-                                            /* Inlined CFG state: 11. */
-                                            {
-                                                statePc = 13;
-                                                continue stateLoop;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        var2_int = var2_int + ee.field_A.field_s;
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 5;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        this.field_I = this.field_I % vc.field_j.field_o;
-                        this.field_u = this.field_u % vc.field_j.field_s;
-                        stackIn_16_0 = this.field_u + (vc.field_j.field_s + 640);
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        var2_int = stackIn_16_0;
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        if ((-vc.field_j.field_s ^ -1) < (var2_int ^ -1)) {
-                            statePc = 29;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 18. */
-                            {
-                                if (var4 != 0) {
-                                    statePc = 29;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 19. */
-                                    {
-                                        var3 = this.field_I - -vc.field_j.field_o + 480;
-                                        statePc = 20;
-                                        continue stateLoop;
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    try {
-                        if ((var3 ^ -1) > (-vc.field_j.field_o ^ -1)) {
-                            statePc = 25;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 21. */
-                            {
-                                vc.field_j.b(var2_int, var3);
-                                var3 = var3 - vc.field_j.field_o;
-                                if (var4 != 0) {
-                                    statePc = 26;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 22. */
-                                    {
-                                        if (var4 == 0) {
-                                            statePc = 20;
-                                            continue stateLoop;
-                                        } else {
-                                            /* Inlined CFG state: 23. */
-                                            {
-                                                statePc = 25;
-                                                continue stateLoop;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 25: {
-                    try {
-                        var2_int = var2_int - vc.field_j.field_s;
-                        statePc = 26;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_25) {
-                        caughtException = stateCaught_25;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 26: {
-                    try {
-                        if (var4 == 0) {
-                            statePc = 17;
-                        } else {
-                            statePc = 29;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_26) {
-                        caughtException = stateCaught_26;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 28: {
-                    var2 = (RuntimeException) ((Object) caughtException);
-                    throw t.a((Throwable) ((Object) var2), "c.I(" + param0 + ')');
-                }
-                case 29: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var4 = Geoblox.field_C;
+        try {
+          L0: {
+            if (param0) {
+              this.field_F = 124;
             }
+            this.field_W = this.field_W % ee.field_A.field_s;
+            this.field_O = this.field_O % ee.field_A.field_o;
+            var2_int = -ee.field_A.field_s + this.field_W;
+            L2: while (true) {
+              L3: {
+                L4: {
+                  if (640 > var2_int) {
+                    stackIn_16_0 = ee.field_A.field_o + this.field_O + 480;
+
+                    if (var4 != 0) {
+                      break L3;
+                    } else {
+                      var3 = stackIn_16_0;
+                      L5: while (true) {
+                        L6: {
+                          if ((-ee.field_A.field_o ^ -1) >= (var3 ^ -1)) {
+                            ee.field_A.c(var2_int, var3);
+                            var3 = var3 - ee.field_A.field_o;
+                            if (var4 != 0) {
+                              break L6;
+                            } else {
+                              if (var4 == 0) {
+                                continue L5;
+                              }
+                            }
+                          }
+                          var2_int = var2_int + ee.field_A.field_s;
+                        }
+                        if (var4 == 0) {
+                          continue L2;
+                        } else {
+                          break L4;
+                        }
+                      }
+                    }
+                  }
+                }
+                this.field_I = this.field_I % vc.field_j.field_o;
+                this.field_u = this.field_u % vc.field_j.field_s;
+                stackIn_16_0 = this.field_u + (vc.field_j.field_s + 640);
+              }
+              var2_int = stackIn_16_0;
+              L8: while (true) {
+                L9: {
+                  L10: {
+                    if ((-vc.field_j.field_s ^ -1) >= (var2_int ^ -1)) {
+                      if (var4 != 0) {
+                        break L9;
+                      } else {
+                        var3 = this.field_I - -vc.field_j.field_o + 480;
+                        L11: while (true) {
+                          L12: {
+                            if ((var3 ^ -1) <= (-vc.field_j.field_o ^ -1)) {
+                              vc.field_j.b(var2_int, var3);
+                              var3 = var3 - vc.field_j.field_o;
+                              if (var4 != 0) {
+                                break L12;
+                              } else {
+                                if (var4 == 0) {
+                                  continue L11;
+                                }
+                              }
+                            }
+                            var2_int = var2_int - vc.field_j.field_s;
+                          }
+                          if (var4 == 0) {
+                            continue L8;
+                          } else {
+                            break L10;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                break L0;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw t.a((Throwable) ((Object) var2), "c.I(" + param0 + ')');
         }
     }
 
@@ -1455,10 +1292,8 @@ final class c extends ka {
     }
 
     private final void b(int param0) {
-        Object stackIn_37_0 = null;
         Object stackIn_59_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         String var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
@@ -1473,558 +1308,152 @@ final class c extends ka {
         String var8 = null;
         String var9 = null;
         int var10 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var10 = Geoblox.field_C;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (ca.field_f != null) {
-                            statePc = 7;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 2. */
-                            {
-                                if (fh.c(-115)) {
-                                    statePc = 7;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 3. */
-                                    {
-                                        /* Sequential CFG blocks: 3, 5. */
-                                        {
-                                        }
-                                        {
-                                            ca.field_f = qb.b(22, 1, 0, 10, 3);
-                                            statePc = 7;
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (0 == da.field_c) {
-                            statePc = 20;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 8. */
-                            {
-                                if (-3 == (da.field_c ^ -1)) {
-                                    statePc = 17;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 9. */
-                                    {
-                                        /* Sequential CFG blocks: 9, 11. */
-                                        {
-                                        }
-                                        {
-                                            if (da.field_c != 1) {
-                                                statePc = 22;
-                                                continue stateLoop;
-                                            } else {
-                                                /* Inlined CFG state: 12. */
-                                                {
-                                                    /* Sequential CFG blocks: 12, 14. */
-                                                    {
-                                                    }
-                                                    {
-                                                        kh.field_h[3].b(0, 20);
-                                                        if (var10 == 0) {
-                                                            statePc = 22;
-                                                            continue stateLoop;
-                                                        } else {
-                                                            /* Inlined CFG state: 15. */
-                                                            {
-                                                                statePc = 17;
-                                                                continue stateLoop;
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        kh.field_h[2].b(0, 20);
-                        if (var10 == 0) {
-                            statePc = 22;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 18. */
-                            {
-                                statePc = 20;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    try {
-                        kh.field_h[1].b(0, 20);
-                        statePc = 22;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 22: {
-                    try {
-                        if (param0 == 30) {
-                            statePc = 25;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 23. */
-                            {
-                                this.c(-78);
-                                statePc = 25;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_22) {
-                        caughtException = stateCaught_22;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 25: {
-                    try {
-                        if (null == ca.field_f) {
-                            statePc = 72;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 26. */
-                            {
-                                if (null == ca.field_f.field_k) {
-                                    statePc = 72;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 27. */
-                                    {
-                                        /* Sequential CFG blocks: 27, 29. */
-                                        {
-                                        }
-                                        {
-                                            if (ca.field_f.field_j) {
-                                                statePc = 33;
-                                                continue stateLoop;
-                                            } else {
-                                                /* Inlined CFG state: 30. */
-                                                {
-                                                    /* Sequential CFG blocks: 30, 32. */
-                                                    {
-                                                    }
-                                                    {
-                                                        var2 = eb.field_f;
-                                                        var3 = 76 + (150 + dd.field_G.field_o);
-                                                        dd.field_G.b(var2, 322, var3, 0, -1);
-                                                        if (var10 == 0) {
-                                                            statePc = 80;
-                                                        } else {
-                                                            statePc = 33;
-                                                        }
-                                                        continue stateLoop;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_25) {
-                        caughtException = stateCaught_25;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 33: {
-                    try {
-                        var2_int = 0;
-                        var3_ref_String__ = ca.field_f.field_k[da.field_c];
-                        var4 = fi.field_d;
-                        if (var3_ref_String__ == null) {
-                            statePc = 69;
-                        } else {
-                            statePc = 34;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_33) {
-                        caughtException = stateCaught_33;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 34: {
-                    try {
-                        var5 = ca.field_f.field_h[da.field_c];
-                        var6 = var4.field_o + 150;
-                        var7 = 0;
-                        var8_int = 0;
-                        statePc = 35;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_34) {
-                        caughtException = stateCaught_34;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 35: {
-                    try {
-                        if (var8_int >= 10) {
-                            statePc = 56;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 36. */
-                            {
-                                stackIn_59_0 = null;
-                                stackIn_37_0 = stackIn_59_0;
-                                if (var10 != 0) {
-                                    statePc = 59;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 37. */
-                                    {
-                                        if (stackIn_37_0 != var3_ref_String__[var8_int]) {
-                                            /* Inlined CFG state: 42. */
-                                            {
-                                                var2_int = 1;
-                                                var9 = var3_ref_String__[var8_int];
-                                                if (var7 != 0) {
-                                                    statePc = 53;
-                                                } else {
-                                                    statePc = 43;
-                                                }
-                                                continue stateLoop;
-                                            }
-                                        } else {
-                                            /* Inlined CFG state: 38. */
-                                            {
-                                                /* Sequential CFG blocks: 38, 40. */
-                                                {
-                                                }
-                                                {
-                                                    statePc = 55;
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_35) {
-                        caughtException = stateCaught_35;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 43: {
-                    try {
-                        if (null == el.field_o) {
-                            statePc = 53;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 44. */
-                            {
-                                /* Sequential CFG blocks: 44, 46. */
-                                {
-                                }
-                                {
-                                    if (var5[var8_int] != Math.abs(el.field_o.field_o)) {
-                                        statePc = 53;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 47. */
-                                        {
-                                            /* Sequential CFG blocks: 47, 49. */
-                                            {
-                                            }
-                                            {
-                                                if (!ge.a(var9, (byte) 12)) {
-                                                    statePc = 53;
-                                                    continue stateLoop;
-                                                } else {
-                                                    /* Inlined CFG state: 50. */
-                                                    {
-                                                        /* Sequential CFG blocks: 50, 52. */
-                                                        {
-                                                        }
-                                                        {
-                                                            var7 = 1;
-                                                            var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
-                                                            var4.a(var9, 165, var6, 16610816, -1);
-                                                            var4.c(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
-                                                            if (var10 == 0) {
-                                                                statePc = 55;
-                                                            } else {
-                                                                statePc = 53;
-                                                            }
-                                                            continue stateLoop;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_43) {
-                        caughtException = stateCaught_43;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 53: {
-                    try {
-                        var4.c(1 + var8_int + ". ", 165, var6, 1, -1);
-                        var4.a(var9, 165, var6, 1, -1);
-                        var4.c(Integer.toString(var5[var8_int]), 500, var6, 1, -1);
-                        statePc = 55;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_53) {
-                        caughtException = stateCaught_53;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 55: {
-                    try {
-                        var6 += 15;
-                        var8_int++;
-                        if (var10 == 0) {
-                            statePc = 35;
-                        } else {
-                            statePc = 56;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_55) {
-                        caughtException = stateCaught_55;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 56: {
-                    try {
-                        if (var7 != 0) {
-                            statePc = 69;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 57. */
-                            {
-                                stackIn_59_0 = null;
-                                statePc = 59;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_56) {
-                        caughtException = stateCaught_56;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 59: {
-                    try {
-                        if (stackIn_59_0 == el.field_o) {
-                            statePc = 69;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 60. */
-                            {
-                                if (-1 == (el.field_o.field_o ^ -1)) {
-                                    statePc = 69;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 61. */
-                                    {
-                                        /* Sequential CFG blocks: 61, 63. */
-                                        {
-                                        }
-                                        {
-                                            if (2147483647 != (el.field_o.field_o ^ -1)) {
-                                                /* Inlined CFG state: 68. */
-                                                {
-                                                    var8 = wd.field_f;
-                                                    var4.a(var8, 165, var6, 16724225, -1);
-                                                    var4.c(Integer.toString(Math.abs(el.field_o.field_o)), 500, var6, 16724225, -1);
-                                                    statePc = 69;
-                                                    continue stateLoop;
-                                                }
-                                            } else {
-                                                /* Inlined CFG state: 64. */
-                                                {
-                                                    /* Sequential CFG blocks: 64, 66. */
-                                                    {
-                                                    }
-                                                    {
-                                                        statePc = 69;
-                                                        continue stateLoop;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_59) {
-                        caughtException = stateCaught_59;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 69: {
-                    try {
-                        if (var2_int != 0) {
-                            statePc = 71;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 70. */
-                            {
-                                var5_ref = sb.field_f;
-                                var6 = 76 + dd.field_G.field_o + 150;
-                                dd.field_G.b(var5_ref, 322, var6, 0, -1);
-                                statePc = 71;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_69) {
-                        caughtException = stateCaught_69;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 71: {
-                    try {
-                        if (var10 == 0) {
-                            statePc = 80;
-                        } else {
-                            statePc = 72;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_71) {
-                        caughtException = stateCaught_71;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 72: {
-                    try {
-                        if (fh.c(-89)) {
-                            statePc = 76;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 73. */
-                            {
-                                /* Sequential CFG blocks: 73, 75. */
-                                {
-                                }
-                                {
-                                    var2 = g.field_l;
-                                    if (var10 == 0) {
-                                        statePc = 77;
-                                    } else {
-                                        statePc = 76;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_72) {
-                        caughtException = stateCaught_72;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 76: {
-                    try {
-                        var2 = sb.field_f;
-                        statePc = 77;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_76) {
-                        caughtException = stateCaught_76;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 77: {
-                    try {
-                        var3 = 150 - (-dd.field_G.field_o - 76);
-                        dd.field_G.b(var2, 322, var3, 0, -1);
-                        if (!fh.c(param0 + -147)) {
-                            statePc = 80;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 78. */
-                            {
-                                dd.field_G.a(ni.field_C, 125, 350, 395, 100, 0, -1, 1, 0, 26);
-                                statePc = 80;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_77) {
-                        caughtException = stateCaught_77;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 80: {
-                    try {
-                        if (fh.c(param0 ^ -109)) {
-                            statePc = 84;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 81. */
-                            {
-                                var2 = ue.field_b;
-                                fi.field_d.a(var2, 140, 325, 360, 300, 0, -1, 1, 0, 16);
-                                statePc = 84;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_80) {
-                        caughtException = stateCaught_80;
-                        statePc = 83;
-                        continue stateLoop;
-                    }
-                }
-                case 83: {
-                    var2_ref = (RuntimeException) ((Object) caughtException);
-                    throw t.a((Throwable) ((Object) var2_ref), "c.U(" + param0 + ')');
-                }
-                case 84: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var10 = Geoblox.field_C;
+        try {
+          if (ca.field_f == null) {
+            if (!fh.c(-115)) {
+              ca.field_f = qb.b(22, 1, 0, 10, 3);
             }
+          }
+          L2: {
+            if (0 != da.field_c) {
+              if (-3 != (da.field_c ^ -1)) {
+                if (da.field_c != 1) {
+                  break L2;
+                } else {
+                  kh.field_h[3].b(0, 20);
+                  if (var10 == 0) {
+                    break L2;
+                  }
+                }
+              }
+              kh.field_h[2].b(0, 20);
+              if (var10 == 0) {
+                break L2;
+              }
+            }
+            kh.field_h[1].b(0, 20);
+          }
+          if (param0 != 30) {
+            this.c(-78);
+          }
+          L6: {
+            if (null != ca.field_f) {
+              if (null != ca.field_f.field_k) {
+                if (!ca.field_f.field_j) {
+                  var2 = eb.field_f;
+                  var3 = 76 + (150 + dd.field_G.field_o);
+                  dd.field_G.b(var2, 322, var3, 0, -1);
+                  if (var10 == 0) {
+                    break L6;
+                  }
+                }
+                L9: {
+                  var2_int = 0;
+                  var3_ref_String__ = ca.field_f.field_k[da.field_c];
+                  var4 = fi.field_d;
+                  if (var3_ref_String__ != null) {
+                    var5 = ca.field_f.field_h[da.field_c];
+                    var6 = var4.field_o + 150;
+                    var7 = 0;
+                    var8_int = 0;
+                    L10: while (true) {
+                      L11: {
+                        if (var8_int < 10) {
+                          stackIn_59_0 = null;
+
+                          if (var10 != 0) {
+                            break L11;
+                          } else {
+                            L13: {
+                              if (stackIn_59_0 != var3_ref_String__[var8_int]) {
+                                var2_int = 1;
+                                var9 = var3_ref_String__[var8_int];
+                                if (var7 == 0) {
+                                  if (null != el.field_o) {
+                                    if (var5[var8_int] == Math.abs(el.field_o.field_o)) {
+                                      if (ge.a(var9, (byte) 12)) {
+                                        var7 = 1;
+                                        var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
+                                        var4.a(var9, 165, var6, 16610816, -1);
+                                        var4.c(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
+                                        if (var10 == 0) {
+                                          break L13;
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                                var4.c(1 + var8_int + ". ", 165, var6, 1, -1);
+                                var4.a(var9, 165, var6, 1, -1);
+                                var4.c(Integer.toString(var5[var8_int]), 500, var6, 1, -1);
+                              }
+                            }
+                            var6 += 15;
+                            var8_int++;
+                            if (var10 == 0) {
+                              continue L10;
+                            }
+                          }
+                        }
+                        if (var7 != 0) {
+                          break L9;
+                        } else {
+                          stackIn_59_0 = null;
+                        }
+                      }
+                      if (stackIn_59_0 == el.field_o) {
+                        break L9;
+                      } else {
+                        if (-1 == (el.field_o.field_o ^ -1)) {
+                          break L9;
+                        } else {
+                          if (2147483647 != (el.field_o.field_o ^ -1)) {
+                            var8 = wd.field_f;
+                            var4.a(var8, 165, var6, 16724225, -1);
+                            var4.c(Integer.toString(Math.abs(el.field_o.field_o)), 500, var6, 16724225, -1);
+                            break L9;
+                          } else {
+                            break L9;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                if (var2_int == 0) {
+                  var5_ref = sb.field_f;
+                  var6 = 76 + dd.field_G.field_o + 150;
+                  dd.field_G.b(var5_ref, 322, var6, 0, -1);
+                }
+                if (var10 == 0) {
+                  break L6;
+                }
+              }
+            }
+            L16: {
+              if (!fh.c(-89)) {
+                var2 = g.field_l;
+                if (var10 == 0) {
+                  break L16;
+                }
+              }
+              var2 = sb.field_f;
+            }
+            var3 = 150 - (-dd.field_G.field_o - 76);
+            dd.field_G.b(var2, 322, var3, 0, -1);
+            if (fh.c(param0 + -147)) {
+              dd.field_G.a(ni.field_C, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+            }
+          }
+          if (!fh.c(param0 ^ -109)) {
+            var2 = ue.field_b;
+            fi.field_d.a(var2, 140, 325, 360, 300, 0, -1, 1, 0, 16);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw t.a((Throwable) ((Object) var2_ref), "c.U(" + param0 + ')');
         }
     }
 
@@ -2033,950 +1462,379 @@ final class c extends ka {
         int fieldTemp$1 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
-        int statePc = 0;
+        RuntimeException decompiledCaughtException = null;
         float var2_float = 0.0f;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    /* Sequential CFG blocks: 0, 1. */
-                    {
-                        var3 = Geoblox.field_C;
-                    }
-                    {
-                        fieldTemp$0 = this.field_D + 1;
-                        this.field_D = this.field_D + 1;
-                        if (-1 == (fieldTemp$0 % 5 ^ -1)) {
-                            statePc = 4;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
+        var3 = Geoblox.field_C;
+        try {
+          L0: {
+            fieldTemp$0 = this.field_D + 1;
+            this.field_D = this.field_D + 1;
+            if (-1 == (fieldTemp$0 % 5 ^ -1)) {
+              this.field_O = this.field_O - 1;
+              this.field_W = this.field_W + 1;
+              this.g((byte) -102);
+            }
+            if (3 == (this.field_D & 3)) {
+              this.field_I = this.field_I - 1;
+              this.field_u = this.field_u - 1;
+            }
+            if (!this.field_E) {
+              jk.field_a = this.field_C;
+              this.field_U = this.field_U + 1;
+              this.field_y = this.field_y + 1;
+              if (this.field_C) {
+                if (vl.field_n != null) {
+                  if (this.field_y > 1500) {
+                    em.b(255);
+                    this.field_C = false;
+                  }
                 }
-                case 4: {
-                    this.field_O = this.field_O - 1;
-                    this.field_W = this.field_W + 1;
-                    this.g((byte) -102);
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (3 != (this.field_D & 3)) {
-                        statePc = 8;
-                        continue stateLoop;
+              }
+              L4: while (true) {
+                L5: {
+                  if (hh.a(108)) {
+                    this.b((byte) 62);
+                    if (var3 != 0) {
+                      break L5;
                     } else {
-                        /* Inlined CFG state: 6. */
-                        {
-                            this.field_I = this.field_I - 1;
-                            this.field_u = this.field_u - 1;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
+                      if (var3 == 0) {
+                        continue L4;
+                      }
                     }
+                  }
+                  if (this.field_K == 3) {
+                    if (this.field_b == 0) {
+                      if (-1 == (this.field_q ^ -1)) {
+                        if (!this.field_H) {
+                          this.field_b = this.field_b + 1;
+                        }
+                      }
+                    }
+                  }
                 }
-                case 8: {
-                    if (!this.field_E) {
-                        /* Inlined CFG state: 11. */
-                        {
-                            jk.field_a = this.field_C;
-                            this.field_U = this.field_U + 1;
-                            this.field_y = this.field_y + 1;
-                            if (!this.field_C) {
-                                statePc = 20;
-                                continue stateLoop;
+                if (this.field_K == 3) {
+                  L8: {
+                    if (0 == (1 & this.field_D)) {
+                      this.field_z = this.field_z + 1;
+                      this.field_Z = -(this.field_z >> -137754207) + 60;
+                      if ((this.field_Z ^ -1) > -16) {
+                        this.field_Z = 15;
+                        if (var3 == 0) {
+                          break L8;
+                        }
+                      }
+                      this.field_A = this.field_A + 0.1;
+                    }
+                  }
+                  if (120 == this.field_z) {
+                    this.field_X = qi.b(7, 1);
+                    this.field_L = qi.b(7, 1);
+                    this.field_z = 0;
+                  }
+                  if (-5 < (this.field_q ^ -1)) {
+                    if (this.field_D % 24 == 0) {
+                      this.field_w = this.field_w + 1;
+                      if (-5 >= (this.field_w ^ -1)) {
+                        this.field_w = 0;
+                      }
+                    }
+                  }
+                  L12: {
+                    if ((this.field_q ^ -1) != -4) {
+                      if (4 == this.field_q) {
+                        if (49 > (this.field_D & 255)) {
+                          if (-1 == (15 & this.field_D ^ -1)) {
+                            this.field_w = this.field_w + 1;
+                            if ((this.field_w ^ -1) <= -5) {
+                              this.field_w = 0;
+                            }
+                            this.field_B = this.field_B + 1;
+                            if (4 <= this.field_B) {
+                              this.field_B = 0;
+                              if (var3 == 0) {
+                                break L12;
+                              }
                             } else {
-                                /* Inlined CFG state: 12. */
-                                {
-                                    if (vl.field_n == null) {
-                                        statePc = 20;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 15. */
-                                        {
-                                            if (this.field_y <= 1500) {
-                                                statePc = 20;
-                                                continue stateLoop;
-                                            } else {
-                                                /* Inlined CFG state: 18. */
-                                                {
-                                                    em.b(255);
-                                                    this.field_C = false;
-                                                    statePc = 20;
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
+                              break L12;
                             }
+                          } else {
+                            break L12;
+                          }
                         }
-                    } else {
-                        /* Inlined CFG state: 9. */
-                        {
-                            /* Sequential CFG blocks: 9, 10. */
-                            {
-                                this.e((byte) 104);
-                            }
-                            {
-                                return;
-                            }
+                        this.field_B = 0;
+                        this.field_w = 0;
+                        if (var3 == 0) {
+                          break L12;
                         }
+                      } else {
+                        break L12;
+                      }
                     }
-                }
-                case 20: {
-                    if (!hh.a(108)) {
-                        statePc = 25;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 21. */
-                        {
-                            this.b((byte) 62);
-                            if (var3 != 0) {
-                                statePc = 37;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 22. */
-                                {
-                                    if (var3 == 0) {
-                                        statePc = 20;
-                                    } else {
-                                        statePc = 25;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 25: {
-                    if (this.field_K != 3) {
-                        statePc = 37;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 26. */
-                        {
-                            if (this.field_b != 0) {
-                                statePc = 37;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 29. */
-                                {
-                                    if (-1 != (this.field_q ^ -1)) {
-                                        statePc = 37;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 32. */
-                                        {
-                                            if (this.field_H) {
-                                                statePc = 37;
-                                                continue stateLoop;
-                                            } else {
-                                                /* Inlined CFG state: 35. */
-                                                {
-                                                    this.field_b = this.field_b + 1;
-                                                    statePc = 37;
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 37: {
-                    if (this.field_K == 3) {
-                        /* Inlined CFG state: 40. */
-                        {
-                            if (0 == (1 & this.field_D)) {
-                                /* Inlined CFG state: 43. */
-                                {
-                                    this.field_z = this.field_z + 1;
-                                    this.field_Z = -(this.field_z >> -137754207) + 60;
-                                    if ((this.field_Z ^ -1) <= -16) {
-                                        statePc = 47;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 44. */
-                                        {
-                                            this.field_Z = 15;
-                                            if (var3 == 0) {
-                                                statePc = 49;
-                                            } else {
-                                                statePc = 47;
-                                            }
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            } else {
-                                statePc = 49;
-                                continue stateLoop;
-                            }
-                        }
-                    } else {
-                        statePc = 89;
-                        continue stateLoop;
-                    }
-                }
-                case 47: {
-                    this.field_A = this.field_A + 0.1;
-                    statePc = 49;
-                    continue stateLoop;
-                }
-                case 49: {
-                    if (120 == this.field_z) {
-                        /* Inlined CFG state: 52. */
-                        {
-                            this.field_X = qi.b(7, 1);
-                            this.field_L = qi.b(7, 1);
-                            this.field_z = 0;
-                            statePc = 53;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 53;
-                        continue stateLoop;
-                    }
-                }
-                case 53: {
-                    if (-5 < (this.field_q ^ -1)) {
-                        /* Inlined CFG state: 56. */
-                        {
-                            if (this.field_D % 24 == 0) {
-                                /* Inlined CFG state: 59. */
-                                {
-                                    this.field_w = this.field_w + 1;
-                                    if (-5 >= (this.field_w ^ -1)) {
-                                        /* Inlined CFG state: 62. */
-                                        {
-                                            this.field_w = 0;
-                                            statePc = 63;
-                                            continue stateLoop;
-                                        }
-                                    } else {
-                                        statePc = 63;
-                                        continue stateLoop;
-                                    }
-                                }
-                            } else {
-                                statePc = 63;
-                                continue stateLoop;
-                            }
-                        }
-                    } else {
-                        statePc = 63;
-                        continue stateLoop;
-                    }
-                }
-                case 63: {
-                    if ((this.field_q ^ -1) == -4) {
-                        statePc = 85;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 64. */
-                        {
-                            if (4 == this.field_q) {
-                                /* Inlined CFG state: 69. */
-                                {
-                                    if (49 <= (this.field_D & 255)) {
-                                        statePc = 82;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 70. */
-                                        {
-                                            if (-1 == (15 & this.field_D ^ -1)) {
-                                                /* Inlined CFG state: 75. */
-                                                {
-                                                    this.field_w = this.field_w + 1;
-                                                    if ((this.field_w ^ -1) > -5) {
-                                                        statePc = 78;
-                                                    } else {
-                                                        statePc = 76;
-                                                    }
-                                                    continue stateLoop;
-                                                }
-                                            } else {
-                                                statePc = 88;
-                                                continue stateLoop;
-                                            }
-                                        }
-                                    }
-                                }
-                            } else {
-                                statePc = 88;
-                                continue stateLoop;
-                            }
-                        }
-                    }
-                }
-                case 76: {
-                    this.field_w = 0;
-                    statePc = 78;
-                    continue stateLoop;
-                }
-                case 78: {
-                    this.field_B = this.field_B + 1;
-                    if (4 <= this.field_B) {
-                        /* Inlined CFG state: 81. */
-                        {
-                            this.field_B = 0;
-                            if (var3 == 0) {
-                                statePc = 88;
-                            } else {
-                                statePc = 82;
-                            }
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 88;
-                        continue stateLoop;
-                    }
-                }
-                case 82: {
-                    this.field_B = 0;
-                    this.field_w = 0;
-                    if (var3 == 0) {
-                        statePc = 88;
-                    } else {
-                        statePc = 85;
-                    }
-                    continue stateLoop;
-                }
-                case 85: {
                     var2_float = 0.019999999552965164f * (float)(this.field_D % 50);
                     this.field_N = ((int)(var2_float * (float)this.field_t) << -1025150840) + (jg.field_h[field_ab][this.field_B] - -((int)(var2_float * (float)this.field_V) << -774715792) + (int)((float)this.field_M * var2_float));
-                    if (this.field_D % 50 != 49) {
-                        statePc = 88;
-                    } else {
-                        statePc = 86;
+                    if (this.field_D % 50 == 49) {
+                      this.field_B = this.field_B + 1;
+                      this.field_B = this.field_B % 7;
+                      this.field_V = -((16751678 & jg.field_h[field_ab][this.field_B]) >> -1539020080) + ((jg.field_h[field_ab][(1 + this.field_B) % 7] & 16754682) >> -580890576);
+                      this.field_t = (255 & jg.field_h[field_ab][(this.field_B + 1) % 7] >> -1088551928) - ((jg.field_h[field_ab][this.field_B] & 65438) >> 2029681544);
+                      this.field_M = (255 & jg.field_h[field_ab][(1 + this.field_B) % 7]) + -(255 & jg.field_h[field_ab][this.field_B]);
                     }
-                    continue stateLoop;
+                  }
+                  qa.b((byte) 127);
                 }
-                case 86: {
-                    this.field_B = this.field_B + 1;
-                    this.field_B = this.field_B % 7;
-                    this.field_V = -((16751678 & jg.field_h[field_ab][this.field_B]) >> -1539020080) + ((jg.field_h[field_ab][(1 + this.field_B) % 7] & 16754682) >> -580890576);
-                    this.field_t = (255 & jg.field_h[field_ab][(this.field_B + 1) % 7] >> -1088551928) - ((jg.field_h[field_ab][this.field_B] & 65438) >> 2029681544);
-                    this.field_M = (255 & jg.field_h[field_ab][(1 + this.field_B) % 7]) + -(255 & jg.field_h[field_ab][this.field_B]);
-                    statePc = 88;
-                    continue stateLoop;
-                }
-                case 88: {
-                    qa.b((byte) 127);
-                    statePc = 89;
-                    continue stateLoop;
-                }
-                case 89: {
-                    fieldTemp$1 = di.field_a;
-                    di.field_a = di.field_a - 1;
-                    if (0 <= fieldTemp$1) {
-                        statePc = 96;
-                    } else {
-                        statePc = 90;
-                    }
-                    continue stateLoop;
-                }
-                case 90: {
+                L16: {
+                  fieldTemp$1 = di.field_a;
+                  di.field_a = di.field_a - 1;
+                  if (0 > fieldTemp$1) {
                     if ((bi.field_g ^ -1) != -1) {
-                        /* Inlined CFG state: 95. */
-                        {
-                            di.field_a = 50;
-                            if (var3 == 0) {
-                                statePc = 98;
-                            } else {
-                                statePc = 96;
-                            }
-                            continue stateLoop;
-                        }
+                      di.field_a = 50;
+                      if (var3 == 0) {
+                        break L16;
+                      }
                     } else {
-                        statePc = 98;
-                        continue stateLoop;
+                      break L16;
                     }
+                  }
+                  bi.field_g = 0;
                 }
-                case 96: {
-                    bi.field_g = 0;
-                    statePc = 98;
-                    continue stateLoop;
-                }
-                case 98: {
-                    if ((bi.field_g ^ -1) != -1) {
-                        /* Inlined CFG state: 101. */
-                        {
-                            if ((this.field_K ^ -1) == -6) {
-                                statePc = 107;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 102. */
-                                {
-                                    if (7 == this.field_K) {
-                                        statePc = 107;
-                                    } else {
-                                        statePc = 108;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        statePc = 115;
-                        continue stateLoop;
+                if ((bi.field_g ^ -1) != -1) {
+                  L19: {
+                    if ((this.field_K ^ -1) != -6) {
+                      if (7 != this.field_K) {
+                        break L19;
+                      }
                     }
-                }
-                case 107: {
                     oe.a(false, false, param0 ^ 189);
-                    statePc = 108;
-                    continue stateLoop;
+                  }
+                  if (this.field_K == 6) {
+                    oe.a(true, false, param0 + 131);
+                  }
+                  if (-5 == (this.field_K ^ -1)) {
+                    oe.a(true, true, 160);
+                  }
                 }
-                case 108: {
-                    if (this.field_K == 6) {
-                        /* Inlined CFG state: 111. */
-                        {
-                            oe.a(true, false, param0 + 131);
-                            statePc = 112;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 112;
-                        continue stateLoop;
-                    }
-                }
-                case 112: {
-                    if (-5 != (this.field_K ^ -1)) {
-                        statePc = 115;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 113. */
-                        {
-                            oe.a(true, true, 160);
-                            statePc = 115;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 115: {
-                    if (this.field_C) {
-                        statePc = 119;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 116. */
-                        {
-                            this.a(true);
-                            if (var3 == 0) {
-                                statePc = 196;
-                            } else {
-                                statePc = 119;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 119: {
-                    if (bi.field_g != 0) {
-                        /* Inlined CFG state: 124. */
-                        {
-                            if (!fh.c(-104)) {
-                                statePc = 158;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 125. */
-                                {
-                                    if (265 >= he.field_d) {
-                                        statePc = 155;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 128. */
-                                        {
-                                            if ((he.field_d ^ -1) <= -300) {
-                                                statePc = 155;
-                                                continue stateLoop;
-                                            } else {
-                                                /* Inlined CFG state: 131. */
-                                                {
-                                                    if (mc.field_a <= 350) {
-                                                        statePc = 140;
-                                                    } else {
-                                                        statePc = 134;
-                                                    }
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } else {
-                        statePc = 196;
-                        continue stateLoop;
-                    }
-                }
-                case 134: {
-                    if (-471 >= (mc.field_a ^ -1)) {
-                        statePc = 140;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 137. */
-                        {
-                            this.field_g = true;
-                            this.field_C = false;
-                            if (var3 == 0) {
-                                statePc = 196;
-                            } else {
-                                statePc = 140;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 140: {
-                    if (-171 <= (mc.field_a ^ -1)) {
-                        statePc = 146;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 143. */
-                        {
-                            if (-291 < (mc.field_a ^ -1)) {
-                                statePc = 149;
-                            } else {
-                                statePc = 146;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 146: {
-                    this.field_g = false;
+                L22: {
+                  if (!this.field_C) {
+                    this.a(true);
                     if (var3 == 0) {
-                        statePc = 196;
-                    } else {
-                        statePc = 149;
+                      break L22;
                     }
-                    continue stateLoop;
-                }
-                case 149: {
-                    this.field_g = true;
-                    if (null == el.field_o) {
-                        statePc = 154;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 152. */
-                        {
+                  }
+                  if (bi.field_g != 0) {
+                    if (fh.c(-104)) {
+                      if (265 < he.field_d) {
+                        if ((he.field_d ^ -1) > -300) {
+                          if (mc.field_a > 350) {
+                            if (-471 < (mc.field_a ^ -1)) {
+                              this.field_g = true;
+                              this.field_C = false;
+                              if (var3 == 0) {
+                                break L22;
+                              }
+                            }
+                          }
+                          L27: {
+                            if (-171 > (mc.field_a ^ -1)) {
+                              if (-291 < (mc.field_a ^ -1)) {
+                                break L27;
+                              }
+                            }
+                            this.field_g = false;
+                            if (var3 == 0) {
+                              break L22;
+                            }
+                          }
+                          this.field_g = true;
+                          if (null != el.field_o) {
                             el.field_o.e((byte) -70);
-                            statePc = 154;
-                            continue stateLoop;
+                          }
+                          ai.field_p = -1;
+                          el.field_i = 0;
+                          cd.field_j = 0;
+                          if (var3 == 0) {
+                            break L22;
+                          }
                         }
+                      }
+                      this.field_g = false;
+                      if (var3 == 0) {
+                        break L22;
+                      }
                     }
-                }
-                case 154: {
-                    ai.field_p = -1;
-                    el.field_i = 0;
-                    cd.field_j = 0;
-                    if (var3 == 0) {
-                        statePc = 196;
-                    } else {
-                        statePc = 155;
-                    }
-                    continue stateLoop;
-                }
-                case 155: {
-                    this.field_g = false;
-                    if (var3 == 0) {
-                        statePc = 196;
-                    } else {
-                        statePc = 158;
-                    }
-                    continue stateLoop;
-                }
-                case 158: {
-                    if (-1 <= (og.field_n ^ -1)) {
-                        statePc = 194;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 161. */
-                        {
-                            if (null == vl.field_n) {
-                                statePc = 194;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 164. */
-                                {
-                                    if ((he.field_d ^ -1) >= -318) {
-                                        statePc = 191;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 167. */
-                                        {
-                                            if (352 <= he.field_d) {
-                                                statePc = 191;
-                                                continue stateLoop;
-                                            } else {
-                                                /* Inlined CFG state: 170. */
-                                                {
-                                                    if (-351 <= (mc.field_a ^ -1)) {
-                                                        statePc = 176;
-                                                    } else {
-                                                        statePc = 173;
-                                                    }
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    }
+                    if (-1 > (og.field_n ^ -1)) {
+                      if (null != vl.field_n) {
+                        if ((he.field_d ^ -1) < -318) {
+                          if (352 > he.field_d) {
+                            L32: {
+                              if (-351 > (mc.field_a ^ -1)) {
+                                if (-471 < (mc.field_a ^ -1)) {
+                                  break L32;
                                 }
-                            }
-                        }
-                    }
-                }
-                case 173: {
-                    if (-471 < (mc.field_a ^ -1)) {
-                        statePc = 188;
-                    } else {
-                        statePc = 176;
-                    }
-                    continue stateLoop;
-                }
-                case 176: {
-                    if (mc.field_a <= 170) {
-                        statePc = 182;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 179. */
-                        {
-                            if (mc.field_a < 290) {
-                                statePc = 185;
-                            } else {
-                                statePc = 182;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 182: {
-                    this.field_g = false;
-                    if (var3 == 0) {
-                        statePc = 196;
-                    } else {
-                        statePc = 185;
-                    }
-                    continue stateLoop;
-                }
-                case 185: {
-                    this.field_C = false;
-                    this.field_g = true;
-                    if (var3 == 0) {
-                        statePc = 196;
-                    } else {
-                        statePc = 188;
-                    }
-                    continue stateLoop;
-                }
-                case 188: {
-                    this.field_C = false;
-                    em.b(255);
-                    this.field_g = true;
-                    if (var3 == 0) {
-                        statePc = 196;
-                    } else {
-                        statePc = 191;
-                    }
-                    continue stateLoop;
-                }
-                case 191: {
-                    this.field_g = false;
-                    if (var3 == 0) {
-                        statePc = 196;
-                    } else {
-                        statePc = 194;
-                    }
-                    continue stateLoop;
-                }
-                case 194: {
-                    this.field_g = true;
-                    this.field_C = false;
-                    statePc = 196;
-                    continue stateLoop;
-                }
-                case 196: {
-                    if (qa.field_a != this.field_s) {
-                        statePc = 202;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 197. */
-                        {
-                            if ((ue.field_e ^ -1) != (this.field_Y ^ -1)) {
-                                statePc = 202;
-                            } else {
-                                statePc = 203;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 202: {
-                    this.field_o = -1;
-                    statePc = 203;
-                    continue stateLoop;
-                }
-                case 203: {
-                    this.field_Y = ue.field_e;
-                    if (param0 == 29) {
-                        statePc = 206;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 204. */
-                        {
-                            this.a(11, 26);
-                            statePc = 206;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 206: {
-                    this.field_s = qa.field_a;
-                    if (this.field_b != 0) {
-                        /* Inlined CFG state: 209. */
-                        {
-                            var2_int = (qa.field_a - -he.field_d - (-kd.field_c - ki.field_d)) % 8;
-                            if (-1 == (var2_int ^ -1)) {
-                                statePc = 252;
-                            } else {
-                                statePc = 210;
-                            }
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 283;
-                        continue stateLoop;
-                    }
-                }
-                case 210: {
-                    if ((var2_int ^ -1) == -2) {
-                        statePc = 249;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 213. */
-                        {
-                            if (var2_int == 2) {
-                                statePc = 246;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 216. */
-                                {
-                                    if ((var2_int ^ -1) != -4) {
-                                        statePc = 222;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 219. */
-                                        {
-                                            oa.field_a = oa.field_a - gb.field_g;
-                                            kb.field_d = kb.field_d + 1;
-                                            if (var3 == 0) {
-                                                statePc = 254;
-                                            } else {
-                                                statePc = 222;
-                                            }
-                                            continue stateLoop;
-                                        }
-                                    }
+                              }
+                              L34: {
+                                if (mc.field_a > 170) {
+                                  if (mc.field_a < 290) {
+                                    break L34;
+                                  }
                                 }
-                            }
-                        }
-                    }
-                }
-                case 222: {
-                    if ((var2_int ^ -1) == -5) {
-                        statePc = 243;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 225. */
-                        {
-                            if ((var2_int ^ -1) == -6) {
-                                statePc = 240;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 228. */
-                                {
-                                    if (6 != var2_int) {
-                                        statePc = 234;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 231. */
-                                        {
-                                            gb.field_g = gb.field_g - 1;
-                                            ml.field_r = ml.field_r - kb.field_d;
-                                            if (var3 == 0) {
-                                                statePc = 254;
-                                            } else {
-                                                statePc = 234;
-                                            }
-                                            continue stateLoop;
-                                        }
-                                    }
+                                this.field_g = false;
+                                if (var3 == 0) {
+                                  break L22;
                                 }
+                              }
+                              this.field_C = false;
+                              this.field_g = true;
+                              if (var3 == 0) {
+                                break L22;
+                              }
                             }
-                        }
-                    }
-                }
-                case 234: {
-                    if (-8 == (var2_int ^ -1)) {
-                        /* Inlined CFG state: 239. */
-                        {
-                            kb.field_d = kb.field_d - 1;
-                            ml.field_r = ml.field_r - gb.field_g;
+                            this.field_C = false;
+                            em.b(255);
+                            this.field_g = true;
                             if (var3 == 0) {
-                                statePc = 254;
-                            } else {
-                                statePc = 240;
+                              break L22;
                             }
-                            continue stateLoop;
+                          }
                         }
-                    } else {
-                        statePc = 254;
-                        continue stateLoop;
+                        this.field_g = false;
+                        if (var3 == 0) {
+                          break L22;
+                        }
+                      }
                     }
+                    this.field_g = true;
+                    this.field_C = false;
+                  }
                 }
-                case 240: {
-                    kb.field_d = kb.field_d + 1;
-                    ml.field_r = ml.field_r + gb.field_g;
-                    if (var3 == 0) {
-                        statePc = 254;
-                    } else {
-                        statePc = 243;
+                L36: {
+                  if (qa.field_a == this.field_s) {
+                    if ((ue.field_e ^ -1) == (this.field_Y ^ -1)) {
+                      break L36;
                     }
-                    continue stateLoop;
+                  }
+                  this.field_o = -1;
                 }
-                case 243: {
-                    gb.field_g = gb.field_g + 1;
-                    ml.field_r = ml.field_r + kb.field_d;
-                    if (var3 == 0) {
-                        statePc = 254;
-                    } else {
-                        statePc = 246;
+                this.field_Y = ue.field_e;
+                if (param0 != 29) {
+                  this.a(11, 26);
+                }
+                L39: {
+                  this.field_s = qa.field_a;
+                  if (this.field_b != 0) {
+                    L40: {
+                      var2_int = (qa.field_a - -he.field_d - (-kd.field_c - ki.field_d)) % 8;
+                      if (-1 != (var2_int ^ -1)) {
+                        if ((var2_int ^ -1) != -2) {
+                          if (var2_int != 2) {
+                            if ((var2_int ^ -1) == -4) {
+                              oa.field_a = oa.field_a - gb.field_g;
+                              kb.field_d = kb.field_d + 1;
+                              if (var3 == 0) {
+                                break L40;
+                              }
+                            }
+                            if ((var2_int ^ -1) != -5) {
+                              if ((var2_int ^ -1) != -6) {
+                                if (6 == var2_int) {
+                                  gb.field_g = gb.field_g - 1;
+                                  ml.field_r = ml.field_r - kb.field_d;
+                                  if (var3 == 0) {
+                                    break L40;
+                                  }
+                                }
+                                if (-8 == (var2_int ^ -1)) {
+                                  kb.field_d = kb.field_d - 1;
+                                  ml.field_r = ml.field_r - gb.field_g;
+                                  if (var3 == 0) {
+                                    break L40;
+                                  }
+                                } else {
+                                  break L40;
+                                }
+                              }
+                              kb.field_d = kb.field_d + 1;
+                              ml.field_r = ml.field_r + gb.field_g;
+                              if (var3 == 0) {
+                                break L40;
+                              }
+                            }
+                            gb.field_g = gb.field_g + 1;
+                            ml.field_r = ml.field_r + kb.field_d;
+                            if (var3 == 0) {
+                              break L40;
+                            }
+                          }
+                          oa.field_a = oa.field_a - kb.field_d;
+                          gb.field_g = gb.field_g + 1;
+                          if (var3 == 0) {
+                            break L40;
+                          }
+                        }
+                        oa.field_a = oa.field_a + gb.field_g;
+                        kb.field_d = kb.field_d - 1;
+                        if (var3 == 0) {
+                          break L40;
+                        }
+                      }
+                      oa.field_a = oa.field_a + kb.field_d;
+                      gb.field_g = gb.field_g - 1;
                     }
-                    continue stateLoop;
-                }
-                case 246: {
-                    oa.field_a = oa.field_a - kb.field_d;
-                    gb.field_g = gb.field_g + 1;
-                    if (var3 == 0) {
-                        statePc = 254;
-                    } else {
-                        statePc = 249;
-                    }
-                    continue stateLoop;
-                }
-                case 249: {
-                    oa.field_a = oa.field_a + gb.field_g;
-                    kb.field_d = kb.field_d - 1;
-                    if (var3 == 0) {
-                        statePc = 254;
-                    } else {
-                        statePc = 252;
-                    }
-                    continue stateLoop;
-                }
-                case 252: {
-                    oa.field_a = oa.field_a + kb.field_d;
-                    gb.field_g = gb.field_g - 1;
-                    statePc = 254;
-                    continue stateLoop;
-                }
-                case 254: {
                     var2_int = (ki.field_d + qa.field_a - (-he.field_d + -kd.field_c)) % 5;
-                    if (0 == var2_int) {
-                        statePc = 279;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 255. */
-                        {
-                            if (var2_int == 1) {
-                                statePc = 276;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 258. */
-                                {
-                                    if ((var2_int ^ -1) != -3) {
-                                        statePc = 264;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 261. */
-                                        {
-                                            el.field_g = el.field_g - sc.field_f;
-                                            lb.field_b = lb.field_b - 1;
-                                            if (var3 == 0) {
-                                                statePc = 283;
-                                            } else {
-                                                statePc = 264;
-                                            }
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            }
+                    if (0 != var2_int) {
+                      if (var2_int != 1) {
+                        if ((var2_int ^ -1) == -3) {
+                          el.field_g = el.field_g - sc.field_f;
+                          lb.field_b = lb.field_b - 1;
+                          if (var3 == 0) {
+                            break L39;
+                          }
                         }
-                    }
-                }
-                case 264: {
-                    if (-4 != (var2_int ^ -1)) {
-                        statePc = 270;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 267. */
-                        {
-                            sc.field_f = sc.field_f + 1;
-                            el.field_g = el.field_g + lb.field_b;
-                            if (var3 == 0) {
-                                statePc = 283;
-                            } else {
-                                statePc = 270;
-                            }
-                            continue stateLoop;
+                        if (-4 == (var2_int ^ -1)) {
+                          sc.field_f = sc.field_f + 1;
+                          el.field_g = el.field_g + lb.field_b;
+                          if (var3 == 0) {
+                            break L39;
+                          }
                         }
-                    }
-                }
-                case 270: {
-                    if ((var2_int ^ -1) != -5) {
-                        statePc = 283;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 273. */
-                        {
-                            el.field_g = el.field_g - lb.field_b;
-                            sc.field_f = sc.field_f - 1;
-                            if (var3 == 0) {
-                                statePc = 283;
-                            } else {
-                                statePc = 276;
-                            }
-                            continue stateLoop;
+                        if ((var2_int ^ -1) != -5) {
+                          break L39;
+                        } else {
+                          el.field_g = el.field_g - lb.field_b;
+                          sc.field_f = sc.field_f - 1;
+                          if (var3 == 0) {
+                            break L39;
+                          }
                         }
+                      }
+                      el.field_g = el.field_g + sc.field_f;
+                      lb.field_b = lb.field_b + 1;
+                      if (var3 == 0) {
+                        break L39;
+                      }
                     }
-                }
-                case 276: {
-                    el.field_g = el.field_g + sc.field_f;
-                    lb.field_b = lb.field_b + 1;
-                    if (var3 == 0) {
-                        statePc = 283;
-                    } else {
-                        statePc = 279;
-                    }
-                    continue stateLoop;
-                }
-                case 279: {
                     dc.field_a = dc.field_a | lb.field_b + el.field_g << 595332241;
-                    statePc = 283;
-                    continue stateLoop;
+                  }
                 }
-                case 283: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                decompiledRegionSelector0 = 1;
+                break L0;
+              }
+            } else {
+              this.e((byte) 104);
+              decompiledRegionSelector0 = 0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw t.a((Throwable) ((Object) var2), "c.R(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 

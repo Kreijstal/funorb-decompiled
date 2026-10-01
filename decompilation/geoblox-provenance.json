@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "e2b82224d6bb50c6e376af24692481581f78baa0",
+      "commit": "86e991cc4ab9540489969e77d738f2c9c72750cc",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "a82db967bd98714696f926b44fbd4fdfcf555f5cc66dd6b4b99a79e547a96a02",
-        "reproduce": "git archive --format=tar e2b82224d6bb50c6e376af24692481581f78baa0 | sha256sum",
+        "sha256": "05af4cf1d9a8099536342d2ad0835f46e8413369dee6efa925bef072ea212992",
+        "reproduce": "git archive --format=tar 86e991cc4ab9540489969e77d738f2c9c72750cc | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -69,7 +69,7 @@
     "sources": 303,
     "hardFailures": 0,
     "diagnostics": "geoblox-decompiler-diagnostics.json",
-    "validFallbackMethods": 16
+    "validFallbackMethods": 4
   },
   "freshVerification": {
     "tool": "dekobloko-work/scripts/Verify.java",
@@ -93,31 +93,46 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "e7e9406eeb406bb265fa0402b76046bfd0bfb36a8b31cba83022a4c0764b3a0b",
-  "previousSourceTreeSha256": "bf67d298e8c884958b622e717be6ecd4c3009e033265219b88e9f293d7671fd9",
-  "changedJavaFiles": 1,
+  "sourceTreeSha256": "deb64208590f0e4d0d46cbd4d6a87f81fd35df1a27ca0c51dd3f3b1b0010c86d",
+  "previousSourceTreeSha256": "e7e9406eeb406bb265fa0402b76046bfd0bfb36a8b31cba83022a4c0764b3a0b",
+  "changedJavaFiles": 7,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
   },
   "runtimeEquivalenceVerified": false,
   "stateMachineReadability": {
-    "originalFallbackMethods": 16,
+    "originalFallbackMethods": 4,
     "emittedDispatchCasesBefore": 3051,
-    "emittedDispatchCasesAfter": 1131,
+    "emittedDispatchCasesAfter": 877,
     "generatedDispatcherMethodsBefore": 41,
-    "generatedDispatcherMethodsAfter": 33,
+    "generatedDispatcherMethodsAfter": 21,
     "largeInitializerHelpersBefore": 23,
     "largeInitializerHelpersAfter": 18,
     "bytecodeChanged": false,
     "wholeGameEquivalenceVerified": false,
-    "previousPassFallbackMethods": 19,
-    "previousPassDispatchCases": 1330,
-    "largeOriginalMethodsAfter": 3,
+    "previousPassFallbackMethods": 16,
+    "previousPassDispatchCases": 1131,
+    "largeOriginalMethodsAfter": 2,
     "handlerFreeFanoutMethodsRecovered": [
       "gh.a(I)V",
       "gh.a(B)V",
       "gh.b(B)V"
-    ]
+    ],
+    "exceptionRegionMethodsRecovered": [
+      "c.b(I)V",
+      "c.b(Z)V",
+      "c.h(B)V",
+      "ch.a(IIIIILjava/lang/String;I)V",
+      "ch.run()V",
+      "i.a(IBLnf;IZ)V",
+      "kc.a(IB)V",
+      "lc.a(I)V",
+      "lc.a(II[IIIIIIIIB[II)V",
+      "p.a([I[ILnf;ZZZZ)V",
+      "wh.a(II[BI)[B",
+      "wh.a(Lqc;Z)V"
+    ],
+    "verifiedExceptionRegionExits": true
   }
 }

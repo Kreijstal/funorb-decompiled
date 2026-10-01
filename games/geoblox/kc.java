@@ -28,117 +28,48 @@ final class kc {
         int var2_int = 0;
         int var3 = 0;
         int decompiledRegionSelector0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = Geoblox.field_C;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        sh.a(0, param0, ok.field_b, bd.field_a, (byte) 121, md.field_c, true);
-                        if (param1 == -98) {
-                            /* Inlined CFG state: 3. */
-                            {
-                                var2_int = 0;
-                                statePc = 4;
-                                continue stateLoop;
-                            }
-                        } else {
-                            statePc = 2;
-                            continue stateLoop;
-                        }
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 13;
-                        continue stateLoop;
+        var3 = Geoblox.field_C;
+        try {
+          L0: {
+            sh.a(0, param0, ok.field_b, bd.field_a, (byte) 121, md.field_c, true);
+            if (param1 == -98) {
+              var2_int = 0;
+              L1: while (true) {
+                L2: {
+                  if (md.field_c > var2_int) {
+                    qi.field_i[param0 + var2_int] = var2_int;
+                    var2_int++;
+                    if (var3 != 0) {
+                      break L2;
+                    } else {
+                      if (var3 == 0) {
+                        continue L1;
+                      }
                     }
+                  }
+                  sh.a(param0, param0 + param0, qg.field_a, va.field_b, (byte) 112, md.field_c - -param0, false);
                 }
-                case 2: {
-                    return;
+                if (param0 < md.field_c) {
+                  md.field_c = param0;
                 }
-                case 4: {
-                    try {
-                        if (md.field_c <= var2_int) {
-                            statePc = 8;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 5. */
-                            {
-                                qi.field_i[param0 + var2_int] = var2_int;
-                                var2_int++;
-                                if (var3 != 0) {
-                                    statePc = 9;
-                                    continue stateLoop;
-                                } else {
-                                    /* Inlined CFG state: 6. */
-                                    {
-                                        if (var3 == 0) {
-                                            statePc = 4;
-                                            continue stateLoop;
-                                        } else {
-                                            /* Inlined CFG state: 7. */
-                                            {
-                                                statePc = 8;
-                                                continue stateLoop;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        sh.a(param0, param0 + param0, qg.field_a, va.field_b, (byte) 112, md.field_c - -param0, false);
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        if (param0 < md.field_c) {
-                            /* Inlined CFG state: 11. */
-                            {
-                                md.field_c = param0;
-                                statePc = 14;
-                                continue stateLoop;
-                            }
-                        } else {
-                            /* Inlined CFG state: 10. */
-                            {
-                                statePc = 14;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    var2 = (RuntimeException) ((Object) caughtException);
-                    throw t.a((Throwable) ((Object) var2), "kc.A(" + param0 + ',' + param1 + ')');
-                }
-                case 14: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                decompiledRegionSelector0 = 1;
+                break L0;
+              }
+            } else {
+              decompiledRegionSelector0 = 0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw t.a((Throwable) ((Object) var2), "kc.A(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
