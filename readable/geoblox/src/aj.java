@@ -21,36 +21,24 @@ public class aj {
         field_d = param1;
         field_a = param2;
         try {
-          L0: {
-            L1: {
-              field_b = System.getProperty("user.home");
-              if (null == field_b) {
-                break L1;
-              } else {
-                field_b = field_b + "/";
-                break L1;
-              }
-            }
-            if (param0 == 66) {
-              break L0;
-            } else {
+          field_b = System.getProperty("user.home");
+          if (null != field_b) {
+            field_b = field_b + "/";
+          }
+          if (param0 != 66) {
+            field_e = true;
+            if (null != field_b) {
               field_e = true;
-              if (null != field_b) {
-                field_e = true;
-                return;
-              } else {
-                field_b = "~/";
-                field_e = true;
-                return;
-              }
+              return;
+            } else {
+              field_b = "~/";
+              field_e = true;
+              return;
             }
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = (Exception) (Object) decompiledCaughtException;
-            break L2;
-          }
+          var3 = (Exception) (Object) decompiledCaughtException;
         }
         if (null == field_b) {
           field_b = "~/";
@@ -67,14 +55,12 @@ public class aj {
     }
 
     public static File a(String param0, byte param1) {
-        String var3;
-        if (param1 > -67) {
-          var3 = (String) null;
-          aj.a((String) null, (byte) -120);
-          return aj.a(field_d, -27533, param0, field_a);
-        } else {
-          return aj.a(field_d, -27533, param0, field_a);
+        if (param1 <= -67) {
+            return aj.a(field_d, -27533, param0, field_a);
         }
+        String var3 = (String) null;
+        aj.a((String) null, (byte) -120);
+        return aj.a(field_d, -27533, param0, field_a);
     }
 
     static {

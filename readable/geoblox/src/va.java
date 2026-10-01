@@ -7,7 +7,7 @@ final class va {
     static boolean field_d;
     static al field_e;
     static int field_a;
-    static tf field_c;
+    static IntrusiveDeque field_c;
 
     public static void a(int param0) {
         field_f = null;
@@ -24,7 +24,7 @@ final class va {
             String var4 = null;
             String var5 = null;
             try {
-                me.field_j = param0;
+                ScorePopup.field_j = param0;
                 try {
                     var3 = param1.getParameter("cookieprefix");
                     var4 = param1.getParameter("cookiehost");
@@ -46,12 +46,12 @@ final class va {
         }
     }
 
-    final static Sprite_dm[] a(int param0, byte param1) {
+    final static Sprite[] a(int param0, byte param1) {
         if (param1 != -112) {
             field_e = (al) null;
         }
-        Sprite_dm[] var3 = new Sprite_dm[9];
-        Sprite_dm[] var2 = var3;
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         var3[4] = ef.a(0, param0, 64);
         return var2;
     }
@@ -80,13 +80,8 @@ final class va {
             var5_int = 0;
             L1: while (true) {
               if (var5_int >= ch.field_d.length) {
-                L2: {
-                  if (param4 == -85) {
-                    break L2;
-                  } else {
-                    va.a(80, (byte) 55);
-                    break L2;
-                  }
+                if (param4 != -85) {
+                  va.a(80, (byte) 55);
                 }
                 break L0;
               } else {
@@ -114,40 +109,32 @@ final class va {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var5 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_12_0 = (RuntimeException) (var5);
 
-            stackIn_12_1 = new StringBuilder().append("va.B(").append(param0).append(',');
+          stackIn_12_1 = new StringBuilder().append("va.B(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          if (param1 == null) {
+            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+            stackIn_13_2 = "{...}";
           }
-          L5: {
 
 
-            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param2).append(',');
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param2).append(',');
 
-            if (param3 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L5;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L5;
-            }
+          if (param3 == null) {
+            stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+            stackIn_16_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ',' + param4 + ')');
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class l extends oj {
-    static tf field_g;
+    static IntrusiveDeque field_g;
     private java.nio.ByteBuffer field_f;
     static fd[] field_i;
     static rh field_h;
@@ -42,6 +42,6 @@ final class l extends oj {
     }
 
     static {
-        field_g = new tf();
+        field_g = new IntrusiveDeque();
     }
 }

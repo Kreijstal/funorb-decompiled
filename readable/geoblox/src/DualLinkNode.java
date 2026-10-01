@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rc extends hf {
-    rc field_k;
+class DualLinkNode extends IntrusiveNode {
+    DualLinkNode nextSecondaryNode;
     static String field_f;
-    static float field_h;
+    static float rotationStepRadians;
     static int[] field_j;
     static String field_g;
-    rc field_l;
+    DualLinkNode previousSecondaryNode;
     long field_i;
 
     final static void c(int param0) {
@@ -36,33 +36,30 @@ class rc extends hf {
         CharSequence var2 = (CharSequence) ((Object) wd.field_f);
         vg.field_b = oe.a(var2, 12);
         if (param0 != 1) {
-            rc.b(83);
+            DualLinkNode.b(83);
         }
     }
 
-    final void a(byte param0) {
-        if (this.field_l == null) {
-          return;
-        } else {
-          this.field_l.field_k = this.field_k;
-          if (param0 <= 39) {
-            field_g = (String) null;
-            this.field_k.field_l = this.field_l;
-            this.field_l = null;
-            this.field_k = null;
+    final void unlinkSecondaryNode(byte param0) {
+        if (!(this.previousSecondaryNode != null)) {
             return;
-          } else {
-            this.field_k.field_l = this.field_l;
-            this.field_l = null;
-            this.field_k = null;
-            return;
-          }
         }
+        this.previousSecondaryNode.nextSecondaryNode = this.nextSecondaryNode;
+        if (param0 > 39) {
+            this.nextSecondaryNode.previousSecondaryNode = this.previousSecondaryNode;
+            this.previousSecondaryNode = null;
+            this.nextSecondaryNode = null;
+            return;
+        }
+        field_g = (String) null;
+        this.nextSecondaryNode.previousSecondaryNode = this.previousSecondaryNode;
+        this.previousSecondaryNode = null;
+        this.nextSecondaryNode = null;
     }
 
     final static int d(int param0) {
         if (param0 < 101) {
-            rc.c((byte) 20);
+            DualLinkNode.c((byte) 20);
             return 1;
         }
         return 1;
@@ -81,11 +78,11 @@ class rc extends hf {
         return true;
     }
 
-    protected rc() {
+    protected DualLinkNode() {
     }
 
     static {
-        field_h = 0.01666666753590107f;
+        rotationStepRadians = 0.01666666753590107f;
         field_f = "Invalid password.";
         field_g = "Data server full or too many connections from your address. Please try again in a few minutes.";
     }

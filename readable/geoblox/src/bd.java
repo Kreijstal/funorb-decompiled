@@ -8,9 +8,9 @@ final class bd extends IOException {
     static ck field_c;
     static String field_b;
 
-    final static void a(int param0) {
-        me var1 = null;
-        String var2 = null;
+    final static void drawScorePopups(int param0) {
+        ScorePopup popup = null;
+        String chainAndPointsText = null;
         int var3 = 0;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
@@ -20,33 +20,24 @@ final class bd extends IOException {
         try {
           L0: {
             sh.field_y.a(255);
-            var1 = (me) ((Object) md.field_a.g(0));
+            popup = (ScorePopup) ((Object) md.activeScorePopups.firstForIteration(0));
             if (param0 <= -112) {
-              L1: while (true) {
-                if (var1 == null) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
+              L1: while (popup != null) {
+                if (popup.chainMultiplier != 1) {
+                  chainAndPointsText = "X" + popup.chainMultiplier + " - " + popup.pointsText;
+                  var3 = dd.field_G.field_K[0][wf.field_p];
+                  dd.field_G.field_K[0][wf.field_p] = 15488514;
+                  dd.field_G.b(chainAndPointsText, (int)(popup.progress * ((float)(80 + el.gameplaySession.pointsPanelX) - popup.originX) + popup.originX), (int)(popup.progress * (34.0f - popup.originY) + popup.originY), 0, -1);
+                  dd.field_G.field_K[0][wf.field_p] = var3;
                 } else {
-                  L2: {
-                    if (var1.field_h != 1) {
-                      var2 = "X" + var1.field_h + " - " + var1.field_m;
-                      var3 = dd.field_G.field_K[0][wf.field_p];
-                      dd.field_G.field_K[0][wf.field_p] = 15488514;
-                      dd.field_G.b(var2, (int)(var1.field_k * ((float)(80 + el.gameplaySession_field_o.field_T) - var1.field_n) + var1.field_n), (int)(var1.field_k * (34.0f - var1.field_i) + var1.field_i), 0, -1);
-                      dd.field_G.field_K[0][wf.field_p] = var3;
-                      break L2;
-                    } else {
-                      dd.field_G.b(var1.field_m, (int)(var1.field_k * (-var1.field_n + 144.0f) + var1.field_n), (int)((-var1.field_i + 34.0f) * var1.field_k + var1.field_i), 0, -1);
-                      break L2;
-                    }
-                  }
-                  var1 = (me) ((Object) md.field_a.d(1));
-                  continue L1;
+                  dd.field_G.b(popup.pointsText, (int)(popup.progress * (-popup.originX + 144.0f) + popup.originX), (int)((-popup.originY + 34.0f) * popup.progress + popup.originY), 0, -1);
                 }
+                popup = (ScorePopup) ((Object) md.activeScorePopups.nextForIteration(1));
               }
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
               decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

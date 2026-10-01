@@ -4,7 +4,7 @@
 final class vj {
     static qa field_b;
     static int[] field_c;
-    static Sprite_dm[] field_a;
+    static Sprite[] field_a;
     private static String field_z;
 
     public static void a(int param0) {

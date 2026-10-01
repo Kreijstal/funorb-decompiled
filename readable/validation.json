@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "rules": 642,
+  "files": 303,
+  "sourceCommit": "dd9828b3532fc0cd3f452b6154bee6d9f77c658c",
+  "commands": [
+    {
+      "command": "node readable/build-geoblox-rules.mjs --check",
+      "result": "pass"
+    },
+    {
+      "command": "node readable/reproduce-geoblox.mjs --check",
+      "result": "pass",
+      "bindingsCompared": 167502,
+      "overrideRelationships": 388,
+      "identifierEdits": 10568
+    },
+    {
+      "command": "node readable/tests/test-geoblox-deque.mjs",
+      "result": "pass",
+      "variants": [
+        "original",
+        "renamed"
+      ]
+    },
+    {
+      "command": "node readable/tests/test-geoblox-gameplay.mjs",
+      "result": "pass",
+      "variants": [
+        "original",
+        "renamed"
+      ]
+    },
+    {
+      "command": "node readable/tools/test-readable-java.mjs",
+      "result": "pass",
+      "tests": 7
+    },
+    {
+      "command": "node readable/tools/test-capture-process.mjs",
+      "result": "pass",
+      "tests": 4
+    },
+    {
+      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v6",
+      "result": "pass",
+      "restoredFiles": 303,
+      "originalBytesRecovered": true,
+      "originalSourceRequired": false
+    }
+  ],
+  "inputTreeSha256": "4ffc26d9728c403266022452f0c0ca68ea28ff61c26d108b7bd165e6ab92e24c",
+  "outputTreeSha256": "f28f79a43671246f825d8709255f295576f06f5ad2d23f6e814d24b024fcdb39",
+  "runtimeEquivalenceVerified": false
+}

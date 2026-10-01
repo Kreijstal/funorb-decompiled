@@ -23,7 +23,7 @@ final class nf {
     short[] field_K;
     short[] field_O;
     short field_f;
-    static int screenTransitionTick_field_A;
+    static int screenTransitionTick;
     int[] field_b;
     private boolean field_D;
     int[] field_L;
@@ -38,7 +38,7 @@ final class nf {
     short field_m;
     short[] field_g;
     short[] field_t;
-    static tf field_j;
+    static IntrusiveDeque field_j;
     int field_s;
     short[] field_k;
     int field_I;
@@ -115,64 +115,34 @@ final class nf {
           var8 = 0;
           L0: while (true) {
             if (this.field_o <= var8) {
-              L1: {
-                this.field_H = var6;
-                this.field_s = var3;
-                this.field_F = var4;
-                this.field_I = var5;
-                if (param0 == -99) {
-                  break L1;
-                } else {
-                  this.field_K = (short[]) null;
-                  break L1;
-                }
+              this.field_H = var6;
+              this.field_s = var3;
+              this.field_F = var4;
+              this.field_I = var5;
+              if (param0 != -99) {
+                this.field_K = (short[]) null;
               }
               this.field_Q = var2;
               this.field_N = var7;
               return;
             } else {
-              L2: {
-                var9 = this.field_O[var8];
-                var10 = this.field_q[var8];
-                if ((var10 ^ -1) > (var3 ^ -1)) {
-                  var3 = var10;
-                  break L2;
-                } else {
-                  break L2;
-                }
+              var9 = this.field_O[var8];
+              var10 = this.field_q[var8];
+              if ((var10 ^ -1) > (var3 ^ -1)) {
+                var3 = var10;
               }
-              L3: {
-                if (var6 >= var10) {
-                  break L3;
-                } else {
-                  var6 = var10;
-                  break L3;
-                }
+              if (var6 < var10) {
+                var6 = var10;
               }
-              L4: {
-                var11 = this.field_K[var8];
-                if (var9 < var2) {
-                  var2 = var9;
-                  break L4;
-                } else {
-                  break L4;
-                }
+              var11 = this.field_K[var8];
+              if (var9 < var2) {
+                var2 = var9;
               }
-              L5: {
-                if (var9 <= var5) {
-                  break L5;
-                } else {
-                  var5 = var9;
-                  break L5;
-                }
+              if (var9 > var5) {
+                var5 = var9;
               }
-              L6: {
-                if (var11 <= var7) {
-                  break L6;
-                } else {
-                  var7 = var11;
-                  break L6;
-                }
+              if (var11 > var7) {
+                var7 = var11;
               }
               if (var4 > var11) {
                 var4 = var11;
@@ -189,124 +159,68 @@ final class nf {
 
     final static void a(int param0, int param1, int param2) {
         L0: {
-          L1: {
-            if (hb.field_l == null) {
-              break L1;
-            } else {
-              if (hb.field_l.length >= param2) {
-                break L0;
-              } else {
-                break L1;
-              }
+          if (hb.field_l != null) {
+            if (hb.field_l.length >= param2) {
+              break L0;
             }
           }
           hb.field_l = new int[param2 * 2];
-          break L0;
         }
         L2: {
-          L3: {
-            if (null == hg.field_a) {
-              break L3;
-            } else {
-              if (param2 <= hg.field_a.length) {
-                break L2;
-              } else {
-                break L3;
-              }
+          if (null != hg.field_a) {
+            if (param2 <= hg.field_a.length) {
+              break L2;
             }
           }
           hg.field_a = new int[param2 * 2];
-          break L2;
         }
         L4: {
-          L5: {
-            if (null == fb.field_m) {
-              break L5;
-            } else {
-              if (fb.field_m.length >= param2) {
-                break L4;
-              } else {
-                break L5;
-              }
+          if (null != fb.field_m) {
+            if (fb.field_m.length >= param2) {
+              break L4;
             }
           }
           fb.field_m = new int[param2 * 2];
-          break L4;
         }
         L6: {
-          L7: {
-            if (null == k.field_i) {
-              break L7;
-            } else {
-              if (param2 > k.field_i.length) {
-                break L7;
-              } else {
-                break L6;
-              }
+          if (null != k.field_i) {
+            if (param2 <= k.field_i.length) {
+              break L6;
             }
           }
           k.field_i = new int[param2 * 2];
-          break L6;
         }
         L8: {
-          L9: {
-            if (null == cj.field_b) {
-              break L9;
-            } else {
-              if (cj.field_b.length < param2) {
-                break L9;
-              } else {
-                break L8;
-              }
+          if (null != cj.field_b) {
+            if (cj.field_b.length >= param2) {
+              break L8;
             }
           }
           cj.field_b = new int[2 * param2];
-          break L8;
         }
         L10: {
-          L11: {
-            if (null == gk.field_a) {
-              break L11;
-            } else {
-              if (gk.field_a.length < param2) {
-                break L11;
-              } else {
-                break L10;
-              }
+          if (null != gk.field_a) {
+            if (gk.field_a.length >= param2) {
+              break L10;
             }
           }
           gk.field_a = new int[param2 * 2];
-          break L10;
         }
         L12: {
-          L13: {
-            if (null == qi.field_i) {
-              break L13;
-            } else {
-              if (qi.field_i.length >= param2 + param1) {
-                break L12;
-              } else {
-                break L13;
-              }
+          if (null != qi.field_i) {
+            if (qi.field_i.length >= param2 + param1) {
+              break L12;
             }
           }
           qi.field_i = new int[(param2 + param1) * 2];
-          break L12;
         }
         L14: {
-          L15: {
-            if (null == qh.field_C) {
-              break L15;
-            } else {
-              if (qh.field_C.length < param2) {
-                break L15;
-              } else {
-                break L14;
-              }
+          if (null != qh.field_C) {
+            if (qh.field_C.length >= param2) {
+              break L14;
             }
           }
           qh.field_C = new boolean[2 * param2];
-          break L14;
         }
         md.field_c = 0;
         va.field_b = -2147483648;
@@ -315,24 +229,24 @@ final class nf {
         qg.field_a = param0;
     }
 
-    final static Sprite_dm[] b(int param0) {
+    final static Sprite[] b(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
-        Sprite_dm[] var1 = new Sprite_dm[sb.field_a];
+        Sprite[] var1 = new Sprite[sb.field_a];
         for (var2 = 0; sb.field_a > var2; var2++) {
-            var3 = hl.field_K[var2] * rc.field_j[var2];
+            var3 = hl.field_K[var2] * DualLinkNode.field_j[var2];
             var4 = mj.field_a[var2];
             var5 = new int[var3];
             for (var6 = 0; var6 < var3; var6++) {
                 var5[var6] = cm.field_j[cd.a((int) var4[var6], 255)];
             }
-            var1[var2] = new Sprite_dm(pg.field_b, dd.field_C, GameplaySession_gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], var5);
+            var1[var2] = new Sprite(pg.field_b, dd.field_C, GameplaySession.field_m[var2], md.field_e[var2], DualLinkNode.field_j[var2], hl.field_K[var2], var5);
         }
         if (param0 != 255) {
-            screenTransitionTick_field_A = 40;
+            screenTransitionTick = 40;
         }
         kj.c(true);
         return var1;
@@ -373,6 +287,6 @@ final class nf {
 
     static {
         field_E = "Reload game";
-        field_j = new tf();
+        field_j = new IntrusiveDeque();
     }
 }

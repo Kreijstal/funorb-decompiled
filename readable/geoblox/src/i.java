@@ -2,24 +2,24 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class i {
-    static Sprite_dm field_a;
+    static Sprite avatarMaskRaster;
 
     public static void a(boolean param0) {
         try {
-            field_a = null;
+            avatarMaskRaster = null;
             if (param0) {
-                field_a = (Sprite_dm) null;
+                avatarMaskRaster = (Sprite) null;
             }
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "i.A(" + param0 + ')');
         }
     }
 
-    final static GameplayEntity_ja a(byte param0) {
+    final static GameplayEntity a(byte param0) {
         float var1_float = 0.0f;
         RuntimeException var1 = null;
         Object var2 = null;
-        GameplayEntity_ja var3 = null;
+        GameplayEntity var3 = null;
         float var4 = 0.0f;
         int var5 = 0;
         Object stackIn_11_0 = null;
@@ -27,50 +27,33 @@ final class i {
         var5 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              var1_float = 1.401298464324817e-45f;
-              var2 = null;
-              var3 = (GameplayEntity_ja) ((Object) a.field_d.a(false));
-              if (param0 < -127) {
-                break L1;
-              } else {
-                i.a(false);
-                break L1;
-              }
+            var1_float = 1.401298464324817e-45f;
+            var2 = null;
+            var3 = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
+            if (param0 >= -127) {
+              i.a(false);
             }
-            L2: while (true) {
-              L3: {
-                if (null == var3) {
-                  break L3;
-                } else {
-                  L4: {
-                    var4 = (-240.0f + var3.positionY_field_v) * (-240.0f + var3.positionY_field_v) + (-320.0f + var3.positionX_field_o) * (var3.positionX_field_o - 320.0f);
-                    if (var1_float < var4) {
-                      var1_float = var4;
-                      var2 = var3;
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  var3 = (GameplayEntity_ja) ((Object) a.field_d.b(0));
-                  if (var5 == 0) {
-                    continue L2;
-                  } else {
-                    break L3;
-                  }
-                }
+            L2: while (null != var3) {
+              var4 = (-240.0f + var3.positionY) * (-240.0f + var3.positionY) + (-320.0f + var3.positionX) * (var3.positionX - 320.0f);
+              if (var1_float < var4) {
+                var1_float = var4;
+                var2 = var3;
               }
-              stackIn_11_0 = var2;
-              break L0;
+              var3 = (GameplayEntity) ((Object) a.attachedEntities.previousForIteration(0));
+              if (var5 == 0) {
+                continue L2;
+              }
+              break;
             }
+            stackIn_11_0 = var2;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "i.D(" + param0 + ')');
         }
-        return (GameplayEntity_ja) ((Object) stackIn_11_0);
+        return (GameplayEntity) ((Object) stackIn_11_0);
     }
 
     final static void a(int param0, byte param1, java.awt.Canvas param2, int param3) {
@@ -85,44 +68,31 @@ final class i {
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
         try {
-          L0: {
-            try {
-              L1: {
-                var4 = param2.getGraphics();
-                sh.field_y.a(param3, var4, param0, 0);
-                var5 = 56 % ((-32 - param1) / 59);
-                var4.dispose();
-                break L1;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
-                var4_ref = (Exception) (Object) decompiledCaughtException;
-                param2.repaint();
-                break L2;
-              }
-            }
-            break L0;
+          try {
+            var4 = param2.getGraphics();
+            sh.field_y.a(param3, var4, param0, 0);
+            var5 = 56 % ((-32 - param1) / 59);
+            var4.dispose();
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var4_ref = (Exception) (Object) decompiledCaughtException;
+            param2.repaint();
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L3: {
-            var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var4_ref2);
+          var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_7_0 = (RuntimeException) (var4_ref2);
 
-            stackIn_7_1 = new StringBuilder().append("i.C(").append(param0).append(',').append(param1).append(',');
+          stackIn_7_1 = new StringBuilder().append("i.C(").append(param0).append(',').append(param1).append(',');
 
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L3;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L3;
-            }
+          if (param2 == null) {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param3 + ')');
         }
@@ -801,7 +771,7 @@ final class i {
                 }
                 case 62: {
                     try {
-                        field_a = (Sprite_dm) null;
+                        avatarMaskRaster = (Sprite) null;
                         statePc = 70;
                         continue stateLoop;
                     } catch (Throwable stateCaught_62) {

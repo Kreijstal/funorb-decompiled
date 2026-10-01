@@ -11,17 +11,21 @@ over the obfuscated gamepacks by the pipeline in
 
 ## Readable GeoBlox export
 
-[`readable/geoblox/src`](readable/geoblox/src) contains a separate GeoBlox source
-export with 420 deterministic naming rules, including the reviewed entity-ID,
-control-flow-guard and shared audio-helper corrections. Its 303 Java files compile
-and preserve all 167,702 recorded source bindings and 388 override relationships.
+[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 6 with
+642 reviewed naming rules, including gameplay state, contact/match processing,
+spawning, result sequences and score popups. Confirmed names omit opaque suffixes;
+the dictionary preserves original identities. Both 303-file Java corpora compile
+and preserve all 167,502 recorded bindings and 388 override relationships.
 The original decompilation remains under `games/`.
 
-The [export instructions](readable/README.md), [frozen rules](readable/geoblox-rules.json),
+The [reproduction and update procedure](readable/README.md),
+[gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md),
+[frozen rules](readable/geoblox-rules.json),
 [symbol map](readable/geoblox/SYMBOLS.md) and
-[provenance](readable/geoblox/provenance.json) record how to regenerate and check it.
-This is an incremental naming pass; unknown identifiers and decompiled control
-flow remain, and the export has not undergone a new whole-game runtime test.
+[provenance](readable/geoblox/provenance.json) describe the export.
+`node readable/reproduce-geoblox.mjs --check` verifies the pinned input and
+bundled tool and checks deterministic regeneration. This is an incremental
+naming pass; unknown identifiers and generated state machines remain.
 
 ## GeoBlox source refresh
 

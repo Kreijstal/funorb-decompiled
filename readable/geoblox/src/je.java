@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class je extends hf {
-    PcmSampleStream_kl field_g;
+final class je extends IntrusiveNode {
+    PcmSampleStream field_g;
     int field_i;
     static wl field_j;
-    hf field_f;
+    IntrusiveNode field_f;
     static sk[] field_h;
 
     final static void c(byte param0) {
@@ -25,7 +25,7 @@ final class je extends hf {
             }
             if (!fh.c(-91)) {
                 while (true) {
-                    var1 = (p) ((Object) GameplayEntity_ja.field_A.b((byte) -118));
+                    var1 = (p) ((Object) GameplayEntity.field_A.removeFirst((byte) -118));
                     if (var1 == null) {
                         break;
                     }
@@ -55,43 +55,30 @@ final class je extends hf {
             Exception var2_ref = null;
             RuntimeException var2_ref2 = null;
             try {
-              L0: {
-                try {
-                  L1: {
-                    var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                    param1.getAppletContext().showDocument(wf.a(var2, -84, param1), "_top");
-                    break L1;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
-                    var2_ref = (Exception) (Object) decompiledCaughtException;
-                    var2_ref.printStackTrace();
-                    break L2;
-                  }
-                }
-                var2_int = 91 % ((50 - param0) / 49);
-                break L0;
+              try {
+                var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
+                param1.getAppletContext().showDocument(wf.a(var2, -84, param1), "_top");
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
               }
+              var2_int = 91 % ((50 - param0) / 49);
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L3: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_7_0 = (RuntimeException) (var2_ref2);
+              var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+              stackIn_7_0 = (RuntimeException) (var2_ref2);
 
-                stackIn_7_1 = new StringBuilder().append("je.D(").append(param0).append(',');
+              stackIn_7_1 = new StringBuilder().append("je.D(").append(param0).append(',');
 
-                if (param1 == null) {
-                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackIn_8_2 = "null";
-                  break L3;
-                } else {
-                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackIn_8_2 = "{...}";
-                  break L3;
-                }
+              if (param1 == null) {
+                stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+                stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+                stackIn_8_2 = "null";
+              } else {
+                stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+                stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+                stackIn_8_2 = "{...}";
               }
               throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
             }
@@ -112,7 +99,7 @@ final class je extends hf {
         field_h = null;
     }
 
-    je(PcmSampleStream_kl param0, hf param1) {
+    je(PcmSampleStream param0, IntrusiveNode param1) {
         try {
             this.field_g = param0;
             this.field_i = param0.i();

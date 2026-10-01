@@ -1,0 +1,912 @@
+{
+  "schema": 1,
+  "previousRulesSha256": "577b1fa5e00f6dfb94be8eb4f7d7816611bedb161937ec45b72a56651fc63f73",
+  "renames": [
+    {
+      "symbol": "C:me",
+      "to": "ScorePopup",
+      "originalName": "me",
+      "evidence": "The instance stores points/text, origin coordinates, progress and chain multiplier. ug initializes it, bd interpolates its display, cf credits completed points and wa collects unfinished points. Unrelated static helpers retain their own identities."
+    },
+    {
+      "symbol": "F:a.field_d:Ltf;",
+      "to": "attachedEntities",
+      "originalName": "field_d",
+      "evidence": "Contact and drawing routines iterate this queue; detachment moves its members back to moving entities."
+    },
+    {
+      "symbol": "F:ab.field_f:Z",
+      "to": "boardContactStateDirty",
+      "originalName": "field_f",
+      "evidence": "Attachment/contact changes and a match cooldown reaching zero set this flag; the session snapshots it before motion and the contact routines consume it."
+    },
+    {
+      "symbol": "F:bk.field_a:Ldm;",
+      "to": "boardOwnershipRaster",
+      "originalName": "field_a",
+      "evidence": "Attached entities stamp entityId+1 into this raster; contact detection and boundary testing inspect it."
+    },
+    {
+      "symbol": "F:dd.field_D:I",
+      "to": "variantMatchCandidateCount",
+      "originalName": "field_D",
+      "evidence": "ul increments this when a collected triple shares spriteVariantIndex, before cooldown eligibility or deduplication is checked."
+    },
+    {
+      "symbol": "F:di.field_g:I",
+      "to": "releasedInDifficultyStep",
+      "originalName": "field_g",
+      "evidence": "hd.f increments this release counter and compares it with sa.field_b before ld.b advances difficulty."
+    },
+    {
+      "symbol": "F:dk.field_b:I",
+      "to": "categoryMatchCandidateCount",
+      "originalName": "field_b",
+      "evidence": "ul increments this when a collected triple shares entityCategoryKey, before cooldown eligibility or deduplication is checked."
+    },
+    {
+      "symbol": "F:fa.field_a:Z",
+      "to": "entitiesDetachedThisTick",
+      "originalName": "field_a",
+      "evidence": "The detach path sets this; session update resets it and excludes the board-clear bonus while it is true."
+    },
+    {
+      "symbol": "F:fa.field_b:I",
+      "to": "releasesPerTheme",
+      "originalName": "field_b",
+      "evidence": "qe.a calculates this theme release threshold; hd.f compares it with ul.field_b, and the HUD displays the difference."
+    },
+    {
+      "symbol": "F:gf.field_f:I",
+      "to": "matchChainLength",
+      "originalName": "field_f",
+      "evidence": "ec increments this per eligible scored triple and uses it as the points multiplier; scene/result setup resets it."
+    },
+    {
+      "symbol": "F:gh.field_B:Z",
+      "to": "connectivityRebuiltThisTick",
+      "originalName": "field_B",
+      "evidence": "kc.b(int) sets this after rebuilding a dirty contact graph; gh consumes it for the board-clear check and clears it each tick."
+    },
+    {
+      "symbol": "F:gh.field_C:Z",
+      "to": "tutorialPromptActive",
+      "originalName": "field_C",
+      "evidence": "Tutorial entry, progression and failure set this; accepting the prompt clears it. Normal motion, release and fast-fall paths are gated while it is set."
+    },
+    {
+      "symbol": "F:gh.field_E:Z",
+      "to": "rotationControlsSwapped",
+      "originalName": "field_E",
+      "evidence": "Chooses which of internal keys 96 and 97 applies each rotation direction; the input handler toggles it."
+    },
+    {
+      "symbol": "F:gh.field_F:Z",
+      "to": "boardRasterDirty",
+      "originalName": "field_F",
+      "evidence": "gh.render clears this after redrawing the attached board raster; contacts, transitions and ending ticks request that redraw."
+    },
+    {
+      "symbol": "F:gh.field_G:I",
+      "to": "debugSpawnCategoryId",
+      "originalName": "field_G",
+      "evidence": "Pointer spawning passes this as nb.a parameter 2, which becomes the motion initializer category argument and entityCategoryKey."
+    },
+    {
+      "symbol": "F:gh.field_H:Z",
+      "to": "sceneTransitionRequested",
+      "originalName": "field_H",
+      "evidence": "leaveTutorial and result completion set this; settled queues allow gh.b(byte) to run, and completion at tick 160 clears it. sk skips boundary checking while it is set."
+    },
+    {
+      "symbol": "F:gh.field_K:Z",
+      "to": "submissionBlocked",
+      "originalName": "field_K",
+      "evidence": "Score/action submission checks this flag. Debug input and emitPointsPopup with the submission-blocking argument set it."
+    },
+    {
+      "symbol": "F:gh.field_N:Z",
+      "to": "spawnReleaseDisabled",
+      "originalName": "field_N",
+      "evidence": "lc skips transfer from the spawn queue into moving entities while this is set. Debug input toggles it; tutorial/end paths also set it."
+    },
+    {
+      "symbol": "F:gh.field_Q:Z",
+      "to": "debugSpawnSpecialKinds",
+      "originalName": "field_Q",
+      "evidence": "Passed as nb.a parameter 5: true chooses special kinds 1/2/3/4 from category/variant; false selects ordinary kind zero."
+    },
+    {
+      "symbol": "F:gh.field_R:Z",
+      "to": "boardEmptyAtResultStart",
+      "originalName": "field_R",
+      "evidence": "Result initialization records a.field_d.isEmpty here. The result message and extra 2000-point popup use that snapshot."
+    },
+    {
+      "symbol": "F:gh.field_V:Z",
+      "to": "debugReducedRendering",
+      "originalName": "field_V",
+      "evidence": "Debug input toggles this flag; rendering skips the entity layer and several overlays while it is set."
+    },
+    {
+      "symbol": "F:gh.field_W:I",
+      "to": "resultCompletionTickOffset",
+      "originalName": "field_W",
+      "evidence": "Set to 920 minus twice endingEntityRadius minus 59; result completion occurs when sceneAnimationTick equals this offset plus 150."
+    },
+    {
+      "symbol": "F:gh.field_Z:Z",
+      "to": "boundaryCheckRequested",
+      "originalName": "field_Z",
+      "evidence": "Captures ab.field_f before the entity-motion update; the later update branch uses it to request sk.a(int). This is a saved request, not a new geometry test."
+    },
+    {
+      "symbol": "F:gh.field_b:Z",
+      "to": "boardClearBonusEligible",
+      "originalName": "field_b",
+      "evidence": "Computed from no detachment this tick, an empty attached queue and a positive current-theme release count; the connectivity-rebuilt branch consumes it for a bonus."
+    },
+    {
+      "symbol": "F:gh.field_bb:I",
+      "to": "sessionPhase",
+      "originalName": "field_bb",
+      "evidence": "gh update/render branch on phase 0 for play, 1 for the result sequence requested at the theme release threshold, 2/3/4 for result effects/countdown and 5 for result completion. Numeric IDs remain unchanged."
+    },
+    {
+      "symbol": "F:gh.field_c:I",
+      "to": "endingEntityRadius",
+      "originalName": "field_c",
+      "evidence": "Result initialization computes the square root of the largest nontransparent sprite-pixel distance from the board center, or defaults to 29 without an ending entity."
+    },
+    {
+      "symbol": "F:gh.field_d:Z",
+      "to": "tutorialAdvanceRequested",
+      "originalName": "field_d",
+      "evidence": "Internal input key 16 sets this request; tutorial phase one consumes it to move to phase two."
+    },
+    {
+      "symbol": "F:gh.field_e:I",
+      "to": "newActionCount",
+      "originalName": "field_e",
+      "evidence": "ra.a records previously unset action bits and increments this count; menu/result branches use whether it is positive."
+    },
+    {
+      "symbol": "F:gh.field_f:Z",
+      "to": "preserveScoreOnTransition",
+      "originalName": "field_f",
+      "evidence": "At scene-transition start false selects resetScoreState while true selects prepareNextTheme. leaveTutorial sets false; transition completion sets true. This flag also gates the progress HUD."
+    },
+    {
+      "symbol": "F:gh.field_h:Z",
+      "to": "showSessionCounters",
+      "originalName": "field_h",
+      "evidence": "Render displays the ec and difficulty counters when set; debug input enables this flag."
+    },
+    {
+      "symbol": "F:gh.field_i:Z",
+      "to": "sceneTransitionInProgress",
+      "originalName": "field_i",
+      "evidence": "gh.b(byte) sets this at transition tick zero and clears it at tick 160; render checks it during the transition."
+    },
+    {
+      "symbol": "F:gh.field_j:Z",
+      "to": "debugPointerSpawnEnabled",
+      "originalName": "field_j",
+      "evidence": "Debug input toggles this; the pointer input handler calls nb.a only when it is set."
+    },
+    {
+      "symbol": "F:gh.field_n:Z",
+      "to": "matchBatchProcessedThisTick",
+      "originalName": "field_n",
+      "evidence": "Receives ec.b(int), which returns true for a consumed nonempty match batch even when cooldowns prevent points from being awarded."
+    },
+    {
+      "symbol": "F:gh.field_q:I",
+      "to": "resultBonusPoints",
+      "originalName": "field_q",
+      "evidence": "Result initialization adds 179; each shrinking-effect tick adds 7. Result render and the final popup display this separate bonus."
+    },
+    {
+      "symbol": "F:gh.field_r:I",
+      "to": "debugSpawnVariantId",
+      "originalName": "field_r",
+      "evidence": "Pointer spawning passes this as nb.a parameter 4, which becomes the motion initializer variant argument and spriteVariantIndex."
+    },
+    {
+      "symbol": "F:gh.field_s:Z",
+      "to": "showDebugOverview",
+      "originalName": "field_s",
+      "evidence": "The fog debug command toggles this; render draws a reduced overview circle with queue/entity markers."
+    },
+    {
+      "symbol": "F:gh.field_x:Z",
+      "to": "sessionEnding",
+      "originalName": "field_x",
+      "evidence": "gh.d(byte) sets this on the valid end path; update switches to the ending path and render omits the normal avatar."
+    },
+    {
+      "symbol": "F:h.field_a:I",
+      "to": "matchCandidateCount",
+      "originalName": "field_a",
+      "evidence": "ul fills the packed candidate array and increments this count; ec sorts and consumes that many candidates."
+    },
+    {
+      "symbol": "F:i.field_a:Ldm;",
+      "to": "avatarMaskRaster",
+      "originalName": "field_a",
+      "evidence": "Avatar setup builds this mask; board initialization draws its white ownership marker before attached entity IDs."
+    },
+    {
+      "symbol": "F:ja.field_B:Z",
+      "to": "detachedFromBoard",
+      "originalName": "field_B",
+      "evidence": "ik/kc/bh set this when an entity or contact component detaches; entity reset clears it. Motion excludes detached entities from the attached count and accelerated-fall branch."
+    },
+    {
+      "symbol": "F:ja.field_E:I",
+      "to": "matchCooldownTicks",
+      "originalName": "field_E",
+      "evidence": "Kind 2 starts at 60; rh decrements once per attached update and marks contacts dirty at zero. ec requires all three candidate cooldowns to be nonpositive before awarding points."
+    },
+    {
+      "symbol": "F:ja.field_t:Z",
+      "to": "touchesAvatar",
+      "originalName": "field_t",
+      "evidence": "ih.a finds the white 0xFFFFFF avatar marker in the ownership mask and sets this. kc uses it as a direct contact root; it does not describe transitive connectivity."
+    },
+    {
+      "symbol": "F:ji.field_h:I",
+      "to": "difficultyStep",
+      "originalName": "field_h",
+      "evidence": "ld.b increments this index and reads the difficulty bit-flag table to adjust speed, rotation and entity selection parameters."
+    },
+    {
+      "symbol": "F:ji.field_r:Ltf;",
+      "to": "movingEntities",
+      "originalName": "field_r",
+      "evidence": "ab advances entities in this queue; contact handling transfers them to the attached queue."
+    },
+    {
+      "symbol": "F:md.field_a:Ltf;",
+      "to": "activeScorePopups",
+      "originalName": "field_a",
+      "evidence": "ug inserts initialized ScorePopup objects here; cf advances them, bd renders them and wa drains unfinished points."
+    },
+    {
+      "symbol": "F:me.field_f:I",
+      "to": "points",
+      "originalName": "field_f",
+      "evidence": "ug assigns awarded points; cf credits this amount at completion and wa sums it when draining unfinished popups."
+    },
+    {
+      "symbol": "F:me.field_h:I",
+      "to": "chainMultiplier",
+      "originalName": "field_h",
+      "evidence": "ug assigns the chain argument; bd displays it with X when not one, and cf routes those points through addPopupPoints instead of addScore."
+    },
+    {
+      "symbol": "F:me.field_i:F",
+      "to": "originY",
+      "originalName": "field_i",
+      "evidence": "ug copies its Y argument here; bd interpolates from this coordinate toward y=34."
+    },
+    {
+      "symbol": "F:me.field_k:F",
+      "to": "progress",
+      "originalName": "field_k",
+      "evidence": "ug resets this to zero; cf advances it toward one; bd uses it to interpolate the popup toward the points panel."
+    },
+    {
+      "symbol": "F:me.field_m:Ljava/lang/String;",
+      "to": "pointsText",
+      "originalName": "field_m",
+      "evidence": "ug sets Integer.toString(points); bd renders this stored string."
+    },
+    {
+      "symbol": "F:me.field_n:F",
+      "to": "originX",
+      "originalName": "field_n",
+      "evidence": "ug copies its X argument here; bd interpolates from this coordinate to the panel target."
+    },
+    {
+      "symbol": "F:nk.field_f:[I",
+      "to": "packedMatchCandidates",
+      "originalName": "field_f",
+      "evidence": "ul packs three 10-bit entity IDs plus category/variant flag bits into each entry; ec sorts, deduplicates and decodes them."
+    },
+    {
+      "symbol": "F:oc.field_d:Ldm;",
+      "to": "boardSceneRaster",
+      "originalName": "field_d",
+      "evidence": "Gameplay render caches the attached board scene in this raster and copies it during transitions."
+    },
+    {
+      "symbol": "F:og.field_r:F",
+      "to": "entityMotionSpeed",
+      "originalName": "field_r",
+      "evidence": "Spawn motion initialization uses this magnitude to form entity velocity components; difficulty setup assigns it."
+    },
+    {
+      "symbol": "F:pk.field_o:[Z",
+      "to": "connectivityVisitedByEntityId",
+      "originalName": "field_o",
+      "evidence": "kc clears this array and marks entity IDs while traversing contact connectivity."
+    },
+    {
+      "symbol": "F:ra.field_a:Ltf;",
+      "to": "availableEntities",
+      "originalName": "field_a",
+      "evidence": "Entity initialization removes a free entity from this queue; completed entity animations return their objects here."
+    },
+    {
+      "symbol": "F:rc.field_h:F",
+      "to": "rotationStepRadians",
+      "originalName": "field_h",
+      "evidence": "Gameplay applies this angular step with opposite signs for the two rotation controls; difficulty setup assigns it."
+    },
+    {
+      "symbol": "F:re.field_j:Z",
+      "to": "connectivityDirty",
+      "originalName": "field_j",
+      "evidence": "Contact link changes set this; kc rebuilds connectivity only when dirty and clears it afterward."
+    },
+    {
+      "symbol": "F:sa.field_b:I",
+      "to": "releasesPerDifficultyStep",
+      "originalName": "field_b",
+      "evidence": "qe.a computes ceil(fa.field_b/3) here; hd.f compares it with di.field_g to advance difficulty after that many releases."
+    },
+    {
+      "symbol": "F:tl.field_g:[Lja;",
+      "to": "entitiesById",
+      "originalName": "field_g",
+      "evidence": "Ownership-mask contact decoding and packed match IDs index this array to resolve GameplayEntity objects."
+    },
+    {
+      "symbol": "F:ue.field_f:Ltf;",
+      "to": "availableScorePopups",
+      "originalName": "field_f",
+      "evidence": "ug takes a popup from this pool; cf returns completed popups using intrusive insertion."
+    },
+    {
+      "symbol": "F:ul.field_b:I",
+      "to": "releasedInCurrentTheme",
+      "originalName": "field_b",
+      "evidence": "hd.f increments this per release; the theme HUD subtracts it from fa.field_b; theme preparation resets it."
+    },
+    {
+      "symbol": "F:vf.field_L:Ldm;",
+      "to": "spriteScratchRaster",
+      "originalName": "field_L",
+      "evidence": "Entity sprite preparation and ending-radius scanning use this temporary raster."
+    },
+    {
+      "symbol": "F:wd.field_b:Ldm;",
+      "to": "contactProbeRaster",
+      "originalName": "field_b",
+      "evidence": "The pixel contact probe uses this raster while resolving moving-entity contacts."
+    },
+    {
+      "symbol": "F:wd.field_e:Ltf;",
+      "to": "spawnQueue",
+      "originalName": "field_e",
+      "evidence": "lc advances staged entities and releases ready members to ji.field_r."
+    },
+    {
+      "symbol": "L:bd.a(I)V#0",
+      "to": "popup",
+      "originalName": "var1",
+      "evidence": "Render iteration uses the popup and builds the X multiplier plus points text for chain multipliers other than one."
+    },
+    {
+      "symbol": "L:bd.a(I)V#1",
+      "to": "chainAndPointsText",
+      "originalName": "var2",
+      "evidence": "Render iteration uses the popup and builds the X multiplier plus points text for chain multipliers other than one."
+    },
+    {
+      "symbol": "L:cf.d(B)V#0",
+      "to": "popup",
+      "originalName": "var1",
+      "evidence": "The active popup iteration updates progress and routes completed points before returning the object to its pool."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#10",
+      "to": "firstMatchedEntity",
+      "originalName": "var5",
+      "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#11",
+      "to": "secondMatchedEntity",
+      "originalName": "var6",
+      "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#12",
+      "to": "thirdMatchedEntity",
+      "originalName": "var7",
+      "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#13",
+      "to": "awardedPoints",
+      "originalName": "var8",
+      "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#15",
+      "to": "popupX",
+      "originalName": "var9",
+      "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#17",
+      "to": "popupY",
+      "originalName": "var10",
+      "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#19",
+      "to": "candidateIndex",
+      "originalName": "var12",
+      "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#7",
+      "to": "sortCursorThenFirstEntityId",
+      "originalName": "var2",
+      "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#8",
+      "to": "packedCandidateThenSecondEntityId",
+      "originalName": "var3",
+      "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+    },
+    {
+      "symbol": "L:ec.b(I)Z#9",
+      "to": "thirdEntityId",
+      "originalName": "var4",
+      "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+    },
+    {
+      "symbol": "L:gh.a(Z)V#0",
+      "to": "shrinkingDiameter",
+      "originalName": "var2",
+      "evidence": "Result render uses 920 minus the scene tick as shrinking diameter and displays resultBonusPoints in the shrinking/countdown phases."
+    },
+    {
+      "symbol": "L:gh.a(Z)V#2",
+      "to": "shrinkingBonusText",
+      "originalName": "var5",
+      "evidence": "Result render uses 920 minus the scene tick as shrinking diameter and displays resultBonusPoints in the shrinking/countdown phases."
+    },
+    {
+      "symbol": "L:gh.a(Z)V#3",
+      "to": "countdownBonusText",
+      "originalName": "var6",
+      "evidence": "Result render uses 920 minus the scene tick as shrinking diameter and displays resultBonusPoints in the shrinking/countdown phases."
+    },
+    {
+      "symbol": "L:gh.b(B)V#6",
+      "to": "precedingThemeId",
+      "originalName": "var2",
+      "evidence": "Scene transition searches the theme list, wraps to the preceding entry and uses that ID for the existing action dispatch. The reused index later holds the theme ID."
+    },
+    {
+      "symbol": "L:gh.b(B)V#7",
+      "to": "themeIndexThenId",
+      "originalName": "var3",
+      "evidence": "Scene transition searches the theme list, wraps to the preceding entry and uses that ID for the existing action dispatch. The reused index later holds the theme ID."
+    },
+    {
+      "symbol": "L:gh.e(I)V#0",
+      "to": "remainingThemeReleases",
+      "originalName": "var2",
+      "evidence": "Normal HUD computes releasesPerTheme minus releasedInCurrentTheme."
+    },
+    {
+      "symbol": "L:gh.f(I)V#10",
+      "to": "spriteOffsetFromCenterX",
+      "originalName": "var4",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#11",
+      "to": "spriteOffsetFromCenterY",
+      "originalName": "var5",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#12",
+      "to": "spriteColumn",
+      "originalName": "var6",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#13",
+      "to": "spriteRow",
+      "originalName": "var7",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#14",
+      "to": "pixelOffsetFromCenterX",
+      "originalName": "var8",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#15",
+      "to": "pixelOffsetFromCenterY",
+      "originalName": "var9",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#16",
+      "to": "pixelRadiusSquared",
+      "originalName": "var10",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#18",
+      "to": "endingEntity",
+      "originalName": "var12",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#8",
+      "to": "resultProgressPercent",
+      "originalName": "var2",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#9",
+      "to": "maxRadiusSquared",
+      "originalName": "var3",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#21",
+      "to": "circleHorizontalOffset",
+      "originalName": "var5",
+      "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#22",
+      "to": "circleVerticalOffset",
+      "originalName": "var6",
+      "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#23",
+      "to": "playfieldRadiusSquared",
+      "originalName": "var7",
+      "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+    },
+    {
+      "symbol": "L:ld.a(I)Z#25",
+      "to": "circleError",
+      "originalName": "var9",
+      "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
+    },
+    {
+      "symbol": "L:sk.a(I)Z#10",
+      "to": "staggeredLifetime",
+      "originalName": "var5",
+      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+    },
+    {
+      "symbol": "L:sk.a(I)Z#11",
+      "to": "cascadeEntity",
+      "originalName": "var6",
+      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+    },
+    {
+      "symbol": "L:sk.a(I)Z#12",
+      "to": "neighborIndex",
+      "originalName": "var7",
+      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+    },
+    {
+      "symbol": "L:sk.a(I)Z#13",
+      "to": "neighborEntity",
+      "originalName": "var8",
+      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+    },
+    {
+      "symbol": "L:sk.a(I)Z#14",
+      "to": "searchedEntity",
+      "originalName": "var9",
+      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+    },
+    {
+      "symbol": "L:sk.a(I)Z#16",
+      "to": "seedEntity",
+      "originalName": "var11",
+      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+    },
+    {
+      "symbol": "L:sk.a(I)Z#17",
+      "to": "cascadeFrontier",
+      "originalName": "var12",
+      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+    },
+    {
+      "symbol": "L:sk.a(I)Z#5",
+      "to": "farthestEntity",
+      "originalName": "var1",
+      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+    },
+    {
+      "symbol": "L:sk.a(I)Z#7",
+      "to": "farthestRadiusSquared",
+      "originalName": "var2",
+      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+    },
+    {
+      "symbol": "L:sk.a(I)Z#8",
+      "to": "candidateEntity",
+      "originalName": "var3",
+      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+    },
+    {
+      "symbol": "L:sk.a(I)Z#9",
+      "to": "visitedCascadeEntities",
+      "originalName": "var4",
+      "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+    },
+    {
+      "symbol": "L:ug.a(IZIII)V#0",
+      "to": "popup",
+      "originalName": "var5",
+      "evidence": "The factory reuses a pooled ScorePopup and fills its instance fields before inserting it into the active queue."
+    },
+    {
+      "symbol": "L:wa.a(I)I#0",
+      "to": "unfinishedPoints",
+      "originalName": "var1_int",
+      "evidence": "Drains active popups with removeFirst and accumulates their points into the returned integer."
+    },
+    {
+      "symbol": "L:wa.a(I)I#2",
+      "to": "popup",
+      "originalName": "var2",
+      "evidence": "Drains active popups with removeFirst and accumulates their points into the returned integer."
+    },
+    {
+      "symbol": "M:ab.a(IF)V",
+      "to": "moveEntitiesAndCollectContacts",
+      "originalName": "a",
+      "evidence": "Advances moving-entity positions, computes motion relative to the rotated board and queues ownership-mask contact candidates."
+    },
+    {
+      "symbol": "M:bd.a(I)V",
+      "to": "drawScorePopups",
+      "originalName": "a",
+      "evidence": "Interpolates active popup position toward the points panel and renders either plain points or chain multiplier plus points."
+    },
+    {
+      "symbol": "M:cf.d(B)V",
+      "to": "advanceScorePopups",
+      "originalName": "d",
+      "evidence": "Increases active popup progress; once it reaches one, credits points to score or the pending panel and returns the popup to the free pool."
+    },
+    {
+      "symbol": "M:dc.a(I)V",
+      "to": "drawAttachedEntities",
+      "originalName": "a",
+      "evidence": "Iterates the attached entity queue and draws its entity sprites."
+    },
+    {
+      "symbol": "M:ec.b(I)Z",
+      "to": "processMatchCandidates",
+      "originalName": "b",
+      "evidence": "Sorts/deduplicates packed triples, checks each entity cooldown, awards chain-scaled points and returns whether a nonempty batch was processed."
+    },
+    {
+      "symbol": "M:gh.a(Z)V",
+      "to": "renderResultSequence",
+      "originalName": "a",
+      "evidence": "Draws the phase-2 expansion, phase-3 shrinking circle with bonus text and the later fading countdown."
+    },
+    {
+      "symbol": "M:gh.b(B)V",
+      "to": "updateSceneTransition",
+      "originalName": "b",
+      "evidence": "Advances the scene animation to tick 160, prepares the next theme or resets score at tick zero, clears entity queues and commits transition flags at completion."
+    },
+    {
+      "symbol": "M:gh.e(I)V",
+      "to": "renderProgressHud",
+      "originalName": "e",
+      "evidence": "Draws the remaining release count in normal play and the phase-specific HUD text otherwise."
+    },
+    {
+      "symbol": "M:gh.f(I)V",
+      "to": "updateResultSequence",
+      "originalName": "f",
+      "evidence": "Initializes the ending sprite radius/bonus, advances expansion/shrink/countdown phases and emits the bonus popups at completion."
+    },
+    {
+      "symbol": "M:gh.j(I)V",
+      "to": "prepareNextTheme",
+      "originalName": "j",
+      "evidence": "Resets the session phase/result fields, selects the next theme ID and requests its assets/music."
+    },
+    {
+      "symbol": "M:gj.f(B)V",
+      "to": "drawSpecialAttachedEntities",
+      "originalName": "f",
+      "evidence": "Draws attached entities whose sprite-kind ID is nonzero."
+    },
+    {
+      "symbol": "M:hd.f(I)V",
+      "to": "recordEntityRelease",
+      "originalName": "f",
+      "evidence": "Increments theme/difficulty release counts and requests a theme transition or advances difficulty at their thresholds."
+    },
+    {
+      "symbol": "M:ih.a(I)Z",
+      "to": "areEntityQueuesSettled",
+      "originalName": "a",
+      "evidence": "Returns true only when moving, spawn and transient animation queues are empty and the additional jl.field_t gate is clear. The attached queue may remain nonempty."
+    },
+    {
+      "symbol": "M:ih.a(IILja;I)V",
+      "to": "linkEntityAtMaskContacts",
+      "originalName": "a",
+      "evidence": "Probes mask coordinates, resolves encoded entity IDs and records avatar or entity contacts."
+    },
+    {
+      "symbol": "M:ik.a(Lja;Lja;Z)Z",
+      "to": "linkTouchingEntities",
+      "originalName": "a",
+      "evidence": "Links the entity pair and related-entity/category/variant counts while resolving the original special-kind contact rules."
+    },
+    {
+      "symbol": "M:lc.a(I)V",
+      "to": "updateSpawnQueue",
+      "originalName": "a",
+      "evidence": "Updates staged entities and transfers ready members to moving entities unless spawnReleaseDisabled is set."
+    },
+    {
+      "symbol": "M:ld.a(I)Z",
+      "to": "hasPixelsAtPlayfieldBoundary",
+      "originalName": "a",
+      "evidence": "Probes symmetric pixels around a radius-230 circle centered at (320,240) in the currently selected raster and returns on the first nonzero pixel."
+    },
+    {
+      "symbol": "M:ld.b(Z)V",
+      "to": "advanceDifficulty",
+      "originalName": "b",
+      "evidence": "Increments the difficulty step and loads its existing motion, angular-speed and release-threshold tables."
+    },
+    {
+      "symbol": "M:nb.a(IIIIIZ)V",
+      "to": "spawnEntityAtPointer",
+      "originalName": "a",
+      "evidence": "Initializes an entity at pointer coordinates with the supplied category/variant and optional special-kind selection."
+    },
+    {
+      "symbol": "M:rh.a(B)V",
+      "to": "updateAttachedEntities",
+      "originalName": "a",
+      "evidence": "Iterates the attached queue, decreases match cooldowns, updates the selected sprites, checks avatar-contact special effects and computes the maximum squared distance from the board center."
+    },
+    {
+      "symbol": "M:sk.a(I)Z",
+      "to": "checkBoundaryLossAndStartCascade",
+      "originalName": "a",
+      "evidence": "Checks the ownership raster boundary outside scene transitions; on loss starts the end sequence and traverses contacts from the farthest entity to assign staggered ending lifetimes."
+    },
+    {
+      "symbol": "M:ug.a(IZIII)V",
+      "to": "spawnScorePopup",
+      "originalName": "a",
+      "evidence": "Takes a popup from the pool, initializes its points, chain and origin, and inserts it into the active queue. If the pool is empty it credits points directly."
+    },
+    {
+      "symbol": "M:ul.b(I)V",
+      "to": "collectMatchCandidates",
+      "originalName": "b",
+      "evidence": "Collects triples of connected entities sharing variant or category, storing sorted entity IDs and equality flags in the packed candidate array."
+    },
+    {
+      "symbol": "M:wa.a(I)I",
+      "to": "collectUnfinishedPopupPoints",
+      "originalName": "a",
+      "evidence": "Removes every active popup and returns the sum of its uncredited points without multiplying them again."
+    },
+    {
+      "symbol": "P:ab.a(IF)V#1",
+      "to": "boardAngleRadians",
+      "originalName": "param1",
+      "evidence": "Used to rotate entity movement/contact coordinates relative to the board."
+    },
+    {
+      "symbol": "P:ih.a(IILja;I)V#1",
+      "to": "contactY",
+      "originalName": "param1",
+      "evidence": "Y coordinate of the ownership-mask contact probe."
+    },
+    {
+      "symbol": "P:ih.a(IILja;I)V#2",
+      "to": "entity",
+      "originalName": "param2",
+      "evidence": "Entity being linked to contacts decoded from the ownership mask."
+    },
+    {
+      "symbol": "P:ih.a(IILja;I)V#3",
+      "to": "contactX",
+      "originalName": "param3",
+      "evidence": "X coordinate of the ownership-mask contact probe."
+    },
+    {
+      "symbol": "P:ik.a(Lja;Lja;Z)Z#0",
+      "to": "firstEntity",
+      "originalName": "param0",
+      "evidence": "First member of the touching pair whose reciprocal neighbor counts are updated."
+    },
+    {
+      "symbol": "P:ik.a(Lja;Lja;Z)Z#1",
+      "to": "secondEntity",
+      "originalName": "param1",
+      "evidence": "Second member of the touching pair whose reciprocal neighbor counts are updated."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIZ)V#1",
+      "to": "pointerX",
+      "originalName": "param1",
+      "evidence": "Forwarded to the spawned entity X position."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIZ)V#2",
+      "to": "categoryId",
+      "originalName": "param2",
+      "evidence": "Forwarded to the entity motion initializer category key."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIZ)V#3",
+      "to": "pointerY",
+      "originalName": "param3",
+      "evidence": "Forwarded to the spawned entity Y position."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIZ)V#4",
+      "to": "variantId",
+      "originalName": "param4",
+      "evidence": "Forwarded to the entity motion initializer sprite variant index."
+    },
+    {
+      "symbol": "P:nb.a(IIIIIZ)V#5",
+      "to": "specialKinds",
+      "originalName": "param5",
+      "evidence": "Selects special entity kinds instead of kind zero."
+    },
+    {
+      "symbol": "P:ug.a(IZIII)V#0",
+      "to": "points",
+      "originalName": "param0",
+      "evidence": "Stored in the popup and its decimal points text."
+    },
+    {
+      "symbol": "P:ug.a(IZIII)V#2",
+      "to": "originY",
+      "originalName": "param2",
+      "evidence": "Stored as popup originY."
+    },
+    {
+      "symbol": "P:ug.a(IZIII)V#3",
+      "to": "chainMultiplier",
+      "originalName": "param3",
+      "evidence": "Stored as popup chain multiplier; points are already multiplied by the scoring caller."
+    },
+    {
+      "symbol": "P:ug.a(IZIII)V#4",
+      "to": "originX",
+      "originalName": "param4",
+      "evidence": "Stored as popup originX."
+    }
+  ]
+}

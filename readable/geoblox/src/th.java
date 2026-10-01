@@ -4,7 +4,7 @@
 final class th extends lf {
     static int[] field_h;
     static String field_g;
-    static IndexedSprite_na field_f;
+    static IndexedSprite field_f;
 
     th(long param0, String param1) {
         super(param0, param1);
@@ -30,13 +30,8 @@ final class th extends lf {
         var6 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              if (param1 == 200) {
-                break L1;
-              } else {
-                th.d((byte) 21);
-                break L1;
-              }
+            if (param1 != 200) {
+              th.d((byte) 21);
             }
             var2 = qi.a("jagex-last-login-method", param0, -114);
             if (var2 != null) {
@@ -62,28 +57,23 @@ final class th extends lf {
             } else {
               stackIn_5_0 = td.field_I;
               decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2_ref = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var2_ref);
+          var2_ref = decompiledCaughtException;
+          stackIn_17_0 = (RuntimeException) (var2_ref);
 
-            stackIn_17_1 = new StringBuilder().append("th.H(");
+          stackIn_17_1 = new StringBuilder().append("th.H(");
 
-            if (param0 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L3;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L3;
-            }
+          if (param0 == null) {
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ')');
         }
@@ -103,7 +93,7 @@ final class th extends lf {
         field_f = null;
         field_g = null;
         if (param0 != -109) {
-            field_f = (IndexedSprite_na) null;
+            field_f = (IndexedSprite) null;
         }
     }
 

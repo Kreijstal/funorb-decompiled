@@ -2,23 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bk {
-    static Sprite_dm field_a;
-    static Sprite_dm field_b;
+    static Sprite boardOwnershipRaster;
+    static Sprite field_b;
     static String field_c;
 
     public static void a(boolean param0) {
-        if (!param0) {
-          field_b = (Sprite_dm) null;
-          field_b = null;
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
-          field_b = null;
-          field_c = null;
-          field_a = null;
-          return;
+        if (param0) {
+            field_b = null;
+            field_c = null;
+            boardOwnershipRaster = null;
+            return;
         }
+        field_b = (Sprite) null;
+        field_b = null;
+        field_c = null;
+        boardOwnershipRaster = null;
     }
 
     final static void a(rh param0, int param1, int param2, ob param3) {
@@ -50,66 +48,44 @@ final class bk {
         int var7 = 0;
         pk var8 = null;
         og var9 = null;
-        L0: {
-          var7 = Geoblox.field_C;
-          var8 = eh.field_d;
-          var3 = var8.c((byte) 34);
-          gj.field_u = var3 & 127;
-          if ((param1 & var3) == 0) {
-            stackIn_3_0 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = 1;
-            break L0;
-          }
+        var7 = Geoblox.field_C;
+        var8 = eh.field_d;
+        var3 = var8.c((byte) 34);
+        gj.field_u = var3 & 127;
+        if ((param1 & var3) == 0) {
+          stackIn_3_0 = 0;
+        } else {
+          stackIn_3_0 = 1;
         }
-        L1: {
-          vd.field_l = stackIn_3_0 != 0;
-          bm.field_s = var8.c((byte) 34);
-          uf.field_c = var8.b(2901);
-          if (-3 != (gj.field_u ^ -1)) {
-            uk.field_o = 0;
-            tj.field_b = 0;
-            break L1;
-          } else {
-            tj.field_b = var8.b(true);
-            uk.field_o = var8.e(105);
-            break L1;
-          }
+        vd.field_l = stackIn_3_0 != 0;
+        bm.field_s = var8.c((byte) 34);
+        uf.field_c = var8.b(2901);
+        if (-3 != (gj.field_u ^ -1)) {
+          uk.field_o = 0;
+          tj.field_b = 0;
+        } else {
+          tj.field_b = var8.b(true);
+          uk.field_o = var8.e(105);
         }
-        L2: {
-          if (-2 != (var8.c((byte) 34) ^ -1)) {
-            stackIn_9_0 = 0;
-            break L2;
-          } else {
-            stackIn_9_0 = 1;
-            break L2;
-          }
+        if (-2 != (var8.c((byte) 34) ^ -1)) {
+          stackIn_9_0 = 0;
+        } else {
+          stackIn_9_0 = 1;
         }
-        L3: {
-          var4 = stackIn_9_0;
-          cj.field_a = var8.e((byte) 117);
-          if (var4 == 0) {
-            jc.field_b = cj.field_a;
-            break L3;
-          } else {
-            jc.field_b = var8.e((byte) 124);
-            break L3;
-          }
+        var4 = stackIn_9_0;
+        cj.field_a = var8.e((byte) 117);
+        if (var4 == 0) {
+          jc.field_b = cj.field_a;
+        } else {
+          jc.field_b = var8.e((byte) 124);
         }
-        L4: {
-          if (gj.field_u == 1) {
+        if (gj.field_u == 1) {
+          var8.b(true);
+          var8.e((byte) 112);
+        } else {
+          if ((gj.field_u ^ -1) == -5) {
             var8.b(true);
             var8.e((byte) 112);
-            break L4;
-          } else {
-            if ((gj.field_u ^ -1) != -5) {
-              break L4;
-            } else {
-              var8.b(true);
-              var8.e((byte) 112);
-              break L4;
-            }
           }
         }
         if (!param0) {
@@ -119,21 +95,14 @@ final class bk {
         } else {
           var5 = var8.b(true);
           try {
-            L5: {
-              L6: {
-                var9 = rd.field_r.a((byte) -14, var5);
-                re.field_f = var9.e((byte) -69);
-                if (!jc.field_b.equals(wd.field_f)) {
-                  stackIn_22_0 = var9.field_m;
-                  break L6;
-                } else {
-                  stackIn_22_0 = null;
-                  break L6;
-                }
-              }
-              vj.field_c = stackIn_22_0;
-              break L5;
+            var9 = rd.field_r.a((byte) -14, var5);
+            re.field_f = var9.e((byte) -69);
+            if (!jc.field_b.equals(wd.field_f)) {
+              stackIn_22_0 = var9.field_m;
+            } else {
+              stackIn_22_0 = null;
             }
+            vj.field_c = stackIn_22_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
@@ -147,7 +116,7 @@ final class bk {
     }
 
     static {
-        field_a = new Sprite_dm(640, 640);
+        boardOwnershipRaster = new Sprite(640, 640);
         field_c = "Username: ";
     }
 }

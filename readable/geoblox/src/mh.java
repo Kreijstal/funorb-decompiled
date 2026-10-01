@@ -28,15 +28,15 @@ final class mh {
         if (field_b.length < field_h) {
             field_b = new int[da.a((byte) 107, field_h)];
         }
-        int var4 = param1 * SoftwareRasterizer_vb.stride_field_f + param0;
+        int var4 = param1 * SoftwareRasterizer.stride + param0;
         for (var5 = 0; var5 < field_h; var5++) {
             field_b[var5] = var4;
-            var4 = var4 + SoftwareRasterizer_vb.stride_field_f;
+            var4 = var4 + SoftwareRasterizer.stride;
         }
     }
 
     final static void b() {
-        mh.a(SoftwareRasterizer_vb.clipLeft_field_e, SoftwareRasterizer_vb.clipTop_field_i, SoftwareRasterizer_vb.clipRight_field_k, SoftwareRasterizer_vb.clipBottom_field_d);
+        mh.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
     }
 
     private final static void a() {

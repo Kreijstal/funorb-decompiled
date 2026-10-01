@@ -1,65 +1,148 @@
 # Readable source exports
 
-The GeoBlox export is generated from `games/geoblox` using the frozen
-[420-rule manifest](geoblox-rules.json). It names confirmed screen, gameplay,
-entity, rendering and audio roles while retaining original identifier suffixes.
-Unknown names, numeric state values, comments, arithmetic and control flow remain
-as emitted by the decompiler.
+GeoBlox pass 6 has 642 reviewed semantic naming rules: 17 classes, 178 fields,
+129 methods, 91 parameters and 227 guarded local declarations. It preserves
+original arithmetic, strings, numeric IDs and control flow. Confirmed names have
+no opaque suffixes; unknown identifiers remain unchanged. The reverse map keeps
+original JVM identities and exact edit information.
 
-The reviewed corrections identify `ja.field_H` as `entityId_field_H`, the local
-`var10` in `ja.f(int)` as `controlFlowGuard_var10`, and the static audio helper as
-`registerAudioStream_a`. The helper also serves menu volume previews.
+Start with [GameplaySession.java](geoblox/src/GameplaySession.java),
+[GameplayEntity.java](geoblox/src/GameplayEntity.java),
+[ScorePopup.java](geoblox/src/ScorePopup.java) and the
+[gameplay reading guide](GEOBLOX-READING-GUIDE.md).
 
-## Export contents
+## Export and tool pins
 
-- [`geoblox/src`](geoblox/src): all 303 readable Java files.
-- [`geoblox/SYMBOLS.md`](geoblox/SYMBOLS.md): renamed JVM identities and evidence.
-- [`geoblox/mapping.json`](geoblox/mapping.json): declaration identities, file
-  mappings and exact identifier edits in original UTF-16 source offsets.
-- [`geoblox/provenance.json`](geoblox/provenance.json): source/rule/generator hashes,
-  JDK and classpath identities, and verification results.
-- [`geoblox-rules.json`](geoblox-rules.json): the complete frozen naming manifest.
-- `funorb-stubs.jar`: compilation dependency built from this repository's
-  `stubs/src` with `javac --release 8`; its exact bytes are included to retain the
-  classpath identity recorded in provenance.
+- [geoblox/src](geoblox/src): all 303 readable Java files.
+- [geoblox-rules.json](geoblox-rules.json): the complete frozen naming manifest.
+- [geoblox/mapping.json](geoblox/mapping.json): original/renamed declarations,
+  filenames, per-file hashes and reversible edits in UTF-16 source offsets.
+- [geoblox/SYMBOLS.md](geoblox/SYMBOLS.md): reviewed rules and evidence.
+- [geoblox/provenance.json](geoblox/provenance.json): source, rules, generator,
+  dependency and output hashes, JDK identity and binding checks.
+- [geoblox-source-pin.json](geoblox-source-pin.json): the exact source commit
+  and dependency pin. The input is `games/geoblox` at commit
+  `dd9828b3532fc0cd3f452b6154bee6d9f77c658c`.
+- [tools/PIN.json](tools/PIN.json): exact bundled naming-tool file digests.
+- [rules](rules): the retained 491-rule manifest and 151 reviewed gameplay
+  additions, with the previous manifest guarded by SHA-256.
+- `funorb-stubs.jar`: the frozen compilation dependency, included byte for byte.
 
-The input tree SHA-256 is
-`45b38190d2b94f1daa68bdf4ea16aa516be2feda493dceabe51ef8146cce6d7f`, matching
-`games/geoblox` at source commit
-`3230e3092c687d210ba068bdfd7667a5213d22fb`. The output tree SHA-256 is
-`f1b68945bdab4565960fb26d135e77f5be9387ad33925ba1b2b7575cea52795d`.
+The original decompilation's tool revisions are separate from source-tree hashes:
 
-The original and renamed corpora compile. All 167,702 source bindings and 388
-override relationships are preserved. Byte-for-byte regeneration is checked
-across the generated sources, mapping, symbol table and provenance. These are
-static checks; no new whole-game runtime-equivalence, FPS or memory result is
-claimed for this export.
+| Tool | Git commit |
+| --- | --- |
+| Deko | `a572c4dd0f0174bfcd7777be53d7ceba2f970f18` |
+| java-tools | `b1e30cf3e762f15a2a2d639226df7a54ad5f4d81` |
+| Upstream naming tool in Deko | `d41315508e071f6bd672d65eb2f5a8d428648d6f` |
+| Reviewed names and adapted naming tool | `fd7dbd89304f5c494223df22d6888b35fc65c15d` in `geoblox-readable-next.bundle` |
 
-## Regenerate and verify
+The generic naming tool belongs to Deko. `tools/` is a frozen publication copy,
+so this checkout can reproduce the export without depending on a mutable sibling
+checkout. Its resolver uses javac Trees and preserves binding and override
+relationships. The bundled adaptation captures subprocess output in temporary
+regular files for restricted environments; the recorded generator digest covers
+that helper too. The wrapper checks all three frozen tool digests before use.
 
-The generic naming tool belongs to
-[dekobloko-work](https://github.com/Kreijstal/dekobloko-work). Its source is pinned
-at commit `d41315508e071f6bd672d65eb2f5a8d428648d6f`; the generator and Java helper
-bytes used here match that commit. Node.js and a JDK with `javac` are required.
-The recorded JDK is OpenJDK `11.0.32.1+1`. Matching the recorded JDK and frozen
-stub JAR retains the environment metadata in a byte-for-byte check.
+The decompilation was freshly repeated from the verified transformed bytecode:
+303 sources, zero hard failures and exact equality with the reviewed input.
+A fresh ASM check covered 2,427 methods with zero failures. See
+[GeoBlox decompilation provenance](../decompilation/geoblox-provenance.json)
+for generator commits, input identities, reused pipeline proof and exact verifier
+dependencies. This refresh covers GeoBlox; the other 43 game exports retain their
+previous revisions.
 
-From this repository root, using a sibling checkout of the pinned tool:
+## Reproduce and verify
+
+From a full Git checkout of this repository, using Node.js and a JDK with javac:
 
 ```sh
-git clone https://github.com/Kreijstal/dekobloko-work.git ../dekobloko-readable-generator
-git -C ../dekobloko-readable-generator checkout --detach d41315508e071f6bd672d65eb2f5a8d428648d6f
-
-# Recompile, regenerate and compare every generated byte against this export:
-node ../dekobloko-readable-generator/scripts/readable-java.mjs \
-  games/geoblox readable/geoblox readable/geoblox-rules.json readable/funorb-stubs.jar --check
-
-# Generate into a fresh directory for inspection:
-node ../dekobloko-readable-generator/scripts/readable-java.mjs \
-  games/geoblox /tmp/geoblox-readable-export readable/geoblox-rules.json readable/funorb-stubs.jar
+node readable/build-geoblox-rules.mjs --check
+node readable/reproduce-geoblox.mjs --check
+node readable/tools/test-readable-java.mjs
+node readable/tools/test-capture-process.mjs
+node readable/tests/test-geoblox-deque.mjs
+node readable/tests/test-geoblox-gameplay.mjs
 ```
 
-Generation refuses an existing output directory. The manifest pins the source
-tree hash, so changes to the input are detected before renaming. `mapping.json`
-records original JVM identities independently of the readable spellings; class
-and method renames include all in-corpus references and complete virtual families.
+The recorded environment is OpenJDK `11.0.32.1+1`, Node `22.23.2`, with Java
+compilation targeting release 8. Use the recorded JDK and dependency bytes for a
+byte-identical check of provenance as well as source.
+
+`reproduce-geoblox.mjs` extracts the pinned source commit with `git archive`,
+then invokes the same bundled `readable-java.mjs` used for publication. Later
+changes in the working `games/geoblox` directory cannot silently change this
+export's input. The pinned commit must be available locally; a shallow clone may
+need to fetch it. The wrapper verifies the source pin, tool files and stub JAR.
+The generator verifies the input tree, compiles both corpora, compares every
+binding and override edge, then compares every generated byte in check mode.
+
+Generate into an unused directory for inspection:
+
+```sh
+node readable/reproduce-geoblox.mjs /tmp/geoblox-readable-new
+```
+
+Restore the exact original Java using only the readable files and dictionary:
+
+```sh
+node readable/tools/restore-original.mjs readable/geoblox /tmp/geoblox-original-restored
+```
+
+The restoration checks readable file hashes, reverses the identifier edits and
+filenames, and checks every recovered original file and its complete tree digest.
+It does not read `games/geoblox` or extract an original input commit.
+
+## Procedure for the next publication
+
+1. Use the authoritative `dekobloko-work/scripts/decompile-all-games.sh`
+   procedure with tracked-clean, pinned Deko and java-tools commits, the fixed
+   original gamepacks and the documented verification/compilation gates. Save
+   each game's report and decompilation provenance. The exact command and gates
+   are documented in Deko's `docs/decompilation.md`.
+2. Update `games/geoblox` only from a successful complete GeoBlox result and
+   record that source refresh in Git. Keep full-catalog and per-game provenance
+   distinct when only one game changes.
+3. Review the new source against every affected naming rule. Local declaration
+   ordinals can move after control-flow changes: migrate identities and guard
+   the original spelling. A changed input needs a reviewed manifest migration;
+   the rule builder refuses to accept a replacement input digest alone.
+4. Pin the new source commit in `geoblox-source-pin.json`, retain the reviewed
+   rule lineage and rebuild `geoblox-rules.json`. If updating the naming tool,
+   import the reviewed tool and update `tools/PIN.json` deliberately.
+5. Generate into a fresh directory with `reproduce-geoblox.mjs`, review its diff
+   and replace `readable/geoblox` with the generated export. Run the commands
+   above, verify exact dictionary-only reversal, and update documentation and
+   validation results before committing the publication.
+
+The reproduction command and underlying tool are the publication workflow.
+There is no second naming algorithm for exports and no manual edit of generated
+readable Java. Changing rules, input or tools deliberately changes their pins;
+unknown symbols are never renamed by guessing during reproduction.
+
+## Checks and limits
+
+Both complete 303-file corpora compile. All 167,502 bindings and 388 override
+relationships are preserved; generation applies 10,568 identifier edits.
+Rebuilding the rules and regenerating the export is byte-identical, and
+map-only reversal recovers all 303 original files byte for byte.
+
+The actual game helper checks pass for original and renamed sources. They cover
+deque order/traversal/splicing, independent node links, boundary pixel probes,
+popup initialization/progress/draining, cooldown-blocked match batches and
+queue settling. The gameplay harness does not cover popup crediting, successful
+match scoring, full contact physics or asset-dependent session transitions.
+
+The export retains large generated state machines and other decompiler
+scaffolding. It does not claim whole-game runtime equivalence, a multiplayer
+protocol reconstruction, or JVM memory/FPS/phone acceptance. Runtime names,
+reflection, serialization and native/external contracts need separate checks
+before treating the renamed export as a runnable replacement.
+
+| Java source tree | SHA-256 |
+| --- | --- |
+| Original GeoBlox | `4ffc26d9728c403266022452f0c0ca68ea28ff61c26d108b7bd165e6ab92e24c` |
+| Readable GeoBlox | `f28f79a43671246f825d8709255f295576f06f5ad2d23f6e814d24b024fcdb39` |
+
+These tree digests use `sourceIdentity(sourceInventory(root))` from the naming
+tool. They identify source bytes; the decompiler Git commits are listed above.

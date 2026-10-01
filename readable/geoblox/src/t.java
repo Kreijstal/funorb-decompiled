@@ -3,7 +3,7 @@
  */
 final class t {
     int field_d;
-    static int[][] menuActionIds_field_i;
+    static int[][] menuActionIds;
     static String[] field_k;
     int field_b;
     int field_c;
@@ -26,32 +26,27 @@ final class t {
     }
 
     final static boolean b(int param0) {
-        if (param0 == 13) {
-          if (oc.field_e != null) {
-            if (pk.field_l != eh.field_b) {
-              return false;
-            } else {
-              return true;
+        if (param0 != 13) {
+            field_k = (String[]) null;
+            if (oc.field_e == null) {
+                return false;
             }
-          } else {
-            return false;
-          }
-        } else {
-          field_k = (String[]) null;
-          if (oc.field_e != null) {
-            if (pk.field_l != eh.field_b) {
-              return false;
-            } else {
-              return true;
+            if (pk.field_l == eh.field_b) {
+                return true;
             }
-          } else {
             return false;
-          }
         }
+        if (oc.field_e == null) {
+            return false;
+        }
+        if (pk.field_l == eh.field_b) {
+            return true;
+        }
+        return false;
     }
 
     public static void a(int param0) {
-        menuActionIds_field_i = (int[][]) null;
+        menuActionIds = (int[][]) null;
         field_k = null;
         if (param0 != 17348) {
             t.b(-123);
@@ -59,16 +54,16 @@ final class t {
     }
 
     static {
-        menuActionIds_field_i = new int[9][];
-        menuActionIds_field_i[7] = new int[]{13, 5};
-        menuActionIds_field_i[4] = new int[]{13, 14};
-        menuActionIds_field_i[2] = new int[]{16, 17, 18, 5};
-        menuActionIds_field_i[3] = new int[]{11, 5, 12, 15};
-        menuActionIds_field_i[8] = new int[]{13, 5};
-        menuActionIds_field_i[1] = new int[]{1, 8, 9, 4, 3, 6};
-        menuActionIds_field_i[5] = new int[]{5};
-        menuActionIds_field_i[6] = new int[]{2, 5};
-        menuActionIds_field_i[0] = new int[]{0, 3, 8, 9, 4, 2, 10, 7};
+        menuActionIds = new int[9][];
+        menuActionIds[7] = new int[]{13, 5};
+        menuActionIds[4] = new int[]{13, 14};
+        menuActionIds[2] = new int[]{16, 17, 18, 5};
+        menuActionIds[3] = new int[]{11, 5, 12, 15};
+        menuActionIds[8] = new int[]{13, 5};
+        menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
+        menuActionIds[5] = new int[]{5};
+        menuActionIds[6] = new int[]{2, 5};
+        menuActionIds[0] = new int[]{0, 3, 8, 9, 4, 2, 10, 7};
         field_k = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
     }
 }

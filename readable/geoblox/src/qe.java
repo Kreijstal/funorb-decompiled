@@ -30,9 +30,7 @@ final class qe {
           L0: {
             if (param4.b(-26098)) {
               L1: {
-                if (param1 != (param0 ^ -1)) {
-                  break L1;
-                } else {
+                if (param1 == (param0 ^ -1)) {
                   var10 = vi.a(param1 ^ -112, param4);
                   var6 = var10;
                   if (var6 != null) {
@@ -47,38 +45,21 @@ final class qe {
                         }
                       } else {
                         if (param3 == var10[var8].field_d) {
-                          L3: {
-                            if (var10[var8].field_f == param2) {
-                              L4: {
-                                if (param5 == 0) {
-                                  break L4;
-                                } else {
-                                  if (param5 == var10[var8].field_a) {
-                                    break L4;
-                                  } else {
-                                    var8++;
-                                    continue L2;
-                                  }
-                                }
+                          if (var10[var8].field_f == param2) {
+                            if (param5 != 0) {
+                              if (param5 != var10[var8].field_a) {
+                                var8++;
+                                continue L2;
                               }
-                              L5: {
-                                if (var7_int == 0) {
-                                  break L5;
-                                } else {
-                                  if (param0 < var10[var8].field_h) {
-                                    break L5;
-                                  } else {
-                                    var8++;
-                                    continue L2;
-                                  }
-                                }
-                              }
-                              var7_int = 1;
-                              param0 = var10[var8].field_h;
-                              break L3;
-                            } else {
-                              break L3;
                             }
+                            if (var7_int != 0) {
+                              if (param0 >= var10[var8].field_h) {
+                                var8++;
+                                continue L2;
+                              }
+                            }
+                            var7_int = 1;
+                            param0 = var10[var8].field_h;
                           }
                           var8++;
                           continue L2;
@@ -96,27 +77,23 @@ final class qe {
                 }
               }
               var11 = param4.a(param2, param1 ^ 1743550127, param5, param0, param3);
-              L6: while (true) {
-                if (var11.field_a != 0) {
-                  var7 = (java.awt.Frame) (var11.field_b);
-                  if (var7 != null) {
-                    if (-3 != (var11.field_a ^ -1)) {
-                      stackIn_37_0 = (java.awt.Frame) (var7);
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    } else {
-                      jk.a(var7, 10, param4);
-                      stackIn_35_0 = null;
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    }
-                  } else {
-                    return null;
-                  }
+              L6: while (var11.field_a == 0) {
+                bc.a(0, 10L);
+              }
+              var7 = (java.awt.Frame) (var11.field_b);
+              if (var7 != null) {
+                if (-3 != (var11.field_a ^ -1)) {
+                  stackIn_37_0 = (java.awt.Frame) (var7);
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
-                  bc.a(0, 10L);
-                  continue L6;
+                  jk.a(var7, 10, param4);
+                  stackIn_35_0 = null;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
+              } else {
+                return null;
               }
             } else {
               return null;
@@ -124,23 +101,19 @@ final class qe {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var6_ref = decompiledCaughtException;
-            stackIn_40_0 = (RuntimeException) (var6_ref);
+          var6_ref = decompiledCaughtException;
+          stackIn_40_0 = (RuntimeException) (var6_ref);
 
-            stackIn_40_1 = new StringBuilder().append("qe.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          stackIn_40_1 = new StringBuilder().append("qe.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 
-            if (param4 == null) {
-              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackIn_41_2 = "null";
-              break L7;
-            } else {
-              stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
-              stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
-              stackIn_41_2 = "{...}";
-              break L7;
-            }
+          if (param4 == null) {
+            stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+            stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+            stackIn_41_2 = "null";
+          } else {
+            stackIn_41_0 = (RuntimeException) ((Object) stackIn_40_0);
+            stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
+            stackIn_41_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ',' + param5 + ')');
         }
@@ -169,28 +142,17 @@ final class qe {
         var2 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              if (ji.field_h == 0) {
-                break L1;
-              } else {
-                if ((ji.field_h ^ -1) <= -22) {
-                  break L1;
-                } else {
-                  fa.field_b = fa.field_b + 10;
-                  break L1;
-                }
+            if (ji.difficultyStep != 0) {
+              if ((ji.difficultyStep ^ -1) > -22) {
+                fa.releasesPerTheme = fa.releasesPerTheme + 10;
               }
             }
-            fa.field_b = fa.field_b + param0;
-            sa.field_b = fa.field_b / 3;
-            L2: while (true) {
-              if (fa.field_b <= 3 * sa.field_b) {
-                break L0;
-              } else {
-                sa.field_b = sa.field_b + 1;
-                continue L2;
-              }
+            fa.releasesPerTheme = fa.releasesPerTheme + param0;
+            sa.releasesPerDifficultyStep = fa.releasesPerTheme / 3;
+            L2: while (fa.releasesPerTheme > 3 * sa.releasesPerDifficultyStep) {
+              sa.releasesPerDifficultyStep = sa.releasesPerDifficultyStep + 1;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

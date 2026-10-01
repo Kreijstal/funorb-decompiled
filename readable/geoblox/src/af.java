@@ -3,7 +3,7 @@
  */
 final class af {
     static sk field_b;
-    static Sprite_dm field_a;
+    static Sprite field_a;
     static sk field_d;
     static int field_c;
     private static String field_z;
@@ -20,6 +20,6 @@ final class af {
     static {
         field_z = "af.A(";
         field_c = 0;
-        field_a = new Sprite_dm(320, 240);
+        field_a = new Sprite(320, 240);
     }
 }

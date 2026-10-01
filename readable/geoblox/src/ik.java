@@ -31,47 +31,28 @@ final class ik {
         var10 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              SoftwareRasterizer_vb.c(param0, param2, param3 - -1, 10000536);
-              SoftwareRasterizer_vb.c(param0, param2 + param1, param3 + 1, 12105912);
-              var5_int = 1;
-              if (SoftwareRasterizer_vb.clipTop_field_i > param2 + var5_int) {
-                var5_int = -param2 + SoftwareRasterizer_vb.clipTop_field_i;
-                break L1;
-              } else {
-                break L1;
-              }
+            SoftwareRasterizer.c(param0, param2, param3 - -1, 10000536);
+            SoftwareRasterizer.c(param0, param2 + param1, param3 + 1, 12105912);
+            var5_int = 1;
+            if (SoftwareRasterizer.clipTop > param2 + var5_int) {
+              var5_int = -param2 + SoftwareRasterizer.clipTop;
             }
-            L2: {
-              var6 = param1;
-              if (SoftwareRasterizer_vb.clipBottom_field_d >= var6 + param2) {
-                break L2;
-              } else {
-                var6 = -param2 + SoftwareRasterizer_vb.clipBottom_field_d;
-                break L2;
-              }
+            var6 = param1;
+            if (SoftwareRasterizer.clipBottom < var6 + param2) {
+              var6 = -param2 + SoftwareRasterizer.clipBottom;
             }
-            L3: {
-              var7 = var5_int;
-              if (param4 == -1540604944) {
-                break L3;
-              } else {
-                field_b = (String) null;
-                break L3;
-              }
+            var7 = var5_int;
+            if (param4 != -1540604944) {
+              field_b = (String) null;
             }
-            L4: while (true) {
-              if (var7 >= var6) {
-                break L0;
-              } else {
-                var8 = 152 - -(48 * var7 / param1);
-                var9 = var8 << -1623895256 | var8 << -1540604944 | var8;
-                SoftwareRasterizer_vb.framebuffer_field_c[param0 + SoftwareRasterizer_vb.stride_field_f * (var7 + param2)] = var9;
-                SoftwareRasterizer_vb.framebuffer_field_c[param3 + (param2 + var7) * SoftwareRasterizer_vb.stride_field_f + param0] = var9;
-                var7++;
-                continue L4;
-              }
+            L4: while (var7 < var6) {
+              var8 = 152 - -(48 * var7 / param1);
+              var9 = var8 << -1623895256 | var8 << -1540604944 | var8;
+              SoftwareRasterizer.framebuffer[param0 + SoftwareRasterizer.stride * (var7 + param2)] = var9;
+              SoftwareRasterizer.framebuffer[param3 + (param2 + var7) * SoftwareRasterizer.stride + param0] = var9;
+              var7++;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +68,7 @@ final class ik {
         field_b = null;
     }
 
-    final static boolean a(GameplayEntity_ja param0, GameplayEntity_ja param1, boolean param2) {
+    final static boolean linkTouchingEntities(GameplayEntity firstEntity, GameplayEntity secondEntity, boolean param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_6_0 = 0;
@@ -108,271 +89,165 @@ final class ik {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5_int = 0;
-        GameplayEntity_ja var5 = null;
+        GameplayEntity var5 = null;
         int var6_int = 0;
-        GameplayEntity_ja var6 = null;
+        GameplayEntity var6 = null;
         int var7 = 0;
         var7 = Geoblox.field_C;
         try {
           L0: {
             var3_int = 0;
             L1: while (true) {
-              if (var3_int >= param1.relatedEntityCount_field_L) {
+              if (var3_int >= secondEntity.relatedEntityCount) {
                 L2: {
-                  L3: {
-                    var3_int = param2 ? 1 : 0;
-                    var4 = 0;
-                    fieldTemp$0 = param1.relatedEntityCount_field_L;
-                    param1.relatedEntityCount_field_L = param1.relatedEntityCount_field_L + 1;
-                    param1.relatedEntities_field_n[fieldTemp$0] = param0;
-                    fieldTemp$1 = param0.relatedEntityCount_field_L;
-                    param0.relatedEntityCount_field_L = param0.relatedEntityCount_field_L + 1;
-                    param0.relatedEntities_field_n[fieldTemp$1] = param1;
-                    if (param1.field_z != 0) {
-                      break L3;
-                    } else {
-                      if (param0.field_z == 0) {
-                        break L2;
-                      } else {
-                        break L3;
-                      }
+                  var3_int = param2 ? 1 : 0;
+                  var4 = 0;
+                  fieldTemp$0 = secondEntity.relatedEntityCount;
+                  secondEntity.relatedEntityCount = secondEntity.relatedEntityCount + 1;
+                  secondEntity.relatedEntities[fieldTemp$0] = firstEntity;
+                  fieldTemp$1 = firstEntity.relatedEntityCount;
+                  firstEntity.relatedEntityCount = firstEntity.relatedEntityCount + 1;
+                  firstEntity.relatedEntities[fieldTemp$1] = secondEntity;
+                  if (secondEntity.entitySpriteKindId == 0) {
+                    if (firstEntity.entitySpriteKindId == 0) {
+                      break L2;
                     }
                   }
-                  L4: {
-                    var5_int = 0;
-                    var6_int = 0;
-                    if (-2 != (param1.field_z ^ -1)) {
-                      stackIn_14_0 = 0;
-                      break L4;
-                    } else {
-                      stackIn_14_0 = 1;
-                      break L4;
-                    }
+                  var5_int = 0;
+                  var6_int = 0;
+                  if (-2 != (secondEntity.entitySpriteKindId ^ -1)) {
+                    stackIn_14_0 = 0;
+                  } else {
+                    stackIn_14_0 = 1;
                   }
-                  L5: {
 
 
-                    if ((param0.field_z ^ -1) != -2) {
+                  if ((firstEntity.entitySpriteKindId ^ -1) != -2) {
 
-                      stackIn_17_1 = 0;
-                      break L5;
-                    } else {
+                    stackIn_17_1 = 0;
+                  } else {
 
-                      stackIn_17_1 = 1;
-                      break L5;
-                    }
+                    stackIn_17_1 = 1;
                   }
                   L6: {
                     if ((stackIn_14_0 ^ stackIn_17_1) != 0) {
-                      L7: {
-                        if (-2 != (param1.field_z ^ -1)) {
-                          break L7;
-                        } else {
-                          if (param0.field_z == 0) {
-                            param1.configureEntitySprite_a(320, param1.entityCategoryKey_field_C, param0.spriteVariantIndex_field_M, 0);
-                            break L6;
-                          } else {
-                            break L7;
-                          }
-                        }
-                      }
-                      L8: {
-                        if (param1.field_z != 0) {
-                          break L8;
-                        } else {
-                          if (param0.field_z == 1) {
-                            var5_int = 1;
-                            break L6;
-                          } else {
-                            break L8;
-                          }
-                        }
-                      }
-                      L9: {
-                        if (param0.field_z != 2) {
-                          break L9;
-                        } else {
-                          if (-2 != (param1.field_z ^ -1)) {
-                            break L9;
-                          } else {
-                            var3_int = 1;
-                            var4 = 1;
-                            var6_int = 1;
-                            param1.configureEntitySprite_a(320, param1.entityCategoryKey_field_C, param0.spriteVariantIndex_field_M, 0);
-                            break L6;
-                          }
-                        }
-                      }
-                      if (1 != param0.field_z) {
-                        break L6;
-                      } else {
-                        if (-3 != (param1.field_z ^ -1)) {
+                      if (-2 == (secondEntity.entitySpriteKindId ^ -1)) {
+                        if (firstEntity.entitySpriteKindId == 0) {
+                          secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
                           break L6;
-                        } else {
-                          param1.configureEntitySprite_a(320, param0.entityCategoryKey_field_C, param1.spriteVariantIndex_field_M, 0);
+                        }
+                      }
+                      if (secondEntity.entitySpriteKindId == 0) {
+                        if (firstEntity.entitySpriteKindId == 1) {
+                          var5_int = 1;
+                          break L6;
+                        }
+                      }
+                      if (firstEntity.entitySpriteKindId == 2) {
+                        if (-2 == (secondEntity.entitySpriteKindId ^ -1)) {
+                          var3_int = 1;
+                          var4 = 1;
+                          var6_int = 1;
+                          secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
+                          break L6;
+                        }
+                      }
+                      if (1 == firstEntity.entitySpriteKindId) {
+                        if (-3 == (secondEntity.entitySpriteKindId ^ -1)) {
+                          secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, 0);
                           var5_int = 1;
                           var3_int = 1;
-                          break L6;
                         }
                       }
                     } else {
-                      L10: {
-                        if (2 == param1.field_z) {
-                          break L10;
-                        } else {
-                          if ((param0.field_z ^ -1) == -3) {
-                            break L10;
-                          } else {
-                            break L6;
-                          }
+                      if (2 != secondEntity.entitySpriteKindId) {
+                        if ((firstEntity.entitySpriteKindId ^ -1) != -3) {
+                          break L6;
                         }
                       }
-                      L11: {
-                        if ((param1.field_z ^ -1) != -3) {
-                          break L11;
-                        } else {
-                          if (2 != param0.field_z) {
-                            param1.configureEntitySprite_a(320, param0.entityCategoryKey_field_C, param1.spriteVariantIndex_field_M, param0.field_z);
-                            var3_int = 1;
-                            break L6;
-                          } else {
-                            break L11;
-                          }
+                      if ((secondEntity.entitySpriteKindId ^ -1) == -3) {
+                        if (2 != firstEntity.entitySpriteKindId) {
+                          secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
+                          var3_int = 1;
+                          break L6;
                         }
                       }
-                      if (-3 != (param0.field_z ^ -1)) {
-                        break L6;
-                      } else {
-                        if (2 != param1.field_z) {
+                      if (-3 == (firstEntity.entitySpriteKindId ^ -1)) {
+                        if (2 != secondEntity.entitySpriteKindId) {
                           var4 = 1;
                           var6_int = 1;
                           var3_int = 1;
-                          param0.configureEntitySprite_a(320, param1.entityCategoryKey_field_C, param0.spriteVariantIndex_field_M, param1.field_z);
-                          break L6;
-                        } else {
-                          break L6;
+                          firstEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, secondEntity.entitySpriteKindId);
                         }
                       }
                     }
                   }
                   L12: {
-                    L13: {
-                      if (var5_int != 0) {
-                        break L13;
-                      } else {
-                        if (var6_int != 0) {
-                          break L13;
-                        } else {
-                          break L12;
-                        }
+                    if (var5_int == 0) {
+                      if (var6_int == 0) {
+                        break L12;
                       }
                     }
-                    bh.a(var6_int != 0, param1, 1, param0, var5_int != 0);
-                    break L12;
+                    bh.a(var6_int != 0, secondEntity, 1, firstEntity, var5_int != 0);
                   }
-                  L14: {
-                    if (-2 != (param1.field_z ^ -1)) {
-                      break L14;
-                    } else {
-                      if (param0.field_z != 1) {
-                        break L14;
-                      } else {
-                        if (param0.entityCategoryKey_field_C == param1.entityCategoryKey_field_C) {
-                          param1.sameCategoryEntityCount_field_N = param1.sameCategoryEntityCount_field_N + 1;
-                          param0.sameCategoryEntityCount_field_N = param0.sameCategoryEntityCount_field_N + 1;
-                          break L2;
-                        } else {
-                          break L14;
-                        }
+                  if (-2 == (secondEntity.entitySpriteKindId ^ -1)) {
+                    if (firstEntity.entitySpriteKindId == 1) {
+                      if (firstEntity.entityCategoryKey == secondEntity.entityCategoryKey) {
+                        secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
+                        firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;
+                        break L2;
                       }
                     }
                   }
-                  if (param1.field_z != 2) {
-                    break L2;
-                  } else {
-                    if (param0.field_z != 2) {
-                      break L2;
-                    } else {
-                      if (param0.spriteVariantIndex_field_M != param1.spriteVariantIndex_field_M) {
-                        break L2;
-                      } else {
-                        param1.sameVariantEntityCount_field_m = param1.sameVariantEntityCount_field_m + 1;
-                        param0.sameVariantEntityCount_field_m = param0.sameVariantEntityCount_field_m + 1;
-                        break L2;
+                  if (secondEntity.entitySpriteKindId == 2) {
+                    if (firstEntity.entitySpriteKindId == 2) {
+                      if (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex) {
+                        secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
+                        firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
                       }
                     }
                   }
                 }
-                L15: {
-                  if (param1.field_z != 0) {
-                    break L15;
-                  } else {
-                    if (-1 == (param0.field_z ^ -1)) {
-                      L16: {
-                        if (param1.entityCategoryKey_field_C != param0.entityCategoryKey_field_C) {
-                          break L16;
-                        } else {
-                          param1.sameCategoryEntityCount_field_N = param1.sameCategoryEntityCount_field_N + 1;
-                          param0.sameCategoryEntityCount_field_N = param0.sameCategoryEntityCount_field_N + 1;
-                          break L16;
-                        }
-                      }
-                      if (param0.spriteVariantIndex_field_M == param1.spriteVariantIndex_field_M) {
-                        param1.sameVariantEntityCount_field_m = param1.sameVariantEntityCount_field_m + 1;
-                        param0.sameVariantEntityCount_field_m = param0.sameVariantEntityCount_field_m + 1;
-                        break L15;
-                      } else {
-                        break L15;
-                      }
-                    } else {
-                      break L15;
+                if (secondEntity.entitySpriteKindId == 0) {
+                  if (-1 == (firstEntity.entitySpriteKindId ^ -1)) {
+                    if (secondEntity.entityCategoryKey == firstEntity.entityCategoryKey) {
+                      secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
+                      firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;
+                    }
+                    if (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex) {
+                      secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
+                      firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
                     }
                   }
                 }
                 L17: {
                   if (var3_int != 0) {
-                    var5_int = 0;
-                    L18: while (true) {
-                      if (param1.relatedEntityCount_field_L <= var5_int) {
-                        var5 = param1;
-                        param1.sameCategoryEntityCount_field_N = 0;
-                        var6 = param1;
-                        var6.sameVariantEntityCount_field_m = 0;
-                        var5.relatedEntityCount_field_L = 0;
-                        param1.entityQueue_field_K = ji.field_r;
-                        param1.field_B = true;
-                        break L17;
-                      } else {
-                        param1.relatedEntities_field_n[var5_int].removeRelatedEntity_a(param1, 0);
-                        var5_int++;
-                        continue L18;
-                      }
+                    for (var5_int = 0; secondEntity.relatedEntityCount > var5_int; var5_int++) {
+                      secondEntity.relatedEntities[var5_int].removeRelatedEntity(secondEntity, 0);
                     }
-                  } else {
+                    var5 = secondEntity;
+                    secondEntity.sameCategoryEntityCount = 0;
+                    var6 = secondEntity;
+                    var6.sameVariantEntityCount = 0;
+                    var5.relatedEntityCount = 0;
+                    secondEntity.entityQueue = ji.movingEntities;
+                    secondEntity.detachedFromBoard = true;
                     break L17;
                   }
                 }
                 L19: {
                   if (var4 != 0) {
-                    var5_int = 0;
-                    L20: while (true) {
-                      if (param0.relatedEntityCount_field_L <= var5_int) {
-                        var5 = param0;
-                        param0.sameCategoryEntityCount_field_N = 0;
-                        var6 = param0;
-                        var5.relatedEntityCount_field_L = 0;
-                        param0.field_t = false;
-                        param0.field_B = true;
-                        param0.entityQueue_field_K = ji.field_r;
-                        var6.sameVariantEntityCount_field_m = 0;
-                        break L19;
-                      } else {
-                        param0.relatedEntities_field_n[var5_int].removeRelatedEntity_a(param0, 0);
-                        var5_int++;
-                        continue L20;
-                      }
+                    for (var5_int = 0; firstEntity.relatedEntityCount > var5_int; var5_int++) {
+                      firstEntity.relatedEntities[var5_int].removeRelatedEntity(firstEntity, 0);
                     }
-                  } else {
+                    var5 = firstEntity;
+                    firstEntity.sameCategoryEntityCount = 0;
+                    var6 = firstEntity;
+                    var5.relatedEntityCount = 0;
+                    firstEntity.touchesAvatar = false;
+                    firstEntity.detachedFromBoard = true;
+                    firstEntity.entityQueue = ji.movingEntities;
+                    var6.sameVariantEntityCount = 0;
                     break L19;
                   }
                 }
@@ -380,7 +255,7 @@ final class ik {
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                if (param1.relatedEntities_field_n[var3_int] == param0) {
+                if (secondEntity.relatedEntities[var3_int] == firstEntity) {
                   stackIn_6_0 = 0;
                   decompiledRegionSelector0 = 0;
                   break L0;
@@ -393,40 +268,32 @@ final class ik {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L21: {
-            var3 = decompiledCaughtException;
-            stackIn_80_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_80_0 = (RuntimeException) (var3);
 
-            stackIn_80_1 = new StringBuilder().append("ik.D(");
+          stackIn_80_1 = new StringBuilder().append("ik.D(");
 
-            if (param0 == null) {
-              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
-              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
-              stackIn_81_2 = "null";
-              break L21;
-            } else {
-              stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
-              stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
-              stackIn_81_2 = "{...}";
-              break L21;
-            }
+          if (firstEntity == null) {
+            stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+            stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+            stackIn_81_2 = "null";
+          } else {
+            stackIn_81_0 = (RuntimeException) ((Object) stackIn_80_0);
+            stackIn_81_1 = (StringBuilder) ((Object) stackIn_80_1);
+            stackIn_81_2 = "{...}";
           }
-          L22: {
 
 
-            stackIn_83_1 = ((StringBuilder) (Object) stackIn_81_1).append(stackIn_81_2).append(',');
+          stackIn_83_1 = ((StringBuilder) (Object) stackIn_81_1).append(stackIn_81_2).append(',');
 
-            if (param1 == null) {
-              stackIn_81_0 = (RuntimeException) ((Object) stackIn_81_0);
-              stackIn_84_1 = (StringBuilder) ((Object) stackIn_83_1);
-              stackIn_84_2 = "null";
-              break L22;
-            } else {
-              stackIn_81_0 = (RuntimeException) ((Object) stackIn_81_0);
-              stackIn_84_1 = (StringBuilder) ((Object) stackIn_83_1);
-              stackIn_84_2 = "{...}";
-              break L22;
-            }
+          if (secondEntity == null) {
+            stackIn_81_0 = (RuntimeException) ((Object) stackIn_81_0);
+            stackIn_84_1 = (StringBuilder) ((Object) stackIn_83_1);
+            stackIn_84_2 = "null";
+          } else {
+            stackIn_81_0 = (RuntimeException) ((Object) stackIn_81_0);
+            stackIn_84_1 = (StringBuilder) ((Object) stackIn_83_1);
+            stackIn_84_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_81_0), stackIn_84_2 + ',' + param2 + ')');
         }

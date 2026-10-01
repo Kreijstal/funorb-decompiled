@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "upstreamRepository": "Kreijstal/dekobloko-work",
+  "upstreamCommit": "d41315508e071f6bd672d65eb2f5a8d428648d6f",
+  "adaptedToolRepository": "geoblox-readable-next.bundle",
+  "adaptedToolCommit": "fd7dbd89304f5c494223df22d6888b35fc65c15d",
+  "adaptation": "Regular-file subprocess capture for restricted environments; naming and Java binding analysis retain their reviewed behavior.",
+  "files": {
+    "readable-java.mjs": "f9835b9bd0e7a961b3c7ea11cc1f9bba73753d5a86dfc63a8d85e521eda7eeea",
+    "lib/ReadableJava.java": "e4fd80e4a917eb224293a2ee724e554d56d183bc3193c69a322068ae6c959190",
+    "lib/capture-process.mjs": "8c389d508513b71012df56312ec3cfcbfedef2f16be77aeb4f32f0c60e9cfca7"
+  }
+}

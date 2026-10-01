@@ -17,22 +17,20 @@ final class ii {
     static String field_j;
 
     public static void a(int param0) {
-        if (param0 < 121) {
-          field_b = (String) null;
-          field_h = null;
-          field_k = null;
-          field_j = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
-          field_h = null;
-          field_k = null;
-          field_j = null;
-          field_d = null;
-          field_b = null;
-          return;
+        if (param0 >= 121) {
+            field_h = null;
+            field_k = null;
+            field_j = null;
+            field_d = null;
+            field_b = null;
+            return;
         }
+        field_b = (String) null;
+        field_h = null;
+        field_k = null;
+        field_j = null;
+        field_d = null;
+        field_b = null;
     }
 
     private ii() throws Throwable {

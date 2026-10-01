@@ -65,73 +65,43 @@ final class nc extends m {
         int var10;
         int var11;
         int var12;
-        L0: {
-          var8 = param1 + param2 * SoftwareRasterizer_vb.stride_field_f;
-          var9 = SoftwareRasterizer_vb.stride_field_f - param3;
-          var10 = 0;
-          var11 = 0;
-          if (param2 >= SoftwareRasterizer_vb.clipTop_field_i) {
-            break L0;
-          } else {
-            var12 = SoftwareRasterizer_vb.clipTop_field_i - param2;
-            param4 = param4 - var12;
-            param2 = SoftwareRasterizer_vb.clipTop_field_i;
-            var11 = var11 + var12 * param3;
-            var8 = var8 + var12 * SoftwareRasterizer_vb.stride_field_f;
-            break L0;
-          }
+        var8 = param1 + param2 * SoftwareRasterizer.stride;
+        var9 = SoftwareRasterizer.stride - param3;
+        var10 = 0;
+        var11 = 0;
+        if (param2 < SoftwareRasterizer.clipTop) {
+          var12 = SoftwareRasterizer.clipTop - param2;
+          param4 = param4 - var12;
+          param2 = SoftwareRasterizer.clipTop;
+          var11 = var11 + var12 * param3;
+          var8 = var8 + var12 * SoftwareRasterizer.stride;
         }
-        L1: {
-          if (param2 + param4 <= SoftwareRasterizer_vb.clipBottom_field_d) {
-            break L1;
-          } else {
-            param4 = param4 - (param2 + param4 - SoftwareRasterizer_vb.clipBottom_field_d);
-            break L1;
-          }
+        if (param2 + param4 > SoftwareRasterizer.clipBottom) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.clipBottom);
         }
-        L2: {
-          if (param1 >= SoftwareRasterizer_vb.clipLeft_field_e) {
-            break L2;
-          } else {
-            var12 = SoftwareRasterizer_vb.clipLeft_field_e - param1;
-            param3 = param3 - var12;
-            param1 = SoftwareRasterizer_vb.clipLeft_field_e;
-            var11 = var11 + var12;
-            var8 = var8 + var12;
-            var10 = var10 + var12;
-            var9 = var9 + var12;
-            break L2;
-          }
+        if (param1 < SoftwareRasterizer.clipLeft) {
+          var12 = SoftwareRasterizer.clipLeft - param1;
+          param3 = param3 - var12;
+          param1 = SoftwareRasterizer.clipLeft;
+          var11 = var11 + var12;
+          var8 = var8 + var12;
+          var10 = var10 + var12;
+          var9 = var9 + var12;
         }
-        L3: {
-          if (param1 + param3 <= SoftwareRasterizer_vb.clipRight_field_k) {
-            break L3;
-          } else {
-            var12 = param1 + param3 - SoftwareRasterizer_vb.clipRight_field_k;
-            param3 = param3 - var12;
-            var10 = var10 + var12;
-            var9 = var9 + var12;
-            break L3;
-          }
+        if (param1 + param3 > SoftwareRasterizer.clipRight) {
+          var12 = param1 + param3 - SoftwareRasterizer.clipRight;
+          param3 = param3 - var12;
+          var10 = var10 + var12;
+          var9 = var9 + var12;
         }
-        L4: {
-          if (param3 <= 0) {
-            break L4;
-          } else {
-            if (param4 > 0) {
-              L5: {
-                if (!param6) {
-                  nc.a(0, SoftwareRasterizer_vb.framebuffer_field_c, this.field_L[param0], this.field_K[param5], var11, var8, param3, param4, var9, var10);
-                  break L5;
-                } else {
-                  bg.a(SoftwareRasterizer_vb.framebuffer_field_c, this.field_L[param0], param5, var11, var8, param3, param4, var9, var10);
-                  break L5;
-                }
-              }
-              return;
+        if (param3 > 0) {
+          if (param4 > 0) {
+            if (!param6) {
+              nc.a(0, SoftwareRasterizer.framebuffer, this.field_L[param0], this.field_K[param5], var11, var8, param3, param4, var9, var10);
             } else {
-              break L4;
+              bg.a(SoftwareRasterizer.framebuffer, this.field_L[param0], param5, var11, var8, param3, param4, var9, var10);
             }
+            return;
           }
         }
     }
@@ -142,73 +112,43 @@ final class nc extends m {
         int var11;
         int var12;
         int var13;
-        L0: {
-          var9 = param1 + param2 * SoftwareRasterizer_vb.stride_field_f;
-          var10 = SoftwareRasterizer_vb.stride_field_f - param3;
-          var11 = 0;
-          var12 = 0;
-          if (param2 >= SoftwareRasterizer_vb.clipTop_field_i) {
-            break L0;
-          } else {
-            var13 = SoftwareRasterizer_vb.clipTop_field_i - param2;
-            param4 = param4 - var13;
-            param2 = SoftwareRasterizer_vb.clipTop_field_i;
-            var12 = var12 + var13 * param3;
-            var9 = var9 + var13 * SoftwareRasterizer_vb.stride_field_f;
-            break L0;
-          }
+        var9 = param1 + param2 * SoftwareRasterizer.stride;
+        var10 = SoftwareRasterizer.stride - param3;
+        var11 = 0;
+        var12 = 0;
+        if (param2 < SoftwareRasterizer.clipTop) {
+          var13 = SoftwareRasterizer.clipTop - param2;
+          param4 = param4 - var13;
+          param2 = SoftwareRasterizer.clipTop;
+          var12 = var12 + var13 * param3;
+          var9 = var9 + var13 * SoftwareRasterizer.stride;
         }
-        L1: {
-          if (param2 + param4 <= SoftwareRasterizer_vb.clipBottom_field_d) {
-            break L1;
-          } else {
-            param4 = param4 - (param2 + param4 - SoftwareRasterizer_vb.clipBottom_field_d);
-            break L1;
-          }
+        if (param2 + param4 > SoftwareRasterizer.clipBottom) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.clipBottom);
         }
-        L2: {
-          if (param1 >= SoftwareRasterizer_vb.clipLeft_field_e) {
-            break L2;
-          } else {
-            var13 = SoftwareRasterizer_vb.clipLeft_field_e - param1;
-            param3 = param3 - var13;
-            param1 = SoftwareRasterizer_vb.clipLeft_field_e;
-            var12 = var12 + var13;
-            var9 = var9 + var13;
-            var11 = var11 + var13;
-            var10 = var10 + var13;
-            break L2;
-          }
+        if (param1 < SoftwareRasterizer.clipLeft) {
+          var13 = SoftwareRasterizer.clipLeft - param1;
+          param3 = param3 - var13;
+          param1 = SoftwareRasterizer.clipLeft;
+          var12 = var12 + var13;
+          var9 = var9 + var13;
+          var11 = var11 + var13;
+          var10 = var10 + var13;
         }
-        L3: {
-          if (param1 + param3 <= SoftwareRasterizer_vb.clipRight_field_k) {
-            break L3;
-          } else {
-            var13 = param1 + param3 - SoftwareRasterizer_vb.clipRight_field_k;
-            param3 = param3 - var13;
-            var11 = var11 + var13;
-            var10 = var10 + var13;
-            break L3;
-          }
+        if (param1 + param3 > SoftwareRasterizer.clipRight) {
+          var13 = param1 + param3 - SoftwareRasterizer.clipRight;
+          param3 = param3 - var13;
+          var11 = var11 + var13;
+          var10 = var10 + var13;
         }
-        L4: {
-          if (param3 <= 0) {
-            break L4;
-          } else {
-            if (param4 > 0) {
-              L5: {
-                if (!param7) {
-                  nc.a(0, SoftwareRasterizer_vb.framebuffer_field_c, this.field_L[param0], this.field_K[param5], var12, var9, param3, param4, var10, var11, param6);
-                  break L5;
-                } else {
-                  bg.a(SoftwareRasterizer_vb.framebuffer_field_c, this.field_L[param0], param5, var12, var9, param3, param4, var10, var11, param6);
-                  break L5;
-                }
-              }
-              return;
+        if (param3 > 0) {
+          if (param4 > 0) {
+            if (!param7) {
+              nc.a(0, SoftwareRasterizer.framebuffer, this.field_L[param0], this.field_K[param5], var12, var9, param3, param4, var10, var11, param6);
             } else {
-              break L4;
+              bg.a(SoftwareRasterizer.framebuffer, this.field_L[param0], param5, var12, var9, param3, param4, var10, var11, param6);
             }
+            return;
           }
         }
     }
@@ -306,50 +246,38 @@ final class nc extends m {
                   }
                 }
               } else {
-                L3: {
-                  incrementValue$3 = param4;
-                  param4++;
-                  dupTemp$4 = param2[incrementValue$3];
-                  param0 = dupTemp$4;
-                  if (dupTemp$4 == 0) {
-                    param5++;
-                    break L3;
-                  } else {
-                    incrementValue$5 = param5;
-                    param5++;
-                    param1[incrementValue$5] = param3[param0 & 255];
-                    break L3;
-                  }
+                incrementValue$3 = param4;
+                param4++;
+                dupTemp$4 = param2[incrementValue$3];
+                param0 = dupTemp$4;
+                if (dupTemp$4 == 0) {
+                  param5++;
+                } else {
+                  incrementValue$5 = param5;
+                  param5++;
+                  param1[incrementValue$5] = param3[param0 & 255];
                 }
-                L4: {
-                  incrementValue$6 = param4;
-                  param4++;
-                  dupTemp$7 = param2[incrementValue$6];
-                  param0 = dupTemp$7;
-                  if (dupTemp$7 == 0) {
-                    param5++;
-                    break L4;
-                  } else {
-                    incrementValue$8 = param5;
-                    param5++;
-                    param1[incrementValue$8] = param3[param0 & 255];
-                    break L4;
-                  }
+                incrementValue$6 = param4;
+                param4++;
+                dupTemp$7 = param2[incrementValue$6];
+                param0 = dupTemp$7;
+                if (dupTemp$7 == 0) {
+                  param5++;
+                } else {
+                  incrementValue$8 = param5;
+                  param5++;
+                  param1[incrementValue$8] = param3[param0 & 255];
                 }
-                L5: {
-                  incrementValue$9 = param4;
-                  param4++;
-                  dupTemp$10 = param2[incrementValue$9];
-                  param0 = dupTemp$10;
-                  if (dupTemp$10 == 0) {
-                    param5++;
-                    break L5;
-                  } else {
-                    incrementValue$11 = param5;
-                    param5++;
-                    param1[incrementValue$11] = param3[param0 & 255];
-                    break L5;
-                  }
+                incrementValue$9 = param4;
+                param4++;
+                dupTemp$10 = param2[incrementValue$9];
+                param0 = dupTemp$10;
+                if (dupTemp$10 == 0) {
+                  param5++;
+                } else {
+                  incrementValue$11 = param5;
+                  param5++;
+                  param1[incrementValue$11] = param3[param0 & 255];
                 }
                 incrementValue$12 = param4;
                 param4++;

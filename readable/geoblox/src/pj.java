@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pj extends hf {
+final class pj extends IntrusiveNode {
     byte[] field_h;
     static nd field_f;
     static int[] field_i;

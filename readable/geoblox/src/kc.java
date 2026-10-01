@@ -179,21 +179,21 @@ final class kc {
         }
     }
 
-    final static void reconcileBoardEntities_b(int param0) {
-        tf stackIn_4_0 = null;
-        tf stackIn_12_0 = null;
+    final static void reconcileBoardEntities(int param0) {
+        IntrusiveDeque stackIn_4_0 = null;
+        IntrusiveDeque stackIn_12_0 = null;
         boolean stackIn_15_0 = false;
-        GameplayEntity_ja stackIn_20_0 = null;
+        GameplayEntity stackIn_20_0 = null;
         boolean stackIn_22_0 = false;
-        GameplayEntity_ja stackIn_28_0 = null;
-        GameplayEntity_ja stackIn_31_0 = null;
-        GameplayEntity_ja stackIn_31_1 = null;
-        GameplayEntity_ja stackIn_38_0 = null;
-        GameplayEntity_ja stackIn_38_1 = null;
+        GameplayEntity stackIn_28_0 = null;
+        GameplayEntity stackIn_31_0 = null;
+        GameplayEntity stackIn_31_1 = null;
+        GameplayEntity stackIn_38_0 = null;
+        GameplayEntity stackIn_38_1 = null;
         int stackIn_44_0 = 0;
         int stackIn_48_0 = 0;
-        GameplayEntity_ja stackIn_51_0 = null;
-        GameplayEntity_ja stackIn_51_1 = null;
+        GameplayEntity stackIn_51_0 = null;
+        GameplayEntity stackIn_51_1 = null;
         int stackIn_56_0 = 0;
         int stackIn_86_0 = 0;
         int stackIn_86_1 = 0;
@@ -211,39 +211,39 @@ final class kc {
         int stackIn_90_1 = 0;
         int stackIn_90_2 = 0;
         int stackIn_90_3 = 0;
-        GameplaySession_gh stackIn_107_0 = null;
-        GameplaySession_gh stackIn_108_0 = null;
-        GameplaySession_gh stackIn_109_0 = null;
-        GameplaySession_gh stackIn_110_0 = null;
-        GameplaySession_gh stackIn_111_0 = null;
-        GameplaySession_gh stackIn_112_0 = null;
+        GameplaySession stackIn_107_0 = null;
+        GameplaySession stackIn_108_0 = null;
+        GameplaySession stackIn_109_0 = null;
+        GameplaySession stackIn_110_0 = null;
+        GameplaySession stackIn_111_0 = null;
+        GameplaySession stackIn_112_0 = null;
         int stackIn_112_1 = 0;
         boolean stackOut_14_0;
         boolean stackOut_21_0;
         int statePc = 0;
         Throwable caughtException = null;
-        GameplayEntity_ja activeEntity_var1 = null;
-        int entityIndexThenGroupCount_var1_int = 0;
+        GameplayEntity activeEntity = null;
+        int entityIndexThenGroupCount = 0;
         RuntimeException var1_ref = null;
-        GameplayEntity_ja candidateEntity_var2_ref_ja = null;
+        GameplayEntity candidateEntity = null;
         int var2 = 0;
-        float radialOffsetX_var3_float = 0.0f;
+        float radialOffsetX = 0.0f;
         int var3_int = 0;
-        GameplayEntity_ja queuedEntity_var3 = null;
+        GameplayEntity queuedEntity = null;
         int var4_int = 0;
-        float radialOffsetY_var4_float = 0.0f;
-        GameplayEntity_ja var4 = null;
-        GameplayEntity_ja groupEntity_var5_ref_ja = null;
-        double radialVelocityScale_var5 = 0.0;
-        int childEntityIndex_var6_int = 0;
-        GameplayEntity_ja var6 = null;
-        GameplayEntity_ja var7 = null;
-        int relatedEntityIndex_var7_int = 0;
-        GameplayEntity_ja relatedEntityCandidate_var8 = null;
+        float radialOffsetY = 0.0f;
+        GameplayEntity var4 = null;
+        GameplayEntity groupEntity = null;
+        double radialVelocityScale = 0.0;
+        int childEntityIndex = 0;
+        GameplayEntity var6 = null;
+        GameplayEntity var7 = null;
+        int relatedEntityIndex = 0;
+        GameplayEntity relatedEntityCandidate = null;
         int var9 = 0;
-        GameplayEntity_ja entityCandidate_var10 = null;
+        GameplayEntity entityCandidate = null;
         wd var11 = null;
-        GameplayEntity_ja parentEntity_var12 = null;
+        GameplayEntity parentEntity = null;
         wd var13 = null;
         stateLoop: while (true) {
             switch (statePc) {
@@ -254,8 +254,8 @@ final class kc {
                 }
                 case 1: {
                     try {
-                        fa.field_a = false;
-                        activeEntity_var1 = (GameplayEntity_ja) ((Object) ji.field_r.g(0));
+                        fa.entitiesDetachedThisTick = false;
+                        activeEntity = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
                         statePc = 2;
                         continue stateLoop;
                     } catch (Throwable stateCaught_1) {
@@ -266,7 +266,7 @@ final class kc {
                 }
                 case 2: {
                     try {
-                        if (activeEntity_var1 == null) {
+                        if (activeEntity == null) {
                             statePc = 10;
                         } else {
                             statePc = 3;
@@ -280,7 +280,7 @@ final class kc {
                 }
                 case 3: {
                     try {
-                        stackIn_12_0 = activeEntity_var1.entityQueue_field_K;
+                        stackIn_12_0 = activeEntity.entityQueue;
                         stackIn_4_0 = stackIn_12_0;
                         if (var9 != 0) {
                             statePc = 12;
@@ -296,7 +296,7 @@ final class kc {
                 }
                 case 4: {
                     try {
-                        if (stackIn_4_0 == a.field_d) {
+                        if (stackIn_4_0 == a.attachedEntities) {
                             statePc = 8;
                         } else {
                             statePc = 5;
@@ -310,7 +310,7 @@ final class kc {
                 }
                 case 5: {
                     try {
-                        if (activeEntity_var1.field_B) {
+                        if (activeEntity.detachedFromBoard) {
                             statePc = 7;
                         } else {
                             statePc = 6;
@@ -334,7 +334,7 @@ final class kc {
                 }
                 case 7: {
                     try {
-                        fa.field_a = true;
+                        fa.entitiesDetachedThisTick = true;
                         if (var9 == 0) {
                             statePc = 9;
                         } else {
@@ -349,12 +349,12 @@ final class kc {
                 }
                 case 8: {
                     try {
-                        activeEntity_var1.eraseEntityTrail_j(30383);
-                        activeEntity_var1.k(2);
-                        activeEntity_var1.a(false);
-                        activeEntity_var1.a((byte) 54);
-                        a.field_d.a(-80, activeEntity_var1);
-                        el.gameplaySession_field_o.field_F = true;
+                        activeEntity.eraseEntityTrail(30383);
+                        activeEntity.drawEntityIdOnBoardMask(2);
+                        activeEntity.unlinkNode(false);
+                        activeEntity.unlinkSecondaryNode((byte) 54);
+                        a.attachedEntities.addLast(-80, activeEntity);
+                        el.gameplaySession.boardRasterDirty = true;
                         statePc = 9;
                         continue stateLoop;
                     } catch (Throwable stateCaught_8) {
@@ -365,8 +365,8 @@ final class kc {
                 }
                 case 9: {
                     try {
-                        activeEntity_var1.entityQueue_field_K = null;
-                        activeEntity_var1 = (GameplayEntity_ja) ((Object) ji.field_r.d(1));
+                        activeEntity.entityQueue = null;
+                        activeEntity = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
                         if (var9 == 0) {
                             statePc = 2;
                         } else {
@@ -381,7 +381,7 @@ final class kc {
                 }
                 case 10: {
                     try {
-                        if (!re.field_j) {
+                        if (!re.connectivityDirty) {
                             statePc = 61;
                         } else {
                             statePc = 11;
@@ -395,7 +395,7 @@ final class kc {
                 }
                 case 11: {
                     try {
-                        stackIn_12_0 = a.field_d;
+                        stackIn_12_0 = a.attachedEntities;
                         statePc = 12;
                         continue stateLoop;
                     } catch (Throwable stateCaught_11) {
@@ -406,7 +406,7 @@ final class kc {
                 }
                 case 12: {
                     try {
-                        activeEntity_var1 = (GameplayEntity_ja) ((Object) ((tf) (Object) stackIn_12_0).g(0));
+                        activeEntity = (GameplayEntity) ((Object) ((IntrusiveDeque) (Object) stackIn_12_0).firstForIteration(0));
                         statePc = 13;
                         continue stateLoop;
                     } catch (Throwable stateCaught_12) {
@@ -417,7 +417,7 @@ final class kc {
                 }
                 case 13: {
                     try {
-                        if (activeEntity_var1 == null) {
+                        if (activeEntity == null) {
                             statePc = 55;
                         } else {
                             statePc = 14;
@@ -431,7 +431,7 @@ final class kc {
                 }
                 case 14: {
                     try {
-                        stackOut_14_0 = pk.field_o[activeEntity_var1.entityId_field_H];
+                        stackOut_14_0 = pk.connectivityVisitedByEntityId[activeEntity.entityId];
                         stackIn_56_0 = stackOut_14_0 ? 1 : 0;
                         stackIn_15_0 = stackOut_14_0;
                         if (var9 != 0) {
@@ -488,7 +488,7 @@ final class kc {
                     try {
                         var11 = new wd();
                         var13 = new wd();
-                        var11.a(activeEntity_var1, false);
+                        var11.a(activeEntity, false);
                         var4_int = 1;
                         statePc = 19;
                         continue stateLoop;
@@ -500,7 +500,7 @@ final class kc {
                 }
                 case 19: {
                     try {
-                        stackIn_20_0 = (GameplayEntity_ja) ((Object) var11.a(true));
+                        stackIn_20_0 = (GameplayEntity) ((Object) var11.a(true));
                         statePc = 20;
                         continue stateLoop;
                     } catch (Throwable stateCaught_19) {
@@ -511,10 +511,10 @@ final class kc {
                 }
                 case 20: {
                     try {
-                        entityCandidate_var10 = stackIn_20_0;
-                        parentEntity_var12 = entityCandidate_var10;
-                        groupEntity_var5_ref_ja = parentEntity_var12;
-                        if (parentEntity_var12 == null) {
+                        entityCandidate = stackIn_20_0;
+                        parentEntity = entityCandidate;
+                        groupEntity = parentEntity;
+                        if (parentEntity == null) {
                             statePc = 43;
                         } else {
                             statePc = 21;
@@ -528,8 +528,8 @@ final class kc {
                 }
                 case 21: {
                     try {
-                        pk.field_o[entityCandidate_var10.entityId_field_H] = true;
-                        stackOut_21_0 = parentEntity_var12.field_t;
+                        pk.connectivityVisitedByEntityId[entityCandidate.entityId] = true;
+                        stackOut_21_0 = parentEntity.touchesAvatar;
                         stackIn_44_0 = stackOut_21_0 ? 1 : 0;
                         stackIn_22_0 = stackOut_21_0;
                         if (var9 != 0) {
@@ -585,8 +585,8 @@ final class kc {
                 }
                 case 25: {
                     try {
-                        var13.a(parentEntity_var12, false);
-                        childEntityIndex_var6_int = 0;
+                        var13.a(parentEntity, false);
+                        childEntityIndex = 0;
                         statePc = 26;
                         continue stateLoop;
                     } catch (Throwable stateCaught_25) {
@@ -597,7 +597,7 @@ final class kc {
                 }
                 case 26: {
                     try {
-                        if (childEntityIndex_var6_int >= parentEntity_var12.relatedEntityCount_field_L) {
+                        if (childEntityIndex >= parentEntity.relatedEntityCount) {
                             statePc = 42;
                         } else {
                             statePc = 27;
@@ -611,8 +611,8 @@ final class kc {
                 }
                 case 27: {
                     try {
-                        var7 = entityCandidate_var10.relatedEntities_field_n[childEntityIndex_var6_int];
-                        stackIn_20_0 = (GameplayEntity_ja) ((Object) var13.c((byte) 121));
+                        var7 = entityCandidate.relatedEntities[childEntityIndex];
+                        stackIn_20_0 = (GameplayEntity) ((Object) var13.c((byte) 121));
                         stackIn_28_0 = stackIn_20_0;
                         if (var9 != 0) {
                             statePc = 20;
@@ -628,7 +628,7 @@ final class kc {
                 }
                 case 28: {
                     try {
-                        relatedEntityCandidate_var8 = stackIn_28_0;
+                        relatedEntityCandidate = stackIn_28_0;
                         statePc = 29;
                         continue stateLoop;
                     } catch (Throwable stateCaught_28) {
@@ -639,7 +639,7 @@ final class kc {
                 }
                 case 29: {
                     try {
-                        if (relatedEntityCandidate_var8 == null) {
+                        if (relatedEntityCandidate == null) {
                             statePc = 35;
                         } else {
                             statePc = 30;
@@ -653,9 +653,9 @@ final class kc {
                 }
                 case 30: {
                     try {
-                        stackIn_51_0 = (GameplayEntity_ja) (relatedEntityCandidate_var8);
+                        stackIn_51_0 = (GameplayEntity) (relatedEntityCandidate);
                         stackIn_31_0 = stackIn_51_0;
-                        stackIn_51_1 = (GameplayEntity_ja) (var7);
+                        stackIn_51_1 = (GameplayEntity) (var7);
                         stackIn_31_1 = stackIn_51_1;
                         if (var9 != 0) {
                             statePc = 51;
@@ -709,7 +709,7 @@ final class kc {
                 }
                 case 34: {
                     try {
-                        relatedEntityCandidate_var8 = (GameplayEntity_ja) ((Object) var13.a(-45));
+                        relatedEntityCandidate = (GameplayEntity) ((Object) var13.a(-45));
                         if (var9 == 0) {
                             statePc = 29;
                         } else {
@@ -724,7 +724,7 @@ final class kc {
                 }
                 case 35: {
                     try {
-                        relatedEntityCandidate_var8 = (GameplayEntity_ja) ((Object) var11.c((byte) 121));
+                        relatedEntityCandidate = (GameplayEntity) ((Object) var11.c((byte) 121));
                         statePc = 36;
                         continue stateLoop;
                     } catch (Throwable stateCaught_35) {
@@ -735,7 +735,7 @@ final class kc {
                 }
                 case 36: {
                     try {
-                        if (relatedEntityCandidate_var8 == null) {
+                        if (relatedEntityCandidate == null) {
                             statePc = 40;
                         } else {
                             statePc = 37;
@@ -749,9 +749,9 @@ final class kc {
                 }
                 case 37: {
                     try {
-                        stackIn_51_0 = (GameplayEntity_ja) (relatedEntityCandidate_var8);
+                        stackIn_51_0 = (GameplayEntity) (relatedEntityCandidate);
                         stackIn_38_0 = stackIn_51_0;
-                        stackIn_51_1 = (GameplayEntity_ja) (var7);
+                        stackIn_51_1 = (GameplayEntity) (var7);
                         stackIn_38_1 = stackIn_51_1;
                         if (var9 != 0) {
                             statePc = 51;
@@ -781,7 +781,7 @@ final class kc {
                 }
                 case 39: {
                     try {
-                        relatedEntityCandidate_var8 = (GameplayEntity_ja) ((Object) var11.a(54));
+                        relatedEntityCandidate = (GameplayEntity) ((Object) var11.a(54));
                         if (var9 == 0) {
                             statePc = 36;
                         } else {
@@ -807,7 +807,7 @@ final class kc {
                 }
                 case 41: {
                     try {
-                        childEntityIndex_var6_int++;
+                        childEntityIndex++;
                         if (var9 == 0) {
                             statePc = 26;
                         } else {
@@ -861,7 +861,7 @@ final class kc {
                 }
                 case 45: {
                     try {
-                        groupEntity_var5_ref_ja = (GameplayEntity_ja) ((Object) var13.a(true));
+                        groupEntity = (GameplayEntity) ((Object) var13.a(true));
                         statePc = 46;
                         continue stateLoop;
                     } catch (Throwable stateCaught_45) {
@@ -872,7 +872,7 @@ final class kc {
                 }
                 case 46: {
                     try {
-                        if (groupEntity_var5_ref_ja == null) {
+                        if (groupEntity == null) {
                             statePc = 54;
                         } else {
                             statePc = 47;
@@ -886,10 +886,10 @@ final class kc {
                 }
                 case 47: {
                     try {
-                        groupEntity_var5_ref_ja.entityQueue_field_K = ji.field_r;
-                        groupEntity_var5_ref_ja.field_t = false;
-                        groupEntity_var5_ref_ja.field_B = true;
-                        fa.field_a = true;
+                        groupEntity.entityQueue = ji.movingEntities;
+                        groupEntity.touchesAvatar = false;
+                        groupEntity.detachedFromBoard = true;
+                        fa.entitiesDetachedThisTick = true;
                         stackIn_56_0 = 0;
                         stackIn_48_0 = stackIn_56_0;
                         if (var9 != 0) {
@@ -906,7 +906,7 @@ final class kc {
                 }
                 case 48: {
                     try {
-                        childEntityIndex_var6_int = stackIn_48_0;
+                        childEntityIndex = stackIn_48_0;
                         statePc = 49;
                         continue stateLoop;
                     } catch (Throwable stateCaught_48) {
@@ -917,7 +917,7 @@ final class kc {
                 }
                 case 49: {
                     try {
-                        if (childEntityIndex_var6_int >= groupEntity_var5_ref_ja.relatedEntityCount_field_L) {
+                        if (childEntityIndex >= groupEntity.relatedEntityCount) {
                             statePc = 53;
                         } else {
                             statePc = 50;
@@ -931,8 +931,8 @@ final class kc {
                 }
                 case 50: {
                     try {
-                        stackIn_51_0 = groupEntity_var5_ref_ja.relatedEntities_field_n[childEntityIndex_var6_int];
-                        stackIn_51_1 = (GameplayEntity_ja) (groupEntity_var5_ref_ja);
+                        stackIn_51_0 = groupEntity.relatedEntities[childEntityIndex];
+                        stackIn_51_1 = (GameplayEntity) (groupEntity);
                         statePc = 51;
                         continue stateLoop;
                     } catch (Throwable stateCaught_50) {
@@ -943,8 +943,8 @@ final class kc {
                 }
                 case 51: {
                     try {
-                        ((GameplayEntity_ja) (Object) stackIn_51_0).removeRelatedEntity_a(stackIn_51_1, 0);
-                        childEntityIndex_var6_int++;
+                        ((GameplayEntity) (Object) stackIn_51_0).removeRelatedEntity(stackIn_51_1, 0);
+                        childEntityIndex++;
                         if (var9 != 0) {
                             statePc = 46;
                         } else {
@@ -973,12 +973,12 @@ final class kc {
                 }
                 case 53: {
                     try {
-                        var6 = groupEntity_var5_ref_ja;
-                        var7 = groupEntity_var5_ref_ja;
-                        groupEntity_var5_ref_ja.relatedEntityCount_field_L = 0;
-                        var6.sameCategoryEntityCount_field_N = 0;
-                        var7.sameVariantEntityCount_field_m = 0;
-                        groupEntity_var5_ref_ja = (GameplayEntity_ja) ((Object) var13.a(true));
+                        var6 = groupEntity;
+                        var7 = groupEntity;
+                        groupEntity.relatedEntityCount = 0;
+                        var6.sameCategoryEntityCount = 0;
+                        var7.sameVariantEntityCount = 0;
+                        groupEntity = (GameplayEntity) ((Object) var13.a(true));
                         if (var9 == 0) {
                             statePc = 46;
                         } else {
@@ -993,7 +993,7 @@ final class kc {
                 }
                 case 54: {
                     try {
-                        activeEntity_var1 = (GameplayEntity_ja) ((Object) a.field_d.d(1));
+                        activeEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
                         if (var9 == 0) {
                             statePc = 13;
                         } else {
@@ -1008,8 +1008,8 @@ final class kc {
                 }
                 case 55: {
                     try {
-                        re.field_j = false;
-                        el.gameplaySession_field_o.field_B = true;
+                        re.connectivityDirty = false;
+                        el.gameplaySession.connectivityRebuiltThisTick = true;
                         stackIn_56_0 = 0;
                         statePc = 56;
                         continue stateLoop;
@@ -1021,7 +1021,7 @@ final class kc {
                 }
                 case 56: {
                     try {
-                        entityIndexThenGroupCount_var1_int = stackIn_56_0;
+                        entityIndexThenGroupCount = stackIn_56_0;
                         statePc = 57;
                         continue stateLoop;
                     } catch (Throwable stateCaught_56) {
@@ -1032,7 +1032,7 @@ final class kc {
                 }
                 case 57: {
                     try {
-                        if (1000 <= entityIndexThenGroupCount_var1_int) {
+                        if (1000 <= entityIndexThenGroupCount) {
                             statePc = 61;
                         } else {
                             statePc = 58;
@@ -1046,8 +1046,8 @@ final class kc {
                 }
                 case 58: {
                     try {
-                        pk.field_o[entityIndexThenGroupCount_var1_int] = false;
-                        entityIndexThenGroupCount_var1_int++;
+                        pk.connectivityVisitedByEntityId[entityIndexThenGroupCount] = false;
+                        entityIndexThenGroupCount++;
                         if (var9 != 0) {
                             statePc = 62;
                         } else {
@@ -1086,7 +1086,7 @@ final class kc {
                 }
                 case 61: {
                     try {
-                        entityIndexThenGroupCount_var1_int = 0;
+                        entityIndexThenGroupCount = 0;
                         statePc = 62;
                         continue stateLoop;
                     } catch (Throwable stateCaught_61) {
@@ -1097,7 +1097,7 @@ final class kc {
                 }
                 case 62: {
                     try {
-                        candidateEntity_var2_ref_ja = (GameplayEntity_ja) ((Object) a.field_d.g(0));
+                        candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
                         statePc = 63;
                         continue stateLoop;
                     } catch (Throwable stateCaught_62) {
@@ -1108,7 +1108,7 @@ final class kc {
                 }
                 case 63: {
                     try {
-                        if (candidateEntity_var2_ref_ja == null) {
+                        if (candidateEntity == null) {
                             statePc = 98;
                         } else {
                             statePc = 64;
@@ -1122,7 +1122,7 @@ final class kc {
                 }
                 case 64: {
                     try {
-                        if (null != candidateEntity_var2_ref_ja.entityQueue_field_K) {
+                        if (null != candidateEntity.entityQueue) {
                             statePc = 68;
                         } else {
                             statePc = 65;
@@ -1150,7 +1150,7 @@ final class kc {
                 }
                 case 66: {
                     try {
-                        if (candidateEntity_var2_ref_ja.field_t) {
+                        if (candidateEntity.touchesAvatar) {
                             statePc = 68;
                         } else {
                             statePc = 67;
@@ -1174,12 +1174,12 @@ final class kc {
                 }
                 case 68: {
                     try {
-                        re.field_j = true;
-                        candidateEntity_var2_ref_ja.a(false);
-                        candidateEntity_var2_ref_ja.a((byte) 100);
-                        el.gameplaySession_field_o.field_F = true;
-                        candidateEntity_var2_ref_ja.eraseEntityPixels_f(92);
-                        if (ji.field_r != candidateEntity_var2_ref_ja.entityQueue_field_K) {
+                        re.connectivityDirty = true;
+                        candidateEntity.unlinkNode(false);
+                        candidateEntity.unlinkSecondaryNode((byte) 100);
+                        el.gameplaySession.boardRasterDirty = true;
+                        candidateEntity.eraseEntityPixels(92);
+                        if (ji.movingEntities != candidateEntity.entityQueue) {
                             statePc = 75;
                         } else {
                             statePc = 69;
@@ -1193,15 +1193,15 @@ final class kc {
                 }
                 case 69: {
                     try {
-                        candidateEntity_var2_ref_ja.rotateEntityAroundBoard_a(-el.gameplaySession_field_o.boardAngleRadians_field_J, -117);
-                        radialOffsetX_var3_float = -candidateEntity_var2_ref_ja.positionX_field_o + 320.0f;
-                        radialOffsetY_var4_float = -candidateEntity_var2_ref_ja.positionY_field_v + 240.0f;
-                        radialVelocityScale_var5 = (double)og.field_r / Math.sqrt((double)(radialOffsetY_var4_float * radialOffsetY_var4_float + radialOffsetX_var3_float * radialOffsetX_var3_float));
-                        radialOffsetX_var3_float = (float)((double)radialOffsetX_var3_float * radialVelocityScale_var5);
-                        radialOffsetY_var4_float = (float)((double)radialOffsetY_var4_float * radialVelocityScale_var5);
-                        candidateEntity_var2_ref_ja.velocityY_field_F = radialOffsetY_var4_float;
-                        candidateEntity_var2_ref_ja.velocityX_field_w = radialOffsetX_var3_float;
-                        relatedEntityIndex_var7_int = 0;
+                        candidateEntity.rotateEntityAroundBoard(-el.gameplaySession.boardAngleRadians, -117);
+                        radialOffsetX = -candidateEntity.positionX + 320.0f;
+                        radialOffsetY = -candidateEntity.positionY + 240.0f;
+                        radialVelocityScale = (double)og.entityMotionSpeed / Math.sqrt((double)(radialOffsetY * radialOffsetY + radialOffsetX * radialOffsetX));
+                        radialOffsetX = (float)((double)radialOffsetX * radialVelocityScale);
+                        radialOffsetY = (float)((double)radialOffsetY * radialVelocityScale);
+                        candidateEntity.velocityY = radialOffsetY;
+                        candidateEntity.velocityX = radialOffsetX;
+                        relatedEntityIndex = 0;
                         statePc = 70;
                         continue stateLoop;
                     } catch (Throwable stateCaught_69) {
@@ -1212,7 +1212,7 @@ final class kc {
                 }
                 case 70: {
                     try {
-                        if (candidateEntity_var2_ref_ja.relatedEntityCount_field_L <= relatedEntityIndex_var7_int) {
+                        if (candidateEntity.relatedEntityCount <= relatedEntityIndex) {
                             statePc = 74;
                         } else {
                             statePc = 71;
@@ -1226,8 +1226,8 @@ final class kc {
                 }
                 case 71: {
                     try {
-                        candidateEntity_var2_ref_ja.relatedEntities_field_n[relatedEntityIndex_var7_int].removeRelatedEntity_a(candidateEntity_var2_ref_ja, 0);
-                        relatedEntityIndex_var7_int++;
+                        candidateEntity.relatedEntities[relatedEntityIndex].removeRelatedEntity(candidateEntity, 0);
+                        relatedEntityIndex++;
                         if (var9 != 0) {
                             statePc = 96;
                         } else {
@@ -1266,12 +1266,12 @@ final class kc {
                 }
                 case 74: {
                     try {
-                        var7 = candidateEntity_var2_ref_ja;
-                        relatedEntityCandidate_var8 = candidateEntity_var2_ref_ja;
-                        candidateEntity_var2_ref_ja.relatedEntityCount_field_L = 0;
-                        var7.sameCategoryEntityCount_field_N = 0;
-                        relatedEntityCandidate_var8.sameVariantEntityCount_field_m = 0;
-                        ji.field_r.a(-36, candidateEntity_var2_ref_ja);
+                        var7 = candidateEntity;
+                        relatedEntityCandidate = candidateEntity;
+                        candidateEntity.relatedEntityCount = 0;
+                        var7.sameCategoryEntityCount = 0;
+                        relatedEntityCandidate.sameVariantEntityCount = 0;
+                        ji.movingEntities.addLast(-36, candidateEntity);
                         if (var9 == 0) {
                             statePc = 95;
                         } else {
@@ -1286,7 +1286,7 @@ final class kc {
                 }
                 case 75: {
                     try {
-                        if (candidateEntity_var2_ref_ja.entityQueue_field_K == bh.field_c) {
+                        if (candidateEntity.entityQueue == bh.field_c) {
                             statePc = 78;
                         } else {
                             statePc = 76;
@@ -1335,7 +1335,7 @@ final class kc {
                 }
                 case 79: {
                     try {
-                        if (var3_int >= candidateEntity_var2_ref_ja.relatedEntityCount_field_L) {
+                        if (var3_int >= candidateEntity.relatedEntityCount) {
                             statePc = 83;
                         } else {
                             statePc = 80;
@@ -1349,8 +1349,8 @@ final class kc {
                 }
                 case 80: {
                     try {
-                        candidateEntity_var2_ref_ja.relatedEntities_field_n[var3_int].removeRelatedEntity_a(candidateEntity_var2_ref_ja, 0);
-                        candidateEntity_var2_ref_ja.relatedEntities_field_n[var3_int].k(2);
+                        candidateEntity.relatedEntities[var3_int].removeRelatedEntity(candidateEntity, 0);
+                        candidateEntity.relatedEntities[var3_int].drawEntityIdOnBoardMask(2);
                         var3_int++;
                         if (var9 != 0) {
                             statePc = 96;
@@ -1390,15 +1390,15 @@ final class kc {
                 }
                 case 83: {
                     try {
-                        queuedEntity_var3 = candidateEntity_var2_ref_ja;
-                        candidateEntity_var2_ref_ja.relatedEntityCount_field_L = 0;
-                        var4 = candidateEntity_var2_ref_ja;
-                        queuedEntity_var3.sameCategoryEntityCount_field_N = 0;
-                        var4.sameVariantEntityCount_field_m = 0;
-                        candidateEntity_var2_ref_ja.remainingLifetimeTicks_field_r = 50;
-                        bh.field_c.a(-100, candidateEntity_var2_ref_ja);
-                        candidateEntity_var2_ref_ja.animationFrameIndex_field_G = 0;
-                        if (!candidateEntity_var2_ref_ja.field_t) {
+                        queuedEntity = candidateEntity;
+                        candidateEntity.relatedEntityCount = 0;
+                        var4 = candidateEntity;
+                        queuedEntity.sameCategoryEntityCount = 0;
+                        var4.sameVariantEntityCount = 0;
+                        candidateEntity.remainingLifetimeTicks = 50;
+                        bh.field_c.addLast(-100, candidateEntity);
+                        candidateEntity.animationFrameIndex = 0;
+                        if (!candidateEntity.touchesAvatar) {
                             statePc = 91;
                         } else {
                             statePc = 84;
@@ -1426,13 +1426,13 @@ final class kc {
                 }
                 case 85: {
                     try {
-                        stackIn_88_0 = (int)candidateEntity_var2_ref_ja.positionY_field_v;
+                        stackIn_88_0 = (int)candidateEntity.positionY;
                         stackIn_86_0 = stackIn_88_0;
-                        stackIn_88_1 = (int)candidateEntity_var2_ref_ja.positionX_field_o;
+                        stackIn_88_1 = (int)candidateEntity.positionX;
                         stackIn_86_1 = stackIn_88_1;
                         stackIn_88_2 = 117;
                         stackIn_86_2 = stackIn_88_2;
-                        if ((candidateEntity_var2_ref_ja.field_z ^ -1) == -5) {
+                        if ((candidateEntity.entitySpriteKindId ^ -1) == -5) {
                             statePc = 88;
                         } else {
                             statePc = 86;
@@ -1452,7 +1452,7 @@ final class kc {
                         stackIn_87_1 = stackIn_89_1;
                         stackIn_89_2 = stackIn_86_2;
                         stackIn_87_2 = stackIn_89_2;
-                        if ((candidateEntity_var2_ref_ja.field_z ^ -1) != -4) {
+                        if ((candidateEntity.entitySpriteKindId ^ -1) != -4) {
                             statePc = 89;
                         } else {
                             statePc = 87;
@@ -1518,7 +1518,7 @@ final class kc {
                 }
                 case 91: {
                     try {
-                        if (4 == candidateEntity_var2_ref_ja.field_z) {
+                        if (4 == candidateEntity.entitySpriteKindId) {
                             statePc = 94;
                         } else {
                             statePc = 92;
@@ -1532,7 +1532,7 @@ final class kc {
                 }
                 case 92: {
                     try {
-                        candidateEntity_var2_ref_ja.configureEntitySprite_a(320, candidateEntity_var2_ref_ja.entityCategoryKey_field_C, candidateEntity_var2_ref_ja.spriteVariantIndex_field_M, 5);
+                        candidateEntity.configureEntitySprite(320, candidateEntity.entityCategoryKey, candidateEntity.spriteVariantIndex, 5);
                         if (var9 == 0) {
                             statePc = 95;
                         } else {
@@ -1557,8 +1557,8 @@ final class kc {
                 }
                 case 94: {
                     try {
-                        candidateEntity_var2_ref_ja.configureEntitySprite_a(320, candidateEntity_var2_ref_ja.entityCategoryKey_field_C, candidateEntity_var2_ref_ja.spriteVariantIndex_field_M, 7);
-                        entityIndexThenGroupCount_var1_int++;
+                        candidateEntity.configureEntitySprite(320, candidateEntity.entityCategoryKey, candidateEntity.spriteVariantIndex, 7);
+                        entityIndexThenGroupCount++;
                         rb.field_b = rb.field_b + 1;
                         statePc = 95;
                         continue stateLoop;
@@ -1570,7 +1570,7 @@ final class kc {
                 }
                 case 95: {
                     try {
-                        candidateEntity_var2_ref_ja.entityQueue_field_K = null;
+                        candidateEntity.entityQueue = null;
                         statePc = 96;
                         continue stateLoop;
                     } catch (Throwable stateCaught_95) {
@@ -1581,7 +1581,7 @@ final class kc {
                 }
                 case 96: {
                     try {
-                        el.gameplaySession_field_o.field_F = true;
+                        el.gameplaySession.boardRasterDirty = true;
                         statePc = 97;
                         continue stateLoop;
                     } catch (Throwable stateCaught_96) {
@@ -1592,7 +1592,7 @@ final class kc {
                 }
                 case 97: {
                     try {
-                        candidateEntity_var2_ref_ja = (GameplayEntity_ja) ((Object) a.field_d.d(1));
+                        candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
                         if (var9 == 0) {
                             statePc = 63;
                         } else {
@@ -1608,7 +1608,7 @@ final class kc {
                 case 98: {
                     try {
                         var2 = -23 / ((param0 - 69) / 46);
-                        queuedEntity_var3 = (GameplayEntity_ja) ((Object) bh.field_c.g(0));
+                        queuedEntity = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
                         statePc = 99;
                         continue stateLoop;
                     } catch (Throwable stateCaught_98) {
@@ -1619,7 +1619,7 @@ final class kc {
                 }
                 case 99: {
                     try {
-                        if (queuedEntity_var3 == null) {
+                        if (queuedEntity == null) {
                             statePc = 104;
                         } else {
                             statePc = 100;
@@ -1647,7 +1647,7 @@ final class kc {
                 }
                 case 101: {
                     try {
-                        if (ra.field_a != queuedEntity_var3.entityQueue_field_K) {
+                        if (ra.availableEntities != queuedEntity.entityQueue) {
                             statePc = 103;
                         } else {
                             statePc = 102;
@@ -1661,10 +1661,10 @@ final class kc {
                 }
                 case 102: {
                     try {
-                        queuedEntity_var3.a(false);
-                        queuedEntity_var3.a((byte) 51);
-                        ra.field_a.a(-44, queuedEntity_var3);
-                        queuedEntity_var3.entityQueue_field_K = null;
+                        queuedEntity.unlinkNode(false);
+                        queuedEntity.unlinkSecondaryNode((byte) 51);
+                        ra.availableEntities.addLast(-44, queuedEntity);
+                        queuedEntity.entityQueue = null;
                         statePc = 103;
                         continue stateLoop;
                     } catch (Throwable stateCaught_102) {
@@ -1675,7 +1675,7 @@ final class kc {
                 }
                 case 103: {
                     try {
-                        queuedEntity_var3 = (GameplayEntity_ja) ((Object) bh.field_c.d(1));
+                        queuedEntity = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
                         if (var9 == 0) {
                             statePc = 99;
                         } else {
@@ -1716,9 +1716,9 @@ final class kc {
                 }
                 case 106: {
                     try {
-                        stackIn_110_0 = el.gameplaySession_field_o;
+                        stackIn_110_0 = el.gameplaySession;
                         stackIn_107_0 = stackIn_110_0;
-                        if (el.gameplaySession_field_o.field_F) {
+                        if (el.gameplaySession.boardRasterDirty) {
                             statePc = 110;
                         } else {
                             statePc = 107;
@@ -1732,9 +1732,9 @@ final class kc {
                 }
                 case 107: {
                     try {
-                        stackIn_110_0 = (GameplaySession_gh) ((Object) stackIn_107_0);
+                        stackIn_110_0 = (GameplaySession) ((Object) stackIn_107_0);
                         stackIn_108_0 = stackIn_110_0;
-                        if (ab.field_f) {
+                        if (ab.boardContactStateDirty) {
                             statePc = 110;
                         } else {
                             statePc = 108;
@@ -1748,7 +1748,7 @@ final class kc {
                 }
                 case 108: {
                     try {
-                        stackIn_111_0 = (GameplaySession_gh) ((Object) stackIn_108_0);
+                        stackIn_111_0 = (GameplaySession) ((Object) stackIn_108_0);
                         stackIn_109_0 = stackIn_111_0;
                         if (!w.field_f) {
                             statePc = 111;
@@ -1764,7 +1764,7 @@ final class kc {
                 }
                 case 109: {
                     try {
-                        stackIn_110_0 = (GameplaySession_gh) ((Object) stackIn_109_0);
+                        stackIn_110_0 = (GameplaySession) ((Object) stackIn_109_0);
                         statePc = 110;
                         continue stateLoop;
                     } catch (Throwable stateCaught_109) {
@@ -1775,7 +1775,7 @@ final class kc {
                 }
                 case 110: {
                     try {
-                        stackIn_112_0 = (GameplaySession_gh) ((Object) stackIn_110_0);
+                        stackIn_112_0 = (GameplaySession) ((Object) stackIn_110_0);
                         stackIn_112_1 = 1;
                         statePc = 112;
                         continue stateLoop;
@@ -1787,7 +1787,7 @@ final class kc {
                 }
                 case 111: {
                     try {
-                        stackIn_112_0 = (GameplaySession_gh) ((Object) stackIn_111_0);
+                        stackIn_112_0 = (GameplaySession) ((Object) stackIn_111_0);
                         stackIn_112_1 = 0;
                         statePc = 112;
                         continue stateLoop;
@@ -1799,9 +1799,9 @@ final class kc {
                 }
                 case 112: {
                     try {
-                        stackIn_112_0.field_F = stackIn_112_1 != 0;
+                        stackIn_112_0.boardRasterDirty = stackIn_112_1 != 0;
                         w.field_f = false;
-                        if (-4 >= (entityIndexThenGroupCount_var1_int ^ -1)) {
+                        if (-4 >= (entityIndexThenGroupCount ^ -1)) {
                             statePc = 114;
                         } else {
                             statePc = 113;

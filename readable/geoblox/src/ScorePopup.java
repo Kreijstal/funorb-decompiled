@@ -1,43 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class me extends hf {
-    float field_k;
-    int field_h;
+final class ScorePopup extends IntrusiveNode {
+    float progress;
+    int chainMultiplier;
     static int field_l;
-    float field_i;
-    String field_m;
-    float field_n;
+    float originY;
+    String pointsText;
+    float originX;
     static String field_j;
-    int field_f;
+    int points;
     static sl field_g;
 
     final static void b(int param0) {
-        if (param0 > 65) {
-          if (fj.field_p != null) {
-            L0: {
-              fj.field_p.c();
-              if (null != oh.field_a) {
+        if (param0 <= 65) {
+            return;
+        }
+        if (fj.field_p == null) {
+            if (!(null == oh.field_a)) {
                 oh.field_a.c();
-                break L0;
-              } else {
-                break L0;
-              }
             }
             return;
-          } else {
-            L1: {
-              if (null != oh.field_a) {
-                oh.field_a.c();
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            return;
-          }
-        } else {
-          return;
+        }
+        fj.field_p.c();
+        if (!(null == oh.field_a)) {
+            oh.field_a.c();
         }
     }
 
@@ -52,7 +39,7 @@ final class me extends hf {
     final static void a(byte param0) {
         jk.field_d = 1;
         if (param0 != 38) {
-            me.c((byte) -26);
+            ScorePopup.c((byte) -26);
         }
     }
 
@@ -66,7 +53,7 @@ final class me extends hf {
             h.field_b = h.field_b + (param1.b(true) << -117028222);
             var2_int = param1.c((byte) 34);
             if (param0 <= 105) {
-                me.a((byte) 114);
+                ScorePopup.a((byte) 114);
             }
             fe.field_g = var2_int << 1391909071 & 2064384;
             h.field_b = h.field_b + (var2_int >> -768121946);
@@ -80,9 +67,9 @@ final class me extends hf {
         }
     }
 
-    me() {
-        this.field_k = 0.0f;
-        this.field_f = 0;
+    ScorePopup() {
+        this.progress = 0.0f;
+        this.points = 0;
     }
 
     static {

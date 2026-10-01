@@ -3,25 +3,25 @@
  */
 final class fi {
     static String field_h;
-    private hf[] field_e;
+    private IntrusiveNode[] field_e;
     static Boolean field_b;
-    private hf field_a;
+    private IntrusiveNode field_a;
     private int field_c;
     private int field_f;
-    private hf field_g;
+    private IntrusiveNode field_g;
     static bg field_d;
 
-    final hf a(long param0, byte param1) {
-        hf var5 = null;
-        hf var4 = this.field_e[(int)((long)(-1 + this.field_c) & param0)];
-        this.field_g = var4.field_b;
+    final IntrusiveNode a(long param0, byte param1) {
+        IntrusiveNode var5 = null;
+        IntrusiveNode var4 = this.field_e[(int)((long)(-1 + this.field_c) & param0)];
+        this.field_g = var4.nextNode;
         while (var4 != this.field_g) {
             if (!((this.field_g.field_a ^ -1L) != (param0 ^ -1L))) {
                 var5 = this.field_g;
-                this.field_g = this.field_g.field_b;
+                this.field_g = this.field_g.nextNode;
                 return var5;
             }
-            this.field_g = this.field_g.field_b;
+            this.field_g = this.field_g.nextNode;
         }
         if (param1 >= -73) {
             this.a((byte) -38);
@@ -48,21 +48,21 @@ final class fi {
         return 2048 <= param0 ? -ai.field_l[param0 + -2048] : ai.field_l[-param0 + 2048];
     }
 
-    final void a(byte param0, hf param1, long param2) {
-        hf var5 = null;
+    final void a(byte param0, IntrusiveNode param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
-            if (!(null == param1.field_c)) {
-                param1.a(false);
+            if (!(null == param1.previousNode)) {
+                param1.unlinkNode(false);
             }
             var5 = this.field_e[(int)((long)(this.field_c + -1) & param2)];
-            param1.field_b = var5;
-            param1.field_c = var5.field_c;
-            param1.field_c.field_b = param1;
+            param1.nextNode = var5;
+            param1.previousNode = var5.previousNode;
+            param1.previousNode.nextNode = param1;
             param1.field_a = param2;
             if (param0 != 102) {
                 field_d = (bg) null;
             }
-            param1.field_b.field_c = param1;
+            param1.nextNode.previousNode = param1;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "fi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -79,52 +79,36 @@ final class fi {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 0) {
-                break L1;
-              } else {
-                field_h = (String) null;
-                break L1;
-              }
+            if (param0 != 0) {
+              field_h = (String) null;
             }
-            L2: {
-              if (param1 == null) {
-                break L2;
-              } else {
-                if (param1 == fe.field_e) {
-                  break L2;
-                } else {
-                  uh.field_y.d(-9268);
-                  fj.field_p.a();
-                  fe.field_e = param1;
-                  uh.field_y.a(true, fe.field_e, -1706);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
+            if (param1 != null) {
+              if (param1 != fe.field_e) {
+                uh.field_y.d(-9268);
+                fj.field_p.a();
+                fe.field_e = param1;
+                uh.field_y.a(true, fe.field_e, -1706);
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
             decompiledRegionSelector0 = 0;
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (runtimeException);
+          runtimeException = decompiledCaughtException;
+          stackIn_10_0 = (RuntimeException) (runtimeException);
 
-            stackIn_10_1 = new StringBuilder().append("fi.D(").append(param0).append(',');
+          stackIn_10_1 = new StringBuilder().append("fi.D(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          if (param1 == null) {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
@@ -135,7 +119,7 @@ final class fi {
         }
     }
 
-    final hf a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 != 125) {
             fi.a(103);
             this.field_f = 0;
@@ -155,39 +139,32 @@ final class fi {
     }
 
     fi(int param0) {
-        hf dupTemp$1 = null;
-        int var2;
-        hf var3;
+        int var2 = 0;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_f = 0;
         this.field_c = param0;
-        this.field_e = new hf[param0];
-        var2 = 0;
-        L0: while (true) {
-          if (var2 < param0) {
-            dupTemp$1 = new hf();
-            var3 = dupTemp$1;
-            this.field_e[var2] = dupTemp$1;
-            var3.field_b = var3;
-            var3.field_c = var3;
-            var2++;
-            continue L0;
-          } else {
-            return;
-          }
+        this.field_e = new IntrusiveNode[param0];
+        for (var2 = 0; var2 < param0; var2++) {
+          dupTemp$1 = new IntrusiveNode();
+          var3 = dupTemp$1;
+          this.field_e[var2] = dupTemp$1;
+          var3.nextNode = var3;
+          var3.previousNode = var3;
         }
     }
 
-    final hf b(int param0) {
+    final IntrusiveNode b(int param0) {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
-        hf var3;
+        IntrusiveNode var3;
         int var2;
-        hf var4;
-        hf var7;
+        IntrusiveNode var4;
+        IntrusiveNode var7;
         if (-1 > (this.field_f ^ -1)) {
           if (this.field_a != this.field_e[this.field_f + -1]) {
             var7 = this.field_a;
-            this.field_a = var7.field_b;
+            this.field_a = var7.nextNode;
             return var7;
           } else {
             L0: while (true) {
@@ -197,9 +174,9 @@ final class fi {
               } else {
                 fieldTemp$3 = this.field_f;
                 this.field_f = this.field_f + 1;
-                var4 = this.field_e[fieldTemp$3].field_b;
+                var4 = this.field_e[fieldTemp$3].nextNode;
                 if (this.field_e[-1 + this.field_f] != var4) {
-                  this.field_a = var4.field_b;
+                  this.field_a = var4.nextNode;
                   return var4;
                 } else {
                   continue L0;
@@ -215,9 +192,9 @@ final class fi {
             } else {
               fieldTemp$4 = this.field_f;
               this.field_f = this.field_f + 1;
-              var3 = this.field_e[fieldTemp$4].field_b;
+              var3 = this.field_e[fieldTemp$4].nextNode;
               if (this.field_e[-1 + this.field_f] != var3) {
-                this.field_a = var3.field_b;
+                this.field_a = var3.nextNode;
                 return var3;
               } else {
                 continue L1;

@@ -27,38 +27,26 @@ final class uh extends ac {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 >= 109) {
-                break L1;
-              } else {
-                var4 = (el) null;
-                this.c(-111, (el) null);
-                break L1;
-              }
-            }
-            stackIn_3_0 = ah.a(0, '*', param1.field_s.length());
-            break L0;
+          if (param0 < 109) {
+            var4 = (el) null;
+            this.c(-111, (el) null);
           }
+          stackIn_3_0 = ah.a(0, '*', param1.field_s.length());
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = (RuntimeException) (var3);
 
-            stackIn_6_1 = new StringBuilder().append("uh.L(").append(param0).append(',');
+          stackIn_6_1 = new StringBuilder().append("uh.L(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          if (param1 == null) {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+            stackIn_7_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
@@ -70,12 +58,11 @@ final class uh extends ac {
     }
 
     final static int b(int param0) {
-        if (param0 != 16) {
-          field_x = (int[]) null;
-          return ee.field_B[el.field_t % ee.field_B.length];
-        } else {
-          return ee.field_B[el.field_t % ee.field_B.length];
+        if (param0 == 16) {
+            return ee.field_B[el.field_t % ee.field_B.length];
         }
+        field_x = (int[]) null;
+        return ee.field_B[el.field_t % ee.field_B.length];
     }
 
     private uh(m param0, int param1) {
@@ -84,7 +71,7 @@ final class uh extends ac {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         oc.b(-96);
-        SoftwareRasterizer_vb.b(param1, param0, param4, param3);
+        SoftwareRasterizer.b(param1, param0, param4, param3);
         if (param2 == -14045) {
             return;
         }
@@ -92,6 +79,7 @@ final class uh extends ac {
     }
 
     final static nf a(pk param0, byte param1) {
+        int var7 = 0;
         nf stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -105,123 +93,82 @@ final class uh extends ac {
         int var4 = 0;
         nf var5 = null;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         var8 = Geoblox.field_C;
         try {
-          L0: {
-            var2_int = param0.e((byte) -17, 8);
-            if ((var2_int ^ -1) < -1) {
-              throw new IllegalStateException("" + var2_int);
-            } else {
-              L1: {
-                var3 = ac.a((byte) 81, param0) ? 1 : 0;
-                var4 = ac.a((byte) 7, param0) ? 1 : 0;
-                var5 = new nf();
-                var5.field_o = (short)param0.e((byte) -17, 16);
-                var5.field_O = ji.a(var5.field_O, 16, 0, param0);
-                var5.field_q = ji.a(var5.field_q, 16, 0, param0);
-                var5.field_K = ji.a(var5.field_K, 16, 0, param0);
-                var5.field_f = (short)param0.e((byte) -17, 16);
-                var5.field_r = ji.a(var5.field_r, 16, 0, param0);
-                if (param1 >= 111) {
-                  break L1;
-                } else {
-                  field_y = (kj) null;
-                  break L1;
-                }
-              }
-              L2: {
-                var5.field_B = ji.a(var5.field_B, 16, 0, param0);
-                var5.field_c = ji.a(var5.field_c, 16, 0, param0);
-                if (var3 != 0) {
-                  var5.field_m = (short)param0.e((byte) -17, 16);
-                  var5.field_M = ji.a(var5.field_M, 16, 0, param0);
-                  var5.field_t = ji.a(var5.field_t, 16, 0, param0);
-                  var5.field_i = ji.a(var5.field_i, 16, 0, param0);
-                  var5.field_P = ji.a(var5.field_P, 16, 0, param0);
-                  var5.field_u = ji.a(var5.field_u, 16, 0, param0);
-                  var5.field_e = ji.a(var5.field_e, 16, 0, param0);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if (var4 != 0) {
-                  param0.e((byte) -17, 16);
-                  var5.field_J = ji.a(var5.field_J, 16, 0, param0);
-                  var5.field_z = ji.a(var5.field_z, 16, 0, param0);
-                  var5.field_h = ji.a(var5.field_h, 16, 0, param0);
-                  var5.field_k = ji.a(var5.field_k, 16, 0, param0);
-                  var5.field_g = ji.a(var5.field_g, 16, 0, param0);
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (ac.a((byte) 102, param0)) {
-                  var5.field_G = ji.a(var5.field_G, 16, 0, param0);
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                if (!ac.a((byte) 37, param0)) {
-                  break L5;
-                } else {
-                  var5.field_n = vk.a(var5.field_n, param0, 16, 8);
-                  var6 = 0;
-                  var7 = 0;
-                  L6: while (true) {
-                    if (var5.field_n.length <= var7) {
-                      if (-1 != (var6 ^ -1)) {
-                        var5.field_v = (byte)(1 + var6);
-                        break L5;
-                      } else {
-                        var5.field_n = null;
-                        break L5;
-                      }
-                    } else {
-                      L7: {
-                        if ((255 & var5.field_n[var7] ^ -1) >= (var6 ^ -1)) {
-                          break L7;
-                        } else {
-                          var6 = 255 & var5.field_n[var7];
-                          break L7;
-                        }
-                      }
-                      var7++;
-                      continue L6;
-                    }
+          var2_int = param0.e((byte) -17, 8);
+          if ((var2_int ^ -1) < -1) {
+            throw new IllegalStateException("" + var2_int);
+          } else {
+            var3 = ac.a((byte) 81, param0) ? 1 : 0;
+            var4 = ac.a((byte) 7, param0) ? 1 : 0;
+            var5 = new nf();
+            var5.field_o = (short)param0.e((byte) -17, 16);
+            var5.field_O = ji.a(var5.field_O, 16, 0, param0);
+            var5.field_q = ji.a(var5.field_q, 16, 0, param0);
+            var5.field_K = ji.a(var5.field_K, 16, 0, param0);
+            var5.field_f = (short)param0.e((byte) -17, 16);
+            var5.field_r = ji.a(var5.field_r, 16, 0, param0);
+            if (param1 < 111) {
+              field_y = (kj) null;
+            }
+            var5.field_B = ji.a(var5.field_B, 16, 0, param0);
+            var5.field_c = ji.a(var5.field_c, 16, 0, param0);
+            if (var3 != 0) {
+              var5.field_m = (short)param0.e((byte) -17, 16);
+              var5.field_M = ji.a(var5.field_M, 16, 0, param0);
+              var5.field_t = ji.a(var5.field_t, 16, 0, param0);
+              var5.field_i = ji.a(var5.field_i, 16, 0, param0);
+              var5.field_P = ji.a(var5.field_P, 16, 0, param0);
+              var5.field_u = ji.a(var5.field_u, 16, 0, param0);
+              var5.field_e = ji.a(var5.field_e, 16, 0, param0);
+            }
+            if (var4 != 0) {
+              param0.e((byte) -17, 16);
+              var5.field_J = ji.a(var5.field_J, 16, 0, param0);
+              var5.field_z = ji.a(var5.field_z, 16, 0, param0);
+              var5.field_h = ji.a(var5.field_h, 16, 0, param0);
+              var5.field_k = ji.a(var5.field_k, 16, 0, param0);
+              var5.field_g = ji.a(var5.field_g, 16, 0, param0);
+            }
+            if (ac.a((byte) 102, param0)) {
+              var5.field_G = ji.a(var5.field_G, 16, 0, param0);
+            }
+            L5: {
+              if (ac.a((byte) 37, param0)) {
+                var5.field_n = vk.a(var5.field_n, param0, 16, 8);
+                var6 = 0;
+                for (var7 = 0; var5.field_n.length > var7; var7++) {
+                  if ((255 & var5.field_n[var7] ^ -1) < (var6 ^ -1)) {
+                    var6 = 255 & var5.field_n[var7];
                   }
                 }
+                if (-1 != (var6 ^ -1)) {
+                  var5.field_v = (byte)(1 + var6);
+                  break L5;
+                } else {
+                  var5.field_n = null;
+                  break L5;
+                }
               }
-              stackIn_28_0 = (nf) (var5);
-              break L0;
             }
+            stackIn_28_0 = (nf) (var5);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var2 = decompiledCaughtException;
-            stackIn_31_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_31_0 = (RuntimeException) (var2);
 
-            stackIn_31_1 = new StringBuilder().append("uh.BA(");
+          stackIn_31_1 = new StringBuilder().append("uh.BA(");
 
-            if (param0 == null) {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "null";
-              break L8;
-            } else {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "{...}";
-              break L8;
-            }
+          if (param0 == null) {
+            stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+            stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+            stackIn_32_2 = "null";
+          } else {
+            stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+            stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+            stackIn_32_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param1 + ')');
         }
@@ -229,6 +176,7 @@ final class uh extends ac {
     }
 
     final static void d(int param0) {
+        float var9 = 0.0f;
         float var2 = 0.0f;
         float var3 = 0.0f;
         int var4 = 0;
@@ -236,12 +184,11 @@ final class uh extends ac {
         float var6 = 0.0f;
         int var7 = 0;
         float var8 = 0.0f;
-        float var9 = 0.0f;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        GameplayEntity_ja var13 = null;
-        GameplayEntity_ja var14 = null;
+        GameplayEntity var13 = null;
+        GameplayEntity var14 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -249,47 +196,36 @@ final class uh extends ac {
         try {
           L0: {
             if (param0 == 4740) {
-              var14 = (GameplayEntity_ja) ((Object) wd.field_e.g(0));
+              var14 = (GameplayEntity) ((Object) wd.spawnQueue.firstForIteration(0));
               if (var14 != null) {
-                var2 = -320.0f + var14.positionX_field_o;
-                var3 = -240.0f + var14.positionY_field_v;
-                var4 = (int)((double)var2 * Math.cos((double)el.gameplaySession_field_o.boardAngleRadians_field_J) - Math.sin((double)el.gameplaySession_field_o.boardAngleRadians_field_J) * (double)var3 + 320.0);
-                var5 = (int)((double)var2 * Math.sin((double)el.gameplaySession_field_o.boardAngleRadians_field_J) + (double)var3 * Math.cos((double)el.gameplaySession_field_o.boardAngleRadians_field_J) + 240.0);
+                var2 = -320.0f + var14.positionX;
+                var3 = -240.0f + var14.positionY;
+                var4 = (int)((double)var2 * Math.cos((double)el.gameplaySession.boardAngleRadians) - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)var3 + 320.0);
+                var5 = (int)((double)var2 * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)var3 * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
                 var6 = 0.01666666753590107f;
                 var7 = 16764416;
-                var8 = (float)el.gameplaySession_field_o.updateTick_field_v * 0.03999999910593033f;
-                SoftwareRasterizer_vb.e(var4, var5, 16, 16777215, 100);
-                SoftwareRasterizer_vb.f(var4, var5, 16, 0);
-                var9 = var8 + 3.1415927410125732f;
-                L1: while (true) {
-                  if (var8 >= var9) {
-                    var13 = (GameplayEntity_ja) ((Object) wd.field_e.g(0));
-                    L2: while (true) {
-                      if (var13 == null) {
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      } else {
-                        var13.drawFadingEntity_n(param0 + -4830);
-                        var13 = (GameplayEntity_ja) ((Object) wd.field_e.d(1));
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    var10 = (int)((double)var4 + 16.0 * Math.cos((double)var9));
-                    var11 = (int)((double)var5 + Math.sin((double)var9) * 16.0);
-                    SoftwareRasterizer_vb.d(var10, var11, 2, var7);
-                    var6 = var6 + var6 * 0.25f;
-                    var7 += 778;
-                    var9 = var9 - var6;
-                    continue L1;
-                  }
+                var8 = (float)el.gameplaySession.updateTick * 0.03999999910593033f;
+                SoftwareRasterizer.e(var4, var5, 16, 16777215, 100);
+                SoftwareRasterizer.f(var4, var5, 16, 0);
+                for (var9 = var8 + 3.1415927410125732f; var8 < var9; var9 = var9 - var6) {
+                  var10 = (int)((double)var4 + 16.0 * Math.cos((double)var9));
+                  var11 = (int)((double)var5 + Math.sin((double)var9) * 16.0);
+                  SoftwareRasterizer.d(var10, var11, 2, var7);
+                  var6 = var6 + var6 * 0.25f;
+                  var7 += 778;
                 }
+                var13 = (GameplayEntity) ((Object) wd.spawnQueue.firstForIteration(0));
+                L2: while (var13 != null) {
+                  var13.drawFadingEntity(param0 + -4830);
+                  var13 = (GameplayEntity) ((Object) wd.spawnQueue.nextForIteration(1));
+                }
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 return;
               }
             } else {
               decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

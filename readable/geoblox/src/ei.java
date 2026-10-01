@@ -18,69 +18,46 @@ final class ei extends qf {
         java.awt.Canvas var5 = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            L1: {
-              if (-11 < (mi.field_C ^ -1)) {
-                L2: {
-                  var3_int = 0;
-                  if (dl.field_c) {
-                    var3_int = 1;
-                    dl.field_c = false;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                pb.a(tj.a((byte) 73), v.field_q, var3_int != 0, false, kh.a((byte) -85));
-                break L1;
-              } else {
-                if (wj.f(7426)) {
-                  if (hj.field_a == 0) {
-                    ue.a(param0, false, (byte) -102);
-                    i.a(0, (byte) 42, param2, 0);
-                    break L1;
-                  } else {
-                    fc.a(true, param2);
-                    break L1;
-                  }
-                } else {
-                  SoftwareRasterizer_vb.c();
-                  eh.a(240, 320, -51);
-                  i.a(0, (byte) 51, param2, 0);
-                  break L1;
-                }
-              }
+          if (-11 < (mi.field_C ^ -1)) {
+            var3_int = 0;
+            if (dl.field_c) {
+              var3_int = 1;
+              dl.field_c = false;
             }
-            L3: {
-              if (param1 == 0) {
-                break L3;
+            pb.a(tj.a((byte) 73), v.field_q, var3_int != 0, false, kh.a((byte) -85));
+          } else {
+            if (wj.f(7426)) {
+              if (hj.field_a == 0) {
+                ue.a(param0, false, (byte) -102);
+                i.a(0, (byte) 42, param2, 0);
               } else {
-                var5 = (java.awt.Canvas) null;
-                ei.a(true, -122, (java.awt.Canvas) null);
-                break L3;
+                fc.a(true, param2);
               }
+            } else {
+              SoftwareRasterizer.c();
+              eh.a(240, 320, -51);
+              i.a(0, (byte) 51, param2, 0);
             }
-            break L0;
+          }
+          if (param1 != 0) {
+            var5 = (java.awt.Canvas) null;
+            ei.a(true, -122, (java.awt.Canvas) null);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_16_0 = (RuntimeException) (var3);
 
-            stackIn_16_1 = new StringBuilder().append("ei.OB(").append(param0).append(',').append(param1).append(',');
+          stackIn_16_1 = new StringBuilder().append("ei.OB(").append(param0).append(',').append(param1).append(',');
 
-            if (param2 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L4;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L4;
-            }
+          if (param2 == null) {
+            stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+            stackIn_17_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
@@ -108,7 +85,6 @@ final class ei extends qf {
             if (var3 != null) {
               stackIn_4_0 = (String) (var3);
               decompiledRegionSelector0 = 0;
-              break L0;
             } else {
               if (!param1) {
                 var4 = 0;
@@ -129,29 +105,24 @@ final class ei extends qf {
               } else {
                 stackIn_7_0 = (String) null;
                 decompiledRegionSelector0 = 1;
-                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var3_ref);
+          var3_ref = decompiledCaughtException;
+          stackIn_18_0 = (RuntimeException) (var3_ref);
 
-            stackIn_18_1 = new StringBuilder().append("ei.QB(").append(param0).append(',').append(param1).append(',');
+          stackIn_18_1 = new StringBuilder().append("ei.QB(").append(param0).append(',').append(param1).append(',');
 
-            if (param2 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L2;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L2;
-            }
+          if (param2 == null) {
+            stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+            stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
+            stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
+            stackIn_19_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }

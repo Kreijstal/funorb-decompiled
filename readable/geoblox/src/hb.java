@@ -15,7 +15,7 @@ final class hb implements dh {
     private int field_f;
     private int field_k;
     static wa field_j;
-    static Sprite_dm[] field_d;
+    static Sprite[] field_d;
 
     public final void a(int param0, int param1, int param2, boolean param3, el param4) {
         int var13 = 0;
@@ -23,19 +23,19 @@ final class hb implements dh {
         int var11 = 0;
         int var12 = 0;
         qb var14 = param4 instanceof qb ? (qb) ((Object) param4) : null;
-        SoftwareRasterizer_vb.a(param0 - -param4.field_v, param4.field_m + param2, param4.field_r, param4.field_h, this.field_f);
+        SoftwareRasterizer.a(param0 - -param4.field_v, param4.field_m + param2, param4.field_r, param4.field_h, this.field_f);
         if (var14 != null) {
         }
         int var7 = param4.field_v + param0 - -var14.field_E;
         int var8 = param4.field_m + param2 - -var14.field_O;
-        SoftwareRasterizer_vb.d(var7, var8, var14.field_K, this.field_e);
+        SoftwareRasterizer.d(var7, var8, var14.field_K, this.field_e);
         if (var14.field_J != -1) {
             var9 = (double)var14.field_J * 3.141592653589793 * 2.0 / (double)var14.field_H;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_K);
             var12 = (int)(Math.cos(var9) * (double)var14.field_K);
-            SoftwareRasterizer_vb.d(var7 + var11, var8 - -var12, 1, this.field_g);
+            SoftwareRasterizer.d(var7 + var11, var8 - -var12, 1, this.field_g);
         }
-        SoftwareRasterizer_vb.d(var7, var8, 2, 1);
+        SoftwareRasterizer.d(var7, var8, 2, 1);
         var9 = 2.0 * (3.141592653589793 * (double)var14.field_I) / (double)var14.field_H;
         var11 = (int)(-Math.sin(var9) * (double)var14.field_K);
         var12 = (int)(Math.cos(var9) * (double)var14.field_K);
@@ -43,7 +43,7 @@ final class hb implements dh {
             return;
         }
         try {
-            SoftwareRasterizer_vb.g(var7, var8, var11 + var7, var12 + var8, 1);
+            SoftwareRasterizer.g(var7, var8, var11 + var7, var12 + var8, 1);
             if (this.field_a != null) {
                 var13 = this.field_c + (var14.field_E - -var14.field_K);
                 this.field_a.a(param4.field_s, var13 + (param0 + param4.field_v), param2 - -param4.field_m - -this.field_i, param4.field_r - (this.field_c + var13), -(this.field_c << 1444492961) + param4.field_h, this.field_m, this.field_k, 1, 1, 0);
@@ -56,18 +56,16 @@ final class hb implements dh {
     public static void a(int param0) {
         field_n = null;
         field_h = null;
-        if (param0 != 0) {
-          field_h = (String) null;
-          field_l = null;
-          field_j = null;
-          field_d = null;
-          return;
-        } else {
-          field_l = null;
-          field_j = null;
-          field_d = null;
-          return;
+        if (param0 == 0) {
+            field_l = null;
+            field_j = null;
+            field_d = null;
+            return;
         }
+        field_h = (String) null;
+        field_l = null;
+        field_j = null;
+        field_d = null;
     }
 
     hb(m param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

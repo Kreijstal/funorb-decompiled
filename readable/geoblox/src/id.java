@@ -4,7 +4,7 @@
 final class id {
     static String field_a;
     static lc[] field_b;
-    static Sprite_dm[] field_c;
+    static Sprite[] field_c;
 
     public static void b(boolean param0) {
         field_c = null;
@@ -16,17 +16,17 @@ final class id {
     }
 
     final static void a(boolean param0) {
-        tl var1 = (tl) ((Object) n.field_l.e(1));
+        tl var1 = (tl) ((Object) n.field_l.removeLast(1));
         if (!(var1 != null)) {
             throw new IllegalStateException();
         }
-        SoftwareRasterizer_vb.a(var1.field_q, var1.field_j, var1.field_k);
-        SoftwareRasterizer_vb.e(var1.field_n, var1.field_p, var1.field_i, var1.field_m);
+        SoftwareRasterizer.a(var1.field_q, var1.field_j, var1.field_k);
+        SoftwareRasterizer.e(var1.field_n, var1.field_p, var1.field_i, var1.field_m);
         var1.field_q = null;
         if (!param0) {
             return;
         }
-        sg.field_b.a(-110, var1);
+        sg.field_b.addLast(-110, var1);
     }
 
     static {

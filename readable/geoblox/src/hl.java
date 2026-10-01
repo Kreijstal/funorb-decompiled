@@ -3,23 +3,23 @@
  */
 final class hl extends el {
     static int[] field_D;
-    private Sprite_dm[] field_F;
+    private Sprite[] field_F;
     private int field_J;
     private int field_L;
     private int field_E;
     private int field_A;
-    private Sprite_dm field_y;
-    private Sprite_dm field_z;
+    private Sprite field_y;
+    private Sprite field_z;
     private int field_H;
     int field_x;
-    private Sprite_dm field_M;
+    private Sprite field_M;
     private int field_I;
     static int[] field_K;
     static boolean field_G;
     boolean field_C;
-    static tf field_B;
+    static IntrusiveDeque field_B;
 
-    private final Sprite_dm a(int param0, boolean param1, int param2) {
+    private final Sprite a(int param0, boolean param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -28,8 +28,8 @@ final class hl extends el {
         int var11 = 0;
         int var12 = 0;
         int var13 = Geoblox.field_C;
-        Sprite_dm var14 = new Sprite_dm(this.field_H * 2, this.field_h);
-        Geoblox.setRasterTarget_a(1, var14);
+        Sprite var14 = new Sprite(this.field_H * 2, this.field_h);
+        Geoblox.setRasterTarget(1, var14);
         int var5 = this.field_h >> -1499813087;
         for (var6 = 0; this.field_h > var6; var6++) {
             var7 = (var6 >> 303611585) * (-1 + this.field_H * 2) % (this.field_H * 2);
@@ -38,13 +38,13 @@ final class hl extends el {
             var10 = -var5 + var6;
             var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
             var12 = -257 >= (var11 ^ -1) ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> -259500472;
-            SoftwareRasterizer_vb.c(var7, var6, this.field_H, var12);
-            SoftwareRasterizer_vb.c(-(2 * this.field_H) + var7, var6, this.field_H, var12);
+            SoftwareRasterizer.c(var7, var6, this.field_H, var12);
+            SoftwareRasterizer.c(-(2 * this.field_H) + var7, var6, this.field_H, var12);
             var9 = param0 & 65280;
             var8 = param0 & 16711935;
             var12 = 256 > var11 ? (16711680 & var9 * var11 | -16711936 & var11 * var8) >>> -1261115064 : var9 | var8;
-            SoftwareRasterizer_vb.c(this.field_H + var7, var6, this.field_H, var12);
-            SoftwareRasterizer_vb.c(-this.field_H + var7, var6, this.field_H, var12);
+            SoftwareRasterizer.c(this.field_H + var7, var6, this.field_H, var12);
+            SoftwareRasterizer.c(-this.field_H + var7, var6, this.field_H, var12);
         }
         id.a(param1);
         return var14;
@@ -61,18 +61,18 @@ final class hl extends el {
         this.e(-1326628703);
     }
 
-    private final Sprite_dm g(int param0) {
+    private final Sprite g(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Geoblox.field_C;
         int var2 = this.field_h >> 1430525217;
-        Sprite_dm var3 = new Sprite_dm(var2, this.field_h);
+        Sprite var3 = new Sprite(var2, this.field_h);
         if (param0 != 255) {
-            return (Sprite_dm) null;
+            return (Sprite) null;
         }
-        Geoblox.setRasterTarget_a(1, var3);
+        Geoblox.setRasterTarget(1, var3);
         for (var4 = 0; var4 < this.field_h; var4++) {
             for (var5 = 0; var5 < var2; var5++) {
                 var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_h));
@@ -81,15 +81,16 @@ final class hl extends el {
                     var6 = Math.sqrt(1.0 - var6);
                     var8 = var6 >= 1.0 ? 255 : (int)(var6 * 255.0);
                 }
-                SoftwareRasterizer_vb.a(var5, var4, var8 << 2019007536 | (var8 | var8 << 407213000));
+                SoftwareRasterizer.a(var5, var4, var8 << 2019007536 | (var8 | var8 << 407213000));
             }
         }
         id.a(true);
         return var3;
     }
 
-    private final void a(Sprite_dm param0, int param1, int param2, int param3) {
-        Sprite_dm discarded$0 = null;
+    private final void a(Sprite param0, int param1, int param2, int param3) {
+        int var6 = 0;
+        Sprite discarded$0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -98,87 +99,58 @@ final class hl extends el {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         var8 = Geoblox.field_C;
         try {
           L0: {
             var5_int = param2 + this.field_r;
-            uh.a(param1, this.field_M.width_field_r + param2, param3 ^ 6447, this.field_h + param1, var5_int - this.field_M.width_field_r);
-            var6 = param2 + -this.field_I;
-            L1: while (true) {
-              if (var6 >= var5_int) {
-                L2: {
-                  if (param3 == -12276) {
-                    break L2;
-                  } else {
-                    discarded$0 = this.g(1);
-                    break L2;
-                  }
+            uh.a(param1, this.field_M.width + param2, param3 ^ 6447, this.field_h + param1, var5_int - this.field_M.width);
+            for (var6 = param2 + -this.field_I; var6 < var5_int; var6 = var6 + param0.width) {
+              param0.b(var6, param1);
+            }
+            if (param3 != -12276) {
+              discarded$0 = this.g(1);
+            }
+            id.a(true);
+            if (this.field_M.width + param2 >= SoftwareRasterizer.clipLeft) {
+              Geoblox.setRasterTarget(1, this.field_z);
+              param0.b(-this.field_I, 0);
+              param0.b(2 * this.field_H - this.field_I, 0);
+              this.field_y.e(0, 0);
+              id.a(true);
+              this.field_z.b(param2, param1);
+            }
+            L4: {
+              if (SoftwareRasterizer.clipRight >= var5_int - this.field_M.width) {
+                Geoblox.setRasterTarget(param3 ^ -12275, this.field_z);
+                for (var7 = this.field_I + (this.field_r - this.field_M.width); var7 > 2 * this.field_H; var7 = var7 - 2 * this.field_H) {
                 }
-                L3: {
-                  id.a(true);
-                  if (this.field_M.width_field_r + param2 < SoftwareRasterizer_vb.clipLeft_field_e) {
-                    break L3;
-                  } else {
-                    Geoblox.setRasterTarget_a(1, this.field_z);
-                    param0.b(-this.field_I, 0);
-                    param0.b(2 * this.field_H - this.field_I, 0);
-                    this.field_y.e(0, 0);
-                    id.a(true);
-                    this.field_z.b(param2, param1);
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (SoftwareRasterizer_vb.clipRight_field_k >= var5_int - this.field_M.width_field_r) {
-                    Geoblox.setRasterTarget_a(param3 ^ -12275, this.field_z);
-                    var7 = this.field_I + (this.field_r - this.field_M.width_field_r);
-                    L5: while (true) {
-                      if (var7 <= 2 * this.field_H) {
-                        param0.b(-var7, 0);
-                        param0.b(-var7 + this.field_H * 2, 0);
-                        this.field_M.e(0, 0);
-                        id.a(true);
-                        this.field_z.b(-this.field_M.width_field_r + var5_int, param1);
-                        break L4;
-                      } else {
-                        var7 = var7 - 2 * this.field_H;
-                        continue L5;
-                      }
-                    }
-                  } else {
-                    break L4;
-                  }
-                }
-                break L0;
-              } else {
-                param0.b(var6, param1);
-                var6 = var6 + param0.width_field_r;
-                continue L1;
+                param0.b(-var7, 0);
+                param0.b(-var7 + this.field_H * 2, 0);
+                this.field_M.e(0, 0);
+                id.a(true);
+                this.field_z.b(-this.field_M.width + var5_int, param1);
+                break L4;
               }
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var5 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_17_0 = (RuntimeException) (var5);
 
-            stackIn_17_1 = new StringBuilder().append("hl.G(");
+          stackIn_17_1 = new StringBuilder().append("hl.G(");
 
-            if (param0 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L6;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L6;
-            }
+          if (param0 == null) {
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -200,7 +172,7 @@ final class hl extends el {
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
-        Sprite_dm discarded$0 = null;
+        Sprite discarded$0 = null;
         super.a(param0, param1, (byte) -74, param3, param4);
         this.e(-1326628703);
         if (param2 > -6) {
@@ -209,13 +181,13 @@ final class hl extends el {
     }
 
     private final void e(int param0) {
-        this.field_F = new Sprite_dm[]{this.a(this.field_L, true, this.field_E), this.a(this.field_A, true, this.field_J)};
+        this.field_F = new Sprite[]{this.a(this.field_L, true, this.field_E), this.a(this.field_A, true, this.field_J)};
         this.field_M = this.g(255);
         if (param0 != -1326628703) {
             return;
         }
         this.field_y = this.field_M.c();
-        this.field_z = new Sprite_dm(this.field_h >> -1326628703, this.field_h);
+        this.field_z = new Sprite(this.field_h >> -1326628703, this.field_h);
     }
 
     private hl(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -249,49 +221,30 @@ final class hl extends el {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          L0: {
-            L1: {
-              if (!this.field_C) {
-                break L1;
-              } else {
-                this.field_I = this.field_I + 1;
-                if (this.field_I <= 2 * this.field_H) {
-                  break L1;
-                } else {
-                  this.field_I = this.field_I - 2 * this.field_H;
-                  break L1;
-                }
-              }
+          if (this.field_C) {
+            this.field_I = this.field_I + 1;
+            if (this.field_I > 2 * this.field_H) {
+              this.field_I = this.field_I - 2 * this.field_H;
             }
-            L2: {
-              if (!param0) {
-                break L2;
-              } else {
-                field_G = false;
-                break L2;
-              }
-            }
-            break L0;
+          }
+          if (param0) {
+            field_G = false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = (RuntimeException) (var5);
 
-            stackIn_8_1 = new StringBuilder().append("hl.H(").append(param0).append(',').append(param1).append(',');
+          stackIn_8_1 = new StringBuilder().append("hl.H(").append(param0).append(',').append(param1).append(',');
 
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          if (param2 == null) {
+            stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+            stackIn_9_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
         }

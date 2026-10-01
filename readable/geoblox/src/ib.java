@@ -4,7 +4,7 @@
 abstract class ib implements dg {
     private long field_b;
     static String field_d;
-    static boolean gameAssetsInitialized_field_a;
+    static boolean gameAssetsInitialized;
     static int field_c;
     static int field_e;
 
@@ -40,19 +40,16 @@ abstract class ib implements dg {
     }
 
     public final String c(int param0) {
-        if (!this.a(-26556)) {
-          if (oa.a(param0 ^ 25670) >= 350L + this.field_b) {
-            if (param0 != -21666) {
-              return (String) null;
-            } else {
-              return this.b((byte) -103);
-            }
-          } else {
+        if (this.a(-26556)) {
             return null;
-          }
-        } else {
-          return null;
         }
+        if (oa.a(param0 ^ 25670) < 350L + this.field_b) {
+            return null;
+        }
+        if (param0 == -21666) {
+            return this.b((byte) -103);
+        }
+        return (String) null;
     }
 
     abstract String b(byte param0);
@@ -80,35 +77,30 @@ abstract class ib implements dg {
     }
 
     public final lh a(byte param0) {
-        if (param0 == -105) {
-          if (!this.a(param0 ^ 26579)) {
-            if ((350L + this.field_b ^ -1L) < (oa.a(-12520) ^ -1L)) {
-              return bf.field_g;
-            } else {
-              return this.e(32);
+        if (param0 != -105) {
+            field_e = -117;
+            if (this.a(param0 ^ 26579)) {
+                return oj.field_d;
             }
-          } else {
-            return oj.field_d;
-          }
-        } else {
-          field_e = -117;
-          if (!this.a(param0 ^ 26579)) {
-            if ((350L + this.field_b ^ -1L) < (oa.a(-12520) ^ -1L)) {
-              return bf.field_g;
-            } else {
-              return this.e(32);
+            if ((350L + this.field_b ^ -1L) >= (oa.a(-12520) ^ -1L)) {
+                return this.e(32);
             }
-          } else {
-            return oj.field_d;
-          }
+            return bf.field_g;
         }
+        if (this.a(param0 ^ 26579)) {
+            return oj.field_d;
+        }
+        if ((350L + this.field_b ^ -1L) >= (oa.a(-12520) ^ -1L)) {
+            return this.e(32);
+        }
+        return bf.field_g;
     }
 
     final static void d(int param0) {
         String var2 = (String) null;
         f.b("", (String) null, 7697781);
         if (param0 != 24107) {
-            gameAssetsInitialized_field_a = false;
+            gameAssetsInitialized = false;
         }
     }
 

@@ -5,7 +5,7 @@ final class hd extends sh {
     private int field_K;
     private m field_F;
     private String field_J;
-    static Sprite_dm field_H;
+    static Sprite field_H;
     static int[] field_I;
     private boolean field_B;
     private int field_C;
@@ -33,159 +33,99 @@ final class hd extends sh {
         field_I = null;
     }
 
-    final static void f(int param0) {
-        if (!el.gameplaySession_field_o.field_Y) {
-          di.field_g = di.field_g + 1;
-          ul.field_b = ul.field_b + 1;
-          if (sa.field_b == di.field_g) {
+    final static void recordEntityRelease(int param0) {
+        if (!el.gameplaySession.tutorialMode) {
+          di.releasedInDifficultyStep = di.releasedInDifficultyStep + 1;
+          ul.releasedInCurrentTheme = ul.releasedInCurrentTheme + 1;
+          if (sa.releasesPerDifficultyStep == di.releasedInDifficultyStep) {
             if (gb.field_c < 2) {
-              di.field_g = 0;
-              ld.b(false);
+              di.releasedInDifficultyStep = 0;
+              ld.advanceDifficulty(false);
               gb.field_c = gb.field_c + 1;
               if (param0 != 2) {
-                L0: {
-                  field_I = (int[]) null;
-                  if (fa.field_b != ul.field_b) {
-                    break L0;
-                  } else {
-                    L1: {
-                      ul.field_b = 0;
-                      fj.field_m = 0;
-                      el.gameplaySession_field_o.field_bb = 1;
-                      di.field_g = 0;
-                      if (-3 < (gb.field_c ^ -1)) {
-                        ld.b(false);
-                        break L1;
-                      } else {
-                        break L1;
-                      }
-                    }
-                    gb.field_c = 0;
-                    el.field_t = el.field_t + 1;
-                    break L0;
+                field_I = (int[]) null;
+                if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
+                  ul.releasedInCurrentTheme = 0;
+                  fj.field_m = 0;
+                  el.gameplaySession.sessionPhase = 1;
+                  di.releasedInDifficultyStep = 0;
+                  if (-3 < (gb.field_c ^ -1)) {
+                    ld.advanceDifficulty(false);
                   }
+                  gb.field_c = 0;
+                  el.field_t = el.field_t + 1;
                 }
                 return;
               } else {
-                L2: {
-                  if (fa.field_b != ul.field_b) {
-                    break L2;
-                  } else {
-                    L3: {
-                      ul.field_b = 0;
-                      fj.field_m = 0;
-                      el.gameplaySession_field_o.field_bb = 1;
-                      di.field_g = 0;
-                      if (-3 < (gb.field_c ^ -1)) {
-                        ld.b(false);
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    gb.field_c = 0;
-                    el.field_t = el.field_t + 1;
-                    break L2;
+                if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
+                  ul.releasedInCurrentTheme = 0;
+                  fj.field_m = 0;
+                  el.gameplaySession.sessionPhase = 1;
+                  di.releasedInDifficultyStep = 0;
+                  if (-3 < (gb.field_c ^ -1)) {
+                    ld.advanceDifficulty(false);
                   }
+                  gb.field_c = 0;
+                  el.field_t = el.field_t + 1;
                 }
                 return;
               }
             } else {
               if (param0 != 2) {
-                L4: {
-                  field_I = (int[]) null;
-                  if (fa.field_b != ul.field_b) {
-                    break L4;
-                  } else {
-                    L5: {
-                      ul.field_b = 0;
-                      fj.field_m = 0;
-                      el.gameplaySession_field_o.field_bb = 1;
-                      di.field_g = 0;
-                      if (-3 < (gb.field_c ^ -1)) {
-                        ld.b(false);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                    gb.field_c = 0;
-                    el.field_t = el.field_t + 1;
-                    break L4;
+                field_I = (int[]) null;
+                if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
+                  ul.releasedInCurrentTheme = 0;
+                  fj.field_m = 0;
+                  el.gameplaySession.sessionPhase = 1;
+                  di.releasedInDifficultyStep = 0;
+                  if (-3 < (gb.field_c ^ -1)) {
+                    ld.advanceDifficulty(false);
                   }
+                  gb.field_c = 0;
+                  el.field_t = el.field_t + 1;
                 }
                 return;
               } else {
-                L6: {
-                  if (fa.field_b != ul.field_b) {
-                    break L6;
-                  } else {
-                    L7: {
-                      ul.field_b = 0;
-                      fj.field_m = 0;
-                      el.gameplaySession_field_o.field_bb = 1;
-                      di.field_g = 0;
-                      if (-3 < (gb.field_c ^ -1)) {
-                        ld.b(false);
-                        break L7;
-                      } else {
-                        break L7;
-                      }
-                    }
-                    gb.field_c = 0;
-                    el.field_t = el.field_t + 1;
-                    break L6;
+                if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
+                  ul.releasedInCurrentTheme = 0;
+                  fj.field_m = 0;
+                  el.gameplaySession.sessionPhase = 1;
+                  di.releasedInDifficultyStep = 0;
+                  if (-3 < (gb.field_c ^ -1)) {
+                    ld.advanceDifficulty(false);
                   }
+                  gb.field_c = 0;
+                  el.field_t = el.field_t + 1;
                 }
                 return;
               }
             }
           } else {
             if (param0 != 2) {
-              L8: {
-                field_I = (int[]) null;
-                if (fa.field_b != ul.field_b) {
-                  break L8;
-                } else {
-                  L9: {
-                    ul.field_b = 0;
-                    fj.field_m = 0;
-                    el.gameplaySession_field_o.field_bb = 1;
-                    di.field_g = 0;
-                    if (-3 < (gb.field_c ^ -1)) {
-                      ld.b(false);
-                      break L9;
-                    } else {
-                      break L9;
-                    }
-                  }
-                  gb.field_c = 0;
-                  el.field_t = el.field_t + 1;
-                  break L8;
+              field_I = (int[]) null;
+              if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
+                ul.releasedInCurrentTheme = 0;
+                fj.field_m = 0;
+                el.gameplaySession.sessionPhase = 1;
+                di.releasedInDifficultyStep = 0;
+                if (-3 < (gb.field_c ^ -1)) {
+                  ld.advanceDifficulty(false);
                 }
+                gb.field_c = 0;
+                el.field_t = el.field_t + 1;
               }
               return;
             } else {
-              L10: {
-                if (fa.field_b != ul.field_b) {
-                  break L10;
-                } else {
-                  L11: {
-                    ul.field_b = 0;
-                    fj.field_m = 0;
-                    el.gameplaySession_field_o.field_bb = 1;
-                    di.field_g = 0;
-                    if (-3 < (gb.field_c ^ -1)) {
-                      ld.b(false);
-                      break L11;
-                    } else {
-                      break L11;
-                    }
-                  }
-                  gb.field_c = 0;
-                  el.field_t = el.field_t + 1;
-                  break L10;
+              if (fa.releasesPerTheme == ul.releasedInCurrentTheme) {
+                ul.releasedInCurrentTheme = 0;
+                fj.field_m = 0;
+                el.gameplaySession.sessionPhase = 1;
+                di.releasedInDifficultyStep = 0;
+                if (-3 < (gb.field_c ^ -1)) {
+                  ld.advanceDifficulty(false);
                 }
+                gb.field_c = 0;
+                el.field_t = el.field_t + 1;
               }
               return;
             }
@@ -226,104 +166,77 @@ final class hd extends sh {
         int var13 = 0;
         int var14 = 0;
         try {
-          L0: {
-            L1: {
-              this.field_G = param9;
-              this.field_A = param4;
-              this.field_C = param7;
-              this.field_F = param8;
-              stackIn_3_0 = this;
+          this.field_G = param9;
+          this.field_A = param4;
+          this.field_C = param7;
+          this.field_F = param8;
+          stackIn_3_0 = this;
 
-              if (!param5) {
-                stackIn_4_0 = this;
-                stackIn_4_1 = 0;
-                break L1;
-              } else {
-                stackIn_4_0 = this;
-                stackIn_4_1 = 1;
-                break L1;
-              }
-            }
-            L2: {
-              ((hd) (this)).field_B = stackIn_4_1 != 0;
-              this.field_K = param6;
-              this.field_J = param10;
-              var12_int = this.field_K - this.field_C;
-              var13 = this.field_F.b(param10, var12_int, this.field_F.field_o) - -(2 * this.field_C);
-              if (var13 <= param3) {
-                var13 = param3;
-                break L2;
-              } else {
-                this.a(var13, param2, (byte) -74, param1, param0);
-                break L2;
-              }
-            }
-            L3: {
-              if (!this.field_B) {
-                stackIn_10_0 = this.field_K - -(this.field_C * 2);
-                break L3;
-              } else {
-                stackIn_10_0 = 0;
-                break L3;
-              }
-            }
-            var14 = stackIn_10_0;
-            this.field_A.a(-(2 * this.field_C) + param3, param2 + -this.field_K - this.field_C * 3, (byte) -105, (-param3 + var13 >> -1512856031) + this.field_C, var14);
-            break L0;
+          if (!param5) {
+            stackIn_4_0 = this;
+            stackIn_4_1 = 0;
+          } else {
+            stackIn_4_0 = this;
+            stackIn_4_1 = 1;
           }
+          ((hd) (this)).field_B = stackIn_4_1 != 0;
+          this.field_K = param6;
+          this.field_J = param10;
+          var12_int = this.field_K - this.field_C;
+          var13 = this.field_F.b(param10, var12_int, this.field_F.field_o) - -(2 * this.field_C);
+          if (var13 <= param3) {
+            var13 = param3;
+          } else {
+            this.a(var13, param2, (byte) -74, param1, param0);
+          }
+          if (!this.field_B) {
+            stackIn_10_0 = this.field_K - -(this.field_C * 2);
+          } else {
+            stackIn_10_0 = 0;
+          }
+          var14 = stackIn_10_0;
+          this.field_A.a(-(2 * this.field_C) + param3, param2 + -this.field_K - this.field_C * 3, (byte) -105, (-param3 + var13 >> -1512856031) + this.field_C, var14);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var12 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var12);
+          var12 = decompiledCaughtException;
+          stackIn_14_0 = (RuntimeException) (var12);
 
-            stackIn_14_1 = new StringBuilder().append("hd.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          stackIn_14_1 = new StringBuilder().append("hd.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 
-            if (param4 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
+          if (param4 == null) {
+            stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+            stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+            stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+            stackIn_15_2 = "{...}";
           }
-          L5: {
 
 
-            stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
 
-            if (param8 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L5;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L5;
-            }
+          if (param8 == null) {
+            stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "{...}";
           }
-          L6: {
 
 
-            stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param9).append(',');
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param9).append(',');
 
-            if (param10 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L6;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L6;
-            }
+          if (param10 == null) {
+            stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+            stackIn_21_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_15_0), stackIn_21_2 + ')');
         }

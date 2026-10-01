@@ -6,14 +6,14 @@ final class sl {
     boolean field_d;
     boolean field_g;
     String field_e;
-    static tf field_k;
+    static IntrusiveDeque field_k;
     int field_j;
     static String field_i;
     static String field_h;
-    static Sprite_dm[] field_f;
+    static Sprite[] field_f;
     static String field_b;
     static rh field_l;
-    static Sprite_dm field_c;
+    static Sprite field_c;
 
     final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
@@ -25,41 +25,33 @@ final class sl {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            hj.a((byte) -85, (java.awt.Component) ((Object) param0));
-            if (param1 == 57) {
-              fk.a((java.awt.Component) ((Object) param0), param1 + -56);
-              if (null != vc.field_f) {
-                vc.field_f.a(124, (java.awt.Component) ((Object) param0));
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                return;
-              }
+          hj.a((byte) -85, (java.awt.Component) ((Object) param0));
+          if (param1 == 57) {
+            fk.a((java.awt.Component) ((Object) param0), param1 + -56);
+            if (null != vc.field_f) {
+              vc.field_f.a(124, (java.awt.Component) ((Object) param0));
+              decompiledRegionSelector0 = 1;
             } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+              return;
             }
+          } else {
+            decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_8_0 = (RuntimeException) (var2);
 
-            stackIn_8_1 = new StringBuilder().append("sl.D(");
+          stackIn_8_1 = new StringBuilder().append("sl.D(");
 
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L1;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L1;
-            }
+          if (param0 == null) {
+            stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+            stackIn_9_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
@@ -88,100 +80,63 @@ final class sl {
         RuntimeException var2 = null;
         try {
           L0: {
-            L1: {
-              var2_int = param0.length();
-              if (20 >= var2_int) {
-                break L1;
-              } else {
-                var2_int = 20;
-                break L1;
-              }
+            var2_int = param0.length();
+            if (20 < var2_int) {
+              var2_int = 20;
             }
-            L2: {
-              var8 = new char[var2_int];
-              var7 = var8;
-              var3 = var7;
-              var4 = 0;
-              if (param1 == 48) {
-                break L2;
-              } else {
-                var6 = (java.awt.Canvas) null;
-                sl.a((java.awt.Canvas) null, 58);
-                break L2;
-              }
+            var8 = new char[var2_int];
+            var7 = var8;
+            var3 = var7;
+            var4 = 0;
+            if (param1 != 48) {
+              var6 = (java.awt.Canvas) null;
+              sl.a((java.awt.Canvas) null, 58);
             }
-            L3: while (true) {
-              if (var2_int <= var4) {
-                stackIn_20_0 = new String(var8);
-                break L0;
-              } else {
-                L4: {
-                  L5: {
-                    var5 = param0.charAt(var4);
-                    if (var5 < 65) {
-                      break L5;
-                    } else {
-                      if (var5 <= 90) {
-                        var3[var4] = (char)(-65 + (var5 - -97));
-                        break L4;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  L6: {
-                    L7: {
-                      if (var5 < 97) {
-                        break L7;
-                      } else {
-                        if (var5 <= 122) {
-                          break L6;
-                        } else {
-                          break L7;
-                        }
-                      }
-                    }
-                    L8: {
-                      if (var5 < 48) {
-                        break L8;
-                      } else {
-                        if (var5 > 57) {
-                          break L8;
-                        } else {
-                          break L6;
-                        }
-                      }
-                    }
-                    var3[var4] = (char)95;
+            L3: while (var2_int > var4) {
+              L4: {
+                var5 = param0.charAt(var4);
+                if (var5 >= 65) {
+                  if (var5 <= 90) {
+                    var3[var4] = (char)(-65 + (var5 - -97));
                     break L4;
                   }
-                  var3[var4] = (char)var5;
+                }
+                L6: {
+                  if (var5 >= 97) {
+                    if (var5 <= 122) {
+                      break L6;
+                    }
+                  }
+                  if (var5 >= 48) {
+                    if (var5 <= 57) {
+                      break L6;
+                    }
+                  }
+                  var3[var4] = (char)95;
                   break L4;
                 }
-                var4++;
-                continue L3;
+                var3[var4] = (char)var5;
               }
+              var4++;
             }
+            stackIn_20_0 = new String(var8);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var2 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_23_0 = (RuntimeException) (var2);
 
-            stackIn_23_1 = new StringBuilder().append("sl.A(");
+          stackIn_23_1 = new StringBuilder().append("sl.A(");
 
-            if (param0 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L9;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L9;
-            }
+          if (param0 == null) {
+            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+            stackIn_24_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ')');
         }
@@ -213,37 +168,25 @@ final class sl {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!param2) {
-                break L1;
-              } else {
-                field_l = (rh) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = param1.a(param0, -17978);
-            break L0;
+          if (param2) {
+            field_l = (rh) null;
           }
+          stackIn_3_0 = param1.a(param0, -17978);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = (RuntimeException) (var3);
 
-            stackIn_6_1 = new StringBuilder().append("sl.B(").append(param0).append(',');
+          stackIn_6_1 = new StringBuilder().append("sl.B(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          if (param1 == null) {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+            stackIn_7_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param2 + ')');
         }
@@ -251,7 +194,7 @@ final class sl {
     }
 
     static {
-        field_k = new tf();
+        field_k = new IntrusiveDeque();
         field_i = "Please enter your age in years";
         field_h = "Orb points: <%0>";
         field_b = "Email: ";

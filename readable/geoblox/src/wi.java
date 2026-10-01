@@ -54,56 +54,41 @@ final class wi extends ee implements pl {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (!super.a(param0, param1 + 0, param2, param3)) {
-              L1: {
-                if (param1 == 13) {
-                  break L1;
-                } else {
-                  field_F = (String) null;
-                  break L1;
-                }
-              }
-              if ((param0 ^ -1) != -99) {
-                if (99 == param0) {
-                  stackIn_13_0 = this.a(param3, -119);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  stackIn_15_0 = 0;
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                }
+          if (!super.a(param0, param1 + 0, param2, param3)) {
+            if (param1 != 13) {
+              field_F = (String) null;
+            }
+            if ((param0 ^ -1) != -99) {
+              if (99 == param0) {
+                stackIn_13_0 = this.a(param3, -119);
+                decompiledRegionSelector0 = 2;
               } else {
-                stackIn_8_0 = this.a(7305, param3);
-                decompiledRegionSelector0 = 1;
-                break L0;
+                stackIn_15_0 = 0;
+                decompiledRegionSelector0 = 3;
               }
             } else {
-              stackIn_2_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
+              stackIn_8_0 = this.a(7305, param3);
+              decompiledRegionSelector0 = 1;
             }
+          } else {
+            stackIn_2_0 = 1;
+            decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_19_0 = (RuntimeException) (var5);
 
-            stackIn_19_1 = new StringBuilder().append("wi.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          stackIn_19_1 = new StringBuilder().append("wi.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
-            if (param3 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L2;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L2;
-            }
+          if (param3 == null) {
+            stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+            stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+            stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+            stackIn_20_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
         }
@@ -147,68 +132,41 @@ final class wi extends ee implements pl {
         RuntimeException var6 = null;
         var7 = Geoblox.field_C;
         try {
-          L0: {
-            L1: {
-              if (param1 == -20) {
-                break L1;
-              } else {
-                this.field_E = (hk) null;
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
-                if (this.field_C != param4) {
-                  break L3;
-                } else {
-                  ib.d(param1 ^ -24121);
-                  if (var7 == 0) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              L4: {
-                if (this.field_G != param4) {
-                  break L4;
-                } else {
-                  jf.a((byte) 101);
-                  if (var7 == 0) {
-                    break L2;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              if (this.field_E != param4) {
-                break L2;
-              } else {
-                hk.e(param1 + 103);
+          if (param1 != -20) {
+            this.field_E = (hk) null;
+          }
+          L2: {
+            if (this.field_C == param4) {
+              ib.d(param1 ^ -24121);
+              if (var7 == 0) {
                 break L2;
               }
             }
-            break L0;
+            if (this.field_G == param4) {
+              jf.a((byte) 101);
+              if (var7 == 0) {
+                break L2;
+              }
+            }
+            if (this.field_E == param4) {
+              hk.e(param1 + 103);
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var6 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var6);
+          var6 = decompiledCaughtException;
+          stackIn_23_0 = (RuntimeException) (var6);
 
-            stackIn_23_1 = new StringBuilder().append("wi.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          stackIn_23_1 = new StringBuilder().append("wi.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 
-            if (param4 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L5;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L5;
-            }
+          if (param4 == null) {
+            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+            stackIn_24_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
         }
@@ -284,7 +242,7 @@ final class wi extends ee implements pl {
                         }
                         case 4: {
                             try {
-                                hf.field_e = ag.a(1, var2);
+                                IntrusiveNode.field_e = ag.a(1, var2);
                                 statePc = 5;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_4) {
@@ -470,7 +428,7 @@ final class wi extends ee implements pl {
                         }
                         case 24: {
                             try {
-                                rc.field_g = ag.a(1, var2);
+                                DualLinkNode.field_g = ag.a(1, var2);
                                 statePc = 26;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_24) {
@@ -8760,7 +8718,7 @@ final class wi extends ee implements pl {
                         }
                         case 953: {
                             try {
-                                rc.field_f = ag.a(1, var2);
+                                DualLinkNode.field_f = ag.a(1, var2);
                                 statePc = 955;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_953) {
@@ -12369,7 +12327,7 @@ final class wi extends ee implements pl {
                         }
                         case 1359: {
                             try {
-                                GameScreen_c.field_r = ag.a(1, var2);
+                                GameScreen.field_r = ag.a(1, var2);
                                 statePc = 1361;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_1359) {
@@ -19307,7 +19265,7 @@ final class wi extends ee implements pl {
                         }
                         case 2136: {
                             try {
-                                GameScreen_c.field_Q[0] = ag.a(1, var2);
+                                GameScreen.field_Q[0] = ag.a(1, var2);
                                 statePc = 2138;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_2136) {
@@ -19333,7 +19291,7 @@ final class wi extends ee implements pl {
                         }
                         case 2139: {
                             try {
-                                GameScreen_c.field_Q[1] = ag.a(1, var2);
+                                GameScreen.field_Q[1] = ag.a(1, var2);
                                 statePc = 2141;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_2139) {
@@ -19359,7 +19317,7 @@ final class wi extends ee implements pl {
                         }
                         case 2142: {
                             try {
-                                GameScreen_c.field_Q[2] = ag.a(1, var2);
+                                GameScreen.field_Q[2] = ag.a(1, var2);
                                 statePc = 2144;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_2142) {
@@ -19385,7 +19343,7 @@ final class wi extends ee implements pl {
                         }
                         case 2145: {
                             try {
-                                GameScreen_c.field_Q[3] = ag.a(1, var2);
+                                GameScreen.field_Q[3] = ag.a(1, var2);
                                 statePc = 2147;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_2145) {
@@ -19411,7 +19369,7 @@ final class wi extends ee implements pl {
                         }
                         case 2148: {
                             try {
-                                GameScreen_c.field_Q[4] = ag.a(1, var2);
+                                GameScreen.field_Q[4] = ag.a(1, var2);
                                 statePc = 2150;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_2148) {
@@ -19447,7 +19405,7 @@ final class wi extends ee implements pl {
                         }
                         case 2153: {
                             try {
-                                GameScreen_c.field_Q[5] = ag.a(1, var2);
+                                GameScreen.field_Q[5] = ag.a(1, var2);
                                 statePc = 2154;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_2153) {
@@ -19679,7 +19637,7 @@ final class wi extends ee implements pl {
                         }
                         case 2179: {
                             try {
-                                GameScreen_c.c(105, var2[0]);
+                                GameScreen.c(105, var2[0]);
                                 statePc = 2180;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_2179) {
@@ -20176,7 +20134,7 @@ final class wi extends ee implements pl {
                         }
                         case 2233: {
                             try {
-                                Geoblox.reconnectMessages_field_z[0] = ag.a(1, var2);
+                                Geoblox.reconnectMessages[0] = ag.a(1, var2);
                                 statePc = 2235;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_2233) {
@@ -20202,7 +20160,7 @@ final class wi extends ee implements pl {
                         }
                         case 2236: {
                             try {
-                                Geoblox.reconnectMessages_field_z[1] = ag.a(1, var2);
+                                Geoblox.reconnectMessages[1] = ag.a(1, var2);
                                 statePc = 2238;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_2236) {
@@ -20228,7 +20186,7 @@ final class wi extends ee implements pl {
                         }
                         case 2239: {
                             try {
-                                Geoblox.reconnectMessages_field_z[2] = ag.a(1, var2);
+                                Geoblox.reconnectMessages[2] = ag.a(1, var2);
                                 statePc = 2241;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_2239) {
@@ -20254,7 +20212,7 @@ final class wi extends ee implements pl {
                         }
                         case 2242: {
                             try {
-                                Geoblox.reconnectMessages_field_z[3] = ag.a(1, var2);
+                                Geoblox.reconnectMessages[3] = ag.a(1, var2);
                                 statePc = 2244;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_2242) {

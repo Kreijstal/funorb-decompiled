@@ -47,14 +47,14 @@ final class hj {
         }
     }
 
-    final static Sprite_dm[] a(int param0) {
-        Sprite_dm[] var1;
+    final static Sprite[] a(int param0) {
+        int var6 = 0;
+        int var7 = 0;
+        Sprite[] var1;
         int var2;
         int var3;
         byte[] var5;
-        int var6;
         int[] var6_ref_int__;
-        int var7;
         int var8;
         byte[] var9;
         int[] var10;
@@ -64,15 +64,10 @@ final class hj {
         int[] var17;
         byte[] var21;
         int[] var22;
-        L0: {
-          var8 = Geoblox.field_C;
-          var1 = new Sprite_dm[sb.field_a];
-          if (param0 > 60) {
-            break L0;
-          } else {
-            field_a = 2;
-            break L0;
-          }
+        var8 = Geoblox.field_C;
+        var1 = new Sprite[sb.field_a];
+        if (param0 <= 60) {
+          field_a = 2;
         }
         var2 = 0;
         L1: while (true) {
@@ -80,23 +75,17 @@ final class hj {
             kj.c(true);
             return var1;
           } else {
-            var3 = hl.field_K[var2] * rc.field_j[var2];
+            var3 = hl.field_K[var2] * DualLinkNode.field_j[var2];
             var21 = mj.field_a[var2];
             if (!ng.field_E[var2]) {
               var10 = new int[var3];
               var22 = var10;
-              var6 = 0;
-              L2: while (true) {
-                if (var3 <= var6) {
-                  var1[var2] = new Sprite_dm(pg.field_b, dd.field_C, GameplaySession_gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], var22);
-                  var2++;
-                  continue L1;
-                } else {
-                  var10[var6] = cm.field_j[cd.a((int) var21[var6], 255)];
-                  var6++;
-                  continue L2;
-                }
+              for (var6 = 0; var3 > var6; var6++) {
+                var10[var6] = cm.field_j[cd.a((int) var21[var6], 255)];
               }
+              var1[var2] = new Sprite(pg.field_b, dd.field_C, GameplaySession.field_m[var2], md.field_e[var2], DualLinkNode.field_j[var2], hl.field_K[var2], var22);
+              var2++;
+              continue L1;
             } else {
               var15 = vf.field_E[var2];
               var11 = var15;
@@ -105,18 +94,12 @@ final class hj {
               var17 = new int[var3];
               var13 = var17;
               var6_ref_int__ = var13;
-              var7 = 0;
-              L3: while (true) {
-                if (var7 >= var3) {
-                  var1[var2] = (Sprite_dm) ((Object) new il(pg.field_b, dd.field_C, GameplaySession_gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], var17));
-                  var2++;
-                  continue L1;
-                } else {
-                  var6_ref_int__[var7] = lb.a(cd.a(var15[var7] << -1753349800, -16777216), cm.field_j[cd.a((int) var21[var7], 255)]);
-                  var7++;
-                  continue L3;
-                }
+              for (var7 = 0; var7 < var3; var7++) {
+                var6_ref_int__[var7] = lb.a(cd.a(var15[var7] << -1753349800, -16777216), cm.field_j[cd.a((int) var21[var7], 255)]);
               }
+              var1[var2] = (Sprite) ((Object) new il(pg.field_b, dd.field_C, GameplaySession.field_m[var2], md.field_e[var2], DualLinkNode.field_j[var2], hl.field_K[var2], var17));
+              var2++;
+              continue L1;
             }
           }
         }

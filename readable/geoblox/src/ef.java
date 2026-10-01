@@ -4,9 +4,9 @@
 import java.util.*;
 
 final class ef implements Iterator {
-    private rc field_b;
+    private DualLinkNode field_b;
     private ra field_a;
-    private rc field_d;
+    private DualLinkNode field_d;
     static String field_c;
     static boolean field_e;
 
@@ -29,53 +29,39 @@ final class ef implements Iterator {
         if (null == this.field_b) {
             throw new IllegalStateException();
         }
-        this.field_b.a((byte) 92);
+        this.field_b.unlinkSecondaryNode((byte) 92);
         this.field_b = null;
     }
 
-    final static void advanceActiveEntityAnimations_b(byte param0) {
+    final static void advanceActiveEntityAnimations(byte param0) {
         float var1_float = 0.0f;
         RuntimeException var1 = null;
-        GameplayEntity_ja var2 = null;
+        GameplayEntity var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              var1_float = el.gameplaySession_field_o.boardAngleRadians_field_J;
-              ab.a(param0 + -22, var1_float);
-              rh.a((byte) 123);
-              if (param0 == -15) {
-                break L1;
-              } else {
-                ef.a((byte) -11);
-                break L1;
-              }
+            var1_float = el.gameplaySession.boardAngleRadians;
+            ab.moveEntitiesAndCollectContacts(param0 + -22, var1_float);
+            rh.updateAttachedEntities((byte) 123);
+            if (param0 != -15) {
+              ef.a((byte) -11);
             }
-            var2 = (GameplayEntity_ja) ((Object) bh.field_c.g(0));
-            L2: while (true) {
-              if (var2 == null) {
-                if (el.gameplaySession_field_o.field_C) {
-                  break L0;
-                } else {
-                  lc.a(255);
-                  return;
-                }
-              } else {
-                L3: {
-                  var2.advanceEntityAnimation_b(true);
-                  if ((var2.animationFrameIndex_field_G ^ -1) > -4) {
-                    break L3;
-                  } else {
-                    var2.entityQueue_field_K = ra.field_a;
-                    var2.animationFrameIndex_field_G = 0;
-                    break L3;
-                  }
-                }
-                var2 = (GameplayEntity_ja) ((Object) bh.field_c.d(1));
-                continue L2;
+            var2 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
+            L2: while (var2 != null) {
+              var2.advanceEntityAnimation(true);
+              if ((var2.animationFrameIndex ^ -1) <= -4) {
+                var2.entityQueue = ra.availableEntities;
+                var2.animationFrameIndex = 0;
               }
+              var2 = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
+            }
+            if (el.gameplaySession.tutorialPromptActive) {
+              break L0;
+            } else {
+              lc.updateSpawnQueue(255);
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -89,7 +75,7 @@ final class ef implements Iterator {
         this.field_b = null;
         try {
             this.field_a = param0;
-            this.field_d = this.field_a.field_c.field_k;
+            this.field_d = this.field_a.field_c.nextSecondaryNode;
             this.field_b = null;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -103,13 +89,13 @@ final class ef implements Iterator {
         }
     }
 
-    final static Sprite_dm a(int param0, int param1, int param2) {
+    final static Sprite a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Geoblox.field_C;
-        Sprite_dm var6 = new Sprite_dm(param2, param2);
-        Sprite_dm var3 = var6;
-        for (var4 = param0; var3.pixels_field_v.length > var4; var4++) {
-            var6.pixels_field_v[var4] = param1;
+        Sprite var6 = new Sprite(param2, param2);
+        Sprite var3 = var6;
+        for (var4 = param0; var3.pixels.length > var4; var4++) {
+            var6.pixels[var4] = param1;
         }
         return var3;
     }
@@ -117,12 +103,12 @@ final class ef implements Iterator {
     public final Object next() {
         Object var1 = this.field_d;
         if (var1 != this.field_a.field_c) {
-            this.field_d = ((rc) (var1)).field_k;
+            this.field_d = ((DualLinkNode) (var1)).nextSecondaryNode;
         } else {
             var1 = null;
             this.field_d = null;
         }
-        this.field_b = (rc) (var1);
+        this.field_b = (DualLinkNode) (var1);
         return var1;
     }
 

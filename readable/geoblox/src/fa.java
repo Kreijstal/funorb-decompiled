@@ -4,10 +4,10 @@
 final class fa {
     static String field_d;
     static String field_h;
-    static int field_b;
+    static int releasesPerTheme;
     static int field_f;
     static int field_e;
-    static boolean field_a;
+    static boolean entitiesDetachedThisTick;
     static qc field_c;
     static int field_i;
     static String[] field_g;
@@ -37,7 +37,7 @@ final class fa {
     }
 
     static {
-        field_b = 60;
+        releasesPerTheme = 60;
         field_f = 14;
         field_d = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
         field_h = "Names cannot contain consecutive spaces";

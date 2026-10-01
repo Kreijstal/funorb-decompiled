@@ -1,203 +1,150 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class GameplaySession_gh {
-    float boardAngleRadians_field_J;
-    boolean field_B;
-    boolean field_Y;
-    private StringBuilder scoreText_field_X;
-    int field_w;
-    int field_u;
-    private boolean field_R;
-    private boolean field_Q;
-    boolean field_C;
-    private boolean field_j;
-    int field_T;
-    boolean field_N;
-    private int delayedActionCountdown_field_a;
-    int field_q;
+final class GameplaySession {
+    float boardAngleRadians;
+    boolean connectivityRebuiltThisTick;
+    boolean tutorialMode;
+    private StringBuilder scoreText;
+    int boardMaskOffsetX;
+    int boardMaskOffsetY;
+    private boolean boardEmptyAtResultStart;
+    private boolean debugSpawnSpecialKinds;
+    boolean tutorialPromptActive;
+    private boolean debugPointerSpawnEnabled;
+    int pointsPanelX;
+    boolean spawnReleaseDisabled;
+    private int delayedActionCountdown;
+    int resultBonusPoints;
     static volatile int field_P;
-    private boolean field_V;
-    private int field_r;
-    boolean field_K;
-    int updateTick_field_v;
-    private int field_U;
-    int score_field_o;
-    private boolean field_s;
-    private int field_k;
-    boolean field_x;
-    private boolean field_d;
-    private boolean field_f;
-    int field_y;
-    private int field_G;
-    private boolean field_b;
-    private int field_t;
+    private boolean debugReducedRendering;
+    private int debugSpawnVariantId;
+    boolean submissionBlocked;
+    int updateTick;
+    private int tutorialProgressMetric;
+    int score;
+    private boolean showDebugOverview;
+    private int pointsPanelFrameDirection;
+    boolean sessionEnding;
+    private boolean tutorialAdvanceRequested;
+    private boolean preserveScoreOnTransition;
+    int pointsPanelSlideDirection;
+    private int debugSpawnCategoryId;
+    private boolean boardClearBonusEligible;
+    private int tutorialStepPhase;
     static int[] field_m;
-    private Geoblox gameApplet_field_I;
-    private int field_p;
+    private Geoblox gameApplet;
+    private int tutorialStepId;
     static String field_z;
-    private boolean field_h;
-    private boolean field_i;
-    private int field_l;
-    private int pendingPopupPoints_field_A;
-    private StringBuilder popupPointsText_field_g;
-    private int field_W;
-    private int resultPanelX_field_ab;
-    boolean field_H;
-    private int sceneAnimationTick_field_D;
-    private boolean field_E;
-    private boolean field_n;
+    private boolean showSessionCounters;
+    private boolean sceneTransitionInProgress;
+    private int pointsPanelFrameIndex;
+    private int pendingPopupPoints;
+    private StringBuilder popupPointsText;
+    private int resultCompletionTickOffset;
+    private int resultPanelX;
+    boolean sceneTransitionRequested;
+    private int sceneAnimationTick;
+    private boolean rotationControlsSwapped;
+    private boolean matchBatchProcessedThisTick;
     private boolean field_L;
-    boolean field_F;
-    private PcmSampleStream_kl field_M;
-    int field_e;
-    private int resultSequenceCountdown_field_S;
-    private boolean field_Z;
-    private int field_c;
-    int field_bb;
+    boolean boardRasterDirty;
+    private PcmSampleStream field_M;
+    int newActionCount;
+    private int resultSequenceCountdown;
+    private boolean boundaryCheckRequested;
+    private int endingEntityRadius;
+    int sessionPhase;
 
-    private final void c(int param0) {
-        this.field_Y = false;
-        this.field_H = true;
+    private final void leaveTutorial(int param0) {
+        this.tutorialMode = false;
+        this.sceneTransitionRequested = true;
         if (param0 != 7000) {
-            this.field_R = true;
+            this.boardEmptyAtResultStart = true;
         }
-        this.field_f = false;
-        this.field_C = false;
+        this.preserveScoreOnTransition = false;
+        this.tutorialPromptActive = false;
     }
 
-    private final void g(int param0) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
+    private final void renderTutorialPrompt(int param0) {
+        int lineSpacing;
+        int promptWidthThenButtonX;
+        int promptHeight;
+        int promptTop;
         int var7;
-        String var8;
+        String promptText;
         var7 = Geoblox.field_C;
-        if (0 != this.field_t) {
+        if (0 != this.tutorialStepPhase) {
           return;
         } else {
           L0: {
-            L1: {
-              var8 = uk.a(this.field_p, 24146);
-              var3 = fi.field_d.field_o - fi.field_d.field_q + param0;
-              var4 = 460;
-              var5 = 30 + fi.field_d.b(var8, var4) * var3;
-              var6 = 300;
-              if ((this.field_p ^ -1) != -1) {
-                break L1;
-              } else {
-                var6 = 232;
+            promptText = uk.tutorialMessageForStep(this.tutorialStepId, 24146);
+            lineSpacing = fi.field_d.field_o - fi.field_d.field_q + param0;
+            promptWidthThenButtonX = 460;
+            promptHeight = 30 + fi.field_d.b(promptText, promptWidthThenButtonX) * lineSpacing;
+            promptTop = 300;
+            if ((this.tutorialStepId ^ -1) == -1) {
+              promptTop = 232;
+              if (var7 == 0) {
+                break L0;
+              }
+            }
+            if (this.tutorialStepId != 3) {
+              if (1 == this.tutorialStepId) {
+                promptTop = 280;
                 if (var7 == 0) {
                   break L0;
-                } else {
-                  break L1;
                 }
-              }
-            }
-            L2: {
-              if (this.field_p == 3) {
-                break L2;
               } else {
-                if (1 == this.field_p) {
-                  var6 = 280;
-                  if (var7 == 0) {
-                    break L0;
-                  } else {
-                    break L2;
-                  }
-                } else {
-                  break L0;
-                }
+                break L0;
               }
             }
-            var6 = 270;
-            break L0;
+            promptTop = 270;
           }
           L3: {
-            L4: {
-              ma.a(var6, 70, 10 + var5, (byte) -92, 500, ll.field_h);
-              fi.field_d.a(var8, 95, 15 + var6, var4, 300, 1, -1, 0, 0, var3);
-              if (-6 != (this.field_p ^ -1)) {
-                break L4;
-              } else {
-                L5: {
-                  if (-101 <= (qa.field_a ^ -1)) {
-                    break L5;
-                  } else {
-                    if (-341 >= (qa.field_a ^ -1)) {
-                      break L5;
-                    } else {
-                      if (-441 <= (ue.field_e ^ -1)) {
-                        break L5;
-                      } else {
-                        if (ue.field_e >= 476) {
-                          break L5;
-                        } else {
-                          dd.field_G.field_K[0][wf.field_p] = 15488514;
-                          break L5;
-                        }
-                      }
+            ma.a(promptTop, 70, 10 + promptHeight, (byte) -92, 500, ll.field_h);
+            fi.field_d.a(promptText, 95, 15 + promptTop, promptWidthThenButtonX, 300, 1, -1, 0, 0, lineSpacing);
+            if (-6 == (this.tutorialStepId ^ -1)) {
+              if (-101 > (qa.field_a ^ -1)) {
+                if (-341 < (qa.field_a ^ -1)) {
+                  if (-441 > (ue.field_e ^ -1)) {
+                    if (ue.field_e < 476) {
+                      dd.field_G.field_K[0][wf.field_p] = 15488514;
                     }
                   }
-                }
-                L6: {
-                  ma.a(440, 100, 36, (byte) -92, 240, eb.field_g);
-                  dd.field_G.b(cf.field_j, 220, 468, 0, -1);
-                  dd.field_G.field_K[0][wf.field_p] = 16689938;
-                  ma.a(440, 380, 36, (byte) -92, 160, eb.field_g);
-                  if (380 >= qa.field_a) {
-                    break L6;
-                  } else {
-                    if (540 <= qa.field_a) {
-                      break L6;
-                    } else {
-                      if (ue.field_e <= 440) {
-                        break L6;
-                      } else {
-                        if (476 > ue.field_e) {
-                          dd.field_G.field_K[0][wf.field_p] = 15488514;
-                          break L6;
-                        } else {
-                          break L6;
-                        }
-                      }
-                    }
-                  }
-                }
-                dd.field_G.b(nk.field_g, var4, 468, 0, -1);
-                dd.field_G.field_K[0][wf.field_p] = 16689938;
-                if (var7 == 0) {
-                  break L3;
-                } else {
-                  break L4;
                 }
               }
-            }
-            L7: {
-              ma.a(440, 240, 36, (byte) -92, 160, eb.field_g);
-              if (250 >= qa.field_a) {
-                break L7;
-              } else {
-                if (-390 >= (qa.field_a ^ -1)) {
-                  break L7;
-                } else {
-                  if ((ue.field_e ^ -1) >= -441) {
-                    break L7;
-                  } else {
-                    if (476 <= ue.field_e) {
-                      break L7;
-                    } else {
+              ma.a(440, 100, 36, (byte) -92, 240, eb.field_g);
+              dd.field_G.b(cf.field_j, 220, 468, 0, -1);
+              dd.field_G.field_K[0][wf.field_p] = 16689938;
+              ma.a(440, 380, 36, (byte) -92, 160, eb.field_g);
+              if (380 < qa.field_a) {
+                if (540 > qa.field_a) {
+                  if (ue.field_e > 440) {
+                    if (476 > ue.field_e) {
                       dd.field_G.field_K[0][wf.field_p] = 15488514;
-                      break L7;
                     }
+                  }
+                }
+              }
+              dd.field_G.b(nk.field_g, promptWidthThenButtonX, 468, 0, -1);
+              dd.field_G.field_K[0][wf.field_p] = 16689938;
+              if (var7 == 0) {
+                break L3;
+              }
+            }
+            ma.a(440, 240, 36, (byte) -92, 160, eb.field_g);
+            if (250 < qa.field_a) {
+              if (-390 < (qa.field_a ^ -1)) {
+                if ((ue.field_e ^ -1) < -441) {
+                  if (476 > ue.field_e) {
+                    dd.field_G.field_K[0][wf.field_p] = 15488514;
                   }
                 }
               }
             }
             dd.field_G.b(mi.field_y, 320, 468, 0, -1);
             dd.field_G.field_K[0][wf.field_p] = 16689938;
-            break L3;
           }
           return;
         }
@@ -224,111 +171,86 @@ final class GameplaySession_gh {
         Throwable decompiledCaughtException = null;
         var4 = Geoblox.field_C;
         try {
-          L0: {
-            try {
-              L1: {
-                if (d.field_b.startsWith("win")) {
-                  if (!param1) {
-                    L2: {
-                      if (param0.startsWith("http://")) {
-                        break L2;
-                      } else {
-                        if (param0.startsWith("https://")) {
-                          break L2;
-                        } else {
-                          return false;
-                        }
-                      }
+          try {
+            L1: {
+              if (d.field_b.startsWith("win")) {
+                if (!param1) {
+                  if (!param0.startsWith("http://")) {
+                    if (!param0.startsWith("https://")) {
+                      return false;
                     }
-                    var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                    var3 = 0;
-                    L3: while (true) {
-                      L4: {
-                        L5: {
-                          if (param0.length() <= var3) {
-                            break L5;
-                          } else {
-                            stackIn_20_0 = var2.indexOf((int) param0.charAt(var3));
+                  }
+                  var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                  var3 = 0;
+                  L3: while (true) {
+                    L4: {
+                      if (param0.length() > var3) {
+                        stackIn_20_0 = var2.indexOf((int) param0.charAt(var3));
 
-                            if (var4 != 0) {
-                              break L4;
-                            } else {
-                              if (stackIn_20_0 != -1) {
-                                var3++;
-                                if (var4 == 0) {
-                                  continue L3;
-                                } else {
-                                  break L5;
-                                }
-                              } else {
-                                stackIn_17_0 = 0;
-                                decompiledRegionSelector0 = 3;
-                                break L1;
-                              }
+                        if (var4 != 0) {
+                          break L4;
+                        } else {
+                          if (stackIn_20_0 != -1) {
+                            var3++;
+                            if (var4 == 0) {
+                              continue L3;
                             }
+                          } else {
+                            stackIn_17_0 = 0;
+                            decompiledRegionSelector0 = 3;
+                            break L1;
                           }
                         }
-                        Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                        stackIn_20_0 = 1;
-                        break L4;
                       }
-                      decompiledRegionSelector0 = 2;
-                      break L1;
+                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+                      stackIn_20_0 = 1;
                     }
-                  } else {
-                    stackIn_6_0 = 1;
-                    decompiledRegionSelector0 = 1;
+                    decompiledRegionSelector0 = 2;
                     break L1;
                   }
                 } else {
-                  stackIn_3_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L1;
+                  stackIn_6_0 = 1;
+                  decompiledRegionSelector0 = 1;
                 }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackIn_22_0 = 0;
-              return stackIn_22_0 != 0;
-            }
-            if (decompiledRegionSelector0 == 0) {
-              decompiledRegionSelector1 = 0;
-              break L0;
-            } else {
-              if (decompiledRegionSelector0 == 1) {
-                decompiledRegionSelector1 = 1;
-                break L0;
               } else {
-                if (decompiledRegionSelector0 == 2) {
-                  decompiledRegionSelector1 = 2;
-                  break L0;
-                } else {
-                  decompiledRegionSelector1 = 3;
-                  break L0;
-                }
+                stackIn_3_0 = 0;
+                decompiledRegionSelector0 = 0;
+              }
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2_ref = (Exception) (Object) decompiledCaughtException;
+            stackIn_22_0 = 0;
+            return stackIn_22_0 != 0;
+          }
+          if (decompiledRegionSelector0 == 0) {
+            decompiledRegionSelector1 = 0;
+          } else {
+            if (decompiledRegionSelector0 == 1) {
+              decompiledRegionSelector1 = 1;
+            } else {
+              if (decompiledRegionSelector0 == 2) {
+                decompiledRegionSelector1 = 2;
+              } else {
+                decompiledRegionSelector1 = 3;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L6: {
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var2_ref2);
+          var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_25_0 = (RuntimeException) (var2_ref2);
 
-            stackIn_25_1 = new StringBuilder().append("gh.U(");
+          stackIn_25_1 = new StringBuilder().append("gh.U(");
 
-            if (param0 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L6;
-            } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L6;
-            }
+          if (param0 == null) {
+            stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+            stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
+            stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
+            stackIn_26_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
         }
@@ -347,7 +269,7 @@ final class GameplaySession_gh {
         }
     }
 
-    final void renderSession_a(byte param0) {
+    final void renderSession(byte param0) {
         int stackIn_49_0 = 0;
         int stackIn_124_0 = 0;
         int stackIn_124_1 = 0;
@@ -365,24 +287,24 @@ final class GameplaySession_gh {
         int var6 = 0;
         float var7_float = 0.0f;
         int var7_int = 0;
-        tf var7 = null;
+        IntrusiveDeque var7 = null;
         int var8 = 0;
-        GameplayEntity_ja renderedEntity_var8_ref_ja = null;
-        float entityOffsetX_var9_float = 0.0f;
+        GameplayEntity renderedEntity = null;
+        float entityOffsetX = 0.0f;
         int var9 = 0;
-        float entityOffsetY_var10_float = 0.0f;
+        float entityOffsetY = 0.0f;
         int var10 = 0;
-        int renderedEntityX_var11 = 0;
-        int renderedEntityY_var12 = 0;
-        int entityOpacity_var13 = 0;
+        int renderedEntityX = 0;
+        int renderedEntityY = 0;
+        int entityOpacity = 0;
         int var14 = 0;
-        tf var15 = null;
-        tf var16 = null;
+        IntrusiveDeque var15 = null;
+        IntrusiveDeque var16 = null;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
                     var14 = Geoblox.field_C;
-                    if (!ll.themesLoaded_field_g[GameScreen_c.selectedThemeId_field_ab]) {
+                    if (!ll.themesLoaded[GameScreen.selectedThemeId]) {
                         statePc = 3;
                     } else {
                         statePc = 39;
@@ -390,7 +312,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 3: {
-                    var3 = GameScreen_c.selectedThemeId_field_ab;
+                    var3 = GameScreen.selectedThemeId;
                     if ((var3 ^ -1) != -5) {
                         statePc = 7;
                     } else {
@@ -537,7 +459,7 @@ final class GameplaySession_gh {
                     return;
                 }
                 case 39: {
-                    if (!ih.a(0)) {
+                    if (!ih.areEntityQueuesSettled(0)) {
                         statePc = 48;
                     } else {
                         statePc = 40;
@@ -545,7 +467,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 40: {
-                    if (!this.field_H) {
+                    if (!this.sceneTransitionRequested) {
                         statePc = 48;
                     } else {
                         statePc = 43;
@@ -553,7 +475,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 43: {
-                    if (!this.field_i) {
+                    if (!this.sceneTransitionInProgress) {
                         statePc = 48;
                     } else {
                         statePc = 46;
@@ -580,7 +502,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 50: {
-                    if (this.field_F) {
+                    if (this.boardRasterDirty) {
                         statePc = 57;
                     } else {
                         statePc = 53;
@@ -588,8 +510,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 53: {
-                    oc.field_d.e();
-                    if (!this.field_V) {
+                    oc.boardSceneRaster.e();
+                    if (!this.debugReducedRendering) {
                         statePc = 56;
                     } else {
                         statePc = 62;
@@ -597,7 +519,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 56: {
-                    gj.f((byte) -63);
+                    gj.drawSpecialAttachedEntities((byte) -63);
                     if (var14 == 0) {
                         statePc = 62;
                     } else {
@@ -606,9 +528,9 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 57: {
-                    oc.field_d.e();
-                    SoftwareRasterizer_vb.c();
-                    if (!this.field_V) {
+                    oc.boardSceneRaster.e();
+                    SoftwareRasterizer.c();
+                    if (!this.debugReducedRendering) {
                         statePc = 60;
                     } else {
                         statePc = 61;
@@ -616,13 +538,13 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 60: {
-                    dc.a(7838);
+                    dc.drawAttachedEntities(7838);
                     statePc = 61;
                     continue stateLoop;
                 }
                 case 61: {
                     k.a(10, 90, 460, -27085, 460);
-                    this.field_F = false;
+                    this.boardRasterDirty = false;
                     statePc = 62;
                     continue stateLoop;
                 }
@@ -639,7 +561,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 63: {
-                    this.updateSession_a(-63);
+                    this.updateSession(-63);
                     statePc = 65;
                     continue stateLoop;
                 }
@@ -652,7 +574,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 68: {
-                    if (this.sceneAnimationTick_field_D > 266) {
+                    if (this.sceneAnimationTick > 266) {
                         statePc = 70;
                     } else {
                         statePc = 69;
@@ -660,7 +582,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 69: {
-                    var5_float = (float)this.sceneAnimationTick_field_D / 266.0f;
+                    var5_float = (float)this.sceneAnimationTick / 266.0f;
                     var6_float = -var5_float + 1.0f;
                     var7_float = var6_float * var6_float;
                     var3 = (int)(0.5f + (70.0f * (2.0f * var5_float * var6_float) + 10.0f * var7_float + 220.0f * (var5_float * var5_float)));
@@ -679,7 +601,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 71: {
-                    if (!this.field_Y) {
+                    if (!this.tutorialMode) {
                         statePc = 77;
                     } else {
                         statePc = 72;
@@ -687,7 +609,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 72: {
-                    var5 = 176 - this.updateTick_field_v / 2;
+                    var5 = 176 - this.updateTick / 2;
                     if (10 > var5) {
                         statePc = 75;
                     } else {
@@ -716,7 +638,7 @@ final class GameplaySession_gh {
                 }
                 case 77: {
                     lj.field_d.b(var3, var4);
-                    if (0 != this.field_bb) {
+                    if (0 != this.sessionPhase) {
                         statePc = 83;
                     } else {
                         statePc = 80;
@@ -724,7 +646,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 80: {
-                    if (!ih.a(0)) {
+                    if (!ih.areEntityQueuesSettled(0)) {
                         statePc = 86;
                     } else {
                         statePc = 83;
@@ -746,7 +668,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 88: {
-                    if (this.field_Y) {
+                    if (this.tutorialMode) {
                         statePc = 103;
                     } else {
                         statePc = 89;
@@ -754,7 +676,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 89: {
-                    if (!ih.a(0)) {
+                    if (!ih.areEntityQueuesSettled(0)) {
                         statePc = 101;
                     } else {
                         statePc = 92;
@@ -770,7 +692,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 95: {
-                    if (0 == this.field_bb) {
+                    if (0 == this.sessionPhase) {
                         statePc = 101;
                     } else {
                         statePc = 98;
@@ -778,7 +700,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 98: {
-                    if (-2 != (this.field_bb ^ -1)) {
+                    if (-2 != (this.sessionPhase ^ -1)) {
                         statePc = 103;
                     } else {
                         statePc = 101;
@@ -786,12 +708,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 101: {
-                    this.e(-46);
+                    this.renderProgressHud(-46);
                     statePc = 103;
                     continue stateLoop;
                 }
                 case 103: {
-                    if (!this.field_V) {
+                    if (!this.debugReducedRendering) {
                         statePc = 106;
                     } else {
                         statePc = 107;
@@ -804,7 +726,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 107: {
-                    if (this.field_V) {
+                    if (this.debugReducedRendering) {
                         statePc = 112;
                     } else {
                         statePc = 108;
@@ -820,13 +742,13 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 111: {
-                    oc.field_d.b(0, 0);
+                    oc.boardSceneRaster.b(0, 0);
                     statePc = 112;
                     continue stateLoop;
                 }
                 case 112: {
                     ij.h((byte) 18);
-                    if (!this.field_V) {
+                    if (!this.debugReducedRendering) {
                         statePc = 115;
                     } else {
                         statePc = 116;
@@ -840,11 +762,11 @@ final class GameplaySession_gh {
                 }
                 case 116: {
                     jf.field_a.e();
-                    SoftwareRasterizer_vb.c();
-                    ec.field_c.rotateNearest_b(ec.field_c.field_s << 1679206499, ec.field_c.field_o << 919227299, jf.field_a.field_s << -122785245, jf.field_a.field_o << 1137750627, (int)(65535.0 * ((double)(-this.boardAngleRadians_field_J) / 6.283185307179586)), 4096);
+                    SoftwareRasterizer.c();
+                    ec.field_c.rotateNearest(ec.field_c.field_s << 1679206499, ec.field_c.field_o << 919227299, jf.field_a.field_s << -122785245, jf.field_a.field_o << 1137750627, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
                     sh.field_y.a(255);
                     w.a(jf.field_a, -(jf.field_a.field_s >> -199505663) + 320, -(jf.field_a.field_o >> -1092517823) + 240);
-                    if (!this.field_V) {
+                    if (!this.debugReducedRendering) {
                         statePc = 119;
                     } else {
                         statePc = 120;
@@ -857,7 +779,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 120: {
-                    if (!this.field_s) {
+                    if (!this.showDebugOverview) {
                         statePc = 169;
                     } else {
                         statePc = 121;
@@ -866,17 +788,17 @@ final class GameplaySession_gh {
                 }
                 case 121: {
                     af.field_a.e();
-                    SoftwareRasterizer_vb.a(0, 0, SoftwareRasterizer_vb.stride_field_f, SoftwareRasterizer_vb.field_b, 1118481);
+                    SoftwareRasterizer.a(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_b, 1118481);
                     var5 = 16777215;
-                    SoftwareRasterizer_vb.f(160, 120, 115, 16711680);
+                    SoftwareRasterizer.f(160, 120, 115, 16711680);
                     var6 = 20;
-                    var15 = wd.field_e;
-                    renderedEntity_var8_ref_ja = (GameplayEntity_ja) ((Object) var15.a(false));
+                    var15 = wd.spawnQueue;
+                    renderedEntity = (GameplayEntity) ((Object) var15.lastForIteration(false));
                     statePc = 122;
                     continue stateLoop;
                 }
                 case 122: {
-                    if (renderedEntity_var8_ref_ja == null) {
+                    if (renderedEntity == null) {
                         statePc = 133;
                     } else {
                         statePc = 123;
@@ -884,14 +806,14 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 123: {
-                    entityOffsetX_var9_float = -320.0f + renderedEntity_var8_ref_ja.positionX_field_o;
-                    entityOffsetY_var10_float = -240.0f + renderedEntity_var8_ref_ja.positionY_field_v;
-                    renderedEntityX_var11 = (int)(320.0 + (Math.cos((double)el.gameplaySession_field_o.boardAngleRadians_field_J) * (double)entityOffsetX_var9_float - Math.sin((double)el.gameplaySession_field_o.boardAngleRadians_field_J) * (double)entityOffsetY_var10_float));
-                    renderedEntityY_var12 = (int)(240.0 + ((double)entityOffsetX_var9_float * Math.sin((double)el.gameplaySession_field_o.boardAngleRadians_field_J) + (double)entityOffsetY_var10_float * Math.cos((double)el.gameplaySession_field_o.boardAngleRadians_field_J)));
-                    entityOpacity_var13 = 255 - renderedEntity_var8_ref_ja.remainingLifetimeTicks_field_r * 255 / renderedEntity_var8_ref_ja.initialLifetimeTicks_field_p;
+                    entityOffsetX = -320.0f + renderedEntity.positionX;
+                    entityOffsetY = -240.0f + renderedEntity.positionY;
+                    renderedEntityX = (int)(320.0 + (Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY));
+                    renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians)));
+                    entityOpacity = 255 - renderedEntity.remainingLifetimeTicks * 255 / renderedEntity.initialLifetimeTicks;
                     stackIn_168_0 = 11;
                     stackIn_124_0 = stackIn_168_0;
-                    stackIn_168_1 = entityOpacity_var13;
+                    stackIn_168_1 = entityOpacity;
                     stackIn_124_1 = stackIn_168_1;
                     if (var14 != 0) {
                         statePc = 168;
@@ -909,12 +831,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 127: {
-                    entityOpacity_var13 = 11;
+                    entityOpacity = 11;
                     statePc = 128;
                     continue stateLoop;
                 }
                 case 128: {
-                    if (-256 > (entityOpacity_var13 ^ -1)) {
+                    if (-256 > (entityOpacity ^ -1)) {
                         statePc = 131;
                     } else {
                         statePc = 132;
@@ -922,13 +844,13 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 131: {
-                    entityOpacity_var13 = 255;
+                    entityOpacity = 255;
                     statePc = 132;
                     continue stateLoop;
                 }
                 case 132: {
-                    SoftwareRasterizer_vb.d(renderedEntityX_var11 / 2, renderedEntityY_var12 / 2, var6, entityOpacity_var13 << 269082696 | entityOpacity_var13 << -327781456 | entityOpacity_var13);
-                    renderedEntity_var8_ref_ja = (GameplayEntity_ja) ((Object) var15.b(0));
+                    SoftwareRasterizer.d(renderedEntityX / 2, renderedEntityY / 2, var6, entityOpacity << 269082696 | entityOpacity << -327781456 | entityOpacity);
+                    renderedEntity = (GameplayEntity) ((Object) var15.previousForIteration(0));
                     if (var14 == 0) {
                         statePc = 122;
                     } else {
@@ -937,14 +859,14 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 133: {
-                    var16 = ji.field_r;
+                    var16 = ji.movingEntities;
                     var7 = var16;
-                    renderedEntity_var8_ref_ja = (GameplayEntity_ja) ((Object) var16.g(0));
+                    renderedEntity = (GameplayEntity) ((Object) var16.firstForIteration(0));
                     statePc = 134;
                     continue stateLoop;
                 }
                 case 134: {
-                    if (null == renderedEntity_var8_ref_ja) {
+                    if (null == renderedEntity) {
                         statePc = 139;
                     } else {
                         statePc = 135;
@@ -952,12 +874,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 135: {
-                    entityOffsetX_var9_float = -320.0f + renderedEntity_var8_ref_ja.positionX_field_o;
-                    entityOffsetY_var10_float = -240.0f + renderedEntity_var8_ref_ja.positionY_field_v;
-                    renderedEntityX_var11 = (int)(Math.cos((double)el.gameplaySession_field_o.boardAngleRadians_field_J) * (double)entityOffsetX_var9_float - Math.sin((double)el.gameplaySession_field_o.boardAngleRadians_field_J) * (double)entityOffsetY_var10_float + 320.0);
-                    renderedEntityY_var12 = (int)(240.0 + ((double)entityOffsetX_var9_float * Math.sin((double)el.gameplaySession_field_o.boardAngleRadians_field_J) + (double)entityOffsetY_var10_float * Math.cos((double)el.gameplaySession_field_o.boardAngleRadians_field_J)));
-                    SoftwareRasterizer_vb.d(renderedEntityX_var11 / 2, renderedEntityY_var12 / 2, var6, var5);
-                    renderedEntity_var8_ref_ja = (GameplayEntity_ja) ((Object) var16.d(1));
+                    entityOffsetX = -320.0f + renderedEntity.positionX;
+                    entityOffsetY = -240.0f + renderedEntity.positionY;
+                    renderedEntityX = (int)(Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
+                    renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians)));
+                    SoftwareRasterizer.d(renderedEntityX / 2, renderedEntityY / 2, var6, var5);
+                    renderedEntity = (GameplayEntity) ((Object) var16.nextForIteration(1));
                     if (var14 != 0) {
                         statePc = 140;
                     } else {
@@ -974,17 +896,17 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 139: {
-                    var7 = a.field_d;
+                    var7 = a.attachedEntities;
                     statePc = 140;
                     continue stateLoop;
                 }
                 case 140: {
-                    renderedEntity_var8_ref_ja = (GameplayEntity_ja) ((Object) var7.g(0));
+                    renderedEntity = (GameplayEntity) ((Object) var7.firstForIteration(0));
                     statePc = 141;
                     continue stateLoop;
                 }
                 case 141: {
-                    if (renderedEntity_var8_ref_ja == null) {
+                    if (renderedEntity == null) {
                         statePc = 146;
                     } else {
                         statePc = 142;
@@ -992,8 +914,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 142: {
-                    SoftwareRasterizer_vb.d((int)(renderedEntity_var8_ref_ja.positionX_field_o / 2.0f), (int)(renderedEntity_var8_ref_ja.positionY_field_v / 2.0f), var6, var5);
-                    renderedEntity_var8_ref_ja = (GameplayEntity_ja) ((Object) var7.d(1));
+                    SoftwareRasterizer.d((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), var6, var5);
+                    renderedEntity = (GameplayEntity) ((Object) var7.nextForIteration(1));
                     if (var14 != 0) {
                         statePc = 147;
                     } else {
@@ -1015,12 +937,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 147: {
-                    renderedEntity_var8_ref_ja = (GameplayEntity_ja) ((Object) var7.g(0));
+                    renderedEntity = (GameplayEntity) ((Object) var7.firstForIteration(0));
                     statePc = 148;
                     continue stateLoop;
                 }
                 case 148: {
-                    if (renderedEntity_var8_ref_ja == null) {
+                    if (renderedEntity == null) {
                         statePc = 153;
                     } else {
                         statePc = 149;
@@ -1028,8 +950,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 149: {
-                    SoftwareRasterizer_vb.d((int)(renderedEntity_var8_ref_ja.positionX_field_o / 2.0f), (int)(renderedEntity_var8_ref_ja.positionY_field_v / 2.0f), var6, var5);
-                    renderedEntity_var8_ref_ja = (GameplayEntity_ja) ((Object) var7.d(1));
+                    SoftwareRasterizer.d((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), var6, var5);
+                    renderedEntity = (GameplayEntity) ((Object) var7.nextForIteration(1));
                     if (var14 != 0) {
                         statePc = 158;
                     } else {
@@ -1046,7 +968,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 153: {
-                    if (!this.field_Y) {
+                    if (!this.tutorialMode) {
                         statePc = 157;
                     } else {
                         statePc = 154;
@@ -1054,7 +976,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 154: {
-                    var8 = -(this.updateTick_field_v / 2) + 176;
+                    var8 = -(this.updateTick / 2) + 176;
                     if ((var8 ^ -1) <= -11) {
                         statePc = 156;
                     } else {
@@ -1070,8 +992,8 @@ final class GameplaySession_gh {
                 case 156: {
                     var9 = fi.field_d.field_o + -fi.field_d.field_q;
                     var10 = fi.field_d.c(v.field_n, 640) + 40;
-                    renderedEntityX_var11 = fi.field_d.b(v.field_n, 640) * var9 - -10;
-                    SoftwareRasterizer_vb.a((320 - var10 / 2) / 2, var8 / 2, var10 / 2, (20 + renderedEntityX_var11) / 2, var5);
+                    renderedEntityX = fi.field_d.b(v.field_n, 640) * var9 - -10;
+                    SoftwareRasterizer.a((320 - var10 / 2) / 2, var8 / 2, var10 / 2, (20 + renderedEntityX) / 2, var5);
                     statePc = 167;
                     continue stateLoop;
                 }
@@ -1081,7 +1003,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 158: {
-                    if (this.field_bb != 0) {
+                    if (this.sessionPhase != 0) {
                         statePc = 165;
                     } else {
                         statePc = 159;
@@ -1089,7 +1011,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 159: {
-                    if (ih.a(0)) {
+                    if (ih.areEntityQueuesSettled(0)) {
                         statePc = 165;
                     } else {
                         statePc = 162;
@@ -1111,21 +1033,21 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 167: {
-                    SoftwareRasterizer_vb.d(160, 120, 21, 16777215);
-                    SoftwareRasterizer_vb.e(2, 2, 0, 0, SoftwareRasterizer_vb.stride_field_f, SoftwareRasterizer_vb.field_b);
+                    SoftwareRasterizer.d(160, 120, 21, 16777215);
+                    SoftwareRasterizer.e(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_b);
                     sh.field_y.a(255);
-                    stackIn_168_0 = SoftwareRasterizer_vb.field_b;
+                    stackIn_168_0 = SoftwareRasterizer.field_b;
                     stackIn_168_1 = 1;
                     statePc = 168;
                     continue stateLoop;
                 }
                 case 168: {
-                    ek.a(stackIn_168_0, stackIn_168_1 != 0, af.field_a, 0, SoftwareRasterizer_vb.stride_field_f, 0);
+                    ek.a(stackIn_168_0, stackIn_168_1 != 0, af.field_a, 0, SoftwareRasterizer.stride, 0);
                     statePc = 169;
                     continue stateLoop;
                 }
                 case 169: {
-                    if (this.field_Y) {
+                    if (this.tutorialMode) {
                         statePc = 206;
                     } else {
                         statePc = 170;
@@ -1133,7 +1055,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 170: {
-                    if ((this.delayedActionCountdown_field_a ^ -1) < -1) {
+                    if ((this.delayedActionCountdown ^ -1) < -1) {
                         statePc = 173;
                     } else {
                         statePc = 174;
@@ -1147,8 +1069,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 174: {
-                    eg.field_q[this.field_l].b(this.field_T, 4);
-                    if (640 <= this.field_T) {
+                    eg.field_q[this.pointsPanelFrameIndex].b(this.pointsPanelX, 4);
+                    if (640 <= this.pointsPanelX) {
                         statePc = 179;
                     } else {
                         statePc = 175;
@@ -1156,7 +1078,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 175: {
-                    if (0 < this.pendingPopupPoints_field_A) {
+                    if (0 < this.pendingPopupPoints) {
                         statePc = 178;
                     } else {
                         statePc = 179;
@@ -1164,12 +1086,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 178: {
-                    dd.field_G.a(wj.a(ic.field_a, new String[]{this.popupPointsText_field_g.toString()}, (byte) -79), this.field_T + 20, 34, 0, -1);
+                    dd.field_G.a(wj.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
                     statePc = 179;
                     continue stateLoop;
                 }
                 case 179: {
-                    if (this.field_h) {
+                    if (this.showSessionCounters) {
                         statePc = 182;
                     } else {
                         statePc = 183;
@@ -1178,12 +1100,12 @@ final class GameplaySession_gh {
                 }
                 case 182: {
                     dd.field_G.a(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
-                    dd.field_G.a(wj.a(qg.field_e, new String[]{Integer.toString(ji.field_h)}, (byte) -71), 400, 80, 0, -1);
+                    dd.field_G.a(wj.a(qg.field_e, new String[]{Integer.toString(ji.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
                     statePc = 183;
                     continue stateLoop;
                 }
                 case 183: {
-                    bd.a(-117);
+                    bd.drawScorePopups(-117);
                     this.c((byte) 64);
                     if (this.field_L) {
                         statePc = 186;
@@ -1194,7 +1116,7 @@ final class GameplaySession_gh {
                 }
                 case 186: {
                     lj.field_d.b(var3, var4);
-                    if (this.sceneAnimationTick_field_D >= 266) {
+                    if (this.sceneAnimationTick >= 266) {
                         statePc = 190;
                     } else {
                         statePc = 187;
@@ -1202,7 +1124,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 187: {
-                    kh.field_h[6].b(0, (this.sceneAnimationTick_field_D >> 1707498369) + -113);
+                    kh.field_h[6].b(0, (this.sceneAnimationTick >> 1707498369) + -113);
                     if (var14 == 0) {
                         statePc = 192;
                     } else {
@@ -1212,13 +1134,13 @@ final class GameplaySession_gh {
                 }
                 case 190: {
                     kh.field_h[6].b(0, 20);
-                    kh.field_h[6].c(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick_field_D) / 40.0) * -64.0 + 64.0));
+                    kh.field_h[6].c(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
                     statePc = 192;
                     continue stateLoop;
                 }
                 case 192: {
-                    dd.field_G.a(wj.a(pa.field_a, new String[]{this.scoreText_field_X.toString()}, (byte) -53), 15 + var3, 30 + var4, 0, -1);
-                    if (!ih.a(0)) {
+                    dd.field_G.a(wj.a(pa.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + var3, 30 + var4, 0, -1);
+                    if (!ih.areEntityQueuesSettled(0)) {
                         statePc = 205;
                     } else {
                         statePc = 193;
@@ -1226,7 +1148,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 193: {
-                    if (0 == this.field_bb) {
+                    if (0 == this.sessionPhase) {
                         statePc = 199;
                     } else {
                         statePc = 196;
@@ -1234,7 +1156,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 196: {
-                    if (this.field_bb != 1) {
+                    if (this.sessionPhase != 1) {
                         statePc = 203;
                     } else {
                         statePc = 199;
@@ -1250,12 +1172,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 202: {
-                    var5 = 35 + (6 * this.sceneAnimationTick_field_D + -480);
+                    var5 = 35 + (6 * this.sceneAnimationTick + -480);
                     sh.field_y.a(255);
-                    SoftwareRasterizer_vb.e(0, var5, 640, 480);
-                    oc.field_d.b(0, 0);
-                    SoftwareRasterizer_vb.e(0, 0, 640, 480);
-                    qj.transitionCurtain_field_c.b(0, -480 + 6 * this.sceneAnimationTick_field_D);
+                    SoftwareRasterizer.e(0, var5, 640, 480);
+                    oc.boardSceneRaster.b(0, 0);
+                    SoftwareRasterizer.e(0, 0, 640, 480);
+                    qj.transitionCurtain.b(0, -480 + 6 * this.sceneAnimationTick);
                     if (var14 == 0) {
                         statePc = 205;
                     } else {
@@ -1264,7 +1186,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 203: {
-                    this.a(false);
+                    this.renderResultSequence(false);
                     statePc = 205;
                     continue stateLoop;
                 }
@@ -1278,7 +1200,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 206: {
-                    this.g(2);
+                    this.renderTutorialPrompt(2);
                     statePc = 208;
                     continue stateLoop;
                 }
@@ -1290,7 +1212,7 @@ final class GameplaySession_gh {
         }
     }
 
-    final void updateSession_a(int param0) {
+    final void updateSession(int param0) {
         int fieldTemp$0 = 0;
         boolean stackIn_227_0 = false;
         boolean stackIn_233_0 = false;
@@ -1336,15 +1258,15 @@ final class GameplaySession_gh {
         int var2 = 0;
         int var3 = 0;
         int var4_int = 0;
-        GameplayEntity_ja var4 = null;
+        GameplayEntity var4 = null;
         int var5 = 0;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
                     var5 = Geoblox.field_C;
                     lh.a(param0 ^ 1578896222);
-                    fieldTemp$0 = this.updateTick_field_v;
-                    this.updateTick_field_v = this.updateTick_field_v + 1;
+                    fieldTemp$0 = this.updateTick;
+                    this.updateTick = this.updateTick + 1;
                     if ((fieldTemp$0 & 15) != 0) {
                         statePc = 10;
                     } else {
@@ -1353,8 +1275,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 1: {
-                    this.field_l = this.field_l + this.field_k;
-                    if (7 == this.field_l) {
+                    this.pointsPanelFrameIndex = this.pointsPanelFrameIndex + this.pointsPanelFrameDirection;
+                    if (7 == this.pointsPanelFrameIndex) {
                         statePc = 8;
                     } else {
                         statePc = 4;
@@ -1362,7 +1284,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 4: {
-                    if (-1 == (this.field_l ^ -1)) {
+                    if (-1 == (this.pointsPanelFrameIndex ^ -1)) {
                         statePc = 7;
                     } else {
                         statePc = 10;
@@ -1370,7 +1292,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 7: {
-                    this.field_k = 1;
+                    this.pointsPanelFrameDirection = 1;
                     if (var5 == 0) {
                         statePc = 10;
                     } else {
@@ -1379,12 +1301,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 8: {
-                    this.field_k = -1;
+                    this.pointsPanelFrameDirection = -1;
                     statePc = 10;
                     continue stateLoop;
                 }
                 case 10: {
-                    if (0 == (this.updateTick_field_v & 1)) {
+                    if (0 == (this.updateTick & 1)) {
                         statePc = 13;
                     } else {
                         statePc = 35;
@@ -1392,7 +1314,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 13: {
-                    if (-1 != this.field_y) {
+                    if (-1 != this.pointsPanelSlideDirection) {
                         statePc = 17;
                     } else {
                         statePc = 14;
@@ -1400,7 +1322,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 14: {
-                    if (463 < this.field_T) {
+                    if (463 < this.pointsPanelX) {
                         statePc = 33;
                     } else {
                         statePc = 17;
@@ -1408,7 +1330,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 17: {
-                    if ((this.field_y ^ -1) != -2) {
+                    if ((this.pointsPanelSlideDirection ^ -1) != -2) {
                         statePc = 23;
                     } else {
                         statePc = 20;
@@ -1416,7 +1338,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 20: {
-                    if (this.field_T < 640) {
+                    if (this.pointsPanelX < 640) {
                         statePc = 30;
                     } else {
                         statePc = 23;
@@ -1424,7 +1346,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 23: {
-                    if (-464 != (this.field_T ^ -1)) {
+                    if (-464 != (this.pointsPanelX ^ -1)) {
                         statePc = 35;
                     } else {
                         statePc = 26;
@@ -1432,7 +1354,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 26: {
-                    if (-1 == (gf.field_f ^ -1)) {
+                    if (-1 == (gf.matchChainLength ^ -1)) {
                         statePc = 29;
                     } else {
                         statePc = 35;
@@ -1440,8 +1362,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 29: {
-                    this.field_y = 1;
-                    el.gameplaySession_field_o.emitPointsPopup_c(false);
+                    this.pointsPanelSlideDirection = 1;
+                    el.gameplaySession.emitPointsPopup(false);
                     if (var5 == 0) {
                         statePc = 35;
                     } else {
@@ -1450,7 +1372,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 30: {
-                    this.field_T = this.field_T + 1;
+                    this.pointsPanelX = this.pointsPanelX + 1;
                     if (var5 == 0) {
                         statePc = 35;
                     } else {
@@ -1459,12 +1381,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 33: {
-                    this.field_T = this.field_T - 1;
+                    this.pointsPanelX = this.pointsPanelX - 1;
                     statePc = 35;
                     continue stateLoop;
                 }
                 case 35: {
-                    if (this.field_x) {
+                    if (this.sessionEnding) {
                         statePc = 274;
                     } else {
                         statePc = 36;
@@ -1472,7 +1394,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 36: {
-                    if (!ih.a(0)) {
+                    if (!ih.areEntityQueuesSettled(0)) {
                         statePc = 42;
                     } else {
                         statePc = 39;
@@ -1480,7 +1402,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 39: {
-                    if (!this.field_n) {
+                    if (!this.matchBatchProcessedThisTick) {
                         statePc = 45;
                     } else {
                         statePc = 42;
@@ -1488,7 +1410,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 42: {
-                    if (this.field_f) {
+                    if (this.preserveScoreOnTransition) {
                         statePc = 61;
                     } else {
                         statePc = 45;
@@ -1496,7 +1418,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 45: {
-                    if (!this.canAdvanceSession_b(true)) {
+                    if (!this.canAdvanceSession(true)) {
                         statePc = 61;
                     } else {
                         statePc = 48;
@@ -1504,7 +1426,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 48: {
-                    if (0 == this.field_bb) {
+                    if (0 == this.sessionPhase) {
                         statePc = 54;
                     } else {
                         statePc = 51;
@@ -1512,7 +1434,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 51: {
-                    if (-6 != (this.field_bb ^ -1)) {
+                    if (-6 != (this.sessionPhase ^ -1)) {
                         statePc = 58;
                     } else {
                         statePc = 54;
@@ -1520,7 +1442,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 54: {
-                    if (this.field_H) {
+                    if (this.sceneTransitionRequested) {
                         statePc = 57;
                     } else {
                         statePc = 288;
@@ -1528,7 +1450,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 57: {
-                    this.b((byte) -80);
+                    this.updateSceneTransition((byte) -80);
                     if (var5 == 0) {
                         statePc = 288;
                     } else {
@@ -1537,7 +1459,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 58: {
-                    this.f(10);
+                    this.updateResultSequence(10);
                     if (var5 == 0) {
                         statePc = 288;
                     } else {
@@ -1546,7 +1468,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 61: {
-                    if (!ll.themesLoaded_field_g[GameScreen_c.selectedThemeId_field_ab]) {
+                    if (!ll.themesLoaded[GameScreen.selectedThemeId]) {
                         statePc = 64;
                     } else {
                         statePc = 65;
@@ -1557,7 +1479,7 @@ final class GameplaySession_gh {
                     return;
                 }
                 case 65: {
-                    if (this.field_E) {
+                    if (this.rotationControlsSwapped) {
                         statePc = 67;
                     } else {
                         statePc = 66;
@@ -1589,8 +1511,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 71: {
-                    this.boardAngleRadians_field_J = this.boardAngleRadians_field_J - rc.field_h;
-                    me.a((byte) 38);
+                    this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
+                    ScorePopup.a((byte) 38);
                     var4_int = (ki.field_d + kd.field_c + qa.field_a + he.field_d) % 8;
                     if (var4_int != 0) {
                         statePc = 75;
@@ -1818,7 +1740,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 143: {
-                    if ((this.field_p ^ -1) != -1) {
+                    if ((this.tutorialStepId ^ -1) != -1) {
                         statePc = 146;
                     } else {
                         statePc = 144;
@@ -1826,7 +1748,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 144: {
-                    this.field_U = this.field_U + 1;
+                    this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
                     statePc = 146;
                     continue stateLoop;
                 }
@@ -1839,9 +1761,9 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 147: {
-                    this.boardAngleRadians_field_J = this.boardAngleRadians_field_J + rc.field_h;
+                    this.boardAngleRadians = this.boardAngleRadians + DualLinkNode.rotationStepRadians;
                     wd.a((byte) 74);
-                    if ((this.field_p ^ -1) != -1) {
+                    if ((this.tutorialStepId ^ -1) != -1) {
                         statePc = 152;
                     } else {
                         statePc = 150;
@@ -1849,7 +1771,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 150: {
-                    this.field_U = this.field_U + 1;
+                    this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
                     statePc = 152;
                     continue stateLoop;
                 }
@@ -2089,7 +2011,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 221: {
-                    if (this.field_C) {
+                    if (this.tutorialPromptActive) {
                         statePc = 232;
                     } else {
                         statePc = 224;
@@ -2097,7 +2019,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 224: {
-                    var4 = (GameplayEntity_ja) ((Object) ji.field_r.g(0));
+                    var4 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
                     statePc = 225;
                     continue stateLoop;
                 }
@@ -2110,7 +2032,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 226: {
-                    stackIn_233_0 = var4.field_B;
+                    stackIn_233_0 = var4.detachedFromBoard;
                     stackIn_227_0 = stackIn_233_0;
                     if (var5 != 0) {
                         statePc = 233;
@@ -2128,8 +2050,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 230: {
-                    var4.positionY_field_v = var4.positionY_field_v + 4.0f * var4.velocityY_field_F;
-                    var4.positionX_field_o = var4.positionX_field_o + 4.0f * var4.velocityX_field_w;
+                    var4.positionY = var4.positionY + 4.0f * var4.velocityY;
+                    var4.positionX = var4.positionX + 4.0f * var4.velocityX;
                     if (var5 == 0) {
                         statePc = 232;
                     } else {
@@ -2138,7 +2060,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 231: {
-                    var4 = (GameplayEntity_ja) ((Object) ji.field_r.d(1));
+                    var4 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
                     if (var5 == 0) {
                         statePc = 225;
                     } else {
@@ -2173,8 +2095,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 239: {
-                    this.delayedActionCountdown_field_a = this.delayedActionCountdown_field_a - 1;
-                    if ((this.delayedActionCountdown_field_a ^ -1) != -1) {
+                    this.delayedActionCountdown = this.delayedActionCountdown - 1;
+                    if ((this.delayedActionCountdown ^ -1) != -1) {
                         statePc = 242;
                     } else {
                         statePc = 240;
@@ -2182,14 +2104,14 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 240: {
-                    ld.a(310, 320, 123, 100 + 100 * ji.field_h);
+                    ld.a(310, 320, 123, 100 + 100 * ji.difficultyStep);
                     statePc = 242;
                     continue stateLoop;
                 }
                 case 242: {
                     stackIn_251_0 = this;
                     stackIn_243_0 = stackIn_251_0;
-                    if (fa.field_a) {
+                    if (fa.entitiesDetachedThisTick) {
                         statePc = 251;
                     } else {
                         statePc = 243;
@@ -2199,7 +2121,7 @@ final class GameplaySession_gh {
                 case 243: {
                     stackIn_251_0 = this;
                     stackIn_244_0 = stackIn_251_0;
-                    if (!a.field_d.c(13519)) {
+                    if (!a.attachedEntities.isEmpty(13519)) {
                         statePc = 251;
                     } else {
                         statePc = 244;
@@ -2214,7 +2136,7 @@ final class GameplaySession_gh {
                 case 246: {
                     stackIn_251_0 = this;
                     stackIn_247_0 = stackIn_251_0;
-                    if (0 >= ul.field_b) {
+                    if (0 >= ul.releasedInCurrentTheme) {
                         statePc = 251;
                     } else {
                         statePc = 247;
@@ -2239,8 +2161,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 252: {
-                    ((GameplaySession_gh) (this)).field_b = stackIn_252_1 != 0;
-                    if (!this.field_b) {
+                    ((GameplaySession) (this)).boardClearBonusEligible = stackIn_252_1 != 0;
+                    if (!this.boardClearBonusEligible) {
                         statePc = 259;
                     } else {
                         statePc = 253;
@@ -2248,7 +2170,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 253: {
-                    if (!this.field_B) {
+                    if (!this.connectivityRebuiltThisTick) {
                         statePc = 259;
                     } else {
                         statePc = 256;
@@ -2256,9 +2178,9 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 256: {
-                    this.field_B = false;
-                    this.delayedActionCountdown_field_a = 300;
-                    this.field_b = false;
+                    this.connectivityRebuiltThisTick = false;
+                    this.delayedActionCountdown = 300;
+                    this.boardClearBonusEligible = false;
                     ra.a(le.field_a ^ 255, -88, le.field_a);
                     if (var5 == 0) {
                         statePc = 261;
@@ -2268,15 +2190,15 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 259: {
-                    this.field_B = false;
+                    this.connectivityRebuiltThisTick = false;
                     statePc = 261;
                     continue stateLoop;
                 }
                 case 261: {
-                    this.field_Z = ab.field_f;
-                    ef.advanceActiveEntityAnimations_b((byte) -15);
-                    kc.reconcileBoardEntities_b(param0 + 1578896101);
-                    if (ab.field_f) {
+                    this.boundaryCheckRequested = ab.boardContactStateDirty;
+                    ef.advanceActiveEntityAnimations((byte) -15);
+                    kc.reconcileBoardEntities(param0 + 1578896101);
+                    if (ab.boardContactStateDirty) {
                         statePc = 264;
                     } else {
                         statePc = 265;
@@ -2284,13 +2206,13 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 264: {
-                    ul.b(-2);
+                    ul.collectMatchCandidates(-2);
                     statePc = 265;
                     continue stateLoop;
                 }
                 case 265: {
-                    this.field_n = ec.b(-18913);
-                    if (this.field_Z) {
+                    this.matchBatchProcessedThisTick = ec.processMatchCandidates(-18913);
+                    if (this.boundaryCheckRequested) {
                         statePc = 268;
                     } else {
                         statePc = 269;
@@ -2298,14 +2220,14 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 268: {
-                    sk.a(param0 ^ 1578896190);
+                    sk.checkBoundaryLossAndStartCascade(param0 ^ 1578896190);
                     statePc = 269;
                     continue stateLoop;
                 }
                 case 269: {
-                    cf.d((byte) 27);
+                    cf.advanceScorePopups((byte) 27);
                     f.o(600);
-                    if (this.field_Y) {
+                    if (this.tutorialMode) {
                         statePc = 272;
                     } else {
                         statePc = 273;
@@ -2313,7 +2235,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 272: {
-                    this.b(109);
+                    this.advanceTutorialStep(109);
                     statePc = 273;
                     continue stateLoop;
                 }
@@ -2326,7 +2248,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 274: {
-                    if (-1 != (this.sceneAnimationTick_field_D ^ -1)) {
+                    if (-1 != (this.sceneAnimationTick ^ -1)) {
                         statePc = 279;
                     } else {
                         statePc = 277;
@@ -2355,7 +2277,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 283: {
-                    if (this.sceneAnimationTick_field_D > 1000) {
+                    if (this.sceneAnimationTick > 1000) {
                         statePc = 286;
                     } else {
                         statePc = 287;
@@ -2363,16 +2285,16 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 286: {
-                    this.requestSessionExitScreen_d(28809);
+                    this.requestSessionExitScreen(28809);
                     statePc = 287;
                     continue stateLoop;
                 }
                 case 287: {
                     fc.a(19);
-                    cf.d((byte) 24);
+                    cf.advanceScorePopups((byte) 24);
                     f.o(600);
-                    this.sceneAnimationTick_field_D = this.sceneAnimationTick_field_D + 1;
-                    this.field_F = true;
+                    this.sceneAnimationTick = this.sceneAnimationTick + 1;
+                    this.boardRasterDirty = true;
                     statePc = 288;
                     continue stateLoop;
                 }
@@ -2385,7 +2307,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 289: {
-                    this.scoreText_field_X = (StringBuilder) null;
+                    this.scoreText = (StringBuilder) null;
                     statePc = 293;
                     continue stateLoop;
                 }
@@ -2417,7 +2339,7 @@ final class GameplaySession_gh {
                 case 300: {
                     stackIn_303_0 = this;
                     stackIn_301_0 = stackIn_303_0;
-                    if (this.field_s) {
+                    if (this.showDebugOverview) {
                         statePc = 303;
                     } else {
                         statePc = 301;
@@ -2437,7 +2359,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 304: {
-                    ((GameplaySession_gh) (this)).field_s = stackIn_304_1 != 0;
+                    ((GameplaySession) (this)).showDebugOverview = stackIn_304_1 != 0;
                     statePc = 305;
                     continue stateLoop;
                 }
@@ -2458,7 +2380,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 309: {
-                    this.gameApplet_field_I.h((byte) 41);
+                    this.gameApplet.h((byte) 41);
                     statePc = 311;
                     continue stateLoop;
                 }
@@ -2471,7 +2393,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 312: {
-                    if (this.field_x) {
+                    if (this.sessionEnding) {
                         statePc = 318;
                     } else {
                         statePc = 315;
@@ -2479,7 +2401,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 315: {
-                    ai.requestedScreenId_field_p = 1;
+                    ai.requestedScreenId = 1;
                     if (var5 == 0) {
                         statePc = 523;
                     } else {
@@ -2488,7 +2410,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 318: {
-                    this.requestSessionExitScreen_d(28809);
+                    this.requestSessionExitScreen(28809);
                     statePc = 320;
                     continue stateLoop;
                 }
@@ -2504,7 +2426,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 324: {
-                    if (!this.field_Y) {
+                    if (!this.tutorialMode) {
                         statePc = 327;
                     } else {
                         statePc = 325;
@@ -2512,7 +2434,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 325: {
-                    this.c(7000);
+                    this.leaveTutorial(7000);
                     statePc = 327;
                     continue stateLoop;
                 }
@@ -2525,7 +2447,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 328: {
-                    if (this.field_t == 0) {
+                    if (this.tutorialStepPhase == 0) {
                         statePc = 331;
                     } else {
                         statePc = 344;
@@ -2533,9 +2455,9 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 331: {
-                    this.field_t = 1;
-                    this.field_C = false;
-                    if (-1 == (this.field_p ^ -1)) {
+                    this.tutorialStepPhase = 1;
+                    this.tutorialPromptActive = false;
+                    if (-1 == (this.tutorialStepId ^ -1)) {
                         statePc = 342;
                     } else {
                         statePc = 332;
@@ -2543,7 +2465,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 332: {
-                    if ((this.field_p ^ -1) == -2) {
+                    if ((this.tutorialStepId ^ -1) == -2) {
                         statePc = 339;
                     } else {
                         statePc = 335;
@@ -2551,7 +2473,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 335: {
-                    if (-3 == (this.field_p ^ -1)) {
+                    if (-3 == (this.tutorialStepId ^ -1)) {
                         statePc = 338;
                     } else {
                         statePc = 344;
@@ -2559,7 +2481,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 338: {
-                    this.field_U = dk.field_b;
+                    this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
                     if (var5 == 0) {
                         statePc = 344;
                     } else {
@@ -2568,7 +2490,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 339: {
-                    this.field_U = dd.field_D;
+                    this.tutorialProgressMetric = dd.variantMatchCandidateCount;
                     if (var5 == 0) {
                         statePc = 344;
                     } else {
@@ -2577,7 +2499,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 342: {
-                    this.field_U = 0;
+                    this.tutorialProgressMetric = 0;
                     statePc = 344;
                     continue stateLoop;
                 }
@@ -2590,7 +2512,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 345: {
-                    if (5 != this.field_p) {
+                    if (5 != this.tutorialStepId) {
                         statePc = 352;
                     } else {
                         statePc = 348;
@@ -2598,7 +2520,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 348: {
-                    if (-1 == (this.field_t ^ -1)) {
+                    if (-1 == (this.tutorialStepPhase ^ -1)) {
                         statePc = 351;
                     } else {
                         statePc = 352;
@@ -2606,10 +2528,10 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 351: {
-                    this.c(param0 ^ -1578897511);
-                    this.field_Y = true;
-                    this.field_p = 0;
-                    this.field_C = true;
+                    this.leaveTutorial(param0 ^ -1578897511);
+                    this.tutorialMode = true;
+                    this.tutorialStepId = 0;
+                    this.tutorialPromptActive = true;
                     statePc = 352;
                     continue stateLoop;
                 }
@@ -2624,7 +2546,7 @@ final class GameplaySession_gh {
                 case 353: {
                     stackIn_358_0 = this;
                     stackIn_354_0 = stackIn_358_0;
-                    if (this.field_E) {
+                    if (this.rotationControlsSwapped) {
                         statePc = 358;
                     } else {
                         statePc = 354;
@@ -2649,7 +2571,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 359: {
-                    ((GameplaySession_gh) (this)).field_E = stackIn_359_1 != 0;
+                    ((GameplaySession) (this)).rotationControlsSwapped = stackIn_359_1 != 0;
                     jc.a(7, false);
                     statePc = 360;
                     continue stateLoop;
@@ -2683,8 +2605,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 365: {
-                    this.field_r = this.field_r - 1;
-                    if ((this.field_r ^ -1) > -1) {
+                    this.debugSpawnVariantId = this.debugSpawnVariantId - 1;
+                    if ((this.debugSpawnVariantId ^ -1) > -1) {
                         statePc = 368;
                     } else {
                         statePc = 369;
@@ -2692,7 +2614,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 368: {
-                    this.field_r = 6;
+                    this.debugSpawnVariantId = 6;
                     statePc = 369;
                     continue stateLoop;
                 }
@@ -2705,8 +2627,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 372: {
-                    this.field_r = this.field_r + 1;
-                    if (this.field_r != 7) {
+                    this.debugSpawnVariantId = this.debugSpawnVariantId + 1;
+                    if (this.debugSpawnVariantId != 7) {
                         statePc = 375;
                     } else {
                         statePc = 373;
@@ -2714,7 +2636,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 373: {
-                    this.field_r = 0;
+                    this.debugSpawnVariantId = 0;
                     statePc = 375;
                     continue stateLoop;
                 }
@@ -2727,8 +2649,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 376: {
-                    this.field_G = this.field_G - 1;
-                    if (-1 >= (this.field_G ^ -1)) {
+                    this.debugSpawnCategoryId = this.debugSpawnCategoryId - 1;
+                    if (-1 >= (this.debugSpawnCategoryId ^ -1)) {
                         statePc = 381;
                     } else {
                         statePc = 379;
@@ -2736,7 +2658,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 379: {
-                    this.field_G = 6;
+                    this.debugSpawnCategoryId = 6;
                     statePc = 381;
                     continue stateLoop;
                 }
@@ -2751,7 +2673,7 @@ final class GameplaySession_gh {
                 case 384: {
                     stackIn_387_0 = this;
                     stackIn_385_0 = stackIn_387_0;
-                    if (this.field_Q) {
+                    if (this.debugSpawnSpecialKinds) {
                         statePc = 387;
                     } else {
                         statePc = 385;
@@ -2771,7 +2693,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 388: {
-                    ((GameplaySession_gh) (this)).field_Q = stackIn_388_1 != 0;
+                    ((GameplaySession) (this)).debugSpawnSpecialKinds = stackIn_388_1 != 0;
                     statePc = 389;
                     continue stateLoop;
                 }
@@ -2784,8 +2706,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 390: {
-                    this.field_G = this.field_G + 1;
-                    if ((this.field_G ^ -1) == -8) {
+                    this.debugSpawnCategoryId = this.debugSpawnCategoryId + 1;
+                    if ((this.debugSpawnCategoryId ^ -1) == -8) {
                         statePc = 393;
                     } else {
                         statePc = 394;
@@ -2793,7 +2715,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 393: {
-                    this.field_G = 0;
+                    this.debugSpawnCategoryId = 0;
                     statePc = 394;
                     continue stateLoop;
                 }
@@ -2806,7 +2728,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 397: {
-                    this.field_d = true;
+                    this.tutorialAdvanceRequested = true;
                     statePc = 398;
                     continue stateLoop;
                 }
@@ -2819,8 +2741,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 399: {
-                    this.field_bb = 1;
-                    this.field_K = true;
+                    this.sessionPhase = 1;
+                    this.submissionBlocked = true;
                     statePc = 401;
                     continue stateLoop;
                 }
@@ -2833,10 +2755,10 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 404: {
-                    this.field_K = true;
+                    this.submissionBlocked = true;
                     stackIn_407_0 = this;
                     stackIn_405_0 = stackIn_407_0;
-                    if (this.field_j) {
+                    if (this.debugPointerSpawnEnabled) {
                         statePc = 407;
                     } else {
                         statePc = 405;
@@ -2856,7 +2778,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 408: {
-                    ((GameplaySession_gh) (this)).field_j = stackIn_408_1 != 0;
+                    ((GameplaySession) (this)).debugPointerSpawnEnabled = stackIn_408_1 != 0;
                     statePc = 409;
                     continue stateLoop;
                 }
@@ -2871,7 +2793,7 @@ final class GameplaySession_gh {
                 case 410: {
                     stackIn_415_0 = this;
                     stackIn_411_0 = stackIn_415_0;
-                    if (this.field_N) {
+                    if (this.spawnReleaseDisabled) {
                         statePc = 415;
                     } else {
                         statePc = 411;
@@ -2896,8 +2818,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 416: {
-                    ((GameplaySession_gh) (this)).field_N = stackIn_416_1 != 0;
-                    this.field_K = true;
+                    ((GameplaySession) (this)).spawnReleaseDisabled = stackIn_416_1 != 0;
+                    this.submissionBlocked = true;
                     statePc = 417;
                     continue stateLoop;
                 }
@@ -2924,8 +2846,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 423: {
-                    hd.f(2);
-                    this.field_K = true;
+                    hd.recordEntityRelease(2);
+                    this.submissionBlocked = true;
                     statePc = 424;
                     continue stateLoop;
                 }
@@ -2938,8 +2860,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 425: {
-                    GameScreen_c.selectedThemeId_field_ab = 1;
-                    hf.a(param0 ^ 1578896207, GameScreen_c.selectedThemeId_field_ab);
+                    GameScreen.selectedThemeId = 1;
+                    IntrusiveNode.a(param0 ^ 1578896207, GameScreen.selectedThemeId);
                     cd.a((byte) 110);
                     statePc = 427;
                     continue stateLoop;
@@ -2953,8 +2875,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 428: {
-                    GameScreen_c.selectedThemeId_field_ab = 0;
-                    hf.a(-126, GameScreen_c.selectedThemeId_field_ab);
+                    GameScreen.selectedThemeId = 0;
+                    IntrusiveNode.a(-126, GameScreen.selectedThemeId);
                     cd.a((byte) 126);
                     statePc = 430;
                     continue stateLoop;
@@ -2968,8 +2890,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 433: {
-                    GameScreen_c.selectedThemeId_field_ab = 6;
-                    hf.a(-99, GameScreen_c.selectedThemeId_field_ab);
+                    GameScreen.selectedThemeId = 6;
+                    IntrusiveNode.a(-99, GameScreen.selectedThemeId);
                     cd.a((byte) 113);
                     statePc = 434;
                     continue stateLoop;
@@ -2983,8 +2905,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 437: {
-                    GameScreen_c.selectedThemeId_field_ab = 5;
-                    hf.a(-124, GameScreen_c.selectedThemeId_field_ab);
+                    GameScreen.selectedThemeId = 5;
+                    IntrusiveNode.a(-124, GameScreen.selectedThemeId);
                     cd.a((byte) 115);
                     statePc = 438;
                     continue stateLoop;
@@ -2998,8 +2920,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 439: {
-                    GameScreen_c.selectedThemeId_field_ab = 3;
-                    hf.a(-98, GameScreen_c.selectedThemeId_field_ab);
+                    GameScreen.selectedThemeId = 3;
+                    IntrusiveNode.a(-98, GameScreen.selectedThemeId);
                     cd.a((byte) 122);
                     statePc = 441;
                     continue stateLoop;
@@ -3013,8 +2935,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 442: {
-                    GameScreen_c.selectedThemeId_field_ab = 4;
-                    hf.a(param0 ^ 1578896198, GameScreen_c.selectedThemeId_field_ab);
+                    GameScreen.selectedThemeId = 4;
+                    IntrusiveNode.a(param0 ^ 1578896198, GameScreen.selectedThemeId);
                     cd.a((byte) 101);
                     statePc = 444;
                     continue stateLoop;
@@ -3028,8 +2950,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 447: {
-                    GameScreen_c.selectedThemeId_field_ab = 2;
-                    hf.a(-118, GameScreen_c.selectedThemeId_field_ab);
+                    GameScreen.selectedThemeId = 2;
+                    IntrusiveNode.a(-118, GameScreen.selectedThemeId);
                     cd.a((byte) 82);
                     statePc = 448;
                     continue stateLoop;
@@ -3045,7 +2967,7 @@ final class GameplaySession_gh {
                 case 451: {
                     stackIn_454_0 = this;
                     stackIn_452_0 = stackIn_454_0;
-                    if (this.field_V) {
+                    if (this.debugReducedRendering) {
                         statePc = 454;
                     } else {
                         statePc = 452;
@@ -3065,7 +2987,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 455: {
-                    ((GameplaySession_gh) (this)).field_V = stackIn_455_1 != 0;
+                    ((GameplaySession) (this)).debugReducedRendering = stackIn_455_1 != 0;
                     statePc = 456;
                     continue stateLoop;
                 }
@@ -3078,8 +3000,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 457: {
-                    GameScreen_c.selectedThemeId_field_ab = GameScreen_c.selectedThemeId_field_ab + 1;
-                    GameScreen_c.selectedThemeId_field_ab = GameScreen_c.selectedThemeId_field_ab % 7;
+                    GameScreen.selectedThemeId = GameScreen.selectedThemeId + 1;
+                    GameScreen.selectedThemeId = GameScreen.selectedThemeId % 7;
                     cd.a((byte) 108);
                     statePc = 459;
                     continue stateLoop;
@@ -3093,7 +3015,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 462: {
-                    this.field_h = true;
+                    this.showSessionCounters = true;
                     if (var5 == 0) {
                         statePc = 293;
                     } else {
@@ -3116,7 +3038,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 465: {
-                    if (!this.field_j) {
+                    if (!this.debugPointerSpawnEnabled) {
                         statePc = 473;
                     } else {
                         statePc = 468;
@@ -3132,12 +3054,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 471: {
-                    nb.a(-28195, mc.field_a, this.field_G, he.field_d, this.field_r, this.field_Q);
+                    nb.spawnEntityAtPointer(-28195, mc.field_a, this.debugSpawnCategoryId, he.field_d, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
                     statePc = 473;
                     continue stateLoop;
                 }
                 case 473: {
-                    if (!this.field_Y) {
+                    if (!this.tutorialMode) {
                         statePc = 522;
                     } else {
                         statePc = 474;
@@ -3145,7 +3067,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 474: {
-                    if ((this.field_t ^ -1) != -1) {
+                    if ((this.tutorialStepPhase ^ -1) != -1) {
                         statePc = 522;
                     } else {
                         statePc = 477;
@@ -3153,7 +3075,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 477: {
-                    if (-6 == (this.field_p ^ -1)) {
+                    if (-6 == (this.tutorialStepId ^ -1)) {
                         statePc = 496;
                     } else {
                         statePc = 480;
@@ -3161,9 +3083,9 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 480: {
-                    this.field_C = false;
-                    this.field_t = 1;
-                    if (this.field_p != 0) {
+                    this.tutorialPromptActive = false;
+                    this.tutorialStepPhase = 1;
+                    if (this.tutorialStepId != 0) {
                         statePc = 486;
                     } else {
                         statePc = 483;
@@ -3171,7 +3093,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 483: {
-                    this.field_U = 0;
+                    this.tutorialProgressMetric = 0;
                     if (var5 == 0) {
                         statePc = 522;
                     } else {
@@ -3180,7 +3102,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 486: {
-                    if ((this.field_p ^ -1) != -2) {
+                    if ((this.tutorialStepId ^ -1) != -2) {
                         statePc = 492;
                     } else {
                         statePc = 489;
@@ -3188,7 +3110,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 489: {
-                    this.field_U = dd.field_D;
+                    this.tutorialProgressMetric = dd.variantMatchCandidateCount;
                     if (var5 == 0) {
                         statePc = 522;
                     } else {
@@ -3197,7 +3119,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 492: {
-                    if ((this.field_p ^ -1) == -3) {
+                    if ((this.tutorialStepId ^ -1) == -3) {
                         statePc = 495;
                     } else {
                         statePc = 522;
@@ -3205,7 +3127,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 495: {
-                    this.field_U = dk.field_b;
+                    this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
                     if (var5 == 0) {
                         statePc = 522;
                     } else {
@@ -3246,10 +3168,10 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 508: {
-                    this.c(param0 ^ -1578897511);
-                    this.field_p = 0;
-                    this.field_Y = true;
-                    this.field_C = true;
+                    this.leaveTutorial(param0 ^ -1578897511);
+                    this.tutorialStepId = 0;
+                    this.tutorialMode = true;
+                    this.tutorialPromptActive = true;
                     statePc = 509;
                     continue stateLoop;
                 }
@@ -3286,8 +3208,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 519: {
-                    this.field_C = false;
-                    this.field_t = 1;
+                    this.tutorialPromptActive = false;
+                    this.tutorialStepPhase = 1;
                     statePc = 522;
                     continue stateLoop;
                 }
@@ -3302,84 +3224,52 @@ final class GameplaySession_gh {
         }
     }
 
-    final void addScore_a(byte param0, int points_param1) {
-        int pointsForCounters_var3;
-        int counterSplitMode_var4;
-        int oneThirdPoints_var5;
+    final void addScore(byte param0, int points) {
+        int pointsForCounters;
+        int counterSplitMode;
+        int oneThirdPoints;
         int var6;
         CharSequence var7;
         CharSequence var8;
         var6 = Geoblox.field_C;
-        if (!this.field_Y) {
+        if (!this.tutorialMode) {
           L0: {
-            L1: {
-              this.score_field_o = this.score_field_o + points_param1;
-              if ((this.score_field_o ^ -1) >= -10000000) {
-                break L1;
-              } else {
-                var7 = (CharSequence) ((Object) Integer.toString(9999999));
-                td.a(var7, this.scoreText_field_X, 0, 47);
-                if (var6 == 0) {
-                  break L0;
-                } else {
-                  break L1;
-                }
+            this.score = this.score + points;
+            if ((this.score ^ -1) < -10000000) {
+              var7 = (CharSequence) ((Object) Integer.toString(9999999));
+              td.a(var7, this.scoreText, 0, 47);
+              if (var6 == 0) {
+                break L0;
               }
             }
-            var8 = (CharSequence) ((Object) Integer.toString(this.score_field_o));
-            td.a(var8, this.scoreText_field_X, 0, 69);
-            break L0;
+            var8 = (CharSequence) ((Object) Integer.toString(this.score));
+            td.a(var8, this.scoreText, 0, 69);
           }
-          L2: {
-            pointsForCounters_var3 = points_param1;
-            if (param0 == 127) {
-              break L2;
-            } else {
-              this.e(-17);
-              break L2;
-            }
+          pointsForCounters = points;
+          if (param0 != 127) {
+            this.renderProgressHud(-17);
           }
           L3: {
-            L4: {
-              counterSplitMode_var4 = kd.field_c % 3;
-              if ((counterSplitMode_var4 ^ -1) == -1) {
-                break L4;
-              } else {
-                L5: {
-                  if (counterSplitMode_var4 != 1) {
-                    break L5;
-                  } else {
-                    ml.field_r = ml.field_r - pointsForCounters_var3;
-                    if (var6 == 0) {
-                      break L3;
-                    } else {
-                      break L5;
-                    }
-                  }
-                }
-                oneThirdPoints_var5 = pointsForCounters_var3 / 3;
-                oa.field_a = oa.field_a + oneThirdPoints_var5;
-                ml.field_r = ml.field_r - (pointsForCounters_var3 - oneThirdPoints_var5);
+            counterSplitMode = kd.field_c % 3;
+            if ((counterSplitMode ^ -1) != -1) {
+              if (counterSplitMode == 1) {
+                ml.field_r = ml.field_r - pointsForCounters;
                 if (var6 == 0) {
                   break L3;
-                } else {
-                  break L4;
                 }
               }
-            }
-            oa.field_a = oa.field_a + pointsForCounters_var3;
-            break L3;
-          }
-          L6: {
-            if (!da.a(0, -117)) {
-              break L6;
-            } else {
-              if (this.score_field_o < 7000) {
-                break L6;
-              } else {
-                ra.a(239, -120, 16);
-                break L6;
+              oneThirdPoints = pointsForCounters / 3;
+              oa.field_a = oa.field_a + oneThirdPoints;
+              ml.field_r = ml.field_r - (pointsForCounters - oneThirdPoints);
+              if (var6 == 0) {
+                break L3;
               }
+            }
+            oa.field_a = oa.field_a + pointsForCounters;
+          }
+          if (da.a(0, -117)) {
+            if (this.score >= 7000) {
+              ra.a(239, -120, 16);
             }
           }
           return;
@@ -3389,69 +3279,45 @@ final class GameplaySession_gh {
     }
 
     public static void i(int param0) {
-        L0: {
-          field_m = null;
-          field_z = null;
-          if (param0 == -17199) {
-            break L0;
-          } else {
-            field_P = 53;
-            break L0;
-          }
+        field_m = null;
+        field_z = null;
+        if (param0 != -17199) {
+          field_P = 53;
         }
     }
 
-    final void startSessionEndSequence_d(byte param0) {
-        L0: {
-          if (param0 == 116) {
-            break L0;
-          } else {
-            this.score_field_o = -46;
-            break L0;
-          }
+    final void startSessionEndSequence(byte param0) {
+        if (param0 != 116) {
+          this.score = -46;
         }
         L1: {
-          L2: {
-            if (this.field_Y) {
-              break L2;
-            } else {
-              this.field_x = true;
-              this.field_L = true;
-              this.emitPointsPopup_c(false);
-              this.addScore_a((byte) 127, wa.a(-25866));
-              this.submitScore_e((byte) -70);
-              if (Geoblox.field_C == 0) {
-                break L1;
-              } else {
-                break L2;
-              }
+          if (!this.tutorialMode) {
+            this.sessionEnding = true;
+            this.field_L = true;
+            this.emitPointsPopup(false);
+            this.addScore((byte) 127, wa.collectUnfinishedPopupPoints(-25866));
+            this.submitScore((byte) -70);
+            if (Geoblox.field_C == 0) {
+              break L1;
             }
           }
-          this.field_p = 5;
-          this.field_t = 0;
-          this.field_C = true;
-          break L1;
+          this.tutorialStepId = 5;
+          this.tutorialStepPhase = 0;
+          this.tutorialPromptActive = true;
         }
     }
 
-    final boolean canAdvanceSession_b(boolean param0) {
+    final boolean canAdvanceSession(boolean param0) {
         int stackIn_9_0 = 0;
         if (param0) {
           L0: {
-            L1: {
-              if (this.field_H) {
-                break L1;
-              } else {
-                if (0 == this.field_bb) {
-                  stackIn_9_0 = 0;
-                  break L0;
-                } else {
-                  break L1;
-                }
+            if (!this.sceneTransitionRequested) {
+              if (0 == this.sessionPhase) {
+                stackIn_9_0 = 0;
+                break L0;
               }
             }
             stackIn_9_0 = 1;
-            break L0;
           }
           return stackIn_9_0 != 0;
         } else {
@@ -3459,123 +3325,81 @@ final class GameplaySession_gh {
         }
     }
 
-    private final void b(int param0) {
+    private final void advanceTutorialStep(int param0) {
         int var3;
         L0: {
-          L1: {
-            var3 = Geoblox.field_C;
-            if (-3 != (this.field_t ^ -1)) {
-              break L1;
-            } else {
-              this.field_p = this.field_p + 1;
-              this.field_C = true;
-              this.field_t = 0;
-              if (var3 == 0) {
-                break L0;
-              } else {
-                break L1;
-              }
+          var3 = Geoblox.field_C;
+          if (-3 == (this.tutorialStepPhase ^ -1)) {
+            this.tutorialStepId = this.tutorialStepId + 1;
+            this.tutorialPromptActive = true;
+            this.tutorialStepPhase = 0;
+            if (var3 == 0) {
+              break L0;
             }
           }
-          if (1 != this.field_t) {
-            break L0;
-          } else {
+          if (1 == this.tutorialStepPhase) {
             L2: {
-              L3: {
-                if ((this.field_p ^ -1) == -4) {
-                  break L3;
-                } else {
-                  if (this.field_p != 5) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
+              if ((this.tutorialStepId ^ -1) != -4) {
+                if (this.tutorialStepId != 5) {
+                  break L2;
                 }
               }
-              this.c(7000);
-              break L2;
+              this.leaveTutorial(7000);
             }
-            L4: {
-              if (!this.field_d) {
-                break L4;
-              } else {
-                this.field_d = false;
-                this.field_t = 2;
-                break L4;
-              }
+            if (this.tutorialAdvanceRequested) {
+              this.tutorialAdvanceRequested = false;
+              this.tutorialStepPhase = 2;
             }
-            L5: {
-              if (-1 != (this.field_p ^ -1)) {
-                break L5;
-              } else {
-                if (-451 <= (this.field_U ^ -1)) {
-                  break L5;
-                } else {
-                  this.field_t = 2;
-                  if (var3 == 0) {
-                    break L0;
-                  } else {
-                    break L5;
-                  }
+            if (-1 == (this.tutorialStepId ^ -1)) {
+              if (-451 > (this.tutorialProgressMetric ^ -1)) {
+                this.tutorialStepPhase = 2;
+                if (var3 == 0) {
+                  break L0;
                 }
               }
             }
             L6: {
-              L7: {
-                if (this.field_p != 1) {
-                  break L7;
-                } else {
-                  if (0 < dd.field_D + -this.field_U) {
-                    break L6;
-                  } else {
-                    break L7;
-                  }
+              if (this.tutorialStepId == 1) {
+                if (0 < dd.variantMatchCandidateCount + -this.tutorialProgressMetric) {
+                  break L6;
                 }
               }
-              if (this.field_p != 2) {
+              if (this.tutorialStepId != 2) {
                 break L0;
               } else {
-                if ((dk.field_b + -this.field_U ^ -1) >= -1) {
+                if ((dk.categoryMatchCandidateCount + -this.tutorialProgressMetric ^ -1) >= -1) {
                   break L0;
                 } else {
-                  this.field_t = 2;
+                  this.tutorialStepPhase = 2;
                   if (var3 == 0) {
                     break L0;
-                  } else {
-                    break L6;
                   }
                 }
               }
             }
-            this.field_t = 2;
-            break L0;
+            this.tutorialStepPhase = 2;
           }
         }
-        L8: {
-          if (param0 >= 59) {
-            break L8;
-          } else {
-            this.field_N = true;
-            break L8;
-          }
+        if (param0 < 59) {
+          this.spawnReleaseDisabled = true;
         }
     }
 
-    private final void b(byte param0) {
+    private final void updateSceneTransition(byte param0) {
         int fieldTemp$0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_17_1 = 0;
         int stackIn_27_0 = 0;
         int stackIn_27_1 = 0;
         int statePc = 0;
-        int var2 = 0;
-        int var3 = 0;
+        int precedingThemeId = 0;
+        int themeIndexThenId = 0;
         int var4 = 0;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
                     var4 = Geoblox.field_C;
-                    if (-1 == (this.sceneAnimationTick_field_D ^ -1)) {
+                    if (-1 == (this.sceneAnimationTick ^ -1)) {
                         statePc = 3;
                     } else {
                         statePc = 10;
@@ -3583,7 +3407,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 3: {
-                    if (this.field_f) {
+                    if (this.preserveScoreOnTransition) {
                         statePc = 7;
                     } else {
                         statePc = 4;
@@ -3591,7 +3415,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 4: {
-                    this.h(122);
+                    this.resetScoreState(122);
                     if (var4 == 0) {
                         statePc = 9;
                     } else {
@@ -3600,24 +3424,24 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 7: {
-                    this.j(867);
+                    this.prepareNextTheme(867);
                     statePc = 9;
                     continue stateLoop;
                 }
                 case 9: {
-                    this.field_i = true;
-                    sf.a(sh.field_y.field_d, 0, oc.field_d.pixels_field_v, 0, sh.field_y.field_d.length);
+                    this.sceneTransitionInProgress = true;
+                    sf.a(sh.field_y.field_d, 0, oc.boardSceneRaster.pixels, 0, sh.field_y.field_d.length);
                     le.a((byte) -39);
-                    bk.field_a.e();
-                    SoftwareRasterizer_vb.c();
-                    i.field_a.a(this.field_w + 320, this.field_u + 240, 16777215);
+                    bk.boardOwnershipRaster.e();
+                    SoftwareRasterizer.c();
+                    i.avatarMaskRaster.a(this.boardMaskOffsetX + 320, this.boardMaskOffsetY + 240, 16777215);
                     sh.field_y.a(255);
                     statePc = 10;
                     continue stateLoop;
                 }
                 case 10: {
-                    fieldTemp$0 = this.sceneAnimationTick_field_D + 1;
-                    this.sceneAnimationTick_field_D = this.sceneAnimationTick_field_D + 1;
+                    fieldTemp$0 = this.sceneAnimationTick + 1;
+                    this.sceneAnimationTick = this.sceneAnimationTick + 1;
                     if (160 != fieldTemp$0) {
                         statePc = 91;
                     } else {
@@ -3626,7 +3450,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 11: {
-                    if (!this.field_f) {
+                    if (!this.preserveScoreOnTransition) {
                         statePc = 87;
                     } else {
                         statePc = 14;
@@ -3634,13 +3458,13 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 14: {
-                    var2 = 0;
-                    var3 = 0;
+                    precedingThemeId = 0;
+                    themeIndexThenId = 0;
                     statePc = 15;
                     continue stateLoop;
                 }
                 case 15: {
-                    if (7 <= var3) {
+                    if (7 <= themeIndexThenId) {
                         statePc = 26;
                     } else {
                         statePc = 16;
@@ -3648,9 +3472,9 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 16: {
-                    stackIn_27_0 = GameScreen_c.selectedThemeId_field_ab ^ -1;
+                    stackIn_27_0 = GameScreen.selectedThemeId ^ -1;
                     stackIn_17_0 = stackIn_27_0;
-                    stackIn_27_1 = ee.field_B[var3] ^ -1;
+                    stackIn_27_1 = ee.field_B[themeIndexThenId] ^ -1;
                     stackIn_17_1 = stackIn_27_1;
                     if (var4 != 0) {
                         statePc = 27;
@@ -3668,7 +3492,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 20: {
-                    if (0 >= var3) {
+                    if (0 >= themeIndexThenId) {
                         statePc = 22;
                     } else {
                         statePc = 21;
@@ -3676,7 +3500,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 21: {
-                    var2 = ee.field_B[var3 + -1];
+                    precedingThemeId = ee.field_B[themeIndexThenId + -1];
                     if (var4 == 0) {
                         statePc = 26;
                     } else {
@@ -3685,7 +3509,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 22: {
-                    var2 = ee.field_B[6];
+                    precedingThemeId = ee.field_B[6];
                     if (var4 == 0) {
                         statePc = 26;
                     } else {
@@ -3694,7 +3518,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 23: {
-                    var3++;
+                    themeIndexThenId++;
                     if (var4 == 0) {
                         statePc = 15;
                     } else {
@@ -3703,9 +3527,9 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 26: {
-                    var3 = var2;
+                    themeIndexThenId = precedingThemeId;
                     stackIn_27_0 = 4;
-                    stackIn_27_1 = var3;
+                    stackIn_27_1 = themeIndexThenId;
                     statePc = 27;
                     continue stateLoop;
                 }
@@ -3726,7 +3550,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 31: {
-                    if (-2 != (var3 ^ -1)) {
+                    if (-2 != (themeIndexThenId ^ -1)) {
                         statePc = 37;
                     } else {
                         statePc = 34;
@@ -3742,7 +3566,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 37: {
-                    if (-4 != (var3 ^ -1)) {
+                    if (-4 != (themeIndexThenId ^ -1)) {
                         statePc = 43;
                     } else {
                         statePc = 40;
@@ -3758,7 +3582,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 43: {
-                    if (-1 != (var3 ^ -1)) {
+                    if (-1 != (themeIndexThenId ^ -1)) {
                         statePc = 49;
                     } else {
                         statePc = 46;
@@ -3774,7 +3598,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 49: {
-                    if (-7 == (var3 ^ -1)) {
+                    if (-7 == (themeIndexThenId ^ -1)) {
                         statePc = 76;
                     } else {
                         statePc = 52;
@@ -3782,7 +3606,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 52: {
-                    if (5 != var3) {
+                    if (5 != themeIndexThenId) {
                         statePc = 58;
                     } else {
                         statePc = 55;
@@ -3798,7 +3622,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 58: {
-                    if (2 != var3) {
+                    if (2 != themeIndexThenId) {
                         statePc = 85;
                     } else {
                         statePc = 61;
@@ -3882,13 +3706,13 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 87: {
-                    this.field_B = false;
-                    this.field_F = true;
-                    this.field_i = false;
-                    this.field_f = true;
-                    this.field_H = false;
-                    this.sceneAnimationTick_field_D = 0;
-                    if (-1 > (ji.field_h ^ -1)) {
+                    this.connectivityRebuiltThisTick = false;
+                    this.boardRasterDirty = true;
+                    this.sceneTransitionInProgress = false;
+                    this.preserveScoreOnTransition = true;
+                    this.sceneTransitionRequested = false;
+                    this.sceneAnimationTick = 0;
+                    if (-1 > (ji.difficultyStep ^ -1)) {
                         statePc = 90;
                     } else {
                         statePc = 91;
@@ -3897,7 +3721,7 @@ final class GameplaySession_gh {
                 }
                 case 90: {
                     qe.b(10);
-                    ld.b(false);
+                    ld.advanceDifficulty(false);
                     statePc = 91;
                     continue stateLoop;
                 }
@@ -3910,7 +3734,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 92: {
-                    this.field_h = true;
+                    this.showSessionCounters = true;
                     statePc = 94;
                     continue stateLoop;
                 }
@@ -3922,74 +3746,49 @@ final class GameplaySession_gh {
         }
     }
 
-    private final void a(boolean param0) {
-        int var2;
+    private final void renderResultSequence(boolean param0) {
+        int shrinkingDiameter;
         int var4;
-        String var5;
-        String var6;
-        L0: {
-          var4 = Geoblox.field_C;
-          if (!param0) {
-            break L0;
-          } else {
-            this.addScore_a((byte) 71, 49);
-            break L0;
-          }
+        String shrinkingBonusText;
+        String countdownBonusText;
+        var4 = Geoblox.field_C;
+        if (param0) {
+          this.addScore((byte) 71, 49);
         }
         L1: {
-          L2: {
-            if (2 != this.field_bb) {
-              break L2;
-            } else {
-              pk.field_k.b(320 + -(this.sceneAnimationTick_field_D >> 883830849), 240 + -(this.sceneAnimationTick_field_D >> -1807064447), this.sceneAnimationTick_field_D, this.sceneAnimationTick_field_D, 150);
-              lj.field_d.b(this.resultPanelX_field_ab, -(lj.field_d.field_o >> -129235807) + 240 - -60);
-              dd.field_G.a(sg.field_f, 15 + this.resultPanelX_field_ab, 312, 0, -1);
-              if (var4 == 0) {
-                break L1;
-              } else {
-                break L2;
-              }
+          if (2 == this.sessionPhase) {
+            pk.field_k.b(320 + -(this.sceneAnimationTick >> 883830849), 240 + -(this.sceneAnimationTick >> -1807064447), this.sceneAnimationTick, this.sceneAnimationTick, 150);
+            lj.field_d.b(this.resultPanelX, -(lj.field_d.field_o >> -129235807) + 240 - -60);
+            dd.field_G.a(sg.field_f, 15 + this.resultPanelX, 312, 0, -1);
+            if (var4 == 0) {
+              break L1;
             }
           }
-          L3: {
-            var2 = -this.sceneAnimationTick_field_D + 460 + 460;
-            if (this.field_bb != 3) {
-              break L3;
-            } else {
-              L4: {
-                pk.field_k.b(-(var2 >> 1946680609) + 320, 240 - (var2 >> -835172863), var2, var2, 150);
-                lj.field_d.b(-(lj.field_d.field_s >> -1714325343) + 320, -(lj.field_d.field_o >> -174520511) + 240 + 60);
-                var5 = Integer.toString(this.field_q);
-                dd.field_G.b(var5, 320, 312, 0, -1);
-                if (!this.field_R) {
-                  break L4;
-                } else {
-                  dd.field_G.b(ld.field_a, 320, 352, 0, -1);
-                  break L4;
-                }
-              }
-              if (var4 == 0) {
-                break L1;
-              } else {
-                break L3;
-              }
+          shrinkingDiameter = -this.sceneAnimationTick + 460 + 460;
+          if (this.sessionPhase == 3) {
+            pk.field_k.b(-(shrinkingDiameter >> 1946680609) + 320, 240 - (shrinkingDiameter >> -835172863), shrinkingDiameter, shrinkingDiameter, 150);
+            lj.field_d.b(-(lj.field_d.field_s >> -1714325343) + 320, -(lj.field_d.field_o >> -174520511) + 240 + 60);
+            shrinkingBonusText = Integer.toString(this.resultBonusPoints);
+            dd.field_G.b(shrinkingBonusText, 320, 312, 0, -1);
+            if (this.boardEmptyAtResultStart) {
+              dd.field_G.b(ld.field_a, 320, 352, 0, -1);
+            }
+            if (var4 == 0) {
+              break L1;
             }
           }
-          k.field_a.d(-(k.field_a.field_s >> 2015782145) + 320, 240 - (k.field_a.field_o >> 738361857), this.resultSequenceCountdown_field_S - 150 + 150);
+          k.field_a.d(-(k.field_a.field_s >> 2015782145) + 320, 240 - (k.field_a.field_o >> 738361857), this.resultSequenceCountdown - 150 + 150);
           lj.field_d.b(-(lj.field_d.field_s >> 1731342273) + 320, 300 + -(lj.field_d.field_o >> -1256391423));
-          var6 = Integer.toString(this.field_q);
-          dd.field_G.b(var6, 320, 312, 0, -1);
-          if (!this.field_R) {
-            break L1;
-          } else {
+          countdownBonusText = Integer.toString(this.resultBonusPoints);
+          dd.field_G.b(countdownBonusText, 320, 312, 0, -1);
+          if (this.boardEmptyAtResultStart) {
             dd.field_G.b(ld.field_a, 320, 352, 0, -1);
-            break L1;
           }
         }
         dd.field_G.a(kd.field_d, 426, 404, 200, 100, 0, -1, 2, 0, 30);
     }
 
-    private final void f(int param0) {
+    private final void updateResultSequence(int param0) {
         int fieldTemp$0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
@@ -3998,22 +3797,22 @@ final class GameplaySession_gh {
         int stackIn_16_1 = 0;
         int stackIn_23_0 = 0;
         int statePc = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int resultProgressPercent = 0;
+        int maxRadiusSquared = 0;
+        int spriteOffsetFromCenterX = 0;
+        int spriteOffsetFromCenterY = 0;
+        int spriteColumn = 0;
+        int spriteRow = 0;
+        int pixelOffsetFromCenterX = 0;
+        int pixelOffsetFromCenterY = 0;
+        int pixelRadiusSquared = 0;
         int var11 = 0;
-        GameplayEntity_ja var12 = null;
+        GameplayEntity endingEntity = null;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
                     var11 = Geoblox.field_C;
-                    if (0 == this.sceneAnimationTick_field_D) {
+                    if (0 == this.sceneAnimationTick) {
                         statePc = 3;
                     } else {
                         statePc = 24;
@@ -4021,8 +3820,8 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 3: {
-                    gf.field_f = 0;
-                    if (!sk.a(param0 + -11)) {
+                    gf.matchChainLength = 0;
+                    if (!sk.checkBoundaryLossAndStartCascade(param0 + -11)) {
                         statePc = 5;
                     } else {
                         statePc = 4;
@@ -4030,15 +3829,15 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 4: {
-                    this.field_y = 0;
+                    this.pointsPanelSlideDirection = 0;
                     return;
                 }
                 case 5: {
-                    this.field_q = this.field_q + 179;
-                    this.field_R = a.field_d.c(13519);
-                    this.resultSequenceCountdown_field_S = 150;
-                    var12 = i.a((byte) -128);
-                    if (null != var12) {
+                    this.resultBonusPoints = this.resultBonusPoints + 179;
+                    this.boardEmptyAtResultStart = a.attachedEntities.isEmpty(13519);
+                    this.resultSequenceCountdown = 150;
+                    endingEntity = i.a((byte) -128);
+                    if (null != endingEntity) {
                         statePc = 9;
                     } else {
                         statePc = 6;
@@ -4046,7 +3845,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 6: {
-                    this.field_c = 29;
+                    this.endingEntityRadius = 29;
                     if (var11 == 0) {
                         statePc = 22;
                     } else {
@@ -4055,20 +3854,20 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 9: {
-                    vf.field_L.e();
-                    SoftwareRasterizer_vb.c();
-                    var12.entitySprite_field_J.rotateSmooth_a(var12.entitySprite_field_J.field_s << -907967581, var12.entitySprite_field_J.field_o << -2077405885, vf.field_L.field_s << -1078669405, vf.field_L.field_o << -1697489437, (int)(65535.0 * ((double)var12.spriteAngleRadians_field_u / 6.283185307179586)), 4096);
+                    vf.spriteScratchRaster.e();
+                    SoftwareRasterizer.c();
+                    endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.field_s << -907967581, endingEntity.entitySprite.field_o << -2077405885, vf.spriteScratchRaster.field_s << -1078669405, vf.spriteScratchRaster.field_o << -1697489437, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
                     sh.field_y.a(255);
-                    var3 = 0;
-                    var4 = (int)(var12.positionX_field_o + 0.5f) + (-(vf.field_L.width_field_r >> 585464481) + -320);
-                    var5 = -240 + ((int)(var12.positionY_field_v + 0.5f) + -(vf.field_L.height_field_m >> -846006463));
-                    var6 = 0;
+                    maxRadiusSquared = 0;
+                    spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(vf.spriteScratchRaster.width >> 585464481) + -320);
+                    spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) + -(vf.spriteScratchRaster.height >> -846006463));
+                    spriteColumn = 0;
                     statePc = 10;
                     continue stateLoop;
                 }
                 case 10: {
-                    stackIn_11_0 = var6;
-                    stackIn_11_1 = vf.field_L.width_field_r;
+                    stackIn_11_0 = spriteColumn;
+                    stackIn_11_1 = vf.spriteScratchRaster.width;
                     statePc = 11;
                     continue stateLoop;
                 }
@@ -4091,12 +3890,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 13: {
-                    var7 = stackIn_13_0;
+                    spriteRow = stackIn_13_0;
                     statePc = 14;
                     continue stateLoop;
                 }
                 case 14: {
-                    if (vf.field_L.height_field_m <= var7) {
+                    if (vf.spriteScratchRaster.height <= spriteRow) {
                         statePc = 20;
                     } else {
                         statePc = 15;
@@ -4106,7 +3905,7 @@ final class GameplaySession_gh {
                 case 15: {
                     stackIn_11_0 = 0;
                     stackIn_16_0 = stackIn_11_0;
-                    stackIn_11_1 = vf.field_L.pixels_field_v[vf.field_L.width_field_r * var7 + var6];
+                    stackIn_11_1 = vf.spriteScratchRaster.pixels[vf.spriteScratchRaster.width * spriteRow + spriteColumn];
                     stackIn_16_1 = stackIn_11_1;
                     if (var11 != 0) {
                         statePc = 11;
@@ -4124,10 +3923,10 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 17: {
-                    var8 = var4 + var6;
-                    var9 = var7 + var5;
-                    var10 = var8 * var8 - -(var9 * var9);
-                    if (var10 <= var3) {
+                    pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
+                    pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
+                    pixelRadiusSquared = pixelOffsetFromCenterX * pixelOffsetFromCenterX - -(pixelOffsetFromCenterY * pixelOffsetFromCenterY);
+                    if (pixelRadiusSquared <= maxRadiusSquared) {
                         statePc = 19;
                     } else {
                         statePc = 18;
@@ -4135,12 +3934,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 18: {
-                    var3 = var10;
+                    maxRadiusSquared = pixelRadiusSquared;
                     statePc = 19;
                     continue stateLoop;
                 }
                 case 19: {
-                    var7++;
+                    spriteRow++;
                     if (var11 == 0) {
                         statePc = 14;
                     } else {
@@ -4149,7 +3948,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 20: {
-                    var6++;
+                    spriteColumn++;
                     if (var11 == 0) {
                         statePc = 10;
                     } else {
@@ -4158,12 +3957,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 21: {
-                    this.field_c = (int)(0.5 + Math.sqrt((double)var3));
+                    this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
                     statePc = 22;
                     continue stateLoop;
                 }
                 case 22: {
-                    this.field_W = 920 + (-(2 * this.field_c) - 58 - 1);
+                    this.resultCompletionTickOffset = 920 + (-(2 * this.endingEntityRadius) - 58 - 1);
                     stackIn_23_0 = param0 ^ 10;
                     statePc = 23;
                     continue stateLoop;
@@ -4174,9 +3973,9 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 24: {
-                    fieldTemp$0 = this.sceneAnimationTick_field_D + 1;
-                    this.sceneAnimationTick_field_D = this.sceneAnimationTick_field_D + 1;
-                    if (fieldTemp$0 == 150 + this.field_W) {
+                    fieldTemp$0 = this.sceneAnimationTick + 1;
+                    this.sceneAnimationTick = this.sceneAnimationTick + 1;
+                    if (fieldTemp$0 == 150 + this.resultCompletionTickOffset) {
                         statePc = 63;
                     } else {
                         statePc = 25;
@@ -4184,7 +3983,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 25: {
-                    if (460 <= this.sceneAnimationTick_field_D) {
+                    if (460 <= this.sceneAnimationTick) {
                         statePc = 31;
                     } else {
                         statePc = 28;
@@ -4192,7 +3991,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 28: {
-                    this.field_bb = 2;
+                    this.sessionPhase = 2;
                     if (var11 == 0) {
                         statePc = 39;
                     } else {
@@ -4201,7 +4000,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 31: {
-                    if ((460 + -this.sceneAnimationTick_field_D + 460 ^ -1) <= (this.field_c * 2 ^ -1)) {
+                    if ((460 + -this.sceneAnimationTick + 460 ^ -1) <= (this.endingEntityRadius * 2 ^ -1)) {
                         statePc = 37;
                     } else {
                         statePc = 34;
@@ -4209,7 +4008,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 34: {
-                    this.field_bb = 4;
+                    this.sessionPhase = 4;
                     if (var11 == 0) {
                         statePc = 39;
                     } else {
@@ -4218,12 +4017,12 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 37: {
-                    this.field_bb = 3;
+                    this.sessionPhase = 3;
                     statePc = 39;
                     continue stateLoop;
                 }
                 case 39: {
-                    if (3 != this.field_bb) {
+                    if (3 != this.sessionPhase) {
                         statePc = 43;
                     } else {
                         statePc = 40;
@@ -4231,7 +4030,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 40: {
-                    this.field_q = this.field_q + 7;
+                    this.resultBonusPoints = this.resultBonusPoints + 7;
                     if (var11 == 0) {
                         statePc = 69;
                     } else {
@@ -4240,7 +4039,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 43: {
-                    if (-3 == (this.field_bb ^ -1)) {
+                    if (-3 == (this.sessionPhase ^ -1)) {
                         statePc = 52;
                     } else {
                         statePc = 46;
@@ -4248,7 +4047,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 46: {
-                    if ((this.resultSequenceCountdown_field_S ^ -1) != -151) {
+                    if ((this.resultSequenceCountdown ^ -1) != -151) {
                         statePc = 51;
                     } else {
                         statePc = 49;
@@ -4261,7 +4060,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 51: {
-                    this.resultSequenceCountdown_field_S = this.resultSequenceCountdown_field_S - 1;
+                    this.resultSequenceCountdown = this.resultSequenceCountdown - 1;
                     if (var11 == 0) {
                         statePc = 69;
                     } else {
@@ -4286,14 +4085,14 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 58: {
-                    var2 = this.sceneAnimationTick_field_D * 100 / 460;
-                    this.field_M = PcmSampleStream_kl.a(fl.field_c[28], 2 * var2 - -200, 45);
-                    GameplayEntity_ja.registerAudioStream_a(false, this.field_M);
+                    resultProgressPercent = this.sceneAnimationTick * 100 / 460;
+                    this.field_M = PcmSampleStream.a(fl.field_c[28], 2 * resultProgressPercent - -200, 45);
+                    GameplayEntity.registerAudioStream(false, this.field_M);
                     statePc = 59;
                     continue stateLoop;
                 }
                 case 59: {
-                    if (this.resultPanelX_field_ab <= 320 + -(lj.field_d.field_s >> -1578896191)) {
+                    if (this.resultPanelX <= 320 + -(lj.field_d.field_s >> -1578896191)) {
                         statePc = 69;
                     } else {
                         statePc = 60;
@@ -4301,7 +4100,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 60: {
-                    this.resultPanelX_field_ab = this.resultPanelX_field_ab - 1;
+                    this.resultPanelX = this.resultPanelX - 1;
                     if (var11 == 0) {
                         statePc = 69;
                     } else {
@@ -4310,10 +4109,10 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 63: {
-                    this.field_H = true;
-                    this.sceneAnimationTick_field_D = 0;
-                    this.field_bb = 5;
-                    if (!this.field_R) {
+                    this.sceneTransitionRequested = true;
+                    this.sceneAnimationTick = 0;
+                    this.sessionPhase = 5;
+                    if (!this.boardEmptyAtResultStart) {
                         statePc = 68;
                     } else {
                         statePc = 66;
@@ -4323,17 +4122,17 @@ final class GameplaySession_gh {
                 case 66: {
                     ld.a(350, 320, 66, 2000);
                     ra.a(eb.field_i ^ 255, param0 + -101, eb.field_i);
-                    this.field_B = false;
+                    this.connectivityRebuiltThisTick = false;
                     statePc = 68;
                     continue stateLoop;
                 }
                 case 68: {
-                    ld.a(310, 320, 90, this.field_q);
+                    ld.a(310, 320, 90, this.resultBonusPoints);
                     statePc = 69;
                     continue stateLoop;
                 }
                 case 69: {
-                    cf.d((byte) 33);
+                    cf.advanceScorePopups((byte) 33);
                     f.o(600);
                     if (param0 == 10) {
                         statePc = 72;
@@ -4343,7 +4142,7 @@ final class GameplaySession_gh {
                     continue stateLoop;
                 }
                 case 70: {
-                    GameplaySession_gh.i(-70);
+                    GameplaySession.i(-70);
                     statePc = 72;
                     continue stateLoop;
                 }
@@ -4355,256 +4154,183 @@ final class GameplaySession_gh {
         }
     }
 
-    final void submitScore_e(byte param0) {
+    final void submitScore(byte param0) {
         if (param0 != -70) {
             return;
         }
-        if (0 < this.score_field_o && !this.field_K) {
+        if (0 < this.score && !this.submissionBlocked) {
             if (!fh.c(-102)) {
-                qf.a(oa.field_a, 22, kb.field_d, 25134, new int[]{this.score_field_o}, ml.field_r, 65513, 3, gb.field_g);
+                qf.a(oa.field_a, 22, kb.field_d, 25134, new int[]{this.score}, ml.field_r, 65513, 3, gb.field_g);
             }
         }
         ca.field_f = null;
     }
 
-    final void addPopupPoints_a(int points_param0, int param1) {
+    final void addPopupPoints(int points, int param1) {
         int var3;
         CharSequence var4;
         CharSequence var5;
-        if (this.field_Y) {
+        if (this.tutorialMode) {
           return;
         } else {
           L0: {
-            L1: {
-              this.pendingPopupPoints_field_A = this.pendingPopupPoints_field_A + points_param0;
-              if (-100000 <= (this.pendingPopupPoints_field_A ^ -1)) {
-                break L1;
-              } else {
-                var4 = (CharSequence) ((Object) Integer.toString(99999));
-                td.a(var4, this.popupPointsText_field_g, 0, 26);
-                if (Geoblox.field_C == 0) {
-                  break L0;
-                } else {
-                  break L1;
-                }
+            this.pendingPopupPoints = this.pendingPopupPoints + points;
+            if (-100000 > (this.pendingPopupPoints ^ -1)) {
+              var4 = (CharSequence) ((Object) Integer.toString(99999));
+              td.a(var4, this.popupPointsText, 0, 26);
+              if (Geoblox.field_C == 0) {
+                break L0;
               }
             }
-            var5 = (CharSequence) ((Object) Integer.toString(this.pendingPopupPoints_field_A));
-            td.a(var5, this.popupPointsText_field_g, 0, 73);
-            break L0;
+            var5 = (CharSequence) ((Object) Integer.toString(this.pendingPopupPoints));
+            td.a(var5, this.popupPointsText, 0, 73);
           }
           var3 = -83 % ((-19 - param1) / 54);
           return;
         }
     }
 
-    private final void e(int param0) {
-        int var2;
+    private final void renderProgressHud(int param0) {
+        int remainingThemeReleases;
         int var3;
         var3 = Geoblox.field_C;
-        if (!this.field_f) {
+        if (!this.preserveScoreOnTransition) {
           return;
         } else {
           L0: {
-            L1: {
-              if (-1 == (this.field_bb ^ -1)) {
-                break L1;
-              } else {
-                dd.field_G.a(tj.field_a, 426, 404, 200, 100, 0, -1, 2, 0, 30);
-                if (var3 == 0) {
-                  break L0;
-                } else {
-                  break L1;
-                }
+            if (-1 != (this.sessionPhase ^ -1)) {
+              dd.field_G.a(tj.field_a, 426, 404, 200, 100, 0, -1, 2, 0, 30);
+              if (var3 == 0) {
+                break L0;
               }
             }
-            L2: {
-              var2 = -ul.field_b + fa.field_b;
-              dd.field_G.field_K[0][wf.field_p] = 15488514;
-              dd.field_G.c(w.field_e, 621, 441, 0, -1);
+            remainingThemeReleases = -ul.releasedInCurrentTheme + fa.releasesPerTheme;
+            dd.field_G.field_K[0][wf.field_p] = 15488514;
+            dd.field_G.c(w.field_e, 621, 441, 0, -1);
+            dd.field_G.field_K[0][wf.field_p] = 16689938;
+            dd.field_G.c(od.field_b, 621, 468, 0, -1);
+            if ((remainingThemeReleases ^ -1) >= -11) {
+              dd.field_G.field_K[0][wf.field_p] = mk.field_k[remainingThemeReleases % 5];
+              dd.field_G.c(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
               dd.field_G.field_K[0][wf.field_p] = 16689938;
-              dd.field_G.c(od.field_b, 621, 468, 0, -1);
-              if ((var2 ^ -1) < -11) {
-                break L2;
-              } else {
-                dd.field_G.field_K[0][wf.field_p] = mk.field_k[var2 % 5];
-                dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
-                dd.field_G.field_K[0][wf.field_p] = 16689938;
-                if (var3 == 0) {
-                  break L0;
-                } else {
-                  break L2;
-                }
+              if (var3 == 0) {
+                break L0;
               }
             }
-            L3: {
-              if (var2 > 99999) {
-                break L3;
-              } else {
-                dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
-                if (var3 == 0) {
-                  break L0;
-                } else {
-                  break L3;
-                }
+            if (remainingThemeReleases <= 99999) {
+              dd.field_G.c(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
+              if (var3 == 0) {
+                break L0;
               }
             }
             dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
-            break L0;
           }
-          L4: {
-            if (param0 < -39) {
-              break L4;
-            } else {
-              this.field_q = 7;
-              break L4;
-            }
+          if (param0 >= -39) {
+            this.resultBonusPoints = 7;
           }
           return;
         }
     }
 
-    private final void requestSessionExitScreen_d(int param0) {
+    private final void requestSessionExitScreen(int param0) {
         int var3;
-        L0: {
-          var3 = Geoblox.field_C;
-          if (param0 == 28809) {
-            break L0;
-          } else {
-            this.field_j = true;
-            break L0;
-          }
+        var3 = Geoblox.field_C;
+        if (param0 != 28809) {
+          this.debugPointerSpawnEnabled = true;
         }
         L1: {
-          L2: {
-            if (fh.c(-93)) {
-              break L2;
-            } else {
-              L3: {
-                if (this.field_e > 0) {
-                  break L3;
-                } else {
-                  L4: {
-                    if (this.score_field_o <= 0) {
-                      break L4;
-                    } else {
-                      ai.requestedScreenId_field_p = 2;
-                      if (var3 == 0) {
-                        break L1;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                  ai.requestedScreenId_field_p = 0;
-                  if (var3 == 0) {
-                    break L1;
-                  } else {
-                    break L3;
-                  }
+          if (!fh.c(-93)) {
+            if (this.newActionCount <= 0) {
+              if (this.score > 0) {
+                ai.requestedScreenId = 2;
+                if (var3 == 0) {
+                  break L1;
                 }
               }
-              ai.requestedScreenId_field_p = 6;
+              ai.requestedScreenId = 0;
               if (var3 == 0) {
                 break L1;
-              } else {
-                break L2;
               }
+            }
+            ai.requestedScreenId = 6;
+            if (var3 == 0) {
+              break L1;
             }
           }
           L5: {
-            L6: {
-              if (this.score_field_o > 0) {
-                break L6;
-              } else {
-                if ((this.field_e ^ -1) >= -1) {
-                  break L5;
-                } else {
-                  break L6;
-                }
+            if (this.score <= 0) {
+              if ((this.newActionCount ^ -1) >= -1) {
+                break L5;
               }
             }
-            ai.requestedScreenId_field_p = 4;
+            ai.requestedScreenId = 4;
             if (var3 == 0) {
               break L1;
-            } else {
-              break L5;
             }
           }
-          ai.requestedScreenId_field_p = 0;
-          break L1;
+          ai.requestedScreenId = 0;
         }
         fi.a(0, ll.field_d);
     }
 
-    private final void h(int param0) {
-        L0: {
-          this.score_field_o = 0;
-          this.pendingPopupPoints_field_A = 0;
-          sc.field_f = 3382;
-          el.field_g = 8801;
-          ml.field_r = 1385;
-          dc.field_a = 0;
-          oa.field_a = 4703;
-          gb.field_g = 5997;
-          kb.field_d = 275;
-          lb.field_b = 935;
-          this.addScore_a((byte) 127, 0);
-          this.addPopupPoints_a(0, -96);
-          gf.field_f = 1;
-          this.field_y = 1;
-          this.field_T = 640;
-          td.a((byte) -93);
-          if (param0 >= 104) {
-            break L0;
-          } else {
-            GameplaySession_gh.i(-111);
-            break L0;
-          }
+    private final void resetScoreState(int param0) {
+        this.score = 0;
+        this.pendingPopupPoints = 0;
+        sc.field_f = 3382;
+        el.field_g = 8801;
+        ml.field_r = 1385;
+        dc.field_a = 0;
+        oa.field_a = 4703;
+        gb.field_g = 5997;
+        kb.field_d = 275;
+        lb.field_b = 935;
+        this.addScore((byte) 127, 0);
+        this.addPopupPoints(0, -96);
+        gf.matchChainLength = 1;
+        this.pointsPanelSlideDirection = 1;
+        this.pointsPanelX = 640;
+        td.a((byte) -93);
+        if (param0 < 104) {
+          GameplaySession.i(-111);
         }
     }
 
     private final void c(byte param0) {
-        L0: {
-          if (param0 > 40) {
-            break L0;
-          } else {
-            GameplaySession_gh.i(100);
-            break L0;
-          }
+        if (param0 <= 40) {
+          GameplaySession.i(100);
         }
     }
 
-    private final void j(int param0) {
-        this.field_bb = 0;
-        this.resultPanelX_field_ab = 640;
-        this.field_q = 0;
-        this.field_c = 0;
+    private final void prepareNextTheme(int param0) {
+        this.sessionPhase = 0;
+        this.resultPanelX = 640;
+        this.resultBonusPoints = 0;
+        this.endingEntityRadius = 0;
         if (param0 != 867) {
-            this.g(20);
+            this.renderTutorialPrompt(20);
         }
-        if (ji.field_h >= 41) {
+        if (ji.difficultyStep >= 41) {
             ra.a(255 ^ pk.field_m, -103, pk.field_m);
         }
         int var2 = uh.b(16);
-        GameScreen_c.selectedThemeId_field_ab = var2;
+        GameScreen.selectedThemeId = var2;
         cd.a((byte) 116);
-        hf.a(param0 ^ -796, var2);
+        IntrusiveNode.a(param0 ^ -796, var2);
     }
 
-    final void emitPointsPopup_c(boolean markSubmissionBlocked_param0) {
-        if ((this.pendingPopupPoints_field_A ^ -1) == -1) {
+    final void emitPointsPopup(boolean markSubmissionBlocked) {
+        if ((this.pendingPopupPoints ^ -1) == -1) {
             return;
         }
-        if (markSubmissionBlocked_param0) {
-            this.field_K = true;
+        if (markSubmissionBlocked) {
+            this.submissionBlocked = true;
         }
-        ld.a(34, 20 + (this.field_T - -60), 79, this.pendingPopupPoints_field_A);
+        ld.a(34, 20 + (this.pointsPanelX - -60), 79, this.pendingPopupPoints);
         td.a(-348, fl.field_c[32]);
-        this.pendingPopupPoints_field_A = 0;
+        this.pendingPopupPoints = 0;
     }
 
-    GameplaySession_gh(Geoblox param0, boolean param1) {
+    GameplaySession(Geoblox param0, boolean param1) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -4612,119 +4338,102 @@ final class GameplaySession_gh {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        this.field_R = false;
-        this.field_T = 640;
-        this.delayedActionCountdown_field_a = 0;
-        this.field_K = false;
-        this.field_C = false;
-        this.field_Q = false;
-        this.field_k = 1;
-        this.field_y = 0;
-        this.field_N = false;
-        this.field_b = false;
-        this.score_field_o = 0;
-        this.field_x = false;
-        this.field_j = false;
-        this.field_d = false;
-        this.field_q = 0;
-        this.field_f = true;
-        this.field_p = 0;
-        this.field_t = 0;
-        this.field_B = false;
-        this.field_h = false;
-        this.field_i = false;
-        this.scoreText_field_X = new StringBuilder(5);
-        this.pendingPopupPoints_field_A = 0;
-        this.popupPointsText_field_g = new StringBuilder(5);
+        this.boardEmptyAtResultStart = false;
+        this.pointsPanelX = 640;
+        this.delayedActionCountdown = 0;
+        this.submissionBlocked = false;
+        this.tutorialPromptActive = false;
+        this.debugSpawnSpecialKinds = false;
+        this.pointsPanelFrameDirection = 1;
+        this.pointsPanelSlideDirection = 0;
+        this.spawnReleaseDisabled = false;
+        this.boardClearBonusEligible = false;
+        this.score = 0;
+        this.sessionEnding = false;
+        this.debugPointerSpawnEnabled = false;
+        this.tutorialAdvanceRequested = false;
+        this.resultBonusPoints = 0;
+        this.preserveScoreOnTransition = true;
+        this.tutorialStepId = 0;
+        this.tutorialStepPhase = 0;
+        this.connectivityRebuiltThisTick = false;
+        this.showSessionCounters = false;
+        this.sceneTransitionInProgress = false;
+        this.scoreText = new StringBuilder(5);
+        this.pendingPopupPoints = 0;
+        this.popupPointsText = new StringBuilder(5);
         this.field_L = false;
-        this.sceneAnimationTick_field_D = 0;
-        this.field_F = false;
-        this.field_H = false;
-        this.resultPanelX_field_ab = 640;
-        this.resultSequenceCountdown_field_S = 150;
-        this.field_W = 0;
-        this.field_c = 0;
-        this.field_bb = 0;
+        this.sceneAnimationTick = 0;
+        this.boardRasterDirty = false;
+        this.sceneTransitionRequested = false;
+        this.resultPanelX = 640;
+        this.resultSequenceCountdown = 150;
+        this.resultCompletionTickOffset = 0;
+        this.endingEntityRadius = 0;
+        this.sessionPhase = 0;
         try {
-          L0: {
-            L1: {
-              this.gameApplet_field_I = param0;
-              ug.field_c = 0;
-              pb.field_t.c((byte) -126);
-              this.pendingPopupPoints_field_A = 0;
-              this.field_w = -(i.field_a.width_field_r >> -724246015);
-              this.field_Y = param1;
-              this.field_C = param1;
-              this.score_field_o = 0;
-              this.field_u = -(i.field_a.height_field_m >> 30070753);
-              this.boardAngleRadians_field_J = 0.0f;
-              bk.field_a.e();
-              SoftwareRasterizer_vb.c();
-              i.field_a.a(320 + this.field_w, this.field_u + 240, 16777215);
-              oc.field_d.e();
-              SoftwareRasterizer_vb.c();
-              sh.field_y.a(255);
-              this.field_H = false;
-              this.sceneAnimationTick_field_D = 0;
-              this.field_F = true;
-              this.field_bb = 0;
-              this.field_x = false;
-              this.addScore_a((byte) 127, 0);
-              if (!da.a(0, 111)) {
-                break L1;
-              } else {
-                uf.field_h[0] = 14788623;
-                uf.field_h[1] = 15439657;
-                break L1;
-              }
-            }
-            L2: {
-              td.a((byte) -93);
-              GameplayEntity_ja.h(0);
-              GameScreen_c.selectedThemeId_field_ab = ee.field_B[0];
-              cd.a((byte) 104);
-              this.field_j = false;
-              this.field_K = false;
-              this.field_N = false;
-              this.field_L = false;
-              hf.a(-116, 1);
-              if (jf.field_a == null) {
-                jf.field_a = new Sprite_dm(ec.field_c.width_field_r, ec.field_c.height_field_m);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            oa.field_a = 4703;
-            kb.field_d = 275;
-            lb.field_b = 935;
-            dc.field_a = 0;
-            ml.field_r = 1385;
-            el.field_g = 8801;
-            sc.field_f = 3382;
-            gb.field_g = 5997;
-            this.field_e = 0;
-            break L0;
+          this.gameApplet = param0;
+          ug.field_c = 0;
+          pb.pendingActionMarkers.clearNodes((byte) -126);
+          this.pendingPopupPoints = 0;
+          this.boardMaskOffsetX = -(i.avatarMaskRaster.width >> -724246015);
+          this.tutorialMode = param1;
+          this.tutorialPromptActive = param1;
+          this.score = 0;
+          this.boardMaskOffsetY = -(i.avatarMaskRaster.height >> 30070753);
+          this.boardAngleRadians = 0.0f;
+          bk.boardOwnershipRaster.e();
+          SoftwareRasterizer.c();
+          i.avatarMaskRaster.a(320 + this.boardMaskOffsetX, this.boardMaskOffsetY + 240, 16777215);
+          oc.boardSceneRaster.e();
+          SoftwareRasterizer.c();
+          sh.field_y.a(255);
+          this.sceneTransitionRequested = false;
+          this.sceneAnimationTick = 0;
+          this.boardRasterDirty = true;
+          this.sessionPhase = 0;
+          this.sessionEnding = false;
+          this.addScore((byte) 127, 0);
+          if (da.a(0, 111)) {
+            uf.field_h[0] = 14788623;
+            uf.field_h[1] = 15439657;
           }
+          td.a((byte) -93);
+          GameplayEntity.h(0);
+          GameScreen.selectedThemeId = ee.field_B[0];
+          cd.a((byte) 104);
+          this.debugPointerSpawnEnabled = false;
+          this.submissionBlocked = false;
+          this.spawnReleaseDisabled = false;
+          this.field_L = false;
+          IntrusiveNode.a(-116, 1);
+          if (jf.field_a == null) {
+            jf.field_a = new Sprite(ec.field_c.width, ec.field_c.height);
+          }
+          oa.field_a = 4703;
+          kb.field_d = 275;
+          lb.field_b = 935;
+          dc.field_a = 0;
+          ml.field_r = 1385;
+          el.field_g = 8801;
+          sc.field_f = 3382;
+          gb.field_g = 5997;
+          this.newActionCount = 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_12_0 = (RuntimeException) (var3);
 
-            stackIn_12_1 = new StringBuilder().append("gh.<init>(");
+          stackIn_12_1 = new StringBuilder().append("gh.<init>(");
 
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          if (param0 == null) {
+            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+            stackIn_13_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }

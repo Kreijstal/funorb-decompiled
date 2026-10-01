@@ -38,79 +38,63 @@ final class gj extends fj {
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
         try {
-          L0: {
-            kd.field_b = va.field_e;
-            if (param2 == 30) {
-              if (param1 != 255) {
-                if ((param1 ^ -1) > -101) {
-                  dl.field_a = ig.a(param0, param1, false);
+          kd.field_b = va.field_e;
+          if (param2 == 30) {
+            if (param1 != 255) {
+              if ((param1 ^ -1) > -101) {
+                dl.field_a = ig.a(param0, param1, false);
+                return;
+              } else {
+                if (-106 <= (param1 ^ -1)) {
+                  dl.field_a = ac.a(28, param3);
                   return;
                 } else {
-                  if (-106 <= (param1 ^ -1)) {
-                    dl.field_a = ac.a(28, param3);
-                    return;
-                  } else {
-                    dl.field_a = ig.a(param0, param1, false);
-                    return;
-                  }
+                  dl.field_a = ig.a(param0, param1, false);
+                  return;
                 }
-              } else {
-                L1: {
-                  stackIn_6_0 = -106;
-
-                  if ((rd.field_u ^ -1) <= -14) {
-                    stackIn_7_0 = stackIn_6_0;
-                    stackIn_7_1 = 0;
-                    break L1;
-                  } else {
-                    stackIn_7_0 = stackIn_6_0;
-                    stackIn_7_1 = 1;
-                    break L1;
-                  }
-                }
-                dl.field_a = hh.a(stackIn_7_0, stackIn_7_1 != 0);
-                return;
               }
             } else {
-              break L0;
+              stackIn_6_0 = -106;
+
+              if ((rd.field_u ^ -1) <= -14) {
+                stackIn_7_0 = stackIn_6_0;
+                stackIn_7_1 = 0;
+              } else {
+                stackIn_7_0 = stackIn_6_0;
+                stackIn_7_1 = 1;
+              }
+              dl.field_a = hh.a(stackIn_7_0, stackIn_7_1 != 0);
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var4);
+          var4 = decompiledCaughtException;
+          stackIn_17_0 = (RuntimeException) (var4);
 
-            stackIn_17_1 = new StringBuilder().append("gj.A(");
+          stackIn_17_1 = new StringBuilder().append("gj.A(");
 
-            if (param0 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L2;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L2;
-            }
+          if (param0 == null) {
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "{...}";
           }
-          L3: {
 
 
-            stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',');
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',');
 
-            if (param3 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L3;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L3;
-            }
+          if (param3 == null) {
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
+            stackIn_21_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_21_2 + ')');
         }
@@ -132,19 +116,19 @@ final class gj extends fj {
         return false;
     }
 
-    final static void f(byte param0) {
-        GameplayEntity_ja var1 = null;
+    final static void drawSpecialAttachedEntities(byte param0) {
+        GameplayEntity var1 = null;
         int var2 = Geoblox.field_C;
         try {
-            var1 = (GameplayEntity_ja) ((Object) a.field_d.g(0));
+            var1 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
             while (var1 != null) {
-                if (-1 != (var1.field_z ^ -1)) {
-                    var1.drawEntityAtPosition_e(1643839728);
+                if (-1 != (var1.entitySpriteKindId ^ -1)) {
+                    var1.drawEntityAtPosition(1643839728);
                 }
-                var1 = (GameplayEntity_ja) ((Object) a.field_d.d(1));
+                var1 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
             }
             if (param0 > -33) {
-                gj.f((byte) 90);
+                gj.drawSpecialAttachedEntities((byte) 90);
                 return;
             }
         } catch (RuntimeException runtimeException) {

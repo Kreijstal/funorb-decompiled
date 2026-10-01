@@ -17,10 +17,10 @@ final class bc {
     }
 
     final static String a(int param0, byte[] param1, int param2, int param3) {
+        int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
         int var5 = 0;
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         char[] var9 = null;
@@ -36,81 +36,49 @@ final class bc {
         RuntimeException var4_ref = null;
         try {
           L0: {
-            L1: {
-              var11 = new char[param3];
-              var10 = var11;
-              var9 = var10;
-              var4 = var9;
-              if (param0 <= 0) {
-                break L1;
-              } else {
-                field_a = 49;
-                break L1;
-              }
+            var11 = new char[param3];
+            var10 = var11;
+            var9 = var10;
+            var4 = var9;
+            if (param0 > 0) {
+              field_a = 49;
             }
             var5 = 0;
-            var6 = 0;
-            L2: while (true) {
-              if (param3 <= var6) {
-                stackIn_14_0 = new String(var11, 0, var5);
-                break L0;
-              } else {
-                L3: {
-                  var7 = param1[param2 + var6] & 255;
-                  if (-1 == (var7 ^ -1)) {
-                    break L3;
-                  } else {
-                    L4: {
-                      if ((var7 ^ -1) > -129) {
-                        break L4;
-                      } else {
-                        if ((var7 ^ -1) <= -161) {
-                          break L4;
-                        } else {
-                          L5: {
-                            var8 = lf.field_e[-128 + var7];
-                            if (var8 != 0) {
-                              break L5;
-                            } else {
-                              var8 = 63;
-                              break L5;
-                            }
-                          }
-                          var7 = var8;
-                          break L4;
-                        }
-                      }
+            for (var6 = 0; param3 > var6; var6++) {
+              var7 = param1[param2 + var6] & 255;
+              if (-1 != (var7 ^ -1)) {
+                if ((var7 ^ -1) <= -129) {
+                  if ((var7 ^ -1) > -161) {
+                    var8 = lf.field_e[-128 + var7];
+                    if (var8 == 0) {
+                      var8 = 63;
                     }
-                    incrementValue$1 = var5;
-                    var5++;
-                    var9[incrementValue$1] = (char)var7;
-                    break L3;
+                    var7 = var8;
                   }
                 }
-                var6++;
-                continue L2;
+                incrementValue$1 = var5;
+                var5++;
+                var9[incrementValue$1] = (char)var7;
               }
             }
+            stackIn_14_0 = new String(var11, 0, var5);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var4_ref = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var4_ref);
+          var4_ref = decompiledCaughtException;
+          stackIn_17_0 = (RuntimeException) (var4_ref);
 
-            stackIn_17_1 = new StringBuilder().append("bc.B(").append(param0).append(',');
+          stackIn_17_1 = new StringBuilder().append("bc.B(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L6;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L6;
-            }
+          if (param1 == null) {
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param2 + ',' + param3 + ')');
         }

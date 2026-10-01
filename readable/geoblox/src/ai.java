@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ai extends hf {
+final class ai extends IntrusiveNode {
     static char[] field_n;
     int[] field_o;
     int field_f;
     int field_q;
-    static int requestedScreenId_field_p;
+    static int requestedScreenId;
     int field_k;
     int field_m;
     static String field_h;
@@ -82,62 +82,38 @@ final class ai extends hf {
                 var6 = 0;
                 L1: while (true) {
                   L2: {
-                    L3: {
-                      if (var5.regionMatches(var6, "/l=", 0, 3)) {
-                        var7_int = var5.indexOf('/', var6 - -1);
-                        if (-1 < (var7_int ^ -1)) {
-                          break L3;
-                        } else {
-                          if ((param3 ^ -1) > -1) {
-                            break L2;
-                          } else {
-                            var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                            continue L1;
-                          }
-                        }
-                      } else {
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      if (!var5.regionMatches(var6, "/a=", 0, 3)) {
-                        break L4;
-                      } else {
-                        var7_int = var5.indexOf('/', 1 + var6);
-                        if (var7_int >= 0) {
+                    if (var5.regionMatches(var6, "/l=", 0, 3)) {
+                      var7_int = var5.indexOf('/', var6 - -1);
+                      if (-1 >= (var7_int ^ -1)) {
+                        if ((param3 ^ -1) > -1) {
                           break L2;
                         } else {
-                          break L4;
+                          var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                          continue L1;
                         }
                       }
                     }
-                    L5: {
-                      if (var5.regionMatches(var6, "/p=", 0, 3)) {
-                        var7_int = var5.indexOf('/', 1 + var6);
-                        if (-1 >= (var7_int ^ -1)) {
-                          if (param1 == null) {
-                            break L2;
-                          } else {
-                            var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                            continue L1;
-                          }
+                    if (var5.regionMatches(var6, "/a=", 0, 3)) {
+                      var7_int = var5.indexOf('/', 1 + var6);
+                      if (var7_int >= 0) {
+                        break L2;
+                      }
+                    }
+                    if (var5.regionMatches(var6, "/p=", 0, 3)) {
+                      var7_int = var5.indexOf('/', 1 + var6);
+                      if (-1 >= (var7_int ^ -1)) {
+                        if (param1 == null) {
+                          break L2;
                         } else {
-                          break L5;
+                          var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                          continue L1;
                         }
-                      } else {
-                        break L5;
                       }
                     }
                     L6: {
-                      L7: {
-                        if (var5.regionMatches(var6, "/s=", 0, 3)) {
-                          break L7;
-                        } else {
-                          if (var5.regionMatches(var6, "/c=", 0, 3)) {
-                            break L7;
-                          } else {
-                            break L6;
-                          }
+                      if (!var5.regionMatches(var6, "/s=", 0, 3)) {
+                        if (!var5.regionMatches(var6, "/c=", 0, 3)) {
+                          break L6;
                         }
                       }
                       var7_int = var5.indexOf('/', var6 + 1);
@@ -149,70 +125,37 @@ final class ai extends hf {
                           var6 = var7_int;
                           continue L1;
                         }
-                      } else {
-                        break L6;
                       }
                     }
-                    L8: {
-                      if (param4) {
-                        break L8;
-                      } else {
-                        var9 = (java.net.URL) null;
-                        ai.a((String) null, (String) null, (java.net.URL) null, 80, true);
-                        break L8;
+                    if (!param4) {
+                      var9 = (java.net.URL) null;
+                      ai.a((String) null, (String) null, (java.net.URL) null, 80, true);
+                    }
+                    var7 = new StringBuilder(var6);
+                    discarded$0 = var7.append(var5.substring(0, var6));
+                    if (param3 > 0) {
+                      discarded$1 = var7.append("/l=");
+                      discarded$2 = var7.append(Integer.toString(param3));
+                    }
+                    if (param1 != null) {
+                      if (-1 > (param1.length() ^ -1)) {
+                        discarded$3 = var7.append("/p=");
+                        discarded$4 = var7.append(param1);
                       }
                     }
-                    L9: {
-                      var7 = new StringBuilder(var6);
-                      discarded$0 = var7.append(var5.substring(0, var6));
-                      if (param3 <= 0) {
-                        break L9;
-                      } else {
-                        discarded$1 = var7.append("/l=");
-                        discarded$2 = var7.append(Integer.toString(param3));
-                        break L9;
+                    if (param0 != null) {
+                      if (-1 > (param0.length() ^ -1)) {
+                        discarded$5 = var7.append("/s=");
+                        discarded$6 = var7.append(param0);
                       }
                     }
-                    L10: {
-                      if (param1 == null) {
-                        break L10;
-                      } else {
-                        if (-1 > (param1.length() ^ -1)) {
-                          discarded$3 = var7.append("/p=");
-                          discarded$4 = var7.append(param1);
-                          break L10;
-                        } else {
-                          break L10;
-                        }
-                      }
-                    }
-                    L11: {
-                      if (param0 == null) {
-                        break L11;
-                      } else {
-                        if (-1 <= (param0.length() ^ -1)) {
-                          break L11;
-                        } else {
-                          discarded$5 = var7.append("/s=");
-                          discarded$6 = var7.append(param0);
-                          break L11;
-                        }
-                      }
-                    }
-                    L12: {
-                      if (var5.length() <= var6) {
-                        discarded$7 = var7.append('/');
-                        break L12;
-                      } else {
-                        discarded$8 = var7.append(var5.substring(var6, var5.length()));
-                        break L12;
-                      }
+                    if (var5.length() <= var6) {
+                      discarded$7 = var7.append('/');
+                    } else {
+                      discarded$8 = var7.append(var5.substring(var6, var5.length()));
                     }
                     try {
-                      L13: {
-                        stackIn_41_0 = new java.net.URL(param2, var7.toString());
-                        break L13;
-                      }
+                      stackIn_41_0 = new java.net.URL(param2, var7.toString());
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       var8 = (Exception) (Object) decompiledCaughtException;
@@ -228,57 +171,45 @@ final class ai extends hf {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L14: {
-                var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_46_0 = (RuntimeException) (var5_ref);
+              var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+              stackIn_46_0 = (RuntimeException) (var5_ref);
 
-                stackIn_46_1 = new StringBuilder().append("ai.B(");
+              stackIn_46_1 = new StringBuilder().append("ai.B(");
 
-                if (param0 == null) {
-                  stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
-                  stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
-                  stackIn_47_2 = "null";
-                  break L14;
-                } else {
-                  stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
-                  stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
-                  stackIn_47_2 = "{...}";
-                  break L14;
-                }
+              if (param0 == null) {
+                stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+                stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+                stackIn_47_2 = "null";
+              } else {
+                stackIn_47_0 = (RuntimeException) ((Object) stackIn_46_0);
+                stackIn_47_1 = (StringBuilder) ((Object) stackIn_46_1);
+                stackIn_47_2 = "{...}";
               }
-              L15: {
 
 
-                stackIn_49_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(',');
+              stackIn_49_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(',');
 
-                if (param1 == null) {
-                  stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-                  stackIn_50_1 = (StringBuilder) ((Object) stackIn_49_1);
-                  stackIn_50_2 = "null";
-                  break L15;
-                } else {
-                  stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-                  stackIn_50_1 = (StringBuilder) ((Object) stackIn_49_1);
-                  stackIn_50_2 = "{...}";
-                  break L15;
-                }
+              if (param1 == null) {
+                stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
+                stackIn_50_1 = (StringBuilder) ((Object) stackIn_49_1);
+                stackIn_50_2 = "null";
+              } else {
+                stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
+                stackIn_50_1 = (StringBuilder) ((Object) stackIn_49_1);
+                stackIn_50_2 = "{...}";
               }
-              L16: {
 
 
-                stackIn_52_1 = ((StringBuilder) (Object) stackIn_50_1).append(stackIn_50_2).append(',');
+              stackIn_52_1 = ((StringBuilder) (Object) stackIn_50_1).append(stackIn_50_2).append(',');
 
-                if (param2 == null) {
-                  stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-                  stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
-                  stackIn_53_2 = "null";
-                  break L16;
-                } else {
-                  stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
-                  stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
-                  stackIn_53_2 = "{...}";
-                  break L16;
-                }
+              if (param2 == null) {
+                stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
+                stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
+                stackIn_53_2 = "null";
+              } else {
+                stackIn_47_0 = (RuntimeException) ((Object) stackIn_47_0);
+                stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
+                stackIn_53_2 = "{...}";
               }
               throw t.a((Throwable) ((Object) stackIn_47_0), stackIn_53_2 + ',' + param3 + ',' + param4 + ')');
             }

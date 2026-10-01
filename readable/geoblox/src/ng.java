@@ -3,7 +3,7 @@
  */
 final class ng extends sh {
     static boolean[] field_E;
-    private tf field_C;
+    private IntrusiveDeque field_C;
     static int field_G;
     static m field_F;
 
@@ -28,7 +28,7 @@ final class ng extends sh {
                 throw new IllegalArgumentException();
             }
             var3 = (dd) ((Object) param1);
-            this.field_C.a(var3, param0);
+            this.field_C.addFirst(var3, param0);
             var3.field_I = true;
             var3.a((byte) -37, (el) (this));
         } catch (RuntimeException runtimeException) {
@@ -54,7 +54,7 @@ final class ng extends sh {
         if (param0 != -13912) {
             return;
         }
-        sl.field_k = new tf();
+        sl.field_k = new IntrusiveDeque();
     }
 
     final static void h(int param0) {
@@ -74,7 +74,7 @@ final class ng extends sh {
         dd var3 = (dd) ((Object) var2.c((byte) 88));
         while (var3 != null) {
             if (var3.h(229)) {
-                var3.a(false);
+                var3.unlinkNode(false);
             }
             var3 = (dd) ((Object) var2.a((byte) 112));
         }
@@ -82,7 +82,7 @@ final class ng extends sh {
 
     public ng() {
         super(0, 0, kb.field_b, fa.field_i, (dh) null, (bb) null);
-        this.field_C = new tf();
+        this.field_C = new IntrusiveDeque();
     }
 
     final el e(int param0) {
@@ -108,7 +108,7 @@ final class ng extends sh {
         dd var3 = (dd) ((Object) var2.c((byte) 88));
         while (var3 != null) {
             if (var3.f(-1)) {
-                var3.a(false);
+                var3.unlinkNode(false);
             }
             var3 = (dd) ((Object) var2.a((byte) 115));
         }

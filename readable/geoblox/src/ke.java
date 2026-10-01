@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ke {
-    static Sprite_dm[][][] field_a;
+    static Sprite[][][] field_a;
 
     final static void a(int param0, boolean param1, int param2, int param3, qc param4) {
         try {
@@ -10,7 +10,7 @@ final class ke {
             param4.e(17, 28695);
             param4.e(param2, 28695);
             if (!param1) {
-                field_a = (Sprite_dm[][][]) null;
+                field_a = (Sprite[][][]) null;
             }
             param4.e(param3, 28695);
             param4.d((byte) 124, param0);
@@ -22,10 +22,10 @@ final class ke {
     public static void a(byte param0) {
         if (param0 > -72) {
             ke.a((byte) 94);
-            field_a = (Sprite_dm[][][]) null;
+            field_a = (Sprite[][][]) null;
             return;
         }
-        field_a = (Sprite_dm[][][]) null;
+        field_a = (Sprite[][][]) null;
     }
 
     final static void b(byte param0) {
@@ -33,6 +33,6 @@ final class ke {
     }
 
     static {
-        field_a = new Sprite_dm[7][7][7];
+        field_a = new Sprite[7][7][7];
     }
 }

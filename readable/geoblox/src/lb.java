@@ -3,7 +3,7 @@
  */
 final class lb {
     static long field_c;
-    static Sprite_dm field_d;
+    static Sprite field_d;
     static boolean field_a;
     static int field_b;
 

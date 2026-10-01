@@ -4,7 +4,7 @@
 final class fl {
     static String field_b;
     static gd[] field_c;
-    static Sprite_dm field_a;
+    static Sprite field_a;
     private static String field_z;
 
     public static void a(int param0) {

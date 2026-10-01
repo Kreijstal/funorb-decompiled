@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj {
-    static tf field_g;
+    static IntrusiveDeque field_g;
     private boolean field_c;
     private int field_d;
     private int[] field_f;
@@ -12,7 +12,7 @@ final class sj {
 
     final static void a(p param0, int param1, int param2) {
         try {
-            rh.field_a.a(-81, param0);
+            rh.field_a.addLast(-81, param0);
             ol.a(param2, param0, 30175);
             int var3_int = -18 % ((param1 - 3) / 40);
         } catch (RuntimeException runtimeException) {
@@ -28,22 +28,18 @@ final class sj {
     }
 
     final void a(int param0, int param1) {
-        if (param0 <= param1) {
-          if (param1 <= this.field_d) {
-            if (param1 != this.field_d) {
-              sf.a(this.field_f, 1 + param1, this.field_f, param1, -param1 + this.field_d);
-              this.field_d = this.field_d - 1;
-              return;
-            } else {
-              this.field_d = this.field_d - 1;
-              return;
-            }
-          } else {
+        if (param0 > param1) {
             throw new ArrayIndexOutOfBoundsException(param1);
-          }
-        } else {
-          throw new ArrayIndexOutOfBoundsException(param1);
         }
+        if (param1 > this.field_d) {
+            throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        if (param1 == this.field_d) {
+            this.field_d = this.field_d - 1;
+            return;
+        }
+        sf.a(this.field_f, 1 + param1, this.field_f, param1, -param1 + this.field_d);
+        this.field_d = this.field_d - 1;
     }
 
     private final int b(int param0, int param1) {
@@ -98,45 +94,29 @@ final class sj {
     }
 
     private final void a(int param0, int param1, int param2) {
-        if (param1 != 1) {
-          return;
-        } else {
-          L0: {
-            if (this.field_d < param2) {
-              this.field_d = param2;
-              break L0;
-            } else {
-              break L0;
+        if (param1 == 1) {
+            if (!(this.field_d >= param2)) {
+                this.field_d = param2;
             }
-          }
-          L1: {
-            if (this.field_f.length <= param2) {
-              this.c(param2, param1 ^ 25176);
-              break L1;
-            } else {
-              break L1;
+            if (!(this.field_f.length > param2)) {
+                this.c(param2, param1 ^ 25176);
             }
-          }
-          this.field_f[param2] = param0;
-          return;
+            this.field_f[param2] = param0;
+            return;
         }
     }
 
     private final void c(int param0, int param1) {
-        int[] var3;
-        int[] var4;
-        var4 = new int[this.b(param0, 1)];
-        var3 = var4;
-        if (param1 != 25177) {
-          this.field_f = (int[]) null;
-          sf.a(this.field_f, 0, var4, 0, this.field_f.length);
-          this.field_f = var4;
-          return;
-        } else {
-          sf.a(this.field_f, 0, var4, 0, this.field_f.length);
-          this.field_f = var4;
-          return;
+        int[] var4 = new int[this.b(param0, 1)];
+        int[] var3 = var4;
+        if (param1 == 25177) {
+            sf.a(this.field_f, 0, var4, 0, this.field_f.length);
+            this.field_f = var4;
+            return;
         }
+        this.field_f = (int[]) null;
+        sf.a(this.field_f, 0, var4, 0, this.field_f.length);
+        this.field_f = var4;
     }
 
     final void b(int param0, byte param1) {
@@ -164,7 +144,7 @@ final class sj {
     }
 
     static {
-        field_g = new tf();
+        field_g = new IntrusiveDeque();
         field_e = "Unfortunately your configuration doesn't support fullscreen mode.";
         field_b = "This entry doesn't match";
     }

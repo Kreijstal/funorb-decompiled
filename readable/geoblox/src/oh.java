@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oh {
-    static AudioOutput_qk field_a;
+    static AudioOutput field_a;
     static String field_c;
     static ng field_b;
 

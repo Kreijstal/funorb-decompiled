@@ -5,7 +5,7 @@ final class h {
     static int field_b;
     private String field_c;
     private boolean field_e;
-    static int field_a;
+    static int matchCandidateCount;
     private boolean field_f;
     static int field_d;
 
@@ -37,61 +37,45 @@ final class h {
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             try {
-              L0: {
-                try {
-                  L1: {
-                    if (!param1) {
-                      L2: {
-                        var2 = param0.getDocumentBase().getFile();
-                        var3 = var2.indexOf('?');
-                        var4 = "reload.ws";
-                        if ((var3 ^ -1) <= -1) {
-                          var4 = var4 + var2.substring(var3);
-                          break L2;
-                        } else {
-                          break L2;
-                        }
-                      }
-                      var5 = new java.net.URL(param0.getCodeBase(), var4);
-                      param0.getAppletContext().showDocument(wf.a(var5, 58, param0), "_self");
-                      decompiledRegionSelector0 = 1;
-                      break L1;
-                    } else {
-                      decompiledRegionSelector0 = 0;
-                      break L1;
-                    }
+              try {
+                if (!param1) {
+                  var2 = param0.getDocumentBase().getFile();
+                  var3 = var2.indexOf('?');
+                  var4 = "reload.ws";
+                  if ((var3 ^ -1) <= -1) {
+                    var4 = var4 + var2.substring(var3);
                   }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = (Exception) (Object) decompiledCaughtException;
-                  var2_ref.printStackTrace();
-                  return;
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  break L0;
+                  var5 = new java.net.URL(param0.getCodeBase(), var4);
+                  param0.getAppletContext().showDocument(wf.a(var5, 58, param0), "_self");
+                  decompiledRegionSelector0 = 1;
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
                 }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
+                return;
+              }
+              if (decompiledRegionSelector0 == 0) {
+              } else {
+                return;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L3: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_11_0 = (RuntimeException) (var2_ref2);
+              var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+              stackIn_11_0 = (RuntimeException) (var2_ref2);
 
-                stackIn_11_1 = new StringBuilder().append("h.A(");
+              stackIn_11_1 = new StringBuilder().append("h.A(");
 
-                if (param0 == null) {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackIn_12_2 = "null";
-                  break L3;
-                } else {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackIn_12_2 = "{...}";
-                  break L3;
-                }
+              if (param0 == null) {
+                stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+                stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+                stackIn_12_2 = "null";
+              } else {
+                stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+                stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+                stackIn_12_2 = "{...}";
               }
               throw t.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
             }
@@ -113,25 +97,21 @@ final class h {
     final static void c(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
-        GameplayEntity_ja var3 = null;
+        GameplayEntity var3 = null;
         RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.field_C;
         try {
           L0: {
-            var3 = (GameplayEntity_ja) ((Object) ji.field_r.g(0));
-            L1: while (true) {
-              if (var3 == null) {
-                if (param0 == -1) {
-                  break L0;
-                } else {
-                  h.c(116);
-                  return;
-                }
-              } else {
-                var3.drawBoardRotatedEntity_g(-16096);
-                var3 = (GameplayEntity_ja) ((Object) ji.field_r.d(1));
-                continue L1;
-              }
+            var3 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+            L1: while (var3 != null) {
+              var3.drawBoardRotatedEntity(-16096);
+              var3 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+            }
+            if (param0 == -1) {
+              break L0;
+            } else {
+              h.c(116);
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -169,6 +149,6 @@ final class h {
     }
 
     static {
-        field_a = 0;
+        matchCandidateCount = 0;
     }
 }

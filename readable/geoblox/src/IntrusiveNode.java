@@ -1,0 +1,325 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+class IntrusiveNode {
+    long field_a;
+    IntrusiveNode nextNode;
+    static String field_e;
+    IntrusiveNode previousNode;
+    static rf field_d;
+
+    final static void a(int param0, int param1) {
+        int var2;
+        int var3;
+        var3 = Geoblox.field_C;
+        IntrusiveDeque.a(111, param1);
+        pk.h(-120, param1);
+        od.b((byte) -24);
+        if (param0 > -90) {
+          field_e = (String) null;
+        }
+        var2 = param1;
+        if (var2 != 4) {
+          if ((var2 ^ -1) != -4) {
+            if ((var2 ^ -1) != -2) {
+              if (var2 != 0) {
+                if (6 != var2) {
+                  if (-6 == (var2 ^ -1)) {
+                    fi.a(0, k.field_f);
+                  } else {
+                    if ((var2 ^ -1) == -3) {
+                      fi.a(0, j.field_ib);
+                    }
+                  }
+                } else {
+                  fi.a(0, wf.field_o);
+                }
+              } else {
+                fi.a(0, ej.field_d);
+              }
+            } else {
+              fi.a(0, field_d);
+            }
+          } else {
+            fi.a(0, te.field_b);
+          }
+        } else {
+          fi.a(0, qb.field_M);
+        }
+    }
+
+    final static Object a(int param0, byte[] param1, boolean param2) {
+        l var3 = null;
+        RuntimeException var3_ref = null;
+        Object stackIn_2_0 = null;
+        Object stackIn_5_0 = null;
+        l stackIn_8_0 = null;
+        byte[] stackIn_11_0 = null;
+        byte[] stackIn_13_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 <= -102) {
+            if (param1 != null) {
+              if (-137 <= (param1.length ^ -1)) {
+                if (param2) {
+                  stackIn_13_0 = nk.a(param1, 0);
+                  decompiledRegionSelector0 = 4;
+                } else {
+                  stackIn_11_0 = (byte[]) (param1);
+                  decompiledRegionSelector0 = 3;
+                }
+              } else {
+                var3 = new l();
+                ((oj) ((Object) var3)).a(param1, true);
+                stackIn_8_0 = (l) (var3);
+                decompiledRegionSelector0 = 2;
+              }
+            } else {
+              stackIn_5_0 = null;
+              decompiledRegionSelector0 = 1;
+            }
+          } else {
+            stackIn_2_0 = (Object) null;
+            decompiledRegionSelector0 = 0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_16_0 = (RuntimeException) (var3_ref);
+
+          stackIn_16_1 = new StringBuilder().append("hf.BA(").append(param0).append(',');
+
+          if (param1 == null) {
+            stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
+            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+            stackIn_17_2 = "{...}";
+          }
+          throw t.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_5_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_8_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_11_0;
+              } else {
+                return stackIn_13_0;
+              }
+            }
+          }
+        }
+    }
+
+    final void unlinkNode(boolean param0) {
+        if (param0) {
+            return;
+        }
+        if (!(null != this.previousNode)) {
+            return;
+        }
+        this.previousNode.nextNode = this.nextNode;
+        this.nextNode.previousNode = this.previousNode;
+        this.previousNode = null;
+        this.nextNode = null;
+    }
+
+    final static void a(boolean param0, byte[] param1) {
+        byte dupTemp$0 = 0;
+        byte dupTemp$1 = 0;
+        int stackIn_28_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_29_1 = 0;
+        int stackIn_44_0 = 0;
+        int stackIn_45_0 = 0;
+        int stackIn_45_1 = 0;
+        RuntimeException stackIn_51_0 = null;
+        StringBuilder stackIn_51_1 = null;
+        RuntimeException stackIn_52_0 = null;
+        StringBuilder stackIn_52_1 = null;
+        String stackIn_52_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        byte[] var8 = null;
+        byte[] var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        qc var15 = null;
+        qc var16 = null;
+        byte[] var17 = null;
+        byte[] var18 = null;
+        byte[] var19 = null;
+        byte[] var20 = null;
+        try {
+          L0: {
+            var15 = new qc(param1);
+            var16 = var15;
+            var16.field_f = param1.length + -2;
+            sb.field_a = var16.b(param0);
+            DualLinkNode.field_j = new int[sb.field_a];
+            hl.field_K = new int[sb.field_a];
+            ng.field_E = new boolean[sb.field_a];
+            vf.field_E = new byte[sb.field_a][];
+            GameplaySession.field_m = new int[sb.field_a];
+            mj.field_a = new byte[sb.field_a][];
+            md.field_e = new int[sb.field_a];
+            var16.field_f = -7 + param1.length + -(sb.field_a * 8);
+            pg.field_b = var16.b(true);
+            dd.field_C = var16.b(true);
+            var3 = (255 & var16.c((byte) 34)) + 1;
+            for (var4 = 0; var4 < sb.field_a; var4++) {
+              GameplaySession.field_m[var4] = var15.b(param0);
+            }
+            for (var4 = 0; var4 < sb.field_a; var4++) {
+              md.field_e[var4] = var15.b(true);
+            }
+            for (var4 = 0; sb.field_a > var4; var4++) {
+              DualLinkNode.field_j[var4] = var15.b(true);
+            }
+            for (var4 = 0; var4 < sb.field_a; var4++) {
+              hl.field_K[var4] = var15.b(true);
+            }
+            var16.field_f = -(var3 * 3) - -3 + -(8 * sb.field_a) + -7 + param1.length;
+            cm.field_j = new int[var3];
+            for (var4 = 1; var4 < var3; var4++) {
+              cm.field_j[var4] = var15.e(108);
+              if (cm.field_j[var4] == 0) {
+                cm.field_j[var4] = 1;
+              }
+            }
+            var16.field_f = 0;
+            for (var4 = 0; var4 < sb.field_a; var4++) {
+              L7: {
+                var5 = DualLinkNode.field_j[var4];
+                var6 = hl.field_K[var4];
+                var7 = var5 * var6;
+                var19 = new byte[var7];
+                var17 = var19;
+                var8 = var17;
+                mj.field_a[var4] = var19;
+                var20 = new byte[var7];
+                var18 = var20;
+                var9 = var18;
+                vf.field_E[var4] = var20;
+                var10 = 0;
+                var11 = var16.c((byte) 34);
+                if ((var11 & 1) != 0) {
+                  for (var12 = 0; var5 > var12; var12++) {
+                    for (var13 = 0; var6 > var13; var13++) {
+                      var8[var13 * var5 + var12] = var15.f((byte) 90);
+                    }
+                  }
+                  if (0 != (2 & var11)) {
+                    for (var12 = 0; var5 > var12; var12++) {
+                      for (var13 = 0; var6 > var13; var13++) {
+                        dupTemp$0 = var15.f((byte) 78);
+                        var9[var12 - -(var5 * var13)] = dupTemp$0;
+                        var14 = dupTemp$0;
+                        stackIn_44_0 = var10;
+
+                        if ((var14 ^ -1) == 0) {
+                          stackIn_45_0 = stackIn_44_0;
+                          stackIn_45_1 = 0;
+                        } else {
+                          stackIn_45_0 = stackIn_44_0;
+                          stackIn_45_1 = 1;
+                        }
+                        var10 = stackIn_45_0 | stackIn_45_1;
+                      }
+                    }
+                    break L7;
+                  } else {
+                    break L7;
+                  }
+                } else {
+                  for (var12 = 0; var12 < var7; var12++) {
+                    var8[var12] = var15.f((byte) 90);
+                  }
+                  if ((var11 & 2) == 0) {
+                    break L7;
+                  } else {
+                    for (var12 = 0; var7 > var12; var12++) {
+                      dupTemp$1 = var15.f((byte) 95);
+                      var9[var12] = dupTemp$1;
+                      var13 = dupTemp$1;
+                      stackIn_28_0 = var10;
+
+                      if ((var13 ^ -1) == 0) {
+                        stackIn_29_0 = stackIn_28_0;
+                        stackIn_29_1 = 0;
+                      } else {
+                        stackIn_29_0 = stackIn_28_0;
+                        stackIn_29_1 = 1;
+                      }
+                      var10 = stackIn_29_0 | stackIn_29_1;
+                    }
+                    break L7;
+                  }
+                }
+              }
+              ng.field_E[var4] = var10 != 0;
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_51_0 = (RuntimeException) (var2);
+
+          stackIn_51_1 = new StringBuilder().append("hf.W(").append(param0).append(',');
+
+          if (param1 == null) {
+            stackIn_52_0 = (RuntimeException) ((Object) stackIn_51_0);
+            stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
+            stackIn_52_2 = "null";
+          } else {
+            stackIn_52_0 = (RuntimeException) ((Object) stackIn_51_0);
+            stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
+            stackIn_52_2 = "{...}";
+          }
+          throw t.a((Throwable) ((Object) stackIn_52_0), stackIn_52_2 + ')');
+        }
+    }
+
+    public static void b(byte param0) {
+        field_e = null;
+        int var1 = -121 / ((-68 - param0) / 42);
+        field_d = null;
+    }
+
+    final boolean a(int param0) {
+        if (!(null != this.previousNode)) {
+            return false;
+        }
+        if (param0 < 112) {
+            IntrusiveNode.b((byte) 110);
+        }
+        return true;
+    }
+
+    static {
+        field_e = "Connection timed out. Please try using a different server.";
+    }
+}

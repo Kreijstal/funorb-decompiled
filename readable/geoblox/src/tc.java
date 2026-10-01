@@ -4,7 +4,7 @@
 final class tc {
     static String field_b;
     static String field_a;
-    static int currentScreenId_field_c;
+    static int currentScreenId;
 
     final static boolean a(byte param0, char param1) {
         char[] var2 = null;
@@ -22,35 +22,18 @@ final class tc {
         try {
           L0: {
             L1: {
-              L2: {
-                if (0 >= param1) {
-                  break L2;
-                } else {
-                  if (128 > param1) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
+              if (0 < param1) {
+                if (128 > param1) {
+                  break L1;
                 }
               }
-              L3: {
-                if (param1 < 160) {
-                  break L3;
-                } else {
-                  if (255 >= param1) {
-                    break L1;
-                  } else {
-                    break L3;
-                  }
+              if (param1 >= 160) {
+                if (255 >= param1) {
+                  break L1;
                 }
               }
-              L4: {
-                if (param0 == -112) {
-                  break L4;
-                } else {
-                  field_b = (String) null;
-                  break L4;
-                }
+              if (param0 != -112) {
+                field_b = (String) null;
               }
               if (param1 != 0) {
                 var6 = lf.field_e;
@@ -79,7 +62,6 @@ final class tc {
             }
             stackIn_8_0 = 1;
             decompiledRegionSelector0 = 0;
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,97 +89,34 @@ final class tc {
 
     final static void a(int param0, String param1, java.applet.Applet param2) {
         try {
-            RuntimeException stackIn_11_0 = null;
-            StringBuilder stackIn_11_1 = null;
-            RuntimeException stackIn_12_0 = null;
-            StringBuilder stackIn_12_1 = null;
-            String stackIn_12_2 = null;
-            StringBuilder stackIn_14_1 = null;
-            StringBuilder stackIn_15_1 = null;
-            String stackIn_15_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var3 = null;
-            RuntimeException var3_ref = null;
-            String var4 = null;
-            String var5 = null;
-            int var6 = 0;
             String var7 = null;
+            String var5 = null;
+            String var4 = null;
             String var8 = null;
             try {
-              L0: {
                 sd.field_z = param1;
                 try {
-                  L1: {
-                    L2: {
-                      var7 = param2.getParameter("cookieprefix");
-                      var5 = var7;
-                      var5 = var7;
-                      var4 = param2.getParameter("cookiehost");
-                      var5 = var4;
-                      var5 = var4;
-                      var8 = var7 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
-                      var5 = var8;
-                      var5 = var8;
-                      if (param1.length() == 0) {
-                        var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                        break L2;
-                      } else {
+                    var7 = param2.getParameter("cookieprefix");
+                    var5 = var7;
+                    var5 = var7;
+                    var4 = param2.getParameter("cookiehost");
+                    var5 = var4;
+                    var5 = var4;
+                    var8 = var7 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
+                    var5 = var8;
+                    var5 = var8;
+                    if (param1.length() != 0) {
                         var5 = var8 + "; Expires=" + md.a((byte) -58, oa.a(-12520) - -94608000000L) + "; Max-Age=" + 94608000L;
-                        break L2;
-                      }
+                    } else {
+                        var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
-                    var6 = -93 % ((-64 - param0) / 61);
+                    int var6 = -93 % ((-64 - param0) / 61);
                     wk.a(param2, "document.cookie=\"" + var5 + "\"", (byte) -92);
-                    break L1;
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L3: {
-                    var3 = decompiledCaughtException;
-                    break L3;
-                  }
+                } catch (Throwable throwable) {
                 }
                 oj.a(param2, 20000000);
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
-                var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_11_0 = (RuntimeException) (var3_ref);
-
-                stackIn_11_1 = new StringBuilder().append("tc.C(").append(param0).append(',');
-
-                if (param1 == null) {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackIn_12_2 = "null";
-                  break L4;
-                } else {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackIn_12_2 = "{...}";
-                  break L4;
-                }
-              }
-              L5: {
-
-
-                stackIn_14_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
-
-                if (param2 == null) {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-                  stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-                  stackIn_15_2 = "null";
-                  break L5;
-                } else {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-                  stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-                  stackIn_15_2 = "{...}";
-                  break L5;
-                }
-              }
-              throw t.a((Throwable) ((Object) stackIn_12_0), stackIn_15_2 + ')');
+            } catch (RuntimeException runtimeException) {
+                throw t.a((Throwable) ((Object) runtimeException), "tc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

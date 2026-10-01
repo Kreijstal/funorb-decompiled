@@ -5,7 +5,7 @@ abstract class dd extends ee {
     private ng field_K;
     boolean field_I;
     static nc field_G;
-    static int field_D;
+    static int variantMatchCandidateCount;
     static rh field_J;
     private int field_H;
     static int field_C;
@@ -21,14 +21,12 @@ abstract class dd extends ee {
     }
 
     final void c(int param0, int param1, int param2) {
-        if (param1 <= 95) {
-          field_G = (nc) null;
-          this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1769189185, kb.field_b - param2 >> 1470837729);
-          return;
-        } else {
-          this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1769189185, kb.field_b - param2 >> 1470837729);
-          return;
+        if (param1 > 95) {
+            this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1769189185, kb.field_b - param2 >> 1470837729);
+            return;
         }
+        field_G = (nc) null;
+        this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1769189185, kb.field_b - param2 >> 1470837729);
     }
 
     private final int g(int param0) {
@@ -39,60 +37,28 @@ abstract class dd extends ee {
     abstract void b(int param0, int param1, int param2);
 
     boolean f(int param0) {
-        int var2;
-        int var3;
-        int stackIn_10_0 = 0;
-        int stackIn_19_0 = 0;
-        L0: {
-          var2 = this.g(-75);
-          var3 = -this.field_H + var2;
-          if ((var3 ^ -1) < param0) {
+        int var2 = this.g(-75);
+        int var3 = -this.field_H + var2;
+        if (!((var3 ^ -1) >= param0)) {
             this.field_H = this.field_H + (var3 + 8 + -1) / 8;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (-1 >= (var3 ^ -1)) {
-          if (this.field_H == 0) {
-            if (0 != var2) {
-              return false;
-            } else {
-              L1: {
-                if (this.field_I) {
-                  stackIn_19_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_19_0 = 1;
-                  break L1;
-                }
-              }
-              return stackIn_19_0 != 0;
+        if (-1 < (var3 ^ -1)) {
+            this.field_H = this.field_H + (-16 + (var3 + 1)) / 16;
+            if (this.field_H != 0) {
+                return false;
             }
-          } else {
-            return false;
-          }
-        } else {
-          this.field_H = this.field_H + (-16 + (var3 + 1)) / 16;
-          if (this.field_H == 0) {
-            if (0 != var2) {
-              return false;
-            } else {
-              L2: {
-                if (this.field_I) {
-                  stackIn_10_0 = 0;
-                  break L2;
-                } else {
-                  stackIn_10_0 = 1;
-                  break L2;
-                }
-              }
-              return stackIn_10_0 != 0;
+            if (0 == var2) {
+                return !this.field_I ? true : false;
             }
-          } else {
             return false;
-          }
         }
+        if (this.field_H != 0) {
+            return false;
+        }
+        if (0 == var2) {
+            return !this.field_I ? true : false;
+        }
+        return false;
     }
 
     dd(ng param0, int param1, int param2) {
@@ -126,95 +92,73 @@ abstract class dd extends ee {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (ak.a(param0, (byte) -67)) {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (ak.a(param0, (byte) -67)) {
+            stackIn_3_0 = 0;
+            decompiledRegionSelector0 = 0;
+          } else {
+            if (ra.a(18725, param0)) {
+              stackIn_7_0 = 0;
+              decompiledRegionSelector0 = 1;
             } else {
-              if (ra.a(18725, param0)) {
-                stackIn_7_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (!em.a(param0, param2 + 25409)) {
-                  if (param1.length() != 0) {
-                    if (!ak.a(param0, param1, -75)) {
-                      L1: {
-                        if (param2 == -25321) {
-                          break L1;
-                        } else {
-                          dd.i(31);
-                          break L1;
-                        }
-                      }
-                      if (uk.a(8, param1, param0)) {
-                        stackIn_22_0 = 0;
-                        decompiledRegionSelector0 = 5;
-                        break L0;
-                      } else {
-                        if (wc.a(param0, param1, (byte) -107)) {
-                          stackIn_26_0 = 0;
-                          decompiledRegionSelector0 = 6;
-                          break L0;
-                        } else {
-                          return true;
-                        }
-                      }
+              if (!em.a(param0, param2 + 25409)) {
+                if (param1.length() != 0) {
+                  if (!ak.a(param0, param1, -75)) {
+                    if (param2 != -25321) {
+                      dd.i(31);
+                    }
+                    if (uk.a(8, param1, param0)) {
+                      stackIn_22_0 = 0;
+                      decompiledRegionSelector0 = 5;
                     } else {
-                      stackIn_16_0 = 0;
-                      decompiledRegionSelector0 = 4;
-                      break L0;
+                      if (wc.a(param0, param1, (byte) -107)) {
+                        stackIn_26_0 = 0;
+                        decompiledRegionSelector0 = 6;
+                      } else {
+                        return true;
+                      }
                     }
                   } else {
-                    stackIn_13_0 = 1;
-                    decompiledRegionSelector0 = 3;
-                    break L0;
+                    stackIn_16_0 = 0;
+                    decompiledRegionSelector0 = 4;
                   }
                 } else {
-                  stackIn_10_0 = 0;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
+                  stackIn_13_0 = 1;
+                  decompiledRegionSelector0 = 3;
                 }
+              } else {
+                stackIn_10_0 = 0;
+                decompiledRegionSelector0 = 2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_29_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_29_0 = (RuntimeException) (var3);
 
-            stackIn_29_1 = new StringBuilder().append("dd.MB(");
+          stackIn_29_1 = new StringBuilder().append("dd.MB(");
 
-            if (param0 == null) {
-              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackIn_30_2 = "null";
-              break L2;
-            } else {
-              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackIn_30_2 = "{...}";
-              break L2;
-            }
+          if (param0 == null) {
+            stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+            stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+            stackIn_30_2 = "null";
+          } else {
+            stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
+            stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
+            stackIn_30_2 = "{...}";
           }
-          L3: {
 
 
-            stackIn_32_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',');
+          stackIn_32_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',');
 
-            if (param1 == null) {
-              stackIn_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackIn_33_2 = "null";
-              break L3;
-            } else {
-              stackIn_30_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackIn_33_2 = "{...}";
-              break L3;
-            }
+          if (param1 == null) {
+            stackIn_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+            stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+            stackIn_33_2 = "null";
+          } else {
+            stackIn_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+            stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
+            stackIn_33_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_30_0), stackIn_33_2 + ',' + param2 + ')');
         }
@@ -247,36 +191,31 @@ abstract class dd extends ee {
 
     boolean h(int param0) {
         this.field_H = this.g(param0 + -297);
-        if (param0 == 229) {
-          if (0 == this.field_H) {
-            if (this.field_I) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
-          return true;
+        if (param0 != 229) {
+            return true;
         }
+        if (0 != this.field_H) {
+            return false;
+        }
+        if (!this.field_I) {
+            return true;
+        }
+        return false;
     }
 
     public static void i(int param0) {
-        if (param0 != 256) {
-          dd.a((byte) -87);
-          field_J = null;
-          field_F = null;
-          field_G = null;
-          field_E = null;
-          return;
-        } else {
-          field_J = null;
-          field_F = null;
-          field_G = null;
-          field_E = null;
-          return;
+        if (param0 == 256) {
+            field_J = null;
+            field_F = null;
+            field_G = null;
+            field_E = null;
+            return;
         }
+        dd.a((byte) -87);
+        field_J = null;
+        field_F = null;
+        field_G = null;
+        field_E = null;
     }
 
     final el f(byte param0) {
@@ -295,69 +234,62 @@ abstract class dd extends ee {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        int var5;
-        if (this.field_H != 0) {
-          if (256 > this.field_H) {
-            if (oi.field_b != null) {
-              if (oi.field_b.width_field_r >= this.field_r) {
-                if (oi.field_b.height_field_m >= this.field_h) {
-                  var5 = 111 / ((1 - param2) / 43);
-                  Geoblox.setRasterTarget_a(1, oi.field_b);
-                  SoftwareRasterizer_vb.c();
-                  this.b(0, 20, 0);
-                  super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
-                  id.a(true);
-                  oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
-                  return;
-                } else {
-                  oi.field_b = new Sprite_dm(this.field_r, this.field_h);
-                  var5 = 111 / ((1 - param2) / 43);
-                  Geoblox.setRasterTarget_a(1, oi.field_b);
-                  SoftwareRasterizer_vb.c();
-                  this.b(0, 20, 0);
-                  super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
-                  id.a(true);
-                  oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
-                  return;
-                }
-              } else {
-                oi.field_b = new Sprite_dm(this.field_r, this.field_h);
-                var5 = 111 / ((1 - param2) / 43);
-                Geoblox.setRasterTarget_a(1, oi.field_b);
-                SoftwareRasterizer_vb.c();
-                this.b(0, 20, 0);
-                super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
-                id.a(true);
-                oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
-                return;
-              }
-            } else {
-              oi.field_b = new Sprite_dm(this.field_r, this.field_h);
-              var5 = 111 / ((1 - param2) / 43);
-              Geoblox.setRasterTarget_a(1, oi.field_b);
-              SoftwareRasterizer_vb.c();
-              this.b(0, 20, 0);
-              super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
-              id.a(true);
-              oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
-              return;
-            }
-          } else {
-            if (param3 != 0) {
-              return;
-            } else {
-              this.b(this.field_v + param0, 20, param1 + this.field_m);
-              super.a(param0, param1, (byte) -52, param3);
-              return;
-            }
-          }
-        } else {
-          return;
+        int var5 = 0;
+        if (this.field_H == 0) {
+            return;
         }
+        if (256 <= this.field_H) {
+            if (!(param3 == 0)) {
+                return;
+            }
+            this.b(this.field_v + param0, 20, param1 + this.field_m);
+            super.a(param0, param1, (byte) -52, param3);
+            return;
+        }
+        if (oi.field_b == null) {
+            oi.field_b = new Sprite(this.field_r, this.field_h);
+            var5 = 111 / ((1 - param2) / 43);
+            Geoblox.setRasterTarget(1, oi.field_b);
+            SoftwareRasterizer.c();
+            this.b(0, 20, 0);
+            super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
+            id.a(true);
+            oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
+            return;
+        }
+        if (oi.field_b.width < this.field_r) {
+            oi.field_b = new Sprite(this.field_r, this.field_h);
+            var5 = 111 / ((1 - param2) / 43);
+            Geoblox.setRasterTarget(1, oi.field_b);
+            SoftwareRasterizer.c();
+            this.b(0, 20, 0);
+            super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
+            id.a(true);
+            oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
+            return;
+        }
+        if (oi.field_b.height < this.field_h) {
+            oi.field_b = new Sprite(this.field_r, this.field_h);
+            var5 = 111 / ((1 - param2) / 43);
+            Geoblox.setRasterTarget(1, oi.field_b);
+            SoftwareRasterizer.c();
+            this.b(0, 20, 0);
+            super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
+            id.a(true);
+            oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
+            return;
+        }
+        var5 = 111 / ((1 - param2) / 43);
+        Geoblox.setRasterTarget(1, oi.field_b);
+        SoftwareRasterizer.c();
+        this.b(0, 20, 0);
+        super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
+        id.a(true);
+        oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
     }
 
     static {
-        field_D = 0;
+        variantMatchCandidateCount = 0;
         field_F = "Loading music";
     }
 }

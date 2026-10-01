@@ -5,7 +5,7 @@ final class ue {
     static String field_g;
     private int field_i;
     private int[][] field_a;
-    static tf field_f;
+    static IntrusiveDeque availableScorePopups;
     static String field_c;
     static String field_b;
     static String field_d;
@@ -29,9 +29,9 @@ final class ue {
 
     final static void a(boolean param0, boolean param1, byte param2) {
         if (param1) {
-            SoftwareRasterizer_vb.b(0, 0, SoftwareRasterizer_vb.stride_field_f, SoftwareRasterizer_vb.field_b, 0, 192);
+            SoftwareRasterizer.b(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_b, 0, 192);
         } else {
-            SoftwareRasterizer_vb.c();
+            SoftwareRasterizer.c();
         }
         if (param2 != -102) {
             return;
@@ -50,7 +50,7 @@ final class ue {
     }
 
     public static void a(boolean param0) {
-        field_f = null;
+        availableScorePopups = null;
         field_b = null;
         field_c = null;
         if (!param0) {
@@ -61,8 +61,8 @@ final class ue {
     }
 
     ue(int param0, int param1) {
+        int var4 = 0;
         int var3;
-        int var4;
         int[] var5;
         double var6;
         int var8;
@@ -77,62 +77,35 @@ final class ue {
           this.field_i = param0;
           this.field_a = new int[param0][14];
           this.field_h = param1;
-          var4 = 0;
-          L0: while (true) {
-            if (param0 <= var4) {
-              return;
-            } else {
-              L1: {
-                var5 = this.field_a[var4];
-                var6 = 6.0 + (double)var4 / (double)param0;
-                var8 = (int)Math.floor(var6 - 7.0 + 1.0);
-                if (var8 >= 0) {
-                  break L1;
-                } else {
-                  var8 = 0;
-                  break L1;
-                }
-              }
-              L2: {
-                var9 = (int)Math.ceil(var6 + 7.0);
-                if ((var9 ^ -1) >= -15) {
-                  break L2;
-                } else {
-                  var9 = 14;
-                  break L2;
-                }
-              }
-              var10 = (double)param1 / (double)param0;
-              L3: while (true) {
-                if (var8 >= var9) {
-                  var4++;
-                  continue L0;
-                } else {
-                  L4: {
-                    L5: {
-                      var12 = ((double)var8 - var6) * 3.141592653589793;
-                      var14 = var10;
-                      if (var12 < -0.0001) {
-                        break L5;
-                      } else {
-                        if (0.0001 >= var12) {
-                          break L4;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    var14 = var14 * (Math.sin(var12) / var12);
+          for (var4 = 0; param0 > var4; var4++) {
+            var5 = this.field_a[var4];
+            var6 = 6.0 + (double)var4 / (double)param0;
+            var8 = (int)Math.floor(var6 - 7.0 + 1.0);
+            if (var8 < 0) {
+              var8 = 0;
+            }
+            var9 = (int)Math.ceil(var6 + 7.0);
+            if ((var9 ^ -1) < -15) {
+              var9 = 14;
+            }
+            var10 = (double)param1 / (double)param0;
+            L3: while (var8 < var9) {
+              L4: {
+                var12 = ((double)var8 - var6) * 3.141592653589793;
+                var14 = var10;
+                if (var12 >= -0.0001) {
+                  if (0.0001 >= var12) {
                     break L4;
                   }
-                  var14 = var14 * (Math.cos(0.2243994752564138 * (-var6 + (double)var8)) * 0.46 + 0.54);
-                  var5[var8] = (int)Math.floor(0.5 + 65536.0 * var14);
-                  var8++;
-                  continue L3;
                 }
+                var14 = var14 * (Math.sin(var12) / var12);
               }
+              var14 = var14 * (Math.cos(0.2243994752564138 * (-var6 + (double)var8)) * 0.46 + 0.54);
+              var5[var8] = (int)Math.floor(0.5 + 65536.0 * var14);
+              var8++;
             }
           }
+          return;
         } else {
           return;
         }
@@ -160,91 +133,61 @@ final class ue {
         int[] var16 = null;
         int[] var18 = null;
         try {
-          L0: {
-            L1: {
-              var3_int = -6 / ((param0 - -18) / 49);
-              if (this.field_a == null) {
-                break L1;
-              } else {
-                var4 = (int)((long)param1.length * (long)this.field_h / (long)this.field_i) + 14;
-                var16 = new int[var4];
-                var14 = var16;
-                var5 = var14;
-                var6 = 0;
-                var7 = 0;
-                var8 = 0;
-                L2: while (true) {
-                  if (param1.length <= var8) {
-                    param1 = new byte[var4];
-                    var12 = 0;
-                    var8 = var12;
-                    L3: while (true) {
-                      if (var12 >= var4) {
-                        break L1;
-                      } else {
-                        L4: {
-                          var9 = var16[var12] - -32768 >> 1873540176;
-                          if (-128 > var9) {
-                            param1[var12] = (byte)-128;
-                            break L4;
-                          } else {
-                            if (-128 <= (var9 ^ -1)) {
-                              param1[var12] = (byte)var9;
-                              break L4;
-                            } else {
-                              param1[var12] = (byte)127;
-                              break L4;
-                            }
-                          }
-                        }
-                        var12++;
-                        continue L3;
-                      }
-                    }
+          L1: {
+            var3_int = -6 / ((param0 - -18) / 49);
+            if (this.field_a != null) {
+              var4 = (int)((long)param1.length * (long)this.field_h / (long)this.field_i) + 14;
+              var16 = new int[var4];
+              var14 = var16;
+              var5 = var14;
+              var6 = 0;
+              var7 = 0;
+              for (var8 = 0; param1.length > var8; var8++) {
+                var9 = param1[var8];
+                var18 = this.field_a[var7];
+                for (var11 = 0; -15 < (var11 ^ -1); var11++) {
+                  var5[var6 + var11] = var5[var6 + var11] + var9 * var18[var11];
+                }
+                var7 = var7 + this.field_h;
+                var11 = var7 / this.field_i;
+                var6 = var6 + var11;
+                var7 = var7 - this.field_i * var11;
+              }
+              param1 = new byte[var4];
+              var12 = 0;
+              var8 = var12;
+              L3: while (var12 < var4) {
+                var9 = var16[var12] - -32768 >> 1873540176;
+                if (-128 > var9) {
+                  param1[var12] = (byte)-128;
+                } else {
+                  if (-128 <= (var9 ^ -1)) {
+                    param1[var12] = (byte)var9;
                   } else {
-                    var9 = param1[var8];
-                    var18 = this.field_a[var7];
-                    var11 = 0;
-                    L5: while (true) {
-                      if (-15 >= (var11 ^ -1)) {
-                        var7 = var7 + this.field_h;
-                        var11 = var7 / this.field_i;
-                        var6 = var6 + var11;
-                        var7 = var7 - this.field_i * var11;
-                        var8++;
-                        continue L2;
-                      } else {
-                        var5[var6 + var11] = var5[var6 + var11] + var9 * var18[var11];
-                        var11++;
-                        continue L5;
-                      }
-                    }
+                    param1[var12] = (byte)127;
                   }
                 }
+                var12++;
               }
+              break L1;
             }
-            stackIn_16_0 = (byte[]) (param1);
-            break L0;
           }
+          stackIn_16_0 = (byte[]) (param1);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var3 = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_19_0 = (RuntimeException) (var3);
 
-            stackIn_19_1 = new StringBuilder().append("ue.E(").append(param0).append(',');
+          stackIn_19_1 = new StringBuilder().append("ue.E(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L6;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L6;
-            }
+          if (param1 == null) {
+            stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+            stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
+            stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+            stackIn_20_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
         }
@@ -258,9 +201,9 @@ final class ue {
         field_b = "Friends can be added in multiplayer<nbsp>games";
         field_d = "Please send me news and updates (I can unsubscribe at any time)";
         field_e = 0;
-        field_f = new tf();
+        availableScorePopups = new IntrusiveDeque();
         for (var0 = 0; var0 < 20; var0++) {
-            field_f.a(-83, new me());
+            availableScorePopups.addLast(-83, new ScorePopup());
         }
         field_j = 250;
     }

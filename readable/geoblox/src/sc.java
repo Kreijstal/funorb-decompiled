@@ -15,9 +15,9 @@ abstract class sc {
 
     abstract void a(int param0, java.awt.Component param1, int param2, byte param3);
 
-    final static Sprite_dm a(byte param0) {
+    final static Sprite a(byte param0) {
         int var4_int = 0;
-        int var1 = rc.field_j[0] * hl.field_K[0];
+        int var1 = DualLinkNode.field_j[0] * hl.field_K[0];
         byte[] var2 = mj.field_a[0];
         int[] var3 = new int[var1];
         if (param0 != -60) {
@@ -27,7 +27,7 @@ abstract class sc {
         for (var4_int = 0; var4_int < var1; var4_int++) {
             var3[var4_int] = cm.field_j[cd.a(255, (int) var2[var4_int])];
         }
-        Sprite_dm var4 = new Sprite_dm(pg.field_b, dd.field_C, GameplaySession_gh.field_m[0], md.field_e[0], rc.field_j[0], hl.field_K[0], var3);
+        Sprite var4 = new Sprite(pg.field_b, dd.field_C, GameplaySession.field_m[0], md.field_e[0], DualLinkNode.field_j[0], hl.field_K[0], var3);
         kj.c(true);
         return var4;
     }
@@ -73,7 +73,6 @@ abstract class sc {
                 } else {
                   stackIn_7_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> -1102483296);
                   decompiledRegionSelector0 = 1;
-                  break L0;
                 }
               } else {
                 throw new IllegalArgumentException();
@@ -81,28 +80,23 @@ abstract class sc {
             } else {
               stackIn_2_0 = 102;
               decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_15_0 = (RuntimeException) (var3);
 
-            stackIn_15_1 = new StringBuilder().append("sc.J(").append(param0).append(',');
+          stackIn_15_1 = new StringBuilder().append("sc.J(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L2;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L2;
-            }
+          if (param1 == null) {
+            stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+            stackIn_16_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ')');
         }
@@ -118,7 +112,7 @@ abstract class sc {
     }
 
     final void a(int param0) {
-        SoftwareRasterizer_vb.a(this.field_d, this.field_a, this.field_c);
+        SoftwareRasterizer.a(this.field_d, this.field_a, this.field_c);
         if (param0 != 255) {
             Random var3 = (Random) null;
             sc.a((byte) -94, (Random) null, 54);

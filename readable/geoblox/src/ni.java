@@ -58,52 +58,38 @@ final class ni extends ee implements pl {
             l.field_i = jc.a(var10, true);
             bm.field_l = new nf[var3];
             pi.field_R = new int[var3][];
-            var4 = 0;
-            L1: while (true) {
-              if (var4 >= var3) {
-                var10.i(-16989);
-                var9 = 0;
-                var4 = var9;
-                L2: while (true) {
-                  if (var3 <= var9) {
-                    break L0;
-                  } else {
-                    var5 = bm.field_l[var9];
-                    var5.a(6, 1, (byte) 89, 6, 6);
-                    var5.a((byte) -99);
-                    var6 = new int[]{var5.field_Q - -var5.field_I >> -2078108927, var5.field_H + var5.field_s >> -144591135, var5.field_N + var5.field_F >> 484842465};
-                    pi.field_R[var9] = var6;
-                    var5.a(-var6[0], -var6[1], -9121, -var6[2]);
-                    var9++;
-                    continue L2;
-                  }
-                }
-              } else {
-                bm.field_l[var4] = uh.a(var8, (byte) 113);
-                var4++;
-                continue L1;
-              }
+            for (var4 = 0; var4 < var3; var4++) {
+              bm.field_l[var4] = uh.a(var8, (byte) 113);
             }
+            var10.i(-16989);
+            var9 = 0;
+            var4 = var9;
+            L2: while (var3 > var9) {
+              var5 = bm.field_l[var9];
+              var5.a(6, 1, (byte) 89, 6, 6);
+              var5.a((byte) -99);
+              var6 = new int[]{var5.field_Q - -var5.field_I >> -2078108927, var5.field_H + var5.field_s >> -144591135, var5.field_N + var5.field_F >> 484842465};
+              pi.field_R[var9] = var6;
+              var5.a(-var6[0], -var6[1], -9121, -var6[2]);
+              var9++;
+            }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = (RuntimeException) (var2);
 
-            stackIn_10_1 = new StringBuilder().append("ni.KA(");
+          stackIn_10_1 = new StringBuilder().append("ni.KA(");
 
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          if (param0 == null) {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
         }
@@ -124,52 +110,41 @@ final class ni extends ee implements pl {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var4 = new hk(param1, param2);
-            var4.field_q = (dh) ((Object) new ml());
-            var5 = param0 + this.field_h;
-            this.a(34 + this.field_h, this.field_r, (byte) -53, 0, 0);
-            var4.a(30, this.field_r - 14, (byte) -33, var5, 7);
-            this.b((byte) -73, var4);
-            stackIn_1_0 = (hk) (var4);
-            break L0;
-          }
+          var4 = new hk(param1, param2);
+          var4.field_q = (dh) ((Object) new ml());
+          var5 = param0 + this.field_h;
+          this.a(34 + this.field_h, this.field_r, (byte) -53, 0, 0);
+          var4.a(30, this.field_r - 14, (byte) -33, var5, 7);
+          this.b((byte) -73, var4);
+          stackIn_1_0 = (hk) (var4);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4_ref = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var4_ref);
+          var4_ref = decompiledCaughtException;
+          stackIn_4_0 = (RuntimeException) (var4_ref);
 
-            stackIn_4_1 = new StringBuilder().append("ni.GA(").append(param0).append(',');
+          stackIn_4_1 = new StringBuilder().append("ni.GA(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          if (param1 == null) {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+            stackIn_5_2 = "{...}";
           }
-          L2: {
 
 
-            stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
 
-            if (param2 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          if (param2 == null) {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), stackIn_8_2 + ')');
         }
@@ -193,30 +168,21 @@ final class ni extends ee implements pl {
 
     final static void f(int param0) {
         int var2 = 0;
-        GameplayEntity_ja var3 = null;
+        GameplayEntity var3 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var2 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              if (param0 == 484842465) {
-                break L1;
-              } else {
-                ni.f(15);
-                break L1;
-              }
+            if (param0 != 484842465) {
+              ni.f(15);
             }
-            var3 = (GameplayEntity_ja) ((Object) bh.field_c.g(0));
-            L2: while (true) {
-              if (var3 == null) {
-                break L0;
-              } else {
-                var3.l(1915952803);
-                var3 = (GameplayEntity_ja) ((Object) bh.field_c.d(1));
-                continue L2;
-              }
+            var3 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
+            L2: while (var3 != null) {
+              var3.drawRotatedEntityOnCurrentRaster(1915952803);
+              var3 = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -245,57 +211,39 @@ final class ni extends ee implements pl {
         var8 = Geoblox.field_C;
         try {
           L0: {
-            var6_int = 0;
-            L1: while (true) {
-              L2: {
-                if (var6_int >= this.field_D) {
-                  break L2;
+            L1: for (var6_int = 0; var6_int < this.field_D; var6_int++) {
+              if (param4 == this.field_F[var6_int]) {
+                var7 = this.field_H[var6_int];
+                if ((var7 ^ -1) != 0) {
+                  pc.a(this.field_H[var6_int], false);
                 } else {
-                  if (param4 == this.field_F[var6_int]) {
-                    var7 = this.field_H[var6_int];
-                    if ((var7 ^ -1) != 0) {
-                      pc.a(this.field_H[var6_int], false);
-                      break L2;
-                    } else {
-                      this.field_J.h((byte) -104);
-                      break L2;
-                    }
-                  } else {
-                    var6_int++;
-                    continue L1;
-                  }
+                  this.field_J.h((byte) -104);
                 }
+              } else {
+                continue L1;
               }
-              L3: {
-                if (param1 == -20) {
-                  break L3;
-                } else {
-                  ni.a((byte) 87);
-                  break L3;
-                }
-              }
-              break L0;
+              break;
             }
+            if (param1 != -20) {
+              ni.a((byte) 87);
+            }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var6 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var6);
+          var6 = decompiledCaughtException;
+          stackIn_14_0 = (RuntimeException) (var6);
 
-            stackIn_14_1 = new StringBuilder().append("ni.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          stackIn_14_1 = new StringBuilder().append("ni.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 
-            if (param4 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
+          if (param4 == null) {
+            stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+            stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
+            stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
+            stackIn_15_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
@@ -331,43 +279,31 @@ final class ni extends ee implements pl {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 != null) {
-              L1: {
-                var2 = new nc(param0, GameplaySession_gh.field_m, md.field_e, rc.field_j, hl.field_K, cm.field_j, mj.field_a);
-                kj.c(true);
-                if (param1 < -107) {
-                  break L1;
-                } else {
-                  field_C = (String) null;
-                  break L1;
-                }
-              }
-              stackIn_6_0 = (nc) (var2);
-              break L0;
-            } else {
-              return null;
+          if (param0 != null) {
+            var2 = new nc(param0, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, cm.field_j, mj.field_a);
+            kj.c(true);
+            if (param1 >= -107) {
+              field_C = (String) null;
             }
+            stackIn_6_0 = (nc) (var2);
+          } else {
+            return null;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var2_ref);
+          var2_ref = decompiledCaughtException;
+          stackIn_9_0 = (RuntimeException) (var2_ref);
 
-            stackIn_9_1 = new StringBuilder().append("ni.MA(");
+          stackIn_9_1 = new StringBuilder().append("ni.MA(");
 
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          if (param0 == null) {
+            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+            stackIn_10_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
         }

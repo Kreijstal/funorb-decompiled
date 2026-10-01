@@ -4,23 +4,23 @@
 import java.util.*;
 
 final class k implements Iterator {
-    private hf field_h;
+    private IntrusiveNode field_h;
     static int[] field_i;
     private int field_j;
-    private hf field_c;
+    private IntrusiveNode field_c;
     static int field_g;
     private gi field_d;
-    static tf field_e;
+    static IntrusiveDeque field_e;
     static String field_k;
     static String field_b;
     static rf field_f;
-    static Sprite_dm field_a;
+    static Sprite field_a;
 
     public final void remove() {
         if (null == this.field_c) {
             throw new IllegalStateException();
         }
-        this.field_c.a(false);
+        this.field_c.unlinkNode(false);
         this.field_c = null;
     }
 
@@ -36,58 +36,48 @@ final class k implements Iterator {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5;
-        int var6;
+        int var5 = 0;
+        int var6 = 0;
         param0 += 2;
         param1 += 2;
-        if (param3 != -27085) {
-          k.b(32);
-          param4 -= 4;
-          param2 -= 4;
-          var5 = param1 + param0 * SoftwareRasterizer_vb.stride_field_f;
-          var6 = SoftwareRasterizer_vb.stride_field_f + -param2;
-          w.a(SoftwareRasterizer_vb.framebuffer_field_c, var5, 0, 0, 0, 0, param2, param4, var6);
-          return;
-        } else {
-          param4 -= 4;
-          param2 -= 4;
-          var5 = param1 + param0 * SoftwareRasterizer_vb.stride_field_f;
-          var6 = SoftwareRasterizer_vb.stride_field_f + -param2;
-          w.a(SoftwareRasterizer_vb.framebuffer_field_c, var5, 0, 0, 0, 0, param2, param4, var6);
-          return;
+        if (param3 == -27085) {
+            param4 -= 4;
+            param2 -= 4;
+            var5 = param1 + param0 * SoftwareRasterizer.stride;
+            var6 = SoftwareRasterizer.stride + -param2;
+            w.a(SoftwareRasterizer.framebuffer, var5, 0, 0, 0, 0, param2, param4, var6);
+            return;
         }
+        k.b(32);
+        param4 -= 4;
+        param2 -= 4;
+        var5 = param1 + param0 * SoftwareRasterizer.stride;
+        var6 = SoftwareRasterizer.stride + -param2;
+        w.a(SoftwareRasterizer.framebuffer, var5, 0, 0, 0, 0, param2, param4, var6);
     }
 
     public final Object next() {
-        int fieldTemp$1 = 0;
-        int var2;
-        Object var3;
-        hf var3_ref;
-        hf var4;
-        var2 = Geoblox.field_C;
-        if (this.field_d.field_a[this.field_j + -1] == this.field_h) {
-          L0: while (true) {
-            if (this.field_j < this.field_d.field_c) {
-              fieldTemp$1 = this.field_j;
-              this.field_j = this.field_j + 1;
-              var3_ref = this.field_d.field_a[fieldTemp$1].field_b;
-              if (var3_ref == this.field_d.field_a[this.field_j - 1]) {
-                continue L0;
-              } else {
-                this.field_h = var3_ref.field_b;
-                this.field_c = var3_ref;
-                return var3_ref;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
-          var4 = this.field_h;
-          this.field_h = var4.field_b;
-          this.field_c = var4;
-          return var4;
+        IntrusiveNode var4 = null;
+        int fieldTemp$0 = 0;
+        IntrusiveNode var3_ref = null;
+        int var2 = Geoblox.field_C;
+        if (this.field_d.field_a[this.field_j + -1] != this.field_h) {
+            var4 = this.field_h;
+            this.field_h = var4.nextNode;
+            this.field_c = var4;
+            return var4;
         }
+        do {
+            if (this.field_j >= this.field_d.field_c) {
+                return null;
+            }
+            fieldTemp$0 = this.field_j;
+            this.field_j = this.field_j + 1;
+            var3_ref = this.field_d.field_a[fieldTemp$0].nextNode;
+        } while (var3_ref == this.field_d.field_a[this.field_j - 1]);
+        this.field_h = var3_ref.nextNode;
+        this.field_c = var3_ref;
+        return var3_ref;
     }
 
     public static void b(int param0) {
@@ -121,8 +111,8 @@ final class k implements Iterator {
             if (this.field_d.field_c > this.field_j) {
               fieldTemp$1 = this.field_j;
               this.field_j = this.field_j + 1;
-              if (this.field_d.field_a[fieldTemp$1].field_b != this.field_d.field_a[this.field_j - 1]) {
-                this.field_h = this.field_d.field_a[-1 + this.field_j].field_b;
+              if (this.field_d.field_a[fieldTemp$1].nextNode != this.field_d.field_a[this.field_j - 1]) {
+                this.field_h = this.field_d.field_a[-1 + this.field_j].nextNode;
                 return true;
               } else {
                 this.field_h = this.field_d.field_a[this.field_j - 1];
@@ -140,18 +130,16 @@ final class k implements Iterator {
     private final void a(int param0) {
         this.field_c = null;
         this.field_j = 1;
-        this.field_h = this.field_d.field_a[0].field_b;
-        if (param0 == -1) {
-          return;
-        } else {
-          this.remove();
-          return;
+        this.field_h = this.field_d.field_a[0].nextNode;
+        if (param0 != -1) {
+            this.remove();
+            return;
         }
     }
 
     static {
         field_g = -1;
-        field_e = new tf();
+        field_e = new IntrusiveDeque();
         field_k = "Log in";
         field_b = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
     }

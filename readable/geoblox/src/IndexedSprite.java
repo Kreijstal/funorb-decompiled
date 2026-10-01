@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class IndexedSprite_na extends ha {
-    int[] palette_field_h;
-    byte[] indices_field_i;
+final class IndexedSprite extends ha {
+    int[] palette;
+    byte[] indices;
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int incrementValue$11 = 0;
@@ -53,33 +53,33 @@ final class IndexedSprite_na extends ha {
         int var9 = 0;
         param0 = param0 + this.field_b;
         param1 = param1 + this.field_f;
-        int var3 = param0 + param1 * SoftwareRasterizer_vb.stride_field_f;
+        int var3 = param0 + param1 * SoftwareRasterizer.stride;
         int var4 = 0;
         int var5 = this.field_d;
         int var6 = this.field_a;
-        int var7 = SoftwareRasterizer_vb.stride_field_f - var6;
+        int var7 = SoftwareRasterizer.stride - var6;
         int var8 = 0;
-        if (param1 < SoftwareRasterizer_vb.clipTop_field_i) {
-            var9 = SoftwareRasterizer_vb.clipTop_field_i - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+            var9 = SoftwareRasterizer.clipTop - param1;
             var5 = var5 - var9;
-            param1 = SoftwareRasterizer_vb.clipTop_field_i;
+            param1 = SoftwareRasterizer.clipTop;
             var4 = var4 + var9 * var6;
-            var3 = var3 + var9 * SoftwareRasterizer_vb.stride_field_f;
+            var3 = var3 + var9 * SoftwareRasterizer.stride;
         }
-        if (param1 + var5 > SoftwareRasterizer_vb.clipBottom_field_d) {
-            var5 = var5 - (param1 + var5 - SoftwareRasterizer_vb.clipBottom_field_d);
+        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
+            var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer_vb.clipLeft_field_e) {
-            var9 = SoftwareRasterizer_vb.clipLeft_field_e - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+            var9 = SoftwareRasterizer.clipLeft - param0;
             var6 = var6 - var9;
-            param0 = SoftwareRasterizer_vb.clipLeft_field_e;
+            param0 = SoftwareRasterizer.clipLeft;
             var4 = var4 + var9;
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
         }
-        if (param0 + var6 > SoftwareRasterizer_vb.clipRight_field_k) {
-            var9 = param0 + var6 - SoftwareRasterizer_vb.clipRight_field_k;
+        if (param0 + var6 > SoftwareRasterizer.clipRight) {
+            var9 = param0 + var6 - SoftwareRasterizer.clipRight;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
@@ -88,7 +88,7 @@ final class IndexedSprite_na extends ha {
             if (var5 <= 0) {
                 return;
             }
-            IndexedSprite_na.a(SoftwareRasterizer_vb.framebuffer_field_c, this.indices_field_i, this.palette_field_h, 0, var4, var3, var6, var5, var7, var8);
+            IndexedSprite.a(SoftwareRasterizer.framebuffer, this.indices, this.palette, 0, var4, var3, var6, var5, var7, var8);
             return;
         }
     }
@@ -97,33 +97,33 @@ final class IndexedSprite_na extends ha {
         int var10 = 0;
         param0 = param0 + this.field_b;
         param1 = param1 + this.field_f;
-        int var4 = param0 + param1 * SoftwareRasterizer_vb.stride_field_f;
+        int var4 = param0 + param1 * SoftwareRasterizer.stride;
         int var5 = 0;
         int var6 = this.field_d;
         int var7 = this.field_a;
-        int var8 = SoftwareRasterizer_vb.stride_field_f - var7;
+        int var8 = SoftwareRasterizer.stride - var7;
         int var9 = 0;
-        if (param1 < SoftwareRasterizer_vb.clipTop_field_i) {
-            var10 = SoftwareRasterizer_vb.clipTop_field_i - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+            var10 = SoftwareRasterizer.clipTop - param1;
             var6 = var6 - var10;
-            param1 = SoftwareRasterizer_vb.clipTop_field_i;
+            param1 = SoftwareRasterizer.clipTop;
             var5 = var5 + var10 * var7;
-            var4 = var4 + var10 * SoftwareRasterizer_vb.stride_field_f;
+            var4 = var4 + var10 * SoftwareRasterizer.stride;
         }
-        if (param1 + var6 > SoftwareRasterizer_vb.clipBottom_field_d) {
-            var6 = var6 - (param1 + var6 - SoftwareRasterizer_vb.clipBottom_field_d);
+        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
+            var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer_vb.clipLeft_field_e) {
-            var10 = SoftwareRasterizer_vb.clipLeft_field_e - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+            var10 = SoftwareRasterizer.clipLeft - param0;
             var7 = var7 - var10;
-            param0 = SoftwareRasterizer_vb.clipLeft_field_e;
+            param0 = SoftwareRasterizer.clipLeft;
             var5 = var5 + var10;
             var4 = var4 + var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
         }
-        if (param0 + var7 > SoftwareRasterizer_vb.clipRight_field_k) {
-            var10 = param0 + var7 - SoftwareRasterizer_vb.clipRight_field_k;
+        if (param0 + var7 > SoftwareRasterizer.clipRight) {
+            var10 = param0 + var7 - SoftwareRasterizer.clipRight;
             var7 = var7 - var10;
             var9 = var9 + var10;
             var8 = var8 + var10;
@@ -132,7 +132,7 @@ final class IndexedSprite_na extends ha {
             if (var6 <= 0) {
                 return;
             }
-            IndexedSprite_na.b(SoftwareRasterizer_vb.framebuffer_field_c, this.indices_field_i, this.palette_field_h, var5, var4, var7, var6, var8, var9, param2);
+            IndexedSprite.b(SoftwareRasterizer.framebuffer, this.indices, this.palette, var5, var4, var7, var6, var8, var9, param2);
             return;
         }
     }
@@ -146,19 +146,12 @@ final class IndexedSprite_na extends ha {
           if (param10 >= 0) {
             return;
           } else {
-            L1: {
-              param4 = param7;
-              if (param2 <= 0) {
-                break L1;
-              } else {
-                if (param1[param2 - 1] != -1) {
-                  break L1;
-                } else {
-                  param4--;
-                  param2++;
-                  param3++;
-                  break L1;
-                }
+            param4 = param7;
+            if (param2 > 0) {
+              if (param1[param2 - 1] == -1) {
+                param4--;
+                param2++;
+                param3++;
               }
             }
             L2: while (true) {
@@ -182,18 +175,13 @@ final class IndexedSprite_na extends ha {
                     param5[incrementValue$13] = param6[param0 & 255];
                     continue L2;
                   } else {
-                    L3: {
-                      incrementValue$14 = param2;
-                      param2++;
-                      param0 = param1[incrementValue$14] & 255;
-                      param4--;
-                      param0 = param0 + param0;
-                      if (param0 <= param4) {
-                        break L3;
-                      } else {
-                        param0 = param4;
-                        break L3;
-                      }
+                    incrementValue$14 = param2;
+                    param2++;
+                    param0 = param1[incrementValue$14] & 255;
+                    param4--;
+                    param0 = param0 + param0;
+                    if (param0 > param4) {
+                      param0 = param4;
                     }
                     param2 = param2 + param0;
                     param4 = param4 - param0;
@@ -211,33 +199,33 @@ final class IndexedSprite_na extends ha {
         int var9 = 0;
         param0 = param0 + this.field_b;
         param1 = param1 + this.field_f;
-        int var3 = param0 + param1 * SoftwareRasterizer_vb.stride_field_f;
+        int var3 = param0 + param1 * SoftwareRasterizer.stride;
         int var4 = 0;
         int var5 = this.field_d;
         int var6 = this.field_a;
-        int var7 = SoftwareRasterizer_vb.stride_field_f - var6;
+        int var7 = SoftwareRasterizer.stride - var6;
         int var8 = 0;
-        if (param1 < SoftwareRasterizer_vb.clipTop_field_i) {
-            var9 = SoftwareRasterizer_vb.clipTop_field_i - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+            var9 = SoftwareRasterizer.clipTop - param1;
             var5 = var5 - var9;
-            param1 = SoftwareRasterizer_vb.clipTop_field_i;
+            param1 = SoftwareRasterizer.clipTop;
             var4 = var4 + var9 * var6;
-            var3 = var3 + var9 * SoftwareRasterizer_vb.stride_field_f;
+            var3 = var3 + var9 * SoftwareRasterizer.stride;
         }
-        if (param1 + var5 > SoftwareRasterizer_vb.clipBottom_field_d) {
-            var5 = var5 - (param1 + var5 - SoftwareRasterizer_vb.clipBottom_field_d);
+        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
+            var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer_vb.clipLeft_field_e) {
-            var9 = SoftwareRasterizer_vb.clipLeft_field_e - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+            var9 = SoftwareRasterizer.clipLeft - param0;
             var6 = var6 - var9;
-            param0 = SoftwareRasterizer_vb.clipLeft_field_e;
+            param0 = SoftwareRasterizer.clipLeft;
             var4 = var4 + var9;
             var3 = var3 + var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
         }
-        if (param0 + var6 > SoftwareRasterizer_vb.clipRight_field_k) {
-            var9 = param0 + var6 - SoftwareRasterizer_vb.clipRight_field_k;
+        if (param0 + var6 > SoftwareRasterizer.clipRight) {
+            var9 = param0 + var6 - SoftwareRasterizer.clipRight;
             var6 = var6 - var9;
             var8 = var8 + var9;
             var7 = var7 + var9;
@@ -246,7 +234,7 @@ final class IndexedSprite_na extends ha {
             if (var5 <= 0) {
                 return;
             }
-            IndexedSprite_na.a(0, this.indices_field_i, var4, var3, 0, SoftwareRasterizer_vb.framebuffer_field_c, this.palette_field_h, var6, var7, var8, 0, var5);
+            IndexedSprite.a(0, this.indices, var4, var3, 0, SoftwareRasterizer.framebuffer, this.palette, var6, var7, var8, 0, var5);
             return;
         }
     }
@@ -300,47 +288,35 @@ final class IndexedSprite_na extends ha {
                   }
                 }
               } else {
-                L3: {
-                  incrementValue$2 = param4;
-                  param4++;
-                  param3 = param1[incrementValue$2];
-                  if (param3 == 0) {
-                    param5++;
-                    break L3;
-                  } else {
-                    incrementValue$3 = param5;
-                    param5++;
-                    param0[incrementValue$3] = param2[param3 & 255];
-                    break L3;
-                  }
+                incrementValue$2 = param4;
+                param4++;
+                param3 = param1[incrementValue$2];
+                if (param3 == 0) {
+                  param5++;
+                } else {
+                  incrementValue$3 = param5;
+                  param5++;
+                  param0[incrementValue$3] = param2[param3 & 255];
                 }
-                L4: {
-                  incrementValue$4 = param4;
-                  param4++;
-                  param3 = param1[incrementValue$4];
-                  if (param3 == 0) {
-                    param5++;
-                    break L4;
-                  } else {
-                    incrementValue$5 = param5;
-                    param5++;
-                    param0[incrementValue$5] = param2[param3 & 255];
-                    break L4;
-                  }
+                incrementValue$4 = param4;
+                param4++;
+                param3 = param1[incrementValue$4];
+                if (param3 == 0) {
+                  param5++;
+                } else {
+                  incrementValue$5 = param5;
+                  param5++;
+                  param0[incrementValue$5] = param2[param3 & 255];
                 }
-                L5: {
-                  incrementValue$6 = param4;
-                  param4++;
-                  param3 = param1[incrementValue$6];
-                  if (param3 == 0) {
-                    param5++;
-                    break L5;
-                  } else {
-                    incrementValue$7 = param5;
-                    param5++;
-                    param0[incrementValue$7] = param2[param3 & 255];
-                    break L5;
-                  }
+                incrementValue$6 = param4;
+                param4++;
+                param3 = param1[incrementValue$6];
+                if (param3 == 0) {
+                  param5++;
+                } else {
+                  incrementValue$7 = param5;
+                  param5++;
+                  param0[incrementValue$7] = param2[param3 & 255];
                 }
                 incrementValue$8 = param4;
                 param4++;
@@ -362,25 +338,25 @@ final class IndexedSprite_na extends ha {
         }
     }
 
-    IndexedSprite_na(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
+    IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
         this.field_e = param0;
         this.field_c = param1;
         this.field_b = param2;
         this.field_f = param3;
         this.field_a = param4;
         this.field_d = param5;
-        this.indices_field_i = param6;
-        this.palette_field_h = param7;
+        this.indices = param6;
+        this.palette = param7;
     }
 
-    IndexedSprite_na(int param0, int param1, int param2) {
+    IndexedSprite(int param0, int param1, int param2) {
         this.field_a = param0;
         this.field_e = param0;
         this.field_d = param1;
         this.field_c = param1;
         this.field_f = 0;
         this.field_b = 0;
-        this.indices_field_i = new byte[param0 * param1];
-        this.palette_field_h = new int[param2];
+        this.indices = new byte[param0 * param1];
+        this.palette = new int[param2];
     }
 }

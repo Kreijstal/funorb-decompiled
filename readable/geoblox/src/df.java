@@ -3,7 +3,7 @@
  */
 abstract class df {
     static String field_b;
-    static IndexedSprite_na field_a;
+    static IndexedSprite field_a;
 
     abstract qg a(byte param0);
 
@@ -14,7 +14,7 @@ abstract class df {
             param1.removeMouseListener(pg.field_c);
             param1.removeMouseMotionListener(pg.field_c);
             if (param0) {
-                field_a = (IndexedSprite_na) null;
+                field_a = (IndexedSprite) null;
             }
             param1.removeFocusListener(pg.field_c);
             s.field_I = 0;

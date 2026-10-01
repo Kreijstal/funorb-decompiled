@@ -2,14 +2,14 @@
   "schema": 1,
   "mode": "readable-source-mirror",
   "source": {
-    "repository": "https://github.com/Kreijstal/funorb-decompiled.git",
-    "commit": "3230e3092c687d210ba068bdfd7667a5213d22fb",
+    "repository": "Kreijstal/funorb-decompiled",
+    "commit": "dd9828b3532fc0cd3f452b6154bee6d9f77c658c",
     "subdirectory": "games/geoblox"
   },
-  "rulesSha256": "ea72817047be122d71a8e46401508e9dbe8eab59c4ff79f993b4408e716db0bd",
-  "generatorSha256": "7869033c9bb389863bb62ce9e704db90e5ac9b74f89d4bc3c6fc66fbb3062153",
-  "inputTreeSha256": "45b38190d2b94f1daa68bdf4ea16aa516be2feda493dceabe51ef8146cce6d7f",
-  "outputTreeSha256": "f1b68945bdab4565960fb26d135e77f5be9387ad33925ba1b2b7575cea52795d",
+  "rulesSha256": "58d4a9d3499d80bd4365d2f46258eecd88e851d302c0d62a6cea0a4f8b95a1b8",
+  "generatorSha256": "0362a9fc183fcb32ef0f63f4dff70591674830d7eb874a3c998e9fd42705f585",
+  "inputTreeSha256": "4ffc26d9728c403266022452f0c0ca68ea28ff61c26d108b7bd165e6ab92e24c",
+  "outputTreeSha256": "f28f79a43671246f825d8709255f295576f06f5ad2d23f6e814d24b024fcdb39",
   "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
   "classpath": [
     {
@@ -20,7 +20,7 @@
   "verification": {
     "originalCompiles": true,
     "renamedCompiles": true,
-    "bindingsCompared": 167702,
+    "bindingsCompared": 167502,
     "overrideFamiliesChecked": 388,
     "overrideRelationshipsPreserved": true,
     "runtimeEquivalenceVerified": false

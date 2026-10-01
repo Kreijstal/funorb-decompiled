@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mg extends hf {
+final class mg extends IntrusiveNode {
     int field_f;
     String[][] field_k;
     boolean field_j;

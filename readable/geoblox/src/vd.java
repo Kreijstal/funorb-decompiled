@@ -17,11 +17,11 @@ final class vd {
     int field_d;
     static boolean field_l;
     static int field_p;
-    static String field_e;
+    static String tutorialShapeMatchMessage;
 
     public static void b(int param0) {
         field_b = null;
-        field_e = null;
+        tutorialShapeMatchMessage = null;
         field_m = null;
         int var1 = -39 % ((62 - param0) / 42);
     }
@@ -45,79 +45,58 @@ final class vd {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (!param4.a(0)) {
-              stackIn_3_0 = (String) (param1);
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                if (!param3) {
-                  break L1;
-                } else {
-                  var6 = (rh) null;
-                  vd.a((String) null, (String) null, 53, false, (rh) null);
-                  break L1;
-                }
-              }
-              stackIn_7_0 = param0 + " - " + param4.b((byte) 42, param2) + "%";
-              decompiledRegionSelector0 = 1;
-              break L0;
+          if (!param4.a(0)) {
+            stackIn_3_0 = (String) (param1);
+            decompiledRegionSelector0 = 0;
+          } else {
+            if (param3) {
+              var6 = (rh) null;
+              vd.a((String) null, (String) null, 53, false, (rh) null);
             }
+            stackIn_7_0 = param0 + " - " + param4.b((byte) 42, param2) + "%";
+            decompiledRegionSelector0 = 1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_10_0 = (RuntimeException) (var5);
 
-            stackIn_10_1 = new StringBuilder().append("vd.D(");
+          stackIn_10_1 = new StringBuilder().append("vd.D(");
 
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          if (param0 == null) {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "{...}";
           }
-          L3: {
 
 
-            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
 
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
+          if (param1 == null) {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+            stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+            stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+            stackIn_14_2 = "{...}";
           }
-          L4: {
 
 
-            stackIn_16_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',');
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',');
 
-            if (param4 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L4;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L4;
-            }
+          if (param4 == null) {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
+            stackIn_17_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_11_0), stackIn_17_2 + ')');
         }
@@ -129,36 +108,30 @@ final class vd {
     }
 
     final static int a(int param0) {
-        double var1;
-        if (param0 == 741924304) {
-          if (Math.random() < sa.field_c) {
-            var1 = Math.random();
-            if (0.13 <= var1) {
-              if (var1 >= 0.25) {
-                if (var1 < 0.65) {
-                  return 1;
-                } else {
-                  return 2;
-                }
-              } else {
-                return 4;
-              }
-            } else {
-              return 3;
-            }
-          } else {
-            return 0;
-          }
-        } else {
-          return 104;
+        if (param0 != 741924304) {
+            return 104;
         }
+        if (Math.random() >= sa.field_c) {
+            return 0;
+        }
+        double var1 = Math.random();
+        if (0.13 > var1) {
+            return 3;
+        }
+        if (var1 < 0.25) {
+            return 4;
+        }
+        if (var1 >= 0.65) {
+            return 2;
+        }
+        return 1;
     }
 
     final int c(int param0) {
         if (!this.field_j) {
           if (this.field_f == 2) {
             if (-1 <= (this.field_c ^ -1)) {
-              if (SpriteState_wh.field_n == this.field_h) {
+              if (SpriteState.field_n == this.field_h) {
                 return 1;
               } else {
                 if ((vk.field_a ^ -1) == -3) {
@@ -185,7 +158,7 @@ final class vd {
               return 2;
             }
           } else {
-            if (SpriteState_wh.field_n == this.field_h) {
+            if (SpriteState.field_n == this.field_h) {
               return 1;
             } else {
               if ((vk.field_a ^ -1) == -3) {
@@ -241,17 +214,13 @@ final class vd {
             var0 = 0;
             L0: while (true) {
               if (field_b.length <= var0) {
-                field_e = "Excellent! Now try connecting three of a kind by shape.<br>Press <img=2> to continue.";
+                tutorialShapeMatchMessage = "Excellent! Now try connecting three of a kind by shape.<br>Press <img=2> to continue.";
                 break $cfr$clinit;
               } else {
-                L1: {
-                  if (-1 != (var0 ^ -1)) {
-                    field_b[var0] = (1 + var0) * 51 << -874678192;
-                    break L1;
-                  } else {
-                    field_b[var0] = (var0 - -1) * 20 << 741924304;
-                    break L1;
-                  }
+                if (-1 != (var0 ^ -1)) {
+                  field_b[var0] = (1 + var0) * 51 << -874678192;
+                } else {
+                  field_b[var0] = (var0 - -1) * 20 << 741924304;
                 }
                 if ((var0 ^ -1) < -3) {
                   field_b[var0] = lb.a(field_b[var0], (var0 + -2) * 22 << 1940867656);

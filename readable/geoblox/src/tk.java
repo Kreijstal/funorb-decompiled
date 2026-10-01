@@ -11,16 +11,11 @@ final class tk {
 
     public final void showcursor(java.awt.Component param0, boolean param1) {
         try {
-            L0: {
-              if (param1) {
-                param0 = null;
-                break L0;
-              } else {
-                if (param0 == null) {
-                  throw new NullPointerException();
-                } else {
-                  break L0;
-                }
+            if (param1) {
+              param0 = null;
+            } else {
+              if (param0 == null) {
+                throw new NullPointerException();
               }
             }
             if (this.field_b == param0) {

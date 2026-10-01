@@ -4,15 +4,15 @@
 final class fc {
     static String field_e;
     static qc field_d;
-    static Sprite_dm[] field_g;
+    static Sprite[] field_g;
     static double field_a;
-    static Sprite_dm[] field_b;
+    static Sprite[] field_b;
     static volatile boolean field_f;
     static int field_c;
 
     final static void a(int param0) {
         RuntimeException decompiledCaughtException = null;
-        GameplayEntity_ja var1 = null;
+        GameplayEntity var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -20,63 +20,37 @@ final class fc {
         try {
           L0: {
             pf.field_D = true;
-            var1 = (GameplayEntity_ja) ((Object) a.field_d.g(0));
-            L1: while (true) {
-              if (var1 == null) {
-                var2 = 12 % ((-69 - param0) / 38);
-                var1 = (GameplayEntity_ja) ((Object) bh.field_c.g(0));
-                L2: while (true) {
-                  if (var1 == null) {
-                    break L0;
-                  } else {
-                    L3: {
-                      L4: {
-                        var1.advanceEntityAnimation_b(true);
-                        if (5 == var1.field_z) {
-                          break L4;
-                        } else {
-                          if ((var1.field_z ^ -1) == -8) {
-                            break L4;
-                          } else {
-                            if ((var1.field_z ^ -1) == -9) {
-                              break L4;
-                            } else {
-                              break L3;
-                            }
-                          }
-                        }
-                      }
-                      pf.field_D = false;
-                      if (var1.animationFrameIndex_field_G < 3) {
-                        break L3;
-                      } else {
-                        ra.field_a.a(-115, var1);
-                        break L3;
-                      }
-                    }
-                    var1 = (GameplayEntity_ja) ((Object) bh.field_c.d(1));
-                    continue L2;
-                  }
+            var1 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
+            L1: while (var1 != null) {
+              var1.advanceEntityAnimation(true);
+              if (6 == var1.entitySpriteKindId) {
+                pf.field_D = false;
+                if (var1.animationFrameIndex >= 3) {
+                  ra.availableEntities.addLast(-67, var1);
                 }
-              } else {
-                L5: {
-                  var1.advanceEntityAnimation_b(true);
-                  if (6 == var1.field_z) {
-                    pf.field_D = false;
-                    if (var1.animationFrameIndex_field_G < 3) {
-                      break L5;
-                    } else {
-                      ra.field_a.a(-67, var1);
-                      break L5;
-                    }
-                  } else {
-                    break L5;
-                  }
-                }
-                var1 = (GameplayEntity_ja) ((Object) a.field_d.d(1));
-                continue L1;
               }
+              var1 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));
             }
+            var2 = 12 % ((-69 - param0) / 38);
+            var1 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
+            L2: while (var1 != null) {
+              L3: {
+                var1.advanceEntityAnimation(true);
+                if (5 != var1.entitySpriteKindId) {
+                  if ((var1.entitySpriteKindId ^ -1) != -8) {
+                    if ((var1.entitySpriteKindId ^ -1) != -9) {
+                      break L3;
+                    }
+                  }
+                }
+                pf.field_D = false;
+                if (var1.animationFrameIndex >= 3) {
+                  ra.availableEntities.addLast(-115, var1);
+                }
+              }
+              var1 = (GameplayEntity) ((Object) bh.field_c.nextForIteration(1));
+            }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -103,16 +77,14 @@ final class fc {
     public static void a(byte param0) {
         field_b = null;
         field_g = null;
-        if (param0 >= -79) {
-          fc.a(-17);
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
-          field_d = null;
-          field_e = null;
-          return;
+        if (param0 < -79) {
+            field_d = null;
+            field_e = null;
+            return;
         }
+        fc.a(-17);
+        field_d = null;
+        field_e = null;
     }
 
     static {

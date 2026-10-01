@@ -7,7 +7,7 @@ final class nk extends df {
     private String field_d;
     static int[] field_c;
     private String field_h;
-    static int[] field_f;
+    static int[] packedMatchCandidates;
     static volatile int field_e;
 
     final void a(int param0, qc param1) {
@@ -35,32 +35,25 @@ final class nk extends df {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var2_int = param0.length;
-            var3 = new byte[var2_int];
-            sf.a(param0, 0, var3, param1, var2_int);
-            stackIn_1_0 = (byte[]) (var3);
-            break L0;
-          }
+          var2_int = param0.length;
+          var3 = new byte[var2_int];
+          sf.a(param0, 0, var3, param1, var2_int);
+          stackIn_1_0 = (byte[]) (var3);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_4_0 = (RuntimeException) (var2);
 
-            stackIn_4_1 = new StringBuilder().append("nk.A(");
+          stackIn_4_1 = new StringBuilder().append("nk.A(");
 
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          if (param0 == null) {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+            stackIn_5_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
         }
@@ -69,7 +62,7 @@ final class nk extends df {
 
     public static void b(int param0) {
         field_i = null;
-        field_f = null;
+        packedMatchCandidates = null;
         field_g = null;
         field_c = null;
         if (param0 != -17226) {
@@ -97,7 +90,7 @@ final class nk extends df {
     static {
         field_g = "Start Game";
         field_i = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
-        field_f = new int[1000];
+        packedMatchCandidates = new int[1000];
         field_e = 0;
     }
 }

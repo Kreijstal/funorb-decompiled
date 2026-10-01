@@ -6,7 +6,7 @@ final class cl {
     static String field_d;
     static uf field_c;
     static int field_a;
-    static Sprite_dm field_b;
+    static Sprite field_b;
 
     public static void a(int param0) {
         field_d = null;
@@ -33,58 +33,42 @@ final class cl {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param0 > 56) {
-                break L1;
-              } else {
-                field_a = -115;
-                break L1;
-              }
+            if (param0 <= 56) {
+              field_a = -115;
             }
-            if (tf.field_d != si.field_g) {
-              L2: {
-                if (si.field_g != va.field_e) {
-                  break L2;
-                } else {
-                  if (!param1.equals(cg.field_k)) {
-                    break L2;
-                  } else {
-                    si.field_g = uf.field_l;
-                    stackIn_8_0 = me.field_g;
-                    decompiledRegionSelector0 = 0;
-                    break L0;
-                  }
+            if (IntrusiveDeque.field_d != si.field_g) {
+              if (si.field_g == va.field_e) {
+                if (param1.equals(cg.field_k)) {
+                  si.field_g = uf.field_l;
+                  stackIn_8_0 = ScorePopup.field_g;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
-              si.field_g = tf.field_d;
+              si.field_g = IntrusiveDeque.field_d;
               cg.field_k = param1;
-              me.field_g = null;
+              ScorePopup.field_g = null;
               stackIn_10_0 = null;
               decompiledRegionSelector0 = 1;
-              break L0;
             } else {
               return null;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_13_0 = (RuntimeException) (var2);
 
-            stackIn_13_1 = new StringBuilder().append("cl.A(").append(param0).append(',');
+          stackIn_13_1 = new StringBuilder().append("cl.A(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
+          if (param1 == null) {
+            stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+            stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+            stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+            stackIn_14_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }

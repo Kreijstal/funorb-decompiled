@@ -7,10 +7,10 @@ final class cg extends ia {
     static String field_k;
 
     final static int a(CharSequence param0, boolean param1, char param2) {
+        int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int var5 = 0;
         int stackIn_9_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -20,54 +20,34 @@ final class cg extends ia {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              var3_int = 0;
-              if (param1) {
-                break L1;
-              } else {
-                cg.b(false);
-                break L1;
-              }
+            var3_int = 0;
+            if (!param1) {
+              cg.b(false);
             }
             var4 = param0.length();
-            var5 = 0;
-            L2: while (true) {
-              if (var5 >= var4) {
-                stackIn_9_0 = var3_int;
-                break L0;
-              } else {
-                L3: {
-                  if (param0.charAt(var5) == param2) {
-                    var3_int++;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                var5++;
-                continue L2;
+            for (var5 = 0; var5 < var4; var5++) {
+              if (param0.charAt(var5) == param2) {
+                var3_int++;
               }
             }
+            stackIn_9_0 = var3_int;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_12_0 = (RuntimeException) (var3);
 
-            stackIn_12_1 = new StringBuilder().append("cg.K(");
+          stackIn_12_1 = new StringBuilder().append("cg.K(");
 
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          if (param0 == null) {
+            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+            stackIn_13_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ')');
         }
@@ -91,12 +71,12 @@ final class cg extends ia {
         }
         param0 = param0 - this.field_j;
         this.field_j = 0;
-        this.field_l.field_c = this.field_c;
-        this.field_l.field_b = this.field_b;
-        this.field_c.field_b = (hf) ((Object) this.field_l);
-        this.field_b.field_c = (hf) ((Object) this.field_l);
-        this.field_c = null;
-        this.field_b = null;
+        this.field_l.previousNode = this.previousNode;
+        this.field_l.nextNode = this.nextNode;
+        this.previousNode.nextNode = (IntrusiveNode) ((Object) this.field_l);
+        this.nextNode.previousNode = (IntrusiveNode) ((Object) this.field_l);
+        this.previousNode = null;
+        this.nextNode = null;
         if (!(0 >= param0)) {
             this.field_l.b(param0);
         }
@@ -138,52 +118,39 @@ final class cg extends ia {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          L0: {
-            if (this.field_j > param2) {
-              this.field_j = this.field_j - param2;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                param1 = param1 + this.field_j;
-                param2 = param2 - this.field_j;
-                this.field_j = 0;
-                this.field_l.field_b = this.field_b;
-                this.field_l.field_c = this.field_c;
-                this.field_c.field_b = (hf) ((Object) this.field_l);
-                this.field_b.field_c = (hf) ((Object) this.field_l);
-                this.field_c = null;
-                this.field_b = null;
-                if (-1 <= (param2 ^ -1)) {
-                  break L1;
-                } else {
-                  this.field_l.a(param0, param1, param2);
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
+          if (this.field_j > param2) {
+            this.field_j = this.field_j - param2;
+            decompiledRegionSelector0 = 0;
+          } else {
+            param1 = param1 + this.field_j;
+            param2 = param2 - this.field_j;
+            this.field_j = 0;
+            this.field_l.nextNode = this.nextNode;
+            this.field_l.previousNode = this.previousNode;
+            this.previousNode.nextNode = (IntrusiveNode) ((Object) this.field_l);
+            this.nextNode.previousNode = (IntrusiveNode) ((Object) this.field_l);
+            this.previousNode = null;
+            this.nextNode = null;
+            if (-1 > (param2 ^ -1)) {
+              this.field_l.a(param0, param1, param2);
             }
+            decompiledRegionSelector0 = 1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = (RuntimeException) (var4);
 
-            stackIn_9_1 = new StringBuilder().append("cg.C(");
+          stackIn_9_1 = new StringBuilder().append("cg.C(");
 
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          if (param0 == null) {
+            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+            stackIn_10_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ')');
         }

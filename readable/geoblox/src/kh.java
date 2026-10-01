@@ -3,8 +3,8 @@
  */
 final class kh implements Runnable {
     d field_b;
-    static Sprite_dm[] field_h;
-    volatile AudioOutput_qk[] field_g;
+    static Sprite[] field_h;
+    volatile AudioOutput[] field_g;
     static String field_a;
     static int field_d;
     volatile boolean field_c;
@@ -15,7 +15,7 @@ final class kh implements Runnable {
         field_a = null;
         field_h = null;
         if (param0 < 82) {
-            field_h = (Sprite_dm[]) null;
+            field_h = (Sprite[]) null;
         }
     }
 
@@ -55,7 +55,7 @@ final class kh implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        AudioOutput_qk var2 = null;
+        AudioOutput var2 = null;
         int var4 = Geoblox.field_C;
         this.field_c = true;
         try {
@@ -79,12 +79,12 @@ final class kh implements Runnable {
     }
 
     kh() {
-        this.field_g = new AudioOutput_qk[2];
+        this.field_g = new AudioOutput[2];
         this.field_f = false;
         this.field_c = false;
     }
 
     static {
-        field_h = new Sprite_dm[10];
+        field_h = new Sprite[10];
     }
 }

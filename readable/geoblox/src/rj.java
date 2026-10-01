@@ -45,30 +45,23 @@ final class rj {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var2_int = 12 % ((-57 - param0) / 57);
-            stackIn_1_0 = param1.b(true);
-            break L0;
-          }
+          var2_int = 12 % ((-57 - param0) / 57);
+          stackIn_1_0 = param1.b(true);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_4_0 = (RuntimeException) (var2);
 
-            stackIn_4_1 = new StringBuilder().append("rj.C(").append(param0).append(',');
+          stackIn_4_1 = new StringBuilder().append("rj.C(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          if (param1 == null) {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+            stackIn_5_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }

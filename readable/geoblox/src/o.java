@@ -7,20 +7,17 @@ final class o extends pb {
     byte[] field_y;
 
     final int g(int param0) {
-        if (param0 == 0) {
-          if (this.field_u) {
+        if (param0 != 0) {
+            this.field_w = (jh) null;
+            if (!this.field_u) {
+                return 100;
+            }
             return 0;
-          } else {
-            return 100;
-          }
-        } else {
-          this.field_w = (jh) null;
-          if (this.field_u) {
-            return 0;
-          } else {
-            return 100;
-          }
         }
+        if (!this.field_u) {
+            return 100;
+        }
+        return 0;
     }
 
     final static void a(int param0, wc param1, int param2) {

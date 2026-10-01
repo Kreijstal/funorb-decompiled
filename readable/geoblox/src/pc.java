@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pc extends hf {
+final class pc extends IntrusiveNode {
     gd field_i;
     static int field_p;
     int field_y;
@@ -14,7 +14,7 @@ final class pc extends hf {
     vl field_z;
     int field_E;
     int field_s;
-    PcmSampleStream_kl field_u;
+    PcmSampleStream field_u;
     int field_m;
     int field_t;
     int field_h;
@@ -29,37 +29,32 @@ final class pc extends hf {
     t field_x;
 
     final static void a(byte param0) {
-        int var1;
-        var1 = -125 / ((param0 - 56) / 54);
+        int var1 = -125 / ((param0 - 56) / 54);
         jk.a((byte) -90);
-        if (null == f.field_kb) {
-          kj.c(-11099);
-          hc.b(true);
-          dk.a((byte) -121);
-          if (vh.g(-88)) {
-            fj.field_q.a(1, (byte) -27);
-            cm.a(-1, 0);
+        if (null != f.field_kb) {
+            nb.a(-2, f.field_kb);
+            kj.c(-11099);
+            hc.b(true);
+            dk.a((byte) -121);
+            if (vh.g(-88)) {
+                fj.field_q.a(1, (byte) -27);
+                cm.a(-1, 0);
+                jl.a((byte) -126);
+                return;
+            }
             jl.a((byte) -126);
             return;
-          } else {
-            jl.a((byte) -126);
-            return;
-          }
-        } else {
-          nb.a(-2, f.field_kb);
-          kj.c(-11099);
-          hc.b(true);
-          dk.a((byte) -121);
-          if (!vh.g(-88)) {
-            jl.a((byte) -126);
-            return;
-          } else {
-            fj.field_q.a(1, (byte) -27);
-            cm.a(-1, 0);
-            jl.a((byte) -126);
-            return;
-          }
         }
+        kj.c(-11099);
+        hc.b(true);
+        dk.a((byte) -121);
+        if (!vh.g(-88)) {
+            jl.a((byte) -126);
+            return;
+        }
+        fj.field_q.a(1, (byte) -27);
+        cm.a(-1, 0);
+        jl.a((byte) -126);
     }
 
     final static void a(int param0, boolean param1) {
@@ -74,16 +69,14 @@ final class pc extends hf {
     final void b(int param0) {
         this.field_u = null;
         this.field_x = null;
-        if (param0 != -1) {
-          field_f = 41;
-          this.field_i = null;
-          this.field_z = null;
-          return;
-        } else {
-          this.field_i = null;
-          this.field_z = null;
-          return;
+        if (param0 == -1) {
+            this.field_i = null;
+            this.field_z = null;
+            return;
         }
+        field_f = 41;
+        this.field_i = null;
+        this.field_z = null;
     }
 
     pc() {

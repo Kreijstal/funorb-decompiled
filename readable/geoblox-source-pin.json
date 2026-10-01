@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "commit": "dd9828b3532fc0cd3f452b6154bee6d9f77c658c",
+  "subdirectory": "games/geoblox",
+  "inputTreeSha256": "4ffc26d9728c403266022452f0c0ca68ea28ff61c26d108b7bd165e6ab92e24c",
+  "generators": {
+    "dekoblokoWork": {
+      "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+      "trackedClean": true
+    },
+    "javaTools": {
+      "commit": "b1e30cf3e762f15a2a2d639226df7a54ad5f4d81",
+      "trackedClean": true
+    }
+  },
+  "originalPublicationCommit": "3230e3092c687d210ba068bdfd7667a5213d22fb",
+  "upstreamNamingGeneratorCommit": "d41315508e071f6bd672d65eb2f5a8d428648d6f",
+  "sourceRepository": "Kreijstal/funorb-decompiled",
+  "reviewedRulesCommit": "fd7dbd89304f5c494223df22d6888b35fc65c15d",
+  "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
+}

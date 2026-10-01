@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kg extends rc {
+class kg extends DualLinkNode {
     static int field_n;
     static boolean field_o;
     static java.applet.Applet field_m;

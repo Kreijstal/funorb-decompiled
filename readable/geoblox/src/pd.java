@@ -31,14 +31,9 @@ final class pd {
     }
 
     private final void a(int param0, java.awt.Frame param1) {
-        L0: {
-          this.field_a.setFullScreenWindow((java.awt.Window) ((Object) param1));
-          if (param0 == -779675038) {
-            break L0;
-          } else {
-            this.field_a = (java.awt.GraphicsDevice) null;
-            break L0;
-          }
+        this.field_a.setFullScreenWindow((java.awt.Window) ((Object) param1));
+        if (param0 != -779675038) {
+          this.field_a = (java.awt.GraphicsDevice) null;
         }
     }
 
@@ -90,9 +85,7 @@ final class pd {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
             this.a(-779675038, param0);
-            if (param4 != 0) {
-              break L0;
-            } else {
+            if (param4 == 0) {
               var6 = this.field_b.getRefreshRate();
               var7 = this.field_a.getDisplayModes();
               var8 = 0;
@@ -109,17 +102,11 @@ final class pd {
                   if (var7[var9].getWidth() == param1) {
                     if (param2 == var7[var9].getHeight()) {
                       if (var7[var9].getBitDepth() == param3) {
-                        L2: {
-                          var10 = var7[var9].getRefreshRate();
-                          if (var8 == 0) {
-                            break L2;
-                          } else {
-                            if (Math.abs(-var6 + var10) < Math.abs(-var6 + param4)) {
-                              break L2;
-                            } else {
-                              var9++;
-                              continue L1;
-                            }
+                        var10 = var7[var9].getRefreshRate();
+                        if (var8 != 0) {
+                          if (Math.abs(-var6 + var10) >= Math.abs(-var6 + param4)) {
+                            var9++;
+                            continue L1;
                           }
                         }
                         param4 = var10;

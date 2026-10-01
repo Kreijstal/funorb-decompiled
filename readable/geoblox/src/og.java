@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends rc {
-    static GameScreen_c[] screens_field_q;
-    static float field_r;
+final class og extends DualLinkNode {
+    static GameScreen[] screens;
+    static float entityMotionSpeed;
     static int field_n;
     int[] field_m;
     private int[] field_o;
@@ -12,43 +12,51 @@ final class og extends rc {
 
     final static String e(int param0) {
         int var2 = 0;
-        String var7 = null;
-        int var3 = 0;
-        int var4 = 0;
-        String var8 = null;
-        int var5 = Geoblox.field_C;
-        String var6 = "(" + ad.field_o + " " + dc.field_b + " " + kg.field_n + ") " + me.field_l;
-        String var1 = var6;
-        if (0 < p.field_k) {
+        String var1;
+        int var3;
+        int var4;
+        int var5;
+        String var6;
+        String var7;
+        String var8;
+        L0: {
+          var5 = Geoblox.field_C;
+          var6 = "(" + ad.field_o + " " + dc.field_b + " " + kg.field_n + ") " + ScorePopup.field_l;
+          var1 = var6;
+          if (0 < p.field_k) {
             var1 = var6 + ":";
             for (var2 = 0; var2 < p.field_k; var2++) {
-                var7 = var1 + ' ';
-                var1 = var7;
-                var3 = 255 & eh.field_d.field_j[var2];
-                var4 = var3 >> -88682940;
-                var3 = var3 & 15;
-                if (-11 < (var4 ^ -1)) {
-                    var4 += 48;
-                } else {
-                    var4 += 55;
-                }
-                if ((var3 ^ -1) <= -11) {
-                    var3 += 55;
-                } else {
-                    var3 += 48;
-                }
-                var8 = var7 + (char)var4;
-                var1 = var8 + (char)var3;
+              var7 = var1 + ' ';
+              var1 = var7;
+              var3 = 255 & eh.field_d.field_j[var2];
+              var4 = var3 >> -88682940;
+              var3 = var3 & 15;
+              if (-11 >= (var4 ^ -1)) {
+                var4 += 55;
+              } else {
+                var4 += 48;
+              }
+              if ((var3 ^ -1) > -11) {
+                var3 += 48;
+              } else {
+                var3 += 55;
+              }
+              var8 = var7 + (char)var4;
+              var1 = var8 + (char)var3;
             }
+            break L0;
+          }
         }
-        if (param0 != 55) {
-            return (String) null;
+        if (param0 == 55) {
+          return var1;
+        } else {
+          return (String) null;
         }
-        return var1;
     }
 
     private final void a(int param0, qc param1, int param2) {
         int[] array$0 = null;
+        int var8 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -60,105 +68,68 @@ final class og extends rc {
         int var5 = 0;
         int var6 = 0;
         ck var7 = null;
-        int var8 = 0;
         int var9 = 0;
         qc var10 = null;
         var9 = Geoblox.field_C;
         try {
-          L0: {
-            L1: {
-              if (1 == param0) {
-                this.field_p = uj.a('<', true, param1.e((byte) 116));
-                break L1;
-              } else {
-                if (2 != param0) {
-                  if (3 != param0) {
-                    if (-5 != (param0 ^ -1)) {
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  } else {
-                    var4_int = param1.c((byte) 34);
-                    this.field_s = new int[var4_int][];
-                    this.field_o = new int[var4_int];
-                    var5 = 0;
-                    L2: while (true) {
-                      if (var4_int <= var5) {
-                        break L1;
-                      } else {
-                        L3: {
-                          var6 = param1.b(true);
-                          var7 = b.a(false, var6);
-                          if (var7 != null) {
-                            this.field_o[var5] = var6;
-                            array$0 = new int[var7.field_a];
-                            this.field_s[var5] = array$0;
-                            var8 = 0;
-                            L4: while (true) {
-                              if (var7.field_a <= var8) {
-                                break L3;
-                              } else {
-                                this.field_s[var5][var8] = param1.b(true);
-                                var8++;
-                                continue L4;
-                              }
-                            }
-                          } else {
-                            break L3;
-                          }
-                        }
-                        var5++;
-                        continue L2;
-                      }
-                    }
+          L1: {
+            if (1 == param0) {
+              this.field_p = uj.a('<', true, param1.e((byte) 116));
+            } else {
+              if (2 != param0) {
+                if (3 != param0) {
+                  if (-5 != (param0 ^ -1)) {
                   }
                 } else {
                   var4_int = param1.c((byte) 34);
-                  this.field_m = new int[var4_int];
-                  var5 = 0;
-                  L5: while (true) {
-                    if (var5 >= var4_int) {
-                      break L1;
-                    } else {
-                      this.field_m[var5] = param1.b(true);
-                      var5++;
-                      continue L5;
+                  this.field_s = new int[var4_int][];
+                  this.field_o = new int[var4_int];
+                  for (var5 = 0; var4_int > var5; var5++) {
+                    L3: {
+                      var6 = param1.b(true);
+                      var7 = b.a(false, var6);
+                      if (var7 != null) {
+                        this.field_o[var5] = var6;
+                        array$0 = new int[var7.field_a];
+                        this.field_s[var5] = array$0;
+                        for (var8 = 0; var7.field_a > var8; var8++) {
+                          this.field_s[var5][var8] = param1.b(true);
+                        }
+                        break L3;
+                      }
                     }
                   }
+                  break L1;
                 }
-              }
-            }
-            L6: {
-              if (param2 == -26093) {
-                break L6;
               } else {
-                var10 = (qc) null;
-                this.a(-112, (qc) null);
-                break L6;
+                var4_int = param1.c((byte) 34);
+                this.field_m = new int[var4_int];
+                for (var5 = 0; var5 < var4_int; var5++) {
+                  this.field_m[var5] = param1.b(true);
+                }
+                break L1;
               }
             }
-            break L0;
+          }
+          if (param2 != -26093) {
+            var10 = (qc) null;
+            this.a(-112, (qc) null);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var4 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var4);
+          var4 = decompiledCaughtException;
+          stackIn_23_0 = (RuntimeException) (var4);
 
-            stackIn_23_1 = new StringBuilder().append("og.H(").append(param0).append(',');
+          stackIn_23_1 = new StringBuilder().append("og.H(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L7;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L7;
-            }
+          if (param1 == null) {
+            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+            stackIn_24_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param2 + ')');
         }
@@ -168,7 +139,7 @@ final class og extends rc {
         int var2 = 0;
         int var3 = Geoblox.field_C;
         if (param0 != 119) {
-            field_r = 0.380857914686203f;
+            entityMotionSpeed = 0.380857914686203f;
         }
         if (!(this.field_m == null)) {
             for (var2 = 0; this.field_m.length > var2; var2++) {
@@ -181,7 +152,7 @@ final class og extends rc {
         if (param0 < 71) {
             og.e(41);
         }
-        screens_field_q = null;
+        screens = null;
     }
 
     final String e(byte param0) {
@@ -250,28 +221,23 @@ final class og extends rc {
               }
             } else {
               decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = (RuntimeException) (var3);
 
-            stackIn_9_1 = new StringBuilder().append("og.B(").append(param0).append(',');
+          stackIn_9_1 = new StringBuilder().append("og.B(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          if (param1 == null) {
+            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+            stackIn_10_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
@@ -296,6 +262,6 @@ final class og extends rc {
     }
 
     static {
-        screens_field_q = new GameScreen_c[9];
+        screens = new GameScreen[9];
     }
 }

@@ -5,11 +5,11 @@ import java.util.*;
 
 final class ra implements Iterable {
     static String field_b;
-    rc field_c;
+    DualLinkNode field_c;
     static int field_d;
-    static tf field_a;
+    static IntrusiveDeque availableEntities;
 
-    final void a(int param0, rc param1) {
+    final void a(int param0, DualLinkNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -18,45 +18,32 @@ final class ra implements Iterable {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1.field_l == null) {
-                break L1;
-              } else {
-                param1.a((byte) 124);
-                break L1;
-              }
-            }
-            param1.field_l = this.field_c.field_l;
-            param1.field_k = this.field_c;
-            param1.field_l.field_k = param1;
-            param1.field_k.field_l = param1;
-            if (param0 == -1) {
-              break L0;
-            } else {
-              this.iterator();
-              return;
-            }
+          if (param1.previousSecondaryNode != null) {
+            param1.unlinkSecondaryNode((byte) 124);
+          }
+          param1.previousSecondaryNode = this.field_c.previousSecondaryNode;
+          param1.nextSecondaryNode = this.field_c;
+          param1.previousSecondaryNode.nextSecondaryNode = param1;
+          param1.nextSecondaryNode.previousSecondaryNode = param1;
+          if (param0 != -1) {
+            this.iterator();
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = (RuntimeException) (var3);
 
-            stackIn_7_1 = new StringBuilder().append("ra.C(").append(param0).append(',');
+          stackIn_7_1 = new StringBuilder().append("ra.C(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          if (param1 == null) {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
@@ -88,150 +75,90 @@ final class ra implements Iterable {
         int var3;
         int var4;
         int var5;
-        if (el.gameplaySession_field_o.field_Y) {
+        if (el.gameplaySession.tutorialMode) {
           return;
         } else {
           var3 = 1 << param2;
           if ((vl.field_p & var3) == 0) {
-            L0: {
-              ug.field_c = ug.field_c | var3;
-              el.gameplaySession_field_o.field_e = el.gameplaySession_field_o.field_e + 1;
-              var4 = param2;
-              if (-1 == (1 << var4 & dc.field_a ^ -1)) {
-                stackIn_8_0 = 0;
-                break L0;
-              } else {
-                stackIn_8_0 = 1;
-                break L0;
-              }
+            ug.field_c = ug.field_c | var3;
+            el.gameplaySession.newActionCount = el.gameplaySession.newActionCount + 1;
+            var4 = param2;
+            if (-1 == (1 << var4 & dc.field_a ^ -1)) {
+              stackIn_8_0 = 0;
+            } else {
+              stackIn_8_0 = 1;
             }
             var5 = stackIn_8_0;
             if (param1 < -47) {
               if (var5 == 0) {
-                L1: {
-                  dc.field_a = dc.field_a | 1 << var4;
-                  el.field_g = el.field_g - (1 << var4);
-                  vl.field_p = vl.field_p | var3;
-                  if (!pb.field_t.c(13519)) {
-                    stackIn_45_0 = 0;
-                    break L1;
-                  } else {
-                    stackIn_45_0 = 1;
-                    break L1;
-                  }
+                dc.field_a = dc.field_a | 1 << var4;
+                el.field_g = el.field_g - (1 << var4);
+                vl.field_p = vl.field_p | var3;
+                if (!pb.pendingActionMarkers.isEmpty(13519)) {
+                  stackIn_45_0 = 0;
+                } else {
+                  stackIn_45_0 = 1;
                 }
-                L2: {
-                  var4 = stackIn_45_0;
-                  pb.field_t.a(-35, new PendingActionMarker_nj(param2));
-                  if (var4 != 0) {
-                    gf.a((byte) -122);
-                    break L2;
-                  } else {
-                    break L2;
-                  }
+                var4 = stackIn_45_0;
+                pb.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
+                if (var4 != 0) {
+                  gf.a((byte) -122);
                 }
-                L3: {
-                  if (!el.gameplaySession_field_o.field_K) {
-                    GameplayEntity_ja.field_A.a(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
-                    break L3;
-                  } else {
-                    break L3;
-                  }
+                if (!el.gameplaySession.submissionBlocked) {
+                  GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
                 }
                 return;
               } else {
-                L4: {
-                  vl.field_p = vl.field_p | var3;
-                  if (!pb.field_t.c(13519)) {
-                    stackIn_35_0 = 0;
-                    break L4;
-                  } else {
-                    stackIn_35_0 = 1;
-                    break L4;
-                  }
+                vl.field_p = vl.field_p | var3;
+                if (!pb.pendingActionMarkers.isEmpty(13519)) {
+                  stackIn_35_0 = 0;
+                } else {
+                  stackIn_35_0 = 1;
                 }
-                L5: {
-                  var4 = stackIn_35_0;
-                  pb.field_t.a(-35, new PendingActionMarker_nj(param2));
-                  if (var4 != 0) {
-                    gf.a((byte) -122);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
+                var4 = stackIn_35_0;
+                pb.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
+                if (var4 != 0) {
+                  gf.a((byte) -122);
                 }
-                L6: {
-                  if (!el.gameplaySession_field_o.field_K) {
-                    GameplayEntity_ja.field_A.a(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
-                    break L6;
-                  } else {
-                    break L6;
-                  }
+                if (!el.gameplaySession.submissionBlocked) {
+                  GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
                 }
                 return;
               }
             } else {
               field_b = (String) null;
               if (var5 != 0) {
-                L7: {
-                  vl.field_p = vl.field_p | var3;
-                  if (!pb.field_t.c(13519)) {
-                    stackIn_23_0 = 0;
-                    break L7;
-                  } else {
-                    stackIn_23_0 = 1;
-                    break L7;
-                  }
+                vl.field_p = vl.field_p | var3;
+                if (!pb.pendingActionMarkers.isEmpty(13519)) {
+                  stackIn_23_0 = 0;
+                } else {
+                  stackIn_23_0 = 1;
                 }
-                L8: {
-                  var4 = stackIn_23_0;
-                  pb.field_t.a(-35, new PendingActionMarker_nj(param2));
-                  if (var4 != 0) {
-                    gf.a((byte) -122);
-                    break L8;
-                  } else {
-                    break L8;
-                  }
+                var4 = stackIn_23_0;
+                pb.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
+                if (var4 != 0) {
+                  gf.a((byte) -122);
                 }
-                L9: {
-                  if (!el.gameplaySession_field_o.field_K) {
-                    GameplayEntity_ja.field_A.a(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
-                    break L9;
-                  } else {
-                    break L9;
-                  }
+                if (!el.gameplaySession.submissionBlocked) {
+                  GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
                 }
                 return;
               } else {
-                L10: {
-                  dc.field_a = dc.field_a | 1 << var4;
-                  el.field_g = el.field_g - (1 << var4);
-                  vl.field_p = vl.field_p | var3;
-                  if (!pb.field_t.c(13519)) {
-                    stackIn_13_0 = 0;
-                    break L10;
-                  } else {
-                    stackIn_13_0 = 1;
-                    break L10;
-                  }
+                dc.field_a = dc.field_a | 1 << var4;
+                el.field_g = el.field_g - (1 << var4);
+                vl.field_p = vl.field_p | var3;
+                if (!pb.pendingActionMarkers.isEmpty(13519)) {
+                  stackIn_13_0 = 0;
+                } else {
+                  stackIn_13_0 = 1;
                 }
-                L11: {
-                  var4 = stackIn_13_0;
-                  pb.field_t.a(-35, new PendingActionMarker_nj(param2));
-                  if (var4 != 0) {
-                    gf.a((byte) -122);
-                    break L11;
-                  } else {
-                    break L11;
-                  }
+                var4 = stackIn_13_0;
+                pb.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
+                if (var4 != 0) {
+                  gf.a((byte) -122);
                 }
-                L12: {
-                  if (!el.gameplaySession_field_o.field_K) {
-                    GameplayEntity_ja.field_A.a(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
-                    break L12;
-                  } else {
-                    break L12;
-                  }
+                if (!el.gameplaySession.submissionBlocked) {
+                  GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
                 }
                 return;
               }
@@ -260,15 +187,10 @@ final class ra implements Iterable {
         var4 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              var2_int = param1.charAt(0);
-              if (param0 == 18725) {
-                break L1;
-              } else {
-                var5 = (String) null;
-                ra.a(20, (String) null);
-                break L1;
-              }
+            var2_int = param1.charAt(0);
+            if (param0 != 18725) {
+              var5 = (String) null;
+              ra.a(20, (String) null);
             }
             var3 = 1;
             L2: while (true) {
@@ -290,23 +212,19 @@ final class ra implements Iterable {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_13_0 = (RuntimeException) (var2);
 
-            stackIn_13_1 = new StringBuilder().append("ra.E(").append(param0).append(',');
+          stackIn_13_1 = new StringBuilder().append("ra.E(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
+          if (param1 == null) {
+            stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+            stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
+            stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
+            stackIn_14_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
@@ -322,24 +240,21 @@ final class ra implements Iterable {
     }
 
     public static void a(int param0) {
-        field_a = null;
+        availableEntities = null;
         field_b = null;
         if (param0 != -1) {
             field_d = -36;
         }
     }
 
-    final rc a(byte param0) {
-        rc var2;
-        int var3;
-        var2 = this.field_c.field_k;
-        var3 = -14 % ((72 - param0) / 46);
-        if (this.field_c == var2) {
-          return null;
-        } else {
-          var2.a((byte) 126);
-          return var2;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_c.nextSecondaryNode;
+        int var3 = -14 % ((72 - param0) / 46);
+        if (this.field_c != var2) {
+            var2.unlinkSecondaryNode((byte) 126);
+            return var2;
         }
+        return null;
     }
 
     private ra() throws Throwable {
@@ -348,6 +263,6 @@ final class ra implements Iterable {
 
     static {
         field_b = "You have <%0> unread messages!";
-        field_a = new tf();
+        availableEntities = new IntrusiveDeque();
     }
 }

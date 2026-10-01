@@ -9,21 +9,21 @@ final class we {
 
     we() {
         int var1 = 0;
-        MusicDecoder_ua.readBits_b(16);
-        this.field_b = MusicDecoder_ua.readBit_b() != 0 ? MusicDecoder_ua.readBits_b(4) + 1 : 1;
-        if (MusicDecoder_ua.readBit_b() != 0) {
-            MusicDecoder_ua.readBits_b(8);
+        MusicDecoder.readBits(16);
+        this.field_b = MusicDecoder.readBit() != 0 ? MusicDecoder.readBits(4) + 1 : 1;
+        if (MusicDecoder.readBit() != 0) {
+            MusicDecoder.readBits(8);
         }
-        MusicDecoder_ua.readBits_b(2);
+        MusicDecoder.readBits(2);
         if (this.field_b > 1) {
-            this.field_a = MusicDecoder_ua.readBits_b(4);
+            this.field_a = MusicDecoder.readBits(4);
         }
         this.field_c = new int[this.field_b];
         this.field_d = new int[this.field_b];
         for (var1 = 0; var1 < this.field_b; var1++) {
-            MusicDecoder_ua.readBits_b(8);
-            this.field_c[var1] = MusicDecoder_ua.readBits_b(8);
-            this.field_d[var1] = MusicDecoder_ua.readBits_b(8);
+            MusicDecoder.readBits(8);
+            this.field_c[var1] = MusicDecoder.readBits(8);
+            this.field_d[var1] = MusicDecoder.readBits(8);
         }
     }
 }

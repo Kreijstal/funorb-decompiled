@@ -32,50 +32,44 @@ final class tj {
     }
 
     final static void b(byte param0) {
-        String var2;
-        String var3;
-        String var4;
-        String var5;
-        if (cf.field_i) {
-          if (Geoblox.field_y == null) {
-            if (param0 >= -47) {
-              field_a = (String) null;
-              var4 = ml.c(7789);
-              ml.field_t = new pf(var4, (String) null, true, false, false);
-              kd.field_e.a(false, hk.field_C);
-              hk.field_C.b(ml.field_t, -85);
-              hk.field_C.b(true);
-              return;
-            } else {
-              var5 = ml.c(7789);
-              ml.field_t = new pf(var5, (String) null, true, false, false);
-              kd.field_e.a(false, hk.field_C);
-              hk.field_C.b(ml.field_t, -85);
-              hk.field_C.b(true);
-              return;
-            }
-          } else {
-            Geoblox.field_y.h((byte) -104);
-            if (param0 < -47) {
-              var2 = ml.c(7789);
-              ml.field_t = new pf(var2, (String) null, true, false, false);
-              kd.field_e.a(false, hk.field_C);
-              hk.field_C.b(ml.field_t, -85);
-              hk.field_C.b(true);
-              return;
-            } else {
-              field_a = (String) null;
-              var3 = ml.c(7789);
-              ml.field_t = new pf(var3, (String) null, true, false, false);
-              kd.field_e.a(false, hk.field_C);
-              hk.field_C.b(ml.field_t, -85);
-              hk.field_C.b(true);
-              return;
-            }
-          }
-        } else {
-          throw new IllegalStateException();
+        String var3 = null;
+        String var2 = null;
+        String var5 = null;
+        if (!cf.field_i) {
+            throw new IllegalStateException();
         }
+        if (Geoblox.field_y != null) {
+            Geoblox.field_y.h((byte) -104);
+            if (param0 >= -47) {
+                field_a = (String) null;
+                var3 = ml.c(7789);
+                ml.field_t = new pf(var3, (String) null, true, false, false);
+                kd.field_e.a(false, hk.field_C);
+                hk.field_C.b(ml.field_t, -85);
+                hk.field_C.b(true);
+                return;
+            }
+            var2 = ml.c(7789);
+            ml.field_t = new pf(var2, (String) null, true, false, false);
+            kd.field_e.a(false, hk.field_C);
+            hk.field_C.b(ml.field_t, -85);
+            hk.field_C.b(true);
+            return;
+        }
+        if (param0 < -47) {
+            var5 = ml.c(7789);
+            ml.field_t = new pf(var5, (String) null, true, false, false);
+            kd.field_e.a(false, hk.field_C);
+            hk.field_C.b(ml.field_t, -85);
+            hk.field_C.b(true);
+            return;
+        }
+        field_a = (String) null;
+        String var4 = ml.c(7789);
+        ml.field_t = new pf(var4, (String) null, true, false, false);
+        kd.field_e.a(false, hk.field_C);
+        hk.field_C.b(ml.field_t, -85);
+        hk.field_C.b(true);
     }
 
     public static void a(int param0) {
@@ -94,13 +88,8 @@ final class tj {
     }
 
     final static int a(byte param0) {
-        L0: {
-          if (param0 == 73) {
-            break L0;
-          } else {
-            tj.a(-5);
-            break L0;
-          }
+        if (param0 != 73) {
+          tj.a(-5);
         }
         if (mi.field_C < 2) {
           return 0;

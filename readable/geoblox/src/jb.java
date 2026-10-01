@@ -183,71 +183,39 @@ final class jb {
         int var2;
         int var3;
         int var4;
-        L0: {
-          var2 = this.field_g.field_j[this.field_g.field_f];
-          if (var2 >= 0) {
-            var2 = this.field_c[param0];
-            break L0;
-          } else {
-            var2 = var2 & 255;
-            this.field_c[param0] = var2;
-            this.field_g.field_f = this.field_g.field_f + 1;
-            break L0;
-          }
+        var2 = this.field_g.field_j[this.field_g.field_f];
+        if (var2 >= 0) {
+          var2 = this.field_c[param0];
+        } else {
+          var2 = var2 & 255;
+          this.field_c[param0] = var2;
+          this.field_g.field_f = this.field_g.field_f + 1;
         }
-        L1: {
-          if (var2 == 240) {
-            break L1;
-          } else {
-            if (var2 != 247) {
-              return this.a(param0, var2);
-            } else {
-              break L1;
-            }
+        if (var2 != 240) {
+          if (var2 != 247) {
+            return this.a(param0, var2);
           }
         }
         L2: {
           var3 = this.field_g.g((byte) -109);
-          if (var2 != 247) {
-            break L2;
-          } else {
-            if (var3 <= 0) {
-              break L2;
-            } else {
+          if (var2 == 247) {
+            if (var3 > 0) {
               L3: {
-                L4: {
-                  var4 = this.field_g.field_j[this.field_g.field_f] & 255;
-                  if (var4 < 241) {
-                    break L4;
-                  } else {
-                    if (var4 <= 243) {
-                      break L3;
-                    } else {
-                      break L4;
-                    }
+                var4 = this.field_g.field_j[this.field_g.field_f] & 255;
+                if (var4 >= 241) {
+                  if (var4 <= 243) {
+                    break L3;
                   }
                 }
-                if (var4 == 246) {
-                  break L3;
-                } else {
-                  if (var4 == 248) {
-                    break L3;
-                  } else {
-                    L5: {
-                      if (var4 < 250) {
-                        break L5;
-                      } else {
-                        if (var4 <= 252) {
-                          break L3;
-                        } else {
-                          break L5;
-                        }
+                if (var4 != 246) {
+                  if (var4 != 248) {
+                    if (var4 >= 250) {
+                      if (var4 <= 252) {
+                        break L3;
                       }
                     }
                     if (var4 != 254) {
                       break L2;
-                    } else {
-                      break L3;
                     }
                   }
                 }
