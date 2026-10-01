@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "cf3828253ca40154f9663b82b3c2905c7fc8adb0",
+    "commit": "1936543883cbb6d694cd72afcab927accf076a10",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "e7e9406eeb406bb265fa0402b76046bfd0bfb36a8b31cba83022a4c0764b3a0b",
+  "inputTreeSha256": "bf67d298e8c884958b622e717be6ecd4c3009e033265219b88e9f293d7671fd9",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -1733,37 +1733,37 @@
       "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
     },
     {
-      "symbol": "L:gh.a(B)V#16",
+      "symbol": "L:gh.a(B)V#19",
       "originalName": "var8_ref_ja",
       "to": "renderedEntity",
       "evidence": "gh.java reads successive ja instances from entity lists and uses each sprite's position/lifetime to calculate its rendered coordinates and opacity."
     },
     {
-      "symbol": "L:gh.a(B)V#17",
+      "symbol": "L:gh.a(B)V#20",
       "originalName": "var9_float",
       "to": "entityOffsetX",
       "evidence": "gh.java computes entity.field_o-320 before applying the session board-angle sine/cosine transform."
     },
     {
-      "symbol": "L:gh.a(B)V#19",
+      "symbol": "L:gh.a(B)V#22",
       "originalName": "var10_float",
       "to": "entityOffsetY",
       "evidence": "gh.java computes entity.field_v-240 before applying the session board-angle sine/cosine transform."
     },
     {
-      "symbol": "L:gh.a(B)V#21",
+      "symbol": "L:gh.a(B)V#24",
       "originalName": "var11",
       "to": "renderedEntityX",
       "evidence": "gh.java derives var11 from the entity offsets and board-angle rotation, then passes it to vb.d for entity drawing."
     },
     {
-      "symbol": "L:gh.a(B)V#22",
+      "symbol": "L:gh.a(B)V#25",
       "originalName": "var12",
       "to": "renderedEntityY",
       "evidence": "gh.java derives var12 from the entity offsets and board-angle rotation, then passes it to vb.d for entity drawing."
     },
     {
-      "symbol": "L:gh.a(B)V#23",
+      "symbol": "L:gh.a(B)V#26",
       "originalName": "var13",
       "to": "entityOpacity",
       "evidence": "gh.java computes 255-entity.field_r*255/entity.field_p, clamps the result to 11..255 and passes it as the drawing alpha."
@@ -1805,13 +1805,13 @@
       "evidence": "Result render uses 920 minus the scene tick as shrinking diameter and displays resultBonusPoints in the shrinking/countdown phases."
     },
     {
-      "symbol": "L:gh.b(B)V#2",
+      "symbol": "L:gh.b(B)V#6",
       "to": "precedingThemeId",
       "originalName": "var2",
       "evidence": "Scene transition searches the theme list, wraps to the preceding entry and uses that ID for the existing action dispatch. The reused index later holds the theme ID."
     },
     {
-      "symbol": "L:gh.b(B)V#3",
+      "symbol": "L:gh.b(B)V#7",
       "to": "themeIndexThenId",
       "originalName": "var3",
       "evidence": "Scene transition searches the theme list, wraps to the preceding entry and uses that ID for the existing action dispatch. The reused index later holds the theme ID."
@@ -3864,23 +3864,23 @@
     }
   ],
   "revision": 4,
-  "previousRulesSha256": "0cecb9337a3e546b690f22552c7f5484938c95c057cc40d814d272ac04d8cbaf",
-  "version": 8,
+  "previousRulesSha256": "58d4a9d3499d80bd4365d2f46258eecd88e851d302c0d62a6cea0a4f8b95a1b8",
+  "version": 7,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "e2b82224d6bb50c6e376af24692481581f78baa0",
+      "commit": "cc3be385def11a6ee0fa99a8bdb6fce77d3ad368",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "a82db967bd98714696f926b44fbd4fdfcf555f5cc66dd6b4b99a79e547a96a02",
-        "reproduce": "git archive --format=tar e2b82224d6bb50c6e376af24692481581f78baa0 | sha256sum",
+        "sha256": "62356e5d5e037e482d8dcb170f016d520b4a00182b13591ed1f726c3e9cae7dd",
+        "reproduce": "git archive --format=tar cc3be385def11a6ee0fa99a8bdb6fce77d3ad368 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
   },
   "upstreamNamingGeneratorCommit": "d41315508e071f6bd672d65eb2f5a8d428648d6f",
-  "namingMigrationSha256": "0e1f819caa608c6cc03be28c2ea21fbe70d13672170b1e808d2adab2ea0375cd"
+  "namingMigrationSha256": "689cfaf115fb9df4499e487494ed21bfef325569bded0004711da898dd866c0b"
 }

@@ -27,16 +27,16 @@ if (passSix.version !== 6 || passSix.previousRulesSha256 !== digest ||
     passSix.inputTreeSha256 !== previous.inputTreeSha256 ||
     JSON.stringify(passSix.renames) !== JSON.stringify(renames))
   throw new Error('Retained pass 6 does not match its reviewed rule lineage');
-if (pin.namingMigration !== 'rules/geoblox-v7-migration.json')
-  throw new Error('Changed input requires reviewed naming-rule migration');
-const migrationBytes = read(pin.namingMigration);
+const passSevenBytes = read('rules/geoblox-v7.json');
+const passSeven = JSON.parse(passSevenBytes);
+const migrationBytes = read('rules/geoblox-v7-migration.json');
 const migration = JSON.parse(migrationBytes);
 const sha256 = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 if (migration.schema !== 1 || migration.version !== 7 ||
     migration.previousRulesSha256 !== sha256(passSixBytes) ||
     migration.previousInputTreeSha256 !== passSix.inputTreeSha256 ||
-    migration.inputTreeSha256 !== pin.inputTreeSha256 ||
-    migration.javaToolsCommit !== pin.generators.javaTools.commit ||
+    migration.inputTreeSha256 !== passSeven.inputTreeSha256 ||
+    migration.javaToolsCommit !== passSeven.generators.javaTools.commit ||
     !Array.isArray(migration.identityChanges) || migration.identityChanges.length !== 0 ||
     migration.review.rulesRetained !== renames.length ||
     migration.review.originalSpellingGuardsMatched !== renames.length ||
@@ -44,10 +44,46 @@ if (migration.schema !== 1 || migration.version !== 7 ||
       renames.filter(rule => rule.symbol.startsWith('L:')).length ||
     migration.review.namedLocalsUniqueWithinMethodBeforeAndAfter !== true)
   throw new Error('Input or declaration identities differ from the reviewed pass-7 migration');
-const rules = {...passSix, version: 7, previousRulesSha256: sha256(passSixBytes),
-  namingMigrationSha256: sha256(migrationBytes), inputTreeSha256: pin.inputTreeSha256,
+const rebuiltPassSeven = {...passSix, version: 7, previousRulesSha256: sha256(passSixBytes),
+  namingMigrationSha256: sha256(migrationBytes), inputTreeSha256: passSeven.inputTreeSha256,
+  source: passSeven.source, generators: passSeven.generators, renames};
+if (passSevenBytes.toString() !== JSON.stringify(rebuiltPassSeven, null, 2) + '\n')
+  throw new Error('Retained pass 7 does not match its reviewed rule lineage');
+if (pin.namingMigration !== 'rules/geoblox-v8-migration.json')
+  throw new Error('Changed input requires reviewed naming-rule migration');
+const latestBytes = read(pin.namingMigration);
+const latest = JSON.parse(latestBytes);
+const localRules = renames.filter(rule => rule.symbol.startsWith('L:')).length;
+if (latest.schema !== 1 || latest.version !== 8 ||
+    latest.previousRulesSha256 !== sha256(passSevenBytes) ||
+    latest.previousInputTreeSha256 !== passSeven.inputTreeSha256 ||
+    latest.inputTreeSha256 !== pin.inputTreeSha256 ||
+    latest.javaToolsCommit !== pin.generators.javaTools.commit ||
+    !Array.isArray(latest.identityChanges) ||
+    latest.review.rulesRetained !== renames.length ||
+    latest.review.originalSpellingGuardsMatched !== renames.length ||
+    latest.review.namedLocalDeclarationIdentitiesMoved !== latest.identityChanges.length ||
+    latest.review.namedLocalDeclarationIdentitiesUnchanged + latest.identityChanges.length !== localRules ||
+    latest.review.namedLocalsUniqueWithinMethodBeforeAndAfter !== true)
+  throw new Error('Input or declaration identities differ from the reviewed pass-8 migration');
+const moves = new Map();
+for (const move of latest.identityChanges) {
+  const rule = renames.find(rule => rule.symbol === move.from);
+  if (!rule || !/^L:.+#\d+$/.test(move.from) || !/^L:.+#\d+$/.test(move.to) ||
+      move.from.slice(0, move.from.lastIndexOf('#')) !== move.to.slice(0, move.to.lastIndexOf('#')) ||
+      move.from === move.to || moves.has(move.from) || move.originalName !== rule.originalName ||
+      move.readableName !== rule.to || move.evidence !== rule.evidence)
+    throw new Error('Local identity differs from the reviewed pass-8 migration');
+  moves.set(move.from, move.to);
+}
+const migratedRenames = renames.map(rule => ({...rule, symbol: moves.get(rule.symbol) ?? rule.symbol}))
+  .sort((a, b) => a.symbol < b.symbol ? -1 : a.symbol > b.symbol ? 1 : 0);
+if (new Set(migratedRenames.map(rule => rule.symbol)).size !== migratedRenames.length)
+  throw new Error('Migrated naming rules have duplicate identities');
+const rules = {...passSeven, version: 8, previousRulesSha256: sha256(passSevenBytes),
+  namingMigrationSha256: sha256(latestBytes), inputTreeSha256: pin.inputTreeSha256,
   source: {repository: pin.sourceRepository, commit: pin.commit, subdirectory: pin.subdirectory},
-  generators: pin.generators, renames};
+  generators: pin.generators, renames: migratedRenames};
 const output = JSON.stringify(rules, null, 2) + '\n';
 const destination = path.join(root, 'geoblox-rules.json');
 const check = process.argv.includes('--check');

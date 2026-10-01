@@ -291,20 +291,20 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ec.b(I)Z#7` | `sortCursorThenFirstEntityId` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
 | `L:ec.b(I)Z#8` | `packedCandidateThenSecondEntityId` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
 | `L:ec.b(I)Z#9` | `thirdEntityId` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
-| `L:gh.a(B)V#19` | `renderedEntity` | gh.java reads successive ja instances from entity lists and uses each sprite's position/lifetime to calculate its rendered coordinates and opacity. |
-| `L:gh.a(B)V#20` | `entityOffsetX` | gh.java computes entity.field_o-320 before applying the session board-angle sine/cosine transform. |
-| `L:gh.a(B)V#22` | `entityOffsetY` | gh.java computes entity.field_v-240 before applying the session board-angle sine/cosine transform. |
-| `L:gh.a(B)V#24` | `renderedEntityX` | gh.java derives var11 from the entity offsets and board-angle rotation, then passes it to vb.d for entity drawing. |
-| `L:gh.a(B)V#25` | `renderedEntityY` | gh.java derives var12 from the entity offsets and board-angle rotation, then passes it to vb.d for entity drawing. |
-| `L:gh.a(B)V#26` | `entityOpacity` | gh.java computes 255-entity.field_r*255/entity.field_p, clamps the result to 11..255 and passes it as the drawing alpha. |
+| `L:gh.a(B)V#16` | `renderedEntity` | gh.java reads successive ja instances from entity lists and uses each sprite's position/lifetime to calculate its rendered coordinates and opacity. |
+| `L:gh.a(B)V#17` | `entityOffsetX` | gh.java computes entity.field_o-320 before applying the session board-angle sine/cosine transform. |
+| `L:gh.a(B)V#19` | `entityOffsetY` | gh.java computes entity.field_v-240 before applying the session board-angle sine/cosine transform. |
+| `L:gh.a(B)V#21` | `renderedEntityX` | gh.java derives var11 from the entity offsets and board-angle rotation, then passes it to vb.d for entity drawing. |
+| `L:gh.a(B)V#22` | `renderedEntityY` | gh.java derives var12 from the entity offsets and board-angle rotation, then passes it to vb.d for entity drawing. |
+| `L:gh.a(B)V#23` | `entityOpacity` | gh.java computes 255-entity.field_r*255/entity.field_p, clamps the result to 11..255 and passes it as the drawing alpha. |
 | `L:gh.a(BI)V#0` | `pointsForCounters` | Copies points amount for per-mode score counters. |
 | `L:gh.a(BI)V#1` | `counterSplitMode` | kd.field_c modulo three selects how added points are split across counters. |
 | `L:gh.a(BI)V#2` | `oneThirdPoints` | One third of added points in mixed counter mode. |
 | `L:gh.a(Z)V#0` | `shrinkingDiameter` | Result render uses 920 minus the scene tick as shrinking diameter and displays resultBonusPoints in the shrinking/countdown phases. |
 | `L:gh.a(Z)V#2` | `shrinkingBonusText` | Result render uses 920 minus the scene tick as shrinking diameter and displays resultBonusPoints in the shrinking/countdown phases. |
 | `L:gh.a(Z)V#3` | `countdownBonusText` | Result render uses 920 minus the scene tick as shrinking diameter and displays resultBonusPoints in the shrinking/countdown phases. |
-| `L:gh.b(B)V#6` | `precedingThemeId` | Scene transition searches the theme list, wraps to the preceding entry and uses that ID for the existing action dispatch. The reused index later holds the theme ID. |
-| `L:gh.b(B)V#7` | `themeIndexThenId` | Scene transition searches the theme list, wraps to the preceding entry and uses that ID for the existing action dispatch. The reused index later holds the theme ID. |
+| `L:gh.b(B)V#2` | `precedingThemeId` | Scene transition searches the theme list, wraps to the preceding entry and uses that ID for the existing action dispatch. The reused index later holds the theme ID. |
+| `L:gh.b(B)V#3` | `themeIndexThenId` | Scene transition searches the theme list, wraps to the preceding entry and uses that ID for the existing action dispatch. The reused index later holds the theme ID. |
 | `L:gh.e(I)V#0` | `remainingThemeReleases` | Normal HUD computes releasesPerTheme minus releasedInCurrentTheme. |
 | `L:gh.f(I)V#10` | `spriteOffsetFromCenterX` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
 | `L:gh.f(I)V#11` | `spriteOffsetFromCenterY` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |

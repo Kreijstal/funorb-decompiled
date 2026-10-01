@@ -271,11 +271,8 @@ final class GameplaySession {
 
     final void renderSession(byte param0) {
         int stackIn_49_0 = 0;
-        int stackIn_124_0 = 0;
-        int stackIn_124_1 = 0;
         int stackIn_168_0 = 0;
         int stackIn_168_1 = 0;
-        int statePc = 0;
         String var2_ref_String = null;
         int var2 = 0;
         int var3 = 0;
@@ -300,2923 +297,1171 @@ final class GameplaySession {
         int var14 = 0;
         IntrusiveDeque var15 = null;
         IntrusiveDeque var16 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var14 = Geoblox.field_C;
-                    if (!ll.themesLoaded[GameScreen.selectedThemeId]) {
-                        statePc = 3;
-                    } else {
-                        statePc = 39;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var3 = GameScreen.selectedThemeId;
-                    if ((var3 ^ -1) != -5) {
-                        statePc = 7;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (var14 == 0) {
-                        /* Inlined CFG state: 31. */
-                        {
+        var14 = Geoblox.field_C;
+        if (!ll.themesLoaded[GameScreen.selectedThemeId]) {
+          L0: {
+            L1: {
+              L2: {
+                L3: {
+                  L4: {
+                    L5: {
+                      L6: {
+                        var3 = GameScreen.selectedThemeId;
+                        if ((var3 ^ -1) == -5) {
+                          if (var14 == 0) {
                             var2_ref_String = "baking";
                             if (var14 == 0) {
-                                statePc = 38;
+                              break L0;
                             } else {
-                                statePc = 32;
+                              break L6;
                             }
-                            continue stateLoop;
+                          }
                         }
-                    } else {
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    if (-7 != (var3 ^ -1)) {
-                        statePc = 13;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 10. */
-                        {
+                        if (-7 == (var3 ^ -1)) {
+                          if (var14 == 0) {
+                            break L6;
+                          }
+                        }
+                        if (var3 == 5) {
+                          if (var14 == 0) {
+                            break L5;
+                          }
+                        }
+                        if (-1 == (var3 ^ -1)) {
+                          break L4;
+                        } else {
+                          if (3 == var3) {
                             if (var14 == 0) {
-                                statePc = 32;
-                            } else {
-                                statePc = 13;
+                              break L3;
                             }
-                            continue stateLoop;
+                          }
+                          if (-3 == (var3 ^ -1)) {
+                            break L2;
+                          } else {
+                            break L1;
+                          }
                         }
+                      }
+                      var2_ref_String = "space";
+                      if (var14 == 0) {
+                        break L0;
+                      }
                     }
-                }
-                case 13: {
-                    if (var3 != 5) {
-                        statePc = 19;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 16. */
-                        {
-                            if (var14 == 0) {
-                                statePc = 33;
-                            } else {
-                                statePc = 19;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 19: {
-                    if (-1 == (var3 ^ -1)) {
-                        statePc = 34;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 22. */
-                        {
-                            if (3 != var3) {
-                                statePc = 28;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 25. */
-                                {
-                                    if (var14 == 0) {
-                                        statePc = 35;
-                                    } else {
-                                        statePc = 28;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 28: {
-                    if (-3 == (var3 ^ -1)) {
-                        statePc = 36;
-                    } else {
-                        statePc = 37;
-                    }
-                    continue stateLoop;
-                }
-                case 32: {
-                    var2_ref_String = "space";
-                    if (var14 == 0) {
-                        statePc = 38;
-                    } else {
-                        statePc = 33;
-                    }
-                    continue stateLoop;
-                }
-                case 33: {
                     var2_ref_String = "sports";
                     if (var14 == 0) {
-                        statePc = 38;
-                    } else {
-                        statePc = 34;
+                      break L0;
                     }
-                    continue stateLoop;
+                  }
+                  var2_ref_String = "jewels";
+                  if (var14 == 0) {
+                    break L0;
+                  }
                 }
-                case 34: {
-                    var2_ref_String = "jewels";
-                    if (var14 == 0) {
-                        statePc = 38;
-                    } else {
-                        statePc = 35;
-                    }
-                    continue stateLoop;
+                var2_ref_String = "germs";
+                if (var14 == 0) {
+                  break L0;
                 }
-                case 35: {
-                    var2_ref_String = "germs";
-                    if (var14 == 0) {
-                        statePc = 38;
-                    } else {
-                        statePc = 36;
-                    }
-                    continue stateLoop;
-                }
-                case 36: {
-                    var2_ref_String = "sweets";
-                    if (var14 == 0) {
-                        statePc = 38;
-                    } else {
-                        statePc = 37;
-                    }
-                    continue stateLoop;
-                }
-                case 37: {
-                    var2_ref_String = "";
-                    statePc = 38;
-                    continue stateLoop;
-                }
-                case 38: {
-                    var3_ref_String = gf.a(ff.field_l, ll.field_f, var2_ref_String, wi.field_F, true);
-                    var4 = 30 + dd.field_G.a(var3_ref_String);
-                    ma.a(215, 320 - var4 / 2, 50, (byte) -92, var4, ll.field_h);
-                    dd.field_G.b(var3_ref_String, 320, 250, 0, -1);
-                    return;
-                }
-                case 39: {
-                    if (!ih.areEntityQueuesSettled(0)) {
-                        statePc = 48;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 40. */
-                        {
-                            if (!this.sceneTransitionRequested) {
-                                statePc = 48;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 43. */
-                                {
-                                    if (!this.sceneTransitionInProgress) {
-                                        statePc = 48;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 46. */
-                                        {
-                                            stackIn_49_0 = 1;
-                                            statePc = 49;
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 48: {
-                    stackIn_49_0 = 0;
-                    statePc = 49;
-                    continue stateLoop;
-                }
-                case 49: {
-                    var2 = stackIn_49_0;
-                    if (var2 != 0) {
-                        statePc = 62;
-                    } else {
-                        statePc = 50;
-                    }
-                    continue stateLoop;
-                }
-                case 50: {
-                    if (this.boardRasterDirty) {
-                        statePc = 57;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 53. */
-                        {
-                            oc.boardSceneRaster.e();
-                            if (!this.debugReducedRendering) {
-                                /* Inlined CFG state: 56. */
-                                {
-                                    gj.drawSpecialAttachedEntities((byte) -63);
-                                    if (var14 == 0) {
-                                        statePc = 62;
-                                    } else {
-                                        statePc = 57;
-                                    }
-                                    continue stateLoop;
-                                }
-                            } else {
-                                statePc = 62;
-                                continue stateLoop;
-                            }
-                        }
-                    }
-                }
-                case 57: {
-                    oc.boardSceneRaster.e();
-                    SoftwareRasterizer.c();
-                    if (!this.debugReducedRendering) {
-                        /* Inlined CFG state: 60. */
-                        {
-                            dc.drawAttachedEntities(7838);
-                            statePc = 61;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 61: {
-                    k.a(10, 90, 460, -27085, 460);
-                    this.boardRasterDirty = false;
-                    statePc = 62;
-                    continue stateLoop;
-                }
-                case 62: {
-                    sh.field_y.a(255);
-                    mf.field_a.b(0, 0);
-                    var3 = 4;
-                    var4 = 4;
-                    if (param0 < -28) {
-                        statePc = 65;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 63. */
-                        {
-                            this.updateSession(-63);
-                            statePc = 65;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 65: {
-                    if (this.field_L) {
-                        /* Inlined CFG state: 68. */
-                        {
-                            if (this.sceneAnimationTick > 266) {
-                                statePc = 70;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 69. */
-                                {
-                                    var5_float = (float)this.sceneAnimationTick / 266.0f;
-                                    var6_float = -var5_float + 1.0f;
-                                    var7_float = var6_float * var6_float;
-                                    var3 = (int)(0.5f + (70.0f * (2.0f * var5_float * var6_float) + 10.0f * var7_float + 220.0f * (var5_float * var5_float)));
-                                    var4 = (int)(170.0f * (var5_float * var5_float) + (var7_float * 10.0f + 140.0f * (var5_float * 2.0f * var6_float)) + 0.5f);
-                                    if (var14 == 0) {
-                                        statePc = 71;
-                                    } else {
-                                        statePc = 70;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        statePc = 71;
-                        continue stateLoop;
-                    }
-                }
-                case 70: {
-                    var3 = 220;
-                    var4 = 170;
-                    statePc = 71;
-                    continue stateLoop;
-                }
-                case 71: {
-                    if (!this.tutorialMode) {
-                        statePc = 77;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 72. */
-                        {
-                            var5 = 176 - this.updateTick / 2;
-                            if (10 > var5) {
-                                statePc = 75;
-                            } else {
-                                statePc = 76;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 75: {
-                    var5 = 10;
-                    statePc = 76;
-                    continue stateLoop;
-                }
-                case 76: {
-                    var6 = -fi.field_d.field_q + fi.field_d.field_o;
-                    var7_int = fi.field_d.c(v.field_n, 640) + 40;
-                    var8 = fi.field_d.b(v.field_n, 640) * var6 - -10;
-                    ma.a(var5, -(var7_int / 2) + 320, 20 + var8, (byte) -92, var7_int, ll.field_h);
-                    fi.field_d.b(v.field_n, 320, var5 + 28, 1, -1);
-                    fi.field_d.b(v.field_n, 319, 28 + var5, 1, -1);
-                    if (var14 == 0) {
-                        statePc = 88;
-                    } else {
-                        statePc = 77;
-                    }
-                    continue stateLoop;
-                }
-                case 77: {
-                    lj.field_d.b(var3, var4);
-                    if (0 != this.sessionPhase) {
-                        statePc = 83;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 80. */
-                        {
-                            if (!ih.areEntityQueuesSettled(0)) {
-                                statePc = 86;
-                            } else {
-                                statePc = 83;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 83: {
-                    vh.field_G.b(446, 410);
-                    if (var14 == 0) {
-                        statePc = 88;
-                    } else {
-                        statePc = 86;
-                    }
-                    continue stateLoop;
-                }
-                case 86: {
-                    g.field_i.b(468, 410);
-                    statePc = 88;
-                    continue stateLoop;
-                }
-                case 88: {
-                    if (this.tutorialMode) {
-                        statePc = 103;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 89. */
-                        {
-                            if (!ih.areEntityQueuesSettled(0)) {
-                                statePc = 101;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 92. */
-                                {
-                                    if (var2 == 0) {
-                                        statePc = 103;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 95. */
-                                        {
-                                            if (0 == this.sessionPhase) {
-                                                statePc = 101;
-                                                continue stateLoop;
-                                            } else {
-                                                /* Inlined CFG state: 98. */
-                                                {
-                                                    if (-2 != (this.sessionPhase ^ -1)) {
-                                                        statePc = 103;
-                                                    } else {
-                                                        statePc = 101;
-                                                    }
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 101: {
-                    this.renderProgressHud(-46);
-                    statePc = 103;
-                    continue stateLoop;
-                }
-                case 103: {
-                    if (!this.debugReducedRendering) {
-                        /* Inlined CFG state: 106. */
-                        {
-                            h.c(-1);
-                            statePc = 107;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 107;
-                        continue stateLoop;
-                    }
-                }
-                case 107: {
-                    if (this.debugReducedRendering) {
-                        statePc = 112;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 108. */
-                        {
-                            if (var2 == 0) {
-                                /* Inlined CFG state: 111. */
-                                {
-                                    oc.boardSceneRaster.b(0, 0);
-                                    statePc = 112;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                statePc = 112;
-                                continue stateLoop;
-                            }
-                        }
-                    }
-                }
-                case 112: {
-                    ij.h((byte) 18);
-                    if (!this.debugReducedRendering) {
-                        /* Inlined CFG state: 115. */
-                        {
-                            ni.f(484842465);
-                            statePc = 116;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 116;
-                        continue stateLoop;
-                    }
-                }
-                case 116: {
-                    jf.field_a.e();
-                    SoftwareRasterizer.c();
-                    ec.field_c.rotateNearest(ec.field_c.field_s << 1679206499, ec.field_c.field_o << 919227299, jf.field_a.field_s << -122785245, jf.field_a.field_o << 1137750627, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
-                    sh.field_y.a(255);
-                    w.a(jf.field_a, -(jf.field_a.field_s >> -199505663) + 320, -(jf.field_a.field_o >> -1092517823) + 240);
-                    if (!this.debugReducedRendering) {
-                        /* Inlined CFG state: 119. */
-                        {
-                            uh.d(4740);
-                            statePc = 120;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 120;
-                        continue stateLoop;
-                    }
-                }
-                case 120: {
-                    if (!this.showDebugOverview) {
-                        statePc = 169;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 121. */
-                        {
-                            af.field_a.e();
-                            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_b, 1118481);
-                            var5 = 16777215;
-                            SoftwareRasterizer.f(160, 120, 115, 16711680);
-                            var6 = 20;
-                            var15 = wd.spawnQueue;
-                            renderedEntity = (GameplayEntity) ((Object) var15.lastForIteration(false));
-                            statePc = 122;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 122: {
-                    if (renderedEntity == null) {
-                        statePc = 133;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 123. */
-                        {
-                            entityOffsetX = -320.0f + renderedEntity.positionX;
-                            entityOffsetY = -240.0f + renderedEntity.positionY;
-                            renderedEntityX = (int)(320.0 + (Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY));
-                            renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians)));
-                            entityOpacity = 255 - renderedEntity.remainingLifetimeTicks * 255 / renderedEntity.initialLifetimeTicks;
-                            stackIn_168_0 = 11;
-                            stackIn_124_0 = stackIn_168_0;
-                            stackIn_168_1 = entityOpacity;
-                            stackIn_124_1 = stackIn_168_1;
-                            if (var14 != 0) {
-                                statePc = 168;
-                            } else {
-                                statePc = 124;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 124: {
-                    if (stackIn_124_0 > stackIn_124_1) {
-                        /* Inlined CFG state: 127. */
-                        {
-                            entityOpacity = 11;
-                            statePc = 128;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 128;
-                        continue stateLoop;
-                    }
-                }
-                case 128: {
-                    if (-256 > (entityOpacity ^ -1)) {
-                        /* Inlined CFG state: 131. */
-                        {
-                            entityOpacity = 255;
-                            statePc = 132;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 132;
-                        continue stateLoop;
-                    }
-                }
-                case 132: {
-                    SoftwareRasterizer.d(renderedEntityX / 2, renderedEntityY / 2, var6, entityOpacity << 269082696 | entityOpacity << -327781456 | entityOpacity);
-                    renderedEntity = (GameplayEntity) ((Object) var15.previousForIteration(0));
-                    if (var14 == 0) {
-                        statePc = 122;
-                    } else {
-                        statePc = 133;
-                    }
-                    continue stateLoop;
-                }
-                case 133: {
-                    var16 = ji.movingEntities;
-                    var7 = var16;
-                    renderedEntity = (GameplayEntity) ((Object) var16.firstForIteration(0));
-                    statePc = 134;
-                    continue stateLoop;
-                }
-                case 134: {
-                    if (null == renderedEntity) {
-                        statePc = 139;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 135. */
-                        {
-                            entityOffsetX = -320.0f + renderedEntity.positionX;
-                            entityOffsetY = -240.0f + renderedEntity.positionY;
-                            renderedEntityX = (int)(Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
-                            renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians)));
-                            SoftwareRasterizer.d(renderedEntityX / 2, renderedEntityY / 2, var6, var5);
-                            renderedEntity = (GameplayEntity) ((Object) var16.nextForIteration(1));
-                            if (var14 != 0) {
-                                statePc = 140;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 136. */
-                                {
-                                    if (var14 == 0) {
-                                        statePc = 134;
-                                    } else {
-                                        statePc = 139;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 139: {
-                    var7 = a.attachedEntities;
-                    statePc = 140;
-                    continue stateLoop;
-                }
-                case 140: {
-                    renderedEntity = (GameplayEntity) ((Object) var7.firstForIteration(0));
-                    statePc = 141;
-                    continue stateLoop;
-                }
-                case 141: {
-                    if (renderedEntity == null) {
-                        statePc = 146;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 142. */
-                        {
-                            SoftwareRasterizer.d((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), var6, var5);
-                            renderedEntity = (GameplayEntity) ((Object) var7.nextForIteration(1));
-                            if (var14 != 0) {
-                                statePc = 147;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 143. */
-                                {
-                                    if (var14 == 0) {
-                                        statePc = 141;
-                                    } else {
-                                        statePc = 146;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 146: {
-                    var7 = bh.field_c;
-                    statePc = 147;
-                    continue stateLoop;
-                }
-                case 147: {
-                    renderedEntity = (GameplayEntity) ((Object) var7.firstForIteration(0));
-                    statePc = 148;
-                    continue stateLoop;
-                }
-                case 148: {
-                    if (renderedEntity == null) {
-                        statePc = 153;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 149. */
-                        {
-                            SoftwareRasterizer.d((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), var6, var5);
-                            renderedEntity = (GameplayEntity) ((Object) var7.nextForIteration(1));
-                            if (var14 != 0) {
-                                statePc = 158;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 150. */
-                                {
-                                    if (var14 == 0) {
-                                        statePc = 148;
-                                    } else {
-                                        statePc = 153;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 153: {
-                    if (!this.tutorialMode) {
-                        /* Inlined CFG state: 157. */
-                        {
-                            lj.field_d.a(var3 / 2, var4 / 2, lj.field_d.field_s / 2, lj.field_d.field_o / 2, var5);
-                            statePc = 158;
-                            continue stateLoop;
-                        }
-                    } else {
-                        /* Inlined CFG state: 154. */
-                        {
-                            var8 = -(this.updateTick / 2) + 176;
-                            if ((var8 ^ -1) <= -11) {
-                                statePc = 156;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 155. */
-                                {
-                                    var8 = 10;
-                                    statePc = 156;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 156: {
-                    var9 = fi.field_d.field_o + -fi.field_d.field_q;
-                    var10 = fi.field_d.c(v.field_n, 640) + 40;
-                    renderedEntityX = fi.field_d.b(v.field_n, 640) * var9 - -10;
-                    SoftwareRasterizer.a((320 - var10 / 2) / 2, var8 / 2, var10 / 2, (20 + renderedEntityX) / 2, var5);
-                    statePc = 167;
-                    continue stateLoop;
-                }
-                case 158: {
-                    if (this.sessionPhase != 0) {
-                        statePc = 165;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 159. */
-                        {
-                            if (ih.areEntityQueuesSettled(0)) {
-                                statePc = 165;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 162. */
-                                {
-                                    g.field_i.a(234, 205, g.field_i.field_s / 2, g.field_i.field_o / 2, var5);
-                                    if (var14 == 0) {
-                                        statePc = 167;
-                                    } else {
-                                        statePc = 165;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 165: {
-                    vh.field_G.a(223, 205, vh.field_G.field_s / 2, vh.field_G.field_o / 2, var5);
-                    statePc = 167;
-                    continue stateLoop;
-                }
-                case 167: {
-                    SoftwareRasterizer.d(160, 120, 21, 16777215);
-                    SoftwareRasterizer.e(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_b);
-                    sh.field_y.a(255);
-                    stackIn_168_0 = SoftwareRasterizer.field_b;
-                    stackIn_168_1 = 1;
-                    statePc = 168;
-                    continue stateLoop;
-                }
-                case 168: {
-                    ek.a(stackIn_168_0, stackIn_168_1 != 0, af.field_a, 0, SoftwareRasterizer.stride, 0);
-                    statePc = 169;
-                    continue stateLoop;
-                }
-                case 169: {
-                    if (this.tutorialMode) {
-                        statePc = 206;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 170. */
-                        {
-                            if ((this.delayedActionCountdown ^ -1) < -1) {
-                                /* Inlined CFG state: 173. */
-                                {
-                                    lj.field_d.b(-(lj.field_d.field_s >> -1133369407) + 320, 60 + -(lj.field_d.field_o >> -2072717343) + 240);
-                                    dd.field_G.b(wl.field_b, 320, 310, 0, -1);
-                                    statePc = 174;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                statePc = 174;
-                                continue stateLoop;
-                            }
-                        }
-                    }
-                }
-                case 174: {
-                    eg.field_q[this.pointsPanelFrameIndex].b(this.pointsPanelX, 4);
-                    if (640 <= this.pointsPanelX) {
-                        statePc = 179;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 175. */
-                        {
-                            if (0 < this.pendingPopupPoints) {
-                                /* Inlined CFG state: 178. */
-                                {
-                                    dd.field_G.a(wj.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
-                                    statePc = 179;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                statePc = 179;
-                                continue stateLoop;
-                            }
-                        }
-                    }
-                }
-                case 179: {
-                    if (this.showSessionCounters) {
-                        /* Inlined CFG state: 182. */
-                        {
-                            dd.field_G.a(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
-                            dd.field_G.a(wj.a(qg.field_e, new String[]{Integer.toString(ji.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
-                            statePc = 183;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 183;
-                        continue stateLoop;
-                    }
-                }
-                case 183: {
-                    bd.drawScorePopups(-117);
-                    this.c((byte) 64);
-                    if (this.field_L) {
-                        /* Inlined CFG state: 186. */
-                        {
-                            lj.field_d.b(var3, var4);
-                            if (this.sceneAnimationTick >= 266) {
-                                statePc = 190;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 187. */
-                                {
-                                    kh.field_h[6].b(0, (this.sceneAnimationTick >> 1707498369) + -113);
-                                    if (var14 == 0) {
-                                        statePc = 192;
-                                    } else {
-                                        statePc = 190;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        statePc = 192;
-                        continue stateLoop;
-                    }
-                }
-                case 190: {
-                    kh.field_h[6].b(0, 20);
-                    kh.field_h[6].c(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
-                    statePc = 192;
-                    continue stateLoop;
-                }
-                case 192: {
-                    dd.field_G.a(wj.a(pa.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + var3, 30 + var4, 0, -1);
-                    if (!ih.areEntityQueuesSettled(0)) {
-                        statePc = 205;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 193. */
-                        {
-                            if (0 == this.sessionPhase) {
-                                statePc = 199;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 196. */
-                                {
-                                    if (this.sessionPhase != 1) {
-                                        statePc = 203;
-                                    } else {
-                                        statePc = 199;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 199: {
-                    if (var2 != 0) {
-                        /* Inlined CFG state: 202. */
-                        {
-                            var5 = 35 + (6 * this.sceneAnimationTick + -480);
-                            sh.field_y.a(255);
-                            SoftwareRasterizer.e(0, var5, 640, 480);
-                            oc.boardSceneRaster.b(0, 0);
-                            SoftwareRasterizer.e(0, 0, 640, 480);
-                            qj.transitionCurtain.b(0, -480 + 6 * this.sceneAnimationTick);
-                            if (var14 == 0) {
-                                statePc = 205;
-                            } else {
-                                statePc = 203;
-                            }
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 205;
-                        continue stateLoop;
-                    }
-                }
-                case 203: {
-                    this.renderResultSequence(false);
-                    statePc = 205;
-                    continue stateLoop;
-                }
-                case 205: {
-                    vc.c(-1);
-                    if (var14 == 0) {
-                        statePc = 208;
-                    } else {
-                        statePc = 206;
-                    }
-                    continue stateLoop;
-                }
-                case 206: {
-                    this.renderTutorialPrompt(2);
-                    statePc = 208;
-                    continue stateLoop;
-                }
-                case 208: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              var2_ref_String = "sweets";
+              if (var14 == 0) {
+                break L0;
+              }
             }
+            var2_ref_String = "";
+          }
+          var3_ref_String = gf.a(ff.field_l, ll.field_f, var2_ref_String, wi.field_F, true);
+          var4 = 30 + dd.field_G.a(var3_ref_String);
+          ma.a(215, 320 - var4 / 2, 50, (byte) -92, var4, ll.field_h);
+          dd.field_G.b(var3_ref_String, 320, 250, 0, -1);
+          return;
+        } else {
+          L11: {
+            if (ih.areEntityQueuesSettled(0)) {
+              if (this.sceneTransitionRequested) {
+                if (this.sceneTransitionInProgress) {
+                  stackIn_49_0 = 1;
+                  break L11;
+                }
+              }
+            }
+            stackIn_49_0 = 0;
+          }
+          L13: {
+            var2 = stackIn_49_0;
+            if (var2 == 0) {
+              if (!this.boardRasterDirty) {
+                oc.boardSceneRaster.e();
+                if (!this.debugReducedRendering) {
+                  gj.drawSpecialAttachedEntities((byte) -63);
+                  if (var14 == 0) {
+                    break L13;
+                  }
+                } else {
+                  break L13;
+                }
+              }
+              oc.boardSceneRaster.e();
+              SoftwareRasterizer.c();
+              if (!this.debugReducedRendering) {
+                dc.drawAttachedEntities(7838);
+              }
+              k.a(10, 90, 460, -27085, 460);
+              this.boardRasterDirty = false;
+            }
+          }
+          sh.field_y.a(255);
+          mf.field_a.b(0, 0);
+          var3 = 4;
+          var4 = 4;
+          if (param0 >= -28) {
+            this.updateSession(-63);
+          }
+          L17: {
+            if (this.field_L) {
+              if (this.sceneAnimationTick <= 266) {
+                var5_float = (float)this.sceneAnimationTick / 266.0f;
+                var6_float = -var5_float + 1.0f;
+                var7_float = var6_float * var6_float;
+                var3 = (int)(0.5f + (70.0f * (2.0f * var5_float * var6_float) + 10.0f * var7_float + 220.0f * (var5_float * var5_float)));
+                var4 = (int)(170.0f * (var5_float * var5_float) + (var7_float * 10.0f + 140.0f * (var5_float * 2.0f * var6_float)) + 0.5f);
+                if (var14 == 0) {
+                  break L17;
+                }
+              }
+              var3 = 220;
+              var4 = 170;
+            }
+          }
+          L19: {
+            if (this.tutorialMode) {
+              var5 = 176 - this.updateTick / 2;
+              if (10 > var5) {
+                var5 = 10;
+              }
+              var6 = -fi.field_d.field_q + fi.field_d.field_o;
+              var7_int = fi.field_d.c(v.field_n, 640) + 40;
+              var8 = fi.field_d.b(v.field_n, 640) * var6 - -10;
+              ma.a(var5, -(var7_int / 2) + 320, 20 + var8, (byte) -92, var7_int, ll.field_h);
+              fi.field_d.b(v.field_n, 320, var5 + 28, 1, -1);
+              fi.field_d.b(v.field_n, 319, 28 + var5, 1, -1);
+              if (var14 == 0) {
+                break L19;
+              }
+            }
+            L22: {
+              lj.field_d.b(var3, var4);
+              if (0 == this.sessionPhase) {
+                if (!ih.areEntityQueuesSettled(0)) {
+                  break L22;
+                }
+              }
+              vh.field_G.b(446, 410);
+              if (var14 == 0) {
+                break L19;
+              }
+            }
+            g.field_i.b(468, 410);
+          }
+          L24: {
+            if (!this.tutorialMode) {
+              if (ih.areEntityQueuesSettled(0)) {
+                if (var2 == 0) {
+                  break L24;
+                } else {
+                  if (0 != this.sessionPhase) {
+                    if (-2 != (this.sessionPhase ^ -1)) {
+                      break L24;
+                    }
+                  }
+                }
+              }
+              this.renderProgressHud(-46);
+            }
+          }
+          if (!this.debugReducedRendering) {
+            h.c(-1);
+          }
+          if (!this.debugReducedRendering) {
+            if (var2 == 0) {
+              oc.boardSceneRaster.b(0, 0);
+            }
+          }
+          ij.h((byte) 18);
+          if (!this.debugReducedRendering) {
+            ni.f(484842465);
+          }
+          jf.field_a.e();
+          SoftwareRasterizer.c();
+          ec.field_c.rotateNearest(ec.field_c.field_s << 1679206499, ec.field_c.field_o << 919227299, jf.field_a.field_s << -122785245, jf.field_a.field_o << 1137750627, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
+          sh.field_y.a(255);
+          w.a(jf.field_a, -(jf.field_a.field_s >> -199505663) + 320, -(jf.field_a.field_o >> -1092517823) + 240);
+          if (!this.debugReducedRendering) {
+            uh.d(4740);
+          }
+          L30: {
+            if (this.showDebugOverview) {
+              af.field_a.e();
+              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_b, 1118481);
+              var5 = 16777215;
+              SoftwareRasterizer.f(160, 120, 115, 16711680);
+              var6 = 20;
+              var15 = wd.spawnQueue;
+              renderedEntity = (GameplayEntity) ((Object) var15.lastForIteration(false));
+              L31: while (true) {
+                L32: {
+                  if (renderedEntity != null) {
+                    entityOffsetX = -320.0f + renderedEntity.positionX;
+                    entityOffsetY = -240.0f + renderedEntity.positionY;
+                    renderedEntityX = (int)(320.0 + (Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY));
+                    renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians)));
+                    entityOpacity = 255 - renderedEntity.remainingLifetimeTicks * 255 / renderedEntity.initialLifetimeTicks;
+                    stackIn_168_0 = 11;
+
+                    stackIn_168_1 = entityOpacity;
+
+                    if (var14 != 0) {
+                      break L32;
+                    } else {
+                      if (stackIn_168_0 > stackIn_168_1) {
+                        entityOpacity = 11;
+                      }
+                      if (-256 > (entityOpacity ^ -1)) {
+                        entityOpacity = 255;
+                      }
+                      SoftwareRasterizer.d(renderedEntityX / 2, renderedEntityY / 2, var6, entityOpacity << 269082696 | entityOpacity << -327781456 | entityOpacity);
+                      renderedEntity = (GameplayEntity) ((Object) var15.previousForIteration(0));
+                      if (var14 == 0) {
+                        continue L31;
+                      }
+                    }
+                  }
+                  var16 = ji.movingEntities;
+                  var7 = var16;
+                  renderedEntity = (GameplayEntity) ((Object) var16.firstForIteration(0));
+                  L36: while (true) {
+                    L37: {
+                      if (null != renderedEntity) {
+                        entityOffsetX = -320.0f + renderedEntity.positionX;
+                        entityOffsetY = -240.0f + renderedEntity.positionY;
+                        renderedEntityX = (int)(Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
+                        renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians)));
+                        SoftwareRasterizer.d(renderedEntityX / 2, renderedEntityY / 2, var6, var5);
+                        renderedEntity = (GameplayEntity) ((Object) var16.nextForIteration(1));
+                        if (var14 != 0) {
+                          break L37;
+                        } else {
+                          if (var14 == 0) {
+                            continue L36;
+                          }
+                        }
+                      }
+                      var7 = a.attachedEntities;
+                    }
+                    renderedEntity = (GameplayEntity) ((Object) var7.firstForIteration(0));
+                    L39: while (true) {
+                      L40: {
+                        if (renderedEntity != null) {
+                          SoftwareRasterizer.d((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), var6, var5);
+                          renderedEntity = (GameplayEntity) ((Object) var7.nextForIteration(1));
+                          if (var14 != 0) {
+                            break L40;
+                          } else {
+                            if (var14 == 0) {
+                              continue L39;
+                            }
+                          }
+                        }
+                        var7 = bh.field_c;
+                      }
+                      renderedEntity = (GameplayEntity) ((Object) var7.firstForIteration(0));
+                      L42: while (true) {
+                        L43: {
+                          L44: {
+                            if (renderedEntity != null) {
+                              SoftwareRasterizer.d((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), var6, var5);
+                              renderedEntity = (GameplayEntity) ((Object) var7.nextForIteration(1));
+                              if (var14 != 0) {
+                                break L44;
+                              } else {
+                                if (var14 == 0) {
+                                  continue L42;
+                                }
+                              }
+                            }
+                            if (!this.tutorialMode) {
+                              lj.field_d.a(var3 / 2, var4 / 2, lj.field_d.field_s / 2, lj.field_d.field_o / 2, var5);
+                            } else {
+                              var8 = -(this.updateTick / 2) + 176;
+                              if ((var8 ^ -1) > -11) {
+                                var8 = 10;
+                              }
+                              var9 = fi.field_d.field_o + -fi.field_d.field_q;
+                              var10 = fi.field_d.c(v.field_n, 640) + 40;
+                              renderedEntityX = fi.field_d.b(v.field_n, 640) * var9 - -10;
+                              SoftwareRasterizer.a((320 - var10 / 2) / 2, var8 / 2, var10 / 2, (20 + renderedEntityX) / 2, var5);
+                              break L43;
+                            }
+                          }
+                          if (this.sessionPhase == 0) {
+                            if (!ih.areEntityQueuesSettled(0)) {
+                              g.field_i.a(234, 205, g.field_i.field_s / 2, g.field_i.field_o / 2, var5);
+                              if (var14 == 0) {
+                                break L43;
+                              }
+                            }
+                          }
+                          vh.field_G.a(223, 205, vh.field_G.field_s / 2, vh.field_G.field_o / 2, var5);
+                        }
+                        SoftwareRasterizer.d(160, 120, 21, 16777215);
+                        SoftwareRasterizer.e(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_b);
+                        sh.field_y.a(255);
+                        stackIn_168_0 = SoftwareRasterizer.field_b;
+                        stackIn_168_1 = 1;
+                        break L32;
+                      }
+                    }
+                  }
+                }
+                ek.a(stackIn_168_0, stackIn_168_1 != 0, af.field_a, 0, SoftwareRasterizer.stride, 0);
+                break L30;
+              }
+            }
+          }
+          L48: {
+            if (!this.tutorialMode) {
+              if ((this.delayedActionCountdown ^ -1) < -1) {
+                lj.field_d.b(-(lj.field_d.field_s >> -1133369407) + 320, 60 + -(lj.field_d.field_o >> -2072717343) + 240);
+                dd.field_G.b(wl.field_b, 320, 310, 0, -1);
+              }
+              eg.field_q[this.pointsPanelFrameIndex].b(this.pointsPanelX, 4);
+              if (640 > this.pointsPanelX) {
+                if (0 < this.pendingPopupPoints) {
+                  dd.field_G.a(wj.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
+                }
+              }
+              if (this.showSessionCounters) {
+                dd.field_G.a(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
+                dd.field_G.a(wj.a(qg.field_e, new String[]{Integer.toString(ji.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
+              }
+              L53: {
+                bd.drawScorePopups(-117);
+                this.c((byte) 64);
+                if (this.field_L) {
+                  lj.field_d.b(var3, var4);
+                  if (this.sceneAnimationTick < 266) {
+                    kh.field_h[6].b(0, (this.sceneAnimationTick >> 1707498369) + -113);
+                    if (var14 == 0) {
+                      break L53;
+                    }
+                  }
+                  kh.field_h[6].b(0, 20);
+                  kh.field_h[6].c(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
+                }
+              }
+              L55: {
+                dd.field_G.a(wj.a(pa.field_a, new String[]{this.scoreText.toString()}, (byte) -53), 15 + var3, 30 + var4, 0, -1);
+                if (ih.areEntityQueuesSettled(0)) {
+                  L56: {
+                    if (0 != this.sessionPhase) {
+                      if (this.sessionPhase != 1) {
+                        break L56;
+                      }
+                    }
+                    if (var2 != 0) {
+                      var5 = 35 + (6 * this.sceneAnimationTick + -480);
+                      sh.field_y.a(255);
+                      SoftwareRasterizer.e(0, var5, 640, 480);
+                      oc.boardSceneRaster.b(0, 0);
+                      SoftwareRasterizer.e(0, 0, 640, 480);
+                      qj.transitionCurtain.b(0, -480 + 6 * this.sceneAnimationTick);
+                      if (var14 == 0) {
+                        break L55;
+                      }
+                    } else {
+                      break L55;
+                    }
+                  }
+                  this.renderResultSequence(false);
+                }
+              }
+              vc.c(-1);
+              if (var14 == 0) {
+                break L48;
+              }
+            }
+            this.renderTutorialPrompt(2);
+          }
+          return;
         }
     }
 
     final void updateSession(int param0) {
         int fieldTemp$0 = 0;
-        boolean stackIn_227_0 = false;
         boolean stackIn_233_0 = false;
-        Object stackIn_243_0 = null;
-        Object stackIn_244_0 = null;
         Object stackIn_246_0 = null;
-        Object stackIn_247_0 = null;
         Object stackIn_249_0 = null;
         Object stackIn_251_0 = null;
         Object stackIn_252_0 = null;
         int stackIn_252_1 = 0;
-        Object stackIn_301_0 = null;
         Object stackIn_303_0 = null;
         Object stackIn_304_0 = null;
         int stackIn_304_1 = 0;
-        Object stackIn_354_0 = null;
         Object stackIn_356_0 = null;
         Object stackIn_358_0 = null;
         Object stackIn_359_0 = null;
         int stackIn_359_1 = 0;
-        int stackIn_362_0 = 0;
-        int stackIn_362_1 = 0;
-        Object stackIn_385_0 = null;
         Object stackIn_387_0 = null;
         Object stackIn_388_0 = null;
         int stackIn_388_1 = 0;
-        Object stackIn_405_0 = null;
         Object stackIn_407_0 = null;
         Object stackIn_408_0 = null;
         int stackIn_408_1 = 0;
-        Object stackIn_411_0 = null;
         Object stackIn_413_0 = null;
         Object stackIn_415_0 = null;
         Object stackIn_416_0 = null;
         int stackIn_416_1 = 0;
-        Object stackIn_452_0 = null;
         Object stackIn_454_0 = null;
         Object stackIn_455_0 = null;
         int stackIn_455_1 = 0;
         int stackIn_464_0 = 0;
         int stackIn_464_1 = 0;
-        int statePc = 0;
         int var2 = 0;
         int var3 = 0;
         int var4_int = 0;
         GameplayEntity var4 = null;
         int var5 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var5 = Geoblox.field_C;
-                    lh.a(param0 ^ 1578896222);
-                    fieldTemp$0 = this.updateTick;
-                    this.updateTick = this.updateTick + 1;
-                    if ((fieldTemp$0 & 15) != 0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        L0: {
+          var5 = Geoblox.field_C;
+          lh.a(param0 ^ 1578896222);
+          fieldTemp$0 = this.updateTick;
+          this.updateTick = this.updateTick + 1;
+          if ((fieldTemp$0 & 15) == 0) {
+            this.pointsPanelFrameIndex = this.pointsPanelFrameIndex + this.pointsPanelFrameDirection;
+            if (7 != this.pointsPanelFrameIndex) {
+              if (-1 == (this.pointsPanelFrameIndex ^ -1)) {
+                this.pointsPanelFrameDirection = 1;
+                if (var5 == 0) {
+                  break L0;
                 }
-                case 1: {
-                    this.pointsPanelFrameIndex = this.pointsPanelFrameIndex + this.pointsPanelFrameDirection;
-                    if (7 == this.pointsPanelFrameIndex) {
-                        statePc = 8;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 4. */
-                        {
-                            if (-1 == (this.pointsPanelFrameIndex ^ -1)) {
-                                /* Inlined CFG state: 7. */
-                                {
-                                    this.pointsPanelFrameDirection = 1;
-                                    if (var5 == 0) {
-                                        statePc = 10;
-                                    } else {
-                                        statePc = 8;
-                                    }
-                                    continue stateLoop;
-                                }
-                            } else {
-                                statePc = 10;
-                                continue stateLoop;
-                            }
-                        }
-                    }
+              } else {
+                break L0;
+              }
+            }
+            this.pointsPanelFrameDirection = -1;
+          }
+        }
+        L2: {
+          if (0 == (this.updateTick & 1)) {
+            L3: {
+              if (-1 == this.pointsPanelSlideDirection) {
+                if (463 < this.pointsPanelX) {
+                  break L3;
                 }
-                case 8: {
-                    this.pointsPanelFrameDirection = -1;
-                    statePc = 10;
-                    continue stateLoop;
+              }
+              L5: {
+                if ((this.pointsPanelSlideDirection ^ -1) == -2) {
+                  if (this.pointsPanelX < 640) {
+                    break L5;
+                  }
                 }
-                case 10: {
-                    if (0 == (this.updateTick & 1)) {
-                        /* Inlined CFG state: 13. */
-                        {
-                            if (-1 != this.pointsPanelSlideDirection) {
-                                statePc = 17;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 14. */
-                                {
-                                    if (463 < this.pointsPanelX) {
-                                        statePc = 33;
-                                    } else {
-                                        statePc = 17;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        statePc = 35;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    if ((this.pointsPanelSlideDirection ^ -1) != -2) {
-                        statePc = 23;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 20. */
-                        {
-                            if (this.pointsPanelX < 640) {
-                                statePc = 30;
-                            } else {
-                                statePc = 23;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 23: {
-                    if (-464 != (this.pointsPanelX ^ -1)) {
-                        statePc = 35;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 26. */
-                        {
-                            if (-1 == (gf.matchChainLength ^ -1)) {
-                                /* Inlined CFG state: 29. */
-                                {
-                                    this.pointsPanelSlideDirection = 1;
-                                    el.gameplaySession.emitPointsPopup(false);
-                                    if (var5 == 0) {
-                                        statePc = 35;
-                                    } else {
-                                        statePc = 30;
-                                    }
-                                    continue stateLoop;
-                                }
-                            } else {
-                                statePc = 35;
-                                continue stateLoop;
-                            }
-                        }
-                    }
-                }
-                case 30: {
-                    this.pointsPanelX = this.pointsPanelX + 1;
+                if (-464 != (this.pointsPanelX ^ -1)) {
+                  break L2;
+                } else {
+                  if (-1 == (gf.matchChainLength ^ -1)) {
+                    this.pointsPanelSlideDirection = 1;
+                    el.gameplaySession.emitPointsPopup(false);
                     if (var5 == 0) {
-                        statePc = 35;
-                    } else {
-                        statePc = 33;
+                      break L2;
                     }
-                    continue stateLoop;
+                  } else {
+                    break L2;
+                  }
                 }
-                case 33: {
-                    this.pointsPanelX = this.pointsPanelX - 1;
-                    statePc = 35;
-                    continue stateLoop;
+              }
+              this.pointsPanelX = this.pointsPanelX + 1;
+              if (var5 == 0) {
+                break L2;
+              }
+            }
+            this.pointsPanelX = this.pointsPanelX - 1;
+          }
+        }
+        L7: {
+          if (!this.sessionEnding) {
+            L9: {
+              L10: {
+                if (ih.areEntityQueuesSettled(0)) {
+                  if (!this.matchBatchProcessedThisTick) {
+                    break L10;
+                  }
                 }
-                case 35: {
-                    if (this.sessionEnding) {
-                        statePc = 274;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 36. */
-                        {
-                            if (!ih.areEntityQueuesSettled(0)) {
-                                statePc = 42;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 39. */
-                                {
-                                    if (!this.matchBatchProcessedThisTick) {
-                                        statePc = 45;
-                                    } else {
-                                        statePc = 42;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
+                if (this.preserveScoreOnTransition) {
+                  break L9;
+                }
+              }
+              if (this.canAdvanceSession(true)) {
+                L12: {
+                  if (0 != this.sessionPhase) {
+                    if (-6 != (this.sessionPhase ^ -1)) {
+                      break L12;
                     }
-                }
-                case 42: {
-                    if (this.preserveScoreOnTransition) {
-                        statePc = 61;
-                    } else {
-                        statePc = 45;
-                    }
-                    continue stateLoop;
-                }
-                case 45: {
-                    if (!this.canAdvanceSession(true)) {
-                        statePc = 61;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 48. */
-                        {
-                            if (0 == this.sessionPhase) {
-                                statePc = 54;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 51. */
-                                {
-                                    if (-6 != (this.sessionPhase ^ -1)) {
-                                        statePc = 58;
-                                    } else {
-                                        statePc = 54;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 54: {
-                    if (this.sceneTransitionRequested) {
-                        /* Inlined CFG state: 57. */
-                        {
-                            this.updateSceneTransition((byte) -80);
-                            if (var5 == 0) {
-                                statePc = 288;
-                            } else {
-                                statePc = 58;
-                            }
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 288;
-                        continue stateLoop;
-                    }
-                }
-                case 58: {
-                    this.updateResultSequence(10);
+                  }
+                  if (this.sceneTransitionRequested) {
+                    this.updateSceneTransition((byte) -80);
                     if (var5 == 0) {
-                        statePc = 288;
-                    } else {
-                        statePc = 61;
+                      break L7;
                     }
-                    continue stateLoop;
+                  } else {
+                    break L7;
+                  }
                 }
-                case 61: {
-                    if (!ll.themesLoaded[GameScreen.selectedThemeId]) {
-                        /* Inlined CFG state: 64. */
-                        {
-                            return;
-                        }
-                    } else {
-                        /* Inlined CFG state: 65. */
-                        {
-                            if (this.rotationControlsSwapped) {
-                                statePc = 67;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 66. */
-                                {
-                                    var2 = 96;
-                                    var3 = 97;
-                                    if (var5 == 0) {
-                                        statePc = 68;
-                                    } else {
-                                        statePc = 67;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
+                this.updateResultSequence(10);
+                if (var5 == 0) {
+                  break L7;
                 }
-                case 67: {
-                    var3 = 96;
-                    var2 = 97;
-                    statePc = 68;
-                    continue stateLoop;
+              }
+            }
+            if (!ll.themesLoaded[GameScreen.selectedThemeId]) {
+              return;
+            } else {
+              L14: {
+                if (!this.rotationControlsSwapped) {
+                  var2 = 96;
+                  var3 = 97;
+                  if (var5 == 0) {
+                    break L14;
+                  }
                 }
-                case 68: {
-                    if (kj.field_o[var2]) {
-                        /* Inlined CFG state: 71. */
-                        {
-                            this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
-                            ScorePopup.a((byte) 38);
-                            var4_int = (ki.field_d + kd.field_c + qa.field_a + he.field_d) % 8;
-                            if (var4_int != 0) {
-                                statePc = 75;
-                            } else {
-                                statePc = 72;
-                            }
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 146;
-                        continue stateLoop;
-                    }
-                }
-                case 72: {
+                var3 = 96;
+                var2 = 97;
+              }
+              if (kj.field_o[var2]) {
+                L17: {
+                  this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
+                  ScorePopup.a((byte) 38);
+                  var4_int = (ki.field_d + kd.field_c + qa.field_a + he.field_d) % 8;
+                  if (var4_int == 0) {
                     oa.field_a = oa.field_a + kb.field_d;
                     gb.field_g = gb.field_g - 1;
                     if (var5 == 0) {
-                        statePc = 116;
-                    } else {
-                        statePc = 75;
+                      break L17;
                     }
-                    continue stateLoop;
-                }
-                case 75: {
-                    if (-2 != (var4_int ^ -1)) {
-                        statePc = 81;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 78. */
-                        {
-                            oa.field_a = oa.field_a + gb.field_g;
-                            kb.field_d = kb.field_d - 1;
-                            if (var5 == 0) {
-                                statePc = 116;
-                            } else {
-                                statePc = 81;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 81: {
-                    if ((var4_int ^ -1) == -3) {
-                        statePc = 114;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 84. */
-                        {
-                            if (3 != var4_int) {
-                                statePc = 90;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 87. */
-                                {
-                                    oa.field_a = oa.field_a - gb.field_g;
-                                    kb.field_d = kb.field_d + 1;
-                                    if (var5 == 0) {
-                                        statePc = 116;
-                                    } else {
-                                        statePc = 90;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 90: {
-                    if (4 != var4_int) {
-                        statePc = 96;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 93. */
-                        {
-                            ml.field_r = ml.field_r + kb.field_d;
-                            gb.field_g = gb.field_g + 1;
-                            if (var5 == 0) {
-                                statePc = 116;
-                            } else {
-                                statePc = 96;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 96: {
-                    if ((var4_int ^ -1) != -6) {
-                        statePc = 102;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 99. */
-                        {
-                            kb.field_d = kb.field_d + 1;
-                            ml.field_r = ml.field_r + gb.field_g;
-                            if (var5 == 0) {
-                                statePc = 116;
-                            } else {
-                                statePc = 102;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 102: {
-                    if (-7 != (var4_int ^ -1)) {
-                        statePc = 108;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 105. */
-                        {
-                            ml.field_r = ml.field_r - kb.field_d;
-                            gb.field_g = gb.field_g - 1;
-                            if (var5 == 0) {
-                                statePc = 116;
-                            } else {
-                                statePc = 108;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 108: {
-                    if ((var4_int ^ -1) != -8) {
-                        statePc = 116;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 111. */
-                        {
-                            kb.field_d = kb.field_d - 1;
-                            ml.field_r = ml.field_r - gb.field_g;
-                            if (var5 == 0) {
-                                statePc = 116;
-                            } else {
-                                statePc = 114;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 114: {
-                    gb.field_g = gb.field_g + 1;
-                    oa.field_a = oa.field_a - kb.field_d;
-                    statePc = 116;
-                    continue stateLoop;
-                }
-                case 116: {
-                    var4_int = (kd.field_c + he.field_d + qa.field_a - -ki.field_d) % 5;
-                    if (0 != var4_int) {
-                        statePc = 120;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 117. */
-                        {
-                            dc.field_a = dc.field_a | lb.field_b + el.field_g << -751962927;
-                            if (var5 == 0) {
-                                statePc = 143;
-                            } else {
-                                statePc = 120;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 120: {
-                    if ((var4_int ^ -1) == -2) {
-                        statePc = 141;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 123. */
-                        {
-                            if (-3 == (var4_int ^ -1)) {
-                                statePc = 138;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 126. */
-                                {
-                                    if (3 != var4_int) {
-                                        statePc = 132;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 129. */
-                                        {
-                                            sc.field_f = sc.field_f + 1;
-                                            el.field_g = el.field_g + lb.field_b;
-                                            if (var5 == 0) {
-                                                statePc = 143;
-                                            } else {
-                                                statePc = 132;
-                                            }
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 132: {
-                    if ((var4_int ^ -1) != -5) {
-                        statePc = 143;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 135. */
-                        {
-                            sc.field_f = sc.field_f - 1;
-                            el.field_g = el.field_g - lb.field_b;
-                            if (var5 == 0) {
-                                statePc = 143;
-                            } else {
-                                statePc = 138;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 138: {
-                    lb.field_b = lb.field_b - 1;
-                    el.field_g = el.field_g - sc.field_f;
-                    if (var5 == 0) {
-                        statePc = 143;
-                    } else {
-                        statePc = 141;
-                    }
-                    continue stateLoop;
-                }
-                case 141: {
-                    el.field_g = el.field_g + sc.field_f;
-                    lb.field_b = lb.field_b + 1;
-                    statePc = 143;
-                    continue stateLoop;
-                }
-                case 143: {
-                    if ((this.tutorialStepId ^ -1) != -1) {
-                        statePc = 146;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 144. */
-                        {
-                            this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
-                            statePc = 146;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 146: {
-                    if (!kj.field_o[var3]) {
-                        statePc = 220;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 147. */
-                        {
-                            this.boardAngleRadians = this.boardAngleRadians + DualLinkNode.rotationStepRadians;
-                            wd.a((byte) 74);
-                            if ((this.tutorialStepId ^ -1) != -1) {
-                                statePc = 152;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 150. */
-                                {
-                                    this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
-                                    statePc = 152;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 152: {
-                    var4_int = (he.field_d + (qa.field_a - -kd.field_c) + ki.field_d) % 8;
-                    if ((var4_int ^ -1) == -1) {
-                        statePc = 193;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 153. */
-                        {
-                            if (1 == var4_int) {
-                                statePc = 190;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 156. */
-                                {
-                                    if ((var4_int ^ -1) == -3) {
-                                        statePc = 187;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 159. */
-                                        {
-                                            if (var4_int != 3) {
-                                                statePc = 165;
-                                                continue stateLoop;
-                                            } else {
-                                                /* Inlined CFG state: 162. */
-                                                {
-                                                    kb.field_d = kb.field_d + 1;
-                                                    oa.field_a = oa.field_a - gb.field_g;
-                                                    if (var5 == 0) {
-                                                        statePc = 195;
-                                                    } else {
-                                                        statePc = 165;
-                                                    }
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 165: {
-                    if (4 != var4_int) {
-                        statePc = 171;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 168. */
-                        {
-                            gb.field_g = gb.field_g + 1;
-                            ml.field_r = ml.field_r + kb.field_d;
-                            if (var5 == 0) {
-                                statePc = 195;
-                            } else {
-                                statePc = 171;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 171: {
-                    if (5 != var4_int) {
-                        statePc = 177;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 174. */
-                        {
-                            kb.field_d = kb.field_d + 1;
-                            ml.field_r = ml.field_r + gb.field_g;
-                            if (var5 == 0) {
-                                statePc = 195;
-                            } else {
-                                statePc = 177;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 177: {
-                    if (var4_int != 6) {
-                        statePc = 183;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 180. */
-                        {
-                            ml.field_r = ml.field_r - kb.field_d;
-                            gb.field_g = gb.field_g - 1;
-                            if (var5 == 0) {
-                                statePc = 195;
-                            } else {
-                                statePc = 183;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 183: {
-                    if (var4_int == 7) {
-                        /* Inlined CFG state: 186. */
-                        {
-                            kb.field_d = kb.field_d - 1;
-                            ml.field_r = ml.field_r - gb.field_g;
-                            if (var5 == 0) {
-                                statePc = 195;
-                            } else {
-                                statePc = 187;
-                            }
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 195;
-                        continue stateLoop;
-                    }
-                }
-                case 187: {
-                    gb.field_g = gb.field_g + 1;
-                    oa.field_a = oa.field_a - kb.field_d;
-                    if (var5 == 0) {
-                        statePc = 195;
-                    } else {
-                        statePc = 190;
-                    }
-                    continue stateLoop;
-                }
-                case 190: {
+                  }
+                  if (-2 == (var4_int ^ -1)) {
                     oa.field_a = oa.field_a + gb.field_g;
                     kb.field_d = kb.field_d - 1;
                     if (var5 == 0) {
-                        statePc = 195;
-                    } else {
-                        statePc = 193;
+                      break L17;
                     }
-                    continue stateLoop;
-                }
-                case 193: {
-                    gb.field_g = gb.field_g - 1;
-                    oa.field_a = oa.field_a + kb.field_d;
-                    statePc = 195;
-                    continue stateLoop;
-                }
-                case 195: {
-                    var4_int = (kd.field_c + qa.field_a - -he.field_d + ki.field_d) % 5;
-                    if (-1 == (var4_int ^ -1)) {
-                        statePc = 218;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 196. */
-                        {
-                            if (1 == var4_int) {
-                                statePc = 215;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 199. */
-                                {
-                                    if (2 == var4_int) {
-                                        statePc = 212;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 202. */
-                                        {
-                                            if (var4_int != 3) {
-                                                statePc = 208;
-                                                continue stateLoop;
-                                            } else {
-                                                /* Inlined CFG state: 205. */
-                                                {
-                                                    sc.field_f = sc.field_f + 1;
-                                                    el.field_g = el.field_g + lb.field_b;
-                                                    if (var5 == 0) {
-                                                        statePc = 220;
-                                                    } else {
-                                                        statePc = 208;
-                                                    }
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                  }
+                  if ((var4_int ^ -1) != -3) {
+                    if (3 == var4_int) {
+                      oa.field_a = oa.field_a - gb.field_g;
+                      kb.field_d = kb.field_d + 1;
+                      if (var5 == 0) {
+                        break L17;
+                      }
                     }
-                }
-                case 208: {
                     if (4 == var4_int) {
-                        /* Inlined CFG state: 211. */
-                        {
-                            el.field_g = el.field_g - lb.field_b;
-                            sc.field_f = sc.field_f - 1;
-                            if (var5 == 0) {
-                                statePc = 220;
-                            } else {
-                                statePc = 212;
-                            }
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 220;
-                        continue stateLoop;
+                      ml.field_r = ml.field_r + kb.field_d;
+                      gb.field_g = gb.field_g + 1;
+                      if (var5 == 0) {
+                        break L17;
+                      }
                     }
+                    if ((var4_int ^ -1) == -6) {
+                      kb.field_d = kb.field_d + 1;
+                      ml.field_r = ml.field_r + gb.field_g;
+                      if (var5 == 0) {
+                        break L17;
+                      }
+                    }
+                    if (-7 == (var4_int ^ -1)) {
+                      ml.field_r = ml.field_r - kb.field_d;
+                      gb.field_g = gb.field_g - 1;
+                      if (var5 == 0) {
+                        break L17;
+                      }
+                    }
+                    if ((var4_int ^ -1) != -8) {
+                      break L17;
+                    } else {
+                      kb.field_d = kb.field_d - 1;
+                      ml.field_r = ml.field_r - gb.field_g;
+                      if (var5 == 0) {
+                        break L17;
+                      }
+                    }
+                  }
+                  gb.field_g = gb.field_g + 1;
+                  oa.field_a = oa.field_a - kb.field_d;
                 }
-                case 212: {
+                L25: {
+                  var4_int = (kd.field_c + he.field_d + qa.field_a - -ki.field_d) % 5;
+                  if (0 == var4_int) {
+                    dc.field_a = dc.field_a | lb.field_b + el.field_g << -751962927;
+                    if (var5 == 0) {
+                      break L25;
+                    }
+                  }
+                  if ((var4_int ^ -1) != -2) {
+                    if (-3 != (var4_int ^ -1)) {
+                      if (3 == var4_int) {
+                        sc.field_f = sc.field_f + 1;
+                        el.field_g = el.field_g + lb.field_b;
+                        if (var5 == 0) {
+                          break L25;
+                        }
+                      }
+                      if ((var4_int ^ -1) != -5) {
+                        break L25;
+                      } else {
+                        sc.field_f = sc.field_f - 1;
+                        el.field_g = el.field_g - lb.field_b;
+                        if (var5 == 0) {
+                          break L25;
+                        }
+                      }
+                    }
                     lb.field_b = lb.field_b - 1;
                     el.field_g = el.field_g - sc.field_f;
                     if (var5 == 0) {
-                        statePc = 220;
-                    } else {
-                        statePc = 215;
+                      break L25;
                     }
-                    continue stateLoop;
+                  }
+                  el.field_g = el.field_g + sc.field_f;
+                  lb.field_b = lb.field_b + 1;
                 }
-                case 215: {
+                if ((this.tutorialStepId ^ -1) == -1) {
+                  this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
+                }
+              }
+              L30: {
+                if (kj.field_o[var3]) {
+                  this.boardAngleRadians = this.boardAngleRadians + DualLinkNode.rotationStepRadians;
+                  wd.a((byte) 74);
+                  if ((this.tutorialStepId ^ -1) == -1) {
+                    this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
+                  }
+                  L32: {
+                    var4_int = (he.field_d + (qa.field_a - -kd.field_c) + ki.field_d) % 8;
+                    if ((var4_int ^ -1) != -1) {
+                      if (1 != var4_int) {
+                        if ((var4_int ^ -1) != -3) {
+                          if (var4_int == 3) {
+                            kb.field_d = kb.field_d + 1;
+                            oa.field_a = oa.field_a - gb.field_g;
+                            if (var5 == 0) {
+                              break L32;
+                            }
+                          }
+                          if (4 == var4_int) {
+                            gb.field_g = gb.field_g + 1;
+                            ml.field_r = ml.field_r + kb.field_d;
+                            if (var5 == 0) {
+                              break L32;
+                            }
+                          }
+                          if (5 == var4_int) {
+                            kb.field_d = kb.field_d + 1;
+                            ml.field_r = ml.field_r + gb.field_g;
+                            if (var5 == 0) {
+                              break L32;
+                            }
+                          }
+                          if (var4_int == 6) {
+                            ml.field_r = ml.field_r - kb.field_d;
+                            gb.field_g = gb.field_g - 1;
+                            if (var5 == 0) {
+                              break L32;
+                            }
+                          }
+                          if (var4_int == 7) {
+                            kb.field_d = kb.field_d - 1;
+                            ml.field_r = ml.field_r - gb.field_g;
+                            if (var5 == 0) {
+                              break L32;
+                            }
+                          } else {
+                            break L32;
+                          }
+                        }
+                        gb.field_g = gb.field_g + 1;
+                        oa.field_a = oa.field_a - kb.field_d;
+                        if (var5 == 0) {
+                          break L32;
+                        }
+                      }
+                      oa.field_a = oa.field_a + gb.field_g;
+                      kb.field_d = kb.field_d - 1;
+                      if (var5 == 0) {
+                        break L32;
+                      }
+                    }
+                    gb.field_g = gb.field_g - 1;
+                    oa.field_a = oa.field_a + kb.field_d;
+                  }
+                  var4_int = (kd.field_c + qa.field_a - -he.field_d + ki.field_d) % 5;
+                  if (-1 != (var4_int ^ -1)) {
+                    if (1 != var4_int) {
+                      if (2 != var4_int) {
+                        if (var4_int == 3) {
+                          sc.field_f = sc.field_f + 1;
+                          el.field_g = el.field_g + lb.field_b;
+                          if (var5 == 0) {
+                            break L30;
+                          }
+                        }
+                        if (4 == var4_int) {
+                          el.field_g = el.field_g - lb.field_b;
+                          sc.field_f = sc.field_f - 1;
+                          if (var5 == 0) {
+                            break L30;
+                          }
+                        } else {
+                          break L30;
+                        }
+                      }
+                      lb.field_b = lb.field_b - 1;
+                      el.field_g = el.field_g - sc.field_f;
+                      if (var5 == 0) {
+                        break L30;
+                      }
+                    }
                     lb.field_b = lb.field_b + 1;
                     el.field_g = el.field_g + sc.field_f;
                     if (var5 == 0) {
-                        statePc = 220;
-                    } else {
-                        statePc = 218;
+                      break L30;
                     }
-                    continue stateLoop;
+                  }
+                  dc.field_a = dc.field_a | el.field_g + lb.field_b << -982889103;
                 }
-                case 218: {
-                    dc.field_a = dc.field_a | el.field_g + lb.field_b << -982889103;
-                    statePc = 220;
-                    continue stateLoop;
-                }
-                case 220: {
-                    if (!kj.field_o[99]) {
-                        statePc = 232;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 221. */
-                        {
-                            if (this.tutorialPromptActive) {
-                                statePc = 232;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 224. */
-                                {
-                                    var4 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
-                                    statePc = 225;
-                                    continue stateLoop;
-                                }
+              }
+              L44: {
+                L45: {
+                  if (kj.field_o[99]) {
+                    if (!this.tutorialPromptActive) {
+                      var4 = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+                      L46: while (true) {
+                        if (null == var4) {
+                          break L45;
+                        } else {
+                          stackIn_233_0 = var4.detachedFromBoard;
+
+                          if (var5 != 0) {
+                            break L44;
+                          } else {
+                            if (!stackIn_233_0) {
+                              var4.positionY = var4.positionY + 4.0f * var4.velocityY;
+                              var4.positionX = var4.positionX + 4.0f * var4.velocityX;
+                              if (var5 == 0) {
+                                break L45;
+                              }
                             }
-                        }
-                    }
-                }
-                case 225: {
-                    if (null == var4) {
-                        statePc = 232;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 226. */
-                        {
-                            stackIn_233_0 = var4.detachedFromBoard;
-                            stackIn_227_0 = stackIn_233_0;
-                            if (var5 != 0) {
-                                statePc = 233;
-                                continue stateLoop;
+                            var4 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+                            if (var5 == 0) {
+                              continue L46;
                             } else {
-                                /* Inlined CFG state: 227. */
-                                {
-                                    if (!stackIn_227_0) {
-                                        /* Inlined CFG state: 230. */
-                                        {
-                                            var4.positionY = var4.positionY + 4.0f * var4.velocityY;
-                                            var4.positionX = var4.positionX + 4.0f * var4.velocityX;
-                                            if (var5 == 0) {
-                                                statePc = 232;
-                                            } else {
-                                                statePc = 231;
-                                            }
-                                            continue stateLoop;
-                                        }
-                                    } else {
-                                        statePc = 231;
-                                        continue stateLoop;
-                                    }
-                                }
+                              break L45;
                             }
+                          }
                         }
+                      }
                     }
+                  }
                 }
-                case 231: {
-                    var4 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
-                    if (var5 == 0) {
-                        statePc = 225;
-                    } else {
-                        statePc = 232;
-                    }
-                    continue stateLoop;
+                stackIn_233_0 = kj.field_o[var3];
+              }
+              if (!stackIn_233_0) {
+                if (!kj.field_o[var2]) {
+                  jj.b(-106);
                 }
-                case 232: {
-                    stackIn_233_0 = kj.field_o[var3];
-                    statePc = 233;
-                    continue stateLoop;
-                }
-                case 233: {
-                    if (stackIn_233_0) {
-                        statePc = 239;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 234. */
-                        {
-                            if (kj.field_o[var2]) {
-                                statePc = 239;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 237. */
-                                {
-                                    jj.b(-106);
-                                    statePc = 239;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 239: {
-                    this.delayedActionCountdown = this.delayedActionCountdown - 1;
-                    if ((this.delayedActionCountdown ^ -1) != -1) {
-                        statePc = 242;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 240. */
-                        {
-                            ld.a(310, 320, 123, 100 + 100 * ji.difficultyStep);
-                            statePc = 242;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 242: {
+              }
+              this.delayedActionCountdown = this.delayedActionCountdown - 1;
+              if ((this.delayedActionCountdown ^ -1) == -1) {
+                ld.a(310, 320, 123, 100 + 100 * ji.difficultyStep);
+              }
+              L50: {
+                stackIn_251_0 = this;
+
+                if (!fa.entitiesDetachedThisTick) {
+                  stackIn_251_0 = this;
+
+                  if (a.attachedEntities.isEmpty(13519)) {
+                    stackIn_246_0 = this;
                     stackIn_251_0 = this;
-                    stackIn_243_0 = stackIn_251_0;
-                    if (fa.entitiesDetachedThisTick) {
-                        statePc = 251;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 243. */
-                        {
-                            stackIn_251_0 = this;
-                            stackIn_244_0 = stackIn_251_0;
-                            if (!a.attachedEntities.isEmpty(13519)) {
-                                statePc = 251;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 244. */
-                                {
-                                    /* Sequential CFG blocks: 244, 246. */
-                                    {
-                                        stackIn_246_0 = this;
-                                    }
-                                    {
-                                        stackIn_251_0 = this;
-                                        stackIn_247_0 = stackIn_251_0;
-                                        if (0 >= ul.releasedInCurrentTheme) {
-                                            statePc = 251;
-                                            continue stateLoop;
-                                        } else {
-                                            /* Inlined CFG state: 247. */
-                                            {
-                                                /* Sequential CFG blocks: 247, 249. */
-                                                {
-                                                    stackIn_249_0 = this;
-                                                }
-                                                {
-                                                    stackIn_252_0 = this;
-                                                    stackIn_252_1 = 1;
-                                                    statePc = 252;
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+
+                    if (0 < ul.releasedInCurrentTheme) {
+                      stackIn_249_0 = this;
+                      stackIn_252_0 = this;
+                      stackIn_252_1 = 1;
+                      break L50;
                     }
+                  }
                 }
-                case 251: {
-                    stackIn_252_0 = this;
-                    stackIn_252_1 = 0;
-                    statePc = 252;
-                    continue stateLoop;
-                }
-                case 252: {
-                    ((GameplaySession) (this)).boardClearBonusEligible = stackIn_252_1 != 0;
-                    if (!this.boardClearBonusEligible) {
-                        statePc = 259;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 253. */
-                        {
-                            if (!this.connectivityRebuiltThisTick) {
-                                statePc = 259;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 256. */
-                                {
-                                    this.connectivityRebuiltThisTick = false;
-                                    this.delayedActionCountdown = 300;
-                                    this.boardClearBonusEligible = false;
-                                    ra.a(le.field_a ^ 255, -88, le.field_a);
-                                    if (var5 == 0) {
-                                        statePc = 261;
-                                    } else {
-                                        statePc = 259;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 259: {
+                stackIn_252_0 = this;
+                stackIn_252_1 = 0;
+              }
+              L52: {
+                ((GameplaySession) (this)).boardClearBonusEligible = stackIn_252_1 != 0;
+                if (this.boardClearBonusEligible) {
+                  if (this.connectivityRebuiltThisTick) {
                     this.connectivityRebuiltThisTick = false;
-                    statePc = 261;
-                    continue stateLoop;
-                }
-                case 261: {
-                    this.boundaryCheckRequested = ab.boardContactStateDirty;
-                    ef.advanceActiveEntityAnimations((byte) -15);
-                    kc.reconcileBoardEntities(param0 + 1578896101);
-                    if (ab.boardContactStateDirty) {
-                        /* Inlined CFG state: 264. */
-                        {
-                            ul.collectMatchCandidates(-2);
-                            statePc = 265;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 265;
-                        continue stateLoop;
-                    }
-                }
-                case 265: {
-                    this.matchBatchProcessedThisTick = ec.processMatchCandidates(-18913);
-                    if (this.boundaryCheckRequested) {
-                        /* Inlined CFG state: 268. */
-                        {
-                            sk.checkBoundaryLossAndStartCascade(param0 ^ 1578896190);
-                            statePc = 269;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 269;
-                        continue stateLoop;
-                    }
-                }
-                case 269: {
-                    cf.advanceScorePopups((byte) 27);
-                    f.o(600);
-                    if (this.tutorialMode) {
-                        /* Inlined CFG state: 272. */
-                        {
-                            this.advanceTutorialStep(109);
-                            statePc = 273;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 273;
-                        continue stateLoop;
-                    }
-                }
-                case 273: {
+                    this.delayedActionCountdown = 300;
+                    this.boardClearBonusEligible = false;
+                    ra.a(le.field_a ^ 255, -88, le.field_a);
                     if (var5 == 0) {
-                        statePc = 288;
-                    } else {
-                        statePc = 274;
+                      break L52;
                     }
-                    continue stateLoop;
+                  }
                 }
-                case 274: {
-                    if (-1 != (this.sceneAnimationTick ^ -1)) {
-                        statePc = 279;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 277. */
-                        {
-                            fi.a(param0 ^ -1578896191, pi.field_S);
-                            statePc = 279;
-                            continue stateLoop;
-                        }
-                    }
+                this.connectivityRebuiltThisTick = false;
+              }
+              this.boundaryCheckRequested = ab.boardContactStateDirty;
+              ef.advanceActiveEntityAnimations((byte) -15);
+              kc.reconcileBoardEntities(param0 + 1578896101);
+              if (ab.boardContactStateDirty) {
+                ul.collectMatchCandidates(-2);
+              }
+              this.matchBatchProcessedThisTick = ec.processMatchCandidates(-18913);
+              if (this.boundaryCheckRequested) {
+                sk.checkBoundaryLossAndStartCascade(param0 ^ 1578896190);
+              }
+              cf.advanceScorePopups((byte) 27);
+              f.o(600);
+              if (this.tutorialMode) {
+                this.advanceTutorialStep(109);
+              }
+              if (var5 == 0) {
+                break L7;
+              }
+            }
+          }
+          if (-1 == (this.sceneAnimationTick ^ -1)) {
+            fi.a(param0 ^ -1578896191, pi.field_S);
+          }
+          if (pf.field_D) {
+            if (od.a(-3)) {
+              if (this.sceneAnimationTick > 1000) {
+                this.requestSessionExitScreen(28809);
+              }
+            }
+          }
+          fc.a(19);
+          cf.advanceScorePopups((byte) 24);
+          f.o(600);
+          this.sceneAnimationTick = this.sceneAnimationTick + 1;
+          this.boardRasterDirty = true;
+        }
+        if (param0 != -1578896191) {
+          this.scoreText = (StringBuilder) null;
+        }
+        L60: while (true) {
+          L61: {
+            if (hh.a(111)) {
+              if (te.field_a > 0) {
+                pk.field_r = pk.field_r.substring(1) + te.field_a;
+                if (pk.field_r.equalsIgnoreCase("fog")) {
+                  stackIn_303_0 = this;
+
+                  if (this.showDebugOverview) {
+                    stackIn_304_0 = this;
+                    stackIn_304_1 = 0;
+                  } else {
+                    stackIn_304_0 = this;
+                    stackIn_304_1 = 1;
+                  }
+                  ((GameplaySession) (this)).showDebugOverview = stackIn_304_1 != 0;
                 }
-                case 279: {
-                    if (!pf.field_D) {
-                        statePc = 287;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 280. */
-                        {
-                            if (!od.a(-3)) {
-                                statePc = 287;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 283. */
-                                {
-                                    if (this.sceneAnimationTick > 1000) {
-                                        /* Inlined CFG state: 286. */
-                                        {
-                                            this.requestSessionExitScreen(28809);
-                                            statePc = 287;
-                                            continue stateLoop;
-                                        }
-                                    } else {
-                                        statePc = 287;
-                                        continue stateLoop;
-                                    }
-                                }
-                            }
-                        }
-                    }
+                if (oc.field_f >= 2) {
+                  if (pk.field_r.equalsIgnoreCase("brk")) {
+                    this.gameApplet.h((byte) 41);
+                  }
                 }
-                case 287: {
-                    fc.a(19);
-                    cf.advanceScorePopups((byte) 24);
-                    f.o(600);
-                    this.sceneAnimationTick = this.sceneAnimationTick + 1;
-                    this.boardRasterDirty = true;
-                    statePc = 288;
-                    continue stateLoop;
+              }
+              if ((ki.field_d ^ -1) != -14) {
+                if (-84 == (ki.field_d ^ -1)) {
+                  if (this.tutorialMode) {
+                    this.leaveTutorial(7000);
+                  }
                 }
-                case 288: {
-                    if (param0 == -1578896191) {
-                        statePc = 293;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 289. */
-                        {
-                            this.scoreText = (StringBuilder) null;
-                            statePc = 293;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 293: {
-                    if (!hh.a(111)) {
-                        statePc = 463;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 294. */
-                        {
-                            if (te.field_a > 0) {
-                                /* Inlined CFG state: 297. */
-                                {
-                                    pk.field_r = pk.field_r.substring(1) + te.field_a;
-                                    if (pk.field_r.equalsIgnoreCase("fog")) {
-                                        /* Inlined CFG state: 300. */
-                                        {
-                                            stackIn_303_0 = this;
-                                            stackIn_301_0 = stackIn_303_0;
-                                            if (this.showDebugOverview) {
-                                                /* Inlined CFG state: 303. */
-                                                {
-                                                    stackIn_304_0 = this;
-                                                    stackIn_304_1 = 0;
-                                                    statePc = 304;
-                                                    continue stateLoop;
-                                                }
-                                            } else {
-                                                /* Inlined CFG state: 301. */
-                                                {
-                                                    stackIn_304_0 = this;
-                                                    stackIn_304_1 = 1;
-                                                    statePc = 304;
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        statePc = 305;
-                                        continue stateLoop;
-                                    }
-                                }
-                            } else {
-                                statePc = 311;
-                                continue stateLoop;
-                            }
-                        }
-                    }
-                }
-                case 304: {
-                    ((GameplaySession) (this)).showDebugOverview = stackIn_304_1 != 0;
-                    statePc = 305;
-                    continue stateLoop;
-                }
-                case 305: {
-                    if (oc.field_f < 2) {
-                        statePc = 311;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 306. */
-                        {
-                            if (!pk.field_r.equalsIgnoreCase("brk")) {
-                                statePc = 311;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 309. */
-                                {
-                                    this.gameApplet.h((byte) 41);
-                                    statePc = 311;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 311: {
-                    if ((ki.field_d ^ -1) != -14) {
-                        /* Inlined CFG state: 321. */
-                        {
-                            if (-84 == (ki.field_d ^ -1)) {
-                                /* Inlined CFG state: 324. */
-                                {
-                                    if (!this.tutorialMode) {
-                                        statePc = 327;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 325. */
-                                        {
-                                            this.leaveTutorial(7000);
-                                            statePc = 327;
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            } else {
-                                statePc = 327;
-                                continue stateLoop;
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 312. */
-                        {
-                            if (this.sessionEnding) {
-                                statePc = 318;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 315. */
-                                {
-                                    ai.requestedScreenId = 1;
-                                    if (var5 == 0) {
-                                        /* Inlined CFG state: 523. */
-                                        {
-                                            return;
-                                        }
-                                    } else {
-                                        statePc = 318;
-                                        continue stateLoop;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 318: {
-                    /* Sequential CFG blocks: 318, 320. */
-                    {
-                        this.requestSessionExitScreen(28809);
-                    }
-                    {
-                        return;
-                    }
-                }
-                case 327: {
-                    if (ki.field_d != 84) {
-                        statePc = 344;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 328. */
-                        {
-                            if (this.tutorialStepPhase == 0) {
-                                /* Inlined CFG state: 331. */
-                                {
-                                    this.tutorialStepPhase = 1;
-                                    this.tutorialPromptActive = false;
-                                    if (-1 == (this.tutorialStepId ^ -1)) {
-                                        statePc = 342;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 332. */
-                                        {
-                                            if ((this.tutorialStepId ^ -1) == -2) {
-                                                statePc = 339;
-                                                continue stateLoop;
-                                            } else {
-                                                /* Inlined CFG state: 335. */
-                                                {
-                                                    if (-3 == (this.tutorialStepId ^ -1)) {
-                                                        statePc = 338;
-                                                    } else {
-                                                        statePc = 344;
-                                                    }
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            } else {
-                                statePc = 344;
-                                continue stateLoop;
-                            }
-                        }
-                    }
-                }
-                case 338: {
-                    this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
-                    if (var5 == 0) {
-                        statePc = 344;
-                    } else {
-                        statePc = 339;
-                    }
-                    continue stateLoop;
-                }
-                case 339: {
-                    this.tutorialProgressMetric = dd.variantMatchCandidateCount;
-                    if (var5 == 0) {
-                        statePc = 344;
-                    } else {
-                        statePc = 342;
-                    }
-                    continue stateLoop;
-                }
-                case 342: {
-                    this.tutorialProgressMetric = 0;
-                    statePc = 344;
-                    continue stateLoop;
-                }
-                case 344: {
-                    if ((ki.field_d ^ -1) != -86) {
-                        statePc = 352;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 345. */
-                        {
-                            if (5 != this.tutorialStepId) {
-                                statePc = 352;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 348. */
-                                {
-                                    if (-1 == (this.tutorialStepPhase ^ -1)) {
-                                        /* Inlined CFG state: 351. */
-                                        {
-                                            this.leaveTutorial(param0 ^ -1578897511);
-                                            this.tutorialMode = true;
-                                            this.tutorialStepId = 0;
-                                            this.tutorialPromptActive = true;
-                                            statePc = 352;
-                                            continue stateLoop;
-                                        }
-                                    } else {
-                                        statePc = 352;
-                                        continue stateLoop;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 352: {
-                    if (jg.field_g != ki.field_d) {
-                        statePc = 360;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 353. */
-                        {
-                            stackIn_358_0 = this;
-                            stackIn_354_0 = stackIn_358_0;
-                            if (this.rotationControlsSwapped) {
-                                /* Inlined CFG state: 358. */
-                                {
-                                    stackIn_359_0 = this;
-                                    stackIn_359_1 = 0;
-                                    statePc = 359;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 354. */
-                                {
-                                    /* Sequential CFG blocks: 354, 356. */
-                                    {
-                                        stackIn_356_0 = this;
-                                    }
-                                    {
-                                        stackIn_359_0 = this;
-                                        stackIn_359_1 = 1;
-                                        statePc = 359;
-                                        continue stateLoop;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 359: {
-                    ((GameplaySession) (this)).rotationControlsSwapped = stackIn_359_1 != 0;
-                    jc.a(7, false);
-                    statePc = 360;
-                    continue stateLoop;
-                }
-                case 360: {
-                    if (2 > oc.field_f) {
-                        statePc = 293;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 361. */
-                        {
-                            stackIn_464_0 = ki.field_d;
-                            stackIn_362_0 = stackIn_464_0;
-                            stackIn_464_1 = 48;
-                            stackIn_362_1 = stackIn_464_1;
-                            if (var5 != 0) {
-                                statePc = 464;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 362. */
-                                {
-                                    if (stackIn_362_0 != stackIn_362_1) {
-                                        statePc = 369;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 365. */
-                                        {
-                                            this.debugSpawnVariantId = this.debugSpawnVariantId - 1;
-                                            if ((this.debugSpawnVariantId ^ -1) > -1) {
-                                                /* Inlined CFG state: 368. */
-                                                {
-                                                    this.debugSpawnVariantId = 6;
-                                                    statePc = 369;
-                                                    continue stateLoop;
-                                                }
-                                            } else {
-                                                statePc = 369;
-                                                continue stateLoop;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 369: {
-                    if (-50 == (ki.field_d ^ -1)) {
-                        /* Inlined CFG state: 372. */
-                        {
-                            this.debugSpawnVariantId = this.debugSpawnVariantId + 1;
-                            if (this.debugSpawnVariantId != 7) {
-                                statePc = 375;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 373. */
-                                {
-                                    this.debugSpawnVariantId = 0;
-                                    statePc = 375;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        statePc = 375;
-                        continue stateLoop;
-                    }
-                }
-                case 375: {
-                    if (-65 != (ki.field_d ^ -1)) {
-                        statePc = 381;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 376. */
-                        {
-                            this.debugSpawnCategoryId = this.debugSpawnCategoryId - 1;
-                            if (-1 >= (this.debugSpawnCategoryId ^ -1)) {
-                                statePc = 381;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 379. */
-                                {
-                                    this.debugSpawnCategoryId = 6;
-                                    statePc = 381;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 381: {
-                    if (32 == ki.field_d) {
-                        /* Inlined CFG state: 384. */
-                        {
-                            stackIn_387_0 = this;
-                            stackIn_385_0 = stackIn_387_0;
-                            if (this.debugSpawnSpecialKinds) {
-                                /* Inlined CFG state: 387. */
-                                {
-                                    stackIn_388_0 = this;
-                                    stackIn_388_1 = 0;
-                                    statePc = 388;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 385. */
-                                {
-                                    stackIn_388_0 = this;
-                                    stackIn_388_1 = 1;
-                                    statePc = 388;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        statePc = 389;
-                        continue stateLoop;
-                    }
-                }
-                case 388: {
-                    ((GameplaySession) (this)).debugSpawnSpecialKinds = stackIn_388_1 != 0;
-                    statePc = 389;
-                    continue stateLoop;
-                }
-                case 389: {
-                    if (ki.field_d != 65) {
-                        statePc = 394;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 390. */
-                        {
-                            this.debugSpawnCategoryId = this.debugSpawnCategoryId + 1;
-                            if ((this.debugSpawnCategoryId ^ -1) == -8) {
-                                /* Inlined CFG state: 393. */
-                                {
-                                    this.debugSpawnCategoryId = 0;
-                                    statePc = 394;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                statePc = 394;
-                                continue stateLoop;
-                            }
-                        }
-                    }
-                }
-                case 394: {
-                    if ((ki.field_d ^ -1) == -17) {
-                        /* Inlined CFG state: 397. */
-                        {
-                            this.tutorialAdvanceRequested = true;
-                            statePc = 398;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 398;
-                        continue stateLoop;
-                    }
-                }
-                case 398: {
-                    if (68 != ki.field_d) {
-                        statePc = 401;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 399. */
-                        {
-                            this.sessionPhase = 1;
-                            this.submissionBlocked = true;
-                            statePc = 401;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 401: {
-                    if (ki.field_d == 1) {
-                        /* Inlined CFG state: 404. */
-                        {
-                            this.submissionBlocked = true;
-                            stackIn_407_0 = this;
-                            stackIn_405_0 = stackIn_407_0;
-                            if (this.debugPointerSpawnEnabled) {
-                                /* Inlined CFG state: 407. */
-                                {
-                                    stackIn_408_0 = this;
-                                    stackIn_408_1 = 0;
-                                    statePc = 408;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 405. */
-                                {
-                                    stackIn_408_0 = this;
-                                    stackIn_408_1 = 1;
-                                    statePc = 408;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        statePc = 409;
-                        continue stateLoop;
-                    }
-                }
-                case 408: {
-                    ((GameplaySession) (this)).debugPointerSpawnEnabled = stackIn_408_1 != 0;
-                    statePc = 409;
-                    continue stateLoop;
-                }
-                case 409: {
-                    if (2 != ki.field_d) {
-                        statePc = 417;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 410. */
-                        {
-                            stackIn_415_0 = this;
-                            stackIn_411_0 = stackIn_415_0;
-                            if (this.spawnReleaseDisabled) {
-                                /* Inlined CFG state: 415. */
-                                {
-                                    stackIn_416_0 = this;
-                                    stackIn_416_1 = 0;
-                                    statePc = 416;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 411. */
-                                {
-                                    /* Sequential CFG blocks: 411, 413. */
-                                    {
-                                        stackIn_413_0 = this;
-                                    }
-                                    {
-                                        stackIn_416_0 = this;
-                                        stackIn_416_1 = 1;
-                                        statePc = 416;
-                                        continue stateLoop;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 416: {
-                    ((GameplaySession) (this)).spawnReleaseDisabled = stackIn_416_1 != 0;
-                    this.submissionBlocked = true;
-                    statePc = 417;
-                    continue stateLoop;
-                }
-                case 417: {
-                    if ((ki.field_d ^ -1) != -4) {
-                        statePc = 420;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 418. */
-                        {
-                            ag.field_k = 7;
-                            f.field_qb = 7;
-                            statePc = 420;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 420: {
-                    if ((ki.field_d ^ -1) == -5) {
-                        /* Inlined CFG state: 423. */
-                        {
-                            hd.recordEntityRelease(2);
-                            this.submissionBlocked = true;
-                            statePc = 424;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 424;
-                        continue stateLoop;
-                    }
-                }
-                case 424: {
-                    if ((ki.field_d ^ -1) != -6) {
-                        statePc = 427;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 425. */
-                        {
-                            GameScreen.selectedThemeId = 1;
-                            IntrusiveNode.a(param0 ^ 1578896207, GameScreen.selectedThemeId);
-                            cd.a((byte) 110);
-                            statePc = 427;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 427: {
-                    if ((ki.field_d ^ -1) != -7) {
-                        statePc = 430;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 428. */
-                        {
-                            GameScreen.selectedThemeId = 0;
-                            IntrusiveNode.a(-126, GameScreen.selectedThemeId);
-                            cd.a((byte) 126);
-                            statePc = 430;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 430: {
-                    if (7 == ki.field_d) {
-                        /* Inlined CFG state: 433. */
-                        {
-                            GameScreen.selectedThemeId = 6;
-                            IntrusiveNode.a(-99, GameScreen.selectedThemeId);
-                            cd.a((byte) 113);
-                            statePc = 434;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 434;
-                        continue stateLoop;
-                    }
-                }
-                case 434: {
-                    if (ki.field_d == 8) {
-                        /* Inlined CFG state: 437. */
-                        {
-                            GameScreen.selectedThemeId = 5;
-                            IntrusiveNode.a(-124, GameScreen.selectedThemeId);
-                            cd.a((byte) 115);
-                            statePc = 438;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 438;
-                        continue stateLoop;
-                    }
-                }
-                case 438: {
-                    if (-10 != (ki.field_d ^ -1)) {
-                        statePc = 441;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 439. */
-                        {
-                            GameScreen.selectedThemeId = 3;
-                            IntrusiveNode.a(-98, GameScreen.selectedThemeId);
-                            cd.a((byte) 122);
-                            statePc = 441;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 441: {
-                    if (10 != ki.field_d) {
-                        statePc = 444;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 442. */
-                        {
-                            GameScreen.selectedThemeId = 4;
-                            IntrusiveNode.a(param0 ^ 1578896198, GameScreen.selectedThemeId);
-                            cd.a((byte) 101);
-                            statePc = 444;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 444: {
-                    if ((ki.field_d ^ -1) == -12) {
-                        /* Inlined CFG state: 447. */
-                        {
-                            GameScreen.selectedThemeId = 2;
-                            IntrusiveNode.a(-118, GameScreen.selectedThemeId);
-                            cd.a((byte) 82);
-                            statePc = 448;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 448;
-                        continue stateLoop;
-                    }
-                }
-                case 448: {
-                    if (ki.field_d == 12) {
-                        /* Inlined CFG state: 451. */
-                        {
-                            stackIn_454_0 = this;
-                            stackIn_452_0 = stackIn_454_0;
-                            if (this.debugReducedRendering) {
-                                /* Inlined CFG state: 454. */
-                                {
-                                    stackIn_455_0 = this;
-                                    stackIn_455_1 = 0;
-                                    statePc = 455;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 452. */
-                                {
-                                    stackIn_455_0 = this;
-                                    stackIn_455_1 = 1;
-                                    statePc = 455;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        statePc = 456;
-                        continue stateLoop;
-                    }
-                }
-                case 455: {
-                    ((GameplaySession) (this)).debugReducedRendering = stackIn_455_1 != 0;
-                    statePc = 456;
-                    continue stateLoop;
-                }
-                case 456: {
-                    if (36 != ki.field_d) {
-                        statePc = 459;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 457. */
-                        {
-                            GameScreen.selectedThemeId = GameScreen.selectedThemeId + 1;
-                            GameScreen.selectedThemeId = GameScreen.selectedThemeId % 7;
-                            cd.a((byte) 108);
-                            statePc = 459;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 459: {
-                    if ((ki.field_d ^ -1) == -40) {
-                        /* Inlined CFG state: 462. */
-                        {
-                            this.showSessionCounters = true;
-                            if (var5 == 0) {
-                                statePc = 293;
-                            } else {
-                                statePc = 463;
-                            }
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 293;
-                        continue stateLoop;
-                    }
-                }
-                case 463: {
-                    stackIn_464_0 = bi.field_g ^ -1;
-                    stackIn_464_1 = -1;
-                    statePc = 464;
-                    continue stateLoop;
-                }
-                case 464: {
-                    if (stackIn_464_0 == stackIn_464_1) {
-                        statePc = 522;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 465. */
-                        {
-                            if (!this.debugPointerSpawnEnabled) {
-                                statePc = 473;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 468. */
-                                {
-                                    if ((oc.field_f ^ -1) > -3) {
-                                        statePc = 473;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 471. */
-                                        {
-                                            nb.spawnEntityAtPointer(-28195, mc.field_a, this.debugSpawnCategoryId, he.field_d, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
-                                            statePc = 473;
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 473: {
-                    if (!this.tutorialMode) {
-                        statePc = 522;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 474. */
-                        {
-                            if ((this.tutorialStepPhase ^ -1) != -1) {
-                                statePc = 522;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 477. */
-                                {
-                                    if (-6 == (this.tutorialStepId ^ -1)) {
-                                        statePc = 496;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 480. */
-                                        {
-                                            this.tutorialPromptActive = false;
-                                            this.tutorialStepPhase = 1;
-                                            if (this.tutorialStepId != 0) {
-                                                statePc = 486;
-                                                continue stateLoop;
-                                            } else {
-                                                /* Inlined CFG state: 483. */
-                                                {
-                                                    this.tutorialProgressMetric = 0;
-                                                    if (var5 == 0) {
-                                                        statePc = 522;
-                                                    } else {
-                                                        statePc = 486;
-                                                    }
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 486: {
-                    if ((this.tutorialStepId ^ -1) != -2) {
-                        statePc = 492;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 489. */
-                        {
-                            this.tutorialProgressMetric = dd.variantMatchCandidateCount;
-                            if (var5 == 0) {
-                                statePc = 522;
-                            } else {
-                                statePc = 492;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 492: {
-                    if ((this.tutorialStepId ^ -1) == -3) {
-                        /* Inlined CFG state: 495. */
-                        {
+                L67: {
+                  if (ki.field_d == 84) {
+                    if (this.tutorialStepPhase == 0) {
+                      this.tutorialStepPhase = 1;
+                      this.tutorialPromptActive = false;
+                      if (-1 != (this.tutorialStepId ^ -1)) {
+                        if ((this.tutorialStepId ^ -1) != -2) {
+                          if (-3 == (this.tutorialStepId ^ -1)) {
                             this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
                             if (var5 == 0) {
-                                statePc = 522;
-                            } else {
-                                statePc = 496;
+                              break L67;
                             }
-                            continue stateLoop;
+                          } else {
+                            break L67;
+                          }
                         }
-                    } else {
-                        statePc = 522;
-                        continue stateLoop;
-                    }
-                }
-                case 496: {
-                    if (-101 <= (mc.field_a ^ -1)) {
-                        statePc = 509;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 499. */
-                        {
-                            if (340 <= mc.field_a) {
-                                statePc = 509;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 502. */
-                                {
-                                    if (-441 <= (he.field_d ^ -1)) {
-                                        statePc = 509;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 505. */
-                                        {
-                                            if (476 > he.field_d) {
-                                                /* Inlined CFG state: 508. */
-                                                {
-                                                    this.leaveTutorial(param0 ^ -1578897511);
-                                                    this.tutorialStepId = 0;
-                                                    this.tutorialMode = true;
-                                                    this.tutorialPromptActive = true;
-                                                    statePc = 509;
-                                                    continue stateLoop;
-                                                }
-                                            } else {
-                                                statePc = 509;
-                                                continue stateLoop;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+                        this.tutorialProgressMetric = dd.variantMatchCandidateCount;
+                        if (var5 == 0) {
+                          break L67;
                         }
+                      }
+                      this.tutorialProgressMetric = 0;
                     }
+                  }
                 }
-                case 509: {
-                    if (mc.field_a <= 380) {
-                        statePc = 522;
-                        continue stateLoop;
+                if ((ki.field_d ^ -1) == -86) {
+                  if (5 == this.tutorialStepId) {
+                    if (-1 == (this.tutorialStepPhase ^ -1)) {
+                      this.leaveTutorial(param0 ^ -1578897511);
+                      this.tutorialMode = true;
+                      this.tutorialStepId = 0;
+                      this.tutorialPromptActive = true;
+                    }
+                  }
+                }
+                if (jg.field_g == ki.field_d) {
+                  stackIn_358_0 = this;
+
+                  if (this.rotationControlsSwapped) {
+                    stackIn_359_0 = this;
+                    stackIn_359_1 = 0;
+                  } else {
+                    stackIn_356_0 = this;
+                    stackIn_359_0 = this;
+                    stackIn_359_1 = 1;
+                  }
+                  ((GameplaySession) (this)).rotationControlsSwapped = stackIn_359_1 != 0;
+                  jc.a(7, false);
+                }
+                if (2 > oc.field_f) {
+                  continue L60;
+                } else {
+                  stackIn_464_0 = ki.field_d;
+
+                  stackIn_464_1 = 48;
+
+                  if (var5 != 0) {
+                    break L61;
+                  } else {
+                    if (stackIn_464_0 == stackIn_464_1) {
+                      this.debugSpawnVariantId = this.debugSpawnVariantId - 1;
+                      if ((this.debugSpawnVariantId ^ -1) > -1) {
+                        this.debugSpawnVariantId = 6;
+                      }
+                    }
+                    if (-50 == (ki.field_d ^ -1)) {
+                      this.debugSpawnVariantId = this.debugSpawnVariantId + 1;
+                      if (this.debugSpawnVariantId == 7) {
+                        this.debugSpawnVariantId = 0;
+                      }
+                    }
+                    if (-65 == (ki.field_d ^ -1)) {
+                      this.debugSpawnCategoryId = this.debugSpawnCategoryId - 1;
+                      if (-1 < (this.debugSpawnCategoryId ^ -1)) {
+                        this.debugSpawnCategoryId = 6;
+                      }
+                    }
+                    if (32 == ki.field_d) {
+                      stackIn_387_0 = this;
+
+                      if (this.debugSpawnSpecialKinds) {
+                        stackIn_388_0 = this;
+                        stackIn_388_1 = 0;
+                      } else {
+                        stackIn_388_0 = this;
+                        stackIn_388_1 = 1;
+                      }
+                      ((GameplaySession) (this)).debugSpawnSpecialKinds = stackIn_388_1 != 0;
+                    }
+                    if (ki.field_d == 65) {
+                      this.debugSpawnCategoryId = this.debugSpawnCategoryId + 1;
+                      if ((this.debugSpawnCategoryId ^ -1) == -8) {
+                        this.debugSpawnCategoryId = 0;
+                      }
+                    }
+                    if ((ki.field_d ^ -1) == -17) {
+                      this.tutorialAdvanceRequested = true;
+                    }
+                    if (68 == ki.field_d) {
+                      this.sessionPhase = 1;
+                      this.submissionBlocked = true;
+                    }
+                    if (ki.field_d == 1) {
+                      this.submissionBlocked = true;
+                      stackIn_407_0 = this;
+
+                      if (this.debugPointerSpawnEnabled) {
+                        stackIn_408_0 = this;
+                        stackIn_408_1 = 0;
+                      } else {
+                        stackIn_408_0 = this;
+                        stackIn_408_1 = 1;
+                      }
+                      ((GameplaySession) (this)).debugPointerSpawnEnabled = stackIn_408_1 != 0;
+                    }
+                    if (2 == ki.field_d) {
+                      stackIn_415_0 = this;
+
+                      if (this.spawnReleaseDisabled) {
+                        stackIn_416_0 = this;
+                        stackIn_416_1 = 0;
+                      } else {
+                        stackIn_413_0 = this;
+                        stackIn_416_0 = this;
+                        stackIn_416_1 = 1;
+                      }
+                      ((GameplaySession) (this)).spawnReleaseDisabled = stackIn_416_1 != 0;
+                      this.submissionBlocked = true;
+                    }
+                    if ((ki.field_d ^ -1) == -4) {
+                      ag.field_k = 7;
+                      f.field_qb = 7;
+                    }
+                    if ((ki.field_d ^ -1) == -5) {
+                      hd.recordEntityRelease(2);
+                      this.submissionBlocked = true;
+                    }
+                    if ((ki.field_d ^ -1) == -6) {
+                      GameScreen.selectedThemeId = 1;
+                      IntrusiveNode.a(param0 ^ 1578896207, GameScreen.selectedThemeId);
+                      cd.a((byte) 110);
+                    }
+                    if ((ki.field_d ^ -1) == -7) {
+                      GameScreen.selectedThemeId = 0;
+                      IntrusiveNode.a(-126, GameScreen.selectedThemeId);
+                      cd.a((byte) 126);
+                    }
+                    if (7 == ki.field_d) {
+                      GameScreen.selectedThemeId = 6;
+                      IntrusiveNode.a(-99, GameScreen.selectedThemeId);
+                      cd.a((byte) 113);
+                    }
+                    if (ki.field_d == 8) {
+                      GameScreen.selectedThemeId = 5;
+                      IntrusiveNode.a(-124, GameScreen.selectedThemeId);
+                      cd.a((byte) 115);
+                    }
+                    if (-10 == (ki.field_d ^ -1)) {
+                      GameScreen.selectedThemeId = 3;
+                      IntrusiveNode.a(-98, GameScreen.selectedThemeId);
+                      cd.a((byte) 122);
+                    }
+                    if (10 == ki.field_d) {
+                      GameScreen.selectedThemeId = 4;
+                      IntrusiveNode.a(param0 ^ 1578896198, GameScreen.selectedThemeId);
+                      cd.a((byte) 101);
+                    }
+                    if ((ki.field_d ^ -1) == -12) {
+                      GameScreen.selectedThemeId = 2;
+                      IntrusiveNode.a(-118, GameScreen.selectedThemeId);
+                      cd.a((byte) 82);
+                    }
+                    if (ki.field_d == 12) {
+                      stackIn_454_0 = this;
+
+                      if (this.debugReducedRendering) {
+                        stackIn_455_0 = this;
+                        stackIn_455_1 = 0;
+                      } else {
+                        stackIn_455_0 = this;
+                        stackIn_455_1 = 1;
+                      }
+                      ((GameplaySession) (this)).debugReducedRendering = stackIn_455_1 != 0;
+                    }
+                    if (36 == ki.field_d) {
+                      GameScreen.selectedThemeId = GameScreen.selectedThemeId + 1;
+                      GameScreen.selectedThemeId = GameScreen.selectedThemeId % 7;
+                      cd.a((byte) 108);
+                    }
+                    if ((ki.field_d ^ -1) == -40) {
+                      this.showSessionCounters = true;
+                      if (var5 == 0) {
+                        continue L60;
+                      }
                     } else {
-                        /* Inlined CFG state: 510. */
-                        {
-                            if (540 <= mc.field_a) {
-                                statePc = 522;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 513. */
-                                {
-                                    if (he.field_d <= 440) {
-                                        statePc = 522;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 516. */
-                                        {
-                                            if ((he.field_d ^ -1) > -477) {
-                                                /* Inlined CFG state: 519. */
-                                                {
-                                                    this.tutorialPromptActive = false;
-                                                    this.tutorialStepPhase = 1;
-                                                    statePc = 522;
-                                                    continue stateLoop;
-                                                }
-                                            } else {
-                                                statePc = 522;
-                                                continue stateLoop;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                      continue L60;
                     }
+                  }
                 }
-                case 522: {
+              } else {
+                if (!this.sessionEnding) {
+                  ai.requestedScreenId = 1;
+                  if (var5 == 0) {
                     return;
+                  }
                 }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                this.requestSessionExitScreen(28809);
+                return;
+              }
             }
+            stackIn_464_0 = bi.field_g ^ -1;
+            stackIn_464_1 = -1;
+          }
+          L98: {
+            if (stackIn_464_0 != stackIn_464_1) {
+              if (this.debugPointerSpawnEnabled) {
+                if ((oc.field_f ^ -1) <= -3) {
+                  nb.spawnEntityAtPointer(-28195, mc.field_a, this.debugSpawnCategoryId, he.field_d, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
+                }
+              }
+              L100: {
+                if (this.tutorialMode) {
+                  if ((this.tutorialStepPhase ^ -1) == -1) {
+                    if (-6 != (this.tutorialStepId ^ -1)) {
+                      this.tutorialPromptActive = false;
+                      this.tutorialStepPhase = 1;
+                      if (this.tutorialStepId == 0) {
+                        this.tutorialProgressMetric = 0;
+                        if (var5 == 0) {
+                          break L100;
+                        }
+                      }
+                      if ((this.tutorialStepId ^ -1) == -2) {
+                        this.tutorialProgressMetric = dd.variantMatchCandidateCount;
+                        if (var5 == 0) {
+                          break L100;
+                        }
+                      }
+                      if ((this.tutorialStepId ^ -1) == -3) {
+                        this.tutorialProgressMetric = dk.categoryMatchCandidateCount;
+                        if (var5 == 0) {
+                          break L100;
+                        }
+                      } else {
+                        break L98;
+                      }
+                    }
+                    if (-101 > (mc.field_a ^ -1)) {
+                      if (340 > mc.field_a) {
+                        if (-441 > (he.field_d ^ -1)) {
+                          if (476 > he.field_d) {
+                            this.leaveTutorial(param0 ^ -1578897511);
+                            this.tutorialStepId = 0;
+                            this.tutorialMode = true;
+                            this.tutorialPromptActive = true;
+                          }
+                        }
+                      }
+                    }
+                    if (mc.field_a > 380) {
+                      if (540 > mc.field_a) {
+                        if (he.field_d > 440) {
+                          if ((he.field_d ^ -1) > -477) {
+                            this.tutorialPromptActive = false;
+                            this.tutorialStepPhase = 1;
+                          } else {
+                            break L98;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -3382,363 +1627,169 @@ final class GameplaySession {
     }
 
     private final void updateSceneTransition(byte param0) {
-        int fieldTemp$0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_17_1 = 0;
         int stackIn_27_0 = 0;
         int stackIn_27_1 = 0;
-        int statePc = 0;
         int precedingThemeId = 0;
         int themeIndexThenId = 0;
         int var4 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = Geoblox.field_C;
-                    if (-1 == (this.sceneAnimationTick ^ -1)) {
-                        statePc = 3;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (this.preserveScoreOnTransition) {
-                        statePc = 7;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 4. */
-                        {
-                            this.resetScoreState(122);
+        var4 = Geoblox.field_C;
+        if (-1 == (this.sceneAnimationTick ^ -1)) {
+          L1: {
+            if (!this.preserveScoreOnTransition) {
+              this.resetScoreState(122);
+              if (var4 == 0) {
+                break L1;
+              }
+            }
+            this.prepareNextTheme(867);
+          }
+          this.sceneTransitionInProgress = true;
+          sf.a(sh.field_y.field_d, 0, oc.boardSceneRaster.pixels, 0, sh.field_y.field_d.length);
+          le.a((byte) -39);
+          bk.boardOwnershipRaster.e();
+          SoftwareRasterizer.c();
+          i.avatarMaskRaster.a(this.boardMaskOffsetX + 320, this.boardMaskOffsetY + 240, 16777215);
+          sh.field_y.a(255);
+        }
+        int fieldTemp$0 = this.sceneAnimationTick + 1;
+        this.sceneAnimationTick = this.sceneAnimationTick + 1;
+        if (160 == fieldTemp$0) {
+          L4: {
+            if (this.preserveScoreOnTransition) {
+              precedingThemeId = 0;
+              themeIndexThenId = 0;
+              L5: while (true) {
+                L6: {
+                  L7: {
+                    if (7 > themeIndexThenId) {
+                      stackIn_27_0 = GameScreen.selectedThemeId ^ -1;
+
+                      stackIn_27_1 = ee.field_B[themeIndexThenId] ^ -1;
+
+                      if (var4 != 0) {
+                        break L6;
+                      } else {
+                        if (stackIn_27_0 == stackIn_27_1) {
+                          if (0 < themeIndexThenId) {
+                            precedingThemeId = ee.field_B[themeIndexThenId + -1];
                             if (var4 == 0) {
-                                statePc = 9;
-                            } else {
-                                statePc = 7;
+                              break L7;
                             }
-                            continue stateLoop;
+                          }
+                          precedingThemeId = ee.field_B[6];
+                          if (var4 == 0) {
+                            break L7;
+                          }
                         }
-                    }
-                }
-                case 7: {
-                    this.prepareNextTheme(867);
-                    statePc = 9;
-                    continue stateLoop;
-                }
-                case 9: {
-                    this.sceneTransitionInProgress = true;
-                    sf.a(sh.field_y.field_d, 0, oc.boardSceneRaster.pixels, 0, sh.field_y.field_d.length);
-                    le.a((byte) -39);
-                    bk.boardOwnershipRaster.e();
-                    SoftwareRasterizer.c();
-                    i.avatarMaskRaster.a(this.boardMaskOffsetX + 320, this.boardMaskOffsetY + 240, 16777215);
-                    sh.field_y.a(255);
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    fieldTemp$0 = this.sceneAnimationTick + 1;
-                    this.sceneAnimationTick = this.sceneAnimationTick + 1;
-                    if (160 != fieldTemp$0) {
-                        statePc = 91;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
-                    if (!this.preserveScoreOnTransition) {
-                        statePc = 87;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 14. */
-                        {
-                            precedingThemeId = 0;
-                            themeIndexThenId = 0;
-                            statePc = 15;
-                            continue stateLoop;
+                        themeIndexThenId++;
+                        if (var4 == 0) {
+                          continue L5;
                         }
+                      }
                     }
+                  }
+                  themeIndexThenId = precedingThemeId;
+                  stackIn_27_0 = 4;
+                  stackIn_27_1 = themeIndexThenId;
                 }
-                case 15: {
-                    if (7 <= themeIndexThenId) {
-                        statePc = 26;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 16. */
-                        {
-                            stackIn_27_0 = GameScreen.selectedThemeId ^ -1;
-                            stackIn_17_0 = stackIn_27_0;
-                            stackIn_27_1 = ee.field_B[themeIndexThenId] ^ -1;
-                            stackIn_17_1 = stackIn_27_1;
-                            if (var4 != 0) {
-                                statePc = 27;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 17. */
-                                {
-                                    if (stackIn_17_0 == stackIn_17_1) {
-                                        /* Inlined CFG state: 20. */
-                                        {
-                                            if (0 >= themeIndexThenId) {
-                                                statePc = 22;
-                                                continue stateLoop;
-                                            } else {
-                                                /* Inlined CFG state: 21. */
-                                                {
-                                                    precedingThemeId = ee.field_B[themeIndexThenId + -1];
-                                                    if (var4 == 0) {
-                                                        statePc = 26;
-                                                    } else {
-                                                        statePc = 22;
-                                                    }
-                                                    continue stateLoop;
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        statePc = 23;
-                                        continue stateLoop;
-                                    }
+                L10: {
+                  L11: {
+                    L12: {
+                      L13: {
+                        L14: {
+                          L15: {
+                            L16: {
+                              L17: {
+                                if (stackIn_27_0 == stackIn_27_1) {
+                                  if (var4 == 0) {
+                                    break L17;
+                                  }
                                 }
-                            }
-                        }
-                    }
-                }
-                case 22: {
-                    precedingThemeId = ee.field_B[6];
-                    if (var4 == 0) {
-                        statePc = 26;
-                    } else {
-                        statePc = 23;
-                    }
-                    continue stateLoop;
-                }
-                case 23: {
-                    themeIndexThenId++;
-                    if (var4 == 0) {
-                        statePc = 15;
-                    } else {
-                        statePc = 26;
-                    }
-                    continue stateLoop;
-                }
-                case 26: {
-                    themeIndexThenId = precedingThemeId;
-                    stackIn_27_0 = 4;
-                    stackIn_27_1 = themeIndexThenId;
-                    statePc = 27;
-                    continue stateLoop;
-                }
-                case 27: {
-                    if (stackIn_27_0 != stackIn_27_1) {
-                        statePc = 31;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 28. */
-                        {
-                            if (var4 == 0) {
-                                statePc = 64;
-                            } else {
-                                statePc = 31;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 31: {
-                    if (-2 != (themeIndexThenId ^ -1)) {
-                        statePc = 37;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 34. */
-                        {
-                            if (var4 == 0) {
-                                statePc = 67;
-                            } else {
-                                statePc = 37;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 37: {
-                    if (-4 != (themeIndexThenId ^ -1)) {
-                        statePc = 43;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 40. */
-                        {
-                            if (var4 == 0) {
-                                statePc = 70;
-                            } else {
-                                statePc = 43;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 43: {
-                    if (-1 != (themeIndexThenId ^ -1)) {
-                        statePc = 49;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 46. */
-                        {
-                            if (var4 == 0) {
-                                statePc = 73;
-                            } else {
-                                statePc = 49;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 49: {
-                    if (-7 == (themeIndexThenId ^ -1)) {
-                        statePc = 76;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 52. */
-                        {
-                            if (5 != themeIndexThenId) {
-                                statePc = 58;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 55. */
-                                {
+                                if (-2 == (themeIndexThenId ^ -1)) {
+                                  if (var4 == 0) {
+                                    break L16;
+                                  }
+                                }
+                                if (-4 == (themeIndexThenId ^ -1)) {
+                                  if (var4 == 0) {
+                                    break L15;
+                                  }
+                                }
+                                if (-1 == (themeIndexThenId ^ -1)) {
+                                  if (var4 == 0) {
+                                    break L14;
+                                  }
+                                }
+                                if (-7 == (themeIndexThenId ^ -1)) {
+                                  break L13;
+                                } else {
+                                  if (5 == themeIndexThenId) {
                                     if (var4 == 0) {
-                                        statePc = 79;
-                                    } else {
-                                        statePc = 58;
+                                      break L12;
                                     }
-                                    continue stateLoop;
+                                  }
+                                  if (2 != themeIndexThenId) {
+                                    break L10;
+                                  } else {
+                                    if (var4 == 0) {
+                                      break L11;
+                                    }
+                                  }
                                 }
+                              }
+                              ra.a(fa.field_f ^ 255, -61, fa.field_f);
+                              if (var4 == 0) {
+                                break L4;
+                              }
                             }
-                        }
-                    }
-                }
-                case 58: {
-                    if (2 != themeIndexThenId) {
-                        statePc = 85;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 61. */
-                        {
+                            ra.a(255 ^ hj.field_b, -84, hj.field_b);
                             if (var4 == 0) {
-                                statePc = 82;
-                            } else {
-                                statePc = 64;
+                              break L4;
                             }
-                            continue stateLoop;
+                          }
+                          ra.a(255 ^ ac.field_u, -50, ac.field_u);
+                          if (var4 == 0) {
+                            break L4;
+                          }
                         }
+                        ra.a(255 ^ kf.field_d, -71, kf.field_d);
+                        if (var4 == 0) {
+                          break L4;
+                        }
+                      }
+                      ra.a(255 ^ vi.field_E, -115, vi.field_E);
+                      if (var4 == 0) {
+                        break L4;
+                      }
                     }
-                }
-                case 64: {
-                    ra.a(fa.field_f ^ 255, -61, fa.field_f);
-                    if (var4 == 0) {
-                        statePc = 87;
-                    } else {
-                        statePc = 67;
-                    }
-                    continue stateLoop;
-                }
-                case 67: {
-                    ra.a(255 ^ hj.field_b, -84, hj.field_b);
-                    if (var4 == 0) {
-                        statePc = 87;
-                    } else {
-                        statePc = 70;
-                    }
-                    continue stateLoop;
-                }
-                case 70: {
-                    ra.a(255 ^ ac.field_u, -50, ac.field_u);
-                    if (var4 == 0) {
-                        statePc = 87;
-                    } else {
-                        statePc = 73;
-                    }
-                    continue stateLoop;
-                }
-                case 73: {
-                    ra.a(255 ^ kf.field_d, -71, kf.field_d);
-                    if (var4 == 0) {
-                        statePc = 87;
-                    } else {
-                        statePc = 76;
-                    }
-                    continue stateLoop;
-                }
-                case 76: {
-                    ra.a(255 ^ vi.field_E, -115, vi.field_E);
-                    if (var4 == 0) {
-                        statePc = 87;
-                    } else {
-                        statePc = 79;
-                    }
-                    continue stateLoop;
-                }
-                case 79: {
                     ra.a(255 ^ jj.field_g, -92, jj.field_g);
                     if (var4 == 0) {
-                        statePc = 87;
-                    } else {
-                        statePc = 82;
+                      break L4;
                     }
-                    continue stateLoop;
+                  }
+                  ra.a(255 ^ jg.field_a, -121, jg.field_a);
+                  if (var4 == 0) {
+                    break L4;
+                  }
                 }
-                case 82: {
-                    ra.a(255 ^ jg.field_a, -121, jg.field_a);
-                    if (var4 == 0) {
-                        statePc = 87;
-                    } else {
-                        statePc = 85;
-                    }
-                    continue stateLoop;
-                }
-                case 85: {
-                    ra.a(hj.field_b ^ 255, -95, hj.field_b);
-                    statePc = 87;
-                    continue stateLoop;
-                }
-                case 87: {
-                    this.connectivityRebuiltThisTick = false;
-                    this.boardRasterDirty = true;
-                    this.sceneTransitionInProgress = false;
-                    this.preserveScoreOnTransition = true;
-                    this.sceneTransitionRequested = false;
-                    this.sceneAnimationTick = 0;
-                    if (-1 > (ji.difficultyStep ^ -1)) {
-                        /* Inlined CFG state: 90. */
-                        {
-                            qe.b(10);
-                            ld.advanceDifficulty(false);
-                            statePc = 91;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 91;
-                        continue stateLoop;
-                    }
-                }
-                case 91: {
-                    if (param0 <= -76) {
-                        statePc = 94;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 92. */
-                        {
-                            this.showSessionCounters = true;
-                            statePc = 94;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 94: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                ra.a(hj.field_b ^ 255, -95, hj.field_b);
+                break L4;
+              }
             }
+          }
+          this.connectivityRebuiltThisTick = false;
+          this.boardRasterDirty = true;
+          this.sceneTransitionInProgress = false;
+          this.preserveScoreOnTransition = true;
+          this.sceneTransitionRequested = false;
+          this.sceneAnimationTick = 0;
+          if (-1 > (ji.difficultyStep ^ -1)) {
+            qe.b(10);
+            ld.advanceDifficulty(false);
+          }
+        }
+        if (param0 > -76) {
+          this.showSessionCounters = true;
         }
     }
 

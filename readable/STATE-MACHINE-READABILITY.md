@@ -1,101 +1,130 @@
-# GeoBlox dispatcher readability, pass 7
+# Why GeoBlox fell back, and what pass 8 recovers
 
-The new java-tools renderer keeps typed operand carriers and dispatcher fallbacks
-but renders proven single-entry branches as `if` and `switch` bodies. Original
-bytecode and the 642 reviewed names are unchanged. Ten raw Java files change;
-all 303 original and renamed files compile. The input, tool revision, complete
-diagnostics and source hashes are pinned separately.
+Three of the five large methods hit the invariant-loop safeguard. It was
+unnecessarily applied to the two handler-free gameplay methods. The generic
+decompiler fix now keeps gameplay update, rendering and scene
+transition as labeled Java loops. Sixteen original methods still use dispatchers;
+three have at least 50 cases. Original transformed bytecode is unchanged.
 
-## Measured result
+## Result
 
-| Method | Dispatcher cases in pass 6 | Pass 7 |
-| --- | ---: | ---: |
-| `GameplaySession.updateSession`, `gh.a(I)V` | 252 | 107 |
-| `GameplaySession.renderSession`, `gh.a(B)V` | 115 | 65 |
-| `GameplaySession.updateSceneTransition`, `gh.b(B)V` | 42 | 27 |
-| `GameplaySession.updateResultSequence`, `gh.f(I)V` | 43 | 27 |
-| `GameScreen.updateScreen`, `c.h(B)V` | 117 | 58 |
-| `kc.reconcileBoardEntities`, `kc.b(I)V` | 120 | 60 |
-| Partitioned `wi.a(BLrh;)V` | 1,877 | 756 |
-| All GeoBlox fallbacks | **3,051** | **1,330** |
+| Method | Pass 6 cases | Pass 7 cases | Pass 8 cases |
+| --- | ---: | ---: | ---: |
+| `GameplaySession.updateSession`, `gh.a(I)V` | 252 | 107 | **0** |
+| `GameplaySession.renderSession`, `gh.a(B)V` | 115 | 65 | **0** |
+| `GameplaySession.updateSceneTransition`, `gh.b(B)V` | 42 | 27 | **0** |
+| `GameplaySession.updateResultSequence`, `gh.f(I)V` | 43 | 27 | 27 |
+| `GameScreen.updateScreen`, `c.h(B)V` | 117 | 58 | 58 |
+| `kc.reconcileBoardEntities`, `kc.b(I)V` | 120 | 60 | 60 |
+| Partitioned `wi.a(BLrh;)V` | 1,877 | 756 | 756 |
+| All GeoBlox fallbacks | **3,051** | **1,330** | **1,131** |
 
-The totals count numeric cases of generated `switch (statePc)` dispatchers,
-including partition helpers; nested application switches are excluded. The
-method-level sums in [diagnostics](../decompilation/geoblox-decompiler-diagnostics.json)
-agree with an independent javac Trees inventory. Nineteen original methods
-still require fallback dispatchers. Generated methods containing dispatchers
-fall from 41 to 36 because `wi` uses 18 partition helpers instead of 23.
-Generated methods with at least 50 dispatcher cases fall from 31 to four.
-Source line counts do not always shrink: preserved scopes and trace comments
-also occupy lines. Gameplay update still spans about 2,000 lines.
+The counts are numeric cases of generated `switch (statePc)` dispatchers,
+including partition helpers, excluding application switches. Method-level sums
+in [diagnostics](../decompilation/geoblox-decompiler-diagnostics.json) agree with
+an independent javac Trees inventory. Generated methods containing dispatchers
+fall from 41 to 36 to 33. The largest original method uses 18 helpers, down from
+23 in pass 6; helpers are not counted as separate original fallback methods.
+Generated methods with at least 50 cases fall from 31 to four to two.
 
-## Proof conditions and failed approaches
+Gameplay update shrinks from about 2,000 lines in pass 7 to 770; rendering drops
+from 941 to 426. Labeled blocks and stack carriers remain, so these are still
+decompiler reconstructions. Pass 8 changes one raw Java file, `gh.java`; all
+303 original and renamed files compile.
 
-Straight-line coalescing alone removed 59 cases (3,051 to 2,992), too small an
-improvement for the large gameplay methods. Branch-region nesting supplies most
-of the reduction. These are generic renderer changes, without game or method
-name special cases and without changing executable bytecode.
+## Why the safeguard fired
 
-A successor needs a proven single normal entry and the same ordered exception
-handlers. Method/handler entries, shared joins and backedges remain explicit.
-Parallel incoming edges are counted separately: duplicate switch targets must
-not produce duplicated child bodies. Sibling scopes preserve repeated locals.
-Before nesting, the owned Java AST proves the parent has no local declaration
-that might capture a child's field/local reference. Unknown syntax refuses the
-rewrite. Nesting depth and source-weight limits preserve bounded partition units.
+The `invariant conditional fanout carried across a CFG backedge` safeguard
+recognizes consecutive tests of an invariant local at a loop latch. Combining
+separately structured exception regions can join the wrong continuation or
+lose a loop body, so the decompiler deliberately uses a dispatcher for that
+shape. The guard previously also caught handler-free methods, which bypass
+exception-region collapse and use the base CFG structurer directly.
 
-The first annotations used full-line comments, which the strict fallback-marker
-checker rejected. They were changed to block comments; that checker was not
-weakened. A parent-local/child-field fixture and repeated-switch-target fixture
-exercise cases where apparently harmless inlining could change behavior.
-Native fixture classes must be built with the repository's compiler: host javac
-produced seven pre-existing source-shape test failures, including resource
-lowering and variable naming. The same failures occurred with optimization off;
-building the intended native fixtures made all 36 assertions pass.
+The fix requires a nonempty effective exception table before applying this
+specific guard. The base structurer preserves handler-free latches with labeled
+loops, `break` and `continue`. Multi-value operand-stack safeguards,
+synchronized-region rules and Java source-flow validation remain active.
+If structured output fails validation, it still falls back.
 
-## Validation
+The deobfuscator cannot simply assume the shared integer guard is zero:
+`Geoblox.field_C` is written by `wh.java` when `ch.field_h` is set. The new
+representation preserves both flag outcomes. It does not remove guard branches
+by assuming a particular launch state.
 
-The java-tools revision is `cc3be385def11a6ee0fa99a8bdb6fce77d3ad368`.
+## Why the remaining three stay
+
+| Method | Refusal or constraint | Next structural work |
+| --- | --- | --- |
+| `GameScreen.updateScreen` | Invariant fanout with two effective exception-table rows | Prove loop exit/continuation identity through exception-region collapse, then lift the region. |
+| `kc.reconcileBoardEntities` | Induced exception subgraph remains irreducible after controlled splitting | Use dominance-aware splitting of nested cycles, preserving handler entries and exact bytecode origins. |
+| `wi.a(BLrh;)V` | 9,499 normalized code items trigger the generic oversized static-void partitioner | Recover bounded structured helpers; retain the 64 KiB compiled-method gate. |
+
+For `kc`, the remaining non-dominating retreating edges correspond to bytecode
+PCs 524→486, 529→449 and a cloned 449→454 edge. Running the same splitter again
+returns no change. It handles secondary entries of maximal strongly connected
+components, while this case exposes nested cycles. More identical retries
+will not resolve it. A new splitter needs focused JVM comparisons and size
+bounds before replacing the existing fallback.
+
+The `wi` partition is a size decision even though its initial structurer reports
+success. Removing its threshold alone does not establish that emitted Java fits
+the classfile's method-size limit. Its 756 dispatcher cases remain spread across
+18 bounded helpers; none of those helpers has 50 cases.
+
+## What was tried and validated
+
+Pass 7's straight-line coalescing alone removed 59 cases, from 3,051 to 2,992.
+Proven single-entry branch nesting supplied most of the further reduction to
+1,330. Entry/handler boundaries, shared joins, lexical binding and source-weight
+limits remain proof conditions. Block comments retain original CFG IDs.
+Full-line annotations initially failed the strict fallback-marker checker;
+changing them to block comments preserved that checker.
+
+Pass 8 first tested narrowing the fanout guard in an isolated experiment, then
+added regression fixtures before changing the production guard. The four new
+variants combine reversed latch conditions with absent/present exception
+protection. Each runs 48 combinations of flag value, loop size and null/full/
+short copy array against original verified JVM bytecode and both reconstructed
+versions: 384 differential output/exception comparisons. Protected variants
+retain dispatchers. Fixtures use classfile version 49, which verifies without
+requiring assembler-generated StackMapTable frames; verification is enabled.
+
+The relevant commands pass in java-tools:
+
+```sh
+node test/cfrInvariantFanout.test.js          # 4 differential tests
+node test/cfrStateMachineReadability.test.js # 11 regression checks
+node test/cfrFixtures.test.js               # 36 assertions
+node test/cfrStructuredFeatures.test.js     # 26 assertions
+node test/cfrAdditionalFeatures.test.js     # 77 assertions
+node test/cfrStackOrdering.test.js          # 38 assertions
+```
+
+In this restricted environment these commands used the installed dependency
+path. Stack-ordering subprocesses also used a temporary regular-file stdio
+adapter; its test and production compiler source were unchanged. Fixture inputs
+were built with the repository-native compiler; host javac previously produced
+seven existing shape-test failures, also present with optimization disabled.
+The external Krakatau suite was unavailable, not counted as validated.
+
+The latest java-tools commit is `e2b82224d6bb50c6e376af24692481581f78baa0`.
 Its [source SHA-256 and reproduction command](README.md) identify the decompiler
-repository, separately from game-source digests. Tests and renderer documentation
-are included in that revision.
+repository separately from game-source digests. Fresh `runCfr.js` emits all
+303 sources with zero hard failures. The bundled readable generator verifies
+both full compilable corpora, every binding and override relationship,
+deterministic reproduction and exact dictionary-only reversal. Deque and
+existing gameplay probes run for both original and renamed sources.
+[validation.json](validation.json) records the commands and results.
 
-- `node test/cfrStateMachineReadability.test.js`: 11 checks pass. Enabled and
-  disabled renderers run against known expected JVM results; a native-compiled
-  original also agrees with both forced fallback variants. Coverage includes
-  scopes, shared joins, loop/effect order, switch targets, handler boundaries,
-  exceptions/finally, source budgets and partitioned-method diagnostics.
-- `node test/cfrFixtures.test.js`: 36 assertions pass after the native fixture
-  build documented in java-tools `docs/decompiler.md`.
-- `node test/cfrStructuredFeatures.test.js`: 26 assertions pass.
-- `node test/cfrAdditionalFeatures.test.js`: 77 assertions pass.
-- `node test/cfrStackOrdering.test.js`: 38 assertions pass. A temporary
-  regular-file stdio adapter allowed child JVM processes in the restricted
-  environment; production/test source was unchanged.
-- The external Krakatau obfuscation suite was skipped because its binary is
-  unavailable. This is not counted as validated.
-- Fresh GeoBlox `scripts/runCfr.js --fail-on-hard-failure`: 303 files, zero hard
-  failures; complete output compiles with `javac --release 8 -proc:none`.
-- The same bundled readable generator verifies both complete corpora, every
-  binding and override relationship, deterministic reproduction and exact
-  dictionary-only reversal. Game helper checks cover the existing deque and
-  gameplay probes; [validation.json](validation.json) records the commands.
+All 642 names are retained. Eight named local ordinals move after synthetic
+stack carriers disappear: six rendering locals and two theme-transition locals.
+[The guarded migration](rules/geoblox-v8-migration.json) records each old/new
+identity, original spelling and unchanged semantic evidence. Both declaration
+audits and the corresponding formulas/uses were reviewed. All 227 named locals
+remain unique by original spelling within their full original JVM method.
+No generated Java was hand-edited.
 
-`rules/geoblox-v7-migration.json` pins both input digests and the previous
-manifest hash. All 642 guarded identities match both declaration audits. Each
-of the 227 named locals is uniquely identified by its original spelling within
-its original full JVM method identity, before and after the renderer change.
-No naming identity needed migration, and no generated Java was hand-edited.
-
-## Remaining work
-
-Shared joins and stack-carrying loops still obstruct full structuring. The next
-pass should recover loop-carried value assignments and shared branch tails in
-the owned CFG/Java AST, with differential JVM fixtures for each accepted shape.
-It must preserve exception entries and lexical binding, and continue to refuse
-shapes lacking proof. The large `wi` initializer also needs bounded helper
-partitioning even after dispatcher reduction.
-
-This improves offline source readability. It does not establish whole-game
-runtime equivalence, reconstruct multiplayer servers, or satisfy the browser
-memory, frame-rate and phone gates.
+These checks establish the focused fixture behavior and source-export integrity.
+They do not establish whole-game equivalence, reconstruct multiplayer servers,
+or satisfy browser memory, frame-rate or phone acceptance.

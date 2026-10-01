@@ -12,7 +12,8 @@ function fixture(change) {
   try {
     for (const file of ['build-geoblox-rules.mjs', 'geoblox-source-pin.json',
       'geoblox-rules.json', 'rules/geoblox-v5.json', 'rules/geoblox-v6-gameplay.json',
-      'rules/geoblox-v6.json', 'rules/geoblox-v7-migration.json']) {
+      'rules/geoblox-v6.json', 'rules/geoblox-v7-migration.json',
+      'rules/geoblox-v7.json', 'rules/geoblox-v8-migration.json']) {
       fs.mkdirSync(path.dirname(path.join(temporary, file)), {recursive: true});
       fs.copyFileSync(path.join(root, file), path.join(temporary, file));
     }
@@ -37,18 +38,33 @@ test('reviewed lineage reproduces all 642 guarded rules', () => {
 test('a replacement input digest alone cannot migrate the export', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.inputTreeSha256 = '0'.repeat(64);
-  })), /reviewed pass-7 migration/);
+  })), /reviewed pass-8 migration/);
 });
 test('a different decompiler revision requires a new reviewed migration', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.generators.javaTools.commit = '0'.repeat(40);
-  })), /reviewed pass-7 migration/);
+  })), /reviewed pass-8 migration/);
 });
 test('previous names and migration identities cannot change silently', () => {
   assert.throws(() => fixture(edit => edit('rules/geoblox-v6.json', data => {
     data.renames[0].to = 'DifferentName';
   })), /reviewed rule lineage/);
-  assert.throws(() => fixture(edit => edit('rules/geoblox-v7-migration.json', data => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v8-migration.json', data => {
     data.identityChanges.push({from: 'L:gh.a(I)V#0', to: 'L:gh.a(I)V#1'});
-  })), /reviewed pass-7 migration/);
+  })), /reviewed pass-8 migration/);
+});
+test('local migrations preserve the original spelling guard', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v8-migration.json', data => {
+    data.identityChanges[0].originalName = 'wrongLocal';
+  })), /reviewed pass-8 migration/);
+});
+test('local migrations cannot cross a JVM method boundary', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v8-migration.json', data => {
+    data.identityChanges[0].to = 'L:gh.b(B)V#16';
+  })), /reviewed pass-8 migration/);
+});
+test('migrated declarations retain distinct identities', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v8-migration.json', data => {
+    data.identityChanges[0].to = data.identityChanges[1].to;
+  })), /duplicate identities/);
 });

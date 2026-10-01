@@ -2,7 +2,7 @@
   "schema": 1,
   "rules": 642,
   "files": 303,
-  "sourceCommit": "1936543883cbb6d694cd72afcab927accf076a10",
+  "sourceCommit": "cf3828253ca40154f9663b82b3c2905c7fc8adb0",
   "commands": [
     {
       "command": "node readable/build-geoblox-rules.mjs --check",
@@ -11,12 +11,12 @@
     {
       "command": "node readable/tests/test-geoblox-rule-builder.mjs",
       "result": "pass",
-      "tests": 4
+      "tests": 7
     },
     {
       "command": "node readable/reproduce-geoblox.mjs --check",
       "result": "pass",
-      "bindingsCompared": 158730,
+      "bindingsCompared": 158177,
       "overrideRelationships": 388,
       "identifierEdits": 10568
     },
@@ -47,28 +47,33 @@
       "tests": 4
     },
     {
-      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v7",
+      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v8",
       "result": "pass",
       "restoredFiles": 303,
       "originalBytesRecovered": true,
       "originalSourceRequired": false
     }
   ],
-  "inputTreeSha256": "bf67d298e8c884958b622e717be6ecd4c3009e033265219b88e9f293d7671fd9",
-  "outputTreeSha256": "a089cf00e67de55186c734d9769070a4cd4dc7ea7e28b543f4e76c73a382b695",
+  "inputTreeSha256": "e7e9406eeb406bb265fa0402b76046bfd0bfb36a8b31cba83022a4c0764b3a0b",
+  "outputTreeSha256": "3e950cfeced37c8c744172caf8ca89e5b02ec96894491e828beb8c99befd3219",
   "runtimeEquivalenceVerified": false,
-  "version": 7,
+  "version": 8,
   "stateMachineReadability": {
-    "javaToolsCommit": "cc3be385def11a6ee0fa99a8bdb6fce77d3ad368",
-    "decompilerSourceArchiveSha256": "62356e5d5e037e482d8dcb170f016d520b4a00182b13591ed1f726c3e9cae7dd",
+    "javaToolsCommit": "e2b82224d6bb50c6e376af24692481581f78baa0",
+    "decompilerSourceArchiveSha256": "a82db967bd98714696f926b44fbd4fdfcf555f5cc66dd6b4b99a79e547a96a02",
     "dispatcherCasesBefore": 3051,
-    "dispatcherCasesAfter": 1330,
-    "originalFallbackMethods": 19,
+    "dispatcherCasesAfter": 1131,
+    "originalFallbackMethods": 16,
     "readabilityRegressionTests": 11,
     "fixturesAssertions": 36,
     "structuredFeatureAssertions": 26,
     "additionalFeatureAssertions": 77,
     "stackOrderingAssertions": 38,
-    "krakatauSuite": "skipped: external binary unavailable"
+    "krakatauSuite": "skipped: external binary unavailable",
+    "previousPassDispatcherCases": 1330,
+    "largeOriginalMethods": 3,
+    "invariantFanoutDifferentialTests": 4,
+    "invariantFanoutDifferentialComparisons": 384,
+    "namedLocalOrdinalMigrations": 8
   }
 }

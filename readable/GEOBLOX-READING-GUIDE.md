@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 7
+# Reading GeoBlox pass 8
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -188,9 +188,12 @@ largely unnamed; class names describe their instance roles.
 There are 642 explicit rules: 17 classes, 178 fields, 129 method declarations,
 91 parameters and 227 guarded local declarations. This is not full
 deobfuscation. Large decompiler state machines, unknown flags, guard arguments
-and opaque shared helpers still need investigation. The naming pass keeps supported roles and all 642 guarded identities from
-pass 6. The decompiler pass groups straight-line blocks and proven single-entry
-branches into ordinary Java bodies. It reduces dispatcher cases from 3,051 to
-1,330, but retains shared joins and loop transfers. Block comments preserve
-original CFG IDs. See [the state-machine report](STATE-MACHINE-READABILITY.md)
-for reductions, refusal conditions and the next structural steps.
+and opaque shared helpers still need investigation. All 642 names from pass 6
+remain. Eight local ordinals move after synthetic carrier cleanup; the guarded
+migration records their exact old/new identities.
+
+The decompiler now keeps handler-free invariant loop fanouts structured.
+Gameplay update, rendering and scene transition use labeled loops instead of
+dispatchers. Total cases drop from 3,051 to 1,131. Sixteen original methods retain
+dispatchers, including three with at least 50 cases. See [the investigation](STATE-MACHINE-READABILITY.md)
+for refusal reasons, verification and the next structural steps.
