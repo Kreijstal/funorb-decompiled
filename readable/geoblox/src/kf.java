@@ -3,13 +3,13 @@
  */
 final class kf {
     static int[] field_a;
-    static String field_b;
+    static String pleaseTryAgainText;
     static boolean field_e;
     static int field_d;
     static rh field_c;
 
     public static void b(int param0) {
-        field_b = null;
+        pleaseTryAgainText = null;
         field_a = null;
         if (param0 != -15647) {
             return;
@@ -23,7 +23,7 @@ final class kf {
     }
 
     static {
-        field_b = "Please try again in a few minutes.";
+        pleaseTryAgainText = "Please try again in a few minutes.";
         field_a = new int[8192];
         field_d = 10;
     }

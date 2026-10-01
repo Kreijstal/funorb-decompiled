@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ue {
-    static String field_g;
+    static String createAgeText;
     private int field_i;
     private int[][] field_a;
     static IntrusiveDeque availableScorePopups;
-    static String field_c;
-    static String field_b;
-    static String field_d;
+    static String fullscreenBeforeAcceptText;
+    static String highscoreFriendTipText;
+    static String createNewsOptInText;
     static int field_e;
     private int field_h;
     static int field_j;
@@ -19,7 +19,7 @@ final class ue {
 
     final int b(int param0, int param1) {
         if (param1 != 6) {
-            field_g = (String) null;
+            createAgeText = (String) null;
         }
         if (!(this.field_a == null)) {
             param0 = (int)((long)param0 * (long)this.field_h / (long)this.field_i) + 6;
@@ -51,13 +51,13 @@ final class ue {
 
     public static void a(boolean param0) {
         availableScorePopups = null;
-        field_b = null;
-        field_c = null;
+        highscoreFriendTipText = null;
+        fullscreenBeforeAcceptText = null;
         if (!param0) {
             ue.a(false);
         }
-        field_g = null;
-        field_d = null;
+        createAgeText = null;
+        createNewsOptInText = null;
     }
 
     ue(int param0, int param1) {
@@ -196,10 +196,10 @@ final class ue {
 
     static {
         int var0 = 0;
-        field_g = "Age:";
-        field_c = "Click";
-        field_b = "Friends can be added in multiplayer<nbsp>games";
-        field_d = "Please send me news and updates (I can unsubscribe at any time)";
+        createAgeText = "Age:";
+        fullscreenBeforeAcceptText = "Click";
+        highscoreFriendTipText = "Friends can be added in multiplayer<nbsp>games";
+        createNewsOptInText = "Please send me news and updates (I can unsubscribe at any time)";
         field_e = 0;
         availableScorePopups = new IntrusiveDeque();
         for (var0 = 0; var0 < 20; var0++) {

@@ -4,8 +4,8 @@
 final class lh {
     static la field_b;
     static boolean field_d;
-    static String field_a;
-    static String field_c;
+    static String nextText;
+    static String createAccountSuccessText;
 
     final static void a(int param0) {
         int fieldTemp$4 = 0;
@@ -102,16 +102,16 @@ final class lh {
         field_b = null;
         if (param0 != -481) {
             lh.a(90);
-            field_a = null;
-            field_c = null;
+            nextText = null;
+            createAccountSuccessText = null;
             return;
         }
-        field_a = null;
-        field_c = null;
+        nextText = null;
+        createAccountSuccessText = null;
     }
 
     static {
-        field_a = "Next";
-        field_c = "Account created successfully!";
+        nextText = "Next";
+        createAccountSuccessText = "Account created successfully!";
     }
 }

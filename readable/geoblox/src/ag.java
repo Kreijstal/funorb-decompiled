@@ -24,10 +24,10 @@ final class ag extends q {
             field_l = -21;
           }
           if (this.a(-257, param1) != si.field_m) {
-            stackIn_6_0 = da.field_e;
+            stackIn_6_0 = da.createEmailValidText;
             decompiledRegionSelector0 = 1;
           } else {
-            stackIn_4_0 = wj.field_B;
+            stackIn_4_0 = wj.createInvalidEmailAlertText;
             decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -172,7 +172,7 @@ final class ag extends q {
         }
     }
 
-    final static String a(int param0, byte[] param1) {
+    final static String decodeTextBytes(int decodeGuard, byte[] textBytes) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -182,18 +182,18 @@ final class ag extends q {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 1) {
+          if (decodeGuard != 1) {
             field_j = (boolean[]) null;
           }
-          stackIn_3_0 = bc.a(-8, param1, 0, param1.length);
+          stackIn_3_0 = bc.decodeTextSlice(-8, textBytes, 0, textBytes.length);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = (RuntimeException) (var2);
 
-          stackIn_6_1 = new StringBuilder().append("ag.B(").append(param0).append(',');
+          stackIn_6_1 = new StringBuilder().append("ag.B(").append(decodeGuard).append(',');
 
-          if (param1 == null) {
+          if (textBytes == null) {
             stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "null";
@@ -306,7 +306,7 @@ final class ag extends q {
         field_j = null;
         if (param0 > -13) {
             byte[] var2 = (byte[]) null;
-            ag.a(95, (byte[]) null);
+            ag.decodeTextBytes(95, (byte[]) null);
             field_m = null;
             return;
         }
@@ -323,7 +323,7 @@ final class ag extends q {
             if (param0 != 12607) {
                 field_l = 32;
             }
-            fa.a(rj.field_g, 480, false);
+            fa.a(rj.loggingInText, 480, false);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ag.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

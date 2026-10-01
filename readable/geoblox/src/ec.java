@@ -3,7 +3,7 @@
  */
 final class ec {
     static int field_b;
-    static String field_a;
+    static String okText;
     static Sprite field_c;
     static String[] field_e;
     static int field_d;
@@ -194,16 +194,16 @@ final class ec {
 
     public static void a(boolean param0) {
         if (!param0) {
-            field_a = (String) null;
+            okText = (String) null;
         }
         field_c = null;
-        field_a = null;
+        okText = null;
         field_e = null;
     }
 
     static {
         field_b = 0;
-        field_a = "OK";
+        okText = "OK";
         field_e = new String[]{"At any point in the game, you can press the <img=4> key on the top-left of your keyboard to pause the game and bring up the menu from which you can access these instructions.<br><br><br><br>Press the <img=0> and <img=1> arrow keys to rotate the game area anticlockwise and clockwise. You can reverse the directions by pressing <img=7> at any point during the game. If you want to make the next geoblox fall faster, press and hold the <img=6> arrow key.", "Connect falling geoblox into threes, by colour, shape, or colour and shape to score points. Geoblox are considered to be connected when there is no black line between them. If there is a black line, your geoblox are not close enough.<br><br>The geoblox plummet towards your avatar from the outside of the play area. They will stick to the first thing they hit. By getting three of a kind, by colour, shape, or colour and shape, they will disappear and earn you points. Special geoblox, which behave differently, appear later in the game.<br>Once the stacked geoblox reach the edge of the play area, you lose.", "The sequence bonus is awarded for clearing more than one set of geoblox in a row. For clearing two sets of geoblox in a row, the points awarded will be doubled; for clearing three sets in a row, the points awarded will be tripled, and so on. The bonus only applies to an uninterrupted sequence.<br><br>There's a bonus for clearing the avatar of geoblox. Once you reach the end of a stage (the countdown is in the bottom-right of the screen), a bonus bubble will appear. It shrinks from the outer edge of the game area until it touches a geoblox. The longer it takes to reach a geoblox, the higher your reward!", "Special geoblox only crop up in the latter parts of the game, so don't worry about them early on.<br><br><shad=AAAAAA>The amorphous geoblox:</shad> This blob in a jar has a fixed colour, but will assume the shape of the first geoblox it hits. These will only disappear when you connect them to two others of the same colour.<br><br><shad=AAAAAA>The chromatic geoblox:</shad> This has a shape, but no colour. It will assume the colour of the first normal geoblox it hits. These will only disappear when you connect them to two others of the same shape.", "<shad=AAAAAA>The black orb:</shad> Malignant and lazy, this geoblox does nothing but get in your way. Destroy them by using a silver star for a whopping 100 points each! There are no points for stacking them, as they will not react.<br><br><shad=AAAAAA>The silver star:</shad> This star reacts if it comes into contact with your avatar. It unleashes an electric shock that destroys all geoblox touching the avatar, including black orbs. Until then, it's a bit useless! Don't try stacking them as they will just sit there."};
     }
 }

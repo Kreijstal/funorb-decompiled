@@ -8,7 +8,7 @@ final class j extends mi {
     int field_kb;
     static String field_lb;
     static rf field_ib;
-    static String field_jb;
+    static String quitWarningText;
 
     final static void e(int param0) {
         wg.field_i.field_b = 0;
@@ -24,7 +24,7 @@ final class j extends mi {
 
     public static void f(byte param0) {
         field_lb = null;
-        field_jb = null;
+        quitWarningText = null;
         if (param0 != -128) {
             j.f((byte) 1);
             field_ib = null;
@@ -35,6 +35,6 @@ final class j extends mi {
 
     static {
         field_gb = 80;
-        field_jb = "Warning: if you quit, you will lose any game you are in the middle of!";
+        quitWarningText = "Warning: if you quit, you will lose any game you are in the middle of!";
     }
 }

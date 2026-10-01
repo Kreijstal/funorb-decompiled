@@ -3,18 +3,18 @@
  */
 final class rj {
     static int field_i;
-    static String field_e;
+    static String quitToWebsiteText;
     int field_f;
     static int field_c;
     static long field_b;
     int field_d;
-    static String field_g;
+    static String loggingInText;
     int field_a;
     int field_h;
 
     final static void a(byte param0, int param1) {
         if (param0 != 121) {
-            field_e = (String) null;
+            quitToWebsiteText = (String) null;
             oj.field_c = 1000000000L / (long)param1;
             return;
         }
@@ -23,8 +23,8 @@ final class rj {
 
     public static void a(int param0) {
         int var1 = 12 % ((-27 - param0) / 57);
-        field_e = null;
-        field_g = null;
+        quitToWebsiteText = null;
+        loggingInText = null;
     }
 
     final static rh a(int param0, byte param1, boolean param2, boolean param3, int param4) {
@@ -71,7 +71,7 @@ final class rj {
     static {
         field_c = 5167632;
         field_i = 500;
-        field_e = "Quit to website";
-        field_g = "Logging in...";
+        quitToWebsiteText = "Quit to website";
+        loggingInText = "Logging in...";
     }
 }

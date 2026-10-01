@@ -4,11 +4,11 @@
 final class qb extends hk {
     static hh field_N;
     static rf field_M;
-    static String field_F;
+    static String js5IoErrorText;
     int field_E;
     int field_H;
     int field_O;
-    static String field_L;
+    static String fullscreenMembersButtonText;
     static int field_G;
     int field_J;
     int field_I;
@@ -33,13 +33,13 @@ final class qb extends hk {
     }
 
     public static void f(int param0) {
-        field_F = null;
+        js5IoErrorText = null;
         field_M = null;
         if (param0 != 0) {
             field_M = (rf) null;
         }
         field_N = null;
-        field_L = null;
+        fullscreenMembersButtonText = null;
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
@@ -223,7 +223,7 @@ final class qb extends hk {
 
     static {
         field_N = new hh();
-        field_F = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
-        field_L = "Members";
+        js5IoErrorText = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
+        fullscreenMembersButtonText = "Members";
     }
 }

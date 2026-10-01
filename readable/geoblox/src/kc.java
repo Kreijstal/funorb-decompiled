@@ -3,12 +3,12 @@
  */
 final class kc {
     static int field_a;
-    static String field_b;
+    static String createNameCharacterAlertText;
     static int field_c;
 
     public static void a(int param0) {
         int var1 = 7 % ((79 - param0) / 43);
-        field_b = null;
+        createNameCharacterAlertText = null;
     }
 
     final static void a(java.awt.Component param0, int param1) {
@@ -684,7 +684,7 @@ final class kc {
 
     static {
         field_c = 0;
-        field_b = "Names can only contain letters, numbers, spaces and underscores";
+        createNameCharacterAlertText = "Names can only contain letters, numbers, spaces and underscores";
         field_a = 0;
     }
 }

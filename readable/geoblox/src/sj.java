@@ -6,8 +6,8 @@ final class sj {
     private boolean field_c;
     private int field_d;
     private int[] field_f;
-    static String field_e;
-    static String field_b;
+    static String fullscreenUnavailableText;
+    static String createMismatchAlertText;
     private int field_a;
 
     final static void a(p param0, int param1, int param2) {
@@ -22,8 +22,8 @@ final class sj {
 
     public static void a(int param0) {
         field_g = null;
-        field_e = null;
-        field_b = null;
+        fullscreenUnavailableText = null;
+        createMismatchAlertText = null;
         int var1 = -116 / ((param0 - 72) / 36);
     }
 
@@ -73,7 +73,7 @@ final class sj {
 
     final int a(int param0, byte param1) {
         if (param1 != 94) {
-            field_b = (String) null;
+            createMismatchAlertText = (String) null;
             if (!(param0 <= this.field_d)) {
                 throw new ArrayIndexOutOfBoundsException(param0);
             }
@@ -145,7 +145,7 @@ final class sj {
 
     static {
         field_g = new IntrusiveDeque();
-        field_e = "Unfortunately your configuration doesn't support fullscreen mode.";
-        field_b = "This entry doesn't match";
+        fullscreenUnavailableText = "Unfortunately your configuration doesn't support fullscreen mode.";
+        createMismatchAlertText = "This entry doesn't match";
     }
 }

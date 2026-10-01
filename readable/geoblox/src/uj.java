@@ -3,10 +3,10 @@
  */
 final class uj {
     static int field_b;
-    static String field_e;
+    static String loginMessage2Text;
     static String field_c;
     static String field_a;
-    static String field_d;
+    static String fullscreenAfterCancelText;
 
     final static boolean a(boolean param0, int param1) {
         if (param0) {
@@ -60,8 +60,8 @@ final class uj {
     }
 
     public static void a(int param0) {
-        field_d = null;
-        field_e = null;
+        fullscreenAfterCancelText = null;
+        loginMessage2Text = null;
         field_c = null;
         field_a = null;
         if (param0 > 0) {
@@ -132,9 +132,9 @@ final class uj {
 
     static {
         field_b = 0;
-        field_e = "Error connecting to server. Please try using a different server.";
+        loginMessage2Text = "Error connecting to server. Please try using a different server.";
         field_c = "Harvesting Pumpkin";
         field_a = "Starting Game";
-        field_d = "to return to the normal view.";
+        fullscreenAfterCancelText = "to return to the normal view.";
     }
 }

@@ -6,11 +6,11 @@ final class a {
     static IntrusiveDeque attachedEntities;
     static String[] field_a;
     static int field_e;
-    static String field_b;
+    static String retryText;
     private static String field_z;
 
     public static void a(byte param0) {
-        field_b = null;
+        retryText = null;
         field_c = null;
         attachedEntities = null;
         if (param0 > -63) {
@@ -26,7 +26,7 @@ final class a {
         field_c = new int[8192];
         field_a = new String[]{"Welcome to Geoblox!", "The controls", "How to play", "Bonuses", "Special geoblox", "Special geoblox cont."};
         field_e = -1;
-        field_b = "Retry";
+        retryText = "Retry";
         attachedEntities = new IntrusiveDeque();
     }
 }

@@ -15,7 +15,7 @@ final class pf extends ee implements ga, pl {
     private hk field_M;
     private dj field_J;
     private hk field_E;
-    static String field_H;
+    static String js5CrcErrorText;
     private boolean field_N;
 
     final static boolean a(int param0, char param1) {
@@ -146,7 +146,7 @@ final class pf extends ee implements ga, pl {
     }
 
     public static void a(byte param0) {
-        field_H = null;
+        js5CrcErrorText = null;
         field_K = null;
         field_O = null;
         if (param0 >= -18) {
@@ -222,7 +222,7 @@ final class pf extends ee implements ga, pl {
     public final void a(dj param0, byte param1) {
         try {
             if (param1 != 74) {
-                field_H = (String) null;
+                js5CrcErrorText = (String) null;
             }
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "pf.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -430,7 +430,7 @@ final class pf extends ee implements ga, pl {
                     }
                   } else {
                     sj.a(k.c(124), (byte) 123);
-                    kh.field_a = ph.field_k;
+                    kh.field_a = ph.createUnableText;
                     jl.a((byte) -124);
                     ck.field_e = false;
                     stackIn_31_0 = var9;
@@ -486,9 +486,9 @@ final class pf extends ee implements ga, pl {
                 ac.field_s = var9;
               } else {
                 if ((ll.a((byte) 12) ^ -1L) >= -30001L) {
-                  kh.field_a = uj.field_e;
+                  kh.field_a = uj.loginMessage2Text;
                 } else {
-                  kh.field_a = IntrusiveNode.field_e;
+                  kh.field_a = IntrusiveNode.loginMessage3Text;
                 }
                 ck.field_e = false;
                 stackIn_63_0 = 249;
@@ -951,7 +951,7 @@ final class pf extends ee implements ga, pl {
           this.field_J = (dj) ((Object) new hc(param0, (bb) (this), 100));
           this.field_P = (dj) ((Object) new hc("", (bb) (this), 20));
           if (!this.field_N) {
-            this.field_E = new hk(k.field_k, (bb) null);
+            this.field_E = new hk(k.loginText, (bb) null);
             stackIn_18_0 = this;
 
             stackIn_18_1 = null;
@@ -962,20 +962,20 @@ final class pf extends ee implements ga, pl {
               stackIn_19_0 = this;
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ok.field_d;
+              stackIn_19_3 = ok.justPlayText;
             } else {
               stackIn_19_0 = this;
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ll.field_b;
+              stackIn_19_3 = ll.backText;
             }
             ((pf) (this)).field_G = new hk(stackIn_19_3, (bb) null);
             if (this.field_C) {
-              this.field_M = new hk(se.field_m, (bb) (this));
+              this.field_M = new hk(se.createAnAccountText, (bb) (this));
             }
           } else {
-            this.field_E = new hk(a.field_b, (bb) null);
-            this.field_G = new hk(rj.field_e, (bb) null);
+            this.field_E = new hk(a.retryText, (bb) null);
+            this.field_G = new hk(rj.quitToWebsiteText, (bb) null);
             this.field_J.field_D = false;
           }
           this.field_J.field_q = (dh) ((Object) new ac(10000536));
@@ -988,17 +988,17 @@ final class pf extends ee implements ga, pl {
           if (this.field_M != null) {
             this.field_M.field_q = (dh) ((Object) var6);
           }
-          this.field_J.field_j = kk.field_v;
+          this.field_J.field_j = kk.loginUsernameTooltipText;
           if (null != this.field_M) {
-            this.field_M.field_j = ic.field_b;
+            this.field_M.field_j = ic.loginCreateTooltipText;
           }
           if (this.field_N) {
-            this.field_G.field_j = j.field_jb;
+            this.field_G.field_j = j.quitWarningText;
           } else {
             if (!this.field_I) {
               this.field_G.field_q = (dh) ((Object) new fh());
             } else {
-              this.field_G.field_j = vi.field_F;
+              this.field_G.field_j = vi.loginJustPlayTooltipText;
               this.field_G.field_q = (dh) ((Object) new fh());
             }
           }
@@ -1007,20 +1007,20 @@ final class pf extends ee implements ga, pl {
           if (this.field_L != null) {
             this.field_m = this.field_m + (var7.b(this.field_L, this.field_r + -40, var7.field_o) + 5);
           }
-          var8 = jj.field_c;
+          var8 = jj.loginUsernameEmailText;
           var9 = th.a(k.c(120), 200);
           if (var9 != mb.field_b) {
             if (var9 == rl.field_W) {
-              var8 = bk.field_c;
+              var8 = bk.loginUsernameText;
             }
           } else {
-            var8 = sl.field_b;
+            var8 = sl.loginEmailText;
           }
           dupTemp$0 = new hd(10, this.field_m, -20 + this.field_r, 25, this.field_J, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.b((byte) -110, dupTemp$0);
           this.field_m = this.field_m + (((el) ((Object) var12)).field_h - -5);
-          dupTemp$1 = new hd(10, this.field_m, this.field_r + -20, 25, this.field_P, false, 80, 3, var7, 16777215, qg.field_b);
+          dupTemp$1 = new hd(10, this.field_m, this.field_r + -20, 25, this.field_P, false, 80, 3, var7, 16777215, qg.createPasswordText);
           var13 = dupTemp$1;
           this.b((byte) -120, dupTemp$1);
           this.field_E.field_u = (bb) (this);
@@ -1111,7 +1111,7 @@ final class pf extends ee implements ga, pl {
 
     static {
         field_D = false;
-        field_H = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
+        js5CrcErrorText = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
         field_K = new gk();
     }
 }

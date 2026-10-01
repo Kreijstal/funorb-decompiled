@@ -3,13 +3,13 @@
  */
 final class cl {
     static java.security.SecureRandom field_e;
-    static String field_d;
+    static String continueText;
     static uf field_c;
     static int field_a;
     static Sprite field_b;
 
     public static void a(int param0) {
-        field_d = null;
+        continueText = null;
         field_e = null;
         field_c = null;
         if (param0 != -9474) {
@@ -81,6 +81,6 @@ final class cl {
 
     static {
         field_a = 10;
-        field_d = "Continue";
+        continueText = "Continue";
     }
 }

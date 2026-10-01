@@ -13,28 +13,28 @@ final class s extends ee implements pe, pl {
 
     final static void g(int param0) {
         if (null == tl.field_f) {
-            jk.field_b = wj.a(jk.field_b, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
-            mj.field_c = wj.a(mj.field_c, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
+            jk.fullscreenAcceptCountdownPluralText = wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
+            mj.fullscreenAcceptCountdownSingularText = wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
             tl.field_f = new String[19];
-            tl.field_f[12] = lh.field_a;
-            tl.field_f[7] = tc.field_b;
-            tl.field_f[6] = df.field_b;
-            tl.field_f[8] = wb.field_c;
+            tl.field_f[12] = lh.nextText;
+            tl.field_f[7] = tc.quitText;
+            tl.field_f[6] = df.endGameText;
+            tl.field_f[8] = wb.soundLabelText;
             tl.field_f[14] = ne.field_c;
-            tl.field_f[5] = ij.field_Z;
-            tl.field_f[0] = nk.field_g;
-            tl.field_f[4] = wf.field_q;
-            tl.field_f[param0] = fc.field_e;
-            tl.field_f[10] = bl.field_a;
-            tl.field_f[11] = tl.field_o;
+            tl.field_f[5] = ij.menuText;
+            tl.field_f[0] = nk.startGameText;
+            tl.field_f[4] = wf.fullscreenText;
+            tl.field_f[param0] = fc.musicLabelText;
+            tl.field_f[10] = bl.achievementsText;
+            tl.field_f[11] = tl.previousText;
             tl.field_f[15] = em.field_a;
-            tl.field_f[1] = id.field_a;
+            tl.field_f[1] = id.resumeGameText;
             tl.field_f[13] = gj.field_t;
-            tl.field_f[3] = ef.field_c;
-            tl.field_f[2] = ii.field_b;
-            tl.field_f[18] = vd.field_m[2];
-            tl.field_f[16] = vd.field_m[0];
-            tl.field_f[17] = vd.field_m[1];
+            tl.field_f[3] = ef.instructionsText;
+            tl.field_f[2] = ii.highscoresText;
+            tl.field_f[18] = vd.highscoreModeNames[2];
+            tl.field_f[16] = vd.highscoreModeNames[0];
+            tl.field_f[17] = vd.highscoreModeNames[1];
             return;
         }
     }
@@ -128,15 +128,15 @@ final class s extends ee implements pe, pl {
         int var6 = 0;
         try {
             this.field_C = param0;
-            this.field_K = new hk(cl.field_d, (bb) null);
+            this.field_K = new hk(cl.continueText, (bb) null);
             this.field_K.field_q = (dh) ((Object) new ml());
-            var7 = wj.a(nk.field_i, new String[]{this.f(11501), this.c(false)}, (byte) -114);
+            var7 = wj.a(nk.createUnder13TermsText, new String[]{this.f(11501), this.c(false)}, (byte) -114);
             var3 = 20;
             var4 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 3, 0, ng.field_F.field_o, -1, 2147483647, true);
             this.field_J = new vf(var7, var4);
             this.field_J.field_j = "";
-            this.field_J.a(0, -47, eh.field_a);
-            this.field_J.a(1, 118, eh.field_a);
+            this.field_J.a(0, -47, eh.openInPopupWindowText);
+            this.field_J.a(1, 118, eh.openInPopupWindowText);
             this.field_J.field_u = (bb) (this);
             this.field_J.field_r = this.field_r + -40;
             this.field_J.b(26, 0, var3, this.field_r + -40);

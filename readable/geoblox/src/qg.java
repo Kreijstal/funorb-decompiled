@@ -6,10 +6,10 @@ final class qg {
     static int field_a;
     int field_c;
     static int field_d;
-    static String field_b;
+    static String createPasswordText;
 
     public static void a(int param0) {
-        field_b = null;
+        createPasswordText = null;
         if (param0 <= 55) {
             return;
         }
@@ -48,6 +48,6 @@ final class qg {
     static {
         field_e = "Level: <%0>";
         field_d = 4;
-        field_b = "Password: ";
+        createPasswordText = "Password: ";
     }
 }

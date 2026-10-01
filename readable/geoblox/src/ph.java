@@ -2,23 +2,23 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ph extends IntrusiveNode {
-    static String field_g;
-    static String field_j;
+    static String waitingForExtraDataText;
+    static String createUsernameAvailableText;
     int field_h;
-    static String field_k;
+    static String createUnableText;
     int field_f;
     static d field_i;
 
     public static void a(byte param0) {
-        field_j = null;
-        field_k = null;
+        createUsernameAvailableText = null;
+        createUnableText = null;
         field_i = null;
         if (param0 != 112) {
-            field_k = (String) null;
-            field_g = null;
+            createUnableText = (String) null;
+            waitingForExtraDataText = null;
             return;
         }
-        field_g = null;
+        waitingForExtraDataText = null;
     }
 
     private ph() throws Throwable {
@@ -26,8 +26,8 @@ final class ph extends IntrusiveNode {
     }
 
     static {
-        field_j = "Name is available";
-        field_g = "Waiting for extra data";
-        field_k = "Unfortunately we are unable to create an account for you at this time.";
+        createUsernameAvailableText = "Name is available";
+        waitingForExtraDataText = "Waiting for extra data";
+        createUnableText = "Unfortunately we are unable to create an account for you at this time.";
     }
 }

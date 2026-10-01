@@ -5,7 +5,7 @@ import java.util.*;
 
 final class gk {
     static Random field_d;
-    static String field_c;
+    static String createDisplayNameHintText;
     static int field_b;
     static int[] field_a;
 
@@ -20,7 +20,7 @@ final class gk {
 
     public static void a(int param0) {
         field_a = null;
-        field_c = null;
+        createDisplayNameHintText = null;
         if (param0 != 0) {
             gk.a(103, 65, true, (byte) -104);
             field_d = null;
@@ -47,7 +47,7 @@ final class gk {
 
     static {
         field_d = new Random();
-        field_c = "Player names can be up to 12 letters, numbers and underscores";
+        createDisplayNameHintText = "Player names can be up to 12 letters, numbers and underscores";
         field_b = 0;
     }
 }

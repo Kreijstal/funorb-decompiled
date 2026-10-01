@@ -110,7 +110,7 @@ final class vh extends ee implements pl {
         m var5 = ng.field_F;
         int var6 = -69 / ((1 - param2) / 43);
         if (!(this.field_C == null)) {
-            var5.a(ab.field_e, this.field_v + param0, param1 + this.field_m, this.field_r, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_o);
+            var5.a(ab.createSuggestionsText, this.field_v + param0, param1 + this.field_m, this.field_r, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_o);
         }
     }
 
@@ -275,11 +275,11 @@ final class vh extends ee implements pl {
                   for (var5 = 0; var5 < var3_int; var5++) {
                     this.field_I[var5] = new hk(this.field_C[var5], (bb) (this));
                     this.field_I[var5].field_q = (dh) ((Object) var4);
-                    this.field_I[var5].field_j = ml.field_u;
+                    this.field_I[var5].field_j = ml.createSelectAlternativeText;
                     this.field_I[var5].a(15, 80, (byte) -14, var5 * 16 + 20, 0);
                     this.b((byte) -126, this.field_I[var5]);
                   }
-                  this.field_I[var3_int] = new hk(ll.field_a, (bb) (this));
+                  this.field_I[var3_int] = new hk(ll.createMoreSuggestionsText, (bb) (this));
                   this.field_I[var3_int].field_q = (dh) ((Object) var4);
                   this.field_I[var3_int].a(15, 100, (byte) -59, 16 + (var3_int * 16 + 20), 0);
                   this.b((byte) -122, this.field_I[var3_int]);

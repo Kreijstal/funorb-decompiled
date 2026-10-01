@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class df {
-    static String field_b;
+    static String endGameText;
     static IndexedSprite field_a;
 
     abstract qg a(byte param0);
@@ -33,16 +33,16 @@ abstract class df {
 
     public static void a(int param0) {
         if (param0 != 0) {
-            field_b = (String) null;
+            endGameText = (String) null;
             field_a = null;
-            field_b = null;
+            endGameText = null;
             return;
         }
         field_a = null;
-        field_b = null;
+        endGameText = null;
     }
 
     static {
-        field_b = "End Game";
+        endGameText = "End Game";
     }
 }

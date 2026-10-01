@@ -3,7 +3,7 @@
  */
 final class ik {
     static int field_a;
-    static String field_b;
+    static String waitingForFontsText;
 
     final static void a(re param0, int param1, byte param2) {
         pk var3 = fj.field_q;
@@ -43,7 +43,7 @@ final class ik {
             }
             var7 = var5_int;
             if (param4 != -1540604944) {
-              field_b = (String) null;
+              waitingForFontsText = (String) null;
             }
             L4: while (var7 < var6) {
               var8 = 152 - -(48 * var7 / param1);
@@ -65,7 +65,7 @@ final class ik {
         if (param0 != 48) {
             field_a = -51;
         }
-        field_b = null;
+        waitingForFontsText = null;
     }
 
     final static boolean linkTouchingEntities(GameplayEntity firstEntity, GameplayEntity secondEntity, boolean param2) {
@@ -305,6 +305,6 @@ final class ik {
     }
 
     static {
-        field_b = "Waiting for fonts";
+        waitingForFontsText = "Waiting for fonts";
     }
 }

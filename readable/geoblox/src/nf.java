@@ -31,7 +31,7 @@ final class nf {
     short[] field_P;
     short[] field_r;
     int[] field_C;
-    static String field_E;
+    static String reloadGameText;
     short[] field_h;
     int field_H;
     short[] field_G;
@@ -69,7 +69,7 @@ final class nf {
 
     public static void b(byte param0) {
         field_j = null;
-        field_E = null;
+        reloadGameText = null;
         if (param0 != 115) {
             nf.a(124, -30, -53);
         }
@@ -286,7 +286,7 @@ final class nf {
     }
 
     static {
-        field_E = "Reload game";
+        reloadGameText = "Reload game";
         field_j = new IntrusiveDeque();
     }
 }

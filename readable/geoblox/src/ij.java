@@ -5,10 +5,10 @@ final class ij extends oe implements pl {
     static int field_X;
     static float field_ab;
     private hk field_bb;
-    static String field_Z;
+    static String menuText;
     static int field_cb;
     static int field_W;
-    static String field_Y;
+    static String createPasswordTooltipText;
 
     private final hk a(String param0, byte param1, bb param2) {
         hk var4 = null;
@@ -71,13 +71,13 @@ final class ij extends oe implements pl {
     }
 
     public static void i(byte param0) {
-        field_Z = null;
+        menuText = null;
         if (param0 > 0) {
             ij.i((byte) 25);
-            field_Y = null;
+            createPasswordTooltipText = null;
             return;
         }
-        field_Y = null;
+        createPasswordTooltipText = null;
     }
 
     final static int m(int param0) {
@@ -104,18 +104,18 @@ final class ij extends oe implements pl {
         try {
           var3 = null;
           if (q.field_h == param1) {
-            var3 = ei.field_gb;
+            var3 = ei.fullscreenUnavailableTrySignedAppletText;
           } else {
             if (param1 == ei.field_hb) {
-              var3 = k.field_b;
+              var3 = k.fullscreenFocusText;
               this.field_h = this.field_h + 10;
               if (nb.a(true)) {
-                var3 = ad.field_n;
+                var3 = ad.fullscreenFocusOrResolutionText;
                 this.field_h = this.field_h + 20;
               }
             } else {
               if (param1 == pa.field_b) {
-                var3 = f.field_nb;
+                var3 = f.fullscreenTimeoutText;
                 this.field_h = this.field_h + 30;
               }
             }
@@ -127,7 +127,7 @@ final class ij extends oe implements pl {
           var4.field_m = 50;
           var4.field_q = (dh) ((Object) new ff(hh.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) -91, var4);
-          this.field_bb = this.a(hh.field_b, (byte) 87, (bb) (this));
+          this.field_bb = this.a(hh.fullscreenCloseButtonText, (byte) 87, (bb) (this));
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -219,7 +219,7 @@ final class ij extends oe implements pl {
             if (param0 >= 3) {
                 return;
             }
-            field_Z = (String) null;
+            menuText = (String) null;
             return;
         }
         if (null == ul.field_a) {
@@ -233,20 +233,20 @@ final class ij extends oe implements pl {
             if (param0 >= 3) {
                 return;
             }
-            field_Z = (String) null;
+            menuText = (String) null;
             return;
         }
         ul.field_a.b(-(ul.field_a.field_s >> -881621759) + 319, -(ul.field_a.field_o >> -1172163679) + 240);
         if (param0 >= 3) {
             return;
         }
-        field_Z = (String) null;
+        menuText = (String) null;
     }
 
     static {
         field_X = 0;
-        field_Z = "Menu";
+        menuText = "Menu";
         field_ab = 0.5f;
-        field_Y = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
+        createPasswordTooltipText = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
     }
 }

@@ -9,7 +9,7 @@ abstract class dd extends ee {
     static rh field_J;
     private int field_H;
     static int field_C;
-    static String field_F;
+    static String loadingMusicText;
     static String[] field_E;
 
     final static boolean a(byte param0) {
@@ -206,14 +206,14 @@ abstract class dd extends ee {
     public static void i(int param0) {
         if (param0 == 256) {
             field_J = null;
-            field_F = null;
+            loadingMusicText = null;
             field_G = null;
             field_E = null;
             return;
         }
         dd.a((byte) -87);
         field_J = null;
-        field_F = null;
+        loadingMusicText = null;
         field_G = null;
         field_E = null;
     }
@@ -290,6 +290,6 @@ abstract class dd extends ee {
 
     static {
         variantMatchCandidateCount = 0;
-        field_F = "Loading music";
+        loadingMusicText = "Loading music";
     }
 }

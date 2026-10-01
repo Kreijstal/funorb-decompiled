@@ -4,7 +4,7 @@
 class IntrusiveNode {
     long field_a;
     IntrusiveNode nextNode;
-    static String field_e;
+    static String loginMessage3Text;
     IntrusiveNode previousNode;
     static rf field_d;
 
@@ -16,7 +16,7 @@ class IntrusiveNode {
         pk.h(-120, param1);
         od.b((byte) -24);
         if (param0 > -90) {
-          field_e = (String) null;
+          loginMessage3Text = (String) null;
         }
         var2 = param1;
         if (var2 != 4) {
@@ -304,7 +304,7 @@ class IntrusiveNode {
     }
 
     public static void b(byte param0) {
-        field_e = null;
+        loginMessage3Text = null;
         int var1 = -121 / ((-68 - param0) / 42);
         field_d = null;
     }
@@ -320,6 +320,6 @@ class IntrusiveNode {
     }
 
     static {
-        field_e = "Connection timed out. Please try using a different server.";
+        loginMessage3Text = "Connection timed out. Please try using a different server.";
     }
 }

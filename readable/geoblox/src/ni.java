@@ -8,7 +8,7 @@ final class ni extends ee implements pl {
     private int[] field_H;
     private m field_G;
     private int field_D;
-    static String field_C;
+    static String createToUseText;
     static int field_I;
 
     private final void c(int param0, int param1) {
@@ -262,9 +262,9 @@ final class ni extends ee implements pl {
     }
 
     public static void a(byte param0) {
-        field_C = null;
+        createToUseText = null;
         if (param0 >= -19) {
-            field_C = (String) null;
+            createToUseText = (String) null;
         }
     }
 
@@ -283,7 +283,7 @@ final class ni extends ee implements pl {
             var2 = new nc(param0, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, cm.field_j, mj.field_a);
             kj.c(true);
             if (param1 >= -107) {
-              field_C = (String) null;
+              createToUseText = (String) null;
             }
             stackIn_6_0 = (nc) (var2);
           } else {
@@ -311,6 +311,6 @@ final class ni extends ee implements pl {
     }
 
     static {
-        field_C = "Create a free account to start using this feature";
+        createToUseText = "Create a free account to start using this feature";
     }
 }

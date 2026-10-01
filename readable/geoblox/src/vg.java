@@ -6,7 +6,7 @@ final class vg {
     static int field_a;
     static rl field_i;
     private int field_h;
-    static String field_d;
+    static String pleaseWaitText;
     private long field_e;
     static boolean[] field_j;
     private DualLinkNode[] field_g;
@@ -108,7 +108,7 @@ final class vg {
             return;
         }
         field_f = null;
-        field_d = null;
+        pleaseWaitText = null;
         field_j = null;
         field_b = null;
     }
@@ -130,6 +130,6 @@ final class vg {
 
     static {
         field_j = new boolean[33];
-        field_d = "Please wait...";
+        pleaseWaitText = "Please wait...";
     }
 }

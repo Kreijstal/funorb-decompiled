@@ -13,7 +13,7 @@ final class vd {
     private String field_i;
     int[] field_g;
     private boolean field_j;
-    static String[] field_m;
+    static String[] highscoreModeNames;
     int field_d;
     static boolean field_l;
     static int field_p;
@@ -22,7 +22,7 @@ final class vd {
     public static void b(int param0) {
         field_b = null;
         tutorialShapeMatchMessage = null;
-        field_m = null;
+        highscoreModeNames = null;
         int var1 = -39 % ((62 - param0) / 42);
     }
 
@@ -209,7 +209,7 @@ final class vd {
             field_b = new int[5];
             field_n = 0;
             field_a = 0;
-            field_m = new String[]{"All scores", "My scores", "Best each"};
+            highscoreModeNames = new String[]{"All scores", "My scores", "Best each"};
             field_p = 6;
             var0 = 0;
             L0: while (true) {

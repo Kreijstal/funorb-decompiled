@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ih {
-    static String field_b;
+    static String ticketingOneUnreadText;
     static df field_a;
     static h field_c;
 
@@ -53,7 +53,7 @@ final class ih {
         }
         field_a = null;
         field_c = null;
-        field_b = null;
+        ticketingOneUnreadText = null;
     }
 
     final static void linkEntityAtMaskContacts(int param0, int contactY, GameplayEntity entity, int contactX) {
@@ -279,7 +279,7 @@ final class ih {
     }
 
     static {
-        field_b = "You have 1 unread message!";
+        ticketingOneUnreadText = "You have 1 unread message!";
         field_a = null;
     }
 }

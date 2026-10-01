@@ -6,7 +6,7 @@ final class uf implements Runnable {
     private wd field_k;
     static int field_a;
     static al field_l;
-    static String field_i;
+    static String createPasswordContainsEmailAlertText;
     int field_d;
     private Thread field_g;
     static int field_b;
@@ -20,7 +20,7 @@ final class uf implements Runnable {
             field_e = null;
             field_h = null;
             field_f = null;
-            field_i = null;
+            createPasswordContainsEmailAlertText = null;
             field_l = null;
             return;
         }
@@ -28,7 +28,7 @@ final class uf implements Runnable {
         field_e = null;
         field_h = null;
         field_f = null;
-        field_i = null;
+        createPasswordContainsEmailAlertText = null;
         field_l = null;
     }
 
@@ -443,7 +443,7 @@ final class uf implements Runnable {
 
     static {
         field_h = new int[]{5167632, 12183066, 16031008, 15087386, 15079962};
-        field_i = "This password contains your email address, and would be easy to guess";
+        createPasswordContainsEmailAlertText = "This password contains your email address, and would be easy to guess";
         field_b = 0;
         field_l = new al();
     }

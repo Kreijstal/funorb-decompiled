@@ -20,7 +20,7 @@ final class GameScreen extends MenuScreen {
     private int[] field_P;
     private int field_T;
     private boolean field_C;
-    static String[] field_Q;
+    static String[] quickChatShortcutHelpTexts;
     private int field_N;
     private int field_s;
     private int field_Y;
@@ -32,7 +32,7 @@ final class GameScreen extends MenuScreen {
     private int field_I;
     private PcmSampleStream volumePreviewStream;
     private int volumePreviewTicks;
-    static String field_r;
+    static String createNameLeadingSpaceAlertText;
     private int field_W;
     int field_q;
     private boolean field_v;
@@ -550,7 +550,7 @@ final class GameScreen extends MenuScreen {
                             SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
                             ma.a(160, 150, 80, (byte) -92, 340, ll.field_h);
                             var6 = 170;
-                            fi.field_d.a(ki.field_a, 160, var6, 320, 300, 0, -1, 1, 0, 16);
+                            fi.field_d.a(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
                             var7 = 100;
                             var8 = -(20 + var7 >> 374422529) + 410;
                             var6 = 265;
@@ -580,7 +580,7 @@ final class GameScreen extends MenuScreen {
                             dd.field_G.field_K[0][wf.field_p] = 15488514;
                           }
                           L20: {
-                            dd.field_G.b(hh.field_b, var9, 30 + var6, 0, -1);
+                            dd.field_G.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
                             var8 = 320 - (20 + var7 >> -708984479) - 90;
                             dd.field_G.field_K[0][wf.field_p] = 16689938;
                             var6 = 265;
@@ -609,7 +609,7 @@ final class GameScreen extends MenuScreen {
                             }
                             dd.field_G.field_K[0][wf.field_p] = 15488514;
                           }
-                          dd.field_G.b(qb.field_L, var9, 30 + var6, 0, -1);
+                          dd.field_G.b(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
                           dd.field_G.field_K[0][wf.field_p] = 16689938;
                           if (var12 == 0) {
                             break L8;
@@ -627,7 +627,7 @@ final class GameScreen extends MenuScreen {
                               SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
                               ma.a(160, 160, 95, (byte) -92, 320, ll.field_h);
                               var6 = 170;
-                              var6 = var6 + 16 * fi.field_d.a(sj.field_e, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                              var6 = var6 + 16 * fi.field_d.a(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                               var6 += 40;
                               var7 = 100;
                               var8 = 320 + -(var7 + 20 >> 1183785761);
@@ -652,7 +652,7 @@ final class GameScreen extends MenuScreen {
                               }
                               dd.field_G.field_K[0][wf.field_p] = 15488514;
                             }
-                            dd.field_G.b(hh.field_b, var9, 30 + var6, 0, -1);
+                            dd.field_G.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
                             dd.field_G.field_K[0][wf.field_p] = 16689938;
                             if (var12 == 0) {
                               break L8;
@@ -668,17 +668,17 @@ final class GameScreen extends MenuScreen {
                             SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
                             ma.a(160, 160, 140, (byte) -92, 320, ll.field_h);
                             var6 = 170;
-                            var7_ref_String = ue.field_c + " " + pb.field_v + " " + wj.field_C + " " + rb.field_a + " " + uj.field_d;
+                            var7_ref_String = ue.fullscreenBeforeAcceptText + " " + pb.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
                             var6 = var6 + 16 * fi.field_d.a(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                             var6 += 10;
                             var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 - -1);
                             if (-1 <= ((1500 - this.activeTicks) / 150 ^ -1)) {
-                              var6 = var6 + fi.field_d.a(wj.a(mj.field_c, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                              var6 = var6 + fi.field_d.a(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
                               if (var12 == 0) {
                                 break L28;
                               }
                             }
-                            var6 = var6 + fi.field_d.a(wj.a(jk.field_b, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                            var6 = var6 + fi.field_d.a(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
                           }
                           L30: {
                             var6 += 40;
@@ -710,7 +710,7 @@ final class GameScreen extends MenuScreen {
                             dd.field_G.field_K[0][wf.field_p] = 15488514;
                           }
                           L32: {
-                            dd.field_G.b(rb.field_a, var11, 30 + var6, 0, -1);
+                            dd.field_G.b(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
                             dd.field_G.field_K[0][wf.field_p] = 16689938;
                             var10 = 320 + -(20 + var9 >> -1873231487) - 90;
                             var11 = 10 + (var9 >> 687806689) + var10;
@@ -738,7 +738,7 @@ final class GameScreen extends MenuScreen {
                             }
                             dd.field_G.field_K[0][wf.field_p] = 15488514;
                           }
-                          dd.field_G.b(pb.field_v, var11, 30 + var6, 0, -1);
+                          dd.field_G.b(pb.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
                           dd.field_G.field_K[0][wf.field_p] = 16689938;
                           if (var12 == 0) {
                             break L8;
@@ -754,7 +754,7 @@ final class GameScreen extends MenuScreen {
                           SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
                           ma.a(170, 160, 80, (byte) -92, 320, ll.field_h);
                           var6 = 180;
-                          fi.field_d.a(ki.field_a, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                          fi.field_d.a(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                           var7 = 242;
                           var8 = 320 - (var7 + 20 >> -1731032895);
                           var9 = 10 + (var8 + (var7 >> -1298819903));
@@ -779,7 +779,7 @@ final class GameScreen extends MenuScreen {
                           }
                           dd.field_G.field_K[0][wf.field_p] = 15488514;
                         }
-                        dd.field_G.b(hh.field_b, var9, 30 + var6, 0, -1);
+                        dd.field_G.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
                         dd.field_G.field_K[0][wf.field_p] = 16689938;
                         if (var12 == 0) {
                           break L8;
@@ -902,9 +902,9 @@ final class GameScreen extends MenuScreen {
 
     public static void d(byte param0) {
         try {
-            field_Q = null;
+            quickChatShortcutHelpTexts = null;
             field_x = null;
-            field_r = null;
+            createNameLeadingSpaceAlertText = null;
             if (param0 != 28) {
                 GameScreen.c(79, (byte) -113);
             }
@@ -1421,7 +1421,7 @@ final class GameScreen extends MenuScreen {
                   }
                 }
                 if (var2_int == 0) {
-                  var5_ref = sb.field_f;
+                  var5_ref = sb.noHighscoresText;
                   var6 = 76 + dd.field_G.field_o + 150;
                   dd.field_G.b(var5_ref, 322, var6, 0, -1);
                 }
@@ -1432,21 +1432,21 @@ final class GameScreen extends MenuScreen {
             }
             L16: {
               if (!fh.c(-89)) {
-                var2 = g.field_l;
+                var2 = g.serviceUnavailableText;
                 if (var10 == 0) {
                   break L16;
                 }
               }
-              var2 = sb.field_f;
+              var2 = sb.noHighscoresText;
             }
             var3 = 150 - (-dd.field_G.field_o - 76);
             dd.field_G.b(var2, 322, var3, 0, -1);
             if (fh.c(param0 + -147)) {
-              dd.field_G.a(ni.field_C, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+              dd.field_G.a(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }
           }
           if (!fh.c(param0 ^ -109)) {
-            var2 = ue.field_b;
+            var2 = ue.highscoreFriendTipText;
             fi.field_d.a(var2, 140, 325, 360, 300, 0, -1, 1, 0, 16);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2111,7 +2111,7 @@ final class GameScreen extends MenuScreen {
           if ((var2_int ^ -1) != -1) {
             if (-129 >= (var2_int ^ -1)) {
               if (160 > var2_int) {
-                var3 = lf.field_e[-128 + var2_int];
+                var3 = lf.extendedTextCharacters[-128 + var2_int];
                 if (0 == var3) {
                   var3 = 63;
                 }
@@ -3326,8 +3326,8 @@ final class GameScreen extends MenuScreen {
     }
 
     static {
-        field_Q = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
+        quickChatShortcutHelpTexts = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
         selectedThemeId = 0;
-        field_r = "Names cannot start or end with space or underscore";
+        createNameLeadingSpaceAlertText = "Names cannot start or end with space or underscore";
     }
 }

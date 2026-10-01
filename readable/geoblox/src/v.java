@@ -6,7 +6,7 @@ final class v {
     private int field_h;
     private int field_v;
     private int field_c;
-    static String field_m;
+    static String createPasswordConfirmationText;
     private int field_p;
     private int field_b;
     private int field_k;
@@ -27,7 +27,7 @@ final class v {
 
     public static void a(boolean param0) {
         field_n = null;
-        field_m = null;
+        createPasswordConfirmationText = null;
         field_l = null;
         if (param0) {
             field_q = null;
@@ -570,7 +570,7 @@ final class v {
 
     final boolean a(int param0) {
         if (param0 > -91) {
-            field_m = (String) null;
+            createPasswordConfirmationText = (String) null;
             if (li.field_c < this.field_k) {
                 return false;
             }
@@ -632,7 +632,7 @@ final class v {
     }
 
     static {
-        field_m = "Confirm Password: ";
+        createPasswordConfirmationText = "Confirm Password: ";
         field_e = null;
         field_n = "To skip this tutorial, press <img=3> at any point.";
         field_q = new java.awt.Color(10040319);

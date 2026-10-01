@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nk extends df {
-    static String field_i;
-    static String field_g;
+    static String createUnder13TermsText;
+    static String startGameText;
     private String field_d;
     static int[] field_c;
     private String field_h;
@@ -61,12 +61,12 @@ final class nk extends df {
     }
 
     public static void b(int param0) {
-        field_i = null;
+        createUnder13TermsText = null;
         packedMatchCandidates = null;
-        field_g = null;
+        startGameText = null;
         field_c = null;
         if (param0 != -17226) {
-            field_g = (String) null;
+            startGameText = (String) null;
         }
     }
 
@@ -88,8 +88,8 @@ final class nk extends df {
     }
 
     static {
-        field_g = "Start Game";
-        field_i = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
+        startGameText = "Start Game";
+        createUnder13TermsText = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         packedMatchCandidates = new int[1000];
         field_e = 0;
     }

@@ -4,7 +4,7 @@
 final class mj {
     static byte[][] field_a;
     static int field_b;
-    static String field_c;
+    static String fullscreenAcceptCountdownSingularText;
 
     final static String a(int param0, int param1, CharSequence[] param2, byte param3) {
         int var6_int = 0;
@@ -128,7 +128,7 @@ final class mj {
           L0: {
             var2_int = param0.length();
             if (param1 > -34) {
-              field_c = (String) null;
+              fullscreenAcceptCountdownSingularText = (String) null;
             }
             var3 = 0;
             L2: while (true) {
@@ -172,7 +172,7 @@ final class mj {
     }
 
     public static void a(int param0) {
-        field_c = null;
+        fullscreenAcceptCountdownSingularText = null;
         field_a = (byte[][]) null;
         if (param0 < 66) {
             field_b = 91;
@@ -180,6 +180,6 @@ final class mj {
     }
 
     static {
-        field_c = "If you do nothing the game will revert to normal view in <%0> second.";
+        fullscreenAcceptCountdownSingularText = "If you do nothing the game will revert to normal view in <%0> second.";
     }
 }

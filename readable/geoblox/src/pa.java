@@ -6,7 +6,7 @@ import java.io.*;
 final class pa {
     static uj field_b;
     private long field_f;
-    static String field_e;
+    static String waitingForSoundEffectsText;
     static String field_a;
     private RandomAccessFile field_d;
     private long field_c;
@@ -77,7 +77,7 @@ final class pa {
     }
 
     public static void b(byte param0) {
-        field_e = null;
+        waitingForSoundEffectsText = null;
         if (param0 <= 3) {
             return;
         }
@@ -324,7 +324,7 @@ final class pa {
         this.field_d.seek(param0);
         this.field_c = param0;
         if (!param1) {
-            field_e = (String) null;
+            waitingForSoundEffectsText = (String) null;
         }
     }
 
@@ -341,7 +341,7 @@ final class pa {
     static {
         field_b = new uj();
         field_a = "Score: <%0>";
-        field_e = "Waiting for sound effects";
+        waitingForSoundEffectsText = "Waiting for sound effects";
         field_g = 0;
     }
 }

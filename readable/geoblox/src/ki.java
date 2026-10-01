@@ -5,8 +5,8 @@ final class ki {
     static Sprite field_c;
     static rh field_b;
     static int field_d;
-    static String field_a;
-    static String field_e;
+    static String fullscreenNonmemberText;
+    static String js5ConnectErrorText;
 
     final static void a(vd param0, int param1) {
         int dupTemp$3 = 0;
@@ -92,9 +92,9 @@ final class ki {
     }
 
     public static void a(byte param0) {
-        field_e = null;
+        js5ConnectErrorText = null;
         field_c = null;
-        field_a = null;
+        fullscreenNonmemberText = null;
         field_b = null;
         if (param0 != -64) {
             vd var2 = (vd) null;
@@ -110,7 +110,7 @@ final class ki {
 
     static {
         field_c = new Sprite(540, 140);
-        field_a = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
-        field_e = "Unable to connect to the data server. Please check any firewall you are using.";
+        fullscreenNonmemberText = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
+        js5ConnectErrorText = "Unable to connect to the data server. Please check any firewall you are using.";
     }
 }

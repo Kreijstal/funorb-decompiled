@@ -31,7 +31,7 @@ final class qa {
             }
             var4 = new byte[var3_int];
             param0.field_f = param0.field_f + vj.field_b.a(var4, param0.field_f, param0.field_j, param1, -127, var3_int);
-            var5 = bc.a(param1 ^ -103, var4, 0, var3_int);
+            var5 = bc.decodeTextSlice(param1 ^ -103, var4, 0, var3_int);
             stackIn_4_0 = (String) (var5);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

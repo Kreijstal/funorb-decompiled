@@ -6,12 +6,12 @@ final class ah {
     static volatile int field_e;
     static rh field_c;
     static int field_d;
-    static String field_b;
+    static String connectionLostReconnectingText;
 
     public static void a(int param0) {
         field_c = null;
         int var1 = -79 % ((param0 - -15) / 50);
-        field_b = null;
+        connectionLostReconnectingText = null;
     }
 
     final static String a(int param0, char param1, int param2) {
@@ -38,6 +38,6 @@ final class ah {
     static {
         field_e = 0;
         field_d = 0;
-        field_b = "Connection lost - attempting to reconnect";
+        connectionLostReconnectingText = "Connection lost - attempting to reconnect";
     }
 }

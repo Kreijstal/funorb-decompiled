@@ -7,7 +7,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
     private java.awt.image.ColorModel field_j;
     static lh field_g;
     private java.awt.image.ImageConsumer field_h;
-    static rh field_i;
+    static rh activeTextArchive;
 
     final static h a(byte param0, String param1) {
         RuntimeException var2 = null;
@@ -20,7 +20,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 86) {
-            field_i = (rh) null;
+            activeTextArchive = (rh) null;
           }
           stackIn_3_0 = new h(param1);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -53,7 +53,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
             this.field_h.imageComplete(2);
             return;
         }
-        field_i = (rh) null;
+        activeTextArchive = (rh) null;
         this.field_h.imageComplete(2);
     }
 
@@ -299,7 +299,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     public static void c(byte param0) {
-        field_i = null;
+        activeTextArchive = null;
         field_g = null;
         if (param0 >= -101) {
             field_g = (lh) null;

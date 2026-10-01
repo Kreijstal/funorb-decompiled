@@ -16,7 +16,7 @@ final class qh extends ee implements pe, pl, ta {
     private hk field_D;
     static boolean[] field_C;
     private vi field_P;
-    static String field_Q;
+    static String createPasswordHintText;
     static String tutorialFailedMessage;
     private hk field_L;
 
@@ -166,15 +166,15 @@ final class qh extends ee implements pe, pl, ta {
         this.field_R = new hc("", (bb) null, 3);
         int var1 = 1;
         this.field_P = new vi("", (bb) null, var1 != 0);
-        this.field_D = new hk(di.field_c, (bb) null);
-        this.field_L = new hk(hc.field_U, (bb) null);
-        this.field_H.field_j = ud.field_a;
-        this.field_I.field_j = ll.field_c;
-        this.field_G.field_j = ok.field_i;
-        this.field_M.field_j = ij.field_Y;
-        this.field_N.field_j = oi.field_c;
-        this.field_R.field_j = pb.field_o;
-        this.field_P.field_j = vi.field_G;
+        this.field_D = new hk(di.createText, (bb) null);
+        this.field_L = new hk(hc.goBackText, (bb) null);
+        this.field_H.field_j = ud.createDisplayNameTooltipText;
+        this.field_I.field_j = ll.createEmailTooltipText;
+        this.field_G.field_j = ok.createEmailConfirmationTooltipText;
+        this.field_M.field_j = ij.createPasswordTooltipText;
+        this.field_N.field_j = oi.createPasswordConfirmationTooltipText;
+        this.field_R.field_j = pb.createAgeTooltipText;
+        this.field_P.field_j = vi.createNewsOptInTooltipText;
         this.field_H.a((byte) -27, new uk(this.field_H));
         this.field_I.a((byte) -111, new ag(this.field_I));
         this.field_G.a((byte) 126, new mk(this.field_G, this.field_I));
@@ -193,22 +193,22 @@ final class qh extends ee implements pe, pl, ta {
         uh dupTemp$1 = new uh(10000536);
         this.field_N.field_q = (dh) ((Object) dupTemp$1);
         this.field_M.field_q = (dh) ((Object) dupTemp$1);
-        String var2 = wj.a(bm.field_p, new String[]{this.b(false), this.c(false)}, (byte) -72);
+        String var2 = wj.a(bm.createAgreeTermsText, new String[]{this.b(false), this.c(false)}, (byte) -72);
         int var3 = 20;
-        var3 = var3 + this.a(var3, ug.field_b, 170, this.field_I, 5);
-        var3 = var3 + (5 + this.a(this.field_G, 170, ok.field_e, 20, "", var3, (byte) -65));
-        var3 = var3 + this.a(var3, qg.field_b, 170, this.field_M, 5);
-        var3 = var3 + (this.a(-99, this.field_N, v.field_m, var3, 170, field_Q) + 5);
-        var3 = var3 + (this.a(-103, this.field_H, wj.field_E, var3, 170, gk.field_c) + 5);
-        var3 = var3 + this.a(var3, 170, this.field_R, ue.field_g, (byte) -127);
-        hd var4 = new hd(46, var3, this.field_r - 90, 25, this.field_P, true, this.field_r + -120, 5, hh.field_d, 11579568, ue.field_d);
+        var3 = var3 + this.a(var3, ug.createEmailText, 170, this.field_I, 5);
+        var3 = var3 + (5 + this.a(this.field_G, 170, ok.createEmailConfirmationText, 20, "", var3, (byte) -65));
+        var3 = var3 + this.a(var3, qg.createPasswordText, 170, this.field_M, 5);
+        var3 = var3 + (this.a(-99, this.field_N, v.createPasswordConfirmationText, var3, 170, createPasswordHintText) + 5);
+        var3 = var3 + (this.a(-103, this.field_H, wj.createDisplayNameText, var3, 170, gk.createDisplayNameHintText) + 5);
+        var3 = var3 + this.a(var3, 170, this.field_R, ue.createAgeText, (byte) -127);
+        hd var4 = new hd(46, var3, this.field_r - 90, 25, this.field_P, true, this.field_r + -120, 5, hh.field_d, 11579568, ue.createNewsOptInText);
         this.b((byte) -106, var4);
         var3 = var3 + var4.field_h;
         ff var5 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 0, 0, ng.field_F.field_o, -1, 2147483647, true);
         this.field_E = new vf(var2, var5);
         this.field_E.field_j = "";
-        this.field_E.a(0, -42, eh.field_a);
-        this.field_E.a(1, -62, eh.field_a);
+        this.field_E.a(0, -42, eh.openInPopupWindowText);
+        this.field_E.a(1, -62, eh.openInPopupWindowText);
         this.field_E.field_u = (bb) (this);
         this.field_E.b(46, 0, var3, -90 + this.field_r);
         var3 = var3 + (this.field_E.field_h + 15);
@@ -503,7 +503,7 @@ final class qh extends ee implements pe, pl, ta {
     }
 
     public static void h(int param0) {
-        field_Q = null;
+        createPasswordHintText = null;
         field_O = null;
         if (param0 == 0) {
             field_C = null;
@@ -511,7 +511,7 @@ final class qh extends ee implements pe, pl, ta {
             field_F = null;
             return;
         }
-        field_Q = (String) null;
+        createPasswordHintText = (String) null;
         field_C = null;
         tutorialFailedMessage = null;
         field_F = null;
@@ -584,7 +584,7 @@ final class qh extends ee implements pe, pl, ta {
               decompiledRegionSelector0 = 1;
             } else {
               if (param1 != 13) {
-                field_Q = (String) null;
+                createPasswordHintText = (String) null;
               }
               if (99 == param0) {
                 stackIn_13_0 = this.a(param3, -125);
@@ -718,6 +718,6 @@ final class qh extends ee implements pe, pl, ta {
     static {
         field_F = new gk();
         tutorialFailedMessage = "Unfortunately, you've failed the tutorial. In Geoblox you lose if any geoblox stuck to your avatar reach the edge of the rotating play area. You can either choose to replay the tutorial or, if you feel confident, you can proceed to the proper game.<br>Press <img=2> to continue to the game. Press <img=5> to replay the tutorial.";
-        field_Q = "Passwords must be between 5 and 20 letters and numbers";
+        createPasswordHintText = "Passwords must be between 5 and 20 letters and numbers";
     }
 }

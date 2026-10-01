@@ -7,30 +7,30 @@ final class ii {
     rh field_i;
     static boolean field_a;
     static nd field_h;
-    static String field_b;
+    static String highscoresText;
     static int[] field_d;
     String field_f;
     String field_g;
     int field_l;
     String field_m;
     static rh field_k;
-    static String field_j;
+    static String createPasswordValidText;
 
     public static void a(int param0) {
         if (param0 >= 121) {
             field_h = null;
             field_k = null;
-            field_j = null;
+            createPasswordValidText = null;
             field_d = null;
-            field_b = null;
+            highscoresText = null;
             return;
         }
-        field_b = (String) null;
+        highscoresText = (String) null;
         field_h = null;
         field_k = null;
-        field_j = null;
+        createPasswordValidText = null;
         field_d = null;
-        field_b = null;
+        highscoresText = null;
     }
 
     private ii() throws Throwable {
@@ -40,8 +40,8 @@ final class ii {
     static {
         field_c = 0;
         field_d = new int[8192];
-        field_b = "Highscores";
+        highscoresText = "Highscores";
         field_h = new nd();
-        field_j = "Password is valid";
+        createPasswordValidText = "Password is valid";
     }
 }

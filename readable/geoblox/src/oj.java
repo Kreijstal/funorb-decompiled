@@ -4,7 +4,7 @@
 abstract class oj {
     static lh field_d;
     static long field_c;
-    static String field_e;
+    static String loadingExtraDataText;
     static int field_b;
     static String field_a;
 
@@ -70,7 +70,7 @@ abstract class oj {
         if (param0 > -50) {
             return;
         }
-        field_e = null;
+        loadingExtraDataText = null;
     }
 
     final static void a(int param0, byte param1) {
@@ -86,7 +86,7 @@ abstract class oj {
 
     static {
         field_d = new lh();
-        field_e = "Loading extra data";
+        loadingExtraDataText = "Loading extra data";
         field_c = 20000000L;
     }
 }

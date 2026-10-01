@@ -6,7 +6,7 @@ final class oi {
     static String field_e;
     static String tutorialColourMatchMessage;
     static Sprite field_b;
-    static String field_c;
+    static String createPasswordConfirmationTooltipText;
 
     final synchronized static byte[] a(boolean param0, int param1) {
         int fieldTemp$3 = 0;
@@ -180,7 +180,7 @@ final class oi {
     }
 
     public static void a(byte param0) {
-        field_c = null;
+        createPasswordConfirmationTooltipText = null;
         int var1 = -119 / ((param0 - 49) / 55);
         field_e = null;
         field_b = null;
@@ -191,6 +191,6 @@ final class oi {
     static {
         field_a = new String[255];
         tutorialColourMatchMessage = "The objective of Geoblox is to stack geoblox on your avatar in patterns of three in a row, by shape, colour, or both shape AND colour. Matching both shape and colour simultaneously will earn you even more points!<br>Try connecting three of a kind by colour now. Press <img=2> once you are ready to continue.";
-        field_c = "Type your password again to make sure it's correct";
+        createPasswordConfirmationTooltipText = "Type your password again to make sure it's correct";
     }
 }

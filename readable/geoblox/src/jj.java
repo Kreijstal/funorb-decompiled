@@ -3,10 +3,10 @@
  */
 final class jj {
     private ra field_e;
-    static String field_c;
+    static String loginUsernameEmailText;
     private int field_d;
     private gi field_f;
-    static String[] field_a;
+    static String[] ratingModeLongNames;
     static int field_g;
     private int field_b;
 
@@ -16,7 +16,7 @@ final class jj {
         if (param1 == 0) {
             return;
         }
-        field_c = (String) null;
+        loginUsernameEmailText = (String) null;
     }
 
     private final void a(long param0, int param1, boolean param2, Object param3) {
@@ -85,7 +85,7 @@ final class jj {
 
     final static void b(int param0) {
         if (param0 > -96) {
-            field_c = (String) null;
+            loginUsernameEmailText = (String) null;
             jk.field_d = 0;
             return;
         }
@@ -130,9 +130,9 @@ final class jj {
     }
 
     public static void a(int param0) {
-        field_a = null;
+        ratingModeLongNames = null;
         int var1 = -3 / ((81 - param0) / 41);
-        field_c = null;
+        loginUsernameEmailText = null;
     }
 
     private jj() throws Throwable {
@@ -140,8 +140,8 @@ final class jj {
     }
 
     static {
-        field_c = "Login: ";
-        field_a = new String[]{"Showing by rating", "Showing by win percentage"};
+        loginUsernameEmailText = "Login: ";
+        ratingModeLongNames = new String[]{"Showing by rating", "Showing by win percentage"};
         field_g = 13;
     }
 }

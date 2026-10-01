@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vi extends hk {
-    static String field_F;
+    static String loginJustPlayTooltipText;
     static long field_H;
-    static String field_G;
+    static String createNewsOptInTooltipText;
     static int field_E;
 
     public static void f(int param0) {
@@ -12,8 +12,8 @@ final class vi extends hk {
             d var2 = (d) null;
             vi.a(98, (d) null);
         }
-        field_F = null;
-        field_G = null;
+        loginJustPlayTooltipText = null;
+        createNewsOptInTooltipText = null;
     }
 
     private vi(String param0, bb param1) {
@@ -135,8 +135,8 @@ final class vi extends hk {
     }
 
     static {
-        field_F = "Play the game without logging in just yet";
-        field_G = "Updates will sent to the email address you've given";
+        loginJustPlayTooltipText = "Play the game without logging in just yet";
+        createNewsOptInTooltipText = "Updates will sent to the email address you've given";
         field_E = 12;
     }
 }

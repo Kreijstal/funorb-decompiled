@@ -6,7 +6,7 @@ final class ne {
     private int[] field_e;
     static String field_c;
     private int field_h;
-    static String field_d;
+    static String ticketingGoToWebsiteText;
     private int[] field_a;
     private int field_g;
     private int field_i;
@@ -201,13 +201,13 @@ final class ne {
     public static void b(byte param0) {
         field_b = null;
         if (param0 > -92) {
-            field_d = (String) null;
+            ticketingGoToWebsiteText = (String) null;
             field_c = null;
-            field_d = null;
+            ticketingGoToWebsiteText = null;
             return;
         }
         field_c = null;
-        field_d = null;
+        ticketingGoToWebsiteText = null;
     }
 
     ne(int[] param0) {
@@ -225,7 +225,7 @@ final class ne {
     }
 
     static {
-        field_d = "Visit the Account Management section on the main site to view.";
+        ticketingGoToWebsiteText = "Visit the Account Management section on the main site to view.";
         field_c = "Discard results";
     }
 }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ca extends IntrusiveNode {
-    static String field_h;
+    static String unpackingMusicText;
     static mg field_f;
     static int field_i;
     static IndexedSprite field_g;
@@ -86,7 +86,7 @@ final class ca extends IntrusiveNode {
     }
 
     public static void b(boolean param0) {
-        field_h = null;
+        unpackingMusicText = null;
         field_f = null;
         field_g = null;
         if (param0) {
@@ -99,6 +99,6 @@ final class ca extends IntrusiveNode {
     }
 
     static {
-        field_h = "Unpacking music";
+        unpackingMusicText = "Unpacking music";
     }
 }

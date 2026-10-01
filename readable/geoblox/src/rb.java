@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rb {
-    static String field_a;
+    static String fullscreenCancelButtonText;
     static boolean field_c;
     static int field_b;
     static v field_d;
@@ -64,12 +64,12 @@ final class rb {
 
     public static void a(byte param0) {
         field_d = null;
-        field_a = null;
+        fullscreenCancelButtonText = null;
         int var1 = -73 % ((-60 - param0) / 48);
     }
 
     static {
-        field_a = "Cancel";
+        fullscreenCancelButtonText = "Cancel";
         field_d = null;
     }
 }

@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class jg {
-    static String field_c;
+    static String loginGameUpdatedText;
     String field_e;
     static int field_a;
     static int field_g;
@@ -194,7 +194,7 @@ abstract class jg {
 
     public static void c(int param0) {
         field_d = null;
-        field_c = null;
+        loginGameUpdatedText = null;
         if (param0 != 16712207) {
             jg.d(56);
         }
@@ -350,7 +350,7 @@ abstract class jg {
         int[] var17;
         int[] var18;
         field_a = 9;
-        field_c = "This game has been updated! Please reload this page.";
+        loginGameUpdatedText = "This game has been updated! Please reload this page.";
         field_g = 35;
         field_h = new int[7][7];
         field_f = new int[][]{new int[]{16646130, 4383370, 7784169, 16732531, 16569656, 16756645, 14022770}, new int[]{16099865, 16720435, 16770049, 42709, 16733161, 11078398, 3658269}, new int[]{16229425, 5957352, 16122070, 15595784, 10216240, 2706395, 11226077}, new int[]{52224, 39372, 16751631, 16751052, 16777011, 16724736, 10040217}, new int[]{16507819, 14654025, 14129125, 13953361, 14512505, 12506866, 12632256}, new int[]{15815889, 1289446, 16363563, 16116238, 9126089, 16730432, 5088306}, new int[]{16716239, 22986, 7461652, 16514820, 16712207, 16744452, 6438761}};

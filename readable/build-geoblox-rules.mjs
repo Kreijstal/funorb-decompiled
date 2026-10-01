@@ -49,7 +49,7 @@ const rebuiltPassSeven = {...passSix, version: 7, previousRulesSha256: sha256(pa
   source: passSeven.source, generators: passSeven.generators, renames};
 if (passSevenBytes.toString() !== JSON.stringify(rebuiltPassSeven, null, 2) + '\n')
   throw new Error('Retained pass 7 does not match its reviewed rule lineage');
-if (pin.namingMigration !== 'rules/geoblox-v12-migration.json')
+if (pin.namingMigration !== 'rules/geoblox-v13-text.json')
   throw new Error('Changed input requires reviewed naming-rule migration');
 const passEightBytes = read('rules/geoblox-v8.json');
 const passEight = JSON.parse(passEightBytes);
@@ -171,13 +171,15 @@ const rebuiltPassEleven = {...passTen, version: 11, previousRulesSha256: sha256(
   source: passEleven.source, generators: passEleven.generators, renames: currentRenames};
 if (passElevenBytes.toString() !== JSON.stringify(rebuiltPassEleven, null, 2) + '\n')
   throw new Error('Retained pass 11 does not match its reviewed rule lineage');
-const outlineMigrationBytes = read(pin.namingMigration);
+const passTwelveBytes = read('rules/geoblox-v12.json');
+const passTwelve = JSON.parse(passTwelveBytes);
+const outlineMigrationBytes = read('rules/geoblox-v12-migration.json');
 const outlineMigration = JSON.parse(outlineMigrationBytes);
 if (outlineMigration.schema !== 1 || outlineMigration.version !== 12 ||
     outlineMigration.previousRulesSha256 !== sha256(passElevenBytes) ||
     outlineMigration.previousInputTreeSha256 !== passEleven.inputTreeSha256 ||
-    outlineMigration.inputTreeSha256 !== pin.inputTreeSha256 ||
-    outlineMigration.javaToolsCommit !== pin.generators.javaTools.commit ||
+    outlineMigration.inputTreeSha256 !== passTwelve.inputTreeSha256 ||
+    outlineMigration.javaToolsCommit !== passTwelve.generators.javaTools.commit ||
     !Array.isArray(outlineMigration.identityChanges) || outlineMigration.identityChanges.length !== 0 ||
     outlineMigration.review.rulesRetained !== renames.length ||
     outlineMigration.review.originalSpellingGuardsMatched !== renames.length ||
@@ -187,10 +189,50 @@ if (outlineMigration.schema !== 1 || outlineMigration.version !== 12 ||
     outlineMigration.review.namedLocalsUniqueWithinMethodBeforeAndAfter !== true ||
     outlineMigration.review.classFieldMethodParameterIdentitiesUnchanged !== true)
   throw new Error('Input or declaration identities differ from the reviewed pass-12 migration');
-const rules = {...passEleven, version: 12, previousRulesSha256: sha256(passElevenBytes),
-  namingMigrationSha256: sha256(outlineMigrationBytes), inputTreeSha256: pin.inputTreeSha256,
+const rebuiltPassTwelve = {...passEleven, version: 12, previousRulesSha256: sha256(passElevenBytes),
+  namingMigrationSha256: sha256(outlineMigrationBytes), inputTreeSha256: passTwelve.inputTreeSha256,
+  source: passTwelve.source, generators: passTwelve.generators, renames: currentRenames};
+if (passTwelveBytes.toString() !== JSON.stringify(rebuiltPassTwelve, null, 2) + '\n')
+  throw new Error('Retained pass 12 does not match its reviewed rule lineage');
+const textBytes = read(pin.namingMigration);
+const text = JSON.parse(textBytes);
+const toolPinBytes = read('tools/PIN.json');
+const toolPin = JSON.parse(toolPinBytes);
+if (text.schema !== 1 || text.version !== 13 ||
+    text.previousRulesSha256 !== sha256(passTwelveBytes) ||
+    text.inputTreeSha256 !== pin.inputTreeSha256 ||
+    text.inputTreeSha256 !== passTwelve.inputTreeSha256 ||
+    text.javaToolsCommit !== pin.generators.javaTools.commit ||
+    text.javaToolsCommit !== passTwelve.generators.javaTools.commit ||
+    pin.commit !== passTwelve.source.commit ||
+    text.namingToolCommit !== toolPin.adaptedToolCommit ||
+    text.namingToolPinSha256 !== sha256(toolPinBytes) ||
+    !Array.isArray(text.renames) || text.renames.length !== 199 ||
+    !Array.isArray(text.resourceAssignments) || text.resourceAssignments.length !== 152 ||
+    text.review.rulesRetained !== currentRenames.length ||
+    text.review.rulesAdded !== text.renames.length ||
+    text.review.originalSpellingGuardsMatched !== currentRenames.length + text.renames.length ||
+    text.review.resourceFieldsObserved !== 152 ||
+    text.review.resourceFieldsRetained !== 1 || text.review.resourceFieldsAdded !== 151 ||
+    text.review.storedResourceReads !== 218 || text.review.allResourceReads !== 744 ||
+    text.review.discardedReadsUnnamed !== 526 || text.review.additionalTextFlowRules !== 48 ||
+    text.review.sourceGeneratedRules !== 19 || text.review.namedLocalsAdded !== 11 ||
+    text.review.sourceBodyEdited !== false)
+  throw new Error('Source or naming tool differs from the reviewed pass-13 text additions');
+const retainedSymbols = new Set(currentRenames.map(rule => rule.symbol));
+for (const rule of text.renames) {
+  if (retainedSymbols.has(rule.symbol)) throw new Error('Text additions replace a retained naming identity');
+  if (!/^[CMFPL]:/.test(rule.symbol) || !rule.originalName || !rule.to || !rule.evidence)
+    throw new Error('Incomplete guarded text rule');
+}
+const textRenames = [...currentRenames, ...text.renames]
+  .sort((a, b) => a.symbol < b.symbol ? -1 : a.symbol > b.symbol ? 1 : 0);
+if (new Set(textRenames.map(rule => rule.symbol)).size !== textRenames.length)
+  throw new Error('Text additions have duplicate naming identities');
+const rules = {...passTwelve, version: 13, previousRulesSha256: sha256(passTwelveBytes),
+  namingMigrationSha256: sha256(textBytes), inputTreeSha256: pin.inputTreeSha256,
   source: {repository: pin.sourceRepository, commit: pin.commit, subdirectory: pin.subdirectory},
-  generators: pin.generators, renames: currentRenames};
+  generators: pin.generators, renames: textRenames};
 const output = JSON.stringify(rules, null, 2) + '\n';
 const destination = path.join(root, 'geoblox-rules.json');
 const check = process.argv.includes('--check');
@@ -198,4 +240,4 @@ if (check) {
   if (fs.readFileSync(destination, 'utf8') !== output)
     throw new Error('Publication rules differ from deterministic rebuild');
 } else fs.writeFileSync(destination, output);
-console.log(JSON.stringify({rules: renames.length, sourceCommit: pin.commit, check}));
+console.log(JSON.stringify({rules: rules.renames.length, sourceCommit: pin.commit, check}));

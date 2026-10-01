@@ -15,7 +15,7 @@ final class bi implements dh {
     private int field_a;
     static int field_g;
     private int field_h;
-    static String[] field_c;
+    static String[] mustLogin3Texts;
 
     final static boolean a(boolean param0, CharSequence param1, byte param2) {
         int var3_int = 0;
@@ -164,7 +164,7 @@ final class bi implements dh {
         if (param0 != 1) {
             return;
         }
-        field_c = null;
+        mustLogin3Texts = null;
     }
 
     bi(m param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -188,6 +188,6 @@ final class bi implements dh {
 
     static {
         field_g = 0;
-        field_c = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
+        mustLogin3Texts = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
     }
 }

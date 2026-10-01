@@ -18,7 +18,7 @@ final class r extends f implements pl {
             b.field_a = param0;
             hg.field_d = param3;
             int var4_int = -62 % ((13 - param1) / 62);
-            fa.a(rj.field_g, 480, param2);
+            fa.a(rj.loggingInText, 480, param2);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "r.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -51,16 +51,16 @@ final class r extends f implements pl {
                     cf.h(-65);
                   }
                   this.field_vb = true;
-                  var4 = hi.field_I;
+                  var4 = hi.createIneligibleText;
                 }
               } else {
-                var4 = rh.field_j;
+                var4 = rh.createUsernameUnavailableText;
                 if (null != this.field_tb) {
                   this.field_tb.a((byte) 83);
                 }
               }
             } else {
-              var4 = lh.field_c;
+              var4 = lh.createAccountSuccessText;
             }
             var5 = new ni((f) (this), hh.field_c, var4);
             if (param1.field_g) {
@@ -69,24 +69,24 @@ final class r extends f implements pl {
                 decompiledRegionSelector0 = 0;
                 break L0;
               } else {
-                var5.a(-2, cl.field_d, (bb) (this));
+                var5.a(-2, cl.continueText, (bb) (this));
               }
             } else {
               if (!this.field_vb) {
                 if (param1.field_j == 5) {
-                  var5.a(nf.field_E, 1, 11);
-                  var5.a(rj.field_e, 1, 17);
+                  var5.a(nf.reloadGameText, 1, 11);
+                  var5.a(rj.quitToWebsiteText, 1, 17);
                 } else {
-                  var5.a(ll.field_b, 1, -1);
+                  var5.a(ll.backText, 1, -1);
                 }
               } else {
-                var5.a(-2, cl.field_d, (bb) (this));
+                var5.a(-2, cl.continueText, (bb) (this));
               }
               if (-4 == (param1.field_j ^ -1)) {
-                var5.a(ee.field_y, 1, 7);
+                var5.a(ee.toServerListText, 1, 7);
               } else {
                 if (6 == param1.field_j) {
-                  var5.a(jc.field_c, 1, 9);
+                  var5.a(jc.toCustomerSupportText, 1, 9);
                 }
               }
             }
@@ -119,7 +119,7 @@ final class r extends f implements pl {
     }
 
     r(ng param0, qh param1) {
-        super(param0, hh.field_c, se.field_i, false, false);
+        super(param0, hh.field_c, se.creatingYourAccountText, false, false);
         try {
             this.field_tb = param1;
         } catch (RuntimeException runtimeException) {
@@ -275,7 +275,7 @@ final class r extends f implements pl {
     }
 
     final void q(int param0) {
-        this.a(true, ig.a(hi.field_I, 248, false), (byte) -57);
+        this.a(true, ig.a(hi.createIneligibleText, 248, false), (byte) -57);
         if (param0 != 12086) {
             this.field_wb = false;
         }

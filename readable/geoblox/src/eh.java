@@ -3,7 +3,7 @@
  */
 final class eh {
     static int field_c;
-    static String field_a;
+    static String openInPopupWindowText;
     static gk field_b;
     static pk field_d;
 
@@ -98,7 +98,7 @@ final class eh {
                   return;
                 }
               } else {
-                field_a = (String) null;
+                openInPopupWindowText = (String) null;
                 if (var6 > 0) {
                   if (-51 < (var6 ^ -1)) {
                     if (var6 >= 20) {
@@ -191,7 +191,7 @@ final class eh {
                   return;
                 }
               } else {
-                field_a = (String) null;
+                openInPopupWindowText = (String) null;
                 if (var6 > 0) {
                   if (-51 < (var6 ^ -1)) {
                     if (var6 >= 20) {
@@ -228,7 +228,7 @@ final class eh {
             }
             var6 = -125 + gb.field_f;
             if (param2 != -51) {
-              field_a = (String) null;
+              openInPopupWindowText = (String) null;
               if (var6 <= 0) {
                 var6 = gb.field_f - 140;
                 if ((var6 ^ -1) < -1) {
@@ -296,7 +296,7 @@ final class eh {
     }
 
     public static void a(int param0) {
-        field_a = null;
+        openInPopupWindowText = null;
         field_d = null;
         field_b = null;
         if (param0 != -6910) {
@@ -314,7 +314,7 @@ final class eh {
     }
 
     static {
-        field_a = "Open in popup window";
+        openInPopupWindowText = "Open in popup window";
         field_b = new gk();
     }
 }

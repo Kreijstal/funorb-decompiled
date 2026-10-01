@@ -3,7 +3,7 @@
  */
 final class ei extends qf {
     static uj field_hb;
-    static String field_gb;
+    static String fullscreenUnavailableTrySignedAppletText;
 
     final static void a(boolean param0, int param1, java.awt.Canvas param2) {
         int var4 = 0;
@@ -94,7 +94,7 @@ final class ei extends qf {
                       var4++;
                       continue L1;
                     } else {
-                      stackIn_13_0 = kc.field_b;
+                      stackIn_13_0 = kc.createNameCharacterAlertText;
                       decompiledRegionSelector0 = 2;
                       break L0;
                     }
@@ -142,13 +142,13 @@ final class ei extends qf {
             return;
         }
         field_hb = null;
-        field_gb = null;
+        fullscreenUnavailableTrySignedAppletText = null;
     }
 
     final void b(el param0, int param1) {
         try {
             if (param1 > -10) {
-                field_gb = (String) null;
+                fullscreenUnavailableTrySignedAppletText = (String) null;
             }
             super.b(param0, -22);
         } catch (RuntimeException runtimeException) {
@@ -162,6 +162,6 @@ final class ei extends qf {
 
     static {
         field_hb = new uj();
-        field_gb = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
+        fullscreenUnavailableTrySignedAppletText = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
     }
 }

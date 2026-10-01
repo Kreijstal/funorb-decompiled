@@ -6,7 +6,7 @@ final class hb implements dh {
     static int field_b;
     static rh field_n;
     private int field_m;
-    static String field_h;
+    static String playFreeVersionText;
     private int field_e;
     private m field_a;
     private int field_i;
@@ -55,14 +55,14 @@ final class hb implements dh {
 
     public static void a(int param0) {
         field_n = null;
-        field_h = null;
+        playFreeVersionText = null;
         if (param0 == 0) {
             field_l = null;
             field_j = null;
             field_d = null;
             return;
         }
-        field_h = (String) null;
+        playFreeVersionText = (String) null;
         field_l = null;
         field_j = null;
         field_d = null;
@@ -85,6 +85,6 @@ final class hb implements dh {
 
     static {
         field_b = 0;
-        field_h = "Play free version";
+        playFreeVersionText = "Play free version";
     }
 }

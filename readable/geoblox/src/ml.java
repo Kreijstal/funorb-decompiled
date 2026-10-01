@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ml extends ff {
-    static String field_u;
+    static String createSelectAlternativeText;
     static d field_s;
     static pf field_t;
     static int field_r;
@@ -86,13 +86,13 @@ final class ml extends ff {
 
     public static void b(int param0) {
         if (param0 == 16777215) {
-            field_u = null;
+            createSelectAlternativeText = null;
             field_t = null;
             field_s = null;
             return;
         }
         ml.b(11);
-        field_u = null;
+        createSelectAlternativeText = null;
         field_t = null;
         field_s = null;
     }
@@ -116,7 +116,7 @@ final class ml extends ff {
                 var1 = DualLinkNode.d((byte) -53);
             }
             if (!(var1.length() != 0)) {
-                var1 = th.field_g;
+                var1 = th.defaultPlayerNameText;
             }
             return var1;
         }
@@ -124,6 +124,6 @@ final class ml extends ff {
     }
 
     static {
-        field_u = "Use this alternative as your account name";
+        createSelectAlternativeText = "Use this alternative as your account name";
     }
 }

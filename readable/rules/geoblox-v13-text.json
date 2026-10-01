@@ -1,0 +1,3531 @@
+{
+  "schema": 1,
+  "version": 13,
+  "previousRulesSha256": "06388e0d236a79a68ecd777c991b69afa3ee2a165f8db41465ed4e9b049ab35f",
+  "inputTreeSha256": "2b5e8eca76820cb18760a231fc0825aded6e26972d646bfc3476d4f88d77147b",
+  "javaToolsCommit": "a6e20fcdc1471afd9190c3391c03d89147cf360b",
+  "resourceLoader": "M:wi.a(BLrh;)V",
+  "loaderSourceSha256": "997861f0c8ede160729d9131394982c2925c477393d539d60edd3a1c8fc4f86d",
+  "review": {
+    "rulesRetained": 642,
+    "rulesAdded": 199,
+    "resourceFieldsObserved": 152,
+    "resourceFieldsRetained": 1,
+    "resourceFieldsAdded": 151,
+    "storedResourceReads": 218,
+    "allResourceReads": 744,
+    "discardedReadsUnnamed": 526,
+    "additionalTextFlowRules": 48,
+    "sourceGeneratedRules": 19,
+    "namedLocalsAdded": 11,
+    "originalSpellingGuardsMatched": 841,
+    "sourceBodyEdited": false,
+    "evidence": "Every named resource field is directly assigned from a non-null byte array returned for an explicit text resource key. Indexed groups retain their resource prefix and positions. Additional roles follow inspected loader, archive reader, decoder and generated-carrier data flow; all 199 new declarations match the full javac Trees audit. No resource key, string, arithmetic, guard or source structure is changed."
+  },
+  "resourceAssignments": [
+    {
+      "symbol": "F:Geoblox.field_z:[Ljava/lang/String;",
+      "originalName": "field_z",
+      "resources": [
+        {
+          "key": "reconnect_lost_seq,0",
+          "index": 0,
+          "line": 2760
+        },
+        {
+          "key": "reconnect_lost_seq,1",
+          "index": 1,
+          "line": 2764
+        },
+        {
+          "key": "reconnect_lost_seq,2",
+          "index": 2,
+          "line": 2768
+        },
+        {
+          "key": "reconnect_lost_seq,3",
+          "index": 3,
+          "line": 2772
+        }
+      ],
+      "to": "reconnectMessages",
+      "retainedRule": true
+    },
+    {
+      "symbol": "F:a.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "retry",
+          "index": null,
+          "line": 1303
+        }
+      ],
+      "to": "retryText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ab.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "resources": [
+        {
+          "key": "create_suggestions",
+          "index": null,
+          "line": 1623
+        }
+      ],
+      "to": "createSuggestionsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ac.field_r:[Ljava/lang/String;",
+      "originalName": "field_r",
+      "resources": [
+        {
+          "key": "mustlogin_alternate,1",
+          "index": 1,
+          "line": 3116
+        },
+        {
+          "key": "mustlogin_alternate,2",
+          "index": 2,
+          "line": 3120
+        },
+        {
+          "key": "mustlogin_alternate,3",
+          "index": 3,
+          "line": 3124
+        },
+        {
+          "key": "mustlogin_alternate,4",
+          "index": 4,
+          "line": 3128
+        },
+        {
+          "key": "mustlogin_alternate,5",
+          "index": 5,
+          "line": 3132
+        },
+        {
+          "key": "mustlogin_alternate,6",
+          "index": 6,
+          "line": 3136
+        },
+        {
+          "key": "mustlogin_alternate,7",
+          "index": 7,
+          "line": 3140
+        }
+      ],
+      "to": "mustLoginAlternateTexts",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ad.field_n:Ljava/lang/String;",
+      "originalName": "field_n",
+      "resources": [
+        {
+          "key": "fs_focus_or_resolution",
+          "index": null,
+          "line": 2876
+        }
+      ],
+      "to": "fullscreenFocusOrResolutionText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ah.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "connectionlost_reconnecting",
+          "index": null,
+          "line": 1285
+        }
+      ],
+      "to": "connectionLostReconnectingText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ai.field_h:Ljava/lang/String;",
+      "originalName": "field_h",
+      "resources": [
+        {
+          "key": "create_alert_passchars",
+          "index": null,
+          "line": 1779
+        }
+      ],
+      "to": "createPasswordCharacterAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:bi.field_c:[Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "mustlogin3,1",
+          "index": 1,
+          "line": 3052
+        },
+        {
+          "key": "mustlogin3,2",
+          "index": 2,
+          "line": 3056
+        },
+        {
+          "key": "mustlogin3,3",
+          "index": 3,
+          "line": 3060
+        },
+        {
+          "key": "mustlogin3,4",
+          "index": 4,
+          "line": 3064
+        },
+        {
+          "key": "mustlogin3,5",
+          "index": 5,
+          "line": 3068
+        },
+        {
+          "key": "mustlogin3,6",
+          "index": 6,
+          "line": 3072
+        },
+        {
+          "key": "mustlogin3,7",
+          "index": 7,
+          "line": 3076
+        }
+      ],
+      "to": "mustLogin3Texts",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:bk.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "login_username",
+          "index": null,
+          "line": 1651
+        }
+      ],
+      "to": "loginUsernameText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:bl.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "achievements",
+          "index": null,
+          "line": 2094
+        }
+      ],
+      "to": "achievementsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:bm.field_p:Ljava/lang/String;",
+      "originalName": "field_p",
+      "resources": [
+        {
+          "key": "create_agreeterms",
+          "index": null,
+          "line": 1639
+        }
+      ],
+      "to": "createAgreeTermsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:c.field_Q:[Ljava/lang/String;",
+      "originalName": "field_Q",
+      "resources": [
+        {
+          "key": "quickchat_shortcut_help,0",
+          "index": 0,
+          "line": 2652
+        },
+        {
+          "key": "quickchat_shortcut_help,1",
+          "index": 1,
+          "line": 2656
+        },
+        {
+          "key": "quickchat_shortcut_help,2",
+          "index": 2,
+          "line": 2660
+        },
+        {
+          "key": "quickchat_shortcut_help,3",
+          "index": 3,
+          "line": 2664
+        },
+        {
+          "key": "quickchat_shortcut_help,4",
+          "index": 4,
+          "line": 2668
+        },
+        {
+          "key": "quickchat_shortcut_help,5",
+          "index": 5,
+          "line": 2672
+        }
+      ],
+      "to": "quickChatShortcutHelpTexts",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:c.field_r:Ljava/lang/String;",
+      "originalName": "field_r",
+      "resources": [
+        {
+          "key": "create_alert_nameleadingspace",
+          "index": null,
+          "line": 1771
+        }
+      ],
+      "to": "createNameLeadingSpaceAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ca.field_h:Ljava/lang/String;",
+      "originalName": "field_h",
+      "resources": [
+        {
+          "key": "unpacking_music",
+          "index": null,
+          "line": 2038
+        }
+      ],
+      "to": "unpackingMusicText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ck.field_d:Ljava/lang/String;",
+      "originalName": "field_d",
+      "resources": [
+        {
+          "key": "cancel",
+          "index": null,
+          "line": 1181
+        }
+      ],
+      "to": "cancelText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:cl.field_d:Ljava/lang/String;",
+      "originalName": "field_d",
+      "resources": [
+        {
+          "key": "cont",
+          "index": null,
+          "line": 2270
+        }
+      ],
+      "to": "continueText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:cm.field_h:Ljava/lang/String;",
+      "originalName": "field_h",
+      "resources": [
+        {
+          "key": "checking",
+          "index": null,
+          "line": 1411
+        }
+      ],
+      "to": "checkingText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:da.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "resources": [
+        {
+          "key": "create_emailvalid",
+          "index": null,
+          "line": 1835
+        }
+      ],
+      "to": "createEmailValidText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:dd.field_F:Ljava/lang/String;",
+      "originalName": "field_F",
+      "resources": [
+        {
+          "key": "loading_music",
+          "index": null,
+          "line": 1995
+        }
+      ],
+      "to": "loadingMusicText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:df.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "endgame",
+          "index": null,
+          "line": 2194
+        }
+      ],
+      "to": "endGameText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:di.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "create",
+          "index": null,
+          "line": 1467
+        }
+      ],
+      "to": "createText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ec.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "ok",
+          "index": null,
+          "line": 2202
+        }
+      ],
+      "to": "okText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ee.field_x:[Ljava/lang/String;",
+      "originalName": "field_x",
+      "resources": [
+        {
+          "key": "mustlogin2,1",
+          "index": 1,
+          "line": 3024
+        },
+        {
+          "key": "mustlogin2,2",
+          "index": 2,
+          "line": 3028
+        },
+        {
+          "key": "mustlogin2,3",
+          "index": 3,
+          "line": 3032
+        },
+        {
+          "key": "mustlogin2,4",
+          "index": 4,
+          "line": 3036
+        },
+        {
+          "key": "mustlogin2,5",
+          "index": 5,
+          "line": 3040
+        },
+        {
+          "key": "mustlogin2,6",
+          "index": 6,
+          "line": 3044
+        },
+        {
+          "key": "mustlogin2,7",
+          "index": 7,
+          "line": 3048
+        }
+      ],
+      "to": "mustLogin2Texts",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ee.field_y:Ljava/lang/String;",
+      "originalName": "field_y",
+      "resources": [
+        {
+          "key": "toserverlist",
+          "index": null,
+          "line": 1217
+        }
+      ],
+      "to": "toServerListText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ef.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "instructions",
+          "index": null,
+          "line": 2058
+        }
+      ],
+      "to": "instructionsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:eh.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "openinpopupwindow",
+          "index": null,
+          "line": 1463
+        }
+      ],
+      "to": "openInPopupWindowText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ei.field_gb:Ljava/lang/String;",
+      "originalName": "field_gb",
+      "resources": [
+        {
+          "key": "fs_unavailable_try_signed_applet",
+          "index": null,
+          "line": 2868
+        }
+      ],
+      "to": "fullscreenUnavailableTrySignedAppletText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ej.field_c:[Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "rating_mode_name,0",
+          "index": 0,
+          "line": 2948
+        },
+        {
+          "key": "rating_mode_name,1",
+          "index": 1,
+          "line": 2952
+        }
+      ],
+      "to": "ratingModeNames",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:f.field_lb:[Ljava/lang/String;",
+      "originalName": "field_lb",
+      "resources": [
+        {
+          "key": "quickchat_shortcut_keys,0",
+          "index": 0,
+          "line": 2676
+        },
+        {
+          "key": "quickchat_shortcut_keys,1",
+          "index": 1,
+          "line": 2680
+        },
+        {
+          "key": "quickchat_shortcut_keys,2",
+          "index": 2,
+          "line": 2684
+        },
+        {
+          "key": "quickchat_shortcut_keys,3",
+          "index": 3,
+          "line": 2688
+        },
+        {
+          "key": "quickchat_shortcut_keys,4",
+          "index": 4,
+          "line": 2692
+        },
+        {
+          "key": "quickchat_shortcut_keys,5",
+          "index": 5,
+          "line": 2696
+        }
+      ],
+      "to": "quickChatShortcutKeys",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:f.field_nb:Ljava/lang/String;",
+      "originalName": "field_nb",
+      "resources": [
+        {
+          "key": "fs_timeout",
+          "index": null,
+          "line": 2880
+        }
+      ],
+      "to": "fullscreenTimeoutText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:fa.field_d:Ljava/lang/String;",
+      "originalName": "field_d",
+      "resources": [
+        {
+          "key": "idlemessage20min",
+          "index": null,
+          "line": 229
+        }
+      ],
+      "to": "idleMessage20MinText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:fa.field_g:[Ljava/lang/String;",
+      "originalName": "field_g",
+      "resources": [
+        {
+          "key": "members_expansion_benefits,0",
+          "index": 0,
+          "line": 2740
+        },
+        {
+          "key": "members_expansion_benefits,1",
+          "index": 1,
+          "line": 2744
+        },
+        {
+          "key": "members_expansion_benefits,2",
+          "index": 2,
+          "line": 2748
+        }
+      ],
+      "to": "membersExpansionBenefitTexts",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:fa.field_h:Ljava/lang/String;",
+      "originalName": "field_h",
+      "resources": [
+        {
+          "key": "create_alert_doublespace",
+          "index": null,
+          "line": 1775
+        }
+      ],
+      "to": "createDoubleSpaceAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:fc.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "resources": [
+        {
+          "key": "music_colon",
+          "index": null,
+          "line": 2074
+        }
+      ],
+      "to": "musicLabelText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ff.field_l:Ljava/lang/String;",
+      "originalName": "field_l",
+      "resources": [
+        {
+          "key": "waitingfor_graphics",
+          "index": null,
+          "line": 1935
+        }
+      ],
+      "to": "waitingForGraphicsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:fi.field_h:Ljava/lang/String;",
+      "originalName": "field_h",
+      "resources": [
+        {
+          "key": "changedisplayname",
+          "index": null,
+          "line": 1225
+        }
+      ],
+      "to": "changeDisplayNameText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:g.field_l:Ljava/lang/String;",
+      "originalName": "field_l",
+      "resources": [
+        {
+          "key": "serviceunavailable",
+          "index": null,
+          "line": 3000
+        }
+      ],
+      "to": "serviceUnavailableText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:g.field_m:Ljava/lang/String;",
+      "originalName": "field_m",
+      "resources": [
+        {
+          "key": "create_alert_email_unavailable",
+          "index": null,
+          "line": 1811
+        }
+      ],
+      "to": "createEmailUnavailableAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:gf.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "resources": [
+        {
+          "key": "create_alert_passcontainsname",
+          "index": null,
+          "line": 1791
+        }
+      ],
+      "to": "createPasswordContainsNameAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:gg.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "create_alert_passrepeated",
+          "index": null,
+          "line": 1783
+        }
+      ],
+      "to": "createRepeatedPasswordAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:gg.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "create_alert_passcontainsname_partial",
+          "index": null,
+          "line": 1799
+        }
+      ],
+      "to": "createPasswordContainsPartialNameAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:gg.field_d:Ljava/lang/String;",
+      "originalName": "field_d",
+      "resources": [
+        {
+          "key": "create_alert_namelength",
+          "index": null,
+          "line": 1763
+        }
+      ],
+      "to": "createNameLengthAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:gk.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "create_displayname_hint",
+          "index": null,
+          "line": 1699
+        }
+      ],
+      "to": "createDisplayNameHintText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:hb.field_h:Ljava/lang/String;",
+      "originalName": "field_h",
+      "resources": [
+        {
+          "key": "playfreeversion",
+          "index": null,
+          "line": 1209
+        }
+      ],
+      "to": "playFreeVersionText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:hc.field_U:Ljava/lang/String;",
+      "originalName": "field_U",
+      "resources": [
+        {
+          "key": "goback",
+          "index": null,
+          "line": 1245
+        }
+      ],
+      "to": "goBackText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:hf.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "resources": [
+        {
+          "key": "loginm3",
+          "index": null,
+          "line": 217
+        }
+      ],
+      "to": "loginMessage3Text",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:hh.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "fs_button_close",
+          "index": null,
+          "line": 2856
+        }
+      ],
+      "to": "fullscreenCloseButtonText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:hi.field_I:Ljava/lang/String;",
+      "originalName": "field_I",
+      "resources": [
+        {
+          "key": "create_ineligible",
+          "index": null,
+          "line": 257
+        }
+      ],
+      "to": "createIneligibleText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ic.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "login_create_tooltip",
+          "index": null,
+          "line": 1671
+        }
+      ],
+      "to": "loginCreateTooltipText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:id.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "resumegame",
+          "index": null,
+          "line": 2166
+        }
+      ],
+      "to": "resumeGameText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ih.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "ticketing_oneunread",
+          "index": null,
+          "line": 281
+        }
+      ],
+      "to": "ticketingOneUnreadText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ii.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "highscores",
+          "index": null,
+          "line": 2086
+        }
+      ],
+      "to": "highscoresText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ii.field_j:Ljava/lang/String;",
+      "originalName": "field_j",
+      "resources": [
+        {
+          "key": "create_passwordvalid",
+          "index": null,
+          "line": 1831
+        }
+      ],
+      "to": "createPasswordValidText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ij.field_Y:Ljava/lang/String;",
+      "originalName": "field_Y",
+      "resources": [
+        {
+          "key": "create_password_tooltip",
+          "index": null,
+          "line": 1703
+        }
+      ],
+      "to": "createPasswordTooltipText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ij.field_Z:Ljava/lang/String;",
+      "originalName": "field_Z",
+      "resources": [
+        {
+          "key": "menu",
+          "index": null,
+          "line": 2146
+        }
+      ],
+      "to": "menuText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ik.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "waitingfor_fonts",
+          "index": null,
+          "line": 1943
+        }
+      ],
+      "to": "waitingForFontsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:j.field_jb:Ljava/lang/String;",
+      "originalName": "field_jb",
+      "resources": [
+        {
+          "key": "warning_ifyouquit",
+          "index": null,
+          "line": 1323
+        }
+      ],
+      "to": "quitWarningText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:jc.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "tocustomersupport",
+          "index": null,
+          "line": 1221
+        }
+      ],
+      "to": "toCustomerSupportText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:jg.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "login_gameupdated",
+          "index": null,
+          "line": 249
+        }
+      ],
+      "to": "loginGameUpdatedText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ji.field_d:Ljava/lang/String;",
+      "originalName": "field_d",
+      "resources": [
+        {
+          "key": "create_alert_passlength",
+          "index": null,
+          "line": 1787
+        }
+      ],
+      "to": "createPasswordLengthAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ji.field_l:Ljava/lang/String;",
+      "originalName": "field_l",
+      "resources": [
+        {
+          "key": "create_welcome",
+          "index": null,
+          "line": 1559
+        }
+      ],
+      "to": "createWelcomeText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ji.field_n:Ljava/lang/String;",
+      "originalName": "field_n",
+      "resources": [
+        {
+          "key": "waitingfor_music",
+          "index": null,
+          "line": 1951
+        }
+      ],
+      "to": "waitingForMusicText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:jj.field_a:[Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "rating_mode_long_name,0",
+          "index": 0,
+          "line": 2956
+        },
+        {
+          "key": "rating_mode_long_name,1",
+          "index": 1,
+          "line": 2960
+        }
+      ],
+      "to": "ratingModeLongNames",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:jj.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "login_username_email",
+          "index": null,
+          "line": 1647
+        }
+      ],
+      "to": "loginUsernameEmailText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:jk.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "fs_accept_countdown_pl",
+          "index": null,
+          "line": 2848
+        }
+      ],
+      "to": "fullscreenAcceptCountdownPluralText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:jk.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "returntogame",
+          "index": null,
+          "line": 2242
+        }
+      ],
+      "to": "returnToGameText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:k.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "fs_focus",
+          "index": null,
+          "line": 2872
+        }
+      ],
+      "to": "fullscreenFocusText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:k.field_k:Ljava/lang/String;",
+      "originalName": "field_k",
+      "resources": [
+        {
+          "key": "login",
+          "index": null,
+          "line": 1241
+        }
+      ],
+      "to": "loginText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:kc.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "create_alert_namechars",
+          "index": null,
+          "line": 1767
+        }
+      ],
+      "to": "createNameCharacterAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:kd.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "achieved",
+          "index": null,
+          "line": 2444
+        }
+      ],
+      "to": "achievedText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:kf.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "pleasetryagain",
+          "index": null,
+          "line": 1201
+        }
+      ],
+      "to": "pleaseTryAgainText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ki.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "fs_nonmember",
+          "index": null,
+          "line": 2852
+        }
+      ],
+      "to": "fullscreenNonmemberText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ki.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "resources": [
+        {
+          "key": "error_js5connect",
+          "index": null,
+          "line": 245
+        }
+      ],
+      "to": "js5ConnectErrorText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:kk.field_v:Ljava/lang/String;",
+      "originalName": "field_v",
+      "resources": [
+        {
+          "key": "login_username_tooltip",
+          "index": null,
+          "line": 1659
+        }
+      ],
+      "to": "loginUsernameTooltipText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:lh.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "next",
+          "index": null,
+          "line": 2222
+        }
+      ],
+      "to": "nextText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:lh.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "create_account_success",
+          "index": null,
+          "line": 1839
+        }
+      ],
+      "to": "createAccountSuccessText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ll.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "create_more_suggestions",
+          "index": null,
+          "line": 1627
+        }
+      ],
+      "to": "createMoreSuggestionsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ll.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "back",
+          "index": null,
+          "line": 1307
+        }
+      ],
+      "to": "backText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ll.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "create_email_tooltip",
+          "index": null,
+          "line": 1715
+        }
+      ],
+      "to": "createEmailTooltipText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:md.field_d:[Ljava/lang/String;",
+      "originalName": "field_d",
+      "resources": [
+        {
+          "key": "mustlogin4,1",
+          "index": 1,
+          "line": 3084
+        },
+        {
+          "key": "mustlogin4,2",
+          "index": 2,
+          "line": 3088
+        },
+        {
+          "key": "mustlogin4,3",
+          "index": 3,
+          "line": 3092
+        },
+        {
+          "key": "mustlogin4,4",
+          "index": 4,
+          "line": 3096
+        },
+        {
+          "key": "mustlogin4,5",
+          "index": 5,
+          "line": 3100
+        },
+        {
+          "key": "mustlogin4,6",
+          "index": 6,
+          "line": 3104
+        },
+        {
+          "key": "mustlogin4,7",
+          "index": 7,
+          "line": 3108
+        }
+      ],
+      "to": "mustLogin4Texts",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:mi.field_E:Ljava/lang/String;",
+      "originalName": "field_E",
+      "resources": [
+        {
+          "key": "invaliduserorpass",
+          "index": null,
+          "line": 1197
+        }
+      ],
+      "to": "invalidUserOrPasswordText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:mi.field_R:Ljava/lang/String;",
+      "originalName": "field_R",
+      "resources": [
+        {
+          "key": "connectionlost_withreason",
+          "index": null,
+          "line": 1289
+        }
+      ],
+      "to": "connectionLostWithReasonText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:mj.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "fs_accept_countdown_sing",
+          "index": null,
+          "line": 2844
+        }
+      ],
+      "to": "fullscreenAcceptCountdownSingularText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ml.field_u:Ljava/lang/String;",
+      "originalName": "field_u",
+      "resources": [
+        {
+          "key": "create_select_alternative",
+          "index": null,
+          "line": 1631
+        }
+      ],
+      "to": "createSelectAlternativeText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:nb.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "loading_fonts",
+          "index": null,
+          "line": 1987
+        }
+      ],
+      "to": "loadingFontsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ne.field_d:Ljava/lang/String;",
+      "originalName": "field_d",
+      "resources": [
+        {
+          "key": "ticketing_gotowebsite",
+          "index": null,
+          "line": 289
+        }
+      ],
+      "to": "ticketingGoToWebsiteText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:nf.field_E:Ljava/lang/String;",
+      "originalName": "field_E",
+      "resources": [
+        {
+          "key": "reloadgame",
+          "index": null,
+          "line": 1213
+        }
+      ],
+      "to": "reloadGameText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:nh.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "loading",
+          "index": null,
+          "line": 845
+        }
+      ],
+      "to": "loadingText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ni.field_C:Ljava/lang/String;",
+      "originalName": "field_C",
+      "resources": [
+        {
+          "key": "createtouse",
+          "index": null,
+          "line": 3004
+        }
+      ],
+      "to": "createToUseText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:nk.field_g:Ljava/lang/String;",
+      "originalName": "field_g",
+      "resources": [
+        {
+          "key": "startgame",
+          "index": null,
+          "line": 2158
+        }
+      ],
+      "to": "startGameText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:nk.field_i:Ljava/lang/String;",
+      "originalName": "field_i",
+      "resources": [
+        {
+          "key": "create_u13terms",
+          "index": null,
+          "line": 1643
+        }
+      ],
+      "to": "createUnder13TermsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:oa.field_d:[Ljava/lang/String;",
+      "originalName": "field_d",
+      "resources": [
+        {
+          "key": "subscription_cost_monthly,0",
+          "index": 0,
+          "line": 3144
+        },
+        {
+          "key": "subscription_cost_monthly,1",
+          "index": 1,
+          "line": 3148
+        },
+        {
+          "key": "subscription_cost_monthly,2",
+          "index": 2,
+          "line": 3152
+        },
+        {
+          "key": "subscription_cost_monthly,3",
+          "index": 3,
+          "line": 3156
+        },
+        {
+          "key": "subscription_cost_monthly,4",
+          "index": 4,
+          "line": 3160
+        },
+        {
+          "key": "subscription_cost_monthly,5",
+          "index": 5,
+          "line": 3164
+        },
+        {
+          "key": "subscription_cost_monthly,6",
+          "index": 6,
+          "line": 3168
+        },
+        {
+          "key": "subscription_cost_monthly,7",
+          "index": 7,
+          "line": 3172
+        },
+        {
+          "key": "subscription_cost_monthly,8",
+          "index": 8,
+          "line": 3176
+        },
+        {
+          "key": "subscription_cost_monthly,9",
+          "index": 9,
+          "line": 3180
+        },
+        {
+          "key": "subscription_cost_monthly,10",
+          "index": 10,
+          "line": 3184
+        },
+        {
+          "key": "subscription_cost_monthly,11",
+          "index": 11,
+          "line": 3188
+        },
+        {
+          "key": "subscription_cost_monthly,12",
+          "index": 12,
+          "line": 3192
+        }
+      ],
+      "to": "subscriptionMonthlyCostTexts",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:oe.field_O:Ljava/lang/String;",
+      "originalName": "field_O",
+      "resources": [
+        {
+          "key": "connectionrestored",
+          "index": null,
+          "line": 1319
+        }
+      ],
+      "to": "connectionRestoredText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:oh.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "unpacking_graphics",
+          "index": null,
+          "line": 2026
+        }
+      ],
+      "to": "unpackingGraphicsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:oi.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "create_password_confirm_tooltip",
+          "index": null,
+          "line": 1711
+        }
+      ],
+      "to": "createPasswordConfirmationTooltipText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:oj.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "resources": [
+        {
+          "key": "loading_extradata",
+          "index": null,
+          "line": 2010
+        }
+      ],
+      "to": "loadingExtraDataText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ok.field_d:Ljava/lang/String;",
+      "originalName": "field_d",
+      "resources": [
+        {
+          "key": "justplay",
+          "index": null,
+          "line": 1233
+        }
+      ],
+      "to": "justPlayText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ok.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "resources": [
+        {
+          "key": "create_email_confirm",
+          "index": null,
+          "line": 1591
+        }
+      ],
+      "to": "createEmailConfirmationText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ok.field_i:Ljava/lang/String;",
+      "originalName": "field_i",
+      "resources": [
+        {
+          "key": "create_email_confirm_tooltip",
+          "index": null,
+          "line": 1719
+        }
+      ],
+      "to": "createEmailConfirmationTooltipText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:pa.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "resources": [
+        {
+          "key": "waitingfor_soundeffects",
+          "index": null,
+          "line": 1947
+        }
+      ],
+      "to": "waitingForSoundEffectsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:pb.field_o:Ljava/lang/String;",
+      "originalName": "field_o",
+      "resources": [
+        {
+          "key": "create_age_tooltip",
+          "index": null,
+          "line": 1723
+        }
+      ],
+      "to": "createAgeTooltipText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:pb.field_v:Ljava/lang/String;",
+      "originalName": "field_v",
+      "resources": [
+        {
+          "key": "fs_button_accept",
+          "index": null,
+          "line": 2828
+        }
+      ],
+      "to": "fullscreenAcceptButtonText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:pf.field_H:Ljava/lang/String;",
+      "originalName": "field_H",
+      "resources": [
+        {
+          "key": "error_js5crc",
+          "index": null,
+          "line": 233
+        }
+      ],
+      "to": "js5CrcErrorText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ph.field_g:Ljava/lang/String;",
+      "originalName": "field_g",
+      "resources": [
+        {
+          "key": "waitingfor_extradata",
+          "index": null,
+          "line": 1963
+        }
+      ],
+      "to": "waitingForExtraDataText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ph.field_j:Ljava/lang/String;",
+      "originalName": "field_j",
+      "resources": [
+        {
+          "key": "create_username_available",
+          "index": null,
+          "line": 1759
+        }
+      ],
+      "to": "createUsernameAvailableText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ph.field_k:Ljava/lang/String;",
+      "originalName": "field_k",
+      "resources": [
+        {
+          "key": "create_unable",
+          "index": null,
+          "line": 253
+        }
+      ],
+      "to": "createUnableText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:qb.field_F:Ljava/lang/String;",
+      "originalName": "field_F",
+      "resources": [
+        {
+          "key": "error_js5io",
+          "index": null,
+          "line": 237
+        }
+      ],
+      "to": "js5IoErrorText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:qb.field_L:Ljava/lang/String;",
+      "originalName": "field_L",
+      "resources": [
+        {
+          "key": "fs_button_members",
+          "index": null,
+          "line": 2860
+        }
+      ],
+      "to": "fullscreenMembersButtonText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:qg.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "create_password",
+          "index": null,
+          "line": 1579
+        }
+      ],
+      "to": "createPasswordText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:qh.field_Q:Ljava/lang/String;",
+      "originalName": "field_Q",
+      "resources": [
+        {
+          "key": "create_password_hint",
+          "index": null,
+          "line": 1707
+        }
+      ],
+      "to": "createPasswordHintText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ra.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "ticketing_xunread",
+          "index": null,
+          "line": 285
+        }
+      ],
+      "to": "ticketingUnreadCountText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:rb.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "fs_button_cancel",
+          "index": null,
+          "line": 2836
+        }
+      ],
+      "to": "fullscreenCancelButtonText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:rc.field_f:Ljava/lang/String;",
+      "originalName": "field_f",
+      "resources": [
+        {
+          "key": "invalidpass",
+          "index": null,
+          "line": 1299
+        }
+      ],
+      "to": "invalidPasswordText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:rc.field_g:Ljava/lang/String;",
+      "originalName": "field_g",
+      "resources": [
+        {
+          "key": "error_js5connect_full",
+          "index": null,
+          "line": 241
+        }
+      ],
+      "to": "js5ConnectFullErrorText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:rh.field_j:Ljava/lang/String;",
+      "originalName": "field_j",
+      "resources": [
+        {
+          "key": "create_username_unavailable",
+          "index": null,
+          "line": 1755
+        }
+      ],
+      "to": "createUsernameUnavailableText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:rj.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "resources": [
+        {
+          "key": "quittowebsite",
+          "index": null,
+          "line": 1315
+        }
+      ],
+      "to": "quitToWebsiteText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:rj.field_g:Ljava/lang/String;",
+      "originalName": "field_g",
+      "resources": [
+        {
+          "key": "logging_in",
+          "index": null,
+          "line": 1265
+        }
+      ],
+      "to": "loggingInText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:sb.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "login_no_displayname",
+          "index": null,
+          "line": 1683
+        }
+      ],
+      "to": "loginNoDisplayNameText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:sb.field_f:Ljava/lang/String;",
+      "originalName": "field_f",
+      "resources": [
+        {
+          "key": "no_highscores",
+          "index": null,
+          "line": 2472
+        }
+      ],
+      "to": "noHighscoresText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:se.field_i:Ljava/lang/String;",
+      "originalName": "field_i",
+      "resources": [
+        {
+          "key": "creatingyouraccount",
+          "index": null,
+          "line": 1483
+        }
+      ],
+      "to": "creatingYourAccountText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:se.field_m:Ljava/lang/String;",
+      "originalName": "field_m",
+      "resources": [
+        {
+          "key": "create_createanaccount",
+          "index": null,
+          "line": 1567
+        }
+      ],
+      "to": "createAnAccountText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:sj.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "create_alert_mismatch",
+          "index": null,
+          "line": 1827
+        }
+      ],
+      "to": "createMismatchAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:sj.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "resources": [
+        {
+          "key": "fs_unavailable",
+          "index": null,
+          "line": 2864
+        }
+      ],
+      "to": "fullscreenUnavailableText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:sl.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "login_email",
+          "index": null,
+          "line": 1655
+        }
+      ],
+      "to": "loginEmailText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:sl.field_h:Ljava/lang/String;",
+      "originalName": "field_h",
+      "resources": [
+        {
+          "key": "orbpoints",
+          "index": null,
+          "line": 2448
+        }
+      ],
+      "to": "orbPointsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:sl.field_i:Ljava/lang/String;",
+      "originalName": "field_i",
+      "resources": [
+        {
+          "key": "create_alert_invalidage",
+          "index": null,
+          "line": 1819
+        }
+      ],
+      "to": "createInvalidAgeAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:tc.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "quit",
+          "index": null,
+          "line": 2110
+        }
+      ],
+      "to": "quitText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:th.field_g:Ljava/lang/String;",
+      "originalName": "field_g",
+      "resources": [
+        {
+          "key": "DEFAULT_PLAYER_NAME",
+          "index": null,
+          "line": 3016
+        }
+      ],
+      "to": "defaultPlayerNameText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:tl.field_o:Ljava/lang/String;",
+      "originalName": "field_o",
+      "resources": [
+        {
+          "key": "prev",
+          "index": null,
+          "line": 2218
+        }
+      ],
+      "to": "previousText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ud.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "create_displayname_tooltip",
+          "index": null,
+          "line": 1695
+        }
+      ],
+      "to": "createDisplayNameTooltipText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ud.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "loading_soundeffects",
+          "index": null,
+          "line": 1991
+        }
+      ],
+      "to": "loadingSoundEffectsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ue.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "hs_friend_tip",
+          "index": null,
+          "line": 2928
+        }
+      ],
+      "to": "highscoreFriendTipText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ue.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "fs_accept_beforeaccept",
+          "index": null,
+          "line": 2824
+        }
+      ],
+      "to": "fullscreenBeforeAcceptText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ue.field_d:Ljava/lang/String;",
+      "originalName": "field_d",
+      "resources": [
+        {
+          "key": "create_optin_news",
+          "index": null,
+          "line": 1635
+        }
+      ],
+      "to": "createNewsOptInText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ue.field_g:Ljava/lang/String;",
+      "originalName": "field_g",
+      "resources": [
+        {
+          "key": "create_age",
+          "index": null,
+          "line": 1595
+        }
+      ],
+      "to": "createAgeText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:uf.field_i:Ljava/lang/String;",
+      "originalName": "field_i",
+      "resources": [
+        {
+          "key": "create_alert_passcontainsemail",
+          "index": null,
+          "line": 1795
+        }
+      ],
+      "to": "createPasswordContainsEmailAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:ug.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "resources": [
+        {
+          "key": "create_email",
+          "index": null,
+          "line": 1587
+        }
+      ],
+      "to": "createEmailText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:uj.field_d:Ljava/lang/String;",
+      "originalName": "field_d",
+      "resources": [
+        {
+          "key": "fs_accept_aftercancel",
+          "index": null,
+          "line": 2840
+        }
+      ],
+      "to": "fullscreenAfterCancelText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:uj.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "resources": [
+        {
+          "key": "loginm2",
+          "index": null,
+          "line": 221
+        }
+      ],
+      "to": "loginMessage2Text",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:uk.field_l:[Ljava/lang/String;",
+      "originalName": "field_l",
+      "resources": [
+        {
+          "key": "monthnames,0",
+          "index": 0,
+          "line": 1511
+        },
+        {
+          "key": "monthnames,1",
+          "index": 1,
+          "line": 1515
+        },
+        {
+          "key": "monthnames,2",
+          "index": 2,
+          "line": 1519
+        },
+        {
+          "key": "monthnames,3",
+          "index": 3,
+          "line": 1523
+        },
+        {
+          "key": "monthnames,4",
+          "index": 4,
+          "line": 1527
+        },
+        {
+          "key": "monthnames,5",
+          "index": 5,
+          "line": 1531
+        },
+        {
+          "key": "monthnames,6",
+          "index": 6,
+          "line": 1535
+        },
+        {
+          "key": "monthnames,7",
+          "index": 7,
+          "line": 1539
+        },
+        {
+          "key": "monthnames,8",
+          "index": 8,
+          "line": 1543
+        },
+        {
+          "key": "monthnames,9",
+          "index": 9,
+          "line": 1547
+        },
+        {
+          "key": "monthnames,10",
+          "index": 10,
+          "line": 1551
+        },
+        {
+          "key": "monthnames,11",
+          "index": 11,
+          "line": 1555
+        }
+      ],
+      "to": "monthNames",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:v.field_m:Ljava/lang/String;",
+      "originalName": "field_m",
+      "resources": [
+        {
+          "key": "create_password_confirm",
+          "index": null,
+          "line": 1583
+        }
+      ],
+      "to": "createPasswordConfirmationText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:vd.field_m:[Ljava/lang/String;",
+      "originalName": "field_m",
+      "resources": [
+        {
+          "key": "hs_mode_name,0",
+          "index": 0,
+          "line": 2936
+        },
+        {
+          "key": "hs_mode_name,1",
+          "index": 1,
+          "line": 2940
+        },
+        {
+          "key": "hs_mode_name,2",
+          "index": 2,
+          "line": 2944
+        }
+      ],
+      "to": "highscoreModeNames",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:vg.field_d:Ljava/lang/String;",
+      "originalName": "field_d",
+      "resources": [
+        {
+          "key": "pleasewait_dotdotdot",
+          "index": null,
+          "line": 2996
+        }
+      ],
+      "to": "pleaseWaitText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:vi.field_F:Ljava/lang/String;",
+      "originalName": "field_F",
+      "resources": [
+        {
+          "key": "login_justplay_tooltip",
+          "index": null,
+          "line": 1675
+        }
+      ],
+      "to": "loginJustPlayTooltipText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:vi.field_G:Ljava/lang/String;",
+      "originalName": "field_G",
+      "resources": [
+        {
+          "key": "create_optin_news_tooltip",
+          "index": null,
+          "line": 1727
+        }
+      ],
+      "to": "createNewsOptInTooltipText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:w.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "resources": [
+        {
+          "key": "mouseoveranicon",
+          "index": null,
+          "line": 2436
+        }
+      ],
+      "to": "mouseOverIconText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:wb.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "resources": [
+        {
+          "key": "sound_colon",
+          "index": null,
+          "line": 2070
+        }
+      ],
+      "to": "soundLabelText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:wf.field_q:Ljava/lang/String;",
+      "originalName": "field_q",
+      "resources": [
+        {
+          "key": "fullscreen",
+          "index": null,
+          "line": 2078
+        }
+      ],
+      "to": "fullscreenText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:wi.field_F:Ljava/lang/String;",
+      "originalName": "field_F",
+      "resources": [
+        {
+          "key": "loading_graphics",
+          "index": null,
+          "line": 1979
+        }
+      ],
+      "to": "loadingGraphicsText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:wj.field_B:Ljava/lang/String;",
+      "originalName": "field_B",
+      "resources": [
+        {
+          "key": "create_alert_invalidemail",
+          "index": null,
+          "line": 1807
+        }
+      ],
+      "to": "createInvalidEmailAlertText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:wj.field_C:Ljava/lang/String;",
+      "originalName": "field_C",
+      "resources": [
+        {
+          "key": "fs_accept_afteraccept",
+          "index": null,
+          "line": 2832
+        }
+      ],
+      "to": "fullscreenAfterAcceptText",
+      "retainedRule": false
+    },
+    {
+      "symbol": "F:wj.field_E:Ljava/lang/String;",
+      "originalName": "field_E",
+      "resources": [
+        {
+          "key": "create_displayname",
+          "index": null,
+          "line": 1575
+        }
+      ],
+      "to": "createDisplayNameText",
+      "retainedRule": false
+    }
+  ],
+  "renames": [
+    {
+      "symbol": "C:wi",
+      "to": "AccountWelcomePanel",
+      "originalName": "wi",
+      "evidence": "Its instance constructor builds create-account, go-back and just-play buttons and displays the create_welcome resource. The button callback dispatches these choices. Unrelated static text-loader helpers retain separate method identities."
+    },
+    {
+      "symbol": "F:a.field_b:Ljava/lang/String;",
+      "to": "retryText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'retry' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ab.field_e:Ljava/lang/String;",
+      "to": "createSuggestionsText",
+      "originalName": "field_e",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_suggestions' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ac.field_r:[Ljava/lang/String;",
+      "to": "mustLoginAlternateTexts",
+      "originalName": "field_r",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'mustlogin_alternate' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:ad.field_n:Ljava/lang/String;",
+      "to": "fullscreenFocusOrResolutionText",
+      "originalName": "field_n",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_focus_or_resolution' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ah.field_b:Ljava/lang/String;",
+      "to": "connectionLostReconnectingText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'connectionlost_reconnecting' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ai.field_h:Ljava/lang/String;",
+      "to": "createPasswordCharacterAlertText",
+      "originalName": "field_h",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_passchars' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:bf.field_i:Lrh;",
+      "to": "activeTextArchive",
+      "originalName": "field_i",
+      "evidence": "wi.a(BLrh;)V sets this to its archive argument before reading text resources, and clears it after the final read; fk.a(ILjava/lang/String;)[B reads from it. Other guard paths can also clear it."
+    },
+    {
+      "symbol": "F:bi.field_c:[Ljava/lang/String;",
+      "to": "mustLogin3Texts",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'mustlogin3' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:bk.field_c:Ljava/lang/String;",
+      "to": "loginUsernameText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'login_username' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:bl.field_a:Ljava/lang/String;",
+      "to": "achievementsText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'achievements' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:bm.field_p:Ljava/lang/String;",
+      "to": "createAgreeTermsText",
+      "originalName": "field_p",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_agreeterms' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:c.field_Q:[Ljava/lang/String;",
+      "to": "quickChatShortcutHelpTexts",
+      "originalName": "field_Q",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'quickchat_shortcut_help' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:c.field_r:Ljava/lang/String;",
+      "to": "createNameLeadingSpaceAlertText",
+      "originalName": "field_r",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_nameleadingspace' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ca.field_h:Ljava/lang/String;",
+      "to": "unpackingMusicText",
+      "originalName": "field_h",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'unpacking_music' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ck.field_d:Ljava/lang/String;",
+      "to": "cancelText",
+      "originalName": "field_d",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'cancel' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:cl.field_d:Ljava/lang/String;",
+      "to": "continueText",
+      "originalName": "field_d",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'cont' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:cm.field_h:Ljava/lang/String;",
+      "to": "checkingText",
+      "originalName": "field_h",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'checking' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:da.field_e:Ljava/lang/String;",
+      "to": "createEmailValidText",
+      "originalName": "field_e",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_emailvalid' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:dd.field_F:Ljava/lang/String;",
+      "to": "loadingMusicText",
+      "originalName": "field_F",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loading_music' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:df.field_b:Ljava/lang/String;",
+      "to": "endGameText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'endgame' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:di.field_c:Ljava/lang/String;",
+      "to": "createText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ec.field_a:Ljava/lang/String;",
+      "to": "okText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'ok' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ee.field_x:[Ljava/lang/String;",
+      "to": "mustLogin2Texts",
+      "originalName": "field_x",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'mustlogin2' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:ee.field_y:Ljava/lang/String;",
+      "to": "toServerListText",
+      "originalName": "field_y",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'toserverlist' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ef.field_c:Ljava/lang/String;",
+      "to": "instructionsText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'instructions' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:eh.field_a:Ljava/lang/String;",
+      "to": "openInPopupWindowText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'openinpopupwindow' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ei.field_gb:Ljava/lang/String;",
+      "to": "fullscreenUnavailableTrySignedAppletText",
+      "originalName": "field_gb",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_unavailable_try_signed_applet' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ej.field_c:[Ljava/lang/String;",
+      "to": "ratingModeNames",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'rating_mode_name' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:f.field_lb:[Ljava/lang/String;",
+      "to": "quickChatShortcutKeys",
+      "originalName": "field_lb",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'quickchat_shortcut_keys' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:f.field_nb:Ljava/lang/String;",
+      "to": "fullscreenTimeoutText",
+      "originalName": "field_nb",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_timeout' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:fa.field_d:Ljava/lang/String;",
+      "to": "idleMessage20MinText",
+      "originalName": "field_d",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'idlemessage20min' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:fa.field_g:[Ljava/lang/String;",
+      "to": "membersExpansionBenefitTexts",
+      "originalName": "field_g",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'members_expansion_benefits' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:fa.field_h:Ljava/lang/String;",
+      "to": "createDoubleSpaceAlertText",
+      "originalName": "field_h",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_doublespace' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:fc.field_e:Ljava/lang/String;",
+      "to": "musicLabelText",
+      "originalName": "field_e",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'music_colon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ff.field_l:Ljava/lang/String;",
+      "to": "waitingForGraphicsText",
+      "originalName": "field_l",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'waitingfor_graphics' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:fi.field_h:Ljava/lang/String;",
+      "to": "changeDisplayNameText",
+      "originalName": "field_h",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'changedisplayname' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:g.field_l:Ljava/lang/String;",
+      "to": "serviceUnavailableText",
+      "originalName": "field_l",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'serviceunavailable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:g.field_m:Ljava/lang/String;",
+      "to": "createEmailUnavailableAlertText",
+      "originalName": "field_m",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_email_unavailable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:gf.field_e:Ljava/lang/String;",
+      "to": "createPasswordContainsNameAlertText",
+      "originalName": "field_e",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_passcontainsname' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:gg.field_a:Ljava/lang/String;",
+      "to": "createRepeatedPasswordAlertText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_passrepeated' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:gg.field_c:Ljava/lang/String;",
+      "to": "createPasswordContainsPartialNameAlertText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_passcontainsname_partial' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:gg.field_d:Ljava/lang/String;",
+      "to": "createNameLengthAlertText",
+      "originalName": "field_d",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_namelength' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:gk.field_c:Ljava/lang/String;",
+      "to": "createDisplayNameHintText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_displayname_hint' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:hb.field_h:Ljava/lang/String;",
+      "to": "playFreeVersionText",
+      "originalName": "field_h",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'playfreeversion' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:hc.field_U:Ljava/lang/String;",
+      "to": "goBackText",
+      "originalName": "field_U",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'goback' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:hf.field_e:Ljava/lang/String;",
+      "to": "loginMessage3Text",
+      "originalName": "field_e",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loginm3' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:hh.field_b:Ljava/lang/String;",
+      "to": "fullscreenCloseButtonText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_button_close' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:hi.field_I:Ljava/lang/String;",
+      "to": "createIneligibleText",
+      "originalName": "field_I",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_ineligible' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ic.field_b:Ljava/lang/String;",
+      "to": "loginCreateTooltipText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'login_create_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:id.field_a:Ljava/lang/String;",
+      "to": "resumeGameText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'resumegame' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ih.field_b:Ljava/lang/String;",
+      "to": "ticketingOneUnreadText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'ticketing_oneunread' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ii.field_b:Ljava/lang/String;",
+      "to": "highscoresText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'highscores' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ii.field_j:Ljava/lang/String;",
+      "to": "createPasswordValidText",
+      "originalName": "field_j",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_passwordvalid' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ij.field_Y:Ljava/lang/String;",
+      "to": "createPasswordTooltipText",
+      "originalName": "field_Y",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_password_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ij.field_Z:Ljava/lang/String;",
+      "to": "menuText",
+      "originalName": "field_Z",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'menu' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ik.field_b:Ljava/lang/String;",
+      "to": "waitingForFontsText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'waitingfor_fonts' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:j.field_jb:Ljava/lang/String;",
+      "to": "quitWarningText",
+      "originalName": "field_jb",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'warning_ifyouquit' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:jc.field_c:Ljava/lang/String;",
+      "to": "toCustomerSupportText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'tocustomersupport' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:jg.field_c:Ljava/lang/String;",
+      "to": "loginGameUpdatedText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'login_gameupdated' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ji.field_d:Ljava/lang/String;",
+      "to": "createPasswordLengthAlertText",
+      "originalName": "field_d",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_passlength' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ji.field_l:Ljava/lang/String;",
+      "to": "createWelcomeText",
+      "originalName": "field_l",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_welcome' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ji.field_n:Ljava/lang/String;",
+      "to": "waitingForMusicText",
+      "originalName": "field_n",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'waitingfor_music' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:jj.field_a:[Ljava/lang/String;",
+      "to": "ratingModeLongNames",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'rating_mode_long_name' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:jj.field_c:Ljava/lang/String;",
+      "to": "loginUsernameEmailText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'login_username_email' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:jk.field_b:Ljava/lang/String;",
+      "to": "fullscreenAcceptCountdownPluralText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_accept_countdown_pl' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:jk.field_c:Ljava/lang/String;",
+      "to": "returnToGameText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'returntogame' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:k.field_b:Ljava/lang/String;",
+      "to": "fullscreenFocusText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_focus' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:k.field_k:Ljava/lang/String;",
+      "to": "loginText",
+      "originalName": "field_k",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'login' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:kc.field_b:Ljava/lang/String;",
+      "to": "createNameCharacterAlertText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_namechars' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:kd.field_a:Ljava/lang/String;",
+      "to": "achievedText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'achieved' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:kf.field_b:Ljava/lang/String;",
+      "to": "pleaseTryAgainText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'pleasetryagain' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ki.field_a:Ljava/lang/String;",
+      "to": "fullscreenNonmemberText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_nonmember' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ki.field_e:Ljava/lang/String;",
+      "to": "js5ConnectErrorText",
+      "originalName": "field_e",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'error_js5connect' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:kk.field_v:Ljava/lang/String;",
+      "to": "loginUsernameTooltipText",
+      "originalName": "field_v",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'login_username_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:lf.field_e:[C",
+      "to": "extendedTextCharacters",
+      "originalName": "field_e",
+      "evidence": "The 32-entry character table indexed by byteValue-128 in bc.a(I[BII)Ljava/lang/String;. Zero entries decode as question mark; table values are preserved byte for byte."
+    },
+    {
+      "symbol": "F:lh.field_a:Ljava/lang/String;",
+      "to": "nextText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'next' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:lh.field_c:Ljava/lang/String;",
+      "to": "createAccountSuccessText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_account_success' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ll.field_a:Ljava/lang/String;",
+      "to": "createMoreSuggestionsText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_more_suggestions' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ll.field_b:Ljava/lang/String;",
+      "to": "backText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'back' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ll.field_c:Ljava/lang/String;",
+      "to": "createEmailTooltipText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_email_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:md.field_d:[Ljava/lang/String;",
+      "to": "mustLogin4Texts",
+      "originalName": "field_d",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'mustlogin4' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:mi.field_E:Ljava/lang/String;",
+      "to": "invalidUserOrPasswordText",
+      "originalName": "field_E",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'invaliduserorpass' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:mi.field_R:Ljava/lang/String;",
+      "to": "connectionLostWithReasonText",
+      "originalName": "field_R",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'connectionlost_withreason' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:mj.field_c:Ljava/lang/String;",
+      "to": "fullscreenAcceptCountdownSingularText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_accept_countdown_sing' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ml.field_u:Ljava/lang/String;",
+      "to": "createSelectAlternativeText",
+      "originalName": "field_u",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_select_alternative' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:nb.field_a:Ljava/lang/String;",
+      "to": "loadingFontsText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loading_fonts' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ne.field_d:Ljava/lang/String;",
+      "to": "ticketingGoToWebsiteText",
+      "originalName": "field_d",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'ticketing_gotowebsite' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:nf.field_E:Ljava/lang/String;",
+      "to": "reloadGameText",
+      "originalName": "field_E",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'reloadgame' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:nh.field_c:Ljava/lang/String;",
+      "to": "loadingText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loading' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ni.field_C:Ljava/lang/String;",
+      "to": "createToUseText",
+      "originalName": "field_C",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'createtouse' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:nk.field_g:Ljava/lang/String;",
+      "to": "startGameText",
+      "originalName": "field_g",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'startgame' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:nk.field_i:Ljava/lang/String;",
+      "to": "createUnder13TermsText",
+      "originalName": "field_i",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_u13terms' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:oa.field_d:[Ljava/lang/String;",
+      "to": "subscriptionMonthlyCostTexts",
+      "originalName": "field_d",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'subscription_cost_monthly' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:oe.field_O:Ljava/lang/String;",
+      "to": "connectionRestoredText",
+      "originalName": "field_O",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'connectionrestored' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:oh.field_c:Ljava/lang/String;",
+      "to": "unpackingGraphicsText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'unpacking_graphics' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:oi.field_c:Ljava/lang/String;",
+      "to": "createPasswordConfirmationTooltipText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_password_confirm_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:oj.field_e:Ljava/lang/String;",
+      "to": "loadingExtraDataText",
+      "originalName": "field_e",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loading_extradata' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ok.field_d:Ljava/lang/String;",
+      "to": "justPlayText",
+      "originalName": "field_d",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'justplay' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ok.field_e:Ljava/lang/String;",
+      "to": "createEmailConfirmationText",
+      "originalName": "field_e",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_email_confirm' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ok.field_i:Ljava/lang/String;",
+      "to": "createEmailConfirmationTooltipText",
+      "originalName": "field_i",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_email_confirm_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:pa.field_e:Ljava/lang/String;",
+      "to": "waitingForSoundEffectsText",
+      "originalName": "field_e",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'waitingfor_soundeffects' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:pb.field_o:Ljava/lang/String;",
+      "to": "createAgeTooltipText",
+      "originalName": "field_o",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_age_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:pb.field_v:Ljava/lang/String;",
+      "to": "fullscreenAcceptButtonText",
+      "originalName": "field_v",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_button_accept' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:pf.field_H:Ljava/lang/String;",
+      "to": "js5CrcErrorText",
+      "originalName": "field_H",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'error_js5crc' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ph.field_g:Ljava/lang/String;",
+      "to": "waitingForExtraDataText",
+      "originalName": "field_g",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'waitingfor_extradata' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ph.field_j:Ljava/lang/String;",
+      "to": "createUsernameAvailableText",
+      "originalName": "field_j",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_username_available' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ph.field_k:Ljava/lang/String;",
+      "to": "createUnableText",
+      "originalName": "field_k",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_unable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:qb.field_F:Ljava/lang/String;",
+      "to": "js5IoErrorText",
+      "originalName": "field_F",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'error_js5io' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:qb.field_L:Ljava/lang/String;",
+      "to": "fullscreenMembersButtonText",
+      "originalName": "field_L",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_button_members' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:qg.field_b:Ljava/lang/String;",
+      "to": "createPasswordText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_password' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:qh.field_Q:Ljava/lang/String;",
+      "to": "createPasswordHintText",
+      "originalName": "field_Q",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_password_hint' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ra.field_b:Ljava/lang/String;",
+      "to": "ticketingUnreadCountText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'ticketing_xunread' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:rb.field_a:Ljava/lang/String;",
+      "to": "fullscreenCancelButtonText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_button_cancel' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:rc.field_f:Ljava/lang/String;",
+      "to": "invalidPasswordText",
+      "originalName": "field_f",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'invalidpass' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:rc.field_g:Ljava/lang/String;",
+      "to": "js5ConnectFullErrorText",
+      "originalName": "field_g",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'error_js5connect_full' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:rh.field_j:Ljava/lang/String;",
+      "to": "createUsernameUnavailableText",
+      "originalName": "field_j",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_username_unavailable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:rj.field_e:Ljava/lang/String;",
+      "to": "quitToWebsiteText",
+      "originalName": "field_e",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'quittowebsite' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:rj.field_g:Ljava/lang/String;",
+      "to": "loggingInText",
+      "originalName": "field_g",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'logging_in' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:sb.field_c:Ljava/lang/String;",
+      "to": "loginNoDisplayNameText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'login_no_displayname' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:sb.field_f:Ljava/lang/String;",
+      "to": "noHighscoresText",
+      "originalName": "field_f",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'no_highscores' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:se.field_i:Ljava/lang/String;",
+      "to": "creatingYourAccountText",
+      "originalName": "field_i",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'creatingyouraccount' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:se.field_m:Ljava/lang/String;",
+      "to": "createAnAccountText",
+      "originalName": "field_m",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_createanaccount' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:sj.field_b:Ljava/lang/String;",
+      "to": "createMismatchAlertText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_mismatch' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:sj.field_e:Ljava/lang/String;",
+      "to": "fullscreenUnavailableText",
+      "originalName": "field_e",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_unavailable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:sl.field_b:Ljava/lang/String;",
+      "to": "loginEmailText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'login_email' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:sl.field_h:Ljava/lang/String;",
+      "to": "orbPointsText",
+      "originalName": "field_h",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'orbpoints' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:sl.field_i:Ljava/lang/String;",
+      "to": "createInvalidAgeAlertText",
+      "originalName": "field_i",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_invalidage' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:tc.field_b:Ljava/lang/String;",
+      "to": "quitText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'quit' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:th.field_g:Ljava/lang/String;",
+      "to": "defaultPlayerNameText",
+      "originalName": "field_g",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'DEFAULT_PLAYER_NAME' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:tl.field_o:Ljava/lang/String;",
+      "to": "previousText",
+      "originalName": "field_o",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'prev' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ud.field_a:Ljava/lang/String;",
+      "to": "createDisplayNameTooltipText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_displayname_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ud.field_b:Ljava/lang/String;",
+      "to": "loadingSoundEffectsText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loading_soundeffects' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ue.field_b:Ljava/lang/String;",
+      "to": "highscoreFriendTipText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'hs_friend_tip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ue.field_c:Ljava/lang/String;",
+      "to": "fullscreenBeforeAcceptText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_accept_beforeaccept' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ue.field_d:Ljava/lang/String;",
+      "to": "createNewsOptInText",
+      "originalName": "field_d",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_optin_news' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ue.field_g:Ljava/lang/String;",
+      "to": "createAgeText",
+      "originalName": "field_g",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_age' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:uf.field_i:Ljava/lang/String;",
+      "to": "createPasswordContainsEmailAlertText",
+      "originalName": "field_i",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_passcontainsemail' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:ug.field_b:Ljava/lang/String;",
+      "to": "createEmailText",
+      "originalName": "field_b",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_email' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:uj.field_d:Ljava/lang/String;",
+      "to": "fullscreenAfterCancelText",
+      "originalName": "field_d",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_accept_aftercancel' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:uj.field_e:Ljava/lang/String;",
+      "to": "loginMessage2Text",
+      "originalName": "field_e",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loginm2' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:uk.field_l:[Ljava/lang/String;",
+      "to": "monthNames",
+      "originalName": "field_l",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'monthnames' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:v.field_m:Ljava/lang/String;",
+      "to": "createPasswordConfirmationText",
+      "originalName": "field_m",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_password_confirm' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:vd.field_m:[Ljava/lang/String;",
+      "to": "highscoreModeNames",
+      "originalName": "field_m",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'hs_mode_name' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. All recorded indexed writes share that key prefix; numeric positions remain unchanged."
+    },
+    {
+      "symbol": "F:vg.field_d:Ljava/lang/String;",
+      "to": "pleaseWaitText",
+      "originalName": "field_d",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'pleasewait_dotdotdot' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:vi.field_F:Ljava/lang/String;",
+      "to": "loginJustPlayTooltipText",
+      "originalName": "field_F",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'login_justplay_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:vi.field_G:Ljava/lang/String;",
+      "to": "createNewsOptInTooltipText",
+      "originalName": "field_G",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_optin_news_tooltip' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:w.field_a:Ljava/lang/String;",
+      "to": "mouseOverIconText",
+      "originalName": "field_a",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'mouseoveranicon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:wb.field_c:Ljava/lang/String;",
+      "to": "soundLabelText",
+      "originalName": "field_c",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'sound_colon' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:wf.field_q:Ljava/lang/String;",
+      "to": "fullscreenText",
+      "originalName": "field_q",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fullscreen' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:wi$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "to": "caughtLoadingFailure",
+      "originalName": "decompiledCaughtException",
+      "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. Exception caught by the enclosing loader runtime catch before being copied into the shared failure carrier."
+    },
+    {
+      "symbol": "F:wi$1$CfrPartitionedBody.param0:B",
+      "to": "loadGuard",
+      "originalName": "param0",
+      "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. Mutable carrier copy of the loader byte argument."
+    },
+    {
+      "symbol": "F:wi$1$CfrPartitionedBody.param1:Lrh;",
+      "to": "textArchive",
+      "originalName": "param1",
+      "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. Mutable carrier copy of the archive argument."
+    },
+    {
+      "symbol": "F:wi$1$CfrPartitionedBody.stackIn_2616_0:Ljava/lang/RuntimeException;",
+      "to": "contextFailure",
+      "originalName": "stackIn_2616_0",
+      "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. First exception operand carried into failure-context construction."
+    },
+    {
+      "symbol": "F:wi$1$CfrPartitionedBody.stackIn_2616_1:Ljava/lang/StringBuilder;",
+      "to": "failureContextBuilder",
+      "originalName": "stackIn_2616_1",
+      "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. Builder holding the original wi.A guard prefix before the null/non-null archive join."
+    },
+    {
+      "symbol": "F:wi$1$CfrPartitionedBody.stackIn_2617_0:Ljava/lang/RuntimeException;",
+      "to": "forwardedContextFailure",
+      "originalName": "stackIn_2617_0",
+      "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. Exception operand forwarded from both archive-context branch arms into the wrapper call."
+    },
+    {
+      "symbol": "F:wi$1$CfrPartitionedBody.stackIn_2617_1:Ljava/lang/StringBuilder;",
+      "to": "forwardedContextBuilder",
+      "originalName": "stackIn_2617_1",
+      "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. Context builder forwarded from both archive-context branch arms before the archive description is appended."
+    },
+    {
+      "symbol": "F:wi$1$CfrPartitionedBody.stackIn_2617_2:Ljava/lang/String;",
+      "to": "archiveContextToken",
+      "originalName": "stackIn_2617_2",
+      "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. The null or {...} archive description selected by the failure-context branch."
+    },
+    {
+      "symbol": "F:wi$1$CfrPartitionedBody.stackIn_2625_0:I",
+      "to": "invertedClientFlagValue",
+      "originalName": "stackIn_2625_0",
+      "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. Integer materialization of !ch.field_h before restoring a JVM boolean at the loader tail."
+    },
+    {
+      "symbol": "F:wi$1$CfrPartitionedBody.var2:[B",
+      "to": "textResourceBytes",
+      "originalName": "var2",
+      "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. Shared byte-array result of every resource read, checked for null before decoding."
+    },
+    {
+      "symbol": "F:wi$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "to": "loadingFailure",
+      "originalName": "var2_ref",
+      "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. Shared runtime failure used by the enclosing loader catch."
+    },
+    {
+      "symbol": "F:wi$1$CfrPartitionedBody.var3:I",
+      "to": "sharedFlowFlag",
+      "originalName": "var3",
+      "evidence": "Source-generated carrier field for original wi.a(BLrh;)V. Snapshot of Geoblox.field_C controlling guard recursion and the final client-flag inversion; its undocumented meaning is not inferred."
+    },
+    {
+      "symbol": "F:wi.field_C:Lhk;",
+      "to": "goBackButton",
+      "originalName": "field_C",
+      "evidence": "The constructor initializes this button with the 'goback' resource text and installs this panel as its listener. The callback compares the clicked button with this field before dispatching its action."
+    },
+    {
+      "symbol": "F:wi.field_E:Lhk;",
+      "to": "justPlayButton",
+      "originalName": "field_E",
+      "evidence": "The constructor initializes this button with the 'justplay' resource text and installs this panel as its listener. The callback compares the clicked button with this field before dispatching its action."
+    },
+    {
+      "symbol": "F:wi.field_F:Ljava/lang/String;",
+      "to": "loadingGraphicsText",
+      "originalName": "field_F",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'loading_graphics' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:wi.field_G:Lhk;",
+      "to": "createAccountButton",
+      "originalName": "field_G",
+      "evidence": "The constructor initializes this button with the 'create_createanaccount' resource text and installs this panel as its listener. The callback compares the clicked button with this field before dispatching its action."
+    },
+    {
+      "symbol": "F:wj.field_B:Ljava/lang/String;",
+      "to": "createInvalidEmailAlertText",
+      "originalName": "field_B",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_alert_invalidemail' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:wj.field_C:Ljava/lang/String;",
+      "to": "fullscreenAfterAcceptText",
+      "originalName": "field_C",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'fs_accept_afteraccept' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "F:wj.field_E:Ljava/lang/String;",
+      "to": "createDisplayNameText",
+      "originalName": "field_E",
+      "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_displayname' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
+    },
+    {
+      "symbol": "L:bc.a(I[BII)Ljava/lang/String;#0",
+      "to": "byteIndex",
+      "originalName": "var6",
+      "evidence": "Loop index over length input bytes."
+    },
+    {
+      "symbol": "L:bc.a(I[BII)Ljava/lang/String;#1",
+      "to": "outputIndex",
+      "originalName": "incrementValue$1",
+      "evidence": "Snapshot of decodedLength before its increment; used as the character-write index."
+    },
+    {
+      "symbol": "L:bc.a(I[BII)Ljava/lang/String;#2",
+      "to": "decodedCharacters",
+      "originalName": "var4",
+      "evidence": "Local alias of the allocated output character buffer."
+    },
+    {
+      "symbol": "L:bc.a(I[BII)Ljava/lang/String;#3",
+      "to": "decodedLength",
+      "originalName": "var5",
+      "evidence": "Count of non-NUL decoded characters, passed as the final String length."
+    },
+    {
+      "symbol": "L:bc.a(I[BII)Ljava/lang/String;#4",
+      "to": "characterCode",
+      "originalName": "var7",
+      "evidence": "Unsigned byte value, replaced by the extended-character mapping when required."
+    },
+    {
+      "symbol": "L:bc.a(I[BII)Ljava/lang/String;#5",
+      "to": "mappedCharacterCode",
+      "originalName": "var8",
+      "evidence": "Mapped character for input values 128..159, with zero converted to question mark."
+    },
+    {
+      "symbol": "L:bc.a(I[BII)Ljava/lang/String;#6",
+      "to": "writeBuffer",
+      "originalName": "var9",
+      "evidence": "Character-buffer alias receiving each decoded character."
+    },
+    {
+      "symbol": "L:bc.a(I[BII)Ljava/lang/String;#7",
+      "to": "sharedBuffer",
+      "originalName": "var10",
+      "evidence": "Intermediate alias in the original reconstructed buffer-assignment chain."
+    },
+    {
+      "symbol": "L:bc.a(I[BII)Ljava/lang/String;#8",
+      "to": "decodedBuffer",
+      "originalName": "var11",
+      "evidence": "Allocated char[length] buffer used to construct the final String."
+    },
+    {
+      "symbol": "L:wi$1$CfrPartitionedBody.run()V#0",
+      "to": "caughtFailure",
+      "originalName": "decompiledCaughtParameter0",
+      "evidence": "Source-generated catch parameter for the original wi.a(BLrh;)V runtime catch, copied into the shared loading-failure field."
+    },
+    {
+      "symbol": "L:wi.a(BLrh;)V#0",
+      "to": "textLoader",
+      "originalName": "decompiledBody",
+      "evidence": "Instance of the source-generated shared carrier that runs the three bounded interface-text helper parts."
+    },
+    {
+      "symbol": "M:ag.a(I[B)Ljava/lang/String;",
+      "to": "decodeTextBytes",
+      "originalName": "a",
+      "evidence": "With guard 1 this decodes the entire byte array through bc.a(-8, bytes, 0, bytes.length). The routine skips zero bytes and maps 128..159 through lf.field_e; it is not a UTF-8 decoder."
+    },
+    {
+      "symbol": "M:bc.a(I[BII)Ljava/lang/String;",
+      "to": "decodeTextSlice",
+      "originalName": "a",
+      "evidence": "Decodes length bytes starting at offset, omits NUL bytes, uses lf.field_e for input values 128..159 with ? for zero mapping entries, and returns the filled prefix of its character buffer. Guard side effects are preserved."
+    },
+    {
+      "symbol": "M:fk.a(ILjava/lang/String;)[B",
+      "to": "readTextResourceBytes",
+      "originalName": "a",
+      "evidence": "With guard 2229 this calls bf.field_i.a(0, resourceKey, \"\") and returns raw bytes. Other guards return null; runtime failures retain their original context."
+    },
+    {
+      "symbol": "M:wi$1$CfrPartitionedBody.runChunk0()V",
+      "to": "loadInterfaceTextPart1",
+      "originalName": "runChunk0",
+      "evidence": "Source-generated bounded helper for original wi.a(BLrh;)V. The number preserves source order and denotes a size-budget partition, not a semantic loading phase."
+    },
+    {
+      "symbol": "M:wi$1$CfrPartitionedBody.runChunk1()V",
+      "to": "loadInterfaceTextPart2",
+      "originalName": "runChunk1",
+      "evidence": "Source-generated bounded helper for original wi.a(BLrh;)V. The number preserves source order and denotes a size-budget partition, not a semantic loading phase."
+    },
+    {
+      "symbol": "M:wi$1$CfrPartitionedBody.runChunk2()V",
+      "to": "loadInterfaceTextPart3",
+      "originalName": "runChunk2",
+      "evidence": "Source-generated bounded helper for original wi.a(BLrh;)V. The number preserves source order and denotes a size-budget partition, not a semantic loading phase."
+    },
+    {
+      "symbol": "M:wi.a(BLrh;)V",
+      "to": "loadInterfaceText",
+      "originalName": "a",
+      "evidence": "wf calls this after the text archive reports ready. It binds bf.field_i, reads named interface resources, decodes and assigns their strings, then releases the archive. It preserves the shared control flag, runtime catch and guard recursion."
+    },
+    {
+      "symbol": "P:ag.a(I[B)Ljava/lang/String;#0",
+      "to": "decodeGuard",
+      "originalName": "param0",
+      "evidence": "Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged."
+    },
+    {
+      "symbol": "P:ag.a(I[B)Ljava/lang/String;#1",
+      "to": "textBytes",
+      "originalName": "param1",
+      "evidence": "Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged."
+    },
+    {
+      "symbol": "P:bc.a(I[BII)Ljava/lang/String;#0",
+      "to": "decodeGuard",
+      "originalName": "param0",
+      "evidence": "Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect."
+    },
+    {
+      "symbol": "P:bc.a(I[BII)Ljava/lang/String;#1",
+      "to": "textBytes",
+      "originalName": "param1",
+      "evidence": "Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect."
+    },
+    {
+      "symbol": "P:bc.a(I[BII)Ljava/lang/String;#2",
+      "to": "offset",
+      "originalName": "param2",
+      "evidence": "Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect."
+    },
+    {
+      "symbol": "P:bc.a(I[BII)Ljava/lang/String;#3",
+      "to": "length",
+      "originalName": "param3",
+      "evidence": "Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect."
+    },
+    {
+      "symbol": "P:fk.a(ILjava/lang/String;)[B#0",
+      "to": "readGuard",
+      "originalName": "param0",
+      "evidence": "Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged."
+    },
+    {
+      "symbol": "P:fk.a(ILjava/lang/String;)[B#1",
+      "to": "resourceKey",
+      "originalName": "param1",
+      "evidence": "Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged."
+    },
+    {
+      "symbol": "P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#0",
+      "to": "initialLoadGuard",
+      "originalName": "initialParam0",
+      "evidence": "Source-generated carrier constructor argument initializes the corresponding shared loader parameter field; this is not an original gamepack method."
+    },
+    {
+      "symbol": "P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#1",
+      "to": "initialTextArchive",
+      "originalName": "initialParam1",
+      "evidence": "Source-generated carrier constructor argument initializes the corresponding shared loader parameter field; this is not an original gamepack method."
+    },
+    {
+      "symbol": "P:wi.a(BLrh;)V#0",
+      "to": "loadGuard",
+      "originalName": "param0",
+      "evidence": "Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged."
+    },
+    {
+      "symbol": "P:wi.a(BLrh;)V#1",
+      "to": "textArchive",
+      "originalName": "param1",
+      "evidence": "Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged."
+    }
+  ],
+  "namingToolCommit": "a0bc835957148b9b1e1f8221c59b79d899d22738",
+  "namingToolPinSha256": "0b0161f33519c576e471494b7b0649050299fd092d8ffd4b0c956aa432ba4152"
+}

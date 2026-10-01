@@ -7,7 +7,7 @@ final class gf {
     static int[] field_c;
     static int[] field_b;
     static qh field_d;
-    static String field_e;
+    static String createPasswordContainsNameAlertText;
 
     final static void a(byte param0) {
         int var2 = 78 % ((-69 - param0) / 46);
@@ -31,13 +31,13 @@ final class gf {
         field_b = null;
         if (param0) {
             field_c = null;
-            field_e = null;
+            createPasswordContainsNameAlertText = null;
             return;
         }
         String var2 = (String) null;
         gf.a((String) null, (rh) null, (String) null, (String) null, true);
         field_c = null;
-        field_e = null;
+        createPasswordContainsNameAlertText = null;
     }
 
     final static void a(GameplayEntity param0, int param1, float param2) {
@@ -120,7 +120,7 @@ final class gf {
             var2.d((byte) -20, 0);
             return;
         }
-        field_e = (String) null;
+        createPasswordContainsNameAlertText = (String) null;
         var2 = fj.field_q;
         var2.a(param0, (byte) -103);
         var2.d((byte) 127, 1);
@@ -235,6 +235,6 @@ final class gf {
         field_c = new int[128];
         field_a = 0;
         field_b = new int[8192];
-        field_e = "This password contains your Player Name, and would be easy to guess";
+        createPasswordContainsNameAlertText = "This password contains your Player Name, and would be easy to guess";
     }
 }

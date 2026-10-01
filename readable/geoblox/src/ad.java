@@ -3,7 +3,7 @@
  */
 final class ad extends ia {
     private kj field_k;
-    static String field_n;
+    static String fullscreenFocusOrResolutionText;
     static boolean field_p;
     IntrusiveDeque field_l;
     static int field_j;
@@ -11,7 +11,7 @@ final class ad extends ia {
     static int field_o;
 
     public static void c(int param0) {
-        field_n = null;
+        fullscreenFocusOrResolutionText = null;
         if (param0 != -1) {
             ad.a((byte) -81);
         }
@@ -397,7 +397,7 @@ final class ad extends ia {
 
     static {
         field_p = false;
-        field_n = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
+        fullscreenFocusOrResolutionText = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         field_j = 2;
         field_o = -1;
     }

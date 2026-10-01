@@ -8,7 +8,7 @@ final class uk extends q {
     static int field_o;
     static String field_p;
     static Sprite field_m;
-    static String[] field_l;
+    static String[] monthNames;
     private String field_k;
 
     final void c(byte param0) {
@@ -326,10 +326,10 @@ final class uk extends q {
                 field_j = -0.46423107385635376f;
               }
               if (this.field_n) {
-                stackIn_16_0 = ph.field_j;
+                stackIn_16_0 = ph.createUsernameAvailableText;
                 decompiledRegionSelector0 = 3;
               } else {
-                stackIn_14_0 = rh.field_j;
+                stackIn_14_0 = rh.createUsernameUnavailableText;
                 decompiledRegionSelector0 = 2;
               }
             } else {
@@ -489,18 +489,18 @@ final class uk extends q {
             field_m = null;
             field_p = null;
             field_i = null;
-            field_l = null;
+            monthNames = null;
             return;
         }
         field_m = (Sprite) null;
         field_m = null;
         field_p = null;
         field_i = null;
-        field_l = null;
+        monthNames = null;
     }
 
     static {
         field_i = new int[8192];
-        field_l = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        monthNames = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     }
 }

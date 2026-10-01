@@ -1,18 +1,21 @@
 # Readable source exports
 
-GeoBlox pass 12 has 642 reviewed semantic naming rules: 17 classes, 178 fields,
-129 methods, 91 parameters and 227 guarded local declarations. It preserves
+GeoBlox pass 13 has 841 reviewed naming rules: 18 classes, 346 fields,
+136 methods, 103 parameters and 238 guarded local declarations. It preserves
 original arithmetic, strings and numeric IDs. The new decompiler renders proven
 single-entry branches as ordinary Java bodies and keeps verified exception-region
 loop fanouts structured. Nested exception cycles are recovered with bounded
-copies. Confirmed names have no opaque suffixes; unknown identifiers remain
-unchanged. The oversized initializer uses three bounded structured helpers,
+copies. Named text resources, loader flow and decoder variables now make
+interface loading easier to follow. Confirmed names have no opaque suffixes;
+unknown identifiers remain unchanged. The oversized initializer uses three bounded structured helpers,
 sharing mutable locals and preserving catch scopes. Builder chains with unknown
-receiver contents retain their operations and failure context. The reverse map keeps original JVM identities and exact edit information.
+receiver contents retain their operations and failure context. The reverse map
+keeps original JVM identities and exact edit information.
 
 Start with [GameplaySession.java](geoblox/src/GameplaySession.java),
 [GameplayEntity.java](geoblox/src/GameplayEntity.java),
-[ScorePopup.java](geoblox/src/ScorePopup.java) and the
+[ScorePopup.java](geoblox/src/ScorePopup.java),
+[AccountWelcomePanel.java](geoblox/src/AccountWelcomePanel.java) and the
 [gameplay reading guide](GEOBLOX-READING-GUIDE.md).
 
 ## Export and tool pins
@@ -29,7 +32,8 @@ Start with [GameplaySession.java](geoblox/src/GameplaySession.java),
   `844b92ec48a7bc48e18e7eb0aa5a2599e631e895`.
 - [tools/PIN.json](tools/PIN.json): exact bundled naming-tool file digests.
 - [rules](rules): the retained 491-rule manifest, 151 gameplay additions,
-  complete pass-6 through pass-11 manifests and explicit pass-7 through pass-12 input migrations.
+  complete pass-6 through pass-12 manifests, explicit pass-7 through pass-12 input
+  migrations and the reviewed pass-13 text additions.
   Every previous manifest and the changed input are guarded by SHA-256.
 - `funorb-stubs.jar`: the frozen compilation dependency, included byte for byte.
 
@@ -40,7 +44,7 @@ The decompilation's tool revisions are separate from game-source hashes:
 | Deko | `a572c4dd0f0174bfcd7777be53d7ceba2f970f18` |
 | java-tools | `a6e20fcdc1471afd9190c3391c03d89147cf360b` |
 | Upstream naming tool in Deko | `d41315508e071f6bd672d65eb2f5a8d428648d6f` |
-| Reviewed names and adapted naming tool | `fd7dbd89304f5c494223df22d6888b35fc65c15d` in `geoblox-readable-next.bundle` |
+| Adapted naming tool | `a0bc835957148b9b1e1f8221c59b79d899d22738` in `geoblox-readable-text-tools.bundle` |
 
 The decompiler repository source archive has SHA-256
 `e6e46b1815a8ccc6867e742d0fb5d4411d3ceeb465648060a6786fec02b9101a`.
@@ -60,10 +64,14 @@ so this checkout can reproduce the export without depending on a mutable sibling
 checkout. Its resolver uses javac Trees and preserves binding and override
 relationships. The bundled adaptation captures subprocess output in temporary
 regular files for restricted environments; the recorded generator digest covers
-that helper too. The wrapper checks all three frozen tool digests before use.
+that helper too. Pass 13 adds guarded constructor-parameter support in the
+JavaScript validator; constructor method names still require a class rule. The
+Java resolver and binding/override checks are unchanged. The wrapper checks all
+three frozen tool digests before use.
 
-The decompilation was freshly repeated from the unchanged verified transformed
-bytecode: 303 sources and zero hard failures. The previous ASM check covered
+The pinned raw input was freshly decompiled in pass 12 from the unchanged
+verified transformed bytecode: 303 sources and zero hard failures. Pass 13
+changes naming rules and the naming validator; that raw input remains unchanged. The previous ASM check covered
 2,427 methods with zero failures; those bytes have not changed. See
 [GeoBlox decompilation provenance](../decompilation/geoblox-provenance.json)
 for generator commits, input identities, reused pipeline proof and exact verifier
@@ -77,6 +85,7 @@ From a full Git checkout of this repository, using Node.js and a JDK with javac:
 ```sh
 node readable/build-geoblox-rules.mjs --check
 node readable/tests/test-geoblox-rule-builder.mjs
+node readable/tests/test-geoblox-text-rules.mjs
 node readable/reproduce-geoblox.mjs --check
 node readable/tools/test-readable-java.mjs
 node readable/tools/test-capture-process.mjs
@@ -134,7 +143,10 @@ It does not read `games/geoblox` or extract an original input commit.
    642 naming guards and 227 named-local identities remain unchanged. Earlier
    migrations remain frozen. Pass 12 outlines the initializer and fixes builder
    prefixes across joins; all 642 guards and 227 named-local identities still
-   match both javac audits. Future input or identity changes
+   match both javac audits. Pass 13 retains those rules and adds 199 guarded
+   names from direct text-resource assignments, inspected loader/decoder flow
+   and the welcome panel. Its 19 carrier-related names describe generated source
+   identities rather than original gamepack methods or fields. Future input or identity changes
    require another reviewed migration.
 4. Pin the new source commit in `geoblox-source-pin.json`, retain the reviewed
    rule lineage and rebuild `geoblox-rules.json`. If updating the naming tool,
@@ -152,7 +164,7 @@ unknown symbols are never renamed by guessing during reproduction.
 ## Checks and limits
 
 Both complete 303-file corpora compile. All 154,256 bindings and 388 override
-relationships are preserved; generation applies 10,628 identifier edits.
+relationships are preserved; generation applies 15,595 identifier edits.
 Rebuilding the rules and regenerating the export is byte-identical, and
 map-only reversal recovers all 303 original files byte for byte.
 
@@ -160,7 +172,8 @@ The actual game helper checks pass for original and renamed sources. They cover
 deque order/traversal/splicing, independent node links, boundary pixel probes,
 popup initialization/progress/draining, cooldown-blocked match batches and
 queue settling. The text probe covers four decoder inputs (including all 256 byte values) and
-the nested context of a null-archive failure. Its expected digest was measured
+slice boundaries, decoder guard side effects and the nested context of a
+null-archive failure. Its expected digest was measured
 on the fixed transformed bytecode. An optional path argument to the text test
 repeats that native comparison after verifying the class-tree pin. Successful
 archive loading remains untested. The gameplay harness does not cover popup crediting, successful
@@ -168,7 +181,8 @@ match scoring, full contact physics or asset-dependent session transitions.
 
 The export reduces dispatcher cases from 3,051 to 61; two original methods
 still need a dispatcher (27 and 34 cases). No original method has 50 cases. See [the renderer report](STATE-MACHINE-READABILITY.md)
-for exact reductions, checks and remaining work. It does not claim whole-game
+for exact reductions, checks and remaining work. [The text-naming report](TEXT-READABILITY.md)
+records direct resource assignments, new roles, tool changes and limits. It does not claim whole-game
 runtime equivalence, a multiplayer
 protocol reconstruction, or JVM memory/FPS/phone acceptance. Runtime names,
 reflection, serialization and native/external contracts need separate checks
@@ -177,7 +191,7 @@ before treating the renamed export as a runnable replacement.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Original GeoBlox | `2b5e8eca76820cb18760a231fc0825aded6e26972d646bfc3476d4f88d77147b` |
-| Readable GeoBlox | `f3bc2be6e2da5d5ea2172eaadb7c9b380c933d8bf23dafd9fe2b4b9c1462e384` |
+| Readable GeoBlox | `3d37181ec5b830fb02a5c1bdfad1d70ba32c27555fce89369d698bb6ba8140d7` |
 
 These tree digests use `sourceIdentity(sourceInventory(root))` from the naming
 tool. They identify source bytes; the decompiler Git commits are listed above.

@@ -5,14 +5,14 @@ final class kd {
     static al field_b;
     static String field_d;
     static ng field_e;
-    static String field_a;
+    static String achievedText;
     static int[] field_f;
     static int field_c;
 
     public static void a(byte param0) {
         int var1 = -73 % ((26 - param0) / 53);
         field_e = null;
-        field_a = null;
+        achievedText = null;
         field_d = null;
         field_f = null;
         field_b = null;
@@ -39,7 +39,7 @@ final class kd {
 
     static {
         field_d = "It's the<br>bubble bonus!";
-        field_a = "Achieved";
+        achievedText = "Achieved";
         field_f = new int[23];
         field_f[14] = lb.a(field_f[14], 128);
         field_f[12] = lb.a(field_f[12], 17);

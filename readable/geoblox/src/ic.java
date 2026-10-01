@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ic {
-    static String field_b;
+    static String loginCreateTooltipText;
     static String field_a;
 
     final static int a(int param0, int param1, int param2) {
@@ -44,7 +44,7 @@ final class ic {
         if (param0 != 16424) {
             return;
         }
-        field_b = null;
+        loginCreateTooltipText = null;
         field_a = null;
     }
 
@@ -97,7 +97,7 @@ final class ic {
                 }
               }
               if (param12 != 64) {
-                field_b = (String) null;
+                loginCreateTooltipText = (String) null;
                 return;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -170,7 +170,7 @@ final class ic {
     }
 
     static {
-        field_b = "Create your own free Jagex account";
+        loginCreateTooltipText = "Create your own free Jagex account";
         field_a = "Bonus: <%0>";
     }
 }

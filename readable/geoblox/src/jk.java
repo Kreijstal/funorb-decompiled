@@ -4,8 +4,8 @@
 final class jk {
     static boolean field_a;
     static int field_d;
-    static String field_b;
-    static String field_c;
+    static String fullscreenAcceptCountdownPluralText;
+    static String returnToGameText;
 
     final static void a(byte param0) {
         if (vl.field_n == null) {
@@ -32,13 +32,13 @@ final class jk {
 
     public static void a(int param0) {
         if (param0 != -10848) {
-            field_c = (String) null;
-            field_b = null;
-            field_c = null;
+            returnToGameText = (String) null;
+            fullscreenAcceptCountdownPluralText = null;
+            returnToGameText = null;
             return;
         }
-        field_b = null;
-        field_c = null;
+        fullscreenAcceptCountdownPluralText = null;
+        returnToGameText = null;
     }
 
     final static void b(byte param0) {
@@ -200,7 +200,7 @@ final class jk {
               } else {
                 param0.setVisible(false);
                 if (param1 != 10) {
-                  field_b = (String) null;
+                  fullscreenAcceptCountdownPluralText = (String) null;
                 }
                 param0.dispose();
                 break L0;
@@ -243,7 +243,7 @@ final class jk {
     static {
         field_d = 0;
         field_a = false;
-        field_b = "If you do nothing the game will revert to normal view in <%0> seconds.";
-        field_c = "Return to game";
+        fullscreenAcceptCountdownPluralText = "If you do nothing the game will revert to normal view in <%0> seconds.";
+        returnToGameText = "Return to game";
     }
 }

@@ -3,7 +3,7 @@
  */
 final class th extends lf {
     static int[] field_h;
-    static String field_g;
+    static String defaultPlayerNameText;
     static IndexedSprite field_f;
 
     th(long param0, String param1) {
@@ -91,7 +91,7 @@ final class th extends lf {
     public static void d(byte param0) {
         field_h = null;
         field_f = null;
-        field_g = null;
+        defaultPlayerNameText = null;
         if (param0 != -109) {
             field_f = (IndexedSprite) null;
         }
@@ -107,6 +107,6 @@ final class th extends lf {
 
     static {
         field_h = new int[]{100, 200, 500, 300, 300, 500, 500, 500, 100, 100, 100, 200, 200, 200, 300, 1000, 300};
-        field_g = "Player";
+        defaultPlayerNameText = "Player";
     }
 }

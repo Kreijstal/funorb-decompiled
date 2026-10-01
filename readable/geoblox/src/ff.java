@@ -6,7 +6,7 @@ class ff implements dh, cc {
     private boolean field_q;
     m field_n;
     static java.awt.Image field_a;
-    static String field_l;
+    static String waitingForGraphicsText;
     int field_e;
     int field_o;
     int field_c;
@@ -411,7 +411,7 @@ class ff implements dh, cc {
     }
 
     public static void a(boolean param0) {
-        field_l = null;
+        waitingForGraphicsText = null;
         field_d = null;
         field_a = null;
         if (!param0) {
@@ -896,7 +896,7 @@ class ff implements dh, cc {
     }
 
     static {
-        field_l = "Waiting for graphics";
+        waitingForGraphicsText = "Waiting for graphics";
         field_d = null;
     }
 }

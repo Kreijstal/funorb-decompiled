@@ -7,13 +7,13 @@ final class ef implements Iterator {
     private DualLinkNode field_b;
     private ra field_a;
     private DualLinkNode field_d;
-    static String field_c;
+    static String instructionsText;
     static boolean field_e;
 
     final static void a(String param0, byte param1, String param2) {
         try {
             if (param1 != 66) {
-                field_c = (String) null;
+                instructionsText = (String) null;
             }
             r.a(param2, (byte) 87, false, param0);
         } catch (RuntimeException runtimeException) {
@@ -83,7 +83,7 @@ final class ef implements Iterator {
     }
 
     public static void a(byte param0) {
-        field_c = null;
+        instructionsText = null;
         if (param0 != 101) {
             field_e = false;
         }
@@ -113,7 +113,7 @@ final class ef implements Iterator {
     }
 
     static {
-        field_c = "Instructions";
+        instructionsText = "Instructions";
         field_e = false;
     }
 }

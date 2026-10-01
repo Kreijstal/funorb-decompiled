@@ -59,7 +59,7 @@ public final class Geoblox extends wf {
         int var10 = field_C;
         oj.a(vc.field_i, (byte) -104);
         if (null != wj.field_F && null != fe.field_a && ah.field_c != null && null != cd.field_m) {
-            lc.a(ca.field_h, -2, 60.0f);
+            lc.a(ca.unpackingMusicText, -2, 60.0f);
             this.renderFrame(25853);
             jg.a(wj.field_F, (byte) 80, ah.field_c, fe.field_a, cd.field_m);
             ah.field_c = null;
@@ -70,7 +70,7 @@ public final class Geoblox extends wf {
             return false;
         }
         if (null != ll.field_f && null != ii.field_k && ki.field_b != null) {
-            lc.a(oh.field_c, param0 + -25871, 80.0f);
+            lc.a(oh.unpackingGraphicsText, param0 + -25871, 80.0f);
             this.renderFrame(25853);
             dd.field_G = w.a("", ll.field_f, ii.field_k, true, "font");
             wf.field_p = dd.field_G.e(1);
@@ -310,13 +310,13 @@ public final class Geoblox extends wf {
                                           }
                                         }
                                       }
-                                      stackIn_47_0 = ff.field_l;
+                                      stackIn_47_0 = ff.waitingForGraphicsText;
 
                                       stackIn_47_1 = ki.field_b;
 
                                       stackIn_47_2 = "basic";
 
-                                      stackIn_47_3 = wi.field_F;
+                                      stackIn_47_3 = AccountWelcomePanel.loadingGraphicsText;
 
                                       if (param0) {
                                         stackIn_48_0 = (String) ((Object) stackIn_47_0);
@@ -335,21 +335,21 @@ public final class Geoblox extends wf {
                                       return false;
                                     }
                                   }
-                                  lc.a(gf.a(ff.field_l, ll.field_f, "sun", wi.field_F, true), -2, 45.0f);
+                                  lc.a(gf.a(ff.waitingForGraphicsText, ll.field_f, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
                                   return false;
                                 }
                               }
-                              lc.a(gf.a(ff.field_l, ll.field_f, "", wi.field_F, true), -2, 45.0f);
+                              lc.a(gf.a(ff.waitingForGraphicsText, ll.field_f, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
                               return false;
                             }
                           }
-                          stackIn_27_0 = ik.field_b;
+                          stackIn_27_0 = ik.waitingForFontsText;
 
                           stackIn_27_1 = ii.field_k;
 
                           stackIn_27_2 = "";
 
-                          stackIn_27_3 = nb.field_a;
+                          stackIn_27_3 = nb.loadingFontsText;
 
                           if (param0) {
                             stackIn_28_0 = (String) ((Object) stackIn_27_0);
@@ -368,19 +368,19 @@ public final class Geoblox extends wf {
                           return false;
                         }
                       }
-                      lc.a(vd.a(ud.field_b, pa.field_e, 0, param0, cd.field_m), -2, 25.0f);
+                      lc.a(vd.a(ud.loadingSoundEffectsText, pa.waitingForSoundEffectsText, 0, param0, cd.field_m), -2, 25.0f);
                       return false;
                     }
                   }
-                  lc.a(gf.a(ji.field_n, fe.field_a, "", dd.field_F, true), -2, 15.0f);
+                  lc.a(gf.a(ji.waitingForMusicText, fe.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
                   return false;
                 }
               }
-              lc.a(gf.a(pa.field_e, ah.field_c, "", ud.field_b, true), -2, 10.0f);
+              lc.a(gf.a(pa.waitingForSoundEffectsText, ah.field_c, "", ud.loadingSoundEffectsText, true), -2, 10.0f);
               return false;
             }
           }
-          lc.a(gf.a(pa.field_e, wj.field_F, "", ud.field_b, true), -2, 5.0f);
+          lc.a(gf.a(pa.waitingForSoundEffectsText, wj.field_F, "", ud.loadingSoundEffectsText, true), -2, 5.0f);
           return false;
         }
     }
@@ -448,7 +448,7 @@ public final class Geoblox extends wf {
         ei.n(param0 ^ 69);
         f.n(-107);
         qh.h(0);
-        wi.f(1);
+        AccountWelcomePanel.f(1);
         pf.a((byte) -97);
         hi.i((byte) -85);
         mb.a(param0 + 63);
@@ -726,7 +726,7 @@ public final class Geoblox extends wf {
                   return;
                 } else {
                   if (!uk.g(79)) {
-                    lc.a(ph.field_g, -2, 100.0f);
+                    lc.a(ph.waitingForExtraDataText, -2, 100.0f);
                   } else {
                     if (dd.a((byte) 47)) {
                       if (!jk.field_a) {
@@ -928,7 +928,7 @@ public final class Geoblox extends wf {
             return;
           } else {
             if (!uk.g(39)) {
-              lc.a(ph.field_g, -2, 100.0f);
+              lc.a(ph.waitingForExtraDataText, -2, 100.0f);
               fc.a(true, (java.awt.Canvas) (var2));
               return;
             } else {

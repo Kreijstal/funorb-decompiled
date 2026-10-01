@@ -56,7 +56,9 @@ function validateRules(rules, audit) {
     if (rule.originalName !== undefined && declarations.get(rule.symbol).name !== rule.originalName)
       throw new Error(`Original name mismatch: ${rule.symbol}: expected ${rule.originalName}, got ${declarations.get(rule.symbol).name}`);
     if (rule.symbol.startsWith('C:') && rule.symbol.includes('$')) throw new Error('Nested/local class renaming is not supported');
-    if (!rule.symbol.startsWith('L:') && (rule.symbol.includes('.<init>') || rule.symbol.includes('.<clinit>')))
+    // Constructor parameters have ordinary resolved parameter identities. Only
+    // the constructor name itself must follow a class rename, never a method rule.
+    if (rule.symbol.startsWith('M:') && (rule.symbol.includes('.<init>') || rule.symbol.includes('.<clinit>')))
       throw new Error('Use a class rule to rename constructors');
     renames.set(rule.symbol, rule.to);
   }

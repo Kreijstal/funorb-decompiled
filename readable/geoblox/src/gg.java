@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gg {
-    static String field_a;
-    static String field_d;
-    static String field_c;
+    static String createRepeatedPasswordAlertText;
+    static String createNameLengthAlertText;
+    static String createPasswordContainsPartialNameAlertText;
     static int field_b;
 
     final static boolean a(byte param0, char param1) {
@@ -63,16 +63,16 @@ final class gg {
 
     public static void a(int param0) {
         if (param0 == 45) {
-            field_a = null;
-            field_d = null;
-            field_c = null;
+            createRepeatedPasswordAlertText = null;
+            createNameLengthAlertText = null;
+            createPasswordContainsPartialNameAlertText = null;
             return;
         }
         byte[] var2 = (byte[]) null;
         gg.a((byte[]) null, 124, 46);
-        field_a = null;
-        field_d = null;
-        field_c = null;
+        createRepeatedPasswordAlertText = null;
+        createNameLengthAlertText = null;
+        createPasswordContainsPartialNameAlertText = null;
     }
 
     final static String a(int param0, CharSequence[] param1) {
@@ -120,9 +120,9 @@ final class gg {
     }
 
     static {
-        field_a = "This password contains repeated characters, and would be easy to guess";
-        field_c = "This password is part of your Player Name, and would be easy to guess";
+        createRepeatedPasswordAlertText = "This password contains repeated characters, and would be easy to guess";
+        createPasswordContainsPartialNameAlertText = "This password is part of your Player Name, and would be easy to guess";
         field_b = 0;
-        field_d = "Names should contain a maximum of 12 characters";
+        createNameLengthAlertText = "Names should contain a maximum of 12 characters";
     }
 }

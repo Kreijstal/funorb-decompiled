@@ -11,7 +11,7 @@ class mi extends kg {
     private Sprite[] field_fb;
     private Sprite[] field_H;
     private boolean field_P;
-    static String field_E;
+    static String invalidUserOrPasswordText;
     private Sprite field_p;
     private int field_T;
     private boolean field_S;
@@ -37,7 +37,7 @@ class mi extends kg {
     private boolean field_N;
     static boolean field_I;
     private int field_ab;
-    static String field_R;
+    static String connectionLostWithReasonText;
     static String field_y;
     private Sprite field_u;
     private int field_G;
@@ -196,11 +196,11 @@ class mi extends kg {
     }
 
     public static void b(boolean param0) {
-        field_R = null;
+        connectionLostWithReasonText = null;
         if (param0) {
             return;
         }
-        field_E = null;
+        invalidUserOrPasswordText = null;
         field_y = null;
         field_B = null;
     }
@@ -269,9 +269,9 @@ class mi extends kg {
     }
 
     static {
-        field_E = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
+        invalidUserOrPasswordText = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
         field_y = "Continue";
         field_I = false;
-        field_R = "Connection lost. <%0>";
+        connectionLostWithReasonText = "Connection lost. <%0>";
     }
 }

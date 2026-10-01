@@ -3,9 +3,9 @@
  */
 final class g extends q {
     static int field_j;
-    static String field_m;
+    static String createEmailUnavailableAlertText;
     private dj field_k;
-    static String field_l;
+    static String serviceUnavailableText;
     static Sprite field_i;
     private dj field_n;
 
@@ -46,11 +46,11 @@ final class g extends q {
           if (-1 != (var4.length() ^ -1)) {
             var5 = var4;
             if (em.a(var5, param0 + -344)) {
-              stackIn_6_0 = ji.field_d;
+              stackIn_6_0 = ji.createPasswordLengthAlertText;
               decompiledRegionSelector0 = 1;
             } else {
               if (ak.a(var5, (byte) -120)) {
-                stackIn_10_0 = ai.field_h;
+                stackIn_10_0 = ai.createPasswordCharacterAlertText;
                 decompiledRegionSelector0 = 2;
               } else {
                 if (!ra.a(param0 + 18303, var5)) {
@@ -58,33 +58,33 @@ final class g extends q {
                     g.g(119);
                   }
                   if (this.a(param1, -29267)) {
-                    stackIn_19_0 = uf.field_i;
+                    stackIn_19_0 = uf.createPasswordContainsEmailAlertText;
                     decompiledRegionSelector0 = 4;
                   } else {
                     if (0 < var6.length()) {
                       if (ak.a(var5, var6, -98)) {
-                        stackIn_26_0 = gf.field_e;
+                        stackIn_26_0 = gf.createPasswordContainsNameAlertText;
                         decompiledRegionSelector0 = 6;
                       } else {
                         if (uk.a(8, var6, var5)) {
-                          stackIn_30_0 = gg.field_c;
+                          stackIn_30_0 = gg.createPasswordContainsPartialNameAlertText;
                           decompiledRegionSelector0 = 7;
                         } else {
                           if (wc.a(var5, var6, (byte) -96)) {
-                            stackIn_34_0 = gf.field_e;
+                            stackIn_34_0 = gf.createPasswordContainsNameAlertText;
                             decompiledRegionSelector0 = 8;
                           } else {
-                            return ji.field_d;
+                            return ji.createPasswordLengthAlertText;
                           }
                         }
                       }
                     } else {
-                      stackIn_22_0 = ii.field_j;
+                      stackIn_22_0 = ii.createPasswordValidText;
                       decompiledRegionSelector0 = 5;
                     }
                   }
                 } else {
-                  stackIn_13_0 = gg.field_a;
+                  stackIn_13_0 = gg.createRepeatedPasswordAlertText;
                   decompiledRegionSelector0 = 3;
                 }
               }
@@ -193,7 +193,7 @@ final class g extends q {
               stackIn_13_0 = 0;
               decompiledRegionSelector0 = 2;
             } else {
-              field_l = (String) null;
+              serviceUnavailableText = (String) null;
               return false;
             }
           }
@@ -302,13 +302,13 @@ final class g extends q {
             return;
         }
         field_i = null;
-        field_m = null;
-        field_l = null;
+        createEmailUnavailableAlertText = null;
+        serviceUnavailableText = null;
     }
 
     static {
-        field_m = "Email address is unavailable";
-        field_l = "Service unavailable";
+        createEmailUnavailableAlertText = "Email address is unavailable";
+        serviceUnavailableText = "Service unavailable";
         field_j = 0;
     }
 }

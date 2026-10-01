@@ -213,10 +213,39 @@ splice. `pendingActionMarkers` holds the existing `PendingActionMarker`
 objects. Static theme helpers on these obfuscated classes remain separate and
 largely unnamed; class names describe their instance roles.
 
+## Interface text and account entry
+
+[AccountWelcomePanel.java](geoblox/src/AccountWelcomePanel.java) is the original
+`wi` class. Its instance builds `createAccountButton`, `goBackButton` and
+`justPlayButton`, using the corresponding decoded labels and dispatching clicks
+by button identity. Its unrelated static helpers remain on this original class.
+
+`AccountWelcomePanel.loadInterfaceText` binds `bf.activeTextArchive`, calls
+`fk.readTextResourceBytes` for each unchanged resource key, then decodes non-null
+bytes with `ag.decodeTextBytes`. The three `loadInterfaceTextPartN` methods are
+size-budget partitions that preserve source order; their numbers do not denote
+semantic loading phases. Shared fields keep decoded bytes, guard values and
+failure context across helpers. The final helper clears the active archive.
+
+There are 152 directly assigned text-resource fields. One, `reconnectMessages`,
+was already named; the 151 new field names include `loadingGraphicsText`,
+`loadingMusicText`, `startGameText`, `resumeGameText`, `orbPointsText`,
+`monthNames`, account alerts and fullscreen prompts. The 526 discarded decode
+results have no destination field to name; their calls remain present.
+
+`bc.decodeTextSlice` iterates `textBytes[offset + byteIndex]`, omits zero bytes,
+maps values 128 through 159 using `lf.extendedTextCharacters`, and constructs
+its string from `decodedBuffer` and `decodedLength`. Zero mapping entries become
+question marks. The guard's side effect remains explicit. This is a legacy
+single-byte decoder; it is not named or treated as UTF-8.
+
+[The text report](TEXT-READABILITY.md) records the exact resource-key evidence,
+reproduction commands and native probe scope.
+
 ## Remaining limitations
 
-There are 642 explicit rules: 17 classes, 178 fields, 129 method declarations,
-91 parameters and 227 guarded local declarations. This is not full
+There are 841 explicit rules: 18 classes, 346 fields, 136 method declarations,
+103 parameters and 238 guarded local declarations. This is not full
 deobfuscation. Two bounded decompiler dispatchers, unknown flags, guard arguments
 and opaque shared helpers still need investigation. All 642 names from pass 6
 remain. Pass 10 migrates thirteen board-reconciliation local ordinals after
@@ -224,7 +253,8 @@ dispatcher-only carriers disappear, retaining their types, spelling guards and
 semantic evidence. Pass 11 removes six unused exception locals without changing
 any named identity or semantic rule. Pass 12 also retains all named identities
 while replacing the oversized text initializer with three structured helpers.
-The earlier migrations remain frozen.
+Pass 13 adds 199 names without changing the raw Java tree; all previous rules
+remain. The earlier migrations remain frozen.
 
 The decompiler now checks explicit exception-region exit contracts, preserves
 ordinary empty branches as no-ops, requires explicit loop exit targets and

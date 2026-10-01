@@ -5,10 +5,10 @@ abstract class pb extends DualLinkNode {
     static IntrusiveDeque pendingActionMarkers;
     volatile boolean field_u;
     boolean field_q;
-    static String field_o;
+    static String createAgeTooltipText;
     static int field_r;
     static long[] field_p;
-    static String field_v;
+    static String fullscreenAcceptButtonText;
     boolean field_n;
     static int[] field_m;
     static float field_s;
@@ -146,11 +146,11 @@ abstract class pb extends DualLinkNode {
     abstract byte[] e(int param0);
 
     public static void f(int param0) {
-        field_o = null;
+        createAgeTooltipText = null;
         pendingActionMarkers = null;
         field_p = null;
         field_m = null;
-        field_v = null;
+        fullscreenAcceptButtonText = null;
         if (param0 != 31735) {
             String var2 = (String) null;
             pb.a(68, (java.awt.Color) null, true, true, (String) null);
@@ -165,9 +165,9 @@ abstract class pb extends DualLinkNode {
 
     static {
         pendingActionMarkers = new IntrusiveDeque();
-        field_o = "Type your age in years";
+        createAgeTooltipText = "Type your age in years";
         field_m = new int[256];
-        field_v = "Accept";
+        fullscreenAcceptButtonText = "Accept";
         field_p = new long[32];
     }
 }

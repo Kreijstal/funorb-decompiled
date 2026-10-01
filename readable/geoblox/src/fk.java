@@ -4,7 +4,7 @@
 final class fk extends sh {
     static ck field_B;
 
-    final static byte[] a(int param0, String param1) {
+    final static byte[] readTextResourceBytes(int readGuard, String resourceKey) {
         RuntimeException var2 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_4_0 = null;
@@ -16,8 +16,8 @@ final class fk extends sh {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == 2229) {
-            stackIn_4_0 = bf.field_i.a(0, param1, "");
+          if (readGuard == 2229) {
+            stackIn_4_0 = bf.activeTextArchive.a(0, resourceKey, "");
             decompiledRegionSelector0 = 1;
           } else {
             stackIn_2_0 = (byte[]) null;
@@ -28,9 +28,9 @@ final class fk extends sh {
           var2 = decompiledCaughtException;
           stackIn_7_0 = (RuntimeException) (var2);
 
-          stackIn_7_1 = new StringBuilder().append("fk.F(").append(param0).append(',');
+          stackIn_7_1 = new StringBuilder().append("fk.F(").append(readGuard).append(',');
 
-          if (param1 == null) {
+          if (resourceKey == null) {
             stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "null";

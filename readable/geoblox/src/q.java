@@ -149,9 +149,9 @@ abstract class q extends ib implements ga {
               if (8 == param1) {
                 param1 = 2;
                 if (!cf.field_i) {
-                  param2 = mi.field_E;
+                  param2 = mi.invalidUserOrPasswordText;
                 } else {
-                  param2 = DualLinkNode.field_f;
+                  param2 = DualLinkNode.invalidPasswordText;
                 }
                 ml.field_t.a(b.field_a, 0);
               }
@@ -162,10 +162,10 @@ abstract class q extends ib implements ga {
               }
               if (var3_int != 0) {
                 if (ii.field_a) {
-                  param2 = wj.a(mi.field_R, new String[]{param2}, (byte) -25);
+                  param2 = wj.a(mi.connectionLostWithReasonText, new String[]{param2}, (byte) -25);
                 }
                 if (mi.field_I) {
-                  param2 = kf.field_b;
+                  param2 = kf.pleaseTryAgainText;
                 }
                 Geoblox.field_y.a(param1, param0 + 19686, param2);
               }

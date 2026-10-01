@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tl extends IntrusiveNode {
-    static String field_o;
+    static String previousText;
     int field_k;
     static long[] field_l;
     static Sprite[] field_r;
@@ -67,7 +67,7 @@ final class tl extends IntrusiveNode {
 
     public static void b(int param0) {
         if (param0 == 6491) {
-            field_o = null;
+            previousText = null;
             entitiesById = null;
             field_l = null;
             field_f = null;
@@ -75,7 +75,7 @@ final class tl extends IntrusiveNode {
             return;
         }
         tl.b(-67);
-        field_o = null;
+        previousText = null;
         entitiesById = null;
         field_l = null;
         field_f = null;
@@ -103,7 +103,7 @@ final class tl extends IntrusiveNode {
     }
 
     static {
-        field_o = "Prev";
+        previousText = "Prev";
         field_l = new long[32];
         entitiesById = new GameplayEntity[1000];
     }

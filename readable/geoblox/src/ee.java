@@ -4,10 +4,10 @@
 import java.util.*;
 
 class ee extends el implements ql {
-    static String field_y;
+    static String toServerListText;
     static Sprite field_A;
     IntrusiveDeque field_z;
-    static String[] field_x;
+    static String[] mustLogin2Texts;
     static int[] field_B;
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
@@ -144,7 +144,7 @@ class ee extends el implements ql {
         gb var3 = new gb(this.field_z);
         el var4 = (el) ((Object) var3.c((byte) 88));
         if (param0 < 82) {
-            field_y = (String) null;
+            toServerListText = (String) null;
         }
         while (var4 != null) {
             var5 = var4.d((byte) 91);
@@ -318,8 +318,8 @@ class ee extends el implements ql {
         if (param0 != 14078) {
             return;
         }
-        field_x = null;
-        field_y = null;
+        mustLogin2Texts = null;
+        toServerListText = null;
         field_B = null;
         field_A = null;
     }
@@ -749,7 +749,7 @@ class ee extends el implements ql {
         int var4;
         var4 = Geoblox.field_C;
         if (param0 >= -60) {
-          field_y = (String) null;
+          toServerListText = (String) null;
         }
         var2 = new gb(this.field_z);
         var3 = (el) ((Object) var2.c((byte) 88));
@@ -844,8 +844,8 @@ class ee extends el implements ql {
     }
 
     static {
-        field_y = "To server list";
-        field_x = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
+        toServerListText = "To server list";
+        mustLogin2Texts = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
         field_B = new int[]{1, 2, 0, 3, 6, 5, 4};
     }
 }

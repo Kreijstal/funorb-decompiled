@@ -4,7 +4,7 @@
 final class ug {
     static int field_c;
     static vg field_a;
-    static String field_b;
+    static String createEmailText;
 
     final static StringBuilder a(StringBuilder param0, byte param1, char param2, int param3) {
         int var5 = 0;
@@ -71,7 +71,7 @@ final class ug {
             md.activeScorePopups.addLast(-95, popup);
             return;
         }
-        field_b = (String) null;
+        createEmailText = (String) null;
         popup.originY = (float)originY;
         md.activeScorePopups.addLast(-95, popup);
     }
@@ -157,7 +157,7 @@ final class ug {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        createEmailText = null;
         field_a = null;
         if (param0 != 9144) {
             String var2 = (String) null;
@@ -166,6 +166,6 @@ final class ug {
     }
 
     static {
-        field_b = "Email (Login):";
+        createEmailText = "Email (Login):";
     }
 }

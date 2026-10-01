@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class md {
-    static String[] field_d;
+    static String[] mustLogin4Texts;
     static int[] field_e;
     static IntrusiveDeque activeScorePopups;
     static float field_b;
@@ -39,7 +39,7 @@ final class md {
     }
 
     public static void a(byte param0) {
-        field_d = null;
+        mustLogin4Texts = null;
         field_e = null;
         activeScorePopups = null;
         if (param0 != 40) {
@@ -48,7 +48,7 @@ final class md {
     }
 
     static {
-        field_d = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
+        mustLogin4Texts = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
         activeScorePopups = new IntrusiveDeque();
     }
 }

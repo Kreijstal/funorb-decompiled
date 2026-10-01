@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bl {
-    static String field_a;
+    static String achievementsText;
 
     final static void c(int param0) {
         if (param0 >= -9) {
-            field_a = (String) null;
+            achievementsText = (String) null;
         }
     }
 
@@ -51,7 +51,7 @@ final class bl {
             param0 = param0 + (param0 >>> 526672816);
             return param0 & 255;
         }
-        field_a = (String) null;
+        achievementsText = (String) null;
         param0 = (param0 & 858993459) - -(param0 >>> -1715558078 & 858993459);
         param0 = param0 + (param0 >>> -1073219292) & 252645135;
         param0 = param0 + (param0 >>> 1208603944);
@@ -62,13 +62,13 @@ final class bl {
     public static void a(int param0) {
         if (param0 != -9751) {
             bl.a(31, (byte) -123);
-            field_a = null;
+            achievementsText = null;
             return;
         }
-        field_a = null;
+        achievementsText = null;
     }
 
     static {
-        field_a = "Achievements";
+        achievementsText = "Achievements";
     }
 }

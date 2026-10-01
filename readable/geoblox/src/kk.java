@@ -8,7 +8,7 @@ final class kk extends ji {
     private ba field_u;
     static int field_t;
     static float field_x;
-    static String field_v;
+    static String loginUsernameTooltipText;
     static int[] field_s;
 
     public static void i(int param0) {
@@ -16,7 +16,7 @@ final class kk extends ji {
         if (param0 > -69) {
             return;
         }
-        field_v = null;
+        loginUsernameTooltipText = null;
         field_w = null;
     }
 
@@ -639,7 +639,7 @@ final class kk extends ji {
 
     static {
         field_w = new lh();
-        field_v = "The account name you use to access RuneScape and other Jagex.com games";
+        loginUsernameTooltipText = "The account name you use to access RuneScape and other Jagex.com games";
         field_s = new int[]{1, 2, 5, 3, 3, 5, 5, 5, 1, 1, 1, 2, 2, 2, 3, 10, 3};
     }
 }

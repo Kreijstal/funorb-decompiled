@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class se extends IntrusiveNode {
-    static String field_i;
+    static String creatingYourAccountText;
     int field_h;
-    static String field_m;
+    static String createAnAccountText;
     int field_f;
     int field_j;
     int field_l;
@@ -12,13 +12,13 @@ final class se extends IntrusiveNode {
     int field_g;
 
     public static void b(int param0) {
-        field_m = null;
+        createAnAccountText = null;
         if (param0 < 120) {
-            field_i = (String) null;
-            field_i = null;
+            creatingYourAccountText = (String) null;
+            creatingYourAccountText = null;
             return;
         }
-        field_i = null;
+        creatingYourAccountText = null;
     }
 
     private se() throws Throwable {
@@ -26,7 +26,7 @@ final class se extends IntrusiveNode {
     }
 
     static {
-        field_i = "Creating your account";
-        field_m = "Create a free Account";
+        creatingYourAccountText = "Creating your account";
+        createAnAccountText = "Create a free Account";
     }
 }

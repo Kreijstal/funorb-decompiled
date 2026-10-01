@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tc {
-    static String field_b;
+    static String quitText;
     static String field_a;
     static int currentScreenId;
 
@@ -33,10 +33,10 @@ final class tc {
                 }
               }
               if (param0 != -112) {
-                field_b = (String) null;
+                quitText = (String) null;
               }
               if (param1 != 0) {
-                var6 = lf.field_e;
+                var6 = lf.extendedTextCharacters;
                 var2 = var6;
                 var3 = 0;
                 L5: while (true) {
@@ -80,7 +80,7 @@ final class tc {
     }
 
     public static void a(boolean param0) {
-        field_b = null;
+        quitText = null;
         field_a = null;
         if (!param0) {
             tc.a(false);
@@ -127,6 +127,6 @@ final class tc {
 
     static {
         field_a = null;
-        field_b = "Quit";
+        quitText = "Quit";
     }
 }

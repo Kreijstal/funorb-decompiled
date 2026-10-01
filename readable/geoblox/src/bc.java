@@ -16,16 +16,16 @@ final class bc {
         }
     }
 
-    final static String a(int param0, byte[] param1, int param2, int param3) {
-        int var6 = 0;
-        int incrementValue$1 = 0;
-        char[] var4 = null;
-        int var5 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        char[] var9 = null;
-        char[] var10 = null;
-        char[] var11 = null;
+    final static String decodeTextSlice(int decodeGuard, byte[] textBytes, int offset, int length) {
+        int byteIndex = 0;
+        int outputIndex = 0;
+        char[] decodedCharacters = null;
+        int decodedLength = 0;
+        int characterCode = 0;
+        int mappedCharacterCode = 0;
+        char[] writeBuffer = null;
+        char[] sharedBuffer = null;
+        char[] decodedBuffer = null;
         String stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -36,32 +36,32 @@ final class bc {
         RuntimeException var4_ref = null;
         try {
           L0: {
-            var11 = new char[param3];
-            var10 = var11;
-            var9 = var10;
-            var4 = var9;
-            if (param0 > 0) {
+            decodedBuffer = new char[length];
+            sharedBuffer = decodedBuffer;
+            writeBuffer = sharedBuffer;
+            decodedCharacters = writeBuffer;
+            if (decodeGuard > 0) {
               field_a = 49;
             }
-            var5 = 0;
-            for (var6 = 0; param3 > var6; var6++) {
-              var7 = param1[param2 + var6] & 255;
-              if (-1 != (var7 ^ -1)) {
-                if ((var7 ^ -1) <= -129) {
-                  if ((var7 ^ -1) > -161) {
-                    var8 = lf.field_e[-128 + var7];
-                    if (var8 == 0) {
-                      var8 = 63;
+            decodedLength = 0;
+            for (byteIndex = 0; length > byteIndex; byteIndex++) {
+              characterCode = textBytes[offset + byteIndex] & 255;
+              if (-1 != (characterCode ^ -1)) {
+                if ((characterCode ^ -1) <= -129) {
+                  if ((characterCode ^ -1) > -161) {
+                    mappedCharacterCode = lf.extendedTextCharacters[-128 + characterCode];
+                    if (mappedCharacterCode == 0) {
+                      mappedCharacterCode = 63;
                     }
-                    var7 = var8;
+                    characterCode = mappedCharacterCode;
                   }
                 }
-                incrementValue$1 = var5;
-                var5++;
-                var9[incrementValue$1] = (char)var7;
+                outputIndex = decodedLength;
+                decodedLength++;
+                writeBuffer[outputIndex] = (char)characterCode;
               }
             }
-            stackIn_14_0 = new String(var11, 0, var5);
+            stackIn_14_0 = new String(decodedBuffer, 0, decodedLength);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -69,9 +69,9 @@ final class bc {
           var4_ref = decompiledCaughtException;
           stackIn_17_0 = (RuntimeException) (var4_ref);
 
-          stackIn_17_1 = new StringBuilder().append("bc.B(").append(param0).append(',');
+          stackIn_17_1 = new StringBuilder().append("bc.B(").append(decodeGuard).append(',');
 
-          if (param1 == null) {
+          if (textBytes == null) {
             stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
             stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "null";
@@ -80,7 +80,7 @@ final class bc {
             stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(offset).append(',').append(length).append(')').toString());
         }
         return stackIn_14_0;
     }

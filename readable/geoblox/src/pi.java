@@ -178,7 +178,7 @@ final class pi extends vf {
               }
             }
           }
-          var5 = cm.field_h;
+          var5 = cm.checkingText;
         }
         if (!var5.equals(this.field_s)) {
           this.field_s = var5;

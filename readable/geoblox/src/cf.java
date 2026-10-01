@@ -107,7 +107,7 @@ final class cf extends q {
               return null;
             }
           } else {
-            stackIn_2_0 = sl.field_i;
+            stackIn_2_0 = sl.createInvalidAgeAlertText;
             decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

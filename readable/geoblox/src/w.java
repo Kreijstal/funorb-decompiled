@@ -7,7 +7,7 @@ final class w {
     static char[] field_c;
     static boolean field_f;
     static ck field_d;
-    static String field_a;
+    static String mouseOverIconText;
     static String[] field_b;
     static String field_e;
 
@@ -86,7 +86,7 @@ final class w {
 
     public static void a(byte param0) {
         field_e = null;
-        field_a = null;
+        mouseOverIconText = null;
         if (param0 < 51) {
             field_b = (String[]) null;
         }
@@ -336,7 +336,7 @@ final class w {
 
     static {
         field_c = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
-        field_a = "Mouse over an icon for details";
+        mouseOverIconText = "Mouse over an icon for details";
         field_d = new ck(1, 2, 2, 0);
         field_e = "Countdown";
         field_b = new String[]{"menu_select", "jewel_1", "jewel_2", "jewel_3", "space_1", "space_2", "space_3", "sun_1", "sun_2", "sun_3", "baking_1", "baking_2", "baking_3", "germs_1", "germs_2", "germs_3", "sport_1", "sport_2", "sport_3", "sweets_1", "sweets_2", "sweets_3", "cry", "to_angry", "to_excited", "to_happy", "to_unhappy", "electric_shock", "bubble_swell", "button_bleep", "geom_rain", "geom_vanish", "bonus", "round_clear"};

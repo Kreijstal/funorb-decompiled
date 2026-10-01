@@ -5,7 +5,7 @@ final class ab {
     static ck field_c;
     static boolean boardContactStateDirty;
     static boolean field_d;
-    static String field_e;
+    static String createSuggestionsText;
     static int field_b;
     static volatile boolean field_a;
 
@@ -70,7 +70,7 @@ final class ab {
         try {
           L0: {
             if (param2 == null) {
-              stackIn_4_0 = gg.field_d;
+              stackIn_4_0 = gg.createNameLengthAlertText;
               decompiledRegionSelector0 = 0;
             } else {
               var3_int = param2.length();
@@ -94,14 +94,14 @@ final class ab {
                             }
                             if (2 <= var5) {
                               if (!param0) {
-                                stackIn_31_0 = fa.field_h;
+                                stackIn_31_0 = fa.createDoubleSpaceAlertText;
                                 decompiledRegionSelector0 = 4;
                                 break L0;
                               }
                             }
                           }
                           if (-1 > (var5 ^ -1)) {
-                            stackIn_36_0 = GameScreen.field_r;
+                            stackIn_36_0 = GameScreen.createNameLeadingSpaceAlertText;
                             decompiledRegionSelector0 = 5;
                             break L0;
                           } else {
@@ -109,17 +109,17 @@ final class ab {
                           }
                         }
                       }
-                      stackIn_21_0 = GameScreen.field_r;
+                      stackIn_21_0 = GameScreen.createNameLeadingSpaceAlertText;
                       decompiledRegionSelector0 = 3;
                       break L0;
                     }
                   }
-                  stackIn_16_0 = gg.field_d;
+                  stackIn_16_0 = gg.createNameLengthAlertText;
                   decompiledRegionSelector0 = 2;
                   break L0;
                 }
               }
-              stackIn_9_0 = gg.field_d;
+              stackIn_9_0 = gg.createNameLengthAlertText;
               decompiledRegionSelector0 = 1;
             }
           }
@@ -388,13 +388,13 @@ final class ab {
 
     public static void a(byte param0) {
         int var1 = -58 % ((param0 - 0) / 38);
-        field_e = null;
+        createSuggestionsText = null;
         field_c = null;
     }
 
     static {
         field_c = new ck(2, 4, 4, 0);
-        field_e = "Suggested names: ";
+        createSuggestionsText = "Suggested names: ";
         field_a = false;
         field_b = 0;
     }

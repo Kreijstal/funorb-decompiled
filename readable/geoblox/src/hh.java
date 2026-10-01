@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hh {
-    static String field_b;
+    static String fullscreenCloseButtonText;
     static m field_d;
     static java.awt.Font field_a;
     static m field_c;
@@ -48,7 +48,7 @@ final class hh {
 
     public static void a(boolean param0) {
         field_a = null;
-        field_b = null;
+        fullscreenCloseButtonText = null;
         field_d = null;
         if (param0) {
             hh.a(102, true);
@@ -59,6 +59,6 @@ final class hh {
     }
 
     static {
-        field_b = "Close";
+        fullscreenCloseButtonText = "Close";
     }
 }

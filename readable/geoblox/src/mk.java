@@ -116,10 +116,10 @@ final class mk extends q {
             decompiledRegionSelector0 = 0;
           } else {
             if (this.a(-257, param1) == si.field_m) {
-              stackIn_9_0 = g.field_m;
+              stackIn_9_0 = g.createEmailUnavailableAlertText;
               decompiledRegionSelector0 = 1;
             } else {
-              return da.field_e;
+              return da.createEmailValidText;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -3,10 +3,10 @@
  */
 class DualLinkNode extends IntrusiveNode {
     DualLinkNode nextSecondaryNode;
-    static String field_f;
+    static String invalidPasswordText;
     static float rotationStepRadians;
     static int[] field_j;
-    static String field_g;
+    static String js5ConnectFullErrorText;
     DualLinkNode previousSecondaryNode;
     long field_i;
 
@@ -15,10 +15,10 @@ class DualLinkNode extends IntrusiveNode {
     }
 
     public static void c(byte param0) {
-        field_f = null;
+        invalidPasswordText = null;
         field_j = null;
         int var1 = -128 / ((param0 - -33) / 50);
-        field_g = null;
+        js5ConnectFullErrorText = null;
     }
 
     final static String d(byte param0) {
@@ -51,7 +51,7 @@ class DualLinkNode extends IntrusiveNode {
             this.nextSecondaryNode = null;
             return;
         }
-        field_g = (String) null;
+        js5ConnectFullErrorText = (String) null;
         this.nextSecondaryNode.previousSecondaryNode = this.previousSecondaryNode;
         this.previousSecondaryNode = null;
         this.nextSecondaryNode = null;
@@ -83,7 +83,7 @@ class DualLinkNode extends IntrusiveNode {
 
     static {
         rotationStepRadians = 0.01666666753590107f;
-        field_f = "Invalid password.";
-        field_g = "Data server full or too many connections from your address. Please try again in a few minutes.";
+        invalidPasswordText = "Invalid password.";
+        js5ConnectFullErrorText = "Data server full or too many connections from your address. Please try again in a few minutes.";
     }
 }

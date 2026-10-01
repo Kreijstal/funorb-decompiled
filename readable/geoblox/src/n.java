@@ -564,7 +564,7 @@ final class n extends q {
               if (var3 != null) {
                 if (var3.a((byte) -105) == kk.field_w) {
                   if (!param1.equals(this.field_i.field_s)) {
-                    stackIn_8_0 = sj.field_b;
+                    stackIn_8_0 = sj.createMismatchAlertText;
                     decompiledRegionSelector0 = 0;
                     break L0;
                   }
@@ -575,7 +575,7 @@ final class n extends q {
               }
             }
             if (!param1.equals(this.field_i.field_s)) {
-              stackIn_14_0 = sj.field_b;
+              stackIn_14_0 = sj.createMismatchAlertText;
               decompiledRegionSelector0 = 2;
             } else {
               return null;

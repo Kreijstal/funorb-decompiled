@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class nh {
-    static String field_c;
+    static String loadingText;
     static char[] field_b;
     static vg field_a;
 
@@ -15,7 +15,7 @@ abstract class nh {
         }
         field_b = null;
         field_a = null;
-        field_c = null;
+        loadingText = null;
     }
 
     abstract bm a(byte param0);
@@ -163,7 +163,7 @@ abstract class nh {
     }
 
     static {
-        field_c = "Loading...";
+        loadingText = "Loading...";
         field_b = new char[]{(char)91, (char)93, (char)35};
     }
 }

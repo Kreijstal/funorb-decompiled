@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fa {
-    static String field_d;
-    static String field_h;
+    static String idleMessage20MinText;
+    static String createDoubleSpaceAlertText;
     static int releasesPerTheme;
     static int field_f;
     static int field_e;
     static boolean entitiesDetachedThisTick;
     static qc field_c;
     static int field_i;
-    static String[] field_g;
+    static String[] membersExpansionBenefitTexts;
 
     final static void a(String param0, int param1, boolean param2) {
         mi.field_I = param2;
@@ -28,21 +28,21 @@ final class fa {
 
     public static void a(int param0) {
         field_c = null;
-        field_d = null;
+        idleMessage20MinText = null;
         if (param0 != 30970) {
             return;
         }
-        field_h = null;
-        field_g = null;
+        createDoubleSpaceAlertText = null;
+        membersExpansionBenefitTexts = null;
     }
 
     static {
         releasesPerTheme = 60;
         field_f = 14;
-        field_d = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
-        field_h = "Names cannot contain consecutive spaces";
+        idleMessage20MinText = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
+        createDoubleSpaceAlertText = "Names cannot contain consecutive spaces";
         field_e = 0;
         field_i = 480;
-        field_g = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
+        membersExpansionBenefitTexts = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
     }
 }

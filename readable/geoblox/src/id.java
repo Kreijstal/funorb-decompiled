@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class id {
-    static String field_a;
+    static String resumeGameText;
     static lc[] field_b;
     static Sprite[] field_c;
 
     public static void b(boolean param0) {
         field_c = null;
         field_b = null;
-        field_a = null;
+        resumeGameText = null;
         if (!param0) {
-            field_a = (String) null;
+            resumeGameText = (String) null;
         }
     }
 
@@ -31,7 +31,7 @@ final class id {
 
     static {
         int var0 = 0;
-        field_a = "Resume Game";
+        resumeGameText = "Resume Game";
         field_b = new lc[255];
         for (var0 = 0; var0 < field_b.length; var0++) {
             field_b[var0] = new lc();

@@ -127,7 +127,7 @@ final class GameplaySession {
                   }
                 }
               }
-              dd.field_G.b(nk.field_g, promptWidthThenButtonX, 468, 0, -1);
+              dd.field_G.b(nk.startGameText, promptWidthThenButtonX, 468, 0, -1);
               dd.field_G.field_K[0][wf.field_p] = 16689938;
               if (var7 == 0) {
                 break L3;
@@ -369,7 +369,7 @@ final class GameplaySession {
             }
             var2_ref_String = "";
           }
-          var3_ref_String = gf.a(ff.field_l, ll.field_f, var2_ref_String, wi.field_F, true);
+          var3_ref_String = gf.a(ff.waitingForGraphicsText, ll.field_f, var2_ref_String, AccountWelcomePanel.loadingGraphicsText, true);
           var4 = 30 + dd.field_G.a(var3_ref_String);
           ma.a(215, 320 - var4 / 2, 50, (byte) -92, var4, ll.field_h);
           dd.field_G.b(var3_ref_String, 320, 250, 0, -1);

@@ -11,7 +11,7 @@ abstract class wf extends ch {
     String field_n;
     private boolean field_m;
     private int field_u;
-    static String field_q;
+    static String fullscreenText;
     private int field_w;
     private int field_l;
     private int field_s;
@@ -314,7 +314,7 @@ abstract class wf extends ch {
             this.field_t = false;
             jl.a((byte) -115);
             kd.b((byte) 81);
-            q.a((byte) 124, 2, fa.field_d);
+            q.a((byte) 124, 2, fa.idleMessage20MinText);
             bl.c(-113);
             ii.field_e = true;
             hi.field_G = oa.a(-12520) - -15000L;
@@ -356,19 +356,19 @@ abstract class wf extends ch {
                 if (-4 != (ib.field_e ^ -1)) {
                   if (4 != ib.field_e) {
                     if (2 == ib.field_e) {
-                      q.a((byte) 124, 256, DualLinkNode.field_g);
+                      q.a((byte) 124, 256, DualLinkNode.js5ConnectFullErrorText);
                     } else {
                       if (ib.field_e != 5) {
-                        q.a((byte) 124, 256, ki.field_e);
+                        q.a((byte) 124, 256, ki.js5ConnectErrorText);
                       } else {
-                        q.a((byte) 124, 5, jg.field_c);
+                        q.a((byte) 124, 5, jg.loginGameUpdatedText);
                       }
                     }
                   } else {
-                    q.a((byte) 124, 256, qb.field_F);
+                    q.a((byte) 124, 256, qb.js5IoErrorText);
                   }
                 } else {
-                  q.a((byte) 124, 256, pf.field_H);
+                  q.a((byte) 124, 256, pf.js5CrcErrorText);
                 }
                 ii.field_e = true;
               }
@@ -442,7 +442,7 @@ abstract class wf extends ch {
                 dd.field_J = null;
               } else {
                 if (dd.field_J.a("", (byte) -126)) {
-                  wi.a((byte) 74, dd.field_J);
+                  AccountWelcomePanel.loadInterfaceText((byte) 74, dd.field_J);
                   dd.field_J = null;
                   ih.b(-50);
                 }
@@ -459,7 +459,7 @@ abstract class wf extends ch {
               L22: {
                 tj.c((byte) -105);
                 ke.b((byte) 120);
-                oi.field_e = nh.field_c;
+                oi.field_e = nh.loadingText;
                 kf.field_e = false;
                 fj.a((byte) 114, hb.field_n, rb.field_c, dc.field_c, l.field_h);
                 if (!ri.field_a) {
@@ -621,7 +621,7 @@ abstract class wf extends ch {
 
     public static void g(int param0) {
         field_o = null;
-        field_q = null;
+        fullscreenText = null;
         if (param0 != 30344) {
             wf.j(-29);
         }
@@ -733,7 +733,7 @@ abstract class wf extends ch {
                       var9 = (String) null;
                       wd.a((byte) 69, (String) null);
                     } else {
-                      var7 = bc.a(-46, var12.field_j, 0, var12.field_f);
+                      var7 = bc.decodeTextSlice(-46, var12.field_j, 0, var12.field_f);
                       wd.a((byte) 69, var7);
                     }
                     mk.field_n = null;
@@ -988,7 +988,7 @@ abstract class wf extends ch {
         int var4 = -1 + p.field_k;
         byte[] var5 = new byte[var4];
         eh.field_d.c(96, 0, var5, var4);
-        pa.a(ag.a(1, var5), (byte) -128, var3 != 0, k.c(112));
+        pa.a(ag.decodeTextBytes(1, var5), (byte) -128, var3 != 0, k.c(112));
     }
 
     private final void i(int param0) {
@@ -1025,6 +1025,6 @@ abstract class wf extends ch {
     }
 
     static {
-        field_q = "Fullscreen";
+        fullscreenText = "Fullscreen";
     }
 }

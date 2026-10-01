@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fc {
-    static String field_e;
+    static String musicLabelText;
     static qc field_d;
     static Sprite[] field_g;
     static double field_a;
@@ -79,16 +79,16 @@ final class fc {
         field_g = null;
         if (param0 < -79) {
             field_d = null;
-            field_e = null;
+            musicLabelText = null;
             return;
         }
         fc.a(-17);
         field_d = null;
-        field_e = null;
+        musicLabelText = null;
     }
 
     static {
-        field_e = "Music: ";
+        musicLabelText = "Music: ";
         field_d = new qc(256);
         field_a = 0.0;
         field_f = false;

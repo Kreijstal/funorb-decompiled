@@ -215,7 +215,7 @@ class qc extends IntrusiveNode {
         if (var4 == 0) {
             return "";
         }
-        return bc.a(param0 ^ -27439, this.field_j, var3, var4);
+        return bc.decodeTextSlice(param0 ^ -27439, this.field_j, var3, var4);
     }
 
     final void a(int param0, boolean param1) {
@@ -242,7 +242,7 @@ class qc extends IntrusiveNode {
         if (param0 != 0) {
             return;
         }
-        hk.field_C.b(new wi(), param0 + -110);
+        hk.field_C.b(new AccountWelcomePanel(), param0 + -110);
     }
 
     final void a(String param0, int param1) {
@@ -991,7 +991,7 @@ class qc extends IntrusiveNode {
         if (param0 < 94) {
             field_i = 68;
         }
-        return bc.a(-45, this.field_j, var2, var3);
+        return bc.decodeTextSlice(-45, this.field_j, var2, var3);
     }
 
     final int h(int param0) {

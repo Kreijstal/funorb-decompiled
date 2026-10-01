@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class ra implements Iterable {
-    static String field_b;
+    static String ticketingUnreadCountText;
     DualLinkNode field_c;
     static int field_d;
     static IntrusiveDeque availableEntities;
@@ -126,7 +126,7 @@ final class ra implements Iterable {
                 return;
               }
             } else {
-              field_b = (String) null;
+              ticketingUnreadCountText = (String) null;
               if (var5 != 0) {
                 vl.field_p = vl.field_p | var3;
                 if (!pb.pendingActionMarkers.isEmpty(13519)) {
@@ -241,7 +241,7 @@ final class ra implements Iterable {
 
     public static void a(int param0) {
         availableEntities = null;
-        field_b = null;
+        ticketingUnreadCountText = null;
         if (param0 != -1) {
             field_d = -36;
         }
@@ -262,7 +262,7 @@ final class ra implements Iterable {
     }
 
     static {
-        field_b = "You have <%0> unread messages!";
+        ticketingUnreadCountText = "You have <%0> unread messages!";
         availableEntities = new IntrusiveDeque();
     }
 }

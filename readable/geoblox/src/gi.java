@@ -27,14 +27,14 @@ final class gi implements Iterable {
             var1 = ik.field_a;
             if ((var1 ^ -1) < -1) {
               if (1 == var1) {
-                ff.field_d = ih.field_b;
-                ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_d)});
+                ff.field_d = ih.ticketingOneUnreadText;
+                ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.ticketingGoToWebsiteText)});
                 Geoblox.field_y.h((byte) -104);
                 rd.c(520);
                 return;
               } else {
-                ff.field_d = wj.a(ra.field_b, new String[]{Integer.toString(var1)}, (byte) -124);
-                ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_d)});
+                ff.field_d = wj.a(ra.ticketingUnreadCountText, new String[]{Integer.toString(var1)}, (byte) -124);
+                ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.ticketingGoToWebsiteText)});
                 Geoblox.field_y.h((byte) -104);
                 rd.c(520);
                 return;

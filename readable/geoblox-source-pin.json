@@ -21,7 +21,7 @@
   "originalPublicationCommit": "3230e3092c687d210ba068bdfd7667a5213d22fb",
   "upstreamNamingGeneratorCommit": "d41315508e071f6bd672d65eb2f5a8d428648d6f",
   "sourceRepository": "Kreijstal/funorb-decompiled",
-  "reviewedRulesCommit": "41a17ac93de086ffdc5283c6aab9aee86b945f35",
+  "reviewedRulesCommit": "be977995f8cab122441ee772881c29c6c8b9cab7",
   "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
-  "namingMigration": "rules/geoblox-v12-migration.json"
+  "namingMigration": "rules/geoblox-v13-text.json"
 }

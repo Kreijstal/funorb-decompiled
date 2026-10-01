@@ -30,27 +30,27 @@ final class kh implements Runnable {
             return vc.field_g;
         }
         if (!l.field_h.a(0)) {
-            return ff.field_l;
+            return ff.waitingForGraphicsText;
         }
         if (param0 >= -59) {
             kh.a((byte) -7);
         }
         if (!l.field_h.a("commonui", (byte) -127)) {
-            return wi.field_F + " - " + l.field_h.a(0, "commonui") + "%";
+            return AccountWelcomePanel.loadingGraphicsText + " - " + l.field_h.a(0, "commonui") + "%";
         }
         if (!(dc.field_c.a(0))) {
-            return ik.field_b;
+            return ik.waitingForFontsText;
         }
         if (!dc.field_c.a("commonui", (byte) -125)) {
-            return nb.field_a + " - " + dc.field_c.a(0, "commonui") + "%";
+            return nb.loadingFontsText + " - " + dc.field_c.a(0, "commonui") + "%";
         }
         if (!hb.field_n.a(0)) {
-            return ph.field_g;
+            return ph.waitingForExtraDataText;
         }
         if (!hb.field_n.b(true)) {
-            return oj.field_e + " - " + hb.field_n.b((byte) 101) + "%";
+            return oj.loadingExtraDataText + " - " + hb.field_n.b((byte) 101) + "%";
         }
-        return vg.field_d;
+        return vg.pleaseWaitText;
     }
 
     public final void run() {

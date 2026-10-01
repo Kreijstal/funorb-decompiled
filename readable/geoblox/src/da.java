@@ -8,7 +8,7 @@ final class da {
     static gk field_g;
     static int field_c;
     static Sprite field_b;
-    static String field_e;
+    static String createEmailValidText;
 
     final static void b(int param0, int param1) {
         lj.field_a = param1 * param0 / 50;
@@ -47,7 +47,7 @@ final class da {
 
     public static void a(int param0) {
         field_b = null;
-        field_e = null;
+        createEmailValidText = null;
         if (param0 == 50) {
             field_d = null;
             field_g = null;
@@ -65,7 +65,7 @@ final class da {
         field_a = 0;
         field_f = new gk();
         field_g = new gk();
-        field_e = "Email is valid";
+        createEmailValidText = "Email is valid";
         field_c = 0;
     }
 }

@@ -5,7 +5,7 @@ final class hc extends dj implements nl {
     static int field_T;
     private int field_S;
     static int field_R;
-    static String field_U;
+    static String goBackText;
     static byte[] field_K;
     private dg field_Q;
 
@@ -84,7 +84,7 @@ final class hc extends dj implements nl {
 
     public final dg a(byte param0) {
         if (param0 > -97) {
-            field_U = (String) null;
+            goBackText = (String) null;
             return this.field_Q;
         }
         return this.field_Q;
@@ -455,7 +455,7 @@ final class hc extends dj implements nl {
     }
 
     public static void k(int param0) {
-        field_U = null;
+        goBackText = null;
         field_K = null;
         if (param0 != -243) {
             field_T = -90;
@@ -463,6 +463,6 @@ final class hc extends dj implements nl {
     }
 
     static {
-        field_U = "Go Back";
+        goBackText = "Go Back";
     }
 }

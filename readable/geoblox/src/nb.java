@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nb {
-    static String field_a;
+    static String loadingFontsText;
 
     final static void a(int param0, java.awt.Canvas param1) {
         RuntimeException var2 = null;
@@ -16,7 +16,7 @@ final class nb {
           kc.a((java.awt.Component) ((Object) param1), 0);
           df.a(false, (java.awt.Component) ((Object) param1));
           if (param0 != -2) {
-            field_a = (String) null;
+            loadingFontsText = (String) null;
           }
           if (null != vc.field_f) {
             vc.field_f.a((java.awt.Component) ((Object) param1), (byte) 83);
@@ -239,7 +239,7 @@ final class nb {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-            field_a = (String) null;
+            loadingFontsText = (String) null;
             if (rb.field_d == null) {
                 return false;
             }
@@ -260,13 +260,13 @@ final class nb {
     public static void a(int param0) {
         if (param0 >= -80) {
             nb.a(108);
-            field_a = null;
+            loadingFontsText = null;
             return;
         }
-        field_a = null;
+        loadingFontsText = null;
     }
 
     static {
-        field_a = "Loading fonts";
+        loadingFontsText = "Loading fonts";
     }
 }

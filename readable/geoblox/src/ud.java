@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ud {
-    static String field_b;
-    static String field_a;
+    static String loadingSoundEffectsText;
+    static String createDisplayNameTooltipText;
 
     final static void a(byte param0, int param1) {
         IntrusiveNode var2 = null;
@@ -21,7 +21,7 @@ final class ud {
             }
             var2 = k.field_e.firstForIteration(0);
             if (param0 > -123) {
-              field_a = (String) null;
+              createDisplayNameTooltipText = (String) null;
             }
             L3: while (var2 != null) {
               re.b(-101, param1);
@@ -110,10 +110,10 @@ final class ud {
     }
 
     public static void a(int param0) {
-        field_a = null;
-        field_b = null;
+        createDisplayNameTooltipText = null;
+        loadingSoundEffectsText = null;
         if (param0 != 0) {
-            field_a = (String) null;
+            createDisplayNameTooltipText = (String) null;
         }
     }
 
@@ -222,7 +222,7 @@ final class ud {
     }
 
     static {
-        field_a = "Enter the name you'd prefer. This is the name displayed to other players.";
-        field_b = "Loading sound effects";
+        createDisplayNameTooltipText = "Enter the name you'd prefer. This is the name displayed to other players.";
+        loadingSoundEffectsText = "Loading sound effects";
     }
 }

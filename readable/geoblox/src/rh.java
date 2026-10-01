@@ -11,7 +11,7 @@ final class rh {
     static IntrusiveDeque field_d;
     private nh field_g;
     private int field_b;
-    static String field_j;
+    static String createUsernameUnavailableText;
 
     final int a(boolean param0) {
         if (!this.a(0)) {
@@ -355,7 +355,7 @@ final class rh {
             return false;
         }
         if (param1 != 3) {
-            field_j = (String) null;
+            createUsernameUnavailableText = (String) null;
         }
         if ((param0 ^ -1) <= -1 && param0 < this.field_c.field_k.length && this.field_c.field_k[param0] != 0) {
             return true;
@@ -369,7 +369,7 @@ final class rh {
     public static void b(int param0) {
         field_a = null;
         field_d = null;
-        field_j = null;
+        createUsernameUnavailableText = null;
         if (param0 != 30261) {
             field_a = (IntrusiveDeque) null;
         }
@@ -922,7 +922,7 @@ final class rh {
           if (this.a(0)) {
             param0 = param0.toLowerCase();
             if (param1 > -123) {
-              field_j = (String) null;
+              createUsernameUnavailableText = (String) null;
             }
             var4 = (CharSequence) ((Object) param0);
             var3_int = this.field_c.field_n.a(true, ab.a(69, var4));
@@ -1273,6 +1273,6 @@ final class rh {
     static {
         field_a = new IntrusiveDeque();
         field_d = new IntrusiveDeque();
-        field_j = "That name is not available";
+        createUsernameUnavailableText = "That name is not available";
     }
 }

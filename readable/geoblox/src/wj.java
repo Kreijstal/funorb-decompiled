@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wj extends sh {
-    static String field_C;
-    static String field_B;
+    static String fullscreenAfterAcceptText;
+    static String createInvalidEmailAlertText;
     int field_D;
     static rh field_F;
     static boolean[] field_G;
-    static String field_E;
+    static String createDisplayNameText;
 
     public wj() {
         super(0, 0, 0, 0, (dh) null, (bb) null);
@@ -16,7 +16,7 @@ final class wj extends sh {
 
     final static boolean f(int param0) {
         if (param0 != 7426) {
-            field_E = (String) null;
+            createDisplayNameText = (String) null;
         }
         return 250 < gb.field_f ? true : false;
     }
@@ -200,13 +200,13 @@ final class wj extends sh {
 
     public static void f(byte param0) {
         field_G = null;
-        field_B = null;
-        field_C = null;
+        createInvalidEmailAlertText = null;
+        fullscreenAfterAcceptText = null;
         if (param0 != -60) {
             return;
         }
         field_F = null;
-        field_E = null;
+        createDisplayNameText = null;
     }
 
     final static void a(d param0, byte param1, Object param2) {
@@ -361,9 +361,9 @@ final class wj extends sh {
     }
 
     static {
-        field_B = "Please check if address is correct";
-        field_C = "to keep fullscreen or";
+        createInvalidEmailAlertText = "Please check if address is correct";
+        fullscreenAfterAcceptText = "to keep fullscreen or";
         field_G = new boolean[64];
-        field_E = "Player Name: ";
+        createDisplayNameText = "Player Name: ";
     }
 }

@@ -9,10 +9,10 @@ class f extends qf implements pl {
     static gk field_hb;
     static int field_qb;
     static java.awt.Canvas field_kb;
-    static String field_nb;
+    static String fullscreenTimeoutText;
     private boolean field_ob;
     private m field_jb;
-    static String[] field_lb;
+    static String[] quickChatShortcutKeys;
     private hl field_pb;
 
     static long a(long param0, long param1) {
@@ -186,8 +186,8 @@ class f extends qf implements pl {
         field_hb = null;
         int var1 = 44 % ((param0 - -23) / 41);
         field_kb = null;
-        field_nb = null;
-        field_lb = null;
+        fullscreenTimeoutText = null;
+        quickChatShortcutKeys = null;
     }
 
     final static void o(int param0) {
@@ -726,40 +726,40 @@ class f extends qf implements pl {
               this.field_pb.a(4210752, 8405024, (byte) -103);
               var6 = new ni((f) (this), this.field_jb, param2);
               if (-6 == (param0 ^ -1)) {
-                var6.a(nf.field_E, 1, 11);
-                var6.a(rj.field_e, 1, 17);
+                var6.a(nf.reloadGameText, 1, 11);
+                var6.a(rj.quitToWebsiteText, 1, 17);
               } else {
                 if (param0 != 256) {
                   stackIn_14_0 = (ni) (var6);
 
                   if (this.field_mb) {
                     stackIn_15_0 = (ni) ((Object) stackIn_14_0);
-                    stackIn_15_1 = a.field_b;
+                    stackIn_15_1 = a.retryText;
                   } else {
                     stackIn_15_0 = (ni) ((Object) stackIn_14_0);
-                    stackIn_15_1 = ll.field_b;
+                    stackIn_15_1 = ll.backText;
                   }
                   ((ni) (Object) stackIn_15_0).a(stackIn_15_1, 1, -1);
                 } else {
-                  var6.a(-2, a.field_b, (bb) (this));
+                  var6.a(-2, a.retryText, (bb) (this));
                 }
               }
               if (-4 == (param0 ^ -1)) {
-                var6.a(ee.field_y, param1 ^ 19811, 7);
+                var6.a(ee.toServerListText, param1 ^ 19811, 7);
               } else {
                 if (param0 != 4) {
                   if (-7 == (param0 ^ -1)) {
-                    var6.a(jc.field_c, 1, 9);
+                    var6.a(jc.toCustomerSupportText, 1, 9);
                   } else {
                     if (-10 == (param0 ^ -1)) {
-                      var6.a(-2, fi.field_h, (bb) (this));
+                      var6.a(-2, fi.changeDisplayNameText, (bb) (this));
                     } else {
                       this.b(var6, param1 ^ -19736);
                       return;
                     }
                   }
                 } else {
-                  var6.a(hb.field_h, 1, 8);
+                  var6.a(hb.playFreeVersionText, 1, 8);
                 }
               }
               this.b(var6, param1 ^ -19736);
@@ -808,7 +808,7 @@ class f extends qf implements pl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -111) {
-            field_lb = (String[]) null;
+            quickChatShortcutKeys = (String[]) null;
           }
           stackIn_3_0 = pa.a(param1, true, 10, 87);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -836,20 +836,20 @@ class f extends qf implements pl {
         ni var2 = null;
         this.field_pb.a(4210752, 2121792, (byte) -103);
         if (!param0) {
-            var2 = new ni((f) (this), this.field_jb, oe.field_O);
-            var2.a(jk.field_c, 1, 15);
+            var2 = new ni((f) (this), this.field_jb, oe.connectionRestoredText);
+            var2.a(jk.returnToGameText, 1, 15);
             this.b(var2, -23);
             return;
         }
         field_kb = (java.awt.Canvas) null;
-        var2 = new ni((f) (this), this.field_jb, oe.field_O);
-        var2.a(jk.field_c, 1, 15);
+        var2 = new ni((f) (this), this.field_jb, oe.connectionRestoredText);
+        var2.a(jk.returnToGameText, 1, 15);
         this.b(var2, -23);
     }
 
     static {
         field_hb = new gk();
-        field_lb = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
-        field_nb = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
+        quickChatShortcutKeys = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
+        fullscreenTimeoutText = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
     }
 }

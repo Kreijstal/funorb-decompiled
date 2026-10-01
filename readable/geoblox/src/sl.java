@@ -8,10 +8,10 @@ final class sl {
     String field_e;
     static IntrusiveDeque field_k;
     int field_j;
-    static String field_i;
-    static String field_h;
+    static String createInvalidAgeAlertText;
+    static String orbPointsText;
     static Sprite[] field_f;
-    static String field_b;
+    static String loginEmailText;
     static rh field_l;
     static Sprite field_c;
 
@@ -144,13 +144,13 @@ final class sl {
     }
 
     public static void a(int param0) {
-        field_i = null;
+        createInvalidAgeAlertText = null;
         field_c = null;
         field_l = null;
         field_k = null;
         int var1 = -39 % ((48 - param0) / 43);
-        field_b = null;
-        field_h = null;
+        loginEmailText = null;
+        orbPointsText = null;
         field_f = null;
     }
 
@@ -195,8 +195,8 @@ final class sl {
 
     static {
         field_k = new IntrusiveDeque();
-        field_i = "Please enter your age in years";
-        field_h = "Orb points: <%0>";
-        field_b = "Email: ";
+        createInvalidAgeAlertText = "Please enter your age in years";
+        orbPointsText = "Orb points: <%0>";
+        loginEmailText = "Email: ";
     }
 }

@@ -4,18 +4,18 @@
 final class bk {
     static Sprite boardOwnershipRaster;
     static Sprite field_b;
-    static String field_c;
+    static String loginUsernameText;
 
     public static void a(boolean param0) {
         if (param0) {
             field_b = null;
-            field_c = null;
+            loginUsernameText = null;
             boardOwnershipRaster = null;
             return;
         }
         field_b = (Sprite) null;
         field_b = null;
-        field_c = null;
+        loginUsernameText = null;
         boardOwnershipRaster = null;
     }
 
@@ -117,6 +117,6 @@ final class bk {
 
     static {
         boardOwnershipRaster = new Sprite(640, 640);
-        field_c = "Username: ";
+        loginUsernameText = "Username: ";
     }
 }

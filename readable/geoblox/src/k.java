@@ -11,8 +11,8 @@ final class k implements Iterator {
     static int field_g;
     private gi field_d;
     static IntrusiveDeque field_e;
-    static String field_k;
-    static String field_b;
+    static String loginText;
+    static String fullscreenFocusText;
     static rf field_f;
     static Sprite field_a;
 
@@ -81,7 +81,7 @@ final class k implements Iterator {
     }
 
     public static void b(int param0) {
-        field_b = null;
+        fullscreenFocusText = null;
         field_e = null;
         if (param0 != 0) {
             return;
@@ -89,7 +89,7 @@ final class k implements Iterator {
         field_a = null;
         field_f = null;
         field_i = null;
-        field_k = null;
+        loginText = null;
     }
 
     k(gi param0) {
@@ -140,7 +140,7 @@ final class k implements Iterator {
     static {
         field_g = -1;
         field_e = new IntrusiveDeque();
-        field_k = "Log in";
-        field_b = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
+        loginText = "Log in";
+        fullscreenFocusText = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
     }
 }

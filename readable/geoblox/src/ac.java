@@ -4,7 +4,7 @@
 class ac extends ff {
     static gk field_v;
     static int field_s;
-    static String[] field_r;
+    static String[] mustLoginAlternateTexts;
     static ff field_t;
     static int[] field_w;
     static int field_u;
@@ -248,9 +248,9 @@ class ac extends ff {
             L10: {
               var10 = stackIn_60_0 + stackIn_60_1;
               if ((var7 ^ -1) == 0) {
-                fi.field_d.b(w.field_a, 315, var10, 0, -1);
+                fi.field_d.b(w.mouseOverIconText, 315, var10, 0, -1);
                 if (fh.c(-94)) {
-                  dd.field_G.a(ni.field_C, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+                  dd.field_G.a(ni.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
                 }
               } else {
                 fi.field_d.b(pg.field_a[var7], 315, var10, 0, -1);
@@ -259,7 +259,7 @@ class ac extends ff {
                 if (0 != (1 << var7 & var5)) {
                   sl.field_f[var7].b(160, var12);
                   var12 += 30;
-                  dd.field_G.a(kd.field_a, 318, var12, 0, -1);
+                  dd.field_G.a(kd.achievedText, 318, var12, 0, -1);
                 } else {
                   am.field_b.b(160, var12);
                   var12 += 30;
@@ -269,7 +269,7 @@ class ac extends ff {
                 }
                 var12 = var12 + (fi.field_d.a(ri.field_b[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
                 var12 += 10;
-                fi.field_d.a(wj.a(sl.field_h, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
+                fi.field_d.a(wj.a(sl.orbPointsText, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
                 for (var13 = 0; var13 < kk.field_s[var7]; var13++) {
                   uk.field_m.f(318 + 10 * var13, 370);
                 }
@@ -291,7 +291,7 @@ class ac extends ff {
 
     public static void a(byte param0) {
         field_t = null;
-        field_r = null;
+        mustLoginAlternateTexts = null;
         field_w = null;
         field_v = null;
         if (param0 < 62) {
@@ -301,7 +301,7 @@ class ac extends ff {
 
     static {
         field_v = new gk();
-        field_r = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
+        mustLoginAlternateTexts = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         field_w = new int[8192];
         field_u = 11;
     }

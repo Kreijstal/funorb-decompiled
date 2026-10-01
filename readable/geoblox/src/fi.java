@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fi {
-    static String field_h;
+    static String changeDisplayNameText;
     private IntrusiveNode[] field_e;
     static Boolean field_b;
     private IntrusiveNode field_a;
@@ -34,7 +34,7 @@ final class fi {
 
     final static int a(int param0, int param1) {
         if (param1 != 2048) {
-            field_h = (String) null;
+            changeDisplayNameText = (String) null;
             param0 = param0 & 8191;
             if (-4097 >= (param0 ^ -1)) {
                 return -6145 >= (param0 ^ -1) ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
@@ -80,7 +80,7 @@ final class fi {
         try {
           L0: {
             if (param0 != 0) {
-              field_h = (String) null;
+              changeDisplayNameText = (String) null;
             }
             if (param1 != null) {
               if (param1 != fe.field_e) {
@@ -130,7 +130,7 @@ final class fi {
     }
 
     public static void a(int param0) {
-        field_h = null;
+        changeDisplayNameText = null;
         if (param0 >= -113) {
             return;
         }
@@ -205,6 +205,6 @@ final class fi {
     }
 
     static {
-        field_h = "Change display name";
+        changeDisplayNameText = "Change display name";
     }
 }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bm {
-    static String field_p;
+    static String createAgreeTermsText;
     private int field_h;
     int field_g;
     int field_m;
@@ -332,7 +332,7 @@ final class bm {
 
     public static void a(int param0) {
         field_l = null;
-        field_p = null;
+        createAgreeTermsText = null;
         int var1 = -24 % ((param0 - -88) / 36);
     }
 
@@ -361,7 +361,7 @@ final class bm {
     }
 
     static {
-        field_p = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
+        createAgreeTermsText = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_j = 20;
     }
 }

@@ -3,7 +3,7 @@
  */
 final class jc {
     static Sprite field_a;
-    static String field_c;
+    static String toCustomerSupportText;
     static String field_b;
 
     final static void a(int param0, boolean param1) {
@@ -326,10 +326,10 @@ final class jc {
         field_a = null;
         if (param0 > -13) {
             field_a = (Sprite) null;
-            field_c = null;
+            toCustomerSupportText = null;
             return;
         }
-        field_c = null;
+        toCustomerSupportText = null;
     }
 
     final static int a(int param0, int param1, int param2) {
@@ -342,6 +342,6 @@ final class jc {
     }
 
     static {
-        field_c = "To Customer Support";
+        toCustomerSupportText = "To Customer Support";
     }
 }

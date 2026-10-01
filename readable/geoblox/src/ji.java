@@ -4,13 +4,13 @@
 abstract class ji {
     wd field_g;
     static IntrusiveDeque movingEntities;
-    static String field_l;
+    static String createWelcomeText;
     wd field_e;
     static int difficultyStep;
     wd field_p;
-    static String field_d;
+    static String createPasswordLengthAlertText;
     static String[] field_a;
-    static String field_n;
+    static String waitingForMusicText;
     wd field_c;
     int field_o;
     long field_k;
@@ -121,7 +121,7 @@ abstract class ji {
         if (param0 == 20) {
             return this.a(-104) >= 20 ? true : false;
         }
-        field_l = (String) null;
+        createWelcomeText = (String) null;
         return this.a(-104) >= 20 ? true : false;
     }
 
@@ -239,11 +239,11 @@ abstract class ji {
     }
 
     public static void d(int param0) {
-        field_n = null;
+        waitingForMusicText = null;
         movingEntities = null;
         field_a = null;
-        field_d = null;
-        field_l = null;
+        createPasswordLengthAlertText = null;
+        createWelcomeText = null;
         int var1 = 78 / ((15 - param0) / 56);
     }
 
@@ -260,11 +260,11 @@ abstract class ji {
     }
 
     static {
-        field_l = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
+        createWelcomeText = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
         movingEntities = new IntrusiveDeque();
         difficultyStep = 0;
-        field_d = "Passwords must be between 5 and 20 characters long";
-        field_n = "Waiting for music";
+        createPasswordLengthAlertText = "Passwords must be between 5 and 20 characters long";
+        waitingForMusicText = "Waiting for music";
         field_a = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     }
 }

@@ -7,7 +7,7 @@ final class hi extends ee implements ta, pl {
     vh field_D;
     private hk field_H;
     static Sprite field_F;
-    static String field_I;
+    static String createIneligibleText;
     static long field_G;
     private hk field_J;
 
@@ -26,10 +26,10 @@ final class hi extends ee implements ta, pl {
         super(0, 0, 496, 0, (dh) null);
         this.field_E = new hc("", (bb) null, 12);
         ff var1 = new ff(hh.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, ng.field_F.field_o, -1, 2147483647, true);
-        el var2 = new el(sb.field_c, var1, (bb) null);
-        this.field_H = new hk(ec.field_a, (bb) null);
-        this.field_J = new hk(ck.field_d, (bb) null);
-        this.field_E.field_j = ud.field_a;
+        el var2 = new el(sb.loginNoDisplayNameText, var1, (bb) null);
+        this.field_H = new hk(ec.okText, (bb) null);
+        this.field_J = new hk(ck.cancelText, (bb) null);
+        this.field_E.field_j = ud.createDisplayNameTooltipText;
         this.field_E.a((byte) -58, new uk(this.field_E));
         this.field_H.field_D = false;
         this.field_H.field_q = (dh) ((Object) new ml());
@@ -41,7 +41,7 @@ final class hi extends ee implements ta, pl {
         int var5 = 200;
         this.b((byte) -110, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, -12037, 170, this.field_E, gk.field_c, wj.field_E));
+        var3 = var3 + (5 + this.a(var3, -12037, 170, this.field_E, gk.createDisplayNameHintText, wj.createDisplayNameText));
         this.field_H.a(40, var5, (byte) -23, var3, -var5 + 496 >> 1828675425);
         this.field_J.a(40, 60, (byte) -85, var3 - -15, 3 + var4);
         this.field_J.field_u = (bb) (this);
@@ -701,7 +701,7 @@ final class hi extends ee implements ta, pl {
         if (param0 > -45) {
             return;
         }
-        field_I = null;
+        createIneligibleText = null;
         field_F = null;
     }
 
@@ -859,6 +859,6 @@ final class hi extends ee implements ta, pl {
 
     static {
         field_C = 0;
-        field_I = "Unfortunately you are not eligible to create an account.";
+        createIneligibleText = "Unfortunately you are not eligible to create an account.";
     }
 }

@@ -3,13 +3,13 @@
  */
 final class ll {
     static Sprite[] field_h;
-    static String field_a;
+    static String createMoreSuggestionsText;
     static rh field_f;
     static rf field_d;
     static boolean field_e;
-    static String field_c;
+    static String createEmailTooltipText;
     static boolean[] themesLoaded;
-    static String field_b;
+    static String backText;
 
     final static long a(byte param0) {
         if (param0 != 12) {
@@ -74,10 +74,10 @@ final class ll {
     }
 
     public static void a(int param0) {
-        field_c = null;
+        createEmailTooltipText = null;
         field_f = null;
-        field_b = null;
-        field_a = null;
+        backText = null;
+        createMoreSuggestionsText = null;
         field_d = null;
         field_h = null;
         if (param0 != 7) {
@@ -87,9 +87,9 @@ final class ll {
     }
 
     static {
-        field_a = "More suggestions";
+        createMoreSuggestionsText = "More suggestions";
         themesLoaded = new boolean[7];
-        field_c = "Your email address is used to identify this account";
-        field_b = "Back";
+        createEmailTooltipText = "Your email address is used to identify this account";
+        backText = "Back";
     }
 }

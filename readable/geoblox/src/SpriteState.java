@@ -29,342 +29,342 @@ abstract class SpriteState extends DualLinkNode {
           pf.field_O = param1;
           var2 = ih.a(122, "achievement_names,0");
           if (null != var2) {
-            pg.field_a[0] = ag.a(1, var2);
+            pg.field_a[0] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "achievement_names,1");
           if (var2 != null) {
-            pg.field_a[1] = ag.a(1, var2);
+            pg.field_a[1] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "achievement_names,2");
           if (var2 != null) {
-            pg.field_a[2] = ag.a(1, var2);
+            pg.field_a[2] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "achievement_names,3");
           if (null != var2) {
-            pg.field_a[3] = ag.a(1, var2);
+            pg.field_a[3] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "achievement_names,4");
           if (null != var2) {
-            pg.field_a[4] = ag.a(1, var2);
+            pg.field_a[4] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "achievement_names,5");
           if (var2 != null) {
-            pg.field_a[5] = ag.a(1, var2);
+            pg.field_a[5] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "achievement_names,6");
           if (var2 != null) {
-            pg.field_a[6] = ag.a(1, var2);
+            pg.field_a[6] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "achievement_names,7");
           if (null != var2) {
-            pg.field_a[7] = ag.a(1, var2);
+            pg.field_a[7] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(127, "achievement_names,8");
           if (null != var2) {
-            pg.field_a[8] = ag.a(1, var2);
+            pg.field_a[8] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "achievement_names,9");
           if (var2 != null) {
-            pg.field_a[9] = ag.a(1, var2);
+            pg.field_a[9] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "achievement_names,10");
           if (null != var2) {
-            pg.field_a[10] = ag.a(1, var2);
+            pg.field_a[10] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "achievement_names,11");
           if (null != var2) {
-            pg.field_a[11] = ag.a(1, var2);
+            pg.field_a[11] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "achievement_names,12");
           if (var2 != null) {
-            pg.field_a[12] = ag.a(1, var2);
+            pg.field_a[12] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "achievement_names,13");
           if (null != var2) {
-            pg.field_a[13] = ag.a(1, var2);
+            pg.field_a[13] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "achievement_names,14");
           if (var2 != null) {
-            pg.field_a[14] = ag.a(1, var2);
+            pg.field_a[14] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(123, "achievement_names,15");
           if (null != var2) {
-            pg.field_a[15] = ag.a(1, var2);
+            pg.field_a[15] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "achievement_names,16");
           if (var2 != null) {
-            pg.field_a[16] = ag.a(1, var2);
+            pg.field_a[16] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "achievement_criteria,0");
           if (null != var2) {
-            ri.field_b[0] = ag.a(1, var2);
+            ri.field_b[0] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "achievement_criteria,1");
           if (null != var2) {
-            ri.field_b[1] = ag.a(1, var2);
+            ri.field_b[1] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "achievement_criteria,2");
           if (null != var2) {
-            ri.field_b[2] = ag.a(1, var2);
+            ri.field_b[2] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "achievement_criteria,3");
           if (var2 != null) {
-            ri.field_b[3] = ag.a(1, var2);
+            ri.field_b[3] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "achievement_criteria,4");
           if (null != var2) {
-            ri.field_b[4] = ag.a(1, var2);
+            ri.field_b[4] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "achievement_criteria,5");
           if (null != var2) {
-            ri.field_b[5] = ag.a(1, var2);
+            ri.field_b[5] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "achievement_criteria,6");
           if (var2 != null) {
-            ri.field_b[6] = ag.a(1, var2);
+            ri.field_b[6] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "achievement_criteria,7");
           if (var2 != null) {
-            ri.field_b[7] = ag.a(1, var2);
+            ri.field_b[7] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "achievement_criteria,8");
           if (null != var2) {
-            ri.field_b[8] = ag.a(1, var2);
+            ri.field_b[8] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "achievement_criteria,9");
           if (null != var2) {
-            ri.field_b[9] = ag.a(1, var2);
+            ri.field_b[9] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "achievement_criteria,10");
           if (null != var2) {
-            ri.field_b[10] = ag.a(1, var2);
+            ri.field_b[10] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "achievement_criteria,11");
           if (var2 != null) {
-            ri.field_b[11] = ag.a(1, var2);
+            ri.field_b[11] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "achievement_criteria,12");
           if (var2 != null) {
-            ri.field_b[12] = ag.a(1, var2);
+            ri.field_b[12] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(127, "achievement_criteria,13");
           if (null != var2) {
-            ri.field_b[13] = ag.a(1, var2);
+            ri.field_b[13] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "achievement_criteria,14");
           if (null != var2) {
-            ri.field_b[14] = ag.a(1, var2);
+            ri.field_b[14] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(127, "achievement_criteria,15");
           if (null != var2) {
-            ri.field_b[15] = ag.a(1, var2);
+            ri.field_b[15] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "achievement_criteria,16");
           if (null != var2) {
-            ri.field_b[16] = ag.a(1, var2);
+            ri.field_b[16] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(127, "starting");
           if (null != var2) {
-            uj.field_a = ag.a(1, var2);
+            uj.field_a = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "gameName");
           if (var2 != null) {
-            od.field_b = ag.a(1, var2);
+            od.field_b = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "caption1");
           if (var2 != null) {
-            ag.a(1, var2);
+            ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(124, "caption2");
           if (null != var2) {
-            ag.a(1, var2);
+            ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(123, "caption3");
           if (var2 != null) {
-            ag.a(1, var2);
+            ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "caption4");
           if (null != var2) {
-            ag.a(1, var2);
+            ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(124, "caption5");
           if (null != var2) {
-            ag.a(1, var2);
+            ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "youreGreat");
           if (null != var2) {
-            ld.field_a = ag.a(1, var2);
+            ld.field_a = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "bubbleBonus");
           if (var2 != null) {
-            sg.field_f = ag.a(1, var2);
+            sg.field_f = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "endOfFreeGame");
           if (var2 != null) {
-            ag.a(1, var2);
+            ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "itsTheBubbleBonus");
           if (var2 != null) {
-            kd.field_d = ag.a(1, var2);
+            kd.field_d = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "countdown");
           if (null != var2) {
-            w.field_e = ag.a(1, var2);
+            w.field_e = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(124, "levelsLastGeoblox");
           if (null != var2) {
-            tj.field_a = ag.a(1, var2);
+            tj.field_a = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "clearBonus");
           if (null != var2) {
-            wl.field_b = ag.a(1, var2);
+            wl.field_b = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "cheat");
           if (!param0) {
             field_t = (ck) null;
           }
           if (var2 != null) {
-            ag.a(1, var2);
+            ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "bonus");
           if (var2 != null) {
-            ic.field_a = ag.a(1, var2);
+            ic.field_a = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(123, "fps");
           if (null != var2) {
-            sh.field_z = ag.a(1, var2);
+            sh.field_z = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(127, "level");
           if (var2 != null) {
-            qg.field_e = ag.a(1, var2);
+            qg.field_e = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(124, "score");
           if (var2 != null) {
-            pa.field_a = ag.a(1, var2);
+            pa.field_a = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "waitingForPumpkin");
           if (var2 != null) {
-            s.field_F = ag.a(1, var2);
+            s.field_F = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "loadingPumpkin");
           if (var2 != null) {
-            uj.field_c = ag.a(1, var2);
+            uj.field_c = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "skipText");
           if (var2 != null) {
-            v.field_n = ag.a(1, var2);
+            v.field_n = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "tutorial1");
           if (null != var2) {
-            vh.tutorialRotationMessage = ag.a(1, var2);
+            vh.tutorialRotationMessage = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(127, "tutorial2");
           if (var2 != null) {
-            oi.tutorialColourMatchMessage = ag.a(1, var2);
+            oi.tutorialColourMatchMessage = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "tutorial3");
           if (null != var2) {
-            vd.tutorialShapeMatchMessage = ag.a(1, var2);
+            vd.tutorialShapeMatchMessage = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "tutorial4");
           if (var2 != null) {
-            li.tutorialCompleteMessage = ag.a(1, var2);
+            li.tutorialCompleteMessage = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "tutorial5");
           if (null != var2) {
-            qh.tutorialFailedMessage = ag.a(1, var2);
+            qh.tutorialFailedMessage = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(123, "cont");
           if (null != var2) {
-            mi.field_y = ag.a(1, var2);
+            mi.field_y = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(124, "restartTutorial");
           if (var2 != null) {
-            cf.field_j = ag.a(1, var2);
+            cf.field_j = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "discardResults");
           if (var2 != null) {
-            ne.field_c = ag.a(1, var2);
+            ne.field_c = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(124, "replayTutorial");
           if (null != var2) {
-            em.field_a = ag.a(1, var2);
+            em.field_a = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "subscribe");
           if (null != var2) {
-            ag.a(1, var2);
+            ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(124, "createAnAccount");
           if (null != var2) {
-            ag.a(1, var2);
+            ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "fetchingHS");
           if (null != var2) {
-            eb.field_f = ag.a(1, var2);
+            eb.field_f = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "instructionTitles,0");
           if (var2 != null) {
-            a.field_a[0] = ag.a(1, var2);
+            a.field_a[0] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(127, "instructionTitles,1");
           if (var2 != null) {
-            a.field_a[1] = ag.a(1, var2);
+            a.field_a[1] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "instructionTitles,2");
           if (null != var2) {
-            a.field_a[2] = ag.a(1, var2);
+            a.field_a[2] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "instructionTitles,3");
           if (null != var2) {
-            a.field_a[3] = ag.a(1, var2);
+            a.field_a[3] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(123, "instructionTitles,4");
           if (var2 != null) {
-            a.field_a[4] = ag.a(1, var2);
+            a.field_a[4] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "instructionTitles,5");
           if (null != var2) {
-            a.field_a[5] = ag.a(1, var2);
+            a.field_a[5] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(124, "instructionText,0");
           if (null != var2) {
-            ec.field_e[0] = ag.a(1, var2);
+            ec.field_e[0] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "instructionText,1");
           if (var2 != null) {
-            ec.field_e[1] = ag.a(1, var2);
+            ec.field_e[1] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "instructionText,2");
           if (var2 != null) {
-            ec.field_e[2] = ag.a(1, var2);
+            ec.field_e[2] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(121, "instructionText,3");
           if (var2 != null) {
-            ec.field_e[3] = ag.a(1, var2);
+            ec.field_e[3] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(123, "instructionText,4");
           if (null != var2) {
-            ec.field_e[4] = ag.a(1, var2);
+            ec.field_e[4] = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(126, "pleaseLogin");
           if (var2 != null) {
-            Geoblox.loginMessage = ag.a(1, var2);
+            Geoblox.loginMessage = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "youAreNotLoggedIn");
           if (null != var2) {
-            r.field_sb = ag.a(1, var2);
+            r.field_sb = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(120, "alternatively");
           if (var2 != null) {
-            bd.field_b = ag.a(1, var2);
+            bd.field_b = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(125, "login");
           if (var2 != null) {
-            gj.field_t = ag.a(1, var2);
+            gj.field_t = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "notAcheived");
           if (null != var2) {
-            ib.field_d = ag.a(1, var2);
+            ib.field_d = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(122, "keycode_reverseControls");
           if (null != var2) {

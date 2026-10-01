@@ -3,7 +3,7 @@
  */
 final class ck {
     int field_b;
-    static String field_d;
+    static String cancelText;
     int field_a;
     static int[] field_c;
     static boolean field_e;
@@ -139,7 +139,7 @@ final class ck {
     public static void a(int param0) {
         int var1 = -55 % ((param0 - -80) / 32);
         field_c = null;
-        field_d = null;
+        cancelText = null;
     }
 
     final static void c(int param0) {
@@ -190,7 +190,7 @@ final class ck {
 
     static {
         int var0 = 0;
-        field_d = "Cancel";
+        cancelText = "Cancel";
         field_c = new int[33];
         for (var0 = 0; -4 < (var0 ^ -1); var0++) {
             field_c[var0 + 10] = 4;

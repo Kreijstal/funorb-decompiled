@@ -3,7 +3,7 @@
  */
 final class oh {
     static AudioOutput field_a;
-    static String field_c;
+    static String unpackingGraphicsText;
     static ng field_b;
 
     final static void a(int param0, int param1, m param2, int param3, int param4, int param5) {
@@ -16,7 +16,7 @@ final class oh {
     }
 
     public static void a(byte param0) {
-        field_c = null;
+        unpackingGraphicsText = null;
         field_b = null;
         field_a = null;
         if (param0 > -73) {
@@ -25,6 +25,6 @@ final class oh {
     }
 
     static {
-        field_c = "Unpacking graphics";
+        unpackingGraphicsText = "Unpacking graphics";
     }
 }

@@ -229,9 +229,9 @@ final class ri {
                     ck.field_e = true;
                   } else {
                     if (30000L >= ll.a((byte) 12)) {
-                      kh.field_a = uj.field_e;
+                      kh.field_a = uj.loginMessage2Text;
                     } else {
-                      kh.field_a = IntrusiveNode.field_e;
+                      kh.field_a = IntrusiveNode.loginMessage3Text;
                     }
                     ck.field_e = false;
                     stackIn_99_0 = 3;

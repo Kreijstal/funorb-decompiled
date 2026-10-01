@@ -3,7 +3,7 @@
  */
 final class di {
     static int releasedInDifficultyStep;
-    static String field_c;
+    static String createText;
     static int field_a;
     private jj field_f;
     static IntrusiveDeque field_e;
@@ -36,7 +36,7 @@ final class di {
     public static void a(byte param0) {
         int var1 = 52 / ((25 - param0) / 54);
         field_e = null;
-        field_c = null;
+        createText = null;
     }
 
     final static void a(int param0, int param1) {
@@ -73,6 +73,6 @@ final class di {
 
     static {
         field_a = 0;
-        field_c = "Create";
+        createText = "Create";
     }
 }

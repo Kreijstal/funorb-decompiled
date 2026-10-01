@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sb {
-    static String field_f;
+    static String noHighscoresText;
     static int[] field_b;
     static int field_a;
-    static String field_c;
+    static String loginNoDisplayNameText;
     static IndexedSprite[] field_e;
     static int field_d;
 
     public static void b(boolean param0) {
         field_e = null;
-        field_c = null;
+        loginNoDisplayNameText = null;
         if (param0) {
             field_a = 105;
         }
         field_b = null;
-        field_f = null;
+        noHighscoresText = null;
     }
 
     final static int a(boolean param0) {
@@ -50,9 +50,9 @@ final class sb {
             int var0;
             int var1;
             int var2;
-            field_f = "No highscores";
+            noHighscoresText = "No highscores";
             field_b = new int[256];
-            field_c = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
+            loginNoDisplayNameText = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
             var1 = 0;
             L0: while (true) {
               if (var1 >= 256) {

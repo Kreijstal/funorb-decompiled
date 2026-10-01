@@ -5,7 +5,7 @@ import java.io.*;
 
 final class cm extends cj {
     private long field_e;
-    static String field_h;
+    static String checkingText;
     private long field_i;
     private int field_g;
     private long[] field_f;
@@ -220,7 +220,7 @@ final class cm extends cj {
         if (param0) {
             cm.a(false);
         }
-        field_h = null;
+        checkingText = null;
     }
 
     final static void a(int param0, int param1) {
@@ -346,6 +346,6 @@ final class cm extends cj {
     }
 
     static {
-        field_h = "Checking";
+        checkingText = "Checking";
     }
 }
