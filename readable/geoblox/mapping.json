@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "inputTreeSha256": "deb64208590f0e4d0d46cbd4d6a87f81fd35df1a27ca0c51dd3f3b1b0010c86d",
+  "inputTreeSha256": "d20046b48387681742f4fe021d655e68ce4b6ac779d4d45e6ae5fb531a5c7767",
   "positionUnits": "UTF-16 code units in original source",
   "rules": [
     {
@@ -2594,95 +2594,95 @@
       "renamedSymbol": "L:MenuScreen.updatePointer(Z)V#0"
     },
     {
-      "symbol": "L:kc.b(I)V#42",
+      "symbol": "L:kc.b(I)V#21",
       "originalName": "var1",
       "to": "activeEntity",
       "evidence": "kc.java obtains var1 from ji.field_r.g(0), processes its queue/special-state membership, then advances with ji.field_r.d(1).",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#42"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#21"
     },
     {
-      "symbol": "L:kc.b(I)V#43",
+      "symbol": "L:kc.b(I)V#22",
       "originalName": "var1_int",
       "to": "entityIndexThenGroupCount",
       "evidence": "kc.java first uses var1_int to clear pk.field_o entries across the 1000 entity slots, then resets it and counts processed entity groups.",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#43"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#22"
     },
     {
-      "symbol": "L:kc.b(I)V#45",
+      "symbol": "L:kc.b(I)V#24",
       "originalName": "var2_ref_ja",
       "to": "candidateEntity",
       "evidence": "kc.java traverses a.field_d for this ja entity, rotates it against el.field_o.field_J, detaches related children and routes it to a processing list.",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#45"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#24"
     },
     {
-      "symbol": "L:kc.b(I)V#47",
+      "symbol": "L:kc.b(I)V#26",
       "originalName": "var3_float",
       "to": "radialOffsetX",
       "evidence": "kc.java computes 320-var2_ref_ja.field_o and normalizes it by the radius together with var4_float before assigning field_w.",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#47"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#26"
     },
     {
-      "symbol": "L:kc.b(I)V#49",
+      "symbol": "L:kc.b(I)V#28",
       "originalName": "var3",
       "to": "queuedEntity",
       "evidence": "kc.java iterates bh.field_c through ja elements, removes each from that list and may reinsert it into ra.field_a.",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#49"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#28"
     },
     {
-      "symbol": "L:kc.b(I)V#51",
+      "symbol": "L:kc.b(I)V#30",
       "originalName": "var4_float",
       "to": "radialOffsetY",
       "evidence": "kc.java computes 240-var2_ref_ja.field_v and normalizes it with var3_float before assigning field_F.",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#51"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#30"
     },
     {
-      "symbol": "L:kc.b(I)V#53",
+      "symbol": "L:kc.b(I)V#32",
       "originalName": "var5_ref_ja",
       "to": "groupEntity",
       "evidence": "kc.java obtains this ja from the temporary var13 list, iterates/removes its children and resets its child counters before continuing the outer entity-group walk.",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#53"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#32"
     },
     {
-      "symbol": "L:kc.b(I)V#54",
+      "symbol": "L:kc.b(I)V#33",
       "originalName": "var5",
       "to": "radialVelocityScale",
       "evidence": "kc.java assigns og.field_r/sqrt(var4_float^2+var3_float^2) to var5 and multiplies both radial offset components by it.",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#54"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#33"
     },
     {
-      "symbol": "L:kc.b(I)V#55",
+      "symbol": "L:kc.b(I)V#34",
       "originalName": "var6_int",
       "to": "childEntityIndex",
       "evidence": "kc.java initializes var6_int to zero and increments it while iterating var12.field_n up to var12.field_L.",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#55"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#34"
     },
     {
-      "symbol": "L:kc.b(I)V#58",
+      "symbol": "L:kc.b(I)V#37",
       "originalName": "var7_int",
       "to": "relatedEntityIndex",
       "evidence": "kc.java loops var7_int from zero to var2_ref_ja.field_L and removes each field_n child from its parent.",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#58"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#37"
     },
     {
-      "symbol": "L:kc.b(I)V#59",
+      "symbol": "L:kc.b(I)V#38",
       "originalName": "var8",
       "to": "relatedEntityCandidate",
       "evidence": "kc.java obtains var8 from the temporary ja collection and compares it by identity against each parent child before list removal.",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#59"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#38"
     },
     {
-      "symbol": "L:kc.b(I)V#61",
+      "symbol": "L:kc.b(I)V#40",
       "originalName": "var10",
       "to": "entityCandidate",
       "evidence": "kc.java assigns the ja returned by var11.a(true), tests its category slot and field_t flag, and processes it in the nested-group pass.",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#61"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#40"
     },
     {
-      "symbol": "L:kc.b(I)V#63",
+      "symbol": "L:kc.b(I)V#42",
       "originalName": "var12",
       "to": "parentEntity",
       "evidence": "kc.java traverses the children of var12.field_L, removes its related entities and resets its category counts before relinking it.",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#63"
+      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#42"
     },
     {
       "symbol": "L:ld.a(I)Z#21",
@@ -89103,987 +89103,470 @@
     {
       "symbol": "L:kc.b(I)V#0",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#0",
-      "originalName": "stackIn_4_0",
-      "renamedName": "stackIn_4_0",
+      "originalName": "stackIn_12_0",
+      "renamedName": "stackIn_12_0",
       "declaration": {
         "file": "kc.java",
         "start": 2454,
-        "end": 2465
+        "end": 2466
       }
     },
     {
       "symbol": "L:kc.b(I)V#1",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#1",
-      "originalName": "stackIn_12_0",
-      "renamedName": "stackIn_12_0",
+      "originalName": "stackIn_15_0",
+      "renamedName": "stackIn_15_0",
       "declaration": {
         "file": "kc.java",
-        "start": 2485,
-        "end": 2497
+        "start": 2491,
+        "end": 2503
       }
     },
     {
       "symbol": "L:kc.b(I)V#10",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#10",
-      "originalName": "stackIn_44_0",
-      "renamedName": "stackIn_44_0",
+      "originalName": "stackIn_88_2",
+      "renamedName": "stackIn_88_2",
       "declaration": {
         "file": "kc.java",
-        "start": 2786,
-        "end": 2798
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#100",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#100",
-      "originalName": "stateCaught_70",
-      "renamedName": "stateCaught_70",
-      "declaration": {
-        "file": "kc.java",
-        "start": 39423,
-        "end": 39437
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#101",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#101",
-      "originalName": "stateCaught_74",
-      "renamedName": "stateCaught_74",
-      "declaration": {
-        "file": "kc.java",
-        "start": 40219,
-        "end": 40233
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#102",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#102",
-      "originalName": "stateCaught_75",
-      "renamedName": "stateCaught_75",
-      "declaration": {
-        "file": "kc.java",
-        "start": 41326,
-        "end": 41340
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#103",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#103",
-      "originalName": "stateCaught_78",
-      "renamedName": "stateCaught_78",
-      "declaration": {
-        "file": "kc.java",
-        "start": 41737,
-        "end": 41751
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#104",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#104",
-      "originalName": "stateCaught_79",
-      "renamedName": "stateCaught_79",
-      "declaration": {
-        "file": "kc.java",
-        "start": 43486,
-        "end": 43500
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#105",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#105",
-      "originalName": "stateCaught_83",
-      "renamedName": "stateCaught_83",
-      "declaration": {
-        "file": "kc.java",
-        "start": 44393,
-        "end": 44407
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#106",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#106",
-      "originalName": "stateCaught_84",
-      "renamedName": "stateCaught_84",
-      "declaration": {
-        "file": "kc.java",
-        "start": 47471,
-        "end": 47485
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#107",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#107",
-      "originalName": "stateCaught_88",
-      "renamedName": "stateCaught_88",
-      "declaration": {
-        "file": "kc.java",
-        "start": 48047,
-        "end": 48061
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#108",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#108",
-      "originalName": "stateCaught_90",
-      "renamedName": "stateCaught_90",
-      "declaration": {
-        "file": "kc.java",
-        "start": 48506,
-        "end": 48520
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#109",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#109",
-      "originalName": "stateCaught_91",
-      "renamedName": "stateCaught_91",
-      "declaration": {
-        "file": "kc.java",
-        "start": 49701,
-        "end": 49715
+        "start": 2779,
+        "end": 2791
       }
     },
     {
       "symbol": "L:kc.b(I)V#11",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#11",
-      "originalName": "stackIn_48_0",
-      "renamedName": "stackIn_48_0",
+      "originalName": "stackIn_90_0",
+      "renamedName": "stackIn_90_0",
       "declaration": {
         "file": "kc.java",
-        "start": 2816,
-        "end": 2828
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#110",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#110",
-      "originalName": "stateCaught_94",
-      "renamedName": "stateCaught_94",
-      "declaration": {
-        "file": "kc.java",
-        "start": 50252,
-        "end": 50266
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#111",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#111",
-      "originalName": "stateCaught_95",
-      "renamedName": "stateCaught_95",
-      "declaration": {
-        "file": "kc.java",
-        "start": 50677,
-        "end": 50691
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#112",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#112",
-      "originalName": "stateCaught_96",
-      "renamedName": "stateCaught_96",
-      "declaration": {
-        "file": "kc.java",
-        "start": 51101,
-        "end": 51115
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#113",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#113",
-      "originalName": "stateCaught_97",
-      "renamedName": "stateCaught_97",
-      "declaration": {
-        "file": "kc.java",
-        "start": 51690,
-        "end": 51704
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#114",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#114",
-      "originalName": "stateCaught_98",
-      "renamedName": "stateCaught_98",
-      "declaration": {
-        "file": "kc.java",
-        "start": 52186,
-        "end": 52200
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#115",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#115",
-      "originalName": "stateCaught_99",
-      "renamedName": "stateCaught_99",
-      "declaration": {
-        "file": "kc.java",
-        "start": 54019,
-        "end": 54033
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#116",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#116",
-      "originalName": "stateCaught_103",
-      "renamedName": "stateCaught_103",
-      "declaration": {
-        "file": "kc.java",
-        "start": 54604,
-        "end": 54619
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#117",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#117",
-      "originalName": "stateCaught_104",
-      "renamedName": "stateCaught_104",
-      "declaration": {
-        "file": "kc.java",
-        "start": 55407,
-        "end": 55422
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#118",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#118",
-      "originalName": "stateCaught_106",
-      "renamedName": "stateCaught_106",
-      "declaration": {
-        "file": "kc.java",
-        "start": 57800,
-        "end": 57815
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#119",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#119",
-      "originalName": "stateCaught_110",
-      "renamedName": "stateCaught_110",
-      "declaration": {
-        "file": "kc.java",
-        "start": 58291,
-        "end": 58306
+        "start": 2809,
+        "end": 2821
       }
     },
     {
       "symbol": "L:kc.b(I)V#12",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#12",
-      "originalName": "stackIn_51_0",
-      "renamedName": "stackIn_51_0",
+      "originalName": "stackIn_90_1",
+      "renamedName": "stackIn_90_1",
       "declaration": {
         "file": "kc.java",
-        "start": 2845,
-        "end": 2857
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#120",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#120",
-      "originalName": "stateCaught_112",
-      "renamedName": "stateCaught_112",
-      "declaration": {
-        "file": "kc.java",
-        "start": 59315,
-        "end": 59330
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#121",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#121",
-      "originalName": "stateCaught_115",
-      "renamedName": "stateCaught_115",
-      "declaration": {
-        "file": "kc.java",
-        "start": 60222,
-        "end": 60237
+        "start": 2835,
+        "end": 2847
       }
     },
     {
       "symbol": "L:kc.b(I)V#13",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#13",
-      "originalName": "stackIn_51_1",
-      "renamedName": "stackIn_51_1",
+      "originalName": "stackIn_90_2",
+      "renamedName": "stackIn_90_2",
       "declaration": {
         "file": "kc.java",
-        "start": 2877,
-        "end": 2889
+        "start": 2861,
+        "end": 2873
       }
     },
     {
       "symbol": "L:kc.b(I)V#14",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#14",
-      "originalName": "stackIn_56_0",
-      "renamedName": "stackIn_56_0",
+      "originalName": "stackIn_90_3",
+      "renamedName": "stackIn_90_3",
       "declaration": {
         "file": "kc.java",
-        "start": 2910,
-        "end": 2922
+        "start": 2887,
+        "end": 2899
       }
     },
     {
       "symbol": "L:kc.b(I)V#15",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#15",
-      "originalName": "stackIn_86_0",
-      "renamedName": "stackIn_86_0",
+      "originalName": "stackIn_110_0",
+      "renamedName": "stackIn_110_0",
       "declaration": {
         "file": "kc.java",
-        "start": 2940,
-        "end": 2952
+        "start": 2912,
+        "end": 2925
       }
     },
     {
       "symbol": "L:kc.b(I)V#16",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#16",
-      "originalName": "stackIn_86_1",
-      "renamedName": "stackIn_86_1",
+      "originalName": "stackIn_112_0",
+      "renamedName": "stackIn_112_0",
       "declaration": {
         "file": "kc.java",
-        "start": 2970,
-        "end": 2982
+        "start": 2945,
+        "end": 2958
       }
     },
     {
       "symbol": "L:kc.b(I)V#17",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#17",
-      "originalName": "stackIn_86_2",
-      "renamedName": "stackIn_86_2",
+      "originalName": "stackIn_112_1",
+      "renamedName": "stackIn_112_1",
       "declaration": {
         "file": "kc.java",
-        "start": 3000,
-        "end": 3012
+        "start": 2979,
+        "end": 2992
       }
     },
     {
       "symbol": "L:kc.b(I)V#18",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#18",
-      "originalName": "stackIn_87_0",
-      "renamedName": "stackIn_87_0",
+      "originalName": "decompiledCaughtException",
+      "renamedName": "decompiledCaughtException",
       "declaration": {
         "file": "kc.java",
-        "start": 3030,
-        "end": 3042
+        "start": 3023,
+        "end": 3048
       }
     },
     {
       "symbol": "L:kc.b(I)V#19",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#19",
-      "originalName": "stackIn_87_1",
-      "renamedName": "stackIn_87_1",
+      "originalName": "stackOut_14_0",
+      "renamedName": "stackOut_14_0",
       "declaration": {
         "file": "kc.java",
-        "start": 3060,
-        "end": 3072
+        "start": 3073,
+        "end": 3086
       }
     },
     {
       "symbol": "L:kc.b(I)V#2",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#2",
-      "originalName": "stackIn_15_0",
-      "renamedName": "stackIn_15_0",
+      "originalName": "stackIn_20_0",
+      "renamedName": "stackIn_20_0",
       "declaration": {
         "file": "kc.java",
-        "start": 2522,
-        "end": 2534
+        "start": 2524,
+        "end": 2536
       }
     },
     {
       "symbol": "L:kc.b(I)V#20",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#20",
-      "originalName": "stackIn_87_2",
-      "renamedName": "stackIn_87_2",
+      "originalName": "stackOut_21_0",
+      "renamedName": "stackOut_21_0",
       "declaration": {
         "file": "kc.java",
-        "start": 3090,
-        "end": 3102
+        "start": 3104,
+        "end": 3117
       }
     },
     {
       "symbol": "L:kc.b(I)V#21",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#21",
-      "originalName": "stackIn_88_0",
-      "renamedName": "stackIn_88_0",
+      "originalName": "var1",
+      "renamedName": "activeEntity",
       "declaration": {
         "file": "kc.java",
-        "start": 3120,
-        "end": 3132
+        "start": 3130,
+        "end": 3134
       }
     },
     {
       "symbol": "L:kc.b(I)V#22",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#22",
-      "originalName": "stackIn_88_1",
-      "renamedName": "stackIn_88_1",
+      "originalName": "var1_int",
+      "renamedName": "entityIndexThenGroupCount",
       "declaration": {
         "file": "kc.java",
-        "start": 3150,
-        "end": 3162
+        "start": 3155,
+        "end": 3163
       }
     },
     {
       "symbol": "L:kc.b(I)V#23",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#23",
-      "originalName": "stackIn_88_2",
-      "renamedName": "stackIn_88_2",
+      "originalName": "var1_ref",
+      "renamedName": "var1_ref",
       "declaration": {
         "file": "kc.java",
-        "start": 3180,
-        "end": 3192
+        "start": 3194,
+        "end": 3202
       }
     },
     {
       "symbol": "L:kc.b(I)V#24",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#24",
-      "originalName": "stackIn_89_0",
-      "renamedName": "stackIn_89_0",
+      "originalName": "var2_ref_ja",
+      "renamedName": "candidateEntity",
       "declaration": {
         "file": "kc.java",
-        "start": 3210,
-        "end": 3222
+        "start": 3222,
+        "end": 3233
       }
     },
     {
       "symbol": "L:kc.b(I)V#25",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#25",
-      "originalName": "stackIn_89_1",
-      "renamedName": "stackIn_89_1",
+      "originalName": "var2",
+      "renamedName": "var2",
       "declaration": {
         "file": "kc.java",
-        "start": 3240,
-        "end": 3252
+        "start": 3254,
+        "end": 3258
       }
     },
     {
       "symbol": "L:kc.b(I)V#26",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#26",
-      "originalName": "stackIn_89_2",
-      "renamedName": "stackIn_89_2",
+      "originalName": "var3_float",
+      "renamedName": "radialOffsetX",
       "declaration": {
         "file": "kc.java",
-        "start": 3270,
-        "end": 3282
+        "start": 3278,
+        "end": 3288
       }
     },
     {
       "symbol": "L:kc.b(I)V#27",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#27",
-      "originalName": "stackIn_90_0",
-      "renamedName": "stackIn_90_0",
+      "originalName": "var3_int",
+      "renamedName": "var3_int",
       "declaration": {
         "file": "kc.java",
-        "start": 3300,
-        "end": 3312
+        "start": 3309,
+        "end": 3317
       }
     },
     {
       "symbol": "L:kc.b(I)V#28",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#28",
-      "originalName": "stackIn_90_1",
-      "renamedName": "stackIn_90_1",
+      "originalName": "var3",
+      "renamedName": "queuedEntity",
       "declaration": {
         "file": "kc.java",
-        "start": 3330,
-        "end": 3342
+        "start": 3334,
+        "end": 3338
       }
     },
     {
       "symbol": "L:kc.b(I)V#29",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#29",
-      "originalName": "stackIn_90_2",
-      "renamedName": "stackIn_90_2",
+      "originalName": "var4_int",
+      "renamedName": "var4_int",
       "declaration": {
         "file": "kc.java",
-        "start": 3360,
-        "end": 3372
+        "start": 3359,
+        "end": 3367
       }
     },
     {
       "symbol": "L:kc.b(I)V#3",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#3",
-      "originalName": "stackIn_20_0",
-      "renamedName": "stackIn_20_0",
+      "originalName": "stackIn_22_0",
+      "renamedName": "stackIn_22_0",
       "declaration": {
         "file": "kc.java",
-        "start": 2555,
-        "end": 2567
+        "start": 2561,
+        "end": 2573
       }
     },
     {
       "symbol": "L:kc.b(I)V#30",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#30",
-      "originalName": "stackIn_90_3",
-      "renamedName": "stackIn_90_3",
+      "originalName": "var4_float",
+      "renamedName": "radialOffsetY",
       "declaration": {
         "file": "kc.java",
-        "start": 3390,
-        "end": 3402
+        "start": 3387,
+        "end": 3397
       }
     },
     {
       "symbol": "L:kc.b(I)V#31",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#31",
-      "originalName": "stackIn_107_0",
-      "renamedName": "stackIn_107_0",
+      "originalName": "var4",
+      "renamedName": "var4",
       "declaration": {
         "file": "kc.java",
-        "start": 3419,
-        "end": 3432
+        "start": 3417,
+        "end": 3421
       }
     },
     {
       "symbol": "L:kc.b(I)V#32",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#32",
-      "originalName": "stackIn_108_0",
-      "renamedName": "stackIn_108_0",
+      "originalName": "var5_ref_ja",
+      "renamedName": "groupEntity",
       "declaration": {
         "file": "kc.java",
-        "start": 3452,
-        "end": 3465
+        "start": 3441,
+        "end": 3452
       }
     },
     {
       "symbol": "L:kc.b(I)V#33",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#33",
-      "originalName": "stackIn_109_0",
-      "renamedName": "stackIn_109_0",
+      "originalName": "var5",
+      "renamedName": "radialVelocityScale",
       "declaration": {
         "file": "kc.java",
-        "start": 3485,
-        "end": 3498
+        "start": 3476,
+        "end": 3480
       }
     },
     {
       "symbol": "L:kc.b(I)V#34",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#34",
-      "originalName": "stackIn_110_0",
-      "renamedName": "stackIn_110_0",
+      "originalName": "var6_int",
+      "renamedName": "childEntityIndex",
       "declaration": {
         "file": "kc.java",
-        "start": 3518,
-        "end": 3531
+        "start": 3500,
+        "end": 3508
       }
     },
     {
       "symbol": "L:kc.b(I)V#35",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#35",
-      "originalName": "stackIn_111_0",
-      "renamedName": "stackIn_111_0",
+      "originalName": "var6",
+      "renamedName": "var6",
       "declaration": {
         "file": "kc.java",
-        "start": 3551,
-        "end": 3564
+        "start": 3525,
+        "end": 3529
       }
     },
     {
       "symbol": "L:kc.b(I)V#36",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#36",
-      "originalName": "stackIn_112_0",
-      "renamedName": "stackIn_112_0",
+      "originalName": "var7",
+      "renamedName": "var7",
       "declaration": {
         "file": "kc.java",
-        "start": 3584,
-        "end": 3597
+        "start": 3549,
+        "end": 3553
       }
     },
     {
       "symbol": "L:kc.b(I)V#37",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#37",
-      "originalName": "stackIn_112_1",
-      "renamedName": "stackIn_112_1",
+      "originalName": "var7_int",
+      "renamedName": "relatedEntityIndex",
       "declaration": {
         "file": "kc.java",
-        "start": 3618,
-        "end": 3631
+        "start": 3574,
+        "end": 3582
       }
     },
     {
       "symbol": "L:kc.b(I)V#38",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#38",
-      "originalName": "stackOut_14_0",
-      "renamedName": "stackOut_14_0",
+      "originalName": "var8",
+      "renamedName": "relatedEntityCandidate",
       "declaration": {
         "file": "kc.java",
-        "start": 3653,
-        "end": 3666
+        "start": 3599,
+        "end": 3603
       }
     },
     {
       "symbol": "L:kc.b(I)V#39",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#39",
-      "originalName": "stackOut_21_0",
-      "renamedName": "stackOut_21_0",
+      "originalName": "var9",
+      "renamedName": "var9",
       "declaration": {
         "file": "kc.java",
-        "start": 3684,
-        "end": 3697
+        "start": 3624,
+        "end": 3628
       }
     },
     {
       "symbol": "L:kc.b(I)V#4",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#4",
-      "originalName": "stackIn_22_0",
-      "renamedName": "stackIn_22_0",
+      "originalName": "stackIn_44_0",
+      "renamedName": "stackIn_44_0",
       "declaration": {
         "file": "kc.java",
-        "start": 2592,
-        "end": 2604
+        "start": 2595,
+        "end": 2607
       }
     },
     {
       "symbol": "L:kc.b(I)V#40",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#40",
-      "originalName": "statePc",
-      "renamedName": "statePc",
+      "originalName": "var10",
+      "renamedName": "entityCandidate",
       "declaration": {
         "file": "kc.java",
-        "start": 3711,
-        "end": 3718
+        "start": 3645,
+        "end": 3650
       }
     },
     {
       "symbol": "L:kc.b(I)V#41",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#41",
-      "originalName": "caughtException",
-      "renamedName": "caughtException",
+      "originalName": "var11",
+      "renamedName": "var11",
       "declaration": {
         "file": "kc.java",
-        "start": 3742,
-        "end": 3757
+        "start": 3670,
+        "end": 3675
       }
     },
     {
       "symbol": "L:kc.b(I)V#42",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#42",
-      "originalName": "var1",
-      "renamedName": "activeEntity",
+      "originalName": "var12",
+      "renamedName": "parentEntity",
       "declaration": {
         "file": "kc.java",
-        "start": 3777,
-        "end": 3781
+        "start": 3695,
+        "end": 3700
       }
     },
     {
       "symbol": "L:kc.b(I)V#43",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#43",
-      "originalName": "var1_int",
-      "renamedName": "entityIndexThenGroupCount",
+      "originalName": "var13",
+      "renamedName": "var13",
       "declaration": {
         "file": "kc.java",
-        "start": 3802,
-        "end": 3810
+        "start": 3720,
+        "end": 3725
       }
     },
     {
       "symbol": "L:kc.b(I)V#44",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#44",
-      "originalName": "var1_ref",
-      "renamedName": "var1_ref",
+      "originalName": "decompiledCaughtParameter0",
+      "renamedName": "decompiledCaughtParameter0",
       "declaration": {
         "file": "kc.java",
-        "start": 3841,
-        "end": 3849
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#45",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#45",
-      "originalName": "var2_ref_ja",
-      "renamedName": "candidateEntity",
-      "declaration": {
-        "file": "kc.java",
-        "start": 3869,
-        "end": 3880
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#46",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#46",
-      "originalName": "var2",
-      "renamedName": "var2",
-      "declaration": {
-        "file": "kc.java",
-        "start": 3901,
-        "end": 3905
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#47",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#47",
-      "originalName": "var3_float",
-      "renamedName": "radialOffsetX",
-      "declaration": {
-        "file": "kc.java",
-        "start": 3925,
-        "end": 3935
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#48",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#48",
-      "originalName": "var3_int",
-      "renamedName": "var3_int",
-      "declaration": {
-        "file": "kc.java",
-        "start": 3956,
-        "end": 3964
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#49",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#49",
-      "originalName": "var3",
-      "renamedName": "queuedEntity",
-      "declaration": {
-        "file": "kc.java",
-        "start": 3981,
-        "end": 3985
+        "start": 32500,
+        "end": 32526
       }
     },
     {
       "symbol": "L:kc.b(I)V#5",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#5",
-      "originalName": "stackIn_28_0",
-      "renamedName": "stackIn_28_0",
+      "originalName": "stackIn_51_0",
+      "renamedName": "stackIn_51_0",
       "declaration": {
         "file": "kc.java",
-        "start": 2625,
-        "end": 2637
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#50",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#50",
-      "originalName": "var4_int",
-      "renamedName": "var4_int",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4006,
-        "end": 4014
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#51",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#51",
-      "originalName": "var4_float",
-      "renamedName": "radialOffsetY",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4034,
-        "end": 4044
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#52",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#52",
-      "originalName": "var4",
-      "renamedName": "var4",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4064,
-        "end": 4068
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#53",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#53",
-      "originalName": "var5_ref_ja",
-      "renamedName": "groupEntity",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4088,
-        "end": 4099
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#54",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#54",
-      "originalName": "var5",
-      "renamedName": "radialVelocityScale",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4123,
-        "end": 4127
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#55",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#55",
-      "originalName": "var6_int",
-      "renamedName": "childEntityIndex",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4147,
-        "end": 4155
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#56",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#56",
-      "originalName": "var6",
-      "renamedName": "var6",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4172,
-        "end": 4176
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#57",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#57",
-      "originalName": "var7",
-      "renamedName": "var7",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4196,
-        "end": 4200
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#58",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#58",
-      "originalName": "var7_int",
-      "renamedName": "relatedEntityIndex",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4221,
-        "end": 4229
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#59",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#59",
-      "originalName": "var8",
-      "renamedName": "relatedEntityCandidate",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4246,
-        "end": 4250
+        "start": 2624,
+        "end": 2636
       }
     },
     {
       "symbol": "L:kc.b(I)V#6",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#6",
-      "originalName": "stackIn_31_0",
-      "renamedName": "stackIn_31_0",
+      "originalName": "stackIn_51_1",
+      "renamedName": "stackIn_51_1",
       "declaration": {
         "file": "kc.java",
-        "start": 2657,
-        "end": 2669
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#60",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#60",
-      "originalName": "var9",
-      "renamedName": "var9",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4271,
-        "end": 4275
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#61",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#61",
-      "originalName": "var10",
-      "renamedName": "entityCandidate",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4292,
-        "end": 4297
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#62",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#62",
-      "originalName": "var11",
-      "renamedName": "var11",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4317,
-        "end": 4322
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#63",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#63",
-      "originalName": "var12",
-      "renamedName": "parentEntity",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4342,
-        "end": 4347
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#64",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#64",
-      "originalName": "var13",
-      "renamedName": "var13",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4367,
-        "end": 4372
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#65",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#65",
-      "originalName": "stateCaught_1",
-      "renamedName": "stateCaught_1",
-      "declaration": {
-        "file": "kc.java",
-        "start": 4887,
-        "end": 4900
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#66",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#66",
-      "originalName": "stateCaught_2",
-      "renamedName": "stateCaught_2",
-      "declaration": {
-        "file": "kc.java",
-        "start": 7612,
-        "end": 7625
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#67",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#67",
-      "originalName": "stateCaught_8",
-      "renamedName": "stateCaught_8",
-      "declaration": {
-        "file": "kc.java",
-        "start": 8236,
-        "end": 8249
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#68",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#68",
-      "originalName": "stateCaught_9",
-      "renamedName": "stateCaught_9",
-      "declaration": {
-        "file": "kc.java",
-        "start": 8860,
-        "end": 8873
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#69",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#69",
-      "originalName": "stateCaught_10",
-      "renamedName": "stateCaught_10",
-      "declaration": {
-        "file": "kc.java",
-        "start": 9614,
-        "end": 9628
+        "start": 2656,
+        "end": 2668
       }
     },
     {
       "symbol": "L:kc.b(I)V#7",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#7",
-      "originalName": "stackIn_31_1",
-      "renamedName": "stackIn_31_1",
+      "originalName": "stackIn_56_0",
+      "renamedName": "stackIn_56_0",
       "declaration": {
         "file": "kc.java",
         "start": 2689,
@@ -90091,355 +89574,25 @@
       }
     },
     {
-      "symbol": "L:kc.b(I)V#70",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#70",
-      "originalName": "stateCaught_12",
-      "renamedName": "stateCaught_12",
-      "declaration": {
-        "file": "kc.java",
-        "start": 10069,
-        "end": 10083
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#71",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#71",
-      "originalName": "stateCaught_13",
-      "renamedName": "stateCaught_13",
-      "declaration": {
-        "file": "kc.java",
-        "start": 12331,
-        "end": 12345
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#72",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#72",
-      "originalName": "stateCaught_18",
-      "renamedName": "stateCaught_18",
-      "declaration": {
-        "file": "kc.java",
-        "start": 12872,
-        "end": 12886
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#73",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#73",
-      "originalName": "stateCaught_19",
-      "renamedName": "stateCaught_19",
-      "declaration": {
-        "file": "kc.java",
-        "start": 13315,
-        "end": 13329
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#74",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#74",
-      "originalName": "stateCaught_20",
-      "renamedName": "stateCaught_20",
-      "declaration": {
-        "file": "kc.java",
-        "start": 13968,
-        "end": 13982
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#75",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#75",
-      "originalName": "stateCaught_21",
-      "renamedName": "stateCaught_21",
-      "declaration": {
-        "file": "kc.java",
-        "start": 15696,
-        "end": 15710
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#76",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#76",
-      "originalName": "stateCaught_25",
-      "renamedName": "stateCaught_25",
-      "declaration": {
-        "file": "kc.java",
-        "start": 16154,
-        "end": 16168
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#77",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#77",
-      "originalName": "stateCaught_26",
-      "renamedName": "stateCaught_26",
-      "declaration": {
-        "file": "kc.java",
-        "start": 17253,
-        "end": 17267
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#78",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#78",
-      "originalName": "stateCaught_28",
-      "renamedName": "stateCaught_28",
-      "declaration": {
-        "file": "kc.java",
-        "start": 17671,
-        "end": 17685
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#79",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#79",
-      "originalName": "stateCaught_29",
-      "renamedName": "stateCaught_29",
-      "declaration": {
-        "file": "kc.java",
-        "start": 19984,
-        "end": 19998
-      }
-    },
-    {
       "symbol": "L:kc.b(I)V#8",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#8",
-      "originalName": "stackIn_38_0",
-      "renamedName": "stackIn_38_0",
+      "originalName": "stackIn_88_0",
+      "renamedName": "stackIn_88_0",
       "declaration": {
         "file": "kc.java",
-        "start": 2721,
-        "end": 2733
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#80",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#80",
-      "originalName": "stateCaught_34",
-      "renamedName": "stateCaught_34",
-      "declaration": {
-        "file": "kc.java",
-        "start": 20564,
-        "end": 20578
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#81",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#81",
-      "originalName": "stateCaught_35",
-      "renamedName": "stateCaught_35",
-      "declaration": {
-        "file": "kc.java",
-        "start": 21005,
-        "end": 21019
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#82",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#82",
-      "originalName": "stateCaught_36",
-      "renamedName": "stateCaught_36",
-      "declaration": {
-        "file": "kc.java",
-        "start": 23129,
-        "end": 23143
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#83",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#83",
-      "originalName": "stateCaught_40",
-      "renamedName": "stateCaught_40",
-      "declaration": {
-        "file": "kc.java",
-        "start": 23548,
-        "end": 23562
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#84",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#84",
-      "originalName": "stateCaught_41",
-      "renamedName": "stateCaught_41",
-      "declaration": {
-        "file": "kc.java",
-        "start": 24103,
-        "end": 24117
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#85",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#85",
-      "originalName": "stateCaught_42",
-      "renamedName": "stateCaught_42",
-      "declaration": {
-        "file": "kc.java",
-        "start": 24622,
-        "end": 24636
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#86",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#86",
-      "originalName": "stateCaught_43",
-      "renamedName": "stateCaught_43",
-      "declaration": {
-        "file": "kc.java",
-        "start": 25044,
-        "end": 25058
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#87",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#87",
-      "originalName": "stateCaught_44",
-      "renamedName": "stateCaught_44",
-      "declaration": {
-        "file": "kc.java",
-        "start": 25825,
-        "end": 25839
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#88",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#88",
-      "originalName": "stateCaught_46",
-      "renamedName": "stateCaught_46",
-      "declaration": {
-        "file": "kc.java",
-        "start": 27332,
-        "end": 27346
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#89",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#89",
-      "originalName": "stateCaught_49",
-      "renamedName": "stateCaught_49",
-      "declaration": {
-        "file": "kc.java",
-        "start": 28195,
-        "end": 28209
+        "start": 2719,
+        "end": 2731
       }
     },
     {
       "symbol": "L:kc.b(I)V#9",
       "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#9",
-      "originalName": "stackIn_38_1",
-      "renamedName": "stackIn_38_1",
+      "originalName": "stackIn_88_1",
+      "renamedName": "stackIn_88_1",
       "declaration": {
         "file": "kc.java",
-        "start": 2753,
-        "end": 2765
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#90",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#90",
-      "originalName": "stateCaught_51",
-      "renamedName": "stateCaught_51",
-      "declaration": {
-        "file": "kc.java",
-        "start": 29178,
-        "end": 29192
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#91",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#91",
-      "originalName": "stateCaught_53",
-      "renamedName": "stateCaught_53",
-      "declaration": {
-        "file": "kc.java",
-        "start": 29987,
-        "end": 30001
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#92",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#92",
-      "originalName": "stateCaught_54",
-      "renamedName": "stateCaught_54",
-      "declaration": {
-        "file": "kc.java",
-        "start": 30569,
-        "end": 30583
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#93",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#93",
-      "originalName": "stateCaught_55",
-      "renamedName": "stateCaught_55",
-      "declaration": {
-        "file": "kc.java",
-        "start": 31079,
-        "end": 31093
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#94",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#94",
-      "originalName": "stateCaught_56",
-      "renamedName": "stateCaught_56",
-      "declaration": {
-        "file": "kc.java",
-        "start": 31501,
-        "end": 31515
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#95",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#95",
-      "originalName": "stateCaught_57",
-      "renamedName": "stateCaught_57",
-      "declaration": {
-        "file": "kc.java",
-        "start": 33148,
-        "end": 33162
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#96",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#96",
-      "originalName": "stateCaught_61",
-      "renamedName": "stateCaught_61",
-      "declaration": {
-        "file": "kc.java",
-        "start": 33559,
-        "end": 33573
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#97",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#97",
-      "originalName": "stateCaught_62",
-      "renamedName": "stateCaught_62",
-      "declaration": {
-        "file": "kc.java",
-        "start": 34002,
-        "end": 34016
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#98",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#98",
-      "originalName": "stateCaught_63",
-      "renamedName": "stateCaught_63",
-      "declaration": {
-        "file": "kc.java",
-        "start": 36090,
-        "end": 36104
-      }
-    },
-    {
-      "symbol": "L:kc.b(I)V#99",
-      "renamedSymbol": "L:kc.reconcileBoardEntities(I)V#99",
-      "originalName": "stateCaught_68",
-      "renamedName": "stateCaught_68",
-      "declaration": {
-        "file": "kc.java",
-        "start": 37742,
-        "end": 37756
+        "start": 2749,
+        "end": 2761
       }
     },
     {
@@ -299099,8 +298252,8 @@
     {
       "original": "kc.java",
       "renamed": "kc.java",
-      "inputSha256": "67ed90367dbbce56ae376e8b289aca8ca23e70d9f6f5f2847282bfa20c664b55",
-      "outputSha256": "4d42890819d7e44b0be7e0912e4a14dbe6e01a08e8f16771af0d8d18d17e0d48",
+      "inputSha256": "6ac3790abf44125b1602b483f9bf8fd434dc57a52947eda031064cec681dda0e",
+      "outputSha256": "75f07af10323916466fe2092fe7073141492d6ea7ff53d59383543b078c8f999",
       "edits": [
         {
           "start": 2427,
@@ -299117,2235 +298270,2655 @@
           "renamed": "IntrusiveDeque"
         },
         {
-          "start": 2482,
-          "end": 2484,
-          "symbol": "C:tf",
-          "original": "tf",
-          "renamed": "IntrusiveDeque"
-        },
-        {
-          "start": 2552,
-          "end": 2554,
+          "start": 2521,
+          "end": 2523,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 2622,
-          "end": 2624,
+          "start": 2621,
+          "end": 2623,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 2654,
-          "end": 2656,
+          "start": 2653,
+          "end": 2655,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 2686,
-          "end": 2688,
-          "symbol": "C:ja",
-          "original": "ja",
-          "renamed": "GameplayEntity"
-        },
-        {
-          "start": 2718,
-          "end": 2720,
-          "symbol": "C:ja",
-          "original": "ja",
-          "renamed": "GameplayEntity"
-        },
-        {
-          "start": 2750,
-          "end": 2752,
-          "symbol": "C:ja",
-          "original": "ja",
-          "renamed": "GameplayEntity"
-        },
-        {
-          "start": 2842,
-          "end": 2844,
-          "symbol": "C:ja",
-          "original": "ja",
-          "renamed": "GameplayEntity"
-        },
-        {
-          "start": 2874,
-          "end": 2876,
-          "symbol": "C:ja",
-          "original": "ja",
-          "renamed": "GameplayEntity"
-        },
-        {
-          "start": 3416,
-          "end": 3418,
+          "start": 2909,
+          "end": 2911,
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "GameplaySession"
         },
         {
-          "start": 3449,
-          "end": 3451,
+          "start": 2942,
+          "end": 2944,
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "GameplaySession"
         },
         {
-          "start": 3482,
-          "end": 3484,
-          "symbol": "C:gh",
-          "original": "gh",
-          "renamed": "GameplaySession"
-        },
-        {
-          "start": 3515,
-          "end": 3517,
-          "symbol": "C:gh",
-          "original": "gh",
-          "renamed": "GameplaySession"
-        },
-        {
-          "start": 3548,
-          "end": 3550,
-          "symbol": "C:gh",
-          "original": "gh",
-          "renamed": "GameplaySession"
-        },
-        {
-          "start": 3581,
-          "end": 3583,
-          "symbol": "C:gh",
-          "original": "gh",
-          "renamed": "GameplaySession"
-        },
-        {
-          "start": 3774,
-          "end": 3776,
+          "start": 3127,
+          "end": 3129,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 3777,
-          "end": 3781,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 3130,
+          "end": 3134,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 3802,
-          "end": 3810,
-          "symbol": "L:kc.b(I)V#43",
+          "start": 3155,
+          "end": 3163,
+          "symbol": "L:kc.b(I)V#22",
           "original": "var1_int",
           "renamed": "entityIndexThenGroupCount"
         },
         {
-          "start": 3866,
-          "end": 3868,
+          "start": 3219,
+          "end": 3221,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 3869,
-          "end": 3880,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 3222,
+          "end": 3233,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 3925,
-          "end": 3935,
-          "symbol": "L:kc.b(I)V#47",
+          "start": 3278,
+          "end": 3288,
+          "symbol": "L:kc.b(I)V#26",
           "original": "var3_float",
           "renamed": "radialOffsetX"
         },
         {
-          "start": 3978,
-          "end": 3980,
+          "start": 3331,
+          "end": 3333,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 3981,
-          "end": 3985,
-          "symbol": "L:kc.b(I)V#49",
+          "start": 3334,
+          "end": 3338,
+          "symbol": "L:kc.b(I)V#28",
           "original": "var3",
           "renamed": "queuedEntity"
         },
         {
-          "start": 4034,
-          "end": 4044,
-          "symbol": "L:kc.b(I)V#51",
+          "start": 3387,
+          "end": 3397,
+          "symbol": "L:kc.b(I)V#30",
           "original": "var4_float",
           "renamed": "radialOffsetY"
         },
         {
-          "start": 4061,
-          "end": 4063,
+          "start": 3414,
+          "end": 3416,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 4085,
-          "end": 4087,
+          "start": 3438,
+          "end": 3440,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 4088,
-          "end": 4099,
-          "symbol": "L:kc.b(I)V#53",
+          "start": 3441,
+          "end": 3452,
+          "symbol": "L:kc.b(I)V#32",
           "original": "var5_ref_ja",
           "renamed": "groupEntity"
         },
         {
-          "start": 4123,
-          "end": 4127,
-          "symbol": "L:kc.b(I)V#54",
+          "start": 3476,
+          "end": 3480,
+          "symbol": "L:kc.b(I)V#33",
           "original": "var5",
           "renamed": "radialVelocityScale"
         },
         {
-          "start": 4147,
-          "end": 4155,
-          "symbol": "L:kc.b(I)V#55",
+          "start": 3500,
+          "end": 3508,
+          "symbol": "L:kc.b(I)V#34",
           "original": "var6_int",
           "renamed": "childEntityIndex"
         },
         {
-          "start": 4169,
-          "end": 4171,
+          "start": 3522,
+          "end": 3524,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 4193,
-          "end": 4195,
+          "start": 3546,
+          "end": 3548,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 4221,
-          "end": 4229,
-          "symbol": "L:kc.b(I)V#58",
+          "start": 3574,
+          "end": 3582,
+          "symbol": "L:kc.b(I)V#37",
           "original": "var7_int",
           "renamed": "relatedEntityIndex"
         },
         {
-          "start": 4243,
-          "end": 4245,
+          "start": 3596,
+          "end": 3598,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 4246,
-          "end": 4250,
-          "symbol": "L:kc.b(I)V#59",
+          "start": 3599,
+          "end": 3603,
+          "symbol": "L:kc.b(I)V#38",
           "original": "var8",
           "renamed": "relatedEntityCandidate"
         },
         {
-          "start": 4289,
-          "end": 4291,
+          "start": 3642,
+          "end": 3644,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 4292,
-          "end": 4297,
-          "symbol": "L:kc.b(I)V#61",
+          "start": 3645,
+          "end": 3650,
+          "symbol": "L:kc.b(I)V#40",
           "original": "var10",
           "renamed": "entityCandidate"
         },
         {
-          "start": 4339,
-          "end": 4341,
+          "start": 3692,
+          "end": 3694,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 4342,
-          "end": 4347,
-          "symbol": "L:kc.b(I)V#63",
+          "start": 3695,
+          "end": 3700,
+          "symbol": "L:kc.b(I)V#42",
           "original": "var12",
           "renamed": "parentEntity"
         },
         {
-          "start": 4686,
-          "end": 4693,
+          "start": 3811,
+          "end": 3818,
           "symbol": "F:fa.field_a:Z",
           "original": "field_a",
           "renamed": "entitiesDetachedThisTick"
         },
         {
-          "start": 4727,
-          "end": 4731,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 3840,
+          "end": 3844,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 4735,
-          "end": 4737,
+          "start": 3848,
+          "end": 3850,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 4752,
-          "end": 4759,
+          "start": 3865,
+          "end": 3872,
           "symbol": "F:ji.field_r:Ltf;",
           "original": "field_r",
           "renamed": "movingEntities"
         },
         {
-          "start": 4760,
-          "end": 4761,
+          "start": 3873,
+          "end": 3874,
           "symbol": "M:tf.g(I)Lhf;",
           "original": "g",
           "renamed": "firstForIteration"
         },
         {
-          "start": 5164,
-          "end": 5168,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 4001,
+          "end": 4005,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 5436,
-          "end": 5440,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 4054,
+          "end": 4058,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 5441,
-          "end": 5448,
+          "start": 4059,
+          "end": 4066,
           "symbol": "F:ja.field_K:Ltf;",
           "original": "field_K",
           "renamed": "entityQueue"
         },
         {
-          "start": 5869,
-          "end": 5876,
+          "start": 4251,
+          "end": 4258,
           "symbol": "F:a.field_d:Ltf;",
           "original": "field_d",
           "renamed": "attachedEntities"
         },
         {
-          "start": 6220,
-          "end": 6224,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 4294,
+          "end": 4298,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 6225,
-          "end": 6232,
+          "start": 4299,
+          "end": 4306,
           "symbol": "F:ja.field_B:Z",
           "original": "field_B",
           "renamed": "detachedFromBoard"
         },
         {
-          "start": 6429,
-          "end": 6436,
+          "start": 4343,
+          "end": 4350,
           "symbol": "F:fa.field_a:Z",
           "original": "field_a",
           "renamed": "entitiesDetachedThisTick"
         },
         {
-          "start": 7885,
-          "end": 7889,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 4641,
+          "end": 4645,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 7890,
-          "end": 7891,
+          "start": 4646,
+          "end": 4647,
           "symbol": "M:ja.j(I)V",
           "original": "j",
           "renamed": "eraseEntityTrail"
         },
         {
-          "start": 7924,
-          "end": 7928,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 4682,
+          "end": 4686,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 7929,
-          "end": 7930,
+          "start": 4687,
+          "end": 4688,
           "symbol": "M:ja.k(I)V",
           "original": "k",
           "renamed": "drawEntityIdOnBoardMask"
         },
         {
-          "start": 7959,
-          "end": 7963,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 4719,
+          "end": 4723,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 7964,
-          "end": 7965,
+          "start": 4724,
+          "end": 4725,
           "symbol": "M:hf.a(Z)V",
           "original": "a",
           "renamed": "unlinkNode"
         },
         {
-          "start": 7998,
-          "end": 8002,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 4760,
+          "end": 4764,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 8003,
-          "end": 8004,
+          "start": 4765,
+          "end": 4766,
           "symbol": "M:rc.a(B)V",
           "original": "a",
           "renamed": "unlinkSecondaryNode"
         },
         {
-          "start": 8043,
-          "end": 8050,
+          "start": 4807,
+          "end": 4814,
           "symbol": "F:a.field_d:Ltf;",
           "original": "field_d",
           "renamed": "attachedEntities"
         },
         {
-          "start": 8051,
-          "end": 8052,
+          "start": 4815,
+          "end": 4816,
           "symbol": "M:tf.a(ILhf;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 8058,
-          "end": 8062,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 4822,
+          "end": 4826,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 8092,
-          "end": 8099,
+          "start": 4858,
+          "end": 4865,
           "symbol": "F:el.field_o:Lgh;",
           "original": "field_o",
           "renamed": "gameplaySession"
         },
         {
-          "start": 8100,
-          "end": 8107,
+          "start": 4866,
+          "end": 4873,
           "symbol": "F:gh.field_F:Z",
           "original": "field_F",
           "renamed": "boardRasterDirty"
         },
         {
-          "start": 8509,
-          "end": 8513,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 4932,
+          "end": 4936,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 8514,
-          "end": 8521,
+          "start": 4937,
+          "end": 4944,
           "symbol": "F:ja.field_K:Ltf;",
           "original": "field_K",
           "renamed": "entityQueue"
         },
         {
-          "start": 8554,
-          "end": 8558,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 4977,
+          "end": 4981,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 8562,
-          "end": 8564,
+          "start": 4985,
+          "end": 4987,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 8579,
-          "end": 8586,
+          "start": 5002,
+          "end": 5009,
           "symbol": "F:ji.field_r:Ltf;",
           "original": "field_r",
           "renamed": "movingEntities"
         },
         {
-          "start": 8587,
-          "end": 8588,
+          "start": 5010,
+          "end": 5011,
           "symbol": "M:tf.d(I)Lhf;",
           "original": "d",
           "renamed": "nextForIteration"
         },
         {
-          "start": 9142,
-          "end": 9149,
+          "start": 5197,
+          "end": 5204,
           "symbol": "F:re.field_j:Z",
           "original": "field_j",
           "renamed": "connectivityDirty"
         },
         {
-          "start": 9412,
-          "end": 9419,
+          "start": 5308,
+          "end": 5315,
           "symbol": "F:a.field_d:Ltf;",
           "original": "field_d",
           "renamed": "attachedEntities"
         },
         {
-          "start": 9890,
-          "end": 9894,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 5377,
+          "end": 5381,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 9898,
-          "end": 9900,
+          "start": 5385,
+          "end": 5387,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 9914,
-          "end": 9916,
+          "start": 5401,
+          "end": 5403,
           "symbol": "C:tf",
           "original": "tf",
           "renamed": "IntrusiveDeque"
         },
         {
-          "start": 9941,
-          "end": 9942,
+          "start": 5428,
+          "end": 5429,
           "symbol": "M:tf.g(I)Lhf;",
           "original": "g",
           "renamed": "firstForIteration"
         },
         {
-          "start": 10349,
-          "end": 10353,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 5524,
+          "end": 5528,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 10626,
-          "end": 10633,
+          "start": 5583,
+          "end": 5590,
           "symbol": "F:pk.field_o:[Z",
           "original": "field_o",
           "renamed": "connectivityVisitedByEntityId"
         },
         {
-          "start": 10634,
-          "end": 10638,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 5591,
+          "end": 5595,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 10639,
-          "end": 10646,
+          "start": 5596,
+          "end": 5603,
           "symbol": "F:ja.field_H:I",
           "original": "field_H",
           "renamed": "entityId"
         },
         {
-          "start": 12699,
-          "end": 12703,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 6193,
+          "end": 6197,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 13164,
-          "end": 13166,
+          "start": 6343,
+          "end": 6345,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 13591,
-          "end": 13596,
-          "symbol": "L:kc.b(I)V#61",
+          "start": 6539,
+          "end": 6544,
+          "symbol": "L:kc.b(I)V#40",
           "original": "var10",
           "renamed": "entityCandidate"
         },
         {
-          "start": 13637,
-          "end": 13642,
-          "symbol": "L:kc.b(I)V#63",
+          "start": 6597,
+          "end": 6602,
+          "symbol": "L:kc.b(I)V#42",
           "original": "var12",
           "renamed": "parentEntity"
         },
         {
-          "start": 13645,
-          "end": 13650,
-          "symbol": "L:kc.b(I)V#61",
+          "start": 6605,
+          "end": 6610,
+          "symbol": "L:kc.b(I)V#40",
           "original": "var10",
           "renamed": "entityCandidate"
         },
         {
-          "start": 13676,
-          "end": 13687,
-          "symbol": "L:kc.b(I)V#53",
+          "start": 6648,
+          "end": 6659,
+          "symbol": "L:kc.b(I)V#32",
           "original": "var5_ref_ja",
           "renamed": "groupEntity"
         },
         {
-          "start": 13690,
-          "end": 13695,
-          "symbol": "L:kc.b(I)V#63",
+          "start": 6662,
+          "end": 6667,
+          "symbol": "L:kc.b(I)V#42",
           "original": "var12",
           "renamed": "parentEntity"
         },
         {
-          "start": 13725,
-          "end": 13730,
-          "symbol": "L:kc.b(I)V#63",
+          "start": 6709,
+          "end": 6714,
+          "symbol": "L:kc.b(I)V#42",
           "original": "var12",
           "renamed": "parentEntity"
         },
         {
-          "start": 14247,
-          "end": 14254,
+          "start": 6767,
+          "end": 6774,
           "symbol": "F:pk.field_o:[Z",
           "original": "field_o",
           "renamed": "connectivityVisitedByEntityId"
         },
         {
-          "start": 14255,
-          "end": 14260,
-          "symbol": "L:kc.b(I)V#61",
+          "start": 6775,
+          "end": 6780,
+          "symbol": "L:kc.b(I)V#40",
           "original": "var10",
           "renamed": "entityCandidate"
         },
         {
-          "start": 14261,
-          "end": 14268,
+          "start": 6781,
+          "end": 6788,
           "symbol": "F:ja.field_H:I",
           "original": "field_H",
           "renamed": "entityId"
         },
         {
-          "start": 14318,
-          "end": 14323,
-          "symbol": "L:kc.b(I)V#63",
+          "start": 6852,
+          "end": 6857,
+          "symbol": "L:kc.b(I)V#42",
           "original": "var12",
           "renamed": "parentEntity"
         },
         {
-          "start": 14324,
-          "end": 14331,
+          "start": 6858,
+          "end": 6865,
           "symbol": "F:ja.field_t:Z",
           "original": "field_t",
           "renamed": "touchesAvatar"
         },
         {
-          "start": 15980,
-          "end": 15985,
-          "symbol": "L:kc.b(I)V#63",
+          "start": 7528,
+          "end": 7533,
+          "symbol": "L:kc.b(I)V#42",
           "original": "var12",
           "renamed": "parentEntity"
         },
         {
-          "start": 16019,
-          "end": 16027,
-          "symbol": "L:kc.b(I)V#55",
+          "start": 7583,
+          "end": 7591,
+          "symbol": "L:kc.b(I)V#34",
           "original": "var6_int",
           "renamed": "childEntityIndex"
         },
         {
-          "start": 16434,
-          "end": 16442,
-          "symbol": "L:kc.b(I)V#55",
+          "start": 7754,
+          "end": 7762,
+          "symbol": "L:kc.b(I)V#34",
           "original": "var6_int",
           "renamed": "childEntityIndex"
         },
         {
-          "start": 16446,
-          "end": 16451,
-          "symbol": "L:kc.b(I)V#63",
+          "start": 7765,
+          "end": 7770,
+          "symbol": "L:kc.b(I)V#42",
           "original": "var12",
           "renamed": "parentEntity"
         },
         {
-          "start": 16452,
-          "end": 16459,
+          "start": 7771,
+          "end": 7778,
           "symbol": "F:ja.field_L:I",
           "original": "field_L",
           "renamed": "relatedEntityCount"
         },
         {
-          "start": 16712,
-          "end": 16717,
-          "symbol": "L:kc.b(I)V#61",
+          "start": 7835,
+          "end": 7840,
+          "symbol": "L:kc.b(I)V#40",
           "original": "var10",
           "renamed": "entityCandidate"
         },
         {
-          "start": 16718,
-          "end": 16725,
+          "start": 7841,
+          "end": 7848,
           "symbol": "F:ja.field_n:[Lja;",
           "original": "field_n",
           "renamed": "relatedEntities"
         },
         {
-          "start": 16726,
-          "end": 16734,
-          "symbol": "L:kc.b(I)V#55",
+          "start": 7849,
+          "end": 7857,
+          "symbol": "L:kc.b(I)V#34",
           "original": "var6_int",
           "renamed": "childEntityIndex"
         },
         {
-          "start": 16785,
-          "end": 16787,
+          "start": 7922,
+          "end": 7924,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 17529,
-          "end": 17533,
-          "symbol": "L:kc.b(I)V#59",
+          "start": 8187,
+          "end": 8191,
+          "symbol": "L:kc.b(I)V#38",
           "original": "var8",
           "renamed": "relatedEntityCandidate"
         },
         {
-          "start": 17951,
-          "end": 17955,
-          "symbol": "L:kc.b(I)V#59",
+          "start": 8450,
+          "end": 8454,
+          "symbol": "L:kc.b(I)V#38",
           "original": "var8",
           "renamed": "relatedEntityCandidate"
         },
         {
-          "start": 18225,
-          "end": 18227,
+          "start": 8538,
+          "end": 8540,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 18230,
-          "end": 18234,
-          "symbol": "L:kc.b(I)V#59",
+          "start": 8543,
+          "end": 8547,
+          "symbol": "L:kc.b(I)V#38",
           "original": "var8",
           "renamed": "relatedEntityCandidate"
         },
         {
-          "start": 18346,
-          "end": 18348,
+          "start": 8623,
+          "end": 8625,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 20260,
-          "end": 20264,
-          "symbol": "L:kc.b(I)V#59",
+          "start": 9267,
+          "end": 9271,
+          "symbol": "L:kc.b(I)V#38",
           "original": "var8",
           "renamed": "relatedEntityCandidate"
         },
         {
-          "start": 20268,
-          "end": 20270,
+          "start": 9275,
+          "end": 9277,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 20840,
-          "end": 20844,
-          "symbol": "L:kc.b(I)V#59",
+          "start": 9681,
+          "end": 9685,
+          "symbol": "L:kc.b(I)V#38",
           "original": "var8",
           "renamed": "relatedEntityCandidate"
         },
         {
-          "start": 20848,
-          "end": 20850,
+          "start": 9689,
+          "end": 9691,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 21285,
-          "end": 21289,
-          "symbol": "L:kc.b(I)V#59",
+          "start": 9791,
+          "end": 9795,
+          "symbol": "L:kc.b(I)V#38",
           "original": "var8",
           "renamed": "relatedEntityCandidate"
         },
         {
-          "start": 21559,
-          "end": 21561,
+          "start": 9879,
+          "end": 9881,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 21564,
-          "end": 21568,
-          "symbol": "L:kc.b(I)V#59",
+          "start": 9884,
+          "end": 9888,
+          "symbol": "L:kc.b(I)V#38",
           "original": "var8",
           "renamed": "relatedEntityCandidate"
         },
         {
-          "start": 21680,
-          "end": 21682,
+          "start": 9964,
+          "end": 9966,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 22466,
-          "end": 22470,
-          "symbol": "L:kc.b(I)V#59",
+          "start": 10476,
+          "end": 10480,
+          "symbol": "L:kc.b(I)V#38",
           "original": "var8",
           "renamed": "relatedEntityCandidate"
         },
         {
-          "start": 22474,
-          "end": 22476,
+          "start": 10484,
+          "end": 10486,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 23824,
-          "end": 23832,
-          "symbol": "L:kc.b(I)V#55",
+          "start": 11350,
+          "end": 11352,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "GameplayEntity"
+        },
+        {
+          "start": 11377,
+          "end": 11378,
+          "symbol": "M:ja.a(Lja;I)V",
+          "original": "a",
+          "renamed": "removeRelatedEntity"
+        },
+        {
+          "start": 11453,
+          "end": 11461,
+          "symbol": "L:kc.b(I)V#34",
           "original": "var6_int",
           "renamed": "childEntityIndex"
         },
         {
-          "start": 25587,
-          "end": 25598,
-          "symbol": "L:kc.b(I)V#53",
+          "start": 11680,
+          "end": 11691,
+          "symbol": "L:kc.b(I)V#32",
           "original": "var5_ref_ja",
           "renamed": "groupEntity"
         },
         {
-          "start": 25602,
-          "end": 25604,
-          "symbol": "C:ja",
-          "original": "ja",
-          "renamed": "GameplayEntity"
-        },
-        {
-          "start": 26105,
-          "end": 26116,
-          "symbol": "L:kc.b(I)V#53",
+          "start": 11907,
+          "end": 11918,
+          "symbol": "L:kc.b(I)V#32",
           "original": "var5_ref_ja",
           "renamed": "groupEntity"
         },
         {
-          "start": 26370,
-          "end": 26381,
-          "symbol": "L:kc.b(I)V#53",
-          "original": "var5_ref_ja",
-          "renamed": "groupEntity"
-        },
-        {
-          "start": 26382,
-          "end": 26389,
+          "start": 11919,
+          "end": 11926,
           "symbol": "F:ja.field_K:Ltf;",
           "original": "field_K",
           "renamed": "entityQueue"
         },
         {
-          "start": 26395,
-          "end": 26402,
+          "start": 11932,
+          "end": 11939,
           "symbol": "F:ji.field_r:Ltf;",
           "original": "field_r",
           "renamed": "movingEntities"
         },
         {
-          "start": 26436,
-          "end": 26447,
-          "symbol": "L:kc.b(I)V#53",
+          "start": 12003,
+          "end": 12014,
+          "symbol": "L:kc.b(I)V#32",
           "original": "var5_ref_ja",
           "renamed": "groupEntity"
         },
         {
-          "start": 26448,
-          "end": 26455,
+          "start": 12015,
+          "end": 12022,
           "symbol": "F:ja.field_t:Z",
           "original": "field_t",
           "renamed": "touchesAvatar"
         },
         {
-          "start": 26497,
-          "end": 26508,
-          "symbol": "L:kc.b(I)V#53",
+          "start": 12094,
+          "end": 12105,
+          "symbol": "L:kc.b(I)V#32",
           "original": "var5_ref_ja",
           "renamed": "groupEntity"
         },
         {
-          "start": 26509,
-          "end": 26516,
+          "start": 12106,
+          "end": 12113,
           "symbol": "F:ja.field_B:Z",
           "original": "field_B",
           "renamed": "detachedFromBoard"
         },
         {
-          "start": 26560,
-          "end": 26567,
+          "start": 12187,
+          "end": 12194,
           "symbol": "F:fa.field_a:Z",
           "original": "field_a",
           "renamed": "entitiesDetachedThisTick"
         },
         {
-          "start": 27026,
-          "end": 27034,
-          "symbol": "L:kc.b(I)V#55",
+          "start": 12572,
+          "end": 12580,
+          "symbol": "L:kc.b(I)V#34",
           "original": "var6_int",
           "renamed": "childEntityIndex"
         },
         {
-          "start": 27612,
-          "end": 27620,
-          "symbol": "L:kc.b(I)V#55",
+          "start": 12665,
+          "end": 12673,
+          "symbol": "L:kc.b(I)V#34",
           "original": "var6_int",
           "renamed": "childEntityIndex"
         },
         {
-          "start": 27624,
-          "end": 27635,
-          "symbol": "L:kc.b(I)V#53",
+          "start": 12677,
+          "end": 12688,
+          "symbol": "L:kc.b(I)V#32",
           "original": "var5_ref_ja",
           "renamed": "groupEntity"
         },
         {
-          "start": 27636,
-          "end": 27643,
+          "start": 12689,
+          "end": 12696,
           "symbol": "F:ja.field_L:I",
           "original": "field_L",
           "renamed": "relatedEntityCount"
         },
         {
-          "start": 27904,
-          "end": 27915,
-          "symbol": "L:kc.b(I)V#53",
+          "start": 12773,
+          "end": 12784,
+          "symbol": "L:kc.b(I)V#32",
           "original": "var5_ref_ja",
           "renamed": "groupEntity"
         },
         {
-          "start": 27916,
-          "end": 27923,
-          "symbol": "F:ja.field_n:[Lja;",
-          "original": "field_n",
-          "renamed": "relatedEntities"
-        },
-        {
-          "start": 27924,
-          "end": 27932,
-          "symbol": "L:kc.b(I)V#55",
-          "original": "var6_int",
-          "renamed": "childEntityIndex"
-        },
-        {
-          "start": 27983,
-          "end": 27985,
-          "symbol": "C:ja",
-          "original": "ja",
-          "renamed": "GameplayEntity"
-        },
-        {
-          "start": 27988,
-          "end": 27999,
-          "symbol": "L:kc.b(I)V#53",
+          "start": 12859,
+          "end": 12870,
+          "symbol": "L:kc.b(I)V#32",
           "original": "var5_ref_ja",
           "renamed": "groupEntity"
         },
         {
-          "start": 28473,
-          "end": 28475,
-          "symbol": "C:ja",
-          "original": "ja",
-          "renamed": "GameplayEntity"
-        },
-        {
-          "start": 28500,
-          "end": 28501,
-          "symbol": "M:ja.a(Lja;I)V",
-          "original": "a",
-          "renamed": "removeRelatedEntity"
-        },
-        {
-          "start": 28544,
-          "end": 28552,
-          "symbol": "L:kc.b(I)V#55",
-          "original": "var6_int",
-          "renamed": "childEntityIndex"
-        },
-        {
-          "start": 29461,
-          "end": 29472,
-          "symbol": "L:kc.b(I)V#53",
+          "start": 12938,
+          "end": 12949,
+          "symbol": "L:kc.b(I)V#32",
           "original": "var5_ref_ja",
           "renamed": "groupEntity"
         },
         {
-          "start": 29505,
-          "end": 29516,
-          "symbol": "L:kc.b(I)V#53",
-          "original": "var5_ref_ja",
-          "renamed": "groupEntity"
-        },
-        {
-          "start": 29542,
-          "end": 29553,
-          "symbol": "L:kc.b(I)V#53",
-          "original": "var5_ref_ja",
-          "renamed": "groupEntity"
-        },
-        {
-          "start": 29554,
-          "end": 29561,
+          "start": 12950,
+          "end": 12957,
           "symbol": "F:ja.field_L:I",
           "original": "field_L",
           "renamed": "relatedEntityCount"
         },
         {
-          "start": 29596,
-          "end": 29603,
+          "start": 13034,
+          "end": 13041,
           "symbol": "F:ja.field_N:I",
           "original": "field_N",
           "renamed": "sameCategoryEntityCount"
         },
         {
-          "start": 29638,
-          "end": 29645,
+          "start": 13118,
+          "end": 13125,
           "symbol": "F:ja.field_m:I",
           "original": "field_m",
           "renamed": "sameVariantEntityCount"
         },
         {
-          "start": 29675,
-          "end": 29686,
-          "symbol": "L:kc.b(I)V#53",
+          "start": 13197,
+          "end": 13208,
+          "symbol": "L:kc.b(I)V#32",
           "original": "var5_ref_ja",
           "renamed": "groupEntity"
         },
         {
-          "start": 29690,
-          "end": 29692,
+          "start": 13212,
+          "end": 13214,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 30263,
-          "end": 30267,
-          "symbol": "L:kc.b(I)V#42",
+          "start": 14317,
+          "end": 14325,
+          "symbol": "L:kc.b(I)V#34",
+          "original": "var6_int",
+          "renamed": "childEntityIndex"
+        },
+        {
+          "start": 14329,
+          "end": 14340,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 14341,
+          "end": 14348,
+          "symbol": "F:ja.field_L:I",
+          "original": "field_L",
+          "renamed": "relatedEntityCount"
+        },
+        {
+          "start": 14423,
+          "end": 14434,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 14507,
+          "end": 14518,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 14584,
+          "end": 14595,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 14596,
+          "end": 14603,
+          "symbol": "F:ja.field_L:I",
+          "original": "field_L",
+          "renamed": "relatedEntityCount"
+        },
+        {
+          "start": 14678,
+          "end": 14685,
+          "symbol": "F:ja.field_N:I",
+          "original": "field_N",
+          "renamed": "sameCategoryEntityCount"
+        },
+        {
+          "start": 14760,
+          "end": 14767,
+          "symbol": "F:ja.field_m:I",
+          "original": "field_m",
+          "renamed": "sameVariantEntityCount"
+        },
+        {
+          "start": 14837,
+          "end": 14848,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 14852,
+          "end": 14854,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "GameplayEntity"
+        },
+        {
+          "start": 15033,
+          "end": 15044,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 15278,
+          "end": 15289,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 15290,
+          "end": 15297,
+          "symbol": "F:ja.field_K:Ltf;",
+          "original": "field_K",
+          "renamed": "entityQueue"
+        },
+        {
+          "start": 15303,
+          "end": 15310,
+          "symbol": "F:ji.field_r:Ltf;",
+          "original": "field_r",
+          "renamed": "movingEntities"
+        },
+        {
+          "start": 15380,
+          "end": 15391,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 15392,
+          "end": 15399,
+          "symbol": "F:ja.field_t:Z",
+          "original": "field_t",
+          "renamed": "touchesAvatar"
+        },
+        {
+          "start": 15477,
+          "end": 15488,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 15489,
+          "end": 15496,
+          "symbol": "F:ja.field_B:Z",
+          "original": "field_B",
+          "renamed": "detachedFromBoard"
+        },
+        {
+          "start": 15576,
+          "end": 15583,
+          "symbol": "F:fa.field_a:Z",
+          "original": "field_a",
+          "renamed": "entitiesDetachedThisTick"
+        },
+        {
+          "start": 15991,
+          "end": 15999,
+          "symbol": "L:kc.b(I)V#34",
+          "original": "var6_int",
+          "renamed": "childEntityIndex"
+        },
+        {
+          "start": 16942,
+          "end": 16953,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 17024,
+          "end": 17035,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 17099,
+          "end": 17110,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 17111,
+          "end": 17118,
+          "symbol": "F:ja.field_L:I",
+          "original": "field_L",
+          "renamed": "relatedEntityCount"
+        },
+        {
+          "start": 17191,
+          "end": 17198,
+          "symbol": "F:ja.field_N:I",
+          "original": "field_N",
+          "renamed": "sameCategoryEntityCount"
+        },
+        {
+          "start": 17271,
+          "end": 17278,
+          "symbol": "F:ja.field_m:I",
+          "original": "field_m",
+          "renamed": "sameVariantEntityCount"
+        },
+        {
+          "start": 17346,
+          "end": 17357,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 17361,
+          "end": 17363,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "GameplayEntity"
+        },
+        {
+          "start": 17538,
+          "end": 17549,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 17777,
+          "end": 17788,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 17789,
+          "end": 17796,
+          "symbol": "F:ja.field_K:Ltf;",
+          "original": "field_K",
+          "renamed": "entityQueue"
+        },
+        {
+          "start": 17802,
+          "end": 17809,
+          "symbol": "F:ji.field_r:Ltf;",
+          "original": "field_r",
+          "renamed": "movingEntities"
+        },
+        {
+          "start": 17877,
+          "end": 17888,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 17889,
+          "end": 17896,
+          "symbol": "F:ja.field_t:Z",
+          "original": "field_t",
+          "renamed": "touchesAvatar"
+        },
+        {
+          "start": 17972,
+          "end": 17983,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 17984,
+          "end": 17991,
+          "symbol": "F:ja.field_B:Z",
+          "original": "field_B",
+          "renamed": "detachedFromBoard"
+        },
+        {
+          "start": 18069,
+          "end": 18076,
+          "symbol": "F:fa.field_a:Z",
+          "original": "field_a",
+          "renamed": "entitiesDetachedThisTick"
+        },
+        {
+          "start": 18474,
+          "end": 18482,
+          "symbol": "L:kc.b(I)V#34",
+          "original": "var6_int",
+          "renamed": "childEntityIndex"
+        },
+        {
+          "start": 18571,
+          "end": 18579,
+          "symbol": "L:kc.b(I)V#34",
+          "original": "var6_int",
+          "renamed": "childEntityIndex"
+        },
+        {
+          "start": 18583,
+          "end": 18594,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 18595,
+          "end": 18602,
+          "symbol": "F:ja.field_L:I",
+          "original": "field_L",
+          "renamed": "relatedEntityCount"
+        },
+        {
+          "start": 19567,
+          "end": 19578,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 19579,
+          "end": 19586,
+          "symbol": "F:ja.field_n:[Lja;",
+          "original": "field_n",
+          "renamed": "relatedEntities"
+        },
+        {
+          "start": 19587,
+          "end": 19595,
+          "symbol": "L:kc.b(I)V#34",
+          "original": "var6_int",
+          "renamed": "childEntityIndex"
+        },
+        {
+          "start": 19668,
+          "end": 19670,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "GameplayEntity"
+        },
+        {
+          "start": 19673,
+          "end": 19684,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 19911,
+          "end": 19919,
+          "symbol": "L:kc.b(I)V#34",
+          "original": "var6_int",
+          "renamed": "childEntityIndex"
+        },
+        {
+          "start": 21111,
+          "end": 21122,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 21126,
+          "end": 21128,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "GameplayEntity"
+        },
+        {
+          "start": 21250,
+          "end": 21261,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 21405,
+          "end": 21416,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 21417,
+          "end": 21424,
+          "symbol": "F:ja.field_K:Ltf;",
+          "original": "field_K",
+          "renamed": "entityQueue"
+        },
+        {
+          "start": 21430,
+          "end": 21437,
+          "symbol": "F:ji.field_r:Ltf;",
+          "original": "field_r",
+          "renamed": "movingEntities"
+        },
+        {
+          "start": 21477,
+          "end": 21488,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 21489,
+          "end": 21496,
+          "symbol": "F:ja.field_t:Z",
+          "original": "field_t",
+          "renamed": "touchesAvatar"
+        },
+        {
+          "start": 21544,
+          "end": 21555,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 21556,
+          "end": 21563,
+          "symbol": "F:ja.field_B:Z",
+          "original": "field_B",
+          "renamed": "detachedFromBoard"
+        },
+        {
+          "start": 21613,
+          "end": 21620,
+          "symbol": "F:fa.field_a:Z",
+          "original": "field_a",
+          "renamed": "entitiesDetachedThisTick"
+        },
+        {
+          "start": 21878,
+          "end": 21886,
+          "symbol": "L:kc.b(I)V#34",
+          "original": "var6_int",
+          "renamed": "childEntityIndex"
+        },
+        {
+          "start": 21955,
+          "end": 21963,
+          "symbol": "L:kc.b(I)V#34",
+          "original": "var6_int",
+          "renamed": "childEntityIndex"
+        },
+        {
+          "start": 21966,
+          "end": 21977,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 21978,
+          "end": 21985,
+          "symbol": "F:ja.field_L:I",
+          "original": "field_L",
+          "renamed": "relatedEntityCount"
+        },
+        {
+          "start": 22046,
+          "end": 22057,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 22058,
+          "end": 22065,
+          "symbol": "F:ja.field_n:[Lja;",
+          "original": "field_n",
+          "renamed": "relatedEntities"
+        },
+        {
+          "start": 22066,
+          "end": 22074,
+          "symbol": "L:kc.b(I)V#34",
+          "original": "var6_int",
+          "renamed": "childEntityIndex"
+        },
+        {
+          "start": 22135,
+          "end": 22137,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "GameplayEntity"
+        },
+        {
+          "start": 22140,
+          "end": 22151,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 22198,
+          "end": 22200,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "GameplayEntity"
+        },
+        {
+          "start": 22225,
+          "end": 22226,
+          "symbol": "M:ja.a(Lja;I)V",
+          "original": "a",
+          "renamed": "removeRelatedEntity"
+        },
+        {
+          "start": 22287,
+          "end": 22295,
+          "symbol": "L:kc.b(I)V#34",
+          "original": "var6_int",
+          "renamed": "childEntityIndex"
+        },
+        {
+          "start": 22816,
+          "end": 22827,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 22876,
+          "end": 22887,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 22929,
+          "end": 22940,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 22941,
+          "end": 22948,
+          "symbol": "F:ja.field_L:I",
+          "original": "field_L",
+          "renamed": "relatedEntityCount"
+        },
+        {
+          "start": 22999,
+          "end": 23006,
+          "symbol": "F:ja.field_N:I",
+          "original": "field_N",
+          "renamed": "sameCategoryEntityCount"
+        },
+        {
+          "start": 23057,
+          "end": 23064,
+          "symbol": "F:ja.field_m:I",
+          "original": "field_m",
+          "renamed": "sameVariantEntityCount"
+        },
+        {
+          "start": 23110,
+          "end": 23121,
+          "symbol": "L:kc.b(I)V#32",
+          "original": "var5_ref_ja",
+          "renamed": "groupEntity"
+        },
+        {
+          "start": 23125,
+          "end": 23127,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "GameplayEntity"
+        },
+        {
+          "start": 23676,
+          "end": 23680,
+          "symbol": "L:kc.b(I)V#21",
           "original": "var1",
           "renamed": "activeEntity"
         },
         {
-          "start": 30271,
-          "end": 30273,
+          "start": 23684,
+          "end": 23686,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 30287,
-          "end": 30294,
+          "start": 23700,
+          "end": 23707,
           "symbol": "F:a.field_d:Ltf;",
           "original": "field_d",
           "renamed": "attachedEntities"
         },
         {
-          "start": 30295,
-          "end": 30296,
+          "start": 23708,
+          "end": 23709,
           "symbol": "M:tf.d(I)Lhf;",
           "original": "d",
           "renamed": "nextForIteration"
         },
         {
-          "start": 30848,
-          "end": 30855,
+          "start": 23902,
+          "end": 23909,
           "symbol": "F:re.field_j:Z",
           "original": "field_j",
           "renamed": "connectivityDirty"
         },
         {
-          "start": 30892,
-          "end": 30899,
+          "start": 23944,
+          "end": 23951,
           "symbol": "F:el.field_o:Lgh;",
           "original": "field_o",
           "renamed": "gameplaySession"
         },
         {
-          "start": 30900,
-          "end": 30907,
+          "start": 23952,
+          "end": 23959,
           "symbol": "F:gh.field_B:Z",
           "original": "field_B",
           "renamed": "connectivityRebuiltThisTick"
         },
         {
-          "start": 31355,
-          "end": 31363,
-          "symbol": "L:kc.b(I)V#43",
+          "start": 24050,
+          "end": 24058,
+          "symbol": "L:kc.b(I)V#22",
           "original": "var1_int",
           "renamed": "entityIndexThenGroupCount"
         },
         {
-          "start": 31789,
-          "end": 31797,
-          "symbol": "L:kc.b(I)V#43",
+          "start": 24149,
+          "end": 24157,
+          "symbol": "L:kc.b(I)V#22",
           "original": "var1_int",
           "renamed": "entityIndexThenGroupCount"
         },
         {
-          "start": 32046,
-          "end": 32053,
+          "start": 24253,
+          "end": 24260,
           "symbol": "F:pk.field_o:[Z",
           "original": "field_o",
           "renamed": "connectivityVisitedByEntityId"
         },
         {
-          "start": 32054,
-          "end": 32062,
-          "symbol": "L:kc.b(I)V#43",
+          "start": 24261,
+          "end": 24269,
+          "symbol": "L:kc.b(I)V#22",
           "original": "var1_int",
           "renamed": "entityIndexThenGroupCount"
         },
         {
-          "start": 32105,
-          "end": 32113,
-          "symbol": "L:kc.b(I)V#43",
+          "start": 24304,
+          "end": 24312,
+          "symbol": "L:kc.b(I)V#22",
           "original": "var1_int",
           "renamed": "entityIndexThenGroupCount"
         },
         {
-          "start": 33424,
-          "end": 33432,
-          "symbol": "L:kc.b(I)V#43",
+          "start": 24738,
+          "end": 24746,
+          "symbol": "L:kc.b(I)V#22",
           "original": "var1_int",
           "renamed": "entityIndexThenGroupCount"
         },
         {
-          "start": 33835,
-          "end": 33846,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 24782,
+          "end": 24793,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 33850,
-          "end": 33852,
+          "start": 24797,
+          "end": 24799,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 33866,
-          "end": 33873,
+          "start": 24813,
+          "end": 24820,
           "symbol": "F:a.field_d:Ltf;",
           "original": "field_d",
           "renamed": "attachedEntities"
         },
         {
-          "start": 33874,
-          "end": 33875,
+          "start": 24821,
+          "end": 24822,
           "symbol": "M:tf.g(I)Lhf;",
           "original": "g",
           "renamed": "firstForIteration"
         },
         {
-          "start": 34282,
-          "end": 34293,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 24854,
+          "end": 24865,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 34559,
-          "end": 34570,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 24930,
+          "end": 24941,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 34571,
-          "end": 34578,
+          "start": 24942,
+          "end": 24949,
           "symbol": "F:ja.field_K:Ltf;",
           "original": "field_K",
           "renamed": "entityQueue"
         },
         {
-          "start": 35232,
-          "end": 35243,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 25080,
+          "end": 25091,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 35244,
-          "end": 35251,
+          "start": 25092,
+          "end": 25099,
           "symbol": "F:ja.field_t:Z",
           "original": "field_t",
           "renamed": "touchesAvatar"
         },
         {
-          "start": 36369,
-          "end": 36376,
+          "start": 25312,
+          "end": 25319,
           "symbol": "F:re.field_j:Z",
           "original": "field_j",
           "renamed": "connectivityDirty"
         },
         {
-          "start": 36409,
-          "end": 36420,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 25352,
+          "end": 25363,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 36421,
-          "end": 36422,
+          "start": 25364,
+          "end": 25365,
           "symbol": "M:hf.a(Z)V",
           "original": "a",
           "renamed": "unlinkNode"
         },
         {
-          "start": 36455,
-          "end": 36466,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 25398,
+          "end": 25409,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 36467,
-          "end": 36468,
+          "start": 25410,
+          "end": 25411,
           "symbol": "M:rc.a(B)V",
           "original": "a",
           "renamed": "unlinkSecondaryNode"
         },
         {
-          "start": 36509,
-          "end": 36516,
+          "start": 25452,
+          "end": 25459,
           "symbol": "F:el.field_o:Lgh;",
           "original": "field_o",
           "renamed": "gameplaySession"
         },
         {
-          "start": 36517,
-          "end": 36524,
+          "start": 25460,
+          "end": 25467,
           "symbol": "F:gh.field_F:Z",
           "original": "field_F",
           "renamed": "boardRasterDirty"
         },
         {
-          "start": 36557,
-          "end": 36568,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 25500,
+          "end": 25511,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 36569,
-          "end": 36570,
+          "start": 25512,
+          "end": 25513,
           "symbol": "M:ja.f(I)V",
           "original": "f",
           "renamed": "eraseEntityPixels"
         },
         {
-          "start": 36607,
-          "end": 36614,
+          "start": 25550,
+          "end": 25557,
           "symbol": "F:ji.field_r:Ltf;",
           "original": "field_r",
           "renamed": "movingEntities"
         },
         {
-          "start": 36618,
-          "end": 36629,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 25561,
+          "end": 25572,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 36630,
-          "end": 36637,
+          "start": 25573,
+          "end": 25580,
           "symbol": "F:ja.field_K:Ltf;",
           "original": "field_K",
           "renamed": "entityQueue"
         },
         {
-          "start": 36883,
-          "end": 36894,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 25610,
+          "end": 25621,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 36895,
-          "end": 36896,
+          "start": 25622,
+          "end": 25623,
           "symbol": "M:ja.a(FI)V",
           "original": "a",
           "renamed": "rotateEntityAroundBoard"
         },
         {
-          "start": 36901,
-          "end": 36908,
+          "start": 25628,
+          "end": 25635,
           "symbol": "F:el.field_o:Lgh;",
           "original": "field_o",
           "renamed": "gameplaySession"
         },
         {
-          "start": 36909,
-          "end": 36916,
+          "start": 25636,
+          "end": 25643,
           "symbol": "F:gh.field_J:F",
           "original": "field_J",
           "renamed": "boardAngleRadians"
         },
         {
-          "start": 36957,
-          "end": 36967,
-          "symbol": "L:kc.b(I)V#47",
+          "start": 25678,
+          "end": 25688,
+          "symbol": "L:kc.b(I)V#26",
           "original": "var3_float",
           "renamed": "radialOffsetX"
         },
         {
-          "start": 36971,
-          "end": 36982,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 25692,
+          "end": 25703,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 36983,
-          "end": 36990,
+          "start": 25704,
+          "end": 25711,
           "symbol": "F:ja.field_o:F",
           "original": "field_o",
           "renamed": "positionX"
         },
         {
-          "start": 37033,
-          "end": 37043,
-          "symbol": "L:kc.b(I)V#51",
+          "start": 25748,
+          "end": 25758,
+          "symbol": "L:kc.b(I)V#30",
           "original": "var4_float",
           "renamed": "radialOffsetY"
         },
         {
-          "start": 37047,
-          "end": 37058,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 25762,
+          "end": 25773,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 37059,
-          "end": 37066,
+          "start": 25774,
+          "end": 25781,
           "symbol": "F:ja.field_v:F",
           "original": "field_v",
           "renamed": "positionY"
         },
         {
-          "start": 37109,
-          "end": 37113,
-          "symbol": "L:kc.b(I)V#54",
+          "start": 25818,
+          "end": 25822,
+          "symbol": "L:kc.b(I)V#33",
           "original": "var5",
           "renamed": "radialVelocityScale"
         },
         {
-          "start": 37127,
-          "end": 37134,
+          "start": 25836,
+          "end": 25843,
           "symbol": "F:og.field_r:F",
           "original": "field_r",
           "renamed": "entityMotionSpeed"
         },
         {
-          "start": 37156,
-          "end": 37166,
-          "symbol": "L:kc.b(I)V#51",
+          "start": 25865,
+          "end": 25875,
+          "symbol": "L:kc.b(I)V#30",
           "original": "var4_float",
           "renamed": "radialOffsetY"
         },
         {
-          "start": 37169,
-          "end": 37179,
-          "symbol": "L:kc.b(I)V#51",
+          "start": 25878,
+          "end": 25888,
+          "symbol": "L:kc.b(I)V#30",
           "original": "var4_float",
           "renamed": "radialOffsetY"
         },
         {
-          "start": 37182,
-          "end": 37192,
-          "symbol": "L:kc.b(I)V#47",
+          "start": 25891,
+          "end": 25901,
+          "symbol": "L:kc.b(I)V#26",
           "original": "var3_float",
           "renamed": "radialOffsetX"
         },
         {
-          "start": 37195,
-          "end": 37205,
-          "symbol": "L:kc.b(I)V#47",
+          "start": 25904,
+          "end": 25914,
+          "symbol": "L:kc.b(I)V#26",
           "original": "var3_float",
           "renamed": "radialOffsetX"
         },
         {
-          "start": 37241,
-          "end": 37251,
-          "symbol": "L:kc.b(I)V#47",
+          "start": 25944,
+          "end": 25954,
+          "symbol": "L:kc.b(I)V#26",
           "original": "var3_float",
           "renamed": "radialOffsetX"
         },
         {
-          "start": 37270,
-          "end": 37280,
-          "symbol": "L:kc.b(I)V#47",
+          "start": 25973,
+          "end": 25983,
+          "symbol": "L:kc.b(I)V#26",
           "original": "var3_float",
           "renamed": "radialOffsetX"
         },
         {
-          "start": 37283,
-          "end": 37287,
-          "symbol": "L:kc.b(I)V#54",
+          "start": 25986,
+          "end": 25990,
+          "symbol": "L:kc.b(I)V#33",
           "original": "var5",
           "renamed": "radialVelocityScale"
         },
         {
-          "start": 37322,
-          "end": 37332,
-          "symbol": "L:kc.b(I)V#51",
+          "start": 26019,
+          "end": 26029,
+          "symbol": "L:kc.b(I)V#30",
           "original": "var4_float",
           "renamed": "radialOffsetY"
         },
         {
-          "start": 37351,
-          "end": 37361,
-          "symbol": "L:kc.b(I)V#51",
+          "start": 26048,
+          "end": 26058,
+          "symbol": "L:kc.b(I)V#30",
           "original": "var4_float",
           "renamed": "radialOffsetY"
         },
         {
-          "start": 37364,
-          "end": 37368,
-          "symbol": "L:kc.b(I)V#54",
+          "start": 26061,
+          "end": 26065,
+          "symbol": "L:kc.b(I)V#33",
           "original": "var5",
           "renamed": "radialVelocityScale"
         },
         {
-          "start": 37403,
-          "end": 37414,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 26094,
+          "end": 26105,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 37415,
-          "end": 37422,
+          "start": 26106,
+          "end": 26113,
           "symbol": "F:ja.field_F:F",
           "original": "field_F",
           "renamed": "velocityY"
         },
         {
-          "start": 37425,
-          "end": 37435,
-          "symbol": "L:kc.b(I)V#51",
+          "start": 26116,
+          "end": 26126,
+          "symbol": "L:kc.b(I)V#30",
           "original": "var4_float",
           "renamed": "radialOffsetY"
         },
         {
-          "start": 37469,
-          "end": 37480,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 26154,
+          "end": 26165,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 37481,
-          "end": 37488,
+          "start": 26166,
+          "end": 26173,
           "symbol": "F:ja.field_w:F",
           "original": "field_w",
           "renamed": "velocityX"
         },
         {
-          "start": 37491,
-          "end": 37501,
-          "symbol": "L:kc.b(I)V#47",
+          "start": 26176,
+          "end": 26186,
+          "symbol": "L:kc.b(I)V#26",
           "original": "var3_float",
           "renamed": "radialOffsetX"
         },
         {
-          "start": 37535,
-          "end": 37543,
-          "symbol": "L:kc.b(I)V#58",
+          "start": 26214,
+          "end": 26222,
+          "symbol": "L:kc.b(I)V#37",
           "original": "var7_int",
           "renamed": "relatedEntityIndex"
         },
         {
-          "start": 38022,
-          "end": 38033,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 26266,
+          "end": 26277,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 38034,
-          "end": 38041,
+          "start": 26278,
+          "end": 26285,
           "symbol": "F:ja.field_L:I",
           "original": "field_L",
           "renamed": "relatedEntityCount"
         },
         {
-          "start": 38045,
-          "end": 38053,
-          "symbol": "L:kc.b(I)V#58",
+          "start": 26288,
+          "end": 26296,
+          "symbol": "L:kc.b(I)V#37",
           "original": "var7_int",
           "renamed": "relatedEntityIndex"
         },
         {
-          "start": 38299,
-          "end": 38310,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 26328,
+          "end": 26339,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 38311,
-          "end": 38318,
+          "start": 26340,
+          "end": 26347,
           "symbol": "F:ja.field_n:[Lja;",
           "original": "field_n",
           "renamed": "relatedEntities"
         },
         {
-          "start": 38319,
-          "end": 38327,
-          "symbol": "L:kc.b(I)V#58",
+          "start": 26348,
+          "end": 26356,
+          "symbol": "L:kc.b(I)V#37",
           "original": "var7_int",
           "renamed": "relatedEntityIndex"
         },
         {
-          "start": 38329,
-          "end": 38330,
+          "start": 26358,
+          "end": 26359,
           "symbol": "M:ja.a(Lja;I)V",
           "original": "a",
           "renamed": "removeRelatedEntity"
         },
         {
-          "start": 38331,
-          "end": 38342,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 26360,
+          "end": 26371,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 38380,
-          "end": 38388,
-          "symbol": "L:kc.b(I)V#58",
+          "start": 26405,
+          "end": 26413,
+          "symbol": "L:kc.b(I)V#37",
           "original": "var7_int",
           "renamed": "relatedEntityIndex"
         },
         {
-          "start": 39706,
-          "end": 39717,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 26791,
+          "end": 26802,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 39743,
-          "end": 39747,
-          "symbol": "L:kc.b(I)V#59",
+          "start": 26830,
+          "end": 26834,
+          "symbol": "L:kc.b(I)V#38",
           "original": "var8",
           "renamed": "relatedEntityCandidate"
         },
         {
-          "start": 39750,
-          "end": 39761,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 26837,
+          "end": 26848,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 39787,
-          "end": 39798,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 26876,
+          "end": 26887,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 39799,
-          "end": 39806,
+          "start": 26888,
+          "end": 26895,
           "symbol": "F:ja.field_L:I",
           "original": "field_L",
           "renamed": "relatedEntityCount"
         },
         {
-          "start": 39841,
-          "end": 39848,
+          "start": 26932,
+          "end": 26939,
           "symbol": "F:ja.field_N:I",
           "original": "field_N",
           "renamed": "sameCategoryEntityCount"
         },
         {
-          "start": 39878,
-          "end": 39882,
-          "symbol": "L:kc.b(I)V#59",
+          "start": 26971,
+          "end": 26975,
+          "symbol": "L:kc.b(I)V#38",
           "original": "var8",
           "renamed": "relatedEntityCandidate"
         },
         {
-          "start": 39883,
-          "end": 39890,
+          "start": 26976,
+          "end": 26983,
           "symbol": "F:ja.field_m:I",
           "original": "field_m",
           "renamed": "sameVariantEntityCount"
         },
         {
-          "start": 39923,
-          "end": 39930,
+          "start": 27018,
+          "end": 27025,
           "symbol": "F:ji.field_r:Ltf;",
           "original": "field_r",
           "renamed": "movingEntities"
         },
         {
-          "start": 39931,
-          "end": 39932,
+          "start": 27026,
+          "end": 27027,
           "symbol": "M:tf.a(ILhf;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 39938,
-          "end": 39949,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 27033,
+          "end": 27044,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 40499,
-          "end": 40510,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 27307,
+          "end": 27318,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 40511,
-          "end": 40518,
+          "start": 27319,
+          "end": 27326,
           "symbol": "F:ja.field_K:Ltf;",
           "original": "field_K",
           "renamed": "entityQueue"
         },
         {
-          "start": 42029,
-          "end": 42040,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 27554,
+          "end": 27565,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 42041,
-          "end": 42048,
+          "start": 27566,
+          "end": 27573,
           "symbol": "F:ja.field_L:I",
           "original": "field_L",
           "renamed": "relatedEntityCount"
         },
         {
-          "start": 42294,
-          "end": 42305,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 27601,
+          "end": 27612,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 42306,
-          "end": 42313,
+          "start": 27613,
+          "end": 27620,
           "symbol": "F:ja.field_n:[Lja;",
           "original": "field_n",
           "renamed": "relatedEntities"
         },
         {
-          "start": 42324,
-          "end": 42325,
+          "start": 27631,
+          "end": 27632,
           "symbol": "M:ja.a(Lja;I)V",
           "original": "a",
           "renamed": "removeRelatedEntity"
         },
         {
-          "start": 42326,
-          "end": 42337,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 27633,
+          "end": 27644,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 42375,
-          "end": 42386,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 27674,
+          "end": 27685,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 42387,
-          "end": 42394,
+          "start": 27686,
+          "end": 27693,
           "symbol": "F:ja.field_n:[Lja;",
           "original": "field_n",
           "renamed": "relatedEntities"
         },
         {
-          "start": 42405,
-          "end": 42406,
+          "start": 27704,
+          "end": 27705,
           "symbol": "M:ja.k(I)V",
           "original": "k",
           "renamed": "drawEntityIdOnBoardMask"
         },
         {
-          "start": 43762,
-          "end": 43766,
-          "symbol": "L:kc.b(I)V#49",
+          "start": 28073,
+          "end": 28077,
+          "symbol": "L:kc.b(I)V#28",
           "original": "var3",
           "renamed": "queuedEntity"
         },
         {
-          "start": 43769,
-          "end": 43780,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 28080,
+          "end": 28091,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 43806,
-          "end": 43817,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 28115,
+          "end": 28126,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 43818,
-          "end": 43825,
+          "start": 28127,
+          "end": 28134,
           "symbol": "F:ja.field_L:I",
           "original": "field_L",
           "renamed": "relatedEntityCount"
         },
         {
-          "start": 43862,
-          "end": 43873,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 28169,
+          "end": 28180,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 43899,
-          "end": 43903,
-          "symbol": "L:kc.b(I)V#49",
+          "start": 28204,
+          "end": 28208,
+          "symbol": "L:kc.b(I)V#28",
           "original": "var3",
           "renamed": "queuedEntity"
         },
         {
-          "start": 43904,
-          "end": 43911,
+          "start": 28209,
+          "end": 28216,
           "symbol": "F:ja.field_N:I",
           "original": "field_N",
           "renamed": "sameCategoryEntityCount"
         },
         {
-          "start": 43946,
-          "end": 43953,
+          "start": 28249,
+          "end": 28256,
           "symbol": "F:ja.field_m:I",
           "original": "field_m",
           "renamed": "sameVariantEntityCount"
         },
         {
-          "start": 43983,
-          "end": 43994,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 28284,
+          "end": 28295,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 43995,
-          "end": 44002,
+          "start": 28296,
+          "end": 28303,
           "symbol": "F:ja.field_r:I",
           "original": "field_r",
           "renamed": "remainingLifetimeTicks"
         },
         {
-          "start": 44044,
-          "end": 44045,
+          "start": 28343,
+          "end": 28344,
           "symbol": "M:tf.a(ILhf;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 44052,
-          "end": 44063,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 28351,
+          "end": 28362,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 44090,
-          "end": 44101,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 28387,
+          "end": 28398,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 44102,
-          "end": 44109,
+          "start": 28399,
+          "end": 28406,
           "symbol": "F:ja.field_G:I",
           "original": "field_G",
           "renamed": "animationFrameIndex"
         },
         {
-          "start": 44144,
-          "end": 44155,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 28438,
+          "end": 28449,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 44156,
-          "end": 44163,
+          "start": 28450,
+          "end": 28457,
           "symbol": "F:ja.field_t:Z",
           "original": "field_t",
           "renamed": "touchesAvatar"
         },
         {
-          "start": 44949,
-          "end": 44960,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 28583,
+          "end": 28594,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 44961,
-          "end": 44968,
+          "start": 28595,
+          "end": 28602,
           "symbol": "F:ja.field_v:F",
           "original": "field_v",
           "renamed": "positionY"
         },
         {
-          "start": 45083,
-          "end": 45094,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 28653,
+          "end": 28664,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 45095,
-          "end": 45102,
+          "start": 28665,
+          "end": 28672,
           "symbol": "F:ja.field_o:F",
           "original": "field_o",
           "renamed": "positionX"
         },
         {
-          "start": 45315,
-          "end": 45326,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 28757,
+          "end": 28768,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 45327,
-          "end": 45334,
+          "start": 28769,
+          "end": 28776,
           "symbol": "F:ja.field_z:I",
           "original": "field_z",
           "renamed": "entitySpriteKindId"
         },
         {
-          "start": 46059,
-          "end": 46070,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 28833,
+          "end": 28844,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 46071,
-          "end": 46078,
+          "start": 28845,
+          "end": 28852,
           "symbol": "F:ja.field_z:I",
           "original": "field_z",
           "renamed": "entitySpriteKindId"
         },
         {
-          "start": 48791,
-          "end": 48802,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 29665,
+          "end": 29676,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 48803,
-          "end": 48810,
+          "start": 29677,
+          "end": 29684,
           "symbol": "F:ja.field_z:I",
           "original": "field_z",
           "renamed": "entitySpriteKindId"
         },
         {
-          "start": 49056,
-          "end": 49067,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 29712,
+          "end": 29723,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 49068,
-          "end": 49069,
+          "start": 29724,
+          "end": 29725,
           "symbol": "M:ja.a(IIII)V",
           "original": "a",
           "renamed": "configureEntitySprite"
         },
         {
-          "start": 49075,
-          "end": 49086,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 29731,
+          "end": 29742,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 49087,
-          "end": 49094,
+          "start": 29743,
+          "end": 29750,
           "symbol": "F:ja.field_C:I",
           "original": "field_C",
           "renamed": "entityCategoryKey"
         },
         {
-          "start": 49096,
-          "end": 49107,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 29752,
+          "end": 29763,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 49108,
-          "end": 49115,
+          "start": 29764,
+          "end": 29771,
           "symbol": "F:ja.field_M:I",
           "original": "field_M",
           "renamed": "spriteVariantIndex"
         },
         {
-          "start": 49977,
-          "end": 49988,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 29927,
+          "end": 29938,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 49989,
-          "end": 49990,
+          "start": 29939,
+          "end": 29940,
           "symbol": "M:ja.a(IIII)V",
           "original": "a",
           "renamed": "configureEntitySprite"
         },
         {
-          "start": 49996,
-          "end": 50007,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 29946,
+          "end": 29957,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 50008,
-          "end": 50015,
+          "start": 29958,
+          "end": 29965,
           "symbol": "F:ja.field_C:I",
           "original": "field_C",
           "renamed": "entityCategoryKey"
         },
         {
-          "start": 50017,
-          "end": 50028,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 29967,
+          "end": 29978,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 50029,
-          "end": 50036,
+          "start": 29979,
+          "end": 29986,
           "symbol": "F:ja.field_M:I",
           "original": "field_M",
           "renamed": "spriteVariantIndex"
         },
         {
-          "start": 50066,
-          "end": 50074,
-          "symbol": "L:kc.b(I)V#43",
+          "start": 30014,
+          "end": 30022,
+          "symbol": "L:kc.b(I)V#22",
           "original": "var1_int",
           "renamed": "entityIndexThenGroupCount"
         },
         {
-          "start": 50528,
-          "end": 50539,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 30152,
+          "end": 30163,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 50540,
-          "end": 50547,
+          "start": 30164,
+          "end": 30171,
           "symbol": "F:ja.field_K:Ltf;",
           "original": "field_K",
           "renamed": "entityQueue"
         },
         {
-          "start": 50956,
-          "end": 50963,
+          "start": 30221,
+          "end": 30228,
           "symbol": "F:el.field_o:Lgh;",
           "original": "field_o",
           "renamed": "gameplaySession"
         },
         {
-          "start": 50964,
-          "end": 50971,
+          "start": 30229,
+          "end": 30236,
           "symbol": "F:gh.field_F:Z",
           "original": "field_F",
           "renamed": "boardRasterDirty"
         },
         {
-          "start": 51377,
-          "end": 51388,
-          "symbol": "L:kc.b(I)V#45",
+          "start": 30279,
+          "end": 30290,
+          "symbol": "L:kc.b(I)V#24",
           "original": "var2_ref_ja",
           "renamed": "candidateEntity"
         },
         {
-          "start": 51392,
-          "end": 51394,
+          "start": 30294,
+          "end": 30296,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 51408,
-          "end": 51415,
+          "start": 30310,
+          "end": 30317,
           "symbol": "F:a.field_d:Ltf;",
           "original": "field_d",
           "renamed": "attachedEntities"
         },
         {
-          "start": 51416,
-          "end": 51417,
+          "start": 30318,
+          "end": 30319,
           "symbol": "M:tf.d(I)Lhf;",
           "original": "d",
           "renamed": "nextForIteration"
         },
         {
-          "start": 52025,
-          "end": 52029,
-          "symbol": "L:kc.b(I)V#49",
+          "start": 30510,
+          "end": 30514,
+          "symbol": "L:kc.b(I)V#28",
           "original": "var3",
           "renamed": "queuedEntity"
         },
         {
-          "start": 52033,
-          "end": 52035,
+          "start": 30518,
+          "end": 30520,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 52058,
-          "end": 52059,
+          "start": 30543,
+          "end": 30544,
           "symbol": "M:tf.g(I)Lhf;",
           "original": "g",
           "renamed": "firstForIteration"
         },
         {
-          "start": 52466,
-          "end": 52470,
-          "symbol": "L:kc.b(I)V#49",
+          "start": 30629,
+          "end": 30633,
+          "symbol": "L:kc.b(I)V#28",
           "original": "var3",
           "renamed": "queuedEntity"
         },
         {
-          "start": 53042,
-          "end": 53049,
+          "start": 30773,
+          "end": 30780,
           "symbol": "F:ra.field_a:Ltf;",
           "original": "field_a",
           "renamed": "availableEntities"
         },
         {
-          "start": 53053,
-          "end": 53057,
-          "symbol": "L:kc.b(I)V#49",
+          "start": 30784,
+          "end": 30788,
+          "symbol": "L:kc.b(I)V#28",
           "original": "var3",
           "renamed": "queuedEntity"
         },
         {
-          "start": 53058,
-          "end": 53065,
+          "start": 30789,
+          "end": 30796,
           "symbol": "F:ja.field_K:Ltf;",
           "original": "field_K",
           "renamed": "entityQueue"
         },
         {
-          "start": 53409,
-          "end": 53413,
-          "symbol": "L:kc.b(I)V#49",
+          "start": 30824,
+          "end": 30828,
+          "symbol": "L:kc.b(I)V#28",
           "original": "var3",
           "renamed": "queuedEntity"
         },
         {
-          "start": 53414,
-          "end": 53415,
+          "start": 30829,
+          "end": 30830,
           "symbol": "M:hf.a(Z)V",
           "original": "a",
           "renamed": "unlinkNode"
         },
         {
-          "start": 53472,
-          "end": 53476,
-          "symbol": "L:kc.b(I)V#49",
+          "start": 30863,
+          "end": 30867,
+          "symbol": "L:kc.b(I)V#28",
           "original": "var3",
           "renamed": "queuedEntity"
         },
         {
-          "start": 53477,
-          "end": 53478,
+          "start": 30868,
+          "end": 30869,
           "symbol": "M:rc.a(B)V",
           "original": "a",
           "renamed": "unlinkSecondaryNode"
         },
         {
-          "start": 53542,
-          "end": 53549,
+          "start": 30909,
+          "end": 30916,
           "symbol": "F:ra.field_a:Ltf;",
           "original": "field_a",
           "renamed": "availableEntities"
         },
         {
-          "start": 53550,
-          "end": 53551,
+          "start": 30917,
+          "end": 30918,
           "symbol": "M:tf.a(ILhf;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 53557,
-          "end": 53561,
-          "symbol": "L:kc.b(I)V#49",
+          "start": 30924,
+          "end": 30928,
+          "symbol": "L:kc.b(I)V#28",
           "original": "var3",
           "renamed": "queuedEntity"
         },
         {
-          "start": 53612,
-          "end": 53616,
-          "symbol": "L:kc.b(I)V#49",
+          "start": 30955,
+          "end": 30959,
+          "symbol": "L:kc.b(I)V#28",
           "original": "var3",
           "renamed": "queuedEntity"
         },
         {
-          "start": 53617,
-          "end": 53624,
+          "start": 30960,
+          "end": 30967,
           "symbol": "F:ja.field_K:Ltf;",
           "original": "field_K",
           "renamed": "entityQueue"
         },
         {
-          "start": 54296,
-          "end": 54300,
-          "symbol": "L:kc.b(I)V#49",
+          "start": 31022,
+          "end": 31026,
+          "symbol": "L:kc.b(I)V#28",
           "original": "var3",
           "renamed": "queuedEntity"
         },
         {
-          "start": 54304,
-          "end": 54306,
+          "start": 31030,
+          "end": 31032,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
         },
         {
-          "start": 54329,
-          "end": 54330,
+          "start": 31055,
+          "end": 31056,
           "symbol": "M:tf.d(I)Lhf;",
           "original": "d",
           "renamed": "nextForIteration"
         },
         {
-          "start": 55705,
-          "end": 55712,
+          "start": 31414,
+          "end": 31421,
           "symbol": "F:el.field_o:Lgh;",
           "original": "field_o",
           "renamed": "gameplaySession"
         },
         {
-          "start": 55800,
-          "end": 55807,
+          "start": 31450,
+          "end": 31457,
           "symbol": "F:el.field_o:Lgh;",
           "original": "field_o",
           "renamed": "gameplaySession"
         },
         {
-          "start": 55808,
-          "end": 55815,
+          "start": 31458,
+          "end": 31465,
           "symbol": "F:gh.field_F:Z",
           "original": "field_F",
           "renamed": "boardRasterDirty"
         },
         {
-          "start": 56080,
-          "end": 56082,
+          "start": 31506,
+          "end": 31508,
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "GameplaySession"
         },
         {
-          "start": 56212,
-          "end": 56219,
+          "start": 31565,
+          "end": 31572,
           "symbol": "F:ab.field_f:Z",
           "original": "field_f",
           "renamed": "boardContactStateDirty"
         },
         {
-          "start": 56532,
-          "end": 56534,
+          "start": 31659,
+          "end": 31661,
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "GameplaySession"
         },
         {
-          "start": 56876,
-          "end": 56878,
+          "start": 31839,
+          "end": 31841,
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "GameplaySession"
         },
         {
-          "start": 57384,
-          "end": 57386,
+          "start": 31970,
+          "end": 31972,
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "GameplaySession"
         },
         {
-          "start": 58096,
-          "end": 58098,
-          "symbol": "C:gh",
-          "original": "gh",
-          "renamed": "GameplaySession"
-        },
-        {
-          "start": 58584,
-          "end": 58591,
+          "start": 32085,
+          "end": 32092,
           "symbol": "F:gh.field_F:Z",
           "original": "field_F",
           "renamed": "boardRasterDirty"
         },
         {
-          "start": 58692,
-          "end": 58700,
-          "symbol": "L:kc.b(I)V#43",
+          "start": 32177,
+          "end": 32185,
+          "symbol": "L:kc.b(I)V#22",
           "original": "var1_int",
           "renamed": "entityIndexThenGroupCount"
         }

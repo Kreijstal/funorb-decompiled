@@ -1,36 +1,38 @@
-# Why GeoBlox fell back, and what pass 9 recovers
+# Why GeoBlox fell back, and what pass 10 recovers
 
-Exception-region exits now keep explicit target and owner identities through
-composition. The decompiler no longer infers a loop break from an empty ordinary
-branch, and it refuses a catch continuation that would restart the wrong part
-of a region. `GameScreen.updateScreen` now uses structured Java with its runtime
-catch intact. Four original methods retain dispatchers; two have at least 50
-cases. Original transformed bytecode is unchanged.
+Pass 9 kept explicit exception-region exit identities and refused unsafe
+continuations. Pass 10 recovers nested cycles inside the board-entity protected
+region with bounded, deterministic copies. `kc.reconcileBoardEntities` now uses
+structured loops with its runtime catch intact. Three original methods retain
+dispatchers; the oversized initializer is the only one with at least 50 cases.
+Original transformed bytecode is unchanged.
 
 ## Result
 
-| Method | Pass 6 cases | Pass 7 cases | Pass 8 cases | Pass 9 cases |
-| --- | ---: | ---: | ---: | ---: |
-| `GameplaySession.updateSession`, `gh.a(I)V` | 252 | 107 | 0 | **0** |
-| `GameplaySession.renderSession`, `gh.a(B)V` | 115 | 65 | 0 | **0** |
-| `GameplaySession.updateSceneTransition`, `gh.b(B)V` | 42 | 27 | 0 | **0** |
-| `GameplaySession.updateResultSequence`, `gh.f(I)V` | 43 | 27 | 27 | 27 |
-| `GameScreen.updateScreen`, `c.h(B)V` | 117 | 58 | 58 | **0** |
-| `kc.reconcileBoardEntities`, `kc.b(I)V` | 120 | 60 | 60 | 60 |
-| Partitioned `wi.a(BLrh;)V` | 1,877 | 756 | 756 | 756 |
-| All GeoBlox fallbacks | **3,051** | **1,330** | **1,131** | **877** |
+| Method | Pass 6 cases | Pass 7 cases | Pass 8 cases | Pass 9 cases | Pass 10 cases |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `GameplaySession.updateSession`, `gh.a(I)V` | 252 | 107 | 0 | 0 | **0** |
+| `GameplaySession.renderSession`, `gh.a(B)V` | 115 | 65 | 0 | 0 | **0** |
+| `GameplaySession.updateSceneTransition`, `gh.b(B)V` | 42 | 27 | 0 | 0 | **0** |
+| `GameplaySession.updateResultSequence`, `gh.f(I)V` | 43 | 27 | 27 | 27 | 27 |
+| `GameScreen.updateScreen`, `c.h(B)V` | 117 | 58 | 58 | 0 | **0** |
+| `kc.reconcileBoardEntities`, `kc.b(I)V` | 120 | 60 | 60 | 60 | **0** |
+| Partitioned `wi.a(BLrh;)V` | 1,877 | 756 | 756 | 756 | 756 |
+| All GeoBlox fallbacks | **3,051** | **1,330** | **1,131** | **877** | **817** |
 
 These are numeric cases in generated `switch (statePc)` dispatchers, including
 partition helpers, excluding application switches. Method-level diagnostics
 agree with an independent javac Trees inventory. Generated methods containing
-dispatchers fall from 41 to 36 to 33 to 21. The largest original method still
+dispatchers fall from 41 to 36 to 33 to 21 to 20. The largest original method still
 uses 18 helpers, down from 23 in pass 6. Generated methods with at least 50 cases
-fall from 31 to four to two to one; counting the partitioned initializer as one
-original method gives two large remaining original methods.
+fall from 31 to four to two to one to zero; counting the partitioned initializer
+as one original method gives one large remaining original method.
 
 Pass 9 changes seven raw Java files: `c`, `ch`, `i`, `kc`, `lc`, `p` and `wh`.
 Twelve original methods recover structured bodies. The screen update shrinks
 from 951 to 380 lines. All 303 original and all 303 renamed sources compile.
+Pass 10 changes only `kc.java`; its board-reconciliation method shrinks from
+1,335 to 608 lines.
 [The diagnostics](../decompilation/geoblox-decompiler-diagnostics.json) and
 [provenance](../decompilation/geoblox-provenance.json) retain exact method
 identities and the recovered-method list.
@@ -70,18 +72,37 @@ structured rendering still falls back. The shared integer guard cannot simply
 be assumed zero: `Geoblox.field_C` is written by `wh` when `ch.field_h` is set.
 Both outcomes remain represented.
 
-## Why the remaining two large methods stay
+## Recovering the nested board cycles
 
-| Method | Constraint | Next structural work |
-| --- | --- | --- |
-| `kc.reconcileBoardEntities` | Induced exception subgraph remains irreducible after controlled splitting | Dominance-aware splitting of nested cycles, preserving handler entries and bytecode origins. |
-| `wi.a(BLrh;)V` | 9,499 normalized code items trigger the oversized static-void partitioner | Bounded structured helpers, retaining the 64 KiB compiled-method gate. |
+In pass 9, `kc` retained non-dominating retreating edges at bytecode PCs
+524→486, 529→449 and a cloned 449→454 edge. More retries of the old splitter made
+no change: it considered only maximal SCCs, whose outer cycle had a single
+entry. Its one-block fallback copy still left three bad edges.
 
-For `kc`, non-dominating retreating edges correspond to bytecode PCs 524→486,
-529→449 and a cloned 449→454 edge. Repeating the existing splitter makes no
-change: it handles secondary entries of maximal strongly connected components,
-while this case exposes nested cycles. More identical retries will not resolve
-it. A new splitter needs focused JVM comparisons and size bounds.
+Pass 10 checks that a sole entry dominates its component, removes that header
+from the induced search graph, then examines the nested SCCs. It copies a
+multi-entry child for one secondary entry, rewiring internal edges to matching
+copies and preserving all external exits. Every copy retains its original block
+identity. Reachable predecessors and stable numeric ordering prevent dead edges
+or traversal order from changing the entry choice. Explicit work stacks avoid
+JavaScript recursion even for deep cycles.
+
+Three region-copy operations add 18 blocks to the 119-block recorded board
+subgraph, making it reducible. Every copy renders the same original instructions
+and stays inside the same protected region. The new body preserves its runtime
+catch, guard outcomes and entity traversals.
+
+The default budget is 64 region-copy operations and at most
+`min(8192, max(originalTerms * 4, originalTerms + 64))` terms. Explicit caller
+budgets remain supported. Exhaustion returns no partial result; the decompiler
+keeps the CFG fallback. The old unbudgeted single-block retry is removed. The
+shared JVM SSA consumer retains its smaller caller-supplied cap.
+
+## Why the oversized initializer stays
+
+`wi.a(BLrh;)V` has 9,499 normalized code items and triggers the oversized
+static-void partitioner. The next structural work is bounded structured helpers
+that retain the 64 KiB compiled-method gate.
 
 The `wi` partition is a size decision even though its initial structurer succeeds.
 Removing that threshold does not establish that emitted Java fits the method
@@ -121,11 +142,22 @@ repeating setup. Sixteen exception-structurer checks include wrong loop labels,
 missing/unknown exit targets and unsafe internal reentry. Ten printer checks
 include repeated, nonmutating rendering.
 
+Pass 10 adds four graph checks and three verified JVM fixtures. The graph checks
+cover deterministic nested recovery, input immutability, budget refusal, switch
+and duplicate targets, unreachable predecessors and a 5,000-node cycle. Two
+sets of 256 routed traces preserve their original block sequence. JVM fixtures
+cover ordinary/reversed branches and a switch with repeated targets, comparing
+140 flag/loop-limit/throw-point inputs against original bytecode and both
+reconstructed versions: 840 comparisons. Side effects encode their order;
+catch results must match, and structured output must contain no dispatcher.
+
 The relevant commands pass in java-tools:
 
 ```sh
 node test/cfrInvariantFanout.test.js # 10 tests, including 768 fanout comparisons
-node --test test/structurer.test.js test/exceptionStructurer.test.js test/cfrStateMachineReadability.test.js test/cfrFixtures.test.js test/cfrStructuredFeatures.test.js test/cfrAdditionalFeatures.test.js test/cfrStackOrdering.test.js test/cfrCatchSemanticsRegressions.test.js # all 8 files pass
+node test/exceptionRegionSplitting.test.js # 4 graph checks, 512 routed traces
+node test/cfrNestedLoopSplitting.test.js # 3 JVM fixtures, 840 comparisons
+node --test test/structurer.test.js test/exceptionStructurer.test.js test/cfrStateMachineReadability.test.js test/cfrFixtures.test.js test/cfrStructuredFeatures.test.js test/cfrAdditionalFeatures.test.js test/cfrStackOrdering.test.js test/cfrCatchSemanticsRegressions.test.js test/cfrInvariantFanout.test.js # all 9 files pass
 ```
 
 The restricted environment uses the installed dependency path:
@@ -135,7 +167,9 @@ regular-file subprocess adapter; production and existing test sources are
 unchanged. Fixture inputs were built with the repository-native compiler.
 Host javac previously caused seven existing shape-test failures, also present
 with optimization disabled. The external Krakatau suite was unavailable and is
-not counted as validated.
+not counted as validated. The existing shared JVM SSA splitting test also passes
+all 14 assertions when selected unchanged by a temporary tape filter. Its
+generated JRE index was rebuilt first.
 
 Fresh `runCfr.js` emits all 303 sources with zero hard failures. The frozen naming
 generator compiles both corpora and checks every binding and override edge,
@@ -143,11 +177,14 @@ deterministic reproduction and exact dictionary-only reversal. Deque and
 gameplay helper probes run against both original and renamed sources.
 [validation.json](validation.json) records the commands and results.
 
-All 642 names remain. Pass 8's eight local-ordinal moves stay in its retained
-migration; pass 9's [reviewed migration](rules/geoblox-v9-migration.json) confirms
-all 227 named local declaration identities are unchanged. Every name matches its
-original spelling guard. No generated Java was hand-edited. The exact decompiler
-commit and source SHA-256 are in [README.md](README.md), separate from game hashes.
+All 642 names remain. Pass 8's eight local-ordinal moves and pass 9's unchanged
+identities remain in their frozen manifests. Pass 10's
+[reviewed migration](rules/geoblox-v10-migration.json) moves thirteen
+board-reconciliation local ordinals down by 21 after dispatcher-only carriers
+disappear. Each retains its type, original spelling, full JVM method and
+unchanged semantic evidence. All 227 named locals remain unique within their
+original methods. No generated Java was hand-edited. The exact decompiler commit
+and source SHA-256 are in [README.md](README.md), separate from game hashes.
 
 These checks establish focused fixture behavior and export integrity. They do
 not establish whole-game equivalence, reproduce multiplayer servers, or satisfy

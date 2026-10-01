@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 9
+# Reading GeoBlox pass 10
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -145,6 +145,36 @@ placed at `(320+boardMaskOffsetX, 240+boardMaskOffsetY)`.
 `registerAudioStream` serves the shared mixer; its name does not imply that the
 stream belongs to a gameplay entity.
 
+## Board entity reconciliation
+
+`kc.reconcileBoardEntities` now uses structured loops instead of 60 dispatcher
+cases. Start with the usual zero-value path of the shared `Geoblox.field_C`
+guard; the generated source retains its other outcomes too.
+
+The first walk handles `ji.movingEntities`: entities queued for attachment have
+their trail/masks updated, their primary and secondary links removed, and are
+inserted into `a.attachedEntities`. Their queue marker is cleared and the board
+raster is marked dirty.
+
+When connectivity is dirty, an attached-entity walk uses
+`pk.connectivityVisitedByEntityId` and two temporary `wd` collections to follow
+related entities. A group touching the avatar is treated differently from a
+detachable group. Detachment marks each group entity as moving, removes related
+links, clears category/variant counters and marks the session flags. The
+collections remain `var11` and `var13`; their complete class API still needs
+review. `entityIndexThenGroupCount` retains its two observed counter roles.
+
+The next attached-entity walk routes queued entities. For moving entities,
+`radialOffsetX`, `radialOffsetY` and `radialVelocityScale` normalize a vector
+toward `(320,240)` using `og.entityMotionSpeed`, then update velocity and remove
+related links. Other paths move entities through the existing transient list,
+update lifetime/animation state, and keep the original numeric sprite/action
+choices. The final transient-list walk can return entities to
+`ra.availableEntities`, then updates the session's raster-dirty flag.
+
+This is a reading map of the recovered source, not a whole-game behavioral
+proof. Several guards, scratch carriers and shared helper names remain opaque.
+
 ## Score popup lifecycle and debug controls
 
 `ScorePopup` replaces the instance class `me`. It stores `points`, `pointsText`,
@@ -189,13 +219,15 @@ There are 642 explicit rules: 17 classes, 178 fields, 129 method declarations,
 91 parameters and 227 guarded local declarations. This is not full
 deobfuscation. Large decompiler state machines, unknown flags, guard arguments
 and opaque shared helpers still need investigation. All 642 names from pass 6
-remain. Pass 9 keeps every declaration identity unchanged. The retained pass-8
-migration records its eight earlier local-ordinal moves.
+remain. Pass 10 migrates thirteen board-reconciliation local ordinals after
+dispatcher-only carriers disappear, retaining their types, spelling guards and
+semantic evidence. The earlier migrations remain frozen.
 
 The decompiler now checks explicit exception-region exit contracts, preserves
 ordinary empty branches as no-ops and refuses internal catch continuations that
 would restart setup. Gameplay update, rendering, scene transition and screen
-update use labeled loops; the screen update retains its runtime catch. Total
-cases drop from 3,051 to 877. Four original methods retain dispatchers, including
-two with at least 50 cases. See [the investigation](STATE-MACHINE-READABILITY.md)
+update use labeled loops; board reconciliation now does too, with its runtime
+catch intact. Total
+cases drop from 3,051 to 817. Three original methods retain dispatchers; only the
+partitioned initializer has at least 50 cases. See [the investigation](STATE-MACHINE-READABILITY.md)
 for refusal reasons, verification and the next structural steps.

@@ -374,19 +374,19 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ka.a(I)V#1` | `itemIndex` | Rendering row loop index bounded by item count. |
 | `L:ka.a(I)V#2` | `rowY` | Starts at first-item Y and advances by row spacing. |
 | `L:ka.a(Z)V#0` | `hitItemIndex` | Result of menu hit test, used for selection and pointer dispatch. |
-| `L:kc.b(I)V#42` | `activeEntity` | kc.java obtains var1 from ji.field_r.g(0), processes its queue/special-state membership, then advances with ji.field_r.d(1). |
-| `L:kc.b(I)V#43` | `entityIndexThenGroupCount` | kc.java first uses var1_int to clear pk.field_o entries across the 1000 entity slots, then resets it and counts processed entity groups. |
-| `L:kc.b(I)V#45` | `candidateEntity` | kc.java traverses a.field_d for this ja entity, rotates it against el.field_o.field_J, detaches related children and routes it to a processing list. |
-| `L:kc.b(I)V#47` | `radialOffsetX` | kc.java computes 320-var2_ref_ja.field_o and normalizes it by the radius together with var4_float before assigning field_w. |
-| `L:kc.b(I)V#49` | `queuedEntity` | kc.java iterates bh.field_c through ja elements, removes each from that list and may reinsert it into ra.field_a. |
-| `L:kc.b(I)V#51` | `radialOffsetY` | kc.java computes 240-var2_ref_ja.field_v and normalizes it with var3_float before assigning field_F. |
-| `L:kc.b(I)V#53` | `groupEntity` | kc.java obtains this ja from the temporary var13 list, iterates/removes its children and resets its child counters before continuing the outer entity-group walk. |
-| `L:kc.b(I)V#54` | `radialVelocityScale` | kc.java assigns og.field_r/sqrt(var4_float^2+var3_float^2) to var5 and multiplies both radial offset components by it. |
-| `L:kc.b(I)V#55` | `childEntityIndex` | kc.java initializes var6_int to zero and increments it while iterating var12.field_n up to var12.field_L. |
-| `L:kc.b(I)V#58` | `relatedEntityIndex` | kc.java loops var7_int from zero to var2_ref_ja.field_L and removes each field_n child from its parent. |
-| `L:kc.b(I)V#59` | `relatedEntityCandidate` | kc.java obtains var8 from the temporary ja collection and compares it by identity against each parent child before list removal. |
-| `L:kc.b(I)V#61` | `entityCandidate` | kc.java assigns the ja returned by var11.a(true), tests its category slot and field_t flag, and processes it in the nested-group pass. |
-| `L:kc.b(I)V#63` | `parentEntity` | kc.java traverses the children of var12.field_L, removes its related entities and resets its category counts before relinking it. |
+| `L:kc.b(I)V#21` | `activeEntity` | kc.java obtains var1 from ji.field_r.g(0), processes its queue/special-state membership, then advances with ji.field_r.d(1). |
+| `L:kc.b(I)V#22` | `entityIndexThenGroupCount` | kc.java first uses var1_int to clear pk.field_o entries across the 1000 entity slots, then resets it and counts processed entity groups. |
+| `L:kc.b(I)V#24` | `candidateEntity` | kc.java traverses a.field_d for this ja entity, rotates it against el.field_o.field_J, detaches related children and routes it to a processing list. |
+| `L:kc.b(I)V#26` | `radialOffsetX` | kc.java computes 320-var2_ref_ja.field_o and normalizes it by the radius together with var4_float before assigning field_w. |
+| `L:kc.b(I)V#28` | `queuedEntity` | kc.java iterates bh.field_c through ja elements, removes each from that list and may reinsert it into ra.field_a. |
+| `L:kc.b(I)V#30` | `radialOffsetY` | kc.java computes 240-var2_ref_ja.field_v and normalizes it with var3_float before assigning field_F. |
+| `L:kc.b(I)V#32` | `groupEntity` | kc.java obtains this ja from the temporary var13 list, iterates/removes its children and resets its child counters before continuing the outer entity-group walk. |
+| `L:kc.b(I)V#33` | `radialVelocityScale` | kc.java assigns og.field_r/sqrt(var4_float^2+var3_float^2) to var5 and multiplies both radial offset components by it. |
+| `L:kc.b(I)V#34` | `childEntityIndex` | kc.java initializes var6_int to zero and increments it while iterating var12.field_n up to var12.field_L. |
+| `L:kc.b(I)V#37` | `relatedEntityIndex` | kc.java loops var7_int from zero to var2_ref_ja.field_L and removes each field_n child from its parent. |
+| `L:kc.b(I)V#38` | `relatedEntityCandidate` | kc.java obtains var8 from the temporary ja collection and compares it by identity against each parent child before list removal. |
+| `L:kc.b(I)V#40` | `entityCandidate` | kc.java assigns the ja returned by var11.a(true), tests its category slot and field_t flag, and processes it in the nested-group pass. |
+| `L:kc.b(I)V#42` | `parentEntity` | kc.java traverses the children of var12.field_L, removes its related entities and resets its category counts before relinking it. |
 | `L:ld.a(I)Z#21` | `circleHorizontalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
 | `L:ld.a(I)Z#22` | `circleVerticalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
 | `L:ld.a(I)Z#23` | `playfieldRadiusSquared` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |

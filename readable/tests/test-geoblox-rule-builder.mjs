@@ -14,7 +14,8 @@ function fixture(change) {
       'geoblox-rules.json', 'rules/geoblox-v5.json', 'rules/geoblox-v6-gameplay.json',
       'rules/geoblox-v6.json', 'rules/geoblox-v7-migration.json',
       'rules/geoblox-v7.json', 'rules/geoblox-v8-migration.json',
-      'rules/geoblox-v8.json', 'rules/geoblox-v9-migration.json']) {
+      'rules/geoblox-v8.json', 'rules/geoblox-v9-migration.json',
+      'rules/geoblox-v9.json', 'rules/geoblox-v10-migration.json']) {
       fs.mkdirSync(path.dirname(path.join(temporary, file)), {recursive: true});
       fs.copyFileSync(path.join(root, file), path.join(temporary, file));
     }
@@ -39,12 +40,12 @@ test('reviewed lineage reproduces all 642 guarded rules', () => {
 test('a replacement input digest alone cannot migrate the export', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.inputTreeSha256 = '0'.repeat(64);
-  })), /reviewed pass-9 migration/);
+  })), /reviewed pass-10 migration/);
 });
 test('a different decompiler revision requires a new reviewed migration', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.generators.javaTools.commit = '0'.repeat(40);
-  })), /reviewed pass-9 migration/);
+  })), /reviewed pass-10 migration/);
 });
 test('previous names and migration identities cannot change silently', () => {
   assert.throws(() => fixture(edit => edit('rules/geoblox-v6.json', data => {
@@ -76,4 +77,15 @@ test('pass 9 requires unchanged reviewed declaration identities', () => {
   assert.throws(() => fixture(edit => edit('rules/geoblox-v9-migration.json', data => {
     data.review.namedLocalDeclarationIdentitiesUnchanged--;
   })), /reviewed pass-9 migration/);
+});
+test('current local migrations guard spelling, method boundaries and distinct identities', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v10-migration.json', data => {
+    data.identityChanges[0].originalName = 'wrongLocal';
+  })), /reviewed pass-10 migration/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v10-migration.json', data => {
+    data.identityChanges[0].to = 'L:kc.a(IB)V#21';
+  })), /reviewed pass-10 migration/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v10-migration.json', data => {
+    data.identityChanges[0].to = data.identityChanges[1].to;
+  })), /duplicate identities/);
 });

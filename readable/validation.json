@@ -2,7 +2,7 @@
   "schema": 1,
   "rules": 642,
   "files": 303,
-  "sourceCommit": "131c8befbd8c6608356d34b5b6883e764448d8eb",
+  "sourceCommit": "489a953c6bb32fe6c94070b9fe69d41c38ed6ac1",
   "commands": [
     {
       "command": "node readable/build-geoblox-rules.mjs --check",
@@ -11,14 +11,14 @@
     {
       "command": "node readable/tests/test-geoblox-rule-builder.mjs",
       "result": "pass",
-      "tests": 8
+      "tests": 9
     },
     {
       "command": "node readable/reproduce-geoblox.mjs --check",
       "result": "pass",
-      "bindingsCompared": 156833,
+      "bindingsCompared": 156457,
       "overrideRelationships": 388,
-      "identifierEdits": 10568
+      "identifierEdits": 10628
     },
     {
       "command": "node readable/tests/test-geoblox-deque.mjs",
@@ -39,47 +39,49 @@
     {
       "command": "node readable/tools/test-readable-java.mjs",
       "result": "pass",
-      "tests": 7
+      "tests": 7,
+      "scope": "Previously passed in pass 9; tool files remain byte-identical and their frozen hashes are rechecked in pass 10."
     },
     {
       "command": "node readable/tools/test-capture-process.mjs",
       "result": "pass",
-      "tests": 4
+      "tests": 4,
+      "scope": "Previously passed in pass 9; tool files remain byte-identical and their frozen hashes are rechecked in pass 10."
     },
     {
-      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v9",
+      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v10",
       "result": "pass",
       "restoredFiles": 303,
       "originalBytesRecovered": true,
       "originalSourceRequired": false
     }
   ],
-  "inputTreeSha256": "deb64208590f0e4d0d46cbd4d6a87f81fd35df1a27ca0c51dd3f3b1b0010c86d",
-  "outputTreeSha256": "ba955263537b8b81ce2302edd2d0b5867d49cf25cdbd4f33cdb2849e924f0f3f",
+  "inputTreeSha256": "d20046b48387681742f4fe021d655e68ce4b6ac779d4d45e6ae5fb531a5c7767",
+  "outputTreeSha256": "7b0754e26f3d9cd9df50dc7ed7e45e24dab3d975363cf3d6b6a60afe4015dd5d",
   "runtimeEquivalenceVerified": false,
-  "version": 9,
+  "version": 10,
   "stateMachineReadability": {
-    "javaToolsCommit": "86e991cc4ab9540489969e77d738f2c9c72750cc",
-    "decompilerSourceArchiveSha256": "05af4cf1d9a8099536342d2ad0835f46e8413369dee6efa925bef072ea212992",
+    "javaToolsCommit": "c55c4c296d47fb8ca1dccef65e3e9933a5681d63",
+    "decompilerSourceArchiveSha256": "96e061795a91528eb9e278e4fa07ff0959ba804c05eac17f42eb0c22c418b4bc",
     "dispatcherCasesBefore": 3051,
-    "dispatcherCasesAfter": 877,
-    "originalFallbackMethods": 4,
+    "dispatcherCasesAfter": 817,
+    "originalFallbackMethods": 3,
     "readabilityRegressionTests": 11,
     "fixturesAssertions": 36,
     "structuredFeatureAssertions": 26,
     "additionalFeatureAssertions": 77,
     "stackOrderingAssertions": 38,
     "krakatauSuite": "skipped: external binary unavailable",
-    "previousPassDispatcherCases": 1131,
-    "largeOriginalMethods": 2,
+    "previousPassDispatcherCases": 877,
+    "largeOriginalMethods": 1,
     "invariantFanoutDifferentialTests": 8,
     "invariantFanoutDifferentialComparisons": 768,
-    "namedLocalOrdinalMigrations": 0,
+    "namedLocalOrdinalMigrations": 13,
     "nativeExitRuntimeTests": 2,
     "exceptionStructurerTests": 16,
     "printerTests": 10,
-    "generatedDispatcherMethods": 21,
-    "generatedLargeDispatcherMethods": 1,
+    "generatedDispatcherMethods": 20,
+    "generatedLargeDispatcherMethods": 0,
     "commands": [
       {
         "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrInvariantFanout.test.js",
@@ -87,19 +89,45 @@
         "result": "pass"
       },
       {
-        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node --test test/structurer.test.js test/exceptionStructurer.test.js test/cfrStateMachineReadability.test.js test/cfrFixtures.test.js test/cfrStructuredFeatures.test.js test/cfrAdditionalFeatures.test.js test/cfrStackOrdering.test.js test/cfrCatchSemanticsRegressions.test.js",
-        "files": 8,
+        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node --test test/structurer.test.js test/exceptionStructurer.test.js test/cfrStateMachineReadability.test.js test/cfrFixtures.test.js test/cfrStructuredFeatures.test.js test/cfrAdditionalFeatures.test.js test/cfrStackOrdering.test.js test/cfrCatchSemanticsRegressions.test.js test/cfrInvariantFanout.test.js",
+        "files": 9,
+        "result": "pass"
+      },
+      {
+        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/exceptionRegionSplitting.test.js",
+        "tests": 4,
+        "result": "pass"
+      },
+      {
+        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrNestedLoopSplitting.test.js",
+        "tests": 3,
+        "comparisons": 840,
         "result": "pass"
       }
     ],
     "independentInventory": {
       "tool": "javac Trees method/switch inventory",
-      "dispatcherCases": 877,
-      "generatedMethods": 21,
-      "largeGeneratedMethods": 1,
+      "dispatcherCases": 817,
+      "generatedMethods": 20,
+      "largeGeneratedMethods": 0,
       "screenUpdateLinesBefore": 951,
       "screenUpdateLinesAfter": 380,
-      "screenUpdateCatchRetained": true
+      "screenUpdateCatchRetained": true,
+      "boardReconciliationLinesBefore": 1335,
+      "boardReconciliationLinesAfter": 608,
+      "boardReconciliationCatchRetained": true
+    },
+    "nestedRegionSplittingTests": 4,
+    "nestedCycleDifferentialTests": 3,
+    "nestedCycleDifferentialComparisons": 840,
+    "routedTraceComparisons": 512,
+    "sharedJitSplittingAssertions": 14,
+    "sharedJitConsumerCheck": {
+      "command": "node scripts/generate-jre-index.js && NODE_PATH=/home/kreijstal/git/java-tools/node_modules JVM_DISABLE_AUDIO=1 node /tmp/run-selected-jit-splitting.cjs",
+      "test": "structured JVM SSA splits bounded irreducible integer regions without name gates",
+      "selection": "Temporary tape filter selects the existing test unchanged; source remains in test/jitCompiler.test.js.",
+      "assertions": 14,
+      "result": "pass"
     }
   }
 }
