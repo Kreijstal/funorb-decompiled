@@ -2,13 +2,13 @@
   "version": "CFR-JS 0.4.0",
   "generatedFiles": 303,
   "hardFailures": 0,
-  "validFallbacks": 4,
+  "validFallbacks": 3,
   "panics": [],
   "totals": {
     "stackUnderflow": 0,
     "rawControlFlow": 0,
     "placeholders": 0,
-    "stateMachineFallback": 4
+    "stateMachineFallback": 3
   },
   "files": [
     {
@@ -26,24 +26,6 @@
           "reason": "multi-value operand stack carried across a CFG backedge",
           "dispatchStatesBefore": 43,
           "dispatchStatesAfter": 27
-        }
-      ]
-    },
-    {
-      "name": "kc.java",
-      "stackUnderflow": 0,
-      "rawControlFlow": 0,
-      "placeholders": 0,
-      "stateMachineFallback": 1,
-      "fallbacks": [
-        {
-          "kind": "stateMachineFallback",
-          "className": "kc",
-          "methodName": "b",
-          "descriptor": "(I)V",
-          "reason": "region sub-CFG remains irreducible after controlled splitting: irreducible CFG: 3 non-dominating retreating edge(s)",
-          "dispatchStatesBefore": 120,
-          "dispatchStatesAfter": 60
         }
       ]
     },

@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "86e991cc4ab9540489969e77d738f2c9c72750cc",
+      "commit": "c55c4c296d47fb8ca1dccef65e3e9933a5681d63",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "05af4cf1d9a8099536342d2ad0835f46e8413369dee6efa925bef072ea212992",
-        "reproduce": "git archive --format=tar 86e991cc4ab9540489969e77d738f2c9c72750cc | sha256sum",
+        "sha256": "96e061795a91528eb9e278e4fa07ff0959ba804c05eac17f42eb0c22c418b4bc",
+        "reproduce": "git archive --format=tar c55c4c296d47fb8ca1dccef65e3e9933a5681d63 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -69,7 +69,7 @@
     "sources": 303,
     "hardFailures": 0,
     "diagnostics": "geoblox-decompiler-diagnostics.json",
-    "validFallbackMethods": 4
+    "validFallbackMethods": 3
   },
   "freshVerification": {
     "tool": "dekobloko-work/scripts/Verify.java",
@@ -93,27 +93,27 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "deb64208590f0e4d0d46cbd4d6a87f81fd35df1a27ca0c51dd3f3b1b0010c86d",
-  "previousSourceTreeSha256": "e7e9406eeb406bb265fa0402b76046bfd0bfb36a8b31cba83022a4c0764b3a0b",
-  "changedJavaFiles": 7,
+  "sourceTreeSha256": "d20046b48387681742f4fe021d655e68ce4b6ac779d4d45e6ae5fb531a5c7767",
+  "previousSourceTreeSha256": "deb64208590f0e4d0d46cbd4d6a87f81fd35df1a27ca0c51dd3f3b1b0010c86d",
+  "changedJavaFiles": 1,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
   },
   "runtimeEquivalenceVerified": false,
   "stateMachineReadability": {
-    "originalFallbackMethods": 4,
+    "originalFallbackMethods": 3,
     "emittedDispatchCasesBefore": 3051,
-    "emittedDispatchCasesAfter": 877,
+    "emittedDispatchCasesAfter": 817,
     "generatedDispatcherMethodsBefore": 41,
-    "generatedDispatcherMethodsAfter": 21,
+    "generatedDispatcherMethodsAfter": 20,
     "largeInitializerHelpersBefore": 23,
     "largeInitializerHelpersAfter": 18,
     "bytecodeChanged": false,
     "wholeGameEquivalenceVerified": false,
-    "previousPassFallbackMethods": 16,
-    "previousPassDispatchCases": 1131,
-    "largeOriginalMethodsAfter": 2,
+    "previousPassFallbackMethods": 4,
+    "previousPassDispatchCases": 877,
+    "largeOriginalMethodsAfter": 1,
     "handlerFreeFanoutMethodsRecovered": [
       "gh.a(I)V",
       "gh.a(B)V",
@@ -133,6 +133,17 @@
       "wh.a(II[BI)[B",
       "wh.a(Lqc;Z)V"
     ],
-    "verifiedExceptionRegionExits": true
+    "verifiedExceptionRegionExits": true,
+    "nestedCycleMethodsRecovered": [
+      "kc.b(I)V"
+    ],
+    "nestedCycleCopies": {
+      "originalTerms": 119,
+      "emittedTerms": 137,
+      "clonedTerms": 18,
+      "regionCopies": 3,
+      "retainsOriginalBlockIdentities": true,
+      "budgetsEnforced": true
+    }
   }
 }
