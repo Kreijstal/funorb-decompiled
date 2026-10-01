@@ -2,13 +2,13 @@
   "version": "CFR-JS 0.4.0",
   "generatedFiles": 303,
   "hardFailures": 0,
-  "validFallbacks": 19,
+  "validFallbacks": 16,
   "panics": [],
   "totals": {
     "stackUnderflow": 0,
     "rawControlFlow": 0,
     "placeholders": 0,
-    "stateMachineFallback": 19
+    "stateMachineFallback": 16
   },
   "files": [
     {
@@ -79,35 +79,8 @@
       "stackUnderflow": 0,
       "rawControlFlow": 0,
       "placeholders": 0,
-      "stateMachineFallback": 4,
+      "stateMachineFallback": 1,
       "fallbacks": [
-        {
-          "kind": "stateMachineFallback",
-          "className": "gh",
-          "methodName": "a",
-          "descriptor": "(B)V",
-          "reason": "invariant conditional fanout carried across a CFG backedge",
-          "dispatchStatesBefore": 115,
-          "dispatchStatesAfter": 65
-        },
-        {
-          "kind": "stateMachineFallback",
-          "className": "gh",
-          "methodName": "a",
-          "descriptor": "(I)V",
-          "reason": "invariant conditional fanout carried across a CFG backedge",
-          "dispatchStatesBefore": 252,
-          "dispatchStatesAfter": 107
-        },
-        {
-          "kind": "stateMachineFallback",
-          "className": "gh",
-          "methodName": "b",
-          "descriptor": "(B)V",
-          "reason": "invariant conditional fanout carried across a CFG backedge",
-          "dispatchStatesBefore": 42,
-          "dispatchStatesAfter": 27
-        },
         {
           "kind": "stateMachineFallback",
           "className": "gh",

@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "cc3be385def11a6ee0fa99a8bdb6fce77d3ad368",
+      "commit": "e2b82224d6bb50c6e376af24692481581f78baa0",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "62356e5d5e037e482d8dcb170f016d520b4a00182b13591ed1f726c3e9cae7dd",
-        "reproduce": "git archive --format=tar cc3be385def11a6ee0fa99a8bdb6fce77d3ad368 | sha256sum",
+        "sha256": "a82db967bd98714696f926b44fbd4fdfcf555f5cc66dd6b4b99a79e547a96a02",
+        "reproduce": "git archive --format=tar e2b82224d6bb50c6e376af24692481581f78baa0 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -69,7 +69,7 @@
     "sources": 303,
     "hardFailures": 0,
     "diagnostics": "geoblox-decompiler-diagnostics.json",
-    "validFallbackMethods": 19
+    "validFallbackMethods": 16
   },
   "freshVerification": {
     "tool": "dekobloko-work/scripts/Verify.java",
@@ -93,23 +93,31 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "bf67d298e8c884958b622e717be6ecd4c3009e033265219b88e9f293d7671fd9",
-  "previousSourceTreeSha256": "4ffc26d9728c403266022452f0c0ca68ea28ff61c26d108b7bd165e6ab92e24c",
-  "changedJavaFiles": 10,
+  "sourceTreeSha256": "e7e9406eeb406bb265fa0402b76046bfd0bfb36a8b31cba83022a4c0764b3a0b",
+  "previousSourceTreeSha256": "bf67d298e8c884958b622e717be6ecd4c3009e033265219b88e9f293d7671fd9",
+  "changedJavaFiles": 1,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
   },
   "runtimeEquivalenceVerified": false,
   "stateMachineReadability": {
-    "originalFallbackMethods": 19,
+    "originalFallbackMethods": 16,
     "emittedDispatchCasesBefore": 3051,
-    "emittedDispatchCasesAfter": 1330,
+    "emittedDispatchCasesAfter": 1131,
     "generatedDispatcherMethodsBefore": 41,
-    "generatedDispatcherMethodsAfter": 36,
+    "generatedDispatcherMethodsAfter": 33,
     "largeInitializerHelpersBefore": 23,
     "largeInitializerHelpersAfter": 18,
     "bytecodeChanged": false,
-    "wholeGameEquivalenceVerified": false
+    "wholeGameEquivalenceVerified": false,
+    "previousPassFallbackMethods": 19,
+    "previousPassDispatchCases": 1330,
+    "largeOriginalMethodsAfter": 3,
+    "handlerFreeFanoutMethodsRecovered": [
+      "gh.a(I)V",
+      "gh.a(B)V",
+      "gh.b(B)V"
+    ]
   }
 }
