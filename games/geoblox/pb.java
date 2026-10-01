@@ -34,148 +34,105 @@ abstract class pb extends rc {
         int var7 = 0;
         int var8 = 0;
         try {
-          L0: {
+          try {
+            var9 = f.field_kb.getGraphics();
+            if (null == hh.field_a) {
+              hh.field_a = new java.awt.Font("Helvetica", 1, 13);
+            }
+            if (param2) {
+              var9.setColor(java.awt.Color.black);
+              var9.fillRect(0, 0, kh.field_d, ok.field_c);
+            }
+            if (param1 == null) {
+              param1 = new java.awt.Color(140, 17, 17);
+            }
             try {
-              L1: {
-                L2: {
-                  var9 = f.field_kb.getGraphics();
-                  if (null != hh.field_a) {
-                    break L2;
-                  } else {
-                    hh.field_a = new java.awt.Font("Helvetica", 1, 13);
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (!param2) {
-                    break L3;
-                  } else {
-                    var9.setColor(java.awt.Color.black);
-                    var9.fillRect(0, 0, kh.field_d, ok.field_c);
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (param1 != null) {
-                    break L4;
-                  } else {
-                    param1 = new java.awt.Color(140, 17, 17);
-                    break L4;
-                  }
-                }
-                try {
-                  L5: {
-                    L6: {
-                      if (null == ff.field_a) {
-                        ff.field_a = f.field_kb.createImage(304, 34);
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    var10 = ff.field_a.getGraphics();
-                    var10.setColor(param1);
-                    var10.drawRect(0, 0, 303, 33);
-                    var10.fillRect(2, 2, 3 * param0, 30);
-                    var10.setColor(java.awt.Color.black);
-                    if (!param3) {
-                      var10.drawRect(1, 1, 301, 31);
-                      var10.fillRect(3 * param0 + 2, 2, 300 + -(3 * param0), 30);
-                      var10.setFont(hh.field_a);
-                      var10.setColor(java.awt.Color.white);
-                      var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
-                      var9.drawImage(ff.field_a, kh.field_d / 2 - 152, ok.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
-                      decompiledRegionSelector0 = 1;
-                      break L5;
-                    } else {
-                      decompiledRegionSelector0 = 0;
-                      break L5;
-                    }
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L7: {
-                    var6 = (Exception) (Object) decompiledCaughtException;
-                    var7 = kh.field_d / 2 + -152;
-                    var8 = ok.field_c / 2 + -18;
-                    var9.setColor(param1);
-                    var9.drawRect(var7, var8, 303, 33);
-                    var9.fillRect(var7 + 2, 2 + var8, 3 * param0, 30);
-                    var9.setColor(java.awt.Color.black);
-                    var9.drawRect(1 + var7, 1 + var8, 301, 31);
-                    var9.fillRect(param0 * 3 + (2 + var7), 2 + var8, -(param0 * 3) + 300, 30);
-                    var9.setFont(hh.field_a);
-                    var9.setColor(java.awt.Color.white);
-                    var9.drawString(param4, (-(6 * param4.length()) + 304) / 2 + var7, 22 + var8);
-                    decompiledRegionSelector0 = 1;
-                    break L7;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  decompiledRegionSelector1 = 1;
-                  break L1;
-                } else {
-                  if (wh.field_q == null) {
-                    decompiledRegionSelector1 = 0;
-                    break L1;
-                  } else {
-                    var9.setFont(hh.field_a);
-                    var9.setColor(java.awt.Color.white);
-                    var9.drawString(wh.field_q, kh.field_d / 2 + -(6 * wh.field_q.length() / 2), -26 + ok.field_c / 2);
-                    return;
-                  }
-                }
+              if (null == ff.field_a) {
+                ff.field_a = f.field_kb.createImage(304, 34);
               }
-            } catch (java.lang.Exception decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var5 = (Exception) (Object) decompiledCaughtException;
-              f.field_kb.repaint();
-              return;
+              var10 = ff.field_a.getGraphics();
+              var10.setColor(param1);
+              var10.drawRect(0, 0, 303, 33);
+              var10.fillRect(2, 2, 3 * param0, 30);
+              var10.setColor(java.awt.Color.black);
+              if (!param3) {
+                var10.drawRect(1, 1, 301, 31);
+                var10.fillRect(3 * param0 + 2, 2, 300 + -(3 * param0), 30);
+                var10.setFont(hh.field_a);
+                var10.setColor(java.awt.Color.white);
+                var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
+                var9.drawImage(ff.field_a, kh.field_d / 2 - 152, ok.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
+                decompiledRegionSelector0 = 1;
+              } else {
+                decompiledRegionSelector0 = 0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (Exception) (Object) decompiledCaughtException;
+              var7 = kh.field_d / 2 + -152;
+              var8 = ok.field_c / 2 + -18;
+              var9.setColor(param1);
+              var9.drawRect(var7, var8, 303, 33);
+              var9.fillRect(var7 + 2, 2 + var8, 3 * param0, 30);
+              var9.setColor(java.awt.Color.black);
+              var9.drawRect(1 + var7, 1 + var8, 301, 31);
+              var9.fillRect(param0 * 3 + (2 + var7), 2 + var8, -(param0 * 3) + 300, 30);
+              var9.setFont(hh.field_a);
+              var9.setColor(java.awt.Color.white);
+              var9.drawString(param4, (-(6 * param4.length()) + 304) / 2 + var7, 22 + var8);
+              decompiledRegionSelector0 = 1;
             }
-            if (decompiledRegionSelector1 == 0) {
-              decompiledRegionSelector2 = 0;
-              break L0;
+            if (decompiledRegionSelector0 == 0) {
+              decompiledRegionSelector1 = 1;
             } else {
-              decompiledRegionSelector2 = 1;
-              break L0;
+              if (wh.field_q == null) {
+                decompiledRegionSelector1 = 0;
+              } else {
+                var9.setFont(hh.field_a);
+                var9.setColor(java.awt.Color.white);
+                var9.drawString(wh.field_q, kh.field_d / 2 + -(6 * wh.field_q.length() / 2), -26 + ok.field_c / 2);
+                return;
+              }
             }
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var5 = (Exception) (Object) decompiledCaughtException;
+            f.field_kb.repaint();
+            return;
+          }
+          if (decompiledRegionSelector1 == 0) {
+            decompiledRegionSelector2 = 0;
+          } else {
+            decompiledRegionSelector2 = 1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
-          L8: {
-            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var5_ref);
+          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_21_0 = (RuntimeException) (var5_ref);
 
-            stackIn_21_1 = new StringBuilder().append("pb.B(").append(param0).append(',');
+          stackIn_21_1 = new StringBuilder().append("pb.B(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L8;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L8;
-            }
+          if (param1 == null) {
+            stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+            stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+            stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+            stackIn_22_2 = "{...}";
           }
-          L9: {
 
 
-            stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',');
+          stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',');
 
-            if (param4 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L9;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L9;
-            }
+          if (param4 == null) {
+            stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+            stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+            stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
+            stackIn_25_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_22_0), stackIn_25_2 + ')');
         }

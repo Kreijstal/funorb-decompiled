@@ -19,37 +19,25 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 86) {
-                break L1;
-              } else {
-                field_i = (rh) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = new h(param1);
-            break L0;
+          if (param0 != 86) {
+            field_i = (rh) null;
           }
+          stackIn_3_0 = new h(param1);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = (RuntimeException) (var2);
 
-            stackIn_6_1 = new StringBuilder().append("bf.A(").append(param0).append(',');
+          stackIn_6_1 = new StringBuilder().append("bf.A(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          if (param1 == null) {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+            stackIn_7_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
@@ -57,19 +45,16 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     private final synchronized void a(boolean param0) {
-        if (null != this.field_h) {
-          this.field_h.setPixels(0, 0, this.field_a, this.field_c, this.field_j, this.field_d, 0, this.field_a);
-          if (!param0) {
-            field_i = (rh) null;
-            this.field_h.imageComplete(2);
+        if (null == this.field_h) {
             return;
-          } else {
-            this.field_h.imageComplete(2);
-            return;
-          }
-        } else {
-          return;
         }
+        this.field_h.setPixels(0, 0, this.field_a, this.field_c, this.field_j, this.field_d, 0, this.field_a);
+        if (param0) {
+            this.field_h.imageComplete(2);
+            return;
+        }
+        field_i = (rh) null;
+        this.field_h.imageComplete(2);
     }
 
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
@@ -122,29 +107,22 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            stackIn_1_0 = 1;
-            break L0;
-          }
+          stackIn_1_0 = 1;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var7 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var7);
+          var7 = decompiledCaughtException;
+          stackIn_4_0 = (RuntimeException) (var7);
 
-            stackIn_4_1 = new StringBuilder().append("bf.imageUpdate(");
+          stackIn_4_1 = new StringBuilder().append("bf.imageUpdate(");
 
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          if (param0 == null) {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+            stackIn_5_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -192,144 +170,108 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         int var13 = 0;
         var13 = Geoblox.field_C;
         try {
-          L0: {
-            L1: {
-              var5_int = param1 + param4;
-              var6 = param0 - -param3;
-              if (param4 <= vb.field_e) {
-                stackIn_4_0 = vb.field_e;
-                break L1;
-              } else {
-                stackIn_4_0 = param4;
-                break L1;
-              }
-            }
-            L2: {
-              var7 = stackIn_4_0;
-              if (param0 > vb.field_i) {
-                stackIn_7_0 = param0;
-                break L2;
-              } else {
-                stackIn_7_0 = vb.field_i;
-                break L2;
-              }
-            }
-            L3: {
-              var8 = stackIn_7_0;
-              if (vb.field_k > var5_int) {
-                stackIn_10_0 = var5_int;
-                break L3;
-              } else {
-                stackIn_10_0 = vb.field_k;
-                break L3;
-              }
-            }
-            L4: {
-              var9 = stackIn_10_0;
-              if (vb.field_d <= var6) {
-                stackIn_13_0 = vb.field_d;
-                break L4;
-              } else {
-                stackIn_13_0 = var6;
-                break L4;
-              }
-            }
-            var10 = stackIn_13_0;
-            if (param2 == 14164) {
-              L5: {
-                if (param4 < vb.field_e) {
-                  break L5;
-                } else {
-                  if (param4 < vb.field_k) {
-                    var11 = param4 + var8 * vb.field_f;
-                    var12 = var10 + 1 + -var8 >> 158912129;
-                    L6: while (true) {
-                      var12--;
-                      if (0 > var12) {
-                        break L5;
-                      } else {
-                        vb.field_c[var11] = 16777215;
-                        var11 = var11 + vb.field_f * 2;
-                        continue L6;
-                      }
-                    }
-                  } else {
-                    break L5;
-                  }
-                }
-              }
-              L7: {
-                if (param0 < vb.field_i) {
-                  break L7;
-                } else {
-                  if (vb.field_d > var6) {
-                    var11 = var7 + vb.field_f * param0;
-                    var12 = -var7 + 1 + var9 >> -2109860607;
-                    L8: while (true) {
-                      var12--;
-                      if (-1 < (var12 ^ -1)) {
-                        break L7;
-                      } else {
-                        vb.field_c[var11] = 16777215;
-                        var11 += 2;
-                        continue L8;
-                      }
-                    }
-                  } else {
-                    break L7;
-                  }
-                }
-              }
-              L9: {
-                if (var5_int < vb.field_e) {
-                  break L9;
-                } else {
-                  if (vb.field_k <= var5_int) {
-                    break L9;
-                  } else {
-                    var11 = var5_int + ((1 & -param4 + var5_int) + var8) * vb.field_f;
-                    var12 = -var8 + 1 + var10 >> -161751903;
-                    L10: while (true) {
-                      var12--;
-                      if (0 > var12) {
-                        break L9;
-                      } else {
-                        vb.field_c[var11] = 16777215;
-                        var11 = var11 + 2 * vb.field_f;
-                        continue L10;
-                      }
+          var5_int = param1 + param4;
+          var6 = param0 - -param3;
+          if (param4 <= vb.field_e) {
+            stackIn_4_0 = vb.field_e;
+          } else {
+            stackIn_4_0 = param4;
+          }
+          var7 = stackIn_4_0;
+          if (param0 > vb.field_i) {
+            stackIn_7_0 = param0;
+          } else {
+            stackIn_7_0 = vb.field_i;
+          }
+          var8 = stackIn_7_0;
+          if (vb.field_k > var5_int) {
+            stackIn_10_0 = var5_int;
+          } else {
+            stackIn_10_0 = vb.field_k;
+          }
+          var9 = stackIn_10_0;
+          if (vb.field_d <= var6) {
+            stackIn_13_0 = vb.field_d;
+          } else {
+            stackIn_13_0 = var6;
+          }
+          var10 = stackIn_13_0;
+          if (param2 == 14164) {
+            L5: {
+              if (param4 >= vb.field_e) {
+                if (param4 < vb.field_k) {
+                  var11 = param4 + var8 * vb.field_f;
+                  var12 = var10 + 1 + -var8 >> 158912129;
+                  L6: while (true) {
+                    var12--;
+                    if (0 > var12) {
+                      break L5;
+                    } else {
+                      vb.field_c[var11] = 16777215;
+                      var11 = var11 + vb.field_f * 2;
+                      continue L6;
                     }
                   }
                 }
               }
-              L11: {
-                if (vb.field_i > param0) {
-                  break L11;
-                } else {
-                  if (vb.field_d <= var6) {
-                    break L11;
-                  } else {
-                    var11 = vb.field_f * var6 + (var7 - -(1 & -param0 + var6));
-                    var12 = 1 - (-var9 + var7) >> 880243777;
-                    L12: while (true) {
-                      var12--;
-                      if (var12 < 0) {
-                        break L11;
-                      } else {
-                        vb.field_c[var11] = 16777215;
-                        var11 += 2;
-                        continue L12;
-                      }
+            }
+            L7: {
+              if (param0 >= vb.field_i) {
+                if (vb.field_d > var6) {
+                  var11 = var7 + vb.field_f * param0;
+                  var12 = -var7 + 1 + var9 >> -2109860607;
+                  L8: while (true) {
+                    var12--;
+                    if (-1 < (var12 ^ -1)) {
+                      break L7;
+                    } else {
+                      vb.field_c[var11] = 16777215;
+                      var11 += 2;
+                      continue L8;
                     }
                   }
                 }
               }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
+            L9: {
+              if (var5_int >= vb.field_e) {
+                if (vb.field_k > var5_int) {
+                  var11 = var5_int + ((1 & -param4 + var5_int) + var8) * vb.field_f;
+                  var12 = -var8 + 1 + var10 >> -161751903;
+                  L10: while (true) {
+                    var12--;
+                    if (0 > var12) {
+                      break L9;
+                    } else {
+                      vb.field_c[var11] = 16777215;
+                      var11 = var11 + 2 * vb.field_f;
+                      continue L10;
+                    }
+                  }
+                }
+              }
+            }
+            L11: {
+              if (vb.field_i <= param0) {
+                if (vb.field_d > var6) {
+                  var11 = vb.field_f * var6 + (var7 - -(1 & -param0 + var6));
+                  var12 = 1 - (-var9 + var7) >> 880243777;
+                  L12: while (true) {
+                    var12--;
+                    if (var12 < 0) {
+                      break L11;
+                    } else {
+                      vb.field_c[var11] = 16777215;
+                      var11 += 2;
+                      continue L12;
+                    }
+                  }
+                }
+              }
+            }
+            decompiledRegionSelector0 = 1;
+          } else {
+            decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

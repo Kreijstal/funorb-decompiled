@@ -78,6 +78,22 @@
       "wizardrun",
       "zombiedawn",
       "zombiedawnmulti"
-    ]
+    ],
+    "gameOverrides": {
+      "geoblox": {
+        "provenance": "decompilation/geoblox-provenance.json",
+        "sourceTreeSha256": "4ffc26d9728c403266022452f0c0ca68ea28ff61c26d108b7bd165e6ab92e24c",
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "b1e30cf3e762f15a2a2d639226df7a54ad5f4d81",
+            "trackedClean": true
+          }
+        }
+      }
+    }
   }
 }

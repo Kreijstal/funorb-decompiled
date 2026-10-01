@@ -59,36 +59,28 @@ abstract class oe extends dd {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 == 44) {
-              stackIn_4_0 = ei.a(false, false, param1);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (String) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == 44) {
+            stackIn_4_0 = ei.a(false, false, param1);
+            decompiledRegionSelector0 = 1;
+          } else {
+            stackIn_2_0 = (String) null;
+            decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = (RuntimeException) (var2);
 
-            stackIn_7_1 = new StringBuilder().append("oe.V(").append(param0).append(',');
+          stackIn_7_1 = new StringBuilder().append("oe.V(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          if (param1 == null) {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
@@ -134,37 +126,33 @@ abstract class oe extends dd {
             var1 = var5;
             var2 = param0;
             var3 = var5.length;
-            L1: while (true) {
-              if (var2 >= var3) {
-                break L0;
-              } else {
-                incrementValue$16 = var2;
-                var2++;
-                var5[incrementValue$16] = 0;
-                incrementValue$17 = var2;
-                var2++;
-                var5[incrementValue$17] = 0;
-                incrementValue$18 = var2;
-                var2++;
-                var5[incrementValue$18] = 0;
-                incrementValue$19 = var2;
-                var2++;
-                var5[incrementValue$19] = 0;
-                incrementValue$20 = var2;
-                var2++;
-                var5[incrementValue$20] = 0;
-                incrementValue$21 = var2;
-                var2++;
-                var5[incrementValue$21] = 0;
-                incrementValue$22 = var2;
-                var2++;
-                var5[incrementValue$22] = 0;
-                incrementValue$23 = var2;
-                var2++;
-                var5[incrementValue$23] = 0;
-                continue L1;
-              }
+            L1: while (var2 < var3) {
+              incrementValue$16 = var2;
+              var2++;
+              var5[incrementValue$16] = 0;
+              incrementValue$17 = var2;
+              var2++;
+              var5[incrementValue$17] = 0;
+              incrementValue$18 = var2;
+              var2++;
+              var5[incrementValue$18] = 0;
+              incrementValue$19 = var2;
+              var2++;
+              var5[incrementValue$19] = 0;
+              incrementValue$20 = var2;
+              var2++;
+              var5[incrementValue$20] = 0;
+              incrementValue$21 = var2;
+              var2++;
+              var5[incrementValue$21] = 0;
+              incrementValue$22 = var2;
+              var2++;
+              var5[incrementValue$22] = 0;
+              incrementValue$23 = var2;
+              var2++;
+              var5[incrementValue$23] = 0;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,9 +174,9 @@ abstract class oe extends dd {
     }
 
     final static int a(int param0, byte[] param1, int param2, int param3) {
+        int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
         CharSequence var6 = null;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -199,48 +187,33 @@ abstract class oe extends dd {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param2 <= -27) {
-                break L1;
-              } else {
-                var6 = (CharSequence) null;
-                oe.a((CharSequence) null, -115);
-                break L1;
-              }
+            if (param2 > -27) {
+              var6 = (CharSequence) null;
+              oe.a((CharSequence) null, -115);
             }
             var4_int = -1;
-            var5 = param3;
-            L2: while (true) {
-              if (var5 >= param0) {
-                var4_int = var4_int ^ -1;
-                stackIn_6_0 = var4_int;
-                break L0;
-              } else {
-                var4_int = sb.field_b[(var4_int ^ param1[var5]) & 255] ^ var4_int >>> 1495180680;
-                var5++;
-                continue L2;
-              }
+            for (var5 = param3; var5 < param0; var5++) {
+              var4_int = sb.field_b[(var4_int ^ param1[var5]) & 255] ^ var4_int >>> 1495180680;
             }
+            var4_int = var4_int ^ -1;
+            stackIn_6_0 = var4_int;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = (RuntimeException) (var4);
 
-            stackIn_9_1 = new StringBuilder().append("oe.P(").append(param0).append(',');
+          stackIn_9_1 = new StringBuilder().append("oe.P(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          if (param1 == null) {
+            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
+            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+            stackIn_10_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
         }
@@ -281,9 +254,8 @@ abstract class oe extends dd {
     }
 
     final static String a(CharSequence param0, int param1) {
+        int var6 = 0;
         StringBuilder discarded$0 = null;
-        int var2_int = 0;
-        int var3 = 0;
         Object stackIn_26_0 = null;
         String stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
@@ -293,10 +265,11 @@ abstract class oe extends dd {
         String stackIn_32_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
         RuntimeException var2 = null;
+        int var3 = 0;
         int var4 = 0;
         StringBuilder var5 = null;
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         try {
@@ -304,82 +277,50 @@ abstract class oe extends dd {
             if (param0 != null) {
               var2_int = 0;
               var3 = param0.length();
-              L1: while (true) {
-                L2: {
-                  if (var3 <= var2_int) {
-                    break L2;
-                  } else {
-                    if (!gg.a((byte) 125, param0.charAt(var2_int))) {
-                      break L2;
-                    } else {
-                      var2_int++;
-                      continue L1;
-                    }
-                  }
+              L1: while (var3 > var2_int) {
+                if (gg.a((byte) 125, param0.charAt(var2_int))) {
+                  var2_int++;
+                  continue L1;
                 }
-                L3: while (true) {
-                  L4: {
-                    if (var2_int >= var3) {
-                      break L4;
-                    } else {
-                      if (!gg.a((byte) -47, param0.charAt(var3 - 1))) {
-                        break L4;
-                      } else {
-                        var3--;
-                        continue L3;
-                      }
-                    }
-                  }
-                  var4 = -var2_int + var3;
-                  if (1 <= var4) {
-                    if (12 >= var4) {
-                      L5: {
-                        if (param1 == 12) {
-                          break L5;
-                        } else {
-                          field_O = (String) null;
-                          break L5;
-                        }
-                      }
-                      var5 = new StringBuilder(var4);
-                      var6 = var2_int;
-                      L6: while (true) {
-                        if (var6 >= var3) {
-                          if (var5.length() != 0) {
-                            stackIn_28_0 = var5.toString();
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          } else {
-                            stackIn_26_0 = null;
-                            decompiledRegionSelector0 = 0;
-                            break L0;
-                          }
-                        } else {
-                          L7: {
-                            var7 = param0.charAt(var6);
-                            if (!fb.a((char) var7, -47)) {
-                              break L7;
-                            } else {
-                              var8 = hc.a((char) var7, param1 + -239);
-                              if (var8 == 0) {
-                                break L7;
-                              } else {
-                                discarded$0 = var5.append((char) var8);
-                                break L7;
-                              }
-                            }
-                          }
-                          var6++;
-                          continue L6;
-                        }
-                      }
-                    } else {
-                      return null;
-                    }
-                  } else {
-                    return null;
-                  }
+                break;
+              }
+              L3: while (var2_int < var3) {
+                if (gg.a((byte) -47, param0.charAt(var3 - 1))) {
+                  var3--;
+                  continue L3;
                 }
+                break;
+              }
+              var4 = -var2_int + var3;
+              if (1 <= var4) {
+                if (12 >= var4) {
+                  if (param1 != 12) {
+                    field_O = (String) null;
+                  }
+                  var5 = new StringBuilder(var4);
+                  for (var6 = var2_int; var6 < var3; var6++) {
+                    var7 = param0.charAt(var6);
+                    if (fb.a((char) var7, -47)) {
+                      var8 = hc.a((char) var7, param1 + -239);
+                      if (var8 != 0) {
+                        discarded$0 = var5.append((char) var8);
+                      }
+                    }
+                  }
+                  if (var5.length() != 0) {
+                    stackIn_28_0 = var5.toString();
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  } else {
+                    stackIn_26_0 = null;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
+                  }
+                } else {
+                  return null;
+                }
+              } else {
+                return null;
               }
             } else {
               return null;
@@ -387,23 +328,19 @@ abstract class oe extends dd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var2 = decompiledCaughtException;
-            stackIn_31_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_31_0 = (RuntimeException) (var2);
 
-            stackIn_31_1 = new StringBuilder().append("oe.L(");
+          stackIn_31_1 = new StringBuilder().append("oe.L(");
 
-            if (param0 == null) {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "null";
-              break L8;
-            } else {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "{...}";
-              break L8;
-            }
+          if (param0 == null) {
+            stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+            stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+            stackIn_32_2 = "null";
+          } else {
+            stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
+            stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
+            stackIn_32_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param1 + ')');
         }
@@ -431,256 +368,139 @@ abstract class oe extends dd {
         int var10 = 0;
         var10 = Geoblox.field_C;
         try {
-          L0: {
-            L1: {
-              var3_int = 160;
-              var4 = 190;
-              if (!param1) {
-                var4 -= 10;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (param0) {
-                stackIn_7_0 = ug.field_c;
-                break L2;
-              } else {
-                stackIn_7_0 = vl.field_p;
-                break L2;
-              }
-            }
-            var5 = stackIn_7_0;
-            var6 = 0;
-            if (param2 == 160) {
-              L3: {
-                L4: {
-                  var7 = 0;
-                  var8 = 0;
-                  if (param0) {
-                    var9 = 15;
-                    L5: while (true) {
-                      if (-1 < (var9 ^ -1)) {
-                        L6: {
-                          if ((var8 ^ -1) <= -9) {
-                            var3_int = var3_int + (-160 + var7);
-                            break L6;
-                          } else {
-                            break L6;
-                          }
-                        }
-                        var9 = 0;
-                        L7: while (true) {
-                          if (pg.field_a.length <= var9) {
-                            break L4;
-                          } else {
-                            L8: {
-                              L9: {
-                                if (-1 != (1 << var9 & var5 ^ -1)) {
-                                  break L9;
-                                } else {
-                                  if (!param0) {
-                                    break L9;
-                                  } else {
-                                    break L8;
-                                  }
-                                }
-                              }
-                              L10: {
-                                if (da.a(0, 88)) {
-                                  break L10;
-                                } else {
-                                  if (var9 != 16) {
-                                    break L10;
-                                  } else {
-                                    if (!qi.d(109)) {
-                                      break L8;
-                                    } else {
-                                      break L10;
-                                    }
-                                  }
-                                }
-                              }
-                              L11: {
-                                if (mc.field_a < var3_int) {
-                                  break L11;
-                                } else {
-                                  if (mc.field_a > var3_int - -32) {
-                                    break L11;
-                                  } else {
-                                    if (var4 > he.field_d) {
-                                      break L11;
-                                    } else {
-                                      if (he.field_d > var4 - -32) {
-                                        break L11;
-                                      } else {
-                                        if (a.field_e == var9) {
-                                          a.field_e = -1;
-                                          break L3;
-                                        } else {
-                                          a.field_e = var9;
-                                          break L3;
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                              incrementValue$0 = var6;
-                              var6++;
-                              if (7 != incrementValue$0) {
-                                var3_int += 40;
-                                break L8;
-                              } else {
-                                L12: {
-                                  var3_int = 160;
-                                  var4 += 40;
-                                  if (!param1) {
-                                    var4 += 5;
-                                    break L12;
-                                  } else {
-                                    break L12;
-                                  }
-                                }
-                                if (!param0) {
-                                  break L8;
-                                } else {
-                                  if ((var8 ^ -1) > -9) {
-                                    var3_int = var3_int + var7;
-                                    break L8;
-                                  } else {
-                                    break L8;
-                                  }
-                                }
-                              }
-                            }
-                            var9++;
-                            continue L7;
-                          }
-                        }
-                      } else {
-                        L13: {
-                          if ((var5 & 1 << var9 ^ -1) != -1) {
-                            break L13;
-                          } else {
-                            var7 += 20;
-                            var8++;
-                            break L13;
-                          }
-                        }
-                        var9--;
-                        continue L5;
-                      }
+          var3_int = 160;
+          var4 = 190;
+          if (!param1) {
+            var4 -= 10;
+          }
+          if (param0) {
+            stackIn_7_0 = ug.field_c;
+          } else {
+            stackIn_7_0 = vl.field_p;
+          }
+          var5 = stackIn_7_0;
+          var6 = 0;
+          if (param2 == 160) {
+            L3: {
+              L4: {
+                var7 = 0;
+                var8 = 0;
+                if (param0) {
+                  for (var9 = 15; -1 >= (var9 ^ -1); var9--) {
+                    if ((var5 & 1 << var9 ^ -1) == -1) {
+                      var7 += 20;
+                      var8++;
                     }
-                  } else {
-                    L14: {
-                      if ((var8 ^ -1) <= -9) {
-                        var3_int = var3_int + (-160 + var7);
-                        break L14;
-                      } else {
-                        break L14;
+                  }
+                  if ((var8 ^ -1) <= -9) {
+                    var3_int = var3_int + (-160 + var7);
+                  }
+                  for (var9 = 0; pg.field_a.length > var9; var9++) {
+                    L8: {
+                      if (-1 == (1 << var9 & var5 ^ -1)) {
+                        if (param0) {
+                          break L8;
+                        }
                       }
-                    }
-                    var9 = 0;
-                    L15: while (true) {
-                      if (pg.field_a.length <= var9) {
-                        break L4;
-                      } else {
-                        L16: {
-                          L17: {
-                            if (-1 != (1 << var9 & var5 ^ -1)) {
-                              break L17;
-                            } else {
-                              if (!param0) {
-                                break L17;
-                              } else {
-                                break L16;
-                              }
-                            }
+                      if (!da.a(0, 88)) {
+                        if (var9 == 16) {
+                          if (!qi.d(109)) {
+                            break L8;
                           }
-                          L18: {
-                            if (da.a(0, 88)) {
-                              break L18;
-                            } else {
-                              if (var9 != 16) {
-                                break L18;
+                        }
+                      }
+                      if (mc.field_a >= var3_int) {
+                        if (mc.field_a <= var3_int - -32) {
+                          if (var4 <= he.field_d) {
+                            if (he.field_d <= var4 - -32) {
+                              if (a.field_e == var9) {
+                                a.field_e = -1;
+                                break L3;
                               } else {
-                                if (!qi.d(109)) {
-                                  break L16;
-                                } else {
-                                  break L18;
-                                }
-                              }
-                            }
-                          }
-                          L19: {
-                            if (mc.field_a < var3_int) {
-                              break L19;
-                            } else {
-                              if (mc.field_a > var3_int - -32) {
-                                break L19;
-                              } else {
-                                if (var4 > he.field_d) {
-                                  break L19;
-                                } else {
-                                  if (he.field_d > var4 - -32) {
-                                    break L19;
-                                  } else {
-                                    if (a.field_e == var9) {
-                                      a.field_e = -1;
-                                      break L3;
-                                    } else {
-                                      a.field_e = var9;
-                                      break L3;
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          incrementValue$1 = var6;
-                          var6++;
-                          if (7 != incrementValue$1) {
-                            var3_int += 40;
-                            break L16;
-                          } else {
-                            L20: {
-                              var3_int = 160;
-                              var4 += 40;
-                              if (!param1) {
-                                var4 += 5;
-                                break L20;
-                              } else {
-                                break L20;
-                              }
-                            }
-                            if (!param0) {
-                              break L16;
-                            } else {
-                              if ((var8 ^ -1) > -9) {
-                                var3_int = var3_int + var7;
-                                break L16;
-                              } else {
-                                break L16;
+                                a.field_e = var9;
+                                break L3;
                               }
                             }
                           }
                         }
-                        var9++;
-                        continue L15;
+                      }
+                      incrementValue$0 = var6;
+                      var6++;
+                      if (7 != incrementValue$0) {
+                        var3_int += 40;
+                      } else {
+                        var3_int = 160;
+                        var4 += 40;
+                        if (!param1) {
+                          var4 += 5;
+                        }
+                        if (param0) {
+                          if ((var8 ^ -1) > -9) {
+                            var3_int = var3_int + var7;
+                          }
+                        }
                       }
                     }
                   }
+                  break L4;
+                } else {
+                  if ((var8 ^ -1) <= -9) {
+                    var3_int = var3_int + (-160 + var7);
+                  }
+                  for (var9 = 0; pg.field_a.length > var9; var9++) {
+                    L16: {
+                      if (-1 == (1 << var9 & var5 ^ -1)) {
+                        if (param0) {
+                          break L16;
+                        }
+                      }
+                      if (!da.a(0, 88)) {
+                        if (var9 == 16) {
+                          if (!qi.d(109)) {
+                            break L16;
+                          }
+                        }
+                      }
+                      if (mc.field_a >= var3_int) {
+                        if (mc.field_a <= var3_int - -32) {
+                          if (var4 <= he.field_d) {
+                            if (he.field_d <= var4 - -32) {
+                              if (a.field_e == var9) {
+                                a.field_e = -1;
+                                break L3;
+                              } else {
+                                a.field_e = var9;
+                                break L3;
+                              }
+                            }
+                          }
+                        }
+                      }
+                      incrementValue$1 = var6;
+                      var6++;
+                      if (7 != incrementValue$1) {
+                        var3_int += 40;
+                      } else {
+                        var3_int = 160;
+                        var4 += 40;
+                        if (!param1) {
+                          var4 += 5;
+                        }
+                        if (param0) {
+                          if ((var8 ^ -1) > -9) {
+                            var3_int = var3_int + var7;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  break L4;
                 }
-                break L3;
               }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
+            decompiledRegionSelector0 = 1;
+          } else {
+            decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -722,47 +542,34 @@ abstract class oe extends dd {
             var6 = 169;
             var7 = 0;
             var8 = 35 + param2;
-            L1: while (true) {
-              if (var7 >= var4) {
-                L2: {
-                  jc.field_a.b(-90 + this.field_r + param0, 10 + param2);
-                  if (param1 == 20) {
-                    break L2;
-                  } else {
-                    this.field_M = -34;
-                    break L2;
-                  }
-                }
-                vl.a(id.field_c, -10 + this.field_r, 35 + param2, 5 + param0, (byte) 107);
-                vl.a(fh.field_e, this.field_r, -22 + (this.field_h + param2), param0, (byte) 107);
-                var4 = this.field_h + -79;
-                var5 = 169;
-                var6 = 127;
-                var7 = 0;
-                var8 = param2 - -57;
-                L3: while (true) {
-                  if (var7 >= var4) {
-                    return;
-                  } else {
-                    var9 = var7 * (var6 - var5) / var4 + var5;
-                    var9 = var9 | (var9 << -367904048 | var9 << -1047298264);
-                    vb.c(param0, var8, 6, var9);
-                    vb.c(-6 + (this.field_r + param0), var8, 6, var9);
-                    var8++;
-                    var7++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var9 = var5 + (-var5 + var6) * var7 / var4;
-                var9 = var9 | (var9 << 712590696 | var9 << 386207504);
-                vb.c(param0, var8, 6, var9);
-                vb.c(this.field_r + param0 + -6, var8, 6, var9);
-                var7++;
-                var8++;
-                continue L1;
-              }
+            L1: while (var7 < var4) {
+              var9 = var5 + (-var5 + var6) * var7 / var4;
+              var9 = var9 | (var9 << 712590696 | var9 << 386207504);
+              vb.c(param0, var8, 6, var9);
+              vb.c(this.field_r + param0 + -6, var8, 6, var9);
+              var7++;
+              var8++;
             }
+            jc.field_a.b(-90 + this.field_r + param0, 10 + param2);
+            if (param1 != 20) {
+              this.field_M = -34;
+            }
+            vl.a(id.field_c, -10 + this.field_r, 35 + param2, 5 + param0, (byte) 107);
+            vl.a(fh.field_e, this.field_r, -22 + (this.field_h + param2), param0, (byte) 107);
+            var4 = this.field_h + -79;
+            var5 = 169;
+            var6 = 127;
+            var7 = 0;
+            var8 = param2 - -57;
+            L3: while (var7 < var4) {
+              var9 = var7 * (var6 - var5) / var4 + var5;
+              var9 = var9 | (var9 << -367904048 | var9 << -1047298264);
+              vb.c(param0, var8, 6, var9);
+              vb.c(-6 + (this.field_r + param0), var8, 6, var9);
+              var8++;
+              var7++;
+            }
+            return;
           } else {
             if ((var8 ^ -1) <= (vb.field_i ^ -1)) {
               if (vb.field_d > var8) {
@@ -770,9 +577,7 @@ abstract class oe extends dd {
                   var9 = (-var5 + var6) * var7 / var4 + var5;
                   var10 = 0;
                   var11 = this.field_r;
-                  if (var7 > 20) {
-                    break L4;
-                  } else {
+                  if (var7 <= 20) {
                     L5: while (true) {
                       if (var10 > 20) {
                         break L4;
@@ -797,40 +602,28 @@ abstract class oe extends dd {
                   }
                 }
                 L6: {
-                  if (20 < var7) {
-                    break L6;
-                  } else {
+                  if (20 >= var7) {
                     var12 = var11;
                     var11 -= 21;
-                    var13 = 0;
-                    L7: while (true) {
-                      L8: {
-                        if (-21 > (var13 ^ -1)) {
-                          break L8;
+                    L7: for (var13 = 0; -21 <= (var13 ^ -1); var13++) {
+                      var14 = (-var7 + 20) * (-var7 + 20) - -(var13 * var13);
+                      if (var14 <= 462) {
+                        if (-421 < (var14 ^ -1)) {
+                          var12 = var11 + 1;
+                          var11++;
+                          continue L7;
                         } else {
-                          var14 = (-var7 + 20) * (-var7 + 20) - -(var13 * var13);
-                          if (var14 <= 462) {
-                            if (-421 < (var14 ^ -1)) {
-                              var12 = var11 + 1;
-                              var11++;
-                              var13++;
-                              continue L7;
-                            } else {
-                              var15 = var9 * (462 + -var14) / 42;
-                              var15 = var15 | (var15 << -321143672 | var15 << -1775523120);
-                              vb.field_c[var11 + param0 + vb.field_f * var8] = var15;
-                              var11++;
-                              var13++;
-                              continue L7;
-                            }
-                          } else {
-                            break L8;
-                          }
+                          var15 = var9 * (462 + -var14) / 42;
+                          var15 = var15 | (var15 << -321143672 | var15 << -1775523120);
+                          vb.field_c[var11 + param0 + vb.field_f * var8] = var15;
+                          var11++;
+                          continue L7;
                         }
                       }
-                      var11 = var12;
-                      break L6;
+                      break;
                     }
+                    var11 = var12;
+                    break L6;
                   }
                 }
                 var9 = var9 | (var9 << -1618164592 | var9 << -946803448);

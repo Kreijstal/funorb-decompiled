@@ -867,19 +867,11 @@ final class p extends hf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          L0: {
-            L1: {
-              if (param0 <= -21) {
-                break L1;
-              } else {
-                field_k = 120;
-                break L1;
-              }
-            }
-            field_o = null;
-            field_i = null;
-            break L0;
+          if (param0 > -21) {
+            field_k = 120;
           }
+          field_o = null;
+          field_i = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -911,46 +903,29 @@ final class p extends hf {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 3) {
-                break L1;
-              } else {
-                field_i = (ue) null;
-                break L1;
-              }
-            }
-            L2: {
-              var2 = fh.a(rh.a(param0, -48), -78);
-              if (null != var2) {
-                break L2;
-              } else {
-                var2 = "";
-                break L2;
-              }
-            }
-            stackIn_6_0 = (String) (var2);
-            break L0;
+          if (param1 != 3) {
+            field_i = (ue) null;
           }
+          var2 = fh.a(rh.a(param0, -48), -78);
+          if (null == var2) {
+            var2 = "";
+          }
+          stackIn_6_0 = (String) (var2);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2_ref);
+          var2_ref = decompiledCaughtException;
+          stackIn_10_0 = (RuntimeException) (var2_ref);
 
-            stackIn_10_1 = new StringBuilder().append("p.C(");
+          stackIn_10_1 = new StringBuilder().append("p.C(");
 
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          if (param0 == null) {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
         }

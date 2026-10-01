@@ -10,28 +10,23 @@ final class lk {
     int[] field_c;
 
     final int a(int param0) {
-        if (param0 == 0) {
-          if (this.field_c != null) {
-            if (0 == this.field_c.length) {
-              return 0;
-            } else {
-              return this.field_c[-1 + this.field_c.length];
+        if (param0 != 0) {
+            field_f = (int[]) null;
+            if (this.field_c == null) {
+                return 0;
             }
-          } else {
-            return 0;
-          }
-        } else {
-          field_f = (int[]) null;
-          if (this.field_c != null) {
-            if (0 == this.field_c.length) {
-              return 0;
-            } else {
-              return this.field_c[-1 + this.field_c.length];
+            if (0 != this.field_c.length) {
+                return this.field_c[-1 + this.field_c.length];
             }
-          } else {
             return 0;
-          }
         }
+        if (this.field_c == null) {
+            return 0;
+        }
+        if (0 != this.field_c.length) {
+            return this.field_c[-1 + this.field_c.length];
+        }
+        return 0;
     }
 
     final int a(int param0, int param1) {

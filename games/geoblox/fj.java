@@ -17,28 +17,23 @@ abstract class fj extends rc {
     }
 
     final static boolean f(int param0) {
-        if (param0 == -31456) {
-          if ((hj.field_a ^ -1) <= -11) {
-            if (mi.field_C < 13) {
-              return false;
-            } else {
-              return true;
+        if (param0 != -31456) {
+            field_q = (pk) null;
+            if ((hj.field_a ^ -1) > -11) {
+                return false;
             }
-          } else {
-            return false;
-          }
-        } else {
-          field_q = (pk) null;
-          if ((hj.field_a ^ -1) <= -11) {
-            if (mi.field_C < 13) {
-              return false;
-            } else {
-              return true;
+            if (mi.field_C >= 13) {
+                return true;
             }
-          } else {
             return false;
-          }
         }
+        if ((hj.field_a ^ -1) > -11) {
+            return false;
+        }
+        if (mi.field_C >= 13) {
+            return true;
+        }
+        return false;
     }
 
     public static void e(int param0) {

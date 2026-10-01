@@ -1,0 +1,13 @@
+{
+  "game": "geoblox",
+  "status": "pass",
+  "classes": 303,
+  "sources": 303,
+  "hardFailures": 0,
+  "failures": {
+    "pipeline": 0,
+    "cli": 0,
+    "verify": 0,
+    "javac": 0
+  }
+}

@@ -32,122 +32,74 @@ final class ek {
         int var15 = 0;
         int var16 = 0;
         try {
-          L0: {
-            var6_int = param2.field_r;
-            var7 = param2.field_m;
-            var8 = 0;
-            var9 = 0;
-            if (param1) {
-              L1: {
-                var10 = param2.field_s;
-                var11 = param2.field_o;
-                var12 = (var10 << 1780073008) / param4;
-                var13 = (var11 << -1191763856) / param0;
-                if ((param2.field_u ^ -1) >= -1) {
-                  break L1;
-                } else {
-                  var14 = ((param2.field_u << 536850224) + (var12 + -1)) / var12;
-                  var8 = var8 + (-(param2.field_u << -815064720) + var12 * var14);
-                  param5 = param5 + var14;
-                  break L1;
-                }
-              }
-              L2: {
-                if (var6_int < var10) {
-                  param4 = (var12 + ((var6_int << 1238097680) + (-var8 - 1))) / var12;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if ((param2.field_p ^ -1) < -1) {
-                  var14 = ((param2.field_p << -93118640) + var13 - 1) / var13;
-                  var9 = var9 + (var14 * var13 - (param2.field_p << -1049630416));
-                  param3 = param3 + var14;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (var11 <= var7) {
-                  break L4;
-                } else {
-                  param0 = (var13 + (-var9 + (var7 << 1965432400)) - 1) / var13;
-                  break L4;
-                }
-              }
-              L5: {
-                var14 = param5 - -(vb.field_f * param3);
-                var15 = vb.field_f - param4;
-                if (vb.field_d < param3 - -param0) {
-                  param0 = param0 - (-vb.field_d + param3 + param0);
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              L6: {
-                if (vb.field_i > param3) {
-                  var16 = vb.field_i - param3;
-                  var9 = var9 + var13 * var16;
-                  param0 = param0 - var16;
-                  var14 = var14 + vb.field_f * var16;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              L7: {
-                if (param4 + param5 <= vb.field_k) {
-                  break L7;
-                } else {
-                  var16 = param5 + (param4 - vb.field_k);
-                  var15 = var15 + var16;
-                  param4 = param4 - var16;
-                  break L7;
-                }
-              }
-              L8: {
-                if (param5 >= vb.field_e) {
-                  break L8;
-                } else {
-                  var16 = vb.field_e + -param5;
-                  var14 = var14 + var16;
-                  var15 = var15 + var16;
-                  var8 = var8 + var16 * var12;
-                  param4 = param4 - var16;
-                  break L8;
-                }
-              }
-              lc.a(var8, param0, vb.field_c, var12, var13, var6_int, var9, var15, var14, param4, (byte) -104, param2.field_v, 0);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var6_int = param2.field_r;
+          var7 = param2.field_m;
+          var8 = 0;
+          var9 = 0;
+          if (param1) {
+            var10 = param2.field_s;
+            var11 = param2.field_o;
+            var12 = (var10 << 1780073008) / param4;
+            var13 = (var11 << -1191763856) / param0;
+            if ((param2.field_u ^ -1) < -1) {
+              var14 = ((param2.field_u << 536850224) + (var12 + -1)) / var12;
+              var8 = var8 + (-(param2.field_u << -815064720) + var12 * var14);
+              param5 = param5 + var14;
             }
+            if (var6_int < var10) {
+              param4 = (var12 + ((var6_int << 1238097680) + (-var8 - 1))) / var12;
+            }
+            if ((param2.field_p ^ -1) < -1) {
+              var14 = ((param2.field_p << -93118640) + var13 - 1) / var13;
+              var9 = var9 + (var14 * var13 - (param2.field_p << -1049630416));
+              param3 = param3 + var14;
+            }
+            if (var11 > var7) {
+              param0 = (var13 + (-var9 + (var7 << 1965432400)) - 1) / var13;
+            }
+            var14 = param5 - -(vb.field_f * param3);
+            var15 = vb.field_f - param4;
+            if (vb.field_d < param3 - -param0) {
+              param0 = param0 - (-vb.field_d + param3 + param0);
+            }
+            if (vb.field_i > param3) {
+              var16 = vb.field_i - param3;
+              var9 = var9 + var13 * var16;
+              param0 = param0 - var16;
+              var14 = var14 + vb.field_f * var16;
+            }
+            if (param4 + param5 > vb.field_k) {
+              var16 = param5 + (param4 - vb.field_k);
+              var15 = var15 + var16;
+              param4 = param4 - var16;
+            }
+            if (param5 < vb.field_e) {
+              var16 = vb.field_e + -param5;
+              var14 = var14 + var16;
+              var15 = var15 + var16;
+              var8 = var8 + var16 * var12;
+              param4 = param4 - var16;
+            }
+            lc.a(var8, param0, vb.field_c, var12, var13, var6_int, var9, var15, var14, param4, (byte) -104, param2.field_v, 0);
+            decompiledRegionSelector0 = 1;
+          } else {
+            decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var6 = decompiledCaughtException;
-            stackIn_26_0 = (RuntimeException) (var6);
+          var6 = decompiledCaughtException;
+          stackIn_26_0 = (RuntimeException) (var6);
 
-            stackIn_26_1 = new StringBuilder().append("ek.A(").append(param0).append(',').append(param1).append(',');
+          stackIn_26_1 = new StringBuilder().append("ek.A(").append(param0).append(',').append(param1).append(',');
 
-            if (param2 == null) {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "null";
-              break L9;
-            } else {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "{...}";
-              break L9;
-            }
+          if (param2 == null) {
+            stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+            stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+            stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+            stackIn_27_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

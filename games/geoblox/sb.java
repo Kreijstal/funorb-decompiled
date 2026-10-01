@@ -28,33 +28,19 @@ final class sb {
 
     final static boolean a(int param0) {
         int stackIn_7_0 = 0;
-        L0: {
-          if (param0 > 46) {
-            break L0;
-          } else {
-            field_a = -60;
-            break L0;
-          }
+        if (param0 <= 46) {
+          field_a = -60;
         }
         L1: {
-          L2: {
-            if (-11 < (hj.field_a ^ -1)) {
-              break L2;
-            } else {
-              if (hl.field_G) {
-                break L2;
-              } else {
-                if (t.b(13)) {
-                  break L2;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L1;
-                }
+          if (-11 >= (hj.field_a ^ -1)) {
+            if (!hl.field_G) {
+              if (!t.b(13)) {
+                stackIn_7_0 = 1;
+                break L1;
               }
             }
           }
           stackIn_7_0 = 0;
-          break L1;
         }
         return stackIn_7_0 != 0;
     }

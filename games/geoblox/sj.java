@@ -28,22 +28,18 @@ final class sj {
     }
 
     final void a(int param0, int param1) {
-        if (param0 <= param1) {
-          if (param1 <= this.field_d) {
-            if (param1 != this.field_d) {
-              sf.a(this.field_f, 1 + param1, this.field_f, param1, -param1 + this.field_d);
-              this.field_d = this.field_d - 1;
-              return;
-            } else {
-              this.field_d = this.field_d - 1;
-              return;
-            }
-          } else {
+        if (param0 > param1) {
             throw new ArrayIndexOutOfBoundsException(param1);
-          }
-        } else {
-          throw new ArrayIndexOutOfBoundsException(param1);
         }
+        if (param1 > this.field_d) {
+            throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        if (param1 == this.field_d) {
+            this.field_d = this.field_d - 1;
+            return;
+        }
+        sf.a(this.field_f, 1 + param1, this.field_f, param1, -param1 + this.field_d);
+        this.field_d = this.field_d - 1;
     }
 
     private final int b(int param0, int param1) {
@@ -98,45 +94,29 @@ final class sj {
     }
 
     private final void a(int param0, int param1, int param2) {
-        if (param1 != 1) {
-          return;
-        } else {
-          L0: {
-            if (this.field_d < param2) {
-              this.field_d = param2;
-              break L0;
-            } else {
-              break L0;
+        if (param1 == 1) {
+            if (!(this.field_d >= param2)) {
+                this.field_d = param2;
             }
-          }
-          L1: {
-            if (this.field_f.length <= param2) {
-              this.c(param2, param1 ^ 25176);
-              break L1;
-            } else {
-              break L1;
+            if (!(this.field_f.length > param2)) {
+                this.c(param2, param1 ^ 25176);
             }
-          }
-          this.field_f[param2] = param0;
-          return;
+            this.field_f[param2] = param0;
+            return;
         }
     }
 
     private final void c(int param0, int param1) {
-        int[] var3;
-        int[] var4;
-        var4 = new int[this.b(param0, 1)];
-        var3 = var4;
-        if (param1 != 25177) {
-          this.field_f = (int[]) null;
-          sf.a(this.field_f, 0, var4, 0, this.field_f.length);
-          this.field_f = var4;
-          return;
-        } else {
-          sf.a(this.field_f, 0, var4, 0, this.field_f.length);
-          this.field_f = var4;
-          return;
+        int[] var4 = new int[this.b(param0, 1)];
+        int[] var3 = var4;
+        if (param1 == 25177) {
+            sf.a(this.field_f, 0, var4, 0, this.field_f.length);
+            this.field_f = var4;
+            return;
         }
+        this.field_f = (int[]) null;
+        sf.a(this.field_f, 0, var4, 0, this.field_f.length);
+        this.field_f = var4;
     }
 
     final void b(int param0, byte param1) {

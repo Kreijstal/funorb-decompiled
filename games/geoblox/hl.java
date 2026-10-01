@@ -89,6 +89,7 @@ final class hl extends el {
     }
 
     private final void a(dm param0, int param1, int param2, int param3) {
+        int var6 = 0;
         dm discarded$0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -98,7 +99,6 @@ final class hl extends el {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         var8 = Geoblox.field_C;
@@ -106,79 +106,51 @@ final class hl extends el {
           L0: {
             var5_int = param2 + this.field_r;
             uh.a(param1, this.field_M.field_r + param2, param3 ^ 6447, this.field_h + param1, var5_int - this.field_M.field_r);
-            var6 = param2 + -this.field_I;
-            L1: while (true) {
-              if (var6 >= var5_int) {
-                L2: {
-                  if (param3 == -12276) {
-                    break L2;
-                  } else {
-                    discarded$0 = this.g(1);
-                    break L2;
-                  }
+            for (var6 = param2 + -this.field_I; var6 < var5_int; var6 = var6 + param0.field_r) {
+              param0.b(var6, param1);
+            }
+            if (param3 != -12276) {
+              discarded$0 = this.g(1);
+            }
+            id.a(true);
+            if (this.field_M.field_r + param2 >= vb.field_e) {
+              Geoblox.a(1, this.field_z);
+              param0.b(-this.field_I, 0);
+              param0.b(2 * this.field_H - this.field_I, 0);
+              this.field_y.e(0, 0);
+              id.a(true);
+              this.field_z.b(param2, param1);
+            }
+            L4: {
+              if (vb.field_k >= var5_int - this.field_M.field_r) {
+                Geoblox.a(param3 ^ -12275, this.field_z);
+                for (var7 = this.field_I + (this.field_r - this.field_M.field_r); var7 > 2 * this.field_H; var7 = var7 - 2 * this.field_H) {
                 }
-                L3: {
-                  id.a(true);
-                  if (this.field_M.field_r + param2 < vb.field_e) {
-                    break L3;
-                  } else {
-                    Geoblox.a(1, this.field_z);
-                    param0.b(-this.field_I, 0);
-                    param0.b(2 * this.field_H - this.field_I, 0);
-                    this.field_y.e(0, 0);
-                    id.a(true);
-                    this.field_z.b(param2, param1);
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (vb.field_k >= var5_int - this.field_M.field_r) {
-                    Geoblox.a(param3 ^ -12275, this.field_z);
-                    var7 = this.field_I + (this.field_r - this.field_M.field_r);
-                    L5: while (true) {
-                      if (var7 <= 2 * this.field_H) {
-                        param0.b(-var7, 0);
-                        param0.b(-var7 + this.field_H * 2, 0);
-                        this.field_M.e(0, 0);
-                        id.a(true);
-                        this.field_z.b(-this.field_M.field_r + var5_int, param1);
-                        break L4;
-                      } else {
-                        var7 = var7 - 2 * this.field_H;
-                        continue L5;
-                      }
-                    }
-                  } else {
-                    break L4;
-                  }
-                }
-                break L0;
-              } else {
-                param0.b(var6, param1);
-                var6 = var6 + param0.field_r;
-                continue L1;
+                param0.b(-var7, 0);
+                param0.b(-var7 + this.field_H * 2, 0);
+                this.field_M.e(0, 0);
+                id.a(true);
+                this.field_z.b(-this.field_M.field_r + var5_int, param1);
+                break L4;
               }
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var5 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_17_0 = (RuntimeException) (var5);
 
-            stackIn_17_1 = new StringBuilder().append("hl.G(");
+          stackIn_17_1 = new StringBuilder().append("hl.G(");
 
-            if (param0 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L6;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L6;
-            }
+          if (param0 == null) {
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
+            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
+            stackIn_18_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -249,49 +221,30 @@ final class hl extends el {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          L0: {
-            L1: {
-              if (!this.field_C) {
-                break L1;
-              } else {
-                this.field_I = this.field_I + 1;
-                if (this.field_I <= 2 * this.field_H) {
-                  break L1;
-                } else {
-                  this.field_I = this.field_I - 2 * this.field_H;
-                  break L1;
-                }
-              }
+          if (this.field_C) {
+            this.field_I = this.field_I + 1;
+            if (this.field_I > 2 * this.field_H) {
+              this.field_I = this.field_I - 2 * this.field_H;
             }
-            L2: {
-              if (!param0) {
-                break L2;
-              } else {
-                field_G = false;
-                break L2;
-              }
-            }
-            break L0;
+          }
+          if (param0) {
+            field_G = false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = (RuntimeException) (var5);
 
-            stackIn_8_1 = new StringBuilder().append("hl.H(").append(param0).append(',').append(param1).append(',');
+          stackIn_8_1 = new StringBuilder().append("hl.H(").append(param0).append(',').append(param1).append(',');
 
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          if (param2 == null) {
+            stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+            stackIn_9_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
         }

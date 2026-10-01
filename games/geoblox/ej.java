@@ -9,20 +9,18 @@ final class ej {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 >= -2) {
-          ej.a(1);
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          field_d = null;
-          return;
-        } else {
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          field_d = null;
-          return;
+        if (param0 < -2) {
+            field_b = null;
+            field_a = null;
+            field_c = null;
+            field_d = null;
+            return;
         }
+        ej.a(1);
+        field_b = null;
+        field_a = null;
+        field_c = null;
+        field_d = null;
     }
 
     static {

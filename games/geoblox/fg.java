@@ -12,13 +12,13 @@ final class fg {
     }
 
     private final byte[] b() {
+        int var8 = 0;
         int var1;
         int var2;
         byte[] var3;
         int var4;
         int var5;
         int var6;
-        int var8;
         int var9;
         int[] var13;
         var1 = 0;
@@ -37,26 +37,15 @@ final class fg {
                     var5 = this.field_a[var4].field_d * 22050 / 1000;
                     var6 = this.field_a[var4].field_v * 22050 / 1000;
                     var13 = this.field_a[var4].a(var5, this.field_a[var4].field_d);
-                    var8 = 0;
-                    L2: while (true) {
-                      if (var8 < var5) {
-                        L3: {
-                          var9 = var3[var8 + var6] + (var13[var8] >> 8);
-                          if ((var9 + 128 & -256) == 0) {
-                            break L3;
-                          } else {
-                            var9 = var9 >> 31 ^ 127;
-                            break L3;
-                          }
-                        }
-                        var3[var8 + var6] = (byte)var9;
-                        var8++;
-                        continue L2;
-                      } else {
-                        var4++;
-                        continue L1;
+                    for (var8 = 0; var8 < var5; var8++) {
+                      var9 = var3[var8 + var6] + (var13[var8] >> 8);
+                      if ((var9 + 128 & -256) != 0) {
+                        var9 = var9 >> 31 ^ 127;
                       }
+                      var3[var8 + var6] = (byte)var9;
                     }
+                    var4++;
+                    continue L1;
                   } else {
                     var4++;
                     continue L1;

@@ -33,54 +33,42 @@ final class pi extends vf {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var5_int = -107 % ((-62 - param2) / 58);
-            if (mf.a(param4, param1, 116, param3)) {
-              stackIn_4_0 = ni.a(param0.a(param1, -28153, param4), -108);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var5_int = -107 % ((-62 - param2) / 58);
+          if (mf.a(param4, param1, 116, param3)) {
+            stackIn_4_0 = ni.a(param0.a(param1, -28153, param4), -108);
+            decompiledRegionSelector0 = 1;
+          } else {
+            stackIn_2_0 = null;
+            decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var5 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_7_0 = (RuntimeException) (var5);
 
-            stackIn_7_1 = new StringBuilder().append("pi.O(");
+          stackIn_7_1 = new StringBuilder().append("pi.O(");
 
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          if (param0 == null) {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "{...}";
           }
-          L2: {
 
 
-            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',');
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',');
 
-            if (param3 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          if (param3 == null) {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_11_2 + ',' + param4 + ')');
         }
@@ -92,41 +80,27 @@ final class pi extends vf {
     }
 
     final static void c(int param0, int param1) {
-        L0: {
-          wg.field_a = param0 >> -1651040092 & 3;
-          if (-3 > (wg.field_a ^ -1)) {
+        wg.field_a = param0 >> -1651040092 & 3;
+        if (!(-3 <= (wg.field_a ^ -1))) {
             wg.field_a = 2;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        L1: {
-          qc.field_i = param0 >> 356020514 & 3;
-          ad.field_j = 3 & param0;
-          if (qc.field_i > 2) {
+        qc.field_i = param0 >> 356020514 & 3;
+        ad.field_j = 3 & param0;
+        if (!(qc.field_i <= 2)) {
             qc.field_i = 2;
-            break L1;
-          } else {
-            break L1;
-          }
         }
-        if (param1 == -12718) {
-          if (ad.field_j > 2) {
-            ad.field_j = 2;
+        if (param1 != -12718) {
+            pi.j(-27);
+            if (ad.field_j > 2) {
+                ad.field_j = 2;
+                return;
+            }
             return;
-          } else {
-            return;
-          }
-        } else {
-          pi.j(-27);
-          if (ad.field_j <= 2) {
-            return;
-          } else {
-            ad.field_j = 2;
-            return;
-          }
         }
+        if (ad.field_j <= 2) {
+            return;
+        }
+        ad.field_j = 2;
     }
 
     final void a(boolean param0, int param1, el param2, int param3) {
@@ -148,34 +122,27 @@ final class pi extends vf {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 <= -30) {
-              stackIn_3_0 = 0;
-              break L0;
-            } else {
-              this.field_P = 97;
-              return false;
-            }
+          if (param0 <= -30) {
+            stackIn_3_0 = 0;
+          } else {
+            this.field_P = 97;
+            return false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = (RuntimeException) (var3);
 
-            stackIn_6_1 = new StringBuilder().append("pi.UA(").append(param0).append(',');
+          stackIn_6_1 = new StringBuilder().append("pi.UA(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L1;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L1;
-            }
+          if (param1 == null) {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+            stackIn_7_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
@@ -198,36 +165,24 @@ final class pi extends vf {
         dm var18;
         dm var19;
         L0: {
-          L1: {
-            var14 = Geoblox.field_C;
-            var6 = this.field_M.a((byte) -105);
-            if (var6 == bf.field_g) {
-              break L1;
-            } else {
-              if (var6 != si.field_n) {
-                var5 = this.field_M.c(-21666);
-                if (var5 == null) {
-                  var5 = this.field_N;
-                  break L0;
-                } else {
-                  break L0;
-                }
+          var14 = Geoblox.field_C;
+          var6 = this.field_M.a((byte) -105);
+          if (var6 != bf.field_g) {
+            if (var6 != si.field_n) {
+              var5 = this.field_M.c(-21666);
+              if (var5 == null) {
+                var5 = this.field_N;
+                break L0;
               } else {
-                break L1;
+                break L0;
               }
             }
           }
           var5 = cm.field_h;
-          break L0;
         }
-        L2: {
-          if (var5.equals(this.field_s)) {
-            break L2;
-          } else {
-            this.field_s = var5;
-            this.g(-55);
-            break L2;
-          }
+        if (!var5.equals(this.field_s)) {
+          this.field_s = var5;
+          this.g(-55);
         }
         super.a(param0, param1, (byte) 106, param3);
         var6 = this.field_M.a((byte) -105);

@@ -72,124 +72,75 @@ final class wg implements Runnable {
         if (2 <= this.field_l) {
           return true;
         } else {
-          L0: {
-            if (this.field_l != 0) {
-              break L0;
-            } else {
-              L1: {
-                if (null != this.field_f) {
-                  break L1;
-                } else {
-                  this.field_f = this.field_b.a(-14, this.field_h);
-                  break L1;
-                }
-              }
-              if (0 == this.field_f.field_a) {
-                return false;
-              } else {
-                if (1 != this.field_f.field_a) {
-                  this.field_l = this.field_l + 1;
-                  this.field_f = null;
-                  return false;
-                } else {
-                  break L0;
-                }
-              }
+          if (this.field_l == 0) {
+            if (null == this.field_f) {
+              this.field_f = this.field_b.a(-14, this.field_h);
             }
-          }
-          L2: {
-            if (-2 != (this.field_l ^ -1)) {
-              break L2;
+            if (0 == this.field_f.field_a) {
+              return false;
             } else {
-              L3: {
-                if (this.field_k == null) {
-                  this.field_k = this.field_b.a(443, this.field_h.getHost(), false);
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              if (this.field_k.field_a != 0) {
-                if (1 == this.field_k.field_a) {
-                  break L2;
-                } else {
-                  this.field_k = null;
-                  this.field_l = this.field_l + 1;
-                  return false;
-                }
-              } else {
+              if (1 != this.field_f.field_a) {
+                this.field_l = this.field_l + 1;
+                this.field_f = null;
                 return false;
               }
             }
           }
-          L4: {
-            if (null != this.field_c) {
-              break L4;
-            } else {
-              try {
-                L5: {
-                  L6: {
-                    if (-1 == (this.field_l ^ -1)) {
-                      this.field_c = (DataInputStream) (this.field_f.field_b);
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
-                  L7: {
-                    if ((this.field_l ^ -1) != -2) {
-                      break L7;
-                    } else {
-                      var4 = (java.net.Socket) (this.field_k.field_b);
-                      var4.setSoTimeout(10000);
-                      var3 = var4.getOutputStream();
-                      var3.write(17);
-                      var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_h.getFile() + "\n\n"));
-                      var3.write(jf.a(var5, (byte) 127));
-                      this.field_c = new DataInputStream(var4.getInputStream());
-                      break L7;
-                    }
-                  }
-                  this.field_n.field_f = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L5;
-                }
-              } catch (java.io.IOException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                L8: {
-                  var2 = (IOException) (Object) decompiledCaughtException;
-                  this.finalize();
-                  this.field_l = this.field_l + 1;
-                  decompiledRegionSelector0 = 1;
-                  break L8;
-                }
+          if (-2 == (this.field_l ^ -1)) {
+            if (this.field_k == null) {
+              this.field_k = this.field_b.a(443, this.field_h.getHost(), false);
+            }
+            if (this.field_k.field_a != 0) {
+              if (1 != this.field_k.field_a) {
+                this.field_k = null;
+                this.field_l = this.field_l + 1;
+                return false;
               }
-              if (decompiledRegionSelector0 == 0) {
-                L9: {
-                  if (null != this.field_g) {
-                    break L9;
+            } else {
+              return false;
+            }
+          }
+          if (null == this.field_c) {
+            try {
+              if (-1 == (this.field_l ^ -1)) {
+                this.field_c = (DataInputStream) (this.field_f.field_b);
+              }
+              if ((this.field_l ^ -1) == -2) {
+                var4 = (java.net.Socket) (this.field_k.field_b);
+                var4.setSoTimeout(10000);
+                var3 = var4.getOutputStream();
+                var3.write(17);
+                var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_h.getFile() + "\n\n"));
+                var3.write(jf.a(var5, (byte) 127));
+                this.field_c = new DataInputStream(var4.getInputStream());
+              }
+              this.field_n.field_f = 0;
+              decompiledRegionSelector0 = 0;
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = (IOException) (Object) decompiledCaughtException;
+              this.finalize();
+              this.field_l = this.field_l + 1;
+              decompiledRegionSelector0 = 1;
+            }
+            if (decompiledRegionSelector0 == 0) {
+              if (null == this.field_g) {
+                this.field_g = this.field_b.a((Runnable) (this), 0, 5);
+              }
+              if (0 == this.field_g.field_a) {
+                return false;
+              } else {
+                if (param0 == 45) {
+                  if (this.field_g.field_a == 1) {
+                    return false;
                   } else {
-                    this.field_g = this.field_b.a((Runnable) (this), 0, 5);
-                    break L9;
-                  }
-                }
-                if (0 == this.field_g.field_a) {
-                  return false;
-                } else {
-                  if (param0 == 45) {
-                    if (this.field_g.field_a == 1) {
-                      return false;
-                    } else {
-                      this.finalize();
-                      this.field_l = this.field_l + 1;
-                      return false;
-                    }
-                  } else {
+                    this.finalize();
+                    this.field_l = this.field_l + 1;
                     return false;
                   }
+                } else {
+                  return false;
                 }
-              } else {
-                break L4;
               }
             }
           }
@@ -200,14 +151,9 @@ final class wg implements Runnable {
               if (param0 != 45) {
                 return false;
               } else {
-                L10: {
-                  if (this.field_g.field_a != 1) {
-                    this.finalize();
-                    this.field_l = this.field_l + 1;
-                    break L10;
-                  } else {
-                    break L10;
-                  }
+                if (this.field_g.field_a != 1) {
+                  this.finalize();
+                  this.field_l = this.field_l + 1;
                 }
                 return false;
               }
@@ -220,14 +166,9 @@ final class wg implements Runnable {
               if (param0 != 45) {
                 return false;
               } else {
-                L11: {
-                  if (this.field_g.field_a != 1) {
-                    this.finalize();
-                    this.field_l = this.field_l + 1;
-                    break L11;
-                  } else {
-                    break L11;
-                  }
+                if (this.field_g.field_a != 1) {
+                  this.finalize();
+                  this.field_l = this.field_l + 1;
                 }
                 return false;
               }
@@ -246,44 +187,31 @@ final class wg implements Runnable {
             Throwable decompiledCaughtException = null;
             var4 = Geoblox.field_C;
             try {
-              L0: while (true) {
-                L1: {
-                  if (this.field_n.field_f >= this.field_n.field_j.length) {
-                    break L1;
-                  } else {
-                    var1_int = this.field_c.read(this.field_n.field_j, this.field_n.field_f, -this.field_n.field_f + this.field_n.field_j.length);
-                    if (0 <= var1_int) {
-                      this.field_n.field_f = this.field_n.field_f + var1_int;
-                      continue L0;
-                    } else {
-                      break L1;
-                    }
-                  }
+              L0: while (this.field_n.field_f < this.field_n.field_j.length) {
+                var1_int = this.field_c.read(this.field_n.field_j, this.field_n.field_f, -this.field_n.field_f + this.field_n.field_j.length);
+                if (0 <= var1_int) {
+                  this.field_n.field_f = this.field_n.field_f + var1_int;
+                  continue L0;
                 }
-                if (this.field_n.field_j.length == this.field_n.field_f) {
-                  throw wg.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_n.field_j.length + " " + this.field_h));
-                } else {
-                  var1 = this;
-                  synchronized (var1) {
-                    L2: {
-                      this.finalize();
-                      this.field_l = 3;
-                      break L2;
-                    }
-                  }
-                  return;
+                break;
+              }
+              if (this.field_n.field_j.length == this.field_n.field_f) {
+                throw wg.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_n.field_j.length + " " + this.field_h));
+              } else {
+                var1 = this;
+                synchronized (var1) {
+                  this.finalize();
+                  this.field_l = 3;
                 }
+                return;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
               var2 = this;
               synchronized (var2) {
-                L3: {
-                  this.finalize();
-                  this.field_l = this.field_l + 1;
-                  break L3;
-                }
+                this.finalize();
+                this.field_l = this.field_l + 1;
               }
               return;
             }

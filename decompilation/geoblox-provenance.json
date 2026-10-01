@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "scope": "GeoBlox only; the other 43 games retain the previous publication.",
+  "generators": {
+    "dekoblokoWork": {
+      "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+      "trackedClean": true
+    },
+    "javaTools": {
+      "commit": "b1e30cf3e762f15a2a2d639226df7a54ad5f4d81",
+      "trackedClean": true
+    }
+  },
+  "contentIdentityAlgorithms": {
+    "java": "sourceIdentity(sourceInventory(root)) in readable/tools/readable-java.mjs",
+    "classes": "hashClassTree(root) in Deko scripts/pipeline-cache-provenance.js"
+  },
+  "originalInputClasses": {
+    "files": 303,
+    "sha256": "7246293fe6a1a43e92cd0013525f62891609a9249c0111d787da1e7ba4c5d71f"
+  },
+  "verifiedTransformedClasses": {
+    "files": 303,
+    "sha256": "dbc112e60d387c7a6351f38001526b8426490a708913b5efaaba0a1024f7638a"
+  },
+  "pipeline": {
+    "mode": "Reuse the verified pipeline output from the recorded generator revisions, without rerunning transformations.",
+    "provenance": "geoblox-pipeline-provenance.json",
+    "report": "geoblox-pipeline-report.json",
+    "priorInvocation": {
+      "script": "scripts/decompile-all-games.sh",
+      "arguments": [
+        ".work/games",
+        "--jobs",
+        "6"
+      ],
+      "selectedGame": null,
+      "reusePipeline": false,
+      "updateBaseline": false,
+      "fixedPipelineArguments": [
+        "--profile",
+        "none",
+        "--safe-bytecode"
+      ],
+      "runtimeSafetyRetry": "removed-runtime-handlers-with-observable-call-duplication",
+      "environment": {
+        "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+      }
+    }
+  },
+  "freshDecompilation": {
+    "script": "java-tools/scripts/runCfr.js",
+    "arguments": [
+      "--silent",
+      "--fail-on-hard-failure",
+      "--classpath",
+      "VERIFIED_TRANSFORMED_CLASSES:FROZEN_STUBS_JAR",
+      "--diagnostics-json",
+      "DIAGNOSTICS_JSON",
+      "--outputdir",
+      "FRESH_JAVA",
+      "VERIFIED_TRANSFORMED_CLASSES"
+    ],
+    "sources": 303,
+    "hardFailures": 0,
+    "matchesReviewedInputByteForByte": true
+  },
+  "freshVerification": {
+    "tool": "dekobloko-work/scripts/Verify.java",
+    "toolSha256": "9e986b389448add90eff4721a94b0e4b37bed94415fc98e885f0c91a2150f4c1",
+    "methodCount": 2427,
+    "failedMethods": 0,
+    "failedClasses": 0,
+    "dependencies": [
+      {
+        "name": "asm-9.6.jar",
+        "sha256": "3c6fac2424db3d4a853b669f4e3d1d9c3c552235e19a319673f887083c2303a1"
+      },
+      {
+        "name": "asm-tree-9.9.1.jar",
+        "sha256": "0f3555096b720b820bbacab0b515589bee0200bee099bda14c561738ae837ba1"
+      },
+      {
+        "name": "asm-analysis-9.9.1.jar",
+        "sha256": "6260bffc8ec008dd1b713702c7994e2c94d188a3da5bef9e87278a16df6a7522"
+      }
+    ]
+  },
+  "sourceTreeSha256": "4ffc26d9728c403266022452f0c0ca68ea28ff61c26d108b7bd165e6ab92e24c",
+  "previousSourceTreeSha256": "45b38190d2b94f1daa68bdf4ea16aa516be2feda493dceabe51ef8146cce6d7f",
+  "changedJavaFiles": 248,
+  "stubJar": {
+    "name": "funorb-stubs.jar",
+    "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
+  },
+  "runtimeEquivalenceVerified": false
+}

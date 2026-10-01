@@ -25,16 +25,11 @@ final class b {
         ck[] var2;
         int var3;
         int var4;
-        L0: {
-          var4 = Geoblox.field_C;
-          var2 = fe.a(-1);
-          var3 = 0;
-          if (!param0) {
-            break L0;
-          } else {
-            b.a(-38);
-            break L0;
-          }
+        var4 = Geoblox.field_C;
+        var2 = fe.a(-1);
+        var3 = 0;
+        if (param0) {
+          b.a(-38);
         }
         L1: while (true) {
           if (var3 < var2.length) {

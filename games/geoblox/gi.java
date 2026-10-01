@@ -94,90 +94,66 @@ final class gi implements Iterable {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var5_int = param2.a((byte) 126, param4);
-              if (param1 == 1) {
-                break L1;
-              } else {
-                field_b = (int[]) null;
-                break L1;
-              }
-            }
-            var6 = param2.a(param3, param1 ^ -82, var5_int);
-            stackIn_3_0 = rb.a(var6, 0, param2, var5_int, param0);
-            break L0;
+          var5_int = param2.a((byte) 126, param4);
+          if (param1 != 1) {
+            field_b = (int[]) null;
           }
+          var6 = param2.a(param3, param1 ^ -82, var5_int);
+          stackIn_3_0 = rb.a(var6, 0, param2, var5_int, param0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_6_0 = (RuntimeException) (var5);
 
-            stackIn_6_1 = new StringBuilder().append("gi.E(");
+          stackIn_6_1 = new StringBuilder().append("gi.E(");
 
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          if (param0 == null) {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+            stackIn_7_2 = "{...}";
           }
-          L3: {
 
 
-            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
 
-            if (param2 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          if (param2 == null) {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
+            stackIn_10_2 = "{...}";
           }
-          L4: {
 
 
-            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
 
-            if (param3 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          if (param3 == null) {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+            stackIn_13_2 = "{...}";
           }
-          L5: {
 
 
-            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
 
-            if (param4 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L5;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L5;
-            }
+          if (param4 == null) {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+            stackIn_16_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_16_2 + ')');
         }
@@ -273,30 +249,15 @@ final class gi implements Iterable {
             String var9 = null;
             try {
               L0: {
-                L1: {
-                  var3 = "";
-                  if (param0 != null) {
-                    var3 = ch.a(param0, param2 + -124);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
+                var3 = "";
+                if (param0 != null) {
+                  var3 = ch.a(param0, param2 + -124);
                 }
-                L2: {
-                  if (param1 == null) {
-                    break L2;
-                  } else {
-                    L3: {
-                      if (param0 != null) {
-                        var3 = var3 + " | ";
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    var3 = var3 + param1;
-                    break L2;
+                if (param1 != null) {
+                  if (param0 != null) {
+                    var3 = var3 + " | ";
                   }
+                  var3 = var3 + param1;
                 }
                 gb.a(var3, (byte) -75);
                 var6 = og.a(var3, "%3a", true, ":");
@@ -305,70 +266,53 @@ final class gi implements Iterable {
                 var9 = og.a(var8, "%23", true, "#");
                 if (null == c.field_x) {
                   decompiledRegionSelector0 = 0;
-                  break L0;
                 } else {
-                  L4: {
-                    stackIn_13_0 = ml.field_s;
+                  stackIn_13_0 = ml.field_s;
 
-                    stackIn_13_1 = -14;
+                  stackIn_13_1 = -14;
 
-                    stackIn_13_2 = null;
+                  stackIn_13_2 = null;
 
-                    stackIn_13_3 = null;
+                  stackIn_13_3 = null;
 
-                    stackIn_13_4 = c.field_x.getCodeBase();
+                  stackIn_13_4 = c.field_x.getCodeBase();
 
-                    stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(kk.field_t).append("&u=");
+                  stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(kk.field_t).append("&u=");
 
-                    if (null == uk.field_p) {
-                      stackIn_14_0 = (d) ((Object) stackIn_13_0);
-                      stackIn_14_1 = stackIn_13_1;
-                      stackIn_14_2 = null;
-                      stackIn_14_3 = null;
-                      stackIn_14_4 = (java.net.URL) ((Object) stackIn_13_4);
-                      stackIn_14_5 = (StringBuilder) ((Object) stackIn_13_5);
-                      stackIn_14_6 = "" + vi.field_H;
-                      break L4;
-                    } else {
-                      stackIn_14_0 = (d) ((Object) stackIn_13_0);
-                      stackIn_14_1 = stackIn_13_1;
-                      stackIn_14_2 = null;
-                      stackIn_14_3 = null;
-                      stackIn_14_4 = (java.net.URL) ((Object) stackIn_13_4);
-                      stackIn_14_5 = (StringBuilder) ((Object) stackIn_13_5);
-                      stackIn_14_6 = uk.field_p;
-                      break L4;
-                    }
+                  if (null == uk.field_p) {
+                    stackIn_14_0 = (d) ((Object) stackIn_13_0);
+                    stackIn_14_1 = stackIn_13_1;
+                    stackIn_14_2 = null;
+                    stackIn_14_3 = null;
+                    stackIn_14_4 = (java.net.URL) ((Object) stackIn_13_4);
+                    stackIn_14_5 = (StringBuilder) ((Object) stackIn_13_5);
+                    stackIn_14_6 = "" + vi.field_H;
+                  } else {
+                    stackIn_14_0 = (d) ((Object) stackIn_13_0);
+                    stackIn_14_1 = stackIn_13_1;
+                    stackIn_14_2 = null;
+                    stackIn_14_3 = null;
+                    stackIn_14_4 = (java.net.URL) ((Object) stackIn_13_4);
+                    stackIn_14_5 = (StringBuilder) ((Object) stackIn_13_5);
+                    stackIn_14_6 = uk.field_p;
                   }
                   var4 = ((d) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, stackIn_14_6 + "&v1=" + d.field_o + "&v2=" + d.field_t + "&e=" + var9));
-                  L5: while (true) {
-                    if (var4.field_a != 0) {
-                      L6: {
-                        if (-2 != (var4.field_a ^ -1)) {
-                          break L6;
-                        } else {
-                          var5 = (DataInputStream) (var4.field_b);
-                          var5.read();
-                          var5.close();
-                          break L6;
-                        }
-                      }
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      bc.a(param2 + -125, 1L);
-                      continue L5;
-                    }
+                  L5: while (var4.field_a == 0) {
+                    bc.a(param2 + -125, 1L);
                   }
+                  if (-2 == (var4.field_a ^ -1)) {
+                    var5 = (DataInputStream) (var4.field_b);
+                    var5.read();
+                    var5.close();
+                  }
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L7: {
-                var3_ref = (Exception) (Object) decompiledCaughtException;
-                decompiledRegionSelector0 = 1;
-                break L7;
-              }
+              var3_ref = (Exception) (Object) decompiledCaughtException;
+              decompiledRegionSelector0 = 1;
             }
             if (decompiledRegionSelector0 == 0) {
               return;
@@ -398,31 +342,22 @@ final class gi implements Iterable {
         try {
           L0: {
             var3_int = 1;
-            L1: while (true) {
-              if (-2 <= (param0 ^ -1)) {
-                var4 = 28 % ((-75 - param1) / 49);
-                if ((param0 ^ -1) != -2) {
-                  stackIn_10_0 = var3_int;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_8_0 = param2 * var3_int;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                L2: {
-                  if (0 != (param0 & 1)) {
-                    var3_int = var3_int * param2;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                param0 = param0 >> 1;
-                param2 = param2 * param2;
-                continue L1;
+            L1: while (-2 > (param0 ^ -1)) {
+              if (0 != (param0 & 1)) {
+                var3_int = var3_int * param2;
               }
+              param0 = param0 >> 1;
+              param2 = param2 * param2;
+            }
+            var4 = 28 % ((-75 - param1) / 49);
+            if ((param0 ^ -1) != -2) {
+              stackIn_10_0 = var3_int;
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              stackIn_8_0 = param2 * var3_int;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

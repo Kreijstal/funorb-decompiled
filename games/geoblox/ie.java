@@ -7,29 +7,28 @@ final class ie implements com.ms.directX.IEnumModesCallback {
     private static int[] field_a;
 
     final int[] a(int param0) {
-        int[] var2;
-        int[] var3;
+        int[] var3 = null;
+        int[] var2 = null;
         this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-        if (param0 != 8) {
-          this.a(-65);
-          field_a = new int[field_b];
-          field_b = 0;
-          this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-          var3 = field_a;
-          var2 = var3;
-          field_b = 0;
-          field_a = null;
-          return var3;
-        } else {
-          field_a = new int[field_b];
-          field_b = 0;
-          this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-          var3 = field_a;
-          var2 = var3;
-          field_b = 0;
-          field_a = null;
-          return var3;
+        if (param0 == 8) {
+            field_a = new int[field_b];
+            field_b = 0;
+            this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
+            var3 = field_a;
+            var2 = var3;
+            field_b = 0;
+            field_a = null;
+            return var3;
         }
+        this.a(-65);
+        field_a = new int[field_b];
+        field_b = 0;
+        this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
+        var3 = field_a;
+        var2 = var3;
+        field_b = 0;
+        field_a = null;
+        return var3;
     }
 
     final void a(int param0, int param1, java.awt.Frame param2, int param3, int param4, int param5) {

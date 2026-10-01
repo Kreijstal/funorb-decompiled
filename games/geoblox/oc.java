@@ -10,87 +10,68 @@ final class oc implements dh {
     static int field_b;
 
     final static void c(int param0) {
-        int var1;
-        int var2;
-        int var3;
-        int var4;
-        L0: {
-          var4 = Geoblox.field_C;
-          fe.field_j.b(0, 0);
-          ne.field_b.b(320 + -(ne.field_b.field_s >> -869072127), param0 + -(ne.field_b.field_o >> -2111513311));
-          kh.field_h[0].b(0, 20);
-          var1 = -70 + n.field_j;
-          if ((var1 ^ -1) > -1) {
-            break L0;
-          } else {
-            if ((double)var1 * 0.0174532925 < 1.5707963267948966) {
-              kh.field_h[0].c(0, 20, (int)(0.5 + Math.sin(2.0 * ((double)var1 * 0.0174532925)) * 90.0));
-              break L0;
-            } else {
-              var2 = tl.field_r[vc.field_h].field_s >> -1357649567;
-              if (vc.field_h < 11) {
-                L1: {
-                  var3 = n.field_j << 516139650;
-                  if (var2 + 320 >= 1000 + -var3) {
-                    qh.field_O[0].b(320 - -var2, 206 + -(qh.field_O[0].field_o >> 752572161));
-                    break L1;
-                  } else {
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = Geoblox.field_C;
+        fe.field_j.b(0, 0);
+        ne.field_b.b(320 + -(ne.field_b.field_s >> -869072127), param0 + -(ne.field_b.field_o >> -2111513311));
+        kh.field_h[0].b(0, 20);
+        int var1 = -70 + n.field_j;
+        if ((var1 ^ -1) <= -1) {
+            if ((double)var1 * 0.0174532925 >= 1.5707963267948966) {
+                var2 = tl.field_r[vc.field_h].field_s >> -1357649567;
+                if (vc.field_h >= 11) {
+                    var3 = (n.field_j - fh.field_c >> 1122296033) * (n.field_j - fh.field_c >> -1949700319) >> -67189375;
+                    tl.field_r[vc.field_h].b(-(tl.field_r[vc.field_h].field_s >> -1439205631) + 320, var3 + (-(tl.field_r[vc.field_h].field_o >> -1667301759) + 240), si.field_j);
+                    qh.field_O[0].b(var2 + 320, -34 + var3 + -(qh.field_O[0].field_o >> 1078181409) + 240);
+                    qh.field_O[1].b(-var2 + 320 - qh.field_O[1].field_s, -(qh.field_O[1].field_o >> 407066881) + (240 + var3 + 22));
+                    return;
+                }
+                var3 = n.field_j << 516139650;
+                if (var2 + 320 < 1000 + -var3) {
                     qh.field_O[0].b(1000 - var3, -34 + (240 - (qh.field_O[0].field_o >> 1346051681)));
-                    break L1;
-                  }
-                }
-                if (-qh.field_O[1].field_s + (320 - var2) <= var3 + -1200) {
-                  qh.field_O[1].b(-qh.field_O[1].field_s + -var2 + 320, 240 + -(qh.field_O[1].field_o >> -331814527) - -22);
-                  tl.field_r[vc.field_h].b(320 + -var2, 240 + -(tl.field_r[vc.field_h].field_o >> 916411393), si.field_j);
-                  return;
                 } else {
-                  qh.field_O[1].b(var3 + -1200, 22 + (240 + -(qh.field_O[1].field_o >> -1029076959)));
-                  tl.field_r[vc.field_h].b(320 + -var2, 240 + -(tl.field_r[vc.field_h].field_o >> 916411393), si.field_j);
-                  return;
+                    qh.field_O[0].b(320 - -var2, 206 + -(qh.field_O[0].field_o >> 752572161));
                 }
-              } else {
-                var3 = (n.field_j - fh.field_c >> 1122296033) * (n.field_j - fh.field_c >> -1949700319) >> -67189375;
-                tl.field_r[vc.field_h].b(-(tl.field_r[vc.field_h].field_s >> -1439205631) + 320, var3 + (-(tl.field_r[vc.field_h].field_o >> -1667301759) + 240), si.field_j);
-                qh.field_O[0].b(var2 + 320, -34 + var3 + -(qh.field_O[0].field_o >> 1078181409) + 240);
-                qh.field_O[1].b(-var2 + 320 - qh.field_O[1].field_s, -(qh.field_O[1].field_o >> 407066881) + (240 + var3 + 22));
+                if (-qh.field_O[1].field_s + (320 - var2) > var3 + -1200) {
+                    qh.field_O[1].b(var3 + -1200, 22 + (240 + -(qh.field_O[1].field_o >> -1029076959)));
+                    tl.field_r[vc.field_h].b(320 + -var2, 240 + -(tl.field_r[vc.field_h].field_o >> 916411393), si.field_j);
+                    return;
+                }
+                qh.field_O[1].b(-qh.field_O[1].field_s + -var2 + 320, 240 + -(qh.field_O[1].field_o >> -331814527) - -22);
+                tl.field_r[vc.field_h].b(320 + -var2, 240 + -(tl.field_r[vc.field_h].field_o >> 916411393), si.field_j);
                 return;
-              }
             }
-          }
+            kh.field_h[0].c(0, 20, (int)(0.5 + Math.sin(2.0 * ((double)var1 * 0.0174532925)) * 90.0));
         }
         var2 = tl.field_r[vc.field_h].field_s >> -1357649567;
-        if (vc.field_h < 11) {
-          var3 = n.field_j << 516139650;
-          if (var2 + 320 >= 1000 + -var3) {
-            qh.field_O[0].b(320 - -var2, 206 + -(qh.field_O[0].field_o >> 752572161));
-            if (-qh.field_O[1].field_s + (320 - var2) <= var3 + -1200) {
-              qh.field_O[1].b(-qh.field_O[1].field_s + -var2 + 320, 240 + -(qh.field_O[1].field_o >> -331814527) - -22);
-              tl.field_r[vc.field_h].b(320 + -var2, 240 + -(tl.field_r[vc.field_h].field_o >> 916411393), si.field_j);
-              return;
-            } else {
-              qh.field_O[1].b(var3 + -1200, 22 + (240 + -(qh.field_O[1].field_o >> -1029076959)));
-              tl.field_r[vc.field_h].b(320 + -var2, 240 + -(tl.field_r[vc.field_h].field_o >> 916411393), si.field_j);
-              return;
-            }
-          } else {
-            qh.field_O[0].b(1000 - var3, -34 + (240 - (qh.field_O[0].field_o >> 1346051681)));
-            if (-qh.field_O[1].field_s + (320 - var2) <= var3 + -1200) {
-              qh.field_O[1].b(-qh.field_O[1].field_s + -var2 + 320, 240 + -(qh.field_O[1].field_o >> -331814527) - -22);
-              tl.field_r[vc.field_h].b(320 + -var2, 240 + -(tl.field_r[vc.field_h].field_o >> 916411393), si.field_j);
-              return;
-            } else {
-              qh.field_O[1].b(var3 + -1200, 22 + (240 + -(qh.field_O[1].field_o >> -1029076959)));
-              tl.field_r[vc.field_h].b(320 + -var2, 240 + -(tl.field_r[vc.field_h].field_o >> 916411393), si.field_j);
-              return;
-            }
-          }
-        } else {
-          var3 = (n.field_j - fh.field_c >> 1122296033) * (n.field_j - fh.field_c >> -1949700319) >> -67189375;
-          tl.field_r[vc.field_h].b(-(tl.field_r[vc.field_h].field_s >> -1439205631) + 320, var3 + (-(tl.field_r[vc.field_h].field_o >> -1667301759) + 240), si.field_j);
-          qh.field_O[0].b(var2 + 320, -34 + var3 + -(qh.field_O[0].field_o >> 1078181409) + 240);
-          qh.field_O[1].b(-var2 + 320 - qh.field_O[1].field_s, -(qh.field_O[1].field_o >> 407066881) + (240 + var3 + 22));
-          return;
+        if (vc.field_h >= 11) {
+            var3 = (n.field_j - fh.field_c >> 1122296033) * (n.field_j - fh.field_c >> -1949700319) >> -67189375;
+            tl.field_r[vc.field_h].b(-(tl.field_r[vc.field_h].field_s >> -1439205631) + 320, var3 + (-(tl.field_r[vc.field_h].field_o >> -1667301759) + 240), si.field_j);
+            qh.field_O[0].b(var2 + 320, -34 + var3 + -(qh.field_O[0].field_o >> 1078181409) + 240);
+            qh.field_O[1].b(-var2 + 320 - qh.field_O[1].field_s, -(qh.field_O[1].field_o >> 407066881) + (240 + var3 + 22));
+            return;
         }
+        var3 = n.field_j << 516139650;
+        if (var2 + 320 < 1000 + -var3) {
+            qh.field_O[0].b(1000 - var3, -34 + (240 - (qh.field_O[0].field_o >> 1346051681)));
+            if (-qh.field_O[1].field_s + (320 - var2) > var3 + -1200) {
+                qh.field_O[1].b(var3 + -1200, 22 + (240 + -(qh.field_O[1].field_o >> -1029076959)));
+                tl.field_r[vc.field_h].b(320 + -var2, 240 + -(tl.field_r[vc.field_h].field_o >> 916411393), si.field_j);
+                return;
+            }
+            qh.field_O[1].b(-qh.field_O[1].field_s + -var2 + 320, 240 + -(qh.field_O[1].field_o >> -331814527) - -22);
+            tl.field_r[vc.field_h].b(320 + -var2, 240 + -(tl.field_r[vc.field_h].field_o >> 916411393), si.field_j);
+            return;
+        }
+        qh.field_O[0].b(320 - -var2, 206 + -(qh.field_O[0].field_o >> 752572161));
+        if (-qh.field_O[1].field_s + (320 - var2) > var3 + -1200) {
+            qh.field_O[1].b(var3 + -1200, 22 + (240 + -(qh.field_O[1].field_o >> -1029076959)));
+            tl.field_r[vc.field_h].b(320 + -var2, 240 + -(tl.field_r[vc.field_h].field_o >> 916411393), si.field_j);
+            return;
+        }
+        qh.field_O[1].b(-qh.field_O[1].field_s + -var2 + 320, 240 + -(qh.field_O[1].field_o >> -331814527) - -22);
+        tl.field_r[vc.field_h].b(320 + -var2, 240 + -(tl.field_r[vc.field_h].field_o >> 916411393), si.field_j);
     }
 
     public static void a(boolean param0) {
@@ -114,57 +95,37 @@ final class oc implements dh {
         int var7 = 0;
         dm var8 = null;
         try {
-          L0: {
-            L1: {
-              var6_int = param4.field_v + param0;
-              var7 = param4.field_m + param2;
-              ik.a(var6_int, param4.field_h, var7, param4.field_r, -1540604944);
-              var8 = oa.field_e[1];
-              if (!(param4 instanceof hk)) {
-                break L1;
-              } else {
-                if (((hk) ((Object) param4)).field_y) {
-                  var8.c(var6_int - (-1 - (-var8.field_s + param4.field_r >> -1966051583)), (-var8.field_o + param4.field_h >> 45748129) + 1 + var7, 256);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
+          var6_int = param4.field_v + param0;
+          var7 = param4.field_m + param2;
+          ik.a(var6_int, param4.field_h, var7, param4.field_r, -1540604944);
+          var8 = oa.field_e[1];
+          if (param4 instanceof hk) {
+            if (((hk) ((Object) param4)).field_y) {
+              var8.c(var6_int - (-1 - (-var8.field_s + param4.field_r >> -1966051583)), (-var8.field_o + param4.field_h >> 45748129) + 1 + var7, 256);
             }
-            L2: {
-              if (!param4.e((byte) 54)) {
-                break L2;
-              } else {
-                bf.a(var7 + 2, -4 + param4.field_r, 14164, -4 + param4.field_h, var6_int + 2);
-                break L2;
-              }
-            }
-            if (param1 < -5) {
-              break L0;
-            } else {
-              field_c = 68;
-              return;
-            }
+          }
+          if (param4.e((byte) 54)) {
+            bf.a(var7 + 2, -4 + param4.field_r, 14164, -4 + param4.field_h, var6_int + 2);
+          }
+          if (param1 >= -5) {
+            field_c = 68;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var6 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var6);
+          var6 = decompiledCaughtException;
+          stackIn_11_0 = (RuntimeException) (var6);
 
-            stackIn_11_1 = new StringBuilder().append("oc.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          stackIn_11_1 = new StringBuilder().append("oc.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
 
-            if (param4 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          if (param4 == null) {
+            stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+            stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
+            stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
+            stackIn_12_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
@@ -194,13 +155,10 @@ final class oc implements dh {
               var1_ref_java_lang_reflect_Method = Runtime.class.getMethod("maxMemory", new Class[]{});
               if (var1_ref_java_lang_reflect_Method != null) {
                 try {
-                  L0: {
-                    var2 = Runtime.getRuntime();
-                    var4 = (Object[]) null;
-                    var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
-                    li.field_c = 1 + (int)(var3.longValue() / 1048576L);
-                    break L0;
-                  }
+                  var2 = Runtime.getRuntime();
+                  var4 = (Object[]) null;
+                  var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
+                  li.field_c = 1 + (int)(var3.longValue() / 1048576L);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2_ref = decompiledCaughtException;

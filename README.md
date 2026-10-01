@@ -23,7 +23,20 @@ The [export instructions](readable/README.md), [frozen rules](readable/geoblox-r
 This is an incremental naming pass; unknown identifiers and decompiled control
 flow remain, and the export has not undergone a new whole-game runtime test.
 
-## What changed in this regeneration
+## GeoBlox source refresh
+
+GeoBlox has a newer 303-file source export. Its fresh owned-decompiler run is
+byte-identical to the reviewed readability input, and its transformed bytecode
+passes a fresh ASM check covering 2,427 methods with zero failures. The other
+43 games retain the previous full-catalog export.
+
+[GeoBlox provenance](decompilation/geoblox-provenance.json) records the exact
+Deko and java-tools Git commits, input identities, reused pipeline proof and
+fresh checks. This refresh reuses the verified transformed bytecode; it does
+not claim that the full 44-game pipeline was rerun or that fresh whole-game
+runtime equivalence was established.
+
+## Previous full-catalog regeneration
 
 The 2026-08-17 regeneration updates all 44 games from tracked-clean generator
 commits. Every game has a complete source set and passed the transformed-bytecode

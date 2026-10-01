@@ -66,9 +66,7 @@ final class ce extends qk {
         String var6;
         L0: {
           var2 = javax.sound.sampled.AudioSystem.getMixerInfo();
-          if (var2 == null) {
-            break L0;
-          } else {
+          if (var2 != null) {
             var3 = var2;
             var4 = 0;
             L1: while (true) {
@@ -99,52 +97,44 @@ final class ce extends qk {
             }
           }
         }
-        L2: {
-          stackIn_12_0 = this;
+        stackIn_12_0 = this;
 
-          stackIn_12_1 = null;
+        stackIn_12_1 = null;
 
-          stackIn_12_2 = null;
+        stackIn_12_2 = null;
 
-          stackIn_12_3 = (float)field_j;
+        stackIn_12_3 = (float)field_j;
 
-          stackIn_12_4 = 16;
+        stackIn_12_4 = 16;
 
-          if (!field_q) {
-            stackIn_13_0 = this;
-            stackIn_13_1 = null;
-            stackIn_13_2 = null;
-            stackIn_13_3 = stackIn_12_3;
-            stackIn_13_4 = stackIn_12_4;
-            stackIn_13_5 = 1;
-            break L2;
-          } else {
-            stackIn_13_0 = this;
-            stackIn_13_1 = null;
-            stackIn_13_2 = null;
-            stackIn_13_3 = stackIn_12_3;
-            stackIn_13_4 = stackIn_12_4;
-            stackIn_13_5 = 2;
-            break L2;
-          }
+        if (!field_q) {
+          stackIn_13_0 = this;
+          stackIn_13_1 = null;
+          stackIn_13_2 = null;
+          stackIn_13_3 = stackIn_12_3;
+          stackIn_13_4 = stackIn_12_4;
+          stackIn_13_5 = 1;
+        } else {
+          stackIn_13_0 = this;
+          stackIn_13_1 = null;
+          stackIn_13_2 = null;
+          stackIn_13_3 = stackIn_12_3;
+          stackIn_13_4 = stackIn_12_4;
+          stackIn_13_5 = 2;
         }
-        L3: {
-          ((ce) (this)).field_y = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
-          stackIn_15_0 = this;
+        ((ce) (this)).field_y = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
+        stackIn_15_0 = this;
 
-          stackIn_15_1 = 256;
+        stackIn_15_1 = 256;
 
-          if (!field_q) {
-            stackIn_16_0 = this;
-            stackIn_16_1 = stackIn_15_1;
-            stackIn_16_2 = 1;
-            break L3;
-          } else {
-            stackIn_16_0 = this;
-            stackIn_16_1 = stackIn_15_1;
-            stackIn_16_2 = 2;
-            break L3;
-          }
+        if (!field_q) {
+          stackIn_16_0 = this;
+          stackIn_16_1 = stackIn_15_1;
+          stackIn_16_2 = 1;
+        } else {
+          stackIn_16_0 = this;
+          stackIn_16_1 = stackIn_15_1;
+          stackIn_16_2 = 2;
         }
         ((ce) (this)).field_z = new byte[stackIn_16_1 << stackIn_16_2];
     }

@@ -16,37 +16,24 @@ final class da {
     }
 
     final static boolean a(int param0, int param1) {
-        int var2;
-        int stackIn_4_0 = 0;
-        if (0 == (param0 ^ -1)) {
-          return true;
-        } else {
-          L0: {
-            var2 = 43 / ((24 - param1) / 50);
-            if ((field_a & 1 << param0) == 0) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (0 != (param0 ^ -1)) {
+            int var2 = 43 / ((24 - param1) / 50);
+            return (field_a & 1 << param0) != 0 ? true : false;
         }
+        return true;
     }
 
     final static int a(byte param0, int param1) {
         param1--;
         param1 = param1 | param1 >>> 987210721;
         param1 = param1 | param1 >>> -1646334462;
-        if (param0 <= 88) {
-          return -15;
-        } else {
-          param1 = param1 | param1 >>> 635733380;
-          param1 = param1 | param1 >>> 573600264;
-          param1 = param1 | param1 >>> -415367664;
-          return param1 - -1;
+        if (param0 > 88) {
+            param1 = param1 | param1 >>> 635733380;
+            param1 = param1 | param1 >>> 573600264;
+            param1 = param1 | param1 >>> -415367664;
+            return param1 - -1;
         }
+        return -15;
     }
 
     final static void a(boolean param0, int param1) {
@@ -61,18 +48,16 @@ final class da {
     public static void a(int param0) {
         field_b = null;
         field_e = null;
-        if (param0 != 50) {
-          field_d = (int[]) null;
-          field_d = null;
-          field_g = null;
-          field_f = null;
-          return;
-        } else {
-          field_d = null;
-          field_g = null;
-          field_f = null;
-          return;
+        if (param0 == 50) {
+            field_d = null;
+            field_g = null;
+            field_f = null;
+            return;
         }
+        field_d = (int[]) null;
+        field_d = null;
+        field_g = null;
+        field_f = null;
     }
 
     static {

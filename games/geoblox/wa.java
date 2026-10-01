@@ -33,60 +33,38 @@ final class wa {
         int var8 = 0;
         String var9 = null;
         try {
-          L0: {
-            L1: {
-              var5_int = this.field_m.a(param2);
-              var6 = this.field_m.field_q + this.field_m.field_y;
-              var7 = param1;
-              if (vb.field_f < 6 + var7 - -var5_int) {
-                var7 = -6 + vb.field_f - var5_int;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              var8 = -this.field_m.field_y + (param3 + 32);
-              if (vb.field_b < 6 + (var8 - -var6)) {
-                var8 = vb.field_b - var6 + -6;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              vb.d(var7, var8, 6 + var5_int, var6 - -6, this.field_k);
-              if (param0 == 69) {
-                break L3;
-              } else {
-                var9 = (String) null;
-                this.a(-83, false, 61, (String) null);
-                break L3;
-              }
-            }
-            vb.a(1 + var7, var8 - -1, var5_int - -4, 4 + var6, this.field_f);
-            this.field_m.a(param2, 3 + var7, this.field_m.field_y + 3 + var8, this.field_k, -1);
-            break L0;
+          var5_int = this.field_m.a(param2);
+          var6 = this.field_m.field_q + this.field_m.field_y;
+          var7 = param1;
+          if (vb.field_f < 6 + var7 - -var5_int) {
+            var7 = -6 + vb.field_f - var5_int;
           }
+          var8 = -this.field_m.field_y + (param3 + 32);
+          if (vb.field_b < 6 + (var8 - -var6)) {
+            var8 = vb.field_b - var6 + -6;
+          }
+          vb.d(var7, var8, 6 + var5_int, var6 - -6, this.field_k);
+          if (param0 != 69) {
+            var9 = (String) null;
+            this.a(-83, false, 61, (String) null);
+          }
+          vb.a(1 + var7, var8 - -1, var5_int - -4, 4 + var6, this.field_f);
+          this.field_m.a(param2, 3 + var7, this.field_m.field_y + 3 + var8, this.field_k, -1);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var5 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_12_0 = (RuntimeException) (var5);
 
-            stackIn_12_1 = new StringBuilder().append("wa.C(").append(param0).append(',').append(param1).append(',');
+          stackIn_12_1 = new StringBuilder().append("wa.C(").append(param0).append(',').append(param1).append(',');
 
-            if (param2 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          if (param2 == null) {
+            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
+            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
+            stackIn_13_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param3 + ')');
         }
@@ -208,120 +186,82 @@ final class wa {
         int var15 = 0;
         var15 = Geoblox.field_C;
         try {
-          L0: {
-            var5_int = this.field_e + this.field_d;
-            var6 = this.field_p + this.field_i;
-            var7 = this.field_h;
-            if (param3 == -3140) {
-              L1: {
-                if (-1 != var7) {
-                  break L1;
-                } else {
-                  var7 = this.field_m.field_q + this.field_m.field_o;
-                  break L1;
-                }
-              }
-              L2: {
-                L3: {
-                  var8 = vb.field_f >> 994128514;
-                  var9 = this.field_m.a(param1);
-                  var10 = this.field_m.field_q + this.field_m.field_o;
-                  var11 = 1;
-                  if (var8 < var9) {
-                    break L3;
-                  } else {
-                    if (-1 != param1.indexOf("<br>")) {
-                      break L3;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                L4: {
-                  if (dd.field_E != null) {
-                    break L4;
-                  } else {
-                    dd.field_E = new String[16];
-                    break L4;
-                  }
-                }
-                L5: {
-                  if (var8 >= var9) {
-                    var12 = var8;
-                    break L5;
-                  } else {
-                    var13 = var9 / var8;
-                    var12 = (var9 % var8 - -var13 - 1) / var13 * 2 + var8;
-                    break L5;
-                  }
-                }
-                var11 = this.field_m.a(param1, new int[]{var12}, dd.field_E);
-                var9 = 0;
-                var10 = var10 + (var11 + -1) * var7;
-                var13 = 0;
-                L6: while (true) {
-                  if (var13 >= var11) {
-                    break L2;
-                  } else {
-                    var14 = this.field_m.a(dd.field_E[var13]);
-                    if (var14 > var9) {
-                      var9 = var14;
-                      var13++;
-                      continue L6;
-                    } else {
-                      var13++;
-                      continue L6;
-                    }
-                  }
-                }
-              }
-              L7: {
-                var12 = param2;
-                if (var5_int + var9 + var12 > vb.field_f) {
-                  var12 = -var5_int + (vb.field_f + -var9);
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              L8: {
-                var13 = 32 + (-this.field_m.field_y + param0);
-                if (vb.field_b >= var10 + (var13 - -var6)) {
-                  break L8;
-                } else {
-                  var13 = param0 - var10 - var6;
-                  break L8;
-                }
-              }
-              vb.d(var12, var13, var5_int + var9, var10 + var6, this.field_n);
-              vb.a(1 + var12, 1 + var13, var9 + (var5_int - 2), -2 + (var10 + var6), this.field_f);
-              this.field_m.a(param1, this.field_d + var12, this.field_i + var13, var9, var10, this.field_k, -1, 0, 0, var7);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var5_int = this.field_e + this.field_d;
+          var6 = this.field_p + this.field_i;
+          var7 = this.field_h;
+          if (param3 == -3140) {
+            if (-1 == var7) {
+              var7 = this.field_m.field_q + this.field_m.field_o;
             }
+            L2: {
+              var8 = vb.field_f >> 994128514;
+              var9 = this.field_m.a(param1);
+              var10 = this.field_m.field_q + this.field_m.field_o;
+              var11 = 1;
+              if (var8 >= var9) {
+                if (-1 == param1.indexOf("<br>")) {
+                  break L2;
+                }
+              }
+              if (dd.field_E == null) {
+                dd.field_E = new String[16];
+              }
+              if (var8 >= var9) {
+                var12 = var8;
+              } else {
+                var13 = var9 / var8;
+                var12 = (var9 % var8 - -var13 - 1) / var13 * 2 + var8;
+              }
+              var11 = this.field_m.a(param1, new int[]{var12}, dd.field_E);
+              var9 = 0;
+              var10 = var10 + (var11 + -1) * var7;
+              var13 = 0;
+              L6: while (true) {
+                if (var13 >= var11) {
+                  break L2;
+                } else {
+                  var14 = this.field_m.a(dd.field_E[var13]);
+                  if (var14 > var9) {
+                    var9 = var14;
+                    var13++;
+                    continue L6;
+                  } else {
+                    var13++;
+                    continue L6;
+                  }
+                }
+              }
+            }
+            var12 = param2;
+            if (var5_int + var9 + var12 > vb.field_f) {
+              var12 = -var5_int + (vb.field_f + -var9);
+            }
+            var13 = 32 + (-this.field_m.field_y + param0);
+            if (vb.field_b < var10 + (var13 - -var6)) {
+              var13 = param0 - var10 - var6;
+            }
+            vb.d(var12, var13, var5_int + var9, var10 + var6, this.field_n);
+            vb.a(1 + var12, 1 + var13, var9 + (var5_int - 2), -2 + (var10 + var6), this.field_f);
+            this.field_m.a(param1, this.field_d + var12, this.field_i + var13, var9, var10, this.field_k, -1, 0, 0, var7);
+            decompiledRegionSelector0 = 1;
+          } else {
+            decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var5 = decompiledCaughtException;
-            stackIn_28_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_28_0 = (RuntimeException) (var5);
 
-            stackIn_28_1 = new StringBuilder().append("wa.G(").append(param0).append(',');
+          stackIn_28_1 = new StringBuilder().append("wa.G(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "null";
-              break L9;
-            } else {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "{...}";
-              break L9;
-            }
+          if (param1 == null) {
+            stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+            stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
+            stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
+            stackIn_29_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param2 + ',' + param3 + ')');
         }
@@ -341,45 +281,29 @@ final class wa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          L0: {
-            L1: {
-              if (!this.field_o) {
-                this.a((byte) 69, param2, param3, param0);
-                break L1;
-              } else {
-                this.a(param0, param3, param2, -3140);
-                break L1;
-              }
-            }
-            L2: {
-              if (param1) {
-                break L2;
-              } else {
-                this.field_c = (dh) null;
-                break L2;
-              }
-            }
-            break L0;
+          if (!this.field_o) {
+            this.a((byte) 69, param2, param3, param0);
+          } else {
+            this.a(param0, param3, param2, -3140);
+          }
+          if (!param1) {
+            this.field_c = (dh) null;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = (RuntimeException) (var5);
 
-            stackIn_8_1 = new StringBuilder().append("wa.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          stackIn_8_1 = new StringBuilder().append("wa.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
 
-            if (param3 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          if (param3 == null) {
+            stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+            stackIn_9_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
@@ -420,26 +344,17 @@ final class wa {
         var3 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              var1_int = 0;
-              if (param0 == -25866) {
-                break L1;
-              } else {
-                wa.a(53, -56, 122, 126);
-                break L1;
-              }
+            var1_int = 0;
+            if (param0 != -25866) {
+              wa.a(53, -56, 122, 126);
             }
             var2 = (me) ((Object) md.field_a.b((byte) -121));
-            L2: while (true) {
-              if (var2 == null) {
-                stackIn_7_0 = var1_int;
-                break L0;
-              } else {
-                var1_int = var1_int + var2.field_f;
-                var2 = (me) ((Object) md.field_a.b((byte) -99));
-                continue L2;
-              }
+            L2: while (var2 != null) {
+              var1_int = var1_int + var2.field_f;
+              var2 = (me) ((Object) md.field_a.b((byte) -99));
             }
+            stackIn_7_0 = var1_int;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

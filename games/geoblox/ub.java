@@ -85,67 +85,47 @@ final class ub {
             var11 = this.field_e;
             this.field_e[1] = 0;
             var11[0] = 0;
-            break L0;
           } else {
             this.field_e[0] = param0.b(true);
             this.field_e[1] = param0.b(true);
             var4 = param0.c((byte) 34);
+            for (var5 = 0; var5 < 2; var5++) {
+              for (var6 = 0; var6 < this.field_b[var5]; var6++) {
+                this.field_c[var5][0][var6] = param0.b(true);
+                this.field_h[var5][0][var6] = param0.b(true);
+              }
+            }
             var5 = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (var5 >= 2) {
-                var5 = 0;
-                L2: while (true) {
-                  if (var5 >= 2) {
-                    L3: {
-                      L4: {
-                        if (var4 != 0) {
-                          break L4;
-                        } else {
-                          if (this.field_e[1] == this.field_e[0]) {
-                            break L3;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
-                      param1.b(param0);
+                L3: {
+                  if (var4 == 0) {
+                    if (this.field_e[1] == this.field_e[0]) {
                       break L3;
                     }
-                    break L0;
-                  } else {
-                    var7 = 0;
-                    var6 = var7;
-                    L5: while (true) {
-                      if (var7 >= this.field_b[var5]) {
-                        var5++;
-                        continue L2;
-                      } else {
-                        if ((var4 & 1 << var5 * 4 << var7) == 0) {
-                          this.field_c[var5][1][var7] = this.field_c[var5][0][var7];
-                          this.field_h[var5][1][var7] = this.field_h[var5][0][var7];
-                          var7++;
-                          continue L5;
-                        } else {
-                          this.field_c[var5][1][var7] = param0.b(true);
-                          this.field_h[var5][1][var7] = param0.b(true);
-                          var7++;
-                          continue L5;
-                        }
-                      }
-                    }
                   }
+                  param1.b(param0);
                 }
+                break L0;
               } else {
-                var6 = 0;
-                L6: while (true) {
-                  if (var6 >= this.field_b[var5]) {
+                var7 = 0;
+                var6 = var7;
+                L5: while (true) {
+                  if (var7 >= this.field_b[var5]) {
                     var5++;
-                    continue L1;
+                    continue L2;
                   } else {
-                    this.field_c[var5][0][var6] = param0.b(true);
-                    this.field_h[var5][0][var6] = param0.b(true);
-                    var6++;
-                    continue L6;
+                    if ((var4 & 1 << var5 * 4 << var7) == 0) {
+                      this.field_c[var5][1][var7] = this.field_c[var5][0][var7];
+                      this.field_h[var5][1][var7] = this.field_h[var5][0][var7];
+                      var7++;
+                      continue L5;
+                    } else {
+                      this.field_c[var5][1][var7] = param0.b(true);
+                      this.field_h[var5][1][var7] = param0.b(true);
+                      var7++;
+                      continue L5;
+                    }
                   }
                 }
               }

@@ -10,120 +10,84 @@ final class qd extends m {
         int var10;
         int var11;
         int var12;
-        L0: {
-          var8 = param1 + param2 * vb.field_f;
-          var9 = vb.field_f - param3;
-          var10 = 0;
-          var11 = 0;
-          if (param2 >= vb.field_i) {
-            break L0;
-          } else {
-            var12 = vb.field_i - param2;
-            param4 = param4 - var12;
-            param2 = vb.field_i;
-            var11 = var11 + var12 * param3;
-            var8 = var8 + var12 * vb.field_f;
-            break L0;
-          }
+        var8 = param1 + param2 * vb.field_f;
+        var9 = vb.field_f - param3;
+        var10 = 0;
+        var11 = 0;
+        if (param2 < vb.field_i) {
+          var12 = vb.field_i - param2;
+          param4 = param4 - var12;
+          param2 = vb.field_i;
+          var11 = var11 + var12 * param3;
+          var8 = var8 + var12 * vb.field_f;
         }
-        L1: {
-          if (param2 + param4 <= vb.field_d) {
-            break L1;
-          } else {
-            param4 = param4 - (param2 + param4 - vb.field_d);
-            break L1;
-          }
+        if (param2 + param4 > vb.field_d) {
+          param4 = param4 - (param2 + param4 - vb.field_d);
         }
-        L2: {
-          if (param1 >= vb.field_e) {
-            break L2;
-          } else {
-            var12 = vb.field_e - param1;
-            param3 = param3 - var12;
-            param1 = vb.field_e;
-            var11 = var11 + var12;
-            var8 = var8 + var12;
-            var10 = var10 + var12;
-            var9 = var9 + var12;
-            break L2;
-          }
+        if (param1 < vb.field_e) {
+          var12 = vb.field_e - param1;
+          param3 = param3 - var12;
+          param1 = vb.field_e;
+          var11 = var11 + var12;
+          var8 = var8 + var12;
+          var10 = var10 + var12;
+          var9 = var9 + var12;
         }
-        L3: {
-          if (param1 + param3 <= vb.field_k) {
-            break L3;
-          } else {
-            var12 = param1 + param3 - vb.field_k;
-            param3 = param3 - var12;
-            var10 = var10 + var12;
-            var9 = var9 + var12;
-            break L3;
-          }
+        if (param1 + param3 > vb.field_k) {
+          var12 = param1 + param3 - vb.field_k;
+          param3 = param3 - var12;
+          var10 = var10 + var12;
+          var9 = var9 + var12;
         }
-        L4: {
-          if (param3 <= 0) {
-            break L4;
-          } else {
-            if (param4 > 0) {
-              L5: {
-                if (!param6) {
-                  qd.a(vb.field_c, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
-                  break L5;
-                } else {
-                  bg.a(vb.field_c, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
-                  break L5;
-                }
-              }
-              return;
+        if (param3 > 0) {
+          if (param4 > 0) {
+            if (!param6) {
+              qd.a(vb.field_c, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
             } else {
-              break L4;
+              bg.a(vb.field_c, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
             }
+            return;
           }
         }
     }
 
     private final static byte[][] a(int[] param0, byte[][] param1) {
-        int var2_int;
+        int var2_int = 0;
         byte[][] var2;
         int var3;
         int var4_int;
         byte[] var4;
         int var5;
         int var6;
-        var2_int = 0;
-        L0: while (true) {
-          if (var2_int >= param0.length) {
-            var2 = param1;
-            var3 = 0;
-            L1: while (true) {
-              if (var3 >= var2.length) {
-                return param1;
+        for (var2_int = 0; var2_int < param0.length; var2_int++) {
+          var3 = param0[var2_int];
+          var4_int = (var3 >> 15 & 510) + (var3 & 255);
+          param0[var2_int] = var4_int / 3 + (var3 >> 8 & 255) >> 1;
+        }
+        var2 = param1;
+        var3 = 0;
+        L1: while (true) {
+          if (var3 >= var2.length) {
+            return param1;
+          } else {
+            var4 = var2[var3];
+            var5 = 0;
+            L2: while (true) {
+              if (var5 >= var4.length) {
+                var3++;
+                continue L1;
               } else {
-                var4 = var2[var3];
-                var5 = 0;
-                L2: while (true) {
-                  if (var5 >= var4.length) {
-                    var3++;
-                    continue L1;
-                  } else {
-                    var6 = var4[var5];
-                    if (var6 != 0) {
-                      var4[var5] = (byte)param0[var6];
-                      var5++;
-                      continue L2;
-                    } else {
-                      var5++;
-                      continue L2;
-                    }
-                  }
+                var6 = var4[var5];
+                if (var6 != 0) {
+                  var4[var5] = (byte)param0[var6];
+                  var5++;
+                  continue L2;
+                } else {
+                  var5++;
+                  continue L2;
                 }
               }
             }
-          } else {
-            var3 = param0[var2_int];
-            var4_int = (var3 >> 15 & 510) + (var3 & 255);
-            param0[var2_int] = var4_int / 3 + (var3 >> 8 & 255) >> 1;
-            var2_int++;
-            continue L0;
           }
         }
     }
@@ -134,73 +98,43 @@ final class qd extends m {
         int var11;
         int var12;
         int var13;
-        L0: {
-          var9 = param1 + param2 * vb.field_f;
-          var10 = vb.field_f - param3;
-          var11 = 0;
-          var12 = 0;
-          if (param2 >= vb.field_i) {
-            break L0;
-          } else {
-            var13 = vb.field_i - param2;
-            param4 = param4 - var13;
-            param2 = vb.field_i;
-            var12 = var12 + var13 * param3;
-            var9 = var9 + var13 * vb.field_f;
-            break L0;
-          }
+        var9 = param1 + param2 * vb.field_f;
+        var10 = vb.field_f - param3;
+        var11 = 0;
+        var12 = 0;
+        if (param2 < vb.field_i) {
+          var13 = vb.field_i - param2;
+          param4 = param4 - var13;
+          param2 = vb.field_i;
+          var12 = var12 + var13 * param3;
+          var9 = var9 + var13 * vb.field_f;
         }
-        L1: {
-          if (param2 + param4 <= vb.field_d) {
-            break L1;
-          } else {
-            param4 = param4 - (param2 + param4 - vb.field_d);
-            break L1;
-          }
+        if (param2 + param4 > vb.field_d) {
+          param4 = param4 - (param2 + param4 - vb.field_d);
         }
-        L2: {
-          if (param1 >= vb.field_e) {
-            break L2;
-          } else {
-            var13 = vb.field_e - param1;
-            param3 = param3 - var13;
-            param1 = vb.field_e;
-            var12 = var12 + var13;
-            var9 = var9 + var13;
-            var11 = var11 + var13;
-            var10 = var10 + var13;
-            break L2;
-          }
+        if (param1 < vb.field_e) {
+          var13 = vb.field_e - param1;
+          param3 = param3 - var13;
+          param1 = vb.field_e;
+          var12 = var12 + var13;
+          var9 = var9 + var13;
+          var11 = var11 + var13;
+          var10 = var10 + var13;
         }
-        L3: {
-          if (param1 + param3 <= vb.field_k) {
-            break L3;
-          } else {
-            var13 = param1 + param3 - vb.field_k;
-            param3 = param3 - var13;
-            var11 = var11 + var13;
-            var10 = var10 + var13;
-            break L3;
-          }
+        if (param1 + param3 > vb.field_k) {
+          var13 = param1 + param3 - vb.field_k;
+          param3 = param3 - var13;
+          var11 = var11 + var13;
+          var10 = var10 + var13;
         }
-        L4: {
-          if (param3 <= 0) {
-            break L4;
-          } else {
-            if (param4 > 0) {
-              L5: {
-                if (!param7) {
-                  qd.a(vb.field_c, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);
-                  break L5;
-                } else {
-                  bg.a(vb.field_c, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);
-                  break L5;
-                }
-              }
-              return;
+        if (param3 > 0) {
+          if (param4 > 0) {
+            if (!param7) {
+              qd.a(vb.field_c, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);
             } else {
-              break L4;
+              bg.a(vb.field_c, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);
             }
+            return;
           }
         }
     }

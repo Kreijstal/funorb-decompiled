@@ -30,23 +30,19 @@ final class gk {
     }
 
     final boolean a(boolean param0) {
-        if (param0) {
-          if (this != da.field_g) {
-            if (da.field_f != this) {
-              if (eh.field_b == this) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
+        if (!param0) {
             return true;
-          }
-        } else {
-          return true;
         }
+        if (this == da.field_g) {
+            return true;
+        }
+        if (da.field_f == this) {
+            return true;
+        }
+        if (eh.field_b != this) {
+            return false;
+        }
+        return true;
     }
 
     static {

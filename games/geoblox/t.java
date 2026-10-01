@@ -26,28 +26,23 @@ final class t {
     }
 
     final static boolean b(int param0) {
-        if (param0 == 13) {
-          if (oc.field_e != null) {
-            if (pk.field_l != eh.field_b) {
-              return false;
-            } else {
-              return true;
+        if (param0 != 13) {
+            field_k = (String[]) null;
+            if (oc.field_e == null) {
+                return false;
             }
-          } else {
-            return false;
-          }
-        } else {
-          field_k = (String[]) null;
-          if (oc.field_e != null) {
-            if (pk.field_l != eh.field_b) {
-              return false;
-            } else {
-              return true;
+            if (pk.field_l == eh.field_b) {
+                return true;
             }
-          } else {
             return false;
-          }
         }
+        if (oc.field_e == null) {
+            return false;
+        }
+        if (pk.field_l == eh.field_b) {
+            return true;
+        }
+        return false;
     }
 
     public static void a(int param0) {

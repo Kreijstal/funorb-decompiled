@@ -13,31 +13,18 @@ final class me extends hf {
     static sl field_g;
 
     final static void b(int param0) {
-        if (param0 > 65) {
-          if (fj.field_p != null) {
-            L0: {
-              fj.field_p.c();
-              if (null != oh.field_a) {
+        if (param0 <= 65) {
+            return;
+        }
+        if (fj.field_p == null) {
+            if (!(null == oh.field_a)) {
                 oh.field_a.c();
-                break L0;
-              } else {
-                break L0;
-              }
             }
             return;
-          } else {
-            L1: {
-              if (null != oh.field_a) {
-                oh.field_a.c();
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            return;
-          }
-        } else {
-          return;
+        }
+        fj.field_p.c();
+        if (!(null == oh.field_a)) {
+            oh.field_a.c();
         }
     }
 

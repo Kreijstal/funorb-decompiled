@@ -43,22 +43,16 @@ final class ja extends rc {
         var4 = (int)((double)var2 * Math.cos((double)el.field_o.field_J) - (double)var3 * Math.sin((double)el.field_o.field_J) + 320.0);
         if (param0 == -16096) {
           L0: {
-            L1: {
-              var5 = (int)(Math.sin((double)el.field_o.field_J) * (double)var2 + (double)var3 * Math.cos((double)el.field_o.field_J) + 240.0);
-              if (this.field_z == 2) {
-                break L1;
-              } else {
-                if (1 == this.field_z) {
-                  break L1;
-                } else {
-                  vf.field_L.e();
-                  vb.c();
-                  this.field_J.c(-this.field_J.field_s + vf.field_L.field_s >> 215276737, vf.field_L.field_o + -this.field_J.field_o >> 930476833);
-                  k.a(0, 0, vf.field_L.field_s, -27085, vf.field_L.field_o);
-                  sh.field_y.a(param0 + 16351);
-                  vf.field_L.a(vf.field_L.field_s << -24802045, vf.field_L.field_o << 1089501283, var4 << 1543501028, var5 << -2087203164, (int)(65535.0 * ((double)(-el.field_o.field_J + this.field_u) / 6.283185307179586)), 4096);
-                  break L0;
-                }
+            var5 = (int)(Math.sin((double)el.field_o.field_J) * (double)var2 + (double)var3 * Math.cos((double)el.field_o.field_J) + 240.0);
+            if (this.field_z != 2) {
+              if (1 != this.field_z) {
+                vf.field_L.e();
+                vb.c();
+                this.field_J.c(-this.field_J.field_s + vf.field_L.field_s >> 215276737, vf.field_L.field_o + -this.field_J.field_o >> 930476833);
+                k.a(0, 0, vf.field_L.field_s, -27085, vf.field_L.field_o);
+                sh.field_y.a(param0 + 16351);
+                vf.field_L.a(vf.field_L.field_s << -24802045, vf.field_L.field_o << 1089501283, var4 << 1543501028, var5 << -2087203164, (int)(65535.0 * ((double)(-el.field_o.field_J + this.field_u) / 6.283185307179586)), 4096);
+                break L0;
               }
             }
             if (1 == this.field_z) {
@@ -68,10 +62,8 @@ final class ja extends rc {
               k.a(0, 0, vf.field_L.field_s, -27085, vf.field_L.field_o);
               sh.field_y.a(param0 + 16351);
               vf.field_L.a(vf.field_L.field_s << -1881785341, vf.field_L.field_o << 794425251, var4 << 1750603908, var5 << -1690760316, (int)(65535.0 * ((double)(-el.field_o.field_J + this.field_u) / 6.283185307179586)), 4096);
-              break L0;
             } else {
               this.field_J.b(-(this.field_J.field_s >> 2075460897) + var4, var5 + -(this.field_J.field_o >> 2079278081));
-              break L0;
             }
           }
           return;
@@ -104,31 +96,24 @@ final class ja extends rc {
         int var10;
         int var11;
         L0: {
-          L1: {
-            var11 = Geoblox.field_C;
-            var2 = this.field_o - 320.0f;
-            var3 = this.field_v - 240.0f;
-            var4 = el.field_o.field_J;
-            var5 = (int)(320.0 + ((double)var2 * Math.cos((double)var4) - Math.sin((double)var4) * (double)var3));
-            var6 = (int)(240.0 + ((double)var2 * Math.sin((double)var4) + Math.cos((double)var4) * (double)var3));
-            if (-2 == (this.field_z ^ -1)) {
-              break L1;
-            } else {
-              if (2 == this.field_z) {
-                break L1;
-              } else {
-                vf.field_L.e();
-                vb.c();
-                this.field_J.a(this.field_J.field_s << -575346205, this.field_J.field_o << 1794565923, vf.field_L.field_s << 776884707, vf.field_L.field_o << -188441693, (int)(((double)this.field_u - (double)var4 / 6.283185307179586) * 65535.0), 4096);
-                break L0;
-              }
+          var11 = Geoblox.field_C;
+          var2 = this.field_o - 320.0f;
+          var3 = this.field_v - 240.0f;
+          var4 = el.field_o.field_J;
+          var5 = (int)(320.0 + ((double)var2 * Math.cos((double)var4) - Math.sin((double)var4) * (double)var3));
+          var6 = (int)(240.0 + ((double)var2 * Math.sin((double)var4) + Math.cos((double)var4) * (double)var3));
+          if (-2 != (this.field_z ^ -1)) {
+            if (2 != this.field_z) {
+              vf.field_L.e();
+              vb.c();
+              this.field_J.a(this.field_J.field_s << -575346205, this.field_J.field_o << 1794565923, vf.field_L.field_s << 776884707, vf.field_L.field_o << -188441693, (int)(((double)this.field_u - (double)var4 / 6.283185307179586) * 65535.0), 4096);
+              break L0;
             }
           }
           if (this.field_z != 1) {
             vf.field_L.e();
             vb.c();
             this.field_J.b(-(this.field_J.field_s >> -1792337183) + (vf.field_L.field_s >> 339525793), (vf.field_L.field_o >> -1789028991) - (this.field_J.field_o >> -1848667231));
-            break L0;
           } else {
             wl.field_a.e();
             vb.c();
@@ -136,25 +121,18 @@ final class ja extends rc {
             vf.field_L.e();
             vb.c();
             wl.field_a.a(wl.field_a.field_s << 992968611, wl.field_a.field_o << 1388040003, vf.field_L.field_s << -967057565, vf.field_L.field_o << 1628733635, (int)(65535.0 * (-((double)var4 / 6.283185307179586) + (double)this.field_u)), 4096);
-            break L0;
           }
         }
-        L2: {
-          var7 = 2 % ((-23 - param0) / 60);
-          sh.field_y.a(255);
-          var8 = var5 + -(vf.field_L.field_s >> -2050048063);
-          var9 = var6 - (vf.field_L.field_o >> -2142432031);
-          var10 = (int)(0.5 + Math.sin((double)(this.field_r + -this.field_p + this.field_p >> 1305235300)) * (double)(100 * (this.field_p - this.field_r)) / (double)this.field_p) - (-(100 * (this.field_p - this.field_r) / this.field_p) - 56);
-          if (-257 > (var10 ^ -1)) {
-            var10 = 256;
-            break L2;
-          } else {
-            if (var10 >= 0) {
-              break L2;
-            } else {
-              var10 = 0;
-              break L2;
-            }
+        var7 = 2 % ((-23 - param0) / 60);
+        sh.field_y.a(255);
+        var8 = var5 + -(vf.field_L.field_s >> -2050048063);
+        var9 = var6 - (vf.field_L.field_o >> -2142432031);
+        var10 = (int)(0.5 + Math.sin((double)(this.field_r + -this.field_p + this.field_p >> 1305235300)) * (double)(100 * (this.field_p - this.field_r)) / (double)this.field_p) - (-(100 * (this.field_p - this.field_r) / this.field_p) - 56);
+        if (-257 > (var10 ^ -1)) {
+          var10 = 256;
+        } else {
+          if (var10 < 0) {
+            var10 = 0;
           }
         }
         vf.field_L.d(var8, var9, var10);
@@ -200,44 +178,24 @@ final class ja extends rc {
         int var9;
         int var10;
         int[] var14;
-        L0: {
-          var10 = Geoblox.field_C;
-          var2 = (int)this.field_o - ((vf.field_L.field_s >> -659585983) - -4);
-          var3 = -4 + -(vf.field_L.field_o >> -1594034399) + (int)this.field_v;
-          var4 = 8 + vf.field_L.field_s;
-          var5 = 8 + vf.field_L.field_o;
-          if (-1 >= (var2 ^ -1)) {
-            break L0;
-          } else {
-            var4 = var4 + var2;
-            var2 = 0;
-            break L0;
-          }
+        var10 = Geoblox.field_C;
+        var2 = (int)this.field_o - ((vf.field_L.field_s >> -659585983) - -4);
+        var3 = -4 + -(vf.field_L.field_o >> -1594034399) + (int)this.field_v;
+        var4 = 8 + vf.field_L.field_s;
+        var5 = 8 + vf.field_L.field_o;
+        if (-1 < (var2 ^ -1)) {
+          var4 = var4 + var2;
+          var2 = 0;
         }
-        L1: {
-          if ((var3 ^ -1) <= -1) {
-            break L1;
-          } else {
-            var5 = var5 + var3;
-            var3 = 0;
-            break L1;
-          }
+        if ((var3 ^ -1) > -1) {
+          var5 = var5 + var3;
+          var3 = 0;
         }
-        L2: {
-          if (bk.field_a.field_r < var4 + var2) {
-            var4 = -var2 + bk.field_a.field_r;
-            break L2;
-          } else {
-            break L2;
-          }
+        if (bk.field_a.field_r < var4 + var2) {
+          var4 = -var2 + bk.field_a.field_r;
         }
-        L3: {
-          if (var5 + var3 > bk.field_a.field_m) {
-            var5 = bk.field_a.field_m - var3;
-            break L3;
-          } else {
-            break L3;
-          }
+        if (var5 + var3 > bk.field_a.field_m) {
+          var5 = bk.field_a.field_m - var3;
         }
         if (param0 >= 78) {
           var6 = var2 + bk.field_a.field_r * var3;
@@ -297,52 +255,37 @@ final class ja extends rc {
 
     private final void g(byte param0) {
         int var3;
-        L0: {
-          var3 = Geoblox.field_C;
-          if (param0 >= 83) {
-            break L0;
-          } else {
-            this.g(18);
-            break L0;
-          }
+        var3 = Geoblox.field_C;
+        if (param0 < 83) {
+          this.g(18);
         }
-        L1: {
-          if (0 == this.field_z) {
-            this.field_J = ke.field_a[c.field_ab][this.field_C][this.field_M];
-            break L1;
+        if (0 == this.field_z) {
+          this.field_J = ke.field_a[c.field_ab][this.field_C][this.field_M];
+        } else {
+          if (-5 == (this.field_z ^ -1)) {
+            this.field_M = -1;
+            this.field_J = fc.field_g[0];
+            this.field_C = -1;
           } else {
-            if (-5 == (this.field_z ^ -1)) {
-              this.field_M = -1;
-              this.field_J = fc.field_g[0];
+            if (this.field_z == 3) {
               this.field_C = -1;
-              break L1;
+              this.field_M = -1;
+              this.field_J = hb.field_d[0];
             } else {
-              if (this.field_z == 3) {
-                this.field_C = -1;
+              if (1 == this.field_z) {
+                this.field_J = s.field_G[c.field_ab][this.field_C];
                 this.field_M = -1;
-                this.field_J = hb.field_d[0];
-                break L1;
+                this.field_q = jg.field_h[c.field_ab][this.field_G];
+                this.m(53);
               } else {
-                if (1 == this.field_z) {
-                  this.field_J = s.field_G[c.field_ab][this.field_C];
-                  this.field_M = -1;
-                  this.field_q = jg.field_h[c.field_ab][this.field_G];
-                  this.m(53);
-                  break L1;
-                } else {
-                  if (2 != this.field_z) {
-                    if (8 == this.field_z) {
-                      this.field_J = ej.field_a[this.field_G];
-                      this.field_C = -1;
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  } else {
-                    this.field_J = ka.field_m[c.field_ab][this.field_M][this.field_G];
+                if (2 != this.field_z) {
+                  if (8 == this.field_z) {
+                    this.field_J = ej.field_a[this.field_G];
                     this.field_C = -1;
-                    break L1;
                   }
+                } else {
+                  this.field_J = ka.field_m[c.field_ab][this.field_M][this.field_G];
+                  this.field_C = -1;
                 }
               }
             }
@@ -404,144 +347,97 @@ final class ja extends rc {
         int fieldTemp$6 = 0;
         float var2;
         int var3;
-        L0: {
-          var3 = Geoblox.field_C;
-          this.field_I = this.field_I + 1;
-          this.field_r = this.field_r - 1;
-          if (param0) {
-            break L0;
+        var3 = Geoblox.field_C;
+        this.field_I = this.field_I + 1;
+        this.field_r = this.field_r - 1;
+        if (!param0) {
+          this.field_v = -0.09870309382677078f;
+        }
+        if ((this.field_z ^ -1) != -6) {
+          if (this.field_z != 1) {
+            if (this.field_z == 2) {
+              if (this.field_I % 24 == 0) {
+                fieldTemp$0 = this.field_G;
+                this.field_G = this.field_G + 1;
+                this.field_J = ka.field_m[c.field_ab][this.field_M][fieldTemp$0];
+                this.field_G = this.field_G % 4;
+              }
+            } else {
+              if (8 == this.field_z) {
+                if (this.field_I % 24 == 0) {
+                  fieldTemp$1 = this.field_G;
+                  this.field_G = this.field_G + 1;
+                  this.field_J = ej.field_a[fieldTemp$1];
+                  this.field_G = this.field_G % 4;
+                }
+              }
+            }
           } else {
-            this.field_v = -0.09870309382677078f;
-            break L0;
+            var2 = 0.019999999552965164f * (float)(this.field_I % 50);
+            this.field_q = (int)((float)this.field_y * var2) + jg.field_h[c.field_ab][this.field_G] + (((int)(var2 * (float)this.field_s) << 1248854992) + ((int)((float)this.field_x * var2) << 461902984));
+            if (-50 == (this.field_I % 50 ^ -1)) {
+              this.field_G = this.field_G + 1;
+              this.field_G = this.field_G % 7;
+              this.m(-107);
+            }
+          }
+        } else {
+          if (this.field_I % 20 == 0) {
+            fieldTemp$2 = this.field_G;
+            this.field_G = this.field_G + 1;
+            this.field_J = mi.field_B[fieldTemp$2];
+            this.field_G = this.field_G % 4;
           }
         }
-        L1: {
-          if ((this.field_z ^ -1) != -6) {
-            if (this.field_z != 1) {
-              if (this.field_z == 2) {
-                if (this.field_I % 24 != 0) {
-                  break L1;
-                } else {
-                  fieldTemp$0 = this.field_G;
-                  this.field_G = this.field_G + 1;
-                  this.field_J = ka.field_m[c.field_ab][this.field_M][fieldTemp$0];
-                  this.field_G = this.field_G % 4;
-                  break L1;
-                }
-              } else {
-                if (8 != this.field_z) {
-                  break L1;
-                } else {
-                  if (this.field_I % 24 == 0) {
-                    fieldTemp$1 = this.field_G;
-                    this.field_G = this.field_G + 1;
-                    this.field_J = ej.field_a[fieldTemp$1];
-                    this.field_G = this.field_G % 4;
-                    break L1;
-                  } else {
-                    break L1;
+        if ((this.field_z ^ -1) != -5) {
+          if (7 != this.field_z) {
+            if ((this.field_z ^ -1) != -4) {
+              if (-7 == (this.field_z ^ -1)) {
+                this.field_r = this.field_r - 1;
+                if ((this.field_r ^ -1) > -1) {
+                  if (-1 == (this.field_I % 24 ^ -1)) {
+                    if (4 > this.field_G) {
+                      fieldTemp$3 = this.field_G;
+                      this.field_G = this.field_G + 1;
+                      this.field_J = vj.field_a[fieldTemp$3];
+                    }
                   }
                 }
               }
             } else {
-              var2 = 0.019999999552965164f * (float)(this.field_I % 50);
-              this.field_q = (int)((float)this.field_y * var2) + jg.field_h[c.field_ab][this.field_G] + (((int)(var2 * (float)this.field_s) << 1248854992) + ((int)((float)this.field_x * var2) << 461902984));
-              if (-50 != (this.field_I % 50 ^ -1)) {
-                break L1;
+              if ((this.field_I & 255 ^ -1) <= -50) {
+                this.field_G = 0;
               } else {
-                this.field_G = this.field_G + 1;
-                this.field_G = this.field_G % 7;
-                this.m(-107);
-                break L1;
+                if ((this.field_I & 15) == 0) {
+                  fieldTemp$4 = this.field_G;
+                  this.field_G = this.field_G + 1;
+                  this.field_J = hb.field_d[fieldTemp$4];
+                  if (-5 == (this.field_G ^ -1)) {
+                    this.field_G = 0;
+                  }
+                }
               }
             }
           } else {
             if (this.field_I % 20 == 0) {
-              fieldTemp$2 = this.field_G;
+              fieldTemp$5 = this.field_G;
               this.field_G = this.field_G + 1;
-              this.field_J = mi.field_B[fieldTemp$2];
+              this.field_J = hg.field_b[fieldTemp$5];
               this.field_G = this.field_G % 4;
-              break L1;
-            } else {
-              break L1;
             }
           }
-        }
-        L2: {
-          if ((this.field_z ^ -1) != -5) {
-            if (7 != this.field_z) {
-              if ((this.field_z ^ -1) != -4) {
-                if (-7 == (this.field_z ^ -1)) {
-                  this.field_r = this.field_r - 1;
-                  if ((this.field_r ^ -1) <= -1) {
-                    break L2;
-                  } else {
-                    if (-1 != (this.field_I % 24 ^ -1)) {
-                      break L2;
-                    } else {
-                      if (4 > this.field_G) {
-                        fieldTemp$3 = this.field_G;
-                        this.field_G = this.field_G + 1;
-                        this.field_J = vj.field_a[fieldTemp$3];
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                } else {
-                  break L2;
-                }
-              } else {
-                if ((this.field_I & 255 ^ -1) <= -50) {
-                  this.field_G = 0;
-                  break L2;
-                } else {
-                  if ((this.field_I & 15) == 0) {
-                    fieldTemp$4 = this.field_G;
-                    this.field_G = this.field_G + 1;
-                    this.field_J = hb.field_d[fieldTemp$4];
-                    if (-5 == (this.field_G ^ -1)) {
-                      this.field_G = 0;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-            } else {
-              if (this.field_I % 20 == 0) {
-                fieldTemp$5 = this.field_G;
-                this.field_G = this.field_G + 1;
-                this.field_J = hg.field_b[fieldTemp$5];
-                this.field_G = this.field_G % 4;
-                break L2;
-              } else {
-                break L2;
+        } else {
+          if ((255 & this.field_I) < 49) {
+            if ((15 & this.field_I) == 0) {
+              fieldTemp$6 = this.field_G;
+              this.field_G = this.field_G + 1;
+              this.field_J = fc.field_g[fieldTemp$6];
+              if ((this.field_G ^ -1) == -5) {
+                this.field_G = 0;
               }
             }
           } else {
-            if ((255 & this.field_I) < 49) {
-              if ((15 & this.field_I) != 0) {
-                break L2;
-              } else {
-                fieldTemp$6 = this.field_G;
-                this.field_G = this.field_G + 1;
-                this.field_J = fc.field_g[fieldTemp$6];
-                if ((this.field_G ^ -1) != -5) {
-                  break L2;
-                } else {
-                  this.field_G = 0;
-                  break L2;
-                }
-              }
-            } else {
-              this.field_G = 0;
-              break L2;
-            }
+            this.field_G = 0;
           }
         }
     }
@@ -559,80 +455,47 @@ final class ja extends rc {
         var4 = Geoblox.field_C;
         try {
           L0: {
-            var3_int = param1;
-            L1: while (true) {
-              L2: {
-                if (var3_int >= this.field_L) {
-                  break L2;
-                } else {
-                  if (this.field_n[var3_int] == param0) {
-                    L3: {
-                      this.field_n[var3_int] = null;
-                      if (this.field_M == param0.field_M) {
-                        this.field_m = this.field_m - 1;
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      this.field_L = this.field_L - 1;
-                      if (param0.field_C == this.field_C) {
-                        this.field_N = this.field_N - 1;
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    L5: {
-                      if (5 > var3_int) {
-                        sf.a(this.field_n, 1 + var3_int, this.field_n, var3_int, this.field_L + -var3_int);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                    this.field_n[this.field_L] = null;
-                    break L2;
-                  } else {
-                    var3_int++;
-                    continue L1;
-                  }
+            L1: for (var3_int = param1; var3_int < this.field_L; var3_int++) {
+              if (this.field_n[var3_int] == param0) {
+                this.field_n[var3_int] = null;
+                if (this.field_M == param0.field_M) {
+                  this.field_m = this.field_m - 1;
                 }
-              }
-              L6: {
-                if (this.field_m > this.field_L) {
-                  break L6;
-                } else {
-                  if (this.field_L < this.field_N) {
-                    break L6;
-                  } else {
-                    break L0;
-                  }
+                this.field_L = this.field_L - 1;
+                if (param0.field_C == this.field_C) {
+                  this.field_N = this.field_N - 1;
                 }
+                if (5 > var3_int) {
+                  sf.a(this.field_n, 1 + var3_int, this.field_n, var3_int, this.field_L + -var3_int);
+                }
+                this.field_n[this.field_L] = null;
+              } else {
+                continue L1;
               }
-              throw new IllegalStateException("");
+              break;
             }
+            if (this.field_m <= this.field_L) {
+              if (this.field_L >= this.field_N) {
+                break L0;
+              }
+            }
+            throw new IllegalStateException("");
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var3 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_23_0 = (RuntimeException) (var3);
 
-            stackIn_23_1 = new StringBuilder().append("ja.HA(");
+          stackIn_23_1 = new StringBuilder().append("ja.HA(");
 
-            if (param0 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L7;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L7;
-            }
+          if (param0 == null) {
+            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
+            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
+            stackIn_24_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ')');
         }
@@ -653,57 +516,32 @@ final class ja extends rc {
         int var13;
         int var14;
         int[] var18;
-        L0: {
-          var14 = Geoblox.field_C;
-          var2 = -320.0f + this.field_o;
-          var3 = -240.0f + this.field_v;
-          var4 = (int)(Math.cos((double)el.field_o.field_J) * (double)var2 - (double)var3 * Math.sin((double)el.field_o.field_J) + 320.0);
-          var5 = (int)((double)var2 * Math.sin((double)el.field_o.field_J) + Math.cos((double)el.field_o.field_J) * (double)var3 + 240.0);
-          var6 = -(vf.field_L.field_s / 2) + (var4 - 4 + -wd.field_a);
-          var7 = -wd.field_d + -4 + (var5 - vf.field_L.field_o / 2);
-          var8 = vf.field_L.field_s - -8;
-          if (var6 < 0) {
-            var8 = var8 + var6;
-            var6 = 0;
-            break L0;
-          } else {
-            break L0;
-          }
+        var14 = Geoblox.field_C;
+        var2 = -320.0f + this.field_o;
+        var3 = -240.0f + this.field_v;
+        var4 = (int)(Math.cos((double)el.field_o.field_J) * (double)var2 - (double)var3 * Math.sin((double)el.field_o.field_J) + 320.0);
+        var5 = (int)((double)var2 * Math.sin((double)el.field_o.field_J) + Math.cos((double)el.field_o.field_J) * (double)var3 + 240.0);
+        var6 = -(vf.field_L.field_s / 2) + (var4 - 4 + -wd.field_a);
+        var7 = -wd.field_d + -4 + (var5 - vf.field_L.field_o / 2);
+        var8 = vf.field_L.field_s - -8;
+        if (var6 < 0) {
+          var8 = var8 + var6;
+          var6 = 0;
         }
-        L1: {
-          var9 = 8 + vf.field_L.field_o;
-          if (wd.field_b.field_r >= var6 + var8) {
-            break L1;
-          } else {
-            var8 = -var6 + wd.field_b.field_r;
-            break L1;
-          }
+        var9 = 8 + vf.field_L.field_o;
+        if (wd.field_b.field_r < var6 + var8) {
+          var8 = -var6 + wd.field_b.field_r;
         }
-        L2: {
-          if (var7 < 0) {
-            var9 = var9 + var7;
-            var7 = 0;
-            break L2;
-          } else {
-            break L2;
-          }
+        if (var7 < 0) {
+          var9 = var9 + var7;
+          var7 = 0;
         }
-        L3: {
-          if (var7 + var9 <= wd.field_b.field_m) {
-            break L3;
-          } else {
-            var9 = wd.field_b.field_m - var7;
-            break L3;
-          }
+        if (var7 + var9 > wd.field_b.field_m) {
+          var9 = wd.field_b.field_m - var7;
         }
-        L4: {
-          var10 = wd.field_b.field_r * var7 + var6;
-          if (param0 == 30383) {
-            break L4;
-          } else {
-            this.field_C = -47;
-            break L4;
-          }
+        var10 = wd.field_b.field_r * var7 + var6;
+        if (param0 != 30383) {
+          this.field_C = -47;
         }
         var11 = -var8 + wd.field_b.field_r;
         var18 = wd.field_b.field_v;

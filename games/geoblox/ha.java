@@ -30,62 +30,50 @@ abstract class ha {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3 = new na(0, 0, 0);
-            var3.field_a = param2.field_a;
-            var3.field_e = param2.field_e;
-            var3.field_d = param2.field_d;
-            if (param0 < -62) {
-              var3.field_c = param2.field_c;
-              var3.field_h = param1;
-              var3.field_i = param2.field_i;
-              var3.field_f = param2.field_f;
-              var3.field_b = param2.field_b;
-              stackIn_4_0 = (na) (var3);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (na) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var3 = new na(0, 0, 0);
+          var3.field_a = param2.field_a;
+          var3.field_e = param2.field_e;
+          var3.field_d = param2.field_d;
+          if (param0 < -62) {
+            var3.field_c = param2.field_c;
+            var3.field_h = param1;
+            var3.field_i = param2.field_i;
+            var3.field_f = param2.field_f;
+            var3.field_b = param2.field_b;
+            stackIn_4_0 = (na) (var3);
+            decompiledRegionSelector0 = 1;
+          } else {
+            stackIn_2_0 = (na) null;
+            decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3_ref);
+          var3_ref = decompiledCaughtException;
+          stackIn_7_0 = (RuntimeException) (var3_ref);
 
-            stackIn_7_1 = new StringBuilder().append("ha.I(").append(param0).append(',');
+          stackIn_7_1 = new StringBuilder().append("ha.I(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          if (param1 == null) {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "{...}";
           }
-          L2: {
 
 
-            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
 
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          if (param2 == null) {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_11_2 + ')');
         }

@@ -73,7 +73,6 @@ abstract class sc {
                 } else {
                   stackIn_7_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> -1102483296);
                   decompiledRegionSelector0 = 1;
-                  break L0;
                 }
               } else {
                 throw new IllegalArgumentException();
@@ -81,28 +80,23 @@ abstract class sc {
             } else {
               stackIn_2_0 = 102;
               decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_15_0 = (RuntimeException) (var3);
 
-            stackIn_15_1 = new StringBuilder().append("sc.J(").append(param0).append(',');
+          stackIn_15_1 = new StringBuilder().append("sc.J(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L2;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L2;
-            }
+          if (param1 == null) {
+            stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
+            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
+            stackIn_16_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ')');
         }

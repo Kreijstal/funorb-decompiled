@@ -22,148 +22,100 @@ class dm extends wh {
         int var16;
         int var17;
         int var18;
-        L0: {
-          var6 = param2 * this.field_r + param1;
-          param3 = param3 & 4095;
-          param4 = param4 & 4095;
-          if (param2 < 0) {
-            var12 = 0;
+        var6 = param2 * this.field_r + param1;
+        param3 = param3 & 4095;
+        param4 = param4 & 4095;
+        if (param2 < 0) {
+          var12 = 0;
+          var11 = 0;
+          var8 = 0;
+          var7 = 0;
+        } else {
+          if (param1 < 0) {
             var11 = 0;
-            var8 = 0;
             var7 = 0;
-            break L0;
           } else {
-            L1: {
-              if (param1 < 0) {
-                var11 = 0;
-                var7 = 0;
-                break L1;
-              } else {
-                L2: {
-                  var7 = this.field_v[var6];
-                  if (var7 == 0) {
-                    stackIn_5_0 = 0;
-                    break L2;
-                  } else {
-                    stackIn_5_0 = (4096 - param3) * (4096 - param4);
-                    break L2;
-                  }
-                }
-                var11 = stackIn_5_0;
-                break L1;
-              }
-            }
-            if (param1 >= this.field_r - 1) {
-              var12 = 0;
-              var8 = 0;
-              break L0;
+            var7 = this.field_v[var6];
+            if (var7 == 0) {
+              stackIn_5_0 = 0;
             } else {
-              L3: {
-                var8 = this.field_v[var6 + 1];
-                if (var8 == 0) {
-                  stackIn_11_0 = 0;
-                  break L3;
-                } else {
-                  stackIn_11_0 = param3 * (4096 - param4);
-                  break L3;
-                }
-              }
-              var12 = stackIn_11_0;
-              break L0;
+              stackIn_5_0 = (4096 - param3) * (4096 - param4);
             }
+            var11 = stackIn_5_0;
+          }
+          if (param1 >= this.field_r - 1) {
+            var12 = 0;
+            var8 = 0;
+          } else {
+            var8 = this.field_v[var6 + 1];
+            if (var8 == 0) {
+              stackIn_11_0 = 0;
+            } else {
+              stackIn_11_0 = param3 * (4096 - param4);
+            }
+            var12 = stackIn_11_0;
           }
         }
-        L4: {
-          if (param2 >= this.field_m - 1) {
-            var14 = 0;
+        if (param2 >= this.field_m - 1) {
+          var14 = 0;
+          var13 = 0;
+          var10 = 0;
+          var9 = 0;
+        } else {
+          if (param1 < 0) {
             var13 = 0;
-            var10 = 0;
             var9 = 0;
-            break L4;
           } else {
-            L5: {
-              if (param1 < 0) {
-                var13 = 0;
-                var9 = 0;
-                break L5;
-              } else {
-                L6: {
-                  var9 = this.field_v[var6 + this.field_r];
-                  if (var9 == 0) {
-                    stackIn_19_0 = 0;
-                    break L6;
-                  } else {
-                    stackIn_19_0 = (4096 - param3) * param4;
-                    break L6;
-                  }
-                }
-                var13 = stackIn_19_0;
-                break L5;
-              }
-            }
-            if (param1 >= this.field_r - 1) {
-              var14 = 0;
-              var10 = 0;
-              break L4;
+            var9 = this.field_v[var6 + this.field_r];
+            if (var9 == 0) {
+              stackIn_19_0 = 0;
             } else {
-              L7: {
-                var10 = this.field_v[var6 + this.field_r + 1];
-                if (var10 == 0) {
-                  stackIn_25_0 = 0;
-                  break L7;
-                } else {
-                  stackIn_25_0 = param3 * param4;
-                  break L7;
-                }
-              }
-              var14 = stackIn_25_0;
-              break L4;
+              stackIn_19_0 = (4096 - param3) * param4;
             }
+            var13 = stackIn_19_0;
+          }
+          if (param1 >= this.field_r - 1) {
+            var14 = 0;
+            var10 = 0;
+          } else {
+            var10 = this.field_v[var6 + this.field_r + 1];
+            if (var10 == 0) {
+              stackIn_25_0 = 0;
+            } else {
+              stackIn_25_0 = param3 * param4;
+            }
+            var14 = stackIn_25_0;
           }
         }
-        L8: {
-          var11 = var11 >> 16;
-          var12 = var12 >> 16;
-          var13 = var13 >> 16;
-          var14 = var14 >> 16;
-          var15 = var11 + var12 + var13 + var14;
-          if (var15 < 256) {
-            if (var15 < 128) {
-              return;
-            } else {
-              L9: {
-                var16 = (var7 & 16711935) * var11 + (var8 & 16711935) * var12;
-                var16 = var16 + ((var9 & 16711935) * var13 + (var10 & 16711935) * var14);
-                var17 = (var7 & 65280) * var11 + (var8 & 65280) * var12;
-                var17 = var17 + ((var9 & 65280) * var13 + (var10 & 65280) * var14);
-                var18 = ((var16 >>> 16) / var15 << 16) + (var17 / var15 & 65280) + (var16 & 65535) / var15;
-                if (var18 != 0) {
-                  break L9;
-                } else {
-                  var18 = 1;
-                  break L9;
-                }
-              }
-              vb.field_c[param0] = var18;
-              break L8;
-            }
+        var11 = var11 >> 16;
+        var12 = var12 >> 16;
+        var13 = var13 >> 16;
+        var14 = var14 >> 16;
+        var15 = var11 + var12 + var13 + var14;
+        if (var15 < 256) {
+          if (var15 < 128) {
+            return;
           } else {
-            L10: {
-              var16 = (var7 & 16711935) * var11 + (var8 & 16711935) * var12;
-              var16 = var16 + ((var9 & 16711935) * var13 + (var10 & 16711935) * var14);
-              var17 = (var7 & 65280) * var11 + (var8 & 65280) * var12;
-              var17 = var17 + ((var9 & 65280) * var13 + (var10 & 65280) * var14);
-              var18 = (var16 >>> 8 & 16711935) + (var17 >>> 8 & 65280);
-              if (var18 != 0) {
-                break L10;
-              } else {
-                var18 = 1;
-                break L10;
-              }
+            var16 = (var7 & 16711935) * var11 + (var8 & 16711935) * var12;
+            var16 = var16 + ((var9 & 16711935) * var13 + (var10 & 16711935) * var14);
+            var17 = (var7 & 65280) * var11 + (var8 & 65280) * var12;
+            var17 = var17 + ((var9 & 65280) * var13 + (var10 & 65280) * var14);
+            var18 = ((var16 >>> 16) / var15 << 16) + (var17 / var15 & 65280) + (var16 & 65535) / var15;
+            if (var18 == 0) {
+              var18 = 1;
             }
             vb.field_c[param0] = var18;
-            break L8;
           }
+        } else {
+          var16 = (var7 & 16711935) * var11 + (var8 & 16711935) * var12;
+          var16 = var16 + ((var9 & 16711935) * var13 + (var10 & 16711935) * var14);
+          var17 = (var7 & 65280) * var11 + (var8 & 65280) * var12;
+          var17 = var17 + ((var9 & 65280) * var13 + (var10 & 65280) * var14);
+          var18 = (var16 >>> 8 & 16711935) + (var17 >>> 8 & 65280);
+          if (var18 == 0) {
+            var18 = 1;
+          }
+          vb.field_c[param0] = var18;
         }
     }
 
@@ -252,148 +204,80 @@ class dm extends wh {
         int var37;
         int var38;
         if (param5 != 0) {
-          L0: {
-            param0 = param0 - (this.field_u << 4);
-            param1 = param1 - (this.field_p << 4);
-            var7 = (double)(param4 & 65535) * 0.00009587379924285257;
-            var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
-            var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
-            var11 = -param0 * var10 + -param1 * var9;
-            var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((this.field_r << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((this.field_r << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((this.field_m << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((this.field_m << 4) - param1) * var10;
-            var17 = ((this.field_r << 4) - param0) * var10 + ((this.field_m << 4) - param1) * var9;
-            var18 = -((this.field_r << 4) - param0) * var9 + ((this.field_m << 4) - param1) * var10;
-            if (var11 >= var13) {
-              var19 = var13;
-              var20 = var11;
-              break L0;
-            } else {
-              var19 = var11;
-              var20 = var13;
-              break L0;
-            }
+          param0 = param0 - (this.field_u << 4);
+          param1 = param1 - (this.field_p << 4);
+          var7 = (double)(param4 & 65535) * 0.00009587379924285257;
+          var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
+          var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
+          var11 = -param0 * var10 + -param1 * var9;
+          var12 = --param0 * var9 + -param1 * var10;
+          var13 = ((this.field_r << 4) - param0) * var10 + -param1 * var9;
+          var14 = -((this.field_r << 4) - param0) * var9 + -param1 * var10;
+          var15 = -param0 * var10 + ((this.field_m << 4) - param1) * var9;
+          var16 = --param0 * var9 + ((this.field_m << 4) - param1) * var10;
+          var17 = ((this.field_r << 4) - param0) * var10 + ((this.field_m << 4) - param1) * var9;
+          var18 = -((this.field_r << 4) - param0) * var9 + ((this.field_m << 4) - param1) * var10;
+          if (var11 >= var13) {
+            var19 = var13;
+            var20 = var11;
+          } else {
+            var19 = var11;
+            var20 = var13;
           }
-          L1: {
-            if (var15 >= var19) {
-              break L1;
-            } else {
-              var19 = var15;
-              break L1;
-            }
+          if (var15 < var19) {
+            var19 = var15;
           }
-          L2: {
-            if (var17 >= var19) {
-              break L2;
-            } else {
-              var19 = var17;
-              break L2;
-            }
+          if (var17 < var19) {
+            var19 = var17;
           }
-          L3: {
-            if (var15 <= var20) {
-              break L3;
-            } else {
-              var20 = var15;
-              break L3;
-            }
+          if (var15 > var20) {
+            var20 = var15;
           }
-          L4: {
-            if (var17 <= var20) {
-              break L4;
-            } else {
-              var20 = var17;
-              break L4;
-            }
+          if (var17 > var20) {
+            var20 = var17;
           }
-          L5: {
-            if (var12 >= var14) {
-              var21 = var14;
-              var22 = var12;
-              break L5;
-            } else {
-              var21 = var12;
-              var22 = var14;
-              break L5;
-            }
+          if (var12 >= var14) {
+            var21 = var14;
+            var22 = var12;
+          } else {
+            var21 = var12;
+            var22 = var14;
           }
-          L6: {
-            if (var16 >= var21) {
-              break L6;
-            } else {
-              var21 = var16;
-              break L6;
-            }
+          if (var16 < var21) {
+            var21 = var16;
           }
-          L7: {
-            if (var18 >= var21) {
-              break L7;
-            } else {
-              var21 = var18;
-              break L7;
-            }
+          if (var18 < var21) {
+            var21 = var18;
           }
-          L8: {
-            if (var16 <= var22) {
-              break L8;
-            } else {
-              var22 = var16;
-              break L8;
-            }
+          if (var16 > var22) {
+            var22 = var16;
           }
-          L9: {
-            if (var18 <= var22) {
-              break L9;
-            } else {
-              var22 = var18;
-              break L9;
-            }
+          if (var18 > var22) {
+            var22 = var18;
           }
-          L10: {
-            var19 = var19 >> 12;
-            var20 = var20 + 4095 >> 12;
-            var21 = var21 >> 12;
-            var22 = var22 + 4095 >> 12;
-            var19 = var19 + param2;
-            var20 = var20 + param2;
-            var21 = var21 + param3;
-            var22 = var22 + param3;
-            var19 = var19 >> 4;
-            var20 = var20 + 15 >> 4;
-            var21 = var21 >> 4;
-            var22 = var22 + 15 >> 4;
-            if (var19 >= vb.field_e) {
-              break L10;
-            } else {
-              var19 = vb.field_e;
-              break L10;
-            }
+          var19 = var19 >> 12;
+          var20 = var20 + 4095 >> 12;
+          var21 = var21 >> 12;
+          var22 = var22 + 4095 >> 12;
+          var19 = var19 + param2;
+          var20 = var20 + param2;
+          var21 = var21 + param3;
+          var22 = var22 + param3;
+          var19 = var19 >> 4;
+          var20 = var20 + 15 >> 4;
+          var21 = var21 >> 4;
+          var22 = var22 + 15 >> 4;
+          if (var19 < vb.field_e) {
+            var19 = vb.field_e;
           }
-          L11: {
-            if (var20 <= vb.field_k) {
-              break L11;
-            } else {
-              var20 = vb.field_k;
-              break L11;
-            }
+          if (var20 > vb.field_k) {
+            var20 = vb.field_k;
           }
-          L12: {
-            if (var21 >= vb.field_i) {
-              break L12;
-            } else {
-              var21 = vb.field_i;
-              break L12;
-            }
+          if (var21 < vb.field_i) {
+            var21 = vb.field_i;
           }
-          L13: {
-            if (var22 <= vb.field_d) {
-              break L13;
-            } else {
-              var22 = vb.field_d;
-              break L13;
-            }
+          if (var22 > vb.field_d) {
+            var22 = vb.field_d;
           }
           var20 = var19 - var20;
           if (var20 < 0) {
@@ -413,610 +297,380 @@ class dm extends wh {
                     if (var26 != 0) {
                       if (var26 >= 0) {
                         var33 = var22;
-                        L15: while (true) {
-                          if (var33 >= 0) {
-                            break L14;
-                          } else {
-                            L16: {
-                              var34 = var23;
-                              var35 = var30 + (var28 * var27 >> 4);
-                              var36 = var31 + (var28 * var26 >> 4);
-                              var37 = var20;
-                              if (var35 >= 0) {
-                                break L16;
-                              } else {
-                                var32 = (var27 - 1 - var35) / var27;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L16;
-                              }
-                            }
-                            L17: {
-                              var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
-                              if ((1 + var35 - (this.field_r << 12) - var27) / var27 <= var37) {
-                                break L17;
-                              } else {
-                                var37 = var32;
-                                break L17;
-                              }
-                            }
-                            L18: {
-                              if (var36 >= 0) {
-                                break L18;
-                              } else {
-                                var32 = (var26 - 1 - var36) / var26;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L18;
-                              }
-                            }
-                            L19: {
-                              var32 = (1 + var36 - (this.field_m << 12) - var26) / var26;
-                              if ((1 + var36 - (this.field_m << 12) - var26) / var26 <= var37) {
-                                break L19;
-                              } else {
-                                var37 = var32;
-                                break L19;
-                              }
-                            }
-                            L20: while (true) {
-                              if (var37 >= 0) {
-                                var33++;
-                                var30 = var30 - var26;
-                                var31 = var31 + var27;
-                                var23 = var23 + vb.field_f;
-                                continue L15;
-                              } else {
-                                L21: {
-                                  var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                                  if (var38 == 0) {
-                                    var34++;
-                                    break L21;
-                                  } else {
-                                    incrementValue$0 = var34;
-                                    var34++;
-                                    vb.field_c[incrementValue$0] = var38;
-                                    break L21;
-                                  }
-                                }
-                                var35 = var35 + var27;
-                                var36 = var36 + var26;
-                                var37++;
-                                continue L20;
-                              }
-                            }
+                        L15: while (var33 < 0) {
+                          var34 = var23;
+                          var35 = var30 + (var28 * var27 >> 4);
+                          var36 = var31 + (var28 * var26 >> 4);
+                          var37 = var20;
+                          if (var35 < 0) {
+                            var32 = (var27 - 1 - var35) / var27;
+                            var37 = var37 + var32;
+                            var35 = var35 + var27 * var32;
+                            var36 = var36 + var26 * var32;
+                            var34 = var34 + var32;
                           }
+                          var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
+                          if ((1 + var35 - (this.field_r << 12) - var27) / var27 > var37) {
+                            var37 = var32;
+                          }
+                          if (var36 < 0) {
+                            var32 = (var26 - 1 - var36) / var26;
+                            var37 = var37 + var32;
+                            var35 = var35 + var27 * var32;
+                            var36 = var36 + var26 * var32;
+                            var34 = var34 + var32;
+                          }
+                          var32 = (1 + var36 - (this.field_m << 12) - var26) / var26;
+                          if ((1 + var36 - (this.field_m << 12) - var26) / var26 > var37) {
+                            var37 = var32;
+                          }
+                          L20: while (var37 < 0) {
+                            var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                            if (var38 == 0) {
+                              var34++;
+                            } else {
+                              incrementValue$0 = var34;
+                              var34++;
+                              vb.field_c[incrementValue$0] = var38;
+                            }
+                            var35 = var35 + var27;
+                            var36 = var36 + var26;
+                            var37++;
+                          }
+                          var33++;
+                          var30 = var30 - var26;
+                          var31 = var31 + var27;
+                          var23 = var23 + vb.field_f;
                         }
+                        break L14;
                       } else {
                         var33 = var22;
-                        L22: while (true) {
-                          if (var33 >= 0) {
-                            break L14;
-                          } else {
-                            L23: {
-                              var34 = var23;
-                              var35 = var30 + (var28 * var27 >> 4);
-                              var36 = var31 + (var28 * var26 >> 4);
-                              var37 = var20;
-                              if (var35 >= 0) {
-                                break L23;
-                              } else {
-                                var32 = (var27 - 1 - var35) / var27;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L23;
-                              }
-                            }
-                            L24: {
-                              var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
-                              if ((1 + var35 - (this.field_r << 12) - var27) / var27 <= var37) {
-                                break L24;
-                              } else {
-                                var37 = var32;
-                                break L24;
-                              }
-                            }
-                            L25: {
-                              var32 = var36 - (this.field_m << 12);
-                              if (var36 - (this.field_m << 12) < 0) {
-                                break L25;
-                              } else {
-                                var32 = (var26 - var32) / var26;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L25;
-                              }
-                            }
-                            L26: {
-                              var32 = (var36 - var26) / var26;
-                              if ((var36 - var26) / var26 <= var37) {
-                                break L26;
-                              } else {
-                                var37 = var32;
-                                break L26;
-                              }
-                            }
-                            L27: while (true) {
-                              if (var37 >= 0) {
-                                var33++;
-                                var30 = var30 - var26;
-                                var31 = var31 + var27;
-                                var23 = var23 + vb.field_f;
-                                continue L22;
-                              } else {
-                                L28: {
-                                  var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                                  if (var38 == 0) {
-                                    var34++;
-                                    break L28;
-                                  } else {
-                                    incrementValue$1 = var34;
-                                    var34++;
-                                    vb.field_c[incrementValue$1] = var38;
-                                    break L28;
-                                  }
-                                }
-                                var35 = var35 + var27;
-                                var36 = var36 + var26;
-                                var37++;
-                                continue L27;
-                              }
-                            }
+                        L22: while (var33 < 0) {
+                          var34 = var23;
+                          var35 = var30 + (var28 * var27 >> 4);
+                          var36 = var31 + (var28 * var26 >> 4);
+                          var37 = var20;
+                          if (var35 < 0) {
+                            var32 = (var27 - 1 - var35) / var27;
+                            var37 = var37 + var32;
+                            var35 = var35 + var27 * var32;
+                            var36 = var36 + var26 * var32;
+                            var34 = var34 + var32;
                           }
+                          var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
+                          if ((1 + var35 - (this.field_r << 12) - var27) / var27 > var37) {
+                            var37 = var32;
+                          }
+                          var32 = var36 - (this.field_m << 12);
+                          if (var36 - (this.field_m << 12) >= 0) {
+                            var32 = (var26 - var32) / var26;
+                            var37 = var37 + var32;
+                            var35 = var35 + var27 * var32;
+                            var36 = var36 + var26 * var32;
+                            var34 = var34 + var32;
+                          }
+                          var32 = (var36 - var26) / var26;
+                          if ((var36 - var26) / var26 > var37) {
+                            var37 = var32;
+                          }
+                          L27: while (var37 < 0) {
+                            var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                            if (var38 == 0) {
+                              var34++;
+                            } else {
+                              incrementValue$1 = var34;
+                              var34++;
+                              vb.field_c[incrementValue$1] = var38;
+                            }
+                            var35 = var35 + var27;
+                            var36 = var36 + var26;
+                            var37++;
+                          }
+                          var33++;
+                          var30 = var30 - var26;
+                          var31 = var31 + var27;
+                          var23 = var23 + vb.field_f;
                         }
+                        break L14;
                       }
                     } else {
                       var33 = var22;
-                      L29: while (true) {
-                        if (var33 >= 0) {
-                          break L14;
-                        } else {
-                          L30: {
-                            var34 = var23;
-                            var35 = var30 + (var28 * var27 >> 4);
-                            var36 = var31;
-                            var37 = var20;
-                            if (var36 >= 0) {
-                              if (var36 - (this.field_m << 12) < 0) {
-                                L31: {
-                                  if (var35 >= 0) {
-                                    break L31;
-                                  } else {
-                                    var32 = (var27 - 1 - var35) / var27;
-                                    var37 = var37 + var32;
-                                    var35 = var35 + var27 * var32;
-                                    var34 = var34 + var32;
-                                    break L31;
-                                  }
-                                }
-                                L32: {
-                                  var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
-                                  if ((1 + var35 - (this.field_r << 12) - var27) / var27 <= var37) {
-                                    break L32;
-                                  } else {
-                                    var37 = var32;
-                                    break L32;
-                                  }
-                                }
-                                L33: while (true) {
-                                  if (var37 >= 0) {
-                                    break L30;
-                                  } else {
-                                    L34: {
-                                      var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                                      if (var38 == 0) {
-                                        var34++;
-                                        break L34;
-                                      } else {
-                                        incrementValue$2 = var34;
-                                        var34++;
-                                        vb.field_c[incrementValue$2] = var38;
-                                        break L34;
-                                      }
-                                    }
-                                    var35 = var35 + var27;
-                                    var37++;
-                                    continue L33;
-                                  }
-                                }
-                              } else {
-                                break L30;
+                      L29: while (var33 < 0) {
+                        L30: {
+                          var34 = var23;
+                          var35 = var30 + (var28 * var27 >> 4);
+                          var36 = var31;
+                          var37 = var20;
+                          if (var36 >= 0) {
+                            if (var36 - (this.field_m << 12) < 0) {
+                              if (var35 < 0) {
+                                var32 = (var27 - 1 - var35) / var27;
+                                var37 = var37 + var32;
+                                var35 = var35 + var27 * var32;
+                                var34 = var34 + var32;
                               }
-                            } else {
+                              var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_r << 12) - var27) / var27 > var37) {
+                                var37 = var32;
+                              }
+                              L33: while (var37 < 0) {
+                                var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                                if (var38 == 0) {
+                                  var34++;
+                                } else {
+                                  incrementValue$2 = var34;
+                                  var34++;
+                                  vb.field_c[incrementValue$2] = var38;
+                                }
+                                var35 = var35 + var27;
+                                var37++;
+                              }
                               break L30;
                             }
                           }
-                          var33++;
-                          var31 = var31 + var27;
-                          var23 = var23 + vb.field_f;
-                          continue L29;
                         }
+                        var33++;
+                        var31 = var31 + var27;
+                        var23 = var23 + vb.field_f;
                       }
+                      break L14;
                     }
                   } else {
                     if (var26 != 0) {
                       if (var26 >= 0) {
                         var33 = var22;
-                        L35: while (true) {
-                          if (var33 >= 0) {
-                            break L14;
-                          } else {
-                            L36: {
-                              var34 = var23;
-                              var35 = var30 + (var28 * var27 >> 4);
-                              var36 = var31 + (var28 * var26 >> 4);
-                              var37 = var20;
-                              var32 = var35 - (this.field_r << 12);
-                              if (var35 - (this.field_r << 12) < 0) {
-                                break L36;
-                              } else {
-                                var32 = (var27 - var32) / var27;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L36;
-                              }
-                            }
-                            L37: {
-                              var32 = (var35 - var27) / var27;
-                              if ((var35 - var27) / var27 <= var37) {
-                                break L37;
-                              } else {
-                                var37 = var32;
-                                break L37;
-                              }
-                            }
-                            L38: {
-                              if (var36 >= 0) {
-                                break L38;
-                              } else {
-                                var32 = (var26 - 1 - var36) / var26;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L38;
-                              }
-                            }
-                            L39: {
-                              var32 = (1 + var36 - (this.field_m << 12) - var26) / var26;
-                              if ((1 + var36 - (this.field_m << 12) - var26) / var26 <= var37) {
-                                break L39;
-                              } else {
-                                var37 = var32;
-                                break L39;
-                              }
-                            }
-                            L40: while (true) {
-                              if (var37 >= 0) {
-                                var33++;
-                                var30 = var30 - var26;
-                                var31 = var31 + var27;
-                                var23 = var23 + vb.field_f;
-                                continue L35;
-                              } else {
-                                L41: {
-                                  var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                                  if (var38 == 0) {
-                                    var34++;
-                                    break L41;
-                                  } else {
-                                    incrementValue$3 = var34;
-                                    var34++;
-                                    vb.field_c[incrementValue$3] = var38;
-                                    break L41;
-                                  }
-                                }
-                                var35 = var35 + var27;
-                                var36 = var36 + var26;
-                                var37++;
-                                continue L40;
-                              }
-                            }
+                        L35: while (var33 < 0) {
+                          var34 = var23;
+                          var35 = var30 + (var28 * var27 >> 4);
+                          var36 = var31 + (var28 * var26 >> 4);
+                          var37 = var20;
+                          var32 = var35 - (this.field_r << 12);
+                          if (var35 - (this.field_r << 12) >= 0) {
+                            var32 = (var27 - var32) / var27;
+                            var37 = var37 + var32;
+                            var35 = var35 + var27 * var32;
+                            var36 = var36 + var26 * var32;
+                            var34 = var34 + var32;
                           }
+                          var32 = (var35 - var27) / var27;
+                          if ((var35 - var27) / var27 > var37) {
+                            var37 = var32;
+                          }
+                          if (var36 < 0) {
+                            var32 = (var26 - 1 - var36) / var26;
+                            var37 = var37 + var32;
+                            var35 = var35 + var27 * var32;
+                            var36 = var36 + var26 * var32;
+                            var34 = var34 + var32;
+                          }
+                          var32 = (1 + var36 - (this.field_m << 12) - var26) / var26;
+                          if ((1 + var36 - (this.field_m << 12) - var26) / var26 > var37) {
+                            var37 = var32;
+                          }
+                          L40: while (var37 < 0) {
+                            var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                            if (var38 == 0) {
+                              var34++;
+                            } else {
+                              incrementValue$3 = var34;
+                              var34++;
+                              vb.field_c[incrementValue$3] = var38;
+                            }
+                            var35 = var35 + var27;
+                            var36 = var36 + var26;
+                            var37++;
+                          }
+                          var33++;
+                          var30 = var30 - var26;
+                          var31 = var31 + var27;
+                          var23 = var23 + vb.field_f;
                         }
+                        break L14;
                       } else {
                         var33 = var22;
-                        L42: while (true) {
-                          if (var33 >= 0) {
-                            break L14;
-                          } else {
-                            L43: {
-                              var34 = var23;
-                              var35 = var30 + (var28 * var27 >> 4);
-                              var36 = var31 + (var28 * var26 >> 4);
-                              var37 = var20;
-                              var32 = var35 - (this.field_r << 12);
-                              if (var35 - (this.field_r << 12) < 0) {
-                                break L43;
-                              } else {
-                                var32 = (var27 - var32) / var27;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L43;
-                              }
-                            }
-                            L44: {
-                              var32 = (var35 - var27) / var27;
-                              if ((var35 - var27) / var27 <= var37) {
-                                break L44;
-                              } else {
-                                var37 = var32;
-                                break L44;
-                              }
-                            }
-                            L45: {
-                              var32 = var36 - (this.field_m << 12);
-                              if (var36 - (this.field_m << 12) < 0) {
-                                break L45;
-                              } else {
-                                var32 = (var26 - var32) / var26;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L45;
-                              }
-                            }
-                            L46: {
-                              var32 = (var36 - var26) / var26;
-                              if ((var36 - var26) / var26 <= var37) {
-                                break L46;
-                              } else {
-                                var37 = var32;
-                                break L46;
-                              }
-                            }
-                            L47: while (true) {
-                              if (var37 >= 0) {
-                                var33++;
-                                var30 = var30 - var26;
-                                var31 = var31 + var27;
-                                var23 = var23 + vb.field_f;
-                                continue L42;
-                              } else {
-                                L48: {
-                                  var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                                  if (var38 == 0) {
-                                    var34++;
-                                    break L48;
-                                  } else {
-                                    incrementValue$4 = var34;
-                                    var34++;
-                                    vb.field_c[incrementValue$4] = var38;
-                                    break L48;
-                                  }
-                                }
-                                var35 = var35 + var27;
-                                var36 = var36 + var26;
-                                var37++;
-                                continue L47;
-                              }
-                            }
+                        L42: while (var33 < 0) {
+                          var34 = var23;
+                          var35 = var30 + (var28 * var27 >> 4);
+                          var36 = var31 + (var28 * var26 >> 4);
+                          var37 = var20;
+                          var32 = var35 - (this.field_r << 12);
+                          if (var35 - (this.field_r << 12) >= 0) {
+                            var32 = (var27 - var32) / var27;
+                            var37 = var37 + var32;
+                            var35 = var35 + var27 * var32;
+                            var36 = var36 + var26 * var32;
+                            var34 = var34 + var32;
                           }
+                          var32 = (var35 - var27) / var27;
+                          if ((var35 - var27) / var27 > var37) {
+                            var37 = var32;
+                          }
+                          var32 = var36 - (this.field_m << 12);
+                          if (var36 - (this.field_m << 12) >= 0) {
+                            var32 = (var26 - var32) / var26;
+                            var37 = var37 + var32;
+                            var35 = var35 + var27 * var32;
+                            var36 = var36 + var26 * var32;
+                            var34 = var34 + var32;
+                          }
+                          var32 = (var36 - var26) / var26;
+                          if ((var36 - var26) / var26 > var37) {
+                            var37 = var32;
+                          }
+                          L47: while (var37 < 0) {
+                            var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                            if (var38 == 0) {
+                              var34++;
+                            } else {
+                              incrementValue$4 = var34;
+                              var34++;
+                              vb.field_c[incrementValue$4] = var38;
+                            }
+                            var35 = var35 + var27;
+                            var36 = var36 + var26;
+                            var37++;
+                          }
+                          var33++;
+                          var30 = var30 - var26;
+                          var31 = var31 + var27;
+                          var23 = var23 + vb.field_f;
                         }
+                        break L14;
                       }
                     } else {
                       var33 = var22;
-                      L49: while (true) {
-                        if (var33 >= 0) {
-                          break L14;
-                        } else {
-                          L50: {
-                            var34 = var23;
-                            var35 = var30 + (var28 * var27 >> 4);
-                            var36 = var31;
-                            var37 = var20;
-                            if (var36 >= 0) {
-                              if (var36 - (this.field_m << 12) < 0) {
-                                L51: {
-                                  var32 = var35 - (this.field_r << 12);
-                                  if (var35 - (this.field_r << 12) < 0) {
-                                    break L51;
-                                  } else {
-                                    var32 = (var27 - var32) / var27;
-                                    var37 = var37 + var32;
-                                    var35 = var35 + var27 * var32;
-                                    var34 = var34 + var32;
-                                    break L51;
-                                  }
-                                }
-                                L52: {
-                                  var32 = (var35 - var27) / var27;
-                                  if ((var35 - var27) / var27 <= var37) {
-                                    break L52;
-                                  } else {
-                                    var37 = var32;
-                                    break L52;
-                                  }
-                                }
-                                L53: while (true) {
-                                  if (var37 >= 0) {
-                                    break L50;
-                                  } else {
-                                    L54: {
-                                      var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                                      if (var38 == 0) {
-                                        var34++;
-                                        break L54;
-                                      } else {
-                                        incrementValue$5 = var34;
-                                        var34++;
-                                        vb.field_c[incrementValue$5] = var38;
-                                        break L54;
-                                      }
-                                    }
-                                    var35 = var35 + var27;
-                                    var37++;
-                                    continue L53;
-                                  }
-                                }
-                              } else {
-                                break L50;
+                      L49: while (var33 < 0) {
+                        L50: {
+                          var34 = var23;
+                          var35 = var30 + (var28 * var27 >> 4);
+                          var36 = var31;
+                          var37 = var20;
+                          if (var36 >= 0) {
+                            if (var36 - (this.field_m << 12) < 0) {
+                              var32 = var35 - (this.field_r << 12);
+                              if (var35 - (this.field_r << 12) >= 0) {
+                                var32 = (var27 - var32) / var27;
+                                var37 = var37 + var32;
+                                var35 = var35 + var27 * var32;
+                                var34 = var34 + var32;
                               }
-                            } else {
+                              var32 = (var35 - var27) / var27;
+                              if ((var35 - var27) / var27 > var37) {
+                                var37 = var32;
+                              }
+                              L53: while (var37 < 0) {
+                                var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                                if (var38 == 0) {
+                                  var34++;
+                                } else {
+                                  incrementValue$5 = var34;
+                                  var34++;
+                                  vb.field_c[incrementValue$5] = var38;
+                                }
+                                var35 = var35 + var27;
+                                var37++;
+                              }
                               break L50;
                             }
                           }
-                          var33++;
-                          var31 = var31 + var27;
-                          var23 = var23 + vb.field_f;
-                          continue L49;
                         }
+                        var33++;
+                        var31 = var31 + var27;
+                        var23 = var23 + vb.field_f;
                       }
+                      break L14;
                     }
                   }
                 } else {
                   if (var26 != 0) {
                     if (var26 >= 0) {
                       var33 = var22;
-                      L55: while (true) {
-                        if (var33 >= 0) {
-                          break L14;
-                        } else {
-                          L56: {
-                            var34 = var23;
-                            var35 = var30;
-                            var36 = var31 + (var28 * var26 >> 4);
-                            var37 = var20;
-                            if (var35 >= 0) {
-                              if (var35 - (this.field_r << 12) < 0) {
-                                L57: {
-                                  if (var36 >= 0) {
-                                    break L57;
-                                  } else {
-                                    var32 = (var26 - 1 - var36) / var26;
-                                    var37 = var37 + var32;
-                                    var36 = var36 + var26 * var32;
-                                    var34 = var34 + var32;
-                                    break L57;
-                                  }
-                                }
-                                L58: {
-                                  var32 = (1 + var36 - (this.field_m << 12) - var26) / var26;
-                                  if ((1 + var36 - (this.field_m << 12) - var26) / var26 <= var37) {
-                                    break L58;
-                                  } else {
-                                    var37 = var32;
-                                    break L58;
-                                  }
-                                }
-                                L59: while (true) {
-                                  if (var37 >= 0) {
-                                    break L56;
-                                  } else {
-                                    L60: {
-                                      var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                                      if (var38 == 0) {
-                                        var34++;
-                                        break L60;
-                                      } else {
-                                        incrementValue$6 = var34;
-                                        var34++;
-                                        vb.field_c[incrementValue$6] = var38;
-                                        break L60;
-                                      }
-                                    }
-                                    var36 = var36 + var26;
-                                    var37++;
-                                    continue L59;
-                                  }
-                                }
-                              } else {
-                                break L56;
+                      L55: while (var33 < 0) {
+                        L56: {
+                          var34 = var23;
+                          var35 = var30;
+                          var36 = var31 + (var28 * var26 >> 4);
+                          var37 = var20;
+                          if (var35 >= 0) {
+                            if (var35 - (this.field_r << 12) < 0) {
+                              if (var36 < 0) {
+                                var32 = (var26 - 1 - var36) / var26;
+                                var37 = var37 + var32;
+                                var36 = var36 + var26 * var32;
+                                var34 = var34 + var32;
                               }
-                            } else {
+                              var32 = (1 + var36 - (this.field_m << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_m << 12) - var26) / var26 > var37) {
+                                var37 = var32;
+                              }
+                              L59: while (var37 < 0) {
+                                var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                                if (var38 == 0) {
+                                  var34++;
+                                } else {
+                                  incrementValue$6 = var34;
+                                  var34++;
+                                  vb.field_c[incrementValue$6] = var38;
+                                }
+                                var36 = var36 + var26;
+                                var37++;
+                              }
                               break L56;
                             }
                           }
-                          var33++;
-                          var30 = var30 - var26;
-                          var23 = var23 + vb.field_f;
-                          continue L55;
                         }
+                        var33++;
+                        var30 = var30 - var26;
+                        var23 = var23 + vb.field_f;
                       }
+                      break L14;
                     } else {
                       var33 = var22;
-                      L61: while (true) {
-                        if (var33 >= 0) {
-                          break L14;
-                        } else {
-                          L62: {
-                            var34 = var23;
-                            var35 = var30;
-                            var36 = var31 + (var28 * var26 >> 4);
-                            var37 = var20;
-                            if (var35 >= 0) {
-                              if (var35 - (this.field_r << 12) < 0) {
-                                L63: {
-                                  var32 = var36 - (this.field_m << 12);
-                                  if (var36 - (this.field_m << 12) < 0) {
-                                    break L63;
-                                  } else {
-                                    var32 = (var26 - var32) / var26;
-                                    var37 = var37 + var32;
-                                    var36 = var36 + var26 * var32;
-                                    var34 = var34 + var32;
-                                    break L63;
-                                  }
-                                }
-                                L64: {
-                                  var32 = (var36 - var26) / var26;
-                                  if ((var36 - var26) / var26 <= var37) {
-                                    break L64;
-                                  } else {
-                                    var37 = var32;
-                                    break L64;
-                                  }
-                                }
-                                L65: while (true) {
-                                  if (var37 >= 0) {
-                                    break L62;
-                                  } else {
-                                    L66: {
-                                      var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                                      if (var38 == 0) {
-                                        var34++;
-                                        break L66;
-                                      } else {
-                                        incrementValue$7 = var34;
-                                        var34++;
-                                        vb.field_c[incrementValue$7] = var38;
-                                        break L66;
-                                      }
-                                    }
-                                    var36 = var36 + var26;
-                                    var37++;
-                                    continue L65;
-                                  }
-                                }
-                              } else {
-                                var33++;
-                                var30 = var30 - var26;
-                                var23 = var23 + vb.field_f;
-                                continue L61;
+                      L61: while (var33 < 0) {
+                        L62: {
+                          var34 = var23;
+                          var35 = var30;
+                          var36 = var31 + (var28 * var26 >> 4);
+                          var37 = var20;
+                          if (var35 >= 0) {
+                            if (var35 - (this.field_r << 12) < 0) {
+                              var32 = var36 - (this.field_m << 12);
+                              if (var36 - (this.field_m << 12) >= 0) {
+                                var32 = (var26 - var32) / var26;
+                                var37 = var37 + var32;
+                                var36 = var36 + var26 * var32;
+                                var34 = var34 + var32;
                               }
-                            } else {
+                              var32 = (var36 - var26) / var26;
+                              if ((var36 - var26) / var26 > var37) {
+                                var37 = var32;
+                              }
+                              L65: while (var37 < 0) {
+                                var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
+                                if (var38 == 0) {
+                                  var34++;
+                                } else {
+                                  incrementValue$7 = var34;
+                                  var34++;
+                                  vb.field_c[incrementValue$7] = var38;
+                                }
+                                var36 = var36 + var26;
+                                var37++;
+                              }
                               break L62;
+                            } else {
+                              var33++;
+                              var30 = var30 - var26;
+                              var23 = var23 + vb.field_f;
+                              continue L61;
                             }
                           }
-                          var33++;
-                          var30 = var30 - var26;
-                          var23 = var23 + vb.field_f;
-                          continue L61;
                         }
+                        var33++;
+                        var30 = var30 - var26;
+                        var23 = var23 + vb.field_f;
                       }
+                      break L14;
                     }
                   } else {
                     var33 = var22;
@@ -1051,14 +705,8 @@ class dm extends wh {
                                       }
                                     }
                                   }
-                                } else {
-                                  break L68;
                                 }
-                              } else {
-                                break L68;
                               }
-                            } else {
-                              break L68;
                             }
                           }
                           var33++;
@@ -1112,6 +760,8 @@ class dm extends wh {
     }
 
     final void d() {
+        int var8 = 0;
+        int var9 = 0;
         int var1;
         int var2;
         int var3;
@@ -1119,14 +769,10 @@ class dm extends wh {
         int var5;
         int var6;
         int[] var7;
-        int var8;
-        int var9;
         var1 = this.field_m - 1;
         L0: while (true) {
           L1: {
-            if (var1 < 0) {
-              break L1;
-            } else {
+            if (var1 >= 0) {
               var2 = var1 * this.field_r;
               var3 = 0;
               L2: while (true) {
@@ -1147,9 +793,7 @@ class dm extends wh {
           var2 = 0;
           L3: while (true) {
             L4: {
-              if (var2 >= var1) {
-                break L4;
-              } else {
+              if (var2 < var1) {
                 var3 = var2 * this.field_r;
                 var4 = 0;
                 L5: while (true) {
@@ -1170,9 +814,7 @@ class dm extends wh {
             var3 = this.field_r - 1;
             L6: while (true) {
               L7: {
-                if (var3 < 0) {
-                  break L7;
-                } else {
+                if (var3 >= 0) {
                   var4 = var2;
                   L8: while (true) {
                     if (var4 > var1) {
@@ -1192,9 +834,7 @@ class dm extends wh {
               var4 = 0;
               L9: while (true) {
                 L10: {
-                  if (var4 >= var3) {
-                    break L10;
-                  } else {
+                  if (var4 < var3) {
                     var5 = var2;
                     L11: while (true) {
                       if (var5 > var1) {
@@ -1211,21 +851,11 @@ class dm extends wh {
                     }
                   }
                 }
-                L12: {
-                  if (var4 != 0) {
-                    break L12;
-                  } else {
-                    if (var3 != this.field_r - 1) {
-                      break L12;
-                    } else {
-                      if (var2 != 0) {
-                        break L12;
-                      } else {
-                        if (var1 != this.field_m - 1) {
-                          break L12;
-                        } else {
-                          return;
-                        }
+                if (var4 == 0) {
+                  if (var3 == this.field_r - 1) {
+                    if (var2 == 0) {
+                      if (var1 == this.field_m - 1) {
+                        return;
                       }
                     }
                   }
@@ -1233,29 +863,17 @@ class dm extends wh {
                 var5 = var3 + 1 - var4;
                 var6 = var1 + 1 - var2;
                 var7 = new int[var5 * var6];
-                var8 = 0;
-                L13: while (true) {
-                  if (var8 >= var6) {
-                    this.field_v = var7;
-                    this.field_r = var5;
-                    this.field_m = var6;
-                    this.field_u = this.field_u + var4;
-                    this.field_p = this.field_p + var2;
-                    return;
-                  } else {
-                    var9 = 0;
-                    L14: while (true) {
-                      if (var9 >= var5) {
-                        var8++;
-                        continue L13;
-                      } else {
-                        var7[var8 * var5 + var9] = this.field_v[(var8 + var2) * this.field_r + (var9 + var4)];
-                        var9++;
-                        continue L14;
-                      }
-                    }
+                for (var8 = 0; var8 < var6; var8++) {
+                  for (var9 = 0; var9 < var5; var9++) {
+                    var7[var8 * var5 + var9] = this.field_v[(var8 + var2) * this.field_r + (var9 + var4)];
                   }
                 }
+                this.field_v = var7;
+                this.field_r = var5;
+                this.field_m = var6;
+                this.field_u = this.field_u + var4;
+                this.field_p = this.field_p + var2;
+                return;
               }
             }
           }
@@ -1263,88 +881,50 @@ class dm extends wh {
     }
 
     final void g(int param0) {
+        int var4 = 0;
+        int var5 = 0;
         int incrementValue$1 = 0;
         int[] var2;
         int var3;
-        int var4;
-        int var5;
         int var6;
         var2 = new int[this.field_r * this.field_m];
         var3 = 0;
-        var4 = 0;
-        L0: while (true) {
-          if (var4 >= this.field_m) {
-            this.field_v = var2;
-            return;
-          } else {
-            var5 = 0;
-            L1: while (true) {
-              if (var5 >= this.field_r) {
-                var4++;
-                continue L0;
-              } else {
-                L2: {
-                  var6 = this.field_v[var3];
-                  if (var6 != 0) {
+        for (var4 = 0; var4 < this.field_m; var4++) {
+          for (var5 = 0; var5 < this.field_r; var5++) {
+            L2: {
+              var6 = this.field_v[var3];
+              if (var6 == 0) {
+                if (var5 > 0) {
+                  if (this.field_v[var3 - 1] != 0) {
+                    var6 = param0;
                     break L2;
-                  } else {
-                    L3: {
-                      if (var5 <= 0) {
-                        break L3;
-                      } else {
-                        if (this.field_v[var3 - 1] == 0) {
-                          break L3;
-                        } else {
-                          var6 = param0;
-                          break L2;
-                        }
-                      }
-                    }
-                    L4: {
-                      if (var4 <= 0) {
-                        break L4;
-                      } else {
-                        if (this.field_v[var3 - this.field_r] == 0) {
-                          break L4;
-                        } else {
-                          var6 = param0;
-                          break L2;
-                        }
-                      }
-                    }
-                    L5: {
-                      if (var5 >= this.field_r - 1) {
-                        break L5;
-                      } else {
-                        if (this.field_v[var3 + 1] == 0) {
-                          break L5;
-                        } else {
-                          var6 = param0;
-                          break L2;
-                        }
-                      }
-                    }
-                    if (var4 >= this.field_m - 1) {
-                      break L2;
-                    } else {
-                      if (this.field_v[var3 + this.field_r] == 0) {
-                        break L2;
-                      } else {
-                        var6 = param0;
-                        break L2;
-                      }
-                    }
                   }
                 }
-                incrementValue$1 = var3;
-                var3++;
-                var2[incrementValue$1] = var6;
-                var5++;
-                continue L1;
+                if (var4 > 0) {
+                  if (this.field_v[var3 - this.field_r] != 0) {
+                    var6 = param0;
+                    break L2;
+                  }
+                }
+                if (var5 < this.field_r - 1) {
+                  if (this.field_v[var3 + 1] != 0) {
+                    var6 = param0;
+                    break L2;
+                  }
+                }
+                if (var4 < this.field_m - 1) {
+                  if (this.field_v[var3 + this.field_r] != 0) {
+                    var6 = param0;
+                  }
+                }
               }
             }
+            incrementValue$1 = var3;
+            var3++;
+            var2[incrementValue$1] = var6;
           }
         }
+        this.field_v = var2;
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -1698,29 +1278,23 @@ class dm extends wh {
                   var16++;
                   continue L1;
                 } else {
-                  L2: {
-                    var17 = param2 >> 16 & 255;
-                    var18 = param2 >> 8 & 255;
-                    var19 = param2 & 255;
-                    if (var17 != var18) {
-                      break L2;
-                    } else {
-                      if (var18 != var19) {
-                        break L2;
+                  var17 = param2 >> 16 & 255;
+                  var18 = param2 >> 8 & 255;
+                  var19 = param2 & 255;
+                  if (var17 == var18) {
+                    if (var18 == var19) {
+                      if (var17 > 128) {
+                        incrementValue$1 = param4;
+                        param4++;
+                        param0[incrementValue$1] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
+                        var16++;
+                        continue L1;
                       } else {
-                        if (var17 > 128) {
-                          incrementValue$1 = param4;
-                          param4++;
-                          param0[incrementValue$1] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
-                          var16++;
-                          continue L1;
-                        } else {
-                          incrementValue$2 = param4;
-                          param4++;
-                          param0[incrementValue$2] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
-                          var16++;
-                          continue L1;
-                        }
+                        incrementValue$2 = param4;
+                        param4++;
+                        param0[incrementValue$2] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
+                        var16++;
+                        continue L1;
                       }
                     }
                   }
@@ -1928,16 +1502,16 @@ class dm extends wh {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
-        int incrementValue$48 = 0;
-        int incrementValue$49 = 0;
-        int incrementValue$50 = 0;
-        int incrementValue$51 = 0;
-        int incrementValue$52 = 0;
-        int incrementValue$53 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         int var9;
         int var10;
         int var11;
@@ -1959,76 +1533,64 @@ class dm extends wh {
                     var10++;
                     continue L0;
                   } else {
-                    incrementValue$44 = param3;
+                    incrementValue$0 = param3;
                     param3++;
-                    param2 = param1[incrementValue$44];
+                    param2 = param1[incrementValue$0];
                     if (param2 == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      incrementValue$45 = param4;
+                      incrementValue$1 = param4;
                       param4++;
-                      param0[incrementValue$45] = param2;
+                      param0[incrementValue$1] = param2;
                       var11++;
                       continue L2;
                     }
                   }
                 }
               } else {
-                L3: {
-                  incrementValue$46 = param3;
-                  param3++;
-                  param2 = param1[incrementValue$46];
-                  if (param2 == 0) {
-                    param4++;
-                    break L3;
-                  } else {
-                    incrementValue$47 = param4;
-                    param4++;
-                    param0[incrementValue$47] = param2;
-                    break L3;
-                  }
-                }
-                L4: {
-                  incrementValue$48 = param3;
-                  param3++;
-                  param2 = param1[incrementValue$48];
-                  if (param2 == 0) {
-                    param4++;
-                    break L4;
-                  } else {
-                    incrementValue$49 = param4;
-                    param4++;
-                    param0[incrementValue$49] = param2;
-                    break L4;
-                  }
-                }
-                L5: {
-                  incrementValue$50 = param3;
-                  param3++;
-                  param2 = param1[incrementValue$50];
-                  if (param2 == 0) {
-                    param4++;
-                    break L5;
-                  } else {
-                    incrementValue$51 = param4;
-                    param4++;
-                    param0[incrementValue$51] = param2;
-                    break L5;
-                  }
-                }
-                incrementValue$52 = param3;
+                incrementValue$2 = param3;
                 param3++;
-                param2 = param1[incrementValue$52];
+                param2 = param1[incrementValue$2];
+                if (param2 == 0) {
+                  param4++;
+                } else {
+                  incrementValue$3 = param4;
+                  param4++;
+                  param0[incrementValue$3] = param2;
+                }
+                incrementValue$4 = param3;
+                param3++;
+                param2 = param1[incrementValue$4];
+                if (param2 == 0) {
+                  param4++;
+                } else {
+                  incrementValue$5 = param4;
+                  param4++;
+                  param0[incrementValue$5] = param2;
+                }
+                incrementValue$6 = param3;
+                param3++;
+                param2 = param1[incrementValue$6];
+                if (param2 == 0) {
+                  param4++;
+                } else {
+                  incrementValue$7 = param4;
+                  param4++;
+                  param0[incrementValue$7] = param2;
+                }
+                incrementValue$8 = param3;
+                param3++;
+                param2 = param1[incrementValue$8];
                 if (param2 == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  incrementValue$53 = param4;
+                  incrementValue$9 = param4;
                   param4++;
-                  param0[incrementValue$53] = param2;
+                  param0[incrementValue$9] = param2;
                   var11++;
                   continue L1;
                 }
@@ -2039,6 +1601,9 @@ class dm extends wh {
     }
 
     void f(int param0, int param1) {
+        int var9 = 0;
+        int var16 = 0;
+        int var17 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -2049,109 +1614,62 @@ class dm extends wh {
         int var6;
         int var7;
         int var8;
-        int var9;
         int var10;
         int var11;
         int var12;
         int var13;
         int var14;
         int var15;
-        int var16;
-        int var17;
-        L0: {
-          var3 = this.field_r >> 2;
-          var4 = this.field_m >> 2;
-          param0 = param0 + this.field_u / 4;
-          param1 = param1 + this.field_p / 4;
-          if (param0 >= vb.field_e) {
-            stackIn_3_0 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = vb.field_e - param0 << 2;
-            break L0;
-          }
+        var3 = this.field_r >> 2;
+        var4 = this.field_m >> 2;
+        param0 = param0 + this.field_u / 4;
+        param1 = param1 + this.field_p / 4;
+        if (param0 >= vb.field_e) {
+          stackIn_3_0 = 0;
+        } else {
+          stackIn_3_0 = vb.field_e - param0 << 2;
         }
-        L1: {
-          var5 = stackIn_3_0;
-          if (param0 + var3 <= vb.field_k) {
-            stackIn_6_0 = this.field_r - 4;
-            break L1;
-          } else {
-            stackIn_6_0 = (vb.field_k - param0 << 2) - 4;
-            break L1;
-          }
+        var5 = stackIn_3_0;
+        if (param0 + var3 <= vb.field_k) {
+          stackIn_6_0 = this.field_r - 4;
+        } else {
+          stackIn_6_0 = (vb.field_k - param0 << 2) - 4;
         }
-        L2: {
-          var6 = stackIn_6_0;
-          if (param1 >= vb.field_i) {
-            stackIn_9_0 = 0;
-            break L2;
-          } else {
-            stackIn_9_0 = vb.field_i - param1 << 2;
-            break L2;
-          }
+        var6 = stackIn_6_0;
+        if (param1 >= vb.field_i) {
+          stackIn_9_0 = 0;
+        } else {
+          stackIn_9_0 = vb.field_i - param1 << 2;
         }
-        L3: {
-          var7 = stackIn_9_0;
-          if (param1 + var4 <= vb.field_d) {
-            stackIn_12_0 = this.field_m - 4;
-            break L3;
-          } else {
-            stackIn_12_0 = (vb.field_d - param1 << 2) - 4;
-            break L3;
-          }
+        var7 = stackIn_9_0;
+        if (param1 + var4 <= vb.field_d) {
+          stackIn_12_0 = this.field_m - 4;
+        } else {
+          stackIn_12_0 = (vb.field_d - param1 << 2) - 4;
         }
         var8 = stackIn_12_0;
-        var9 = var7;
-        L4: while (true) {
-          if (var9 > var8) {
-            return;
-          } else {
-            var10 = var9 * this.field_r + var5;
-            var11 = (param1 + (var9 >> 2)) * vb.field_f + (param0 + (var5 >> 2));
-            var12 = var5;
-            L5: while (true) {
-              if (var12 > var6) {
-                var9 += 4;
-                continue L4;
-              } else {
-                var13 = 0;
-                var14 = 0;
-                var15 = 0;
-                var16 = 0;
-                L6: while (true) {
-                  if (var16 >= 4) {
-                    vb.field_c[var11] = (var14 & 267390960 | var15 & 1044480) >> 4;
-                    var12 += 4;
-                    var10 += 4;
-                    var11++;
-                    continue L5;
-                  } else {
-                    var17 = 0;
-                    L7: while (true) {
-                      if (var17 >= 4) {
-                        var16++;
-                        continue L6;
-                      } else {
-                        L8: {
-                          var13 = this.field_v[var10 + var16 * this.field_r + var17];
-                          if (var13 != 0) {
-                            break L8;
-                          } else {
-                            var13 = vb.field_c[var11];
-                            break L8;
-                          }
-                        }
-                        var14 = var14 + (var13 & 16711935);
-                        var15 = var15 + (var13 & 65280);
-                        var17++;
-                        continue L7;
-                      }
-                    }
-                  }
+        for (var9 = var7; var9 <= var8; var9 += 4) {
+          var10 = var9 * this.field_r + var5;
+          var11 = (param1 + (var9 >> 2)) * vb.field_f + (param0 + (var5 >> 2));
+          var12 = var5;
+          L5: while (var12 <= var6) {
+            var13 = 0;
+            var14 = 0;
+            var15 = 0;
+            for (var16 = 0; var16 < 4; var16++) {
+              for (var17 = 0; var17 < 4; var17++) {
+                var13 = this.field_v[var10 + var16 * this.field_r + var17];
+                if (var13 == 0) {
+                  var13 = vb.field_c[var11];
                 }
+                var14 = var14 + (var13 & 16711935);
+                var15 = var15 + (var13 & 65280);
               }
             }
+            vb.field_c[var11] = (var14 & 267390960 | var15 & 1044480) >> 4;
+            var12 += 4;
+            var10 += 4;
+            var11++;
           }
         }
     }
@@ -2170,97 +1688,72 @@ class dm extends wh {
         int var13;
         int var14;
         var8 = 0;
-        L0: while (true) {
-          if (var8 >= param7) {
-            return;
-          } else {
-            var9 = 0;
-            L1: while (true) {
-              if (var9 >= param6) {
-                var8++;
-                param1 = param1 + param3;
-                param2 = param2 + param4;
-                continue L0;
-              } else {
-                L2: {
-                  var11 = vb.field_c[param2] & 16711935;
-                  var12 = vb.field_c[param2] & 65280;
-                  var13 = 0;
-                  var14 = 0;
-                  dupTemp$0 = param0[param1];
-                  var10 = dupTemp$0;
-                  if (dupTemp$0 != 0) {
-                    var13 = var13 + (var10 & 16711935);
-                    var14 = var14 + (var10 & 65280);
-                    break L2;
-                  } else {
-                    var13 = var13 + var11;
-                    var14 = var14 + var12;
-                    break L2;
-                  }
-                }
-                L3: {
-                  dupTemp$1 = param0[param1 + 1];
-                  var10 = dupTemp$1;
-                  if (dupTemp$1 != 0) {
-                    var13 = var13 + (var10 & 16711935);
-                    var14 = var14 + (var10 & 65280);
-                    break L3;
-                  } else {
-                    var13 = var13 + var11;
-                    var14 = var14 + var12;
-                    break L3;
-                  }
-                }
-                L4: {
-                  dupTemp$2 = param0[param1 + param5];
-                  var10 = dupTemp$2;
-                  if (dupTemp$2 != 0) {
-                    var13 = var13 + (var10 & 16711935);
-                    var14 = var14 + (var10 & 65280);
-                    break L4;
-                  } else {
-                    var13 = var13 + var11;
-                    var14 = var14 + var12;
-                    break L4;
-                  }
-                }
-                L5: {
-                  dupTemp$3 = param0[param1 + param5 + 1];
-                  var10 = dupTemp$3;
-                  if (dupTemp$3 != 0) {
-                    var13 = var13 + (var10 & 16711935);
-                    var14 = var14 + (var10 & 65280);
-                    break L5;
-                  } else {
-                    var13 = var13 + var11;
-                    var14 = var14 + var12;
-                    break L5;
-                  }
-                }
-                incrementValue$4 = param2;
-                param2++;
-                vb.field_c[incrementValue$4] = (var13 & 66847740 | var14 & 261120) >> 2;
-                var9++;
-                param1 += 2;
-                continue L1;
-              }
+        L0: while (var8 < param7) {
+          var9 = 0;
+          L1: while (var9 < param6) {
+            var11 = vb.field_c[param2] & 16711935;
+            var12 = vb.field_c[param2] & 65280;
+            var13 = 0;
+            var14 = 0;
+            dupTemp$0 = param0[param1];
+            var10 = dupTemp$0;
+            if (dupTemp$0 != 0) {
+              var13 = var13 + (var10 & 16711935);
+              var14 = var14 + (var10 & 65280);
+            } else {
+              var13 = var13 + var11;
+              var14 = var14 + var12;
             }
+            dupTemp$1 = param0[param1 + 1];
+            var10 = dupTemp$1;
+            if (dupTemp$1 != 0) {
+              var13 = var13 + (var10 & 16711935);
+              var14 = var14 + (var10 & 65280);
+            } else {
+              var13 = var13 + var11;
+              var14 = var14 + var12;
+            }
+            dupTemp$2 = param0[param1 + param5];
+            var10 = dupTemp$2;
+            if (dupTemp$2 != 0) {
+              var13 = var13 + (var10 & 16711935);
+              var14 = var14 + (var10 & 65280);
+            } else {
+              var13 = var13 + var11;
+              var14 = var14 + var12;
+            }
+            dupTemp$3 = param0[param1 + param5 + 1];
+            var10 = dupTemp$3;
+            if (dupTemp$3 != 0) {
+              var13 = var13 + (var10 & 16711935);
+              var14 = var14 + (var10 & 65280);
+            } else {
+              var13 = var13 + var11;
+              var14 = var14 + var12;
+            }
+            incrementValue$4 = param2;
+            param2++;
+            vb.field_c[incrementValue$4] = (var13 & 66847740 | var14 & 261120) >> 2;
+            var9++;
+            param1 += 2;
           }
+          var8++;
+          param1 = param1 + param3;
+          param2 = param2 + param4;
         }
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$44 = 0;
-        int incrementValue$45 = 0;
-        int incrementValue$46 = 0;
-        int incrementValue$47 = 0;
-        int incrementValue$48 = 0;
-        int incrementValue$49 = 0;
-        int incrementValue$50 = 0;
-        int incrementValue$51 = 0;
-        int incrementValue$52 = 0;
-        int incrementValue$53 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         int var9;
         int var10;
         int var11;
@@ -2282,71 +1775,59 @@ class dm extends wh {
                     var10++;
                     continue L0;
                   } else {
-                    incrementValue$44 = param3;
+                    incrementValue$0 = param3;
                     param3++;
-                    if (param1[incrementValue$44] == 0) {
+                    if (param1[incrementValue$0] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      incrementValue$45 = param4;
+                      incrementValue$1 = param4;
                       param4++;
-                      param0[incrementValue$45] = param2;
+                      param0[incrementValue$1] = param2;
                       var11++;
                       continue L2;
                     }
                   }
                 }
               } else {
-                L3: {
-                  incrementValue$46 = param3;
-                  param3++;
-                  if (param1[incrementValue$46] == 0) {
-                    param4++;
-                    break L3;
-                  } else {
-                    incrementValue$47 = param4;
-                    param4++;
-                    param0[incrementValue$47] = param2;
-                    break L3;
-                  }
-                }
-                L4: {
-                  incrementValue$48 = param3;
-                  param3++;
-                  if (param1[incrementValue$48] == 0) {
-                    param4++;
-                    break L4;
-                  } else {
-                    incrementValue$49 = param4;
-                    param4++;
-                    param0[incrementValue$49] = param2;
-                    break L4;
-                  }
-                }
-                L5: {
-                  incrementValue$50 = param3;
-                  param3++;
-                  if (param1[incrementValue$50] == 0) {
-                    param4++;
-                    break L5;
-                  } else {
-                    incrementValue$51 = param4;
-                    param4++;
-                    param0[incrementValue$51] = param2;
-                    break L5;
-                  }
-                }
-                incrementValue$52 = param3;
+                incrementValue$2 = param3;
                 param3++;
-                if (param1[incrementValue$52] == 0) {
+                if (param1[incrementValue$2] == 0) {
+                  param4++;
+                } else {
+                  incrementValue$3 = param4;
+                  param4++;
+                  param0[incrementValue$3] = param2;
+                }
+                incrementValue$4 = param3;
+                param3++;
+                if (param1[incrementValue$4] == 0) {
+                  param4++;
+                } else {
+                  incrementValue$5 = param4;
+                  param4++;
+                  param0[incrementValue$5] = param2;
+                }
+                incrementValue$6 = param3;
+                param3++;
+                if (param1[incrementValue$6] == 0) {
+                  param4++;
+                } else {
+                  incrementValue$7 = param4;
+                  param4++;
+                  param0[incrementValue$7] = param2;
+                }
+                incrementValue$8 = param3;
+                param3++;
+                if (param1[incrementValue$8] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  incrementValue$53 = param4;
+                  incrementValue$9 = param4;
                   param4++;
-                  param0[incrementValue$53] = param2;
+                  param0[incrementValue$9] = param2;
                   var11++;
                   continue L1;
                 }
@@ -2648,148 +2129,80 @@ class dm extends wh {
         int var39;
         int var40;
         if (param5 != 0) {
-          L0: {
-            param0 = param0 - (this.field_u << 4);
-            param1 = param1 - (this.field_p << 4);
-            var7 = (double)(param4 & 65535) * 0.00009587379924285257;
-            var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
-            var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
-            var11 = -param0 * var10 + -param1 * var9;
-            var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((this.field_r << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((this.field_r << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((this.field_m << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((this.field_m << 4) - param1) * var10;
-            var17 = ((this.field_r << 4) - param0) * var10 + ((this.field_m << 4) - param1) * var9;
-            var18 = -((this.field_r << 4) - param0) * var9 + ((this.field_m << 4) - param1) * var10;
-            if (var11 >= var13) {
-              var19 = var13;
-              var20 = var11;
-              break L0;
-            } else {
-              var19 = var11;
-              var20 = var13;
-              break L0;
-            }
+          param0 = param0 - (this.field_u << 4);
+          param1 = param1 - (this.field_p << 4);
+          var7 = (double)(param4 & 65535) * 0.00009587379924285257;
+          var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
+          var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
+          var11 = -param0 * var10 + -param1 * var9;
+          var12 = --param0 * var9 + -param1 * var10;
+          var13 = ((this.field_r << 4) - param0) * var10 + -param1 * var9;
+          var14 = -((this.field_r << 4) - param0) * var9 + -param1 * var10;
+          var15 = -param0 * var10 + ((this.field_m << 4) - param1) * var9;
+          var16 = --param0 * var9 + ((this.field_m << 4) - param1) * var10;
+          var17 = ((this.field_r << 4) - param0) * var10 + ((this.field_m << 4) - param1) * var9;
+          var18 = -((this.field_r << 4) - param0) * var9 + ((this.field_m << 4) - param1) * var10;
+          if (var11 >= var13) {
+            var19 = var13;
+            var20 = var11;
+          } else {
+            var19 = var11;
+            var20 = var13;
           }
-          L1: {
-            if (var15 >= var19) {
-              break L1;
-            } else {
-              var19 = var15;
-              break L1;
-            }
+          if (var15 < var19) {
+            var19 = var15;
           }
-          L2: {
-            if (var17 >= var19) {
-              break L2;
-            } else {
-              var19 = var17;
-              break L2;
-            }
+          if (var17 < var19) {
+            var19 = var17;
           }
-          L3: {
-            if (var15 <= var20) {
-              break L3;
-            } else {
-              var20 = var15;
-              break L3;
-            }
+          if (var15 > var20) {
+            var20 = var15;
           }
-          L4: {
-            if (var17 <= var20) {
-              break L4;
-            } else {
-              var20 = var17;
-              break L4;
-            }
+          if (var17 > var20) {
+            var20 = var17;
           }
-          L5: {
-            if (var12 >= var14) {
-              var21 = var14;
-              var22 = var12;
-              break L5;
-            } else {
-              var21 = var12;
-              var22 = var14;
-              break L5;
-            }
+          if (var12 >= var14) {
+            var21 = var14;
+            var22 = var12;
+          } else {
+            var21 = var12;
+            var22 = var14;
           }
-          L6: {
-            if (var16 >= var21) {
-              break L6;
-            } else {
-              var21 = var16;
-              break L6;
-            }
+          if (var16 < var21) {
+            var21 = var16;
           }
-          L7: {
-            if (var18 >= var21) {
-              break L7;
-            } else {
-              var21 = var18;
-              break L7;
-            }
+          if (var18 < var21) {
+            var21 = var18;
           }
-          L8: {
-            if (var16 <= var22) {
-              break L8;
-            } else {
-              var22 = var16;
-              break L8;
-            }
+          if (var16 > var22) {
+            var22 = var16;
           }
-          L9: {
-            if (var18 <= var22) {
-              break L9;
-            } else {
-              var22 = var18;
-              break L9;
-            }
+          if (var18 > var22) {
+            var22 = var18;
           }
-          L10: {
-            var19 = var19 >> 12;
-            var20 = var20 + 4095 >> 12;
-            var21 = var21 >> 12;
-            var22 = var22 + 4095 >> 12;
-            var19 = var19 + param2;
-            var20 = var20 + param2;
-            var21 = var21 + param3;
-            var22 = var22 + param3;
-            var19 = var19 >> 4;
-            var20 = var20 + 15 >> 4;
-            var21 = var21 >> 4;
-            var22 = var22 + 15 >> 4;
-            if (var19 >= vb.field_e) {
-              break L10;
-            } else {
-              var19 = vb.field_e;
-              break L10;
-            }
+          var19 = var19 >> 12;
+          var20 = var20 + 4095 >> 12;
+          var21 = var21 >> 12;
+          var22 = var22 + 4095 >> 12;
+          var19 = var19 + param2;
+          var20 = var20 + param2;
+          var21 = var21 + param3;
+          var22 = var22 + param3;
+          var19 = var19 >> 4;
+          var20 = var20 + 15 >> 4;
+          var21 = var21 >> 4;
+          var22 = var22 + 15 >> 4;
+          if (var19 < vb.field_e) {
+            var19 = vb.field_e;
           }
-          L11: {
-            if (var20 <= vb.field_k) {
-              break L11;
-            } else {
-              var20 = vb.field_k;
-              break L11;
-            }
+          if (var20 > vb.field_k) {
+            var20 = vb.field_k;
           }
-          L12: {
-            if (var21 >= vb.field_i) {
-              break L12;
-            } else {
-              var21 = vb.field_i;
-              break L12;
-            }
+          if (var21 < vb.field_i) {
+            var21 = vb.field_i;
           }
-          L13: {
-            if (var22 <= vb.field_d) {
-              break L13;
-            } else {
-              var22 = vb.field_d;
-              break L13;
-            }
+          if (var22 > vb.field_d) {
+            var22 = vb.field_d;
           }
           var20 = var19 - var20;
           if (var20 < 0) {
@@ -2808,382 +2221,274 @@ class dm extends wh {
                 if (var28 >= 0) {
                   if (var27 >= 0) {
                     var36 = var22;
-                    L15: while (true) {
-                      if (var36 >= 0) {
-                        break L14;
+                    L15: while (var36 < 0) {
+                      var37 = var31 + (var29 * var28 >> 4);
+                      var38 = var32 + (var29 * var27 >> 4);
+                      var39 = var20;
+                      var40 = 0;
+                      var35 = var37 + 4096;
+                      if (var35 < 0) {
+                        if (var28 != 0) {
+                          var35 = (var28 - 1 - var35) / var28;
+                          var39 = var39 + var35;
+                          var37 = var37 + var28 * var35;
+                          var38 = var38 + var27 * var35;
+                          var23 = var23 + var35;
+                          var40 = 1;
+                        } else {
+                          var23 = var23 - var39;
+                        }
                       } else {
-                        L16: {
-                          var37 = var31 + (var29 * var28 >> 4);
-                          var38 = var32 + (var29 * var27 >> 4);
-                          var39 = var20;
+                        var40 = 1;
+                      }
+                      L17: {
+                        if (var40 != 0) {
                           var40 = 0;
-                          var35 = var37 + 4096;
+                          var35 = var38 + 4096;
                           if (var35 < 0) {
-                            if (var28 != 0) {
-                              var35 = (var28 - 1 - var35) / var28;
+                            if (var27 != 0) {
+                              var35 = (var27 - 1 - var35) / var27;
                               var39 = var39 + var35;
                               var37 = var37 + var28 * var35;
                               var38 = var38 + var27 * var35;
                               var23 = var23 + var35;
                               var40 = 1;
-                              break L16;
                             } else {
                               var23 = var23 - var39;
-                              break L16;
                             }
                           } else {
                             var40 = 1;
-                            break L16;
                           }
-                        }
-                        L17: {
-                          if (var40 == 0) {
+                          if (var40 != 0) {
+                            L19: while (var39 < 0) {
+                              var33 = var37 >> 12;
+                              if (var37 >> 12 < this.field_r) {
+                                var34 = var38 >> 12;
+                                if (var38 >> 12 < this.field_m) {
+                                  this.c(var23, var33, var34, var37, var38);
+                                  var39++;
+                                  var37 = var37 + var28;
+                                  var38 = var38 + var27;
+                                  var23++;
+                                  continue L19;
+                                }
+                              }
+                              break;
+                            }
+                            var23 = var23 - var39;
                             break L17;
-                          } else {
-                            L18: {
-                              var40 = 0;
-                              var35 = var38 + 4096;
-                              if (var35 < 0) {
-                                if (var27 != 0) {
-                                  var35 = (var27 - 1 - var35) / var27;
-                                  var39 = var39 + var35;
-                                  var37 = var37 + var28 * var35;
-                                  var38 = var38 + var27 * var35;
-                                  var23 = var23 + var35;
-                                  var40 = 1;
-                                  break L18;
-                                } else {
-                                  var23 = var23 - var39;
-                                  break L18;
-                                }
-                              } else {
-                                var40 = 1;
-                                break L18;
-                              }
-                            }
-                            if (var40 == 0) {
-                              break L17;
-                            } else {
-                              L19: while (true) {
-                                L20: {
-                                  if (var39 >= 0) {
-                                    break L20;
-                                  } else {
-                                    var33 = var37 >> 12;
-                                    if (var37 >> 12 >= this.field_r) {
-                                      break L20;
-                                    } else {
-                                      var34 = var38 >> 12;
-                                      if (var38 >> 12 < this.field_m) {
-                                        this.c(var23, var33, var34, var37, var38);
-                                        var39++;
-                                        var37 = var37 + var28;
-                                        var38 = var38 + var27;
-                                        var23++;
-                                        continue L19;
-                                      } else {
-                                        break L20;
-                                      }
-                                    }
-                                  }
-                                }
-                                var23 = var23 - var39;
-                                break L17;
-                              }
-                            }
                           }
                         }
-                        var36++;
-                        var31 = var31 - var27;
-                        var32 = var32 + var28;
-                        var23 = var23 + var24;
-                        continue L15;
                       }
+                      var36++;
+                      var31 = var31 - var27;
+                      var32 = var32 + var28;
+                      var23 = var23 + var24;
                     }
+                    break L14;
                   } else {
                     var36 = var22;
-                    L21: while (true) {
-                      if (var36 >= 0) {
-                        break L14;
+                    L21: while (var36 < 0) {
+                      var37 = var31 + (var29 * var28 >> 4);
+                      var38 = var32 + (var29 * var27 >> 4);
+                      var39 = var20;
+                      var40 = 0;
+                      var35 = var37 + 4096;
+                      if (var35 < 0) {
+                        if (var28 != 0) {
+                          var35 = (var28 - 1 - var35) / var28;
+                          var39 = var39 + var35;
+                          var37 = var37 + var28 * var35;
+                          var38 = var38 + var27 * var35;
+                          var23 = var23 + var35;
+                          var40 = 1;
+                        } else {
+                          var23 = var23 - var39;
+                        }
                       } else {
-                        L22: {
-                          var37 = var31 + (var29 * var28 >> 4);
-                          var38 = var32 + (var29 * var27 >> 4);
-                          var39 = var20;
+                        var40 = 1;
+                      }
+                      L23: {
+                        if (var40 != 0) {
                           var40 = 0;
-                          var35 = var37 + 4096;
-                          if (var35 < 0) {
-                            if (var28 != 0) {
-                              var35 = (var28 - 1 - var35) / var28;
+                          var35 = var38 - (this.field_m << 12);
+                          if (var35 >= 0) {
+                            if (var27 != 0) {
+                              var35 = (var27 - var35) / var27;
                               var39 = var39 + var35;
                               var37 = var37 + var28 * var35;
                               var38 = var38 + var27 * var35;
                               var23 = var23 + var35;
                               var40 = 1;
-                              break L22;
                             } else {
                               var23 = var23 - var39;
-                              break L22;
                             }
                           } else {
                             var40 = 1;
-                            break L22;
                           }
-                        }
-                        L23: {
-                          if (var40 == 0) {
+                          if (var40 != 0) {
+                            L25: while (var39 < 0) {
+                              if (var38 >= -4096) {
+                                var33 = var37 >> 12;
+                                if (var37 >> 12 < this.field_r) {
+                                  var34 = var38 >> 12;
+                                  this.c(var23, var33, var34, var37, var38);
+                                  var39++;
+                                  var37 = var37 + var28;
+                                  var38 = var38 + var27;
+                                  var23++;
+                                  continue L25;
+                                }
+                              }
+                              break;
+                            }
+                            var23 = var23 - var39;
                             break L23;
-                          } else {
-                            L24: {
-                              var40 = 0;
-                              var35 = var38 - (this.field_m << 12);
-                              if (var35 >= 0) {
-                                if (var27 != 0) {
-                                  var35 = (var27 - var35) / var27;
-                                  var39 = var39 + var35;
-                                  var37 = var37 + var28 * var35;
-                                  var38 = var38 + var27 * var35;
-                                  var23 = var23 + var35;
-                                  var40 = 1;
-                                  break L24;
-                                } else {
-                                  var23 = var23 - var39;
-                                  break L24;
-                                }
-                              } else {
-                                var40 = 1;
-                                break L24;
-                              }
-                            }
-                            if (var40 == 0) {
-                              break L23;
-                            } else {
-                              L25: while (true) {
-                                L26: {
-                                  if (var39 >= 0) {
-                                    break L26;
-                                  } else {
-                                    if (var38 < -4096) {
-                                      break L26;
-                                    } else {
-                                      var33 = var37 >> 12;
-                                      if (var37 >> 12 < this.field_r) {
-                                        var34 = var38 >> 12;
-                                        this.c(var23, var33, var34, var37, var38);
-                                        var39++;
-                                        var37 = var37 + var28;
-                                        var38 = var38 + var27;
-                                        var23++;
-                                        continue L25;
-                                      } else {
-                                        break L26;
-                                      }
-                                    }
-                                  }
-                                }
-                                var23 = var23 - var39;
-                                break L23;
-                              }
-                            }
                           }
                         }
-                        var36++;
-                        var31 = var31 - var27;
-                        var32 = var32 + var28;
-                        var23 = var23 + var24;
-                        continue L21;
                       }
+                      var36++;
+                      var31 = var31 - var27;
+                      var32 = var32 + var28;
+                      var23 = var23 + var24;
                     }
+                    break L14;
                   }
                 } else {
                   if (var27 >= 0) {
                     var36 = var22;
-                    L27: while (true) {
-                      if (var36 >= 0) {
-                        break L14;
+                    L27: while (var36 < 0) {
+                      var37 = var31 + (var29 * var28 >> 4);
+                      var38 = var32 + (var29 * var27 >> 4);
+                      var39 = var20;
+                      var40 = 0;
+                      var35 = var37 - (this.field_r << 12);
+                      if (var35 >= 0) {
+                        if (var28 != 0) {
+                          var35 = (var28 - var35) / var28;
+                          var39 = var39 + var35;
+                          var37 = var37 + var28 * var35;
+                          var38 = var38 + var27 * var35;
+                          var23 = var23 + var35;
+                          var40 = 1;
+                        } else {
+                          var23 = var23 - var39;
+                        }
                       } else {
-                        L28: {
-                          var37 = var31 + (var29 * var28 >> 4);
-                          var38 = var32 + (var29 * var27 >> 4);
-                          var39 = var20;
+                        var40 = 1;
+                      }
+                      L29: {
+                        if (var40 != 0) {
                           var40 = 0;
-                          var35 = var37 - (this.field_r << 12);
-                          if (var35 >= 0) {
-                            if (var28 != 0) {
-                              var35 = (var28 - var35) / var28;
+                          var35 = var38 + 4096;
+                          if (var35 < 0) {
+                            if (var27 != 0) {
+                              var35 = (var27 - 1 - var35) / var27;
                               var39 = var39 + var35;
                               var37 = var37 + var28 * var35;
                               var38 = var38 + var27 * var35;
                               var23 = var23 + var35;
                               var40 = 1;
-                              break L28;
                             } else {
                               var23 = var23 - var39;
-                              break L28;
                             }
                           } else {
                             var40 = 1;
-                            break L28;
                           }
-                        }
-                        L29: {
-                          if (var40 == 0) {
+                          if (var40 != 0) {
+                            L31: while (var39 < 0) {
+                              if (var37 >= -4096) {
+                                var34 = var38 >> 12;
+                                if (var38 >> 12 < this.field_m) {
+                                  var33 = var37 >> 12;
+                                  this.c(var23, var33, var34, var37, var38);
+                                  var39++;
+                                  var37 = var37 + var28;
+                                  var38 = var38 + var27;
+                                  var23++;
+                                  continue L31;
+                                }
+                              }
+                              break;
+                            }
+                            var23 = var23 - var39;
                             break L29;
-                          } else {
-                            L30: {
-                              var40 = 0;
-                              var35 = var38 + 4096;
-                              if (var35 < 0) {
-                                if (var27 != 0) {
-                                  var35 = (var27 - 1 - var35) / var27;
-                                  var39 = var39 + var35;
-                                  var37 = var37 + var28 * var35;
-                                  var38 = var38 + var27 * var35;
-                                  var23 = var23 + var35;
-                                  var40 = 1;
-                                  break L30;
-                                } else {
-                                  var23 = var23 - var39;
-                                  break L30;
-                                }
-                              } else {
-                                var40 = 1;
-                                break L30;
-                              }
-                            }
-                            if (var40 == 0) {
-                              break L29;
-                            } else {
-                              L31: while (true) {
-                                L32: {
-                                  if (var39 >= 0) {
-                                    break L32;
-                                  } else {
-                                    if (var37 < -4096) {
-                                      break L32;
-                                    } else {
-                                      var34 = var38 >> 12;
-                                      if (var38 >> 12 < this.field_m) {
-                                        var33 = var37 >> 12;
-                                        this.c(var23, var33, var34, var37, var38);
-                                        var39++;
-                                        var37 = var37 + var28;
-                                        var38 = var38 + var27;
-                                        var23++;
-                                        continue L31;
-                                      } else {
-                                        break L32;
-                                      }
-                                    }
-                                  }
-                                }
-                                var23 = var23 - var39;
-                                break L29;
-                              }
-                            }
                           }
                         }
-                        var36++;
-                        var31 = var31 - var27;
-                        var32 = var32 + var28;
-                        var23 = var23 + var24;
-                        continue L27;
                       }
+                      var36++;
+                      var31 = var31 - var27;
+                      var32 = var32 + var28;
+                      var23 = var23 + var24;
                     }
+                    break L14;
                   } else {
                     var36 = var22;
-                    L33: while (true) {
-                      if (var36 >= 0) {
-                        return;
+                    L33: while (var36 < 0) {
+                      var37 = var31 + (var29 * var28 >> 4);
+                      var38 = var32 + (var29 * var27 >> 4);
+                      var39 = var20;
+                      var40 = 0;
+                      var35 = var37 - (this.field_r << 12);
+                      if (var35 >= 0) {
+                        if (var28 != 0) {
+                          var35 = (var28 - var35) / var28;
+                          var39 = var39 + var35;
+                          var37 = var37 + var28 * var35;
+                          var38 = var38 + var27 * var35;
+                          var23 = var23 + var35;
+                          var40 = 1;
+                        } else {
+                          var23 = var23 - var39;
+                        }
                       } else {
-                        L34: {
-                          var37 = var31 + (var29 * var28 >> 4);
-                          var38 = var32 + (var29 * var27 >> 4);
-                          var39 = var20;
+                        var40 = 1;
+                      }
+                      L35: {
+                        if (var40 != 0) {
                           var40 = 0;
-                          var35 = var37 - (this.field_r << 12);
+                          var35 = var38 - (this.field_m << 12);
                           if (var35 >= 0) {
-                            if (var28 != 0) {
-                              var35 = (var28 - var35) / var28;
+                            if (var27 != 0) {
+                              var35 = (var27 - var35) / var27;
                               var39 = var39 + var35;
                               var37 = var37 + var28 * var35;
                               var38 = var38 + var27 * var35;
                               var23 = var23 + var35;
                               var40 = 1;
-                              break L34;
                             } else {
                               var23 = var23 - var39;
-                              break L34;
                             }
                           } else {
                             var40 = 1;
-                            break L34;
                           }
-                        }
-                        L35: {
-                          if (var40 == 0) {
+                          if (var40 != 0) {
+                            L37: while (var39 < 0) {
+                              if (var37 >= -4096) {
+                                if (var38 >= -4096) {
+                                  var33 = var37 >> 12;
+                                  var34 = var38 >> 12;
+                                  this.c(var23, var33, var34, var37, var38);
+                                  var39++;
+                                  var37 = var37 + var28;
+                                  var38 = var38 + var27;
+                                  var23++;
+                                  continue L37;
+                                }
+                              }
+                              break;
+                            }
+                            var23 = var23 - var39;
                             break L35;
-                          } else {
-                            L36: {
-                              var40 = 0;
-                              var35 = var38 - (this.field_m << 12);
-                              if (var35 >= 0) {
-                                if (var27 != 0) {
-                                  var35 = (var27 - var35) / var27;
-                                  var39 = var39 + var35;
-                                  var37 = var37 + var28 * var35;
-                                  var38 = var38 + var27 * var35;
-                                  var23 = var23 + var35;
-                                  var40 = 1;
-                                  break L36;
-                                } else {
-                                  var23 = var23 - var39;
-                                  break L36;
-                                }
-                              } else {
-                                var40 = 1;
-                                break L36;
-                              }
-                            }
-                            if (var40 == 0) {
-                              break L35;
-                            } else {
-                              L37: while (true) {
-                                L38: {
-                                  if (var39 >= 0) {
-                                    break L38;
-                                  } else {
-                                    if (var37 < -4096) {
-                                      break L38;
-                                    } else {
-                                      if (var38 >= -4096) {
-                                        var33 = var37 >> 12;
-                                        var34 = var38 >> 12;
-                                        this.c(var23, var33, var34, var37, var38);
-                                        var39++;
-                                        var37 = var37 + var28;
-                                        var38 = var38 + var27;
-                                        var23++;
-                                        continue L37;
-                                      } else {
-                                        break L38;
-                                      }
-                                    }
-                                  }
-                                }
-                                var23 = var23 - var39;
-                                break L35;
-                              }
-                            }
                           }
                         }
-                        var36++;
-                        var31 = var31 - var27;
-                        var32 = var32 + var28;
-                        var23 = var23 + var24;
-                        continue L33;
                       }
+                      var36++;
+                      var31 = var31 - var27;
+                      var32 = var32 + var28;
+                      var23 = var23 + var24;
                     }
+                    return;
                   }
                 }
               }
@@ -3393,28 +2698,22 @@ class dm extends wh {
         java.awt.MediaTracker var4 = null;
         java.awt.image.PixelGrabber var5 = null;
         try {
-          L0: {
-            var3 = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
-            var4 = new java.awt.MediaTracker(param1);
-            var4.addImage(var3, 0);
-            var4.waitForAll();
-            this.field_r = var3.getWidth((java.awt.image.ImageObserver) ((Object) param1));
-            this.field_m = var3.getHeight((java.awt.image.ImageObserver) ((Object) param1));
-            this.field_s = this.field_r;
-            this.field_o = this.field_m;
-            this.field_u = 0;
-            this.field_p = 0;
-            this.field_v = new int[this.field_r * this.field_m];
-            var5 = new java.awt.image.PixelGrabber(var3, 0, 0, this.field_r, this.field_m, this.field_v, 0, this.field_r);
-            var5.grabPixels();
-            break L0;
-          }
+          var3 = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
+          var4 = new java.awt.MediaTracker(param1);
+          var4.addImage(var3, 0);
+          var4.waitForAll();
+          this.field_r = var3.getWidth((java.awt.image.ImageObserver) ((Object) param1));
+          this.field_m = var3.getHeight((java.awt.image.ImageObserver) ((Object) param1));
+          this.field_s = this.field_r;
+          this.field_o = this.field_m;
+          this.field_u = 0;
+          this.field_p = 0;
+          this.field_v = new int[this.field_r * this.field_m];
+          var5 = new java.awt.image.PixelGrabber(var3, 0, 0, this.field_r, this.field_m, this.field_v, 0, this.field_r);
+          var5.grabPixels();
         } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3_ref = (InterruptedException) (Object) decompiledCaughtException;
-            break L1;
-          }
+          var3_ref = (InterruptedException) (Object) decompiledCaughtException;
         }
     }
 }

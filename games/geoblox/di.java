@@ -11,43 +11,26 @@ final class di {
     private rh field_b;
 
     final og a(byte param0, int param1) {
-        og var3;
-        int var4;
-        byte[] var5;
-        var3 = (og) (this.field_f.a((byte) 106, (long)param1));
-        if (var3 != null) {
-          return var3;
-        } else {
-          L0: {
-            var4 = 3 % ((param0 - 57) / 42);
-            if (param1 >= 32768) {
-              var5 = this.field_b.a(1, -28153, 32767 & param1);
-              break L0;
+        byte[] var5 = null;
+        og var3 = (og) (this.field_f.a((byte) 106, (long)param1));
+        if (var3 == null) {
+            int var4 = 3 % ((param0 - 57) / 42);
+            if (param1 < 32768) {
+                var5 = this.field_d.a(1, -28153, param1);
             } else {
-              var5 = this.field_d.a(1, -28153, param1);
-              break L0;
+                var5 = this.field_b.a(1, -28153, 32767 & param1);
             }
-          }
-          L1: {
             var3 = new og();
-            if (var5 != null) {
-              var3.a(0, new qc(var5));
-              break L1;
-            } else {
-              break L1;
+            if (!(var5 == null)) {
+                var3.a(0, new qc(var5));
             }
-          }
-          L2: {
-            if (param1 >= 32768) {
-              var3.f((byte) 119);
-              break L2;
-            } else {
-              break L2;
+            if (!(param1 < 32768)) {
+                var3.f((byte) 119);
             }
-          }
-          this.field_f.a(-126, (long)param1, var3);
-          return var3;
+            this.field_f.a(-126, (long)param1, var3);
+            return var3;
         }
+        return var3;
     }
 
     public static void a(byte param0) {
@@ -66,24 +49,16 @@ final class di {
         try {
           L0: {
             var4 = (wc) ((Object) l.field_g.g(param1 ^ param1));
-            L1: while (true) {
-              if (var4 == null) {
-                var2 = qa.field_e.g(0);
-                L2: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    gf.a(param0, 125);
-                    var2 = qa.field_e.d(1);
-                    continue L2;
-                  }
-                }
-              } else {
-                o.a(param0, var4, param1 + -21718);
-                var4 = (wc) ((Object) l.field_g.d(1));
-                continue L1;
-              }
+            L1: while (var4 != null) {
+              o.a(param0, var4, param1 + -21718);
+              var4 = (wc) ((Object) l.field_g.d(1));
             }
+            var2 = qa.field_e.g(0);
+            L2: while (var2 != null) {
+              gf.a(param0, 125);
+              var2 = qa.field_e.d(1);
+            }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

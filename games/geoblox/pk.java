@@ -13,9 +13,9 @@ final class pk extends qc {
     static int field_m;
 
     final void c(int param0, int param1, byte[] param2, int param3) {
+        int var6 = 0;
         int fieldTemp$2 = 0;
         int var5_int = 0;
-        int var6 = 0;
         int var7 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -28,38 +28,28 @@ final class pk extends qc {
         try {
           L0: {
             var5_int = 31 % ((param0 - -36) / 37);
-            var6 = 0;
-            L1: while (true) {
-              if (var6 >= param3) {
-                break L0;
-              } else {
-                fieldTemp$2 = this.field_f;
-                this.field_f = this.field_f + 1;
-                param2[var6 + param1] = (byte)(this.field_j[fieldTemp$2] + -this.field_p.b(0));
-                var6++;
-                continue L1;
-              }
+            for (var6 = 0; var6 < param3; var6++) {
+              fieldTemp$2 = this.field_f;
+              this.field_f = this.field_f + 1;
+              param2[var6 + param1] = (byte)(this.field_j[fieldTemp$2] + -this.field_p.b(0));
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var5);
+          var5 = decompiledCaughtException;
+          stackIn_7_0 = (RuntimeException) (var5);
 
-            stackIn_7_1 = new StringBuilder().append("pk.FB(").append(param0).append(',').append(param1).append(',');
+          stackIn_7_1 = new StringBuilder().append("pk.FB(").append(param0).append(',').append(param1).append(',');
 
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          if (param2 == null) {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param3 + ')');
         }
@@ -131,30 +121,18 @@ final class pk extends qc {
                   }
                 } else {
                   if (param1 == ck.field_c[var2_int]) {
-                    L3: {
-                      if (!vg.field_j[var2_int]) {
-                        L4: {
-                          L5: {
-                            if (10 > var2_int) {
-                              break L5;
-                            } else {
-                              if (26 >= var2_int) {
-                                var3 = te.field_c.c(-1879044097, w.field_b[var2_int]);
-                                break L4;
-                              } else {
-                                break L5;
-                              }
-                            }
+                    if (!vg.field_j[var2_int]) {
+                      L4: {
+                        if (10 <= var2_int) {
+                          if (26 >= var2_int) {
+                            var3 = te.field_c.c(-1879044097, w.field_b[var2_int]);
+                            break L4;
                           }
-                          var3 = te.field_c.b(1, w.field_b[var2_int]);
-                          break L4;
                         }
-                        fl.field_c[var2_int] = var3.a(p.field_i);
-                        vg.field_j[var2_int] = true;
-                        break L3;
-                      } else {
-                        break L3;
+                        var3 = te.field_c.b(1, w.field_b[var2_int]);
                       }
+                      fl.field_c[var2_int] = var3.a(p.field_i);
+                      vg.field_j[var2_int] = true;
                     }
                     var2_int++;
                     continue L1;
@@ -166,7 +144,6 @@ final class pk extends qc {
               }
             } else {
               decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

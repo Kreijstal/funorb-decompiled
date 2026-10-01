@@ -12,20 +12,18 @@ final class sg {
 
     public static void a(int param0) {
         field_e = null;
-        if (param0 != -13575) {
-          sg.a(-7);
-          field_f = null;
-          field_a = null;
-          field_b = null;
-          field_c = (byte[][][]) null;
-          return;
-        } else {
-          field_f = null;
-          field_a = null;
-          field_b = null;
-          field_c = (byte[][][]) null;
-          return;
+        if (param0 == -13575) {
+            field_f = null;
+            field_a = null;
+            field_b = null;
+            field_c = (byte[][][]) null;
+            return;
         }
+        sg.a(-7);
+        field_f = null;
+        field_a = null;
+        field_b = null;
+        field_c = (byte[][][]) null;
     }
 
     static {

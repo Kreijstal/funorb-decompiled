@@ -42,40 +42,26 @@ final class ef implements Iterator {
         var3 = Geoblox.field_C;
         try {
           L0: {
-            L1: {
-              var1_float = el.field_o.field_J;
-              ab.a(param0 + -22, var1_float);
-              rh.a((byte) 123);
-              if (param0 == -15) {
-                break L1;
-              } else {
-                ef.a((byte) -11);
-                break L1;
-              }
+            var1_float = el.field_o.field_J;
+            ab.a(param0 + -22, var1_float);
+            rh.a((byte) 123);
+            if (param0 != -15) {
+              ef.a((byte) -11);
             }
             var2 = (ja) ((Object) bh.field_c.g(0));
-            L2: while (true) {
-              if (var2 == null) {
-                if (el.field_o.field_C) {
-                  break L0;
-                } else {
-                  lc.a(255);
-                  return;
-                }
-              } else {
-                L3: {
-                  var2.b(true);
-                  if ((var2.field_G ^ -1) > -4) {
-                    break L3;
-                  } else {
-                    var2.field_K = ra.field_a;
-                    var2.field_G = 0;
-                    break L3;
-                  }
-                }
-                var2 = (ja) ((Object) bh.field_c.d(1));
-                continue L2;
+            L2: while (var2 != null) {
+              var2.b(true);
+              if ((var2.field_G ^ -1) <= -4) {
+                var2.field_K = ra.field_a;
+                var2.field_G = 0;
               }
+              var2 = (ja) ((Object) bh.field_c.d(1));
+            }
+            if (el.field_o.field_C) {
+              break L0;
+            } else {
+              lc.a(255);
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

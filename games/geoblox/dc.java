@@ -22,19 +22,15 @@ final class dc {
         try {
           L0: {
             var3 = (ja) ((Object) a.field_d.g(0));
-            L1: while (true) {
-              if (var3 == null) {
-                if (param0 == 7838) {
-                  break L0;
-                } else {
-                  dc.b(-80);
-                  return;
-                }
-              } else {
-                var3.e(1643839728);
-                var3 = (ja) ((Object) a.field_d.d(1));
-                continue L1;
-              }
+            L1: while (var3 != null) {
+              var3.e(1643839728);
+              var3 = (ja) ((Object) a.field_d.d(1));
+            }
+            if (param0 == 7838) {
+              break L0;
+            } else {
+              dc.b(-80);
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

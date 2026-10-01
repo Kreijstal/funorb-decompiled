@@ -11,6 +11,9 @@ final class ui {
     private int field_b;
 
     final void a(float[] param0, int param1, boolean param2) {
+        int var17 = 0;
+        int var16 = 0;
+        int var18 = 0;
         int var4;
         int var5;
         int var6;
@@ -23,138 +26,92 @@ final class ui {
         int var13;
         ae var14;
         int var15;
-        int var16;
-        int var17;
-        int var18;
         int[] var19;
         int[] var22;
         float[] var27;
         float[] var28;
-        var4 = 0;
-        L0: while (true) {
-          if (var4 >= param1) {
-            if (!param2) {
-              var4 = ua.field_u[this.field_a].field_e;
-              var5 = this.field_b - this.field_c;
-              var6 = var5 / this.field_f;
-              var22 = new int[var6];
-              var19 = var22;
-              var7 = var19;
-              var8 = 0;
-              L1: while (true) {
-                if (var8 >= 8) {
-                  return;
+        for (var4 = 0; var4 < param1; var4++) {
+          param0[var4] = 0.0f;
+        }
+        if (!param2) {
+          var4 = ua.field_u[this.field_a].field_e;
+          var5 = this.field_b - this.field_c;
+          var6 = var5 / this.field_f;
+          var22 = new int[var6];
+          var19 = var22;
+          var7 = var19;
+          var8 = 0;
+          L1: while (true) {
+            if (var8 >= 8) {
+              return;
+            } else {
+              var9 = 0;
+              L2: while (true) {
+                if (var9 >= var6) {
+                  var8++;
+                  continue L1;
                 } else {
-                  var9 = 0;
-                  L2: while (true) {
-                    if (var9 >= var6) {
-                      var8++;
-                      continue L1;
+                  L3: {
+                    if (var8 == 0) {
+                      var10 = ua.field_u[this.field_a].b();
+                      for (var11 = var4 - 1; var11 >= 0; var11--) {
+                        if (var9 + var11 < var6) {
+                          var7[var9 + var11] = var10 % this.field_e;
+                        }
+                        var10 = var10 / this.field_e;
+                      }
+                      break L3;
+                    }
+                  }
+                  var22 = var19;
+                  var10 = 0;
+                  L6: while (true) {
+                    if (var10 >= var4) {
+                      continue L2;
                     } else {
-                      L3: {
-                        if (var8 != 0) {
-                          break L3;
-                        } else {
-                          var10 = ua.field_u[this.field_a].b();
-                          var11 = var4 - 1;
-                          L4: while (true) {
-                            if (var11 < 0) {
-                              break L3;
-                            } else {
-                              L5: {
-                                if (var9 + var11 >= var6) {
-                                  break L5;
-                                } else {
-                                  var7[var9 + var11] = var10 % this.field_e;
-                                  break L5;
-                                }
+                      L7: {
+                        var11 = var22[var9];
+                        var12 = this.field_g[var11 * 8 + var8];
+                        if (var12 >= 0) {
+                          var13 = this.field_c + var9 * this.field_f;
+                          var14 = ua.field_u[var12];
+                          if (this.field_d != 0) {
+                            var15 = 0;
+                            L8: while (var15 < this.field_f) {
+                              var28 = var14.a();
+                              for (var17 = 0; var17 < var14.field_e; var17++) {
+                                param0[var13 + var15] = param0[var13 + var15] + var28[var17];
+                                var15++;
                               }
-                              var10 = var10 / this.field_e;
-                              var11--;
-                              continue L4;
                             }
+                            break L7;
+                          } else {
+                            var15 = this.field_f / var14.field_e;
+                            for (var16 = 0; var16 < var15; var16++) {
+                              var27 = var14.a();
+                              for (var18 = 0; var18 < var14.field_e; var18++) {
+                                param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
+                              }
+                            }
+                            break L7;
                           }
                         }
                       }
-                      var22 = var19;
-                      var10 = 0;
-                      L6: while (true) {
-                        if (var10 >= var4) {
-                          continue L2;
-                        } else {
-                          L7: {
-                            var11 = var22[var9];
-                            var12 = this.field_g[var11 * 8 + var8];
-                            if (var12 < 0) {
-                              break L7;
-                            } else {
-                              var13 = this.field_c + var9 * this.field_f;
-                              var14 = ua.field_u[var12];
-                              if (this.field_d != 0) {
-                                var15 = 0;
-                                L8: while (true) {
-                                  if (var15 >= this.field_f) {
-                                    break L7;
-                                  } else {
-                                    var28 = var14.a();
-                                    var17 = 0;
-                                    L9: while (true) {
-                                      if (var17 >= var14.field_e) {
-                                        continue L8;
-                                      } else {
-                                        param0[var13 + var15] = param0[var13 + var15] + var28[var17];
-                                        var15++;
-                                        var17++;
-                                        continue L9;
-                                      }
-                                    }
-                                  }
-                                }
-                              } else {
-                                var15 = this.field_f / var14.field_e;
-                                var16 = 0;
-                                L10: while (true) {
-                                  if (var16 >= var15) {
-                                    break L7;
-                                  } else {
-                                    var27 = var14.a();
-                                    var18 = 0;
-                                    L11: while (true) {
-                                      if (var18 >= var14.field_e) {
-                                        var16++;
-                                        continue L10;
-                                      } else {
-                                        param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
-                                        var18++;
-                                        continue L11;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          var9++;
-                          if (var9 < var6) {
-                            var10++;
-                            continue L6;
-                          } else {
-                            continue L2;
-                          }
-                        }
+                      var9++;
+                      if (var9 < var6) {
+                        var10++;
+                        continue L6;
+                      } else {
+                        continue L2;
                       }
                     }
                   }
                 }
               }
-            } else {
-              return;
             }
-          } else {
-            param0[var4] = 0.0f;
-            var4++;
-            continue L0;
           }
+        } else {
+          return;
         }
     }
 

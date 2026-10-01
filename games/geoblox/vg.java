@@ -114,24 +114,17 @@ final class vg {
     }
 
     vg(int param0) {
+        int var2 = 0;
         rc dupTemp$1 = null;
-        int var2;
         rc var3;
         this.field_g = new rc[param0];
         this.field_h = param0;
-        var2 = 0;
-        L0: while (true) {
-          if (param0 > var2) {
-            dupTemp$1 = new rc();
-            var3 = dupTemp$1;
-            this.field_g[var2] = dupTemp$1;
-            var3.field_k = var3;
-            var3.field_l = var3;
-            var2++;
-            continue L0;
-          } else {
-            return;
-          }
+        for (var2 = 0; param0 > var2; var2++) {
+          dupTemp$1 = new rc();
+          var3 = dupTemp$1;
+          this.field_g[var2] = dupTemp$1;
+          var3.field_k = var3;
+          var3.field_l = var3;
         }
     }
 

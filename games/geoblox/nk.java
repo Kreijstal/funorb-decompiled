@@ -35,32 +35,25 @@ final class nk extends df {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var2_int = param0.length;
-            var3 = new byte[var2_int];
-            sf.a(param0, 0, var3, param1, var2_int);
-            stackIn_1_0 = (byte[]) (var3);
-            break L0;
-          }
+          var2_int = param0.length;
+          var3 = new byte[var2_int];
+          sf.a(param0, 0, var3, param1, var2_int);
+          stackIn_1_0 = (byte[]) (var3);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_4_0 = (RuntimeException) (var2);
 
-            stackIn_4_1 = new StringBuilder().append("nk.A(");
+          stackIn_4_1 = new StringBuilder().append("nk.A(");
 
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          if (param0 == null) {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+            stackIn_5_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
         }

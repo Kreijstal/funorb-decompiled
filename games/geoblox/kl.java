@@ -19,78 +19,56 @@ final class kl extends ia {
     private int field_t;
 
     private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, kl param11, int param12, int param13) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         L0: {
-          L1: {
-            if (param12 == 0) {
-              break L1;
-            } else {
-              param8 = param5 + (param10 + 256 - param4 + param12) / param12;
-              if (param5 + (param10 + 256 - param4 + param12) / param12 <= param9) {
-                break L0;
-              } else {
-                break L1;
-              }
+          if (param12 != 0) {
+            param8 = param5 + (param10 + 256 - param4 + param12) / param12;
+            if (param5 + (param10 + 256 - param4 + param12) / param12 <= param9) {
+              break L0;
             }
           }
           param8 = param9;
-          break L0;
         }
         param5 = param5 << 1;
         param8 = param8 << 1;
-        L2: while (true) {
-          if (param5 >= param8) {
-            L3: {
-              L4: {
-                if (param12 == 0) {
-                  break L4;
-                } else {
-                  param8 = (param5 >> 1) + (param10 - param4 + param12) / param12;
-                  if ((param5 >> 1) + (param10 - param4 + param12) / param12 <= param9) {
-                    break L3;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              param8 = param9;
+        L2: while (param5 < param8) {
+          param1 = param4 >> 8;
+          param0 = param2[param1 - 1];
+          param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
+          incrementValue$6 = param5;
+          param5++;
+          param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
+          incrementValue$7 = param5;
+          param5++;
+          param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
+          param4 = param4 + param12;
+        }
+        L3: {
+          if (param12 != 0) {
+            param8 = (param5 >> 1) + (param10 - param4 + param12) / param12;
+            if ((param5 >> 1) + (param10 - param4 + param12) / param12 <= param9) {
               break L3;
             }
-            param8 = param8 << 1;
-            param1 = param13;
-            L5: while (true) {
-              if (param5 >= param8) {
-                param11.field_x = param4;
-                return param5 >> 1;
-              } else {
-                param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
-                incrementValue$4 = param5;
-                param5++;
-                param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
-                incrementValue$5 = param5;
-                param5++;
-                param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
-                param4 = param4 + param12;
-                continue L5;
-              }
-            }
-          } else {
-            param1 = param4 >> 8;
-            param0 = param2[param1 - 1];
-            param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
-            incrementValue$6 = param5;
-            param5++;
-            param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
-            incrementValue$7 = param5;
-            param5++;
-            param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
-            param4 = param4 + param12;
-            continue L2;
           }
+          param8 = param9;
         }
+        param8 = param8 << 1;
+        param1 = param13;
+        L5: while (param5 < param8) {
+          param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
+          incrementValue$4 = param5;
+          param5++;
+          param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
+          incrementValue$5 = param5;
+          param5++;
+          param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
+          param4 = param4 + param12;
+        }
+        param11.field_x = param4;
+        return param5 >> 1;
     }
 
     final synchronized void f(int param0) {
@@ -108,96 +86,64 @@ final class kl extends ia {
         int var1;
         int var2;
         int var3;
-        L0: {
-          var1 = this.field_u;
-          if (var1 != -2147483648) {
-            var2 = kl.e(var1, this.field_o);
-            var3 = kl.d(var1, this.field_o);
-            break L0;
-          } else {
-            var3 = 0;
-            var2 = 0;
-            var1 = 0;
-            break L0;
-          }
+        var1 = this.field_u;
+        if (var1 != -2147483648) {
+          var2 = kl.e(var1, this.field_o);
+          var3 = kl.d(var1, this.field_o);
+        } else {
+          var3 = 0;
+          var2 = 0;
+          var1 = 0;
         }
-        L1: {
-          if (this.field_k != var1) {
-            break L1;
-          } else {
-            if (this.field_n != var2) {
-              break L1;
-            } else {
-              if (this.field_s == var3) {
-                if (this.field_u == -2147483648) {
-                  this.field_u = 0;
-                  this.field_s = 0;
-                  this.field_n = 0;
-                  this.field_k = 0;
-                  this.a(false);
-                  return true;
-                } else {
-                  this.e();
-                  return false;
-                }
+        if (this.field_k == var1) {
+          if (this.field_n == var2) {
+            if (this.field_s == var3) {
+              if (this.field_u == -2147483648) {
+                this.field_u = 0;
+                this.field_s = 0;
+                this.field_n = 0;
+                this.field_k = 0;
+                this.a(false);
+                return true;
               } else {
-                break L1;
+                this.e();
+                return false;
               }
             }
           }
         }
-        L2: {
-          if (this.field_k >= var1) {
-            if (this.field_k <= var1) {
-              this.field_j = 0;
-              break L2;
-            } else {
-              this.field_j = -1;
-              this.field_l = this.field_k - var1;
-              break L2;
-            }
+        if (this.field_k >= var1) {
+          if (this.field_k <= var1) {
+            this.field_j = 0;
           } else {
-            this.field_j = 1;
-            this.field_l = var1 - this.field_k;
-            break L2;
+            this.field_j = -1;
+            this.field_l = this.field_k - var1;
           }
+        } else {
+          this.field_j = 1;
+          this.field_l = var1 - this.field_k;
         }
         L3: {
           if (this.field_n >= var2) {
             if (this.field_n <= var2) {
               this.field_t = 0;
-              break L3;
             } else {
-              L4: {
-                this.field_t = -1;
-                if (this.field_l == 0) {
-                  break L4;
-                } else {
-                  if (this.field_l <= this.field_n - var2) {
-                    break L3;
-                  } else {
-                    break L4;
-                  }
+              this.field_t = -1;
+              if (this.field_l != 0) {
+                if (this.field_l <= this.field_n - var2) {
+                  break L3;
                 }
               }
               this.field_l = this.field_n - var2;
-              break L3;
             }
           } else {
-            L5: {
-              this.field_t = 1;
-              if (this.field_l == 0) {
-                break L5;
-              } else {
-                if (this.field_l <= var2 - this.field_n) {
-                  break L3;
-                } else {
-                  break L5;
-                }
+            this.field_t = 1;
+            if (this.field_l != 0) {
+              if (this.field_l <= var2 - this.field_n) {
+                break L3;
               }
             }
             this.field_l = var2 - this.field_n;
-            break L3;
           }
         }
         if (this.field_s < var3) {
@@ -217,22 +163,14 @@ final class kl extends ia {
           L6: {
             if (this.field_s <= var3) {
               this.field_w = 0;
-              break L6;
             } else {
-              L7: {
-                this.field_w = -1;
-                if (this.field_l == 0) {
-                  break L7;
-                } else {
-                  if (this.field_l <= this.field_s - var3) {
-                    break L6;
-                  } else {
-                    break L7;
-                  }
+              this.field_w = -1;
+              if (this.field_l != 0) {
+                if (this.field_l <= this.field_s - var3) {
+                  break L6;
                 }
               }
               this.field_l = this.field_s - var3;
-              break L6;
             }
           }
           return false;
@@ -243,18 +181,12 @@ final class kl extends ia {
         int var6;
         L0: while (true) {
           if (this.field_l <= 0) {
-            L1: {
-              if (this.field_p != -256) {
-                break L1;
-              } else {
-                if ((this.field_x & 255) != 0) {
-                  break L1;
+            if (this.field_p == -256) {
+              if ((this.field_x & 255) == 0) {
+                if (qk.field_q) {
+                  return kl.b(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, (kl) (this));
                 } else {
-                  if (qk.field_q) {
-                    return kl.b(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, (kl) (this));
-                  } else {
-                    return kl.b(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, (kl) (this));
-                  }
+                  return kl.b(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, (kl) (this));
                 }
               }
             }
@@ -264,40 +196,27 @@ final class kl extends ia {
               return kl.a(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, (kl) (this), this.field_p, param4);
             }
           } else {
-            L2: {
-              var6 = param1 + this.field_l;
-              if (var6 <= param3) {
-                break L2;
-              } else {
-                var6 = param3;
-                break L2;
-              }
+            var6 = param1 + this.field_l;
+            if (var6 > param3) {
+              var6 = param3;
             }
             L3: {
-              L4: {
-                this.field_l = this.field_l + param1;
-                if (this.field_p != -256) {
-                  break L4;
-                } else {
-                  if ((this.field_x & 255) != 0) {
-                    break L4;
+              this.field_l = this.field_l + param1;
+              if (this.field_p == -256) {
+                if ((this.field_x & 255) == 0) {
+                  if (!qk.field_q) {
+                    param1 = kl.a(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, (kl) (this));
+                    break L3;
                   } else {
-                    if (!qk.field_q) {
-                      param1 = kl.a(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, (kl) (this));
-                      break L3;
-                    } else {
-                      param1 = kl.a(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (kl) (this));
-                      break L3;
-                    }
+                    param1 = kl.a(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (kl) (this));
+                    break L3;
                   }
                 }
               }
               if (!qk.field_q) {
                 param1 = kl.a(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, (kl) (this), this.field_p, param4);
-                break L3;
               } else {
                 param1 = kl.b(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (kl) (this), this.field_p, param4);
-                break L3;
               }
             }
             this.field_l = this.field_l - param1;
@@ -326,18 +245,12 @@ final class kl extends ia {
         int var6;
         L0: while (true) {
           if (this.field_l <= 0) {
-            L1: {
-              if (this.field_p != 256) {
-                break L1;
-              } else {
-                if ((this.field_x & 255) != 0) {
-                  break L1;
+            if (this.field_p == 256) {
+              if ((this.field_x & 255) == 0) {
+                if (qk.field_q) {
+                  return kl.a(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, (kl) (this));
                 } else {
-                  if (qk.field_q) {
-                    return kl.a(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, (kl) (this));
-                  } else {
-                    return kl.a(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, (kl) (this));
-                  }
+                  return kl.a(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, (kl) (this));
                 }
               }
             }
@@ -347,40 +260,27 @@ final class kl extends ia {
               return kl.b(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, (kl) (this), this.field_p, param4);
             }
           } else {
-            L2: {
-              var6 = param1 + this.field_l;
-              if (var6 <= param3) {
-                break L2;
-              } else {
-                var6 = param3;
-                break L2;
-              }
+            var6 = param1 + this.field_l;
+            if (var6 > param3) {
+              var6 = param3;
             }
             L3: {
-              L4: {
-                this.field_l = this.field_l + param1;
-                if (this.field_p != 256) {
-                  break L4;
-                } else {
-                  if ((this.field_x & 255) != 0) {
-                    break L4;
+              this.field_l = this.field_l + param1;
+              if (this.field_p == 256) {
+                if ((this.field_x & 255) == 0) {
+                  if (!qk.field_q) {
+                    param1 = kl.b(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, (kl) (this));
+                    break L3;
                   } else {
-                    if (!qk.field_q) {
-                      param1 = kl.b(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, (kl) (this));
-                      break L3;
-                    } else {
-                      param1 = kl.b(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (kl) (this));
-                      break L3;
-                    }
+                    param1 = kl.b(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (kl) (this));
+                    break L3;
                   }
                 }
               }
               if (!qk.field_q) {
                 param1 = kl.c(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, (kl) (this), this.field_p, param4);
-                break L3;
               } else {
                 param1 = kl.a(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (kl) (this), this.field_p, param4);
-                break L3;
               }
             }
             this.field_l = this.field_l - param1;
@@ -481,79 +381,57 @@ final class kl extends ia {
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, kl param11, int param12, int param13) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         L0: {
-          L1: {
-            if (param12 == 0) {
-              break L1;
-            } else {
-              param8 = param5 + (param10 - param4 + param12 - 257) / param12;
-              if (param5 + (param10 - param4 + param12 - 257) / param12 <= param9) {
-                break L0;
-              } else {
-                break L1;
-              }
+          if (param12 != 0) {
+            param8 = param5 + (param10 - param4 + param12 - 257) / param12;
+            if (param5 + (param10 - param4 + param12 - 257) / param12 <= param9) {
+              break L0;
             }
           }
           param8 = param9;
-          break L0;
         }
         param5 = param5 << 1;
         param8 = param8 << 1;
-        L2: while (true) {
-          if (param5 >= param8) {
-            L3: {
-              L4: {
-                if (param12 == 0) {
-                  break L4;
-                } else {
-                  param8 = (param5 >> 1) + (param10 - param4 + param12 - 1) / param12;
-                  if ((param5 >> 1) + (param10 - param4 + param12 - 1) / param12 <= param9) {
-                    break L3;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              param8 = param9;
+        L2: while (param5 < param8) {
+          param1 = param4 >> 8;
+          param0 = param2[param1];
+          param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
+          incrementValue$6 = param5;
+          param5++;
+          param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
+          incrementValue$7 = param5;
+          param5++;
+          param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
+          param4 = param4 + param12;
+        }
+        L3: {
+          if (param12 != 0) {
+            param8 = (param5 >> 1) + (param10 - param4 + param12 - 1) / param12;
+            if ((param5 >> 1) + (param10 - param4 + param12 - 1) / param12 <= param9) {
               break L3;
             }
-            param8 = param8 << 1;
-            param1 = param13;
-            L5: while (true) {
-              if (param5 >= param8) {
-                param11.field_x = param4;
-                return param5 >> 1;
-              } else {
-                param0 = param2[param4 >> 8];
-                param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
-                incrementValue$4 = param5;
-                param5++;
-                param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
-                incrementValue$5 = param5;
-                param5++;
-                param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
-                param4 = param4 + param12;
-                continue L5;
-              }
-            }
-          } else {
-            param1 = param4 >> 8;
-            param0 = param2[param1];
-            param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
-            incrementValue$6 = param5;
-            param5++;
-            param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
-            incrementValue$7 = param5;
-            param5++;
-            param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
-            param4 = param4 + param12;
-            continue L2;
           }
+          param8 = param9;
         }
+        param8 = param8 << 1;
+        param1 = param13;
+        L5: while (param5 < param8) {
+          param0 = param2[param4 >> 8];
+          param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
+          incrementValue$4 = param5;
+          param5++;
+          param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
+          incrementValue$5 = param5;
+          param5++;
+          param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
+          param4 = param4 + param12;
+        }
+        param11.field_x = param4;
+        return param5 >> 1;
     }
 
     private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, kl param8) {
@@ -710,121 +588,31 @@ final class kl extends ia {
     }
 
     final synchronized void c(int param0) {
-        int var2;
-        if (param0 != 0) {
-          if (this.field_n == 0) {
-            if (this.field_s == 0) {
-              this.field_l = 0;
-              this.field_u = 0;
-              this.field_k = 0;
-              this.a(false);
-              return;
-            } else {
-              L0: {
-                var2 = -this.field_k;
-                if (this.field_k <= var2) {
-                  break L0;
-                } else {
-                  var2 = this.field_k;
-                  break L0;
-                }
-              }
-              L1: {
-                if (-this.field_n <= var2) {
-                  break L1;
-                } else {
-                  var2 = -this.field_n;
-                  break L1;
-                }
-              }
-              L2: {
-                if (this.field_n <= var2) {
-                  break L2;
-                } else {
-                  var2 = this.field_n;
-                  break L2;
-                }
-              }
-              L3: {
-                if (-this.field_s <= var2) {
-                  break L3;
-                } else {
-                  var2 = -this.field_s;
-                  break L3;
-                }
-              }
-              L4: {
-                if (this.field_s <= var2) {
-                  break L4;
-                } else {
-                  var2 = this.field_s;
-                  break L4;
-                }
-              }
-              L5: {
-                if (param0 <= var2) {
-                  break L5;
-                } else {
-                  param0 = var2;
-                  break L5;
-                }
-              }
-              this.field_l = param0;
-              this.field_u = -2147483648;
-              this.field_j = -this.field_k / param0;
-              this.field_t = -this.field_n / param0;
-              this.field_w = -this.field_s / param0;
-              return;
-            }
-          } else {
-            L6: {
-              var2 = -this.field_k;
-              if (this.field_k <= var2) {
-                break L6;
-              } else {
+        int var2 = 0;
+        if (param0 == 0) {
+            this.f(0);
+            this.a(false);
+            return;
+        }
+        if (this.field_n != 0) {
+            var2 = -this.field_k;
+            if (this.field_k > var2) {
                 var2 = this.field_k;
-                break L6;
-              }
             }
-            L7: {
-              if (-this.field_n <= var2) {
-                break L7;
-              } else {
+            if (-this.field_n > var2) {
                 var2 = -this.field_n;
-                break L7;
-              }
             }
-            L8: {
-              if (this.field_n <= var2) {
-                break L8;
-              } else {
+            if (this.field_n > var2) {
                 var2 = this.field_n;
-                break L8;
-              }
             }
-            L9: {
-              if (-this.field_s <= var2) {
-                break L9;
-              } else {
+            if (-this.field_s > var2) {
                 var2 = -this.field_s;
-                break L9;
-              }
             }
-            L10: {
-              if (this.field_s <= var2) {
-                break L10;
-              } else {
+            if (this.field_s > var2) {
                 var2 = this.field_s;
-                break L10;
-              }
             }
-            L11: {
-              if (param0 <= var2) {
-                break L11;
-              } else {
+            if (param0 > var2) {
                 param0 = var2;
-                break L11;
-              }
             }
             this.field_l = param0;
             this.field_u = -2147483648;
@@ -832,12 +620,38 @@ final class kl extends ia {
             this.field_t = -this.field_n / param0;
             this.field_w = -this.field_s / param0;
             return;
-          }
-        } else {
-          this.f(0);
-          this.a(false);
-          return;
         }
+        if (this.field_s != 0) {
+            var2 = -this.field_k;
+            if (this.field_k > var2) {
+                var2 = this.field_k;
+            }
+            if (-this.field_n > var2) {
+                var2 = -this.field_n;
+            }
+            if (this.field_n > var2) {
+                var2 = this.field_n;
+            }
+            if (-this.field_s > var2) {
+                var2 = -this.field_s;
+            }
+            if (this.field_s > var2) {
+                var2 = this.field_s;
+            }
+            if (param0 > var2) {
+                param0 = var2;
+            }
+            this.field_l = param0;
+            this.field_u = -2147483648;
+            this.field_j = -this.field_k / param0;
+            this.field_t = -this.field_n / param0;
+            this.field_w = -this.field_s / param0;
+            return;
+        }
+        this.field_l = 0;
+        this.field_u = 0;
+        this.field_k = 0;
+        this.a(false);
     }
 
     private final synchronized void b(int param0, int param1) {
@@ -849,12 +663,10 @@ final class kl extends ia {
 
     final synchronized void b(boolean param0) {
         this.field_p = (this.field_p ^ this.field_p >> 31) + (this.field_p >>> 31);
-        if (param0) {
-          this.field_p = -this.field_p;
-          return;
-        } else {
-          return;
+        if (!param0) {
+            return;
         }
+        this.field_p = -this.field_p;
     }
 
     final synchronized void g(int param0) {
@@ -862,235 +674,169 @@ final class kl extends ia {
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, kl param13, int param14, int param15) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         L0: {
-          L1: {
-            param13.field_k = param13.field_k - param13.field_j * param5;
-            if (param14 == 0) {
-              break L1;
-            } else {
-              param10 = param5 + (param12 - param4 + param14 - 257) / param14;
-              if (param5 + (param12 - param4 + param14 - 257) / param14 <= param11) {
-                break L0;
-              } else {
-                break L1;
-              }
+          param13.field_k = param13.field_k - param13.field_j * param5;
+          if (param14 != 0) {
+            param10 = param5 + (param12 - param4 + param14 - 257) / param14;
+            if (param5 + (param12 - param4 + param14 - 257) / param14 <= param11) {
+              break L0;
             }
           }
           param10 = param11;
-          break L0;
         }
         param5 = param5 << 1;
         param10 = param10 << 1;
-        L2: while (true) {
-          if (param5 >= param10) {
-            L3: {
-              L4: {
-                if (param14 == 0) {
-                  break L4;
-                } else {
-                  param10 = (param5 >> 1) + (param12 - param4 + param14 - 1) / param14;
-                  if ((param5 >> 1) + (param12 - param4 + param14 - 1) / param14 <= param11) {
-                    break L3;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              param10 = param11;
+        L2: while (param5 < param10) {
+          param1 = param4 >> 8;
+          param0 = param2[param1];
+          param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
+          incrementValue$6 = param5;
+          param5++;
+          param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
+          param6 = param6 + param8;
+          incrementValue$7 = param5;
+          param5++;
+          param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
+          param7 = param7 + param9;
+          param4 = param4 + param14;
+        }
+        L3: {
+          if (param14 != 0) {
+            param10 = (param5 >> 1) + (param12 - param4 + param14 - 1) / param14;
+            if ((param5 >> 1) + (param12 - param4 + param14 - 1) / param14 <= param11) {
               break L3;
             }
-            param10 = param10 << 1;
-            param1 = param15;
-            L5: while (true) {
-              if (param5 >= param10) {
-                param5 = param5 >> 1;
-                param13.field_k = param13.field_k + param13.field_j * param5;
-                param13.field_n = param6;
-                param13.field_s = param7;
-                param13.field_x = param4;
-                return param5;
-              } else {
-                param0 = param2[param4 >> 8];
-                param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
-                incrementValue$4 = param5;
-                param5++;
-                param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
-                param6 = param6 + param8;
-                incrementValue$5 = param5;
-                param5++;
-                param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
-                param7 = param7 + param9;
-                param4 = param4 + param14;
-                continue L5;
-              }
-            }
-          } else {
-            param1 = param4 >> 8;
-            param0 = param2[param1];
-            param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
-            incrementValue$6 = param5;
-            param5++;
-            param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
-            param6 = param6 + param8;
-            incrementValue$7 = param5;
-            param5++;
-            param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
-            param7 = param7 + param9;
-            param4 = param4 + param14;
-            continue L2;
           }
+          param10 = param11;
         }
+        param10 = param10 << 1;
+        param1 = param15;
+        L5: while (param5 < param10) {
+          param0 = param2[param4 >> 8];
+          param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
+          incrementValue$4 = param5;
+          param5++;
+          param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
+          param6 = param6 + param8;
+          incrementValue$5 = param5;
+          param5++;
+          param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
+          param7 = param7 + param9;
+          param4 = param4 + param14;
+        }
+        param5 = param5 >> 1;
+        param13.field_k = param13.field_k + param13.field_j * param5;
+        param13.field_n = param6;
+        param13.field_s = param7;
+        param13.field_x = param4;
+        return param5;
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, kl param10, int param11, int param12) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$0 = 0;
         L0: {
-          L1: {
-            if (param11 == 0) {
-              break L1;
-            } else {
-              param7 = param5 + (param9 + 256 - param4 + param11) / param11;
-              if (param5 + (param9 + 256 - param4 + param11) / param11 <= param8) {
-                break L0;
-              } else {
-                break L1;
-              }
+          if (param11 != 0) {
+            param7 = param5 + (param9 + 256 - param4 + param11) / param11;
+            if (param5 + (param9 + 256 - param4 + param11) / param11 <= param8) {
+              break L0;
             }
           }
           param7 = param8;
-          break L0;
         }
-        L2: while (true) {
-          if (param5 >= param7) {
-            L3: {
-              L4: {
-                if (param11 == 0) {
-                  break L4;
-                } else {
-                  param7 = param5 + (param9 - param4 + param11) / param11;
-                  if (param5 + (param9 - param4 + param11) / param11 <= param8) {
-                    break L3;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              param7 = param8;
+        L2: while (param5 < param7) {
+          param1 = param4 >> 8;
+          param0 = param2[param1 - 1];
+          incrementValue$1 = param5;
+          param5++;
+          param3[incrementValue$1] = param3[incrementValue$1] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
+          param4 = param4 + param11;
+        }
+        L3: {
+          if (param11 != 0) {
+            param7 = param5 + (param9 - param4 + param11) / param11;
+            if (param5 + (param9 - param4 + param11) / param11 <= param8) {
               break L3;
             }
-            param0 = param12;
-            param1 = param11;
-            L5: while (true) {
-              if (param5 >= param7) {
-                param10.field_x = param4;
-                return param5;
-              } else {
-                incrementValue$2 = param5;
-                param5++;
-                param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
-                param4 = param4 + param1;
-                continue L5;
-              }
-            }
-          } else {
-            param1 = param4 >> 8;
-            param0 = param2[param1 - 1];
-            incrementValue$3 = param5;
-            param5++;
-            param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
-            param4 = param4 + param11;
-            continue L2;
           }
+          param7 = param8;
         }
+        param0 = param12;
+        param1 = param11;
+        L5: while (param5 < param7) {
+          incrementValue$0 = param5;
+          param5++;
+          param3[incrementValue$0] = param3[incrementValue$0] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
+          param4 = param4 + param1;
+        }
+        param10.field_x = param4;
+        return param5;
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, kl param13, int param14, int param15) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         L0: {
-          L1: {
-            param13.field_k = param13.field_k - param13.field_j * param5;
-            if (param14 == 0) {
-              break L1;
-            } else {
-              param10 = param5 + (param12 + 256 - param4 + param14) / param14;
-              if (param5 + (param12 + 256 - param4 + param14) / param14 <= param11) {
-                break L0;
-              } else {
-                break L1;
-              }
+          param13.field_k = param13.field_k - param13.field_j * param5;
+          if (param14 != 0) {
+            param10 = param5 + (param12 + 256 - param4 + param14) / param14;
+            if (param5 + (param12 + 256 - param4 + param14) / param14 <= param11) {
+              break L0;
             }
           }
           param10 = param11;
-          break L0;
         }
         param5 = param5 << 1;
         param10 = param10 << 1;
-        L2: while (true) {
-          if (param5 >= param10) {
-            L3: {
-              L4: {
-                if (param14 == 0) {
-                  break L4;
-                } else {
-                  param10 = (param5 >> 1) + (param12 - param4 + param14) / param14;
-                  if ((param5 >> 1) + (param12 - param4 + param14) / param14 <= param11) {
-                    break L3;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              param10 = param11;
+        L2: while (param5 < param10) {
+          param1 = param4 >> 8;
+          param0 = param2[param1 - 1];
+          param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
+          incrementValue$6 = param5;
+          param5++;
+          param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
+          param6 = param6 + param8;
+          incrementValue$7 = param5;
+          param5++;
+          param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
+          param7 = param7 + param9;
+          param4 = param4 + param14;
+        }
+        L3: {
+          if (param14 != 0) {
+            param10 = (param5 >> 1) + (param12 - param4 + param14) / param14;
+            if ((param5 >> 1) + (param12 - param4 + param14) / param14 <= param11) {
               break L3;
             }
-            param10 = param10 << 1;
-            param1 = param15;
-            L5: while (true) {
-              if (param5 >= param10) {
-                param5 = param5 >> 1;
-                param13.field_k = param13.field_k + param13.field_j * param5;
-                param13.field_n = param6;
-                param13.field_s = param7;
-                param13.field_x = param4;
-                return param5;
-              } else {
-                param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
-                incrementValue$4 = param5;
-                param5++;
-                param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
-                param6 = param6 + param8;
-                incrementValue$5 = param5;
-                param5++;
-                param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
-                param7 = param7 + param9;
-                param4 = param4 + param14;
-                continue L5;
-              }
-            }
-          } else {
-            param1 = param4 >> 8;
-            param0 = param2[param1 - 1];
-            param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
-            incrementValue$6 = param5;
-            param5++;
-            param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
-            param6 = param6 + param8;
-            incrementValue$7 = param5;
-            param5++;
-            param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
-            param7 = param7 + param9;
-            param4 = param4 + param14;
-            continue L2;
           }
+          param10 = param11;
         }
+        param10 = param10 << 1;
+        param1 = param15;
+        L5: while (param5 < param10) {
+          param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
+          incrementValue$4 = param5;
+          param5++;
+          param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
+          param6 = param6 + param8;
+          incrementValue$5 = param5;
+          param5++;
+          param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
+          param7 = param7 + param9;
+          param4 = param4 + param14;
+        }
+        param5 = param5 >> 1;
+        param13.field_k = param13.field_k + param13.field_j * param5;
+        param13.field_n = param6;
+        param13.field_s = param7;
+        param13.field_x = param4;
+        return param5;
     }
 
     final synchronized boolean g() {
@@ -1134,136 +880,98 @@ final class kl extends ia {
         int var5;
         int var6;
         int var7;
-        L0: {
-          if (this.field_l <= 0) {
-            break L0;
+        if (this.field_l > 0) {
+          if (param0 < this.field_l) {
+            this.field_k = this.field_k + this.field_j * param0;
+            this.field_n = this.field_n + this.field_t * param0;
+            this.field_s = this.field_s + this.field_w * param0;
+            this.field_l = this.field_l - param0;
           } else {
-            if (param0 < this.field_l) {
-              this.field_k = this.field_k + this.field_j * param0;
-              this.field_n = this.field_n + this.field_t * param0;
-              this.field_s = this.field_s + this.field_w * param0;
-              this.field_l = this.field_l - param0;
-              break L0;
-            } else {
-              L1: {
-                if (this.field_u != -2147483648) {
-                  break L1;
-                } else {
-                  this.field_u = 0;
-                  this.field_s = 0;
-                  this.field_n = 0;
-                  this.field_k = 0;
-                  this.a(false);
-                  param0 = this.field_l;
-                  break L1;
-                }
-              }
-              this.field_l = 0;
-              this.e();
-              break L0;
-            }
-          }
-        }
-        L2: {
-          var2 = (gd) ((Object) this.field_g);
-          var3 = this.field_q << 8;
-          var4 = this.field_m << 8;
-          var5 = var2.field_k.length << 8;
-          var6 = var4 - var3;
-          if (var6 > 0) {
-            break L2;
-          } else {
-            this.field_v = 0;
-            break L2;
-          }
-        }
-        L3: {
-          if (this.field_x >= 0) {
-            break L3;
-          } else {
-            if (this.field_p <= 0) {
-              this.f();
+            if (this.field_u == -2147483648) {
+              this.field_u = 0;
+              this.field_s = 0;
+              this.field_n = 0;
+              this.field_k = 0;
               this.a(false);
-              return;
-            } else {
-              this.field_x = 0;
-              break L3;
+              param0 = this.field_l;
             }
+            this.field_l = 0;
+            this.e();
           }
         }
-        L4: {
-          if (this.field_x < var5) {
-            break L4;
+        var2 = (gd) ((Object) this.field_g);
+        var3 = this.field_q << 8;
+        var4 = this.field_m << 8;
+        var5 = var2.field_k.length << 8;
+        var6 = var4 - var3;
+        if (var6 <= 0) {
+          this.field_v = 0;
+        }
+        if (this.field_x < 0) {
+          if (this.field_p <= 0) {
+            this.f();
+            this.a(false);
+            return;
           } else {
-            if (this.field_p >= 0) {
-              this.f();
-              this.a(false);
-              return;
-            } else {
-              this.field_x = var5 - 1;
-              break L4;
-            }
+            this.field_x = 0;
+          }
+        }
+        if (this.field_x >= var5) {
+          if (this.field_p >= 0) {
+            this.f();
+            this.a(false);
+            return;
+          } else {
+            this.field_x = var5 - 1;
           }
         }
         this.field_x = this.field_x + this.field_p * param0;
         if (this.field_v >= 0) {
           L5: {
-            if (this.field_v <= 0) {
-              break L5;
-            } else {
+            if (this.field_v > 0) {
               if (!this.field_r) {
-                L6: {
-                  if (this.field_p >= 0) {
-                    if (this.field_x >= var4) {
-                      var7 = (this.field_x - var3) / var6;
-                      if (var7 < this.field_v) {
-                        this.field_x = this.field_x - var6 * var7;
-                        this.field_v = this.field_v - var7;
-                        break L6;
-                      } else {
-                        this.field_x = this.field_x - var6 * this.field_v;
-                        this.field_v = 0;
-                        break L5;
-                      }
+                if (this.field_p >= 0) {
+                  if (this.field_x >= var4) {
+                    var7 = (this.field_x - var3) / var6;
+                    if (var7 < this.field_v) {
+                      this.field_x = this.field_x - var6 * var7;
+                      this.field_v = this.field_v - var7;
                     } else {
-                      return;
+                      this.field_x = this.field_x - var6 * this.field_v;
+                      this.field_v = 0;
+                      break L5;
                     }
                   } else {
-                    if (this.field_x < var3) {
-                      var7 = (var4 - 1 - this.field_x) / var6;
-                      if (var7 < this.field_v) {
-                        this.field_x = this.field_x + var6 * var7;
-                        this.field_v = this.field_v - var7;
-                        break L6;
-                      } else {
-                        this.field_x = this.field_x + var6 * this.field_v;
-                        this.field_v = 0;
-                        break L5;
-                      }
+                    return;
+                  }
+                } else {
+                  if (this.field_x < var3) {
+                    var7 = (var4 - 1 - this.field_x) / var6;
+                    if (var7 < this.field_v) {
+                      this.field_x = this.field_x + var6 * var7;
+                      this.field_v = this.field_v - var7;
                     } else {
-                      return;
+                      this.field_x = this.field_x + var6 * this.field_v;
+                      this.field_v = 0;
+                      break L5;
                     }
+                  } else {
+                    return;
                   }
                 }
                 return;
               } else {
-                L7: {
-                  if (this.field_p >= 0) {
-                    break L7;
-                  } else {
-                    if (this.field_x < var3) {
-                      this.field_x = var3 + var3 - 1 - this.field_x;
-                      this.field_p = -this.field_p;
-                      fieldTemp$0 = this.field_v - 1;
-                      this.field_v = this.field_v - 1;
-                      if (fieldTemp$0 != 0) {
-                        break L7;
-                      } else {
-                        break L5;
-                      }
-                    } else {
-                      return;
+                if (this.field_p < 0) {
+                  if (this.field_x < var3) {
+                    this.field_x = var3 + var3 - 1 - this.field_x;
+                    this.field_p = -this.field_p;
+                    fieldTemp$0 = this.field_v - 1;
+                    this.field_v = this.field_v - 1;
+                    if (fieldTemp$0 == 0) {
+                      break L5;
                     }
+                  } else {
+                    return;
                   }
                 }
                 L8: while (true) {
@@ -1306,15 +1014,10 @@ final class kl extends ia {
               return;
             }
           } else {
-            L9: {
-              if (this.field_x < var5) {
-                break L9;
-              } else {
-                this.field_x = var5;
-                this.f();
-                this.a(false);
-                break L9;
-              }
+            if (this.field_x >= var5) {
+              this.field_x = var5;
+              this.f();
+              this.a(false);
             }
             return;
           }
@@ -1336,17 +1039,12 @@ final class kl extends ia {
               }
             }
           } else {
-            L10: {
-              if (this.field_p >= 0) {
-                break L10;
+            if (this.field_p < 0) {
+              if (this.field_x < var3) {
+                this.field_x = var3 + var3 - 1 - this.field_x;
+                this.field_p = -this.field_p;
               } else {
-                if (this.field_x < var3) {
-                  this.field_x = var3 + var3 - 1 - this.field_x;
-                  this.field_p = -this.field_p;
-                  break L10;
-                } else {
-                  return;
-                }
+                return;
               }
             }
             L11: while (true) {
@@ -1515,66 +1213,43 @@ final class kl extends ia {
         int var8;
         int var9;
         int var10;
-        L0: {
-          if (this.field_u != 0) {
-            break L0;
-          } else {
-            if (this.field_l != 0) {
-              break L0;
-            } else {
-              this.b(param2);
-              return;
-            }
+        if (this.field_u == 0) {
+          if (this.field_l == 0) {
+            this.b(param2);
+            return;
           }
         }
-        L1: {
-          var4 = (gd) ((Object) this.field_g);
-          var5 = this.field_q << 8;
-          var6 = this.field_m << 8;
-          var7 = var4.field_k.length << 8;
-          var8 = var6 - var5;
-          if (var8 > 0) {
-            break L1;
+        var4 = (gd) ((Object) this.field_g);
+        var5 = this.field_q << 8;
+        var6 = this.field_m << 8;
+        var7 = var4.field_k.length << 8;
+        var8 = var6 - var5;
+        if (var8 <= 0) {
+          this.field_v = 0;
+        }
+        var9 = param1;
+        param2 = param2 + param1;
+        if (this.field_x < 0) {
+          if (this.field_p <= 0) {
+            this.f();
+            this.a(false);
+            return;
           } else {
-            this.field_v = 0;
-            break L1;
+            this.field_x = 0;
           }
         }
-        L2: {
-          var9 = param1;
-          param2 = param2 + param1;
-          if (this.field_x >= 0) {
-            break L2;
+        if (this.field_x >= var7) {
+          if (this.field_p >= 0) {
+            this.f();
+            this.a(false);
+            return;
           } else {
-            if (this.field_p <= 0) {
-              this.f();
-              this.a(false);
-              return;
-            } else {
-              this.field_x = 0;
-              break L2;
-            }
-          }
-        }
-        L3: {
-          if (this.field_x < var7) {
-            break L3;
-          } else {
-            if (this.field_p >= 0) {
-              this.f();
-              this.a(false);
-              return;
-            } else {
-              this.field_x = var7 - 1;
-              break L3;
-            }
+            this.field_x = var7 - 1;
           }
         }
         if (this.field_v >= 0) {
           L4: {
-            if (this.field_v <= 0) {
-              break L4;
-            } else {
+            if (this.field_v > 0) {
               if (!this.field_r) {
                 if (this.field_p >= 0) {
                   L5: while (true) {
@@ -1614,24 +1289,18 @@ final class kl extends ia {
                   }
                 }
               } else {
-                L7: {
-                  if (this.field_p >= 0) {
-                    break L7;
-                  } else {
-                    var9 = this.a(param0, var9, var5, param2, (int) var4.field_k[this.field_q]);
-                    if (this.field_x < var5) {
-                      this.field_x = var5 + var5 - 1 - this.field_x;
-                      this.field_p = -this.field_p;
-                      fieldTemp$0 = this.field_v - 1;
-                      this.field_v = this.field_v - 1;
-                      if (fieldTemp$0 != 0) {
-                        break L7;
-                      } else {
-                        break L4;
-                      }
-                    } else {
-                      return;
+                if (this.field_p < 0) {
+                  var9 = this.a(param0, var9, var5, param2, (int) var4.field_k[this.field_q]);
+                  if (this.field_x < var5) {
+                    this.field_x = var5 + var5 - 1 - this.field_x;
+                    this.field_p = -this.field_p;
+                    fieldTemp$0 = this.field_v - 1;
+                    this.field_v = this.field_v - 1;
+                    if (fieldTemp$0 == 0) {
+                      break L4;
                     }
+                  } else {
+                    return;
                   }
                 }
                 L8: while (true) {
@@ -1677,16 +1346,11 @@ final class kl extends ia {
               return;
             }
           } else {
-            L9: {
-              discarded$4 = this.b(param0, var9, var7, param2, 0);
-              if (this.field_x < var7) {
-                break L9;
-              } else {
-                this.field_x = var7;
-                this.f();
-                this.a(false);
-                break L9;
-              }
+            discarded$4 = this.b(param0, var9, var7, param2, 0);
+            if (this.field_x >= var7) {
+              this.field_x = var7;
+              this.f();
+              this.a(false);
             }
             return;
           }
@@ -1714,18 +1378,13 @@ final class kl extends ia {
               }
             }
           } else {
-            L12: {
-              if (this.field_p >= 0) {
-                break L12;
+            if (this.field_p < 0) {
+              var9 = this.a(param0, var9, var5, param2, (int) var4.field_k[this.field_q]);
+              if (this.field_x < var5) {
+                this.field_x = var5 + var5 - 1 - this.field_x;
+                this.field_p = -this.field_p;
               } else {
-                var9 = this.a(param0, var9, var5, param2, (int) var4.field_k[this.field_q]);
-                if (this.field_x < var5) {
-                  this.field_x = var5 + var5 - 1 - this.field_x;
-                  this.field_p = -this.field_p;
-                  break L12;
-                } else {
-                  return;
-                }
+                return;
               }
             }
             L13: while (true) {
@@ -1756,193 +1415,80 @@ final class kl extends ia {
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, kl param11, int param12, int param13) {
-        int incrementValue$2 = 0;
         int incrementValue$3 = 0;
+        int incrementValue$2 = 0;
         L0: {
-          L1: {
-            param11.field_n = param11.field_n - param11.field_t * param5;
-            param11.field_s = param11.field_s - param11.field_w * param5;
-            if (param12 == 0) {
-              break L1;
-            } else {
-              param8 = param5 + (param10 + 256 - param4 + param12) / param12;
-              if (param5 + (param10 + 256 - param4 + param12) / param12 <= param9) {
-                break L0;
-              } else {
-                break L1;
-              }
+          param11.field_n = param11.field_n - param11.field_t * param5;
+          param11.field_s = param11.field_s - param11.field_w * param5;
+          if (param12 != 0) {
+            param8 = param5 + (param10 + 256 - param4 + param12) / param12;
+            if (param5 + (param10 + 256 - param4 + param12) / param12 <= param9) {
+              break L0;
             }
           }
           param8 = param9;
-          break L0;
         }
-        L2: while (true) {
-          if (param5 >= param8) {
-            L3: {
-              L4: {
-                if (param12 == 0) {
-                  break L4;
-                } else {
-                  param8 = param5 + (param10 - param4 + param12) / param12;
-                  if (param5 + (param10 - param4 + param12) / param12 <= param9) {
-                    break L3;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              param8 = param9;
+        L2: while (param5 < param8) {
+          param1 = param4 >> 8;
+          param0 = param2[param1 - 1];
+          incrementValue$3 = param5;
+          param5++;
+          param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
+          param6 = param6 + param7;
+          param4 = param4 + param12;
+        }
+        L3: {
+          if (param12 != 0) {
+            param8 = param5 + (param10 - param4 + param12) / param12;
+            if (param5 + (param10 - param4 + param12) / param12 <= param9) {
               break L3;
             }
-            param0 = param13;
-            param1 = param12;
-            L5: while (true) {
-              if (param5 >= param8) {
-                param11.field_n = param11.field_n + param11.field_t * param5;
-                param11.field_s = param11.field_s + param11.field_w * param5;
-                param11.field_k = param6;
-                param11.field_x = param4;
-                return param5;
-              } else {
-                incrementValue$2 = param5;
-                param5++;
-                param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
-                param6 = param6 + param7;
-                param4 = param4 + param1;
-                continue L5;
-              }
-            }
-          } else {
-            param1 = param4 >> 8;
-            param0 = param2[param1 - 1];
-            incrementValue$3 = param5;
-            param5++;
-            param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
-            param6 = param6 + param7;
-            param4 = param4 + param12;
-            continue L2;
           }
+          param8 = param9;
         }
+        param0 = param13;
+        param1 = param12;
+        L5: while (param5 < param8) {
+          incrementValue$2 = param5;
+          param5++;
+          param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
+          param6 = param6 + param7;
+          param4 = param4 + param1;
+        }
+        param11.field_n = param11.field_n + param11.field_t * param5;
+        param11.field_s = param11.field_s + param11.field_w * param5;
+        param11.field_k = param6;
+        param11.field_x = param4;
+        return param5;
     }
 
     final synchronized void a(int param0, int param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        if (param0 != 0) {
-          var4 = kl.e(param1, param2);
-          var5 = kl.d(param1, param2);
-          if (this.field_n == var4) {
-            if (this.field_s == var5) {
-              this.field_l = 0;
-              return;
-            } else {
-              L0: {
-                var6 = param1 - this.field_k;
-                if (this.field_k - param1 <= var6) {
-                  break L0;
-                } else {
-                  var6 = this.field_k - param1;
-                  break L0;
-                }
-              }
-              L1: {
-                if (var4 - this.field_n <= var6) {
-                  break L1;
-                } else {
-                  var6 = var4 - this.field_n;
-                  break L1;
-                }
-              }
-              L2: {
-                if (this.field_n - var4 <= var6) {
-                  break L2;
-                } else {
-                  var6 = this.field_n - var4;
-                  break L2;
-                }
-              }
-              L3: {
-                if (var5 - this.field_s <= var6) {
-                  break L3;
-                } else {
-                  var6 = var5 - this.field_s;
-                  break L3;
-                }
-              }
-              L4: {
-                if (this.field_s - var5 <= var6) {
-                  break L4;
-                } else {
-                  var6 = this.field_s - var5;
-                  break L4;
-                }
-              }
-              L5: {
-                if (param0 <= var6) {
-                  break L5;
-                } else {
-                  param0 = var6;
-                  break L5;
-                }
-              }
-              this.field_l = param0;
-              this.field_u = param1;
-              this.field_o = param2;
-              this.field_j = (param1 - this.field_k) / param0;
-              this.field_t = (var4 - this.field_n) / param0;
-              this.field_w = (var5 - this.field_s) / param0;
-              return;
-            }
-          } else {
-            L6: {
-              var6 = param1 - this.field_k;
-              if (this.field_k - param1 <= var6) {
-                break L6;
-              } else {
+        int var6 = 0;
+        if (param0 == 0) {
+            this.b(param1, param2);
+            return;
+        }
+        int var4 = kl.e(param1, param2);
+        int var5 = kl.d(param1, param2);
+        if (this.field_n != var4) {
+            var6 = param1 - this.field_k;
+            if (this.field_k - param1 > var6) {
                 var6 = this.field_k - param1;
-                break L6;
-              }
             }
-            L7: {
-              if (var4 - this.field_n <= var6) {
-                break L7;
-              } else {
+            if (var4 - this.field_n > var6) {
                 var6 = var4 - this.field_n;
-                break L7;
-              }
             }
-            L8: {
-              if (this.field_n - var4 <= var6) {
-                break L8;
-              } else {
+            if (this.field_n - var4 > var6) {
                 var6 = this.field_n - var4;
-                break L8;
-              }
             }
-            L9: {
-              if (var5 - this.field_s <= var6) {
-                break L9;
-              } else {
+            if (var5 - this.field_s > var6) {
                 var6 = var5 - this.field_s;
-                break L9;
-              }
             }
-            L10: {
-              if (this.field_s - var5 <= var6) {
-                break L10;
-              } else {
+            if (this.field_s - var5 > var6) {
                 var6 = this.field_s - var5;
-                break L10;
-              }
             }
-            L11: {
-              if (param0 <= var6) {
-                break L11;
-              } else {
+            if (param0 > var6) {
                 param0 = var6;
-                break L11;
-              }
             }
             this.field_l = param0;
             this.field_u = param1;
@@ -1951,11 +1497,36 @@ final class kl extends ia {
             this.field_t = (var4 - this.field_n) / param0;
             this.field_w = (var5 - this.field_s) / param0;
             return;
-          }
-        } else {
-          this.b(param1, param2);
-          return;
         }
+        if (this.field_s != var5) {
+            var6 = param1 - this.field_k;
+            if (this.field_k - param1 > var6) {
+                var6 = this.field_k - param1;
+            }
+            if (var4 - this.field_n > var6) {
+                var6 = var4 - this.field_n;
+            }
+            if (this.field_n - var4 > var6) {
+                var6 = this.field_n - var4;
+            }
+            if (var5 - this.field_s > var6) {
+                var6 = var5 - this.field_s;
+            }
+            if (this.field_s - var5 > var6) {
+                var6 = this.field_s - var5;
+            }
+            if (param0 > var6) {
+                param0 = var6;
+            }
+            this.field_l = param0;
+            this.field_u = param1;
+            this.field_o = param2;
+            this.field_j = (param1 - this.field_k) / param0;
+            this.field_t = (var4 - this.field_n) / param0;
+            this.field_w = (var5 - this.field_s) / param0;
+            return;
+        }
+        this.field_l = 0;
     }
 
     private final void f() {
@@ -1970,73 +1541,51 @@ final class kl extends ia {
     }
 
     private final static int c(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, kl param11, int param12, int param13) {
-        int incrementValue$2 = 0;
         int incrementValue$3 = 0;
+        int incrementValue$2 = 0;
         L0: {
-          L1: {
-            param11.field_n = param11.field_n - param11.field_t * param5;
-            param11.field_s = param11.field_s - param11.field_w * param5;
-            if (param12 == 0) {
-              break L1;
-            } else {
-              param8 = param5 + (param10 - param4 + param12 - 257) / param12;
-              if (param5 + (param10 - param4 + param12 - 257) / param12 <= param9) {
-                break L0;
-              } else {
-                break L1;
-              }
+          param11.field_n = param11.field_n - param11.field_t * param5;
+          param11.field_s = param11.field_s - param11.field_w * param5;
+          if (param12 != 0) {
+            param8 = param5 + (param10 - param4 + param12 - 257) / param12;
+            if (param5 + (param10 - param4 + param12 - 257) / param12 <= param9) {
+              break L0;
             }
           }
           param8 = param9;
-          break L0;
         }
-        L2: while (true) {
-          if (param5 >= param8) {
-            L3: {
-              L4: {
-                if (param12 == 0) {
-                  break L4;
-                } else {
-                  param8 = param5 + (param10 - param4 + param12 - 1) / param12;
-                  if (param5 + (param10 - param4 + param12 - 1) / param12 <= param9) {
-                    break L3;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              param8 = param9;
+        L2: while (param5 < param8) {
+          param1 = param4 >> 8;
+          param0 = param2[param1];
+          incrementValue$3 = param5;
+          param5++;
+          param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
+          param6 = param6 + param7;
+          param4 = param4 + param12;
+        }
+        L3: {
+          if (param12 != 0) {
+            param8 = param5 + (param10 - param4 + param12 - 1) / param12;
+            if (param5 + (param10 - param4 + param12 - 1) / param12 <= param9) {
               break L3;
             }
-            param1 = param13;
-            L5: while (true) {
-              if (param5 >= param8) {
-                param11.field_n = param11.field_n + param11.field_t * param5;
-                param11.field_s = param11.field_s + param11.field_w * param5;
-                param11.field_k = param6;
-                param11.field_x = param4;
-                return param5;
-              } else {
-                param0 = param2[param4 >> 8];
-                incrementValue$2 = param5;
-                param5++;
-                param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
-                param6 = param6 + param7;
-                param4 = param4 + param12;
-                continue L5;
-              }
-            }
-          } else {
-            param1 = param4 >> 8;
-            param0 = param2[param1];
-            incrementValue$3 = param5;
-            param5++;
-            param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
-            param6 = param6 + param7;
-            param4 = param4 + param12;
-            continue L2;
           }
+          param8 = param9;
         }
+        param1 = param13;
+        L5: while (param5 < param8) {
+          param0 = param2[param4 >> 8];
+          incrementValue$2 = param5;
+          param5++;
+          param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
+          param6 = param6 + param7;
+          param4 = param4 + param12;
+        }
+        param11.field_n = param11.field_n + param11.field_t * param5;
+        param11.field_s = param11.field_s + param11.field_w * param5;
+        param11.field_k = param6;
+        param11.field_x = param4;
+        return param5;
     }
 
     private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, kl param9) {
@@ -2198,15 +1747,13 @@ final class kl extends ia {
     }
 
     final static kl a(gd param0, int param1, int param2, int param3) {
-        if (param0.field_k != null) {
-          if (param0.field_k.length == 0) {
+        if (param0.field_k == null) {
             return null;
-          } else {
-            return new kl(param0, param1, param2, param3);
-          }
-        } else {
-          return null;
         }
+        if (param0.field_k.length != 0) {
+            return new kl(param0, param1, param2, param3);
+        }
+        return null;
     }
 
     final synchronized int k() {
@@ -2218,15 +1765,13 @@ final class kl extends ia {
     }
 
     final static kl a(gd param0, int param1, int param2) {
-        if (param0.field_k != null) {
-          if (param0.field_k.length == 0) {
+        if (param0.field_k == null) {
             return null;
-          } else {
-            return new kl(param0, (int)((long)param0.field_h * 256L * (long)param1 / (long)(100 * qk.field_j)), param2 << 6);
-          }
-        } else {
-          return null;
         }
+        if (param0.field_k.length != 0) {
+            return new kl(param0, (int)((long)param0.field_h * 256L * (long)param1 / (long)(100 * qk.field_j)), param2 << 6);
+        }
+        return null;
     }
 
     private kl(gd param0, int param1, int param2) {
@@ -2242,66 +1787,44 @@ final class kl extends ia {
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, kl param10, int param11, int param12) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$0 = 0;
         L0: {
-          L1: {
-            if (param11 == 0) {
-              break L1;
-            } else {
-              param7 = param5 + (param9 - param4 + param11 - 257) / param11;
-              if (param5 + (param9 - param4 + param11 - 257) / param11 <= param8) {
-                break L0;
-              } else {
-                break L1;
-              }
+          if (param11 != 0) {
+            param7 = param5 + (param9 - param4 + param11 - 257) / param11;
+            if (param5 + (param9 - param4 + param11 - 257) / param11 <= param8) {
+              break L0;
             }
           }
           param7 = param8;
-          break L0;
         }
-        L2: while (true) {
-          if (param5 >= param7) {
-            L3: {
-              L4: {
-                if (param11 == 0) {
-                  break L4;
-                } else {
-                  param7 = param5 + (param9 - param4 + param11 - 1) / param11;
-                  if (param5 + (param9 - param4 + param11 - 1) / param11 <= param8) {
-                    break L3;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              param7 = param8;
+        L2: while (param5 < param7) {
+          param1 = param4 >> 8;
+          param0 = param2[param1];
+          incrementValue$1 = param5;
+          param5++;
+          param3[incrementValue$1] = param3[incrementValue$1] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
+          param4 = param4 + param11;
+        }
+        L3: {
+          if (param11 != 0) {
+            param7 = param5 + (param9 - param4 + param11 - 1) / param11;
+            if (param5 + (param9 - param4 + param11 - 1) / param11 <= param8) {
               break L3;
             }
-            param1 = param12;
-            L5: while (true) {
-              if (param5 >= param7) {
-                param10.field_x = param4;
-                return param5;
-              } else {
-                param0 = param2[param4 >> 8];
-                incrementValue$2 = param5;
-                param5++;
-                param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
-                param4 = param4 + param11;
-                continue L5;
-              }
-            }
-          } else {
-            param1 = param4 >> 8;
-            param0 = param2[param1];
-            incrementValue$3 = param5;
-            param5++;
-            param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
-            param4 = param4 + param11;
-            continue L2;
           }
+          param7 = param8;
         }
+        param1 = param12;
+        L5: while (param5 < param7) {
+          param0 = param2[param4 >> 8];
+          incrementValue$0 = param5;
+          param5++;
+          param3[incrementValue$0] = param3[incrementValue$0] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
+          param4 = param4 + param11;
+        }
+        param10.field_x = param4;
+        return param5;
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, kl param10) {

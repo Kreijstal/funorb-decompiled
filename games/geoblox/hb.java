@@ -56,18 +56,16 @@ final class hb implements dh {
     public static void a(int param0) {
         field_n = null;
         field_h = null;
-        if (param0 != 0) {
-          field_h = (String) null;
-          field_l = null;
-          field_j = null;
-          field_d = null;
-          return;
-        } else {
-          field_l = null;
-          field_j = null;
-          field_d = null;
-          return;
+        if (param0 == 0) {
+            field_l = null;
+            field_j = null;
+            field_d = null;
+            return;
         }
+        field_h = (String) null;
+        field_l = null;
+        field_j = null;
+        field_d = null;
     }
 
     hb(m param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

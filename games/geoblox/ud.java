@@ -15,32 +15,19 @@ final class ud {
         try {
           L0: {
             var4 = (p) ((Object) rh.field_a.g(0));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  var2 = k.field_e.g(0);
-                  if (param0 <= -123) {
-                    break L2;
-                  } else {
-                    field_a = (String) null;
-                    break L2;
-                  }
-                }
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    re.b(-101, param1);
-                    var2 = k.field_e.d(1);
-                    continue L3;
-                  }
-                }
-              } else {
-                ol.a(param1, var4, 30175);
-                var4 = (p) ((Object) rh.field_a.d(1));
-                continue L1;
-              }
+            L1: while (var4 != null) {
+              ol.a(param1, var4, 30175);
+              var4 = (p) ((Object) rh.field_a.d(1));
             }
+            var2 = k.field_e.g(0);
+            if (param0 > -123) {
+              field_a = (String) null;
+            }
+            L3: while (var2 != null) {
+              re.b(-101, param1);
+              var2 = k.field_e.d(1);
+            }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -69,37 +56,22 @@ final class ud {
         try {
           L0: {
             if (null != ug.field_a) {
-              L1: {
-                var7 = (CharSequence) ((Object) param1);
-                var2 = oe.a(var7, 12);
-                if (var2 == null) {
-                  var2 = param1;
-                  break L1;
-                } else {
-                  break L1;
-                }
+              var7 = (CharSequence) ((Object) param1);
+              var2 = oe.a(var7, 12);
+              if (var2 == null) {
+                var2 = param1;
               }
-              L2: {
-                var3 = (j) ((Object) ug.field_a.a((long)var2.hashCode(), -1));
-                if (param0 == 0) {
-                  break L2;
-                } else {
-                  var6 = (String) null;
-                  ud.a(55, (String) null);
-                  break L2;
-                }
+              var3 = (j) ((Object) ug.field_a.a((long)var2.hashCode(), -1));
+              if (param0 != 0) {
+                var6 = (String) null;
+                ud.a(55, (String) null);
               }
               L3: while (true) {
                 if (var3 != null) {
-                  L4: {
-                    var8 = (CharSequence) ((Object) var3.field_hb);
-                    var4 = oe.a(var8, 12);
-                    if (var4 != null) {
-                      break L4;
-                    } else {
-                      var4 = var3.field_hb;
-                      break L4;
-                    }
+                  var8 = (CharSequence) ((Object) var3.field_hb);
+                  var4 = oe.a(var8, 12);
+                  if (var4 == null) {
+                    var4 = var3.field_hb;
                   }
                   if (var4.equals(var2)) {
                     stackIn_16_0 = (j) (var3);
@@ -118,23 +90,19 @@ final class ud {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var2_ref = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var2_ref);
+          var2_ref = decompiledCaughtException;
+          stackIn_21_0 = (RuntimeException) (var2_ref);
 
-            stackIn_21_1 = new StringBuilder().append("ud.C(").append(param0).append(',');
+          stackIn_21_1 = new StringBuilder().append("ud.C(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L5;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L5;
-            }
+          if (param1 == null) {
+            stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+            stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
+            stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
+            stackIn_22_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
@@ -150,6 +118,7 @@ final class ud {
     }
 
     final static void b(int param0) {
+        int var7 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -158,7 +127,6 @@ final class ud {
         int[] var4 = null;
         pk var5 = null;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
@@ -183,7 +151,6 @@ final class ud {
                     break L0;
                   } else {
                     var11.a(false);
-                    break L1;
                   }
                 } else {
                   if ((var2 ^ -1) == -3) {
@@ -197,12 +164,10 @@ final class ud {
                       var15.field_j = var15.field_g[0];
                       var15.field_f = true;
                       var15.a(false);
-                      break L1;
                     }
                   } else {
                     gi.a((Throwable) null, "A1: " + og.e(55), (byte) 125);
                     jl.a((byte) -116);
-                    break L1;
                   }
                 }
               } else {
@@ -214,39 +179,27 @@ final class ud {
                 var4 = var9;
                 var5 = var12;
                 var6 = ((qc) ((Object) var5)).c((byte) 34);
-                var7 = 0;
-                L2: while (true) {
-                  if (var7 >= var6) {
-                    var14 = (qi) ((Object) k.field_e.g(0));
-                    if (var14 == null) {
-                      jl.a((byte) -117);
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    } else {
-                      var14.field_g = var3;
-                      var14.field_f = true;
-                      var14.field_j = var16[0];
-                      var14.a(false);
-                      break L1;
-                    }
-                  } else {
-                    var9[var7] = ((qc) ((Object) var5)).a((byte) -97);
-                    var7++;
-                    continue L2;
-                  }
+                for (var7 = 0; var7 < var6; var7++) {
+                  var9[var7] = ((qc) ((Object) var5)).a((byte) -97);
+                }
+                var14 = (qi) ((Object) k.field_e.g(0));
+                if (var14 == null) {
+                  jl.a((byte) -117);
+                  decompiledRegionSelector0 = 0;
+                  break L0;
+                } else {
+                  var14.field_g = var3;
+                  var14.field_f = true;
+                  var14.field_j = var16[0];
+                  var14.a(false);
+                  break L1;
                 }
               }
             }
-            L3: {
-              if (param0 > 85) {
-                break L3;
-              } else {
-                ud.a(-63);
-                break L3;
-              }
+            if (param0 <= 85) {
+              ud.a(-63);
             }
             decompiledRegionSelector0 = 3;
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -18,21 +18,14 @@ abstract class cj {
     }
 
     final int a(byte param0, long param1) {
-        long var4;
-        L0: {
-          var4 = this.a((byte) -49);
-          if (0L < var4) {
+        long var4 = this.a((byte) -49);
+        if (!(0L >= var4)) {
             bc.a(0, var4);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param0 != -6) {
-          return -30;
-        } else {
-          return this.a(true, param1);
+        if (param0 == -6) {
+            return this.a(true, param1);
         }
+        return -30;
     }
 
     abstract void a(int param0);

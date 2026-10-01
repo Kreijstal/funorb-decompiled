@@ -58,14 +58,10 @@ final class ig {
                     if (var4 > var5) {
                       return false;
                     } else {
-                      L0: {
-                        if (param3 >= param1) {
-                          stackIn_36_0 = 0;
-                          break L0;
-                        } else {
-                          stackIn_36_0 = 1;
-                          break L0;
-                        }
+                      if (param3 >= param1) {
+                        stackIn_36_0 = 0;
+                      } else {
+                        stackIn_36_0 = 1;
                       }
                       return stackIn_36_0 != 0;
                     }
@@ -92,32 +88,25 @@ final class ig {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3 = new sl(param2);
-            var3.field_j = param1;
-            var3.field_e = param0;
-            stackIn_1_0 = (sl) (var3);
-            break L0;
-          }
+          var3 = new sl(param2);
+          var3.field_j = param1;
+          var3.field_e = param0;
+          stackIn_1_0 = (sl) (var3);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3_ref = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var3_ref);
+          var3_ref = decompiledCaughtException;
+          stackIn_4_0 = (RuntimeException) (var3_ref);
 
-            stackIn_4_1 = new StringBuilder().append("ig.B(");
+          stackIn_4_1 = new StringBuilder().append("ig.B(");
 
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          if (param0 == null) {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
+            stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
+            stackIn_5_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ')');
         }

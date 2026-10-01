@@ -28,44 +28,33 @@ final class tl extends hf {
             String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
             try {
-              L0: {
-                if (param1 == -91) {
-                  try {
-                    L1: {
-                      var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-                      param0.getAppletContext().showDocument(wf.a(var2, 68, param0), "_top");
-                      break L1;
-                    }
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    var2_ref = (Exception) (Object) decompiledCaughtException;
-                    var2_ref.printStackTrace();
-                    return;
-                  }
+              if (param1 == -91) {
+                try {
+                  var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
+                  param0.getAppletContext().showDocument(wf.a(var2, 68, param0), "_top");
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2_ref = (Exception) (Object) decompiledCaughtException;
+                  var2_ref.printStackTrace();
                   return;
-                } else {
-                  break L0;
                 }
+                return;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L2: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_8_0 = (RuntimeException) (var2_ref2);
+              var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+              stackIn_8_0 = (RuntimeException) (var2_ref2);
 
-                stackIn_8_1 = new StringBuilder().append("tl.A(");
+              stackIn_8_1 = new StringBuilder().append("tl.A(");
 
-                if (param0 == null) {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "null";
-                  break L2;
-                } else {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "{...}";
-                  break L2;
-                }
+              if (param0 == null) {
+                stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                stackIn_9_2 = "null";
+              } else {
+                stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
+                stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
+                stackIn_9_2 = "{...}";
               }
               throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
             }
@@ -77,22 +66,20 @@ final class tl extends hf {
     }
 
     public static void b(int param0) {
-        if (param0 != 6491) {
-          tl.b(-67);
-          field_o = null;
-          field_g = null;
-          field_l = null;
-          field_f = null;
-          field_r = null;
-          return;
-        } else {
-          field_o = null;
-          field_g = null;
-          field_l = null;
-          field_f = null;
-          field_r = null;
-          return;
+        if (param0 == 6491) {
+            field_o = null;
+            field_g = null;
+            field_l = null;
+            field_f = null;
+            field_r = null;
+            return;
         }
+        tl.b(-67);
+        field_o = null;
+        field_g = null;
+        field_l = null;
+        field_f = null;
+        field_r = null;
     }
 
     tl() {

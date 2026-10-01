@@ -79,52 +79,36 @@ final class fi {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 0) {
-                break L1;
-              } else {
-                field_h = (String) null;
-                break L1;
-              }
+            if (param0 != 0) {
+              field_h = (String) null;
             }
-            L2: {
-              if (param1 == null) {
-                break L2;
-              } else {
-                if (param1 == fe.field_e) {
-                  break L2;
-                } else {
-                  uh.field_y.d(-9268);
-                  fj.field_p.a();
-                  fe.field_e = param1;
-                  uh.field_y.a(true, fe.field_e, -1706);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
+            if (param1 != null) {
+              if (param1 != fe.field_e) {
+                uh.field_y.d(-9268);
+                fj.field_p.a();
+                fe.field_e = param1;
+                uh.field_y.a(true, fe.field_e, -1706);
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
             decompiledRegionSelector0 = 0;
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (runtimeException);
+          runtimeException = decompiledCaughtException;
+          stackIn_10_0 = (RuntimeException) (runtimeException);
 
-            stackIn_10_1 = new StringBuilder().append("fi.D(").append(param0).append(',');
+          stackIn_10_1 = new StringBuilder().append("fi.D(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          if (param1 == null) {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
+            stackIn_11_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
@@ -155,25 +139,18 @@ final class fi {
     }
 
     fi(int param0) {
+        int var2 = 0;
         hf dupTemp$1 = null;
-        int var2;
         hf var3;
         this.field_f = 0;
         this.field_c = param0;
         this.field_e = new hf[param0];
-        var2 = 0;
-        L0: while (true) {
-          if (var2 < param0) {
-            dupTemp$1 = new hf();
-            var3 = dupTemp$1;
-            this.field_e[var2] = dupTemp$1;
-            var3.field_b = var3;
-            var3.field_c = var3;
-            var2++;
-            continue L0;
-          } else {
-            return;
-          }
+        for (var2 = 0; var2 < param0; var2++) {
+          dupTemp$1 = new hf();
+          var3 = dupTemp$1;
+          this.field_e[var2] = dupTemp$1;
+          var3.field_b = var3;
+          var3.field_c = var3;
         }
     }
 

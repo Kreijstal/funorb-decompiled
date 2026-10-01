@@ -1,0 +1,33 @@
+{
+  "formatVersion": 1,
+  "fingerprint": "ee802ca3ce19b26ad1373d0effe3232dcb3a7f84b38cddf323a20550c52f8ee2",
+  "snapshot": {
+    "formatVersion": 1,
+    "generators": {
+      "dekoblokoWork": {
+        "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+        "trackedClean": true
+      },
+      "javaTools": {
+        "commit": "b1e30cf3e762f15a2a2d639226df7a54ad5f4d81",
+        "trackedClean": true
+      }
+    },
+    "inputClasses": {
+      "files": 303,
+      "sha256": "7246293fe6a1a43e92cd0013525f62891609a9249c0111d787da1e7ba4c5d71f"
+    },
+    "pipeline": {
+      "arguments": [
+        "--profile",
+        "none",
+        "--safe-bytecode"
+      ],
+      "runtimeSafetyRetry": "removed-runtime-handlers-with-observable-call-duplication",
+      "skipPasses": "intize-boolean-parameters,compile-conflict-renames",
+      "environment": {
+        "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+      }
+    }
+  }
+}

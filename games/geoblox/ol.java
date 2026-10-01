@@ -56,37 +56,25 @@ final class ol extends hk {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                field_I = (String) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = eg.a(param1, (byte) 39, 10, true);
-            break L0;
+          if (param0) {
+            field_I = (String) null;
           }
+          stackIn_3_0 = eg.a(param1, (byte) 39, 10, true);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = (RuntimeException) (var2);
 
-            stackIn_6_1 = new StringBuilder().append("ol.G(").append(param0).append(',');
+          stackIn_6_1 = new StringBuilder().append("ol.G(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          if (param1 == null) {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
+            stackIn_7_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
@@ -94,6 +82,7 @@ final class ol extends hk {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
+        int var13 = 0;
         int stackIn_21_0 = 0;
         int stackIn_23_0 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -109,99 +98,66 @@ final class ol extends hk {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
         int var14 = 0;
         int var15 = 0;
         var15 = Geoblox.field_C;
         try {
-          L0: {
-            var8_int = -89 % ((-3 - param1) / 38);
-            if (!super.a(param0, 93, param2, param3, param4, param5, param6)) {
-              stackIn_23_0 = 0;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              L1: {
-                var9 = -param2 + param4 + -this.field_H;
-                var10 = this.field_r - 2 * this.field_H;
-                if (var10 < var9) {
-                  var9 = var10;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L2: {
-                if (0 > var9) {
-                  var9 = 0;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                var9 = this.field_E * var9 / var10;
-                if (param3 != 1) {
-                  if (param3 != 2) {
-                    break L3;
-                  } else {
-                    var11 = 2147483647;
-                    var12 = -1;
-                    var13 = 0;
-                    L4: while (true) {
-                      if (var13 >= this.field_F.a((byte) 48)) {
-                        if (0 > var12) {
-                          break L3;
-                        } else {
-                          this.field_F.a(0, var12);
-                          break L3;
-                        }
-                      } else {
-                        L5: {
-                          var14 = this.field_F.a(var13, (byte) 94) + -var9;
-                          var14 = var14 * var14;
-                          if ((var11 ^ -1) < (var14 ^ -1)) {
-                            var11 = var14;
-                            var12 = var13;
-                            break L5;
-                          } else {
-                            break L5;
-                          }
-                        }
-                        var13++;
-                        continue L4;
-                      }
+          var8_int = -89 % ((-3 - param1) / 38);
+          if (!super.a(param0, 93, param2, param3, param4, param5, param6)) {
+            stackIn_23_0 = 0;
+            decompiledRegionSelector0 = 1;
+          } else {
+            var9 = -param2 + param4 + -this.field_H;
+            var10 = this.field_r - 2 * this.field_H;
+            if (var10 < var9) {
+              var9 = var10;
+            }
+            if (0 > var9) {
+              var9 = 0;
+            }
+            L3: {
+              var9 = this.field_E * var9 / var10;
+              if (param3 != 1) {
+                if (param3 == 2) {
+                  var11 = 2147483647;
+                  var12 = -1;
+                  for (var13 = 0; var13 < this.field_F.a((byte) 48); var13++) {
+                    var14 = this.field_F.a(var13, (byte) 94) + -var9;
+                    var14 = var14 * var14;
+                    if ((var11 ^ -1) < (var14 ^ -1)) {
+                      var11 = var14;
+                      var12 = var13;
                     }
                   }
-                } else {
-                  this.field_F.b(var9, (byte) -93);
-                  break L3;
+                  if (0 > var12) {
+                    break L3;
+                  } else {
+                    this.field_F.a(0, var12);
+                    break L3;
+                  }
                 }
+              } else {
+                this.field_F.b(var9, (byte) -93);
               }
-              stackIn_21_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
+            stackIn_21_0 = 1;
+            decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var8 = decompiledCaughtException;
-            stackIn_26_0 = (RuntimeException) (var8);
+          var8 = decompiledCaughtException;
+          stackIn_26_0 = (RuntimeException) (var8);
 
-            stackIn_26_1 = new StringBuilder().append("ol.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+          stackIn_26_1 = new StringBuilder().append("ol.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
 
-            if (param6 == null) {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "null";
-              break L6;
-            } else {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "{...}";
-              break L6;
-            }
+          if (param6 == null) {
+            stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+            stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
+            stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+            stackIn_27_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
         }

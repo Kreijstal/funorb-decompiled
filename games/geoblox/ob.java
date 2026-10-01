@@ -40,20 +40,13 @@ final class ob extends ia {
               var5 = (jd) ((Object) this.field_j.g(0));
               var6 = var5;
               synchronized (var6) {
-                L1: {
-                  L2: {
-                    var7 = var5.a((ob) (this));
-                    if (var7 >= 0) {
-                      var5.field_f = var7;
-                      this.a(var5.field_b, var5);
-                      break L2;
-                    } else {
-                      var5.field_f = 0;
-                      this.a(var5);
-                      break L2;
-                    }
-                  }
-                  break L1;
+                var7 = var5.a((ob) (this));
+                if (var7 >= 0) {
+                  var5.field_f = var7;
+                  this.a(var5.field_b, var5);
+                } else {
+                  var5.field_f = 0;
+                  this.a(var5);
                 }
               }
               if (param2 != 0) {
@@ -121,20 +114,13 @@ final class ob extends ia {
               var3 = (jd) ((Object) this.field_j.g(0));
               var4 = var3;
               synchronized (var4) {
-                L1: {
-                  L2: {
-                    var5 = var3.a((ob) (this));
-                    if (var5 >= 0) {
-                      var3.field_f = var5;
-                      this.a(var3.field_b, var3);
-                      break L2;
-                    } else {
-                      var3.field_f = 0;
-                      this.a(var3);
-                      break L2;
-                    }
-                  }
-                  break L1;
+                var5 = var3.a((ob) (this));
+                if (var5 >= 0) {
+                  var3.field_f = var5;
+                  this.a(var3.field_b, var3);
+                } else {
+                  var3.field_f = 0;
+                  this.a(var3);
                 }
               }
               if (param0 != 0) {

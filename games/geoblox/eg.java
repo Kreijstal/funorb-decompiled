@@ -28,6 +28,7 @@ final class eg extends hf {
     }
 
     final static int a(CharSequence param0, byte param1, int param2, boolean param3) {
+        int var8 = 0;
         int stackIn_41_0 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
@@ -40,128 +41,78 @@ final class eg extends hf {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         CharSequence var11 = null;
         try {
           L0: {
-            L1: {
-              if (2 > param2) {
-                break L1;
-              } else {
-                if (-37 > (param2 ^ -1)) {
-                  break L1;
-                } else {
-                  L2: {
-                    var4_int = 0;
-                    var5 = 0;
-                    var6 = 0;
-                    var7 = param0.length();
-                    if (param1 > 2) {
-                      break L2;
-                    } else {
-                      var11 = (CharSequence) null;
-                      eg.a((CharSequence) null, (byte) 58, 6, false);
-                      break L2;
-                    }
-                  }
-                  var8 = 0;
-                  L3: while (true) {
-                    if (var7 <= var8) {
-                      if (var5 != 0) {
-                        stackIn_41_0 = var6;
-                        break L0;
+            if (2 <= param2) {
+              if (-37 <= (param2 ^ -1)) {
+                var4_int = 0;
+                var5 = 0;
+                var6 = 0;
+                var7 = param0.length();
+                if (param1 <= 2) {
+                  var11 = (CharSequence) null;
+                  eg.a((CharSequence) null, (byte) 58, 6, false);
+                }
+                for (var8 = 0; var7 > var8; var8++) {
+                  L4: {
+                    var9 = param0.charAt(var8);
+                    if (var8 == 0) {
+                      if (var9 == 45) {
+                        var4_int = 1;
+                        break L4;
                       } else {
-                        throw new NumberFormatException();
-                      }
-                    } else {
-                      L4: {
-                        L5: {
-                          var9 = param0.charAt(var8);
-                          if (var8 == 0) {
-                            if (var9 == 45) {
-                              var4_int = 1;
-                              break L4;
-                            } else {
-                              if (var9 != 43) {
-                                break L5;
-                              } else {
-                                if (!param3) {
-                                  break L5;
-                                } else {
-                                  break L4;
-                                }
-                              }
-                            }
-                          } else {
-                            break L5;
-                          }
-                        }
-                        L6: {
-                          L7: {
-                            if (48 > var9) {
-                              break L7;
-                            } else {
-                              if (var9 > 57) {
-                                break L7;
-                              } else {
-                                var9 -= 48;
-                                break L6;
-                              }
-                            }
-                          }
-                          L8: {
-                            if (65 > var9) {
-                              break L8;
-                            } else {
-                              if (90 < var9) {
-                                break L8;
-                              } else {
-                                var9 -= 55;
-                                break L6;
-                              }
-                            }
-                          }
-                          L9: {
-                            if (var9 < 97) {
-                              break L9;
-                            } else {
-                              if (122 >= var9) {
-                                var9 -= 87;
-                                break L6;
-                              } else {
-                                break L9;
-                              }
-                            }
-                          }
-                          throw new NumberFormatException();
-                        }
-                        if (var9 < param2) {
-                          L10: {
-                            if (var4_int != 0) {
-                              var9 = -var9;
-                              break L10;
-                            } else {
-                              break L10;
-                            }
-                          }
-                          var10 = var6 * param2 + var9;
-                          if (var6 != var10 / param2) {
-                            throw new NumberFormatException();
-                          } else {
-                            var5 = 1;
-                            var6 = var10;
+                        if (var9 == 43) {
+                          if (param3) {
                             break L4;
                           }
-                        } else {
-                          throw new NumberFormatException();
                         }
                       }
-                      var8++;
-                      continue L3;
+                    }
+                    L6: {
+                      if (48 <= var9) {
+                        if (var9 <= 57) {
+                          var9 -= 48;
+                          break L6;
+                        }
+                      }
+                      if (65 <= var9) {
+                        if (90 >= var9) {
+                          var9 -= 55;
+                          break L6;
+                        }
+                      }
+                      if (var9 >= 97) {
+                        if (122 >= var9) {
+                          var9 -= 87;
+                          break L6;
+                        }
+                      }
+                      throw new NumberFormatException();
+                    }
+                    if (var9 < param2) {
+                      if (var4_int != 0) {
+                        var9 = -var9;
+                      }
+                      var10 = var6 * param2 + var9;
+                      if (var6 != var10 / param2) {
+                        throw new NumberFormatException();
+                      } else {
+                        var5 = 1;
+                        var6 = var10;
+                      }
+                    } else {
+                      throw new NumberFormatException();
                     }
                   }
+                }
+                if (var5 != 0) {
+                  stackIn_41_0 = var6;
+                  break L0;
+                } else {
+                  throw new NumberFormatException();
                 }
               }
             }
@@ -169,23 +120,19 @@ final class eg extends hf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
-            var4 = decompiledCaughtException;
-            stackIn_44_0 = (RuntimeException) (var4);
+          var4 = decompiledCaughtException;
+          stackIn_44_0 = (RuntimeException) (var4);
 
-            stackIn_44_1 = new StringBuilder().append("eg.B(");
+          stackIn_44_1 = new StringBuilder().append("eg.B(");
 
-            if (param0 == null) {
-              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackIn_45_2 = "null";
-              break L11;
-            } else {
-              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackIn_45_2 = "{...}";
-              break L11;
-            }
+          if (param0 == null) {
+            stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+            stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+            stackIn_45_2 = "null";
+          } else {
+            stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
+            stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
+            stackIn_45_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

@@ -33,36 +33,28 @@ final class oa {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param2 == 8192) {
-              stackIn_4_0 = eg.a(param1, (byte) 49, param0, true);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = -10;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param2 == 8192) {
+            stackIn_4_0 = eg.a(param1, (byte) 49, param0, true);
+            decompiledRegionSelector0 = 1;
+          } else {
+            stackIn_2_0 = -10;
+            decompiledRegionSelector0 = 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = (RuntimeException) (var3);
 
-            stackIn_7_1 = new StringBuilder().append("oa.A(").append(param0).append(',');
+          stackIn_7_1 = new StringBuilder().append("oa.A(").append(param0).append(',');
 
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          if (param1 == null) {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
+            stackIn_8_2 = "{...}";
           }
           throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
         }

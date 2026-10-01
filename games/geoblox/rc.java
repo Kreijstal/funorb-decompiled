@@ -41,23 +41,20 @@ class rc extends hf {
     }
 
     final void a(byte param0) {
-        if (this.field_l == null) {
-          return;
-        } else {
-          this.field_l.field_k = this.field_k;
-          if (param0 <= 39) {
-            field_g = (String) null;
-            this.field_k.field_l = this.field_l;
-            this.field_l = null;
-            this.field_k = null;
+        if (!(this.field_l != null)) {
             return;
-          } else {
-            this.field_k.field_l = this.field_l;
-            this.field_l = null;
-            this.field_k = null;
-            return;
-          }
         }
+        this.field_l.field_k = this.field_k;
+        if (param0 > 39) {
+            this.field_k.field_l = this.field_l;
+            this.field_l = null;
+            this.field_k = null;
+            return;
+        }
+        field_g = (String) null;
+        this.field_k.field_l = this.field_l;
+        this.field_l = null;
+        this.field_k = null;
     }
 
     final static int d(int param0) {

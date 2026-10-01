@@ -146,19 +146,12 @@ final class na extends ha {
           if (param10 >= 0) {
             return;
           } else {
-            L1: {
-              param4 = param7;
-              if (param2 <= 0) {
-                break L1;
-              } else {
-                if (param1[param2 - 1] != -1) {
-                  break L1;
-                } else {
-                  param4--;
-                  param2++;
-                  param3++;
-                  break L1;
-                }
+            param4 = param7;
+            if (param2 > 0) {
+              if (param1[param2 - 1] == -1) {
+                param4--;
+                param2++;
+                param3++;
               }
             }
             L2: while (true) {
@@ -182,18 +175,13 @@ final class na extends ha {
                     param5[incrementValue$13] = param6[param0 & 255];
                     continue L2;
                   } else {
-                    L3: {
-                      incrementValue$14 = param2;
-                      param2++;
-                      param0 = param1[incrementValue$14] & 255;
-                      param4--;
-                      param0 = param0 + param0;
-                      if (param0 <= param4) {
-                        break L3;
-                      } else {
-                        param0 = param4;
-                        break L3;
-                      }
+                    incrementValue$14 = param2;
+                    param2++;
+                    param0 = param1[incrementValue$14] & 255;
+                    param4--;
+                    param0 = param0 + param0;
+                    if (param0 > param4) {
+                      param0 = param4;
                     }
                     param2 = param2 + param0;
                     param4 = param4 - param0;
@@ -300,47 +288,35 @@ final class na extends ha {
                   }
                 }
               } else {
-                L3: {
-                  incrementValue$2 = param4;
-                  param4++;
-                  param3 = param1[incrementValue$2];
-                  if (param3 == 0) {
-                    param5++;
-                    break L3;
-                  } else {
-                    incrementValue$3 = param5;
-                    param5++;
-                    param0[incrementValue$3] = param2[param3 & 255];
-                    break L3;
-                  }
+                incrementValue$2 = param4;
+                param4++;
+                param3 = param1[incrementValue$2];
+                if (param3 == 0) {
+                  param5++;
+                } else {
+                  incrementValue$3 = param5;
+                  param5++;
+                  param0[incrementValue$3] = param2[param3 & 255];
                 }
-                L4: {
-                  incrementValue$4 = param4;
-                  param4++;
-                  param3 = param1[incrementValue$4];
-                  if (param3 == 0) {
-                    param5++;
-                    break L4;
-                  } else {
-                    incrementValue$5 = param5;
-                    param5++;
-                    param0[incrementValue$5] = param2[param3 & 255];
-                    break L4;
-                  }
+                incrementValue$4 = param4;
+                param4++;
+                param3 = param1[incrementValue$4];
+                if (param3 == 0) {
+                  param5++;
+                } else {
+                  incrementValue$5 = param5;
+                  param5++;
+                  param0[incrementValue$5] = param2[param3 & 255];
                 }
-                L5: {
-                  incrementValue$6 = param4;
-                  param4++;
-                  param3 = param1[incrementValue$6];
-                  if (param3 == 0) {
-                    param5++;
-                    break L5;
-                  } else {
-                    incrementValue$7 = param5;
-                    param5++;
-                    param0[incrementValue$7] = param2[param3 & 255];
-                    break L5;
-                  }
+                incrementValue$6 = param4;
+                param4++;
+                param3 = param1[incrementValue$6];
+                if (param3 == 0) {
+                  param5++;
+                } else {
+                  incrementValue$7 = param5;
+                  param5++;
+                  param0[incrementValue$7] = param2[param3 & 255];
                 }
                 incrementValue$8 = param4;
                 param4++;
