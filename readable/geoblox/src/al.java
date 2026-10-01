@@ -220,7 +220,7 @@ final class al {
                 stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
                 stackIn_25_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
+              throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(')').toString());
             }
             if (decompiledRegionSelector1 == 0) {
               return stackIn_4_0 != 0;

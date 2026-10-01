@@ -217,12 +217,14 @@ largely unnamed; class names describe their instance roles.
 
 There are 642 explicit rules: 17 classes, 178 fields, 129 method declarations,
 91 parameters and 227 guarded local declarations. This is not full
-deobfuscation. Large decompiler state machines, unknown flags, guard arguments
+deobfuscation. Two bounded decompiler dispatchers, unknown flags, guard arguments
 and opaque shared helpers still need investigation. All 642 names from pass 6
 remain. Pass 10 migrates thirteen board-reconciliation local ordinals after
 dispatcher-only carriers disappear, retaining their types, spelling guards and
 semantic evidence. Pass 11 removes six unused exception locals without changing
-any named identity or semantic rule. The earlier migrations remain frozen.
+any named identity or semantic rule. Pass 12 also retains all named identities
+while replacing the oversized text initializer with three structured helpers.
+The earlier migrations remain frozen.
 
 The decompiler now checks explicit exception-region exit contracts, preserves
 ordinary empty branches as no-ops, requires explicit loop exit targets and
@@ -230,6 +232,8 @@ retains the exception table in large-method fallbacks. It refuses internal catch
 would restart setup. Gameplay update, rendering, scene transition and screen
 update use labeled loops; board reconciliation now does too, with its runtime
 catch intact. Total
-cases drop from 3,051 to 817. Three original methods retain dispatchers; only the
-partitioned initializer has at least 50 cases. See [the investigation](STATE-MACHINE-READABILITY.md)
+cases drop from 3,051 to 61. Two original methods retain dispatchers (27 and
+34 cases); none has at least 50 cases. The initializer preserves its runtime
+catch and original resource order through shared helper fields. Unknown builder
+prefixes across joins no longer disappear from diagnostic contexts. See [the investigation](STATE-MACHINE-READABILITY.md)
 for refusal reasons, verification and the next structural steps.

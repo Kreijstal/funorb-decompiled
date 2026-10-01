@@ -101,7 +101,7 @@ final class ek {
             stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return;

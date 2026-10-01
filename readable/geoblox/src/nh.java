@@ -153,7 +153,7 @@ abstract class nh {
             stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
             stackIn_33_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_24_0), stackIn_33_2 + ',' + param5 + ',' + param6 + ')');
+          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return;

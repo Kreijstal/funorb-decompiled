@@ -155,7 +155,7 @@ final class gi implements Iterable {
             stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_16_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
         }
         return stackIn_3_0;
     }
@@ -296,7 +296,7 @@ final class gi implements Iterable {
                     stackIn_14_5 = (StringBuilder) ((Object) stackIn_13_5);
                     stackIn_14_6 = uk.field_p;
                   }
-                  var4 = ((d) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, stackIn_14_6 + "&v1=" + d.field_o + "&v2=" + d.field_t + "&e=" + var9));
+                  var4 = ((d) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_14_6).append("&v1=").append(d.field_o).append("&v2=").append(d.field_t).append("&e=").append(var9).toString()));
                   L5: while (var4.field_a == 0) {
                     bc.a(param2 + -125, 1L);
                   }

@@ -308,7 +308,7 @@ final class jc {
             stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0;

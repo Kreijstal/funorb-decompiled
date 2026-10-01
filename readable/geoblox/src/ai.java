@@ -211,7 +211,7 @@ final class ai extends IntrusiveNode {
                 stackIn_53_1 = (StringBuilder) ((Object) stackIn_52_1);
                 stackIn_53_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_47_0), stackIn_53_2 + ',' + param3 + ',' + param4 + ')');
+              throw t.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_53_2).append(',').append(param3).append(',').append(param4).append(')').toString());
             }
             return stackIn_41_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {

@@ -50,7 +50,7 @@ final class vh extends ee implements pl {
             stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return (IndexedSprite) ((Object) stackIn_2_0);
@@ -173,7 +173,7 @@ final class vh extends ee implements pl {
             stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_5_0 != 0;
@@ -235,7 +235,7 @@ final class vh extends ee implements pl {
             stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -309,7 +309,7 @@ final class vh extends ee implements pl {
             stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
             stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return;

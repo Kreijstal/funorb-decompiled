@@ -70,7 +70,7 @@ final class sd extends pb {
             stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
         return stackIn_2_0;
     }
@@ -291,7 +291,7 @@ final class sd extends pb {
             stackIn_75_1 = (StringBuilder) ((Object) stackIn_74_1);
             stackIn_75_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_75_0), stackIn_75_2 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw t.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_75_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return;

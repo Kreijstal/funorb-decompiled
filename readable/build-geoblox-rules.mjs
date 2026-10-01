@@ -49,7 +49,7 @@ const rebuiltPassSeven = {...passSix, version: 7, previousRulesSha256: sha256(pa
   source: passSeven.source, generators: passSeven.generators, renames};
 if (passSevenBytes.toString() !== JSON.stringify(rebuiltPassSeven, null, 2) + '\n')
   throw new Error('Retained pass 7 does not match its reviewed rule lineage');
-if (pin.namingMigration !== 'rules/geoblox-v11-migration.json')
+if (pin.namingMigration !== 'rules/geoblox-v12-migration.json')
   throw new Error('Changed input requires reviewed naming-rule migration');
 const passEightBytes = read('rules/geoblox-v8.json');
 const passEight = JSON.parse(passEightBytes);
@@ -148,13 +148,15 @@ const rebuiltPassTen = {...passNine, version: 10, previousRulesSha256: sha256(pa
   source: passTen.source, generators: passTen.generators, renames: currentRenames};
 if (passTenBytes.toString() !== JSON.stringify(rebuiltPassTen, null, 2) + '\n')
   throw new Error('Retained pass 10 does not match its reviewed rule lineage');
-const nextMigrationBytes = read(pin.namingMigration);
+const passElevenBytes = read('rules/geoblox-v11.json');
+const passEleven = JSON.parse(passElevenBytes);
+const nextMigrationBytes = read('rules/geoblox-v11-migration.json');
 const nextMigration = JSON.parse(nextMigrationBytes);
 if (nextMigration.schema !== 1 || nextMigration.version !== 11 ||
     nextMigration.previousRulesSha256 !== sha256(passTenBytes) ||
     nextMigration.previousInputTreeSha256 !== passTen.inputTreeSha256 ||
-    nextMigration.inputTreeSha256 !== pin.inputTreeSha256 ||
-    nextMigration.javaToolsCommit !== pin.generators.javaTools.commit ||
+    nextMigration.inputTreeSha256 !== passEleven.inputTreeSha256 ||
+    nextMigration.javaToolsCommit !== passEleven.generators.javaTools.commit ||
     !Array.isArray(nextMigration.identityChanges) || nextMigration.identityChanges.length !== 0 ||
     nextMigration.review.rulesRetained !== renames.length ||
     nextMigration.review.originalSpellingGuardsMatched !== renames.length ||
@@ -164,8 +166,29 @@ if (nextMigration.schema !== 1 || nextMigration.version !== 11 ||
     nextMigration.review.namedLocalsUniqueWithinMethodBeforeAndAfter !== true ||
     nextMigration.review.classFieldMethodParameterIdentitiesUnchanged !== true)
   throw new Error('Input or declaration identities differ from the reviewed pass-11 migration');
-const rules = {...passTen, version: 11, previousRulesSha256: sha256(passTenBytes),
-  namingMigrationSha256: sha256(nextMigrationBytes), inputTreeSha256: pin.inputTreeSha256,
+const rebuiltPassEleven = {...passTen, version: 11, previousRulesSha256: sha256(passTenBytes),
+  namingMigrationSha256: sha256(nextMigrationBytes), inputTreeSha256: passEleven.inputTreeSha256,
+  source: passEleven.source, generators: passEleven.generators, renames: currentRenames};
+if (passElevenBytes.toString() !== JSON.stringify(rebuiltPassEleven, null, 2) + '\n')
+  throw new Error('Retained pass 11 does not match its reviewed rule lineage');
+const outlineMigrationBytes = read(pin.namingMigration);
+const outlineMigration = JSON.parse(outlineMigrationBytes);
+if (outlineMigration.schema !== 1 || outlineMigration.version !== 12 ||
+    outlineMigration.previousRulesSha256 !== sha256(passElevenBytes) ||
+    outlineMigration.previousInputTreeSha256 !== passEleven.inputTreeSha256 ||
+    outlineMigration.inputTreeSha256 !== pin.inputTreeSha256 ||
+    outlineMigration.javaToolsCommit !== pin.generators.javaTools.commit ||
+    !Array.isArray(outlineMigration.identityChanges) || outlineMigration.identityChanges.length !== 0 ||
+    outlineMigration.review.rulesRetained !== renames.length ||
+    outlineMigration.review.originalSpellingGuardsMatched !== renames.length ||
+    outlineMigration.review.namedLocals !== localRules ||
+    outlineMigration.review.namedLocalDeclarationIdentitiesUnchanged !== localRules ||
+    outlineMigration.review.namedLocalDeclarationIdentitiesMoved !== 0 ||
+    outlineMigration.review.namedLocalsUniqueWithinMethodBeforeAndAfter !== true ||
+    outlineMigration.review.classFieldMethodParameterIdentitiesUnchanged !== true)
+  throw new Error('Input or declaration identities differ from the reviewed pass-12 migration');
+const rules = {...passEleven, version: 12, previousRulesSha256: sha256(passElevenBytes),
+  namingMigrationSha256: sha256(outlineMigrationBytes), inputTreeSha256: pin.inputTreeSha256,
   source: {repository: pin.sourceRepository, commit: pin.commit, subdirectory: pin.subdirectory},
   generators: pin.generators, renames: currentRenames};
 const output = JSON.stringify(rules, null, 2) + '\n';

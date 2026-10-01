@@ -58,7 +58,7 @@ final class rl extends oe {
             stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
         return stackIn_3_0;
     }
@@ -113,7 +113,7 @@ final class rl extends oe {
             stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class rl extends oe {
             stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

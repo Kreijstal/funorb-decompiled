@@ -74,7 +74,7 @@ final class mf {
             stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_2_0 != 0;

@@ -108,7 +108,7 @@ abstract class jg {
             stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_10_0;
@@ -187,7 +187,7 @@ abstract class jg {
             stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_13_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(')').toString());
         }
         return stackIn_3_0;
     }
@@ -321,7 +321,7 @@ abstract class jg {
             stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_27_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

@@ -70,7 +70,7 @@ final class pi extends vf {
             stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_11_2 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return (nc) ((Object) stackIn_2_0);
@@ -144,7 +144,7 @@ final class pi extends vf {
             stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
         return stackIn_3_0 != 0;
     }

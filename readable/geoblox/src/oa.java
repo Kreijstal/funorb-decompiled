@@ -56,7 +56,7 @@ final class oa {
             stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_2_0;

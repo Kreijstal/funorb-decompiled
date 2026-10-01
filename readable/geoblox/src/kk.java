@@ -380,7 +380,7 @@ final class kk extends ji {
             stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
             stackIn_40_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_40_0), stackIn_40_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_4_0 != 0;
@@ -510,7 +510,7 @@ final class kk extends ji {
                 stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
                 stackIn_28_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
+              throw t.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

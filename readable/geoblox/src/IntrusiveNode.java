@@ -104,7 +104,7 @@ class IntrusiveNode {
             stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_2_0;
@@ -299,7 +299,7 @@ class IntrusiveNode {
             stackIn_52_1 = (StringBuilder) ((Object) stackIn_51_1);
             stackIn_52_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_52_0), stackIn_52_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_52_2).append(')').toString());
         }
     }
 

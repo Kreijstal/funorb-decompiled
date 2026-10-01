@@ -333,7 +333,7 @@ final class ul {
             stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
             stackIn_22_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), stackIn_22_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_3_0 != 0;

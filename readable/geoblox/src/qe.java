@@ -115,7 +115,7 @@ final class qe {
             stackIn_41_1 = (StringBuilder) ((Object) stackIn_40_1);
             stackIn_41_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ',' + param5 + ')');
+          throw t.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_41_2).append(',').append(param5).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return (java.awt.Frame) ((Object) stackIn_7_0);

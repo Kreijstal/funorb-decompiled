@@ -80,7 +80,7 @@ final class ml extends ff {
             stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

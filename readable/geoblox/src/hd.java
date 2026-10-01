@@ -238,7 +238,7 @@ final class hd extends sh {
             stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), stackIn_21_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

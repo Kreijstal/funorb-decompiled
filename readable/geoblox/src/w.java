@@ -177,7 +177,7 @@ final class w {
             stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_16_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
         }
         return stackIn_3_0;
     }

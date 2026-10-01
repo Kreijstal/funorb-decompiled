@@ -80,7 +80,7 @@ final class bc {
             stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
         return stackIn_14_0;
     }

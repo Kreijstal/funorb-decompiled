@@ -95,7 +95,7 @@ abstract class vk {
             stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), stackIn_23_2 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return (byte[]) ((Object) stackIn_3_0);

@@ -60,7 +60,7 @@ final class od {
             stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_2_0 != 0;
@@ -133,7 +133,7 @@ final class od {
             stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param5 + ')');
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
         }
         return stackIn_6_0;
     }

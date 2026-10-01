@@ -125,7 +125,7 @@ final class jj {
             stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(')').toString());
         }
     }
 

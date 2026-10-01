@@ -159,7 +159,7 @@ final class ba implements Runnable {
             stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -237,7 +237,7 @@ final class ba implements Runnable {
             stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

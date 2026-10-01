@@ -131,7 +131,7 @@ abstract class wf extends ch {
             stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
         }
         return stackIn_9_0;
     }
@@ -873,7 +873,7 @@ abstract class wf extends ch {
             stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
         if (decompiledRegionSelector1 == 0) {
           return;

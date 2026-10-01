@@ -291,7 +291,7 @@ final class eb {
                 stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
                 stackIn_12_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_12_2 + ')');
+              throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

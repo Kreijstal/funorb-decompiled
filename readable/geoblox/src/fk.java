@@ -39,7 +39,7 @@ final class fk extends sh {
             stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_2_0;
@@ -158,7 +158,7 @@ final class fk extends sh {
                 stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
                 stackIn_10_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
+              throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
             }
             if (decompiledRegionSelector1 == 0) {
               return stackIn_2_0;

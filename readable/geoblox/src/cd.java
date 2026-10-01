@@ -155,7 +155,7 @@ final class cd extends jg {
             stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_2_0;
@@ -237,7 +237,7 @@ final class cd extends jg {
             stackIn_9_3 = (StringBuilder) ((Object) stackIn_8_3);
             stackIn_9_4 = "https";
           }
-          var3 = ((java.net.ProxySelector) (Object) stackIn_9_0).select(new java.net.URI(stackIn_9_4 + "://" + this.field_e));
+          var3 = ((java.net.ProxySelector) (Object) stackIn_9_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_9_3).append(stackIn_9_4).append("://").append(this.field_e).toString()));
           stackIn_11_0 = this.field_k;
 
           stackIn_11_1 = null;
@@ -259,7 +259,7 @@ final class cd extends jg {
             stackIn_12_3 = (StringBuilder) ((Object) stackIn_11_3);
             stackIn_12_4 = "https";
           }
-          var4 = ((java.net.ProxySelector) (Object) stackIn_12_0).select(new java.net.URI(stackIn_12_4 + "://" + this.field_e));
+          var4 = ((java.net.ProxySelector) (Object) stackIn_12_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_12_3).append(stackIn_12_4).append("://").append(this.field_e).toString()));
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
@@ -426,7 +426,7 @@ final class cd extends jg {
             stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
             stackIn_31_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_28_0), stackIn_31_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_10_0;

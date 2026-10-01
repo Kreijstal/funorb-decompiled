@@ -76,7 +76,7 @@ final class jl {
             stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
         return stackIn_6_0 != 0;
     }

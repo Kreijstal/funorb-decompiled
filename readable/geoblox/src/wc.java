@@ -63,7 +63,7 @@ final class wc extends IntrusiveNode {
             stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), stackIn_14_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
         return stackIn_7_0 != 0;
     }

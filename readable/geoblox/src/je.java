@@ -80,7 +80,7 @@ final class je extends IntrusiveNode {
                 stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
                 stackIn_8_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+              throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

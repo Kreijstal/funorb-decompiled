@@ -104,7 +104,7 @@ final class ud {
             stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
             stackIn_22_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(')').toString());
         }
         return stackIn_16_0;
     }

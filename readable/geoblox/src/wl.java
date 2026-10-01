@@ -78,7 +78,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
             stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
             stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
             stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

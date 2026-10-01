@@ -189,7 +189,7 @@ final class ue {
             stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(')').toString());
         }
         return stackIn_16_0;
     }

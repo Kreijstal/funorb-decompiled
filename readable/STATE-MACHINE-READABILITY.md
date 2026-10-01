@@ -1,4 +1,4 @@
-# Why GeoBlox fell back, and how pass 11 preserves its exits
+# GeoBlox reconstruction: safe exception exits and bounded structured helpers
 
 Pass 9 kept explicit exception-region exit identities and refused unsafe
 continuations. Pass 10 recovers nested cycles inside the board-entity protected
@@ -7,28 +7,32 @@ structured loops with its runtime catch intact. Three original methods retain
 dispatchers; the oversized initializer is the only one with at least 50 cases.
 Pass 11 removes large-method shortcuts that dropped exception handlers and
 requires explicit loop exit targets. Dispatcher counts are unchanged.
+Pass 12 replaces the initializer dispatcher with three structured helpers and
+preserves existing builder contents across branch and exception joins. Two
+original methods retain dispatchers, with 61 cases in total.
 Original transformed bytecode is unchanged.
 
 ## Result
 
-| Method | Pass 6 cases | Pass 7 cases | Pass 8 cases | Pass 9 cases | Pass 10 cases |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| `GameplaySession.updateSession`, `gh.a(I)V` | 252 | 107 | 0 | 0 | **0** |
-| `GameplaySession.renderSession`, `gh.a(B)V` | 115 | 65 | 0 | 0 | **0** |
-| `GameplaySession.updateSceneTransition`, `gh.b(B)V` | 42 | 27 | 0 | 0 | **0** |
-| `GameplaySession.updateResultSequence`, `gh.f(I)V` | 43 | 27 | 27 | 27 | 27 |
-| `GameScreen.updateScreen`, `c.h(B)V` | 117 | 58 | 58 | 0 | **0** |
-| `kc.reconcileBoardEntities`, `kc.b(I)V` | 120 | 60 | 60 | 60 | **0** |
-| Partitioned `wi.a(BLrh;)V` | 1,877 | 756 | 756 | 756 | 756 |
-| All GeoBlox fallbacks | **3,051** | **1,330** | **1,131** | **877** | **817** |
+| Method | Pass 6 cases | Pass 7 cases | Pass 8 cases | Pass 9 cases | Pass 10 cases | Pass 12 cases |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| `GameplaySession.updateSession`, `gh.a(I)V` | 252 | 107 | 0 | 0 | **0** | **0** |
+| `GameplaySession.renderSession`, `gh.a(B)V` | 115 | 65 | 0 | 0 | **0** | **0** |
+| `GameplaySession.updateSceneTransition`, `gh.b(B)V` | 42 | 27 | 0 | 0 | **0** | **0** |
+| `GameplaySession.updateResultSequence`, `gh.f(I)V` | 43 | 27 | 27 | 27 | 27 | 27 |
+| `GameScreen.updateScreen`, `c.h(B)V` | 117 | 58 | 58 | 0 | **0** | **0** |
+| `kc.reconcileBoardEntities`, `kc.b(I)V` | 120 | 60 | 60 | 60 | **0** | **0** |
+| Partitioned `wi.a(BLrh;)V` | 1,877 | 756 | 756 | 756 | 756 | **0** |
+| All GeoBlox fallbacks | **3,051** | **1,330** | **1,131** | **877** | **817** | **61** |
 
 These are numeric cases in generated `switch (statePc)` dispatchers, including
 partition helpers, excluding application switches. Method-level diagnostics
 agree with an independent javac Trees inventory. Generated methods containing
-dispatchers fall from 41 to 36 to 33 to 21 to 20. The largest original method still
-uses 18 helpers, down from 23 in pass 6. Generated methods with at least 50 cases
+dispatchers fall from 41 to 36 to 33 to 21 to 20 to two. The initializer now
+uses three structured helpers, down from 18 dispatcher helpers in pass 11. Generated methods with at least 50 cases
 fall from 31 to four to two to one to zero; counting the partitioned initializer
-as one original method gives one large remaining original method.
+as one original method gave one large remaining method in pass 11; pass 12
+has no large original dispatcher methods.
 
 Pass 9 changes seven raw Java files: `c`, `ch`, `i`, `kc`, `lc`, `p` and `wh`.
 Twelve original methods recover structured bodies. The screen update shrinks
@@ -103,7 +107,7 @@ budgets remain supported. Exhaustion returns no partial result; the decompiler
 keeps the CFG fallback. The old unbudgeted single-block retry is removed. The
 shared JVM SSA consumer retains its smaller caller-supplied cap.
 
-## Why the oversized initializer stays
+## Why the oversized initializer stayed through pass 11
 
 `wi.a(BLrh;)V` has 9,499 normalized code items and triggers the oversized
 static-void partitioner. The next structural work is bounded structured helpers
@@ -234,3 +238,70 @@ both source variants, and dictionary-only reversal restores all 303 originals
 byte for byte. Earlier region-splitting and JIT checks above are retained results
 from pass 10, not fresh runs in this pass. These checks do not establish whole-game
 behavior or browser memory/FPS/phone acceptance.
+
+## Pass 12: outline complete statements, preserve shared state
+
+The size threshold previously selected a dispatcher before trying the owned
+structured tree. A diagnostic rendering of `wi.a(BLrh;)V` without that early
+threshold compiled to 18,108 bytes, so this method did not require a dispatcher.
+The generic implementation now tries bounded structured helpers first, keeping
+complete statements in source order. The default budget is 24,000 source
+characters per helper, with 256 helpers at most. Unsupported shapes and refused
+budgets retain the exception-preserving typed CFG fallback.
+
+Mutable parameters, promoted locals and their initializers share one carrier.
+First-store declarations cannot shadow those fields. Early helper returns set a
+shared completion flag checked by callers. Nested exception scopes stay at their
+original call sites, and helpers declare enclosing checked catches. Nonlocal
+break/continue statements stay in their original loop or label scope between
+outlined runs. Catch-local scopes, resources and finally blocks are not extracted.
+
+The six original-versus-rebuilt native fixtures cover both dispatcher coalescing
+modes, array initialization, primitive sharing, mutable parameters, early returns,
+checked catches, source-budget refusal and a repeatedly executed loop with an
+external break. All 270 input comparisons pass with bytecode verification enabled.
+Generated carrier methods in these fixtures remain below 32,768 code bytes.
+
+GeoBlox's initializer now has three helpers with 7,764, 7,925 and 6,671 Code bytes;
+its constructor has 65 and driver 240. Full release-8 compilation measures these
+sizes directly. The 756 initializer dispatcher cases disappear: total cases fall
+from 817 to 61, dispatcher methods from 20 to two, and original fallback methods
+from three to two. `gh.f(I)V` (27) and `n.a(IIIIBIIII)[Ldm;` (34) retain their
+multi-value operand-stack safeguards. Large original dispatchers are now zero.
+These two methods need precise stack-value transport reconstruction next; simply
+removing their safeguard would not prove correctness.
+
+## Pass 12: preserve builder prefixes in catch contexts
+
+A differential probe against the unchanged transformed GeoBlox classes exposed
+another bug: `wi`'s null-archive failure lost its nested context prefix. The
+original JVM prints `fk.F(2229,{...}) wi.A(74,null)`; the old renderer produced
+`{...}) null)`. A builder crossing a branch join becomes an operand-stack carrier,
+so its complete append history is unknown. The renderer wrongly treated a newly
+appended suffix as the entire builder and folded away its earlier contents.
+
+Unknown receivers now keep their real `append(...).toString()` operations.
+Complete tracked inline chains still become concatenations. Two native fixtures
+compare 14 outputs across ordinary and forced-dispatcher reconstruction, including
+catch joins, `append(char)` and repeated mutation of a caller-owned builder.
+The actual GeoBlox probe matches all four decoder inputs and the complete failure
+context against original transformed bytecode. The same pinned probe passes raw
+and renamed sources; it does not exercise successful archive loading.
+
+The complete raw export changes 165 files, largely preserving builder operations
+in error paths; no transformed bytecode changed. All 303 raw and renamed sources
+compile, all 642 naming guards remain valid, and all 227 named local identities
+remain unchanged. Javac compares 154,256 bindings and 388 override relationships.
+Dictionary-only reversal restores every original source byte.
+
+```sh
+NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrStringBuilderJoins.test.js # 2 native checks pass
+NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node --test test/structurer.test.js test/exceptionStructurer.test.js test/cfrInvariantFanout.test.js test/cfrNestedLoopSplitting.test.js test/cfrPartitionedLocals.test.js test/cfrAdditionalFeatures.test.js test/cfrStackOrdering.test.js test/cfrCatchSemanticsRegressions.test.js # 8 files pass
+node readable/tests/test-geoblox-rule-builder.mjs # 11 checks pass
+node readable/reproduce-geoblox.mjs --check # exact bytes, both corpora compile
+node readable/tests/test-geoblox-text.mjs # pinned decoder and failure-context probe
+```
+
+The frozen naming tool remains unchanged. This pass improves source readability
+and validates these scoped behaviors; it does not establish whole-game runtime
+semantics or browser memory, FPS and phone acceptance.

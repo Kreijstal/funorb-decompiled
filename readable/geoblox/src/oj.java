@@ -55,7 +55,7 @@ abstract class oj {
                 stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
                 stackIn_9_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+              throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

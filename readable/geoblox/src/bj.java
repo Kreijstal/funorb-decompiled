@@ -386,7 +386,7 @@ final class bj extends nh {
             stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
         }
         return stackIn_7_0;
     }
@@ -780,7 +780,7 @@ final class bj extends nh {
             stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
             stackIn_25_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), stackIn_25_2 + ',' + param7 + ',' + param8 + ')');
+          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

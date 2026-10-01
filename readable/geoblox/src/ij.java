@@ -65,7 +65,7 @@ final class ij extends oe implements pl {
             stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(')').toString());
         }
         return stackIn_3_0;
     }
@@ -157,7 +157,7 @@ final class ij extends oe implements pl {
             stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class ij extends oe implements pl {
             stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

@@ -2,7 +2,7 @@
   "schema": 1,
   "rules": 642,
   "files": 303,
-  "sourceCommit": "7bbba268d57c391c47aaeffbf99ee2cf202e83bc",
+  "sourceCommit": "844b92ec48a7bc48e18e7eb0aa5a2599e631e895",
   "commands": [
     {
       "command": "node readable/build-geoblox-rules.mjs --check",
@@ -11,22 +11,23 @@
     {
       "command": "node readable/tests/test-geoblox-rule-builder.mjs",
       "result": "pass",
-      "tests": 10
+      "tests": 11
     },
     {
       "command": "node readable/reproduce-geoblox.mjs --check",
       "result": "pass",
-      "bindingsCompared": 156445,
+      "bindingsCompared": 154256,
       "overrideRelationships": 388,
       "identifierEdits": 10628
     },
     {
-      "command": "node readable/tests/test-geoblox-deque.mjs",
+      "command": "JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-deque.mjs",
       "result": "pass",
       "variants": [
         "original",
         "renamed"
-      ]
+      ],
+      "environmentNote": "First concurrent invocation had a JVM hsperfdata lock warning on stdout; retry disables shared JVM performance-data files and passes both variants."
     },
     {
       "command": "node readable/tests/test-geoblox-gameplay.mjs",
@@ -40,32 +41,45 @@
       "command": "node readable/tools/test-readable-java.mjs",
       "result": "pass",
       "tests": 7,
-      "scope": "Previously passed in pass 9; tool files remain byte-identical and their frozen hashes are rechecked in pass 11."
+      "scope": "Previously passed in pass 9; tool files remain byte-identical and their frozen hashes are rechecked in pass 12."
     },
     {
       "command": "node readable/tools/test-capture-process.mjs",
       "result": "pass",
       "tests": 4,
-      "scope": "Previously passed in pass 9; tool files remain byte-identical and their frozen hashes are rechecked in pass 11."
+      "scope": "Previously passed in pass 9; tool files remain byte-identical and their frozen hashes are rechecked in pass 12."
     },
     {
-      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v11",
+      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v12",
       "result": "pass",
       "restoredFiles": 303,
       "originalBytesRecovered": true,
       "originalSourceRequired": false
+    },
+    {
+      "command": "node readable/tests/test-geoblox-text.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out",
+      "result": "pass",
+      "variants": [
+        "original",
+        "renamed",
+        "native"
+      ],
+      "decoderInputs": 4,
+      "nativeInputPinVerified": true,
+      "outputSha256": "e2e462accb656ba5820c8a5f28b8a45f71a06b8a48045ba0dccbed73a0eedd1c",
+      "scope": "Four decoder inputs and early null-archive failure context, not complete successful archive loading."
     }
   ],
-  "inputTreeSha256": "5840d847b3298140b82e05407399d8df88a588e2f08d890d406fa7c02b8ab66b",
-  "outputTreeSha256": "02bb7f9e2a3ef1726da49452fae5d38e3fdab94bcffa7deb3896dd60e641176f",
+  "inputTreeSha256": "2b5e8eca76820cb18760a231fc0825aded6e26972d646bfc3476d4f88d77147b",
+  "outputTreeSha256": "f3bc2be6e2da5d5ea2172eaadb7c9b380c933d8bf23dafd9fe2b4b9c1462e384",
   "runtimeEquivalenceVerified": false,
-  "version": 11,
+  "version": 12,
   "stateMachineReadability": {
-    "javaToolsCommit": "58cc6db28ba70e4bbda5e9c6458df6162be1a448",
-    "decompilerSourceArchiveSha256": "d149a992cc2f57baead66b26ae561541a668936cdff5d6cbe94ac099cce80b1c",
+    "javaToolsCommit": "a6e20fcdc1471afd9190c3391c03d89147cf360b",
+    "decompilerSourceArchiveSha256": "e6e46b1815a8ccc6867e742d0fb5d4411d3ceeb465648060a6786fec02b9101a",
     "dispatcherCasesBefore": 3051,
-    "dispatcherCasesAfter": 817,
-    "originalFallbackMethods": 3,
+    "dispatcherCasesAfter": 61,
+    "originalFallbackMethods": 2,
     "readabilityRegressionTests": 11,
     "fixturesAssertions": 36,
     "structuredFeatureAssertions": 26,
@@ -73,31 +87,37 @@
     "stackOrderingAssertions": 38,
     "krakatauSuite": "skipped: external binary unavailable",
     "previousPassDispatcherCases": 817,
-    "largeOriginalMethods": 1,
+    "largeOriginalMethods": 0,
     "invariantFanoutDifferentialTests": 8,
     "invariantFanoutDifferentialComparisons": 768,
     "namedLocalOrdinalMigrations": 0,
     "nativeExitRuntimeTests": 5,
     "exceptionStructurerTests": 17,
     "printerTests": 10,
-    "generatedDispatcherMethods": 20,
+    "generatedDispatcherMethods": 2,
     "generatedLargeDispatcherMethods": 0,
     "commands": [
       {
-        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/structurer.test.js test/exceptionStructurer.test.js test/cfrInvariantFanout.test.js test/cfrNestedLoopSplitting.test.js",
-        "files": 4,
-        "result": "pass"
+        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrStringBuilderJoins.test.js",
+        "result": "pass",
+        "tests": 2,
+        "nativeComparisons": 14
       },
       {
-        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node --test test/cfrStateMachineReadability.test.js test/cfrFixtures.test.js test/cfrStructuredFeatures.test.js test/cfrAdditionalFeatures.test.js test/cfrStackOrdering.test.js test/cfrCatchSemanticsRegressions.test.js",
-        "files": 6,
-        "result": "pass"
+        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node --test test/structurer.test.js test/exceptionStructurer.test.js test/cfrInvariantFanout.test.js test/cfrNestedLoopSplitting.test.js test/cfrPartitionedLocals.test.js test/cfrAdditionalFeatures.test.js test/cfrStackOrdering.test.js test/cfrCatchSemanticsRegressions.test.js",
+        "result": "pass",
+        "files": 8
+      },
+      {
+        "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node --test test/cfrStateMachineReadability.test.js test/cfrFixtures.test.js test/cfrStructuredFeatures.test.js",
+        "result": "pass",
+        "files": 3
       }
     ],
     "independentInventory": {
       "tool": "javac Trees method/switch inventory",
-      "dispatcherCases": 817,
-      "generatedMethods": 20,
+      "dispatcherCases": 61,
+      "generatedMethods": 2,
       "largeGeneratedMethods": 0,
       "screenUpdateLinesBefore": 951,
       "screenUpdateLinesAfter": 379,
@@ -132,11 +152,38 @@
     "exportIntegrity": {
       "freshSources": 303,
       "hardFailures": 0,
-      "originalFallbackMethods": 3,
+      "originalFallbackMethods": 2,
       "freshCleanDecompilerMatches": true,
-      "rawSourceChangedFiles": 3,
-      "onlyUnusedExceptionDeclarationsRemoved": 6,
-      "namedLocalIdentitiesUnchanged": 227
+      "rawSourceChangedFiles": 165,
+      "namedLocalIdentitiesUnchanged": 227,
+      "sourceChanges": "Bounded structured initializer and existing StringBuilder operations retained across branch/exception joins."
+    },
+    "structuredInitializer": {
+      "method": "wi.a(BLrh;)V",
+      "helpers": 3,
+      "sharedLocals": 10,
+      "sourceBudgetCharacters": 24000,
+      "helperCodeBytes": [
+        7764,
+        7925,
+        6671
+      ],
+      "constructorCodeBytes": 65,
+      "runCodeBytes": 240,
+      "compilation": "javac --release 8 against frozen stubs",
+      "nativeDifferentialTests": 6,
+      "nativeDifferentialComparisons": 270,
+      "scope": "Synthetic fixtures cover promoted locals, mutable parameters, early returns, checked catches, repeated loop execution and budget refusal. GeoBlox probe covers decoding and early failure context, not complete successful archive loading."
+    },
+    "stringBuilderJoins": {
+      "nativeTests": 2,
+      "nativeOutputComparisons": 14,
+      "unknownReceiverOperationsPreserved": true,
+      "geobloxProbeOutputSha256": "e2e462accb656ba5820c8a5f28b8a45f71a06b8a48045ba0dccbed73a0eedd1c",
+      "geobloxFailureContext": "fk.F(2229,{...}) wi.A(74,null)",
+      "originalTransformedBytecodeCompared": true,
+      "decoderInputs": 4,
+      "scope": "Native probe matches unchanged transformed bytecode; does not establish whole-game equivalence."
     }
   }
 }

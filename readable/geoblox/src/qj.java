@@ -116,7 +116,7 @@ final class qj {
             stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), stackIn_20_2 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
         return stackIn_13_0;
     }

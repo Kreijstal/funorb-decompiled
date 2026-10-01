@@ -63,7 +63,7 @@ final class rj {
             stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
             stackIn_5_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(')').toString());
         }
         return stackIn_1_0;
     }

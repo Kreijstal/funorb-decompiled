@@ -105,7 +105,7 @@ final class qb extends hk {
             stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_14_0 != 0;
@@ -213,7 +213,7 @@ final class qb extends hk {
             stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), stackIn_26_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

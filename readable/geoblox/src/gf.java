@@ -102,7 +102,7 @@ final class gf {
                 stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
                 stackIn_9_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+              throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -213,7 +213,7 @@ final class gf {
             stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), stackIn_20_2 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_5_0;

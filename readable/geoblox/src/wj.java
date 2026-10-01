@@ -167,7 +167,7 @@ final class wj extends sh {
             stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
             stackIn_32_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_29_0), stackIn_32_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return stackIn_12_0;
@@ -280,7 +280,7 @@ final class wj extends sh {
             stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_21_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(')').toString());
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -355,7 +355,7 @@ final class wj extends sh {
             stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_13_2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
         return stackIn_3_0;
     }
