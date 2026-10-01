@@ -1,0 +1,277 @@
+{
+  "version": "CFR-JS 0.4.0",
+  "generatedFiles": 303,
+  "hardFailures": 0,
+  "validFallbacks": 19,
+  "panics": [],
+  "totals": {
+    "stackUnderflow": 0,
+    "rawControlFlow": 0,
+    "placeholders": 0,
+    "stateMachineFallback": 19
+  },
+  "files": [
+    {
+      "name": "c.java",
+      "stackUnderflow": 0,
+      "rawControlFlow": 0,
+      "placeholders": 0,
+      "stateMachineFallback": 3,
+      "fallbacks": [
+        {
+          "kind": "stateMachineFallback",
+          "className": "c",
+          "methodName": "b",
+          "descriptor": "(Z)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 26,
+          "dispatchStatesAfter": 15
+        },
+        {
+          "kind": "stateMachineFallback",
+          "className": "c",
+          "methodName": "b",
+          "descriptor": "(I)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 62,
+          "dispatchStatesAfter": 23
+        },
+        {
+          "kind": "stateMachineFallback",
+          "className": "c",
+          "methodName": "h",
+          "descriptor": "(B)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 117,
+          "dispatchStatesAfter": 58
+        }
+      ]
+    },
+    {
+      "name": "ch.java",
+      "stackUnderflow": 0,
+      "rawControlFlow": 0,
+      "placeholders": 0,
+      "stateMachineFallback": 2,
+      "fallbacks": [
+        {
+          "kind": "stateMachineFallback",
+          "className": "ch",
+          "methodName": "run",
+          "descriptor": "()V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 84,
+          "dispatchStatesAfter": 35
+        },
+        {
+          "kind": "stateMachineFallback",
+          "className": "ch",
+          "methodName": "a",
+          "descriptor": "(IIIIILjava/lang/String;I)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 22,
+          "dispatchStatesAfter": 13
+        }
+      ]
+    },
+    {
+      "name": "gh.java",
+      "stackUnderflow": 0,
+      "rawControlFlow": 0,
+      "placeholders": 0,
+      "stateMachineFallback": 4,
+      "fallbacks": [
+        {
+          "kind": "stateMachineFallback",
+          "className": "gh",
+          "methodName": "a",
+          "descriptor": "(B)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 115,
+          "dispatchStatesAfter": 65
+        },
+        {
+          "kind": "stateMachineFallback",
+          "className": "gh",
+          "methodName": "a",
+          "descriptor": "(I)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 252,
+          "dispatchStatesAfter": 107
+        },
+        {
+          "kind": "stateMachineFallback",
+          "className": "gh",
+          "methodName": "b",
+          "descriptor": "(B)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 42,
+          "dispatchStatesAfter": 27
+        },
+        {
+          "kind": "stateMachineFallback",
+          "className": "gh",
+          "methodName": "f",
+          "descriptor": "(I)V",
+          "reason": "multi-value operand stack carried across a CFG backedge",
+          "dispatchStatesBefore": 43,
+          "dispatchStatesAfter": 27
+        }
+      ]
+    },
+    {
+      "name": "i.java",
+      "stackUnderflow": 0,
+      "rawControlFlow": 0,
+      "placeholders": 0,
+      "stateMachineFallback": 1,
+      "fallbacks": [
+        {
+          "kind": "stateMachineFallback",
+          "className": "i",
+          "methodName": "a",
+          "descriptor": "(IBLnf;IZ)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 55,
+          "dispatchStatesAfter": 26
+        }
+      ]
+    },
+    {
+      "name": "kc.java",
+      "stackUnderflow": 0,
+      "rawControlFlow": 0,
+      "placeholders": 0,
+      "stateMachineFallback": 2,
+      "fallbacks": [
+        {
+          "kind": "stateMachineFallback",
+          "className": "kc",
+          "methodName": "a",
+          "descriptor": "(IB)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 14,
+          "dispatchStatesAfter": 8
+        },
+        {
+          "kind": "stateMachineFallback",
+          "className": "kc",
+          "methodName": "b",
+          "descriptor": "(I)V",
+          "reason": "region sub-CFG remains irreducible after controlled splitting: irreducible CFG: 3 non-dominating retreating edge(s)",
+          "dispatchStatesBefore": 120,
+          "dispatchStatesAfter": 60
+        }
+      ]
+    },
+    {
+      "name": "lc.java",
+      "stackUnderflow": 0,
+      "rawControlFlow": 0,
+      "placeholders": 0,
+      "stateMachineFallback": 2,
+      "fallbacks": [
+        {
+          "kind": "stateMachineFallback",
+          "className": "lc",
+          "methodName": "a",
+          "descriptor": "(I)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 33,
+          "dispatchStatesAfter": 10
+        },
+        {
+          "kind": "stateMachineFallback",
+          "className": "lc",
+          "methodName": "a",
+          "descriptor": "(II[IIIIIIIIB[II)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 28,
+          "dispatchStatesAfter": 18
+        }
+      ]
+    },
+    {
+      "name": "n.java",
+      "stackUnderflow": 0,
+      "rawControlFlow": 0,
+      "placeholders": 0,
+      "stateMachineFallback": 1,
+      "fallbacks": [
+        {
+          "kind": "stateMachineFallback",
+          "className": "n",
+          "methodName": "a",
+          "descriptor": "(IIIIBIIII)[Ldm;",
+          "reason": "multi-value operand stack carried across a CFG backedge",
+          "dispatchStatesBefore": 55,
+          "dispatchStatesAfter": 34
+        }
+      ]
+    },
+    {
+      "name": "p.java",
+      "stackUnderflow": 0,
+      "rawControlFlow": 0,
+      "placeholders": 0,
+      "stateMachineFallback": 1,
+      "fallbacks": [
+        {
+          "kind": "stateMachineFallback",
+          "className": "p",
+          "methodName": "a",
+          "descriptor": "([I[ILnf;ZZZZ)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 62,
+          "dispatchStatesAfter": 24
+        }
+      ]
+    },
+    {
+      "name": "wh.java",
+      "stackUnderflow": 0,
+      "rawControlFlow": 0,
+      "placeholders": 0,
+      "stateMachineFallback": 2,
+      "fallbacks": [
+        {
+          "kind": "stateMachineFallback",
+          "className": "wh",
+          "methodName": "a",
+          "descriptor": "(II[BI)[B",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 15,
+          "dispatchStatesAfter": 9
+        },
+        {
+          "kind": "stateMachineFallback",
+          "className": "wh",
+          "methodName": "a",
+          "descriptor": "(Lqc;Z)V",
+          "reason": "invariant conditional fanout carried across a CFG backedge",
+          "dispatchStatesBefore": 29,
+          "dispatchStatesAfter": 15
+        }
+      ]
+    },
+    {
+      "name": "wi.java",
+      "stackUnderflow": 0,
+      "rawControlFlow": 0,
+      "placeholders": 0,
+      "stateMachineFallback": 1,
+      "fallbacks": [
+        {
+          "kind": "stateMachineFallback",
+          "className": "wi",
+          "methodName": "a",
+          "descriptor": "(BLrh;)V",
+          "reason": "partitioned oversized CFG",
+          "dispatchStatesBefore": 1877,
+          "dispatchStatesAfter": 756
+        }
+      ]
+    }
+  ],
+  "obfuscationGuards": []
+}
