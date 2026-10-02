@@ -1,7 +1,7 @@
 # Readable source exports
 
-GeoBlox pass 15 has 841 reviewed naming rules: 18 classes, 346 fields,
-136 methods, 103 parameters and 238 guarded local declarations. It preserves strings and numeric IDs; typed XOR-minus-one expressions and
+GeoBlox pass 16 has 926 reviewed naming rules: 20 classes, 348 fields,
+157 methods, 153 parameters and 248 guarded local declarations. It preserves strings and numeric IDs; typed XOR-minus-one expressions and
 comparisons now use equivalent signed integer/long conditions. The new decompiler renders proven
 single-entry branches as ordinary Java bodies and keeps verified exception-region
 loop fanouts structured. Nested exception cycles are recovered with bounded
@@ -14,6 +14,8 @@ keeps original JVM identities and exact edit information.
 
 See [parallel-loop readability](PARALLEL-LOOP-READABILITY.md) for the last two
 dispatchers, source-edge checks and native verification. The
+[border and validation report](BORDER-VALIDATION-READABILITY.md) records pass 16's
+85 additions and the four complete validation override families. The
 [comparison report](COMPARISON-READABILITY.md) records pass 14. Start with [GameplaySession.java](geoblox/src/GameplaySession.java),
 [GameplayEntity.java](geoblox/src/GameplayEntity.java),
 [ScorePopup.java](geoblox/src/ScorePopup.java),
@@ -34,9 +36,9 @@ dispatchers, source-edge checks and native verification. The
   `3c6a8e65d4796deb631ed67773b67ef92501cbd9`.
 - [tools/PIN.json](tools/PIN.json): exact bundled naming-tool file digests.
 - [rules](rules): the retained 491-rule manifest, 151 gameplay additions,
-  complete pass-6 through pass-14 manifests, reviewed input migrations,
+  complete pass-6 through pass-15 manifests, reviewed input migrations,
   pass-13 text additions, the pass-14 comparison migration and the pass-15
-  local-identity migration.
+  local-identity migration and pass-16 border/validation additions.
   Every previous manifest and the changed input are guarded by SHA-256.
 - `funorb-stubs.jar`: the frozen compilation dependency, included byte for byte.
 
@@ -77,6 +79,10 @@ verified transformed bytecode: 303 sources, zero hard failures and zero dispatch
 Pass 15 changes ten source files through parallel operand-copy fixes and loop
 reconstruction, retaining all 841 reviewed names. Ten result-sequence local
 ordinals move; their spellings, types and semantic evidence are preserved.
+Pass 16 keeps that raw input and the decompiler/tool pins unchanged. It retains
+every pass-15 rule and adds names for the nine-slice sprite geometry, the matching
+text validator and its complete state/message override families. No source body
+or local identity is migrated in this naming pass.
 The complete pass-14 rules remain frozen, and pass 15 binds the new source and
 decompiler identities. The previous ASM check covered
 2,427 methods with zero failures; those bytes have not changed. See
@@ -160,6 +166,10 @@ It does not read `games/geoblox` or extract an original input commit.
    migrates ten result-sequence local ordinals after removing the last two
    dispatchers, preserving each declaration type and reviewed role. Future input
    or identity changes require another reviewed migration.
+   Pass 16 retains all 841 rules and adds 85 guarded names on the unchanged input;
+   its manifest guards the frozen pass-15 rules, tool identities and the borrowed
+   pass-15 text-resource evidence. It checks all four validation override families
+   as complete sets.
 4. Pin the new source commit in `geoblox-source-pin.json`, retain the reviewed
    rule lineage and rebuild `geoblox-rules.json`. If updating the naming tool,
    import the reviewed tool and update `tools/PIN.json` deliberately.
@@ -176,7 +186,7 @@ unknown symbols are never renamed by guessing during reproduction.
 ## Checks and limits
 
 Both complete 303-file corpora compile. All 154,109 bindings and 388 override
-relationships are preserved; generation applies 15,595 identifier edits.
+relationships are preserved; generation applies 16,050 identifier edits.
 Rebuilding the rules and regenerating the export is byte-identical, and
 map-only reversal recovers all 303 original files byte for byte.
 
@@ -208,7 +218,7 @@ before treating the renamed export as a runnable replacement.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Original GeoBlox | `6b638e579bfeb73adbb6583b0581f4d6df93c9ca5930816ea81bf1a48aa3f015` |
-| Readable GeoBlox | `4a0a0980666235ca1d9d6407f0f84e14a40675df8ecfaea4dbbf0eab94b81281` |
+| Readable GeoBlox | `5051a73952b8ce3f709ed33dcaf16765a1db513d107dd533e6ee3b4c03a94200` |
 
 These tree digests use `sourceIdentity(sourceInventory(root))` from the naming
 tool. They identify source bytes; the decompiler Git commits are listed above.

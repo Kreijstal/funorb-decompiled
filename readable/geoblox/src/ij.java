@@ -103,7 +103,7 @@ final class ij extends oe implements pl {
         el var4 = null;
         try {
           var3 = null;
-          if (q.field_h == param1) {
+          if (TextInputValidator.field_h == param1) {
             var3 = ei.fullscreenUnavailableTrySignedAppletText;
           } else {
             if (param1 == ei.field_hb) {

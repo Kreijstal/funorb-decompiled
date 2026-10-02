@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 15
+# Reading GeoBlox pass 16
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -242,10 +242,30 @@ single-byte decoder; it is not named or treated as UTF-8.
 [The text report](TEXT-READABILITY.md) records the exact resource-key evidence,
 reproduction commands and native probe scope.
 
+## Input validation and UI border sprites
+
+[TextInputValidator](geoblox/src/TextInputValidator.java) supplies
+`currentValidationState` and `currentValidationMessage` from `validatedInput`.
+The candidate queries are `validationStateForText` and
+`validationMessageForText`. All seven declarations in each candidate-query
+family use those names, preserving their virtual overrides and pending states.
+[MatchingTextValidator](geoblox/src/MatchingTextValidator.java) compares the
+candidate with `referenceInput` and checks `referenceValidation` before accepting
+the match. `qh` uses it for a confirmation input, and `mk` composes it with
+another validation stage. Sentinel guard values remain in the source.
+
+The same class contains an unrelated static helper, `buildNineSliceSprites`.
+It creates corners, edge strips and a centre sprite; `cornerSize` is the sum of
+`innerAccentWidth`, `borderGap` and `outerBorderWidth`. Named colour arguments
+distinguish fill, top/left border, bottom/right border and inner accent.
+`IntrusiveDeque.buildUnitBorderNineSliceSprites` supplies fixed unit widths for
+UI skins. [The border/validation report](BORDER-VALIDATION-READABILITY.md) maps
+the array indices, evidence, override families and remaining shared carriers.
+
 ## Remaining limitations
 
-There are 841 explicit rules: 18 classes, 346 fields, 136 method declarations,
-103 parameters and 238 guarded local declarations. This is not full
+There are 926 explicit rules: 20 classes, 348 fields, 157 method declarations,
+153 parameters and 248 guarded local declarations. This is not full
 deobfuscation. Unknown flags, guard arguments and opaque shared helpers still
 need investigation. Pass 15 removes the last two dispatchers while preserving
 the reviewed names; ten result-sequence local ordinals move without changing
@@ -256,7 +276,9 @@ semantic evidence. Pass 11 removes six unused exception locals without changing
 any named identity or semantic rule. Pass 12 also retains all named identities
 while replacing the oversized text initializer with three structured helpers.
 Pass 13 adds 199 names without changing the raw Java tree; all previous rules
-remain. The earlier migrations remain frozen.
+remain. Pass 16 adds 85 names for border geometry and text validation on the unchanged
+raw source. All previous rules and local identities remain. The earlier
+migrations remain frozen.
 
 The decompiler now checks explicit exception-region exit contracts, preserves
 ordinary empty branches as no-ops, requires explicit loop exit targets and
@@ -286,6 +308,7 @@ structured control flow instead of a 27-case dispatcher. Its entity pixel scan
 retains `maxRadiusSquared`, `spriteColumn`, `spriteRow`, pixel offsets and
 `pixelRadiusSquared`. The source still preserves nonzero client-guard paths;
 they are not silently treated as normal-play zero flags. The nine-slice helper
-`n.a` also loses its 34-case dispatcher. See the
+`MatchingTextValidator.buildNineSliceSprites` (original `n.a`) also loses its
+34-case dispatcher. See the
 [parallel-loop report](PARALLEL-LOOP-READABILITY.md) for the copy hazards found,
 exact reproduction and the native test scope.

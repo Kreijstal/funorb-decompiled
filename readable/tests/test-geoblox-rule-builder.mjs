@@ -20,7 +20,8 @@ function fixture(change) {
       'rules/geoblox-v11.json', 'rules/geoblox-v12-migration.json',
       'rules/geoblox-v12.json', 'rules/geoblox-v13-text.json', 'rules/geoblox-v13.json',
       'rules/geoblox-v14-migration.json', 'rules/geoblox-v14.json',
-      'rules/geoblox-v15-migration.json', 'tools/PIN.json']) {
+      'rules/geoblox-v15-migration.json', 'rules/geoblox-v15.json',
+      'rules/geoblox-v16-border.json', 'tools/PIN.json']) {
       fs.mkdirSync(path.dirname(path.join(temporary, file)), {recursive: true});
       fs.copyFileSync(path.join(root, file), path.join(temporary, file));
     }
@@ -39,18 +40,18 @@ function fixture(change) {
   } finally { fs.rmSync(temporary, {recursive: true, force: true}); }
 }
 
-test('reviewed lineage reproduces all 841 guarded rules', () => {
-  assert.equal(JSON.parse(fixture().stdout).rules, 841);
+test('reviewed lineage reproduces all 926 guarded rules', () => {
+  assert.equal(JSON.parse(fixture().stdout).rules, 926);
 });
 test('a replacement input digest alone cannot migrate the export', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.inputTreeSha256 = '0'.repeat(64);
-  })), /reviewed pass-15 migration/);
+  })), /reviewed pass-16 border manifest/);
 });
 test('a different decompiler revision requires a new reviewed migration', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.generators.javaTools.commit = '0'.repeat(40);
-  })), /reviewed pass-15 migration/);
+  })), /reviewed pass-16 border manifest/);
 });
 test('previous names and migration identities cannot change silently', () => {
   assert.throws(() => fixture(edit => edit('rules/geoblox-v6.json', data => {
@@ -169,8 +170,8 @@ test('pass 14 cannot rewrite historical names or borrow a resource identity', ()
 });
 
 test('pass 15 binds the new source commit and retains the complete pass-14 snapshot', () => {
-  assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
-    data.commit = '0'.repeat(40);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v15.json', data => {
+    data.source.commit = '0'.repeat(40);
   })), /reviewed pass-15 migration/);
   assert.throws(() => fixture(edit => edit('rules/geoblox-v14.json', data => {
     data.renames[0].to = 'ChangedHistoricalName';
@@ -206,4 +207,44 @@ test('pass 15 cannot change the retained loader source or resource evidence', ()
   ]) assert.throws(() => fixture(edit => edit('rules/geoblox-v15-migration.json', data => {
     change(data.textEvidence);
   })), /changes reviewed resource identities or unchanged loader source/);
+});
+
+test('pass 16 additions retain their source and every pass-15 name', () => {
+  assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
+    data.commit = '0'.repeat(40);
+  })), /reviewed pass-16 border manifest/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v15.json', data => {
+    data.renames[0].to = 'ChangedHistoricalName';
+  })), /reviewed rule lineage/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v16-border.json', data => {
+    data.review.sourceBodyEdited = true;
+  })), /reviewed pass-16 border manifest/);
+});
+
+test('pass 16 additions cannot replace retained identities, duplicate identities or lose guards', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v16-border.json', data => {
+    data.renames[0].symbol = 'C:gh';
+  })), /replace a retained naming identity/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v16-border.json', data => {
+    data.renames[1].symbol = data.renames[0].symbol;
+  })), /duplicate naming identities/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v16-border.json', data => {
+    delete data.renames[0].originalName;
+  })), /Incomplete guarded border rule/);
+});
+
+test('pass 16 preserves all complete validation override families', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v16-border.json', data => {
+    data.renames.find(rule => rule.symbol === 'M:ib.e(I)Llh;').to = 'WrongFamilyName';
+  })), /incomplete or inconsistent reviewed override family/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v16-border.json', data => {
+    data.overrideFamilies.pop();
+  })), /incomplete or inconsistent reviewed override family/);
+});
+
+test('pass 16 cannot borrow another text-evidence revision', () => {
+  for (const key of ['textEvidenceMigration', 'textEvidenceMigrationSha256'])
+    assert.throws(() => fixture(edit => edit('rules/geoblox-v16-border.json', data => {
+      data[key] = 'wrong';
+    })), /reviewed pass-16 border manifest/);
 });

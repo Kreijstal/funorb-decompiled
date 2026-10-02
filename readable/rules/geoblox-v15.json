@@ -59,12 +59,6 @@
       "evidence": "The instance stores points/text, origin coordinates, progress and chain multiplier. ug initializes it, bd interpolates its display, cf credits completed points and wa collects unfinished points. Unrelated static helpers retain their own identities."
     },
     {
-      "symbol": "C:n",
-      "to": "MatchingTextValidator",
-      "originalName": "n",
-      "evidence": "Instance methods compare candidate text with the current text of field_i, propagate its nl validation result, and return createMismatchAlertText on mismatch. qh installs it on the confirmation field, and mk composes it for a second matching field. Unrelated static helpers retain independent method identities."
-    },
-    {
       "symbol": "C:na",
       "to": "IndexedSprite",
       "evidence": "Owns byte pixel indices and int palette used by indexed raster loops.",
@@ -75,12 +69,6 @@
       "to": "PendingActionMarker",
       "evidence": "nj.java instances contain the supplied integer as field_h; ra.java enqueues new nj(param2) into pb.field_t as a marker for the action being handled.",
       "originalName": "nj"
-    },
-    {
-      "symbol": "C:q",
-      "to": "TextInputValidator",
-      "originalName": "q",
-      "evidence": "Abstract instance contract supplies validation state and message for field_g current text; constructor captures that text input, e(int) delegates to a(int,String), and b(byte) delegates to b(int,String). Static game helpers are unrelated to this instance role."
     },
     {
       "symbol": "C:qk",
@@ -1367,12 +1355,6 @@
       "evidence": "wi.a(BLrh;)V reads the explicit resource key 'create_select_alternative' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null."
     },
     {
-      "symbol": "F:n.field_i:Ldj;",
-      "to": "referenceInput",
-      "originalName": "field_i",
-      "evidence": "Constructor parameter 1 is stored here. Both validation methods compare candidate text with this input's current field_s and inspect its existing nl validator before accepting a match."
-    },
-    {
       "symbol": "F:na.field_h:[I",
       "to": "palette",
       "evidence": "Indexed raster looks up int color by unsigned byte pixel value.",
@@ -1581,12 +1563,6 @@
       "to": "connectivityVisitedByEntityId",
       "originalName": "field_o",
       "evidence": "kc clears this array and marks entity IDs while traversing contact connectivity."
-    },
-    {
-      "symbol": "F:q.field_g:Ldj;",
-      "to": "validatedInput",
-      "originalName": "field_g",
-      "evidence": "Constructor captures the input whose current field_s is passed into the abstract validation methods by e(int) and b(byte)."
     },
     {
       "symbol": "F:qb.field_F:Ljava/lang/String;",
@@ -3425,66 +3401,6 @@
       "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
     },
     {
-      "symbol": "L:n.a(IIIIBIIII)[Ldm;#10",
-      "to": "borderIndex",
-      "originalName": "var11",
-      "evidence": "Reused outer loop index for corner border layers and positions along edge strips; role is deliberately broad across those separate loops."
-    },
-    {
-      "symbol": "L:n.a(IIIIBIIII)[Ldm;#11",
-      "to": "scanIndex",
-      "originalName": "var12",
-      "evidence": "Reused for the initial slice-array traversal, square-corner scan positions and edge-band offsets; not named as one fixed x/y coordinate."
-    },
-    {
-      "symbol": "L:n.a(IIIIBIIII)[Ldm;#12",
-      "to": "sliceToFill",
-      "originalName": "var13",
-      "evidence": "Current sprite selected from slicesToFill before its complete pixel array is initialized."
-    },
-    {
-      "symbol": "L:n.a(IIIIBIIII)[Ldm;#13",
-      "to": "fillPixelIndex",
-      "originalName": "var14",
-      "evidence": "Indexes the current sprite pixel array during the initial fill-colour loop."
-    },
-    {
-      "symbol": "L:n.a(IIIIBIIII)[Ldm;#14",
-      "to": "controlFlowGuard",
-      "originalName": "var15",
-      "evidence": "Snapshot of Geoblox.field_C. Nonzero paths change loop transfers, so the source retains this guard rather than assuming normal-play zero."
-    },
-    {
-      "symbol": "L:n.a(IIIIBIIII)[Ldm;#7",
-      "to": "cornerSize",
-      "originalName": "var9",
-      "evidence": "Sum of innerAccentWidth, borderGap and outerBorderWidth; used as both dimensions of the four square corners and the transverse dimension of edge strips."
-    },
-    {
-      "symbol": "L:n.a(IIIIBIIII)[Ldm;#8",
-      "to": "slices",
-      "originalName": "var10",
-      "evidence": "Nine newly allocated sprites; pixel writes use row-major indices 0..8, and this array is returned."
-    },
-    {
-      "symbol": "L:n.a(IIIIBIIII)[Ldm;#9",
-      "to": "slicesToFill",
-      "originalName": "var11_ref_dm__",
-      "evidence": "Alias of the returned slices array used by the initial full-pixel-fill traversal."
-    },
-    {
-      "symbol": "L:n.a(ILjava/lang/String;)Llh;#0",
-      "to": "referenceValidation",
-      "originalName": "var3",
-      "evidence": "Existing dg validation object obtained when referenceInput is nl; its status/message is checked before reporting a matching candidate as valid."
-    },
-    {
-      "symbol": "L:n.b(ILjava/lang/String;)Ljava/lang/String;#0",
-      "to": "referenceValidation",
-      "originalName": "var3",
-      "evidence": "Existing dg validation object obtained when referenceInput is nl; its status/message is checked before reporting a matching candidate as valid."
-    },
-    {
       "symbol": "L:sk.a(I)Z#10",
       "to": "staggeredLifetime",
       "originalName": "var5",
@@ -3815,22 +3731,10 @@
       "evidence": "Advances moving-entity positions, computes motion relative to the rotated board and queues ownership-mask contact candidates."
     },
     {
-      "symbol": "M:ag.a(ILjava/lang/String;)Llh;",
-      "to": "validationStateForText",
-      "originalName": "a",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
-    },
-    {
       "symbol": "M:ag.a(I[B)Ljava/lang/String;",
       "to": "decodeTextBytes",
       "originalName": "a",
       "evidence": "With guard 1 this decodes the entire byte array through bc.a(-8, bytes, 0, bytes.length). The routine skips zero bytes and maps 128..159 through lf.field_e; it is not a UTF-8 decoder."
-    },
-    {
-      "symbol": "M:ag.b(ILjava/lang/String;)Ljava/lang/String;",
-      "to": "validationMessageForText",
-      "originalName": "b",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
     },
     {
       "symbol": "M:bc.a(I[BII)Ljava/lang/String;",
@@ -3923,18 +3827,6 @@
       "originalName": "h"
     },
     {
-      "symbol": "M:cf.a(ILjava/lang/String;)Llh;",
-      "to": "validationStateForText",
-      "originalName": "a",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
-    },
-    {
-      "symbol": "M:cf.b(ILjava/lang/String;)Ljava/lang/String;",
-      "to": "validationMessageForText",
-      "originalName": "b",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
-    },
-    {
       "symbol": "M:cf.d(B)V",
       "to": "advanceScorePopups",
       "originalName": "d",
@@ -4011,18 +3903,6 @@
       "to": "readTextResourceBytes",
       "originalName": "a",
       "evidence": "With guard 2229 this calls bf.field_i.a(0, resourceKey, \"\") and returns raw bytes. Other guards return null; runtime failures retain their original context."
-    },
-    {
-      "symbol": "M:g.a(ILjava/lang/String;)Llh;",
-      "to": "validationStateForText",
-      "originalName": "a",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
-    },
-    {
-      "symbol": "M:g.b(ILjava/lang/String;)Ljava/lang/String;",
-      "to": "validationMessageForText",
-      "originalName": "b",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
     },
     {
       "symbol": "M:gh.a(B)V",
@@ -4149,18 +4029,6 @@
       "to": "unlinkNode",
       "evidence": "When the false guard is supplied, reconnects previous/next neighbours and clears both links; tf removal and insertion call this method.",
       "originalName": "a"
-    },
-    {
-      "symbol": "M:ib.b(B)Ljava/lang/String;",
-      "to": "currentValidationMessage",
-      "originalName": "b",
-      "evidence": "Abstract declaration implemented by q; both identities receive the same reviewed name so callers and overrides remain consistent."
-    },
-    {
-      "symbol": "M:ib.e(I)Llh;",
-      "to": "currentValidationState",
-      "originalName": "e",
-      "evidence": "Abstract declaration implemented by q; both identities receive the same reviewed name so callers and overrides remain consistent."
     },
     {
       "symbol": "M:ih.a(I)Z",
@@ -4379,70 +4247,10 @@
       "evidence": "Increments the difficulty step and loads its existing motion, angular-speed and release-threshold tables."
     },
     {
-      "symbol": "M:mk.a(ILjava/lang/String;)Llh;",
-      "to": "validationStateForText",
-      "originalName": "a",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
-    },
-    {
-      "symbol": "M:mk.b(ILjava/lang/String;)Ljava/lang/String;",
-      "to": "validationMessageForText",
-      "originalName": "b",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
-    },
-    {
-      "symbol": "M:n.a(IIIIBIIII)[Ldm;",
-      "to": "buildNineSliceSprites",
-      "originalName": "a",
-      "evidence": "Allocates nine sprites in row-major border layout: four square corners, four edge strips and a 64x64 centre. Fills pixels, draws top/left and bottom/right border colours, and applies a half-strip inner accent. tf.a(IIIII) supplies unit widths and the result is installed as UI border/background sprites by wa.a."
-    },
-    {
-      "symbol": "M:n.a(ILjava/lang/String;)Llh;",
-      "to": "validationStateForText",
-      "originalName": "a",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
-    },
-    {
-      "symbol": "M:n.b(ILjava/lang/String;)Ljava/lang/String;",
-      "to": "validationMessageForText",
-      "originalName": "b",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
-    },
-    {
-      "symbol": "M:n.g(I)V",
-      "to": "clearStaticReferences",
-      "originalName": "g",
-      "evidence": "Clears n.field_l and n.field_k, with the original nonzero-guard call to n.c(byte) retained. The fields belong to unrelated static helpers, so this name does not claim they are sprite caches."
-    },
-    {
       "symbol": "M:nb.a(IIIIIZ)V",
       "to": "spawnEntityAtPointer",
       "originalName": "a",
       "evidence": "Initializes an entity at pointer coordinates with the supplied category/variant and optional special-kind selection."
-    },
-    {
-      "symbol": "M:q.a(ILjava/lang/String;)Llh;",
-      "to": "validationStateForText",
-      "originalName": "a",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
-    },
-    {
-      "symbol": "M:q.b(B)Ljava/lang/String;",
-      "to": "currentValidationMessage",
-      "originalName": "b",
-      "evidence": "With guard -103, calls b(422,current input text); other guards clear the input and retain the original failing path. The complete override family includes the abstract ib declaration, renamed in the same manifest."
-    },
-    {
-      "symbol": "M:q.b(ILjava/lang/String;)Ljava/lang/String;",
-      "to": "validationMessageForText",
-      "originalName": "b",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
-    },
-    {
-      "symbol": "M:q.e(I)Llh;",
-      "to": "currentValidationState",
-      "originalName": "e",
-      "evidence": "With guard 32, calls the abstract state query using the validated input's current text. The complete override family includes the abstract ib declaration, renamed in the same manifest."
     },
     {
       "symbol": "M:rc.a(B)V",
@@ -4467,12 +4275,6 @@
       "to": "countNodes",
       "evidence": "Walks from sentinel.field_b until returning to the sentinel, counting each node.",
       "originalName": "a"
-    },
-    {
-      "symbol": "M:tf.a(IIIII)[Ldm;",
-      "to": "buildUnitBorderNineSliceSprites",
-      "originalName": "a",
-      "evidence": "Delegates to n.a with inner accent width 1, border gap 1, outer border width 1, edge length 3 and retention guard 1. It preserves all four caller-supplied colours."
     },
     {
       "symbol": "M:tf.a(ILhf;)V",
@@ -4601,18 +4403,6 @@
       "originalName": "a"
     },
     {
-      "symbol": "M:uk.a(ILjava/lang/String;)Llh;",
-      "to": "validationStateForText",
-      "originalName": "a",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
-    },
-    {
-      "symbol": "M:uk.b(ILjava/lang/String;)Ljava/lang/String;",
-      "to": "validationMessageForText",
-      "originalName": "b",
-      "evidence": "Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged."
-    },
-    {
       "symbol": "M:ul.b(I)V",
       "to": "collectMatchCandidates",
       "originalName": "b",
@@ -4655,18 +4445,6 @@
       "evidence": "Used to rotate entity movement/contact coordinates relative to the board."
     },
     {
-      "symbol": "P:ag.a(ILjava/lang/String;)Llh;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:ag.a(ILjava/lang/String;)Llh;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
       "symbol": "P:ag.a(I[B)Ljava/lang/String;#0",
       "to": "decodeGuard",
       "originalName": "param0",
@@ -4677,18 +4455,6 @@
       "to": "textBytes",
       "originalName": "param1",
       "evidence": "Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged."
-    },
-    {
-      "symbol": "P:ag.b(ILjava/lang/String;)Ljava/lang/String;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:ag.b(ILjava/lang/String;)Ljava/lang/String;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
     },
     {
       "symbol": "P:bc.a(I[BII)Ljava/lang/String;#0",
@@ -4811,30 +4577,6 @@
       "originalName": "param1"
     },
     {
-      "symbol": "P:cf.a(ILjava/lang/String;)Llh;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:cf.a(ILjava/lang/String;)Llh;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:cf.b(ILjava/lang/String;)Ljava/lang/String;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:cf.b(ILjava/lang/String;)Ljava/lang/String;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
       "symbol": "P:dm.a(IIIIII)V#0",
       "to": "sourcePivotX",
       "evidence": "Original position retained; transform equations and renderer differential fixtures.",
@@ -4949,30 +4691,6 @@
       "evidence": "Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged."
     },
     {
-      "symbol": "P:g.a(ILjava/lang/String;)Llh;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:g.a(ILjava/lang/String;)Llh;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:g.b(ILjava/lang/String;)Ljava/lang/String;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:g.b(ILjava/lang/String;)Ljava/lang/String;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
       "symbol": "P:gh.a(BI)V#1",
       "to": "points",
       "evidence": "Value added to score.",
@@ -4989,18 +4707,6 @@
       "to": "markSubmissionBlocked",
       "evidence": "When true sets field_K, which blocks score submission.",
       "originalName": "param0"
-    },
-    {
-      "symbol": "P:ib.b(B)Ljava/lang/String;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Guard argument passed to the q implementation; original numeric sentinel and descriptor remain unchanged."
-    },
-    {
-      "symbol": "P:ib.e(I)Llh;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Guard argument passed to the q implementation; original numeric sentinel and descriptor remain unchanged."
     },
     {
       "symbol": "P:ih.a(IILja;I)V#1",
@@ -5201,126 +4907,6 @@
       "originalName": "param0"
     },
     {
-      "symbol": "P:mk.a(ILjava/lang/String;)Llh;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:mk.a(ILjava/lang/String;)Llh;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:mk.b(ILjava/lang/String;)Ljava/lang/String;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:mk.b(ILjava/lang/String;)Ljava/lang/String;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:n.<init>(Ldj;Ldj;)V#0",
-      "to": "validatedInput",
-      "originalName": "param0",
-      "evidence": "First input is passed to the validator superclass; second input is stored as the source of the required matching text."
-    },
-    {
-      "symbol": "P:n.<init>(Ldj;Ldj;)V#1",
-      "to": "referenceInput",
-      "originalName": "param1",
-      "evidence": "First input is passed to the validator superclass; second input is stored as the source of the required matching text."
-    },
-    {
-      "symbol": "P:n.a(IIIIBIIII)[Ldm;#0",
-      "to": "innerAccentColor",
-      "originalName": "param0",
-      "evidence": "Written to inward-facing bands on sprites 1,3,7,5 for the first half of the edge length. Original arithmetic, bit shifts and nonzero guards remain unchanged."
-    },
-    {
-      "symbol": "P:n.a(IIIIBIIII)[Ldm;#1",
-      "to": "innerAccentWidth",
-      "originalName": "param1",
-      "evidence": "Bounds the inward-band pixel loop; contributes to square-corner extent. Original arithmetic, bit shifts and nonzero guards remain unchanged."
-    },
-    {
-      "symbol": "P:n.a(IIIIBIIII)[Ldm;#2",
-      "to": "topLeftBorderColor",
-      "originalName": "param2",
-      "evidence": "Written along top and left corner borders and outward-facing top/left edge-strip pixels. Original arithmetic, bit shifts and nonzero guards remain unchanged."
-    },
-    {
-      "symbol": "P:n.a(IIIIBIIII)[Ldm;#3",
-      "to": "edgeLength",
-      "originalName": "param3",
-      "evidence": "Sets the length of all four edge strips; the inner accent covers edgeLength shifted right by one. Original arithmetic, bit shifts and nonzero guards remain unchanged."
-    },
-    {
-      "symbol": "P:n.a(IIIIBIIII)[Ldm;#4",
-      "to": "referenceRetentionGuard",
-      "originalName": "param4",
-      "evidence": "Value 1 retains unrelated static references; other values call n.g(5) before returning the sprites. This guard is not a rendering mode. Original arithmetic, bit shifts and nonzero guards remain unchanged."
-    },
-    {
-      "symbol": "P:n.a(IIIIBIIII)[Ldm;#5",
-      "to": "fillColor",
-      "originalName": "param5",
-      "evidence": "Initial fill colour assigned to every pixel in all nine sprites, including the centre. Original arithmetic, bit shifts and nonzero guards remain unchanged."
-    },
-    {
-      "symbol": "P:n.a(IIIIBIIII)[Ldm;#6",
-      "to": "bottomRightBorderColor",
-      "originalName": "param6",
-      "evidence": "Written along bottom and right corner borders and outward-facing bottom/right edge-strip pixels. Original arithmetic, bit shifts and nonzero guards remain unchanged."
-    },
-    {
-      "symbol": "P:n.a(IIIIBIIII)[Ldm;#7",
-      "to": "borderGap",
-      "originalName": "param7",
-      "evidence": "Contributes to corner extent between the inner accent width and outer border width; those bands are drawn from opposite sides. Original arithmetic, bit shifts and nonzero guards remain unchanged."
-    },
-    {
-      "symbol": "P:n.a(IIIIBIIII)[Ldm;#8",
-      "to": "outerBorderWidth",
-      "originalName": "param8",
-      "evidence": "Bounds the corner-border layer loops and outward-facing edge-strip band loops. Original arithmetic, bit shifts and nonzero guards remain unchanged."
-    },
-    {
-      "symbol": "P:n.a(ILjava/lang/String;)Llh;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Original validation sentinel is preserved: -257 for state queries and 422 for message queries."
-    },
-    {
-      "symbol": "P:n.a(ILjava/lang/String;)Llh;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Compared with the reference input's current text; mismatches return the invalid state or createMismatchAlertText."
-    },
-    {
-      "symbol": "P:n.b(ILjava/lang/String;)Ljava/lang/String;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Original validation sentinel is preserved: -257 for state queries and 422 for message queries."
-    },
-    {
-      "symbol": "P:n.b(ILjava/lang/String;)Ljava/lang/String;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Compared with the reference input's current text; mismatches return the invalid state or createMismatchAlertText."
-    },
-    {
-      "symbol": "P:n.g(I)V#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Zero skips the additional n.c(89) call after clearing static references; other values retain that side effect."
-    },
-    {
       "symbol": "P:nb.a(IIIIIZ)V#1",
       "to": "pointerX",
       "originalName": "param1",
@@ -5349,78 +4935,6 @@
       "to": "specialKinds",
       "originalName": "param5",
       "evidence": "Selects special entity kinds instead of kind zero."
-    },
-    {
-      "symbol": "P:q.<init>(Ldj;)V#0",
-      "to": "validatedInput",
-      "originalName": "param0",
-      "evidence": "Stored in q.field_g and used by the current-state/current-message wrappers."
-    },
-    {
-      "symbol": "P:q.a(ILjava/lang/String;)Llh;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:q.a(ILjava/lang/String;)Llh;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:q.b(B)Ljava/lang/String;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Sentinel -103 preserves the validated input reference; nonstandard values follow the original cleanup/dereference path."
-    },
-    {
-      "symbol": "P:q.b(ILjava/lang/String;)Ljava/lang/String;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:q.b(ILjava/lang/String;)Ljava/lang/String;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:q.e(I)Llh;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Only value 32 delegates to the current input validation query; other values return null. The numeric sentinel is preserved."
-    },
-    {
-      "symbol": "P:tf.a(IIIII)[Ldm;#0",
-      "to": "bottomRightBorderColor",
-      "originalName": "param0",
-      "evidence": "Passed to n.a parameter 6, the bottom/right border colour."
-    },
-    {
-      "symbol": "P:tf.a(IIIII)[Ldm;#1",
-      "to": "fillColor",
-      "originalName": "param1",
-      "evidence": "Passed to n.a parameter 5, the full-sprite initial fill colour."
-    },
-    {
-      "symbol": "P:tf.a(IIIII)[Ldm;#2",
-      "to": "guard",
-      "originalName": "param2",
-      "evidence": "Values at most 90 clear tf.field_d before the unchanged delegation; this is a guard, not a colour."
-    },
-    {
-      "symbol": "P:tf.a(IIIII)[Ldm;#3",
-      "to": "topLeftBorderColor",
-      "originalName": "param3",
-      "evidence": "Passed to n.a parameter 2, the top/left border colour."
-    },
-    {
-      "symbol": "P:tf.a(IIIII)[Ldm;#4",
-      "to": "innerAccentColor",
-      "originalName": "param4",
-      "evidence": "Passed to n.a parameter 0, the half-strip inward accent colour."
     },
     {
       "symbol": "P:tf.a(ILhf;)V#1",
@@ -5519,30 +5033,6 @@
       "originalName": "param0"
     },
     {
-      "symbol": "P:uk.a(ILjava/lang/String;)Llh;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:uk.a(ILjava/lang/String;)Llh;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:uk.b(ILjava/lang/String;)Ljava/lang/String;#0",
-      "to": "guard",
-      "originalName": "param0",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
-      "symbol": "P:uk.b(ILjava/lang/String;)Ljava/lang/String;#1",
-      "to": "candidateText",
-      "originalName": "param1",
-      "evidence": "Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message."
-    },
-    {
       "symbol": "P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#0",
       "to": "initialLoadGuard",
       "originalName": "initialParam0",
@@ -5568,8 +5058,8 @@
     }
   ],
   "revision": 4,
-  "previousRulesSha256": "6d18ba2ec5d0160fd58b6939eb238003c3fdbed0778b4018524a32bf71579f5e",
-  "version": 16,
+  "previousRulesSha256": "40c019b8100ded83f7659271ce8b54da99b5bfd99f9f5186e96fafbf7ff07d4e",
+  "version": 15,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -5586,5 +5076,5 @@
     }
   },
   "upstreamNamingGeneratorCommit": "d41315508e071f6bd672d65eb2f5a8d428648d6f",
-  "namingMigrationSha256": "2b182ae1ac02731df247bef77ea54fce64d128fe32cdcc275d8dc940483c6e5e"
+  "namingMigrationSha256": "135141cf27a4787b6ee7489a77948a4c6b72af10e7e8f325b728eb5bcf1b6b8e"
 }

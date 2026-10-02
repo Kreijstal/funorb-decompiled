@@ -179,7 +179,7 @@ final class qh extends ee implements pe, pl, ta {
         this.field_I.a((byte) -111, new ag(this.field_I));
         this.field_G.a((byte) 126, new mk(this.field_G, this.field_I));
         this.field_M.a((byte) 83, new g(this.field_M, this.field_H, this.field_I));
-        this.field_N.a((byte) -71, new n(this.field_N, this.field_M));
+        this.field_N.a((byte) -71, new MatchingTextValidator(this.field_N, this.field_M));
         this.field_R.a((byte) -116, new cf(this.field_R));
         this.field_D.field_D = false;
         this.field_D.field_q = (dh) ((Object) new ml());

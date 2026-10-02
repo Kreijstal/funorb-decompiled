@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class q extends ib implements ga {
+abstract class TextInputValidator extends ib implements ga {
     static uj field_h;
     static double field_f;
-    private dj field_g;
+    private dj validatedInput;
 
     final static void a(byte param0, boolean param1) {
         if (param0 < 102) {
@@ -13,26 +13,26 @@ abstract class q extends ib implements ga {
         b.a(false, param1, false);
     }
 
-    final lh e(int param0) {
-        if (param0 != 32) {
+    final lh currentValidationState(int guard) {
+        if (guard != 32) {
             return (lh) null;
         }
-        return this.a(-257, this.field_g.field_s);
+        return this.validationStateForText(-257, this.validatedInput.field_s);
     }
 
     public final boolean a(int param0) {
         if (param0 != -26556) {
             String var3 = (String) null;
-            this.b(-33, (String) null);
-            if (this.field_g.field_s != null) {
-                return this.field_g.field_s.length() == 0 ? true : false;
+            this.validationMessageForText(-33, (String) null);
+            if (this.validatedInput.field_s != null) {
+                return this.validatedInput.field_s.length() == 0 ? true : false;
             }
             return true;
         }
-        if (this.field_g.field_s == null) {
+        if (this.validatedInput.field_s == null) {
             return true;
         }
-        if (this.field_g.field_s.length() != 0) {
+        if (this.validatedInput.field_s.length() != 0) {
             return false;
         }
         return true;
@@ -41,14 +41,14 @@ abstract class q extends ib implements ga {
     public final void a(dj param0, int param1) {
         try {
             if (param1 != -18649) {
-                this.field_g = (dj) null;
+                this.validatedInput = (dj) null;
             }
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "q.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    abstract String b(int param0, String param1);
+    abstract String validationMessageForText(int guard, String candidateText);
 
     final static boolean a(char param0, byte param1) {
         if (!(!Character.isISOControl(param0))) {
@@ -157,7 +157,7 @@ abstract class q extends ib implements ga {
               }
               var3_int = 1;
               if (param1 == 10) {
-                n.c((byte) -4);
+                MatchingTextValidator.c((byte) -4);
                 var3_int = 0;
               }
               if (var3_int != 0) {
@@ -180,7 +180,7 @@ abstract class q extends ib implements ga {
           }
           if (param0 != 124) {
             var4 = (String) null;
-            q.a(-94, -21, 56, -5, 62, (d) null, (String) null, -54, -101);
+            TextInputValidator.a(-94, -21, 56, -5, 62, (d) null, (String) null, -54, -101);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -227,7 +227,7 @@ abstract class q extends ib implements ga {
         try {
           if (param1 != 1) {
             var7 = (String) null;
-            q.a((byte) 108, 111, (String) null);
+            TextInputValidator.a((byte) 108, 111, (String) null);
           }
           var5_int = param4.a((byte) 126, param3);
           var6 = param4.a(param2, param1 + -69, var5_int);
@@ -292,14 +292,14 @@ abstract class q extends ib implements ga {
         return stackIn_3_0;
     }
 
-    abstract lh a(int param0, String param1);
+    abstract lh validationStateForText(int guard, String candidateText);
 
-    final String b(byte param0) {
-        if (param0 == -103) {
-            return this.b(422, this.field_g.field_s);
+    final String currentValidationMessage(byte guard) {
+        if (guard == -103) {
+            return this.validationMessageForText(422, this.validatedInput.field_s);
         }
-        this.field_g = (dj) null;
-        return this.b(422, this.field_g.field_s);
+        this.validatedInput = (dj) null;
+        return this.validationMessageForText(422, this.validatedInput.field_s);
     }
 
     public static void f(int param0) {
@@ -309,11 +309,11 @@ abstract class q extends ib implements ga {
         }
     }
 
-    q(dj param0) {
+    TextInputValidator(dj validatedInput) {
         try {
-            this.field_g = param0;
+            this.validatedInput = validatedInput;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "q.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "q.<init>(" + (validatedInput != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ag extends q {
+final class ag extends TextInputValidator {
     private static long[] field_m;
     static int field_l;
     static boolean[] field_j;
     static int field_k;
     static int field_i;
 
-    final String b(int param0, String param1) {
+    final String validationMessageForText(int guard, String candidateText) {
         RuntimeException var3 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -20,10 +20,10 @@ final class ag extends q {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 422) {
+          if (guard != 422) {
             field_l = -21;
           }
-          if (this.a(-257, param1) != si.field_m) {
+          if (this.validationStateForText(-257, candidateText) != si.field_m) {
             stackIn_6_0 = da.createEmailValidText;
             decompiledRegionSelector0 = 1;
           } else {
@@ -35,9 +35,9 @@ final class ag extends q {
           var3 = decompiledCaughtException;
           stackIn_9_0 = (RuntimeException) (var3);
 
-          stackIn_9_1 = new StringBuilder().append("ag.A(").append(param0).append(',');
+          stackIn_9_1 = new StringBuilder().append("ag.A(").append(guard).append(',');
 
-          if (param1 == null) {
+          if (candidateText == null) {
             stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
             stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "null";
@@ -207,7 +207,7 @@ final class ag extends q {
         return stackIn_3_0;
     }
 
-    final lh a(int param0, String param1) {
+    final lh validationStateForText(int guard, String candidateText) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -222,16 +222,16 @@ final class ag extends q {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != ca.a(param1, 1)) {
+          if (null != ca.a(candidateText, 1)) {
             stackIn_3_0 = 0;
           } else {
             stackIn_3_0 = 1;
           }
           var3_int = stackIn_3_0;
           if (var3_int != 0) {
-            if (param0 != -257) {
+            if (guard != -257) {
               var4 = (String) null;
-              this.b(97, (String) null);
+              this.validationMessageForText(97, (String) null);
             }
             stackIn_9_0 = kk.field_w;
             decompiledRegionSelector0 = 1;
@@ -244,9 +244,9 @@ final class ag extends q {
           var3 = decompiledCaughtException;
           stackIn_12_0 = (RuntimeException) (var3);
 
-          stackIn_12_1 = new StringBuilder().append("ag.D(").append(param0).append(',');
+          stackIn_12_1 = new StringBuilder().append("ag.D(").append(guard).append(',');
 
-          if (param1 == null) {
+          if (candidateText == null) {
             stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";

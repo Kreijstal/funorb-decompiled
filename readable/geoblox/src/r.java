@@ -304,7 +304,7 @@ final class r extends f implements pl {
         }
         if (this.field_I) {
             if (!(this.field_wb)) {
-                var2 = n.d((byte) 93);
+                var2 = MatchingTextValidator.d((byte) 93);
                 if (!(var2 == null)) {
                     this.a(false, var2, (byte) -69);
                 }

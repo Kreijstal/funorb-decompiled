@@ -47,12 +47,12 @@ abstract class ib implements dg {
             return null;
         }
         if (param0 == -21666) {
-            return this.b((byte) -103);
+            return this.currentValidationMessage((byte) -103);
         }
         return (String) null;
     }
 
-    abstract String b(byte param0);
+    abstract String currentValidationMessage(byte guard);
 
     public final void b(int param0) {
         this.field_b = oa.a(param0 ^ 23811);
@@ -83,7 +83,7 @@ abstract class ib implements dg {
                 return oj.field_d;
             }
             if (~(350L + this.field_b) >= ~oa.a(-12520)) {
-                return this.e(32);
+                return this.currentValidationState(32);
             }
             return bf.field_g;
         }
@@ -91,7 +91,7 @@ abstract class ib implements dg {
             return oj.field_d;
         }
         if (~(350L + this.field_b) >= ~oa.a(-12520)) {
-            return this.e(32);
+            return this.currentValidationState(32);
         }
         return bf.field_g;
     }
@@ -104,7 +104,7 @@ abstract class ib implements dg {
         }
     }
 
-    abstract lh e(int param0);
+    abstract lh currentValidationState(int guard);
 
     static {
         field_d = "Not achieved";

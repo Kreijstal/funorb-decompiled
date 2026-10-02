@@ -63,7 +63,7 @@ final class s extends ee implements pe, pl {
                     }
                   }
                   for (var2_int = 0; oj.field_b > var2_int; var2_int++) {
-                    var3 = n.field_k[var2_int];
+                    var3 = MatchingTextValidator.field_k[var2_int];
                     if (2 == var3.field_f) {
                       if (param0.field_o == var3.field_o) {
                         if (param0.field_d == var3.field_d) {

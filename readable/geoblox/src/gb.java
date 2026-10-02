@@ -23,27 +23,27 @@ final class gb {
         var4 = Geoblox.field_C;
         try {
           L0: {
-            if (n.field_j == param0) {
+            if (MatchingTextValidator.field_j == param0) {
               td.a(-348, fl.field_c[25]);
             }
-            n.field_j = n.field_j + 1;
+            MatchingTextValidator.field_j = MatchingTextValidator.field_j + 1;
             L2: while (true) {
               if (!hh.a(93)) {
-                if (0 == n.field_j % 40) {
+                if (0 == MatchingTextValidator.field_j % 40) {
                   if (vc.field_h < 11) {
-                    fh.field_c = n.field_j;
+                    fh.field_c = MatchingTextValidator.field_j;
                     vc.field_h = vc.field_h + 1;
                     if (10 == vc.field_h) {
                       td.a(-348, fl.field_c[26]);
                     }
                   }
                 }
-                var1_float = -((480.0f - (float)n.field_j) / 480.0f) + 1.0f;
+                var1_float = -((480.0f - (float)MatchingTextValidator.field_j) / 480.0f) + 1.0f;
                 if (11 > vc.field_h) {
                   si.field_j = ((int)(var1_float * MenuScreen.field_c) << -231506296) + (uf.field_h[0] + ((int)(var1_float * lk.field_b) << -265857872)) - -(int)(kk.field_x * var1_float);
                 }
                 var2 = tl.field_r[vc.field_h].field_s >> -757524927;
-                var3 = n.field_j << -597797246;
+                var3 = MatchingTextValidator.field_j << -597797246;
                 if (!sg.field_d) {
                   if (-var3 + 900 <= 320 + var2) {
                     td.a(-348, fl.field_c[7]);
@@ -56,7 +56,7 @@ final class gb {
                     ab.field_d = true;
                   }
                 }
-                if (494 > n.field_j) {
+                if (494 > MatchingTextValidator.field_j) {
                   stackIn_25_0 = 0;
                 } else {
                   stackIn_25_0 = 1;

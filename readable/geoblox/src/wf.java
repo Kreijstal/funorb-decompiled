@@ -46,7 +46,7 @@ abstract class wf extends ch {
                       this.a((byte) 79, "reconnect");
                     }
                     kd.b((byte) 103);
-                    q.a((byte) 124, var2, kh.field_a);
+                    TextInputValidator.a((byte) 124, var2, kh.field_a);
                     ii.field_e = true;
                     hi.field_G = oa.a(-12520) - -15000L;
                     return var2;
@@ -145,7 +145,7 @@ abstract class wf extends ch {
         da.a(true, va.field_a);
         if (param0 == -70) {
             ic.a(this.field_s, this.field_k, 5000, param7, this.field_m, param5, va.field_a, this.field_w, 5000, this.field_n, this.field_x, MenuScreen.field_i, 64, this.field_l);
-            q.a(param7, va.field_a, this.field_l, this.field_x, -23949, MenuScreen.field_i, this.field_n, this.field_s, this.field_w);
+            TextInputValidator.a(param7, va.field_a, this.field_l, this.field_x, -23949, MenuScreen.field_i, this.field_n, this.field_s, this.field_w);
             rd.b(28);
             vc.field_f = nd.a(param0 + 113);
             sl.a(f.field_kb, 57);
@@ -314,7 +314,7 @@ abstract class wf extends ch {
             this.field_t = false;
             jl.a((byte) -115);
             kd.b((byte) 81);
-            q.a((byte) 124, 2, fa.idleMessage20MinText);
+            TextInputValidator.a((byte) 124, 2, fa.idleMessage20MinText);
             bl.c(-113);
             ii.field_e = true;
             hi.field_G = oa.a(-12520) - -15000L;
@@ -356,19 +356,19 @@ abstract class wf extends ch {
                 if (ib.field_e != 3) {
                   if (4 != ib.field_e) {
                     if (2 == ib.field_e) {
-                      q.a((byte) 124, 256, DualLinkNode.js5ConnectFullErrorText);
+                      TextInputValidator.a((byte) 124, 256, DualLinkNode.js5ConnectFullErrorText);
                     } else {
                       if (ib.field_e != 5) {
-                        q.a((byte) 124, 256, ki.js5ConnectErrorText);
+                        TextInputValidator.a((byte) 124, 256, ki.js5ConnectErrorText);
                       } else {
-                        q.a((byte) 124, 5, jg.loginGameUpdatedText);
+                        TextInputValidator.a((byte) 124, 5, jg.loginGameUpdatedText);
                       }
                     }
                   } else {
-                    q.a((byte) 124, 256, qb.js5IoErrorText);
+                    TextInputValidator.a((byte) 124, 256, qb.js5IoErrorText);
                   }
                 } else {
-                  q.a((byte) 124, 256, pf.js5CrcErrorText);
+                  TextInputValidator.a((byte) 124, 256, pf.js5CrcErrorText);
                 }
                 ii.field_e = true;
               }
@@ -680,7 +680,7 @@ abstract class wf extends ch {
                       hl.field_G = false;
                       hj.field_a = 10;
                     } else {
-                      q.a((byte) 124, var5_int, kh.field_a);
+                      TextInputValidator.a((byte) 124, var5_int, kh.field_a);
                       kh.field_a = null;
                     }
                   }

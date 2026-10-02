@@ -12,12 +12,12 @@ final class PendingActionMarker extends IntrusiveNode {
         }
         kf.field_e = true;
         if (param0 > 115) {
-            q.a((byte) 107, false);
+            TextInputValidator.a((byte) 107, false);
             hj.field_a = 0;
             return;
         }
         field_f = (IntrusiveDeque) null;
-        q.a((byte) 107, false);
+        TextInputValidator.a((byte) 107, false);
         hj.field_a = 0;
     }
 

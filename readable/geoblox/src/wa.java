@@ -119,7 +119,7 @@ final class wa {
             }
             var5[4] = (Sprite) ((Object) var18);
             var4.a(-127, 4).a(true, (byte) 73).a(var5, true);
-            var4.a(-101, 5).a(IntrusiveDeque.a(0, 0, 116, 0, 65793), true).a(true, (byte) 73).b(256, -1);
+            var4.a(-101, 5).a(IntrusiveDeque.buildUnitBorderNineSliceSprites(0, 0, 116, 0, 65793), true).a(true, (byte) 73).b(256, -1);
             this.field_j = (dh) ((Object) var4);
             var6 = new rd(var4, true);
             var6.field_g = 0;

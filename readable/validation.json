@@ -1,16 +1,16 @@
 {
   "schema": 1,
-  "version": 15,
-  "rules": 841,
+  "version": 16,
+  "rules": 926,
   "files": 303,
   "sourceCommit": "3c6a8e65d4796deb631ed67773b67ef92501cbd9",
   "inputTreeSha256": "6b638e579bfeb73adbb6583b0581f4d6df93c9ca5930816ea81bf1a48aa3f015",
-  "outputTreeSha256": "4a0a0980666235ca1d9d6407f0f84e14a40675df8ecfaea4dbbf0eab94b81281",
+  "outputTreeSha256": "5051a73952b8ce3f709ed33dcaf16765a1db513d107dd533e6ee3b4c03a94200",
   "runtimeEquivalenceVerified": false,
   "previousValidation": {
-    "commit": "3f0dbd01d87dfb8649f2cb8fe8151fe0a340a9b0",
+    "commit": "24544062d466be16f8d60a145f946f5b92f491f0",
     "path": "readable/validation.json",
-    "scope": "Immutable pass-14 record; unlisted historical checks are not claimed freshly rerun."
+    "scope": "Immutable pass-15 decompiler and naming validation; unlisted historical checks are not claimed freshly rerun."
   },
   "commands": [
     {
@@ -20,7 +20,7 @@
     {
       "command": "node readable/tests/test-geoblox-rule-builder.mjs",
       "result": "pass",
-      "tests": 20
+      "tests": 24
     },
     {
       "command": "node readable/tests/test-geoblox-text-rules.mjs",
@@ -35,11 +35,11 @@
       "result": "pass",
       "bindingsCompared": 154109,
       "overrideRelationships": 388,
-      "identifierEdits": 15595,
+      "identifierEdits": 16050,
       "originalAndRenamedFullCompilation": true
     },
     {
-      "command": "node readable/tools/restore-original.mjs readable/geoblox ../geoblox-loops-v15-final/restored",
+      "command": "node readable/tools/restore-original.mjs readable/geoblox ../geoblox-border-v16/restored",
       "result": "pass",
       "restoredFiles": 303,
       "originalBytesRecovered": true,
@@ -90,117 +90,38 @@
       "nativeInputPinVerified": true,
       "outputSha256": "e2e462accb656ba5820c8a5f28b8a45f71a06b8a48045ba0dccbed73a0eedd1c",
       "scope": "Decoder arrays/slices, guard side effects and early null-archive failure context; not complete successful archive loading."
-    },
-    {
-      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrParallelBackedges.test.js",
-      "checkout": "java-tools e3268884ffc81e43bc60694439a297603b68a2e4",
-      "result": "pass",
-      "tests": 12,
-      "nativeComparisons": 6650
-    },
-    {
-      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node test/cfrStackOrdering.test.js",
-      "checkout": "java-tools e3268884ffc81e43bc60694439a297603b68a2e4",
-      "result": "pass",
-      "assertions": 38
-    },
-    {
-      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrComplementComparisons.test.js",
-      "checkout": "java-tools e3268884ffc81e43bc60694439a297603b68a2e4",
-      "result": "pass",
-      "tests": 3,
-      "nativeComparisons": 7040
-    },
-    {
-      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrExceptionLoopExits.test.js",
-      "checkout": "java-tools e3268884ffc81e43bc60694439a297603b68a2e4",
-      "result": "pass",
-      "tests": 1,
-      "nativeComparisons": 504
-    },
-    {
-      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/structuredFlowVerifier.test.js",
-      "checkout": "java-tools e3268884ffc81e43bc60694439a297603b68a2e4",
-      "result": "pass",
-      "tests": 6
-    },
-    {
-      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/exceptionStructurer.test.js",
-      "checkout": "java-tools e3268884ffc81e43bc60694439a297603b68a2e4",
-      "result": "pass",
-      "tests": 25
-    },
-    {
-      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData node test/cfrNestedLoopSplitting.test.js",
-      "checkout": "java-tools e3268884ffc81e43bc60694439a297603b68a2e4",
-      "result": "pass",
-      "tests": 3,
-      "nativeComparisons": 840
-    },
-    {
-      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node test/cfrStructuredFeatures.test.js",
-      "checkout": "java-tools e3268884ffc81e43bc60694439a297603b68a2e4",
-      "result": "pass",
-      "assertions": 26
-    },
-    {
-      "command": "node readable/tools/test-readable-java.mjs",
-      "result": "pass",
-      "tests": 9
     }
   ],
   "stateMachineReadability": {
     "javaToolsCommit": "e3268884ffc81e43bc60694439a297603b68a2e4",
     "decompilerSourceArchiveSha256": "98369c043d012743adb1924409bb754781722f4c2d6c7c7ab082cce5a82aeb20",
-    "dispatcherCasesBefore": 3051,
-    "previousPassDispatcherCases": 61,
-    "dispatcherCasesAfter": 0,
-    "originalFallbackMethods": 0,
-    "generatedDispatcherMethods": 0,
-    "largeOriginalMethods": 0,
-    "originalBytecodeUnchanged": true,
-    "independentInventory": {
-      "tool": "javac Trees method/switch inventory",
-      "dispatcherCases": 0,
-      "generatedMethods": 0,
-      "resultSequenceLinesBefore": 364,
-      "resultSequenceLinesAfter": 167,
-      "nineSliceLinesBefore": 441,
-      "nineSliceLinesAfter": 235
-    },
-    "exportIntegrity": {
-      "freshSources": 303,
-      "hardFailures": 0,
-      "validFallbacks": 0,
-      "freshCleanDecompilerMatches": true,
-      "rawSourceChangedFiles": 10,
-      "rawAndRenamedFullCompilation": true,
-      "dictionaryOnlyReversalExact": true
-    },
-    "sourceFlowContracts": {
-      "sourceEdgesRetainedBeforeSplitting": true,
-      "everyControlledCopyVerified": true,
-      "conditionalPolarityVerified": true,
-      "switchFallthroughVerified": true,
-      "outerRegionRoutingVerified": true
-    },
-    "fullGameRuntimeEquivalenceVerified": false
+    "dispatcherCases": 0,
+    "dispatcherMethods": 0,
+    "rawSourceTreeUnchanged": true,
+    "scope": "Pass-15 structured source is unchanged. Pass 16 changes identifier spellings only; native decompiler fixtures remain recorded in the previous validation."
   },
   "namingReview": {
-    "spellingGuardsMatched": 841,
-    "namedLocals": 238,
-    "namedLocalIdentitiesUnchanged": 228,
-    "namedLocalOrdinalMigrations": 10,
-    "namedLocalTypesMatched": 238,
-    "classFieldMethodParameterIdentitiesUnchanged": true,
-    "semanticNamesAndEvidenceUnchanged": true,
-    "previousPass14SnapshotFrozen": true,
+    "spellingGuardsMatched": 926,
+    "retainedRules": 841,
+    "addedRules": 85,
+    "classRules": 20,
+    "fieldRules": 348,
+    "methodRules": 157,
+    "parameterRules": 153,
+    "localRules": 248,
+    "previousNamedLocalIdentitiesUnchanged": 238,
+    "addedNamedLocals": 10,
+    "namedLocalOrdinalMigrations": 0,
+    "previousPass15SnapshotFrozen": true,
+    "rawSourceTreeUnchanged": true,
+    "sourceBodyEdited": false,
+    "completeValidationOverrideFamilies": 4,
     "bindingComparisonCount": 154109,
     "overrideRelationships": 388,
-    "identifierEdits": 15595,
+    "identifierEdits": 16050,
     "resourceFieldsRetained": 152,
     "resourceEvidenceTests": 8,
-    "ruleBuilderTests": 20,
+    "ruleBuilderTests": 24,
     "namingToolCommit": "a0bc835957148b9b1e1f8221c59b79d899d22738",
     "namingToolSourceArchiveSha256": "cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c"
   },
@@ -209,6 +130,7 @@
     "Complete successful archive loading not verified",
     "Whole-game runtime equivalence not verified",
     "Browser FPS, memory and phone acceptance not measured by this source-readability pass",
-    "Unknown names, guard arguments and shared joins remain"
+    "Unknown names, guard arguments and shared joins remain",
+    "Matching validator behavior is not covered by the static nine-slice native probe"
   ]
 }

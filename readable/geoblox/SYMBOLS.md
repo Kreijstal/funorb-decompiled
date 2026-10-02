@@ -12,8 +12,10 @@ Generated from explicit rules; original names remain lookup identities.
 | `C:ka` | `MenuScreen` | Base for c; stores item geometry and selection, dispatches keyboard/pointer input, renders item rows. |
 | `C:kl` | `PcmSampleStream` | Audio chunk census and sample interpolation/mixing bodies. |
 | `C:me` | `ScorePopup` | The instance stores points/text, origin coordinates, progress and chain multiplier. ug initializes it, bd interpolates its display, cf credits completed points and wa collects unfinished points. Unrelated static helpers retain their own identities. |
+| `C:n` | `MatchingTextValidator` | Instance methods compare candidate text with the current text of field_i, propagate its nl validation result, and return createMismatchAlertText on mismatch. qh installs it on the confirmation field, and mk composes it for a second matching field. Unrelated static helpers retain independent method identities. |
 | `C:na` | `IndexedSprite` | Owns byte pixel indices and int palette used by indexed raster loops. |
 | `C:nj` | `PendingActionMarker` | nj.java instances contain the supplied integer as field_h; ra.java enqueues new nj(param2) into pb.field_t as a marker for the action being handled. |
+| `C:q` | `TextInputValidator` | Abstract instance contract supplies validation state and message for field_g current text; constructor captures that text input, e(int) delegates to a(int,String), and b(byte) delegates to b(int,String). Static game helpers are unrelated to this instance role. |
 | `C:qk` | `AudioOutput` | Owns output sample buffer and drives ia stream fill from the audio update chain. |
 | `C:rc` | `DualLinkNode` | rc extends hf and adds field_k/field_l as an independent reciprocal link pair; rc.a(byte) unlinks only that second pair. GameplayEntity_ja inherits both link sets. |
 | `C:tf` | `IntrusiveDeque` | tf instance owns a circular hf sentinel, cursor, head/tail insertion, removal and traversal; constructor self-links the sentinel. Its static theme helpers are unrelated to this instance role. |
@@ -228,6 +230,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:mi.field_R:Ljava/lang/String;` | `connectionLostWithReasonText` | wi.a(BLrh;)V reads the explicit resource key 'connectionlost_withreason' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:mj.field_c:Ljava/lang/String;` | `fullscreenAcceptCountdownSingularText` | wi.a(BLrh;)V reads the explicit resource key 'fs_accept_countdown_sing' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ml.field_u:Ljava/lang/String;` | `createSelectAlternativeText` | wi.a(BLrh;)V reads the explicit resource key 'create_select_alternative' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
+| `F:n.field_i:Ldj;` | `referenceInput` | Constructor parameter 1 is stored here. Both validation methods compare candidate text with this input's current field_s and inspect its existing nl validator before accepting a match. |
 | `F:na.field_h:[I` | `palette` | Indexed raster looks up int color by unsigned byte pixel value. |
 | `F:na.field_i:[B` | `indices` | Byte indices consumed by indexed raster bodies. |
 | `F:nb.field_a:Ljava/lang/String;` | `loadingFontsText` | wi.a(BLrh;)V reads the explicit resource key 'loading_fonts' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -263,6 +266,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `F:ph.field_j:Ljava/lang/String;` | `createUsernameAvailableText` | wi.a(BLrh;)V reads the explicit resource key 'create_username_available' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:ph.field_k:Ljava/lang/String;` | `createUnableText` | wi.a(BLrh;)V reads the explicit resource key 'create_unable' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:pk.field_o:[Z` | `connectivityVisitedByEntityId` | kc clears this array and marks entity IDs while traversing contact connectivity. |
+| `F:q.field_g:Ldj;` | `validatedInput` | Constructor captures the input whose current field_s is passed into the abstract validation methods by e(int) and b(byte). |
 | `F:qb.field_F:Ljava/lang/String;` | `js5IoErrorText` | wi.a(BLrh;)V reads the explicit resource key 'error_js5io' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:qb.field_L:Ljava/lang/String;` | `fullscreenMembersButtonText` | wi.a(BLrh;)V reads the explicit resource key 'fs_button_members' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
 | `F:qg.field_b:Ljava/lang/String;` | `createPasswordText` | wi.a(BLrh;)V reads the explicit resource key 'create_password' with fk.a(2229, key) and assigns ag.a(1, bytes) to this field when the bytes are non-null. |
@@ -569,6 +573,16 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ld.a(I)Z#22` | `circleVerticalOffset` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
 | `L:ld.a(I)Z#23` | `playfieldRadiusSquared` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
 | `L:ld.a(I)Z#25` | `circleError` | The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions. |
+| `L:n.a(IIIIBIIII)[Ldm;#10` | `borderIndex` | Reused outer loop index for corner border layers and positions along edge strips; role is deliberately broad across those separate loops. |
+| `L:n.a(IIIIBIIII)[Ldm;#11` | `scanIndex` | Reused for the initial slice-array traversal, square-corner scan positions and edge-band offsets; not named as one fixed x/y coordinate. |
+| `L:n.a(IIIIBIIII)[Ldm;#12` | `sliceToFill` | Current sprite selected from slicesToFill before its complete pixel array is initialized. |
+| `L:n.a(IIIIBIIII)[Ldm;#13` | `fillPixelIndex` | Indexes the current sprite pixel array during the initial fill-colour loop. |
+| `L:n.a(IIIIBIIII)[Ldm;#14` | `controlFlowGuard` | Snapshot of Geoblox.field_C. Nonzero paths change loop transfers, so the source retains this guard rather than assuming normal-play zero. |
+| `L:n.a(IIIIBIIII)[Ldm;#7` | `cornerSize` | Sum of innerAccentWidth, borderGap and outerBorderWidth; used as both dimensions of the four square corners and the transverse dimension of edge strips. |
+| `L:n.a(IIIIBIIII)[Ldm;#8` | `slices` | Nine newly allocated sprites; pixel writes use row-major indices 0..8, and this array is returned. |
+| `L:n.a(IIIIBIIII)[Ldm;#9` | `slicesToFill` | Alias of the returned slices array used by the initial full-pixel-fill traversal. |
+| `L:n.a(ILjava/lang/String;)Llh;#0` | `referenceValidation` | Existing dg validation object obtained when referenceInput is nl; its status/message is checked before reporting a matching candidate as valid. |
+| `L:n.b(ILjava/lang/String;)Ljava/lang/String;#0` | `referenceValidation` | Existing dg validation object obtained when referenceInput is nl; its status/message is checked before reporting a matching candidate as valid. |
 | `L:sk.a(I)Z#10` | `staggeredLifetime` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
 | `L:sk.a(I)Z#11` | `cascadeEntity` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
 | `L:sk.a(I)Z#12` | `neighborIndex` | Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity. |
@@ -624,7 +638,9 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:Geoblox.q(I)V` | `loadBakingTheme` | Loads baking foreground/background and sets themesLoaded[4]. |
 | `M:Geoblox.r(I)V` | `clearAppletStatics` | Geoblox.java static cleanup sets field_B, field_z, field_A and field_y to null; these are the applet's cached resource/message statics. |
 | `M:ab.a(IF)V` | `moveEntitiesAndCollectContacts` | Advances moving-entity positions, computes motion relative to the rotated board and queues ownership-mask contact candidates. |
+| `M:ag.a(ILjava/lang/String;)Llh;` | `validationStateForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:ag.a(I[B)Ljava/lang/String;` | `decodeTextBytes` | With guard 1 this decodes the entire byte array through bc.a(-8, bytes, 0, bytes.length). The routine skips zero bytes and maps 128..159 through lf.field_e; it is not a UTF-8 decoder. |
+| `M:ag.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:bc.a(I[BII)Ljava/lang/String;` | `decodeTextSlice` | Decodes length bytes starting at offset, omits NUL bytes, uses lf.field_e for input values 128..159 with ? for zero mapping entries, and returns the filled prefix of its character buffer. Guard side effects are preserved. |
 | `M:bd.a(I)V` | `drawScorePopups` | Interpolates active popup position toward the points panel and renders either plain points or chain multiplier plus points. |
 | `M:c.a(BI)V` | `increaseMenuValue` | Concrete increases music/effect sliders by ten; base dispatches right-direction keys here. Both base and concrete declarations are renamed. |
@@ -640,6 +656,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:c.c(II)V` | `setItemCount` | Assigns inherited item count from second argument; called after action-array length changes. |
 | `M:c.d(I)V` | `previewMusicVolume` | Starts sample 8 at j.field_gb volume, retaining preview stream and resetting preview ticks. |
 | `M:c.h(B)V` | `updateScreen` | Geoblox calls this on committed nonnegative screen ID; advances animation, processes keyboard/pointer and screen-specific state. |
+| `M:cf.a(ILjava/lang/String;)Llh;` | `validationStateForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
+| `M:cf.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:cf.d(B)V` | `advanceScorePopups` | Increases active popup progress; once it reaches one, credits points to score or the pending panel and returns the popup to the free pool. |
 | `M:ch.a(I)V` | `renderFrame` | ch draw turn invokes a(25853); GeoBlox draws loading/menu/game content and publishes Canvas. Rename abstract declaration and implementation as one virtual family. |
 | `M:ch.b(B)V` | `releaseGameResources` | Invokes global resource cleanup and clears game state references. Rename abstract declaration and implementation as one virtual family. |
@@ -653,6 +671,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:ec.b(I)Z` | `processMatchCandidates` | Sorts/deduplicates packed triples, checks each entity cooldown, awards chain-scaled points and returns whether a nonempty batch was processed. |
 | `M:ef.b(B)V` | `advanceActiveEntityAnimations` | ef.java takes el.field_o.field_J as the current board angle, traverses bh.field_c ja entities and calls ja.b(true); entities reaching the frame threshold are attached to ra.field_a for follow-up processing. |
 | `M:fk.a(ILjava/lang/String;)[B` | `readTextResourceBytes` | With guard 2229 this calls bf.field_i.a(0, resourceKey, "") and returns raw bytes. Other guards return null; runtime failures retain their original context. |
+| `M:g.a(ILjava/lang/String;)Llh;` | `validationStateForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
+| `M:g.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:gh.a(B)V` | `renderSession` | Called by Geoblox gameplay drawing; renders theme, rotating board, entities, text and overlays. |
 | `M:gh.a(BI)V` | `addScore` | Adds second argument to score, formats/clamps display and updates score-dependent counters. |
 | `M:gh.a(I)V` | `updateSession` | Called by Geoblox when current/requested screen IDs are -1; updates input, board/session logic and animations. |
@@ -674,6 +694,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:gj.f(B)V` | `drawSpecialAttachedEntities` | Draws attached entities whose sprite-kind ID is nonzero. |
 | `M:hd.f(I)V` | `recordEntityRelease` | Increments theme/difficulty release counts and requests a theme transition or advances difficulty at their thresholds. |
 | `M:hf.a(Z)V` | `unlinkNode` | When the false guard is supplied, reconnects previous/next neighbours and clears both links; tf removal and insertion call this method. |
+| `M:ib.b(B)Ljava/lang/String;` | `currentValidationMessage` | Abstract declaration implemented by q; both identities receive the same reviewed name so callers and overrides remain consistent. |
+| `M:ib.e(I)Llh;` | `currentValidationState` | Abstract declaration implemented by q; both identities receive the same reviewed name so callers and overrides remain consistent. |
 | `M:ih.a(I)Z` | `areEntityQueuesSettled` | Returns true only when moving, spawn and transient animation queues are empty and the additional jl.field_t gate is clear. The attached queue may remain nonempty. |
 | `M:ih.a(IILja;I)V` | `linkEntityAtMaskContacts` | Probes mask coordinates, resolves encoded entity IDs and records avatar or entity contacts. |
 | `M:ik.a(Lja;Lja;Z)Z` | `linkTouchingEntities` | Links the entity pair and related-entity/category/variant counts while resolving the original special-kind contact rules. |
@@ -710,11 +732,22 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:lc.a(I)V` | `updateSpawnQueue` | Updates staged entities and transfers ready members to moving entities unless spawnReleaseDisabled is set. |
 | `M:ld.a(I)Z` | `hasPixelsAtPlayfieldBoundary` | Probes symmetric pixels around a radius-230 circle centered at (320,240) in the currently selected raster and returns on the first nonzero pixel. |
 | `M:ld.b(Z)V` | `advanceDifficulty` | Increments the difficulty step and loads its existing motion, angular-speed and release-threshold tables. |
+| `M:mk.a(ILjava/lang/String;)Llh;` | `validationStateForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
+| `M:mk.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
+| `M:n.a(IIIIBIIII)[Ldm;` | `buildNineSliceSprites` | Allocates nine sprites in row-major border layout: four square corners, four edge strips and a 64x64 centre. Fills pixels, draws top/left and bottom/right border colours, and applies a half-strip inner accent. tf.a(IIIII) supplies unit widths and the result is installed as UI border/background sprites by wa.a. |
+| `M:n.a(ILjava/lang/String;)Llh;` | `validationStateForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
+| `M:n.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
+| `M:n.g(I)V` | `clearStaticReferences` | Clears n.field_l and n.field_k, with the original nonzero-guard call to n.c(byte) retained. The fields belong to unrelated static helpers, so this name does not claim they are sprite caches. |
 | `M:nb.a(IIIIIZ)V` | `spawnEntityAtPointer` | Initializes an entity at pointer coordinates with the supplied category/variant and optional special-kind selection. |
+| `M:q.a(ILjava/lang/String;)Llh;` | `validationStateForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
+| `M:q.b(B)Ljava/lang/String;` | `currentValidationMessage` | With guard -103, calls b(422,current input text); other guards clear the input and retain the original failing path. The complete override family includes the abstract ib declaration, renamed in the same manifest. |
+| `M:q.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
+| `M:q.e(I)Llh;` | `currentValidationState` | With guard 32, calls the abstract state query using the validated input's current text. The complete override family includes the abstract ib declaration, renamed in the same manifest. |
 | `M:rc.a(B)V` | `unlinkSecondaryNode` | Reconnects field_l/field_k neighbours and clears both second links without touching inherited hf links. |
 | `M:rh.a(B)V` | `updateAttachedEntities` | Iterates the attached queue, decreases match cooldowns, updates the selected sprites, checks avatar-contact special effects and computes the maximum squared distance from the board center. |
 | `M:sk.a(I)Z` | `checkBoundaryLossAndStartCascade` | Checks the ownership raster boundary outside scene transitions; on loss starts the end sequence and traverses contacts from the farthest entity to assign staggered ending lifetimes. |
 | `M:tf.a(I)I` | `countNodes` | Walks from sentinel.field_b until returning to the sentinel, counting each node. |
+| `M:tf.a(IIIII)[Ldm;` | `buildUnitBorderNineSliceSprites` | Delegates to n.a with inner accent width 1, border gap 1, outer border width 1, edge length 3 and retention guard 1. It preserves all four caller-supplied colours. |
 | `M:tf.a(ILhf;)V` | `addLast` | Unlinks the argument if already linked, then inserts it before the sentinel after the previous tail. |
 | `M:tf.a(Lhf;Z)V` | `addFirst` | Unlinks the argument if already linked, then inserts it after the sentinel before the previous head. |
 | `M:tf.a(Ltf;B)V` | `moveAllTo` | Delegates to the private range-splice helper with this deque first node and the supplied destination deque. |
@@ -736,6 +769,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:ua.c(I)[F` | `decodePacket` | Selects field_p packet by index and computes float output during music loading. |
 | `M:ug.a(IZIII)V` | `spawnScorePopup` | Takes a popup from the pool, initializes its points, chain and origin, and inserts it into the active queue. If the pool is empty it credits points directly. |
 | `M:uk.a(II)Ljava/lang/String;` | `tutorialMessageForStep` | Maps step IDs 0,1,2,3,5 to the five explicit tutorial strings; other IDs return null. |
+| `M:uk.a(ILjava/lang/String;)Llh;` | `validationStateForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
+| `M:uk.b(ILjava/lang/String;)Ljava/lang/String;` | `validationMessageForText` | Complete q override family across ag, cf, g, mk, n, q and uk. The state query evaluates candidate text and returns a validation-state identity; the message query describes that candidate or returns null. q current-input wrappers call these methods with the current input text. Full JVM descriptor, guards and asynchronous/pending behavior remain unchanged. |
 | `M:ul.b(I)V` | `collectMatchCandidates` | Collects triples of connected entities sharing variant or category, storing sorted entity IDs and equality flags in the packed candidate array. |
 | `M:wa.a(I)I` | `collectUnfinishedPopupPoints` | Removes every active popup and returns the sum of its uncredited points without multiplying them again. |
 | `M:wi$1$CfrPartitionedBody.runChunk0()V` | `loadInterfaceTextPart1` | Source-generated bounded helper for original wi.a(BLrh;)V. The number preserves source order and denotes a size-budget partition, not a semantic loading phase. |
@@ -743,8 +778,12 @@ Generated from explicit rules; original names remain lookup identities.
 | `M:wi$1$CfrPartitionedBody.runChunk2()V` | `loadInterfaceTextPart3` | Source-generated bounded helper for original wi.a(BLrh;)V. The number preserves source order and denotes a size-budget partition, not a semantic loading phase. |
 | `M:wi.a(BLrh;)V` | `loadInterfaceText` | wf calls this after the text archive reports ready. It binds bf.field_i, reads named interface resources, decodes and assigns their strings, then releases the archive. It preserves the shared control flag, runtime catch and guard recursion. |
 | `P:ab.a(IF)V#1` | `boardAngleRadians` | Used to rotate entity movement/contact coordinates relative to the board. |
+| `P:ag.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:ag.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:ag.a(I[B)Ljava/lang/String;#0` | `decodeGuard` | Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged. |
 | `P:ag.a(I[B)Ljava/lang/String;#1` | `textBytes` | Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged. |
+| `P:ag.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:ag.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:bc.a(I[BII)Ljava/lang/String;#0` | `decodeGuard` | Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect. |
 | `P:bc.a(I[BII)Ljava/lang/String;#1` | `textBytes` | Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect. |
 | `P:bc.a(I[BII)Ljava/lang/String;#2` | `offset` | Argument role is explicit in allocation of char[length], access to textBytes[offset + byteIndex], loop bound length and the guard side effect. |
@@ -765,6 +804,10 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:c.a(ZBII)V#3` | `rowY` | Row Y supplied by render loop and used in text/slider drawing. |
 | `P:c.b(IB)V#0` | `itemIndex` | Indexes action IDs for activation. |
 | `P:c.c(II)V#1` | `itemCount` | Copied into inherited item count. |
+| `P:cf.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:cf.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:cf.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:cf.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:dm.a(IIIIII)V#0` | `sourcePivotX` | Original position retained; transform equations and renderer differential fixtures. |
 | `P:dm.a(IIIIII)V#1` | `sourcePivotY` | Original position retained; transform equations and renderer differential fixtures. |
 | `P:dm.a(IIIIII)V#2` | `destinationX` | Original position retained; transform equations and renderer differential fixtures. |
@@ -784,9 +827,15 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:dm.c(IIIII)V#4` | `fractionY` | Bilinear sampler array index and 12-bit fraction expressions. |
 | `P:fk.a(ILjava/lang/String;)[B#0` | `readGuard` | Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged. |
 | `P:fk.a(ILjava/lang/String;)[B#1` | `resourceKey` | Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged. |
+| `P:g.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:g.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:g.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:g.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:gh.a(BI)V#1` | `points` | Value added to score. |
 | `P:gh.a(II)V#0` | `points` | Value added to popup points. |
 | `P:gh.c(Z)V#0` | `markSubmissionBlocked` | When true sets field_K, which blocks score submission. |
+| `P:ib.b(B)Ljava/lang/String;#0` | `guard` | Guard argument passed to the q implementation; original numeric sentinel and descriptor remain unchanged. |
+| `P:ib.e(I)Llh;#0` | `guard` | Guard argument passed to the q implementation; original numeric sentinel and descriptor remain unchanged. |
 | `P:ih.a(IILja;I)V#1` | `contactY` | Y coordinate of the ownership-mask contact probe. |
 | `P:ih.a(IILja;I)V#2` | `entity` | Entity being linked to contacts decoded from the ownership mask. |
 | `P:ih.a(IILja;I)V#3` | `contactX` | X coordinate of the ownership-mask contact probe. |
@@ -820,11 +869,43 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:ka.a(ZBII)V#2` | `itemIndex` | Row index supplied by render loop. |
 | `P:ka.a(ZBII)V#3` | `rowY` | Row Y supplied by render loop and used in text/slider drawing. |
 | `P:ka.b(IB)V#0` | `itemIndex` | Indexes action IDs for activation. |
+| `P:mk.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:mk.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:mk.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:mk.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:n.<init>(Ldj;Ldj;)V#0` | `validatedInput` | First input is passed to the validator superclass; second input is stored as the source of the required matching text. |
+| `P:n.<init>(Ldj;Ldj;)V#1` | `referenceInput` | First input is passed to the validator superclass; second input is stored as the source of the required matching text. |
+| `P:n.a(IIIIBIIII)[Ldm;#0` | `innerAccentColor` | Written to inward-facing bands on sprites 1,3,7,5 for the first half of the edge length. Original arithmetic, bit shifts and nonzero guards remain unchanged. |
+| `P:n.a(IIIIBIIII)[Ldm;#1` | `innerAccentWidth` | Bounds the inward-band pixel loop; contributes to square-corner extent. Original arithmetic, bit shifts and nonzero guards remain unchanged. |
+| `P:n.a(IIIIBIIII)[Ldm;#2` | `topLeftBorderColor` | Written along top and left corner borders and outward-facing top/left edge-strip pixels. Original arithmetic, bit shifts and nonzero guards remain unchanged. |
+| `P:n.a(IIIIBIIII)[Ldm;#3` | `edgeLength` | Sets the length of all four edge strips; the inner accent covers edgeLength shifted right by one. Original arithmetic, bit shifts and nonzero guards remain unchanged. |
+| `P:n.a(IIIIBIIII)[Ldm;#4` | `referenceRetentionGuard` | Value 1 retains unrelated static references; other values call n.g(5) before returning the sprites. This guard is not a rendering mode. Original arithmetic, bit shifts and nonzero guards remain unchanged. |
+| `P:n.a(IIIIBIIII)[Ldm;#5` | `fillColor` | Initial fill colour assigned to every pixel in all nine sprites, including the centre. Original arithmetic, bit shifts and nonzero guards remain unchanged. |
+| `P:n.a(IIIIBIIII)[Ldm;#6` | `bottomRightBorderColor` | Written along bottom and right corner borders and outward-facing bottom/right edge-strip pixels. Original arithmetic, bit shifts and nonzero guards remain unchanged. |
+| `P:n.a(IIIIBIIII)[Ldm;#7` | `borderGap` | Contributes to corner extent between the inner accent width and outer border width; those bands are drawn from opposite sides. Original arithmetic, bit shifts and nonzero guards remain unchanged. |
+| `P:n.a(IIIIBIIII)[Ldm;#8` | `outerBorderWidth` | Bounds the corner-border layer loops and outward-facing edge-strip band loops. Original arithmetic, bit shifts and nonzero guards remain unchanged. |
+| `P:n.a(ILjava/lang/String;)Llh;#0` | `guard` | Original validation sentinel is preserved: -257 for state queries and 422 for message queries. |
+| `P:n.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Compared with the reference input's current text; mismatches return the invalid state or createMismatchAlertText. |
+| `P:n.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Original validation sentinel is preserved: -257 for state queries and 422 for message queries. |
+| `P:n.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Compared with the reference input's current text; mismatches return the invalid state or createMismatchAlertText. |
+| `P:n.g(I)V#0` | `guard` | Zero skips the additional n.c(89) call after clearing static references; other values retain that side effect. |
 | `P:nb.a(IIIIIZ)V#1` | `pointerX` | Forwarded to the spawned entity X position. |
 | `P:nb.a(IIIIIZ)V#2` | `categoryId` | Forwarded to the entity motion initializer category key. |
 | `P:nb.a(IIIIIZ)V#3` | `pointerY` | Forwarded to the spawned entity Y position. |
 | `P:nb.a(IIIIIZ)V#4` | `variantId` | Forwarded to the entity motion initializer sprite variant index. |
 | `P:nb.a(IIIIIZ)V#5` | `specialKinds` | Selects special entity kinds instead of kind zero. |
+| `P:q.<init>(Ldj;)V#0` | `validatedInput` | Stored in q.field_g and used by the current-state/current-message wrappers. |
+| `P:q.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:q.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:q.b(B)Ljava/lang/String;#0` | `guard` | Sentinel -103 preserves the validated input reference; nonstandard values follow the original cleanup/dereference path. |
+| `P:q.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:q.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:q.e(I)Llh;#0` | `guard` | Only value 32 delegates to the current input validation query; other values return null. The numeric sentinel is preserved. |
+| `P:tf.a(IIIII)[Ldm;#0` | `bottomRightBorderColor` | Passed to n.a parameter 6, the bottom/right border colour. |
+| `P:tf.a(IIIII)[Ldm;#1` | `fillColor` | Passed to n.a parameter 5, the full-sprite initial fill colour. |
+| `P:tf.a(IIIII)[Ldm;#2` | `guard` | Values at most 90 clear tf.field_d before the unchanged delegation; this is a guard, not a colour. |
+| `P:tf.a(IIIII)[Ldm;#3` | `topLeftBorderColor` | Passed to n.a parameter 2, the top/left border colour. |
+| `P:tf.a(IIIII)[Ldm;#4` | `innerAccentColor` | Passed to n.a parameter 0, the half-strip inward accent colour. |
 | `P:tf.a(ILhf;)V#1` | `node` | The linked node being detached and inserted at the deque tail. |
 | `P:tf.a(Lhf;Z)V#0` | `node` | The linked node being detached and inserted at the deque head. |
 | `P:tf.a(Ltf;B)V#0` | `destination` | Deque receiving all nodes of this deque through the range-splice helper. |
@@ -841,6 +922,10 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:ug.a(IZIII)V#3` | `chainMultiplier` | Stored as popup chain multiplier; points are already multiplied by the scoring caller. |
 | `P:ug.a(IZIII)V#4` | `originX` | Stored as popup originX. |
 | `P:uk.a(II)Ljava/lang/String;#0` | `tutorialStepId` | Switch-like dispatch selects the message for this tutorial step. |
+| `P:uk.a(ILjava/lang/String;)Llh;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:uk.a(ILjava/lang/String;)Llh;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:uk.b(ILjava/lang/String;)Ljava/lang/String;#0` | `guard` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
+| `P:uk.b(ILjava/lang/String;)Ljava/lang/String;#1` | `candidateText` | Parameter of the complete q text-validation override family: parameter 0 retains the original guard/sentinel arithmetic, and parameter 1 is the candidate string used for validation or its message. |
 | `P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#0` | `initialLoadGuard` | Source-generated carrier constructor argument initializes the corresponding shared loader parameter field; this is not an original gamepack method. |
 | `P:wi$1$CfrPartitionedBody.<init>(BLrh;)V#1` | `initialTextArchive` | Source-generated carrier constructor argument initializes the corresponding shared loader parameter field; this is not an original gamepack method. |
 | `P:wi.a(BLrh;)V#0` | `loadGuard` | Argument role follows the corresponding reviewed text loader, resource reader or whole-array decoder; guard arithmetic and side effects remain unchanged. |

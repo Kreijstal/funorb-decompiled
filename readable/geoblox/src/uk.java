@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk extends q {
+final class uk extends TextInputValidator {
     static int[] field_i;
     private boolean field_n;
     static float field_j;
@@ -286,7 +286,7 @@ final class uk extends q {
         }
     }
 
-    final String b(int param0, String param1) {
+    final String validationMessageForText(int guard, String candidateText) {
         String var3 = null;
         RuntimeException var3_ref = null;
         sl var4 = null;
@@ -304,14 +304,14 @@ final class uk extends q {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            var5 = (CharSequence) ((Object) param1);
+            var5 = (CharSequence) ((Object) candidateText);
             var3 = oe.a((byte) 44, var5);
             if (var3 == null) {
-              if (!param1.equals(this.field_k)) {
-                var4 = cl.a((byte) 94, param1);
+              if (!candidateText.equals(this.field_k)) {
+                var4 = cl.a((byte) 94, candidateText);
                 if (var4 != null) {
                   if (null == var4.field_e) {
-                    this.field_k = param1;
+                    this.field_k = candidateText;
                     this.field_n = var4.field_g;
                   } else {
                     stackIn_8_0 = null;
@@ -322,7 +322,7 @@ final class uk extends q {
                   return null;
                 }
               }
-              if (param0 != 422) {
+              if (guard != 422) {
                 field_j = -0.46423107385635376f;
               }
               if (this.field_n) {
@@ -342,9 +342,9 @@ final class uk extends q {
           var3_ref = decompiledCaughtException;
           stackIn_19_0 = (RuntimeException) (var3_ref);
 
-          stackIn_19_1 = new StringBuilder().append("uk.A(").append(param0).append(',');
+          stackIn_19_1 = new StringBuilder().append("uk.A(").append(guard).append(',');
 
-          if (param1 == null) {
+          if (candidateText == null) {
             stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
             stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "null";
@@ -375,7 +375,7 @@ final class uk extends q {
         this.field_n = false;
     }
 
-    final lh a(int param0, String param1) {
+    final lh validationStateForText(int guard, String candidateText) {
         sl var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -392,19 +392,19 @@ final class uk extends q {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            if (param0 != -257) {
+            if (guard != -257) {
               var4 = (String) null;
               uk.a(false, (String) null);
             }
-            var5 = (CharSequence) ((Object) param1);
+            var5 = (CharSequence) ((Object) candidateText);
             if (hc.a((byte) 82, var5)) {
               L2: {
-                if (!param1.equals(this.field_k)) {
-                  var3 = cl.a((byte) 108, param1);
+                if (!candidateText.equals(this.field_k)) {
+                  var3 = cl.a((byte) 108, candidateText);
                   if (var3 != null) {
                     if (var3.field_e == null) {
                       this.field_n = var3.field_g;
-                      this.field_k = param1;
+                      this.field_k = candidateText;
                       break L2;
                     }
                   }
@@ -429,9 +429,9 @@ final class uk extends q {
           var3_ref = decompiledCaughtException;
           stackIn_18_0 = (RuntimeException) (var3_ref);
 
-          stackIn_18_1 = new StringBuilder().append("uk.D(").append(param0).append(',');
+          stackIn_18_1 = new StringBuilder().append("uk.D(").append(guard).append(',');
 
-          if (param1 == null) {
+          if (candidateText == null) {
             stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
             stackIn_19_2 = "null";

@@ -44,7 +44,7 @@ final class bi implements dh {
                     decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
-                    if (q.a(param1.charAt(var3_int), (byte) 118)) {
+                    if (TextInputValidator.a(param1.charAt(var3_int), (byte) 118)) {
                       var3_int++;
                       continue L1;
                     } else {

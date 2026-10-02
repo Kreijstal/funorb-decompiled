@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mk extends q {
+final class mk extends TextInputValidator {
     private String field_j;
     static wg field_n;
     static int field_l;
     private boolean field_i;
-    private n field_m;
+    private MatchingTextValidator field_m;
     static int[] field_k;
 
     mk(dj param0, dj param1) {
@@ -14,7 +14,7 @@ final class mk extends q {
         this.field_j = "";
         this.field_i = false;
         try {
-            this.field_m = new n(param0, param1);
+            this.field_m = new MatchingTextValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -29,7 +29,7 @@ final class mk extends q {
         ih.field_c.a((byte) -110, param1);
     }
 
-    final lh a(int param0, String param1) {
+    final lh validationStateForText(int guard, String candidateText) {
         h var3 = null;
         RuntimeException var3_ref = null;
         lh stackIn_2_0 = null;
@@ -44,15 +44,15 @@ final class mk extends q {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            if (this.field_m.a(param0, param1) != si.field_m) {
-              if (!param1.equals(this.field_j)) {
-                var3 = ci.a(-1, param1);
+            if (this.field_m.validationStateForText(guard, candidateText) != si.field_m) {
+              if (!candidateText.equals(this.field_j)) {
+                var3 = ci.a(-1, candidateText);
                 if (!var3.a(-76)) {
                   stackIn_8_0 = si.field_n;
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  this.field_j = param1;
+                  this.field_j = candidateText;
                   this.field_i = var3.a((byte) -52);
                 }
               }
@@ -72,9 +72,9 @@ final class mk extends q {
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = (RuntimeException) (var3_ref);
 
-          stackIn_16_1 = new StringBuilder().append("mk.D(").append(param0).append(',');
+          stackIn_16_1 = new StringBuilder().append("mk.D(").append(guard).append(',');
 
-          if (param1 == null) {
+          if (candidateText == null) {
             stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "null";
@@ -96,7 +96,7 @@ final class mk extends q {
         }
     }
 
-    final String b(int param0, String param1) {
+    final String validationMessageForText(int guard, String candidateText) {
         RuntimeException var3 = null;
         String stackIn_5_0 = null;
         String stackIn_9_0 = null;
@@ -108,14 +108,14 @@ final class mk extends q {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 422) {
+          if (guard != 422) {
             mk.c((byte) -50);
           }
-          if (this.field_m.a(-257, param1) == si.field_m) {
-            stackIn_5_0 = this.field_m.b(422, param1);
+          if (this.field_m.validationStateForText(-257, candidateText) == si.field_m) {
+            stackIn_5_0 = this.field_m.validationMessageForText(422, candidateText);
             decompiledRegionSelector0 = 0;
           } else {
-            if (this.a(-257, param1) == si.field_m) {
+            if (this.validationStateForText(-257, candidateText) == si.field_m) {
               stackIn_9_0 = g.createEmailUnavailableAlertText;
               decompiledRegionSelector0 = 1;
             } else {
@@ -127,9 +127,9 @@ final class mk extends q {
           var3 = decompiledCaughtException;
           stackIn_12_0 = (RuntimeException) (var3);
 
-          stackIn_12_1 = new StringBuilder().append("mk.A(").append(param0).append(',');
+          stackIn_12_1 = new StringBuilder().append("mk.A(").append(guard).append(',');
 
-          if (param1 == null) {
+          if (candidateText == null) {
             stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";

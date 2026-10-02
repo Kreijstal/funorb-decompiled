@@ -559,7 +559,7 @@ public final class Geoblox extends wf {
         td.f(-116);
         pi.j(24033);
         vi.f(-75);
-        q.f(param0 + 65);
+        TextInputValidator.f(param0 + 65);
         jc.a(-43);
         s.b(false);
         qb.f(0);
@@ -613,7 +613,7 @@ public final class Geoblox extends wf {
         ag.g(param0 + -22);
         mk.c((byte) -9);
         cf.g(-48);
-        n.g(param0 + 64);
+        MatchingTextValidator.clearStaticReferences(param0 + 64);
         hh.a(false);
         fb.b(true);
         lh.b(-481);

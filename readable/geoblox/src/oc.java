@@ -16,18 +16,18 @@ final class oc implements dh {
         fe.field_j.b(0, 0);
         ne.field_b.b(320 + -(ne.field_b.field_s >> -869072127), param0 + -(ne.field_b.field_o >> -2111513311));
         kh.field_h[0].b(0, 20);
-        int var1 = -70 + n.field_j;
+        int var1 = -70 + MatchingTextValidator.field_j;
         if (var1 >= 0) {
             if ((double)var1 * 0.0174532925 >= 1.5707963267948966) {
                 var2 = tl.field_r[vc.field_h].field_s >> -1357649567;
                 if (vc.field_h >= 11) {
-                    var3 = (n.field_j - fh.field_c >> 1122296033) * (n.field_j - fh.field_c >> -1949700319) >> -67189375;
+                    var3 = (MatchingTextValidator.field_j - fh.field_c >> 1122296033) * (MatchingTextValidator.field_j - fh.field_c >> -1949700319) >> -67189375;
                     tl.field_r[vc.field_h].b(-(tl.field_r[vc.field_h].field_s >> -1439205631) + 320, var3 + (-(tl.field_r[vc.field_h].field_o >> -1667301759) + 240), si.field_j);
                     qh.field_O[0].b(var2 + 320, -34 + var3 + -(qh.field_O[0].field_o >> 1078181409) + 240);
                     qh.field_O[1].b(-var2 + 320 - qh.field_O[1].field_s, -(qh.field_O[1].field_o >> 407066881) + (240 + var3 + 22));
                     return;
                 }
-                var3 = n.field_j << 516139650;
+                var3 = MatchingTextValidator.field_j << 516139650;
                 if (var2 + 320 < 1000 + -var3) {
                     qh.field_O[0].b(1000 - var3, -34 + (240 - (qh.field_O[0].field_o >> 1346051681)));
                 } else {
@@ -46,13 +46,13 @@ final class oc implements dh {
         }
         var2 = tl.field_r[vc.field_h].field_s >> -1357649567;
         if (vc.field_h >= 11) {
-            var3 = (n.field_j - fh.field_c >> 1122296033) * (n.field_j - fh.field_c >> -1949700319) >> -67189375;
+            var3 = (MatchingTextValidator.field_j - fh.field_c >> 1122296033) * (MatchingTextValidator.field_j - fh.field_c >> -1949700319) >> -67189375;
             tl.field_r[vc.field_h].b(-(tl.field_r[vc.field_h].field_s >> -1439205631) + 320, var3 + (-(tl.field_r[vc.field_h].field_o >> -1667301759) + 240), si.field_j);
             qh.field_O[0].b(var2 + 320, -34 + var3 + -(qh.field_O[0].field_o >> 1078181409) + 240);
             qh.field_O[1].b(-var2 + 320 - qh.field_O[1].field_s, -(qh.field_O[1].field_o >> 407066881) + (240 + var3 + 22));
             return;
         }
-        var3 = n.field_j << 516139650;
+        var3 = MatchingTextValidator.field_j << 516139650;
         if (var2 + 320 < 1000 + -var3) {
             qh.field_O[0].b(1000 - var3, -34 + (240 - (qh.field_O[0].field_o >> 1346051681)));
             if (-qh.field_O[1].field_s + (320 - var2) > var3 + -1200) {
@@ -138,7 +138,7 @@ final class oc implements dh {
             var1 = new tl();
         }
         var1.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom, SoftwareRasterizer.stride, SoftwareRasterizer.field_b, SoftwareRasterizer.clipTop, SoftwareRasterizer.framebuffer, true);
-        n.field_l.addLast(-88, var1);
+        MatchingTextValidator.field_l.addLast(-88, var1);
     }
 
     final static void a(int param0) {

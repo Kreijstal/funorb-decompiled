@@ -49,7 +49,7 @@ const rebuiltPassSeven = {...passSix, version: 7, previousRulesSha256: sha256(pa
   source: passSeven.source, generators: passSeven.generators, renames};
 if (passSevenBytes.toString() !== JSON.stringify(rebuiltPassSeven, null, 2) + '\n')
   throw new Error('Retained pass 7 does not match its reviewed rule lineage');
-if (pin.namingMigration !== 'rules/geoblox-v15-migration.json')
+if (pin.namingMigration !== 'rules/geoblox-v16-border.json')
   throw new Error('Changed input requires reviewed naming-rule migration');
 const passEightBytes = read('rules/geoblox-v8.json');
 const passEight = JSON.parse(passEightBytes);
@@ -269,13 +269,15 @@ const rebuiltPassFourteen = {...passThirteen, version: 14, previousRulesSha256: 
   source: passFourteen.source, generators: passFourteen.generators, renames: textRenames};
 if (passFourteenBytes.toString() !== JSON.stringify(rebuiltPassFourteen, null, 2) + '\n')
   throw new Error('Retained pass 14 does not match its reviewed rule lineage');
-const loopBytes = read(pin.namingMigration);
+const passFifteenBytes = read('rules/geoblox-v15.json');
+const passFifteen = JSON.parse(passFifteenBytes);
+const loopBytes = read('rules/geoblox-v15-migration.json');
 const loop = JSON.parse(loopBytes);
 if (loop.schema !== 1 || loop.version !== 15 ||
     loop.previousRulesSha256 !== sha256(passFourteenBytes) ||
     loop.previousInputTreeSha256 !== passFourteen.inputTreeSha256 ||
-    loop.sourceCommit !== pin.commit || loop.inputTreeSha256 !== pin.inputTreeSha256 ||
-    loop.javaToolsCommit !== pin.generators.javaTools.commit ||
+    loop.sourceCommit !== passFifteen.source.commit || loop.inputTreeSha256 !== passFifteen.inputTreeSha256 ||
+    loop.javaToolsCommit !== passFifteen.generators.javaTools.commit ||
     !Array.isArray(loop.identityChanges) ||
     loop.review.rulesRetained !== textRenames.length ||
     loop.review.originalSpellingGuardsMatched !== textRenames.length ||
@@ -303,10 +305,58 @@ const loopRenames = textRenames.map(rule => ({...rule, symbol: loopMoves.get(rul
   .sort((a, b) => a.symbol < b.symbol ? -1 : a.symbol > b.symbol ? 1 : 0);
 if (new Set(loopRenames.map(rule => rule.symbol)).size !== loopRenames.length)
   throw new Error('Migrated naming rules have duplicate identities');
-const rules = {...passFourteen, version: 15, previousRulesSha256: sha256(passFourteenBytes),
-  namingMigrationSha256: sha256(loopBytes), inputTreeSha256: pin.inputTreeSha256,
+const rebuiltPassFifteen = {...passFourteen, version: 15, previousRulesSha256: sha256(passFourteenBytes),
+  namingMigrationSha256: sha256(loopBytes), inputTreeSha256: passFifteen.inputTreeSha256,
+  source: passFifteen.source, generators: passFifteen.generators, renames: loopRenames};
+if (passFifteenBytes.toString() !== JSON.stringify(rebuiltPassFifteen, null, 2) + '\n')
+  throw new Error('Retained pass 15 does not match its reviewed rule lineage');
+const borderBytes = read(pin.namingMigration);
+const border = JSON.parse(borderBytes);
+if (border.schema !== 1 || border.version !== 16 ||
+    border.previousRulesSha256 !== sha256(passFifteenBytes) ||
+    border.inputTreeSha256 !== pin.inputTreeSha256 || border.inputTreeSha256 !== passFifteen.inputTreeSha256 ||
+    border.sourceCommit !== pin.commit || border.sourceCommit !== passFifteen.source.commit ||
+    border.javaToolsCommit !== pin.generators.javaTools.commit ||
+    border.javaToolsCommit !== passFifteen.generators.javaTools.commit ||
+    border.textEvidenceMigration !== 'rules/geoblox-v15-migration.json' ||
+    border.textEvidenceMigrationSha256 !== sha256(loopBytes) ||
+    JSON.stringify(pin.generators) !== JSON.stringify(passFifteen.generators) ||
+    !Array.isArray(border.renames) || border.renames.length !== 85 ||
+    border.review.rulesRetained !== loopRenames.length ||
+    border.review.rulesAdded !== border.renames.length ||
+    border.review.originalSpellingGuardsMatched !== loopRenames.length + border.renames.length ||
+    border.review.rawSourceTreeUnchanged !== true || border.review.sourceBodyEdited !== false ||
+    !Array.isArray(border.review.identityChanges) || border.review.identityChanges.length !== 0)
+  throw new Error('Source or naming additions differ from the reviewed pass-16 border manifest');
+const retainedLoopSymbols = new Set(loopRenames.map(rule => rule.symbol));
+for (const rule of border.renames) {
+  if (retainedLoopSymbols.has(rule.symbol))
+    throw new Error('Border additions replace a retained naming identity');
+  if (!/^[CMFPL]:/.test(rule.symbol) || !rule.originalName || !rule.to || !rule.evidence)
+    throw new Error('Incomplete guarded border rule');
+}
+const borderRenames = [...loopRenames, ...border.renames]
+  .sort((a, b) => a.symbol < b.symbol ? -1 : a.symbol > b.symbol ? 1 : 0);
+if (new Set(borderRenames.map(rule => rule.symbol)).size !== borderRenames.length)
+  throw new Error('Border additions have duplicate naming identities');
+const expectedFamilies = [
+  {members: ['M:ib.e(I)Llh;', 'M:q.e(I)Llh;'], readableName: 'currentValidationState'},
+  {members: ['M:ib.b(B)Ljava/lang/String;', 'M:q.b(B)Ljava/lang/String;'], readableName: 'currentValidationMessage'},
+  ...[['a', '(ILjava/lang/String;)Llh;', 'validationStateForText'],
+    ['b', '(ILjava/lang/String;)Ljava/lang/String;', 'validationMessageForText']]
+    .map(([member, descriptor, readableName]) => ({
+      members: ['ag', 'cf', 'g', 'mk', 'n', 'q', 'uk'].map(owner => `M:${owner}.${member}${descriptor}`),
+      readableName,
+    })),
+];
+if (JSON.stringify(border.overrideFamilies) !== JSON.stringify(expectedFamilies) ||
+    expectedFamilies.some(family => family.members.some(symbol =>
+      border.renames.find(rule => rule.symbol === symbol)?.to !== family.readableName)))
+  throw new Error('Border additions leave an incomplete or inconsistent reviewed override family');
+const rules = {...passFifteen, version: 16, previousRulesSha256: sha256(passFifteenBytes),
+  namingMigrationSha256: sha256(borderBytes), inputTreeSha256: pin.inputTreeSha256,
   source: {repository: pin.sourceRepository, commit: pin.commit, subdirectory: pin.subdirectory},
-  generators: pin.generators, renames: loopRenames};
+  generators: pin.generators, renames: borderRenames};
 const output = JSON.stringify(rules, null, 2) + '\n';
 const destination = path.join(root, 'geoblox-rules.json');
 const check = process.argv.includes('--check');

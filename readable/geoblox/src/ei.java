@@ -90,7 +90,7 @@ final class ei extends qf {
                 var4 = 0;
                 L1: while (true) {
                   if (var4 < param2.length()) {
-                    if (q.a(param2.charAt(var4), (byte) 97)) {
+                    if (TextInputValidator.a(param2.charAt(var4), (byte) 97)) {
                       var4++;
                       continue L1;
                     } else {

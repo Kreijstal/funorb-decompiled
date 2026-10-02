@@ -106,9 +106,9 @@ abstract class ha {
             jc.field_a = ug.a("jagex_logo_grey", param2, (byte) -78, "commonui");
             vk.field_e = wj.a("button", "commonui", param2, 0);
             oa.field_e = oi.a((byte) -39, "validation", "commonui", param2);
-            hh.field_d = (m) ((Object) q.a(param3, 1, "arezzo12", "commonui", param2));
-            ng.field_F = (m) ((Object) q.a(param3, 1, "arezzo14", "commonui", param2));
-            hh.field_c = (m) ((Object) q.a(param3, 1, "arezzo14bold", "commonui", param2));
+            hh.field_d = (m) ((Object) TextInputValidator.a(param3, 1, "arezzo12", "commonui", param2));
+            ng.field_F = (m) ((Object) TextInputValidator.a(param3, 1, "arezzo14", "commonui", param2));
+            hh.field_c = (m) ((Object) TextInputValidator.a(param3, 1, "arezzo14bold", "commonui", param2));
             var18 = new Sprite(param1.a(0, "", "button.gif"), (java.awt.Component) ((Object) f.field_kb));
             jg.a(param2, 1, "commonui", "dropdown");
             var5 = MenuScreen.a("commonui", "screen_options", true, param2);

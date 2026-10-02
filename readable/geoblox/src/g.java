@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class g extends q {
+final class g extends TextInputValidator {
     static int field_j;
     static String createEmailUnavailableAlertText;
     private dj field_k;
@@ -19,7 +19,7 @@ final class g extends q {
         }
     }
 
-    final String b(int param0, String param1) {
+    final String validationMessageForText(int guard, String candidateText) {
         RuntimeException var3 = null;
         String var4 = null;
         String var5 = null;
@@ -42,10 +42,10 @@ final class g extends q {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = this.field_k.field_s.toLowerCase();
-          var4 = param1.toLowerCase();
+          var4 = candidateText.toLowerCase();
           if (var4.length() != 0) {
             var5 = var4;
-            if (em.a(var5, param0 + -344)) {
+            if (em.a(var5, guard + -344)) {
               stackIn_6_0 = ji.createPasswordLengthAlertText;
               decompiledRegionSelector0 = 1;
             } else {
@@ -53,11 +53,11 @@ final class g extends q {
                 stackIn_10_0 = ai.createPasswordCharacterAlertText;
                 decompiledRegionSelector0 = 2;
               } else {
-                if (!ra.a(param0 + 18303, var5)) {
-                  if (param0 != 422) {
+                if (!ra.a(guard + 18303, var5)) {
+                  if (guard != 422) {
                     g.g(119);
                   }
-                  if (this.a(param1, -29267)) {
+                  if (this.a(candidateText, -29267)) {
                     stackIn_19_0 = uf.createPasswordContainsEmailAlertText;
                     decompiledRegionSelector0 = 4;
                   } else {
@@ -98,9 +98,9 @@ final class g extends q {
           var3 = decompiledCaughtException;
           stackIn_37_0 = (RuntimeException) (var3);
 
-          stackIn_37_1 = new StringBuilder().append("g.A(").append(param0).append(',');
+          stackIn_37_1 = new StringBuilder().append("g.A(").append(guard).append(',');
 
-          if (param1 == null) {
+          if (candidateText == null) {
             stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
             stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
             stackIn_38_2 = "null";
@@ -226,7 +226,7 @@ final class g extends q {
         }
     }
 
-    final lh a(int param0, String param1) {
+    final lh validationStateForText(int guard, String candidateText) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -242,17 +242,17 @@ final class g extends q {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -257) {
+          if (guard != -257) {
             this.field_k = (dj) null;
           }
           var3 = this.field_k.field_s.toLowerCase();
-          var4 = param1.toLowerCase();
+          var4 = candidateText.toLowerCase();
           if (var4.length() == 0) {
             stackIn_5_0 = si.field_m;
             decompiledRegionSelector0 = 0;
           } else {
             if (dd.a(var4, var3, -25321)) {
-              if (!this.a(param1, -29267)) {
+              if (!this.a(candidateText, -29267)) {
                 stackIn_13_0 = kk.field_w;
                 decompiledRegionSelector0 = 3;
               } else {
@@ -269,9 +269,9 @@ final class g extends q {
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = (RuntimeException) (var3_ref);
 
-          stackIn_16_1 = new StringBuilder().append("g.D(").append(param0).append(',');
+          stackIn_16_1 = new StringBuilder().append("g.D(").append(guard).append(',');
 
-          if (param1 == null) {
+          if (candidateText == null) {
             stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "null";

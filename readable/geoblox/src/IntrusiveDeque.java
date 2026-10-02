@@ -22,11 +22,11 @@ final class IntrusiveDeque {
         return node;
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 <= 90) {
+    final static Sprite[] buildUnitBorderNineSliceSprites(int bottomRightBorderColor, int fillColor, int guard, int topLeftBorderColor, int innerAccentColor) {
+        if (guard <= 90) {
             field_d = (al) null;
         }
-        return n.a(param4, 1, param3, 3, (byte) 1, param1, param0, 1, 1);
+        return MatchingTextValidator.buildNineSliceSprites(innerAccentColor, 1, topLeftBorderColor, 3, (byte) 1, fillColor, bottomRightBorderColor, 1, 1);
     }
 
     final IntrusiveNode firstForIteration(int param0) {
@@ -108,7 +108,7 @@ final class IntrusiveDeque {
     public static void f(int param0) {
         field_b = null;
         if (param0 != 51) {
-            IntrusiveDeque.a(-67, 123, -7, 36, 22);
+            IntrusiveDeque.buildUnitBorderNineSliceSprites(-67, 123, -7, 36, 22);
         }
         field_d = null;
         field_e = null;

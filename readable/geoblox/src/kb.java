@@ -105,7 +105,7 @@ final class kb {
             throw new IllegalStateException();
         }
         kf.field_e = true;
-        q.a((byte) 123, true);
+        TextInputValidator.a((byte) 123, true);
         hj.field_a = 0;
         if (param0 < -90) {
             return;
