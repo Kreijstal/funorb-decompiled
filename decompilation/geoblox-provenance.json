@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "dc899ebfaed78111257c7cd7c9c647428a8207e9",
+      "commit": "a4cb12769e663bb0318f864ba63242eb769defd8",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "ca1ac1f6748b27b17cbda6141556ee9b08faabb28cd68073f44a48c2ace8992e",
-        "reproduce": "git archive --format=tar dc899ebfaed78111257c7cd7c9c647428a8207e9 | sha256sum",
+        "sha256": "4a602f64863503fc42934d47c05b546784f7ebaee646a7c7ea7093b24bd5ee66",
+        "reproduce": "git archive --format=tar a4cb12769e663bb0318f864ba63242eb769defd8 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "54a54b0e7576a6af94adb3b69987428f011658f7b2513f6de27ba0dd45fdd331",
-  "previousSourceTreeSha256": "db87af61f08e3fa11e6f19e45d63941889f9027d947e96dcf819b999be73d624",
-  "changedJavaFiles": 75,
+  "sourceTreeSha256": "d7bea0c5687e00ea49ab0d6f5b89aace3e2cca0067c862db74bd7ce881569adc",
+  "previousSourceTreeSha256": "54a54b0e7576a6af94adb3b69987428f011658f7b2513f6de27ba0dd45fdd331",
+  "changedJavaFiles": 16,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -1267,5 +1267,61 @@
     "cleanSourceArchiveByteExact": true,
     "diagnosticsUnchanged": true,
     "scope": "Generic native fixtures cover effect order, failure priority, nullable unboxing, mutation, short-circuiting, loop snapshots, NaNs and signed minima. GeoBlox native/raw/readable probes and current naming migration are recorded in the current readable manifest. Whole-game equivalence remains unverified."
+  },
+  "branchTailFactoring": {
+    "javaToolsCommit": "a4cb12769e663bb0318f864ba63242eb769defd8",
+    "sourceArchiveSha256": "4a602f64863503fc42934d47c05b546784f7ebaee646a7c7ea7093b24bd5ee66",
+    "defaultEnabled": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "runsAfterBooleanCarrierCleanup": true,
+    "completeKnownBodyParsingRequired": true,
+    "tokenBalancedExtentsRequired": true,
+    "onlyIdenticalWholeStatementsMoved": true,
+    "branchLocalScopeChangesRefused": true,
+    "handlerAndMonitorBoundariesUnchanged": true,
+    "emptyPrefixesStillEvaluateCondition": true,
+    "floatingRelationalInversionRetainsLogicalNegation": true,
+    "bareTransferGuardLaddersRetained": true,
+    "nestedLoopTryAndLabeledBodiesKeptWhole": true,
+    "sourceLinesBefore": 86455,
+    "sourceLinesAfter": 86004,
+    "changedJavaFiles": [
+      "aj.java",
+      "dj.java",
+      "gi.java",
+      "hd.java",
+      "jc.java",
+      "kl.java",
+      "ld.java",
+      "nb.java",
+      "pi.java",
+      "tg.java",
+      "tj.java",
+      "tk.java",
+      "v.java",
+      "vb.java",
+      "vd.java",
+      "wg.java"
+    ],
+    "difficultyMethodLinesBefore": 220,
+    "difficultyMethodLinesAfter": 69,
+    "sourceDeclarationsBefore": 20710,
+    "sourceDeclarationsAfter": 20710,
+    "allDeclarationIdentitiesUnchanged": true,
+    "overrideRelationshipsPreserved": 388,
+    "sourceReferenceOccurrencesBefore": 131064,
+    "sourceReferenceOccurrencesAfter": 130174,
+    "sourceReferenceOccurrencesRemoved": 890,
+    "sourceReferenceOccurrencesAdded": 0,
+    "referenceRemovalAttribution": "Duplicate occurrences in identical whole tails; every declaration identity and all override rows are unchanged. No reference identities or occurrences are added.",
+    "duplicateLocalMethodWgFinalizeByteExact": true,
+    "guardedRulesUnchanged": 1194,
+    "genericEmitterTestGroups": 19,
+    "nativeEmitterComparisons": 2329,
+    "nativeSharedTailComparisons": 819,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "scope": "The prior Boolean-carrier proof records the previous export. This pass factors exact tails within emitted block scopes, retaining nested try/monitor/loop/labeled constructs whole. Generic native fixtures cover effect order, nullable condition unboxing, mutation, nested arms, NaNs and handler/lock effects. Current readable reproduction and six native game probes are recorded in the readable manifest; whole-game equivalence remains unverified."
   }
 }

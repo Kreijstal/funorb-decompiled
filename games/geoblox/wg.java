@@ -139,20 +139,9 @@ final class wg implements Runnable {
             return false;
           }
         }
-        if (null != this.field_g) {
-          if (0 == this.field_g.field_a) {
-            return false;
-          }
-          if (param0 != 45) {
-            return false;
-          }
-          if (this.field_g.field_a != 1) {
-            this.finalize();
-            this.field_l = this.field_l + 1;
-          }
-          return false;
+        if (null == this.field_g) {
+          this.field_g = this.field_b.a((Runnable) (this), 0, 5);
         }
-        this.field_g = this.field_b.a((Runnable) (this), 0, 5);
         if (0 == this.field_g.field_a) {
           return false;
         }

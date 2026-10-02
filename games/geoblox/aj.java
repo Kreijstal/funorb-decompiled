@@ -39,11 +39,9 @@ public class aj {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (Exception) (Object) decompiledCaughtException;
         }
-        if (null != field_b) {
-          field_e = true;
-          return;
+        if (null == field_b) {
+          field_b = "~/";
         }
-        field_b = "~/";
         field_e = true;
     }
 

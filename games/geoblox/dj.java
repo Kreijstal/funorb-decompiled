@@ -573,38 +573,38 @@ class dj extends hk {
         if (!this.field_E) {
           this.field_n = 0;
           this.field_k = 0;
-          return;
-        }
-        if (!(this.field_q instanceof cc)) {
-          return;
-        }
-        var9 = (cc) ((Object) this.field_q);
-        if (param0 > -66) {
-          return;
-        }
-        var3 = var9.a((byte) 119, (el) (this));
-        var4 = var3.a(96);
-        var5 = var9.a((el) (this), -1);
-        var6 = var9.a(1) >> 1;
-        if (var4 < var5 - var6) {
-          this.field_k = 0;
-          this.field_n = 0;
-          return;
-        }
-        var7 = this.field_k + var3.a(this.field_H, 120);
-        if (var7 > var5 - var6) {
-          this.field_k = this.field_k - (var7 + var6 - var5);
         } else {
-          if (var7 < var6) {
-            this.field_k = this.field_k - (-var6 + var7);
+          if (!(this.field_q instanceof cc)) {
+            return;
           }
-        }
-        if (this.field_k <= 0) {
-          if (var6 - var5 > this.field_k) {
-            this.field_k = var6 - var5;
+          var9 = (cc) ((Object) this.field_q);
+          if (param0 > -66) {
+            return;
           }
-        } else {
-          this.field_k = 0;
+          var3 = var9.a((byte) 119, (el) (this));
+          var4 = var3.a(96);
+          var5 = var9.a((el) (this), -1);
+          var6 = var9.a(1) >> 1;
+          if (var4 < var5 - var6) {
+            this.field_k = 0;
+            this.field_n = 0;
+          } else {
+            var7 = this.field_k + var3.a(this.field_H, 120);
+            if (var7 > var5 - var6) {
+              this.field_k = this.field_k - (var7 + var6 - var5);
+            } else {
+              if (var7 < var6) {
+                this.field_k = this.field_k - (-var6 + var7);
+              }
+            }
+            if (this.field_k <= 0) {
+              if (var6 - var5 > this.field_k) {
+                this.field_k = var6 - var5;
+              }
+            } else {
+              this.field_k = 0;
+            }
+          }
         }
     }
 
