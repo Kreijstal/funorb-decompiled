@@ -49,7 +49,7 @@ final class di {
         try {
           var4 = (wc) ((Object) l.field_g.firstForIteration(param1 ^ param1));
           L0: while (var4 != null) {
-            o.a(param0, var4, param1 - 21718);
+            DiskArchiveRequest.a(param0, var4, param1 - 21718);
             var4 = (wc) ((Object) l.field_g.nextForIteration(1));
           }
           var2 = PrefixCodeDecoder.field_e.firstForIteration(0);

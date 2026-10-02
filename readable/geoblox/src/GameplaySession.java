@@ -2057,7 +2057,7 @@ final class GameplaySession {
         try {
           this.gameApplet = ownerApplet;
           ug.field_c = 0;
-          pb.pendingActionMarkers.clearNodes((byte) -126);
+          ArchiveRequest.pendingActionMarkers.clearNodes((byte) -126);
           this.pendingPopupPoints = 0;
           this.boardMaskOffsetX = -(i.avatarMaskRaster.width >> 1);
           this.tutorialMode = enableTutorial;

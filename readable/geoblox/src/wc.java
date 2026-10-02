@@ -18,7 +18,7 @@ final class wc extends IntrusiveNode {
         RuntimeException var3_ref = null;
         try {
           param1 = qj.a(param1, "", '_', (byte) 127);
-          var3 = bj.a(82, param1);
+          var3 = CachedArchiveSource.a(82, param1);
           if (param2 > -77) {
             field_g = true;
           }

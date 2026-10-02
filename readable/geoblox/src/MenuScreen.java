@@ -37,7 +37,7 @@ abstract class MenuScreen {
           }
           var4_int = param3.findGroupId((byte) 126, param0);
           var5 = param3.findFileId(param1, -89, var4_int);
-          stackIn_4_0 = sd.a(true, param3, var5, var4_int);
+          stackIn_4_0 = NetworkArchiveRequest.a(true, param3, var5, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

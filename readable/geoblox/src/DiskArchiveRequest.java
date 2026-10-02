@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class o extends pb {
-    jh field_w;
-    int field_x;
-    byte[] field_y;
+final class DiskArchiveRequest extends ArchiveRequest {
+    jh diskCache;
+    int operationType;
+    byte[] bytes;
 
-    final int g(int param0) {
-        if (param0 != 0) {
-            this.field_w = (jh) null;
-            if (!this.field_u) {
+    final int getProgress(int methodGuard) {
+        if (methodGuard != 0) {
+            this.diskCache = (jh) null;
+            if (!this.pending) {
                 return 100;
             }
             return 0;
         }
-        if (!this.field_u) {
+        if (!this.pending) {
             return 100;
         }
         return 0;
@@ -45,17 +45,17 @@ final class o extends pb {
         }
     }
 
-    final byte[] e(int param0) {
-        if (param0 != 397) {
+    final byte[] getBytes(int methodGuard) {
+        if (methodGuard != 397) {
             return (byte[]) null;
         }
-        if (!(!this.field_u)) {
+        if (!(!this.pending)) {
             throw new RuntimeException();
         }
-        return this.field_y;
+        return this.bytes;
     }
 
-    o() {
+    DiskArchiveRequest() {
     }
 
     static {

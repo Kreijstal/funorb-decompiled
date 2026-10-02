@@ -42,8 +42,8 @@ final class oi {
           if (ag.field_i > 0) {
             fieldTemp$5 = ag.field_i - 1;
             ag.field_i = ag.field_i - 1;
-            var2_ref_byte__ = sd.field_C[fieldTemp$5];
-            sd.field_C[ag.field_i] = null;
+            var2_ref_byte__ = NetworkArchiveRequest.field_C[fieldTemp$5];
+            NetworkArchiveRequest.field_C[ag.field_i] = null;
             return var2_ref_byte__;
           }
         }

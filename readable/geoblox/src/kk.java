@@ -27,7 +27,7 @@ final class kk extends ji {
             int stackIn_66_0 = 0;
             Throwable decompiledCaughtException = null;
             long var2_long = 0L;
-            sd var2 = null;
+            NetworkArchiveRequest var2 = null;
             IOException var2_ref = null;
             int var3_int = 0;
             Exception var3 = null;
@@ -42,7 +42,7 @@ final class kk extends ji {
             int var11 = 0;
             long var12 = 0L;
             Object var14 = null;
-            sd var14_ref = null;
+            NetworkArchiveRequest var14_ref = null;
             int var15 = 0;
             int var16 = 0;
             int var17 = 0;
@@ -75,16 +75,16 @@ final class kk extends ji {
             }
             try {
               this.field_u.checkWriteFailure(-108);
-              var2 = (sd) ((Object) this.field_g.firstForIteration((byte) 121));
+              var2 = (NetworkArchiveRequest) ((Object) this.field_g.firstForIteration((byte) 121));
               L4: while (var2 != null) {
                 this.field_m.position = 0;
                 this.field_m.writeByte((byte) -54, 1);
                 this.field_m.writeLong40BE((byte) -127, var2.field_i);
                 this.field_u.enqueueWrite(100, 0, this.field_m.bytes.length, this.field_m.bytes);
                 this.field_e.addLast(-93, var2);
-                var2 = (sd) ((Object) this.field_g.nextForIteration(param0 ^ 41));
+                var2 = (NetworkArchiveRequest) ((Object) this.field_g.nextForIteration(param0 ^ 41));
               }
-              var2 = (sd) ((Object) this.field_p.firstForIteration((byte) 121));
+              var2 = (NetworkArchiveRequest) ((Object) this.field_p.firstForIteration((byte) 121));
               if (param0 != 95) {
                 this.e(-90);
               }
@@ -94,7 +94,7 @@ final class kk extends ji {
                 this.field_m.writeLong40BE((byte) -127, var2.field_i);
                 this.field_u.enqueueWrite(100, 0, this.field_m.bytes.length, this.field_m.bytes);
                 this.field_c.addLast(112, var2);
-                var2 = (sd) ((Object) this.field_p.nextForIteration(54));
+                var2 = (NetworkArchiveRequest) ((Object) this.field_p.nextForIteration(54));
               }
               for (var2_int = 0; var2_int < 100; var2_int++) {
                 var3_int = this.field_u.available((byte) 82);
@@ -107,42 +107,42 @@ final class kk extends ji {
                 this.field_o = 0;
                 var4 = 0;
                 if (this.field_f != null) {
-                  if (this.field_f.field_D == 0) {
+                  if (this.field_f.blockPosition == 0) {
                     var4 = 1;
                   }
                 } else {
                   var4 = 10;
                 }
                 if (0 >= var4) {
-                  var5 = this.field_f.field_A.bytes.length - this.field_f.field_E;
-                  var6 = 512 - this.field_f.field_D;
-                  if (-this.field_f.field_A.position + var5 < var6) {
-                    var6 = -this.field_f.field_A.position + var5;
+                  var5 = this.field_f.responseBuffer.bytes.length - this.field_f.reservedTailBytes;
+                  var6 = 512 - this.field_f.blockPosition;
+                  if (-this.field_f.responseBuffer.position + var5 < var6) {
+                    var6 = -this.field_f.responseBuffer.position + var5;
                   }
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
                   L12: {
-                    this.field_u.readFully(this.field_f.field_A.bytes, (byte) -97, this.field_f.field_A.position, var6);
+                    this.field_u.readFully(this.field_f.responseBuffer.bytes, (byte) -97, this.field_f.responseBuffer.position, var6);
                     if (this.field_i != 0) {
                       var17 = 0;
                       var7 = var17;
                       L13: while (var6 > var17) {
-                        this.field_f.field_A.bytes[this.field_f.field_A.position + var17] = (byte)h.a((int) this.field_f.field_A.bytes[this.field_f.field_A.position + var17], (int) this.field_i);
+                        this.field_f.responseBuffer.bytes[this.field_f.responseBuffer.position + var17] = (byte)h.a((int) this.field_f.responseBuffer.bytes[this.field_f.responseBuffer.position + var17], (int) this.field_i);
                         var17++;
                       }
                       break L12;
                     }
                   }
-                  this.field_f.field_D = this.field_f.field_D + var6;
-                  this.field_f.field_A.position = this.field_f.field_A.position + var6;
-                  if (var5 == this.field_f.field_A.position) {
+                  this.field_f.blockPosition = this.field_f.blockPosition + var6;
+                  this.field_f.responseBuffer.position = this.field_f.responseBuffer.position + var6;
+                  if (var5 == this.field_f.responseBuffer.position) {
                     this.field_f.unlinkSecondaryNode((byte) 57);
-                    this.field_f.field_u = false;
+                    this.field_f.pending = false;
                     this.field_f = null;
                   } else {
-                    if (this.field_f.field_D == 512) {
-                      this.field_f.field_D = 0;
+                    if (this.field_f.blockPosition == 512) {
+                      this.field_f.blockPosition = 0;
                     }
                   }
                 } else {
@@ -174,21 +174,21 @@ final class kk extends ji {
                         var12 = (long)var7 + ((long)var6 << 32);
                         var14 = null;
                         if (var11 != 0) {
-                          var14_ref = (sd) ((Object) this.field_c.firstForIteration((byte) 121));
+                          var14_ref = (NetworkArchiveRequest) ((Object) this.field_c.firstForIteration((byte) 121));
                           L19: while (var14_ref != null) {
                             if (var12 == var14_ref.field_i) {
                               break L18;
                             }
-                            var14_ref = (sd) ((Object) this.field_c.nextForIteration(-30));
+                            var14_ref = (NetworkArchiveRequest) ((Object) this.field_c.nextForIteration(-30));
                           }
                           break L18;
                         }
-                        var14_ref = (sd) ((Object) this.field_e.firstForIteration((byte) 121));
+                        var14_ref = (NetworkArchiveRequest) ((Object) this.field_e.firstForIteration((byte) 121));
                         L20: while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_i) {
                             break L18;
                           }
-                          var14_ref = (sd) ((Object) this.field_e.nextForIteration(72));
+                          var14_ref = (NetworkArchiveRequest) ((Object) this.field_e.nextForIteration(72));
                         }
                         break L18;
                       }
@@ -199,19 +199,19 @@ final class kk extends ji {
                         this.field_f = var14_ref;
                         stackIn_66_0 = (0 != var10) ? 9 : 5;
                         var15 = stackIn_66_0;
-                        this.field_f.field_A = new ByteArrayBuffer(var9 + var15 + this.field_f.field_E);
-                        this.field_f.field_A.writeByte((byte) -26, var10);
-                        this.field_f.field_A.writeIntBE((byte) 95, var9);
+                        this.field_f.responseBuffer = new ByteArrayBuffer(var9 + var15 + this.field_f.reservedTailBytes);
+                        this.field_f.responseBuffer.writeByte((byte) -26, var10);
+                        this.field_f.responseBuffer.writeIntBE((byte) 95, var9);
                         this.field_j.position = 0;
-                        this.field_f.field_D = 10;
+                        this.field_f.blockPosition = 10;
                       }
                     } else {
-                      if (0 != this.field_f.field_D) {
+                      if (0 != this.field_f.blockPosition) {
                         throw new IOException();
                       }
                       if (-1 == this.field_j.bytes[0]) {
                         this.field_j.position = 0;
-                        this.field_f.field_D = 1;
+                        this.field_f.blockPosition = 1;
                       } else {
                         this.field_f = null;
                       }
@@ -335,7 +335,7 @@ final class kk extends ji {
             String stackIn_28_2 = null;
             Throwable decompiledCaughtException = null;
             Exception var4 = null;
-            sd var4_ref = null;
+            NetworkArchiveRequest var4_ref = null;
             IOException var4_ref2 = null;
             RuntimeException var4_ref3 = null;
             Exception var5 = null;
@@ -357,7 +357,7 @@ final class kk extends ji {
               this.field_j.position = 0;
               this.field_f = null;
               L3: while (true) {
-                var4_ref = (sd) ((Object) this.field_e.removeFirst(true));
+                var4_ref = (NetworkArchiveRequest) ((Object) this.field_e.removeFirst(true));
                 if (var4_ref != null) {
                   this.field_g.addLast(-74, var4_ref);
                   continue L3;
@@ -366,7 +366,7 @@ final class kk extends ji {
                   field_t = 110;
                 }
                 L5: while (true) {
-                  var4_ref = (sd) ((Object) this.field_c.removeFirst(true));
+                  var4_ref = (NetworkArchiveRequest) ((Object) this.field_c.removeFirst(true));
                   if (var4_ref != null) {
                     this.field_p.addLast(116, var4_ref);
                     continue L5;

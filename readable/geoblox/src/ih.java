@@ -14,7 +14,7 @@ final class ih {
             eg.field_p.a(111);
             var1_int = 10 / ((param0 - 68) / 57);
             for (var2 = 0; var2 < 32; var2++) {
-                pb.field_p[var2] = 0L;
+                ArchiveRequest.field_p[var2] = 0L;
             }
             for (var1_int = 0; var1_int < 32; var1_int++) {
                 tl.field_l[var1_int] = 0L;

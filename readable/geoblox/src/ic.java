@@ -61,7 +61,7 @@ final class ic {
               GameplayEntity.field_D = param11;
               ok.field_f = param3;
               lb.field_c = param1;
-              sd.field_x = param13;
+              NetworkArchiveRequest.field_x = param13;
               ac.field_s = param7;
               f.field_ib = param0;
               rb.field_c = param4;

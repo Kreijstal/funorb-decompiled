@@ -302,11 +302,11 @@ final class s extends ee implements pe, pl {
               if (param0 != -1) {
                 s.g(14);
               }
-              if (null == sd.field_z) {
+              if (null == NetworkArchiveRequest.field_z) {
                 stackIn_15_0 = param1.getParameter("settings");
                 return stackIn_15_0;
               }
-              stackIn_13_0 = sd.field_z;
+              stackIn_13_0 = NetworkArchiveRequest.field_z;
               return stackIn_13_0;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

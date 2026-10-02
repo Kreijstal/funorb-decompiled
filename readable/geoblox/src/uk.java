@@ -30,7 +30,7 @@ final class uk extends TextInputValidator {
         RuntimeException var3_ref = null;
         try {
           param1 = qj.a(param1, "", '_', (byte) 119);
-          var3 = bj.a(105, param2);
+          var3 = CachedArchiveSource.a(105, param2);
           if (param0 != 8) {
             field_i = (int[]) null;
           }

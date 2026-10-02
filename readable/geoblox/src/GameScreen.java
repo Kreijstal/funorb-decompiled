@@ -633,7 +633,7 @@ final class GameScreen extends MenuScreen {
                           SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var5);
                           ma.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, ll.frameNineSliceSprites);
                           var6 = 170;
-                          var7_ref_String = ue.fullscreenBeforeAcceptText + " " + pb.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
+                          var7_ref_String = ue.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
                           var6 = var6 + 16 * fi.smallFont.drawParagraph(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                           var6 += 10;
                           var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 + 1);
@@ -695,7 +695,7 @@ final class GameScreen extends MenuScreen {
                           }
                           dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                         }
-                        dd.uiPaletteFont.drawCenteredText(pb.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
+                        dd.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
                         dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 16689938;
                         if (var12 == 0) {
                           break L7;
@@ -1859,8 +1859,8 @@ final class GameScreen extends MenuScreen {
                 L4: {
                   pointerX -= 280;
                   if (pointerX > 0) {
-                    if (pointerX < sd.barSprite.fullWidth) {
-                      j.field_gb = 80 * pointerX / sd.barSprite.fullWidth;
+                    if (pointerX < NetworkArchiveRequest.barSprite.fullWidth) {
+                      j.field_gb = 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth;
                       if (var9 == 0) {
                         break L4;
                       }
@@ -1888,8 +1888,8 @@ final class GameScreen extends MenuScreen {
                   break L1;
                 }
               }
-              if (~sd.barSprite.fullWidth < ~pointerX) {
-                wg.a(-15346, 80 * pointerX / sd.barSprite.fullWidth);
+              if (~NetworkArchiveRequest.barSprite.fullWidth < ~pointerX) {
+                wg.a(-15346, 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth);
                 if (var9 == 0) {
                   break L1;
                 }
@@ -2814,14 +2814,14 @@ final class GameScreen extends MenuScreen {
                 }
               }
               var8.drawRightAlignedText(var7, 285 + var12, 30 + rowY, 0, -1);
-              sd.barSprite.draw(var12 + 280, rowY + 15);
+              NetworkArchiveRequest.barSprite.draw(var12 + 280, rowY + 15);
               if (actionId == 8) {
                 stackIn_153_0 = j.field_gb;
               } else {
                 stackIn_153_0 = oc.field_c;
               }
               var13 = stackIn_153_0;
-              var13 = var13 * (-4 + sd.barSprite.fullWidth) / 80;
+              var13 = var13 * (-4 + NetworkArchiveRequest.barSprite.fullWidth) / 80;
               re.widgetSprite.draw(280 + var13 - 1 + var12, 9 + rowY);
               if (var14 == 0) {
                 break L35;

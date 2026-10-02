@@ -85,30 +85,30 @@ final class ra implements Iterable {
             if (param1 < -47) {
               if (var5 != 0) {
                 vl.field_p = vl.field_p | var3;
-                stackIn_35_0 = (!pb.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+                stackIn_35_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
                 var4 = stackIn_35_0;
               } else {
                 dc.field_a = dc.field_a | 1 << var4;
                 el.field_g = el.field_g - (1 << var4);
                 vl.field_p = vl.field_p | var3;
-                stackIn_45_0 = (!pb.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+                stackIn_45_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
                 var4 = stackIn_45_0;
               }
             } else {
               ticketingUnreadCountText = (String) null;
               if (var5 != 0) {
                 vl.field_p = vl.field_p | var3;
-                stackIn_23_0 = (!pb.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+                stackIn_23_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
                 var4 = stackIn_23_0;
               } else {
                 dc.field_a = dc.field_a | 1 << var4;
                 el.field_g = el.field_g - (1 << var4);
                 vl.field_p = vl.field_p | var3;
-                stackIn_13_0 = (!pb.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+                stackIn_13_0 = (!ArchiveRequest.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
                 var4 = stackIn_13_0;
               }
             }
-            pb.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
+            ArchiveRequest.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
             if (var4 != 0) {
               gf.preparePendingActionPanel((byte) -122);
             }

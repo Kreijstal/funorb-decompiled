@@ -19,7 +19,7 @@ abstract class ji {
     byte field_i;
     volatile int field_q;
     ByteArrayBuffer field_j;
-    sd field_f;
+    NetworkArchiveRequest field_f;
 
     abstract void h(int param0);
 
@@ -56,12 +56,12 @@ abstract class ji {
 
     abstract void a(Object param0, boolean param1, boolean param2);
 
-    final sd a(byte param0, int param1, int param2, int param3, boolean param4) {
+    final NetworkArchiveRequest a(byte param0, int param1, int param2, int param3, boolean param4) {
         long var6 = ((long)param1 << 32) + (long)param3;
-        sd var8 = new sd();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.field_i = var6;
-        var8.field_q = param4 ? true : false;
-        var8.field_E = param0;
+        var8.priority = param4 ? true : false;
+        var8.reservedTailBytes = param0;
         if (!param4) {
             if (this.a(false) >= 20) {
                 throw new RuntimeException();

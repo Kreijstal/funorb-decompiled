@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd extends pb {
+final class NetworkArchiveRequest extends ArchiveRequest {
     static int field_w;
     static PlatformTask field_B;
-    ByteArrayBuffer field_A;
-    byte field_E;
+    ByteArrayBuffer responseBuffer;
+    byte reservedTailBytes;
     static byte[][] field_C;
-    int field_D;
+    int blockPosition;
     static int field_x;
     static Sprite barSprite;
     static String field_z;
@@ -22,15 +22,15 @@ final class sd extends pb {
         field_C = (byte[][]) null;
     }
 
-    final byte[] e(int param0) {
-        if (this.field_u) {
+    final byte[] getBytes(int methodGuard) {
+        if (this.pending) {
             throw new RuntimeException();
         }
-        if (this.field_A.position >= this.field_A.bytes.length - this.field_E) {
-            if (param0 != 397) {
-                this.g(-105);
+        if (this.responseBuffer.position >= this.responseBuffer.bytes.length - this.reservedTailBytes) {
+            if (methodGuard != 397) {
+                this.getProgress(-105);
             }
-            return this.field_A.bytes;
+            return this.responseBuffer.bytes;
         }
         throw new RuntimeException();
     }
@@ -258,17 +258,17 @@ final class sd extends pb {
         }
     }
 
-    final int g(int param0) {
-        if (param0 != 0) {
+    final int getProgress(int methodGuard) {
+        if (methodGuard != 0) {
             return 76;
         }
-        if (null != this.field_A) {
-            return 100 * this.field_A.position / (-this.field_E + this.field_A.bytes.length);
+        if (null != this.responseBuffer) {
+            return 100 * this.responseBuffer.position / (-this.reservedTailBytes + this.responseBuffer.bytes.length);
         }
         return 0;
     }
 
-    sd() {
+    NetworkArchiveRequest() {
     }
 
     final static void h(int param0) {

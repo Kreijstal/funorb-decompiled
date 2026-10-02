@@ -208,7 +208,7 @@ public final class Geoblox extends wf {
             ll.frameNineSliceSprites[7] = ug.loadSprite("frame_bottom", ll.gameGraphicsArchive, (byte) -78, "");
             ll.frameNineSliceSprites[8] = ug.loadSprite("frame_bottomright", ll.gameGraphicsArchive, (byte) -78, "");
             re.widgetSprite = ug.loadSprite("widget", ll.gameGraphicsArchive, (byte) -78, "");
-            sd.barSprite = ug.loadSprite("bar", ll.gameGraphicsArchive, (byte) -78, "");
+            NetworkArchiveRequest.barSprite = ug.loadSprite("bar", ll.gameGraphicsArchive, (byte) -78, "");
             lj.smallBoxSprite = ug.loadSprite("box_sml", ll.gameGraphicsArchive, (byte) -78, "");
             g.countBoxSprite = ug.loadSprite("box_count", ll.gameGraphicsArchive, (byte) -78, "");
             vh.largeBoxSprite = ug.loadSprite("box_lgr", ll.gameGraphicsArchive, (byte) -78, "");
@@ -438,9 +438,9 @@ public final class Geoblox extends wf {
         kh.a(104);
         PacketByteCipher.b((byte) -125);
         kk.i(-84);
-        sd.e((byte) 118);
-        bj.b(true);
-        pb.f(31735);
+        NetworkArchiveRequest.e((byte) 118);
+        CachedArchiveSource.b(true);
+        ArchiveRequest.f(31735);
         dl.a(true);
         ij.i((byte) -80);
         bk.a(true);
@@ -647,7 +647,7 @@ public final class Geoblox extends wf {
           this.requestGameArchives(stackIn_14_1);
           cf.field_k = false;
         }
-        L4: while (sh.a((byte) -118, pb.field_m)) {
+        L4: while (sh.a((byte) -118, ArchiveRequest.field_m)) {
           this.l(121);
         }
         L5: {
@@ -936,7 +936,7 @@ public final class Geoblox extends wf {
                 return;
             }
             kj.jewelsForegroundSprite = ug.loadSprite("jewls_foreground", ll.gameGraphicsArchive, (byte) -78, "jewels");
-            bj.jewelsBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "jewels", "jewls_background");
+            CachedArchiveSource.jewelsBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "jewels", "jewls_background");
             ll.themesLoaded[0] = true;
             return;
         }

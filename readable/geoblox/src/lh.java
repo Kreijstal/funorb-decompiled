@@ -16,7 +16,7 @@ final class lh {
         int var2;
         var2 = Geoblox.field_C;
         if (param0 <= -78) {
-          if (null != pb.pendingActionMarkers.firstForIteration(0)) {
+          if (null != ArchiveRequest.pendingActionMarkers.firstForIteration(0)) {
             var1 = kj.field_J;
             if (var1 == 0) {
               eh.pendingActionPanelTop = eh.pendingActionPanelTop - 1;
@@ -39,7 +39,7 @@ final class lh {
                 fieldTemp$5 = eh.pendingActionPanelTop;
                 eh.pendingActionPanelTop = eh.pendingActionPanelTop + 1;
                 if (fieldTemp$5 > 480) {
-                  pb.pendingActionMarkers.removeFirst((byte) -118);
+                  ArchiveRequest.pendingActionMarkers.removeFirst((byte) -118);
                   gf.preparePendingActionPanel((byte) -12);
                   return;
                 }
@@ -49,7 +49,7 @@ final class lh {
           return;
         }
         lh.b(-5);
-        if (null == pb.pendingActionMarkers.firstForIteration(0)) {
+        if (null == ArchiveRequest.pendingActionMarkers.firstForIteration(0)) {
           return;
         }
         var1 = kj.field_J;
@@ -80,7 +80,7 @@ final class lh {
           if (fieldTemp$7 <= 480) {
             return;
           }
-          pb.pendingActionMarkers.removeFirst((byte) -118);
+          ArchiveRequest.pendingActionMarkers.removeFirst((byte) -118);
           gf.preparePendingActionPanel((byte) -12);
           return;
         }

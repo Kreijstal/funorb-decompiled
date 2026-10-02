@@ -306,7 +306,7 @@ final class vc extends dk {
         if (methodGuard != -1) {
             field_h = 119;
         }
-        PendingActionMarker pendingActionMarkerForDrawing = (PendingActionMarker) ((Object) pb.pendingActionMarkers.firstForIteration(0));
+        PendingActionMarker pendingActionMarkerForDrawing = (PendingActionMarker) ((Object) ArchiveRequest.pendingActionMarkers.firstForIteration(0));
         PendingActionMarker pendingActionMarkerBeforeNullCheck = pendingActionMarkerForDrawing;
         if (pendingActionMarkerBeforeNullCheck != null) {
             pendingActionDrawTop = eh.pendingActionPanelTop;

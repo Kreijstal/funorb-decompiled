@@ -424,8 +424,8 @@ final class pf extends ee implements ga, pl {
               stackIn_63_0 = 249;
               return stackIn_63_0;
             }
-            var9 = sd.field_x;
-            sd.field_x = ac.field_s;
+            var9 = NetworkArchiveRequest.field_x;
+            NetworkArchiveRequest.field_x = ac.field_s;
             ck.field_e = true;
             ac.field_s = var9;
           }
@@ -483,7 +483,7 @@ final class pf extends ee implements ga, pl {
                     ByteArrayBuffer.g(0);
                   }
                 } else {
-                  sd.h(param1 ^ -60);
+                  NetworkArchiveRequest.h(param1 ^ -60);
                 }
               }
             }

@@ -102,7 +102,7 @@ final class lc {
             lc.a((byte) -59);
           }
           oi.field_e = param0;
-          pb.field_s = param2;
+          ArchiveRequest.field_s = param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

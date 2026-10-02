@@ -126,7 +126,7 @@ final class qh extends ee implements pe, pl, ta {
         this.field_G.field_j = ok.createEmailConfirmationTooltipText;
         this.field_M.field_j = ij.createPasswordTooltipText;
         this.field_N.field_j = oi.createPasswordConfirmationTooltipText;
-        this.field_R.field_j = pb.createAgeTooltipText;
+        this.field_R.field_j = ArchiveRequest.createAgeTooltipText;
         this.field_P.field_j = vi.createNewsOptInTooltipText;
         this.field_H.a((byte) -27, new uk(this.field_H));
         this.field_I.a((byte) -111, new ag(this.field_I));

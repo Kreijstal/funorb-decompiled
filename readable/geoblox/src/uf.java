@@ -32,11 +32,11 @@ final class uf implements Runnable {
         field_l = null;
     }
 
-    final o a(byte param0, int param1, jh param2, byte[] param3) {
-        o var5 = null;
+    final DiskArchiveRequest a(byte param0, int param1, jh param2, byte[] param3) {
+        DiskArchiveRequest var5 = null;
         RuntimeException var5_ref = null;
-        o stackIn_2_0 = null;
-        o stackIn_4_0 = null;
+        DiskArchiveRequest stackIn_2_0 = null;
+        DiskArchiveRequest stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -44,18 +44,18 @@ final class uf implements Runnable {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new o();
-          var5.field_y = param3;
-          var5.field_q = false;
+          var5 = new DiskArchiveRequest();
+          var5.bytes = param3;
+          var5.priority = false;
           var5.field_i = (long)param1;
-          var5.field_x = 2;
-          var5.field_w = param2;
+          var5.operationType = 2;
+          var5.diskCache = param2;
           if (param0 <= 41) {
-            stackIn_2_0 = (o) null;
+            stackIn_2_0 = (DiskArchiveRequest) null;
             return stackIn_2_0;
           }
           this.a(var5, 15079962);
-          stackIn_4_0 = (o) (var5);
+          stackIn_4_0 = (DiskArchiveRequest) (var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,49 +77,49 @@ final class uf implements Runnable {
         }
     }
 
-    final o a(jh param0, int param1, int param2) {
-        o var4 = null;
+    final DiskArchiveRequest a(jh param0, int param1, int param2) {
+        DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
-        o var6 = null;
+        DiskArchiveRequest var6 = null;
         int var8 = 0;
-        o stackIn_11_0 = null;
-        o stackIn_18_0 = null;
+        DiskArchiveRequest stackIn_11_0 = null;
+        DiskArchiveRequest stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         Throwable decompiledCaughtException = null;
         var8 = Geoblox.field_C;
         try {
-          var4 = new o();
+          var4 = new DiskArchiveRequest();
           if (param2 != 15079962) {
             field_a = -116;
           }
-          var4.field_x = 1;
+          var4.operationType = 1;
           var5 = this.field_k;
           synchronized (var5) {
             L1: {
-              var6 = (o) ((Object) this.field_k.firstForIteration((byte) 121));
+              var6 = (DiskArchiveRequest) ((Object) this.field_k.firstForIteration((byte) 121));
               L2: while (var6 != null) {
                 if ((long)param1 == var6.field_i) {
-                  if (var6.field_w == param0) {
-                    if (2 == var6.field_x) {
-                      var4.field_y = var6.field_y;
-                      var4.field_u = false;
-                      stackIn_11_0 = (o) (var4);
+                  if (var6.diskCache == param0) {
+                    if (2 == var6.operationType) {
+                      var4.bytes = var6.bytes;
+                      var4.pending = false;
+                      stackIn_11_0 = (DiskArchiveRequest) (var4);
                       return stackIn_11_0;
                     }
                   }
                 }
-                var6 = (o) ((Object) this.field_k.nextForIteration(-20));
+                var6 = (DiskArchiveRequest) ((Object) this.field_k.nextForIteration(-20));
               }
               break L1;
             }
           }
-          var4.field_y = param0.a(param1, (byte) -78);
-          var4.field_q = true;
-          var4.field_u = false;
-          stackIn_18_0 = (o) (var4);
+          var4.bytes = param0.a(param1, (byte) -78);
+          var4.priority = true;
+          var4.pending = false;
+          stackIn_18_0 = (DiskArchiveRequest) (var4);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,7 +135,7 @@ final class uf implements Runnable {
         }
     }
 
-    private final void a(o param0, int param1) {
+    private final void a(DiskArchiveRequest param0, int param1) {
         Object var3 = null;
         Throwable var4 = null;
         Object stackIn_11_0 = null;
@@ -242,25 +242,25 @@ final class uf implements Runnable {
         }
     }
 
-    final o a(int param0, jh param1, int param2) {
-        o var4 = null;
+    final DiskArchiveRequest a(int param0, jh param1, int param2) {
+        DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
-        o stackIn_3_0 = null;
+        DiskArchiveRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new o();
-          var4.field_x = 3;
-          var4.field_w = param1;
-          var4.field_q = false;
+          var4 = new DiskArchiveRequest();
+          var4.operationType = 3;
+          var4.diskCache = param1;
+          var4.priority = false;
           var4.field_i = (long)param2;
           if (param0 < 22) {
             uf.a(70);
           }
           this.a(var4, 15079962);
-          stackIn_3_0 = (o) (var4);
+          stackIn_3_0 = (DiskArchiveRequest) (var4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -281,7 +281,7 @@ final class uf implements Runnable {
             InterruptedException interruptedException = null;
             Object var2 = null;
             int var5 = 0;
-            o var7 = null;
+            DiskArchiveRequest var7 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
@@ -291,7 +291,7 @@ final class uf implements Runnable {
             L0: while (!this.field_j) {
               var2 = this.field_k;
               synchronized (var2) {
-                var7 = (o) ((Object) this.field_k.removeFirst(true));
+                var7 = (DiskArchiveRequest) ((Object) this.field_k.removeFirst(true));
                 if (var7 == null) {
                   try {
                     this.field_k.wait();
@@ -310,16 +310,16 @@ final class uf implements Runnable {
               }
               try {
                 L4: {
-                  if (var7.field_x != 2) {
-                    if (3 == var7.field_x) {
-                      var7.field_y = var7.field_w.a((int)var7.field_i, (byte) -76);
+                  if (var7.operationType != 2) {
+                    if (3 == var7.operationType) {
+                      var7.bytes = var7.diskCache.a((int)var7.field_i, (byte) -76);
                       decompiledRegionSelector1 = 1;
                       break L4;
                     }
-                    var7.field_u = false;
+                    var7.pending = false;
                   } else {
-                    var7.field_w.a(var7.field_y, (byte) -53, (int)var7.field_i, var7.field_y.length);
-                    var7.field_u = false;
+                    var7.diskCache.a(var7.bytes, (byte) -53, (int)var7.field_i, var7.bytes.length);
+                    var7.pending = false;
                   }
                   decompiledRegionSelector1 = 0;
                 }
@@ -333,7 +333,7 @@ final class uf implements Runnable {
               if (decompiledRegionSelector1 == 0) {
                 continue L0;
               }
-              var7.field_u = false;
+              var7.pending = false;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

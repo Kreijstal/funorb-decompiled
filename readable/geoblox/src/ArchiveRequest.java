@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pb extends DualLinkNode {
+abstract class ArchiveRequest extends DualLinkNode {
     static IntrusiveDeque pendingActionMarkers;
-    volatile boolean field_u;
-    boolean field_q;
+    volatile boolean pending;
+    boolean priority;
     static String createAgeTooltipText;
     static int field_r;
     static long[] field_p;
     static String fullscreenAcceptButtonText;
-    boolean field_n;
+    boolean seenByCleanup;
     static int[] field_m;
     static float field_s;
 
@@ -106,7 +106,7 @@ abstract class pb extends DualLinkNode {
         }
     }
 
-    abstract byte[] e(int param0);
+    abstract byte[] getBytes(int methodGuard);
 
     public static void f(int param0) {
         createAgeTooltipText = null;
@@ -116,14 +116,14 @@ abstract class pb extends DualLinkNode {
         fullscreenAcceptButtonText = null;
         if (param0 != 31735) {
             String var2 = (String) null;
-            pb.a(68, (java.awt.Color) null, true, true, (String) null);
+            ArchiveRequest.a(68, (java.awt.Color) null, true, true, (String) null);
         }
     }
 
-    abstract int g(int param0);
+    abstract int getProgress(int methodGuard);
 
-    pb() {
-        this.field_u = true;
+    ArchiveRequest() {
+        this.pending = true;
     }
 
     static {

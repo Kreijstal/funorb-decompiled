@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 5,220 explicit guarded rules: 45 classes, 641 fields, 473 method
-declarations, 1,434 parameters and 2,627 locals. This is not full deobfuscation.
+There are 5,336 explicit guarded rules: 49 classes, 669 fields, 483 method
+declarations, 1,455 parameters and 2,680 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -1947,8 +1947,8 @@ constructor CRC/digest validation. Network index requests retain CRC/digest
 validation and their original retry/reset and queued disk-write paths; this
 method adds no expected-revision comparison to that branch. Incomplete requests
 return null. Clearing the completed request and allocating group-state storage
-retain their original order. Private provider fields/requests/helpers remain
-opaque pending the next pass.
+retain their original order. Private provider fields/requests/helpers remained opaque at pass 67;
+pass 68 names their instance declarations and request records.
 
 `gg.computePrefixCrc32(bytes, methodGuard, length)` delegates to the existing
 CRC helper at start position 0; guard below 56 retains recursive null-input
@@ -1969,3 +1969,86 @@ text fixtures retain their decoder/guard/nested-failure scope without new
 metadata/lookup/hash/provider execution. Private provider/storage/compression
 helpers, static shared names, real assets/server traffic, complete gameplay and
 device performance remain unfinished or unverified.
+
+## Cached archive requests and background work (pass 68)
+
+`CachedArchiveSource` names `bj` for its concrete provider role. It owns the
+archiveId, expected index CRC/digest/revision, loaded index, networkClient,
+diskWorker, optional indexDiskCache/groupDiskCache and a groupRequests table.
+All instance declarations and constructor contracts have guarded names; shared
+static text/graphics helpers stay on the owner. Constructor table/queue allocation
+still occurs before its catch, and supplied digest/storage references are retained.
+
+| Provider state | Role |
+| --- | --- |
+| groupDiskStatus | 0 unknown, -1 invalid/unavailable, 1 validated or queued for disk storage |
+| verifyDiskCachePending | Initial verification phase when groupDiskCache exists |
+| downloadAllPending | Requested full download phase, enabled only with groupDiskCache |
+| backgroundGroupIndex / backgroundGroups | Scan cursor and unresolved group IDs for the active phase |
+| requestedGroups | Private queue scanned by processRequestedGroups; no producer exists in the fixed source |
+| sweepCompletedRequests / nextRequestSweepMillis | Optional completed-request cleanup and its deadline |
+
+`getGroupRequest(methodGuard, requestMode, groupId)` first checks groupRequests.
+Foreground mode 0 discards a cached pending nonpriority request, then uses disk
+unless its status is -1; otherwise it requests priority network data. Mode 1
+requires disk cache and queues verification. Mode 2 requires disk cache and
+status -1, then requests background network data. Full queues return null
+before insertion. Pending requests return null. The method obtains bytes before
+testing guard -71, preserving malformed guards and partial request effects.
+
+Disk responses require more than two bytes, validate CRC excluding the final
+two bytes, optionally compare a 64-byte Whirlpool digest, then check the low
+16 revision bits in that suffix. Caught Exception marks disk status -1, unlinks
+and may retry priority network. Network responses validate CRC/digest, reset
+existing client counters on success, and catch RuntimeException to reset,
+unlink and possibly retry. Successful network data gets its revision written
+into the final two reserved bytes in place. The provider queues a disk write,
+updates disk status and unlinks nonpriority records at their original points.
+No additional copy, ownership rule, retry or exception handling is introduced.
+
+`requestAllGroups(methodGuard)` returns without groupDiskCache; otherwise it
+sets downloadAllPending and allocates backgroundGroups if necessary. Its wrong
+guard still changes the cleanup deadline. `processRequestedGroups` requires a
+background queue and loaded index, removes invalid/empty IDs, requests mode 1
+for status 0 and mode 2 for status -1, then removes status 1 entries. The fixed
+source only allocates/iterates requestedGroups; it does not enqueue into it.
+
+`advanceBackgroundLoading(methodGuard)` gives disk verification priority over
+downloads. Verification retries unresolved queued groups and scans nonempty
+index slots while disk-worker depth is below 250, finishing when statuses are
+nonzero. Downloads request groups whose status is not 1 while the network
+background queue has room; the client retains its 20-outstanding-request limit.
+Unresolved IDs join backgroundGroups. Complete phases clear their flag and reset
+the shared cursor; the queue clears when no phase remains. Missing index data
+returns before cleanup. Original large labeled bodies and duplicate arms remain.
+
+When enabled and its deadline is reached, cleanup skips pending records and
+sets seenByCleanup on completed records. A later sweep unlinks previously marked
+priority records and throws for a marked nonpriority record. The deadline moves
+by 1000ms only after an actual sweep. Wrong guards preserve their group-get call,
+clock order and other side effects.
+
+| Request type | Instance contract |
+| --- | --- |
+| ArchiveRequest | Dual-link record, volatile pending initialized true, priority flag, seenByCleanup marker and getBytes/getProgress virtual APIs |
+| DiskArchiveRequest | diskCache, operationType and original bytes; operation 1 synchronous read, 2 queued write, 3 queued read |
+| NetworkArchiveRequest | responseBuffer, signed reservedTailBytes and blockPosition within 512-byte transport blocks |
+
+Disk getBytes returns null for the wrong guard before checking pending; normal
+pending throws, completed returns the original array. Its progress is 0/100,
+with wrong guard first clearing diskCache. Network getBytes rejects pending or
+incomplete non-tail data; its wrong guard invokes getProgress(-105) before
+returning the original buffer bytes. Network progress uses
+100*position/(length-reservedTailBytes), preserving overflow/division, and wrong
+guard returns 76. Transport sets blockPosition to 10 after its response header,
+resets it at 512 and uses 1 after a continuation marker.
+
+The disk worker's synchronous read normally sets priority true, but reusing a
+matching queued write returns its byte alias early with priority still false.
+That behavior stays visible; this naming pass does not alter the flags or queue
+protocol. All selected instance declarations/constructor contracts and every
+previous complete rule remain. Compilation, binding checks, reproduction and
+reversal support these names. Existing native text fixtures retain their prior
+scope without new provider/request/worker/transport or actual asset execution.
+Worker/network/storage/compression helpers, static shared names, remaining large
+bodies, full gameplay and device performance remain unfinished or unverified.

@@ -32,7 +32,7 @@ final class mc {
             var8.q(12086);
             return true;
           }
-          bj.field_s = param5;
+          CachedArchiveSource.field_s = param5;
           rd.field_u = param2;
           dl.field_a = null;
           ResourceArchive.field_i = param1;

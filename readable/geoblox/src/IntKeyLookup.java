@@ -44,7 +44,7 @@ final class IntKeyLookup {
         try {
             Object var6 = null;
             Object var7 = null;
-            bj var8 = null;
+            CachedArchiveSource var8 = null;
             ResourceArchive stackIn_2_0 = null;
             ResourceArchive stackIn_15_0 = null;
             Throwable decompiledCaughtException = null;
@@ -72,7 +72,7 @@ final class IntKeyLookup {
               }
               var8 = gb.field_b.a(param1, (byte) -9, param5, (jh) (var6), (jh) (var7));
               if (param2) {
-                var8.b(92);
+                var8.requestAllGroups(92);
               }
               stackIn_15_0 = new ResourceArchive(var8, param4, param3);
               return stackIn_15_0;

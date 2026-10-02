@@ -11,7 +11,7 @@ final class gf {
 
     final static void preparePendingActionPanel(byte methodGuard) {
         int sentinelDivisionGuard = 78 % ((-69 - methodGuard) / 46);
-        PendingActionMarker pendingActionMarker = (PendingActionMarker) ((Object) pb.pendingActionMarkers.firstForIteration(0));
+        PendingActionMarker pendingActionMarker = (PendingActionMarker) ((Object) ArchiveRequest.pendingActionMarkers.firstForIteration(0));
         pendingActionMarker = pendingActionMarker;
         if (pendingActionMarker == null) {
             return;

@@ -152,19 +152,19 @@ final class i {
                       break L4;
                     }
                   }
-                  var12 = bj.field_j[var9];
+                  var12 = CachedArchiveSource.field_j[var9];
                   if (-2147483648 == var12) {
                     if (var19 == 0) {
                       break L4;
                     }
                   }
-                  var13 = bj.field_j[var10];
+                  var13 = CachedArchiveSource.field_j[var10];
                   if (-2147483648 == var13) {
                     if (var19 == 0) {
                       break L4;
                     }
                   }
-                  var14 = bj.field_j[var11];
+                  var14 = CachedArchiveSource.field_j[var11];
                   if (var14 != -2147483648) {
                     var15 = var13 + (var12 + var14 - var6);
                     if (var7 < 0) {

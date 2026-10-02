@@ -740,7 +740,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                       if (~var2.width > ~qb.field_G) {
                         break L1;
                       }
-                      if (sd.field_w > var2.height) {
+                      if (NetworkArchiveRequest.field_w > var2.height) {
                         break L1;
                       }
                     }
@@ -808,7 +808,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   }
                   kk.field_t = param2;
                   ok.field_c = param3;
-                  sd.field_w = param3;
+                  NetworkArchiveRequest.field_w = param3;
                   PrefixCodeDecoder.field_b = 0;
                   hk.field_B = 0;
                   kh.field_d = param4;
@@ -914,8 +914,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             this.windowActivated((java.awt.event.WindowEvent) null);
           }
           var2_long = oa.a(param0 - 44520);
-          var4 = pb.field_p[fe.field_k];
-          pb.field_p[fe.field_k] = var2_long;
+          var4 = ArchiveRequest.field_p[fe.field_k];
+          ArchiveRequest.field_p[fe.field_k] = var2_long;
           fe.field_k = 31 & fe.field_k + 1;
           if (0L != var4) {
             if (var4 < var2_long) {

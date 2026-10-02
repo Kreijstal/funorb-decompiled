@@ -4,10 +4,10 @@
 final class em {
     private ji field_g;
     private uf field_f;
-    private sd field_h;
+    private NetworkArchiveRequest field_h;
     private java.math.BigInteger field_e;
     private java.math.BigInteger field_c;
-    private bj[] field_d;
+    private CachedArchiveSource[] field_d;
     static String field_a;
     private ByteArrayBuffer field_b;
 
@@ -60,9 +60,9 @@ final class em {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final bj a(int param0, byte param1, boolean param2, jh param3, jh param4) {
-        bj stackIn_9_0 = null;
-        bj stackIn_13_0 = null;
+    final CachedArchiveSource a(int param0, byte param1, boolean param2, jh param3, jh param4) {
+        CachedArchiveSource stackIn_9_0 = null;
+        CachedArchiveSource stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -72,7 +72,7 @@ final class em {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        bj var9 = null;
+        CachedArchiveSource var9 = null;
         byte[] var13 = null;
         try {
           if (this.field_b == null) {
@@ -90,12 +90,12 @@ final class em {
                 var7 = this.field_b.readIntBE((byte) -55);
                 var13 = new byte[64];
                 if (param1 != -9) {
-                  this.field_h = (sd) null;
+                  this.field_h = (NetworkArchiveRequest) null;
                 }
                 this.field_b.readBytes(29915, 64, var13, 0);
-                var9 = new bj(param0, param4, param3, this.field_g, this.field_f, var6_int, var13, var7, param2);
+                var9 = new CachedArchiveSource(param0, param4, param3, this.field_g, this.field_f, var6_int, var13, var7, param2);
                 this.field_d[param0] = var9;
-                stackIn_13_0 = (bj) (var9);
+                stackIn_13_0 = (CachedArchiveSource) (var9);
                 return stackIn_13_0;
               }
             }
@@ -124,7 +124,7 @@ final class em {
     final void a(byte param0) {
         int var2;
         int var3;
-        bj stackIn_16_0 = null;
+        CachedArchiveSource stackIn_16_0 = null;
         var3 = Geoblox.field_C;
         if (null == this.field_d) {
           return;
@@ -133,7 +133,7 @@ final class em {
           if (this.field_d[var2] == null) {
             continue L0;
           }
-          this.field_d[var2].a(6924);
+          this.field_d[var2].processRequestedGroups(6924);
         }
         if (param0 != -65) {
           em.a('', 15);
@@ -143,7 +143,7 @@ final class em {
             continue L2;
           }
           stackIn_16_0 = this.field_d[var2];
-          ((bj) (Object) stackIn_16_0).b((byte) -38);
+          ((CachedArchiveSource) (Object) stackIn_16_0).advanceBackgroundLoading((byte) -38);
         }
     }
 
@@ -172,11 +172,11 @@ final class em {
         if (param0 <= 121) {
           return false;
         }
-        if (this.field_h.field_u) {
+        if (this.field_h.pending) {
           return false;
         }
         L1: {
-          var10 = new ByteArrayBuffer(this.field_h.e(397));
+          var10 = new ByteArrayBuffer(this.field_h.getBytes(397));
           var10.position = 5;
           var3 = var10.readUnsignedByte((byte) 34);
           var10.position = var10.position + var3 * 72;
@@ -205,7 +205,7 @@ final class em {
             }
           }
           this.field_b = var10;
-          this.field_d = new bj[var3];
+          this.field_d = new CachedArchiveSource[var3];
           return true;
         }
     }

@@ -65,7 +65,7 @@ final class fc {
             return;
         }
         try {
-            ByteArrayBuffer.a(pb.field_s, oi.field_e, lb.field_a, (byte) -40);
+            ByteArrayBuffer.a(ArchiveRequest.field_s, oi.field_e, lb.field_a, (byte) -40);
             i.a(0, (byte) 117, param1, 0);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "fc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

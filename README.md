@@ -19,20 +19,24 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 136 guarded identities for `ArchiveIndex`,
-`IntKeyLookup`, `ArchiveSource`, matching provider contracts and checksum/digest
-helpers. Metadata now distinguishes sparse slots, actual counts, revisions,
-CRCs, optional Whirlpool digests and name hashes. Original format branches,
-probing, guards, aliasing, request ordering and diagnostic contexts remain.
+The current naming pass adds 116 guarded identities for `CachedArchiveSource`
+and the three-class archive-request hierarchy. Every instance field/API,
+constructor contract and local has a name. Request modes, disk validation,
+background scans, cleanup markers, volatile pending state and network response
+storage expose their roles while retaining the original behavior.
 
-The 5,220 rules apply 44,016 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 5,084 previous complete rules
+The 5,336 rules apply 44,882 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 5,220 previous complete rules
 and raw source/decompiler pins are unchanged. Binding checks, reproduction and
 byte-exact reversal support the names. Existing native text fixtures retain
-their decoder/failure-context scope without new metadata/lookup/digest/provider
-execution coverage. Private provider/storage/compression helpers, static names,
-full assets/gameplay and device performance remain unfinished or unverified.
-One manifest holds current evidence, with Git for history.
+their decoder/failure-context scope without new provider/worker/request/network
+execution coverage. Worker/network/storage/compression helpers, static names,
+large labeled bodies, full assets/gameplay and device performance remain
+unfinished or unverified. One manifest holds current evidence, with Git for history.
+
+Pass 67 named `ArchiveIndex`, `IntKeyLookup`, `ArchiveSource`, matching provider
+contracts and checksum/digest helpers. Counts, sparse slots, revisions, CRCs,
+optional Whirlpool digests and name hashes retain the original format/ordering.
 
 Pass 66 named `ResourceArchive` instance fields/APIs, constructor contracts and
 locals, exposing index/group loading, file/name lookup, unpacking, progress and

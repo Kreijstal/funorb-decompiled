@@ -108,12 +108,12 @@ final class p extends IntrusiveNode {
                       if (var8 < var29) {
                         var8 = var29;
                       }
-                      bj.field_j[var23] = var29;
+                      CachedArchiveSource.field_j[var23] = var29;
                       if (var30 == 0) {
                         break L5;
                       }
                     }
-                    bj.field_j[var23] = -2147483648;
+                    CachedArchiveSource.field_j[var23] = -2147483648;
                   }
                   if (param4) {
                     a.field_c[var23] = var27 >> ok.field_g;

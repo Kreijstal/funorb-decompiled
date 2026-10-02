@@ -66,7 +66,7 @@ final class tc {
             String var4 = null;
             String var8 = null;
             try {
-                sd.field_z = param1;
+                NetworkArchiveRequest.field_z = param1;
                 try {
                     var7 = param2.getParameter("cookieprefix");
                     var5 = var7;

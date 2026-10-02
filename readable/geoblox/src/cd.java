@@ -45,7 +45,7 @@ final class cd extends jg {
                   mf.selectedThemeBackground = df.spaceBackgroundSprite;
                 }
               } else {
-                mf.selectedThemeBackground = bj.jewelsBackgroundSprite;
+                mf.selectedThemeBackground = CachedArchiveSource.jewelsBackgroundSprite;
                 ec.selectedThemeForeground = kj.jewelsForegroundSprite;
               }
             }

@@ -1682,7 +1682,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_age_tooltip");
                 if (null != textResourceBytes) {
-                  pb.createAgeTooltipText = ag.decodeTextBytes(1, textResourceBytes);
+                  ArchiveRequest.createAgeTooltipText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_optin_news_tooltip");
                 if (null != textResourceBytes) {
@@ -2787,7 +2787,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "fs_button_accept");
                 if (textResourceBytes != null) {
-                  pb.fullscreenAcceptButtonText = ag.decodeTextBytes(1, textResourceBytes);
+                  ArchiveRequest.fullscreenAcceptButtonText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "fs_accept_afteraccept");
                 if (textResourceBytes != null) {

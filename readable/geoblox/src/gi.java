@@ -122,22 +122,22 @@ final class gi implements Iterable {
         var9 = Geoblox.field_C;
         if (param6 >= param3) {
           if (param2 > param6) {
-            sd.a(param5, param4, param7, 110, SoftwareRasterizer.framebuffer, param2, param0, param6, param3);
+            NetworkArchiveRequest.a(param5, param4, param7, 110, SoftwareRasterizer.framebuffer, param2, param0, param6, param3);
           } else {
             if (param3 < param2) {
-              sd.a(param0, param4, param7, 127, SoftwareRasterizer.framebuffer, param6, param5, param2, param3);
+              NetworkArchiveRequest.a(param0, param4, param7, 127, SoftwareRasterizer.framebuffer, param6, param5, param2, param3);
             } else {
-              sd.a(param4, param0, param7, 120, SoftwareRasterizer.framebuffer, param6, param5, param3, param2);
+              NetworkArchiveRequest.a(param4, param0, param7, 120, SoftwareRasterizer.framebuffer, param6, param5, param3, param2);
             }
           }
         } else {
           if (param3 < param2) {
-            sd.a(param4, param5, param7, 116, SoftwareRasterizer.framebuffer, param2, param0, param3, param6);
+            NetworkArchiveRequest.a(param4, param5, param7, 116, SoftwareRasterizer.framebuffer, param2, param0, param3, param6);
           } else {
             if (param2 > param6) {
-              sd.a(param0, param5, param7, -110, SoftwareRasterizer.framebuffer, param3, param4, param2, param6);
+              NetworkArchiveRequest.a(param0, param5, param7, -110, SoftwareRasterizer.framebuffer, param3, param4, param2, param6);
             } else {
-              sd.a(param5, param0, param7, -102, SoftwareRasterizer.framebuffer, param3, param4, param6, param2);
+              NetworkArchiveRequest.a(param5, param0, param7, -102, SoftwareRasterizer.framebuffer, param3, param4, param6, param2);
             }
           }
         }

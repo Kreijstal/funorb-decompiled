@@ -94,7 +94,7 @@ final class cg extends ia {
         if (param0 <= 18) {
             return false;
         }
-        return bj.field_s;
+        return CachedArchiveSource.field_s;
     }
 
     final void a(int[] param0, int param1, int param2) {

@@ -19,7 +19,7 @@ final class ak {
           if (param2 > -67) {
             return true;
           }
-          var3 = bj.a(32, param1);
+          var3 = CachedArchiveSource.a(32, param1);
           if (param0.indexOf(param1) == -1) {
             if (-1 == param0.indexOf(var3)) {
               L1: {

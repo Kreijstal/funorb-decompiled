@@ -213,8 +213,8 @@ final class ri {
                   stackIn_99_0 = 3;
                   return stackIn_99_0;
                 }
-                var6_int = sd.field_x;
-                sd.field_x = ac.field_s;
+                var6_int = NetworkArchiveRequest.field_x;
+                NetworkArchiveRequest.field_x = ac.field_s;
                 ac.field_s = var6_int;
                 ck.field_e = true;
               }

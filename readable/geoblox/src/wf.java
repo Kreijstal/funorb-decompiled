@@ -71,9 +71,9 @@ abstract class wf extends ch {
           var4 = -16 / ((param1 + 4) / 62);
           var3 = null;
           var5 = null;
-          if (null != sd.field_z) {
-            if (!sd.field_z.equals(param2.getParameter("settings"))) {
-              var3 = sd.field_z;
+          if (null != NetworkArchiveRequest.field_z) {
+            if (!NetworkArchiveRequest.field_z.equals(param2.getParameter("settings"))) {
+              var3 = NetworkArchiveRequest.field_z;
               var5 = var3;
               var5 = var3;
             }
@@ -120,7 +120,7 @@ abstract class wf extends ch {
             sl.a(f.field_kb, 57);
             lk.field_e = param2;
             ib.field_c = param4;
-            pb.field_r = param6;
+            ArchiveRequest.field_r = param6;
             sb.field_d = param3;
             ah.field_a = param1;
             this.e(123);
@@ -217,23 +217,23 @@ abstract class wf extends ch {
     }
 
     private final void e(int param0) {
-        pb.field_m[11] = -1;
-        pb.field_m[3] = -1;
-        pb.field_m[10] = -1;
-        pb.field_m[17] = -1;
-        pb.field_m[5] = -1;
-        pb.field_m[16] = -1;
-        pb.field_m[6] = -2;
-        pb.field_m[1] = 16;
-        pb.field_m[9] = -1;
-        pb.field_m[13] = -1;
+        ArchiveRequest.field_m[11] = -1;
+        ArchiveRequest.field_m[3] = -1;
+        ArchiveRequest.field_m[10] = -1;
+        ArchiveRequest.field_m[17] = -1;
+        ArchiveRequest.field_m[5] = -1;
+        ArchiveRequest.field_m[16] = -1;
+        ArchiveRequest.field_m[6] = -2;
+        ArchiveRequest.field_m[1] = 16;
+        ArchiveRequest.field_m[9] = -1;
+        ArchiveRequest.field_m[13] = -1;
         int var2 = -13 / ((param0 - 56) / 60);
-        pb.field_m[7] = -1;
-        pb.field_m[2] = -2;
-        pb.field_m[4] = -1;
-        pb.field_m[8] = -2;
-        pb.field_m[18] = 1;
-        pb.field_m[12] = -1;
+        ArchiveRequest.field_m[7] = -1;
+        ArchiveRequest.field_m[2] = -2;
+        ArchiveRequest.field_m[4] = -1;
+        ArchiveRequest.field_m[8] = -2;
+        ArchiveRequest.field_m[18] = 1;
+        ArchiveRequest.field_m[12] = -1;
     }
 
     final void b(boolean param0, int param1) {
@@ -391,7 +391,7 @@ abstract class wf extends ch {
             dd.field_J = kk.a(lk.field_e, (byte) -62);
           }
           l.field_h = rj.a(ib.field_c, (byte) -18, true, false, 1);
-          dc.field_c = rj.a(pb.field_r, (byte) -124, true, false, 1);
+          dc.field_c = rj.a(ArchiveRequest.field_r, (byte) -124, true, false, 1);
           hb.field_n = rj.a(sb.field_d, (byte) -41, true, false, 1);
           ki.basicUiGraphicsArchive = l.field_h;
           mi.field_C = 2;
