@@ -20,8 +20,8 @@ final class id {
         if (!(var1 != null)) {
             throw new IllegalStateException();
         }
-        SoftwareRasterizer.a(var1.field_q, var1.field_j, var1.field_k);
-        SoftwareRasterizer.e(var1.field_n, var1.field_p, var1.field_i, var1.field_m);
+        SoftwareRasterizer.setRasterTarget(var1.field_q, var1.field_j, var1.field_k);
+        SoftwareRasterizer.setClip(var1.field_n, var1.field_p, var1.field_i, var1.field_m);
         var1.field_q = null;
         if (!param0) {
             return;

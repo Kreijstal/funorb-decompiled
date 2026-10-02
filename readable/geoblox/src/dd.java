@@ -203,42 +203,42 @@ abstract class dd extends ee {
             oi.field_b = new Sprite(this.field_r, this.field_h);
             var5 = 111 / ((1 - param2) / 43);
             Geoblox.setRasterTarget(1, oi.field_b);
-            SoftwareRasterizer.c();
+            SoftwareRasterizer.clearFramebuffer();
             this.b(0, 20, 0);
             super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
             id.a(true);
-            oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
+            oi.field_b.drawAlpha(param0 + this.field_v, this.field_m + param1, this.field_H);
             return;
         }
         if (oi.field_b.width < this.field_r) {
             oi.field_b = new Sprite(this.field_r, this.field_h);
             var5 = 111 / ((1 - param2) / 43);
             Geoblox.setRasterTarget(1, oi.field_b);
-            SoftwareRasterizer.c();
+            SoftwareRasterizer.clearFramebuffer();
             this.b(0, 20, 0);
             super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
             id.a(true);
-            oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
+            oi.field_b.drawAlpha(param0 + this.field_v, this.field_m + param1, this.field_H);
             return;
         }
         if (oi.field_b.height < this.field_h) {
             oi.field_b = new Sprite(this.field_r, this.field_h);
             var5 = 111 / ((1 - param2) / 43);
             Geoblox.setRasterTarget(1, oi.field_b);
-            SoftwareRasterizer.c();
+            SoftwareRasterizer.clearFramebuffer();
             this.b(0, 20, 0);
             super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
             id.a(true);
-            oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
+            oi.field_b.drawAlpha(param0 + this.field_v, this.field_m + param1, this.field_H);
             return;
         }
         var5 = 111 / ((1 - param2) / 43);
         Geoblox.setRasterTarget(1, oi.field_b);
-        SoftwareRasterizer.c();
+        SoftwareRasterizer.clearFramebuffer();
         this.b(0, 20, 0);
         super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
         id.a(true);
-        oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
+        oi.field_b.drawAlpha(param0 + this.field_v, this.field_m + param1, this.field_H);
     }
 
     static {

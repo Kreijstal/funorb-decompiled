@@ -340,7 +340,7 @@ final class GameplaySession {
           var2 = stackIn_49_0;
           if (var2 == 0) {
             if (!this.boardRasterDirty) {
-              oc.boardSceneRaster.e();
+              oc.boardSceneRaster.setAsRasterTarget();
               if (this.debugReducedRendering) {
                 break L13;
               }
@@ -349,8 +349,8 @@ final class GameplaySession {
                 break L13;
               }
             }
-            oc.boardSceneRaster.e();
-            SoftwareRasterizer.c();
+            oc.boardSceneRaster.setAsRasterTarget();
+            SoftwareRasterizer.clearFramebuffer();
             if (!this.debugReducedRendering) {
               dc.drawAttachedEntities(7838);
             }
@@ -359,7 +359,7 @@ final class GameplaySession {
           }
         }
         sh.field_y.a(255);
-        mf.selectedThemeBackground.b(0, 0);
+        mf.selectedThemeBackground.drawRunEncoded(0, 0);
         var3 = 4;
         var4 = 4;
         if (param0 >= -28) {
@@ -398,18 +398,18 @@ final class GameplaySession {
             }
           }
           L22: {
-            lj.smallBoxSprite.b(var3, var4);
+            lj.smallBoxSprite.draw(var3, var4);
             if (0 == this.sessionPhase) {
               if (!ih.areEntityQueuesSettled(0)) {
                 break L22;
               }
             }
-            vh.largeBoxSprite.b(446, 410);
+            vh.largeBoxSprite.draw(446, 410);
             if (var14 == 0) {
               break L19;
             }
           }
-          g.countBoxSprite.b(468, 410);
+          g.countBoxSprite.draw(468, 410);
         }
         L24: {
           if (!this.tutorialMode) {
@@ -431,27 +431,27 @@ final class GameplaySession {
         }
         if (!this.debugReducedRendering) {
           if (var2 == 0) {
-            oc.boardSceneRaster.b(0, 0);
+            oc.boardSceneRaster.draw(0, 0);
           }
         }
         ij.h((byte) 18);
         if (!this.debugReducedRendering) {
           ni.f(484842465);
         }
-        jf.rotatedThemeForegroundRaster.e();
-        SoftwareRasterizer.c();
-        ec.selectedThemeForeground.rotateNearest(ec.selectedThemeForeground.field_s << 3, ec.selectedThemeForeground.field_o << 3, jf.rotatedThemeForegroundRaster.field_s << 3, jf.rotatedThemeForegroundRaster.field_o << 3, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
+        jf.rotatedThemeForegroundRaster.setAsRasterTarget();
+        SoftwareRasterizer.clearFramebuffer();
+        ec.selectedThemeForeground.rotateNearest(ec.selectedThemeForeground.fullWidth << 3, ec.selectedThemeForeground.fullHeight << 3, jf.rotatedThemeForegroundRaster.fullWidth << 3, jf.rotatedThemeForegroundRaster.fullHeight << 3, (int)(65535.0 * ((double)(-this.boardAngleRadians) / 6.283185307179586)), 4096);
         sh.field_y.a(255);
-        w.a(jf.rotatedThemeForegroundRaster, -(jf.rotatedThemeForegroundRaster.field_s >> 1) + 320, -(jf.rotatedThemeForegroundRaster.field_o >> 1) + 240);
+        w.a(jf.rotatedThemeForegroundRaster, -(jf.rotatedThemeForegroundRaster.fullWidth >> 1) + 320, -(jf.rotatedThemeForegroundRaster.fullHeight >> 1) + 240);
         if (!this.debugReducedRendering) {
           uh.d(4740);
         }
         L30: {
           if (this.showDebugOverview) {
-            af.field_a.e();
-            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_b, 1118481);
+            af.field_a.setAsRasterTarget();
+            SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 1118481);
             var5 = 16777215;
-            SoftwareRasterizer.f(160, 120, 115, 16711680);
+            SoftwareRasterizer.drawCircle(160, 120, 115, 16711680);
             var6 = 20;
             var15 = SecondaryDeque.spawnQueue;
             renderedEntity = (GameplayEntity) ((Object) var15.lastForIteration(false));
@@ -476,7 +476,7 @@ final class GameplaySession {
                   if (entityOpacity > 255) {
                     entityOpacity = 255;
                   }
-                  SoftwareRasterizer.d(renderedEntityX / 2, renderedEntityY / 2, var6, entityOpacity << 8 | entityOpacity << 16 | entityOpacity);
+                  SoftwareRasterizer.fillCircle(renderedEntityX / 2, renderedEntityY / 2, var6, entityOpacity << 8 | entityOpacity << 16 | entityOpacity);
                   renderedEntity = (GameplayEntity) ((Object) var15.previousForIteration(0));
                   if (var14 == 0) {
                     continue L31;
@@ -492,7 +492,7 @@ final class GameplaySession {
                       entityOffsetY = -240.0f + renderedEntity.positionY;
                       renderedEntityX = (int)(Math.cos((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
                       renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians)));
-                      SoftwareRasterizer.d(renderedEntityX / 2, renderedEntityY / 2, var6, var5);
+                      SoftwareRasterizer.fillCircle(renderedEntityX / 2, renderedEntityY / 2, var6, var5);
                       renderedEntity = (GameplayEntity) ((Object) var16.nextForIteration(1));
                       if (var14 != 0) {
                         break L37;
@@ -507,7 +507,7 @@ final class GameplaySession {
                   L39: while (true) {
                     L40: {
                       if (renderedEntity != null) {
-                        SoftwareRasterizer.d((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), var6, var5);
+                        SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), var6, var5);
                         renderedEntity = (GameplayEntity) ((Object) var7.nextForIteration(1));
                         if (var14 != 0) {
                           break L40;
@@ -523,7 +523,7 @@ final class GameplaySession {
                       L43: {
                         L44: {
                           if (renderedEntity != null) {
-                            SoftwareRasterizer.d((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), var6, var5);
+                            SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), var6, var5);
                             renderedEntity = (GameplayEntity) ((Object) var7.nextForIteration(1));
                             if (var14 != 0) {
                               break L44;
@@ -540,25 +540,25 @@ final class GameplaySession {
                             var9 = fi.smallFont.field_o - fi.smallFont.field_q;
                             var10 = fi.smallFont.c(v.field_n, 640) + 40;
                             renderedEntityX = fi.smallFont.b(v.field_n, 640) * var9 + 10;
-                            SoftwareRasterizer.a((320 - var10 / 2) / 2, var8 / 2, var10 / 2, (20 + renderedEntityX) / 2, var5);
+                            SoftwareRasterizer.fillRectangle((320 - var10 / 2) / 2, var8 / 2, var10 / 2, (20 + renderedEntityX) / 2, var5);
                             break L43;
                           }
-                          lj.smallBoxSprite.a(var3 / 2, var4 / 2, lj.smallBoxSprite.field_s / 2, lj.smallBoxSprite.field_o / 2, var5);
+                          lj.smallBoxSprite.drawScaledSilhouette(var3 / 2, var4 / 2, lj.smallBoxSprite.fullWidth / 2, lj.smallBoxSprite.fullHeight / 2, var5);
                         }
                         if (this.sessionPhase == 0) {
                           if (!ih.areEntityQueuesSettled(0)) {
-                            g.countBoxSprite.a(234, 205, g.countBoxSprite.field_s / 2, g.countBoxSprite.field_o / 2, var5);
+                            g.countBoxSprite.drawScaledSilhouette(234, 205, g.countBoxSprite.fullWidth / 2, g.countBoxSprite.fullHeight / 2, var5);
                             if (var14 == 0) {
                               break L43;
                             }
                           }
                         }
-                        vh.largeBoxSprite.a(223, 205, vh.largeBoxSprite.field_s / 2, vh.largeBoxSprite.field_o / 2, var5);
+                        vh.largeBoxSprite.drawScaledSilhouette(223, 205, vh.largeBoxSprite.fullWidth / 2, vh.largeBoxSprite.fullHeight / 2, var5);
                       }
-                      SoftwareRasterizer.d(160, 120, 21, 16777215);
-                      SoftwareRasterizer.e(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_b);
+                      SoftwareRasterizer.fillCircle(160, 120, 21, 16777215);
+                      SoftwareRasterizer.e(2, 2, 0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
                       sh.field_y.a(255);
-                      stackIn_168_0 = SoftwareRasterizer.field_b;
+                      stackIn_168_0 = SoftwareRasterizer.framebufferHeight;
                       stackIn_168_1 = 1;
                       break L32;
                     }
@@ -573,10 +573,10 @@ final class GameplaySession {
         L48: {
           if (!this.tutorialMode) {
             if (this.delayedActionCountdown > 0) {
-              lj.smallBoxSprite.b(-(lj.smallBoxSprite.field_s >> 1) + 320, 60 - (lj.smallBoxSprite.field_o >> 1) + 240);
+              lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, 60 - (lj.smallBoxSprite.fullHeight >> 1) + 240);
               dd.uiPaletteFont.b(wl.field_b, 320, 310, 0, -1);
             }
-            eg.pointsPanelGlowFrames[this.pointsPanelFrameIndex].b(this.pointsPanelX, 4);
+            eg.pointsPanelGlowFrames[this.pointsPanelFrameIndex].draw(this.pointsPanelX, 4);
             if (640 > this.pointsPanelX) {
               if (0 < this.pendingPopupPoints) {
                 dd.uiPaletteFont.a(wj.a(ic.field_a, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
@@ -590,15 +590,15 @@ final class GameplaySession {
               bd.drawScorePopups(-117);
               this.c((byte) 64);
               if (this.showGameOverOverlay) {
-                lj.smallBoxSprite.b(var3, var4);
+                lj.smallBoxSprite.draw(var3, var4);
                 if (this.sceneAnimationTick < 266) {
-                  kh.screenTitleSprites[6].b(0, (this.sceneAnimationTick >> 1) - 113);
+                  kh.screenTitleSprites[6].draw(0, (this.sceneAnimationTick >> 1) - 113);
                   if (var14 == 0) {
                     break L53;
                   }
                 }
-                kh.screenTitleSprites[6].b(0, 20);
-                kh.screenTitleSprites[6].c(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
+                kh.screenTitleSprites[6].draw(0, 20);
+                kh.screenTitleSprites[6].drawAdditive(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
               }
             }
             L55: {
@@ -615,10 +615,10 @@ final class GameplaySession {
                   }
                   var5 = 35 + (6 * this.sceneAnimationTick - 480);
                   sh.field_y.a(255);
-                  SoftwareRasterizer.e(0, var5, 640, 480);
-                  oc.boardSceneRaster.b(0, 0);
-                  SoftwareRasterizer.e(0, 0, 640, 480);
-                  qj.transitionCurtain.b(0, -480 + 6 * this.sceneAnimationTick);
+                  SoftwareRasterizer.setClip(0, var5, 640, 480);
+                  oc.boardSceneRaster.draw(0, 0);
+                  SoftwareRasterizer.setClip(0, 0, 640, 480);
+                  qj.transitionCurtain.draw(0, -480 + 6 * this.sceneAnimationTick);
                   if (var14 == 0) {
                     break L55;
                   }
@@ -1565,9 +1565,9 @@ final class GameplaySession {
           this.sceneTransitionInProgress = true;
           sf.a(sh.field_y.field_d, 0, oc.boardSceneRaster.pixels, 0, sh.field_y.field_d.length);
           le.a((byte) -39);
-          bk.boardOwnershipRaster.e();
-          SoftwareRasterizer.c();
-          i.avatarMaskRaster.a(this.boardMaskOffsetX + 320, this.boardMaskOffsetY + 240, 16777215);
+          bk.boardOwnershipRaster.setAsRasterTarget();
+          SoftwareRasterizer.clearFramebuffer();
+          i.avatarMaskRaster.drawSilhouette(this.boardMaskOffsetX + 320, this.boardMaskOffsetY + 240, 16777215);
           sh.field_y.a(255);
         }
         int fieldTemp$0 = this.sceneAnimationTick + 1;
@@ -1720,8 +1720,8 @@ final class GameplaySession {
         }
         L1: {
           if (2 == this.sessionPhase) {
-            pk.resultBubbleSprite.b(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
-            lj.smallBoxSprite.b(this.resultPanelX, -(lj.smallBoxSprite.field_o >> 1) + 240 + 60);
+            pk.resultBubbleSprite.drawScaledAlpha(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
+            lj.smallBoxSprite.draw(this.resultPanelX, -(lj.smallBoxSprite.fullHeight >> 1) + 240 + 60);
             dd.uiPaletteFont.a(sg.field_f, 15 + this.resultPanelX, 312, 0, -1);
             if (var4 == 0) {
               break L1;
@@ -1729,8 +1729,8 @@ final class GameplaySession {
           }
           shrinkingDiameter = -this.sceneAnimationTick + 460 + 460;
           if (this.sessionPhase == 3) {
-            pk.resultBubbleSprite.b(-(shrinkingDiameter >> 1) + 320, 240 - (shrinkingDiameter >> 1), shrinkingDiameter, shrinkingDiameter, 150);
-            lj.smallBoxSprite.b(-(lj.smallBoxSprite.field_s >> 1) + 320, -(lj.smallBoxSprite.field_o >> 1) + 240 + 60);
+            pk.resultBubbleSprite.drawScaledAlpha(-(shrinkingDiameter >> 1) + 320, 240 - (shrinkingDiameter >> 1), shrinkingDiameter, shrinkingDiameter, 150);
+            lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, -(lj.smallBoxSprite.fullHeight >> 1) + 240 + 60);
             shrinkingBonusText = Integer.toString(this.resultBonusPoints);
             dd.uiPaletteFont.b(shrinkingBonusText, 320, 312, 0, -1);
             if (this.boardEmptyAtResultStart) {
@@ -1740,8 +1740,8 @@ final class GameplaySession {
               break L1;
             }
           }
-          k.popSprite.d(-(k.popSprite.field_s >> 1) + 320, 240 - (k.popSprite.field_o >> 1), this.resultSequenceCountdown - 150 + 150);
-          lj.smallBoxSprite.b(-(lj.smallBoxSprite.field_s >> 1) + 320, 300 - (lj.smallBoxSprite.field_o >> 1));
+          k.popSprite.drawAlpha(-(k.popSprite.fullWidth >> 1) + 320, 240 - (k.popSprite.fullHeight >> 1), this.resultSequenceCountdown - 150 + 150);
+          lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, 300 - (lj.smallBoxSprite.fullHeight >> 1));
           countdownBonusText = Integer.toString(this.resultBonusPoints);
           dd.uiPaletteFont.b(countdownBonusText, 320, 312, 0, -1);
           if (this.boardEmptyAtResultStart) {
@@ -1786,9 +1786,9 @@ final class GameplaySession {
                   break L2;
                 }
               }
-              vf.spriteScratchRaster.e();
-              SoftwareRasterizer.c();
-              endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.field_s << 3, endingEntity.entitySprite.field_o << 3, vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
+              vf.spriteScratchRaster.setAsRasterTarget();
+              SoftwareRasterizer.clearFramebuffer();
+              endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.fullWidth << 3, endingEntity.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
               sh.field_y.a(255);
               maxRadiusSquared = 0;
               spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(vf.spriteScratchRaster.width >> 1) - 320);
@@ -1891,7 +1891,7 @@ final class GameplaySession {
               this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(fl.field_c[28], 2 * resultProgressPercent + 200, 45);
               GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
             }
-            if (this.resultPanelX <= 320 - (lj.smallBoxSprite.field_s >> 1)) {
+            if (this.resultPanelX <= 320 - (lj.smallBoxSprite.fullWidth >> 1)) {
               break L10;
             }
             this.resultPanelX = this.resultPanelX - 1;
@@ -2140,11 +2140,11 @@ final class GameplaySession {
           this.score = 0;
           this.boardMaskOffsetY = -(i.avatarMaskRaster.height >> 1);
           this.boardAngleRadians = 0.0f;
-          bk.boardOwnershipRaster.e();
-          SoftwareRasterizer.c();
-          i.avatarMaskRaster.a(320 + this.boardMaskOffsetX, this.boardMaskOffsetY + 240, 16777215);
-          oc.boardSceneRaster.e();
-          SoftwareRasterizer.c();
+          bk.boardOwnershipRaster.setAsRasterTarget();
+          SoftwareRasterizer.clearFramebuffer();
+          i.avatarMaskRaster.drawSilhouette(320 + this.boardMaskOffsetX, this.boardMaskOffsetY + 240, 16777215);
+          oc.boardSceneRaster.setAsRasterTarget();
+          SoftwareRasterizer.clearFramebuffer();
           sh.field_y.a(255);
           this.sceneTransitionRequested = false;
           this.sceneAnimationTick = 0;

@@ -4,11 +4,11 @@
 import java.io.*;
 
 abstract class SpriteState extends DualLinkNode {
-    int field_s;
+    int fullWidth;
     int width;
     int height;
     int trimY;
-    int field_o;
+    int fullHeight;
     static long field_n;
     static ck field_t;
     int trimX;

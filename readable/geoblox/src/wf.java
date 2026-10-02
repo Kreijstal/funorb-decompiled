@@ -296,7 +296,7 @@ abstract class wf extends ch {
           if (t.b(param1 ^ 19649)) {
             var3 = 1200 * sb.a(true);
             if (!this.field_t) {
-              if (~var3 <= ~ha.a(-76)) {
+              if (~var3 <= ~IndexedSpriteState.a(-76)) {
                 break L4;
               }
               if (var3 >= jk.a(false)) {

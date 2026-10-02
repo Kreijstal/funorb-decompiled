@@ -262,13 +262,13 @@ final class ri {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 2 + (i.avatarMaskRaster.field_s >> 1);
+        int var3 = 2 + (i.avatarMaskRaster.fullWidth >> 1);
         if (param2 != 29497) {
             return;
         }
-        int var4 = (i.avatarMaskRaster.field_o >> 1) + 2;
-        fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].b(param0 - var3, param1 - var4, rj.avatarTintColor);
-        vh.avatarMouthFrames[nd.avatarFeedbackModeId].b(-var3 + param0, -var4 + param1, rj.avatarTintColor);
+        int var4 = (i.avatarMaskRaster.fullHeight >> 1) + 2;
+        fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].drawGrayModulated(param0 - var3, param1 - var4, rj.avatarTintColor);
+        vh.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(-var3 + param0, -var4 + param1, rj.avatarTintColor);
     }
 
     public static void a(int param0) {

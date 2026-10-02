@@ -394,7 +394,7 @@ final class qa {
               return;
             }
             {
-              ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
               fieldTemp$29 = jf.avatarTintFadeTicks;
               jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
               if (fieldTemp$29 <= 0) {
@@ -425,7 +425,7 @@ final class qa {
               return;
             }
             {
-              ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
               fieldTemp$3 = jf.avatarTintFadeTicks;
               jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
               if (fieldTemp$3 <= 0) {
@@ -451,7 +451,7 @@ final class qa {
                   fieldTemp$17 = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$17 > 0) {
-                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                    IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   }
                   fieldTemp$18 = jf.avatarTintFadeTicks;
                   jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -474,7 +474,7 @@ final class qa {
                   fieldTemp$19 = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$19 > 0) {
-                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                    IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   }
                   fieldTemp$20 = jf.avatarTintFadeTicks;
                   jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -495,7 +495,7 @@ final class qa {
                 fieldTemp$25 = wa.avatarShockEffectTicks;
                 wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                 if (fieldTemp$25 > 0) {
-                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
                 fieldTemp$26 = jf.avatarTintFadeTicks;
                 jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -515,7 +515,7 @@ final class qa {
                 fieldTemp$21 = wa.avatarShockEffectTicks;
                 wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                 if (fieldTemp$21 > 0) {
-                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
                 fieldTemp$22 = jf.avatarTintFadeTicks;
                 jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -536,7 +536,7 @@ final class qa {
                 fieldTemp$23 = wa.avatarShockEffectTicks;
                 wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                 if (fieldTemp$23 > 0) {
-                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
                 fieldTemp$24 = jf.avatarTintFadeTicks;
                 jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -567,7 +567,7 @@ final class qa {
                 return;
               }
               {
-                ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 fieldTemp$6 = jf.avatarTintFadeTicks;
                 jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                 if (fieldTemp$6 > 0) {
@@ -589,7 +589,7 @@ final class qa {
                 fieldTemp$7 = wa.avatarShockEffectTicks;
                 wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                 if (fieldTemp$7 > 0) {
-                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
                 fieldTemp$8 = jf.avatarTintFadeTicks;
                 jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -612,7 +612,7 @@ final class qa {
                 fieldTemp$9 = wa.avatarShockEffectTicks;
                 wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                 if (fieldTemp$9 > 0) {
-                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
                 fieldTemp$10 = jf.avatarTintFadeTicks;
                 jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -633,7 +633,7 @@ final class qa {
               fieldTemp$15 = wa.avatarShockEffectTicks;
               wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
               if (fieldTemp$15 > 0) {
-                ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
               }
               fieldTemp$16 = jf.avatarTintFadeTicks;
               jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -653,7 +653,7 @@ final class qa {
               fieldTemp$11 = wa.avatarShockEffectTicks;
               wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
               if (fieldTemp$11 > 0) {
-                ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
               }
               fieldTemp$12 = jf.avatarTintFadeTicks;
               jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -674,7 +674,7 @@ final class qa {
               fieldTemp$13 = wa.avatarShockEffectTicks;
               wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
               if (fieldTemp$13 > 0) {
-                ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
               }
               fieldTemp$14 = jf.avatarTintFadeTicks;
               jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;

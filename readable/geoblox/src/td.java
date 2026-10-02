@@ -97,7 +97,7 @@ final class td extends hk {
             if (si.field_n != var9) {
               if (si.field_m == var9) {
                 var14 = oa.field_e[2];
-                var14.c(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
+                var14.drawAdditive(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
                 break L0;
               }
               if (var9 != kk.field_w) {
@@ -105,20 +105,20 @@ final class td extends hk {
               }
               {
                 var15 = oa.field_e[1];
-                var15.c(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
+                var15.drawAdditive(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
                 break L0;
               }
             }
           }
           L2: {
             var13 = oa.field_e[0];
-            var10 = var13.field_s << 1;
-            var11 = var13.field_o << 1;
+            var10 = var13.fullWidth << 1;
+            var11 = var13.fullHeight << 1;
             if (null != da.field_b) {
               if (var10 <= da.field_b.width) {
                 if (var11 <= da.field_b.height) {
                   Geoblox.setRasterTarget(1, da.field_b);
-                  SoftwareRasterizer.c();
+                  SoftwareRasterizer.clearFramebuffer();
                   break L2;
                 }
               }
@@ -126,9 +126,9 @@ final class td extends hk {
             da.field_b = new Sprite(var10, var11);
             Geoblox.setRasterTarget(1, da.field_b);
           }
-          var13.rotateSmooth(112, 144, var13.field_s << 4, var13.field_o << 4, -this.field_G << 10, 4096);
+          var13.rotateSmooth(112, 144, var13.fullWidth << 4, var13.fullHeight << 4, -this.field_G << 10, 4096);
           id.a(true);
-          da.field_b.c(-var13.field_s + var5, var6 - var13.field_o, 256);
+          da.field_b.drawAdditive(-var13.fullWidth + var5, var6 - var13.fullHeight, 256);
         }
     }
 

@@ -97,9 +97,9 @@ final class ih {
         var26 = null;
         var27 = Geoblox.field_C;
         try {
-          var4_int = contactX - vf.spriteScratchRaster.field_s / 2;
+          var4_int = contactX - vf.spriteScratchRaster.fullWidth / 2;
           var4_int = var4_int + vf.spriteScratchRaster.trimX;
-          var5 = -(vf.spriteScratchRaster.field_o / 2) + contactY;
+          var5 = -(vf.spriteScratchRaster.fullHeight / 2) + contactY;
           var5 = var5 + vf.spriteScratchRaster.trimY;
           var6 = -var4_int + bk.boardOwnershipRaster.trimX;
           var7 = bk.boardOwnershipRaster.trimY - var5;

@@ -181,8 +181,8 @@ final class pi extends vf {
         var11 = 7 % ((param2 - 1) / 43);
         if (bf.field_g == var6) {
           var19 = oa.field_e[0];
-          var12 = var19.field_s << 1;
-          var13 = var19.field_o << 1;
+          var12 = var19.fullWidth << 1;
+          var13 = var19.fullHeight << 1;
           if (this.field_Q == null) {
             this.field_Q = new Sprite(var12, var13);
             Geoblox.setRasterTarget(1, this.field_Q);
@@ -196,19 +196,19 @@ final class pi extends vf {
                 Geoblox.setRasterTarget(1, this.field_Q);
               } else {
                 Geoblox.setRasterTarget(1, this.field_Q);
-                SoftwareRasterizer.c();
+                SoftwareRasterizer.clearFramebuffer();
               }
             }
           }
-          var19.rotateSmooth(112, 144, var19.field_s << 4, var19.field_o << 4, -this.field_P << 10, 4096);
+          var19.rotateSmooth(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_P << 10, 4096);
           id.a(true);
-          this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
+          this.field_Q.drawAdditive(-(var19.fullWidth >> 1) + var9, var10 - var19.fullHeight, 256);
           return;
         }
         if (var6 != si.field_n) {
           if (si.field_m == var6) {
             var17 = oa.field_e[2];
-            var17.c(var9, var10 - (var17.height >> 1), 256);
+            var17.drawAdditive(var9, var10 - (var17.height >> 1), 256);
             return;
           }
           if (kk.field_w != var6) {
@@ -216,44 +216,44 @@ final class pi extends vf {
           }
           {
             var16 = oa.field_e[1];
-            var16.c(var9, var10 - (var16.height >> 1), 256);
+            var16.drawAdditive(var9, var10 - (var16.height >> 1), 256);
             return;
           }
         }
         {
           var18 = oa.field_e[0];
           var15 = var18;
-          var12 = var18.field_s << 1;
-          var13 = var18.field_o << 1;
+          var12 = var18.fullWidth << 1;
+          var13 = var18.fullHeight << 1;
           if (this.field_Q == null) {
             this.field_Q = new Sprite(var12, var13);
             Geoblox.setRasterTarget(1, this.field_Q);
-            var18.rotateSmooth(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
+            var18.rotateSmooth(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_P << 10, 4096);
             id.a(true);
-            this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
+            this.field_Q.drawAdditive(-(var18.fullWidth >> 1) + var9, var10 - var18.fullHeight, 256);
             return;
           }
           if (this.field_Q.width < var12) {
             this.field_Q = new Sprite(var12, var13);
             Geoblox.setRasterTarget(1, this.field_Q);
-            var18.rotateSmooth(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
+            var18.rotateSmooth(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_P << 10, 4096);
             id.a(true);
-            this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
+            this.field_Q.drawAdditive(-(var18.fullWidth >> 1) + var9, var10 - var18.fullHeight, 256);
             return;
           }
           if (this.field_Q.height < var13) {
             this.field_Q = new Sprite(var12, var13);
             Geoblox.setRasterTarget(1, this.field_Q);
-            var18.rotateSmooth(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
+            var18.rotateSmooth(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_P << 10, 4096);
             id.a(true);
-            this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
+            this.field_Q.drawAdditive(-(var18.fullWidth >> 1) + var9, var10 - var18.fullHeight, 256);
             return;
           }
           Geoblox.setRasterTarget(1, this.field_Q);
-          SoftwareRasterizer.c();
-          var18.rotateSmooth(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
+          SoftwareRasterizer.clearFramebuffer();
+          var18.rotateSmooth(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_P << 10, 4096);
           id.a(true);
-          this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
+          this.field_Q.drawAdditive(-(var18.fullWidth >> 1) + var9, var10 - var18.fullHeight, 256);
           return;
         }
     }

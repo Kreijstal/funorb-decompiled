@@ -67,6 +67,46 @@ moves the score box and displays the title loaded from `gameover_title` at
 index six. Asset identity and use support these names; successful complete
 archive loading and real-asset rendering remain outside the native fixtures.
 
+## Sprite and raster drawing
+
+`SoftwareRasterizer.setRasterTarget` installs the pixel buffer, framebuffer
+stride and `framebufferHeight`, then resets the clip. `setClip` clamps its edges
+to the target bounds; `intersectClip` tightens the current clip. `saveClip` and
+`restoreClip` use left, top, right and bottom in that order. Restoration retains
+the original raw bounds. `clearFramebuffer` clears the whole target, regardless
+of its clip. `releaseRasterStorage` releases its retained arrays.
+
+`SpriteState.fullWidth`/`fullHeight` describe the logical canvas; `width`/`height`
+describe cropped pixels and `trimX`/`trimY` place them within that canvas.
+`IndexedSpriteState` exposes the corresponding geometry for `IndexedSprite`.
+The preparation locals `geometryCanvasHeight` and
+`geometryCanvasWidthThenFrameIndex` replace the earlier ambiguous names.
+The latter is still reused as a frame index later in the original method.
+`Sprite.setAsRasterTarget` uses actual pixel dimensions. The distinct
+`Geoblox.setRasterTarget` helper retains its original full-canvas arguments.
+
+| Operation | RGB `Sprite` | `ArgbSprite` |
+| --- | --- | --- |
+| `draw` | Skips zero-colour pixels | Blends stored per-pixel alpha |
+| `drawUnmasked` | Copies pixels including zero | Still blends stored alpha |
+| `drawAlpha` / `drawScaledAlpha` | Uses `alpha256` | Combines global and stored alpha |
+| `drawGrayTinted` / `drawGrayModulated` | Remaps gray pixels | Remaps gray pixels and blends stored alpha |
+
+`drawScaled`, `drawHalfSize` and `drawQuarterSize` keep the original sampling,
+trimming and clipping formulas. `drawAdditive` retains each implementation's
+channel saturation and alpha arithmetic. The complete overridden method
+families share names; no RGB assumptions are imposed on their ARGB variants.
+`IndexedSprite.draw` and `drawAlpha` use palette indexes with zero transparency.
+`drawRunEncoded` additionally interprets the original -1 skip-run marker.
+
+Clipped wrappers now name `sourceIndex`, `destinationIndex`, `drawWidth`,
+`drawHeight`, row skips and `clippedEdgePixels`. Pixel kernels still contain
+opaque temporary names. Raster APIs distinguish `drawCircle` from `fillCircle`
+and name rectangles, lines, gradients and rounded shapes. Original clipping,
+rounding, guard and invalid-input behavior remains; these names do not change
+alpha ranges or fix edge cases. Controlled native fixtures exercise drawing,
+but whole-game rendering with real assets remains unverified.
+
 ## Tutorial prompts and progression
 
 `GameplaySession.tutorialMode` selects tutorial behavior and suppresses
@@ -601,8 +641,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 1,311 explicit guarded rules: 22 classes, 448 fields, 187 method
-declarations, 241 parameters and 413 locals. This is not full deobfuscation.
+There are 1,710 explicit guarded rules: 24 classes, 457 fields, 247 method
+declarations, 450 parameters and 532 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration

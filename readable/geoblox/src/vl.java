@@ -197,19 +197,19 @@ final class vl extends IntrusiveNode {
         try {
           if (param0 != null) {
             if (param1 > 0) {
-              var5_int = param0[0].field_s;
-              var6 = param0[2].field_s;
-              var7 = param0[1].field_s;
-              param0[0].b(param3, param2);
-              param0[2].b(param3 + param1 - var6, param2);
-              SoftwareRasterizer.a(da.field_d);
-              SoftwareRasterizer.b(param3 + var5_int, param2, param3 + param1 - var6, param2 + param0[1].field_o);
+              var5_int = param0[0].fullWidth;
+              var6 = param0[2].fullWidth;
+              var7 = param0[1].fullWidth;
+              param0[0].draw(param3, param2);
+              param0[2].draw(param3 + param1 - var6, param2);
+              SoftwareRasterizer.saveClip(da.field_d);
+              SoftwareRasterizer.intersectClip(param3 + var5_int, param2, param3 + param1 - var6, param2 + param0[1].fullHeight);
               var8 = var5_int + param3;
               var9 = param1 + (param3 - var6);
               for (param3 = var8; param3 < var9; param3 = param3 + var7) {
-                param0[1].b(param3, param2);
+                param0[1].draw(param3, param2);
               }
-              SoftwareRasterizer.b(da.field_d);
+              SoftwareRasterizer.restoreClip(da.field_d);
               if (param4 != 107) {
                 field_l = (java.math.BigInteger) null;
               }

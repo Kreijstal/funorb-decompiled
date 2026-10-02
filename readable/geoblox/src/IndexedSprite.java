@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class IndexedSprite extends ha {
+final class IndexedSprite extends IndexedSpriteState {
     int[] palette;
     byte[] indices;
 
@@ -50,90 +50,90 @@ final class IndexedSprite extends ha {
         }
     }
 
-    final void a(int param0, int param1) {
-        int var9 = 0;
-        param0 = param0 + this.field_b;
-        param1 = param1 + this.field_f;
-        int var3 = param0 + param1 * SoftwareRasterizer.stride;
-        int var4 = 0;
-        int var5 = this.field_d;
-        int var6 = this.field_a;
-        int var7 = SoftwareRasterizer.stride - var6;
-        int var8 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-            var9 = SoftwareRasterizer.clipTop - param1;
-            var5 = var5 - var9;
-            param1 = SoftwareRasterizer.clipTop;
-            var4 = var4 + var9 * var6;
-            var3 = var3 + var9 * SoftwareRasterizer.stride;
+    final void draw(int x, int y) {
+        int clippedEdgePixels = 0;
+        x = x + this.trimX;
+        y = y + this.trimY;
+        int destinationIndex = x + y * SoftwareRasterizer.stride;
+        int sourceIndex = 0;
+        int drawHeight = this.height;
+        int drawWidth = this.width;
+        int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
+        int sourceRowSkip = 0;
+        if (y < SoftwareRasterizer.clipTop) {
+            clippedEdgePixels = SoftwareRasterizer.clipTop - y;
+            drawHeight = drawHeight - clippedEdgePixels;
+            y = SoftwareRasterizer.clipTop;
+            sourceIndex = sourceIndex + clippedEdgePixels * drawWidth;
+            destinationIndex = destinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
         }
-        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
-            var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
+        if (y + drawHeight > SoftwareRasterizer.clipBottom) {
+            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-            var9 = SoftwareRasterizer.clipLeft - param0;
-            var6 = var6 - var9;
-            param0 = SoftwareRasterizer.clipLeft;
-            var4 = var4 + var9;
-            var3 = var3 + var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+        if (x < SoftwareRasterizer.clipLeft) {
+            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixels;
+            x = SoftwareRasterizer.clipLeft;
+            sourceIndex = sourceIndex + clippedEdgePixels;
+            destinationIndex = destinationIndex + clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (param0 + var6 > SoftwareRasterizer.clipRight) {
-            var9 = param0 + var6 - SoftwareRasterizer.clipRight;
-            var6 = var6 - var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+        if (x + drawWidth > SoftwareRasterizer.clipRight) {
+            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (var6 > 0) {
-            if (var5 <= 0) {
+        if (drawWidth > 0) {
+            if (drawHeight <= 0) {
                 return;
             }
-            IndexedSprite.a(SoftwareRasterizer.framebuffer, this.indices, this.palette, 0, var4, var3, var6, var5, var7, var8);
+            IndexedSprite.a(SoftwareRasterizer.framebuffer, this.indices, this.palette, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
             return;
         }
     }
 
-    final void a(int param0, int param1, int param2) {
-        int var10 = 0;
-        param0 = param0 + this.field_b;
-        param1 = param1 + this.field_f;
-        int var4 = param0 + param1 * SoftwareRasterizer.stride;
-        int var5 = 0;
-        int var6 = this.field_d;
-        int var7 = this.field_a;
-        int var8 = SoftwareRasterizer.stride - var7;
-        int var9 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-            var10 = SoftwareRasterizer.clipTop - param1;
-            var6 = var6 - var10;
-            param1 = SoftwareRasterizer.clipTop;
-            var5 = var5 + var10 * var7;
-            var4 = var4 + var10 * SoftwareRasterizer.stride;
+    final void drawAlpha(int x, int y, int alpha256) {
+        int clippedEdgePixels = 0;
+        x = x + this.trimX;
+        y = y + this.trimY;
+        int destinationIndex = x + y * SoftwareRasterizer.stride;
+        int sourceIndex = 0;
+        int drawHeight = this.height;
+        int drawWidth = this.width;
+        int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
+        int sourceRowSkip = 0;
+        if (y < SoftwareRasterizer.clipTop) {
+            clippedEdgePixels = SoftwareRasterizer.clipTop - y;
+            drawHeight = drawHeight - clippedEdgePixels;
+            y = SoftwareRasterizer.clipTop;
+            sourceIndex = sourceIndex + clippedEdgePixels * drawWidth;
+            destinationIndex = destinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
         }
-        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-            var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
+        if (y + drawHeight > SoftwareRasterizer.clipBottom) {
+            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-            var10 = SoftwareRasterizer.clipLeft - param0;
-            var7 = var7 - var10;
-            param0 = SoftwareRasterizer.clipLeft;
-            var5 = var5 + var10;
-            var4 = var4 + var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+        if (x < SoftwareRasterizer.clipLeft) {
+            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixels;
+            x = SoftwareRasterizer.clipLeft;
+            sourceIndex = sourceIndex + clippedEdgePixels;
+            destinationIndex = destinationIndex + clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (param0 + var7 > SoftwareRasterizer.clipRight) {
-            var10 = param0 + var7 - SoftwareRasterizer.clipRight;
-            var7 = var7 - var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+        if (x + drawWidth > SoftwareRasterizer.clipRight) {
+            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (var7 > 0) {
-            if (var6 <= 0) {
+        if (drawWidth > 0) {
+            if (drawHeight <= 0) {
                 return;
             }
-            IndexedSprite.b(SoftwareRasterizer.framebuffer, this.indices, this.palette, var5, var4, var7, var6, var8, var9, param2);
+            IndexedSprite.b(SoftwareRasterizer.framebuffer, this.indices, this.palette, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, alpha256);
             return;
         }
     }
@@ -196,46 +196,46 @@ final class IndexedSprite extends ha {
         }
     }
 
-    final void b(int param0, int param1) {
-        int var9 = 0;
-        param0 = param0 + this.field_b;
-        param1 = param1 + this.field_f;
-        int var3 = param0 + param1 * SoftwareRasterizer.stride;
-        int var4 = 0;
-        int var5 = this.field_d;
-        int var6 = this.field_a;
-        int var7 = SoftwareRasterizer.stride - var6;
-        int var8 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-            var9 = SoftwareRasterizer.clipTop - param1;
-            var5 = var5 - var9;
-            param1 = SoftwareRasterizer.clipTop;
-            var4 = var4 + var9 * var6;
-            var3 = var3 + var9 * SoftwareRasterizer.stride;
+    final void drawRunEncoded(int x, int y) {
+        int clippedEdgePixels = 0;
+        x = x + this.trimX;
+        y = y + this.trimY;
+        int destinationIndex = x + y * SoftwareRasterizer.stride;
+        int sourceIndex = 0;
+        int drawHeight = this.height;
+        int drawWidth = this.width;
+        int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
+        int sourceRowSkip = 0;
+        if (y < SoftwareRasterizer.clipTop) {
+            clippedEdgePixels = SoftwareRasterizer.clipTop - y;
+            drawHeight = drawHeight - clippedEdgePixels;
+            y = SoftwareRasterizer.clipTop;
+            sourceIndex = sourceIndex + clippedEdgePixels * drawWidth;
+            destinationIndex = destinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
         }
-        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
-            var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
+        if (y + drawHeight > SoftwareRasterizer.clipBottom) {
+            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-            var9 = SoftwareRasterizer.clipLeft - param0;
-            var6 = var6 - var9;
-            param0 = SoftwareRasterizer.clipLeft;
-            var4 = var4 + var9;
-            var3 = var3 + var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+        if (x < SoftwareRasterizer.clipLeft) {
+            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixels;
+            x = SoftwareRasterizer.clipLeft;
+            sourceIndex = sourceIndex + clippedEdgePixels;
+            destinationIndex = destinationIndex + clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (param0 + var6 > SoftwareRasterizer.clipRight) {
-            var9 = param0 + var6 - SoftwareRasterizer.clipRight;
-            var6 = var6 - var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+        if (x + drawWidth > SoftwareRasterizer.clipRight) {
+            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (var6 > 0) {
-            if (var5 <= 0) {
+        if (drawWidth > 0) {
+            if (drawHeight <= 0) {
                 return;
             }
-            IndexedSprite.a(0, this.indices, var4, var3, 0, SoftwareRasterizer.framebuffer, this.palette, var6, var7, var8, 0, var5);
+            IndexedSprite.a(0, this.indices, sourceIndex, destinationIndex, 0, SoftwareRasterizer.framebuffer, this.palette, drawWidth, destinationRowSkip, sourceRowSkip, 0, drawHeight);
             return;
         }
     }
@@ -344,25 +344,25 @@ final class IndexedSprite extends ha {
         }
     }
 
-    IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        this.field_e = param0;
-        this.field_c = param1;
-        this.field_b = param2;
-        this.field_f = param3;
-        this.field_a = param4;
-        this.field_d = param5;
-        this.indices = param6;
-        this.palette = param7;
+    IndexedSprite(int fullWidth, int fullHeight, int trimX, int trimY, int width, int height, byte[] indices, int[] palette) {
+        this.fullWidth = fullWidth;
+        this.fullHeight = fullHeight;
+        this.trimX = trimX;
+        this.trimY = trimY;
+        this.width = width;
+        this.height = height;
+        this.indices = indices;
+        this.palette = palette;
     }
 
-    IndexedSprite(int param0, int param1, int param2) {
-        this.field_a = param0;
-        this.field_e = param0;
-        this.field_d = param1;
-        this.field_c = param1;
-        this.field_f = 0;
-        this.field_b = 0;
-        this.indices = new byte[param0 * param1];
-        this.palette = new int[param2];
+    IndexedSprite(int width, int height, int paletteSize) {
+        this.width = width;
+        this.fullWidth = width;
+        this.height = height;
+        this.fullHeight = height;
+        this.trimY = 0;
+        this.trimX = 0;
+        this.indices = new byte[width * height];
+        this.palette = new int[paletteSize];
     }
 }

@@ -52,9 +52,9 @@ final class gf {
                 gf.a((java.applet.Applet) null, 60);
             }
             td.field_E = (int)(240.0 + (Math.sin((double)param2) * (double)var3_float + (double)var4 * Math.cos((double)param2)) + 0.5);
-            vf.spriteScratchRaster.e();
-            SoftwareRasterizer.c();
-            param0.entitySprite.rotateNearest(param0.entitySprite.field_s << 3, param0.entitySprite.field_o << 3, vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, (int)(65535.0 * ((double)(-param2 + param0.spriteAngleRadians) / 6.283185307179586)), 4096);
+            vf.spriteScratchRaster.setAsRasterTarget();
+            SoftwareRasterizer.clearFramebuffer();
+            param0.entitySprite.rotateNearest(param0.entitySprite.fullWidth << 3, param0.entitySprite.fullHeight << 3, vf.spriteScratchRaster.fullWidth << 3, vf.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)(-param2 + param0.spriteAngleRadians) / 6.283185307179586)), 4096);
             sh.field_y.a(255);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "gf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

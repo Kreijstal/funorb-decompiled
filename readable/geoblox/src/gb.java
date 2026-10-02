@@ -45,7 +45,7 @@ final class gb {
               if (11 > vc.field_h) {
                 si.field_j = ((int)(var1_float * MenuScreen.field_c) << 8) + (uf.avatarTintPalette[0] + ((int)(var1_float * lk.field_b) << 16)) + (int)(kk.field_x * var1_float);
               }
-              var2 = tl.introFaceFrames[vc.field_h].field_s >> 1;
+              var2 = tl.introFaceFrames[vc.field_h].fullWidth >> 1;
               var3 = MatchingTextValidator.field_j << 2;
               if (!sg.field_d) {
                 if (-var3 + 900 <= 320 + var2) {
@@ -54,7 +54,7 @@ final class gb {
                 }
               }
               if (!ab.field_d) {
-                if (-var2 + (320 - qh.introGeometryFrames[1].field_s) <= -1200 + var3) {
+                if (-var2 + (320 - qh.introGeometryFrames[1].fullWidth) <= -1200 + var3) {
                   td.playPcmSample(-348, fl.field_c[8]);
                   ab.field_d = true;
                 }

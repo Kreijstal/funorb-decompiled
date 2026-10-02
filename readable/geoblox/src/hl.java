@@ -38,13 +38,13 @@ final class hl extends el {
             var10 = -var5 + var6;
             var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
             var12 = var11 >= 256 ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> 8;
-            SoftwareRasterizer.c(var7, var6, this.field_H, var12);
-            SoftwareRasterizer.c(-(2 * this.field_H) + var7, var6, this.field_H, var12);
+            SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_H, var12);
+            SoftwareRasterizer.drawHorizontalLine(-(2 * this.field_H) + var7, var6, this.field_H, var12);
             var9 = param0 & 65280;
             var8 = param0 & 16711935;
             var12 = 256 > var11 ? (16711680 & var9 * var11 | -16711936 & var11 * var8) >>> 8 : var9 | var8;
-            SoftwareRasterizer.c(this.field_H + var7, var6, this.field_H, var12);
-            SoftwareRasterizer.c(-this.field_H + var7, var6, this.field_H, var12);
+            SoftwareRasterizer.drawHorizontalLine(this.field_H + var7, var6, this.field_H, var12);
+            SoftwareRasterizer.drawHorizontalLine(-this.field_H + var7, var6, this.field_H, var12);
         }
         id.a(param1);
         return var14;
@@ -81,7 +81,7 @@ final class hl extends el {
                     var6 = Math.sqrt(1.0 - var6);
                     var8 = var6 >= 1.0 ? 255 : (int)(var6 * 255.0);
                 }
-                SoftwareRasterizer.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+                SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
             }
         }
         id.a(true);
@@ -106,7 +106,7 @@ final class hl extends el {
           var5_int = param2 + this.field_r;
           uh.a(param1, this.field_M.width + param2, param3 ^ 6447, this.field_h + param1, var5_int - this.field_M.width);
           for (var6 = param2 - this.field_I; var6 < var5_int; var6 = var6 + param0.width) {
-            param0.b(var6, param1);
+            param0.draw(var6, param1);
           }
           if (param3 != -12276) {
             discarded$0 = this.g(1);
@@ -114,22 +114,22 @@ final class hl extends el {
           id.a(true);
           if (this.field_M.width + param2 >= SoftwareRasterizer.clipLeft) {
             Geoblox.setRasterTarget(1, this.field_z);
-            param0.b(-this.field_I, 0);
-            param0.b(2 * this.field_H - this.field_I, 0);
-            this.field_y.e(0, 0);
+            param0.draw(-this.field_I, 0);
+            param0.draw(2 * this.field_H - this.field_I, 0);
+            this.field_y.drawMultiply(0, 0);
             id.a(true);
-            this.field_z.b(param2, param1);
+            this.field_z.draw(param2, param1);
           }
           L3: {
             if (SoftwareRasterizer.clipRight >= var5_int - this.field_M.width) {
               Geoblox.setRasterTarget(param3 ^ -12275, this.field_z);
               for (var7 = this.field_I + (this.field_r - this.field_M.width); var7 > 2 * this.field_H; var7 = var7 - 2 * this.field_H) {
               }
-              param0.b(-var7, 0);
-              param0.b(-var7 + this.field_H * 2, 0);
-              this.field_M.e(0, 0);
+              param0.draw(-var7, 0);
+              param0.draw(-var7 + this.field_H * 2, 0);
+              this.field_M.drawMultiply(0, 0);
               id.a(true);
-              this.field_z.b(-this.field_M.width + var5_int, param1);
+              this.field_z.draw(-this.field_M.width + var5_int, param1);
               break L3;
             }
           }
@@ -184,7 +184,7 @@ final class hl extends el {
         if (param0 != -1326628703) {
             return;
         }
-        this.field_y = this.field_M.c();
+        this.field_y = this.field_M.copyMirroredHorizontally();
         this.field_z = new Sprite(this.field_h >> 1, this.field_h);
     }
 

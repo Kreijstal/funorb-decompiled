@@ -44,7 +44,7 @@ public final class Geoblox extends wf {
         Sprite[] geometrySourceFrames = null;
         Sprite[] geometryAliasThenAmorphousFrames = null;
         int themeIndex = 0;
-        int geometryFrameHeight = 0;
+        int geometryCanvasHeight = 0;
         Sprite[] avatarEyeSourceFrames = null;
         Sprite[] avatarMouthSourceFrames = null;
         IndexedSprite[] keyboardIconSprites = null;
@@ -54,7 +54,7 @@ public final class Geoblox extends wf {
         int keyboardIconIndex = 0;
         int geometryFrameThenVariantIndex = 0;
         int categoryThenAnimationFrameIndex = 0;
-        int geometryWidthThenFrameIndex = 0;
+        int geometryCanvasWidthThenFrameIndex = 0;
         int paletteVariantThenKeyboardIndex = 0;
         int clientFlagSnapshot = field_C;
         oj.a(vc.field_i, (byte) -104);
@@ -92,23 +92,23 @@ public final class Geoblox extends wf {
                         break;
                     }
                 }
-                geometryWidthThenFrameIndex = geometrySourceFrames[geometryFrameThenVariantIndex].field_s;
-                geometryFrameHeight = geometrySourceFrames[geometryFrameThenVariantIndex].field_o;
+                geometryCanvasWidthThenFrameIndex = geometrySourceFrames[geometryFrameThenVariantIndex].fullWidth;
+                geometryCanvasHeight = geometrySourceFrames[geometryFrameThenVariantIndex].fullHeight;
                 s.geometrySpritesByThemeAndCategory[themeIndex][categoryThenAnimationFrameIndex] = geometrySourceFrames[geometryFrameThenVariantIndex];
                 for (paletteVariantThenKeyboardIndex = 0; paletteVariantThenKeyboardIndex < 7; paletteVariantThenKeyboardIndex++) {
-                    ke.entitySpritesByThemeCategoryAndVariant[themeIndex][categoryThenAnimationFrameIndex][paletteVariantThenKeyboardIndex] = new Sprite(geometryWidthThenFrameIndex, geometryFrameHeight);
-                    ke.entitySpritesByThemeCategoryAndVariant[themeIndex][categoryThenAnimationFrameIndex][paletteVariantThenKeyboardIndex].e();
-                    geometrySourceFrames[geometryFrameThenVariantIndex].b(0, 0, jg.themeSpriteColors[themeIndex][paletteVariantThenKeyboardIndex]);
+                    ke.entitySpritesByThemeCategoryAndVariant[themeIndex][categoryThenAnimationFrameIndex][paletteVariantThenKeyboardIndex] = new Sprite(geometryCanvasWidthThenFrameIndex, geometryCanvasHeight);
+                    ke.entitySpritesByThemeCategoryAndVariant[themeIndex][categoryThenAnimationFrameIndex][paletteVariantThenKeyboardIndex].setAsRasterTarget();
+                    geometrySourceFrames[geometryFrameThenVariantIndex].drawGrayModulated(0, 0, jg.themeSpriteColors[themeIndex][paletteVariantThenKeyboardIndex]);
                 }
             }
             geometryAliasThenAmorphousFrames = wj.loadSpriteFrames("amorphic", "", ll.gameGraphicsArchive, methodGuard ^ 25869);
             for (themeIndex = 0; themeIndex < 7; themeIndex++) {
                 for (geometryFrameThenVariantIndex = 0; geometryFrameThenVariantIndex < 7; geometryFrameThenVariantIndex++) {
                     for (categoryThenAnimationFrameIndex = 0; categoryThenAnimationFrameIndex < geometryAliasThenAmorphousFrames.length; categoryThenAnimationFrameIndex++) {
-                        MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex] = new Sprite(4 + geometryAliasThenAmorphousFrames[categoryThenAnimationFrameIndex].field_s, 4 + geometryAliasThenAmorphousFrames[categoryThenAnimationFrameIndex].field_o);
-                        MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex].e();
-                        geometryAliasThenAmorphousFrames[categoryThenAnimationFrameIndex].b(2, 2, jg.themeSpriteColors[themeIndex][geometryFrameThenVariantIndex]);
-                        k.a(0, 0, MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex].field_s, methodGuard ^ -3266, MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex].field_o);
+                        MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex] = new Sprite(4 + geometryAliasThenAmorphousFrames[categoryThenAnimationFrameIndex].fullWidth, 4 + geometryAliasThenAmorphousFrames[categoryThenAnimationFrameIndex].fullHeight);
+                        MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex].setAsRasterTarget();
+                        geometryAliasThenAmorphousFrames[categoryThenAnimationFrameIndex].drawGrayModulated(2, 2, jg.themeSpriteColors[themeIndex][geometryFrameThenVariantIndex]);
+                        k.a(0, 0, MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex].fullWidth, methodGuard ^ -3266, MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex].fullHeight);
                     }
                 }
             }
@@ -125,23 +125,23 @@ public final class Geoblox extends wf {
             }
             fc.avatarEyeFrames = new Sprite[avatarEyeSourceFrames.length];
             for (categoryThenAnimationFrameIndex = 0; avatarEyeSourceFrames.length > categoryThenAnimationFrameIndex; categoryThenAnimationFrameIndex++) {
-                fc.avatarEyeFrames[categoryThenAnimationFrameIndex] = new Sprite(4 + avatarEyeSourceFrames[categoryThenAnimationFrameIndex].field_s, avatarEyeSourceFrames[categoryThenAnimationFrameIndex].field_o + 4);
-                fc.avatarEyeFrames[categoryThenAnimationFrameIndex].e();
-                avatarEyeSourceFrames[categoryThenAnimationFrameIndex].c(2, 2);
-                k.a(0, 0, fc.avatarEyeFrames[categoryThenAnimationFrameIndex].field_s, -27085, fc.avatarEyeFrames[categoryThenAnimationFrameIndex].height);
-                fc.avatarEyeFrames[categoryThenAnimationFrameIndex].d();
+                fc.avatarEyeFrames[categoryThenAnimationFrameIndex] = new Sprite(4 + avatarEyeSourceFrames[categoryThenAnimationFrameIndex].fullWidth, avatarEyeSourceFrames[categoryThenAnimationFrameIndex].fullHeight + 4);
+                fc.avatarEyeFrames[categoryThenAnimationFrameIndex].setAsRasterTarget();
+                avatarEyeSourceFrames[categoryThenAnimationFrameIndex].drawUnmasked(2, 2);
+                k.a(0, 0, fc.avatarEyeFrames[categoryThenAnimationFrameIndex].fullWidth, -27085, fc.avatarEyeFrames[categoryThenAnimationFrameIndex].height);
+                fc.avatarEyeFrames[categoryThenAnimationFrameIndex].trimTransparentBorders();
             }
             avatarMouthSourceFrames = wj.loadSpriteFrames("player_mouth", "", ll.gameGraphicsArchive, 0);
             if (da.a(0, methodGuard - 25774)) {
                 avatarMouthSourceFrames = wj.loadSpriteFrames("player_mouth", "halloween", ll.gameGraphicsArchive, 0);
             }
             vh.avatarMouthFrames = new Sprite[avatarMouthSourceFrames.length];
-            for (geometryWidthThenFrameIndex = 0; avatarMouthSourceFrames.length > geometryWidthThenFrameIndex; geometryWidthThenFrameIndex++) {
-                vh.avatarMouthFrames[geometryWidthThenFrameIndex] = new Sprite(avatarMouthSourceFrames[geometryWidthThenFrameIndex].field_s + 4, avatarMouthSourceFrames[geometryWidthThenFrameIndex].field_o + 4);
-                vh.avatarMouthFrames[geometryWidthThenFrameIndex].e();
-                avatarMouthSourceFrames[geometryWidthThenFrameIndex].c(2, 2);
-                k.a(2 + avatarMouthSourceFrames[geometryWidthThenFrameIndex].trimY, 0, vh.avatarMouthFrames[geometryWidthThenFrameIndex].field_s, -27085, avatarMouthSourceFrames[geometryWidthThenFrameIndex].height);
-                vh.avatarMouthFrames[geometryWidthThenFrameIndex].d();
+            for (geometryCanvasWidthThenFrameIndex = 0; avatarMouthSourceFrames.length > geometryCanvasWidthThenFrameIndex; geometryCanvasWidthThenFrameIndex++) {
+                vh.avatarMouthFrames[geometryCanvasWidthThenFrameIndex] = new Sprite(avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndex].fullWidth + 4, avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndex].fullHeight + 4);
+                vh.avatarMouthFrames[geometryCanvasWidthThenFrameIndex].setAsRasterTarget();
+                avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndex].drawUnmasked(2, 2);
+                k.a(2 + avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndex].trimY, 0, vh.avatarMouthFrames[geometryCanvasWidthThenFrameIndex].fullWidth, -27085, avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndex].height);
+                vh.avatarMouthFrames[geometryCanvasWidthThenFrameIndex].trimTransparentBorders();
             }
             sh.field_y.a(255);
             fe.sunBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "sun", "sky_background");
@@ -152,8 +152,8 @@ public final class Geoblox extends wf {
             qj.transitionCurtain = ug.loadSprite("transition", ll.gameGraphicsArchive, (byte) -78, "");
             vg.silverStarShockFrames = wj.loadSpriteFrames("silver_shock", "", ll.gameGraphicsArchive, 0);
             mi.sparkleFrames = wj.loadSpriteFrames("sparkle", "", ll.gameGraphicsArchive, 0);
-            for (geometryWidthThenFrameIndex = 0; mi.sparkleFrames.length > geometryWidthThenFrameIndex; geometryWidthThenFrameIndex++) {
-                mi.sparkleFrames[geometryWidthThenFrameIndex].g(1);
+            for (geometryCanvasWidthThenFrameIndex = 0; mi.sparkleFrames.length > geometryCanvasWidthThenFrameIndex; geometryCanvasWidthThenFrameIndex++) {
+                mi.sparkleFrames[geometryCanvasWidthThenFrameIndex].addOutline(1);
             }
             vj.bangFrames = wj.loadSpriteFrames("bang", "", ll.gameGraphicsArchive, 0);
             eg.pointsPanelGlowFrames = wj.loadSpriteFrames("bonus_glow", "", ll.gameGraphicsArchive, 0);
@@ -183,7 +183,7 @@ public final class Geoblox extends wf {
             keyboardIconIndex = 0;
             paletteVariantThenKeyboardIndex = keyboardIconIndex;
             while (keyboardIconIndex < keyboardIconAdvanceWidths.length) {
-                keyboardWidthsForFill[keyboardIconIndex] = keyboardIconSprites[keyboardIconIndex].field_c - 3;
+                keyboardWidthsForFill[keyboardIconIndex] = keyboardIconSprites[keyboardIconIndex].fullHeight - 3;
                 keyboardIconIndex++;
             }
             fi.smallFont.a(keyboardIconSprites, keyboardIconAdvanceWidths);
@@ -397,7 +397,7 @@ public final class Geoblox extends wf {
         wl.a(31997);
         le.a(-29313);
         vk.a(-42);
-        SoftwareRasterizer.a();
+        SoftwareRasterizer.releaseRasterStorage();
         rh.b(30261);
         b.a(17062);
         kb.c(105);
@@ -639,7 +639,7 @@ public final class Geoblox extends wf {
     final static void setRasterTarget(int param0, Sprite param1) {
         try {
             oc.b(9);
-            SoftwareRasterizer.a(param1.pixels, param1.field_s, param1.field_o);
+            SoftwareRasterizer.setRasterTarget(param1.pixels, param1.fullWidth, param1.fullHeight);
             if (param0 != 1) {
                 Sprite var3 = (Sprite) null;
                 Geoblox.setRasterTarget(-34, (Sprite) null);
@@ -927,7 +927,7 @@ public final class Geoblox extends wf {
         }
         L1: {
           sh.field_y.a(param0 - 25598);
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.clearFramebuffer();
           if (tc.currentScreenId == ai.requestedScreenId) {
             if (el.gameplayReturnScreenId == -1) {
               if (tc.currentScreenId != -1) {
@@ -957,21 +957,21 @@ public final class Geoblox extends wf {
                 break L3;
               }
             }
-            SoftwareRasterizer.a(0, 0, 640, 480, 1);
+            SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 1);
           }
           if (tc.currentScreenId == -2) {
             oc.c(param0 ^ 25613);
           }
-          SoftwareRasterizer.e(0, 0, 640, transitionSplitY);
+          SoftwareRasterizer.setClip(0, 0, 640, transitionSplitY);
           if (ai.requestedScreenId != -1) {
             og.screens[ai.requestedScreenId].renderScreen(-28750);
           }
-          SoftwareRasterizer.e(0, transitionSplitY, 640, 480);
+          SoftwareRasterizer.setClip(0, transitionSplitY, 640, 480);
           if (tc.currentScreenId > -1) {
             og.screens[tc.currentScreenId].renderScreen(-28750);
           }
-          SoftwareRasterizer.e(0, 0, 640, 480);
-          qj.transitionCurtain.b(0, 6 * nf.screenTransitionTick - 480);
+          SoftwareRasterizer.setClip(0, 0, 640, 480);
+          qj.transitionCurtain.draw(0, 6 * nf.screenTransitionTick - 480);
         }
         if (cg.b(true)) {
           if (null == vl.field_n) {

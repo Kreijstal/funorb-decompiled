@@ -182,27 +182,27 @@ class ac extends ff {
                 if (32 + var3_int >= qa.field_a) {
                   if (var4 <= ue.field_e) {
                     if (32 + var4 >= ue.field_e) {
-                      SoftwareRasterizer.c(var3_int, var4, 32, 32, 2, 16689938);
+                      SoftwareRasterizer.fillRoundedRectangle(var3_int, var4, 32, 32, 2, 16689938);
                       if (var7 < 0) {
                         var7 = var10;
                       }
-                      SoftwareRasterizer.a(2 + var3_int, var4 + 2, 28, 28, 2, 16777215);
+                      SoftwareRasterizer.drawRoundedRectangle(2 + var3_int, var4 + 2, 28, 28, 2, 16777215);
                     }
                   }
                 }
               }
             }
             if (var10 == a.field_e) {
-              SoftwareRasterizer.c(var3_int, var4, 32, 32, 2, 15488514);
-              SoftwareRasterizer.a(var3_int + 2, var4 + 2, 28, 28, 2, 16777215);
+              SoftwareRasterizer.fillRoundedRectangle(var3_int, var4, 32, 32, 2, 15488514);
+              SoftwareRasterizer.drawRoundedRectangle(var3_int + 2, var4 + 2, 28, 28, 2, 16777215);
             }
             if ((var5 & 1 << var10) == 0) {
               if (param1) {
                 continue L7;
               }
-              am.unachievedSprite.f(var3_int, var4);
+              am.unachievedSprite.drawQuarterSize(var3_int, var4);
             } else {
-              sl.achievementSprites[var10].f(var3_int, var4);
+              sl.achievementSprites[var10].drawQuarterSize(var3_int, var4);
             }
             incrementValue$0 = var6;
             var6++;
@@ -238,11 +238,11 @@ class ac extends ff {
               var11 = -fi.smallFont.field_q + fi.smallFont.field_o;
               var12 = 280;
               if (0 != (1 << var7 & var5)) {
-                sl.achievementSprites[var7].b(160, var12);
+                sl.achievementSprites[var7].draw(160, var12);
                 var12 += 30;
                 dd.uiPaletteFont.a(kd.achievedText, 318, var12, 0, -1);
               } else {
-                am.unachievedSprite.b(160, var12);
+                am.unachievedSprite.draw(160, var12);
                 var12 += 30;
                 dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                 dd.uiPaletteFont.a(ib.field_d, 318, var12, 0, -1);
@@ -252,7 +252,7 @@ class ac extends ff {
               var12 += 10;
               fi.smallFont.a(wj.a(sl.orbPointsText, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
               for (var13 = 0; var13 < kk.field_s[var7]; var13++) {
-                uk.orbCoinSprite.f(318 + 10 * var13, 370);
+                uk.orbCoinSprite.drawQuarterSize(318 + 10 * var13, 370);
               }
               var12 = var12 + var11;
               break L9;

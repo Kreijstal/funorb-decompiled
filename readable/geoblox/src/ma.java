@@ -78,7 +78,7 @@ final class ma extends IntrusiveNode {
           if (!param0) {
             ma.b(-91);
           }
-          stackIn_3_0 = aa.a(SecondaryDeque.contactProbeRaster, 0, 0, vf.spriteScratchRaster, -SecondaryDeque.contactProbeOffsetX + ng.field_G - (vf.spriteScratchRaster.field_s >> 1), -SecondaryDeque.contactProbeOffsetY - (vf.spriteScratchRaster.field_o >> 1) + td.field_E);
+          stackIn_3_0 = aa.a(SecondaryDeque.contactProbeRaster, 0, 0, vf.spriteScratchRaster, -SecondaryDeque.contactProbeOffsetX + ng.field_G - (vf.spriteScratchRaster.fullWidth >> 1), -SecondaryDeque.contactProbeOffsetY - (vf.spriteScratchRaster.fullHeight >> 1) + td.field_E);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,13 +155,13 @@ final class ma extends IntrusiveNode {
               if (param5[3] == null) {
                 stackIn_10_0 = 0;
               } else {
-                stackIn_10_0 = param5[3].field_s;
+                stackIn_10_0 = param5[3].fullWidth;
               }
               var6_int = stackIn_10_0;
               if (null == param5[5]) {
                 stackIn_13_0 = 0;
               } else {
-                stackIn_13_0 = param5[5].field_s;
+                stackIn_13_0 = param5[5].fullWidth;
               }
               var7 = stackIn_13_0;
               if (param3 != -92) {
@@ -169,13 +169,13 @@ final class ma extends IntrusiveNode {
               }
               {
                 if (null != param5[1]) {
-                  stackIn_18_0 = param5[1].field_o;
+                  stackIn_18_0 = param5[1].fullHeight;
                 } else {
                   stackIn_18_0 = 0;
                 }
                 var8 = stackIn_18_0;
                 if (null != param5[7]) {
-                  stackIn_21_0 = param5[7].field_o;
+                  stackIn_21_0 = param5[7].fullHeight;
                 } else {
                   stackIn_21_0 = 0;
                 }
@@ -194,90 +194,90 @@ final class ma extends IntrusiveNode {
                 }
                 var18 = var14;
                 var19 = var15;
-                SoftwareRasterizer.a(hd.field_I);
+                SoftwareRasterizer.saveClip(hd.field_I);
                 if (var19 < var18) {
                   var19 = param2 * var8 / (var8 + var9) + param0;
                   var18 = param2 * var8 / (var8 + var9) + param0;
                 }
                 if (null != param5[0]) {
-                  SoftwareRasterizer.b(param1, param0, var16, var18);
-                  param5[0].b(param1, param0);
-                  SoftwareRasterizer.b(hd.field_I);
+                  SoftwareRasterizer.intersectClip(param1, param0, var16, var18);
+                  param5[0].draw(param1, param0);
+                  SoftwareRasterizer.restoreClip(hd.field_I);
                 }
                 if (param5[2] != null) {
-                  SoftwareRasterizer.b(var17, param0, var10, var18);
-                  param5[2].b(var13, param0);
-                  SoftwareRasterizer.b(hd.field_I);
+                  SoftwareRasterizer.intersectClip(var17, param0, var10, var18);
+                  param5[2].draw(var13, param0);
+                  SoftwareRasterizer.restoreClip(hd.field_I);
                 }
                 if (null != param5[6]) {
-                  SoftwareRasterizer.b(param1, var19, var16, var11);
-                  param5[6].b(param1, var15);
-                  SoftwareRasterizer.b(hd.field_I);
+                  SoftwareRasterizer.intersectClip(param1, var19, var16, var11);
+                  param5[6].draw(param1, var15);
+                  SoftwareRasterizer.restoreClip(hd.field_I);
                 }
                 if (null != param5[8]) {
-                  SoftwareRasterizer.b(var17, var19, var10, var11);
-                  param5[8].b(var13, var15);
-                  SoftwareRasterizer.b(hd.field_I);
+                  SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
+                  param5[8].draw(var13, var15);
+                  SoftwareRasterizer.restoreClip(hd.field_I);
                 }
                 L11: {
                   if (null != param5[1]) {
-                    if (param5[1].field_s != 0) {
-                      SoftwareRasterizer.b(var16, param0, var17, var18);
-                      for (var20 = var12; var13 > var20; var20 = var20 + param5[1].field_s) {
-                        param5[1].b(var20, param0);
+                    if (param5[1].fullWidth != 0) {
+                      SoftwareRasterizer.intersectClip(var16, param0, var17, var18);
+                      for (var20 = var12; var13 > var20; var20 = var20 + param5[1].fullWidth) {
+                        param5[1].draw(var20, param0);
                       }
-                      SoftwareRasterizer.b(hd.field_I);
+                      SoftwareRasterizer.restoreClip(hd.field_I);
                       break L11;
                     }
                   }
                 }
                 L13: {
                   if (param5[7] != null) {
-                    if (0 != param5[7].field_s) {
-                      SoftwareRasterizer.b(var16, var19, var17, var11);
-                      for (var20 = var12; var20 < var13; var20 = var20 + param5[7].field_s) {
-                        param5[7].b(var20, var15);
+                    if (0 != param5[7].fullWidth) {
+                      SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
+                      for (var20 = var12; var20 < var13; var20 = var20 + param5[7].fullWidth) {
+                        param5[7].draw(var20, var15);
                       }
-                      SoftwareRasterizer.b(hd.field_I);
+                      SoftwareRasterizer.restoreClip(hd.field_I);
                       break L13;
                     }
                   }
                 }
                 L15: {
                   if (param5[3] != null) {
-                    if (0 != param5[3].field_o) {
-                      SoftwareRasterizer.b(param1, var18, var16, var19);
-                      for (var20 = var14; var15 > var20; var20 = var20 + param5[3].field_o) {
-                        param5[3].b(param1, var20);
+                    if (0 != param5[3].fullHeight) {
+                      SoftwareRasterizer.intersectClip(param1, var18, var16, var19);
+                      for (var20 = var14; var15 > var20; var20 = var20 + param5[3].fullHeight) {
+                        param5[3].draw(param1, var20);
                       }
-                      SoftwareRasterizer.b(hd.field_I);
+                      SoftwareRasterizer.restoreClip(hd.field_I);
                       break L15;
                     }
                   }
                 }
                 L17: {
                   if (param5[5] != null) {
-                    if (param5[5].field_o != 0) {
-                      SoftwareRasterizer.b(var17, var18, var10, var19);
-                      for (var20 = var14; var20 < var15; var20 = var20 + param5[5].field_o) {
-                        param5[5].b(var13, var20);
+                    if (param5[5].fullHeight != 0) {
+                      SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
+                      for (var20 = var14; var20 < var15; var20 = var20 + param5[5].fullHeight) {
+                        param5[5].draw(var13, var20);
                       }
-                      SoftwareRasterizer.b(hd.field_I);
+                      SoftwareRasterizer.restoreClip(hd.field_I);
                       break L17;
                     }
                   }
                 }
                 L19: {
                   if (param5[4] != null) {
-                    if (param5[4].field_s != 0) {
-                      if (0 != param5[4].field_o) {
-                        SoftwareRasterizer.b(var16, var18, var17, var19);
-                        for (var20 = var14; var15 > var20; var20 = var20 + param5[4].field_o) {
-                          for (var21 = var12; var21 < var13; var21 = var21 + param5[4].field_s) {
-                            param5[4].b(var21, var20);
+                    if (param5[4].fullWidth != 0) {
+                      if (0 != param5[4].fullHeight) {
+                        SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
+                        for (var20 = var14; var15 > var20; var20 = var20 + param5[4].fullHeight) {
+                          for (var21 = var12; var21 < var13; var21 = var21 + param5[4].fullWidth) {
+                            param5[4].draw(var21, var20);
                           }
                         }
-                        SoftwareRasterizer.b(hd.field_I);
+                        SoftwareRasterizer.restoreClip(hd.field_I);
                         break L19;
                       }
                     }

@@ -11,10 +11,10 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         SecondaryDeque.spawnQueue.moveAllTo(ra.availableEntities, (byte) -70);
         bh.field_c.moveAllTo(ra.availableEntities, (byte) -70);
         kc.ticksSinceLastEntityRelease = 0;
-        vf.spriteScratchRaster.e();
-        SoftwareRasterizer.c();
-        SecondaryDeque.contactProbeRaster.e();
-        SoftwareRasterizer.c();
+        vf.spriteScratchRaster.setAsRasterTarget();
+        SoftwareRasterizer.clearFramebuffer();
+        SecondaryDeque.contactProbeRaster.setAsRasterTarget();
+        SoftwareRasterizer.clearFramebuffer();
         sh.field_y.a(255);
         jl.avatarShockContactPending = false;
         rb.kindFourRemovalCount = 0;

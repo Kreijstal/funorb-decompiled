@@ -30,8 +30,8 @@ final class ik {
         int var10 = 0;
         var10 = Geoblox.field_C;
         try {
-          SoftwareRasterizer.c(param0, param2, param3 + 1, 10000536);
-          SoftwareRasterizer.c(param0, param2 + param1, param3 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param0, param2, param3 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param0, param2 + param1, param3 + 1, 12105912);
           var5_int = 1;
           if (SoftwareRasterizer.clipTop > param2 + var5_int) {
             var5_int = -param2 + SoftwareRasterizer.clipTop;

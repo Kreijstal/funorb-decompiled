@@ -214,10 +214,10 @@ final class ij extends oe implements pl {
             var1 = el.gameplaySession.boardMaskOffsetX - 2;
             var2 = el.gameplaySession.boardMaskOffsetY - 2;
             if (!(wa.avatarShockEffectTicks <= 0)) {
-                vg.silverStarShockFrames[ha.avatarShockFrameIndex].b(320 - (vg.silverStarShockFrames[ha.avatarShockFrameIndex].field_s >> 1), -(vg.silverStarShockFrames[ha.avatarShockFrameIndex].field_o >> 1) + 240);
+                vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
             }
-            fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].b(var1 + 320, 240 + var2, rj.avatarTintColor);
-            vh.avatarMouthFrames[nd.avatarFeedbackModeId].b(320 + var1, 240 + var2, rj.avatarTintColor);
+            fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].drawGrayModulated(var1 + 320, 240 + var2, rj.avatarTintColor);
+            vh.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(320 + var1, 240 + var2, rj.avatarTintColor);
             if (param0 >= 3) {
                 return;
             }
@@ -228,17 +228,17 @@ final class ij extends oe implements pl {
             var1 = el.gameplaySession.boardMaskOffsetX - 2;
             var2 = el.gameplaySession.boardMaskOffsetY - 2;
             if (!(wa.avatarShockEffectTicks <= 0)) {
-                vg.silverStarShockFrames[ha.avatarShockFrameIndex].b(320 - (vg.silverStarShockFrames[ha.avatarShockFrameIndex].field_s >> 1), -(vg.silverStarShockFrames[ha.avatarShockFrameIndex].field_o >> 1) + 240);
+                vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(vg.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
             }
-            fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].b(var1 + 320, 240 + var2, rj.avatarTintColor);
-            vh.avatarMouthFrames[nd.avatarFeedbackModeId].b(320 + var1, 240 + var2, rj.avatarTintColor);
+            fc.avatarEyeFrames[uf.avatarFeedbackFrameIndex].drawGrayModulated(var1 + 320, 240 + var2, rj.avatarTintColor);
+            vh.avatarMouthFrames[nd.avatarFeedbackModeId].drawGrayModulated(320 + var1, 240 + var2, rj.avatarTintColor);
             if (param0 >= 3) {
                 return;
             }
             menuText = (String) null;
             return;
         }
-        ul.field_a.b(-(ul.field_a.field_s >> 1) + 319, -(ul.field_a.field_o >> 1) + 240);
+        ul.field_a.draw(-(ul.field_a.fullWidth >> 1) + 319, -(ul.field_a.fullHeight >> 1) + 240);
         if (param0 >= 3) {
             return;
         }

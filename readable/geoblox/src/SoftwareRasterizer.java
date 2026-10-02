@@ -10,12 +10,12 @@ final class SoftwareRasterizer {
     static int[] field_a;
     static int clipTop;
     static int stride;
-    static int field_b;
+    static int framebufferHeight;
     static int[] framebuffer;
     static int clipLeft;
     private static int[] field_h;
 
-    final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillVerticalGradient(int x, int y, int width, int height, int topColor, int bottomColor) {
         int var10 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
@@ -27,29 +27,29 @@ final class SoftwareRasterizer {
         int var12;
         int var13;
         var6 = 0;
-        var7 = 65536 / param3;
-        if (param0 < clipLeft) {
-          param2 = param2 - (clipLeft - param0);
-          param0 = clipLeft;
+        var7 = 65536 / height;
+        if (x < clipLeft) {
+          width = width - (clipLeft - x);
+          x = clipLeft;
         }
-        if (param1 < clipTop) {
-          var6 = var6 + (clipTop - param1) * var7;
-          param3 = param3 - (clipTop - param1);
-          param1 = clipTop;
+        if (y < clipTop) {
+          var6 = var6 + (clipTop - y) * var7;
+          height = height - (clipTop - y);
+          y = clipTop;
         }
-        if (param0 + param2 > clipRight) {
-          param2 = clipRight - param0;
+        if (x + width > clipRight) {
+          width = clipRight - x;
         }
-        if (param1 + param3 > clipBottom) {
-          param3 = clipBottom - param1;
+        if (y + height > clipBottom) {
+          height = clipBottom - y;
         }
-        var8 = stride - param2;
-        var9 = param0 + param1 * stride;
-        for (var10 = -param3; var10 < 0; var10++) {
+        var8 = stride - width;
+        var9 = x + y * stride;
+        for (var10 = -height; var10 < 0; var10++) {
           var11 = 65536 - var6 >> 8;
           var12 = var6 >> 8;
-          var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
-          for (var14 = -param2; var14 < 0; var14++) {
+          var13 = ((topColor & 16711935) * var11 + (bottomColor & 16711935) * var12 & -16711936) + ((topColor & 65280) * var11 + (bottomColor & 65280) * var12 & 16711680) >>> 8;
+          for (var14 = -width; var14 < 0; var14++) {
             incrementValue$0 = var9;
             var9++;
             framebuffer[incrementValue$0] = var13;
@@ -59,40 +59,40 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
-        if (clipLeft < param0) {
-            clipLeft = param0;
+    final static void intersectClip(int left, int top, int right, int bottom) {
+        if (clipLeft < left) {
+            clipLeft = left;
         }
-        if (clipTop < param1) {
-            clipTop = param1;
+        if (clipTop < top) {
+            clipTop = top;
         }
-        if (clipRight > param2) {
-            clipRight = param2;
+        if (clipRight > right) {
+            clipRight = right;
         }
-        if (clipBottom > param3) {
-            clipBottom = param3;
+        if (clipBottom > bottom) {
+            clipBottom = bottom;
         }
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.clearScanlineMasks();
     }
 
-    final static void f(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawRectangleDropShadow(int x, int y, int width, int height, int color) {
         int var6 = 0;
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            SoftwareRasterizer.b(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            SoftwareRasterizer.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            SoftwareRasterizer.drawHorizontalLineAlpha(x + var6, y + height + var6, width, color, var5);
+            SoftwareRasterizer.drawVerticalLineAlpha(x + width + var6, y + var6, height + 1, color, var5);
         }
     }
 
-    final static void a(int[] param0) {
-        param0[0] = clipLeft;
-        param0[1] = clipTop;
-        param0[2] = clipRight;
-        param0[3] = clipBottom;
+    final static void saveClip(int[] clipBounds) {
+        clipBounds[0] = clipLeft;
+        clipBounds[1] = clipTop;
+        clipBounds[2] = clipRight;
+        clipBounds[3] = clipBottom;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void grayscaleRectangle(int x, int y, int width, int height) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -101,27 +101,27 @@ final class SoftwareRasterizer {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$0 = 0;
-        if (param0 < clipLeft) {
-            param2 = param2 - (clipLeft - param0);
-            param0 = clipLeft;
+        if (x < clipLeft) {
+            width = width - (clipLeft - x);
+            x = clipLeft;
         }
-        if (param0 + param2 > clipRight) {
-            param2 = clipRight - param0;
+        if (x + width > clipRight) {
+            width = clipRight - x;
         }
-        if (param1 < clipTop) {
-            param3 = param3 - (clipTop - param1);
-            param1 = clipTop;
+        if (y < clipTop) {
+            height = height - (clipTop - y);
+            y = clipTop;
         }
-        if (param1 + param3 > clipBottom) {
-            param3 = clipBottom - param1;
+        if (y + height > clipBottom) {
+            height = clipBottom - y;
         }
-        int var4 = param0 + param1 * stride;
-        if (param2 > 0) {
-            if (param3 <= 0) {
+        int var4 = x + y * stride;
+        if (width > 0) {
+            if (height <= 0) {
                 return;
             }
-            for (var5 = 0; var5 < param3; var5++) {
-                for (var6 = 0; var6 < param2; var6++) {
+            for (var5 = 0; var5 < height; var5++) {
+                for (var6 = 0; var6 < width; var6++) {
                     var7 = framebuffer[var4];
                     var8 = var7 >> 15 & 510;
                     var9 = var7 >> 8 & 255;
@@ -131,13 +131,13 @@ final class SoftwareRasterizer {
                     var4++;
                     framebuffer[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
                 }
-                var4 = var4 + (stride - param2);
+                var4 = var4 + (stride - width);
             }
             return;
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawRoundedRectangle(int x, int y, int width, int height, int cornerRadius, int color) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var6;
@@ -157,54 +157,54 @@ final class SoftwareRasterizer {
         int var20;
         int var21;
         int var22;
-        if (param4 == 0) {
-          SoftwareRasterizer.d(param0, param1, param2, param3, param5);
+        if (cornerRadius == 0) {
+          SoftwareRasterizer.drawRectangle(x, y, width, height, color);
           return;
         }
         {
-          if (param4 < 0) {
-            param4 = -param4;
+          if (cornerRadius < 0) {
+            cornerRadius = -cornerRadius;
           }
-          var6 = param0 + param4;
-          var7 = param1 + param4;
-          var8 = param0 + param2 - param4 - 1;
-          var9 = param1 + param3 - param4 - 1;
+          var6 = x + cornerRadius;
+          var7 = y + cornerRadius;
+          var8 = x + width - cornerRadius - 1;
+          var9 = y + height - cornerRadius - 1;
           if (clipRight > clipLeft) {
             if (clipBottom <= clipTop) {
               return;
             }
-            if (param0 + param2 > clipLeft) {
-              if (param0 < clipRight) {
-                if (param1 + param3 >= clipTop) {
-                  if (param1 < clipBottom) {
+            if (x + width > clipLeft) {
+              if (x < clipRight) {
+                if (y + height >= clipTop) {
+                  if (y < clipBottom) {
                     L3: {
-                      var10 = var6 + (var7 - param4) * stride;
-                      var11 = var8 + (var7 - param4) * stride;
+                      var10 = var6 + (var7 - cornerRadius) * stride;
+                      var11 = var8 + (var7 - cornerRadius) * stride;
                       var12 = var6 + var7 * stride;
                       var13 = var8 + var7 * stride;
                       var14 = var6 + var9 * stride;
                       var15 = var8 + var9 * stride;
-                      var16 = var6 + (var9 + param4) * stride;
-                      var17 = var8 + (var9 + param4) * stride;
-                      var18 = param4;
+                      var16 = var6 + (var9 + cornerRadius) * stride;
+                      var17 = var8 + (var9 + cornerRadius) * stride;
+                      var18 = cornerRadius;
                       var19 = 0;
-                      var20 = param4 * param4;
+                      var20 = cornerRadius * cornerRadius;
                       var21 = var20 - var18;
-                      if (param0 >= clipLeft) {
-                        if (param0 + param2 < clipRight) {
-                          if (param1 >= clipTop) {
-                            if (param1 + param3 < clipBottom) {
+                      if (x >= clipLeft) {
+                        if (x + width < clipRight) {
+                          if (y >= clipTop) {
+                            if (y + height < clipBottom) {
                               for (var22 = var12; var22 <= var14; var22 = var22 + stride) {
-                                framebuffer[var22 - var18] = param5;
+                                framebuffer[var22 - var18] = color;
                               }
                               for (var22 = var13; var22 <= var15; var22 = var22 + stride) {
-                                framebuffer[var22 + var18] = param5;
+                                framebuffer[var22 + var18] = color;
                               }
                               for (var22 = var10; var22 <= var11; var22++) {
-                                framebuffer[var22] = param5;
+                                framebuffer[var22] = color;
                               }
                               for (var22 = var16; var22 <= var17; var22++) {
-                                framebuffer[var22] = param5;
+                                framebuffer[var22] = color;
                               }
                               L9: while (true) {
                                 incrementValue$0 = var19;
@@ -225,24 +225,24 @@ final class SoftwareRasterizer {
                                 if (var18 < var19) {
                                   break L3;
                                 }
-                                framebuffer[var10 - var19] = param5;
-                                framebuffer[var11 + var19] = param5;
-                                framebuffer[var12 - var18] = param5;
-                                framebuffer[var13 + var18] = param5;
-                                framebuffer[var14 - var18] = param5;
-                                framebuffer[var15 + var18] = param5;
-                                framebuffer[var16 - var19] = param5;
-                                framebuffer[var17 + var19] = param5;
+                                framebuffer[var10 - var19] = color;
+                                framebuffer[var11 + var19] = color;
+                                framebuffer[var12 - var18] = color;
+                                framebuffer[var13 + var18] = color;
+                                framebuffer[var14 - var18] = color;
+                                framebuffer[var15 + var18] = color;
+                                framebuffer[var16 - var19] = color;
+                                framebuffer[var17 + var19] = color;
                                 continue L9;
                               }
                             }
                           }
                         }
                       }
-                      SoftwareRasterizer.g(param0, param1 + var18, param3 - var18 - var18, param5);
-                      SoftwareRasterizer.g(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-                      SoftwareRasterizer.c(param0 + var18, param1, param2 - var18 - var18, param5);
-                      SoftwareRasterizer.c(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+                      SoftwareRasterizer.drawVerticalLine(x, y + var18, height - var18 - var18, color);
+                      SoftwareRasterizer.drawVerticalLine(x + width - 1, y + var18, height - var18 - var18, color);
+                      SoftwareRasterizer.drawHorizontalLine(x + var18, y, width - var18 - var18, color);
+                      SoftwareRasterizer.drawHorizontalLine(x + var18, y + height - 1, width - var18 - var18, color);
                       L11: while (true) {
                         incrementValue$1 = var19;
                         var19++;
@@ -266,12 +266,12 @@ final class SoftwareRasterizer {
                           if (var7 - var18 < clipBottom) {
                             if (var6 - var19 >= clipLeft) {
                               if (var6 - var19 < clipRight) {
-                                framebuffer[var10 - var19] = param5;
+                                framebuffer[var10 - var19] = color;
                               }
                             }
                             if (var8 + var19 >= clipLeft) {
                               if (var8 + var19 < clipRight) {
-                                framebuffer[var11 + var19] = param5;
+                                framebuffer[var11 + var19] = color;
                               }
                             }
                           }
@@ -280,12 +280,12 @@ final class SoftwareRasterizer {
                           if (var7 - var19 < clipBottom) {
                             if (var6 - var18 >= clipLeft) {
                               if (var6 - var18 < clipRight) {
-                                framebuffer[var12 - var18] = param5;
+                                framebuffer[var12 - var18] = color;
                               }
                             }
                             if (var8 + var18 >= clipLeft) {
                               if (var8 + var18 < clipRight) {
-                                framebuffer[var13 + var18] = param5;
+                                framebuffer[var13 + var18] = color;
                               }
                             }
                           }
@@ -294,12 +294,12 @@ final class SoftwareRasterizer {
                           if (var9 + var19 < clipBottom) {
                             if (var6 - var18 >= clipLeft) {
                               if (var6 - var18 < clipRight) {
-                                framebuffer[var14 - var18] = param5;
+                                framebuffer[var14 - var18] = color;
                               }
                             }
                             if (var8 + var18 >= clipLeft) {
                               if (var8 + var18 < clipRight) {
-                                framebuffer[var15 + var18] = param5;
+                                framebuffer[var15 + var18] = color;
                               }
                             }
                           }
@@ -312,7 +312,7 @@ final class SoftwareRasterizer {
                         }
                         if (var6 - var19 >= clipLeft) {
                           if (var6 - var19 < clipRight) {
-                            framebuffer[var16 - var19] = param5;
+                            framebuffer[var16 - var19] = color;
                           }
                         }
                         if (var8 + var19 < clipLeft) {
@@ -321,7 +321,7 @@ final class SoftwareRasterizer {
                         if (var8 + var19 >= clipRight) {
                           continue L11;
                         }
-                        framebuffer[var17 + var19] = param5;
+                        framebuffer[var17 + var19] = color;
                         continue L11;
                       }
                     }
@@ -496,7 +496,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    private final static void b(int param0, int param1, int param2, int param3, int param4) {
+    private final static void drawHorizontalLineAlpha(int x, int y, int length, int color, int alpha256) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -508,23 +508,23 @@ final class SoftwareRasterizer {
         int var11 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
-        if (param1 >= clipTop) {
-            if (param1 >= clipBottom) {
+        if (y >= clipTop) {
+            if (y >= clipBottom) {
                 return;
             }
-            if (param0 < clipLeft) {
-                param2 = param2 - (clipLeft - param0);
-                param0 = clipLeft;
+            if (x < clipLeft) {
+                length = length - (clipLeft - x);
+                x = clipLeft;
             }
-            if (param0 + param2 > clipRight) {
-                param2 = clipRight - param0;
+            if (x + length > clipRight) {
+                length = clipRight - x;
             }
-            var5 = 256 - param4;
-            var6 = (param3 >> 16 & 255) * param4;
-            var7 = (param3 >> 8 & 255) * param4;
-            var8 = (param3 & 255) * param4;
-            var12 = param0 + param1 * stride;
-            for (var13 = 0; var13 < param2; var13++) {
+            var5 = 256 - alpha256;
+            var6 = (color >> 16 & 255) * alpha256;
+            var7 = (color >> 8 & 255) * alpha256;
+            var8 = (color & 255) * alpha256;
+            var12 = x + y * stride;
+            for (var13 = 0; var13 < length; var13++) {
                 var9 = (framebuffer[var12] >> 16 & 255) * var5;
                 var10 = (framebuffer[var12] >> 8 & 255) * var5;
                 var11 = (framebuffer[var12] & 255) * var5;
@@ -537,7 +537,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    private final static void c(int param0, int param1, int param2, int param3, int param4) {
+    private final static void drawVerticalLineAlpha(int x, int y, int length, int color, int alpha256) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -548,23 +548,23 @@ final class SoftwareRasterizer {
         int var10 = 0;
         int var11 = 0;
         int var14 = 0;
-        if (param0 >= clipLeft) {
-            if (param0 >= clipRight) {
+        if (x >= clipLeft) {
+            if (x >= clipRight) {
                 return;
             }
-            if (param1 < clipTop) {
-                param2 = param2 - (clipTop - param1);
-                param1 = clipTop;
+            if (y < clipTop) {
+                length = length - (clipTop - y);
+                y = clipTop;
             }
-            if (param1 + param2 > clipBottom) {
-                param2 = clipBottom - param1;
+            if (y + length > clipBottom) {
+                length = clipBottom - y;
             }
-            var5 = 256 - param4;
-            var6 = (param3 >> 16 & 255) * param4;
-            var7 = (param3 >> 8 & 255) * param4;
-            var8 = (param3 & 255) * param4;
-            var12 = param0 + param1 * stride;
-            for (var13 = 0; var13 < param2; var13++) {
+            var5 = 256 - alpha256;
+            var6 = (color >> 16 & 255) * alpha256;
+            var7 = (color >> 8 & 255) * alpha256;
+            var8 = (color & 255) * alpha256;
+            var12 = x + y * stride;
+            for (var13 = 0; var13 < length; var13++) {
                 var9 = (framebuffer[var12] >> 16 & 255) * var5;
                 var10 = (framebuffer[var12] >> 8 & 255) * var5;
                 var11 = (framebuffer[var12] & 255) * var5;
@@ -576,7 +576,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    public static void a() {
+    public static void releaseRasterStorage() {
         framebuffer = null;
         field_a = null;
         field_l = null;
@@ -585,12 +585,12 @@ final class SoftwareRasterizer {
         field_j = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
-        if (param0 >= clipLeft) {
-            if (param1 < clipTop || param0 >= clipRight || param1 >= clipBottom) {
+    final static void setPixel(int x, int y, int color) {
+        if (x >= clipLeft) {
+            if (y < clipTop || x >= clipRight || y >= clipBottom) {
                 return;
             }
-            framebuffer[param0 + param1 * stride] = param2;
+            framebuffer[x + y * stride] = color;
             return;
         }
     }
@@ -600,12 +600,12 @@ final class SoftwareRasterizer {
         SoftwareRasterizer.a(framebuffer, 0, param2 + param3 * stride, param1, param3, param5, stride - param4, param2, param4);
     }
 
-    private final static void b() {
+    private final static void clearScanlineMasks() {
         field_a = null;
         field_l = null;
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillCircleAlpha(int centerX, int centerY, int radius, int color, int alpha256) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -633,48 +633,48 @@ final class SoftwareRasterizer {
         int var23;
         int var24;
         int var25;
-        if (param4 == 0) {
+        if (alpha256 == 0) {
           return;
         }
-        if (param4 == 256) {
-          SoftwareRasterizer.d(param0, param1, param2, param3);
+        if (alpha256 == 256) {
+          SoftwareRasterizer.fillCircle(centerX, centerY, radius, color);
           return;
         }
         {
-          if (param2 < 0) {
-            param2 = -param2;
+          if (radius < 0) {
+            radius = -radius;
           }
-          var5 = 256 - param4;
-          var6 = (param3 >> 16 & 255) * param4;
-          var7 = (param3 >> 8 & 255) * param4;
-          var8 = (param3 & 255) * param4;
-          var12 = param1 - param2;
+          var5 = 256 - alpha256;
+          var6 = (color >> 16 & 255) * alpha256;
+          var7 = (color >> 8 & 255) * alpha256;
+          var8 = (color & 255) * alpha256;
+          var12 = centerY - radius;
           if (var12 < clipTop) {
             var12 = clipTop;
           }
-          var13 = param1 + param2 + 1;
+          var13 = centerY + radius + 1;
           if (var13 > clipBottom) {
             var13 = clipBottom;
           }
           var14 = var12;
-          var15 = param2 * param2;
+          var15 = radius * radius;
           var16 = 0;
-          var17 = param1 - var14;
+          var17 = centerY - var14;
           var18 = var17 * var17;
           var19 = var18 - var17;
-          if (param1 > var13) {
-            param1 = var13;
+          if (centerY > var13) {
+            centerY = var13;
           }
           L4: while (true) {
-            if (var14 < param1) {
+            if (var14 < centerY) {
               L11: while (true) {
                 if (var19 > var15) {
                   if (var18 > var15) {
-                    var20 = param0 - var16 + 1;
+                    var20 = centerX - var16 + 1;
                     if (var20 < clipLeft) {
                       var20 = clipLeft;
                     }
-                    var21 = param0 + var16;
+                    var21 = centerX + var16;
                     if (var21 > clipRight) {
                       var21 = clipRight;
                     }
@@ -703,7 +703,7 @@ final class SoftwareRasterizer {
                 continue L11;
               }
             }
-            var16 = param2;
+            var16 = radius;
             var17 = -var17;
             var19 = var17 * var17 + var15;
             var18 = var19 - var16;
@@ -719,11 +719,11 @@ final class SoftwareRasterizer {
                 }
                 break;
               }
-              var20 = param0 - var16;
+              var20 = centerX - var16;
               if (var20 < clipLeft) {
                 var20 = clipLeft;
               }
-              var21 = param0 + var16;
+              var21 = centerX + var16;
               if (var21 > clipRight - 1) {
                 var21 = clipRight - 1;
               }
@@ -749,59 +749,59 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillRectangle(int x, int y, int width, int height, int color) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
-        if (param0 < clipLeft) {
-            param2 = param2 - (clipLeft - param0);
-            param0 = clipLeft;
+        if (x < clipLeft) {
+            width = width - (clipLeft - x);
+            x = clipLeft;
         }
-        if (param1 < clipTop) {
-            param3 = param3 - (clipTop - param1);
-            param1 = clipTop;
+        if (y < clipTop) {
+            height = height - (clipTop - y);
+            y = clipTop;
         }
-        if (param0 + param2 > clipRight) {
-            param2 = clipRight - param0;
+        if (x + width > clipRight) {
+            width = clipRight - x;
         }
-        if (param1 + param3 > clipBottom) {
-            param3 = clipBottom - param1;
+        if (y + height > clipBottom) {
+            height = clipBottom - y;
         }
-        int var5 = stride - param2;
-        int var6 = param0 + param1 * stride;
-        for (var7 = -param3; var7 < 0; var7++) {
-            for (var8 = -param2; var8 < 0; var8++) {
+        int var5 = stride - width;
+        int var6 = x + y * stride;
+        for (var7 = -height; var7 < 0; var7++) {
+            for (var8 = -width; var8 < 0; var8++) {
                 incrementValue$0 = var6;
                 var6++;
-                framebuffer[incrementValue$0] = param4;
+                framebuffer[incrementValue$0] = color;
             }
             var6 = var6 + var5;
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
+    final static void drawHorizontalLine(int x, int y, int length, int color) {
         int var4 = 0;
         int var5 = 0;
-        if (param1 >= clipTop) {
-            if (param1 >= clipBottom) {
+        if (y >= clipTop) {
+            if (y >= clipBottom) {
                 return;
             }
-            if (param0 < clipLeft) {
-                param2 = param2 - (clipLeft - param0);
-                param0 = clipLeft;
+            if (x < clipLeft) {
+                length = length - (clipLeft - x);
+                x = clipLeft;
             }
-            if (param0 + param2 > clipRight) {
-                param2 = clipRight - param0;
+            if (x + length > clipRight) {
+                length = clipRight - x;
             }
-            var4 = param0 + param1 * stride;
-            for (var5 = 0; var5 < param2; var5++) {
-                framebuffer[var4 + var5] = param3;
+            var4 = x + y * stride;
+            for (var5 = 0; var5 < length; var5++) {
+                framebuffer[var4 + var5] = color;
             }
             return;
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3) {
+    final static void fillCircle(int centerX, int centerY, int radius, int color) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -820,41 +820,41 @@ final class SoftwareRasterizer {
         int var13;
         int var14;
         int var15;
-        if (param2 == 0) {
-          SoftwareRasterizer.a(param0, param1, param3);
+        if (radius == 0) {
+          SoftwareRasterizer.setPixel(centerX, centerY, color);
           return;
         }
         {
-          if (param2 < 0) {
-            param2 = -param2;
+          if (radius < 0) {
+            radius = -radius;
           }
-          var4 = param1 - param2;
+          var4 = centerY - radius;
           if (var4 < clipTop) {
             var4 = clipTop;
           }
-          var5 = param1 + param2 + 1;
+          var5 = centerY + radius + 1;
           if (var5 > clipBottom) {
             var5 = clipBottom;
           }
           var6 = var4;
-          var7 = param2 * param2;
+          var7 = radius * radius;
           var8 = 0;
-          var9 = param1 - var6;
+          var9 = centerY - var6;
           var10 = var9 * var9;
           var11 = var10 - var9;
-          if (param1 > var5) {
-            param1 = var5;
+          if (centerY > var5) {
+            centerY = var5;
           }
           L4: while (true) {
-            if (var6 < param1) {
+            if (var6 < centerY) {
               L11: while (true) {
                 if (var11 > var7) {
                   if (var10 > var7) {
-                    var12 = param0 - var8 + 1;
+                    var12 = centerX - var8 + 1;
                     if (var12 < clipLeft) {
                       var12 = clipLeft;
                     }
-                    var13 = param0 + var8;
+                    var13 = centerX + var8;
                     if (var13 > clipRight) {
                       var13 = clipRight;
                     }
@@ -862,7 +862,7 @@ final class SoftwareRasterizer {
                     for (var15 = var12; var15 < var13; var15++) {
                       incrementValue$4 = var14;
                       var14++;
-                      framebuffer[incrementValue$4] = param3;
+                      framebuffer[incrementValue$4] = color;
                     }
                     var6++;
                     incrementValue$3 = var9;
@@ -879,8 +879,8 @@ final class SoftwareRasterizer {
                 continue L11;
               }
             }
-            var8 = param2;
-            var9 = var6 - param1;
+            var8 = radius;
+            var9 = var6 - centerY;
             var11 = var9 * var9 + var7;
             var10 = var11 - var8;
             var11 = var11 - var9;
@@ -895,11 +895,11 @@ final class SoftwareRasterizer {
                 }
                 break;
               }
-              var12 = param0 - var8;
+              var12 = centerX - var8;
               if (var12 < clipLeft) {
                 var12 = clipLeft;
               }
-              var13 = param0 + var8;
+              var13 = centerX + var8;
               if (var13 > clipRight - 1) {
                 var13 = clipRight - 1;
               }
@@ -907,7 +907,7 @@ final class SoftwareRasterizer {
               for (var15 = var12; var15 <= var13; var15++) {
                 incrementValue$2 = var14;
                 var14++;
-                framebuffer[incrementValue$2] = param3;
+                framebuffer[incrementValue$2] = color;
               }
               var6++;
               var11 = var11 + (var9 + var9);
@@ -920,83 +920,83 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void g(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawLine(int startX, int startY, int endX, int endY, int color) {
         int var5;
         int var6;
-        param2 = param2 - param0;
-        param3 = param3 - param1;
-        if (param3 == 0) {
-          if (param2 < 0) {
-            SoftwareRasterizer.c(param0 + param2, param1, -param2 + 1, param4);
+        endX = endX - startX;
+        endY = endY - startY;
+        if (endY == 0) {
+          if (endX < 0) {
+            SoftwareRasterizer.drawHorizontalLine(startX + endX, startY, -endX + 1, color);
           } else {
-            SoftwareRasterizer.c(param0, param1, param2 + 1, param4);
+            SoftwareRasterizer.drawHorizontalLine(startX, startY, endX + 1, color);
           }
           return;
         }
-        if (param2 == 0) {
-          if (param3 < 0) {
-            SoftwareRasterizer.g(param0, param1 + param3, -param3 + 1, param4);
+        if (endX == 0) {
+          if (endY < 0) {
+            SoftwareRasterizer.drawVerticalLine(startX, startY + endY, -endY + 1, color);
           } else {
-            SoftwareRasterizer.g(param0, param1, param3 + 1, param4);
+            SoftwareRasterizer.drawVerticalLine(startX, startY, endY + 1, color);
           }
           return;
         }
-        if (param2 + param3 < 0) {
-          param0 = param0 + param2;
-          param2 = -param2;
-          param1 = param1 + param3;
-          param3 = -param3;
+        if (endX + endY < 0) {
+          startX = startX + endX;
+          endX = -endX;
+          startY = startY + endY;
+          endY = -endY;
         }
-        if (param2 <= param3) {
-          param0 = param0 << 16;
-          param0 = param0 + 32768;
-          param2 = param2 << 16;
-          var5 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
-          param3 = param3 + param1;
-          if (param1 < clipTop) {
-            param0 = param0 + var5 * (clipTop - param1);
-            param1 = clipTop;
+        if (endX <= endY) {
+          startX = startX << 16;
+          startX = startX + 32768;
+          endX = endX << 16;
+          var5 = (int)Math.floor((double)endX / (double)endY + 0.5);
+          endY = endY + startY;
+          if (startY < clipTop) {
+            startX = startX + var5 * (clipTop - startY);
+            startY = clipTop;
           }
-          if (param3 >= clipBottom) {
-            param3 = clipBottom - 1;
+          if (endY >= clipBottom) {
+            endY = clipBottom - 1;
           }
-          L3: while (param1 <= param3) {
-            var6 = param0 >> 16;
+          L3: while (startY <= endY) {
+            var6 = startX >> 16;
             if (var6 >= clipLeft) {
               if (var6 < clipRight) {
-                framebuffer[var6 + param1 * stride] = param4;
+                framebuffer[var6 + startY * stride] = color;
               }
             }
-            param0 = param0 + var5;
-            param1++;
+            startX = startX + var5;
+            startY++;
           }
           return;
         }
-        param1 = param1 << 16;
-        param1 = param1 + 32768;
-        param3 = param3 << 16;
-        var5 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
-        param2 = param2 + param0;
-        if (param0 < clipLeft) {
-          param1 = param1 + var5 * (clipLeft - param0);
-          param0 = clipLeft;
+        startY = startY << 16;
+        startY = startY + 32768;
+        endY = endY << 16;
+        var5 = (int)Math.floor((double)endY / (double)endX + 0.5);
+        endX = endX + startX;
+        if (startX < clipLeft) {
+          startY = startY + var5 * (clipLeft - startX);
+          startX = clipLeft;
         }
-        if (param2 >= clipRight) {
-          param2 = clipRight - 1;
+        if (endX >= clipRight) {
+          endX = clipRight - 1;
         }
-        L7: while (param0 <= param2) {
-          var6 = param1 >> 16;
+        L7: while (startX <= endX) {
+          var6 = startY >> 16;
           if (var6 >= clipTop) {
             if (var6 < clipBottom) {
-              framebuffer[param0 + var6 * stride] = param4;
+              framebuffer[startX + var6 * stride] = color;
             }
           }
-          param1 = param1 + var5;
-          param0++;
+          startY = startY + var5;
+          startX++;
         }
     }
 
-    final static void f(int param0, int param1, int param2, int param3) {
+    final static void drawCircle(int centerX, int centerY, int radius, int color) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var4;
@@ -1006,45 +1006,45 @@ final class SoftwareRasterizer {
         int var8;
         int var9;
         int var10;
-        if (param2 == 0) {
-          SoftwareRasterizer.a(param0, param1, param3);
+        if (radius == 0) {
+          SoftwareRasterizer.setPixel(centerX, centerY, color);
           return;
         }
-        if (param2 < 0) {
-          param2 = -param2;
+        if (radius < 0) {
+          radius = -radius;
         }
         if (clipRight > clipLeft) {
           if (clipBottom <= clipTop) {
             return;
           }
-          if (param0 + param2 >= clipLeft) {
-            if (param0 - param2 < clipRight) {
-              if (param1 + param2 >= clipTop) {
-                if (param1 - param2 < clipBottom) {
+          if (centerX + radius >= clipLeft) {
+            if (centerX - radius < clipRight) {
+              if (centerY + radius >= clipTop) {
+                if (centerY - radius < clipBottom) {
                   L3: {
-                    var4 = param0 + param1 * stride;
+                    var4 = centerX + centerY * stride;
                     var5 = var4;
-                    var6 = var4 - param2 * stride;
-                    var7 = var4 + param2 * stride;
-                    var8 = param2;
+                    var6 = var4 - radius * stride;
+                    var7 = var4 + radius * stride;
+                    var8 = radius;
                     var9 = 0;
-                    param2 = param2 * param2;
-                    var10 = param2 - var8;
-                    if (param0 - var8 >= clipLeft) {
-                      if (param0 + var8 < clipRight) {
-                        if (param1 - var8 >= clipTop) {
-                          if (param1 + var8 < clipBottom) {
-                            framebuffer[var4 - var8] = param3;
-                            framebuffer[var4 + var8] = param3;
-                            framebuffer[var6] = param3;
-                            framebuffer[var7] = param3;
+                    radius = radius * radius;
+                    var10 = radius - var8;
+                    if (centerX - var8 >= clipLeft) {
+                      if (centerX + var8 < clipRight) {
+                        if (centerY - var8 >= clipTop) {
+                          if (centerY + var8 < clipBottom) {
+                            framebuffer[var4 - var8] = color;
+                            framebuffer[var4 + var8] = color;
+                            framebuffer[var6] = color;
+                            framebuffer[var7] = color;
                             L5: while (true) {
                               incrementValue$0 = var9;
                               var9++;
                               var10 = var10 + (incrementValue$0 + var9);
                               var4 = var4 - stride;
                               var5 = var5 + stride;
-                              if (var10 > param2) {
+                              if (var10 > radius) {
                                 var8--;
                                 var10 = var10 - (var8 + var8);
                                 var6 = var6 + stride;
@@ -1053,68 +1053,68 @@ final class SoftwareRasterizer {
                               if (var8 < var9) {
                                 break L3;
                               }
-                              framebuffer[var6 - var9] = param3;
-                              framebuffer[var6 + var9] = param3;
-                              framebuffer[var4 - var8] = param3;
-                              framebuffer[var4 + var8] = param3;
-                              framebuffer[var5 - var8] = param3;
-                              framebuffer[var5 + var8] = param3;
-                              framebuffer[var7 - var9] = param3;
-                              framebuffer[var7 + var9] = param3;
+                              framebuffer[var6 - var9] = color;
+                              framebuffer[var6 + var9] = color;
+                              framebuffer[var4 - var8] = color;
+                              framebuffer[var4 + var8] = color;
+                              framebuffer[var5 - var8] = color;
+                              framebuffer[var5 + var8] = color;
+                              framebuffer[var7 - var9] = color;
+                              framebuffer[var7 + var9] = color;
                               continue L5;
                             }
                           }
                         }
                       }
                     }
-                    if (param0 - var8 >= clipLeft) {
-                      if (param1 >= clipTop) {
-                        if (param1 < clipBottom) {
-                          framebuffer[var4 - var8] = param3;
+                    if (centerX - var8 >= clipLeft) {
+                      if (centerY >= clipTop) {
+                        if (centerY < clipBottom) {
+                          framebuffer[var4 - var8] = color;
                         }
                       }
                     }
-                    if (param0 + var8 < clipRight) {
-                      if (param1 >= clipTop) {
-                        if (param1 < clipBottom) {
-                          framebuffer[var4 + var8] = param3;
+                    if (centerX + var8 < clipRight) {
+                      if (centerY >= clipTop) {
+                        if (centerY < clipBottom) {
+                          framebuffer[var4 + var8] = color;
                         }
                       }
                     }
-                    if (param1 - var8 >= clipTop) {
-                      if (param0 >= clipLeft) {
-                        if (param0 < clipRight) {
-                          framebuffer[var6] = param3;
-                          if (param1 + var8 < clipBottom) {
-                            if (param0 >= clipLeft) {
-                              if (param0 < clipRight) {
-                                framebuffer[var7] = param3;
+                    if (centerY - var8 >= clipTop) {
+                      if (centerX >= clipLeft) {
+                        if (centerX < clipRight) {
+                          framebuffer[var6] = color;
+                          if (centerY + var8 < clipBottom) {
+                            if (centerX >= clipLeft) {
+                              if (centerX < clipRight) {
+                                framebuffer[var7] = color;
                               }
                             }
                           }
                         } else {
-                          if (param1 + var8 < clipBottom) {
-                            if (param0 >= clipLeft) {
-                              if (param0 < clipRight) {
-                                framebuffer[var7] = param3;
+                          if (centerY + var8 < clipBottom) {
+                            if (centerX >= clipLeft) {
+                              if (centerX < clipRight) {
+                                framebuffer[var7] = color;
                               }
                             }
                           }
                         }
                       } else {
-                        if (param1 + var8 < clipBottom) {
-                          if (param0 >= clipLeft) {
-                            if (param0 < clipRight) {
-                              framebuffer[var7] = param3;
+                        if (centerY + var8 < clipBottom) {
+                          if (centerX >= clipLeft) {
+                            if (centerX < clipRight) {
+                              framebuffer[var7] = color;
                             }
                           }
                         }
                       }
                     } else {
-                      if (param1 + var8 < clipBottom) {
-                        if (param0 >= clipLeft) {
-                          if (param0 < clipRight) {
-                            framebuffer[var7] = param3;
+                      if (centerY + var8 < clipBottom) {
+                        if (centerX >= clipLeft) {
+                          if (centerX < clipRight) {
+                            framebuffer[var7] = color;
                           }
                         }
                       }
@@ -1125,7 +1125,7 @@ final class SoftwareRasterizer {
                       var10 = var10 + (incrementValue$1 + var9);
                       var4 = var4 - stride;
                       var5 = var5 + stride;
-                      if (var10 > param2) {
+                      if (var10 > radius) {
                         var8--;
                         var10 = var10 - (var8 + var8);
                         var6 = var6 + stride;
@@ -1134,66 +1134,66 @@ final class SoftwareRasterizer {
                       if (var8 < var9) {
                         break L3;
                       }
-                      if (param1 - var8 >= clipTop) {
-                        if (param1 - var8 < clipBottom) {
-                          if (param0 - var9 >= clipLeft) {
-                            if (param0 - var9 < clipRight) {
-                              framebuffer[var6 - var9] = param3;
+                      if (centerY - var8 >= clipTop) {
+                        if (centerY - var8 < clipBottom) {
+                          if (centerX - var9 >= clipLeft) {
+                            if (centerX - var9 < clipRight) {
+                              framebuffer[var6 - var9] = color;
                             }
                           }
-                          if (param0 + var9 >= clipLeft) {
-                            if (param0 + var9 < clipRight) {
-                              framebuffer[var6 + var9] = param3;
-                            }
-                          }
-                        }
-                      }
-                      if (param1 - var9 >= clipTop) {
-                        if (param1 - var9 < clipBottom) {
-                          if (param0 - var8 >= clipLeft) {
-                            if (param0 - var8 < clipRight) {
-                              framebuffer[var4 - var8] = param3;
-                            }
-                          }
-                          if (param0 + var8 >= clipLeft) {
-                            if (param0 + var8 < clipRight) {
-                              framebuffer[var4 + var8] = param3;
+                          if (centerX + var9 >= clipLeft) {
+                            if (centerX + var9 < clipRight) {
+                              framebuffer[var6 + var9] = color;
                             }
                           }
                         }
                       }
-                      if (param1 + var9 >= clipTop) {
-                        if (param1 + var9 < clipBottom) {
-                          if (param0 - var8 >= clipLeft) {
-                            if (param0 - var8 < clipRight) {
-                              framebuffer[var5 - var8] = param3;
+                      if (centerY - var9 >= clipTop) {
+                        if (centerY - var9 < clipBottom) {
+                          if (centerX - var8 >= clipLeft) {
+                            if (centerX - var8 < clipRight) {
+                              framebuffer[var4 - var8] = color;
                             }
                           }
-                          if (param0 + var8 >= clipLeft) {
-                            if (param0 + var8 < clipRight) {
-                              framebuffer[var5 + var8] = param3;
+                          if (centerX + var8 >= clipLeft) {
+                            if (centerX + var8 < clipRight) {
+                              framebuffer[var4 + var8] = color;
                             }
                           }
                         }
                       }
-                      if (param1 + var8 < clipTop) {
-                        continue L10;
-                      }
-                      if (param1 + var8 >= clipBottom) {
-                        continue L10;
-                      }
-                      if (param0 - var9 >= clipLeft) {
-                        if (param0 - var9 < clipRight) {
-                          framebuffer[var7 - var9] = param3;
+                      if (centerY + var9 >= clipTop) {
+                        if (centerY + var9 < clipBottom) {
+                          if (centerX - var8 >= clipLeft) {
+                            if (centerX - var8 < clipRight) {
+                              framebuffer[var5 - var8] = color;
+                            }
+                          }
+                          if (centerX + var8 >= clipLeft) {
+                            if (centerX + var8 < clipRight) {
+                              framebuffer[var5 + var8] = color;
+                            }
+                          }
                         }
                       }
-                      if (param0 + var9 < clipLeft) {
+                      if (centerY + var8 < clipTop) {
                         continue L10;
                       }
-                      if (param0 + var9 >= clipRight) {
+                      if (centerY + var8 >= clipBottom) {
                         continue L10;
                       }
-                      framebuffer[var7 + var9] = param3;
+                      if (centerX - var9 >= clipLeft) {
+                        if (centerX - var9 < clipRight) {
+                          framebuffer[var7 - var9] = color;
+                        }
+                      }
+                      if (centerX + var9 < clipLeft) {
+                        continue L10;
+                      }
+                      if (centerX + var9 >= clipRight) {
+                        continue L10;
+                      }
+                      framebuffer[var7 + var9] = color;
                       continue L10;
                     }
                   }
@@ -1206,7 +1206,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void c() {
+    final static void clearFramebuffer() {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1217,7 +1217,7 @@ final class SoftwareRasterizer {
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
         int var0 = 0;
-        int var1 = stride * field_b - 7;
+        int var1 = stride * framebufferHeight - 7;
         while (var0 < var1) {
             incrementValue$0 = var0;
             var0++;
@@ -1252,14 +1252,14 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4) {
-        SoftwareRasterizer.c(param0, param1, param2, param4);
-        SoftwareRasterizer.c(param0, param1 + param3 - 1, param2, param4);
-        SoftwareRasterizer.g(param0, param1, param3, param4);
-        SoftwareRasterizer.g(param0 + param2 - 1, param1, param3, param4);
+    final static void drawRectangle(int x, int y, int width, int height, int color) {
+        SoftwareRasterizer.drawHorizontalLine(x, y, width, color);
+        SoftwareRasterizer.drawHorizontalLine(x, y + height - 1, width, color);
+        SoftwareRasterizer.drawVerticalLine(x, y, height, color);
+        SoftwareRasterizer.drawVerticalLine(x + width - 1, y, height, color);
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleAlpha(int x, int y, int width, int height, int color, int alpha256) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$0 = 0;
@@ -1267,37 +1267,37 @@ final class SoftwareRasterizer {
         int var7;
         int var8;
         int var11;
-        if (param0 < clipLeft) {
-          param2 = param2 - (clipLeft - param0);
-          param0 = clipLeft;
+        if (x < clipLeft) {
+          width = width - (clipLeft - x);
+          x = clipLeft;
         }
-        if (param1 < clipTop) {
-          param3 = param3 - (clipTop - param1);
-          param1 = clipTop;
+        if (y < clipTop) {
+          height = height - (clipTop - y);
+          y = clipTop;
         }
-        if (param0 + param2 > clipRight) {
-          param2 = clipRight - param0;
+        if (x + width > clipRight) {
+          width = clipRight - x;
         }
-        if (param1 + param3 > clipBottom) {
-          param3 = clipBottom - param1;
+        if (y + height > clipBottom) {
+          height = clipBottom - y;
         }
-        param4 = ((param4 & 16711935) * param5 >> 8 & 16711935) + ((param4 & 65280) * param5 >> 8 & 65280);
-        var6 = 256 - param5;
-        var7 = stride - param2;
-        var8 = param0 + param1 * stride;
-        for (var9 = 0; var9 < param3; var9++) {
-          for (var10 = -param2; var10 < 0; var10++) {
+        color = ((color & 16711935) * alpha256 >> 8 & 16711935) + ((color & 65280) * alpha256 >> 8 & 65280);
+        var6 = 256 - alpha256;
+        var7 = stride - width;
+        var8 = x + y * stride;
+        for (var9 = 0; var9 < height; var9++) {
+          for (var10 = -width; var10 < 0; var10++) {
             var11 = framebuffer[var8];
             var11 = ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & 65280) * var6 >> 8 & 65280);
             incrementValue$0 = var8;
             var8++;
-            framebuffer[incrementValue$0] = param4 + var11;
+            framebuffer[incrementValue$0] = color + var11;
           }
           var8 = var8 + var7;
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRoundedRectangle(int x, int y, int width, int height, int cornerRadius, int color) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int incrementValue$6 = 0;
@@ -1322,27 +1322,27 @@ final class SoftwareRasterizer {
         int var19;
         int var20;
         int var21;
-        if (param4 == 0) {
-          SoftwareRasterizer.a(param0, param1, param2, param3, param5);
+        if (cornerRadius == 0) {
+          SoftwareRasterizer.fillRectangle(x, y, width, height, color);
           return;
         }
         {
-          if (param4 < 0) {
-            param4 = -param4;
+          if (cornerRadius < 0) {
+            cornerRadius = -cornerRadius;
           }
-          var6 = param0 + param4;
-          var7 = param1 + param4;
-          var8 = param1;
+          var6 = x + cornerRadius;
+          var7 = y + cornerRadius;
+          var8 = y;
           if (var8 < clipTop) {
             var8 = clipTop;
           }
-          var9 = param1 + param3;
+          var9 = y + height;
           if (var9 > clipBottom) {
             var9 = clipBottom;
           }
-          var10 = param2 - param4 - param4 - 1;
+          var10 = width - cornerRadius - cornerRadius - 1;
           var11 = var8;
-          var12 = param4 * param4;
+          var12 = cornerRadius * cornerRadius;
           var13 = 0;
           var14 = var7 - var11;
           var15 = var14 * var14;
@@ -1367,7 +1367,7 @@ final class SoftwareRasterizer {
                     for (var20 = var17; var20 < var18; var20++) {
                       incrementValue$5 = var19;
                       var19++;
-                      framebuffer[incrementValue$5] = param5;
+                      framebuffer[incrementValue$5] = color;
                     }
                     var11++;
                     incrementValue$4 = var14;
@@ -1386,17 +1386,17 @@ final class SoftwareRasterizer {
             }
             {
               var14 = var11 - var7;
-              var17 = param0;
+              var17 = x;
               if (var17 < clipLeft) {
                 var17 = clipLeft;
               }
-              var18 = param0 + param2;
+              var18 = x + width;
               if (var18 > clipRight) {
                 var18 = clipRight;
               }
               var19 = var17 + var11 * stride;
               var20 = stride + var17 - var18;
-              var21 = param1 + param3 - param4 - 1;
+              var21 = y + height - cornerRadius - 1;
               if (var21 > clipBottom) {
                 var21 = clipBottom;
               }
@@ -1404,13 +1404,13 @@ final class SoftwareRasterizer {
                 for (var22 = var17; var22 < var18; var22++) {
                   incrementValue$3 = var19;
                   var19++;
-                  framebuffer[incrementValue$3] = param5;
+                  framebuffer[incrementValue$3] = color;
                 }
                 var11++;
                 var19 = var19 + var20;
               }
               var14 = 0;
-              var13 = param4;
+              var13 = cornerRadius;
               var16 = var14 * var14 + var12;
               var15 = var16 - var13;
               var16 = var16 - var14;
@@ -1437,7 +1437,7 @@ final class SoftwareRasterizer {
                 for (var20 = var17; var20 <= var18; var20++) {
                   incrementValue$2 = var19;
                   var19++;
-                  framebuffer[incrementValue$2] = param5;
+                  framebuffer[incrementValue$2] = color;
                 }
                 var11++;
                 var16 = var16 + (var14 + var14);
@@ -1451,24 +1451,24 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3) {
-        if (param0 < 0) {
-            param0 = 0;
+    final static void setClip(int left, int top, int right, int bottom) {
+        if (left < 0) {
+            left = 0;
         }
-        if (param1 < 0) {
-            param1 = 0;
+        if (top < 0) {
+            top = 0;
         }
-        if (param2 > stride) {
-            param2 = stride;
+        if (right > stride) {
+            right = stride;
         }
-        if (param3 > field_b) {
-            param3 = field_b;
+        if (bottom > framebufferHeight) {
+            bottom = framebufferHeight;
         }
-        clipLeft = param0;
-        clipTop = param1;
-        clipRight = param2;
-        clipBottom = param3;
-        SoftwareRasterizer.b();
+        clipLeft = left;
+        clipTop = top;
+        clipRight = right;
+        clipBottom = bottom;
+        SoftwareRasterizer.clearScanlineMasks();
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -1547,9 +1547,9 @@ final class SoftwareRasterizer {
         var14 = param7 + var13 * stride;
         var15 = param4 + param3;
         var16 = 0;
-        if (var15 >= field_b) {
-          var16 = var15 - field_b + 1;
-          var15 = field_b - 1;
+        if (var15 >= framebufferHeight) {
+          var16 = var15 - framebufferHeight + 1;
+          var15 = framebufferHeight - 1;
         }
         var17 = var15 - var13 + 1;
         L4: while (var13 <= var15) {
@@ -1608,7 +1608,7 @@ final class SoftwareRasterizer {
           param2 = param2 + param6;
           var13++;
         }
-        var18 = field_b - param4 - param5 - param3;
+        var18 = framebufferHeight - param4 - param5 - param3;
         if (0 < var18) {
           var18 = 0;
         }
@@ -1738,32 +1738,32 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void b(int[] param0) {
-        clipLeft = param0[0];
-        clipTop = param0[1];
-        clipRight = param0[2];
-        clipBottom = param0[3];
-        SoftwareRasterizer.b();
+    final static void restoreClip(int[] clipBounds) {
+        clipLeft = clipBounds[0];
+        clipTop = clipBounds[1];
+        clipRight = clipBounds[2];
+        clipBottom = clipBounds[3];
+        SoftwareRasterizer.clearScanlineMasks();
     }
 
-    private final static void g(int param0, int param1, int param2, int param3) {
+    private final static void drawVerticalLine(int x, int y, int length, int color) {
         int var4 = 0;
         int var5 = 0;
-        if (param0 >= clipLeft) {
-            if (param0 >= clipRight) {
+        if (x >= clipLeft) {
+            if (x >= clipRight) {
                 return;
             }
-            if (param1 < clipTop) {
-                param2 = param2 - (clipTop - param1);
-                param1 = clipTop;
+            if (y < clipTop) {
+                length = length - (clipTop - y);
+                y = clipTop;
             }
-            if (param1 + param2 > clipBottom) {
-                param2 = clipBottom - param1;
+            if (y + length > clipBottom) {
+                length = clipBottom - y;
             }
-            var4 = param0 + param1 * stride;
+            var4 = x + y * stride;
             var5 = 0;
-            while (var5 < param2) {
-                framebuffer[var4] = param3;
+            while (var5 < length) {
+                framebuffer[var4] = color;
                 var5++;
                 var4 = var4 + stride;
             }
@@ -1771,11 +1771,11 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2) {
-        framebuffer = param0;
-        stride = param1;
-        field_b = param2;
-        SoftwareRasterizer.e(0, 0, param1, param2);
+    final static void setRasterTarget(int[] targetPixels, int targetWidth, int targetHeight) {
+        framebuffer = targetPixels;
+        stride = targetWidth;
+        framebufferHeight = targetHeight;
+        SoftwareRasterizer.setClip(0, 0, targetWidth, targetHeight);
     }
 
     static {

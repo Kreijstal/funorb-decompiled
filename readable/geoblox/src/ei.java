@@ -34,7 +34,7 @@ final class ei extends qf {
                 fc.a(true, param2);
               }
             } else {
-              SoftwareRasterizer.c();
+              SoftwareRasterizer.clearFramebuffer();
               eh.a(240, 320, -51);
               i.a(0, (byte) 51, param2, 0);
             }

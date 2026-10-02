@@ -182,7 +182,7 @@ final class wj extends sh {
         Geoblox.setRasterTarget(1, var6);
         this.field_A.a(0, 0, (byte) -115, param3);
         id.a(true);
-        var6.d(this.field_v + param0, this.field_m + param1, this.field_D);
+        var6.drawAlpha(this.field_v + param0, this.field_m + param1, this.field_D);
     }
 
     public static void f(byte param0) {

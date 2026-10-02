@@ -29,9 +29,9 @@ final class ue {
 
     final static void a(boolean param0, boolean param1, byte param2) {
         if (param1) {
-            SoftwareRasterizer.b(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_b, 0, 192);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, 192);
         } else {
-            SoftwareRasterizer.c();
+            SoftwareRasterizer.clearFramebuffer();
         }
         if (param2 != -102) {
             return;

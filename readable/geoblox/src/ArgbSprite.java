@@ -1,47 +1,47 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il extends Sprite {
-    final void e(int param0, int param1, int param2) {
-        int var10 = 0;
-        param0 = param0 + this.trimX;
-        param1 = param1 + this.trimY;
-        int var4 = param0 + param1 * SoftwareRasterizer.stride;
-        int var5 = 0;
-        int var6 = this.height;
-        int var7 = this.width;
-        int var8 = SoftwareRasterizer.stride - var7;
-        int var9 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-            var10 = SoftwareRasterizer.clipTop - param1;
-            var6 = var6 - var10;
-            param1 = SoftwareRasterizer.clipTop;
-            var5 = var5 + var10 * var7;
-            var4 = var4 + var10 * SoftwareRasterizer.stride;
+final class ArgbSprite extends Sprite {
+    final void drawGrayTinted(int x, int y, int tintColor) {
+        int clippedEdgePixels = 0;
+        x = x + this.trimX;
+        y = y + this.trimY;
+        int destinationIndex = x + y * SoftwareRasterizer.stride;
+        int sourceIndex = 0;
+        int drawHeight = this.height;
+        int drawWidth = this.width;
+        int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
+        int sourceRowSkip = 0;
+        if (y < SoftwareRasterizer.clipTop) {
+            clippedEdgePixels = SoftwareRasterizer.clipTop - y;
+            drawHeight = drawHeight - clippedEdgePixels;
+            y = SoftwareRasterizer.clipTop;
+            sourceIndex = sourceIndex + clippedEdgePixels * drawWidth;
+            destinationIndex = destinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
         }
-        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-            var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
+        if (y + drawHeight > SoftwareRasterizer.clipBottom) {
+            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-            var10 = SoftwareRasterizer.clipLeft - param0;
-            var7 = var7 - var10;
-            param0 = SoftwareRasterizer.clipLeft;
-            var5 = var5 + var10;
-            var4 = var4 + var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+        if (x < SoftwareRasterizer.clipLeft) {
+            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixels;
+            x = SoftwareRasterizer.clipLeft;
+            sourceIndex = sourceIndex + clippedEdgePixels;
+            destinationIndex = destinationIndex + clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (param0 + var7 > SoftwareRasterizer.clipRight) {
-            var10 = param0 + var7 - SoftwareRasterizer.clipRight;
-            var7 = var7 - var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+        if (x + drawWidth > SoftwareRasterizer.clipRight) {
+            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (var7 > 0) {
-            if (var6 <= 0) {
+        if (drawWidth > 0) {
+            if (drawHeight <= 0) {
                 return;
             }
-            il.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+            ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
             return;
         }
     }
@@ -77,90 +77,90 @@ final class il extends Sprite {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
-        int var10 = 0;
-        param0 = param0 + this.trimX;
-        param1 = param1 + this.trimY;
-        int var4 = param0 + param1 * SoftwareRasterizer.stride;
-        int var5 = 0;
-        int var6 = this.height;
-        int var7 = this.width;
-        int var8 = SoftwareRasterizer.stride - var7;
-        int var9 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-            var10 = SoftwareRasterizer.clipTop - param1;
-            var6 = var6 - var10;
-            param1 = SoftwareRasterizer.clipTop;
-            var5 = var5 + var10 * var7;
-            var4 = var4 + var10 * SoftwareRasterizer.stride;
+    final void drawGrayModulated(int x, int y, int tintColor) {
+        int clippedEdgePixels = 0;
+        x = x + this.trimX;
+        y = y + this.trimY;
+        int destinationIndex = x + y * SoftwareRasterizer.stride;
+        int sourceIndex = 0;
+        int drawHeight = this.height;
+        int drawWidth = this.width;
+        int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
+        int sourceRowSkip = 0;
+        if (y < SoftwareRasterizer.clipTop) {
+            clippedEdgePixels = SoftwareRasterizer.clipTop - y;
+            drawHeight = drawHeight - clippedEdgePixels;
+            y = SoftwareRasterizer.clipTop;
+            sourceIndex = sourceIndex + clippedEdgePixels * drawWidth;
+            destinationIndex = destinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
         }
-        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-            var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
+        if (y + drawHeight > SoftwareRasterizer.clipBottom) {
+            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-            var10 = SoftwareRasterizer.clipLeft - param0;
-            var7 = var7 - var10;
-            param0 = SoftwareRasterizer.clipLeft;
-            var5 = var5 + var10;
-            var4 = var4 + var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+        if (x < SoftwareRasterizer.clipLeft) {
+            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixels;
+            x = SoftwareRasterizer.clipLeft;
+            sourceIndex = sourceIndex + clippedEdgePixels;
+            destinationIndex = destinationIndex + clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (param0 + var7 > SoftwareRasterizer.clipRight) {
-            var10 = param0 + var7 - SoftwareRasterizer.clipRight;
-            var7 = var7 - var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+        if (x + drawWidth > SoftwareRasterizer.clipRight) {
+            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (var7 > 0) {
-            if (var6 <= 0) {
+        if (drawWidth > 0) {
+            if (drawHeight <= 0) {
                 return;
             }
-            il.d(SoftwareRasterizer.framebuffer, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+            ArgbSprite.d(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, 0, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
             return;
         }
     }
 
-    final void d(int param0, int param1, int param2) {
-        int var10 = 0;
-        param0 = param0 + this.trimX;
-        param1 = param1 + this.trimY;
-        int var4 = param0 + param1 * SoftwareRasterizer.stride;
-        int var5 = 0;
-        int var6 = this.height;
-        int var7 = this.width;
-        int var8 = SoftwareRasterizer.stride - var7;
-        int var9 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-            var10 = SoftwareRasterizer.clipTop - param1;
-            var6 = var6 - var10;
-            param1 = SoftwareRasterizer.clipTop;
-            var5 = var5 + var10 * var7;
-            var4 = var4 + var10 * SoftwareRasterizer.stride;
+    final void drawAlpha(int x, int y, int alpha256) {
+        int clippedEdgePixels = 0;
+        x = x + this.trimX;
+        y = y + this.trimY;
+        int destinationIndex = x + y * SoftwareRasterizer.stride;
+        int sourceIndex = 0;
+        int drawHeight = this.height;
+        int drawWidth = this.width;
+        int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
+        int sourceRowSkip = 0;
+        if (y < SoftwareRasterizer.clipTop) {
+            clippedEdgePixels = SoftwareRasterizer.clipTop - y;
+            drawHeight = drawHeight - clippedEdgePixels;
+            y = SoftwareRasterizer.clipTop;
+            sourceIndex = sourceIndex + clippedEdgePixels * drawWidth;
+            destinationIndex = destinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
         }
-        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-            var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
+        if (y + drawHeight > SoftwareRasterizer.clipBottom) {
+            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-            var10 = SoftwareRasterizer.clipLeft - param0;
-            var7 = var7 - var10;
-            param0 = SoftwareRasterizer.clipLeft;
-            var5 = var5 + var10;
-            var4 = var4 + var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+        if (x < SoftwareRasterizer.clipLeft) {
+            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixels;
+            x = SoftwareRasterizer.clipLeft;
+            sourceIndex = sourceIndex + clippedEdgePixels;
+            destinationIndex = destinationIndex + clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (param0 + var7 > SoftwareRasterizer.clipRight) {
-            var10 = param0 + var7 - SoftwareRasterizer.clipRight;
-            var7 = var7 - var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+        if (x + drawWidth > SoftwareRasterizer.clipRight) {
+            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (var7 > 0) {
-            if (var6 <= 0) {
+        if (drawWidth > 0) {
+            if (drawHeight <= 0) {
                 return;
             }
-            il.d(SoftwareRasterizer.framebuffer, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+            ArgbSprite.d(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, alpha256);
             return;
         }
     }
@@ -898,7 +898,7 @@ final class il extends Sprite {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void drawHalfSize(int x, int y) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -929,30 +929,30 @@ final class il extends Sprite {
         int var21;
         var3 = this.width >> 1;
         var4 = this.height >> 1;
-        param0 = param0 + this.trimX / 2;
-        param1 = param1 + this.trimY / 2;
-        if (param0 >= SoftwareRasterizer.clipLeft) {
+        x = x + this.trimX / 2;
+        y = y + this.trimY / 2;
+        if (x >= SoftwareRasterizer.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = SoftwareRasterizer.clipLeft - param0 << 1;
+          stackIn_3_0 = SoftwareRasterizer.clipLeft - x << 1;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= SoftwareRasterizer.clipRight) {
+        if (x + var3 <= SoftwareRasterizer.clipRight) {
           stackIn_6_0 = this.width - 2;
         } else {
-          stackIn_6_0 = (SoftwareRasterizer.clipRight - param0 << 1) - 2;
+          stackIn_6_0 = (SoftwareRasterizer.clipRight - x << 1) - 2;
         }
         var6 = stackIn_6_0;
-        if (param1 >= SoftwareRasterizer.clipTop) {
+        if (y >= SoftwareRasterizer.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = SoftwareRasterizer.clipTop - param1 << 1;
+          stackIn_9_0 = SoftwareRasterizer.clipTop - y << 1;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= SoftwareRasterizer.clipBottom) {
+        if (y + var4 <= SoftwareRasterizer.clipBottom) {
           stackIn_12_0 = this.height - 2;
         } else {
-          stackIn_12_0 = (SoftwareRasterizer.clipBottom - param1 << 1) - 2;
+          stackIn_12_0 = (SoftwareRasterizer.clipBottom - y << 1) - 2;
         }
         var8 = stackIn_12_0;
         var9 = var7;
@@ -962,7 +962,7 @@ final class il extends Sprite {
           }
           {
             var10 = var9 * this.width + var5;
-            var11 = (param1 + (var9 >> 1)) * SoftwareRasterizer.stride + (param0 + (var5 >> 1));
+            var11 = (y + (var9 >> 1)) * SoftwareRasterizer.stride + (x + (var5 >> 1));
             var12 = var5;
             L5: while (true) {
               if (var12 > var6) {
@@ -1021,11 +1021,11 @@ final class il extends Sprite {
         }
     }
 
-    il(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        super(param0, param1, param2, param3, param4, param5, param6);
+    ArgbSprite(int fullWidth, int fullHeight, int trimX, int trimY, int width, int height, int[] pixels) {
+        super(fullWidth, fullHeight, trimX, trimY, width, height, pixels);
     }
 
-    final void f(int param0, int param1) {
+    final void drawQuarterSize(int x, int y) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -1053,30 +1053,30 @@ final class il extends Sprite {
         int[] var23;
         var3 = this.width >> 2;
         var4 = this.height >> 2;
-        param0 = param0 + this.trimX / 4;
-        param1 = param1 + this.trimY / 4;
-        if (param0 >= SoftwareRasterizer.clipLeft) {
+        x = x + this.trimX / 4;
+        y = y + this.trimY / 4;
+        if (x >= SoftwareRasterizer.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = SoftwareRasterizer.clipLeft - param0 << 2;
+          stackIn_3_0 = SoftwareRasterizer.clipLeft - x << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= SoftwareRasterizer.clipRight) {
+        if (x + var3 <= SoftwareRasterizer.clipRight) {
           stackIn_6_0 = this.width - 4;
         } else {
-          stackIn_6_0 = (SoftwareRasterizer.clipRight - param0 << 2) - 4;
+          stackIn_6_0 = (SoftwareRasterizer.clipRight - x << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= SoftwareRasterizer.clipTop) {
+        if (y >= SoftwareRasterizer.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = SoftwareRasterizer.clipTop - param1 << 2;
+          stackIn_9_0 = SoftwareRasterizer.clipTop - y << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= SoftwareRasterizer.clipBottom) {
+        if (y + var4 <= SoftwareRasterizer.clipBottom) {
           stackIn_12_0 = this.height - 4;
         } else {
-          stackIn_12_0 = (SoftwareRasterizer.clipBottom - param1 << 2) - 4;
+          stackIn_12_0 = (SoftwareRasterizer.clipBottom - y << 2) - 4;
         }
         var8 = stackIn_12_0;
         var23 = new int[16];
@@ -1096,7 +1096,7 @@ final class il extends Sprite {
               }
               {
                 var12 = var10 * this.width + var11;
-                var13 = (param1 + (var10 >> 2)) * SoftwareRasterizer.stride + (param0 + (var11 >> 2));
+                var13 = (y + (var10 >> 2)) * SoftwareRasterizer.stride + (x + (var11 >> 2));
                 for (var14 = 0; var14 < 4; var14++) {
                   for (var15 = 0; var15 < 4; var15++) {
                     var9[(var14 << 2) + var15] = this.pixels[var12 + var14 * this.width + var15];
@@ -1135,8 +1135,8 @@ final class il extends Sprite {
         }
     }
 
-    il(int param0, int param1) {
-        super(param0, param1);
+    ArgbSprite(int width, int height) {
+        super(width, height);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -1195,90 +1195,90 @@ final class il extends Sprite {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
-        int var10 = 0;
-        param0 = param0 + this.trimX;
-        param1 = param1 + this.trimY;
-        int var4 = param0 + param1 * SoftwareRasterizer.stride;
-        int var5 = 0;
-        int var6 = this.height;
-        int var7 = this.width;
-        int var8 = SoftwareRasterizer.stride - var7;
-        int var9 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-            var10 = SoftwareRasterizer.clipTop - param1;
-            var6 = var6 - var10;
-            param1 = SoftwareRasterizer.clipTop;
-            var5 = var5 + var10 * var7;
-            var4 = var4 + var10 * SoftwareRasterizer.stride;
+    final void drawAdditive(int x, int y, int intensity256) {
+        int clippedEdgePixels = 0;
+        x = x + this.trimX;
+        y = y + this.trimY;
+        int destinationIndex = x + y * SoftwareRasterizer.stride;
+        int sourceIndex = 0;
+        int drawHeight = this.height;
+        int drawWidth = this.width;
+        int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
+        int sourceRowSkip = 0;
+        if (y < SoftwareRasterizer.clipTop) {
+            clippedEdgePixels = SoftwareRasterizer.clipTop - y;
+            drawHeight = drawHeight - clippedEdgePixels;
+            y = SoftwareRasterizer.clipTop;
+            sourceIndex = sourceIndex + clippedEdgePixels * drawWidth;
+            destinationIndex = destinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
         }
-        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-            var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
+        if (y + drawHeight > SoftwareRasterizer.clipBottom) {
+            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-            var10 = SoftwareRasterizer.clipLeft - param0;
-            var7 = var7 - var10;
-            param0 = SoftwareRasterizer.clipLeft;
-            var5 = var5 + var10;
-            var4 = var4 + var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+        if (x < SoftwareRasterizer.clipLeft) {
+            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixels;
+            x = SoftwareRasterizer.clipLeft;
+            sourceIndex = sourceIndex + clippedEdgePixels;
+            destinationIndex = destinationIndex + clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (param0 + var7 > SoftwareRasterizer.clipRight) {
-            var10 = param0 + var7 - SoftwareRasterizer.clipRight;
-            var7 = var7 - var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+        if (x + drawWidth > SoftwareRasterizer.clipRight) {
+            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (var7 > 0) {
-            if (var6 <= 0) {
+        if (drawWidth > 0) {
+            if (drawHeight <= 0) {
                 return;
             }
-            il.b(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            ArgbSprite.b(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, sourceIndex, 0, destinationIndex, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, intensity256);
             return;
         }
     }
 
-    final void b(int param0, int param1) {
-        int var9 = 0;
-        param0 = param0 + this.trimX;
-        param1 = param1 + this.trimY;
-        int var3 = param0 + param1 * SoftwareRasterizer.stride;
-        int var4 = 0;
-        int var5 = this.height;
-        int var6 = this.width;
-        int var7 = SoftwareRasterizer.stride - var6;
-        int var8 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-            var9 = SoftwareRasterizer.clipTop - param1;
-            var5 = var5 - var9;
-            param1 = SoftwareRasterizer.clipTop;
-            var4 = var4 + var9 * var6;
-            var3 = var3 + var9 * SoftwareRasterizer.stride;
+    final void draw(int x, int y) {
+        int clippedEdgePixels = 0;
+        x = x + this.trimX;
+        y = y + this.trimY;
+        int destinationIndex = x + y * SoftwareRasterizer.stride;
+        int sourceIndex = 0;
+        int drawHeight = this.height;
+        int drawWidth = this.width;
+        int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
+        int sourceRowSkip = 0;
+        if (y < SoftwareRasterizer.clipTop) {
+            clippedEdgePixels = SoftwareRasterizer.clipTop - y;
+            drawHeight = drawHeight - clippedEdgePixels;
+            y = SoftwareRasterizer.clipTop;
+            sourceIndex = sourceIndex + clippedEdgePixels * drawWidth;
+            destinationIndex = destinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
         }
-        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
-            var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
+        if (y + drawHeight > SoftwareRasterizer.clipBottom) {
+            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-            var9 = SoftwareRasterizer.clipLeft - param0;
-            var6 = var6 - var9;
-            param0 = SoftwareRasterizer.clipLeft;
-            var4 = var4 + var9;
-            var3 = var3 + var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+        if (x < SoftwareRasterizer.clipLeft) {
+            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixels;
+            x = SoftwareRasterizer.clipLeft;
+            sourceIndex = sourceIndex + clippedEdgePixels;
+            destinationIndex = destinationIndex + clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (param0 + var6 > SoftwareRasterizer.clipRight) {
-            var9 = param0 + var6 - SoftwareRasterizer.clipRight;
-            var6 = var6 - var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+        if (x + drawWidth > SoftwareRasterizer.clipRight) {
+            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (var6 > 0) {
-            if (var5 <= 0) {
+        if (drawWidth > 0) {
+            if (drawHeight <= 0) {
                 return;
             }
-            il.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+            ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
             return;
         }
     }
@@ -1309,7 +1309,7 @@ final class il extends Sprite {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledAlpha(int x, int y, int destinationWidth, int destinationHeight, int alpha256) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1321,63 +1321,63 @@ final class il extends Sprite {
         int var15 = 0;
         int var14 = 0;
         int var16 = 0;
-        if (param2 > 0) {
-            if (param3 <= 0) {
+        if (destinationWidth > 0) {
+            if (destinationHeight <= 0) {
                 return;
             }
             var6 = this.width;
             var7 = this.height;
             var8 = 0;
             var9 = 0;
-            var10 = this.field_s;
-            var11 = this.field_o;
-            var12 = (var10 << 16) / param2;
-            var13 = (var11 << 16) / param3;
+            var10 = this.fullWidth;
+            var11 = this.fullHeight;
+            var12 = (var10 << 16) / destinationWidth;
+            var13 = (var11 << 16) / destinationHeight;
             if (this.trimX > 0) {
                 var14 = ((this.trimX << 16) + var12 - 1) / var12;
-                param0 = param0 + var14;
+                x = x + var14;
                 var8 = var8 + (var14 * var12 - (this.trimX << 16));
             }
             if (this.trimY > 0) {
                 var14 = ((this.trimY << 16) + var13 - 1) / var13;
-                param1 = param1 + var14;
+                y = y + var14;
                 var9 = var9 + (var14 * var13 - (this.trimY << 16));
             }
             if (var6 < var10) {
-                param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
+                destinationWidth = ((var6 << 16) - var8 + var12 - 1) / var12;
             }
             if (var7 < var11) {
-                param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
+                destinationHeight = ((var7 << 16) - var9 + var13 - 1) / var13;
             }
-            var14 = param0 + param1 * SoftwareRasterizer.stride;
-            var15 = SoftwareRasterizer.stride - param2;
-            if (param1 + param3 > SoftwareRasterizer.clipBottom) {
-                param3 = param3 - (param1 + param3 - SoftwareRasterizer.clipBottom);
+            var14 = x + y * SoftwareRasterizer.stride;
+            var15 = SoftwareRasterizer.stride - destinationWidth;
+            if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
+                destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
             }
-            if (param1 < SoftwareRasterizer.clipTop) {
-                var16 = SoftwareRasterizer.clipTop - param1;
-                param3 = param3 - var16;
+            if (y < SoftwareRasterizer.clipTop) {
+                var16 = SoftwareRasterizer.clipTop - y;
+                destinationHeight = destinationHeight - var16;
                 var14 = var14 + var16 * SoftwareRasterizer.stride;
                 var9 = var9 + var13 * var16;
             }
-            if (param0 + param2 > SoftwareRasterizer.clipRight) {
-                var16 = param0 + param2 - SoftwareRasterizer.clipRight;
-                param2 = param2 - var16;
+            if (x + destinationWidth > SoftwareRasterizer.clipRight) {
+                var16 = x + destinationWidth - SoftwareRasterizer.clipRight;
+                destinationWidth = destinationWidth - var16;
                 var15 = var15 + var16;
             }
-            if (param0 < SoftwareRasterizer.clipLeft) {
-                var16 = SoftwareRasterizer.clipLeft - param0;
-                param2 = param2 - var16;
+            if (x < SoftwareRasterizer.clipLeft) {
+                var16 = SoftwareRasterizer.clipLeft - x;
+                destinationWidth = destinationWidth - var16;
                 var14 = var14 + var16;
                 var8 = var8 + var12 * var16;
                 var15 = var15 + var16;
             }
-            il.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
+            ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var8, var9, var14, var15, destinationWidth, destinationHeight, var12, var13, var6, alpha256);
             return;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int x, int y, int destinationWidth, int destinationHeight) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1389,102 +1389,102 @@ final class il extends Sprite {
         int var14 = 0;
         int var13 = 0;
         int var15 = 0;
-        if (param2 > 0) {
-            if (param3 <= 0) {
+        if (destinationWidth > 0) {
+            if (destinationHeight <= 0) {
                 return;
             }
             var5 = this.width;
             var6 = this.height;
             var7 = 0;
             var8 = 0;
-            var9 = this.field_s;
-            var10 = this.field_o;
-            var11 = (var9 << 16) / param2;
-            var12 = (var10 << 16) / param3;
+            var9 = this.fullWidth;
+            var10 = this.fullHeight;
+            var11 = (var9 << 16) / destinationWidth;
+            var12 = (var10 << 16) / destinationHeight;
             if (this.trimX > 0) {
                 var13 = ((this.trimX << 16) + var11 - 1) / var11;
-                param0 = param0 + var13;
+                x = x + var13;
                 var7 = var7 + (var13 * var11 - (this.trimX << 16));
             }
             if (this.trimY > 0) {
                 var13 = ((this.trimY << 16) + var12 - 1) / var12;
-                param1 = param1 + var13;
+                y = y + var13;
                 var8 = var8 + (var13 * var12 - (this.trimY << 16));
             }
             if (var5 < var9) {
-                param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
+                destinationWidth = ((var5 << 16) - var7 + var11 - 1) / var11;
             }
             if (var6 < var10) {
-                param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
+                destinationHeight = ((var6 << 16) - var8 + var12 - 1) / var12;
             }
-            var13 = param0 + param1 * SoftwareRasterizer.stride;
-            var14 = SoftwareRasterizer.stride - param2;
-            if (param1 + param3 > SoftwareRasterizer.clipBottom) {
-                param3 = param3 - (param1 + param3 - SoftwareRasterizer.clipBottom);
+            var13 = x + y * SoftwareRasterizer.stride;
+            var14 = SoftwareRasterizer.stride - destinationWidth;
+            if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
+                destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
             }
-            if (param1 < SoftwareRasterizer.clipTop) {
-                var15 = SoftwareRasterizer.clipTop - param1;
-                param3 = param3 - var15;
+            if (y < SoftwareRasterizer.clipTop) {
+                var15 = SoftwareRasterizer.clipTop - y;
+                destinationHeight = destinationHeight - var15;
                 var13 = var13 + var15 * SoftwareRasterizer.stride;
                 var8 = var8 + var12 * var15;
             }
-            if (param0 + param2 > SoftwareRasterizer.clipRight) {
-                var15 = param0 + param2 - SoftwareRasterizer.clipRight;
-                param2 = param2 - var15;
+            if (x + destinationWidth > SoftwareRasterizer.clipRight) {
+                var15 = x + destinationWidth - SoftwareRasterizer.clipRight;
+                destinationWidth = destinationWidth - var15;
                 var14 = var14 + var15;
             }
-            if (param0 < SoftwareRasterizer.clipLeft) {
-                var15 = SoftwareRasterizer.clipLeft - param0;
-                param2 = param2 - var15;
+            if (x < SoftwareRasterizer.clipLeft) {
+                var15 = SoftwareRasterizer.clipLeft - x;
+                destinationWidth = destinationWidth - var15;
                 var13 = var13 + var15;
                 var7 = var7 + var11 * var15;
                 var14 = var14 + var15;
             }
-            il.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+            ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var7, var8, var13, var14, destinationWidth, destinationHeight, var11, var12, var5);
             return;
         }
     }
 
-    final void c(int param0, int param1) {
-        int var9 = 0;
-        param0 = param0 + this.trimX;
-        param1 = param1 + this.trimY;
-        int var3 = param0 + param1 * SoftwareRasterizer.stride;
-        int var4 = 0;
-        int var5 = this.height;
-        int var6 = this.width;
-        int var7 = SoftwareRasterizer.stride - var6;
-        int var8 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-            var9 = SoftwareRasterizer.clipTop - param1;
-            var5 = var5 - var9;
-            param1 = SoftwareRasterizer.clipTop;
-            var4 = var4 + var9 * var6;
-            var3 = var3 + var9 * SoftwareRasterizer.stride;
+    final void drawUnmasked(int x, int y) {
+        int clippedEdgePixels = 0;
+        x = x + this.trimX;
+        y = y + this.trimY;
+        int destinationIndex = x + y * SoftwareRasterizer.stride;
+        int sourceIndex = 0;
+        int drawHeight = this.height;
+        int drawWidth = this.width;
+        int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
+        int sourceRowSkip = 0;
+        if (y < SoftwareRasterizer.clipTop) {
+            clippedEdgePixels = SoftwareRasterizer.clipTop - y;
+            drawHeight = drawHeight - clippedEdgePixels;
+            y = SoftwareRasterizer.clipTop;
+            sourceIndex = sourceIndex + clippedEdgePixels * drawWidth;
+            destinationIndex = destinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
         }
-        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
-            var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
+        if (y + drawHeight > SoftwareRasterizer.clipBottom) {
+            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-            var9 = SoftwareRasterizer.clipLeft - param0;
-            var6 = var6 - var9;
-            param0 = SoftwareRasterizer.clipLeft;
-            var4 = var4 + var9;
-            var3 = var3 + var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+        if (x < SoftwareRasterizer.clipLeft) {
+            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixels;
+            x = SoftwareRasterizer.clipLeft;
+            sourceIndex = sourceIndex + clippedEdgePixels;
+            destinationIndex = destinationIndex + clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (param0 + var6 > SoftwareRasterizer.clipRight) {
-            var9 = param0 + var6 - SoftwareRasterizer.clipRight;
-            var6 = var6 - var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+        if (x + drawWidth > SoftwareRasterizer.clipRight) {
+            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixels;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
         }
-        if (var6 > 0) {
-            if (var5 <= 0) {
+        if (drawWidth > 0) {
+            if (drawHeight <= 0) {
                 return;
             }
-            il.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+            ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
             return;
         }
     }

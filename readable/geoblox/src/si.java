@@ -154,18 +154,18 @@ final class si {
             var6_int = this.field_b + (param3.field_v + param1);
             var7 = this.field_f + param2 + param3.field_m;
             if (param0.field_g == 1) {
-              var6_int = var6_int + (-this.field_l.field_s + param3.field_r) / 2;
+              var6_int = var6_int + (-this.field_l.fullWidth + param3.field_r) / 2;
             }
             if (2 == param0.field_g) {
-              var6_int = var6_int + (-this.field_l.field_s + param3.field_r);
+              var6_int = var6_int + (-this.field_l.fullWidth + param3.field_r);
             }
             if (param0.field_i == 1) {
-              var7 = var7 + (param3.field_h - this.field_l.field_o) / 2;
+              var7 = var7 + (param3.field_h - this.field_l.fullHeight) / 2;
             }
             if (2 == param0.field_i) {
-              var7 = var7 + (-this.field_l.field_o + param3.field_h);
+              var7 = var7 + (-this.field_l.fullHeight + param3.field_h);
             }
-            this.field_l.b(var6_int, var7);
+            this.field_l.draw(var6_int, var7);
           }
           if (param4 != 0) {
             field_n = (lh) null;

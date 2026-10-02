@@ -94,17 +94,17 @@ final class bi implements dh {
             this.field_a = -3;
           }
           var7 = 5592405;
-          SoftwareRasterizer.a(param4.field_v + param0, param2 + param4.field_m, param4.field_r, param4.field_h, this.field_d);
+          SoftwareRasterizer.fillRectangle(param4.field_v + param0, param2 + param4.field_m, param4.field_r, param4.field_h, this.field_d);
           if (param3) {
             var7 = 16777215;
           }
           var8 = this.field_k + (param0 + param4.field_v);
           var9 = this.field_j + (param4.field_m + param2);
-          SoftwareRasterizer.f(var8, var9, this.field_n, this.field_h, 5592405);
-          SoftwareRasterizer.a(var8, var9, this.field_n, this.field_h, var7);
+          SoftwareRasterizer.drawRectangleDropShadow(var8, var9, this.field_n, this.field_h, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_n, this.field_h, var7);
           if (var11.field_y) {
-            SoftwareRasterizer.g(var8, var9, this.field_n + var8, var9 + this.field_h, 1);
-            SoftwareRasterizer.g(var8 + this.field_n, var9, var8, this.field_h + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_n + var8, var9 + this.field_h, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_n, var9, var8, this.field_h + var9, 1);
           }
           if (null != this.field_b) {
             var10 = this.field_m + this.field_n + this.field_k;

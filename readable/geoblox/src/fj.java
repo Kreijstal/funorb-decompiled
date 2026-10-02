@@ -51,7 +51,7 @@ abstract class fj extends DualLinkNode {
             ih.field_c = bf.a((byte) 86, "");
             int var5_int = 103 / ((param0 - 70) / 34);
             ih.field_c.a((byte) -126, false);
-            ha.a((byte) 103, param1, param4, param3);
+            IndexedSpriteState.a((byte) 103, param1, param4, param3);
             qh.h((byte) -121);
             kd.field_b = uf.field_l;
             si.field_g = uf.field_l;

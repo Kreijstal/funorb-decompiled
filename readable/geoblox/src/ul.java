@@ -301,14 +301,14 @@ final class ul {
             var4 = var2.height;
             oc.b(param0 + 21619);
             bk.field_b = new Sprite(var3, 3 * var4 / 4);
-            bk.field_b.e();
-            var2.c(0, 0);
+            bk.field_b.setAsRasterTarget();
+            var2.drawUnmasked(0, 0);
             cl.field_b = new Sprite(var3, var4 - bk.field_b.height);
-            cl.field_b.e();
+            cl.field_b.setAsRasterTarget();
             if (param0 != -21541) {
                 field_a = (Sprite) null;
             }
-            var2.c(0, -bk.field_b.height);
+            var2.drawUnmasked(0, -bk.field_b.height);
             cl.field_b.trimY = bk.field_b.height;
             id.a(true);
         } catch (RuntimeException runtimeException) {

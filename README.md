@@ -24,10 +24,13 @@ bounds, special-kind probability, release interval and queue geometry.
 The previous naming pass added 38 rules. The Boolean-carrier pass removed
 14 obsolete names and migrated 61 local ordinals plus one generated field type.
 The preceding integral-guard pass preserved all 1,194 guarded rules unchanged.
-The current naming pass adds 117 identities for gameplay sprite tables, avatar
-frames, HUD graphics, theme selection, font/sprite loaders and preparation locals.
-It retains the same raw input and all prior rules: 1,311 rules now apply 19,829
-identifier edits, with original resource keys and numeric indexes preserved.
+The previous naming pass added 117 asset and loading identities. The current
+pass adds 399 rendering identities, naming raster drawing/clipping, complete
+RGB/ARGB sprite override families, indexed operations and clipped-blit locals.
+Two existing preparation locals now distinguish full canvas dimensions from
+cropped pixels; all other prior rules and the raw input remain unchanged.
+The 1,710 rules apply 23,212 identifier edits. Original resource keys, numeric
+indexes and distinct RGB/ARGB/indexed transparency behavior remain intact.
 Independent native fixtures verify 84,661 additional difficulty/reset/selection cases,
 including floating-point casts, recursive failures, partial writes and seeded
 random draw consumption. The current input and decompiler revisions are pinned

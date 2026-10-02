@@ -477,7 +477,7 @@ final class sk {
           if (el.gameplaySession.sceneTransitionRequested) {
             return false;
           }
-          bk.boardOwnershipRaster.e();
+          bk.boardOwnershipRaster.setAsRasterTarget();
           if (!ld.hasPixelsAtPlayfieldBoundary(-61)) {
             sh.field_y.a(255);
             return false;

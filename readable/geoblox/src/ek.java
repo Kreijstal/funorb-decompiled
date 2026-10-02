@@ -39,8 +39,8 @@ final class ek {
             return;
           }
           {
-            var10 = param2.field_s;
-            var11 = param2.field_o;
+            var10 = param2.fullWidth;
+            var11 = param2.fullHeight;
             var12 = (var10 << 16) / param4;
             var13 = (var11 << 16) / param0;
             if (param2.trimX > 0) {

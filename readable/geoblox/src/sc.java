@@ -95,7 +95,7 @@ abstract class sc {
     }
 
     final void a(int param0) {
-        SoftwareRasterizer.a(this.field_d, this.field_a, this.field_c);
+        SoftwareRasterizer.setRasterTarget(this.field_d, this.field_a, this.field_c);
         if (param0 != 255) {
             Random var3 = (Random) null;
             sc.a((byte) -94, (Random) null, 54);

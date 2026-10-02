@@ -13,65 +13,65 @@ final class oc implements dh {
         int var2 = 0;
         int var3 = 0;
         int var4 = Geoblox.field_C;
-        fe.sunBackgroundSprite.b(0, 0);
-        ne.sunForegroundSprite.b(320 - (ne.sunForegroundSprite.field_s >> 1), param0 - (ne.sunForegroundSprite.field_o >> 1));
-        kh.screenTitleSprites[0].b(0, 20);
+        fe.sunBackgroundSprite.drawRunEncoded(0, 0);
+        ne.sunForegroundSprite.draw(320 - (ne.sunForegroundSprite.fullWidth >> 1), param0 - (ne.sunForegroundSprite.fullHeight >> 1));
+        kh.screenTitleSprites[0].draw(0, 20);
         int var1 = -70 + MatchingTextValidator.field_j;
         if (var1 >= 0) {
             if (!((double)var1 * 0.0174532925 < 1.5707963267948966)) {
-                var2 = tl.introFaceFrames[vc.field_h].field_s >> 1;
+                var2 = tl.introFaceFrames[vc.field_h].fullWidth >> 1;
                 if (vc.field_h >= 11) {
                     var3 = (MatchingTextValidator.field_j - fh.field_c >> 1) * (MatchingTextValidator.field_j - fh.field_c >> 1) >> 1;
-                    tl.introFaceFrames[vc.field_h].b(-(tl.introFaceFrames[vc.field_h].field_s >> 1) + 320, var3 + (-(tl.introFaceFrames[vc.field_h].field_o >> 1) + 240), si.field_j);
-                    qh.introGeometryFrames[0].b(var2 + 320, -34 + var3 - (qh.introGeometryFrames[0].field_o >> 1) + 240);
-                    qh.introGeometryFrames[1].b(-var2 + 320 - qh.introGeometryFrames[1].field_s, -(qh.introGeometryFrames[1].field_o >> 1) + (240 + var3 + 22));
+                    tl.introFaceFrames[vc.field_h].drawGrayModulated(-(tl.introFaceFrames[vc.field_h].fullWidth >> 1) + 320, var3 + (-(tl.introFaceFrames[vc.field_h].fullHeight >> 1) + 240), si.field_j);
+                    qh.introGeometryFrames[0].draw(var2 + 320, -34 + var3 - (qh.introGeometryFrames[0].fullHeight >> 1) + 240);
+                    qh.introGeometryFrames[1].draw(-var2 + 320 - qh.introGeometryFrames[1].fullWidth, -(qh.introGeometryFrames[1].fullHeight >> 1) + (240 + var3 + 22));
                     return;
                 }
                 var3 = MatchingTextValidator.field_j << 2;
                 if (var2 + 320 < 1000 - var3) {
-                    qh.introGeometryFrames[0].b(1000 - var3, -34 + (240 - (qh.introGeometryFrames[0].field_o >> 1)));
+                    qh.introGeometryFrames[0].draw(1000 - var3, -34 + (240 - (qh.introGeometryFrames[0].fullHeight >> 1)));
                 } else {
-                    qh.introGeometryFrames[0].b(320 + var2, 206 - (qh.introGeometryFrames[0].field_o >> 1));
+                    qh.introGeometryFrames[0].draw(320 + var2, 206 - (qh.introGeometryFrames[0].fullHeight >> 1));
                 }
-                if (-qh.introGeometryFrames[1].field_s + (320 - var2) > var3 - 1200) {
-                    qh.introGeometryFrames[1].b(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].field_o >> 1)));
-                    tl.introFaceFrames[vc.field_h].b(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].field_o >> 1), si.field_j);
+                if (-qh.introGeometryFrames[1].fullWidth + (320 - var2) > var3 - 1200) {
+                    qh.introGeometryFrames[1].draw(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].fullHeight >> 1)));
+                    tl.introFaceFrames[vc.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].fullHeight >> 1), si.field_j);
                     return;
                 }
-                qh.introGeometryFrames[1].b(-qh.introGeometryFrames[1].field_s - var2 + 320, 240 - (qh.introGeometryFrames[1].field_o >> 1) + 22);
-                tl.introFaceFrames[vc.field_h].b(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].field_o >> 1), si.field_j);
+                qh.introGeometryFrames[1].draw(-qh.introGeometryFrames[1].fullWidth - var2 + 320, 240 - (qh.introGeometryFrames[1].fullHeight >> 1) + 22);
+                tl.introFaceFrames[vc.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].fullHeight >> 1), si.field_j);
                 return;
             }
-            kh.screenTitleSprites[0].c(0, 20, (int)(0.5 + Math.sin(2.0 * ((double)var1 * 0.0174532925)) * 90.0));
+            kh.screenTitleSprites[0].drawAdditive(0, 20, (int)(0.5 + Math.sin(2.0 * ((double)var1 * 0.0174532925)) * 90.0));
         }
-        var2 = tl.introFaceFrames[vc.field_h].field_s >> 1;
+        var2 = tl.introFaceFrames[vc.field_h].fullWidth >> 1;
         if (vc.field_h >= 11) {
             var3 = (MatchingTextValidator.field_j - fh.field_c >> 1) * (MatchingTextValidator.field_j - fh.field_c >> 1) >> 1;
-            tl.introFaceFrames[vc.field_h].b(-(tl.introFaceFrames[vc.field_h].field_s >> 1) + 320, var3 + (-(tl.introFaceFrames[vc.field_h].field_o >> 1) + 240), si.field_j);
-            qh.introGeometryFrames[0].b(var2 + 320, -34 + var3 - (qh.introGeometryFrames[0].field_o >> 1) + 240);
-            qh.introGeometryFrames[1].b(-var2 + 320 - qh.introGeometryFrames[1].field_s, -(qh.introGeometryFrames[1].field_o >> 1) + (240 + var3 + 22));
+            tl.introFaceFrames[vc.field_h].drawGrayModulated(-(tl.introFaceFrames[vc.field_h].fullWidth >> 1) + 320, var3 + (-(tl.introFaceFrames[vc.field_h].fullHeight >> 1) + 240), si.field_j);
+            qh.introGeometryFrames[0].draw(var2 + 320, -34 + var3 - (qh.introGeometryFrames[0].fullHeight >> 1) + 240);
+            qh.introGeometryFrames[1].draw(-var2 + 320 - qh.introGeometryFrames[1].fullWidth, -(qh.introGeometryFrames[1].fullHeight >> 1) + (240 + var3 + 22));
             return;
         }
         var3 = MatchingTextValidator.field_j << 2;
         if (var2 + 320 < 1000 - var3) {
-            qh.introGeometryFrames[0].b(1000 - var3, -34 + (240 - (qh.introGeometryFrames[0].field_o >> 1)));
-            if (-qh.introGeometryFrames[1].field_s + (320 - var2) > var3 - 1200) {
-                qh.introGeometryFrames[1].b(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].field_o >> 1)));
-                tl.introFaceFrames[vc.field_h].b(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].field_o >> 1), si.field_j);
+            qh.introGeometryFrames[0].draw(1000 - var3, -34 + (240 - (qh.introGeometryFrames[0].fullHeight >> 1)));
+            if (-qh.introGeometryFrames[1].fullWidth + (320 - var2) > var3 - 1200) {
+                qh.introGeometryFrames[1].draw(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].fullHeight >> 1)));
+                tl.introFaceFrames[vc.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].fullHeight >> 1), si.field_j);
                 return;
             }
-            qh.introGeometryFrames[1].b(-qh.introGeometryFrames[1].field_s - var2 + 320, 240 - (qh.introGeometryFrames[1].field_o >> 1) + 22);
-            tl.introFaceFrames[vc.field_h].b(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].field_o >> 1), si.field_j);
+            qh.introGeometryFrames[1].draw(-qh.introGeometryFrames[1].fullWidth - var2 + 320, 240 - (qh.introGeometryFrames[1].fullHeight >> 1) + 22);
+            tl.introFaceFrames[vc.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].fullHeight >> 1), si.field_j);
             return;
         }
-        qh.introGeometryFrames[0].b(320 + var2, 206 - (qh.introGeometryFrames[0].field_o >> 1));
-        if (-qh.introGeometryFrames[1].field_s + (320 - var2) > var3 - 1200) {
-            qh.introGeometryFrames[1].b(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].field_o >> 1)));
-            tl.introFaceFrames[vc.field_h].b(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].field_o >> 1), si.field_j);
+        qh.introGeometryFrames[0].draw(320 + var2, 206 - (qh.introGeometryFrames[0].fullHeight >> 1));
+        if (-qh.introGeometryFrames[1].fullWidth + (320 - var2) > var3 - 1200) {
+            qh.introGeometryFrames[1].draw(var3 - 1200, 22 + (240 - (qh.introGeometryFrames[1].fullHeight >> 1)));
+            tl.introFaceFrames[vc.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].fullHeight >> 1), si.field_j);
             return;
         }
-        qh.introGeometryFrames[1].b(-qh.introGeometryFrames[1].field_s - var2 + 320, 240 - (qh.introGeometryFrames[1].field_o >> 1) + 22);
-        tl.introFaceFrames[vc.field_h].b(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].field_o >> 1), si.field_j);
+        qh.introGeometryFrames[1].draw(-qh.introGeometryFrames[1].fullWidth - var2 + 320, 240 - (qh.introGeometryFrames[1].fullHeight >> 1) + 22);
+        tl.introFaceFrames[vc.field_h].drawGrayModulated(320 - var2, 240 - (tl.introFaceFrames[vc.field_h].fullHeight >> 1), si.field_j);
     }
 
     public static void a(boolean param0) {
@@ -101,7 +101,7 @@ final class oc implements dh {
           var8 = oa.field_e[1];
           if (param4 instanceof hk) {
             if (((hk) ((Object) param4)).field_y) {
-              var8.c(var6_int - (-1 - (-var8.field_s + param4.field_r >> 1)), (-var8.field_o + param4.field_h >> 1) + 1 + var7, 256);
+              var8.drawAdditive(var6_int - (-1 - (-var8.fullWidth + param4.field_r >> 1)), (-var8.fullHeight + param4.field_h >> 1) + 1 + var7, 256);
             }
           }
           if (param4.e((byte) 54)) {
@@ -138,7 +138,7 @@ final class oc implements dh {
         if (!(var1 != null)) {
             var1 = new tl();
         }
-        var1.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom, SoftwareRasterizer.stride, SoftwareRasterizer.field_b, SoftwareRasterizer.clipTop, SoftwareRasterizer.framebuffer, true);
+        var1.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, SoftwareRasterizer.clipTop, SoftwareRasterizer.framebuffer, true);
         MatchingTextValidator.field_l.addLast(-88, var1);
     }
 

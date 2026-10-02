@@ -170,16 +170,16 @@ final class ad extends ia {
             var1 = new Sprite(540, 140);
             Geoblox.setRasterTarget(1, var1);
             mh.b();
-            SoftwareRasterizer.c();
+            SoftwareRasterizer.clearFramebuffer();
             gb.field_f = 0;
             ck.a((byte) -73);
-            var2 = var1.b();
+            var2 = var1.copy();
             for (var3 = 0; var3 < 15; var3++) {
-                var2.a(-2, -2, 16777215);
+                var2.drawSilhouette(-2, -2, 16777215);
                 SoftwareRasterizer.e(4, 4, 0, 0, 540, 140);
             }
-            cd.field_l.e();
-            var1.d(0, 0);
+            cd.field_l.setAsRasterTarget();
+            var1.drawHalfSize(0, 0);
             id.a(true);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "ad.H(" + param0 + ')');

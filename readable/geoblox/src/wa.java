@@ -40,15 +40,15 @@ final class wa {
             var7 = -6 + SoftwareRasterizer.stride - var5_int;
           }
           var8 = -this.field_m.field_y + (param3 + 32);
-          if (SoftwareRasterizer.field_b < 6 + (var8 + var6)) {
-            var8 = SoftwareRasterizer.field_b - var6 - 6;
+          if (SoftwareRasterizer.framebufferHeight < 6 + (var8 + var6)) {
+            var8 = SoftwareRasterizer.framebufferHeight - var6 - 6;
           }
-          SoftwareRasterizer.d(var7, var8, 6 + var5_int, var6 + 6, this.field_k);
+          SoftwareRasterizer.drawRectangle(var7, var8, 6 + var5_int, var6 + 6, this.field_k);
           if (param0 != 69) {
             var9 = (String) null;
             this.a(-83, false, 61, (String) null);
           }
-          SoftwareRasterizer.a(1 + var7, var8 + 1, var5_int + 4, 4 + var6, this.field_f);
+          SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, var5_int + 4, 4 + var6, this.field_f);
           this.field_m.a(param2, 3 + var7, this.field_m.field_y + 3 + var8, this.field_k, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -75,8 +75,8 @@ final class wa {
         ff var17 = null;
         rd var4 = null;
         Sprite[] var5 = null;
-        il var16 = null;
-        il var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         rd var6 = null;
         rd var7 = null;
@@ -113,7 +113,7 @@ final class wa {
             var4.a(-106, 1).a(wa.a(10066329, 11184810, 13421772, 1), true);
             var4.a(param0 ^ -100, 3).a(wa.a(7829367, 8947848, 10066329, param0 - 8), true).b((byte) -53, 1).a(param0 - 9, 1);
             var5 = new Sprite[9];
-            var16 = new il(32, 32);
+            var16 = new ArgbSprite(32, 32);
             var18 = var16;
             for (var7_int = 0; var18.pixels.length > var7_int; var7_int++) {
                 var16.pixels[var7_int] = 1077952576;
@@ -150,14 +150,14 @@ final class wa {
             var13 = new Sprite(7, 4);
             var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
             var14 = new rd(var4, true);
-            var14.a(0, var13.b());
-            var13.a();
+            var14.a(0, var13.copy());
+            var13.rotateClockwise();
             var14 = new rd(var4, true);
-            var14.a(param0 ^ 9, var13.b());
-            var13.a();
+            var14.a(param0 ^ 9, var13.copy());
+            var13.rotateClockwise();
             var14 = new rd(var4, true);
-            var14.a(0, var13.b());
-            var13.a();
+            var14.a(0, var13.copy());
+            var13.rotateClockwise();
             var19 = new rd(var4, true);
             var19.a(param0 ^ 9, var13);
         } catch (RuntimeException runtimeException) {
@@ -231,11 +231,11 @@ final class wa {
             var12 = -var5_int + (SoftwareRasterizer.stride - var9);
           }
           var13 = 32 + (-this.field_m.field_y + param0);
-          if (SoftwareRasterizer.field_b < var10 + (var13 + var6)) {
+          if (SoftwareRasterizer.framebufferHeight < var10 + (var13 + var6)) {
             var13 = param0 - var10 - var6;
           }
-          SoftwareRasterizer.d(var12, var13, var5_int + var9, var10 + var6, this.field_n);
-          SoftwareRasterizer.a(1 + var12, 1 + var13, var9 + (var5_int - 2), -2 + (var10 + var6), this.field_f);
+          SoftwareRasterizer.drawRectangle(var12, var13, var5_int + var9, var10 + var6, this.field_n);
+          SoftwareRasterizer.fillRectangle(1 + var12, 1 + var13, var9 + (var5_int - 2), -2 + (var10 + var6), this.field_f);
           this.field_m.a(param1, this.field_d + var12, this.field_i + var13, var9, var10, this.field_k, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -307,11 +307,11 @@ final class wa {
         if (param4 != 15658734) {
             return;
         }
-        SoftwareRasterizer.b(param6, param0, param2, param1, param5, param3);
+        SoftwareRasterizer.fillRectangleAlpha(param6, param0, param2, param1, param5, param3);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRasterizer.g(param4, param3, param1, param0, param2);
+        SoftwareRasterizer.drawLine(param4, param3, param1, param0, param2);
         if (param5 != 8947848) {
             this.field_p = 22;
         }

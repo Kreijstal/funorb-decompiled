@@ -236,8 +236,8 @@ final class SecondaryDeque {
 
     static {
         contactProbeRaster = new Sprite(460, 460);
-        contactProbeOffsetY = (-contactProbeRaster.field_o + 480) / 2;
-        contactProbeOffsetX = (640 - contactProbeRaster.field_s) / 2;
+        contactProbeOffsetY = (-contactProbeRaster.fullHeight + 480) / 2;
+        contactProbeOffsetX = (640 - contactProbeRaster.fullWidth) / 2;
         spawnQueue = new IntrusiveDeque();
     }
 }

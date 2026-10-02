@@ -229,7 +229,7 @@ final class ab {
                 }
                 gf.a(var2, -1232328029, boardAngleRadians);
                 if (uj.a(var2, boardAngleRadians, 0)) {
-                  vf.spriteScratchRaster.g(1);
+                  vf.spriteScratchRaster.addOutline(1);
                   if (var2.matchCooldownTicks <= 0) {
                     al.a(9666, GameScreen.selectedThemeId);
                   }
@@ -263,7 +263,7 @@ final class ab {
                   continue L0;
                 }
                 if (ma.a(true, boardAngleRadians, var2)) {
-                  var3 = SecondaryDeque.contactProbeRaster.pixels[aa.field_a + SecondaryDeque.contactProbeRaster.field_s * aa.field_b] - 1;
+                  var3 = SecondaryDeque.contactProbeRaster.pixels[aa.field_a + SecondaryDeque.contactProbeRaster.fullWidth * aa.field_b] - 1;
                   var4 = tl.entitiesById[var3];
                   if (a.attachedEntities == var4.entityQueue) {
                     break L2;

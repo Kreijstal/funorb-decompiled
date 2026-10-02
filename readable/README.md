@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 1,311 guarded naming rules: 22 classes, 448 fields,
-187 methods, 241 parameters and 413 local declarations. Both 303-file corpora
+The current export has 1,710 guarded naming rules: 24 classes, 457 fields,
+247 methods, 450 parameters and 532 local declarations. Both 303-file corpora
 compile, preserving 150,801 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -37,15 +37,19 @@ git archive --format=tar 1fa1f5ca8db58810744ef29e04bcf31c74e81805 | sha256sum
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or the Java source-tree hashes below.
 
-The current naming pass adds 117 guarded identities: 59 fields, six methods,
-24 parameters and 28 locals. It names gameplay sprite tables, avatar/effect
-frames, HUD graphics, seven theme foreground/background pairs, font and sprite
-loaders, archive lookup arguments and preparation locals. Raw source, decompiler
-pins and all 1,194 prior rules remain unchanged. The mirror applies 19,829
-identifier edits while preserving all 150,801 bindings and 388 override edges.
-Keyboard/screen/theme indexes, original resource keys and guard effects remain.
-The complete archive-loading path and rendering with real assets are not
-established by the existing native fixtures.
+The current naming pass adds 399 guarded identities: two classes, nine fields,
+60 method declarations, 209 parameters and 119 locals. It names raster drawing
+and clipping APIs, complete RGB/ARGB sprite override families, indexed sprite
+operations, canvas dimensions and clipped-blit cursors. Two existing preparation
+locals are refined to distinguish full canvas dimensions from cropped pixels;
+all other 1,309 prior rules remain unchanged. The mirror applies 23,212 identifier
+edits while preserving all 150,801 bindings and 388 override edges. Raw source
+and generator pins are unchanged.
+
+The previous pass added 117 asset/loading identities. Original resource keys,
+numeric indexes, guards, zero-colour transparency, stored ARGB alpha and indexed
+run markers remain intact. The complete archive-loading path and rendering with
+real assets are not established by the existing native fixtures.
 
 ## Reproduce and check
 
@@ -354,6 +358,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d` |
-| Readable | `cea37354add0674d6afbd99d18bdc3e950c0238d8dc69ba67974467c0ada155b` |
+| Readable | `0c98b7ae5eed853e73ba5cebce1d0b1cdd4bf966f35987db87ae412f119f5cca` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

@@ -198,7 +198,7 @@ final class pf extends ee implements ga, pl {
             ng.field_F.a(this.field_L, this.field_v + param0 + 20, 15 + this.field_m + param1, -40 + this.field_r, this.field_h, 16777215, -1, 1, 0, ng.field_F.field_o);
         }
         if (null != this.field_M) {
-            SoftwareRasterizer.c(10 + param0, 134 + param1, -20 + this.field_r, 4210752);
+            SoftwareRasterizer.drawHorizontalLine(10 + param0, 134 + param1, -20 + this.field_r, 4210752);
         }
         int var5 = 20 / ((param2 - 1) / 43);
         super.a(param0, param1, (byte) -48, param3);

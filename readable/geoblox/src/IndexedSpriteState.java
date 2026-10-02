@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ha {
+abstract class IndexedSpriteState {
     static int avatarShockFrameIndex;
-    int field_e;
-    int field_b;
-    int field_a;
-    int field_c;
-    int field_d;
-    int field_f;
+    int fullWidth;
+    int trimX;
+    int width;
+    int fullHeight;
+    int height;
+    int trimY;
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int x, int y, int alpha256);
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int x, int y);
 
     private final static IndexedSprite a(int param0, int[] param1, IndexedSprite param2) {
         IndexedSprite var3 = null;
@@ -30,18 +30,18 @@ abstract class ha {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new IndexedSprite(0, 0, 0);
-          var3.field_a = param2.field_a;
-          var3.field_e = param2.field_e;
-          var3.field_d = param2.field_d;
+          var3.width = param2.width;
+          var3.fullWidth = param2.fullWidth;
+          var3.height = param2.height;
           if (param0 >= -62) {
             stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
-          var3.field_c = param2.field_c;
+          var3.fullHeight = param2.fullHeight;
           var3.palette = param1;
           var3.indices = param2.indices;
-          var3.field_f = param2.field_f;
-          var3.field_b = param2.field_b;
+          var3.trimY = param2.trimY;
+          var3.trimX = param2.trimX;
           stackIn_4_0 = (IndexedSprite) (var3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -124,27 +124,27 @@ abstract class ha {
                 var15 = var6[var9];
                 IndexedSprite[] var10 = var15;
                 for (var11_int = 0; var11_int < var15.length; var11_int++) {
-                    var15[var11_int] = ha.a(-84, var20[var11_int], var5[var9]);
+                    var15[var11_int] = IndexedSpriteState.a(-84, var20[var11_int], var5[var9]);
                 }
             }
             var9 = var18.height;
             oc.b(-105);
             if (param0 <= 98) {
                 IndexedSprite var14 = (IndexedSprite) null;
-                ha.a(72, (int[]) null, (IndexedSprite) null);
+                IndexedSpriteState.a(72, (int[]) null, (IndexedSprite) null);
             }
-            var18.e();
-            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_b);
+            var18.setAsRasterTarget();
+            SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
             var16 = new Sprite(var9, var9);
             var19 = var16;
-            var19.e();
-            var18.c(0, 0);
+            var19.setAsRasterTarget();
+            var18.drawUnmasked(0, 0);
             var11 = new Sprite(var9, var9);
-            var11.e();
-            var18.c(var9 - var18.width, 0);
+            var11.setAsRasterTarget();
+            var18.drawUnmasked(var9 - var18.width, 0);
             var12 = new Sprite(var18.width - 2 * var9, var9);
-            var12.e();
-            var18.c(-var9, 0);
+            var12.setAsRasterTarget();
+            var18.drawUnmasked(-var9, 0);
             id.a(true);
             vk.field_e = new Sprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {

@@ -8,7 +8,7 @@ abstract class m extends DualLinkNode {
     private int[] field_J;
     private static StringBuilder field_r;
     int field_o;
-    private ha[] field_s;
+    private IndexedSpriteState[] field_s;
     private int[] field_C;
     private static int field_B;
     private static int field_n;
@@ -250,7 +250,7 @@ abstract class m extends DualLinkNode {
                                     try {
                                       var18 = (CharSequence) ((Object) var15.substring(4));
                                       var16_int = ol.a(false, var18);
-                                      var4 = var4 + this.field_s[var16_int].field_e;
+                                      var4 = var4 + this.field_s[var16_int].fullWidth;
                                       var10 = 0;
                                     } catch (java.lang.Exception decompiledCaughtParameter0) {
                                       decompiledCaughtException = decompiledCaughtParameter0;
@@ -678,7 +678,7 @@ abstract class m extends DualLinkNode {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
                                   var9_int = ol.a(false, var10);
-                                  var4 = var4 + this.field_s[var9_int].field_e;
+                                  var4 = var4 + this.field_s[var9_int].fullWidth;
                                   var3 = 0;
                                   var6++;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -789,7 +789,7 @@ abstract class m extends DualLinkNode {
         return -var13;
     }
 
-    final void a(ha[] param0, int[] param1) {
+    final void a(IndexedSpriteState[] param0, int[] param1) {
         if (param1 != null && param1.length != param0.length) {
             throw new IllegalArgumentException();
         }
@@ -809,7 +809,7 @@ abstract class m extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        ha var11_ref_ha = null;
+        IndexedSpriteState var11_ref_ha = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -851,17 +851,17 @@ abstract class m extends DualLinkNode {
                                   var10 = ol.a(false, var13);
                                   var11_ref_ha = this.field_s[var10];
                                   if (this.field_w == null) {
-                                    stackIn_26_0 = var11_ref_ha.field_c;
+                                    stackIn_26_0 = var11_ref_ha.fullHeight;
                                   } else {
                                     stackIn_26_0 = this.field_w[var10];
                                   }
                                   var12 = stackIn_26_0;
                                   if (field_m != 256) {
-                                    var11_ref_ha.a(param1, param2 + this.field_p - var12, field_m);
+                                    var11_ref_ha.drawAlpha(param1, param2 + this.field_p - var12, field_m);
                                   } else {
-                                    var11_ref_ha.a(param1, param2 + this.field_p - var12);
+                                    var11_ref_ha.draw(param1, param2 + this.field_p - var12);
                                   }
-                                  param1 = param1 + var11_ref_ha.field_e;
+                                  param1 = param1 + var11_ref_ha.fullWidth;
                                   var5 = 0;
                                   var7++;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -930,10 +930,10 @@ abstract class m extends DualLinkNode {
               }
               param1 = param1 + this.field_v[var8];
               if (field_H != -1) {
-                SoftwareRasterizer.c(var11, param2 + (int)((double)this.field_p * 0.7), param1 - var11, field_H);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_p * 0.7), param1 - var11, field_H);
               }
               if (field_z != -1) {
-                SoftwareRasterizer.c(var11, param2 + this.field_p + 1, param1 - var11, field_z);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_p + 1, param1 - var11, field_z);
               }
               var5 = var8;
               var7++;

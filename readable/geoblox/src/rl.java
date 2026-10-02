@@ -204,7 +204,7 @@ final class rl extends oe {
         super.b(param0, param1, param2);
         hh.field_c.b(this.field_X, (this.field_r >> 1) + param0, param2 + 103, 16777215, -1);
         if (this.field_Y != null) {
-            SoftwareRasterizer.c(20 + param0, -7 + param2 + 120, 260, 8421504);
+            SoftwareRasterizer.drawHorizontalLine(20 + param0, -7 + param2 + 120, 260, 8421504);
             hh.field_c.a(this.field_Y, param0 + 20, 8 + (120 + param2), 260, 100, 16777215, -1, 1, 0, hh.field_c.field_o);
         }
     }

@@ -289,7 +289,7 @@ class qc extends IntrusiveNode {
                 kd.field_e.a(false, vg.field_i);
             }
             vg.field_i.a(param2, param1, param3 ^ -92, param0);
-            SoftwareRasterizer.c();
+            SoftwareRasterizer.clearFramebuffer();
             if (param3 != -40) {
                 field_g = (long[][]) null;
             }

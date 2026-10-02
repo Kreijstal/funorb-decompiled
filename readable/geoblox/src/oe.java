@@ -499,7 +499,7 @@ abstract class oe extends dd {
         int var15;
         int var16;
         var16 = Geoblox.field_C;
-        SoftwareRasterizer.d(param0 + 6, param2 + 35, -12 + this.field_r, -40 + this.field_h, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(param0 + 6, param2 + 35, -12 + this.field_r, -40 + this.field_h, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -572,7 +572,7 @@ abstract class oe extends dd {
             }
           }
           var9 = var9 | (var9 << 16 | var9 << 8);
-          SoftwareRasterizer.c(var10 + param0, var8, var11 - var10, var9);
+          SoftwareRasterizer.drawHorizontalLine(var10 + param0, var8, var11 - var10, var9);
           var8++;
           var7++;
         }
@@ -584,12 +584,12 @@ abstract class oe extends dd {
         L1: while (var7 < var4) {
           var9 = var5 + (-var5 + var6) * var7 / var4;
           var9 = var9 | (var9 << 8 | var9 << 16);
-          SoftwareRasterizer.c(param0, var8, 6, var9);
-          SoftwareRasterizer.c(this.field_r + param0 - 6, var8, 6, var9);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8, 6, var9);
+          SoftwareRasterizer.drawHorizontalLine(this.field_r + param0 - 6, var8, 6, var9);
           var7++;
           var8++;
         }
-        jc.field_a.b(-90 + this.field_r + param0, 10 + param2);
+        jc.field_a.draw(-90 + this.field_r + param0, 10 + param2);
         if (param1 != 20) {
           this.field_M = -34;
         }
@@ -603,8 +603,8 @@ abstract class oe extends dd {
         L3: while (var7 < var4) {
           var9 = var7 * (var6 - var5) / var4 + var5;
           var9 = var9 | (var9 << 16 | var9 << 8);
-          SoftwareRasterizer.c(param0, var8, 6, var9);
-          SoftwareRasterizer.c(-6 + (this.field_r + param0), var8, 6, var9);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8, 6, var9);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (this.field_r + param0), var8, 6, var9);
           var8++;
           var7++;
         }

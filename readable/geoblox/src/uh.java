@@ -71,7 +71,7 @@ final class uh extends ac {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         oc.b(-96);
-        SoftwareRasterizer.b(param1, param0, param4, param3);
+        SoftwareRasterizer.intersectClip(param1, param0, param4, param3);
         if (param2 == -14045) {
             return;
         }
@@ -207,12 +207,12 @@ final class uh extends ac {
           var6 = 0.01666666753590107f;
           var7 = 16764416;
           var8 = (float)el.gameplaySession.updateTick * 0.03999999910593033f;
-          SoftwareRasterizer.e(var4, var5, 16, 16777215, 100);
-          SoftwareRasterizer.f(var4, var5, 16, 0);
+          SoftwareRasterizer.fillCircleAlpha(var4, var5, 16, 16777215, 100);
+          SoftwareRasterizer.drawCircle(var4, var5, 16, 0);
           for (var9 = var8 + 3.1415927410125732f; var8 < var9; var9 = var9 - var6) {
             var10 = (int)((double)var4 + 16.0 * Math.cos((double)var9));
             var11 = (int)((double)var5 + Math.sin((double)var9) * 16.0);
-            SoftwareRasterizer.d(var10, var11, 2, var7);
+            SoftwareRasterizer.fillCircle(var10, var11, 2, var7);
             var6 = var6 + var6 * 0.25f;
             var7 += 778;
           }

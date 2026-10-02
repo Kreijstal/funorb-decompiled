@@ -244,7 +244,7 @@ class f extends qf implements pl {
                   fieldTemp$53 = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$53 > 0) {
-                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                    IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   }
                   fieldTemp$54 = jf.avatarTintFadeTicks;
                   jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -262,7 +262,7 @@ class f extends qf implements pl {
                   fieldTemp$51 = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$51 > 0) {
-                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                    IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   }
                   fieldTemp$52 = jf.avatarTintFadeTicks;
                   jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -280,7 +280,7 @@ class f extends qf implements pl {
                   fieldTemp$55 = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$55 > 0) {
-                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                    IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   }
                   fieldTemp$56 = jf.avatarTintFadeTicks;
                   jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -297,7 +297,7 @@ class f extends qf implements pl {
                   fieldTemp$57 = wa.avatarShockEffectTicks;
                   wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                   if (fieldTemp$57 > 0) {
-                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                    IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   }
                   fieldTemp$58 = jf.avatarTintFadeTicks;
                   jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -325,7 +325,7 @@ class f extends qf implements pl {
             return;
           }
           {
-            ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+            IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
             fieldTemp$61 = jf.avatarTintFadeTicks;
             jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
             if (fieldTemp$61 > 0) {
@@ -382,7 +382,7 @@ class f extends qf implements pl {
                       fieldTemp$26 = wa.avatarShockEffectTicks;
                       wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                       if (fieldTemp$26 > 0) {
-                        ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                        IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                       }
                       fieldTemp$27 = jf.avatarTintFadeTicks;
                       jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -400,7 +400,7 @@ class f extends qf implements pl {
                       fieldTemp$24 = wa.avatarShockEffectTicks;
                       wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                       if (fieldTemp$24 > 0) {
-                        ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                        IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                       }
                       fieldTemp$25 = jf.avatarTintFadeTicks;
                       jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -418,7 +418,7 @@ class f extends qf implements pl {
                       fieldTemp$28 = wa.avatarShockEffectTicks;
                       wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                       if (fieldTemp$28 > 0) {
-                        ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                        IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                       }
                       fieldTemp$29 = jf.avatarTintFadeTicks;
                       jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -435,7 +435,7 @@ class f extends qf implements pl {
                       fieldTemp$30 = wa.avatarShockEffectTicks;
                       wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                       if (fieldTemp$30 > 0) {
-                        ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                        IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                       }
                       fieldTemp$31 = jf.avatarTintFadeTicks;
                       jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -463,7 +463,7 @@ class f extends qf implements pl {
                 return;
               }
               {
-                ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 fieldTemp$34 = jf.avatarTintFadeTicks;
                 jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                 if (fieldTemp$34 > 0) {
@@ -520,7 +520,7 @@ class f extends qf implements pl {
             return;
           }
           {
-            ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+            IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
             fieldTemp$50 = jf.avatarTintFadeTicks;
             jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
             if (fieldTemp$50 <= 0) {
@@ -550,7 +550,7 @@ class f extends qf implements pl {
                   return;
                 }
                 {
-                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   fieldTemp$37 = jf.avatarTintFadeTicks;
                   jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                   if (fieldTemp$37 <= 0) {
@@ -578,7 +578,7 @@ class f extends qf implements pl {
                   return;
                 }
                 {
-                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                   fieldTemp$40 = jf.avatarTintFadeTicks;
                   jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
                   if (fieldTemp$40 > 0) {
@@ -596,7 +596,7 @@ class f extends qf implements pl {
                 fieldTemp$43 = wa.avatarShockEffectTicks;
                 wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                 if (fieldTemp$43 > 0) {
-                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
                 fieldTemp$44 = jf.avatarTintFadeTicks;
                 jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -613,7 +613,7 @@ class f extends qf implements pl {
                 fieldTemp$41 = wa.avatarShockEffectTicks;
                 wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
                 if (fieldTemp$41 > 0) {
-                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                  IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
                 }
                 fieldTemp$42 = jf.avatarTintFadeTicks;
                 jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
@@ -641,7 +641,7 @@ class f extends qf implements pl {
             return;
           }
           {
-            ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+            IndexedSpriteState.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
             fieldTemp$47 = jf.avatarTintFadeTicks;
             jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
             if (fieldTemp$47 <= 0) {
