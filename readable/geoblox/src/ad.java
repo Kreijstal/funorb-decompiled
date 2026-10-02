@@ -45,16 +45,14 @@ final class ad extends ia {
                     this.a(var5, (byte) -69, var5 + var4_int, param0, var6, var4_int);
                     var6.field_g = var6.field_g - var5;
                     break L1;
-                  } else {
-                    this.a(var6.field_g, (byte) -37, var4_int + var5, param0, var6, var4_int);
-                    var5 = var5 - var6.field_g;
-                    var4_int = var4_int + var6.field_g;
-                    if (!this.field_k.a(var5, var4_int, param0, var6, false)) {
-                      continue L2;
-                    } else {
-                      break L1;
-                    }
                   }
+                  this.a(var6.field_g, (byte) -37, var4_int + var5, param0, var6, var4_int);
+                  var5 = var5 - var6.field_g;
+                  var4_int = var4_int + var6.field_g;
+                  if (!this.field_k.a(var5, var4_int, param0, var6, false)) {
+                    continue L2;
+                  }
+                  break L1;
                 }
               }
             }
@@ -135,12 +133,11 @@ final class ad extends ia {
               }
             }
           }
-          if (param0 == -1) {
-            param1.field_u.b(param2);
-            return;
-          } else {
+          if (param0 != -1) {
             return;
           }
+          param1.field_u.b(param2);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -198,21 +195,16 @@ final class ad extends ia {
           L1: {
             if (!this.field_k.b(var3, -1)) {
               var2 = param0;
-              L2: while (true) {
-                if (var2 <= var3.field_g) {
-                  this.a(-1, var3, var2);
-                  var3.field_g = var3.field_g - var2;
+              L2: while (var2 > var3.field_g) {
+                this.a(-1, var3, var3.field_g);
+                var2 = var2 - var3.field_g;
+                if (this.field_k.a(var2, 0, (int[]) null, var3, false)) {
                   break L1;
-                } else {
-                  this.a(-1, var3, var3.field_g);
-                  var2 = var2 - var3.field_g;
-                  if (this.field_k.a(var2, 0, (int[]) null, var3, false)) {
-                    break L1;
-                  } else {
-                    continue L2;
-                  }
                 }
               }
+              this.a(-1, var3, var2);
+              var3.field_g = var3.field_g - var2;
+              break L1;
             }
           }
           var3 = (pc) ((Object) this.field_l.nextForIteration(1));
@@ -225,15 +217,13 @@ final class ad extends ia {
         var2 = Geoblox.field_C;
         L0: while (true) {
           var1 = (pc) ((Object) this.field_l.nextForIteration(1));
-          if (var1 != null) {
-            if (var1.field_u != null) {
-              return (ia) ((Object) var1.field_u);
-            } else {
-              continue L0;
-            }
-          } else {
+          if (var1 == null) {
             return null;
           }
+          if (var1.field_u != null) {
+            return (ia) ((Object) var1.field_u);
+          }
+          continue L0;
         }
     }
 
@@ -278,7 +268,11 @@ final class ad extends ia {
                 var7_int = this.field_k.field_n[param4.field_t] / AudioOutput.sampleRateHz;
                 L1: while (true) {
                   var8 = (-param4.field_B + (var7_int + 1048575)) / var7_int;
-                  if (param0 >= var8) {
+                  if (param0 < var8) {
+                    param4.field_B = param4.field_B + param0 * var7_int;
+                    break L0;
+                  }
+                  {
                     param4.field_u.a(param3, param5, var8);
                     param0 = param0 - var8;
                     param5 = param5 + var8;
@@ -320,24 +314,19 @@ final class ad extends ia {
                     var11.a(param3, param5, param2 - param5);
                     if (!var11.g()) {
                       continue L1;
-                    } else {
-                      this.field_m.a(var11);
-                      continue L1;
                     }
-                  } else {
-                    param4.field_B = param4.field_B + param0 * var7_int;
-                    break L0;
+                    this.field_m.a(var11);
+                    continue L1;
                   }
                 }
               }
             }
           }
-          if (param1 < -26) {
-            param4.field_u.a(param3, param5, param0);
-            return;
-          } else {
+          if (param1 >= -26) {
             return;
           }
+          param4.field_u.a(param3, param5, param0);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;

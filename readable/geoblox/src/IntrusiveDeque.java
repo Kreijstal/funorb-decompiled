@@ -89,20 +89,19 @@ final class IntrusiveDeque {
 
     final static boolean a(byte param0) {
         int stackIn_6_0 = 0;
-        if (param0 > 65) {
-          L0: {
-            if (oh.field_b != null) {
-              if (oh.field_b.j(75) != null) {
-                stackIn_6_0 = 1;
-                break L0;
-              }
-            }
-            stackIn_6_0 = 0;
-          }
-          return stackIn_6_0 != 0;
-        } else {
+        if (param0 <= 65) {
           return false;
         }
+        L0: {
+          if (oh.field_b != null) {
+            if (oh.field_b.j(75) != null) {
+              stackIn_6_0 = 1;
+              break L0;
+            }
+          }
+          stackIn_6_0 = 0;
+        }
+        return stackIn_6_0 != 0;
     }
 
     public static void f(int param0) {
@@ -311,34 +310,22 @@ final class IntrusiveDeque {
     }
 
     static {
-        $cfr$clinit: {
-            IntrusiveDeque discarded$0 = null;
-            int var0;
-            field_f = 5;
-            field_d = new al();
-            field_e = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
-            field_b = new int[5];
-            var0 = 0;
-            L0: while (true) {
-              if (var0 >= field_b.length) {
-                discarded$0 = new IntrusiveDeque();
-                break $cfr$clinit;
-              } else {
-                if (var0 == 0) {
-                  field_b[var0] = (1 + var0) * 20 << 8;
-                } else {
-                  field_b[var0] = (1 + var0) * 51 << 8;
-                }
-                if (var0 > 2) {
-                  field_b[var0] = lb.a(field_b[var0], (-2 + var0) * 22 << 16);
-                  var0++;
-                  continue L0;
-                } else {
-                  var0++;
-                  continue L0;
-                }
-              }
-            }
+        int var0 = 0;
+        field_f = 5;
+        field_d = new al();
+        field_e = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
+        field_b = new int[5];
+        L0: for (var0 = 0; var0 < field_b.length; var0++) {
+          if (var0 == 0) {
+            field_b[var0] = (1 + var0) * 20 << 8;
+          } else {
+            field_b[var0] = (1 + var0) * 51 << 8;
+          }
+          if (var0 <= 2) {
+            continue L0;
+          }
+          field_b[var0] = lb.a(field_b[var0], (-2 + var0) * 22 << 16);
         }
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
     }
 }

@@ -53,14 +53,13 @@ final class uf implements Runnable {
           var5.field_i = (long)param1;
           var5.field_x = 2;
           var5.field_w = param2;
-          if (param0 > 41) {
-            this.a(var5, 15079962);
-            stackIn_4_0 = (o) (var5);
-            return stackIn_4_0;
-          } else {
+          if (param0 <= 41) {
             stackIn_2_0 = (o) null;
             return stackIn_2_0;
           }
+          this.a(var5, 15079962);
+          stackIn_4_0 = (o) (var5);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
@@ -173,12 +172,11 @@ final class uf implements Runnable {
           var3 = this.field_k;
           synchronized (var3) {
             this.field_k.addLast(-128, param0);
-            if (param1 == 15079962) {
-              this.field_d = this.field_d + 1;
-              this.field_k.notifyAll();
-            } else {
+            if (param1 != 15079962) {
               return;
             }
+            this.field_d = this.field_d + 1;
+            this.field_k.notifyAll();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -354,60 +352,52 @@ final class uf implements Runnable {
             Exception var2_ref = null;
             String var6 = null;
             var5 = Geoblox.field_C;
-            L0: while (true) {
-              if (this.field_j) {
-                return;
-              } else {
-                var2 = this.field_k;
-                synchronized (var2) {
-                  var7 = (o) ((Object) this.field_k.removeFirst(true));
-                  if (var7 == null) {
-                    try {
-                      this.field_k.wait();
-                    } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      interruptedException = (InterruptedException) (Object) decompiledCaughtException;
-                    }
-                    decompiledRegionSelector0 = 0;
-                  } else {
-                    this.field_d = this.field_d - 1;
-                    decompiledRegionSelector0 = 1;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  continue L0;
-                } else {
+            L0: while (!this.field_j) {
+              var2 = this.field_k;
+              synchronized (var2) {
+                var7 = (o) ((Object) this.field_k.removeFirst(true));
+                if (var7 == null) {
                   try {
-                    L4: {
-                      if (var7.field_x != 2) {
-                        if (3 == var7.field_x) {
-                          var7.field_y = var7.field_w.a((int)var7.field_i, (byte) -76);
-                          decompiledRegionSelector1 = 1;
-                          break L4;
-                        } else {
-                          var7.field_u = false;
-                        }
-                      } else {
-                        var7.field_w.a(var7.field_y, (byte) -53, (int)var7.field_i, var7.field_y.length);
-                        var7.field_u = false;
-                      }
-                      decompiledRegionSelector1 = 0;
-                    }
-                  } catch (java.lang.Exception decompiledCaughtParameter1) {
-                    decompiledCaughtException = decompiledCaughtParameter1;
-                    var2_ref = (Exception) (Object) decompiledCaughtException;
-                    var6 = (String) null;
-                    gi.a((Throwable) ((Object) var2_ref), (String) null, (byte) 125);
-                    decompiledRegionSelector1 = 1;
+                    this.field_k.wait();
+                  } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    interruptedException = (InterruptedException) (Object) decompiledCaughtException;
                   }
-                  if (decompiledRegionSelector1 == 0) {
-                    continue L0;
-                  } else {
-                    var7.field_u = false;
-                    continue L0;
-                  }
+                  decompiledRegionSelector0 = 0;
+                } else {
+                  this.field_d = this.field_d - 1;
+                  decompiledRegionSelector0 = 1;
                 }
               }
+              if (decompiledRegionSelector0 == 0) {
+                continue L0;
+              }
+              try {
+                L4: {
+                  if (var7.field_x != 2) {
+                    if (3 == var7.field_x) {
+                      var7.field_y = var7.field_w.a((int)var7.field_i, (byte) -76);
+                      decompiledRegionSelector1 = 1;
+                      break L4;
+                    }
+                    var7.field_u = false;
+                  } else {
+                    var7.field_w.a(var7.field_y, (byte) -53, (int)var7.field_i, var7.field_y.length);
+                    var7.field_u = false;
+                  }
+                  decompiledRegionSelector1 = 0;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter1) {
+                decompiledCaughtException = decompiledCaughtParameter1;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var6 = (String) null;
+                gi.a((Throwable) ((Object) var2_ref), (String) null, (byte) 125);
+                decompiledRegionSelector1 = 1;
+              }
+              if (decompiledRegionSelector1 == 0) {
+                continue L0;
+              }
+              var7.field_u = false;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

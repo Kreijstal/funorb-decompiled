@@ -60,20 +60,23 @@ final class ec {
         try {
           if (0 == h.matchCandidateCount) {
             if (0 < wb.newAttachmentCount) {
-              if (!w.avatarShockPending) {
-                gf.matchChainLength = 0;
-                if (el.gameplaySession.pointsPanelX == 463) {
-                  el.gameplaySession.pointsPanelSlideDirection = 1;
-                  el.gameplaySession.emitPointsPopup(false);
-                }
-                stackIn_9_0 = 0;
-                return stackIn_9_0 != 0;
-              } else {
+              if (w.avatarShockPending) {
                 return false;
               }
+              gf.matchChainLength = 0;
+              if (el.gameplaySession.pointsPanelX == 463) {
+                el.gameplaySession.pointsPanelSlideDirection = 1;
+                el.gameplaySession.emitPointsPopup(false);
+              }
+              stackIn_9_0 = 0;
+              return stackIn_9_0 != 0;
             }
           }
-          if (h.matchCandidateCount != 0) {
+          if (h.matchCandidateCount == 0) {
+            stackIn_12_0 = 0;
+            return stackIn_12_0 != 0;
+          }
+          {
             if (gf.matchChainLength >= 5) {
               ra.a(jf.field_g ^ 255, -99, jf.field_g);
             }
@@ -151,9 +154,6 @@ final class ec {
             h.matchCandidateCount = 0;
             stackIn_49_0 = 1;
             return stackIn_49_0 != 0;
-          } else {
-            stackIn_12_0 = 0;
-            return stackIn_12_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

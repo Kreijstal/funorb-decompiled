@@ -153,10 +153,9 @@ final class gf {
           if (!param1.a(0)) {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
-          } else {
-            stackIn_7_0 = param3 + " - " + param1.a(0, param2) + "%";
-            return stackIn_7_0;
           }
+          stackIn_7_0 = param3 + " - " + param1.a(0, param2) + "%";
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

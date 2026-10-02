@@ -105,34 +105,24 @@ final class jb {
     }
 
     final int c() {
+        int var4 = 0;
         int var1;
         int var2;
         int var3;
-        int var4;
         var1 = this.field_e.length;
         var2 = -1;
         var3 = 2147483647;
-        var4 = 0;
-        L0: while (true) {
-          if (var4 >= var1) {
-            return var2;
-          } else {
-            if (this.field_e[var4] >= 0) {
-              if (this.field_a[var4] < var3) {
-                var2 = var4;
-                var3 = this.field_a[var4];
-                var4++;
-                continue L0;
-              } else {
-                var4++;
-                continue L0;
-              }
-            } else {
-              var4++;
-              continue L0;
-            }
+        L0: for (var4 = 0; var4 < var1; var4++) {
+          if (this.field_e[var4] < 0) {
+            continue L0;
           }
+          if (this.field_a[var4] >= var3) {
+            continue L0;
+          }
+          var2 = var4;
+          var3 = this.field_a[var4];
         }
+        return var2;
     }
 
     final void a(int param0) {

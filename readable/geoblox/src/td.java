@@ -12,58 +12,56 @@ final class td extends hk {
         int var2;
         if (param0 == 0) {
           return 0;
-        } else {
-          if (param0 > 0) {
-            var2 = 1;
-            if (param0 > 65535) {
-              param0 = param0 >> 16;
-              var2 += 16;
-            }
-            if (param0 > 255) {
-              var2 += 8;
-              param0 = param0 >> 8;
-            }
-            if (param0 > 15) {
-              var2 += 4;
-              param0 = param0 >> 4;
-            }
-            if (param0 > 3) {
-              var2 += 2;
-              param0 = param0 >> 2;
-            }
-            if (param0 > 1) {
-              param0 = param0 >> 1;
-              var2++;
-            }
-            return var2;
-          } else {
-            var2 = 2;
-            if (param0 < -65536) {
-              var2 += 16;
-              param0 = param0 >> 16;
-            }
-            if (param0 < -256) {
-              param0 = param0 >> 8;
-              var2 += 8;
-            }
-            if (param1 != 66) {
-              field_H = true;
-            }
-            if (-16 > param0) {
-              param0 = param0 >> 4;
-              var2 += 4;
-            }
-            if (param0 < -4) {
-              param0 = param0 >> 2;
-              var2 += 2;
-            }
-            if (-2 > param0) {
-              var2++;
-              param0 = param0 >> 1;
-            }
-            return var2;
-          }
         }
+        if (param0 > 0) {
+          var2 = 1;
+          if (param0 > 65535) {
+            param0 = param0 >> 16;
+            var2 += 16;
+          }
+          if (param0 > 255) {
+            var2 += 8;
+            param0 = param0 >> 8;
+          }
+          if (param0 > 15) {
+            var2 += 4;
+            param0 = param0 >> 4;
+          }
+          if (param0 > 3) {
+            var2 += 2;
+            param0 = param0 >> 2;
+          }
+          if (param0 > 1) {
+            param0 = param0 >> 1;
+            var2++;
+          }
+          return var2;
+        }
+        var2 = 2;
+        if (param0 < -65536) {
+          var2 += 16;
+          param0 = param0 >> 16;
+        }
+        if (param0 < -256) {
+          param0 = param0 >> 8;
+          var2 += 8;
+        }
+        if (param1 != 66) {
+          field_H = true;
+        }
+        if (-16 > param0) {
+          param0 = param0 >> 4;
+          var2 += 4;
+        }
+        if (param0 < -4) {
+          param0 = param0 >> 2;
+          var2 += 2;
+        }
+        if (-2 > param0) {
+          var2++;
+          param0 = param0 >> 1;
+        }
+        return var2;
     }
 
     public static void f(int param0) {
@@ -87,52 +85,50 @@ final class td extends hk {
         Sprite var15;
         var12 = Geoblox.field_C;
         super.a(param0, param1, (byte) -86, param3);
-        if (0 == param3) {
-          L0: {
-            var5 = (this.field_r >> 1) + (this.field_v + param0);
-            var7 = -74 % ((param2 - 1) / 43);
-            var6 = param1 - (-this.field_m - (this.field_h >> 1));
-            var9 = this.field_F.a((byte) -105);
-            if (var9 != bf.field_g) {
-              if (si.field_n != var9) {
-                if (si.field_m != var9) {
-                  if (var9 == kk.field_w) {
-                    var15 = oa.field_e[1];
-                    var15.c(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                } else {
-                  var14 = oa.field_e[2];
-                  var14.c(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
-                  break L0;
-                }
+        if (0 != param3) {
+          return;
+        }
+        L0: {
+          var5 = (this.field_r >> 1) + (this.field_v + param0);
+          var7 = -74 % ((param2 - 1) / 43);
+          var6 = param1 - (-this.field_m - (this.field_h >> 1));
+          var9 = this.field_F.a((byte) -105);
+          if (var9 != bf.field_g) {
+            if (si.field_n != var9) {
+              if (si.field_m == var9) {
+                var14 = oa.field_e[2];
+                var14.c(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
+                break L0;
+              }
+              if (var9 != kk.field_w) {
+                break L0;
+              }
+              {
+                var15 = oa.field_e[1];
+                var15.c(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
+                break L0;
               }
             }
-            L2: {
-              var13 = oa.field_e[0];
-              var10 = var13.field_s << 1;
-              var11 = var13.field_o << 1;
-              if (null != da.field_b) {
-                if (var10 <= da.field_b.width) {
-                  if (var11 <= da.field_b.height) {
-                    Geoblox.setRasterTarget(1, da.field_b);
-                    SoftwareRasterizer.c();
-                    break L2;
-                  }
-                }
-              }
-              da.field_b = new Sprite(var10, var11);
-              Geoblox.setRasterTarget(1, da.field_b);
-            }
-            var13.rotateSmooth(112, 144, var13.field_s << 4, var13.field_o << 4, -this.field_G << 10, 4096);
-            id.a(true);
-            da.field_b.c(-var13.field_s + var5, var6 - var13.field_o, 256);
           }
-          return;
-        } else {
-          return;
+          L2: {
+            var13 = oa.field_e[0];
+            var10 = var13.field_s << 1;
+            var11 = var13.field_o << 1;
+            if (null != da.field_b) {
+              if (var10 <= da.field_b.width) {
+                if (var11 <= da.field_b.height) {
+                  Geoblox.setRasterTarget(1, da.field_b);
+                  SoftwareRasterizer.c();
+                  break L2;
+                }
+              }
+            }
+            da.field_b = new Sprite(var10, var11);
+            Geoblox.setRasterTarget(1, da.field_b);
+          }
+          var13.rotateSmooth(112, 144, var13.field_s << 4, var13.field_o << 4, -this.field_G << 10, 4096);
+          id.a(true);
+          da.field_b.c(-var13.field_s + var5, var6 - var13.field_o, 256);
         }
     }
 
@@ -178,22 +174,21 @@ final class td extends hk {
           if (writeOffset >= 0) {
             if (originalLength >= writeOffset) {
               sourceLength = sourceText.length();
-              if (sourceLength != 0) {
-                writeEndOffset = writeOffset + sourceLength;
-                if (originalLength < writeEndOffset) {
-                  destination.setLength(writeEndOffset);
-                }
-                for (sourceCharacterIndex = 0; sourceCharacterIndex < sourceLength; sourceCharacterIndex++) {
-                  characterWriteOffset = writeOffset;
-                  writeOffset++;
-                  destination.setCharAt(characterWriteOffset, sourceText.charAt(sourceCharacterIndex));
-                }
-                stackIn_17_0 = (StringBuilder) (destination);
-                return stackIn_17_0;
-              } else {
+              if (sourceLength == 0) {
                 stackIn_9_0 = (StringBuilder) (destination);
                 return stackIn_9_0;
               }
+              writeEndOffset = writeOffset + sourceLength;
+              if (originalLength < writeEndOffset) {
+                destination.setLength(writeEndOffset);
+              }
+              for (sourceCharacterIndex = 0; sourceCharacterIndex < sourceLength; sourceCharacterIndex++) {
+                characterWriteOffset = writeOffset;
+                writeOffset++;
+                destination.setCharAt(characterWriteOffset, sourceText.charAt(sourceCharacterIndex));
+              }
+              stackIn_17_0 = (StringBuilder) (destination);
+              return stackIn_17_0;
             }
           }
           throw new StringIndexOutOfBoundsException("length=" + originalLength + " startPos=" + writeOffset);

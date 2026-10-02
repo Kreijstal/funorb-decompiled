@@ -52,36 +52,34 @@ final class s extends ee implements pe, pl {
         RuntimeException var2 = null;
         var4 = Geoblox.field_C;
         try {
-          if (param1 == 0) {
-            if (null != param0.field_k) {
-              L0: {
-                if (param0.field_o == 0) {
-                  if (0 == param0.field_d) {
-                    break L0;
-                  }
-                }
-                for (var2_int = 0; oj.field_b > var2_int; var2_int++) {
-                  var3 = MatchingTextValidator.field_k[var2_int];
-                  if (2 == var3.field_f) {
-                    if (param0.field_o == var3.field_o) {
-                      if (param0.field_d == var3.field_d) {
-                        return;
-                      }
-                    }
-                  }
-                }
-                break L0;
-              }
-              if (null == param0.field_g) {
-              }
-              ki.a(param0, 31274);
-              return;
-            } else {
-              return;
-            }
-          } else {
+          if (param1 != 0) {
             return;
           }
+          if (null == param0.field_k) {
+            return;
+          }
+          L0: {
+            if (param0.field_o == 0) {
+              if (0 == param0.field_d) {
+                break L0;
+              }
+            }
+            for (var2_int = 0; oj.field_b > var2_int; var2_int++) {
+              var3 = MatchingTextValidator.field_k[var2_int];
+              if (2 == var3.field_f) {
+                if (param0.field_o == var3.field_o) {
+                  if (param0.field_d == var3.field_d) {
+                    return;
+                  }
+                }
+              }
+            }
+            break L0;
+          }
+          if (null == param0.field_g) {
+          }
+          ki.a(param0, 31274);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -160,10 +158,9 @@ final class s extends ee implements pe, pl {
           }
           if (param2 == 2) {
             return;
-          } else {
-            this.field_C = (r) null;
-            return;
           }
+          this.field_C = (r) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -208,19 +205,16 @@ final class s extends ee implements pe, pl {
           if (super.a(param0, param1, param2, param3)) {
             stackIn_3_0 = 1;
             return stackIn_3_0 != 0;
-          } else {
-            if (param0 != 98) {
-              if (param0 == 99) {
-                stackIn_10_0 = this.a(param3, -104);
-                return stackIn_10_0;
-              } else {
-                return false;
-              }
-            } else {
-              stackIn_6_0 = this.a(7305, param3);
-              return stackIn_6_0;
-            }
           }
+          if (param0 == 98) {
+            stackIn_6_0 = this.a(7305, param3);
+            return stackIn_6_0;
+          }
+          if (param0 != 99) {
+            return false;
+          }
+          stackIn_10_0 = this.a(param3, -104);
+          return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -277,10 +271,9 @@ final class s extends ee implements pe, pl {
           }
           if (param1 == -20) {
             return;
-          } else {
-            this.field_C = (r) null;
-            return;
           }
+          this.field_C = (r) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -348,10 +341,9 @@ final class s extends ee implements pe, pl {
               if (null == sd.field_z) {
                 stackIn_15_0 = param1.getParameter("settings");
                 return stackIn_15_0;
-              } else {
-                stackIn_13_0 = sd.field_z;
-                return stackIn_13_0;
               }
+              stackIn_13_0 = sd.field_z;
+              return stackIn_13_0;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (RuntimeException) (Object) decompiledCaughtException;

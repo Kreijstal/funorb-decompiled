@@ -64,10 +64,9 @@ final class la extends sh {
                 this.field_v = var5_int;
                 if (!(this.field_u instanceof de)) {
                   break L0;
-                } else {
-                  ((de) ((Object) this.field_u)).a(param3, -20951, (la) (this), param1);
-                  break L0;
                 }
+                ((de) ((Object) this.field_u)).a(param3, -20951, (la) (this), param1);
+                break L0;
               }
             }
             if (this.field_C) {
@@ -126,10 +125,9 @@ final class la extends sh {
           super.a(param0, param1, param2, param3);
           if (!param0) {
             return;
-          } else {
-            this.field_G = 54;
-            return;
           }
+          this.field_G = 54;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -251,18 +249,16 @@ final class la extends sh {
           if (!this.a(param4, -1, param5, param0, param2)) {
             stackIn_10_0 = var8_int;
             return stackIn_10_0 != 0;
-          } else {
-            this.field_f = param3;
-            if (param3 != 1) {
-              stackIn_8_0 = 1;
-              return stackIn_8_0 != 0;
-            } else {
-              this.field_H = -param0 + param5 - this.field_m;
-              this.field_D = -param2 + (param4 - this.field_v);
-              lh.field_b = (la) (this);
-              return true;
-            }
           }
+          this.field_f = param3;
+          if (param3 != 1) {
+            stackIn_8_0 = 1;
+            return stackIn_8_0 != 0;
+          }
+          this.field_H = -param0 + param5 - this.field_m;
+          this.field_D = -param2 + (param4 - this.field_v);
+          lh.field_b = (la) (this);
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;

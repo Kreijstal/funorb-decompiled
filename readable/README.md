@@ -2,7 +2,7 @@
 
 The current export has 1,170 guarded naming rules: 22 classes, 382 fields,
 175 methods, 209 parameters and 382 local declarations. Both 303-file corpora
-compile, preserving 152,600 bindings and 388 override relationships. Unknown
+compile, preserving 152,514 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`a298f846c1824a1e88dd6c63674bbe81e67152e1`. It comes from java-tools
-`2f75cefb09f32e164f77b7f4adc6fd011d922f43` and Deko
+`589c78257fcea469a48c6a3f2eba15cf77fb7e1a`. It comes from java-tools
+`44435d91c3e1f48530c0f2462caa3874968993bc` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`8e6ff3d4a6c5439128cbbad964491358c73c92c2e6e0a0ff82edadda478a612e`:
+`91f00d39ebbcdeff76e1c4d507ba69839a1f5fe3573499906040ac6f712a63c1`:
 
 ```sh
-git archive --format=tar 2f75cefb09f32e164f77b7f4adc6fd011d922f43 | sha256sum
+git archive --format=tar 44435d91c3e1f48530c0f2462caa3874968993bc | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -121,6 +121,8 @@ The boundary scan names all 27 remaining local declarations and its method
 guard, including four row-center cursors and thirteen retained result carriers.
 Its obsolete selector is removed; the result carriers now return on their
 original paths inside the try. The 13-arm post-try ladder is gone.
+The current early-exit pass also turns its deeply nested pixel checks into
+sequential guards, retaining pixel-read order, division guards and exceptions.
 An independent closed-form lattice oracle checks every pixel in the 461-by-461
 bounding square at strides 640 and 641: 425,042 pixel checks and all 1,300
 perimeter pixels per variant. Negative nonzero pixels, read-only buffer behavior,
@@ -134,31 +136,48 @@ audio and whole-game equivalence remain unverified. Text-writer guards <=23
 retain a PCM side effect outside the direct writer probe. These source checks
 do not establish FPS, heap or phone acceptance.
 
-The pinned generic decompiler reconstructs forward, nonthrowing terminal
+The preceding terminal-return pass reconstructs forward, nonthrowing terminal
 returns inside the try when every normal predecessor belongs to that body.
 Shared joins, throwing continuations, handler entries, retreating edges and
 synchronized-region boundaries retain their external routing. This removes
 254 generated selectors (265 to 11) and 3,125 raw source lines across 181 files.
 All original CFG flow and exception-binding contracts remain checked.
 
-The fresh javac inventory preserves all 20,920 nonselector declarations,
-152,549 nonselector declaration/reference occurrences and 388 override edges.
-Changed files have unique method/original-spelling local identities; duplicate
-names only occur in the byte-identical `wg.finalize`, which retains exact keys.
-The readable update explicitly migrates 46 local ordinals and removes only the
-obsolete `boundaryResultArmId` rule. All remaining semantic names are retained.
-This source inventory audit does not establish whole-program equivalence.
+The current generic emitter flattens conditionals when one arm provably exits,
+using the shorter arm as a guard when both exit. It parses complete arms rather
+than guessing from the last line, renders children in their original CFG order,
+and retains a plain block when moving declarations would widen their scopes.
+Condition inversion preserves Boolean and NaN semantics. Shared labels, catches
+and synchronized bodies retain their destinations and scopes.
+
+This removes 2,128 generated else wrappers (3,481 to 1,353) and 2,213 raw source
+lines across 208 files. The fresh javac inventory preserves all 20,931
+declaration identities and 388 override edges. The only duplicate-name method,
+`wg.finalize`, is byte-identical. Current raw/readable comparison checks 152,514
+bindings. The update explicitly migrates 35 named local ordinals; all 1,170
+reviewed semantic names remain. Reference inventory changes comprise 86 merged
+unit increments, one assignment moved into an initializer and one unreachable
+checked-catch sentinel. This inventory audit does not establish whole-program
+equivalence.
 
 In the pinned java-tools checkout, run the focused checks:
 
 ```sh
-node test/exceptionStructurer.test.js
+node test/javaAstEmitterLoopExits.test.js
+node test/structurer.test.js
+node test/cfrFloatingComparisons.test.js
+node test/cfrNestedLoopSplitting.test.js
 node test/cfrExceptionLoopExits.test.js
 node test/cfrCatchSemanticsRegressions.test.js
 ```
 
-These pass 36 region-contract groups, six native exit groups and 18 catch
-regression assertions. Return-tail fixtures compare 1,560 int/long/float/double/
+The emitter passes 11 groups and 556 native comparisons covering effect order,
+NaNs, labels, early returns, exceptions, variable/local-class scopes and lock
+release, including a retained scope block that previously acquired an
+unreachable default return. Structurer, floating-comparison and nested-cycle
+checks pass 13, four and three groups respectively. Exception exits and catch
+regressions pass six groups and 18 assertions. Return-tail fixtures compare
+1,560 int/long/float/double/
 reference/void cases across normal and forced output, including boundaries,
 NaN payloads, identity, effects, shared joins and outside failures. Another
 15 cases verify normal synchronized reconstruction, lock state and release.
@@ -190,7 +209,7 @@ identity and naming migrations live in the same `publication.sourceChange` and
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `0ce7d77ce24b5c74be0439d9d363ac7fb407bf949c9385ecc5f7e4cbcfe48f0f` |
-| Readable | `80ca753ee13941a47819f1178975f880e33f48ba1d0a6891bf6b58c3cf1d0874` |
+| Raw | `baeae8c226093d2a14392d9994aa74ddd4c735009a09e713af1b7cf39f202029` |
+| Readable | `28acc3358e687ca4bd75674d08882a3d3a639e3118837fb6c0a15d3835ef86af` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

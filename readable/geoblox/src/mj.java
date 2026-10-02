@@ -35,43 +35,42 @@ final class mj {
           if (param1 == 0) {
             stackIn_4_0 = "";
             return stackIn_4_0;
-          } else {
-            if (param1 == 1) {
-              var10 = param2[param0];
-              var4 = var10;
-              if (var4 != null) {
-                stackIn_11_0 = var10.toString();
-                return stackIn_11_0;
-              } else {
-                stackIn_9_0 = "null";
-                return stackIn_9_0;
-              }
-            } else {
-              var4_int = param0 + param1;
-              var5 = 0;
-              if (param3 != 96) {
-                field_b = 111;
-              }
-              for (var6_int = param0; var4_int > var6_int; var6_int++) {
-                var7_ref_CharSequence = param2[var6_int];
-                if (var7_ref_CharSequence == null) {
-                  var5 += 4;
-                } else {
-                  var5 = var5 + var7_ref_CharSequence.length();
-                }
-              }
-              var6 = new StringBuilder(var5);
-              for (var7 = param0; var4_int > var7; var7++) {
-                var8 = param2[var7];
-                if (var8 != null) {
-                  discarded$0 = var6.append(var8);
-                } else {
-                  discarded$1 = var6.append("null");
-                }
-              }
-              stackIn_27_0 = var6.toString();
-              return stackIn_27_0;
+          }
+          if (param1 == 1) {
+            var10 = param2[param0];
+            var4 = var10;
+            if (var4 != null) {
+              stackIn_11_0 = var10.toString();
+              return stackIn_11_0;
             }
+            stackIn_9_0 = "null";
+            return stackIn_9_0;
+          }
+          {
+            var4_int = param0 + param1;
+            var5 = 0;
+            if (param3 != 96) {
+              field_b = 111;
+            }
+            for (var6_int = param0; var4_int > var6_int; var6_int++) {
+              var7_ref_CharSequence = param2[var6_int];
+              if (var7_ref_CharSequence == null) {
+                var5 += 4;
+              } else {
+                var5 = var5 + var7_ref_CharSequence.length();
+              }
+            }
+            var6 = new StringBuilder(var5);
+            for (var7 = param0; var4_int > var7; var7++) {
+              var8 = param2[var7];
+              if (var8 != null) {
+                discarded$0 = var6.append(var8);
+              } else {
+                discarded$1 = var6.append("null");
+              }
+            }
+            stackIn_27_0 = var6.toString();
+            return stackIn_27_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,9 +93,9 @@ final class mj {
     }
 
     final static nd a(String param0, byte param1) {
+        int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         nd stackIn_12_0 = null;
@@ -112,25 +111,17 @@ final class mj {
           if (param1 > -34) {
             fullscreenAcceptCountdownSingularText = (String) null;
           }
-          var3 = 0;
-          L1: while (true) {
-            if (var3 >= var2_int) {
-              stackIn_12_0 = ii.field_h;
-              return stackIn_12_0;
-            } else {
-              var4 = param0.charAt(var3);
-              if (48 <= var4) {
-                if (var4 <= 57) {
-                  var3++;
-                  continue L1;
-                } else {
-                  return null;
-                }
-              } else {
-                return null;
-              }
+          for (var3 = 0; var3 < var2_int; var3++) {
+            var4 = param0.charAt(var3);
+            if (48 > var4) {
+              return null;
+            }
+            if (var4 > 57) {
+              return null;
             }
           }
+          stackIn_12_0 = ii.field_h;
+          return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

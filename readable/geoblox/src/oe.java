@@ -61,10 +61,9 @@ abstract class oe extends dd {
           if (param0 == 44) {
             stackIn_4_0 = ei.a(false, false, param1);
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = (String) null;
-            return stackIn_2_0;
           }
+          stackIn_2_0 = (String) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -261,7 +260,10 @@ abstract class oe extends dd {
         int var7 = 0;
         int var8 = 0;
         try {
-          if (param0 != null) {
+          if (param0 == null) {
+            return null;
+          }
+          {
             var2_int = 0;
             var3 = param0.length();
             L0: while (var3 > var2_int) {
@@ -279,36 +281,33 @@ abstract class oe extends dd {
               break;
             }
             var4 = -var2_int + var3;
-            if (1 <= var4) {
-              if (12 >= var4) {
-                if (param1 != 12) {
-                  connectionRestoredText = (String) null;
-                }
-                var5 = new StringBuilder(var4);
-                for (var6 = var2_int; var6 < var3; var6++) {
-                  var7 = param0.charAt(var6);
-                  if (fb.a((char) var7, -47)) {
-                    var8 = hc.a((char) var7, param1 - 239);
-                    if (var8 != 0) {
-                      discarded$0 = var5.append((char) var8);
-                    }
-                  }
-                }
-                if (var5.length() != 0) {
-                  stackIn_28_0 = var5.toString();
-                  return stackIn_28_0;
-                } else {
-                  stackIn_26_0 = null;
-                  return (String) ((Object) stackIn_26_0);
-                }
-              } else {
-                return null;
-              }
-            } else {
+            if (1 > var4) {
               return null;
             }
-          } else {
-            return null;
+            if (12 < var4) {
+              return null;
+            }
+            {
+              if (param1 != 12) {
+                connectionRestoredText = (String) null;
+              }
+              var5 = new StringBuilder(var4);
+              for (var6 = var2_int; var6 < var3; var6++) {
+                var7 = param0.charAt(var6);
+                if (fb.a((char) var7, -47)) {
+                  var8 = hc.a((char) var7, param1 - 239);
+                  if (var8 != 0) {
+                    discarded$0 = var5.append((char) var8);
+                  }
+                }
+              }
+              if (var5.length() != 0) {
+                stackIn_28_0 = var5.toString();
+                return stackIn_28_0;
+              }
+              stackIn_26_0 = null;
+              return (String) ((Object) stackIn_26_0);
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -331,8 +330,8 @@ abstract class oe extends dd {
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
-        int incrementValue$0 = 0;
         int incrementValue$1 = 0;
+        int incrementValue$0 = 0;
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -358,128 +357,126 @@ abstract class oe extends dd {
           }
           var5 = stackIn_7_0;
           var6 = 0;
-          if (param2 == 160) {
-            L2: {
-              L3: {
-                var7 = 0;
-                var8 = 0;
-                if (param0) {
-                  for (var9 = 15; var9 >= 0; var9--) {
-                    if ((var5 & 1 << var9) == 0) {
-                      var7 += 20;
-                      var8++;
-                    }
-                  }
-                  if (var8 >= 8) {
-                    var3_int = var3_int + (-160 + var7);
-                  }
-                  for (var9 = 0; pg.field_a.length > var9; var9++) {
-                    L7: {
-                      if ((1 << var9 & var5) == 0) {
-                        if (param0) {
-                          break L7;
-                        }
-                      }
-                      if (!da.a(0, 88)) {
-                        if (var9 == 16) {
-                          if (!qi.d(109)) {
-                            break L7;
-                          }
-                        }
-                      }
-                      if (mc.field_a >= var3_int) {
-                        if (mc.field_a <= var3_int + 32) {
-                          if (var4 <= he.field_d) {
-                            if (he.field_d <= var4 + 32) {
-                              if (a.field_e == var9) {
-                                a.field_e = -1;
-                                break L2;
-                              } else {
-                                a.field_e = var9;
-                                break L2;
-                              }
-                            }
-                          }
-                        }
-                      }
-                      incrementValue$0 = var6;
-                      var6++;
-                      if (7 != incrementValue$0) {
-                        var3_int += 40;
-                      } else {
-                        var3_int = 160;
-                        var4 += 40;
-                        if (!param1) {
-                          var4 += 5;
-                        }
-                        if (param0) {
-                          if (var8 < 8) {
-                            var3_int = var3_int + var7;
-                          }
-                        }
+          if (param2 != 160) {
+            return;
+          }
+          L2: {
+            L3: {
+              var7 = 0;
+              var8 = 0;
+              if (!param0) {
+                if (var8 >= 8) {
+                  var3_int = var3_int + (-160 + var7);
+                }
+                for (var9 = 0; pg.field_a.length > var9; var9++) {
+                  L15: {
+                    if ((1 << var9 & var5) == 0) {
+                      if (param0) {
+                        break L15;
                       }
                     }
-                  }
-                  break L3;
-                } else {
-                  if (var8 >= 8) {
-                    var3_int = var3_int + (-160 + var7);
-                  }
-                  for (var9 = 0; pg.field_a.length > var9; var9++) {
-                    L15: {
-                      if ((1 << var9 & var5) == 0) {
-                        if (param0) {
+                    if (!da.a(0, 88)) {
+                      if (var9 == 16) {
+                        if (!qi.d(109)) {
                           break L15;
                         }
                       }
-                      if (!da.a(0, 88)) {
-                        if (var9 == 16) {
-                          if (!qi.d(109)) {
-                            break L15;
-                          }
-                        }
-                      }
-                      if (mc.field_a >= var3_int) {
-                        if (mc.field_a <= var3_int + 32) {
-                          if (var4 <= he.field_d) {
-                            if (he.field_d <= var4 + 32) {
-                              if (a.field_e == var9) {
-                                a.field_e = -1;
-                                break L2;
-                              } else {
-                                a.field_e = var9;
-                                break L2;
-                              }
+                    }
+                    if (mc.field_a >= var3_int) {
+                      if (mc.field_a <= var3_int + 32) {
+                        if (var4 <= he.field_d) {
+                          if (he.field_d <= var4 + 32) {
+                            if (a.field_e == var9) {
+                              a.field_e = -1;
+                              break L2;
                             }
-                          }
-                        }
-                      }
-                      incrementValue$1 = var6;
-                      var6++;
-                      if (7 != incrementValue$1) {
-                        var3_int += 40;
-                      } else {
-                        var3_int = 160;
-                        var4 += 40;
-                        if (!param1) {
-                          var4 += 5;
-                        }
-                        if (param0) {
-                          if (var8 < 8) {
-                            var3_int = var3_int + var7;
+                            a.field_e = var9;
+                            break L2;
                           }
                         }
                       }
                     }
+                    incrementValue$1 = var6;
+                    var6++;
+                    if (7 != incrementValue$1) {
+                      var3_int += 40;
+                    } else {
+                      var3_int = 160;
+                      var4 += 40;
+                      if (!param1) {
+                        var4 += 5;
+                      }
+                      if (param0) {
+                        if (var8 < 8) {
+                          var3_int = var3_int + var7;
+                        }
+                      }
+                    }
                   }
-                  break L3;
                 }
+                break L3;
+              }
+              {
+                for (var9 = 15; var9 >= 0; var9--) {
+                  if ((var5 & 1 << var9) == 0) {
+                    var7 += 20;
+                    var8++;
+                  }
+                }
+                if (var8 >= 8) {
+                  var3_int = var3_int + (-160 + var7);
+                }
+                for (var9 = 0; pg.field_a.length > var9; var9++) {
+                  L7: {
+                    if ((1 << var9 & var5) == 0) {
+                      if (param0) {
+                        break L7;
+                      }
+                    }
+                    if (!da.a(0, 88)) {
+                      if (var9 == 16) {
+                        if (!qi.d(109)) {
+                          break L7;
+                        }
+                      }
+                    }
+                    if (mc.field_a >= var3_int) {
+                      if (mc.field_a <= var3_int + 32) {
+                        if (var4 <= he.field_d) {
+                          if (he.field_d <= var4 + 32) {
+                            if (a.field_e == var9) {
+                              a.field_e = -1;
+                              break L2;
+                            }
+                            a.field_e = var9;
+                            break L2;
+                          }
+                        }
+                      }
+                    }
+                    incrementValue$0 = var6;
+                    var6++;
+                    if (7 != incrementValue$0) {
+                      var3_int += 40;
+                    } else {
+                      var3_int = 160;
+                      var4 += 40;
+                      if (!param1) {
+                        var4 += 5;
+                      }
+                      if (param0) {
+                        if (var8 < 8) {
+                          var3_int = var3_int + var7;
+                        }
+                      }
+                    }
+                  }
+                }
+                break L3;
               }
             }
-            return;
-          } else {
-            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -508,113 +505,108 @@ abstract class oe extends dd {
         var6 = 194;
         var7 = 0;
         var8 = param2;
-        L0: while (true) {
-          if (var4 <= var7) {
-            var4 = 22;
-            var5 = 194;
-            var6 = 169;
-            var7 = 0;
-            var8 = 35 + param2;
-            L1: while (var7 < var4) {
-              var9 = var5 + (-var5 + var6) * var7 / var4;
-              var9 = var9 | (var9 << 8 | var9 << 16);
-              SoftwareRasterizer.c(param0, var8, 6, var9);
-              SoftwareRasterizer.c(this.field_r + param0 - 6, var8, 6, var9);
-              var7++;
-              var8++;
-            }
-            jc.field_a.b(-90 + this.field_r + param0, 10 + param2);
-            if (param1 != 20) {
-              this.field_M = -34;
-            }
-            vl.a(id.field_c, -10 + this.field_r, 35 + param2, 5 + param0, (byte) 107);
-            vl.a(fh.field_e, this.field_r, -22 + (this.field_h + param2), param0, (byte) 107);
-            var4 = this.field_h - 79;
-            var5 = 169;
-            var6 = 127;
-            var7 = 0;
-            var8 = param2 + 57;
-            L3: while (var7 < var4) {
-              var9 = var7 * (var6 - var5) / var4 + var5;
-              var9 = var9 | (var9 << 16 | var9 << 8);
-              SoftwareRasterizer.c(param0, var8, 6, var9);
-              SoftwareRasterizer.c(-6 + (this.field_r + param0), var8, 6, var9);
-              var8++;
-              var7++;
-            }
-            return;
-          } else {
-            if (~var8 <= ~SoftwareRasterizer.clipTop) {
-              if (SoftwareRasterizer.clipBottom > var8) {
-                L4: {
-                  var9 = (-var5 + var6) * var7 / var4 + var5;
-                  var10 = 0;
-                  var11 = this.field_r;
-                  if (var7 <= 20) {
-                    L5: while (true) {
-                      if (var10 > 20) {
-                        break L4;
-                      } else {
-                        var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
-                        if (var12 <= 462) {
-                          if (var12 < 420) {
-                            break L4;
-                          } else {
-                            var13 = (-var12 + 462) * var9 / 42;
-                            var13 = var13 | (var13 << 8 | var13 << 16);
-                            SoftwareRasterizer.framebuffer[var8 * SoftwareRasterizer.stride + param0 + var10] = var13;
-                            var10++;
-                            continue L5;
-                          }
-                        } else {
-                          var10++;
-                          continue L5;
-                        }
-                      }
-                    }
+        L0: while (var4 > var7) {
+          if (~var8 > ~SoftwareRasterizer.clipTop) {
+            var8++;
+            var7++;
+            continue L0;
+          }
+          if (SoftwareRasterizer.clipBottom <= var8) {
+            var8++;
+            var7++;
+            continue L0;
+          }
+          L4: {
+            var9 = (-var5 + var6) * var7 / var4 + var5;
+            var10 = 0;
+            var11 = this.field_r;
+            if (var7 <= 20) {
+              L5: while (true) {
+                if (var10 > 20) {
+                  break L4;
+                }
+                {
+                  var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
+                  if (var12 > 462) {
+                    var10++;
+                    continue L5;
+                  }
+                  if (var12 < 420) {
+                    break L4;
+                  }
+                  {
+                    var13 = (-var12 + 462) * var9 / 42;
+                    var13 = var13 | (var13 << 8 | var13 << 16);
+                    SoftwareRasterizer.framebuffer[var8 * SoftwareRasterizer.stride + param0 + var10] = var13;
+                    var10++;
+                    continue L5;
                   }
                 }
-                L6: {
-                  if (20 >= var7) {
-                    var12 = var11;
-                    var11 -= 21;
-                    L7: for (var13 = 0; var13 <= 20; var13++) {
-                      var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
-                      if (var14 <= 462) {
-                        if (var14 < 420) {
-                          var12 = var11 + 1;
-                          var11++;
-                          continue L7;
-                        } else {
-                          var15 = var9 * (462 - var14) / 42;
-                          var15 = var15 | (var15 << 8 | var15 << 16);
-                          SoftwareRasterizer.framebuffer[var11 + param0 + SoftwareRasterizer.stride * var8] = var15;
-                          var11++;
-                          continue L7;
-                        }
-                      }
-                      break;
-                    }
-                    var11 = var12;
-                    break L6;
-                  }
-                }
-                var9 = var9 | (var9 << 16 | var9 << 8);
-                SoftwareRasterizer.c(var10 + param0, var8, var11 - var10, var9);
-                var8++;
-                var7++;
-                continue L0;
-              } else {
-                var8++;
-                var7++;
-                continue L0;
               }
-            } else {
-              var8++;
-              var7++;
-              continue L0;
             }
           }
+          L6: {
+            if (20 >= var7) {
+              var12 = var11;
+              var11 -= 21;
+              L7: for (var13 = 0; var13 <= 20; var13++) {
+                var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
+                if (var14 <= 462) {
+                  if (var14 < 420) {
+                    var12 = var11 + 1;
+                    var11++;
+                    continue L7;
+                  }
+                  {
+                    var15 = var9 * (462 - var14) / 42;
+                    var15 = var15 | (var15 << 8 | var15 << 16);
+                    SoftwareRasterizer.framebuffer[var11 + param0 + SoftwareRasterizer.stride * var8] = var15;
+                    var11++;
+                    continue L7;
+                  }
+                }
+                break;
+              }
+              var11 = var12;
+              break L6;
+            }
+          }
+          var9 = var9 | (var9 << 16 | var9 << 8);
+          SoftwareRasterizer.c(var10 + param0, var8, var11 - var10, var9);
+          var8++;
+          var7++;
+        }
+        var4 = 22;
+        var5 = 194;
+        var6 = 169;
+        var7 = 0;
+        var8 = 35 + param2;
+        L1: while (var7 < var4) {
+          var9 = var5 + (-var5 + var6) * var7 / var4;
+          var9 = var9 | (var9 << 8 | var9 << 16);
+          SoftwareRasterizer.c(param0, var8, 6, var9);
+          SoftwareRasterizer.c(this.field_r + param0 - 6, var8, 6, var9);
+          var7++;
+          var8++;
+        }
+        jc.field_a.b(-90 + this.field_r + param0, 10 + param2);
+        if (param1 != 20) {
+          this.field_M = -34;
+        }
+        vl.a(id.field_c, -10 + this.field_r, 35 + param2, 5 + param0, (byte) 107);
+        vl.a(fh.field_e, this.field_r, -22 + (this.field_h + param2), param0, (byte) 107);
+        var4 = this.field_h - 79;
+        var5 = 169;
+        var6 = 127;
+        var7 = 0;
+        var8 = param2 + 57;
+        L3: while (var7 < var4) {
+          var9 = var7 * (var6 - var5) / var4 + var5;
+          var9 = var9 | (var9 << 16 | var9 << 8);
+          SoftwareRasterizer.c(param0, var8, 6, var9);
+          SoftwareRasterizer.c(-6 + (this.field_r + param0), var8, 6, var9);
+          var8++;
+          var7++;
         }
     }
 

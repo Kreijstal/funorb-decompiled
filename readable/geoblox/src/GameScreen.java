@@ -72,9 +72,8 @@ final class GameScreen extends MenuScreen {
                     this.previewMusicVolume(0);
                     if (var4 == 0) {
                       break L0;
-                    } else {
-                      break L2;
                     }
+                    break L2;
                   }
                 }
                 if (actionId != 9) {
@@ -111,16 +110,15 @@ final class GameScreen extends MenuScreen {
                 }
                 if (~ai.requestedScreenId == ~this.screenId) {
                   break L0;
-                } else {
-                  if (this.screenId != 1) {
-                    if (this.screenId != 0) {
-                      break L0;
-                    }
-                  }
-                  oc.previousMenuScreenId = this.screenId;
-                  if (var4 == 0) {
+                }
+                if (this.screenId != 1) {
+                  if (this.screenId != 0) {
                     break L0;
                   }
+                }
+                oc.previousMenuScreenId = this.screenId;
+                if (var4 == 0) {
+                  break L0;
                 }
               }
             }
@@ -135,13 +133,12 @@ final class GameScreen extends MenuScreen {
                   if (og.field_n <= 0) {
                     if (this.field_o == 0) {
                       break L16;
-                    } else {
-                      if (qa.field_a > 190) {
-                        if (qa.field_a < 449) {
-                          if (265 < ue.field_e) {
-                            if (ue.field_e < 299) {
-                              break L16;
-                            }
+                    }
+                    if (qa.field_a > 190) {
+                      if (qa.field_a < 449) {
+                        if (265 < ue.field_e) {
+                          if (ue.field_e < 299) {
+                            break L16;
                           }
                         }
                       }
@@ -151,18 +148,15 @@ final class GameScreen extends MenuScreen {
                     if (0 != this.field_o) {
                       if (qa.field_a <= 260) {
                         break L0;
-                      } else {
-                        if (qa.field_a >= 380) {
-                          break L0;
-                        } else {
-                          if (ue.field_e <= 274) {
-                            break L0;
-                          } else {
-                            if (ue.field_e >= 309) {
-                              break L0;
-                            }
-                          }
-                        }
+                      }
+                      if (qa.field_a >= 380) {
+                        break L0;
+                      }
+                      if (ue.field_e <= 274) {
+                        break L0;
+                      }
+                      if (ue.field_e >= 309) {
+                        break L0;
                       }
                     }
                     this.pointerInteractionActive = true;
@@ -175,22 +169,18 @@ final class GameScreen extends MenuScreen {
                     if (1 != this.field_o) {
                       if (this.field_o >= 0) {
                         break L20;
-                      } else {
-                        if (qa.field_a <= 350) {
-                          break L20;
-                        } else {
-                          if (qa.field_a >= 470) {
-                            break L20;
-                          } else {
-                            if (ue.field_e <= 327) {
-                              break L20;
-                            } else {
-                              if (ue.field_e >= 362) {
-                                break L20;
-                              }
-                            }
-                          }
-                        }
+                      }
+                      if (qa.field_a <= 350) {
+                        break L20;
+                      }
+                      if (qa.field_a >= 470) {
+                        break L20;
+                      }
+                      if (ue.field_e <= 327) {
+                        break L20;
+                      }
+                      if (ue.field_e >= 362) {
+                        break L20;
                       }
                     }
                     this.field_C = false;
@@ -203,22 +193,18 @@ final class GameScreen extends MenuScreen {
                   if (this.field_o != 0) {
                     if (this.field_o >= 0) {
                       break L0;
-                    } else {
-                      if (qa.field_a <= 170) {
-                        break L0;
-                      } else {
-                        if (qa.field_a >= 290) {
-                          break L0;
-                        } else {
-                          if (ue.field_e <= 327) {
-                            break L0;
-                          } else {
-                            if (ue.field_e >= 362) {
-                              break L0;
-                            }
-                          }
-                        }
-                      }
+                    }
+                    if (qa.field_a <= 170) {
+                      break L0;
+                    }
+                    if (qa.field_a >= 290) {
+                      break L0;
+                    }
+                    if (ue.field_e <= 327) {
+                      break L0;
+                    }
+                    if (ue.field_e >= 362) {
+                      break L0;
                     }
                   }
                   this.pointerInteractionActive = true;
@@ -237,22 +223,18 @@ final class GameScreen extends MenuScreen {
                 if (this.field_o != 1) {
                   if (this.field_o >= 0) {
                     break L23;
-                  } else {
-                    if (qa.field_a <= 350) {
-                      break L23;
-                    } else {
-                      if (470 <= qa.field_a) {
-                        break L23;
-                      } else {
-                        if (ue.field_e <= 265) {
-                          break L23;
-                        } else {
-                          if (ue.field_e >= 299) {
-                            break L23;
-                          }
-                        }
-                      }
-                    }
+                  }
+                  if (qa.field_a <= 350) {
+                    break L23;
+                  }
+                  if (470 <= qa.field_a) {
+                    break L23;
+                  }
+                  if (ue.field_e <= 265) {
+                    break L23;
+                  }
+                  if (ue.field_e >= 299) {
+                    break L23;
                   }
                 }
                 this.pointerInteractionActive = true;
@@ -264,22 +246,18 @@ final class GameScreen extends MenuScreen {
               if (this.field_o != 0) {
                 if (this.field_o >= 0) {
                   break L0;
-                } else {
-                  if (qa.field_a <= 170) {
-                    break L0;
-                  } else {
-                    if (qa.field_a >= 290) {
-                      break L0;
-                    } else {
-                      if (ue.field_e <= 265) {
-                        break L0;
-                      } else {
-                        if (ue.field_e >= 299) {
-                          break L0;
-                        }
-                      }
-                    }
-                  }
+                }
+                if (qa.field_a <= 170) {
+                  break L0;
+                }
+                if (qa.field_a >= 290) {
+                  break L0;
+                }
+                if (ue.field_e <= 265) {
+                  break L0;
+                }
+                if (ue.field_e >= 299) {
+                  break L0;
                 }
               }
               this.pointerInteractionActive = true;
@@ -329,7 +307,8 @@ final class GameScreen extends MenuScreen {
 
                   if (var4 != 0) {
                     break L2;
-                  } else {
+                  }
+                  {
                     var3 = stackIn_16_0;
                     L4: while (true) {
                       L5: {
@@ -338,19 +317,17 @@ final class GameScreen extends MenuScreen {
                           var3 = var3 - ee.field_A.field_o;
                           if (var4 != 0) {
                             break L5;
-                          } else {
-                            if (var4 == 0) {
-                              continue L4;
-                            }
+                          }
+                          if (var4 == 0) {
+                            continue L4;
                           }
                         }
                         var2_int = var2_int + ee.field_A.field_s;
                       }
                       if (var4 == 0) {
                         continue L1;
-                      } else {
-                        break L3;
                       }
+                      break L3;
                     }
                   }
                 }
@@ -366,29 +343,26 @@ final class GameScreen extends MenuScreen {
                   if (~-vc.field_j.field_s >= ~var2_int) {
                     if (var4 != 0) {
                       break L8;
-                    } else {
-                      var3 = this.field_I + vc.field_j.field_o + 480;
-                      L10: while (true) {
-                        L11: {
-                          if (~var3 <= ~-vc.field_j.field_o) {
-                            vc.field_j.b(var2_int, var3);
-                            var3 = var3 - vc.field_j.field_o;
-                            if (var4 != 0) {
-                              break L11;
-                            } else {
-                              if (var4 == 0) {
-                                continue L10;
-                              }
-                            }
+                    }
+                    var3 = this.field_I + vc.field_j.field_o + 480;
+                    L10: while (true) {
+                      L11: {
+                        if (~var3 <= ~-vc.field_j.field_o) {
+                          vc.field_j.b(var2_int, var3);
+                          var3 = var3 - vc.field_j.field_o;
+                          if (var4 != 0) {
+                            break L11;
                           }
-                          var2_int = var2_int - vc.field_j.field_s;
+                          if (var4 == 0) {
+                            continue L10;
+                          }
                         }
-                        if (var4 == 0) {
-                          continue L7;
-                        } else {
-                          break L9;
-                        }
+                        var2_int = var2_int - vc.field_j.field_s;
                       }
+                      if (var4 == 0) {
+                        continue L7;
+                      }
+                      break L9;
                     }
                   }
                 }
@@ -411,12 +385,11 @@ final class GameScreen extends MenuScreen {
         try {
           L0: {
             if (!this.field_H) {
-              if (this.field_T < 0) {
-                this.field_T = this.field_T + 1;
-                if (var3 == 0) {
-                  break L0;
-                }
-              } else {
+              if (this.field_T >= 0) {
+                break L0;
+              }
+              this.field_T = this.field_T + 1;
+              if (var3 == 0) {
                 break L0;
               }
             }
@@ -461,7 +434,10 @@ final class GameScreen extends MenuScreen {
         int var12 = 0;
         var12 = Geoblox.field_C;
         try {
-          if (param0 == -28750) {
+          if (param0 != -28750) {
+            return;
+          }
+          {
             this.b(false);
             var2_int = 270;
             var3 = 140;
@@ -537,253 +513,230 @@ final class GameScreen extends MenuScreen {
                           break L7;
                         }
                       }
-                      if (this.field_C) {
-                        if (fh.c(-93)) {
-                          if (this.activeTicks <= 200) {
-                            stackIn_73_0 = this.activeTicks;
-                          } else {
-                            stackIn_73_0 = 200;
-                          }
-                          L17: {
-                            var5 = stackIn_73_0;
-                            SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
-                            ma.a(160, 150, 80, (byte) -92, 340, ll.field_h);
-                            var6 = 170;
-                            fi.field_d.a(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
-                            var7 = 100;
-                            var8 = -(20 + var7 >> 1) + 410;
-                            var6 = 265;
-                            var9 = var8 - (-(var7 >> 1) - 10);
-                            ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.field_g);
-                            if (1 != this.field_o) {
-                              if (this.field_o >= 0) {
-                                break L17;
-                              } else {
-                                if (350 >= qa.field_a) {
-                                  break L17;
-                                } else {
-                                  if (qa.field_a >= 470) {
-                                    break L17;
-                                  } else {
-                                    if (ue.field_e <= 265) {
-                                      break L17;
-                                    } else {
-                                      if (ue.field_e >= 299) {
-                                        break L17;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                            dd.field_G.field_K[0][wf.field_p] = 15488514;
-                          }
-                          L19: {
-                            dd.field_G.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
-                            var8 = 320 - (20 + var7 >> 1) - 90;
-                            dd.field_G.field_K[0][wf.field_p] = 16689938;
-                            var6 = 265;
-                            var9 = 10 + (var7 >> 1) + var8;
-                            ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.field_g);
-                            if (this.field_o != 0) {
-                              if (0 <= this.field_o) {
-                                break L19;
-                              } else {
-                                if (170 >= qa.field_a) {
-                                  break L19;
-                                } else {
-                                  if (qa.field_a >= 290) {
-                                    break L19;
-                                  } else {
-                                    if (ue.field_e <= 265) {
-                                      break L19;
-                                    } else {
-                                      if (ue.field_e >= 299) {
-                                        break L19;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                            dd.field_G.field_K[0][wf.field_p] = 15488514;
-                          }
-                          dd.field_G.b(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
-                          dd.field_G.field_K[0][wf.field_p] = 16689938;
-                          if (var12 == 0) {
-                            break L7;
-                          }
-                        }
-                        if (og.field_n > 0) {
-                          if (vl.field_n == null) {
-                            if (this.activeTicks > 200) {
-                              stackIn_122_0 = 200;
-                            } else {
-                              stackIn_122_0 = this.activeTicks;
-                            }
-                            L24: {
-                              var5 = stackIn_122_0;
-                              SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
-                              ma.a(160, 160, 95, (byte) -92, 320, ll.field_h);
-                              var6 = 170;
-                              var6 = var6 + 16 * fi.field_d.a(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                              var6 += 40;
-                              var7 = 100;
-                              var8 = 320 - (var7 + 20 >> 1);
-                              var9 = (var7 >> 1) + (var8 + 10);
-                              ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.field_g);
-                              if (0 != this.field_o) {
-                                if (260 >= qa.field_a) {
-                                  break L24;
-                                } else {
-                                  if (qa.field_a >= 380) {
-                                    break L24;
-                                  } else {
-                                    if (ue.field_e <= 274) {
-                                      break L24;
-                                    } else {
-                                      if (ue.field_e >= 309) {
-                                        break L24;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                              dd.field_G.field_K[0][wf.field_p] = 15488514;
-                            }
-                            dd.field_G.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
-                            dd.field_G.field_K[0][wf.field_p] = 16689938;
-                            if (var12 == 0) {
-                              break L7;
-                            }
-                          }
-                          if (this.activeTicks <= 200) {
-                            stackIn_144_0 = this.activeTicks;
-                          } else {
-                            stackIn_144_0 = 200;
-                          }
-                          L27: {
-                            var5 = stackIn_144_0;
-                            SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
-                            ma.a(160, 160, 140, (byte) -92, 320, ll.field_h);
-                            var6 = 170;
-                            var7_ref_String = ue.fullscreenBeforeAcceptText + " " + pb.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
-                            var6 = var6 + 16 * fi.field_d.a(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                            var6 += 10;
-                            var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 + 1);
-                            if ((1500 - this.activeTicks) / 150 <= 0) {
-                              var6 = var6 + fi.field_d.a(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
-                              if (var12 == 0) {
-                                break L27;
-                              }
-                            }
-                            var6 = var6 + fi.field_d.a(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
-                          }
-                          L29: {
-                            var6 += 40;
-                            var9 = 100;
-                            var10 = -(20 + var9 >> 1) + 320 + 90;
-                            ma.a(var6, var10, 36, (byte) -92, var9 + 20, eb.field_g);
-                            var11 = 10 + ((var9 >> 1) + var10);
-                            if (this.field_o != 1) {
-                              if (0 <= this.field_o) {
-                                break L29;
-                              } else {
-                                if (qa.field_a <= 350) {
-                                  break L29;
-                                } else {
-                                  if (qa.field_a >= 470) {
-                                    break L29;
-                                  } else {
-                                    if (ue.field_e <= 317) {
-                                      break L29;
-                                    } else {
-                                      if (ue.field_e >= 352) {
-                                        break L29;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                            dd.field_G.field_K[0][wf.field_p] = 15488514;
-                          }
-                          L31: {
-                            dd.field_G.b(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
-                            dd.field_G.field_K[0][wf.field_p] = 16689938;
-                            var10 = 320 - (20 + var9 >> 1) - 90;
-                            var11 = 10 + (var9 >> 1) + var10;
-                            ma.a(var6, var10, 36, (byte) -92, 20 + var9, eb.field_g);
-                            if (this.field_o != 0) {
-                              if (this.field_o >= 0) {
-                                break L31;
-                              } else {
-                                if (qa.field_a <= 170) {
-                                  break L31;
-                                } else {
-                                  if (qa.field_a >= 290) {
-                                    break L31;
-                                  } else {
-                                    if (ue.field_e <= 317) {
-                                      break L31;
-                                    } else {
-                                      if (ue.field_e >= 352) {
-                                        break L31;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                            dd.field_G.field_K[0][wf.field_p] = 15488514;
-                          }
-                          dd.field_G.b(pb.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
-                          dd.field_G.field_K[0][wf.field_p] = 16689938;
-                          if (var12 == 0) {
-                            break L7;
-                          }
-                        }
-                        if (this.activeTicks > 200) {
-                          stackIn_191_0 = 200;
+                      if (!this.field_C) {
+                        break L7;
+                      }
+                      if (fh.c(-93)) {
+                        if (this.activeTicks <= 200) {
+                          stackIn_73_0 = this.activeTicks;
                         } else {
-                          stackIn_191_0 = this.activeTicks;
+                          stackIn_73_0 = 200;
                         }
-                        L34: {
-                          var5 = stackIn_191_0;
+                        L17: {
+                          var5 = stackIn_73_0;
                           SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
-                          ma.a(170, 160, 80, (byte) -92, 320, ll.field_h);
-                          var6 = 180;
-                          fi.field_d.a(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                          var7 = 242;
-                          var8 = 320 - (var7 + 20 >> 1);
-                          var9 = 10 + (var8 + (var7 >> 1));
+                          ma.a(160, 150, 80, (byte) -92, 340, ll.field_h);
+                          var6 = 170;
+                          fi.field_d.a(ki.fullscreenNonmemberText, 160, var6, 320, 300, 0, -1, 1, 0, 16);
+                          var7 = 100;
+                          var8 = -(20 + var7 >> 1) + 410;
                           var6 = 265;
-                          ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.field_g);
-                          if (this.field_o != 0) {
-                            if (qa.field_a <= 190) {
-                              break L34;
-                            } else {
-                              if (qa.field_a >= 449) {
-                                break L34;
-                              } else {
-                                if (ue.field_e <= 265) {
-                                  break L34;
-                                } else {
-                                  if (299 <= ue.field_e) {
-                                    break L34;
-                                  }
-                                }
-                              }
+                          var9 = var8 - (-(var7 >> 1) - 10);
+                          ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.field_g);
+                          if (1 != this.field_o) {
+                            if (this.field_o >= 0) {
+                              break L17;
+                            }
+                            if (350 >= qa.field_a) {
+                              break L17;
+                            }
+                            if (qa.field_a >= 470) {
+                              break L17;
+                            }
+                            if (ue.field_e <= 265) {
+                              break L17;
+                            }
+                            if (ue.field_e >= 299) {
+                              break L17;
                             }
                           }
                           dd.field_G.field_K[0][wf.field_p] = 15488514;
                         }
-                        dd.field_G.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                        L19: {
+                          dd.field_G.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                          var8 = 320 - (20 + var7 >> 1) - 90;
+                          dd.field_G.field_K[0][wf.field_p] = 16689938;
+                          var6 = 265;
+                          var9 = 10 + (var7 >> 1) + var8;
+                          ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.field_g);
+                          if (this.field_o != 0) {
+                            if (0 <= this.field_o) {
+                              break L19;
+                            }
+                            if (170 >= qa.field_a) {
+                              break L19;
+                            }
+                            if (qa.field_a >= 290) {
+                              break L19;
+                            }
+                            if (ue.field_e <= 265) {
+                              break L19;
+                            }
+                            if (ue.field_e >= 299) {
+                              break L19;
+                            }
+                          }
+                          dd.field_G.field_K[0][wf.field_p] = 15488514;
+                        }
+                        dd.field_G.b(qb.fullscreenMembersButtonText, var9, 30 + var6, 0, -1);
                         dd.field_G.field_K[0][wf.field_p] = 16689938;
                         if (var12 == 0) {
                           break L7;
                         }
+                      }
+                      if (og.field_n > 0) {
+                        if (vl.field_n == null) {
+                          if (this.activeTicks > 200) {
+                            stackIn_122_0 = 200;
+                          } else {
+                            stackIn_122_0 = this.activeTicks;
+                          }
+                          L24: {
+                            var5 = stackIn_122_0;
+                            SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
+                            ma.a(160, 160, 95, (byte) -92, 320, ll.field_h);
+                            var6 = 170;
+                            var6 = var6 + 16 * fi.field_d.a(sj.fullscreenUnavailableText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                            var6 += 40;
+                            var7 = 100;
+                            var8 = 320 - (var7 + 20 >> 1);
+                            var9 = (var7 >> 1) + (var8 + 10);
+                            ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.field_g);
+                            if (0 != this.field_o) {
+                              if (260 >= qa.field_a) {
+                                break L24;
+                              }
+                              if (qa.field_a >= 380) {
+                                break L24;
+                              }
+                              if (ue.field_e <= 274) {
+                                break L24;
+                              }
+                              if (ue.field_e >= 309) {
+                                break L24;
+                              }
+                            }
+                            dd.field_G.field_K[0][wf.field_p] = 15488514;
+                          }
+                          dd.field_G.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                          dd.field_G.field_K[0][wf.field_p] = 16689938;
+                          if (var12 == 0) {
+                            break L7;
+                          }
+                        }
+                        if (this.activeTicks <= 200) {
+                          stackIn_144_0 = this.activeTicks;
+                        } else {
+                          stackIn_144_0 = 200;
+                        }
+                        L27: {
+                          var5 = stackIn_144_0;
+                          SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
+                          ma.a(160, 160, 140, (byte) -92, 320, ll.field_h);
+                          var6 = 170;
+                          var7_ref_String = ue.fullscreenBeforeAcceptText + " " + pb.fullscreenAcceptButtonText + " " + wj.fullscreenAfterAcceptText + " " + rb.fullscreenCancelButtonText + " " + uj.fullscreenAfterCancelText;
+                          var6 = var6 + 16 * fi.field_d.a(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                          var6 += 10;
+                          var8_ref_String = Integer.toString((1500 - this.activeTicks) / 150 + 1);
+                          if ((1500 - this.activeTicks) / 150 <= 0) {
+                            var6 = var6 + fi.field_d.a(wj.a(mj.fullscreenAcceptCountdownSingularText, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                            if (var12 == 0) {
+                              break L27;
+                            }
+                          }
+                          var6 = var6 + fi.field_d.a(wj.a(jk.fullscreenAcceptCountdownPluralText, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                        }
+                        L29: {
+                          var6 += 40;
+                          var9 = 100;
+                          var10 = -(20 + var9 >> 1) + 320 + 90;
+                          ma.a(var6, var10, 36, (byte) -92, var9 + 20, eb.field_g);
+                          var11 = 10 + ((var9 >> 1) + var10);
+                          if (this.field_o != 1) {
+                            if (0 <= this.field_o) {
+                              break L29;
+                            }
+                            if (qa.field_a <= 350) {
+                              break L29;
+                            }
+                            if (qa.field_a >= 470) {
+                              break L29;
+                            }
+                            if (ue.field_e <= 317) {
+                              break L29;
+                            }
+                            if (ue.field_e >= 352) {
+                              break L29;
+                            }
+                          }
+                          dd.field_G.field_K[0][wf.field_p] = 15488514;
+                        }
+                        L31: {
+                          dd.field_G.b(rb.fullscreenCancelButtonText, var11, 30 + var6, 0, -1);
+                          dd.field_G.field_K[0][wf.field_p] = 16689938;
+                          var10 = 320 - (20 + var9 >> 1) - 90;
+                          var11 = 10 + (var9 >> 1) + var10;
+                          ma.a(var6, var10, 36, (byte) -92, 20 + var9, eb.field_g);
+                          if (this.field_o != 0) {
+                            if (this.field_o >= 0) {
+                              break L31;
+                            }
+                            if (qa.field_a <= 170) {
+                              break L31;
+                            }
+                            if (qa.field_a >= 290) {
+                              break L31;
+                            }
+                            if (ue.field_e <= 317) {
+                              break L31;
+                            }
+                            if (ue.field_e >= 352) {
+                              break L31;
+                            }
+                          }
+                          dd.field_G.field_K[0][wf.field_p] = 15488514;
+                        }
+                        dd.field_G.b(pb.fullscreenAcceptButtonText, var11, 30 + var6, 0, -1);
+                        dd.field_G.field_K[0][wf.field_p] = 16689938;
+                        if (var12 == 0) {
+                          break L7;
+                        }
+                      }
+                      if (this.activeTicks > 200) {
+                        stackIn_191_0 = 200;
                       } else {
+                        stackIn_191_0 = this.activeTicks;
+                      }
+                      L34: {
+                        var5 = stackIn_191_0;
+                        SoftwareRasterizer.b(0, 0, 640, 480, 0, var5);
+                        ma.a(170, 160, 80, (byte) -92, 320, ll.field_h);
+                        var6 = 180;
+                        fi.field_d.a(ki.fullscreenNonmemberText, 170, var6, 300, 300, 0, -1, 1, 0, 16);
+                        var7 = 242;
+                        var8 = 320 - (var7 + 20 >> 1);
+                        var9 = 10 + (var8 + (var7 >> 1));
+                        var6 = 265;
+                        ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.field_g);
+                        if (this.field_o != 0) {
+                          if (qa.field_a <= 190) {
+                            break L34;
+                          }
+                          if (qa.field_a >= 449) {
+                            break L34;
+                          }
+                          if (ue.field_e <= 265) {
+                            break L34;
+                          }
+                          if (299 <= ue.field_e) {
+                            break L34;
+                          }
+                        }
+                        dd.field_G.field_K[0][wf.field_p] = 15488514;
+                      }
+                      dd.field_G.b(hh.fullscreenCloseButtonText, var9, 30 + var6, 0, -1);
+                      dd.field_G.field_K[0][wf.field_p] = 16689938;
+                      if (var12 == 0) {
                         break L7;
                       }
                     }
@@ -837,8 +790,6 @@ final class GameScreen extends MenuScreen {
               this.b(30);
             }
             return;
-          } else {
-            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -870,9 +821,8 @@ final class GameScreen extends MenuScreen {
                   j.field_gb = 0;
                   if (var5 == 0) {
                     break L0;
-                  } else {
-                    break L1;
                   }
+                  break L1;
                 }
               }
               if (9 != actionId) {
@@ -932,28 +882,24 @@ final class GameScreen extends MenuScreen {
                     }
                     if (oc.previousMenuScreenId != 1) {
                       break L1;
-                    } else {
-                      if (this.selectedItemIndex == 3) {
-                        this.selectedItemIndex = 0;
-                        if (var3 == 0) {
-                          break L1;
-                        }
-                      } else {
-                        break L1;
-                      }
+                    }
+                    if (this.selectedItemIndex != 3) {
+                      break L1;
+                    }
+                    this.selectedItemIndex = 0;
+                    if (var3 == 0) {
+                      break L1;
                     }
                   }
                   if (this.field_q != 0) {
                     break L1;
-                  } else {
-                    if (this.selectedItemIndex == 0) {
-                      this.selectedItemIndex = 1;
-                      if (var3 == 0) {
-                        break L1;
-                      }
-                    } else {
-                      break L1;
-                    }
+                  }
+                  if (this.selectedItemIndex != 0) {
+                    break L1;
+                  }
+                  this.selectedItemIndex = 1;
+                  if (var3 == 0) {
+                    break L1;
                   }
                 }
                 this.selectedItemIndex = 0;
@@ -991,201 +937,183 @@ final class GameScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (param2 >= 20) {
-            if (0 != this.screenId) {
-              if (this.screenId != 1) {
-                L1: {
-                  if (this.screenId == 3) {
-                    if (pointerY > 430) {
-                      if (pointerY < 470) {
-                        if (this.field_q != 0) {
-                          if (pointerX > 130) {
-                            if (pointerX < 253) {
-                              stackIn_162_0 = 0;
-                              return stackIn_162_0;
-                            }
+          if (param2 < 20) {
+            stackIn_2_0 = -109;
+            return stackIn_2_0;
+          }
+          if (0 != this.screenId) {
+            if (this.screenId != 1) {
+              L1: {
+                if (this.screenId == 3) {
+                  if (pointerY > 430) {
+                    if (pointerY < 470) {
+                      if (this.field_q != 0) {
+                        if (pointerX > 130) {
+                          if (pointerX < 253) {
+                            stackIn_162_0 = 0;
+                            return stackIn_162_0;
                           }
                         }
-                        if (pointerX > 268) {
-                          if (391 > pointerX) {
-                            stackIn_168_0 = 1;
-                            return stackIn_168_0;
+                      }
+                      if (pointerX > 268) {
+                        if (391 > pointerX) {
+                          stackIn_168_0 = 1;
+                          return stackIn_168_0;
+                        }
+                      }
+                      if (this.field_q != 4) {
+                        if (pointerX > 406) {
+                          if (pointerX < 529) {
+                            stackIn_179_0 = 2;
+                            return stackIn_179_0;
                           }
                         }
-                        if (this.field_q != 4) {
+                      }
+                      if (this.field_q == 4) {
+                        if (oc.previousMenuScreenId != 1) {
                           if (pointerX > 406) {
-                            if (pointerX < 529) {
-                              stackIn_179_0 = 2;
-                              return stackIn_179_0;
-                            }
-                          }
-                        }
-                        if (this.field_q == 4) {
-                          if (oc.previousMenuScreenId != 1) {
-                            if (pointerX > 406) {
-                              if (pointerX < 635) {
-                                stackIn_193_0 = 3;
-                                return stackIn_193_0;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    if (this.screenId != 5) {
-                      if (this.screenId != 7) {
-                        if (this.screenId != 8) {
-                          if (2 == this.screenId) {
-                            if (pointerY > 380) {
-                              if (pointerY < 420) {
-                                if (pointerX > 61) {
-                                  if (220 > pointerX) {
-                                    stackIn_133_0 = 0;
-                                    return stackIn_133_0;
-                                  }
-                                }
-                                if (241 < pointerX) {
-                                  if (pointerX < 400) {
-                                    stackIn_125_0 = 1;
-                                    return stackIn_125_0;
-                                  }
-                                }
-                                if (pointerX <= 420) {
-                                  break L1;
-                                } else {
-                                  if (pointerX >= 579) {
-                                    break L1;
-                                  } else {
-                                    stackIn_131_0 = 2;
-                                    return stackIn_131_0;
-                                  }
-                                }
-                              }
-                            }
-                            if (pointerY <= 430) {
-                              break L1;
-                            } else {
-                              if (pointerY >= 470) {
-                                break L1;
-                              } else {
-                                if (pointerX <= 279) {
-                                  break L1;
-                                } else {
-                                  if (pointerX >= 362) {
-                                    break L1;
-                                  } else {
-                                    stackIn_145_0 = 3;
-                                    return stackIn_145_0;
-                                  }
-                                }
-                              }
-                            }
-                          } else {
-                            if (this.screenId != 4) {
-                              if (6 != this.screenId) {
-                                break L1;
-                              } else {
-                                if (pointerY <= 430) {
-                                  break L1;
-                                } else {
-                                  if (470 <= pointerY) {
-                                    break L1;
-                                  } else {
-                                    if (pointerX > 146) {
-                                      if (pointerX < 306) {
-                                        stackIn_99_0 = 0;
-                                        return stackIn_99_0;
-                                      }
-                                    }
-                                    if (pointerX <= 326) {
-                                      break L1;
-                                    } else {
-                                      if (pointerX < 486) {
-                                        stackIn_107_0 = 1;
-                                        return stackIn_107_0;
-                                      } else {
-                                        break L1;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            } else {
-                              if (pointerX <= 171) {
-                                break L1;
-                              } else {
-                                if (pointerX < 469) {
-                                  if (265 < pointerY) {
-                                    if (pointerY < 301) {
-                                      stackIn_78_0 = 0;
-                                      return stackIn_78_0;
-                                    }
-                                  }
-                                  if (pointerY <= 395) {
-                                    break L1;
-                                  } else {
-                                    if (431 <= pointerY) {
-                                      break L1;
-                                    } else {
-                                      stackIn_84_0 = 1;
-                                      return stackIn_84_0;
-                                    }
-                                  }
-                                } else {
-                                  break L1;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                      if (pointerY > 437) {
-                        if (pointerY < 473) {
-                          if (pointerX > 121) {
-                            if (356 > pointerX) {
-                              stackIn_54_0 = 0;
-                              return stackIn_54_0;
-                            }
-                          }
-                          if (436 < pointerX) {
-                            if (pointerY < 518) {
-                              stackIn_60_0 = 1;
-                              return stackIn_60_0;
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      if (pointerY > 435) {
-                        if (470 > pointerY) {
-                          if (pointerX > 279) {
-                            if (361 > pointerX) {
-                              stackIn_36_0 = 0;
-                              return stackIn_36_0;
+                            if (pointerX < 635) {
+                              stackIn_193_0 = 3;
+                              return stackIn_193_0;
                             }
                           }
                         }
                       }
                     }
                   }
+                } else {
+                  if (this.screenId != 5) {
+                    if (this.screenId != 7) {
+                      if (this.screenId != 8) {
+                        if (2 == this.screenId) {
+                          if (pointerY > 380) {
+                            if (pointerY < 420) {
+                              if (pointerX > 61) {
+                                if (220 > pointerX) {
+                                  stackIn_133_0 = 0;
+                                  return stackIn_133_0;
+                                }
+                              }
+                              if (241 < pointerX) {
+                                if (pointerX < 400) {
+                                  stackIn_125_0 = 1;
+                                  return stackIn_125_0;
+                                }
+                              }
+                              if (pointerX <= 420) {
+                                break L1;
+                              }
+                              if (pointerX >= 579) {
+                                break L1;
+                              }
+                              stackIn_131_0 = 2;
+                              return stackIn_131_0;
+                            }
+                          }
+                          if (pointerY <= 430) {
+                            break L1;
+                          }
+                          if (pointerY >= 470) {
+                            break L1;
+                          }
+                          if (pointerX <= 279) {
+                            break L1;
+                          }
+                          if (pointerX >= 362) {
+                            break L1;
+                          }
+                          stackIn_145_0 = 3;
+                          return stackIn_145_0;
+                        }
+                        if (this.screenId == 4) {
+                          if (pointerX <= 171) {
+                            break L1;
+                          }
+                          if (pointerX >= 469) {
+                            break L1;
+                          }
+                          if (265 < pointerY) {
+                            if (pointerY < 301) {
+                              stackIn_78_0 = 0;
+                              return stackIn_78_0;
+                            }
+                          }
+                          if (pointerY <= 395) {
+                            break L1;
+                          }
+                          if (431 <= pointerY) {
+                            break L1;
+                          }
+                          stackIn_84_0 = 1;
+                          return stackIn_84_0;
+                        }
+                        if (6 != this.screenId) {
+                          break L1;
+                        }
+                        if (pointerY <= 430) {
+                          break L1;
+                        }
+                        if (470 <= pointerY) {
+                          break L1;
+                        }
+                        if (pointerX > 146) {
+                          if (pointerX < 306) {
+                            stackIn_99_0 = 0;
+                            return stackIn_99_0;
+                          }
+                        }
+                        if (pointerX <= 326) {
+                          break L1;
+                        }
+                        if (pointerX >= 486) {
+                          break L1;
+                        }
+                        stackIn_107_0 = 1;
+                        return stackIn_107_0;
+                      }
+                    }
+                    if (pointerY > 437) {
+                      if (pointerY < 473) {
+                        if (pointerX > 121) {
+                          if (356 > pointerX) {
+                            stackIn_54_0 = 0;
+                            return stackIn_54_0;
+                          }
+                        }
+                        if (436 < pointerX) {
+                          if (pointerY < 518) {
+                            stackIn_60_0 = 1;
+                            return stackIn_60_0;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    if (pointerY > 435) {
+                      if (470 > pointerY) {
+                        if (pointerX > 279) {
+                          if (361 > pointerX) {
+                            stackIn_36_0 = 0;
+                            return stackIn_36_0;
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
-                stackIn_195_0 = -1;
-                return stackIn_195_0;
               }
+              stackIn_195_0 = -1;
+              return stackIn_195_0;
             }
-            if (pointerX >= 149) {
-              if (490 >= pointerX) {
-                stackIn_18_0 = super.hitTestMenuItem(pointerX, pointerY, (byte) 127);
-                return stackIn_18_0;
-              }
-            }
-            stackIn_16_0 = -1;
-            return stackIn_16_0;
-          } else {
-            stackIn_2_0 = -109;
-            return stackIn_2_0;
           }
+          if (pointerX >= 149) {
+            if (490 >= pointerX) {
+              stackIn_18_0 = super.hitTestMenuItem(pointerX, pointerY, (byte) 127);
+              return stackIn_18_0;
+            }
+          }
+          stackIn_16_0 = -1;
+          return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -1222,11 +1150,10 @@ final class GameScreen extends MenuScreen {
               if (da.field_c != 2) {
                 if (da.field_c != 1) {
                   break L1;
-                } else {
-                  kh.field_h[3].b(0, 20);
-                  if (var10 == 0) {
-                    break L1;
-                  }
+                }
+                kh.field_h[3].b(0, 20);
+                if (var10 == 0) {
+                  break L1;
                 }
               }
               kh.field_h[2].b(0, 20);
@@ -1266,59 +1193,56 @@ final class GameScreen extends MenuScreen {
 
                           if (var10 != 0) {
                             break L10;
-                          } else {
-                            L12: {
-                              if (stackIn_59_0 != var3_ref_String__[var8_int]) {
-                                var2_int = 1;
-                                var9 = var3_ref_String__[var8_int];
-                                if (var7 == 0) {
-                                  if (null != el.gameplaySession) {
-                                    if (var5[var8_int] == Math.abs(el.gameplaySession.score)) {
-                                      if (ge.a(var9, (byte) 12)) {
-                                        var7 = 1;
-                                        var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
-                                        var4.a(var9, 165, var6, 16610816, -1);
-                                        var4.c(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
-                                        if (var10 == 0) {
-                                          break L12;
-                                        }
+                          }
+                          L12: {
+                            if (stackIn_59_0 != var3_ref_String__[var8_int]) {
+                              var2_int = 1;
+                              var9 = var3_ref_String__[var8_int];
+                              if (var7 == 0) {
+                                if (null != el.gameplaySession) {
+                                  if (var5[var8_int] == Math.abs(el.gameplaySession.score)) {
+                                    if (ge.a(var9, (byte) 12)) {
+                                      var7 = 1;
+                                      var4.c(1 + var8_int + ". ", 165, var6, 16610816, -1);
+                                      var4.a(var9, 165, var6, 16610816, -1);
+                                      var4.c(Integer.toString(var5[var8_int]), 500, var6, 16610816, -1);
+                                      if (var10 == 0) {
+                                        break L12;
                                       }
                                     }
                                   }
                                 }
-                                var4.c(1 + var8_int + ". ", 165, var6, 1, -1);
-                                var4.a(var9, 165, var6, 1, -1);
-                                var4.c(Integer.toString(var5[var8_int]), 500, var6, 1, -1);
                               }
+                              var4.c(1 + var8_int + ". ", 165, var6, 1, -1);
+                              var4.a(var9, 165, var6, 1, -1);
+                              var4.c(Integer.toString(var5[var8_int]), 500, var6, 1, -1);
                             }
-                            var6 += 15;
-                            var8_int++;
-                            if (var10 == 0) {
-                              continue L9;
-                            }
+                          }
+                          var6 += 15;
+                          var8_int++;
+                          if (var10 == 0) {
+                            continue L9;
                           }
                         }
                         if (var7 != 0) {
                           break L8;
-                        } else {
-                          stackIn_59_0 = null;
                         }
+                        stackIn_59_0 = null;
                       }
                       if (stackIn_59_0 == el.gameplaySession) {
                         break L8;
-                      } else {
-                        if (el.gameplaySession.score == 0) {
-                          break L8;
-                        } else {
-                          if (el.gameplaySession.score != -2147483648) {
-                            var8 = SecondaryDeque.field_f;
-                            var4.a(var8, 165, var6, 16724225, -1);
-                            var4.c(Integer.toString(Math.abs(el.gameplaySession.score)), 500, var6, 16724225, -1);
-                            break L8;
-                          } else {
-                            break L8;
-                          }
-                        }
+                      }
+                      if (el.gameplaySession.score == 0) {
+                        break L8;
+                      }
+                      if (el.gameplaySession.score == -2147483648) {
+                        break L8;
+                      }
+                      {
+                        var8 = SecondaryDeque.field_f;
+                        var4.a(var8, 165, var6, 16724225, -1);
+                        var4.c(Integer.toString(Math.abs(el.gameplaySession.score)), 500, var6, 16724225, -1);
+                        break L8;
                       }
                     }
                   }
@@ -1381,179 +1305,217 @@ final class GameScreen extends MenuScreen {
             this.field_I = this.field_I - 1;
             this.field_u = this.field_u - 1;
           }
-          if (!this.field_E) {
-            jk.field_a = this.field_C;
-            this.volumePreviewTicks = this.volumePreviewTicks + 1;
-            this.activeTicks = this.activeTicks + 1;
-            if (this.field_C) {
-              if (vl.field_n != null) {
-                if (this.activeTicks > 1500) {
-                  em.b(255);
-                  this.field_C = false;
-                }
+          if (this.field_E) {
+            this.e((byte) 104);
+            return;
+          }
+          jk.field_a = this.field_C;
+          this.volumePreviewTicks = this.volumePreviewTicks + 1;
+          this.activeTicks = this.activeTicks + 1;
+          if (this.field_C) {
+            if (vl.field_n != null) {
+              if (this.activeTicks > 1500) {
+                em.b(255);
+                this.field_C = false;
               }
             }
-            L3: while (true) {
-              L4: {
-                if (hh.a(108)) {
-                  this.handleScreenKey((byte) 62);
-                  if (var3 != 0) {
-                    break L4;
-                  } else {
-                    if (var3 == 0) {
-                      continue L3;
-                    }
-                  }
+          }
+          L3: while (true) {
+            L4: {
+              if (hh.a(108)) {
+                this.handleScreenKey((byte) 62);
+                if (var3 != 0) {
+                  break L4;
                 }
-                if (this.screenId == 3) {
-                  if (this.selectedItemIndex == 0) {
-                    if (this.field_q == 0) {
-                      if (!this.field_H) {
-                        this.selectedItemIndex = this.selectedItemIndex + 1;
-                      }
-                    }
-                  }
+                if (var3 == 0) {
+                  continue L3;
                 }
               }
               if (this.screenId == 3) {
-                L7: {
-                  if (0 == (1 & this.animationTick)) {
-                    this.field_z = this.field_z + 1;
-                    this.field_Z = -(this.field_z >> 1) + 60;
-                    if (this.field_Z < 15) {
-                      this.field_Z = 15;
-                      if (var3 == 0) {
-                        break L7;
-                      }
+                if (this.selectedItemIndex == 0) {
+                  if (this.field_q == 0) {
+                    if (!this.field_H) {
+                      this.selectedItemIndex = this.selectedItemIndex + 1;
                     }
-                    this.field_A = this.field_A + 0.1;
                   }
                 }
-                if (120 == this.field_z) {
-                  this.field_X = qi.b(7, 1);
-                  this.field_L = qi.b(7, 1);
-                  this.field_z = 0;
+              }
+            }
+            if (this.screenId == 3) {
+              L7: {
+                if (0 == (1 & this.animationTick)) {
+                  this.field_z = this.field_z + 1;
+                  this.field_Z = -(this.field_z >> 1) + 60;
+                  if (this.field_Z < 15) {
+                    this.field_Z = 15;
+                    if (var3 == 0) {
+                      break L7;
+                    }
+                  }
+                  this.field_A = this.field_A + 0.1;
                 }
-                if (this.field_q < 4) {
-                  if (this.animationTick % 24 == 0) {
+              }
+              if (120 == this.field_z) {
+                this.field_X = qi.b(7, 1);
+                this.field_L = qi.b(7, 1);
+                this.field_z = 0;
+              }
+              if (this.field_q < 4) {
+                if (this.animationTick % 24 == 0) {
+                  this.field_w = this.field_w + 1;
+                  if (this.field_w >= 4) {
+                    this.field_w = 0;
+                  }
+                }
+              }
+              L11: {
+                if (this.field_q != 3) {
+                  if (4 != this.field_q) {
+                    break L11;
+                  }
+                  if (49 > (this.animationTick & 255)) {
+                    if ((15 & this.animationTick) != 0) {
+                      break L11;
+                    }
                     this.field_w = this.field_w + 1;
                     if (this.field_w >= 4) {
                       this.field_w = 0;
                     }
-                  }
-                }
-                L11: {
-                  if (this.field_q != 3) {
-                    if (4 == this.field_q) {
-                      if (49 > (this.animationTick & 255)) {
-                        if ((15 & this.animationTick) == 0) {
-                          this.field_w = this.field_w + 1;
-                          if (this.field_w >= 4) {
-                            this.field_w = 0;
-                          }
-                          this.field_B = this.field_B + 1;
-                          if (4 <= this.field_B) {
-                            this.field_B = 0;
-                            if (var3 == 0) {
-                              break L11;
-                            }
-                          } else {
-                            break L11;
-                          }
-                        } else {
-                          break L11;
-                        }
-                      }
-                      this.field_B = 0;
-                      this.field_w = 0;
-                      if (var3 == 0) {
-                        break L11;
-                      }
-                    } else {
+                    this.field_B = this.field_B + 1;
+                    if (4 > this.field_B) {
+                      break L11;
+                    }
+                    this.field_B = 0;
+                    if (var3 == 0) {
                       break L11;
                     }
                   }
-                  var2_float = 0.019999999552965164f * (float)(this.animationTick % 50);
-                  this.field_N = ((int)(var2_float * (float)this.field_t) << 8) + (jg.field_h[selectedThemeId][this.field_B] + ((int)(var2_float * (float)this.field_V) << 16) + (int)((float)this.field_M * var2_float));
-                  if (this.animationTick % 50 == 49) {
-                    this.field_B = this.field_B + 1;
-                    this.field_B = this.field_B % 7;
-                    this.field_V = -((16751678 & jg.field_h[selectedThemeId][this.field_B]) >> 16) + ((jg.field_h[selectedThemeId][(1 + this.field_B) % 7] & 16754682) >> 16);
-                    this.field_t = (255 & jg.field_h[selectedThemeId][(this.field_B + 1) % 7] >> 8) - ((jg.field_h[selectedThemeId][this.field_B] & 65438) >> 8);
-                    this.field_M = (255 & jg.field_h[selectedThemeId][(1 + this.field_B) % 7]) - (255 & jg.field_h[selectedThemeId][this.field_B]);
+                  this.field_B = 0;
+                  this.field_w = 0;
+                  if (var3 == 0) {
+                    break L11;
                   }
                 }
-                qa.advanceMenuAvatarAnimation((byte) 127);
+                var2_float = 0.019999999552965164f * (float)(this.animationTick % 50);
+                this.field_N = ((int)(var2_float * (float)this.field_t) << 8) + (jg.field_h[selectedThemeId][this.field_B] + ((int)(var2_float * (float)this.field_V) << 16) + (int)((float)this.field_M * var2_float));
+                if (this.animationTick % 50 == 49) {
+                  this.field_B = this.field_B + 1;
+                  this.field_B = this.field_B % 7;
+                  this.field_V = -((16751678 & jg.field_h[selectedThemeId][this.field_B]) >> 16) + ((jg.field_h[selectedThemeId][(1 + this.field_B) % 7] & 16754682) >> 16);
+                  this.field_t = (255 & jg.field_h[selectedThemeId][(this.field_B + 1) % 7] >> 8) - ((jg.field_h[selectedThemeId][this.field_B] & 65438) >> 8);
+                  this.field_M = (255 & jg.field_h[selectedThemeId][(1 + this.field_B) % 7]) - (255 & jg.field_h[selectedThemeId][this.field_B]);
+                }
               }
-              L15: {
-                fieldTemp$1 = di.field_a;
-                di.field_a = di.field_a - 1;
-                if (0 > fieldTemp$1) {
-                  if (bi.field_g != 0) {
-                    di.field_a = 50;
-                    if (var3 == 0) {
-                      break L15;
-                    }
-                  } else {
-                    break L15;
+              qa.advanceMenuAvatarAnimation((byte) 127);
+            }
+            L15: {
+              fieldTemp$1 = di.field_a;
+              di.field_a = di.field_a - 1;
+              if (0 > fieldTemp$1) {
+                if (bi.field_g == 0) {
+                  break L15;
+                }
+                di.field_a = 50;
+                if (var3 == 0) {
+                  break L15;
+                }
+              }
+              bi.field_g = 0;
+            }
+            if (bi.field_g != 0) {
+              L18: {
+                if (this.screenId != 5) {
+                  if (7 != this.screenId) {
+                    break L18;
                   }
                 }
-                bi.field_g = 0;
+                oe.a(false, false, param0 ^ 189);
+              }
+              if (this.screenId == 6) {
+                oe.a(true, false, param0 + 131);
+              }
+              if (this.screenId == 4) {
+                oe.a(true, true, 160);
+              }
+            }
+            L21: {
+              if (!this.field_C) {
+                this.updatePointer(true);
+                if (var3 == 0) {
+                  break L21;
+                }
               }
               if (bi.field_g != 0) {
-                L18: {
-                  if (this.screenId != 5) {
-                    if (7 != this.screenId) {
-                      break L18;
-                    }
-                  }
-                  oe.a(false, false, param0 ^ 189);
-                }
-                if (this.screenId == 6) {
-                  oe.a(true, false, param0 + 131);
-                }
-                if (this.screenId == 4) {
-                  oe.a(true, true, 160);
-                }
-              }
-              L21: {
-                if (!this.field_C) {
-                  this.updatePointer(true);
-                  if (var3 == 0) {
-                    break L21;
-                  }
-                }
-                if (bi.field_g != 0) {
-                  if (fh.c(-104)) {
-                    if (265 < he.field_d) {
-                      if (he.field_d < 299) {
-                        if (mc.field_a > 350) {
-                          if (mc.field_a < 470) {
-                            this.pointerInteractionActive = true;
-                            this.field_C = false;
-                            if (var3 == 0) {
-                              break L21;
-                            }
-                          }
-                        }
-                        L26: {
-                          if (mc.field_a > 170) {
-                            if (mc.field_a < 290) {
-                              break L26;
-                            }
-                          }
-                          this.pointerInteractionActive = false;
+                if (fh.c(-104)) {
+                  if (265 < he.field_d) {
+                    if (he.field_d < 299) {
+                      if (mc.field_a > 350) {
+                        if (mc.field_a < 470) {
+                          this.pointerInteractionActive = true;
+                          this.field_C = false;
                           if (var3 == 0) {
                             break L21;
                           }
                         }
-                        this.pointerInteractionActive = true;
-                        if (null != el.gameplaySession) {
-                          el.gameplaySession.submitScore((byte) -70);
+                      }
+                      L26: {
+                        if (mc.field_a > 170) {
+                          if (mc.field_a < 290) {
+                            break L26;
+                          }
                         }
-                        ai.requestedScreenId = -1;
-                        el.gameplayReturnScreenId = 0;
-                        cd.gameplayOriginScreenId = 0;
+                        this.pointerInteractionActive = false;
+                        if (var3 == 0) {
+                          break L21;
+                        }
+                      }
+                      this.pointerInteractionActive = true;
+                      if (null != el.gameplaySession) {
+                        el.gameplaySession.submitScore((byte) -70);
+                      }
+                      ai.requestedScreenId = -1;
+                      el.gameplayReturnScreenId = 0;
+                      cd.gameplayOriginScreenId = 0;
+                      if (var3 == 0) {
+                        break L21;
+                      }
+                    }
+                  }
+                  this.pointerInteractionActive = false;
+                  if (var3 == 0) {
+                    break L21;
+                  }
+                }
+                if (og.field_n > 0) {
+                  if (null != vl.field_n) {
+                    if (he.field_d > 317) {
+                      if (352 > he.field_d) {
+                        L31: {
+                          if (mc.field_a > 350) {
+                            if (mc.field_a < 470) {
+                              break L31;
+                            }
+                          }
+                          L33: {
+                            if (mc.field_a > 170) {
+                              if (mc.field_a < 290) {
+                                break L33;
+                              }
+                            }
+                            this.pointerInteractionActive = false;
+                            if (var3 == 0) {
+                              break L21;
+                            }
+                          }
+                          this.field_C = false;
+                          this.pointerInteractionActive = true;
+                          if (var3 == 0) {
+                            break L21;
+                          }
+                        }
+                        this.field_C = false;
+                        em.b(255);
+                        this.pointerInteractionActive = true;
                         if (var3 == 0) {
                           break L21;
                         }
@@ -1564,164 +1526,118 @@ final class GameScreen extends MenuScreen {
                       break L21;
                     }
                   }
-                  if (og.field_n > 0) {
-                    if (null != vl.field_n) {
-                      if (he.field_d > 317) {
-                        if (352 > he.field_d) {
-                          L31: {
-                            if (mc.field_a > 350) {
-                              if (mc.field_a < 470) {
-                                break L31;
-                              }
-                            }
-                            L33: {
-                              if (mc.field_a > 170) {
-                                if (mc.field_a < 290) {
-                                  break L33;
-                                }
-                              }
-                              this.pointerInteractionActive = false;
-                              if (var3 == 0) {
-                                break L21;
-                              }
-                            }
-                            this.field_C = false;
-                            this.pointerInteractionActive = true;
-                            if (var3 == 0) {
-                              break L21;
-                            }
-                          }
-                          this.field_C = false;
-                          em.b(255);
-                          this.pointerInteractionActive = true;
-                          if (var3 == 0) {
-                            break L21;
-                          }
-                        }
-                      }
-                      this.pointerInteractionActive = false;
-                      if (var3 == 0) {
-                        break L21;
-                      }
-                    }
-                  }
-                  this.pointerInteractionActive = true;
-                  this.field_C = false;
+                }
+                this.pointerInteractionActive = true;
+                this.field_C = false;
+              }
+            }
+            L35: {
+              if (qa.field_a == this.field_s) {
+                if (~ue.field_e == ~this.field_Y) {
+                  break L35;
                 }
               }
-              L35: {
-                if (qa.field_a == this.field_s) {
-                  if (~ue.field_e == ~this.field_Y) {
-                    break L35;
-                  }
-                }
-                this.field_o = -1;
-              }
-              this.field_Y = ue.field_e;
-              if (param0 != 29) {
-                this.handleMenuKey(11, 26);
-              }
-              L38: {
-                this.field_s = qa.field_a;
-                if (this.selectedItemIndex != 0) {
-                  L39: {
-                    var2_int = (qa.field_a + he.field_d - (-kd.field_c - ki.field_d)) % 8;
-                    if (var2_int != 0) {
-                      if (var2_int != 1) {
-                        if (var2_int != 2) {
-                          if (var2_int == 3) {
-                            oa.field_a = oa.field_a - gb.field_g;
-                            kb.field_d = kb.field_d + 1;
-                            if (var3 == 0) {
-                              break L39;
-                            }
-                          }
-                          if (var2_int != 4) {
-                            if (var2_int != 5) {
-                              if (6 == var2_int) {
-                                gb.field_g = gb.field_g - 1;
-                                ml.field_r = ml.field_r - kb.field_d;
-                                if (var3 == 0) {
-                                  break L39;
-                                }
-                              }
-                              if (var2_int == 7) {
-                                kb.field_d = kb.field_d - 1;
-                                ml.field_r = ml.field_r - gb.field_g;
-                                if (var3 == 0) {
-                                  break L39;
-                                }
-                              } else {
-                                break L39;
-                              }
-                            }
-                            kb.field_d = kb.field_d + 1;
-                            ml.field_r = ml.field_r + gb.field_g;
-                            if (var3 == 0) {
-                              break L39;
-                            }
-                          }
-                          gb.field_g = gb.field_g + 1;
-                          ml.field_r = ml.field_r + kb.field_d;
+              this.field_o = -1;
+            }
+            this.field_Y = ue.field_e;
+            if (param0 != 29) {
+              this.handleMenuKey(11, 26);
+            }
+            L38: {
+              this.field_s = qa.field_a;
+              if (this.selectedItemIndex != 0) {
+                L39: {
+                  var2_int = (qa.field_a + he.field_d - (-kd.field_c - ki.field_d)) % 8;
+                  if (var2_int != 0) {
+                    if (var2_int != 1) {
+                      if (var2_int != 2) {
+                        if (var2_int == 3) {
+                          oa.field_a = oa.field_a - gb.field_g;
+                          kb.field_d = kb.field_d + 1;
                           if (var3 == 0) {
                             break L39;
                           }
                         }
-                        oa.field_a = oa.field_a - kb.field_d;
+                        if (var2_int != 4) {
+                          if (var2_int != 5) {
+                            if (6 == var2_int) {
+                              gb.field_g = gb.field_g - 1;
+                              ml.field_r = ml.field_r - kb.field_d;
+                              if (var3 == 0) {
+                                break L39;
+                              }
+                            }
+                            if (var2_int != 7) {
+                              break L39;
+                            }
+                            kb.field_d = kb.field_d - 1;
+                            ml.field_r = ml.field_r - gb.field_g;
+                            if (var3 == 0) {
+                              break L39;
+                            }
+                          }
+                          kb.field_d = kb.field_d + 1;
+                          ml.field_r = ml.field_r + gb.field_g;
+                          if (var3 == 0) {
+                            break L39;
+                          }
+                        }
                         gb.field_g = gb.field_g + 1;
+                        ml.field_r = ml.field_r + kb.field_d;
                         if (var3 == 0) {
                           break L39;
                         }
                       }
-                      oa.field_a = oa.field_a + gb.field_g;
-                      kb.field_d = kb.field_d - 1;
+                      oa.field_a = oa.field_a - kb.field_d;
+                      gb.field_g = gb.field_g + 1;
                       if (var3 == 0) {
                         break L39;
                       }
                     }
-                    oa.field_a = oa.field_a + kb.field_d;
-                    gb.field_g = gb.field_g - 1;
+                    oa.field_a = oa.field_a + gb.field_g;
+                    kb.field_d = kb.field_d - 1;
+                    if (var3 == 0) {
+                      break L39;
+                    }
                   }
-                  var2_int = (ki.field_d + qa.field_a - (-he.field_d - kd.field_c)) % 5;
-                  if (0 != var2_int) {
-                    if (var2_int != 1) {
-                      if (var2_int == 2) {
-                        el.field_g = el.field_g - sc.field_f;
-                        lb.field_b = lb.field_b - 1;
-                        if (var3 == 0) {
-                          break L38;
-                        }
-                      }
-                      if (var2_int == 3) {
-                        sc.field_f = sc.field_f + 1;
-                        el.field_g = el.field_g + lb.field_b;
-                        if (var3 == 0) {
-                          break L38;
-                        }
-                      }
-                      if (var2_int != 4) {
+                  oa.field_a = oa.field_a + kb.field_d;
+                  gb.field_g = gb.field_g - 1;
+                }
+                var2_int = (ki.field_d + qa.field_a - (-he.field_d - kd.field_c)) % 5;
+                if (0 != var2_int) {
+                  if (var2_int != 1) {
+                    if (var2_int == 2) {
+                      el.field_g = el.field_g - sc.field_f;
+                      lb.field_b = lb.field_b - 1;
+                      if (var3 == 0) {
                         break L38;
-                      } else {
-                        el.field_g = el.field_g - lb.field_b;
-                        sc.field_f = sc.field_f - 1;
-                        if (var3 == 0) {
-                          break L38;
-                        }
                       }
                     }
-                    el.field_g = el.field_g + sc.field_f;
-                    lb.field_b = lb.field_b + 1;
+                    if (var2_int == 3) {
+                      sc.field_f = sc.field_f + 1;
+                      el.field_g = el.field_g + lb.field_b;
+                      if (var3 == 0) {
+                        break L38;
+                      }
+                    }
+                    if (var2_int != 4) {
+                      break L38;
+                    }
+                    el.field_g = el.field_g - lb.field_b;
+                    sc.field_f = sc.field_f - 1;
                     if (var3 == 0) {
                       break L38;
                     }
                   }
-                  dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
+                  el.field_g = el.field_g + sc.field_f;
+                  lb.field_b = lb.field_b + 1;
+                  if (var3 == 0) {
+                    break L38;
+                  }
                 }
+                dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
               }
-              return;
             }
-          } else {
-            this.e((byte) 104);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2005,24 +1921,23 @@ final class GameScreen extends MenuScreen {
         int var3 = 0;
         try {
           var2_int = 255 & param1;
-          if (var2_int != 0) {
-            if (var2_int >= 128) {
-              if (160 > var2_int) {
-                var3 = lf.extendedTextCharacters[-128 + var2_int];
-                if (0 == var3) {
-                  var3 = 63;
-                }
-                var2_int = var3;
-              }
-            }
-            if (param0 <= 21) {
-              GameScreen.d((byte) -112);
-            }
-            stackIn_16_0 = (char)var2_int;
-            return stackIn_16_0;
-          } else {
+          if (var2_int == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2_int, 16));
           }
+          if (var2_int >= 128) {
+            if (160 > var2_int) {
+              var3 = lf.extendedTextCharacters[-128 + var2_int];
+              if (0 == var3) {
+                var3 = 63;
+              }
+              var2_int = var3;
+            }
+          }
+          if (param0 <= 21) {
+            GameScreen.d((byte) -112);
+          }
+          stackIn_16_0 = (char)var2_int;
+          return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -2058,12 +1973,11 @@ final class GameScreen extends MenuScreen {
               L2: {
                 if (0 == this.field_F) {
                   if (this.keyboardSelectionActive) {
-                    if (this.field_q == 4) {
-                      this.selectedItemIndex = 3;
-                      if (Geoblox.field_C == 0) {
-                        break L2;
-                      }
-                    } else {
+                    if (this.field_q != 4) {
+                      break L2;
+                    }
+                    this.selectedItemIndex = 3;
+                    if (Geoblox.field_C == 0) {
                       break L2;
                     }
                   }
@@ -2090,40 +2004,39 @@ final class GameScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (param0 == 89) {
-            if (3 == this.screenId) {
-              if (!this.field_E) {
-                L1: {
-                  if (this.field_q != 4) {
-                    if (this.selectedItemIndex == 3) {
-                      this.selectedItemIndex = 2;
-                      if (Geoblox.field_C == 0) {
-                        break L1;
-                      }
-                    }
-                  }
-                  if (this.field_q == 4) {
-                    if (this.selectedItemIndex == 2) {
-                      this.selectedItemIndex = 1;
-                    }
-                    if (oc.previousMenuScreenId == 1) {
-                      if (this.selectedItemIndex == 3) {
-                        this.selectedItemIndex = 1;
-                      }
+          if (param0 != 89) {
+            return;
+          }
+          if (3 == this.screenId) {
+            if (!this.field_E) {
+              L1: {
+                if (this.field_q != 4) {
+                  if (this.selectedItemIndex == 3) {
+                    this.selectedItemIndex = 2;
+                    if (Geoblox.field_C == 0) {
+                      break L1;
                     }
                   }
                 }
-                if (this.field_q == 0) {
-                  if (this.selectedItemIndex == 0) {
-                    this.selectedItemIndex = 2;
+                if (this.field_q == 4) {
+                  if (this.selectedItemIndex == 2) {
+                    this.selectedItemIndex = 1;
+                  }
+                  if (oc.previousMenuScreenId == 1) {
+                    if (this.selectedItemIndex == 3) {
+                      this.selectedItemIndex = 1;
+                    }
                   }
                 }
               }
+              if (this.field_q == 0) {
+                if (this.selectedItemIndex == 0) {
+                  this.selectedItemIndex = 2;
+                }
+              }
             }
-            return;
-          } else {
-            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -2183,23 +2096,22 @@ final class GameScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (param0 == 0) {
-            L0: {
-              if (null != this.volumePreviewStream) {
-                if (!this.volumePreviewStream.isSamplePositionOutOfRange()) {
-                  if (50 >= this.volumePreviewTicks) {
-                    break L0;
-                  }
-                }
-              }
-              this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(fl.field_c[8], 100, j.field_gb);
-              GameplayEntity.registerAudioStream(false, this.volumePreviewStream);
-              this.volumePreviewTicks = 0;
-            }
-            return;
-          } else {
+          if (param0 != 0) {
             return;
           }
+          L0: {
+            if (null != this.volumePreviewStream) {
+              if (!this.volumePreviewStream.isSamplePositionOutOfRange()) {
+                if (50 >= this.volumePreviewTicks) {
+                  break L0;
+                }
+              }
+            }
+            this.volumePreviewStream = PcmSampleStream.createForPlaybackRate(fl.field_c[8], 100, j.field_gb);
+            GameplayEntity.registerAudioStream(false, this.volumePreviewStream);
+            this.volumePreviewTicks = 0;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -2260,10 +2172,9 @@ final class GameScreen extends MenuScreen {
                 if (var7 == 0) {
                   if (1 == oc.previousMenuScreenId) {
                     return;
-                  } else {
-                    var3_int = 1;
-                    break L2;
                   }
+                  var3_int = 1;
+                  break L2;
                 }
               }
               if (var6_int == 0) {
@@ -2290,9 +2201,8 @@ final class GameScreen extends MenuScreen {
                                               ai.requestedScreenId = -1;
                                               if (var7 == 0) {
                                                 break L1;
-                                              } else {
-                                                break L18;
                                               }
+                                              break L18;
                                             }
                                           }
                                           if (var6_int == 2) {
@@ -2302,61 +2212,52 @@ final class GameScreen extends MenuScreen {
                                           }
                                           if (var6_int == 3) {
                                             break L17;
-                                          } else {
-                                            if (var6_int == 4) {
-                                              if (var7 == 0) {
-                                                break L16;
-                                              }
-                                            }
-                                            if (14 == var6_int) {
-                                              if (var7 == 0) {
-                                                break L15;
-                                              }
-                                            }
-                                            if (var6_int == 5) {
-                                              break L14;
-                                            } else {
-                                              if (var6_int == 13) {
-                                                break L13;
-                                              } else {
-                                                if (6 == var6_int) {
-                                                  if (var7 == 0) {
-                                                    break L12;
-                                                  }
-                                                }
-                                                if (var6_int == 7) {
-                                                  break L11;
-                                                } else {
-                                                  if (var6_int == 12) {
-                                                    break L10;
-                                                  } else {
-                                                    if (var6_int == 11) {
-                                                      break L9;
-                                                    } else {
-                                                      if (var6_int == 10) {
-                                                        break L8;
-                                                      } else {
-                                                        if (16 == var6_int) {
-                                                          if (var7 == 0) {
-                                                            break L7;
-                                                          }
-                                                        }
-                                                        if (var6_int == 17) {
-                                                          break L6;
-                                                        } else {
-                                                          if (var6_int == 18) {
-                                                            break L5;
-                                                          } else {
-                                                            break L1;
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
+                                          }
+                                          if (var6_int == 4) {
+                                            if (var7 == 0) {
+                                              break L16;
                                             }
                                           }
+                                          if (14 == var6_int) {
+                                            if (var7 == 0) {
+                                              break L15;
+                                            }
+                                          }
+                                          if (var6_int == 5) {
+                                            break L14;
+                                          }
+                                          if (var6_int == 13) {
+                                            break L13;
+                                          }
+                                          if (6 == var6_int) {
+                                            if (var7 == 0) {
+                                              break L12;
+                                            }
+                                          }
+                                          if (var6_int == 7) {
+                                            break L11;
+                                          }
+                                          if (var6_int == 12) {
+                                            break L10;
+                                          }
+                                          if (var6_int == 11) {
+                                            break L9;
+                                          }
+                                          if (var6_int == 10) {
+                                            break L8;
+                                          }
+                                          if (16 == var6_int) {
+                                            if (var7 == 0) {
+                                              break L7;
+                                            }
+                                          }
+                                          if (var6_int == 17) {
+                                            break L6;
+                                          }
+                                          if (var6_int == 18) {
+                                            break L5;
+                                          }
+                                          break L1;
                                         }
                                         if (!fh.c(-100)) {
                                           ai.requestedScreenId = 2;
@@ -2690,271 +2591,268 @@ final class GameScreen extends MenuScreen {
         int var14 = 0;
         var14 = Geoblox.field_C;
         try {
-          if (param1 < -74) {
-            if (this.field_S) {
-              stackIn_7_0 = this.field_n;
-            } else {
-              stackIn_7_0 = this.field_q;
-            }
-            L1: {
-              var5_int = stackIn_7_0;
-              if (3 == this.screenId) {
-                L2: {
-                  if (itemIndex == 0) {
-                    if (var5_int == 0) {
-                      break L2;
-                    }
-                  }
-                  if (itemIndex != 2) {
-                    break L1;
-                  } else {
-                    if (var5_int != 4) {
-                      break L1;
-                    }
-                  }
-                }
-                return;
-              }
-            }
-            L4: {
-              actionId = t.menuActionIds[this.screenId][itemIndex];
-              var7 = tl.field_f[actionId];
-              if (actionId == 15) {
-                if (var5_int == 4) {
-                  if (oc.previousMenuScreenId != 1) {
-                    break L4;
-                  }
-                }
-                return;
-              }
-            }
+          if (param1 >= -74) {
+            return;
+          }
+          if (this.field_S) {
+            stackIn_7_0 = this.field_n;
+          } else {
+            stackIn_7_0 = this.field_q;
+          }
+          L1: {
+            var5_int = stackIn_7_0;
             if (3 == this.screenId) {
-              if (this.field_E) {
-                if (this.field_q == 4) {
-                  if (oc.previousMenuScreenId != 1) {
-                    if (itemIndex == 2) {
-                      if (this.selectedItemIndex == 3) {
-                        selected = true;
-                      }
+              L2: {
+                if (itemIndex == 0) {
+                  if (var5_int == 0) {
+                    break L2;
+                  }
+                }
+                if (itemIndex != 2) {
+                  break L1;
+                }
+                if (var5_int != 4) {
+                  break L1;
+                }
+              }
+              return;
+            }
+          }
+          L4: {
+            actionId = t.menuActionIds[this.screenId][itemIndex];
+            var7 = tl.field_f[actionId];
+            if (actionId == 15) {
+              if (var5_int == 4) {
+                if (oc.previousMenuScreenId != 1) {
+                  break L4;
+                }
+              }
+              return;
+            }
+          }
+          if (3 == this.screenId) {
+            if (this.field_E) {
+              if (this.field_q == 4) {
+                if (oc.previousMenuScreenId != 1) {
+                  if (itemIndex == 2) {
+                    if (this.selectedItemIndex == 3) {
+                      selected = true;
                     }
                   }
                 }
               }
             }
-            L7: {
-              L8: {
-                if (this.screenId != 3) {
-                  if (this.screenId != 2) {
-                    break L8;
-                  }
-                }
-                rowY += 280;
-                if (var14 == 0) {
-                  break L7;
-                }
-              }
-              if (this.screenId != 5) {
-                if (this.screenId != 7) {
-                  if (this.screenId != 6) {
-                    if (this.screenId != 4) {
-                      break L7;
-                    }
-                  }
-                }
-              }
-              rowY += 295;
-            }
-            L11: {
-              L12: {
-                var8 = dd.field_G;
-                var9 = 320;
-                var10 = 160;
-                if (0 != this.screenId) {
-                  if (this.screenId != 1) {
-                    break L12;
-                  }
-                }
-                var11 = 322;
-                if (var14 == 0) {
-                  break L11;
-                }
-              }
-              var11 = var8.c(var7, 400);
-            }
-            L14: {
+          }
+          L7: {
+            L8: {
               if (this.screenId != 3) {
                 if (this.screenId != 2) {
-                  if (this.screenId != 6) {
-                    if (this.screenId != 7) {
-                      if (this.screenId != 8) {
-                        if (this.screenId != 4) {
-                          if (selected) {
-                            var9 = var9 + this.field_T;
-                            var10 = var10 + this.field_T;
-                            rowY = rowY - this.field_T;
-                          }
-                          var10 = 320 - (var11 + 20 >> 1);
-                          stackIn_98_0 = rowY;
-
-                          stackIn_98_1 = var10;
-
-                          if (!selected) {
-                            stackIn_99_0 = stackIn_98_0;
-                            stackIn_99_1 = stackIn_98_1;
-                            stackIn_99_2 = 0;
-                          } else {
-                            stackIn_99_0 = stackIn_98_0;
-                            stackIn_99_1 = stackIn_98_1;
-                            stackIn_99_2 = this.field_T;
-                          }
-                          ma.a(stackIn_99_0, stackIn_99_1 + stackIn_99_2, 36, (byte) -92, var11 + 20, eb.field_g);
-                          if (var14 == 0) {
-                            break L14;
-                          }
-                        }
-                        L20: {
-                          var11 = 278;
-                          var10 = 320 - (var11 + 20 >> 1);
-                          if (actionId != 13) {
-                            rowY = 395;
-                            if (var14 == 0) {
-                              break L20;
-                            }
-                          }
-                          rowY = 265;
-                        }
-                        var9 = 10 + (var11 >> 1) + var10;
+                  break L8;
+                }
+              }
+              rowY += 280;
+              if (var14 == 0) {
+                break L7;
+              }
+            }
+            if (this.screenId != 5) {
+              if (this.screenId != 7) {
+                if (this.screenId != 6) {
+                  if (this.screenId != 4) {
+                    break L7;
+                  }
+                }
+              }
+            }
+            rowY += 295;
+          }
+          L11: {
+            L12: {
+              var8 = dd.field_G;
+              var9 = 320;
+              var10 = 160;
+              if (0 != this.screenId) {
+                if (this.screenId != 1) {
+                  break L12;
+                }
+              }
+              var11 = 322;
+              if (var14 == 0) {
+                break L11;
+              }
+            }
+            var11 = var8.c(var7, 400);
+          }
+          L14: {
+            if (this.screenId != 3) {
+              if (this.screenId != 2) {
+                if (this.screenId != 6) {
+                  if (this.screenId != 7) {
+                    if (this.screenId != 8) {
+                      if (this.screenId != 4) {
                         if (selected) {
+                          var9 = var9 + this.field_T;
                           var10 = var10 + this.field_T;
                           rowY = rowY - this.field_T;
-                          var9 = var9 + this.field_T;
                         }
-                        ma.a(rowY, var10, 36, (byte) -92, 20 + var11, eb.field_g);
+                        var10 = 320 - (var11 + 20 >> 1);
+                        stackIn_98_0 = rowY;
+
+                        stackIn_98_1 = var10;
+
+                        if (!selected) {
+                          stackIn_99_0 = stackIn_98_0;
+                          stackIn_99_1 = stackIn_98_1;
+                          stackIn_99_2 = 0;
+                        } else {
+                          stackIn_99_0 = stackIn_98_0;
+                          stackIn_99_1 = stackIn_98_1;
+                          stackIn_99_2 = this.field_T;
+                        }
+                        ma.a(stackIn_99_0, stackIn_99_1 + stackIn_99_2, 36, (byte) -92, var11 + 20, eb.field_g);
                         if (var14 == 0) {
                           break L14;
                         }
                       }
-                    }
-                    L23: {
-                      rowY = 437;
-                      if (actionId == 13) {
-                        var10 = 121;
-                        var9 = (var11 >> 1) + var10 + 10;
-                        if (var14 == 0) {
-                          break L23;
+                      L20: {
+                        var11 = 278;
+                        var10 = 320 - (var11 + 20 >> 1);
+                        if (actionId != 13) {
+                          rowY = 395;
+                          if (var14 == 0) {
+                            break L20;
+                          }
                         }
+                        rowY = 265;
                       }
-                      var10 = 436;
+                      var9 = 10 + (var11 >> 1) + var10;
+                      if (selected) {
+                        var10 = var10 + this.field_T;
+                        rowY = rowY - this.field_T;
+                        var9 = var9 + this.field_T;
+                      }
+                      ma.a(rowY, var10, 36, (byte) -92, 20 + var11, eb.field_g);
+                      if (var14 == 0) {
+                        break L14;
+                      }
+                    }
+                  }
+                  L23: {
+                    rowY = 437;
+                    if (actionId == 13) {
+                      var10 = 121;
                       var9 = (var11 >> 1) + var10 + 10;
+                      if (var14 == 0) {
+                        break L23;
+                      }
                     }
-                    if (selected) {
-                      var9 = var9 + this.field_T;
-                      rowY = rowY - this.field_T;
-                      var10 = var10 + this.field_T;
-                    }
-                    ma.a(rowY, var10, 36, (byte) -92, var11 + 20, eb.field_g);
-                    if (var14 == 0) {
-                      break L14;
-                    }
+                    var10 = 436;
+                    var9 = (var11 >> 1) + var10 + 10;
+                  }
+                  if (selected) {
+                    var9 = var9 + this.field_T;
+                    rowY = rowY - this.field_T;
+                    var10 = var10 + this.field_T;
+                  }
+                  ma.a(rowY, var10, 36, (byte) -92, var11 + 20, eb.field_g);
+                  if (var14 == 0) {
+                    break L14;
                   }
                 }
               }
-              L26: {
-                if (this.screenId != 3) {
-                  var11 = 160;
-                  if (var14 == 0) {
-                    break L26;
-                  }
-                }
-                var11 = 123;
-              }
-              L28: {
-                var12 = (rowY + (-280 - this.firstItemY)) / this.itemSpacing;
-                var9 = 320 + (var11 + 20) * (var12 - 1);
-                var10 = -(var11 >> 1) + var9;
-                if (6 == this.screenId) {
-                  var9 += 86;
-                  rowY = 430;
-                  var10 += 86;
-                  if (var14 == 0) {
-                    break L28;
-                  }
-                }
-                if (this.screenId == 3) {
-                  var9 = 9 + (320 + (15 + var11) * (var12 - 1));
-                  rowY = 430;
-                  var10 = var9 - (var11 >> 1);
-                  if (15 == actionId) {
-                    var10 -= 138;
-                    var11 = 229;
-                    var9 = (var11 >> 1) + var10;
-                    if (var14 == 0) {
-                      break L28;
-                    }
-                  } else {
-                    break L28;
-                  }
-                }
-                rowY = 380;
-                if (actionId == 5) {
-                  var11 = 83;
-                  var9 = 320;
-                  rowY += 50;
-                  var10 = var9 - (var11 >> 1);
+            }
+            L26: {
+              if (this.screenId != 3) {
+                var11 = 160;
+                if (var14 == 0) {
+                  break L26;
                 }
               }
-              L31: {
-                if (!selected) {
-                  ma.a(rowY, var10, 40, (byte) -92, var11, eb.field_g);
-                  if (var14 == 0) {
-                    break L31;
-                  }
+              var11 = 123;
+            }
+            L28: {
+              var12 = (rowY + (-280 - this.firstItemY)) / this.itemSpacing;
+              var9 = 320 + (var11 + 20) * (var12 - 1);
+              var10 = -(var11 >> 1) + var9;
+              if (6 == this.screenId) {
+                var9 += 86;
+                rowY = 430;
+                var10 += 86;
+                if (var14 == 0) {
+                  break L28;
                 }
-                var9 = var9 + this.field_T;
-                var10 = var10 + this.field_T;
-                rowY = rowY - this.field_T;
+              }
+              if (this.screenId == 3) {
+                var9 = 9 + (320 + (15 + var11) * (var12 - 1));
+                rowY = 430;
+                var10 = var9 - (var11 >> 1);
+                if (15 != actionId) {
+                  break L28;
+                }
+                var10 -= 138;
+                var11 = 229;
+                var9 = (var11 >> 1) + var10;
+                if (var14 == 0) {
+                  break L28;
+                }
+              }
+              rowY = 380;
+              if (actionId == 5) {
+                var11 = 83;
+                var9 = 320;
+                rowY += 50;
+                var10 = var9 - (var11 >> 1);
+              }
+            }
+            L31: {
+              if (!selected) {
                 ma.a(rowY, var10, 40, (byte) -92, var11, eb.field_g);
-              }
-              rowY += 2;
-            }
-            L33: {
-              if (selected) {
-                dd.field_G.field_K[0][wf.field_p] = 15488514;
-                var12 = this.field_T;
                 if (var14 == 0) {
-                  break L33;
+                  break L31;
                 }
               }
-              var12 = 0;
+              var9 = var9 + this.field_T;
+              var10 = var10 + this.field_T;
+              rowY = rowY - this.field_T;
+              ma.a(rowY, var10, 40, (byte) -92, var11, eb.field_g);
             }
-            L35: {
-              L36: {
-                if (actionId != 8) {
-                  if (9 != actionId) {
-                    break L36;
-                  }
-                }
-                var8.c(var7, 285 + var12, 30 + rowY, 0, -1);
-                sd.field_y.b(var12 + 280, rowY + 15);
-                if (actionId == 8) {
-                  stackIn_153_0 = j.field_gb;
-                } else {
-                  stackIn_153_0 = oc.field_c;
-                }
-                var13 = stackIn_153_0;
-                var13 = var13 * (-4 + sd.field_y.field_s) / 80;
-                re.field_h.b(280 + var13 - 1 + var12, 9 + rowY);
-                if (var14 == 0) {
-                  break L35;
-                }
-              }
-              var8.b(var7, var9, rowY + 30, 0, -1);
-            }
-            dd.field_G.field_K[0][wf.field_p] = 16689938;
-            return;
-          } else {
-            return;
+            rowY += 2;
           }
+          L33: {
+            if (selected) {
+              dd.field_G.field_K[0][wf.field_p] = 15488514;
+              var12 = this.field_T;
+              if (var14 == 0) {
+                break L33;
+              }
+            }
+            var12 = 0;
+          }
+          L35: {
+            L36: {
+              if (actionId != 8) {
+                if (9 != actionId) {
+                  break L36;
+                }
+              }
+              var8.c(var7, 285 + var12, 30 + rowY, 0, -1);
+              sd.field_y.b(var12 + 280, rowY + 15);
+              if (actionId == 8) {
+                stackIn_153_0 = j.field_gb;
+              } else {
+                stackIn_153_0 = oc.field_c;
+              }
+              var13 = stackIn_153_0;
+              var13 = var13 * (-4 + sd.field_y.field_s) / 80;
+              re.field_h.b(280 + var13 - 1 + var12, 9 + rowY);
+              if (var14 == 0) {
+                break L35;
+              }
+            }
+            var8.b(var7, var9, rowY + 30, 0, -1);
+          }
+          dd.field_G.field_K[0][wf.field_p] = 16689938;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -2971,200 +2869,190 @@ final class GameScreen extends MenuScreen {
           if (param0 != 62) {
             this.field_X = -26;
           }
-          if (!this.pointerInteractionActive) {
-            L1: {
-              L2: {
-                if (!this.field_C) {
-                  if (this.screenId == 0) {
-                    break L2;
-                  } else {
-                    if (1 == this.screenId) {
-                      break L2;
-                    } else {
-                      if (this.screenId == 4) {
-                        break L2;
-                      }
-                    }
-                  }
+          if (this.pointerInteractionActive) {
+            return;
+          }
+          L1: {
+            L2: {
+              if (!this.field_C) {
+                if (this.screenId == 0) {
+                  break L2;
                 }
-                L4: {
-                  if (ki.field_d == 96) {
-                    if (this.field_C) {
-                      if (this.field_o != 0) {
-                        this.field_o = 0;
-                        if (var3 == 0) {
-                          break L4;
-                        }
-                      } else {
-                        break L4;
-                      }
+                if (1 == this.screenId) {
+                  break L2;
+                }
+                if (this.screenId == 4) {
+                  break L2;
+                }
+              }
+              L4: {
+                if (ki.field_d == 96) {
+                  if (this.field_C) {
+                    if (this.field_o == 0) {
+                      break L4;
                     }
-                    if (0 >= this.selectedItemIndex) {
-                      this.selectedItemIndex = this.itemCount;
-                    }
-                    this.selectedItemIndex = this.selectedItemIndex - 1;
-                    this.keyboardSelectionActive = true;
-                    this.f((byte) 89);
+                    this.field_o = 0;
                     if (var3 == 0) {
                       break L4;
                     }
                   }
-                  if (ki.field_d != 97) {
-                    if (ki.field_d == 98) {
-                      if (2 == this.screenId) {
-                        if (this.selectedItemIndex < 0) {
-                          this.selectedItemIndex = 3;
-                          if (var3 == 0) {
-                            break L4;
-                          }
-                        }
-                        if (5 != t.menuActionIds[this.screenId][this.selectedItemIndex]) {
+                  if (0 >= this.selectedItemIndex) {
+                    this.selectedItemIndex = this.itemCount;
+                  }
+                  this.selectedItemIndex = this.selectedItemIndex - 1;
+                  this.keyboardSelectionActive = true;
+                  this.f((byte) 89);
+                  if (var3 == 0) {
+                    break L4;
+                  }
+                }
+                if (ki.field_d != 97) {
+                  if (ki.field_d == 98) {
+                    if (2 == this.screenId) {
+                      if (this.selectedItemIndex < 0) {
+                        this.selectedItemIndex = 3;
+                        if (var3 == 0) {
                           break L4;
-                        } else {
-                          this.selectedItemIndex = 1;
-                          if (var3 == 0) {
-                            break L4;
-                          }
                         }
                       }
-                    }
-                    if (ki.field_d != 99) {
-                      break L4;
-                    } else {
-                      if (this.screenId == 2) {
-                        if (this.selectedItemIndex < 0) {
-                          this.selectedItemIndex = 1;
-                          if (var3 == 0) {
-                            break L4;
-                          }
-                        }
-                        if (t.menuActionIds[this.screenId][this.selectedItemIndex] == 5) {
-                          break L4;
-                        } else {
-                          this.selectedItemIndex = 3;
-                          if (var3 == 0) {
-                            break L4;
-                          }
-                        }
-                      } else {
+                      if (5 != t.menuActionIds[this.screenId][this.selectedItemIndex]) {
                         break L4;
                       }
-                    }
-                  }
-                  if (this.field_C) {
-                    if (this.field_o == 1) {
-                      break L4;
-                    } else {
-                      if (!fh.c(-122)) {
-                        if (og.field_n <= 0) {
-                          break L4;
-                        }
-                      }
-                      this.field_o = 1;
+                      this.selectedItemIndex = 1;
                       if (var3 == 0) {
                         break L4;
                       }
                     }
                   }
-                  this.selectedItemIndex = this.selectedItemIndex + 1;
-                  this.keyboardSelectionActive = true;
-                  if (this.itemCount <= this.selectedItemIndex) {
-                    this.selectedItemIndex = 0;
+                  if (ki.field_d != 99) {
+                    break L4;
                   }
-                  this.c((byte) -117);
-                }
-                if (0 > this.selectedItemIndex) {
-                  break L1;
-                } else {
-                  this.handleMenuKey(this.selectedItemIndex, -49);
+                  if (this.screenId != 2) {
+                    break L4;
+                  }
+                  if (this.selectedItemIndex < 0) {
+                    this.selectedItemIndex = 1;
+                    if (var3 == 0) {
+                      break L4;
+                    }
+                  }
+                  if (t.menuActionIds[this.screenId][this.selectedItemIndex] == 5) {
+                    break L4;
+                  }
+                  this.selectedItemIndex = 3;
                   if (var3 == 0) {
-                    break L1;
+                    break L4;
                   }
                 }
-              }
-              if (ki.field_d == 98) {
-                if (0 >= this.selectedItemIndex) {
-                  this.selectedItemIndex = this.itemCount;
+                if (this.field_C) {
+                  if (this.field_o == 1) {
+                    break L4;
+                  }
+                  if (!fh.c(-122)) {
+                    if (og.field_n <= 0) {
+                      break L4;
+                    }
+                  }
+                  this.field_o = 1;
+                  if (var3 == 0) {
+                    break L4;
+                  }
                 }
-                this.selectedItemIndex = this.selectedItemIndex - 1;
-                this.keyboardSelectionActive = true;
-                this.f((byte) 89);
-                if (var3 == 0) {
-                  break L1;
-                }
-              }
-              if (ki.field_d == 99) {
                 this.selectedItemIndex = this.selectedItemIndex + 1;
-                if (this.selectedItemIndex >= this.itemCount) {
+                this.keyboardSelectionActive = true;
+                if (this.itemCount <= this.selectedItemIndex) {
                   this.selectedItemIndex = 0;
                 }
-                this.keyboardSelectionActive = true;
-                this.c((byte) -107);
-                if (var3 == 0) {
-                  break L1;
-                }
+                this.c((byte) -117);
               }
-              if (0 <= this.selectedItemIndex) {
-                this.handleMenuKey(this.selectedItemIndex, -29);
+              if (0 > this.selectedItemIndex) {
+                break L1;
+              }
+              this.handleMenuKey(this.selectedItemIndex, -49);
+              if (var3 == 0) {
+                break L1;
               }
             }
-            L19: {
-              if (ki.field_d == 69) {
-                if (this.screenId == 3) {
-                  if (this.field_q < 4) {
-                    this.field_q = this.field_q + 1;
-                    if (var3 == 0) {
-                      break L19;
-                    }
+            if (ki.field_d == 98) {
+              if (0 >= this.selectedItemIndex) {
+                this.selectedItemIndex = this.itemCount;
+              }
+              this.selectedItemIndex = this.selectedItemIndex - 1;
+              this.keyboardSelectionActive = true;
+              this.f((byte) 89);
+              if (var3 == 0) {
+                break L1;
+              }
+            }
+            if (ki.field_d == 99) {
+              this.selectedItemIndex = this.selectedItemIndex + 1;
+              if (this.selectedItemIndex >= this.itemCount) {
+                this.selectedItemIndex = 0;
+              }
+              this.keyboardSelectionActive = true;
+              this.c((byte) -107);
+              if (var3 == 0) {
+                break L1;
+              }
+            }
+            if (0 <= this.selectedItemIndex) {
+              this.handleMenuKey(this.selectedItemIndex, -29);
+            }
+          }
+          L19: {
+            if (ki.field_d == 69) {
+              if (this.screenId == 3) {
+                if (this.field_q < 4) {
+                  this.field_q = this.field_q + 1;
+                  if (var3 == 0) {
+                    break L19;
                   }
                 }
               }
-              if (ki.field_d == 41) {
-                if (this.screenId == 3) {
-                  if (this.field_q > 0) {
-                    this.field_q = this.field_q - 1;
-                    if (var3 == 0) {
-                      break L19;
-                    }
+            }
+            if (ki.field_d == 41) {
+              if (this.screenId == 3) {
+                if (this.field_q > 0) {
+                  this.field_q = this.field_q - 1;
+                  if (var3 == 0) {
+                    break L19;
                   }
                 }
               }
-              if (13 == ki.field_d) {
-                if (!this.field_C) {
-                  if (4 != this.screenId) {
-                    L22: {
-                      if (this.screenId == 1) {
-                        ai.requestedScreenId = -1;
+            }
+            if (13 == ki.field_d) {
+              if (!this.field_C) {
+                if (4 != this.screenId) {
+                  L22: {
+                    if (this.screenId == 1) {
+                      ai.requestedScreenId = -1;
+                      if (var3 == 0) {
+                        break L22;
+                      }
+                    }
+                    if (this.screenId != 6) {
+                      if (this.screenId != 2) {
+                        ai.requestedScreenId = oc.previousMenuScreenId;
                         if (var3 == 0) {
                           break L22;
                         }
                       }
-                      if (this.screenId != 6) {
-                        if (this.screenId != 2) {
-                          ai.requestedScreenId = oc.previousMenuScreenId;
-                          if (var3 == 0) {
-                            break L22;
-                          }
-                        }
-                      }
-                      ai.requestedScreenId = 0;
                     }
-                    if (~this.screenId != ~ai.requestedScreenId) {
-                      if (this.screenId != 1) {
-                        if (this.screenId != 0) {
-                          break L19;
-                        }
+                    ai.requestedScreenId = 0;
+                  }
+                  if (~this.screenId != ~ai.requestedScreenId) {
+                    if (this.screenId != 1) {
+                      if (this.screenId != 0) {
+                        break L19;
                       }
-                      oc.previousMenuScreenId = this.screenId;
                     }
+                    oc.previousMenuScreenId = this.screenId;
                   }
                 }
               }
             }
-            return;
-          } else {
-            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

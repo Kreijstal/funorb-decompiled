@@ -68,32 +68,31 @@ final class bg extends m {
         L0: while (true) {
           if (var15 >= var14 + param5) {
             return;
-          } else {
+          }
+          {
             var16 = param11[var15];
             var17 = param12[var15];
             var18 = param4;
             if (var13 <= var16) {
               var19 = var16 - var13;
-              if (var19 < param4) {
-                param7 = param7 + var19;
-                var18 = var18 - var19;
-                param8 = param8 + var19;
-              } else {
+              if (var19 >= param4) {
                 param7 = param7 + (param4 + param10);
                 param8 = param8 + (param4 + param9);
                 var15++;
                 continue L0;
               }
+              param7 = param7 + var19;
+              var18 = var18 - var19;
+              param8 = param8 + var19;
             } else {
               var19 = var13 - var16;
-              if (var19 < var17) {
-                var17 = var17 - var19;
-              } else {
+              if (var19 >= var17) {
                 param7 = param7 + (param4 + param10);
                 param8 = param8 + (param4 + param9);
                 var15++;
                 continue L0;
               }
+              var17 = var17 - var19;
             }
             var19 = 0;
             if (var18 >= var17) {
@@ -108,14 +107,16 @@ final class bg extends m {
                 param8 = param8 + (var19 + param9);
                 var15++;
                 continue L0;
-              } else {
+              }
+              {
                 incrementValue$0 = param7;
                 param7++;
                 if (param1[incrementValue$0] == 0) {
                   param8++;
                   var20++;
                   continue L3;
-                } else {
+                }
+                {
                   incrementValue$1 = param8;
                   param8++;
                   SoftwareRasterizer.framebuffer[incrementValue$1] = param6;
@@ -191,7 +192,8 @@ final class bg extends m {
         L0: while (true) {
           if (var10 >= 0) {
             return;
-          } else {
+          }
+          {
             var11 = var9;
             L1: while (true) {
               if (var11 >= 0) {
@@ -202,14 +204,16 @@ final class bg extends m {
                     param3 = param3 + param8;
                     var10++;
                     continue L0;
-                  } else {
+                  }
+                  {
                     incrementValue$0 = param3;
                     param3++;
                     if (param1[incrementValue$0] == 0) {
                       param4++;
                       var11++;
                       continue L2;
-                    } else {
+                    }
+                    {
                       incrementValue$1 = param4;
                       param4++;
                       param0[incrementValue$1] = param2;
@@ -218,7 +222,8 @@ final class bg extends m {
                     }
                   }
                 }
-              } else {
+              }
+              {
                 incrementValue$2 = param3;
                 param3++;
                 if (param1[incrementValue$2] == 0) {
@@ -252,7 +257,8 @@ final class bg extends m {
                   param4++;
                   var11++;
                   continue L1;
-                } else {
+                }
+                {
                   incrementValue$9 = param4;
                   param4++;
                   param0[incrementValue$9] = param2;
@@ -277,29 +283,30 @@ final class bg extends m {
         L0: while (true) {
           if (var10 >= 0) {
             return;
-          } else {
-            var11 = -param5;
-            L1: while (true) {
-              if (var11 >= 0) {
-                param4 = param4 + param7;
-                param3 = param3 + param8;
-                var10++;
-                continue L0;
-              } else {
-                incrementValue$11 = param3;
-                param3++;
-                if (param1[incrementValue$11] == 0) {
-                  param4++;
-                  var11++;
-                  continue L1;
-                } else {
-                  var12 = param0[param4];
-                  incrementValue$12 = param4;
-                  param4++;
-                  param0[incrementValue$12] = (((var12 & 16711935) * param9 & -16711936) + ((var12 & 65280) * param9 & 16711680) >> 8) + param2;
-                  var11++;
-                  continue L1;
-                }
+          }
+          var11 = -param5;
+          L1: while (true) {
+            if (var11 >= 0) {
+              param4 = param4 + param7;
+              param3 = param3 + param8;
+              var10++;
+              continue L0;
+            }
+            {
+              incrementValue$11 = param3;
+              param3++;
+              if (param1[incrementValue$11] == 0) {
+                param4++;
+                var11++;
+                continue L1;
+              }
+              {
+                var12 = param0[param4];
+                incrementValue$12 = param4;
+                param4++;
+                param0[incrementValue$12] = (((var12 & 16711935) * param9 & -16711936) + ((var12 & 65280) * param9 & 16711680) >> 8) + param2;
+                var11++;
+                continue L1;
               }
             }
           }

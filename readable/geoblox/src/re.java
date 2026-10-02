@@ -54,23 +54,17 @@ final class re extends IntrusiveNode {
                 }
                 ii.field_c = gk.field_b;
                 break L2;
-              } else {
-                L4: while (true) {
-                  if (gk.field_b == ii.field_c) {
-                    break L2;
-                  } else {
-                    var2 = gf.field_c[gk.field_b];
-                    gk.field_b = 1 + gk.field_b & 127;
-                    if (var2 < 0) {
-                      kj.field_o[~var2] = false;
-                      continue L4;
-                    } else {
-                      kj.field_o[var2] = true;
-                      continue L4;
-                    }
-                  }
-                }
               }
+              L4: while (gk.field_b != ii.field_c) {
+                var2 = gf.field_c[gk.field_b];
+                gk.field_b = 1 + gk.field_b & 127;
+                if (var2 < 0) {
+                  kj.field_o[~var2] = false;
+                  continue L4;
+                }
+                kj.field_o[var2] = true;
+              }
+              break L2;
             }
             pc.field_p = ba.field_c;
           }

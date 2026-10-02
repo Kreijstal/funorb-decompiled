@@ -19,6 +19,7 @@ final class ul {
 
     final static void collectMatchCandidates(int methodGuard) {
         int firstNeighborIndex = 0;
+        int secondNeighborIndex = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_21_0 = 0;
@@ -46,7 +47,6 @@ final class ul {
         int categoryMatchingAllowed = 0;
         int firstNeighborSharesVariant = 0;
         int firstNeighborSharesCategory = 0;
-        int secondNeighborIndex = 0;
         int tripleSharesCategory = 0;
         int tripleSharesVariant = 0;
         int largestPackedEntityId = 0;
@@ -111,130 +111,122 @@ final class ul {
                       break L10;
                     }
                   }
-                  secondNeighborIndex = firstNeighborIndex + 1;
-                  L12: while (true) {
-                    if (secondNeighborIndex >= centralEntity.relatedEntityCount) {
-                      break L10;
-                    } else {
-                      if (firstNeighborSharesCategory != 0) {
-                        if (centralEntity.relatedEntities[secondNeighborIndex].entityCategoryKey == centralEntity.entityCategoryKey) {
-                          stackIn_38_0 = 1;
-                        } else {
-                          stackIn_38_0 = 0;
-                        }
+                  L12: for (secondNeighborIndex = firstNeighborIndex + 1; secondNeighborIndex < centralEntity.relatedEntityCount; secondNeighborIndex++) {
+                    if (firstNeighborSharesCategory != 0) {
+                      if (centralEntity.relatedEntities[secondNeighborIndex].entityCategoryKey == centralEntity.entityCategoryKey) {
+                        stackIn_38_0 = 1;
                       } else {
                         stackIn_38_0 = 0;
                       }
-                      tripleSharesCategory = stackIn_38_0;
-                      if (firstNeighborSharesVariant != 0) {
-                        if (centralEntity.spriteVariantIndex == centralEntity.relatedEntities[secondNeighborIndex].spriteVariantIndex) {
-                          stackIn_44_0 = 1;
-                        } else {
-                          stackIn_44_0 = 0;
-                        }
+                    } else {
+                      stackIn_38_0 = 0;
+                    }
+                    tripleSharesCategory = stackIn_38_0;
+                    if (firstNeighborSharesVariant != 0) {
+                      if (centralEntity.spriteVariantIndex == centralEntity.relatedEntities[secondNeighborIndex].spriteVariantIndex) {
+                        stackIn_44_0 = 1;
                       } else {
                         stackIn_44_0 = 0;
                       }
-                      L15: {
-                        tripleSharesVariant = stackIn_44_0;
-                        if (tripleSharesCategory == 0) {
-                          if (tripleSharesVariant == 0) {
-                            break L15;
-                          }
-                        }
-                        centralEntity.relatedEntities[firstNeighborIndex].entityQueue = bh.field_c;
-                        centralEntity.relatedEntities[secondNeighborIndex].entityQueue = bh.field_c;
-                        middlePackedEntityId = centralEntity.relatedEntities[firstNeighborIndex].entityId;
-                        largestPackedEntityId = centralEntity.entityId;
-                        smallestPackedEntityId = centralEntity.relatedEntities[secondNeighborIndex].entityId;
-                        if (middlePackedEntityId < smallestPackedEntityId) {
-                          swappedEntityId = middlePackedEntityId;
-                          middlePackedEntityId = smallestPackedEntityId;
-                          smallestPackedEntityId = swappedEntityId;
-                        }
-                        if (tripleSharesVariant != 0) {
-                          dd.variantMatchCandidateCount = dd.variantMatchCandidateCount + 1;
-                        }
-                        if (tripleSharesVariant != 0) {
-                          if (tripleSharesCategory != 0) {
-                          }
-                        }
-                        if (tripleSharesCategory != 0) {
-                          dk.categoryMatchCandidateCount = dk.categoryMatchCandidateCount + 1;
-                        }
-                        if (largestPackedEntityId >= smallestPackedEntityId) {
-                          if (middlePackedEntityId > largestPackedEntityId) {
-                            swappedEntityId = largestPackedEntityId;
-                            largestPackedEntityId = middlePackedEntityId;
-                            middlePackedEntityId = swappedEntityId;
-                          }
-                        } else {
-                          swappedEntityId = middlePackedEntityId;
-                          middlePackedEntityId = smallestPackedEntityId;
-                          smallestPackedEntityId = largestPackedEntityId;
-                          largestPackedEntityId = swappedEntityId;
-                        }
-                        stackIn_64_0 = nk.packedMatchCandidates;
-
-                        stackIn_64_1 = h.matchCandidateCount;
-
-                        stackIn_64_2 = nk.packedMatchCandidates[h.matchCandidateCount];
-
-                        stackIn_64_3 = smallestPackedEntityId;
-
-                        if (tripleSharesCategory == 0) {
-                          stackIn_65_0 = (int[]) ((Object) stackIn_64_0);
-                          stackIn_65_1 = stackIn_64_1;
-                          stackIn_65_2 = stackIn_64_2;
-                          stackIn_65_3 = stackIn_64_3;
-                          stackIn_65_4 = 0;
-                        } else {
-                          stackIn_65_0 = (int[]) ((Object) stackIn_64_0);
-                          stackIn_65_1 = stackIn_64_1;
-                          stackIn_65_2 = stackIn_64_2;
-                          stackIn_65_3 = stackIn_64_3;
-                          stackIn_65_4 = -2147483648;
-                        }
-
-
-
-
-
-
-
-
-
-
+                    } else {
+                      stackIn_44_0 = 0;
+                    }
+                    L15: {
+                      tripleSharesVariant = stackIn_44_0;
+                      if (tripleSharesCategory == 0) {
                         if (tripleSharesVariant == 0) {
-                          stackIn_65_0 = (int[]) ((Object) stackIn_65_0);
-
-
-
-
-                          stackIn_68_5 = 0;
-                        } else {
-                          stackIn_65_0 = (int[]) ((Object) stackIn_65_0);
-
-
-
-
-                          stackIn_68_5 = 1073741824;
+                          break L15;
                         }
-                        stackIn_65_0[stackIn_65_1] = lb.a(stackIn_65_2, lb.a(stackIn_65_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), largestPackedEntityId << 20), middlePackedEntityId << 10)));
-                        h.matchCandidateCount = h.matchCandidateCount + 1;
+                      }
+                      centralEntity.relatedEntities[firstNeighborIndex].entityQueue = bh.field_c;
+                      centralEntity.relatedEntities[secondNeighborIndex].entityQueue = bh.field_c;
+                      middlePackedEntityId = centralEntity.relatedEntities[firstNeighborIndex].entityId;
+                      largestPackedEntityId = centralEntity.entityId;
+                      smallestPackedEntityId = centralEntity.relatedEntities[secondNeighborIndex].entityId;
+                      if (middlePackedEntityId < smallestPackedEntityId) {
+                        swappedEntityId = middlePackedEntityId;
+                        middlePackedEntityId = smallestPackedEntityId;
+                        smallestPackedEntityId = swappedEntityId;
+                      }
+                      if (tripleSharesVariant != 0) {
+                        dd.variantMatchCandidateCount = dd.variantMatchCandidateCount + 1;
+                      }
+                      if (tripleSharesVariant != 0) {
+                        if (tripleSharesCategory != 0) {
+                        }
                       }
                       if (tripleSharesCategory != 0) {
-                        if (tripleSharesVariant != 0) {
-                          dualMatchFound = 1;
-                        }
-                        secondNeighborIndex++;
-                        continue L12;
-                      } else {
-                        secondNeighborIndex++;
-                        continue L12;
+                        dk.categoryMatchCandidateCount = dk.categoryMatchCandidateCount + 1;
                       }
+                      if (largestPackedEntityId >= smallestPackedEntityId) {
+                        if (middlePackedEntityId > largestPackedEntityId) {
+                          swappedEntityId = largestPackedEntityId;
+                          largestPackedEntityId = middlePackedEntityId;
+                          middlePackedEntityId = swappedEntityId;
+                        }
+                      } else {
+                        swappedEntityId = middlePackedEntityId;
+                        middlePackedEntityId = smallestPackedEntityId;
+                        smallestPackedEntityId = largestPackedEntityId;
+                        largestPackedEntityId = swappedEntityId;
+                      }
+                      stackIn_64_0 = nk.packedMatchCandidates;
+
+                      stackIn_64_1 = h.matchCandidateCount;
+
+                      stackIn_64_2 = nk.packedMatchCandidates[h.matchCandidateCount];
+
+                      stackIn_64_3 = smallestPackedEntityId;
+
+                      if (tripleSharesCategory == 0) {
+                        stackIn_65_0 = (int[]) ((Object) stackIn_64_0);
+                        stackIn_65_1 = stackIn_64_1;
+                        stackIn_65_2 = stackIn_64_2;
+                        stackIn_65_3 = stackIn_64_3;
+                        stackIn_65_4 = 0;
+                      } else {
+                        stackIn_65_0 = (int[]) ((Object) stackIn_64_0);
+                        stackIn_65_1 = stackIn_64_1;
+                        stackIn_65_2 = stackIn_64_2;
+                        stackIn_65_3 = stackIn_64_3;
+                        stackIn_65_4 = -2147483648;
+                      }
+
+
+
+
+
+
+
+
+
+
+                      if (tripleSharesVariant == 0) {
+                        stackIn_65_0 = (int[]) ((Object) stackIn_65_0);
+
+
+
+
+                        stackIn_68_5 = 0;
+                      } else {
+                        stackIn_65_0 = (int[]) ((Object) stackIn_65_0);
+
+
+
+
+                        stackIn_68_5 = 1073741824;
+                      }
+                      stackIn_65_0[stackIn_65_1] = lb.a(stackIn_65_2, lb.a(stackIn_65_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), largestPackedEntityId << 20), middlePackedEntityId << 10)));
+                      h.matchCandidateCount = h.matchCandidateCount + 1;
+                    }
+                    if (tripleSharesCategory == 0) {
+                      continue L12;
+                    }
+                    if (tripleSharesVariant != 0) {
+                      dualMatchFound = 1;
                     }
                   }
+                  break L10;
                 }
               }
               break L3;
@@ -275,32 +267,31 @@ final class ul {
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
         try {
-          if (param2 == 127) {
-            var3_int = param0.field_kb - param1.field_kb;
-            if (eg.field_l != param0.field_mb) {
-              if (param0.field_mb == null) {
-                var3_int += 200;
-              }
-            } else {
-              var3_int -= 200;
-            }
-            if (param1.field_mb == eg.field_l) {
-              var3_int += 200;
-            } else {
-              if (null == param1.field_mb) {
-                var3_int -= 200;
-              }
-            }
-            if (0 >= var3_int) {
-              stackIn_15_0 = 0;
-            } else {
-              stackIn_15_0 = 1;
-            }
-            return stackIn_15_0 != 0;
-          } else {
+          if (param2 != 127) {
             stackIn_3_0 = 0;
             return stackIn_3_0 != 0;
           }
+          var3_int = param0.field_kb - param1.field_kb;
+          if (eg.field_l != param0.field_mb) {
+            if (param0.field_mb == null) {
+              var3_int += 200;
+            }
+          } else {
+            var3_int -= 200;
+          }
+          if (param1.field_mb == eg.field_l) {
+            var3_int += 200;
+          } else {
+            if (null == param1.field_mb) {
+              var3_int -= 200;
+            }
+          }
+          if (0 >= var3_int) {
+            stackIn_15_0 = 0;
+          } else {
+            stackIn_15_0 = 1;
+          }
+          return stackIn_15_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

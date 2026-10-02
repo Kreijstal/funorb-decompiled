@@ -95,10 +95,9 @@ final class rl extends oe {
           var3.e(param2.field_h, param1 + 28161);
           if (param1 == 534) {
             return;
-          } else {
-            field_W = (od) null;
-            return;
           }
+          field_W = (od) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -154,34 +153,33 @@ final class rl extends oe {
             stackIn_3_0 = stackIn_2_0;
             stackIn_3_1 = 1;
           }
-          if ((stackIn_3_0 ? 1 : 0) == stackIn_3_1) {
-            stackIn_7_0 = this;
-
-            if (!param0) {
-              stackIn_8_0 = this;
-              stackIn_8_1 = 0;
-            } else {
-              stackIn_8_0 = this;
-              stackIn_8_1 = 1;
-            }
-            ((rl) (this)).field_Z = stackIn_8_1 != 0;
-            if (!this.field_Z) {
-              this.field_bb.a(4210752, 2113632, (byte) -103);
-              if (this.field_ab) {
-                this.field_bb.field_C = false;
-              }
-            } else {
-              this.field_bb.a(4210752, 8405024, (byte) -103);
-              this.field_bb.field_C = true;
-            }
-            this.field_X = param1;
-            this.field_bb.field_x = (int)(65536.0f * (param3 / 100.0f));
-            return;
-          } else {
+          if ((stackIn_3_0 ? 1 : 0) != stackIn_3_1) {
             this.field_X = param1;
             this.field_bb.field_x = (int)(65536.0f * (param3 / 100.0f));
             return;
           }
+          stackIn_7_0 = this;
+
+          if (!param0) {
+            stackIn_8_0 = this;
+            stackIn_8_1 = 0;
+          } else {
+            stackIn_8_0 = this;
+            stackIn_8_1 = 1;
+          }
+          ((rl) (this)).field_Z = stackIn_8_1 != 0;
+          if (!this.field_Z) {
+            this.field_bb.a(4210752, 2113632, (byte) -103);
+            if (this.field_ab) {
+              this.field_bb.field_C = false;
+            }
+          } else {
+            this.field_bb.a(4210752, 8405024, (byte) -103);
+            this.field_bb.field_C = true;
+          }
+          this.field_X = param1;
+          this.field_bb.field_x = (int)(65536.0f * (param3 / 100.0f));
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

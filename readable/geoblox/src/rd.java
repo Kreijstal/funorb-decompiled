@@ -116,9 +116,8 @@ final class rd extends ff {
                 }
               }
               break L0;
-            } else {
-              sf.a(this.field_x, 0, param1.field_x, 0, 6);
             }
+            sf.a(this.field_x, 0, param1.field_x, 0, 6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -392,9 +391,8 @@ final class rd extends ff {
           }
           if (mf.a(param2, param0, 114, param3)) {
             return hj.a(104);
-          } else {
-            return null;
           }
+          return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

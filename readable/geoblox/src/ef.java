@@ -58,10 +58,9 @@ final class ef implements Iterator {
           }
           if (el.gameplaySession.tutorialPromptActive) {
             return;
-          } else {
-            lc.updateSpawnQueue(255);
-            return;
           }
+          lc.updateSpawnQueue(255);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

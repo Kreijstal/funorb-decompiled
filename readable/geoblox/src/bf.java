@@ -195,83 +195,78 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
             stackIn_13_0 = var6;
           }
           var10 = stackIn_13_0;
-          if (param2 == 14164) {
-            L4: {
-              if (param4 >= SoftwareRasterizer.clipLeft) {
-                if (param4 < SoftwareRasterizer.clipRight) {
-                  var11 = param4 + var8 * SoftwareRasterizer.stride;
-                  var12 = var10 + 1 - var8 >> 1;
-                  L5: while (true) {
-                    var12--;
-                    if (0 > var12) {
-                      break L4;
-                    } else {
-                      SoftwareRasterizer.framebuffer[var11] = 16777215;
-                      var11 = var11 + SoftwareRasterizer.stride * 2;
-                      continue L5;
-                    }
-                  }
-                }
-              }
-            }
-            L6: {
-              if (param0 >= SoftwareRasterizer.clipTop) {
-                if (SoftwareRasterizer.clipBottom > var6) {
-                  var11 = var7 + SoftwareRasterizer.stride * param0;
-                  var12 = -var7 + 1 + var9 >> 1;
-                  L7: while (true) {
-                    var12--;
-                    if (var12 < 0) {
-                      break L6;
-                    } else {
-                      SoftwareRasterizer.framebuffer[var11] = 16777215;
-                      var11 += 2;
-                      continue L7;
-                    }
-                  }
-                }
-              }
-            }
-            L8: {
-              if (var5_int >= SoftwareRasterizer.clipLeft) {
-                if (SoftwareRasterizer.clipRight > var5_int) {
-                  var11 = var5_int + ((1 & -param4 + var5_int) + var8) * SoftwareRasterizer.stride;
-                  var12 = -var8 + 1 + var10 >> 1;
-                  L9: while (true) {
-                    var12--;
-                    if (0 > var12) {
-                      break L8;
-                    } else {
-                      SoftwareRasterizer.framebuffer[var11] = 16777215;
-                      var11 = var11 + 2 * SoftwareRasterizer.stride;
-                      continue L9;
-                    }
-                  }
-                }
-              }
-            }
-            L10: {
-              if (SoftwareRasterizer.clipTop <= param0) {
-                if (SoftwareRasterizer.clipBottom > var6) {
-                  var11 = SoftwareRasterizer.stride * var6 + (var7 + (1 & -param0 + var6));
-                  var12 = 1 - (-var9 + var7) >> 1;
-                  L11: while (true) {
-                    var12--;
-                    if (var12 < 0) {
-                      break L10;
-                    } else {
-                      SoftwareRasterizer.framebuffer[var11] = 16777215;
-                      var11 += 2;
-                      continue L11;
-                    }
-                  }
-                }
-              }
-            }
-            return;
-          } else {
+          if (param2 != 14164) {
             return;
           }
+          L4: {
+            if (param4 >= SoftwareRasterizer.clipLeft) {
+              if (param4 < SoftwareRasterizer.clipRight) {
+                var11 = param4 + var8 * SoftwareRasterizer.stride;
+                var12 = var10 + 1 - var8 >> 1;
+                L5: while (true) {
+                  var12--;
+                  if (0 > var12) {
+                    break L4;
+                  }
+                  SoftwareRasterizer.framebuffer[var11] = 16777215;
+                  var11 = var11 + SoftwareRasterizer.stride * 2;
+                  continue L5;
+                }
+              }
+            }
+          }
+          L6: {
+            if (param0 >= SoftwareRasterizer.clipTop) {
+              if (SoftwareRasterizer.clipBottom > var6) {
+                var11 = var7 + SoftwareRasterizer.stride * param0;
+                var12 = -var7 + 1 + var9 >> 1;
+                L7: while (true) {
+                  var12--;
+                  if (var12 < 0) {
+                    break L6;
+                  }
+                  SoftwareRasterizer.framebuffer[var11] = 16777215;
+                  var11 += 2;
+                  continue L7;
+                }
+              }
+            }
+          }
+          L8: {
+            if (var5_int >= SoftwareRasterizer.clipLeft) {
+              if (SoftwareRasterizer.clipRight > var5_int) {
+                var11 = var5_int + ((1 & -param4 + var5_int) + var8) * SoftwareRasterizer.stride;
+                var12 = -var8 + 1 + var10 >> 1;
+                L9: while (true) {
+                  var12--;
+                  if (0 > var12) {
+                    break L8;
+                  }
+                  SoftwareRasterizer.framebuffer[var11] = 16777215;
+                  var11 = var11 + 2 * SoftwareRasterizer.stride;
+                  continue L9;
+                }
+              }
+            }
+          }
+          L10: {
+            if (SoftwareRasterizer.clipTop <= param0) {
+              if (SoftwareRasterizer.clipBottom > var6) {
+                var11 = SoftwareRasterizer.stride * var6 + (var7 + (1 & -param0 + var6));
+                var12 = 1 - (-var9 + var7) >> 1;
+                L11: while (true) {
+                  var12--;
+                  if (var12 < 0) {
+                    break L10;
+                  }
+                  SoftwareRasterizer.framebuffer[var11] = 16777215;
+                  var11 += 2;
+                  continue L11;
+                }
+              }
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

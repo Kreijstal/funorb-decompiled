@@ -62,11 +62,10 @@ final class eg extends IntrusiveNode {
                     if (var9 == 45) {
                       var4_int = 1;
                       break L3;
-                    } else {
-                      if (var9 == 43) {
-                        if (param3) {
-                          break L3;
-                        }
+                    }
+                    if (var9 == 43) {
+                      if (param3) {
+                        break L3;
                       }
                     }
                   }
@@ -91,28 +90,27 @@ final class eg extends IntrusiveNode {
                     }
                     throw new NumberFormatException();
                   }
-                  if (var9 < param2) {
+                  if (var9 >= param2) {
+                    throw new NumberFormatException();
+                  }
+                  {
                     if (var4_int != 0) {
                       var9 = -var9;
                     }
                     var10 = var6 * param2 + var9;
                     if (var6 != var10 / param2) {
                       throw new NumberFormatException();
-                    } else {
-                      var5 = 1;
-                      var6 = var10;
                     }
-                  } else {
-                    throw new NumberFormatException();
+                    var5 = 1;
+                    var6 = var10;
                   }
                 }
               }
-              if (var5 != 0) {
-                stackIn_41_0 = var6;
-                return stackIn_41_0;
-              } else {
+              if (var5 == 0) {
                 throw new NumberFormatException();
               }
+              stackIn_41_0 = var6;
+              return stackIn_41_0;
             }
           }
           throw new IllegalArgumentException("" + param2);

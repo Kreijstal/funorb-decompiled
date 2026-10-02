@@ -34,22 +34,21 @@ final class cl {
           if (param0 <= 56) {
             field_a = -115;
           }
-          if (IntrusiveDeque.field_d != si.field_g) {
-            if (si.field_g == va.field_e) {
-              if (param1.equals(cg.field_k)) {
-                si.field_g = uf.field_l;
-                stackIn_8_0 = ScorePopup.field_g;
-                return stackIn_8_0;
-              }
-            }
-            si.field_g = IntrusiveDeque.field_d;
-            cg.field_k = param1;
-            ScorePopup.field_g = null;
-            stackIn_10_0 = null;
-            return (sl) ((Object) stackIn_10_0);
-          } else {
+          if (IntrusiveDeque.field_d == si.field_g) {
             return null;
           }
+          if (si.field_g == va.field_e) {
+            if (param1.equals(cg.field_k)) {
+              si.field_g = uf.field_l;
+              stackIn_8_0 = ScorePopup.field_g;
+              return stackIn_8_0;
+            }
+          }
+          si.field_g = IntrusiveDeque.field_d;
+          cg.field_k = param1;
+          ScorePopup.field_g = null;
+          stackIn_10_0 = null;
+          return (sl) ((Object) stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

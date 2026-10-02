@@ -108,7 +108,10 @@ final class fh implements dh {
           if (param1 > -5) {
             fh.a(53L, -116);
           }
-          if (param4.e((byte) 54)) {
+          if (!param4.e((byte) 54)) {
+            return;
+          }
+          {
             var7 = this.field_d.a(param4.field_s);
             var8 = this.field_d.field_q + this.field_d.field_o;
             var9 = param4.field_v + param0;
@@ -128,8 +131,6 @@ final class fh implements dh {
               }
             }
             bf.a(var10 + 2, 4 + var7, 14164, var8, -2 + var9);
-            return;
-          } else {
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

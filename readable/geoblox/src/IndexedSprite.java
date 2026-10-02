@@ -18,31 +18,32 @@ final class IndexedSprite extends ha {
         L0: while (true) {
           if (var11 >= 0) {
             return;
-          } else {
-            var12 = -param5;
-            L1: while (true) {
-              if (var12 >= 0) {
-                param4 = param4 + param7;
-                param3 = param3 + param8;
-                var11++;
-                continue L0;
-              } else {
-                incrementValue$11 = param3;
-                param3++;
-                var13 = param1[incrementValue$11];
-                if (var13 == 0) {
-                  param4++;
-                  var12++;
-                  continue L1;
-                } else {
-                  var13 = param2[var13 & 255];
-                  var14 = param0[param4];
-                  incrementValue$12 = param4;
-                  param4++;
-                  param0[incrementValue$12] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
-                  var12++;
-                  continue L1;
-                }
+          }
+          var12 = -param5;
+          L1: while (true) {
+            if (var12 >= 0) {
+              param4 = param4 + param7;
+              param3 = param3 + param8;
+              var11++;
+              continue L0;
+            }
+            {
+              incrementValue$11 = param3;
+              param3++;
+              var13 = param1[incrementValue$11];
+              if (var13 == 0) {
+                param4++;
+                var12++;
+                continue L1;
+              }
+              {
+                var13 = param2[var13 & 255];
+                var14 = param0[param4];
+                incrementValue$12 = param4;
+                param4++;
+                param0[incrementValue$12] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
+                var12++;
+                continue L1;
               }
             }
           }
@@ -145,50 +146,50 @@ final class IndexedSprite extends ha {
         L0: while (true) {
           if (param10 >= 0) {
             return;
-          } else {
-            param4 = param7;
-            if (param2 > 0) {
-              if (param1[param2 - 1] == -1) {
-                param4--;
-                param2++;
-                param3++;
-              }
+          }
+          param4 = param7;
+          if (param2 > 0) {
+            if (param1[param2 - 1] == -1) {
+              param4--;
+              param2++;
+              param3++;
             }
-            L2: while (true) {
-              if (param4 <= 0) {
-                param3 = param3 + param8;
-                param2 = param2 + param9;
-                param10++;
-                continue L0;
-              } else {
-                incrementValue$12 = param2;
+          }
+          L2: while (true) {
+            if (param4 <= 0) {
+              param3 = param3 + param8;
+              param2 = param2 + param9;
+              param10++;
+              continue L0;
+            }
+            {
+              incrementValue$12 = param2;
+              param2++;
+              param0 = param1[incrementValue$12];
+              param4--;
+              if (param0 == 0) {
+                param3++;
+                continue L2;
+              }
+              if (param0 != -1) {
+                incrementValue$13 = param3;
+                param3++;
+                param5[incrementValue$13] = param6[param0 & 255];
+                continue L2;
+              }
+              {
+                incrementValue$14 = param2;
                 param2++;
-                param0 = param1[incrementValue$12];
+                param0 = param1[incrementValue$14] & 255;
                 param4--;
-                if (param0 == 0) {
-                  param3++;
-                  continue L2;
-                } else {
-                  if (param0 != -1) {
-                    incrementValue$13 = param3;
-                    param3++;
-                    param5[incrementValue$13] = param6[param0 & 255];
-                    continue L2;
-                  } else {
-                    incrementValue$14 = param2;
-                    param2++;
-                    param0 = param1[incrementValue$14] & 255;
-                    param4--;
-                    param0 = param0 + param0;
-                    if (param0 > param4) {
-                      param0 = param4;
-                    }
-                    param2 = param2 + param0;
-                    param4 = param4 - param0;
-                    param3 = param3 + (param0 + 2);
-                    continue L2;
-                  }
+                param0 = param0 + param0;
+                if (param0 > param4) {
+                  param0 = param4;
                 }
+                param2 = param2 + param0;
+                param4 = param4 - param0;
+                param3 = param3 + (param0 + 2);
+                continue L2;
               }
             }
           }
@@ -259,7 +260,8 @@ final class IndexedSprite extends ha {
         L0: while (true) {
           if (var11 >= 0) {
             return;
-          } else {
+          }
+          {
             var12 = var10;
             L1: while (true) {
               if (var12 >= 0) {
@@ -270,7 +272,8 @@ final class IndexedSprite extends ha {
                     param4 = param4 + param9;
                     var11++;
                     continue L0;
-                  } else {
+                  }
+                  {
                     incrementValue$0 = param4;
                     param4++;
                     param3 = param1[incrementValue$0];
@@ -278,7 +281,8 @@ final class IndexedSprite extends ha {
                       param5++;
                       var12++;
                       continue L2;
-                    } else {
+                    }
+                    {
                       incrementValue$1 = param5;
                       param5++;
                       param0[incrementValue$1] = param2[param3 & 255];
@@ -287,7 +291,8 @@ final class IndexedSprite extends ha {
                     }
                   }
                 }
-              } else {
+              }
+              {
                 incrementValue$2 = param4;
                 param4++;
                 param3 = param1[incrementValue$2];
@@ -325,7 +330,8 @@ final class IndexedSprite extends ha {
                   param5++;
                   var12++;
                   continue L1;
-                } else {
+                }
+                {
                   incrementValue$9 = param5;
                   param5++;
                   param0[incrementValue$9] = param2[param3 & 255];

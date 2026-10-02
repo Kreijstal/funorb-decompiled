@@ -17,6 +17,7 @@ final class ck {
     }
 
     final static void a(byte param0) {
+        int var17_int = 0;
         int var18 = 0;
         int var1_int = 0;
         int[] var2 = null;
@@ -36,7 +37,6 @@ final class ck {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        int var17_int = 0;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
@@ -90,39 +90,25 @@ final class ck {
           var14 = (int)((double)var14 * var10);
           var12 = (int)((double)var12 * var10);
           var13 = (int)((double)var13 * var10);
-          var15 = 0;
-          L2: while (true) {
-            if (bm.field_l.length <= var15) {
-              var15 = 123 / ((48 - param0) / 59);
-              return;
-            } else {
-              var16 = 0;
-              var17_int = 1;
-              L3: while (true) {
-                if (bm.field_l.length <= var17_int) {
-                  var21[var16] = -2147483648;
-                  var17 = bm.field_l[var16];
-                  Geoblox.a((byte) -112, var16);
-                  for (var18 = 0; var18 < 3; var18++) {
-                    lk.field_f[var18] = lk.field_f[var18] + pi.field_R[var15][var18];
-                  }
-                  p.a(am.field_a, lk.field_f, var17, true, false, false, true);
-                  hi.a(var14, var9, var12, 6562, var7, var17, var13, var8);
-                  var15++;
-                  continue L2;
-                } else {
-                  if (var21[var17_int] > var21[var16]) {
-                    var16 = var17_int;
-                    var17_int++;
-                    continue L3;
-                  } else {
-                    var17_int++;
-                    continue L3;
-                  }
-                }
+          for (var15 = 0; bm.field_l.length > var15; var15++) {
+            var16 = 0;
+            L3: for (var17_int = 1; bm.field_l.length > var17_int; var17_int++) {
+              if (var21[var17_int] <= var21[var16]) {
+                continue L3;
               }
+              var16 = var17_int;
             }
+            var21[var16] = -2147483648;
+            var17 = bm.field_l[var16];
+            Geoblox.a((byte) -112, var16);
+            for (var18 = 0; var18 < 3; var18++) {
+              lk.field_f[var18] = lk.field_f[var18] + pi.field_R[var15][var18];
+            }
+            p.a(am.field_a, lk.field_f, var17, true, false, false, true);
+            hi.a(var14, var9, var12, 6562, var7, var17, var13, var8);
           }
+          var15 = 123 / ((48 - param0) / 59);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -146,17 +132,7 @@ final class ck {
         RuntimeException var1 = null;
         var2 = Geoblox.field_C;
         try {
-          if (IntrusiveDeque.a((byte) 124)) {
-            if (param0 != 1) {
-              ck.a((byte) 8);
-            }
-            oh.field_b.a(true, 127, dk.field_c, ni.field_I);
-            oh.field_b.i(-50);
-            L1: while (hh.a(125)) {
-              oh.field_b.a((byte) -126, te.field_a, ki.field_d);
-            }
-            return;
-          } else {
+          if (!IntrusiveDeque.a((byte) 124)) {
             if (vl.field_n != null) {
               if (vl.field_n.field_c) {
                 jk.a((byte) -87);
@@ -165,6 +141,15 @@ final class ck {
             }
             return;
           }
+          if (param0 != 1) {
+            ck.a((byte) 8);
+          }
+          oh.field_b.a(true, 127, dk.field_c, ni.field_I);
+          oh.field_b.i(-50);
+          L1: while (hh.a(125)) {
+            oh.field_b.a((byte) -126, te.field_a, ki.field_d);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

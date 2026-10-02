@@ -36,38 +36,36 @@ abstract class dk {
         int var6;
         var7 = Geoblox.field_C;
         var2 = -1;
-        if (param0 >= 60) {
-          L0: {
-            if (null != this.field_a) {
-              var3 = this.field_a;
-              var4 = 0;
-              L1: while (true) {
-                if (var3.length <= var4) {
-                  break L0;
-                } else {
-                  var5 = var3[var4];
-                  if (var5 != null) {
-                    var6 = var5.a(0);
-                    if (var6 > var2) {
-                      var2 = var6;
-                      var4++;
-                      continue L1;
-                    } else {
-                      var4++;
-                      continue L1;
-                    }
-                  } else {
-                    var4++;
-                    continue L1;
-                  }
+        if (param0 < 60) {
+          return 19;
+        }
+        L0: {
+          if (null != this.field_a) {
+            var3 = this.field_a;
+            var4 = 0;
+            L1: while (true) {
+              if (var3.length <= var4) {
+                break L0;
+              }
+              var5 = var3[var4];
+              if (var5 == null) {
+                var4++;
+                continue L1;
+              }
+              {
+                var6 = var5.a(0);
+                if (var6 <= var2) {
+                  var4++;
+                  continue L1;
                 }
+                var2 = var6;
+                var4++;
+                continue L1;
               }
             }
           }
-          return var2;
-        } else {
-          return 19;
         }
+        return var2;
     }
 
     final int a(int param0, int param1, int param2, String param3) {
@@ -114,12 +112,11 @@ abstract class dk {
           if (var5_int <= 0) {
             stackIn_16_0 = 0;
             return stackIn_16_0;
-          } else {
-            stackIn_13_0 = param2 - param1 << 8;
-            stackIn_13_1 = var5_int;
-            stackIn_14_0 = stackIn_13_0 / stackIn_13_1;
-            return stackIn_14_0;
           }
+          stackIn_13_0 = param2 - param1 << 8;
+          stackIn_13_1 = var5_int;
+          stackIn_14_0 = stackIn_13_0 / stackIn_13_1;
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -142,8 +139,8 @@ abstract class dk {
 
     final static void a(byte param0) {
         try {
-            IOException iOException = null;
             int var1_int = 0;
+            IOException iOException = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException var1 = null;
@@ -169,26 +166,18 @@ abstract class dk {
               }
               L6: {
                 if (null != je.field_h) {
-                  var1_int = 0;
-                  L7: while (true) {
-                    if (je.field_h.length <= var1_int) {
-                      break L6;
-                    } else {
-                      if (null != je.field_h[var1_int]) {
-                        try {
-                          je.field_h[var1_int].b(27034);
-                        } catch (java.io.IOException decompiledCaughtParameter1) {
-                          decompiledCaughtException = decompiledCaughtParameter1;
-                          var2 = (IOException) (Object) decompiledCaughtException;
-                        }
-                        var1_int++;
-                        continue L7;
-                      } else {
-                        var1_int++;
-                        continue L7;
-                      }
+                  L7: for (var1_int = 0; je.field_h.length > var1_int; var1_int++) {
+                    if (null == je.field_h[var1_int]) {
+                      continue L7;
+                    }
+                    try {
+                      je.field_h[var1_int].b(27034);
+                    } catch (java.io.IOException decompiledCaughtParameter1) {
+                      decompiledCaughtException = decompiledCaughtParameter1;
+                      var2 = (IOException) (Object) decompiledCaughtException;
                     }
                   }
+                  break L6;
                 }
               }
               return;
@@ -251,29 +240,26 @@ abstract class dk {
             if (this.field_a[0].field_d <= param2) {
               if (this.field_a[-1 + this.field_a.length].field_a < param2) {
                 return -1;
-              } else {
-                if (this.field_a.length != 1) {
-                  var4 = 0;
-                  var5 = -2 % ((15 - param1) / 32);
-                  for (var6 = 0; var6 < this.field_a.length; var6++) {
-                    var7 = this.field_a[var6];
-                    if (param2 >= var7.field_d) {
-                      if (var7.field_a >= param2) {
-                        var8 = var7.a(-79, param0);
-                        if (-1 != var8) {
-                          return var4 + var8;
-                        } else {
-                          return -1;
-                        }
-                      }
-                    }
-                    var4 = var4 + (var7.field_c.length - 1);
-                  }
-                  return -1;
-                } else {
-                  return this.field_a[0].a(71, param0);
-                }
               }
+              if (this.field_a.length == 1) {
+                return this.field_a[0].a(71, param0);
+              }
+              var4 = 0;
+              var5 = -2 % ((15 - param1) / 32);
+              for (var6 = 0; var6 < this.field_a.length; var6++) {
+                var7 = this.field_a[var6];
+                if (param2 >= var7.field_d) {
+                  if (var7.field_a >= param2) {
+                    var8 = var7.a(-79, param0);
+                    if (-1 != var8) {
+                      return var4 + var8;
+                    }
+                    return -1;
+                  }
+                }
+                var4 = var4 + (var7.field_c.length - 1);
+              }
+              return -1;
             }
           }
         }

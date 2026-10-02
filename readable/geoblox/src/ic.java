@@ -95,10 +95,9 @@ final class ic {
               }
               if (param12 == 64) {
                 return;
-              } else {
-                loginCreateTooltipText = (String) null;
-                return;
               }
+              loginCreateTooltipText = (String) null;
+              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var15_ref = (RuntimeException) (Object) decompiledCaughtException;

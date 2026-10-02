@@ -76,14 +76,13 @@ final class qa {
             var3 = (byte[]) null;
             qa.a((byte[]) null, false);
           }
-          if (param0 != null) {
-            var2 = new qd(param0, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, cm.field_j, mj.field_a);
-            kj.c(true);
-            stackIn_6_0 = (qd) (var2);
-            return stackIn_6_0;
-          } else {
+          if (param0 == null) {
             return null;
           }
+          var2 = new qd(param0, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, cm.field_j, mj.field_a);
+          kj.c(true);
+          stackIn_6_0 = (qd) (var2);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -144,7 +143,8 @@ final class qa {
           if (0 == param5) {
             stackIn_4_0 = 0;
             return stackIn_4_0;
-          } else {
+          }
+          {
             var8 = 121 / ((-63 - param4) / 59);
             var7_int = 0;
             param5 = param5 + param3;
@@ -165,9 +165,8 @@ final class qa {
                   param0[incrementValue$1] = (byte)(~var11);
                   if (param3 >= param5) {
                     break L2;
-                  } else {
-                    var7_int = 0;
                   }
+                  var7_int = 0;
                 }
                 if (0 == (64 & var10)) {
                   var7_int++;
@@ -182,9 +181,8 @@ final class qa {
                   param0[incrementValue$3] = (byte)(~var11);
                   if (param3 >= param5) {
                     break L2;
-                  } else {
-                    var7_int = 0;
                   }
+                  var7_int = 0;
                 }
                 if ((var10 & 32) != 0) {
                   var7_int = this.field_c[var7_int];
@@ -197,11 +195,10 @@ final class qa {
                   incrementValue$5 = param3;
                   param3++;
                   param0[incrementValue$5] = (byte)(~var11);
-                  if (param5 > param3) {
-                    var7_int = 0;
-                  } else {
+                  if (param5 <= param3) {
                     break L2;
                   }
+                  var7_int = 0;
                 }
                 if ((var10 & 16) == 0) {
                   var7_int++;
@@ -214,11 +211,10 @@ final class qa {
                   incrementValue$7 = param3;
                   param3++;
                   param0[incrementValue$7] = (byte)(~var11);
-                  if (param5 > param3) {
-                    var7_int = 0;
-                  } else {
+                  if (param5 <= param3) {
                     break L2;
                   }
+                  var7_int = 0;
                 }
                 if ((8 & var10) == 0) {
                   var7_int++;
@@ -231,11 +227,10 @@ final class qa {
                   incrementValue$9 = param3;
                   param3++;
                   param0[incrementValue$9] = (byte)(~var11);
-                  if (param5 > param3) {
-                    var7_int = 0;
-                  } else {
+                  if (param5 <= param3) {
                     break L2;
                   }
+                  var7_int = 0;
                 }
                 if ((var10 & 4) != 0) {
                   var7_int = this.field_c[var7_int];
@@ -248,11 +243,10 @@ final class qa {
                   incrementValue$11 = param3;
                   param3++;
                   param0[incrementValue$11] = (byte)(~var11);
-                  if (param5 > param3) {
-                    var7_int = 0;
-                  } else {
+                  if (param5 <= param3) {
                     return var9 + 1 - param1;
                   }
+                  var7_int = 0;
                 }
                 if ((var10 & 2) != 0) {
                   var7_int = this.field_c[var7_int];
@@ -267,9 +261,8 @@ final class qa {
                   param0[incrementValue$13] = (byte)(~var11);
                   if (param3 >= param5) {
                     break L2;
-                  } else {
-                    var7_int = 0;
                   }
+                  var7_int = 0;
                 }
                 if (0 == (1 & var10)) {
                   var7_int++;
@@ -278,7 +271,11 @@ final class qa {
                 }
                 dupTemp$14 = this.field_c[var7_int];
                 var11 = dupTemp$14;
-                if (dupTemp$14 < 0) {
+                if (dupTemp$14 >= 0) {
+                  var9++;
+                  continue L0;
+                }
+                {
                   incrementValue$15 = param3;
                   param3++;
                   param0[incrementValue$15] = (byte)(~var11);
@@ -287,9 +284,6 @@ final class qa {
                     var9++;
                     continue L0;
                   }
-                } else {
-                  var9++;
-                  continue L0;
                 }
               }
               stackIn_66_0 = var9 + 1 - param1;
@@ -342,9 +336,22 @@ final class qa {
 
     final static void advanceMenuAvatarAnimation(byte methodGuard) {
         int frameStepTicksBeforeDecrement = 0;
+        int fieldTemp$27 = 0;
+        int fieldTemp$28 = 0;
+        int fieldTemp$29 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
+        int fieldTemp$17 = 0;
+        int fieldTemp$18 = 0;
+        int fieldTemp$19 = 0;
+        int fieldTemp$20 = 0;
+        int fieldTemp$25 = 0;
+        int fieldTemp$26 = 0;
+        int fieldTemp$21 = 0;
+        int fieldTemp$22 = 0;
+        int fieldTemp$23 = 0;
+        int fieldTemp$24 = 0;
         int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
         int fieldTemp$6 = 0;
@@ -352,316 +359,23 @@ final class qa {
         int fieldTemp$8 = 0;
         int fieldTemp$9 = 0;
         int fieldTemp$10 = 0;
+        int fieldTemp$15 = 0;
+        int fieldTemp$16 = 0;
         int fieldTemp$11 = 0;
         int fieldTemp$12 = 0;
         int fieldTemp$13 = 0;
         int fieldTemp$14 = 0;
-        int fieldTemp$15 = 0;
-        int fieldTemp$16 = 0;
-        int fieldTemp$17 = 0;
-        int fieldTemp$18 = 0;
-        int fieldTemp$19 = 0;
-        int fieldTemp$20 = 0;
-        int fieldTemp$21 = 0;
-        int fieldTemp$22 = 0;
-        int fieldTemp$23 = 0;
-        int fieldTemp$24 = 0;
-        int fieldTemp$25 = 0;
-        int fieldTemp$26 = 0;
-        int fieldTemp$27 = 0;
-        int fieldTemp$28 = 0;
-        int fieldTemp$29 = 0;
         float avatarTintFadeFactor;
         int avatarFrameOffsetInSegment;
         int unusedClientControlSnapshot;
         unusedClientControlSnapshot = Geoblox.field_C;
-        if (methodGuard >= 72) {
+        if (methodGuard < 72) {
+          return;
+        }
+        {
           frameStepTicksBeforeDecrement = af.avatarFrameStepTicks;
           af.avatarFrameStepTicks = af.avatarFrameStepTicks - 1;
-          if (0 > frameStepTicksBeforeDecrement) {
-            if (uf.avatarFeedbackFrameIndex == 0 + MenuScreen.avatarFeedbackFrameBase) {
-              uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
-              af.avatarFrameStepTicks = 20;
-              pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-              gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-              if (gi.avatarBlinkClockTicks % 600 < 30) {
-                uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-              }
-              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-              fieldTemp$1 = wa.avatarShockEffectTicks;
-              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-              if (fieldTemp$1 <= 0) {
-                fieldTemp$2 = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                if (fieldTemp$2 > 0) {
-                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                fieldTemp$3 = jf.avatarTintFadeTicks;
-                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                if (fieldTemp$3 <= 0) {
-                  return;
-                } else {
-                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                  return;
-                }
-              }
-            } else {
-              avatarFrameOffsetInSegment = uf.avatarFeedbackFrameIndex - MenuScreen.avatarFeedbackFrameBase;
-              if (jk.avatarSteeringDirectionId == 1) {
-                if (avatarFrameOffsetInSegment > 1) {
-                  uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
-                  af.avatarFrameStepTicks = 20;
-                  pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                  gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                  if (gi.avatarBlinkClockTicks % 600 < 30) {
-                    uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                  }
-                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                  fieldTemp$4 = wa.avatarShockEffectTicks;
-                  wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                  if (fieldTemp$4 <= 0) {
-                    fieldTemp$5 = jf.avatarTintFadeTicks;
-                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                    if (fieldTemp$5 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                    fieldTemp$6 = jf.avatarTintFadeTicks;
-                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                    if (fieldTemp$6 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                    }
-                    return;
-                  }
-                } else {
-                  if (jk.avatarSteeringDirectionId == 2) {
-                    if (avatarFrameOffsetInSegment < 5) {
-                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
-                      af.avatarFrameStepTicks = 20;
-                      pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                      gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                      if (gi.avatarBlinkClockTicks % 600 < 30) {
-                        uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                      }
-                      avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                      fieldTemp$7 = wa.avatarShockEffectTicks;
-                      wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                      if (fieldTemp$7 > 0) {
-                        ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                      }
-                      fieldTemp$8 = jf.avatarTintFadeTicks;
-                      jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                      if (fieldTemp$8 > 0) {
-                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                      }
-                      return;
-                    }
-                  }
-                  if (jk.avatarSteeringDirectionId == 0) {
-                    if (avatarFrameOffsetInSegment < 3) {
-                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
-                      af.avatarFrameStepTicks = 20;
-                      pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                      gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                      if (gi.avatarBlinkClockTicks % 600 < 30) {
-                        uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                      }
-                      avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                      fieldTemp$9 = wa.avatarShockEffectTicks;
-                      wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                      if (fieldTemp$9 > 0) {
-                        ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                      }
-                      fieldTemp$10 = jf.avatarTintFadeTicks;
-                      jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                      if (fieldTemp$10 > 0) {
-                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                      }
-                      return;
-                    }
-                  }
-                  if (jk.avatarSteeringDirectionId == 0) {
-                    if (avatarFrameOffsetInSegment <= 3) {
-                      af.avatarFrameStepTicks = 20;
-                      pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                      gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                      if (gi.avatarBlinkClockTicks % 600 < 30) {
-                        uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                      }
-                      avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                      fieldTemp$11 = wa.avatarShockEffectTicks;
-                      wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                      if (fieldTemp$11 > 0) {
-                        ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                      }
-                      fieldTemp$12 = jf.avatarTintFadeTicks;
-                      jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                      if (fieldTemp$12 > 0) {
-                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                      }
-                      return;
-                    } else {
-                      uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
-                      af.avatarFrameStepTicks = 20;
-                      pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                      gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                      if (gi.avatarBlinkClockTicks % 600 < 30) {
-                        uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                      }
-                      avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                      fieldTemp$13 = wa.avatarShockEffectTicks;
-                      wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                      if (fieldTemp$13 > 0) {
-                        ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                      }
-                      fieldTemp$14 = jf.avatarTintFadeTicks;
-                      jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                      if (fieldTemp$14 > 0) {
-                        rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                      }
-                      return;
-                    }
-                  } else {
-                    af.avatarFrameStepTicks = 20;
-                    pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                    gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                    if (gi.avatarBlinkClockTicks % 600 < 30) {
-                      uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                    }
-                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                    fieldTemp$15 = wa.avatarShockEffectTicks;
-                    wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                    if (fieldTemp$15 > 0) {
-                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                    }
-                    fieldTemp$16 = jf.avatarTintFadeTicks;
-                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                    if (fieldTemp$16 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                    }
-                    return;
-                  }
-                }
-              } else {
-                if (jk.avatarSteeringDirectionId == 2) {
-                  if (avatarFrameOffsetInSegment < 5) {
-                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
-                    af.avatarFrameStepTicks = 20;
-                    pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                    gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                    if (gi.avatarBlinkClockTicks % 600 < 30) {
-                      uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                    }
-                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                    fieldTemp$17 = wa.avatarShockEffectTicks;
-                    wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                    if (fieldTemp$17 > 0) {
-                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                    }
-                    fieldTemp$18 = jf.avatarTintFadeTicks;
-                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                    if (fieldTemp$18 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                    }
-                    return;
-                  }
-                }
-                if (jk.avatarSteeringDirectionId == 0) {
-                  if (avatarFrameOffsetInSegment < 3) {
-                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
-                    af.avatarFrameStepTicks = 20;
-                    pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                    gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                    if (gi.avatarBlinkClockTicks % 600 < 30) {
-                      uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                    }
-                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                    fieldTemp$19 = wa.avatarShockEffectTicks;
-                    wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                    if (fieldTemp$19 > 0) {
-                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                    }
-                    fieldTemp$20 = jf.avatarTintFadeTicks;
-                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                    if (fieldTemp$20 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                    }
-                    return;
-                  }
-                }
-                if (jk.avatarSteeringDirectionId == 0) {
-                  if (avatarFrameOffsetInSegment <= 3) {
-                    af.avatarFrameStepTicks = 20;
-                    pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                    gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                    if (gi.avatarBlinkClockTicks % 600 < 30) {
-                      uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                    }
-                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                    fieldTemp$21 = wa.avatarShockEffectTicks;
-                    wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                    if (fieldTemp$21 > 0) {
-                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                    }
-                    fieldTemp$22 = jf.avatarTintFadeTicks;
-                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                    if (fieldTemp$22 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                    }
-                    return;
-                  } else {
-                    uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
-                    af.avatarFrameStepTicks = 20;
-                    pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                    gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                    if (gi.avatarBlinkClockTicks % 600 < 30) {
-                      uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                    }
-                    avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                    fieldTemp$23 = wa.avatarShockEffectTicks;
-                    wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                    if (fieldTemp$23 > 0) {
-                      ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                    }
-                    fieldTemp$24 = jf.avatarTintFadeTicks;
-                    jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                    if (fieldTemp$24 > 0) {
-                      rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                    }
-                    return;
-                  }
-                } else {
-                  af.avatarFrameStepTicks = 20;
-                  pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
-                  gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
-                  if (gi.avatarBlinkClockTicks % 600 < 30) {
-                    uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
-                  }
-                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
-                  fieldTemp$25 = wa.avatarShockEffectTicks;
-                  wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
-                  if (fieldTemp$25 > 0) {
-                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
-                  }
-                  fieldTemp$26 = jf.avatarTintFadeTicks;
-                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-                  if (fieldTemp$26 > 0) {
-                    rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                  }
-                  return;
-                }
-              }
-            }
-          } else {
+          if (0 <= frameStepTicksBeforeDecrement) {
             pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
             gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
             if (gi.avatarBlinkClockTicks % 600 < 30) {
@@ -675,24 +389,301 @@ final class qa {
               jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
               if (fieldTemp$28 <= 0) {
                 return;
-              } else {
-                rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
-                return;
               }
-            } else {
+              rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+              return;
+            }
+            {
               ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
               fieldTemp$29 = jf.avatarTintFadeTicks;
               jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
-              if (fieldTemp$29 > 0) {
-                rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+              if (fieldTemp$29 <= 0) {
                 return;
-              } else {
+              }
+              rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+              return;
+            }
+          }
+          if (uf.avatarFeedbackFrameIndex == 0 + MenuScreen.avatarFeedbackFrameBase) {
+            uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 3;
+            af.avatarFrameStepTicks = 20;
+            pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+            gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+            if (gi.avatarBlinkClockTicks % 600 < 30) {
+              uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+            }
+            avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+            fieldTemp$1 = wa.avatarShockEffectTicks;
+            wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+            if (fieldTemp$1 <= 0) {
+              fieldTemp$2 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              if (fieldTemp$2 <= 0) {
+                return;
+              }
+              rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+              return;
+            }
+            {
+              ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              fieldTemp$3 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              if (fieldTemp$3 <= 0) {
+                return;
+              }
+              rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+              return;
+            }
+          }
+          {
+            avatarFrameOffsetInSegment = uf.avatarFeedbackFrameIndex - MenuScreen.avatarFeedbackFrameBase;
+            if (jk.avatarSteeringDirectionId != 1) {
+              if (jk.avatarSteeringDirectionId == 2) {
+                if (avatarFrameOffsetInSegment < 5) {
+                  uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
+                  af.avatarFrameStepTicks = 20;
+                  pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                  gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                  if (gi.avatarBlinkClockTicks % 600 < 30) {
+                    uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                  }
+                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                  fieldTemp$17 = wa.avatarShockEffectTicks;
+                  wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+                  if (fieldTemp$17 > 0) {
+                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                  }
+                  fieldTemp$18 = jf.avatarTintFadeTicks;
+                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                  if (fieldTemp$18 > 0) {
+                    rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                  }
+                  return;
+                }
+              }
+              if (jk.avatarSteeringDirectionId == 0) {
+                if (avatarFrameOffsetInSegment < 3) {
+                  uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
+                  af.avatarFrameStepTicks = 20;
+                  pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                  gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                  if (gi.avatarBlinkClockTicks % 600 < 30) {
+                    uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                  }
+                  avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                  fieldTemp$19 = wa.avatarShockEffectTicks;
+                  wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+                  if (fieldTemp$19 > 0) {
+                    ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                  }
+                  fieldTemp$20 = jf.avatarTintFadeTicks;
+                  jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                  if (fieldTemp$20 > 0) {
+                    rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                  }
+                  return;
+                }
+              }
+              if (jk.avatarSteeringDirectionId != 0) {
+                af.avatarFrameStepTicks = 20;
+                pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                if (gi.avatarBlinkClockTicks % 600 < 30) {
+                  uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                }
+                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                fieldTemp$25 = wa.avatarShockEffectTicks;
+                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+                if (fieldTemp$25 > 0) {
+                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                }
+                fieldTemp$26 = jf.avatarTintFadeTicks;
+                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                if (fieldTemp$26 > 0) {
+                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                }
+                return;
+              }
+              if (avatarFrameOffsetInSegment <= 3) {
+                af.avatarFrameStepTicks = 20;
+                pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                if (gi.avatarBlinkClockTicks % 600 < 30) {
+                  uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                }
+                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                fieldTemp$21 = wa.avatarShockEffectTicks;
+                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+                if (fieldTemp$21 > 0) {
+                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                }
+                fieldTemp$22 = jf.avatarTintFadeTicks;
+                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                if (fieldTemp$22 > 0) {
+                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                }
+                return;
+              }
+              {
+                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
+                af.avatarFrameStepTicks = 20;
+                pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                if (gi.avatarBlinkClockTicks % 600 < 30) {
+                  uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                }
+                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                fieldTemp$23 = wa.avatarShockEffectTicks;
+                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+                if (fieldTemp$23 > 0) {
+                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                }
+                fieldTemp$24 = jf.avatarTintFadeTicks;
+                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                if (fieldTemp$24 > 0) {
+                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                }
                 return;
               }
             }
+            if (avatarFrameOffsetInSegment > 1) {
+              uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
+              af.avatarFrameStepTicks = 20;
+              pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+              gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+              if (gi.avatarBlinkClockTicks % 600 < 30) {
+                uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+              }
+              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+              fieldTemp$4 = wa.avatarShockEffectTicks;
+              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+              if (fieldTemp$4 <= 0) {
+                fieldTemp$5 = jf.avatarTintFadeTicks;
+                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                if (fieldTemp$5 <= 0) {
+                  return;
+                }
+                rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                return;
+              }
+              {
+                ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                fieldTemp$6 = jf.avatarTintFadeTicks;
+                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                if (fieldTemp$6 > 0) {
+                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                }
+                return;
+              }
+            }
+            if (jk.avatarSteeringDirectionId == 2) {
+              if (avatarFrameOffsetInSegment < 5) {
+                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
+                af.avatarFrameStepTicks = 20;
+                pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                if (gi.avatarBlinkClockTicks % 600 < 30) {
+                  uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                }
+                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                fieldTemp$7 = wa.avatarShockEffectTicks;
+                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+                if (fieldTemp$7 > 0) {
+                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                }
+                fieldTemp$8 = jf.avatarTintFadeTicks;
+                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                if (fieldTemp$8 > 0) {
+                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                }
+                return;
+              }
+            }
+            if (jk.avatarSteeringDirectionId == 0) {
+              if (avatarFrameOffsetInSegment < 3) {
+                uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex + 1;
+                af.avatarFrameStepTicks = 20;
+                pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+                gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+                if (gi.avatarBlinkClockTicks % 600 < 30) {
+                  uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+                }
+                avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+                fieldTemp$9 = wa.avatarShockEffectTicks;
+                wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+                if (fieldTemp$9 > 0) {
+                  ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+                }
+                fieldTemp$10 = jf.avatarTintFadeTicks;
+                jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+                if (fieldTemp$10 > 0) {
+                  rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+                }
+                return;
+              }
+            }
+            if (jk.avatarSteeringDirectionId != 0) {
+              af.avatarFrameStepTicks = 20;
+              pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+              gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+              if (gi.avatarBlinkClockTicks % 600 < 30) {
+                uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+              }
+              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+              fieldTemp$15 = wa.avatarShockEffectTicks;
+              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+              if (fieldTemp$15 > 0) {
+                ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              }
+              fieldTemp$16 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              if (fieldTemp$16 > 0) {
+                rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+              }
+              return;
+            }
+            if (avatarFrameOffsetInSegment <= 3) {
+              af.avatarFrameStepTicks = 20;
+              pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+              gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+              if (gi.avatarBlinkClockTicks % 600 < 30) {
+                uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+              }
+              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+              fieldTemp$11 = wa.avatarShockEffectTicks;
+              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+              if (fieldTemp$11 > 0) {
+                ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              }
+              fieldTemp$12 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              if (fieldTemp$12 > 0) {
+                rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+              }
+              return;
+            }
+            {
+              uf.avatarFeedbackFrameIndex = uf.avatarFeedbackFrameIndex - 1;
+              af.avatarFrameStepTicks = 20;
+              pa.avatarFeedbackHoldTicks = pa.avatarFeedbackHoldTicks - 1;
+              gi.avatarBlinkClockTicks = gi.avatarBlinkClockTicks + 1;
+              if (gi.avatarBlinkClockTicks % 600 < 30) {
+                uf.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
+              }
+              avatarTintFadeFactor = (float)(50 - jf.avatarTintFadeTicks) * 0.0066999997943639755f;
+              fieldTemp$13 = wa.avatarShockEffectTicks;
+              wa.avatarShockEffectTicks = wa.avatarShockEffectTicks - 1;
+              if (fieldTemp$13 > 0) {
+                ha.avatarShockFrameIndex = wa.avatarShockEffectTicks % 15 % 2;
+              }
+              fieldTemp$14 = jf.avatarTintFadeTicks;
+              jf.avatarTintFadeTicks = jf.avatarTintFadeTicks - 1;
+              if (fieldTemp$14 > 0) {
+                rj.avatarTintColor = ((int)(fe.avatarTintGreenDelta * avatarTintFadeFactor) << 8) + (r.avatarTintStartColor + ((int)(avatarTintFadeFactor * md.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactor * uk.avatarTintBlueDelta));
+              }
+              return;
+            }
           }
-        } else {
-          return;
         }
     }
 

@@ -62,28 +62,27 @@ final class k implements Iterator {
         IntrusiveNode var3;
         IntrusiveNode var4;
         var2 = Geoblox.field_C;
-        if (this.field_d.field_a[this.field_j - 1] == this.field_h) {
-          L0: while (true) {
-            if (this.field_j < this.field_d.field_c) {
-              fieldTemp$0 = this.field_j;
-              this.field_j = this.field_j + 1;
-              var3 = this.field_d.field_a[fieldTemp$0].nextNode;
-              if (var3 == this.field_d.field_a[this.field_j - 1]) {
-                continue L0;
-              } else {
-                this.field_h = var3.nextNode;
-                this.field_c = var3;
-                return var3;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (this.field_d.field_a[this.field_j - 1] != this.field_h) {
           var4 = this.field_h;
           this.field_h = var4.nextNode;
           this.field_c = var4;
           return var4;
+        }
+        L0: while (true) {
+          if (this.field_j >= this.field_d.field_c) {
+            return null;
+          }
+          {
+            fieldTemp$0 = this.field_j;
+            this.field_j = this.field_j + 1;
+            var3 = this.field_d.field_a[fieldTemp$0].nextNode;
+            if (var3 == this.field_d.field_a[this.field_j - 1]) {
+              continue L0;
+            }
+            this.field_h = var3.nextNode;
+            this.field_c = var3;
+            return var3;
+          }
         }
     }
 
@@ -113,25 +112,19 @@ final class k implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = Geoblox.field_C;
-        if (this.field_d.field_a[this.field_j - 1] == this.field_h) {
-          L0: while (true) {
-            if (this.field_d.field_c > this.field_j) {
-              fieldTemp$0 = this.field_j;
-              this.field_j = this.field_j + 1;
-              if (this.field_d.field_a[fieldTemp$0].nextNode != this.field_d.field_a[this.field_j - 1]) {
-                this.field_h = this.field_d.field_a[-1 + this.field_j].nextNode;
-                return true;
-              } else {
-                this.field_h = this.field_d.field_a[this.field_j - 1];
-                continue L0;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
+        if (this.field_d.field_a[this.field_j - 1] != this.field_h) {
           return true;
         }
+        L0: while (this.field_d.field_c > this.field_j) {
+          fieldTemp$0 = this.field_j;
+          this.field_j = this.field_j + 1;
+          if (this.field_d.field_a[fieldTemp$0].nextNode != this.field_d.field_a[this.field_j - 1]) {
+            this.field_h = this.field_d.field_a[-1 + this.field_j].nextNode;
+            return true;
+          }
+          this.field_h = this.field_d.field_a[this.field_j - 1];
+        }
+        return false;
     }
 
     private final void a(int param0) {

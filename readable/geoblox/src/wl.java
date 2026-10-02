@@ -16,53 +16,51 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (je.field_j != null) {
-            L0: {
-              nk.field_e = 0;
-              var2_int = param0.getKeyCode();
-              if (var2_int >= 0) {
-                if (oe.field_P.length > var2_int) {
-                  var2_int = oe.field_P[var2_int];
-                  if ((var2_int & 128) == 0) {
-                    break L0;
-                  } else {
-                    var2_int = -1;
-                    break L0;
-                  }
-                }
-              }
-              var2_int = -1;
-            }
-            if (ii.field_c >= 0) {
-              if (var2_int >= 0) {
-                gf.field_c[ii.field_c] = var2_int;
-                ii.field_c = 127 & 1 + ii.field_c;
-                if (gk.field_b == ii.field_c) {
-                  ii.field_c = -1;
-                }
-              }
-            }
-            if (var2_int >= 0) {
-              var3 = 127 & 1 + ba.field_c;
-              if (var3 != vd.field_n) {
-                kj.field_O[ba.field_c] = var2_int;
-                ai.field_n[ba.field_c] = (char)0;
-                ba.field_c = var3;
-              }
-            }
-            var3 = param0.getModifiers();
-            if ((var3 & 10) == 0) {
-              if (85 != var2_int) {
-                if (var2_int != 10) {
-                  return;
-                }
-              }
-            }
-            param0.consume();
-            return;
-          } else {
+          if (je.field_j == null) {
             return;
           }
+          L0: {
+            nk.field_e = 0;
+            var2_int = param0.getKeyCode();
+            if (var2_int >= 0) {
+              if (oe.field_P.length > var2_int) {
+                var2_int = oe.field_P[var2_int];
+                if ((var2_int & 128) == 0) {
+                  break L0;
+                }
+                var2_int = -1;
+                break L0;
+              }
+            }
+            var2_int = -1;
+          }
+          if (ii.field_c >= 0) {
+            if (var2_int >= 0) {
+              gf.field_c[ii.field_c] = var2_int;
+              ii.field_c = 127 & 1 + ii.field_c;
+              if (gk.field_b == ii.field_c) {
+                ii.field_c = -1;
+              }
+            }
+          }
+          if (var2_int >= 0) {
+            var3 = 127 & 1 + ba.field_c;
+            if (var3 != vd.field_n) {
+              kj.field_O[ba.field_c] = var2_int;
+              ai.field_n[ba.field_c] = (char)0;
+              ba.field_c = var3;
+            }
+          }
+          var3 = param0.getModifiers();
+          if ((var3 & 10) == 0) {
+            if (85 != var2_int) {
+              if (var2_int != 10) {
+                return;
+              }
+            }
+          }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -186,12 +184,11 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != je.field_j) {
-            ii.field_c = -1;
-            return;
-          } else {
+          if (null == je.field_j) {
             return;
           }
+          ii.field_c = -1;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

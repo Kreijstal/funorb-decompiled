@@ -95,12 +95,11 @@ final class ri {
                           pk.field_l = ac.field_v;
                           p.field_k = -1;
                           break L6;
-                        } else {
-                          jl.a((byte) -116);
-                          ck.field_e = false;
-                          stackIn_33_0 = var6_int;
-                          return stackIn_33_0;
                         }
+                        jl.a((byte) -116);
+                        ck.field_e = false;
+                        stackIn_33_0 = var6_int;
+                        return stackIn_33_0;
                       }
                     }
                     p.field_k = -1;
@@ -215,12 +214,7 @@ final class ri {
                 }
               }
               if (null == oc.field_e) {
-                if (!ck.field_e) {
-                  var6_int = sd.field_x;
-                  sd.field_x = ac.field_s;
-                  ac.field_s = var6_int;
-                  ck.field_e = true;
-                } else {
+                if (ck.field_e) {
                   if (30000L >= ll.a((byte) 12)) {
                     kh.field_a = uj.loginMessage2Text;
                   } else {
@@ -230,6 +224,10 @@ final class ri {
                   stackIn_99_0 = 3;
                   return stackIn_99_0;
                 }
+                var6_int = sd.field_x;
+                sd.field_x = ac.field_s;
+                ac.field_s = var6_int;
+                ck.field_e = true;
               }
               stackIn_102_0 = -1;
               return stackIn_102_0;

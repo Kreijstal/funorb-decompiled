@@ -35,10 +35,9 @@ final class oa {
           if (param2 == 8192) {
             stackIn_4_0 = eg.a(param1, (byte) 49, param0, true);
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = -10;
-            return stackIn_2_0;
           }
+          stackIn_2_0 = -10;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

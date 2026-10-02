@@ -33,30 +33,26 @@ final class bi implements dh {
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
         try {
-          if (kk.a(param0, param1, (byte) 118)) {
-            if (param2 < -32) {
-              var3_int = 0;
-              L0: while (true) {
-                if (param1.length() <= var3_int) {
-                  stackIn_14_0 = 1;
-                  return stackIn_14_0 != 0;
-                } else {
-                  if (TextInputValidator.a(param1.charAt(var3_int), (byte) 118)) {
-                    var3_int++;
-                    continue L0;
-                  } else {
-                    stackIn_11_0 = 0;
-                    return stackIn_11_0 != 0;
-                  }
-                }
-              }
-            } else {
-              stackIn_6_0 = 1;
-              return stackIn_6_0 != 0;
-            }
-          } else {
+          if (!kk.a(param0, param1, (byte) 118)) {
             stackIn_3_0 = 0;
             return stackIn_3_0 != 0;
+          }
+          if (param2 >= -32) {
+            stackIn_6_0 = 1;
+            return stackIn_6_0 != 0;
+          }
+          var3_int = 0;
+          L0: while (true) {
+            if (param1.length() <= var3_int) {
+              stackIn_14_0 = 1;
+              return stackIn_14_0 != 0;
+            }
+            if (TextInputValidator.a(param1.charAt(var3_int), (byte) 118)) {
+              var3_int++;
+              continue L0;
+            }
+            stackIn_11_0 = 0;
+            return stackIn_11_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

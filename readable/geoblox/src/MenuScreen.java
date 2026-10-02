@@ -35,15 +35,14 @@ abstract class MenuScreen {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2) {
-            var4_int = param3.a((byte) 126, param0);
-            var5 = param3.a(param1, -89, var4_int);
-            stackIn_4_0 = sd.a(true, param3, var5, var4_int);
-            return stackIn_4_0;
-          } else {
+          if (!param2) {
             stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
+          var4_int = param3.a((byte) 126, param0);
+          var5 = param3.a(param1, -89, var4_int);
+          stackIn_4_0 = sd.a(true, param3, var5, var4_int);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -154,16 +153,14 @@ abstract class MenuScreen {
         if (this.hitLeftX <= pointerX) {
           if (pointerX < this.hitRightX) {
             if (this.firstItemY <= pointerY) {
-              if (param2 >= 20) {
-                var4 = (pointerY - this.firstItemY) / this.itemSpacing;
-                if (this.itemCount > var4) {
-                  return var4;
-                } else {
-                  return -1;
-                }
-              } else {
+              if (param2 < 20) {
                 return 81;
               }
+              var4 = (pointerY - this.firstItemY) / this.itemSpacing;
+              if (this.itemCount > var4) {
+                return var4;
+              }
+              return -1;
             }
           }
         }
@@ -214,12 +211,11 @@ abstract class MenuScreen {
             if (gf.field_a != 0) {
               if (this.pointerInteractionActive) {
                 hitItemIndex = this.selectedItemIndex;
-                if (hitItemIndex != -1) {
-                  this.handleMenuPointer(hitItemIndex, qa.field_a, false, -(this.itemSpacing * hitItemIndex) + (ue.field_e - this.firstItemY), true, gf.field_a);
-                  break L0;
-                } else {
+                if (hitItemIndex == -1) {
                   break L0;
                 }
+                this.handleMenuPointer(hitItemIndex, qa.field_a, false, -(this.itemSpacing * hitItemIndex) + (ue.field_e - this.firstItemY), true, gf.field_a);
+                break L0;
               }
             }
             this.pointerInteractionActive = false;

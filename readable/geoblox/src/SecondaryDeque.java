@@ -131,10 +131,9 @@ final class SecondaryDeque {
           }
           if (param0) {
             return;
-          } else {
-            contactProbeOffsetX = -80;
-            return;
           }
+          contactProbeOffsetX = -80;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -185,10 +184,9 @@ final class SecondaryDeque {
           if (!param4) {
             stackIn_11_0 = new lf(param1, param3);
             return (df) ((Object) stackIn_11_0);
-          } else {
-            stackIn_7_0 = new th(param1, param3);
-            return (df) ((Object) stackIn_7_0);
           }
+          stackIn_7_0 = new th(param1, param3);
+          return (df) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

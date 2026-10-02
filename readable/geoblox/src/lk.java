@@ -33,28 +33,19 @@ final class lk {
         int var3;
         int var4;
         var4 = Geoblox.field_C;
-        if (null != this.field_c) {
-          if (this.field_c.length != 0) {
-            var3 = 1;
-            L0: while (true) {
-              if (this.field_c.length > var3) {
-                if (this.field_c[var3] + this.field_c[-1 + var3] >> 1 <= param1) {
-                  var3++;
-                  continue L0;
-                } else {
-                  return var3 - 1;
-                }
-              } else {
-                var3 = 35 / ((param0 + 9) / 51);
-                return this.field_c.length - 1;
-              }
-            }
-          } else {
-            return 0;
-          }
-        } else {
+        if (null == this.field_c) {
           return 0;
         }
+        if (this.field_c.length == 0) {
+          return 0;
+        }
+        for (var3 = 1; this.field_c.length > var3; var3++) {
+          if (this.field_c[var3] + this.field_c[-1 + var3] >> 1 > param1) {
+            return var3 - 1;
+          }
+        }
+        var3 = 35 / ((param0 + 9) / 51);
+        return this.field_c.length - 1;
     }
 
     public static void a(byte param0) {

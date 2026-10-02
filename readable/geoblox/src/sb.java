@@ -46,39 +46,22 @@ final class sb {
     }
 
     static {
-        $cfr$clinit: {
-            int var0;
-            int var1;
-            int var2;
-            noHighscoresText = "No highscores";
-            field_b = new int[256];
-            loginNoDisplayNameText = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
-            var1 = 0;
-            L0: while (true) {
-              if (var1 >= 256) {
-                break $cfr$clinit;
-              } else {
-                var0 = var1;
-                var2 = 0;
-                L1: while (true) {
-                  if (8 <= var2) {
-                    field_b[var1] = var0;
-                    var1++;
-                    continue L0;
-                  } else {
-                    if (1 != (var0 & 1)) {
-                      var0 = var0 >>> 1;
-                      var2++;
-                      continue L1;
-                    } else {
-                      var0 = -306674912 ^ var0 >>> 1;
-                      var2++;
-                      continue L1;
-                    }
-                  }
-                }
-              }
+        int var1 = 0;
+        int var2 = 0;
+        int var0;
+        noHighscoresText = "No highscores";
+        field_b = new int[256];
+        loginNoDisplayNameText = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
+        for (var1 = 0; var1 < 256; var1++) {
+          var0 = var1;
+          L1: for (var2 = 0; 8 > var2; var2++) {
+            if (1 != (var0 & 1)) {
+              var0 = var0 >>> 1;
+              continue L1;
             }
+            var0 = -306674912 ^ var0 >>> 1;
+          }
+          field_b[var1] = var0;
         }
     }
 }

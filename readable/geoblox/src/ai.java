@@ -86,10 +86,9 @@ final class ai extends IntrusiveNode {
                     if (var7_int >= 0) {
                       if (param3 < 0) {
                         break L1;
-                      } else {
-                        var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                        continue L0;
                       }
+                      var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                      continue L0;
                     }
                   }
                   if (var5.regionMatches(var6, "/a=", 0, 3)) {
@@ -103,10 +102,9 @@ final class ai extends IntrusiveNode {
                     if (var7_int >= 0) {
                       if (param1 == null) {
                         break L1;
-                      } else {
-                        var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                        continue L0;
                       }
+                      var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                      continue L0;
                     }
                   }
                   L5: {
@@ -120,10 +118,9 @@ final class ai extends IntrusiveNode {
                       if (param0 != null) {
                         var5 = var5.substring(0, var6) + var5.substring(var7_int);
                         continue L0;
-                      } else {
-                        var6 = var7_int;
-                        continue L0;
                       }
+                      var6 = var7_int;
+                      continue L0;
                     }
                   }
                   if (!param4) {

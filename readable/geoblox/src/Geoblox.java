@@ -261,128 +261,126 @@ public final class Geoblox extends wf {
         int stackIn_48_4 = 0;
         if (ef.field_e) {
           return true;
-        } else {
-          s.g(9);
-          if (wj.field_F.a(0)) {
-            if (wj.field_F.b(true)) {
-              if (ah.field_c.a(0)) {
-                stackIn_10_0 = ah.field_c;
-
-                if (param0) {
-                  stackIn_11_0 = (rh) ((Object) stackIn_10_0);
-                  stackIn_11_1 = 0;
-                } else {
-                  stackIn_11_0 = (rh) ((Object) stackIn_10_0);
-                  stackIn_11_1 = 1;
-                }
-                if (((rh) (Object) stackIn_11_0).b(stackIn_11_1 != 0)) {
-                  if (fe.field_a.a(0)) {
-                    if (fe.field_a.b(true)) {
-                      if (cd.field_m.a(0)) {
-                        if (cd.field_m.b(true)) {
-                          if (ii.field_k.a(0)) {
-                            if (ii.field_k.b(true)) {
-                              if (ll.field_f.a(0)) {
-                                if (ll.field_f.a("", (byte) -127)) {
-                                  if (ll.field_f.a(0)) {
-                                    if (ll.field_f.a("sun", (byte) -127)) {
-                                      L8: {
-                                        if (da.a(0, -112)) {
-                                          if (ll.field_f.a(0)) {
-                                            if (ll.field_f.a("halloween", (byte) -127)) {
-                                              break L8;
-                                            }
-                                          }
-                                          lc.a(gf.a(s.field_F, ll.field_f, "halloween", uj.field_c, true), -2, 45.0f);
-                                          return false;
-                                        }
-                                      }
-                                      if (ki.field_b.a(0)) {
-                                        if (ki.field_b.a("basic", (byte) -124)) {
-                                          if (!param0) {
-                                            SecondaryDeque.c(480);
-                                            lc.a(uj.field_a, -2, 50.0f);
-                                            this.renderFrame(25853);
-                                            ef.field_e = true;
-                                            return true;
-                                          } else {
-                                            return true;
-                                          }
-                                        }
-                                      }
-                                      stackIn_47_0 = ff.waitingForGraphicsText;
-
-                                      stackIn_47_1 = ki.field_b;
-
-                                      stackIn_47_2 = "basic";
-
-                                      stackIn_47_3 = AccountWelcomePanel.loadingGraphicsText;
-
-                                      if (param0) {
-                                        stackIn_48_0 = (String) ((Object) stackIn_47_0);
-                                        stackIn_48_1 = (rh) ((Object) stackIn_47_1);
-                                        stackIn_48_2 = (String) ((Object) stackIn_47_2);
-                                        stackIn_48_3 = (String) ((Object) stackIn_47_3);
-                                        stackIn_48_4 = 0;
-                                      } else {
-                                        stackIn_48_0 = (String) ((Object) stackIn_47_0);
-                                        stackIn_48_1 = (rh) ((Object) stackIn_47_1);
-                                        stackIn_48_2 = (String) ((Object) stackIn_47_2);
-                                        stackIn_48_3 = (String) ((Object) stackIn_47_3);
-                                        stackIn_48_4 = 1;
-                                      }
-                                      lc.a(gf.a(stackIn_48_0, stackIn_48_1, stackIn_48_2, stackIn_48_3, stackIn_48_4 != 0), -2, 50.0f);
-                                      return false;
-                                    }
-                                  }
-                                  lc.a(gf.a(ff.waitingForGraphicsText, ll.field_f, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
-                                  return false;
-                                }
-                              }
-                              lc.a(gf.a(ff.waitingForGraphicsText, ll.field_f, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
-                              return false;
-                            }
-                          }
-                          stackIn_27_0 = ik.waitingForFontsText;
-
-                          stackIn_27_1 = ii.field_k;
-
-                          stackIn_27_2 = "";
-
-                          stackIn_27_3 = nb.loadingFontsText;
-
-                          if (param0) {
-                            stackIn_28_0 = (String) ((Object) stackIn_27_0);
-                            stackIn_28_1 = (rh) ((Object) stackIn_27_1);
-                            stackIn_28_2 = (String) ((Object) stackIn_27_2);
-                            stackIn_28_3 = (String) ((Object) stackIn_27_3);
-                            stackIn_28_4 = 0;
-                          } else {
-                            stackIn_28_0 = (String) ((Object) stackIn_27_0);
-                            stackIn_28_1 = (rh) ((Object) stackIn_27_1);
-                            stackIn_28_2 = (String) ((Object) stackIn_27_2);
-                            stackIn_28_3 = (String) ((Object) stackIn_27_3);
-                            stackIn_28_4 = 1;
-                          }
-                          lc.a(gf.a(stackIn_28_0, stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4 != 0), -2, 35.0f);
-                          return false;
-                        }
-                      }
-                      lc.a(vd.a(ud.loadingSoundEffectsText, pa.waitingForSoundEffectsText, 0, param0, cd.field_m), -2, 25.0f);
-                      return false;
-                    }
-                  }
-                  lc.a(gf.a(ji.waitingForMusicText, fe.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
-                  return false;
-                }
-              }
-              lc.a(gf.a(pa.waitingForSoundEffectsText, ah.field_c, "", ud.loadingSoundEffectsText, true), -2, 10.0f);
-              return false;
-            }
-          }
-          lc.a(gf.a(pa.waitingForSoundEffectsText, wj.field_F, "", ud.loadingSoundEffectsText, true), -2, 5.0f);
-          return false;
         }
+        s.g(9);
+        if (wj.field_F.a(0)) {
+          if (wj.field_F.b(true)) {
+            if (ah.field_c.a(0)) {
+              stackIn_10_0 = ah.field_c;
+
+              if (param0) {
+                stackIn_11_0 = (rh) ((Object) stackIn_10_0);
+                stackIn_11_1 = 0;
+              } else {
+                stackIn_11_0 = (rh) ((Object) stackIn_10_0);
+                stackIn_11_1 = 1;
+              }
+              if (((rh) (Object) stackIn_11_0).b(stackIn_11_1 != 0)) {
+                if (fe.field_a.a(0)) {
+                  if (fe.field_a.b(true)) {
+                    if (cd.field_m.a(0)) {
+                      if (cd.field_m.b(true)) {
+                        if (ii.field_k.a(0)) {
+                          if (ii.field_k.b(true)) {
+                            if (ll.field_f.a(0)) {
+                              if (ll.field_f.a("", (byte) -127)) {
+                                if (ll.field_f.a(0)) {
+                                  if (ll.field_f.a("sun", (byte) -127)) {
+                                    L8: {
+                                      if (da.a(0, -112)) {
+                                        if (ll.field_f.a(0)) {
+                                          if (ll.field_f.a("halloween", (byte) -127)) {
+                                            break L8;
+                                          }
+                                        }
+                                        lc.a(gf.a(s.field_F, ll.field_f, "halloween", uj.field_c, true), -2, 45.0f);
+                                        return false;
+                                      }
+                                    }
+                                    if (ki.field_b.a(0)) {
+                                      if (ki.field_b.a("basic", (byte) -124)) {
+                                        if (param0) {
+                                          return true;
+                                        }
+                                        SecondaryDeque.c(480);
+                                        lc.a(uj.field_a, -2, 50.0f);
+                                        this.renderFrame(25853);
+                                        ef.field_e = true;
+                                        return true;
+                                      }
+                                    }
+                                    stackIn_47_0 = ff.waitingForGraphicsText;
+
+                                    stackIn_47_1 = ki.field_b;
+
+                                    stackIn_47_2 = "basic";
+
+                                    stackIn_47_3 = AccountWelcomePanel.loadingGraphicsText;
+
+                                    if (param0) {
+                                      stackIn_48_0 = (String) ((Object) stackIn_47_0);
+                                      stackIn_48_1 = (rh) ((Object) stackIn_47_1);
+                                      stackIn_48_2 = (String) ((Object) stackIn_47_2);
+                                      stackIn_48_3 = (String) ((Object) stackIn_47_3);
+                                      stackIn_48_4 = 0;
+                                    } else {
+                                      stackIn_48_0 = (String) ((Object) stackIn_47_0);
+                                      stackIn_48_1 = (rh) ((Object) stackIn_47_1);
+                                      stackIn_48_2 = (String) ((Object) stackIn_47_2);
+                                      stackIn_48_3 = (String) ((Object) stackIn_47_3);
+                                      stackIn_48_4 = 1;
+                                    }
+                                    lc.a(gf.a(stackIn_48_0, stackIn_48_1, stackIn_48_2, stackIn_48_3, stackIn_48_4 != 0), -2, 50.0f);
+                                    return false;
+                                  }
+                                }
+                                lc.a(gf.a(ff.waitingForGraphicsText, ll.field_f, "sun", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
+                                return false;
+                              }
+                            }
+                            lc.a(gf.a(ff.waitingForGraphicsText, ll.field_f, "", AccountWelcomePanel.loadingGraphicsText, true), -2, 45.0f);
+                            return false;
+                          }
+                        }
+                        stackIn_27_0 = ik.waitingForFontsText;
+
+                        stackIn_27_1 = ii.field_k;
+
+                        stackIn_27_2 = "";
+
+                        stackIn_27_3 = nb.loadingFontsText;
+
+                        if (param0) {
+                          stackIn_28_0 = (String) ((Object) stackIn_27_0);
+                          stackIn_28_1 = (rh) ((Object) stackIn_27_1);
+                          stackIn_28_2 = (String) ((Object) stackIn_27_2);
+                          stackIn_28_3 = (String) ((Object) stackIn_27_3);
+                          stackIn_28_4 = 0;
+                        } else {
+                          stackIn_28_0 = (String) ((Object) stackIn_27_0);
+                          stackIn_28_1 = (rh) ((Object) stackIn_27_1);
+                          stackIn_28_2 = (String) ((Object) stackIn_27_2);
+                          stackIn_28_3 = (String) ((Object) stackIn_27_3);
+                          stackIn_28_4 = 1;
+                        }
+                        lc.a(gf.a(stackIn_28_0, stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4 != 0), -2, 35.0f);
+                        return false;
+                      }
+                    }
+                    lc.a(vd.a(ud.loadingSoundEffectsText, pa.waitingForSoundEffectsText, 0, param0, cd.field_m), -2, 25.0f);
+                    return false;
+                  }
+                }
+                lc.a(gf.a(ji.waitingForMusicText, fe.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
+                return false;
+              }
+            }
+            lc.a(gf.a(pa.waitingForSoundEffectsText, ah.field_c, "", ud.loadingSoundEffectsText, true), -2, 10.0f);
+            return false;
+          }
+        }
+        lc.a(gf.a(pa.waitingForSoundEffectsText, wj.field_F, "", ud.loadingSoundEffectsText, true), -2, 5.0f);
+        return false;
     }
 
     final void releaseGameResources(byte param0) {
@@ -677,234 +675,229 @@ public final class Geoblox extends wf {
         int var3;
         var3 = field_C;
         ng.h(78);
-        if (!param0) {
-          if (vl.field_n != null) {
-            if (vl.field_n.field_c) {
-              vl.field_n.a(0, MenuScreen.field_i);
-              vl.field_n = null;
-            }
+        if (param0) {
+          return;
+        }
+        if (vl.field_n != null) {
+          if (vl.field_n.field_c) {
+            vl.field_n.a(0, MenuScreen.field_i);
+            vl.field_n = null;
           }
-          stackIn_8_0 = this;
+        }
+        stackIn_8_0 = this;
 
-          if (null == vl.field_n) {
-            stackIn_9_0 = this;
-            stackIn_9_1 = 0;
+        if (null == vl.field_n) {
+          stackIn_9_0 = this;
+          stackIn_9_1 = 0;
+        } else {
+          stackIn_9_0 = this;
+          stackIn_9_1 = 1;
+        }
+        this.b(stackIn_9_1 != 0, 19660);
+        if (cf.field_k) {
+          stackIn_13_0 = this;
+
+          if (param0) {
+            stackIn_14_0 = this;
+            stackIn_14_1 = 0;
           } else {
-            stackIn_9_0 = this;
-            stackIn_9_1 = 1;
+            stackIn_14_0 = this;
+            stackIn_14_1 = 1;
           }
-          this.b(stackIn_9_1 != 0, 19660);
-          if (cf.field_k) {
-            stackIn_13_0 = this;
-
-            if (param0) {
-              stackIn_14_0 = this;
-              stackIn_14_1 = 0;
-            } else {
-              stackIn_14_0 = this;
-              stackIn_14_1 = 1;
-            }
-            this.requestGameArchives(stackIn_14_1 != 0);
-            cf.field_k = false;
-          }
-          L4: while (sh.a((byte) -118, pb.field_m)) {
-            this.l(121);
-          }
-          L5: {
-            if (!bl.b(255)) {
-              L6: {
-                if (!ib.gameAssetsInitialized) {
-                  oj.a(vc.field_i, (byte) -98);
-                  if (this.pollArchiveLoading(false)) {
-                    if (this.prepareGameAssets(25869)) {
-                      ib.gameAssetsInitialized = true;
-                      this.initializeScreens(82);
-                      break L6;
-                    }
+          this.requestGameArchives(stackIn_14_1 != 0);
+          cf.field_k = false;
+        }
+        L4: while (sh.a((byte) -118, pb.field_m)) {
+          this.l(121);
+        }
+        L5: {
+          if (!bl.b(255)) {
+            L6: {
+              if (!ib.gameAssetsInitialized) {
+                oj.a(vc.field_i, (byte) -98);
+                if (this.pollArchiveLoading(false)) {
+                  if (this.prepareGameAssets(25869)) {
+                    ib.gameAssetsInitialized = true;
+                    this.initializeScreens(82);
+                    break L6;
                   }
-                  cm.a(-1, 0);
-                  return;
-                } else {
-                  if (!uk.g(79)) {
-                    lc.a(ph.waitingForExtraDataText, -2, 100.0f);
-                  } else {
-                    if (dd.a((byte) 47)) {
-                      if (!jk.field_a) {
-                        if (vl.field_n == null) {
-                          stackIn_91_0 = 0;
-                        } else {
-                          stackIn_91_0 = 1;
-                        }
-                        L10: {
-                          var2 = sl.a(stackIn_91_0 != 0, (wf) (this), false);
-                          if (var2 != 2364824) {
-                            if (var2 != 1) {
-                              if (2 != var2) {
-                                break L10;
-                              }
-                            }
-                            if (null != vl.field_n) {
-                              vl.field_n.a(0, MenuScreen.field_i);
-                              vl.field_n = null;
-                            }
-                            if (var2 == 2) {
-                              gf.a(k.c(109), 62);
-                            }
-                          } else {
-                            DualLinkNode.c(-8);
+                }
+                cm.a(-1, 0);
+                return;
+              }
+              if (!uk.g(79)) {
+                lc.a(ph.waitingForExtraDataText, -2, 100.0f);
+              } else {
+                if (dd.a((byte) 47)) {
+                  if (!jk.field_a) {
+                    if (vl.field_n == null) {
+                      stackIn_91_0 = 0;
+                    } else {
+                      stackIn_91_0 = 1;
+                    }
+                    L10: {
+                      var2 = sl.a(stackIn_91_0 != 0, (wf) (this), false);
+                      if (var2 != 2364824) {
+                        if (var2 != 1) {
+                          if (2 != var2) {
+                            break L10;
                           }
                         }
-                        if (!kg.field_o) {
-                          break L6;
-                        } else {
-                          rj.a((byte) 121, 50);
-                          kg.field_o = false;
-                          break L6;
+                        if (null != vl.field_n) {
+                          vl.field_n.a(0, MenuScreen.field_i);
+                          vl.field_n = null;
                         }
+                        if (var2 == 2) {
+                          gf.a(k.c(109), 62);
+                        }
+                      } else {
+                        DualLinkNode.c(-8);
                       }
                     }
                     if (!kg.field_o) {
-                      rj.a((byte) 121, 150);
-                      kg.field_o = true;
+                      break L6;
                     }
-                    if (!ll.themesLoaded[2]) {
-                      this.loadSweetsTheme(7);
-                    } else {
-                      if (ll.themesLoaded[0]) {
-                        if (ll.themesLoaded[3]) {
-                          if (ll.themesLoaded[6]) {
-                            if (!ll.themesLoaded[5]) {
-                              this.loadSportsTheme(75);
-                            } else {
-                              if (!ll.themesLoaded[4]) {
-                                this.loadBakingTheme(2);
-                              }
-                            }
-                          } else {
-                            this.loadSpaceTheme(false);
-                          }
+                    rj.a((byte) 121, 50);
+                    kg.field_o = false;
+                    break L6;
+                  }
+                }
+                if (!kg.field_o) {
+                  rj.a((byte) 121, 150);
+                  kg.field_o = true;
+                }
+                if (!ll.themesLoaded[2]) {
+                  this.loadSweetsTheme(7);
+                } else {
+                  if (ll.themesLoaded[0]) {
+                    if (ll.themesLoaded[3]) {
+                      if (ll.themesLoaded[6]) {
+                        if (!ll.themesLoaded[5]) {
+                          this.loadSportsTheme(75);
                         } else {
-                          this.loadGermsTheme((byte) -117);
+                          if (!ll.themesLoaded[4]) {
+                            this.loadBakingTheme(2);
+                          }
                         }
                       } else {
-                        this.loadJewelsTheme(false);
-                      }
-                    }
-                    if (pg.screenChangePending) {
-                      pg.screenChangePending = false;
-                      if (!fh.c(-95)) {
-                        if (0 < og.field_n) {
-                          t.menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
-                          og.screens[1].setItemCount(-12831, t.menuActionIds[1].length);
-                          if (0 == el.gameplayReturnScreenId) {
-                            f.i((byte) -112);
-                            og.screens[0].activeTicks = 0;
-                          }
-                        }
-                        if (null != el.gameplaySession) {
-                          if (el.gameplaySession.score > 0) {
-                            el.gameplaySession.submitScore((byte) -70);
-                          }
-                        }
-                        ai.requestedScreenId = el.gameplayReturnScreenId;
-                      } else {
-                        ai.requestedScreenId = cd.gameplayOriginScreenId;
-                      }
-                      tc.currentScreenId = -1;
-                      el.gameplayReturnScreenId = -1;
-                      qj.clearGameplayDuringTransition = true;
-                    }
-                    if (ai.requestedScreenId != tc.currentScreenId) {
-                      if (6 == ai.requestedScreenId) {
-                        if (ug.field_c <= 0) {
-                          ai.requestedScreenId = 2;
-                        }
-                      }
-                      if (-1 < tc.currentScreenId) {
-                        og.screens[tc.currentScreenId].updateTransition(16405);
-                      }
-                      if (ai.requestedScreenId != -1) {
-                        og.screens[ai.requestedScreenId].updateTransition(16405);
-                        og.screens[ai.requestedScreenId].field_q = 0;
-                        if (ai.requestedScreenId != 3) {
-                          og.screens[ai.requestedScreenId].selectedItemIndex = 0;
-                        } else {
-                          og.screens[ai.requestedScreenId].selectedItemIndex = 1;
-                        }
-                      }
-                      if (nf.screenTransitionTick == 0) {
-                        td.playPcmSample(-348, fl.field_c[30]);
-                      }
-                      fieldTemp$0 = nf.screenTransitionTick + 1;
-                      nf.screenTransitionTick = nf.screenTransitionTick + 1;
-                      if (fieldTemp$0 == 160) {
-                        L23: {
-                          if (el.gameplayReturnScreenId != -1) {
-                            if (fh.c(-109)) {
-                              if (cd.gameplayOriginScreenId != 0) {
-                                kb.a(-106);
-                              } else {
-                                PendingActionMarker.a((byte) 118);
-                              }
-                              pg.screenChangePending = true;
-                              break L23;
-                            }
-                          }
-                          if (tc.currentScreenId == 2) {
-                            ca.field_f = null;
-                          }
-                        }
-                        nf.screenTransitionTick = 0;
-                        tc.currentScreenId = ai.requestedScreenId;
-                        qj.clearGameplayDuringTransition = false;
+                        this.loadSpaceTheme(false);
                       }
                     } else {
-                      if (tc.currentScreenId == -1) {
-                        if (dl.field_b) {
-                          if (gb.b(1)) {
-                            stackIn_63_0 = 0;
-                          } else {
-                            stackIn_63_0 = 1;
-                          }
-                          dl.field_b = stackIn_63_0 != 0;
-                          if (stackIn_63_0 == 0) {
-                            tc.currentScreenId = -2;
-                            ai.requestedScreenId = 0;
-                          }
-                        } else {
-                          el.gameplaySession.updateSession(-1578896191);
-                        }
-                      } else {
-                        og.screens[tc.currentScreenId].updateScreen((byte) 29);
+                      this.loadGermsTheme((byte) -117);
+                    }
+                  } else {
+                    this.loadJewelsTheme(false);
+                  }
+                }
+                if (pg.screenChangePending) {
+                  pg.screenChangePending = false;
+                  if (!fh.c(-95)) {
+                    if (0 < og.field_n) {
+                      t.menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
+                      og.screens[1].setItemCount(-12831, t.menuActionIds[1].length);
+                      if (0 == el.gameplayReturnScreenId) {
+                        f.i((byte) -112);
+                        og.screens[0].activeTicks = 0;
                       }
                     }
+                    if (null != el.gameplaySession) {
+                      if (el.gameplaySession.score > 0) {
+                        el.gameplaySession.submitScore((byte) -70);
+                      }
+                    }
+                    ai.requestedScreenId = el.gameplayReturnScreenId;
+                  } else {
+                    ai.requestedScreenId = cd.gameplayOriginScreenId;
+                  }
+                  tc.currentScreenId = -1;
+                  el.gameplayReturnScreenId = -1;
+                  qj.clearGameplayDuringTransition = true;
+                }
+                if (ai.requestedScreenId != tc.currentScreenId) {
+                  if (6 == ai.requestedScreenId) {
+                    if (ug.field_c <= 0) {
+                      ai.requestedScreenId = 2;
+                    }
+                  }
+                  if (-1 < tc.currentScreenId) {
+                    og.screens[tc.currentScreenId].updateTransition(16405);
+                  }
+                  if (ai.requestedScreenId != -1) {
+                    og.screens[ai.requestedScreenId].updateTransition(16405);
+                    og.screens[ai.requestedScreenId].field_q = 0;
+                    if (ai.requestedScreenId != 3) {
+                      og.screens[ai.requestedScreenId].selectedItemIndex = 0;
+                    } else {
+                      og.screens[ai.requestedScreenId].selectedItemIndex = 1;
+                    }
+                  }
+                  if (nf.screenTransitionTick == 0) {
+                    td.playPcmSample(-348, fl.field_c[30]);
+                  }
+                  fieldTemp$0 = nf.screenTransitionTick + 1;
+                  nf.screenTransitionTick = nf.screenTransitionTick + 1;
+                  if (fieldTemp$0 == 160) {
+                    L23: {
+                      if (el.gameplayReturnScreenId != -1) {
+                        if (fh.c(-109)) {
+                          if (cd.gameplayOriginScreenId != 0) {
+                            kb.a(-106);
+                          } else {
+                            PendingActionMarker.a((byte) 118);
+                          }
+                          pg.screenChangePending = true;
+                          break L23;
+                        }
+                      }
+                      if (tc.currentScreenId == 2) {
+                        ca.field_f = null;
+                      }
+                    }
+                    nf.screenTransitionTick = 0;
+                    tc.currentScreenId = ai.requestedScreenId;
+                    qj.clearGameplayDuringTransition = false;
+                  }
+                } else {
+                  if (tc.currentScreenId == -1) {
+                    if (dl.field_b) {
+                      if (gb.b(1)) {
+                        stackIn_63_0 = 0;
+                      } else {
+                        stackIn_63_0 = 1;
+                      }
+                      dl.field_b = stackIn_63_0 != 0;
+                      if (stackIn_63_0 == 0) {
+                        tc.currentScreenId = -2;
+                        ai.requestedScreenId = 0;
+                      }
+                    } else {
+                      el.gameplaySession.updateSession(-1578896191);
+                    }
+                  } else {
+                    og.screens[tc.currentScreenId].updateScreen((byte) 29);
                   }
                 }
               }
-              je.c((byte) -122);
-              cm.a(-1, 0);
-              if (sb.a(54)) {
-                var2 = this.d((byte) -67);
-                if (var2 == 2) {
-                  oh.a(320, 240, fi.field_d, fi.field_d.field_o * 3 >> 1, -128, fi.field_d.field_o);
-                } else {
-                  break L5;
-                }
+            }
+            je.c((byte) -122);
+            cm.a(-1, 0);
+            if (sb.a(54)) {
+              var2 = this.d((byte) -67);
+              if (var2 != 2) {
+                break L5;
               }
-            } else {
-              if (kg.field_o) {
-                rj.a((byte) 121, 50);
-                kg.field_o = false;
-              }
-              this.h(115);
-              if (fj.f(-31456)) {
-                discarded$1 = this.pollArchiveLoading(false);
-              }
+              oh.a(320, 240, fi.field_d, fi.field_d.field_o * 3 >> 1, -128, fi.field_d.field_o);
+            }
+          } else {
+            if (kg.field_o) {
+              rj.a((byte) 121, 50);
+              kg.field_o = false;
+            }
+            this.h(115);
+            if (fj.f(-31456)) {
+              discarded$1 = this.pollArchiveLoading(false);
             }
           }
-          return;
-        } else {
-          return;
         }
     }
 
@@ -922,84 +915,7 @@ public final class Geoblox extends wf {
           stackIn_3_0 = f.field_kb;
         }
         var2 = stackIn_3_0;
-        if (!bl.b(255)) {
-          if (!ib.gameAssetsInitialized) {
-            fc.a(true, (java.awt.Canvas) (var2));
-            return;
-          } else {
-            if (!uk.g(39)) {
-              lc.a(ph.waitingForExtraDataText, -2, 100.0f);
-              fc.a(true, (java.awt.Canvas) (var2));
-              return;
-            } else {
-              L1: {
-                sh.field_y.a(param0 - 25598);
-                SoftwareRasterizer.c();
-                if (tc.currentScreenId == ai.requestedScreenId) {
-                  if (el.gameplayReturnScreenId == -1) {
-                    if (tc.currentScreenId == -1) {
-                      if (!dl.field_b) {
-                        el.gameplaySession.renderSession((byte) -49);
-                        break L1;
-                      } else {
-                        oc.c(240);
-                        break L1;
-                      }
-                    } else {
-                      og.screens[tc.currentScreenId].renderScreen(-28750);
-                      break L1;
-                    }
-                  }
-                }
-                L3: {
-                  transitionSplitY = -480 + (nf.screenTransitionTick * 6 + 35);
-                  if (el.gameplayReturnScreenId == -1) {
-                    if (!qj.clearGameplayDuringTransition) {
-                      if (ai.requestedScreenId != -1) {
-                        if (tc.currentScreenId == -1) {
-                          el.gameplaySession.renderSession((byte) -68);
-                          break L3;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        el.gameplaySession.renderSession((byte) -68);
-                        break L3;
-                      }
-                    }
-                  }
-                  SoftwareRasterizer.a(0, 0, 640, 480, 1);
-                }
-                if (tc.currentScreenId == -2) {
-                  oc.c(param0 ^ 25613);
-                }
-                SoftwareRasterizer.e(0, 0, 640, transitionSplitY);
-                if (ai.requestedScreenId != -1) {
-                  og.screens[ai.requestedScreenId].renderScreen(-28750);
-                }
-                SoftwareRasterizer.e(0, transitionSplitY, 640, 480);
-                if (tc.currentScreenId > -1) {
-                  og.screens[tc.currentScreenId].renderScreen(-28750);
-                }
-                SoftwareRasterizer.e(0, 0, 640, 480);
-                qj.transitionCurtain.b(0, 6 * nf.screenTransitionTick - 480);
-              }
-              if (cg.b(true)) {
-                if (null == vl.field_n) {
-                  stackIn_42_0 = lh.field_d ? 1 : 0;
-                } else {
-                  stackIn_42_0 = 1;
-                }
-                kb.a(stackIn_42_0 != 0, false);
-              }
-              i.a(0, (byte) 110, (java.awt.Canvas) (var2), 0);
-              if (param0 != 25853) {
-                field_D = -11L;
-              }
-              return;
-            }
-          }
-        } else {
+        if (bl.b(255)) {
           if (vl.field_n != null) {
             stackIn_7_0 = 1;
           } else {
@@ -1007,6 +923,75 @@ public final class Geoblox extends wf {
           }
           ei.a(stackIn_7_0 != 0, param0 - 25853, (java.awt.Canvas) (var2));
           return;
+        }
+        if (!ib.gameAssetsInitialized) {
+          fc.a(true, (java.awt.Canvas) (var2));
+          return;
+        }
+        if (!uk.g(39)) {
+          lc.a(ph.waitingForExtraDataText, -2, 100.0f);
+          fc.a(true, (java.awt.Canvas) (var2));
+          return;
+        }
+        L1: {
+          sh.field_y.a(param0 - 25598);
+          SoftwareRasterizer.c();
+          if (tc.currentScreenId == ai.requestedScreenId) {
+            if (el.gameplayReturnScreenId == -1) {
+              if (tc.currentScreenId != -1) {
+                og.screens[tc.currentScreenId].renderScreen(-28750);
+                break L1;
+              }
+              if (!dl.field_b) {
+                el.gameplaySession.renderSession((byte) -49);
+                break L1;
+              }
+              oc.c(240);
+              break L1;
+            }
+          }
+          L3: {
+            transitionSplitY = -480 + (nf.screenTransitionTick * 6 + 35);
+            if (el.gameplayReturnScreenId == -1) {
+              if (!qj.clearGameplayDuringTransition) {
+                if (ai.requestedScreenId == -1) {
+                  el.gameplaySession.renderSession((byte) -68);
+                  break L3;
+                }
+                if (tc.currentScreenId != -1) {
+                  break L3;
+                }
+                el.gameplaySession.renderSession((byte) -68);
+                break L3;
+              }
+            }
+            SoftwareRasterizer.a(0, 0, 640, 480, 1);
+          }
+          if (tc.currentScreenId == -2) {
+            oc.c(param0 ^ 25613);
+          }
+          SoftwareRasterizer.e(0, 0, 640, transitionSplitY);
+          if (ai.requestedScreenId != -1) {
+            og.screens[ai.requestedScreenId].renderScreen(-28750);
+          }
+          SoftwareRasterizer.e(0, transitionSplitY, 640, 480);
+          if (tc.currentScreenId > -1) {
+            og.screens[tc.currentScreenId].renderScreen(-28750);
+          }
+          SoftwareRasterizer.e(0, 0, 640, 480);
+          qj.transitionCurtain.b(0, 6 * nf.screenTransitionTick - 480);
+        }
+        if (cg.b(true)) {
+          if (null == vl.field_n) {
+            stackIn_42_0 = lh.field_d ? 1 : 0;
+          } else {
+            stackIn_42_0 = 1;
+          }
+          kb.a(stackIn_42_0 != 0, false);
+        }
+        i.a(0, (byte) 110, (java.awt.Canvas) (var2), 0);
+        if (param0 != 25853) {
+          field_D = -11L;
         }
     }
 

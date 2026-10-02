@@ -59,81 +59,68 @@ final class ld {
           if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + upperNearRowCenterIndex] != 0) {
             leftCardinalHit = 1;
             return leftCardinalHit != 0;
-          } else {
-            if (0 == SoftwareRasterizer.framebuffer[upperNearRowCenterIndex + circleHorizontalOffset]) {
-              if (SoftwareRasterizer.framebuffer[upperFarRowCenterIndex] != 0) {
-                topCardinalHit = 1;
-                return topCardinalHit != 0;
-              } else {
-                if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex] != 0) {
-                  bottomCardinalHit = 1;
-                  return bottomCardinalHit != 0;
-                } else {
-                  L0: while (true) {
-                    previousCircleVerticalOffset = circleVerticalOffset;
-                    circleVerticalOffset++;
-                    circleError = circleError + (previousCircleVerticalOffset + circleVerticalOffset);
-                    lowerNearRowCenterIndex = lowerNearRowCenterIndex + SoftwareRasterizer.stride;
-                    upperNearRowCenterIndex = upperNearRowCenterIndex - SoftwareRasterizer.stride;
-                    if (playfieldRadiusSquared < circleError) {
-                      upperFarRowCenterIndex = upperFarRowCenterIndex + SoftwareRasterizer.stride;
-                      lowerFarRowCenterIndex = lowerFarRowCenterIndex - SoftwareRasterizer.stride;
-                      circleHorizontalOffset--;
-                      circleError = circleError - (circleHorizontalOffset + circleHorizontalOffset);
-                    }
-                    if (circleVerticalOffset > circleHorizontalOffset) {
-                      boundaryScanMissResult = 0;
-                      return boundaryScanMissResult != 0;
-                    } else {
-                      if (0 == SoftwareRasterizer.framebuffer[-circleVerticalOffset + upperFarRowCenterIndex]) {
-                        if (SoftwareRasterizer.framebuffer[upperFarRowCenterIndex + circleVerticalOffset] == 0) {
-                          if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + upperNearRowCenterIndex] == 0) {
-                            if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + upperNearRowCenterIndex] == 0) {
-                              if (SoftwareRasterizer.framebuffer[lowerNearRowCenterIndex - circleHorizontalOffset] != 0) {
-                                lowerNearLeftHit = 1;
-                                return lowerNearLeftHit != 0;
-                              } else {
-                                if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + lowerNearRowCenterIndex] == 0) {
-                                  if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex - circleVerticalOffset] != 0) {
-                                    lowerFarLeftHit = 1;
-                                    return lowerFarLeftHit != 0;
-                                  } else {
-                                    if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex + circleVerticalOffset] != 0) {
-                                      lowerFarRightHit = 1;
-                                      return lowerFarRightHit != 0;
-                                    } else {
-                                      continue L0;
-                                    }
-                                  }
-                                } else {
-                                  lowerNearRightHit = 1;
-                                  return lowerNearRightHit != 0;
-                                }
-                              }
-                            } else {
-                              upperNearRightHit = 1;
-                              return upperNearRightHit != 0;
-                            }
-                          } else {
-                            upperNearLeftHit = 1;
-                            return upperNearLeftHit != 0;
-                          }
-                        } else {
-                          upperFarRightHit = 1;
-                          return upperFarRightHit != 0;
-                        }
-                      } else {
-                        upperFarLeftHit = 1;
-                        return upperFarLeftHit != 0;
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              rightCardinalHit = 1;
-              return rightCardinalHit != 0;
+          }
+          if (0 != SoftwareRasterizer.framebuffer[upperNearRowCenterIndex + circleHorizontalOffset]) {
+            rightCardinalHit = 1;
+            return rightCardinalHit != 0;
+          }
+          if (SoftwareRasterizer.framebuffer[upperFarRowCenterIndex] != 0) {
+            topCardinalHit = 1;
+            return topCardinalHit != 0;
+          }
+          if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex] != 0) {
+            bottomCardinalHit = 1;
+            return bottomCardinalHit != 0;
+          }
+          L0: while (true) {
+            previousCircleVerticalOffset = circleVerticalOffset;
+            circleVerticalOffset++;
+            circleError = circleError + (previousCircleVerticalOffset + circleVerticalOffset);
+            lowerNearRowCenterIndex = lowerNearRowCenterIndex + SoftwareRasterizer.stride;
+            upperNearRowCenterIndex = upperNearRowCenterIndex - SoftwareRasterizer.stride;
+            if (playfieldRadiusSquared < circleError) {
+              upperFarRowCenterIndex = upperFarRowCenterIndex + SoftwareRasterizer.stride;
+              lowerFarRowCenterIndex = lowerFarRowCenterIndex - SoftwareRasterizer.stride;
+              circleHorizontalOffset--;
+              circleError = circleError - (circleHorizontalOffset + circleHorizontalOffset);
             }
+            if (circleVerticalOffset > circleHorizontalOffset) {
+              boundaryScanMissResult = 0;
+              return boundaryScanMissResult != 0;
+            }
+            if (0 != SoftwareRasterizer.framebuffer[-circleVerticalOffset + upperFarRowCenterIndex]) {
+              upperFarLeftHit = 1;
+              return upperFarLeftHit != 0;
+            }
+            if (SoftwareRasterizer.framebuffer[upperFarRowCenterIndex + circleVerticalOffset] != 0) {
+              upperFarRightHit = 1;
+              return upperFarRightHit != 0;
+            }
+            if (SoftwareRasterizer.framebuffer[-circleHorizontalOffset + upperNearRowCenterIndex] != 0) {
+              upperNearLeftHit = 1;
+              return upperNearLeftHit != 0;
+            }
+            if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + upperNearRowCenterIndex] != 0) {
+              upperNearRightHit = 1;
+              return upperNearRightHit != 0;
+            }
+            if (SoftwareRasterizer.framebuffer[lowerNearRowCenterIndex - circleHorizontalOffset] != 0) {
+              lowerNearLeftHit = 1;
+              return lowerNearLeftHit != 0;
+            }
+            if (SoftwareRasterizer.framebuffer[circleHorizontalOffset + lowerNearRowCenterIndex] != 0) {
+              lowerNearRightHit = 1;
+              return lowerNearRightHit != 0;
+            }
+            if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex - circleVerticalOffset] != 0) {
+              lowerFarLeftHit = 1;
+              return lowerFarLeftHit != 0;
+            }
+            if (SoftwareRasterizer.framebuffer[lowerFarRowCenterIndex + circleVerticalOffset] == 0) {
+              continue L0;
+            }
+            lowerFarRightHit = 1;
+            return lowerFarRightHit != 0;
           }
         } catch (java.lang.RuntimeException boundaryScanFailure) {
           caughtBoundaryScanFailure = boundaryScanFailure;
@@ -161,324 +148,307 @@ final class ld {
         int stackIn_218_0 = 0;
         int stackIn_228_0 = 0;
         ji.difficultyStep = ji.difficultyStep + 1;
-        if (ji.difficultyStep < kd.field_f.length) {
-          if ((4 & kd.field_f[ji.difficultyStep]) != 0) {
-            og.entityMotionSpeed = og.entityMotionSpeed + 0.055555559694767f;
-            if (param0) {
-              stackIn_10_0 = 0;
-            } else {
-              stackIn_10_0 = 1;
-            }
-            sa.b(stackIn_10_0 != 0);
-          }
-          if ((kd.field_f[ji.difficultyStep] & 1) != 0) {
-            if (ag.field_k >= 7) {
-              if (!param0) {
-                if ((kd.field_f[ji.difficultyStep] & 2) != 0) {
-                  if (f.field_qb < 7) {
-                    f.field_qb = f.field_qb + 1;
-                  } else {
-                    if (0 == (kd.field_f[ji.difficultyStep] & 16)) {
-                      if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
-                        DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-                        if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                          if (0.800000011920929f > ij.field_ab) {
-                            ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                          }
-                          if (param0) {
-                            stackIn_182_0 = 0;
-                          } else {
-                            stackIn_182_0 = 1;
-                          }
-                          sa.b(stackIn_182_0 != 0);
-                        }
-                        return;
-                      } else {
-                        if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                          if (0.800000011920929f > ij.field_ab) {
-                            ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                          }
-                          if (param0) {
-                            stackIn_172_0 = 0;
-                          } else {
-                            stackIn_172_0 = 1;
-                          }
-                          sa.b(stackIn_172_0 != 0);
-                        }
-                        return;
-                      }
-                    } else {
-                      sa.field_c = sa.field_c + 0.05;
-                      if ((8 & kd.field_f[ji.difficultyStep]) == 0) {
-                        if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                          if (0.800000011920929f > ij.field_ab) {
-                            ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                          }
-                          if (param0) {
-                            stackIn_160_0 = 0;
-                          } else {
-                            stackIn_160_0 = 1;
-                          }
-                          sa.b(stackIn_160_0 != 0);
-                        }
-                        return;
-                      } else {
-                        DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-                        if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                          if (0.800000011920929f > ij.field_ab) {
-                            ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                          }
-                          if (param0) {
-                            stackIn_150_0 = 0;
-                          } else {
-                            stackIn_150_0 = 1;
-                          }
-                          sa.b(stackIn_150_0 != 0);
-                        }
-                        return;
-                      }
-                    }
-                  }
-                }
-                if (0 == (kd.field_f[ji.difficultyStep] & 16)) {
-                  if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
-                    DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-                    if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                      if (0.800000011920929f > ij.field_ab) {
-                        ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                      }
-                      if (param0) {
-                        stackIn_228_0 = 0;
-                      } else {
-                        stackIn_228_0 = 1;
-                      }
-                      sa.b(stackIn_228_0 != 0);
-                    }
-                    return;
-                  } else {
-                    if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                      if (0.800000011920929f > ij.field_ab) {
-                        ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                      }
-                      if (param0) {
-                        stackIn_218_0 = 0;
-                      } else {
-                        stackIn_218_0 = 1;
-                      }
-                      sa.b(stackIn_218_0 != 0);
-                    }
-                    return;
-                  }
-                } else {
-                  sa.field_c = sa.field_c + 0.05;
-                  if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
-                    DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-                    if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                      if (0.800000011920929f > ij.field_ab) {
-                        ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                      }
-                      if (param0) {
-                        stackIn_206_0 = 0;
-                      } else {
-                        stackIn_206_0 = 1;
-                      }
-                      sa.b(stackIn_206_0 != 0);
-                    }
-                    return;
-                  } else {
-                    if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                      if (0.800000011920929f > ij.field_ab) {
-                        ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                      }
-                      if (param0) {
-                        stackIn_196_0 = 0;
-                      } else {
-                        stackIn_196_0 = 1;
-                      }
-                      sa.b(stackIn_196_0 != 0);
-                    }
-                    return;
-                  }
-                }
-              } else {
-                ld.advanceDifficulty(true);
-                if ((kd.field_f[ji.difficultyStep] & 2) != 0) {
-                  if (f.field_qb < 7) {
-                    f.field_qb = f.field_qb + 1;
-                  } else {
-                    if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
-                      sa.field_c = sa.field_c + 0.05;
-                    }
-                    if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
-                      DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-                    }
-                    if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                      if (0.800000011920929f > ij.field_ab) {
-                        ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                      }
-                      if (param0) {
-                        stackIn_100_0 = 0;
-                      } else {
-                        stackIn_100_0 = 1;
-                      }
-                      sa.b(stackIn_100_0 != 0);
-                    }
-                    return;
-                  }
-                }
-                if (0 == (kd.field_f[ji.difficultyStep] & 16)) {
-                  if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
-                    DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-                    if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                      if (0.800000011920929f > ij.field_ab) {
-                        ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                      }
-                      if (param0) {
-                        stackIn_135_0 = 0;
-                      } else {
-                        stackIn_135_0 = 1;
-                      }
-                      sa.b(stackIn_135_0 != 0);
-                    }
-                    return;
-                  } else {
-                    if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                      if (0.800000011920929f > ij.field_ab) {
-                        ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                      }
-                      if (param0) {
-                        stackIn_125_0 = 0;
-                      } else {
-                        stackIn_125_0 = 1;
-                      }
-                      sa.b(stackIn_125_0 != 0);
-                    }
-                    return;
-                  }
-                } else {
-                  sa.field_c = sa.field_c + 0.05;
-                  if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
-                    DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-                  }
-                  if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                    if (0.800000011920929f > ij.field_ab) {
-                      ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                    }
-                    if (param0) {
-                      stackIn_114_0 = 0;
-                    } else {
-                      stackIn_114_0 = 1;
-                    }
-                    sa.b(stackIn_114_0 != 0);
-                  }
-                  return;
-                }
-              }
-            } else {
-              ag.field_k = ag.field_k + 1;
-              if (param0) {
-                ld.advanceDifficulty(true);
-              }
-              if ((kd.field_f[ji.difficultyStep] & 2) != 0) {
-                if (f.field_qb < 7) {
-                  f.field_qb = f.field_qb + 1;
-                }
-              }
-              if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
-                sa.field_c = sa.field_c + 0.05;
-              }
-              if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
-                DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-              }
-              if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                if (0.800000011920929f > ij.field_ab) {
-                  ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                }
-                if (param0) {
-                  stackIn_83_0 = 0;
-                } else {
-                  stackIn_83_0 = 1;
-                }
-                sa.b(stackIn_83_0 != 0);
-              }
-              return;
-            }
-          } else {
-            if (param0) {
-              ld.advanceDifficulty(true);
-              if ((kd.field_f[ji.difficultyStep] & 2) == 0) {
-                if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
-                  sa.field_c = sa.field_c + 0.05;
-                }
-                if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
-                  DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-                }
-                if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                  if (0.800000011920929f > ij.field_ab) {
-                    ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                  }
-                  if (param0) {
-                    stackIn_61_0 = 0;
-                  } else {
-                    stackIn_61_0 = 1;
-                  }
-                  sa.b(stackIn_61_0 != 0);
-                }
-                return;
-              } else {
-                if (f.field_qb < 7) {
-                  f.field_qb = f.field_qb + 1;
-                }
-                if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
-                  sa.field_c = sa.field_c + 0.05;
-                }
-                if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
-                  DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-                }
-                if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                  if (0.800000011920929f > ij.field_ab) {
-                    ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                  }
-                  if (param0) {
-                    stackIn_47_0 = 0;
-                  } else {
-                    stackIn_47_0 = 1;
-                  }
-                  sa.b(stackIn_47_0 != 0);
-                }
-                return;
-              }
-            } else {
-              if ((kd.field_f[ji.difficultyStep] & 2) != 0) {
-                if (f.field_qb < 7) {
-                  f.field_qb = f.field_qb + 1;
-                }
-              }
-              if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
-                sa.field_c = sa.field_c + 0.05;
-              }
-              if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
-                DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-              }
-              if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
-                if (0.800000011920929f > ij.field_ab) {
-                  ij.field_ab = ij.field_ab + 0.02857142873108387f;
-                }
-                if (param0) {
-                  stackIn_29_0 = 0;
-                } else {
-                  stackIn_29_0 = 1;
-                }
-                sa.b(stackIn_29_0 != 0);
-              }
-              return;
-            }
-          }
-        } else {
+        if (ji.difficultyStep >= kd.field_f.length) {
           if (sa.field_c > 0.15000000000000002) {
             sa.field_c = sa.field_c - 0.05;
           }
           return;
+        }
+        if ((4 & kd.field_f[ji.difficultyStep]) != 0) {
+          og.entityMotionSpeed = og.entityMotionSpeed + 0.055555559694767f;
+          if (param0) {
+            stackIn_10_0 = 0;
+          } else {
+            stackIn_10_0 = 1;
+          }
+          sa.b(stackIn_10_0 != 0);
+        }
+        if ((kd.field_f[ji.difficultyStep] & 1) == 0) {
+          if (!param0) {
+            if ((kd.field_f[ji.difficultyStep] & 2) != 0) {
+              if (f.field_qb < 7) {
+                f.field_qb = f.field_qb + 1;
+              }
+            }
+            if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
+              sa.field_c = sa.field_c + 0.05;
+            }
+            if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
+              DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
+            }
+            if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+              if (0.800000011920929f > ij.field_ab) {
+                ij.field_ab = ij.field_ab + 0.02857142873108387f;
+              }
+              if (param0) {
+                stackIn_29_0 = 0;
+              } else {
+                stackIn_29_0 = 1;
+              }
+              sa.b(stackIn_29_0 != 0);
+            }
+            return;
+          }
+          ld.advanceDifficulty(true);
+          if ((kd.field_f[ji.difficultyStep] & 2) == 0) {
+            if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
+              sa.field_c = sa.field_c + 0.05;
+            }
+            if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
+              DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
+            }
+            if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+              if (0.800000011920929f > ij.field_ab) {
+                ij.field_ab = ij.field_ab + 0.02857142873108387f;
+              }
+              if (param0) {
+                stackIn_61_0 = 0;
+              } else {
+                stackIn_61_0 = 1;
+              }
+              sa.b(stackIn_61_0 != 0);
+            }
+            return;
+          }
+          if (f.field_qb < 7) {
+            f.field_qb = f.field_qb + 1;
+          }
+          if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
+            sa.field_c = sa.field_c + 0.05;
+          }
+          if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
+            DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
+          }
+          if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+            if (0.800000011920929f > ij.field_ab) {
+              ij.field_ab = ij.field_ab + 0.02857142873108387f;
+            }
+            if (param0) {
+              stackIn_47_0 = 0;
+            } else {
+              stackIn_47_0 = 1;
+            }
+            sa.b(stackIn_47_0 != 0);
+          }
+          return;
+        }
+        if (ag.field_k < 7) {
+          ag.field_k = ag.field_k + 1;
+          if (param0) {
+            ld.advanceDifficulty(true);
+          }
+          if ((kd.field_f[ji.difficultyStep] & 2) != 0) {
+            if (f.field_qb < 7) {
+              f.field_qb = f.field_qb + 1;
+            }
+          }
+          if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
+            sa.field_c = sa.field_c + 0.05;
+          }
+          if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
+            DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
+          }
+          if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+            if (0.800000011920929f > ij.field_ab) {
+              ij.field_ab = ij.field_ab + 0.02857142873108387f;
+            }
+            if (param0) {
+              stackIn_83_0 = 0;
+            } else {
+              stackIn_83_0 = 1;
+            }
+            sa.b(stackIn_83_0 != 0);
+          }
+          return;
+        }
+        if (param0) {
+          ld.advanceDifficulty(true);
+          if ((kd.field_f[ji.difficultyStep] & 2) != 0) {
+            if (f.field_qb >= 7) {
+              if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
+                sa.field_c = sa.field_c + 0.05;
+              }
+              if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
+                DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
+              }
+              if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+                if (0.800000011920929f > ij.field_ab) {
+                  ij.field_ab = ij.field_ab + 0.02857142873108387f;
+                }
+                if (param0) {
+                  stackIn_100_0 = 0;
+                } else {
+                  stackIn_100_0 = 1;
+                }
+                sa.b(stackIn_100_0 != 0);
+              }
+              return;
+            }
+            f.field_qb = f.field_qb + 1;
+          }
+          if (0 != (kd.field_f[ji.difficultyStep] & 16)) {
+            sa.field_c = sa.field_c + 0.05;
+            if ((8 & kd.field_f[ji.difficultyStep]) != 0) {
+              DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
+            }
+            if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+              if (0.800000011920929f > ij.field_ab) {
+                ij.field_ab = ij.field_ab + 0.02857142873108387f;
+              }
+              if (param0) {
+                stackIn_114_0 = 0;
+              } else {
+                stackIn_114_0 = 1;
+              }
+              sa.b(stackIn_114_0 != 0);
+            }
+            return;
+          }
+          if ((8 & kd.field_f[ji.difficultyStep]) == 0) {
+            if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+              if (0.800000011920929f > ij.field_ab) {
+                ij.field_ab = ij.field_ab + 0.02857142873108387f;
+              }
+              if (param0) {
+                stackIn_125_0 = 0;
+              } else {
+                stackIn_125_0 = 1;
+              }
+              sa.b(stackIn_125_0 != 0);
+            }
+            return;
+          }
+          DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
+          if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+            if (0.800000011920929f > ij.field_ab) {
+              ij.field_ab = ij.field_ab + 0.02857142873108387f;
+            }
+            if (param0) {
+              stackIn_135_0 = 0;
+            } else {
+              stackIn_135_0 = 1;
+            }
+            sa.b(stackIn_135_0 != 0);
+          }
+          return;
+        }
+        if ((kd.field_f[ji.difficultyStep] & 2) != 0) {
+          if (f.field_qb >= 7) {
+            if (0 == (kd.field_f[ji.difficultyStep] & 16)) {
+              if ((8 & kd.field_f[ji.difficultyStep]) == 0) {
+                if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+                  if (0.800000011920929f > ij.field_ab) {
+                    ij.field_ab = ij.field_ab + 0.02857142873108387f;
+                  }
+                  if (param0) {
+                    stackIn_172_0 = 0;
+                  } else {
+                    stackIn_172_0 = 1;
+                  }
+                  sa.b(stackIn_172_0 != 0);
+                }
+                return;
+              }
+              DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
+              if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+                if (0.800000011920929f > ij.field_ab) {
+                  ij.field_ab = ij.field_ab + 0.02857142873108387f;
+                }
+                if (param0) {
+                  stackIn_182_0 = 0;
+                } else {
+                  stackIn_182_0 = 1;
+                }
+                sa.b(stackIn_182_0 != 0);
+              }
+              return;
+            }
+            sa.field_c = sa.field_c + 0.05;
+            if ((8 & kd.field_f[ji.difficultyStep]) == 0) {
+              if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+                if (0.800000011920929f > ij.field_ab) {
+                  ij.field_ab = ij.field_ab + 0.02857142873108387f;
+                }
+                if (param0) {
+                  stackIn_160_0 = 0;
+                } else {
+                  stackIn_160_0 = 1;
+                }
+                sa.b(stackIn_160_0 != 0);
+              }
+              return;
+            }
+            DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
+            if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+              if (0.800000011920929f > ij.field_ab) {
+                ij.field_ab = ij.field_ab + 0.02857142873108387f;
+              }
+              if (param0) {
+                stackIn_150_0 = 0;
+              } else {
+                stackIn_150_0 = 1;
+              }
+              sa.b(stackIn_150_0 != 0);
+            }
+            return;
+          }
+          f.field_qb = f.field_qb + 1;
+        }
+        if (0 == (kd.field_f[ji.difficultyStep] & 16)) {
+          if ((8 & kd.field_f[ji.difficultyStep]) == 0) {
+            if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+              if (0.800000011920929f > ij.field_ab) {
+                ij.field_ab = ij.field_ab + 0.02857142873108387f;
+              }
+              if (param0) {
+                stackIn_218_0 = 0;
+              } else {
+                stackIn_218_0 = 1;
+              }
+              sa.b(stackIn_218_0 != 0);
+            }
+            return;
+          }
+          DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
+          if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+            if (0.800000011920929f > ij.field_ab) {
+              ij.field_ab = ij.field_ab + 0.02857142873108387f;
+            }
+            if (param0) {
+              stackIn_228_0 = 0;
+            } else {
+              stackIn_228_0 = 1;
+            }
+            sa.b(stackIn_228_0 != 0);
+          }
+          return;
+        }
+        sa.field_c = sa.field_c + 0.05;
+        if ((8 & kd.field_f[ji.difficultyStep]) == 0) {
+          if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+            if (0.800000011920929f > ij.field_ab) {
+              ij.field_ab = ij.field_ab + 0.02857142873108387f;
+            }
+            if (param0) {
+              stackIn_196_0 = 0;
+            } else {
+              stackIn_196_0 = 1;
+            }
+            sa.b(stackIn_196_0 != 0);
+          }
+          return;
+        }
+        DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
+        if (0 != (kd.field_f[ji.difficultyStep] & 128)) {
+          if (0.800000011920929f > ij.field_ab) {
+            ij.field_ab = ij.field_ab + 0.02857142873108387f;
+          }
+          if (param0) {
+            stackIn_206_0 = 0;
+          } else {
+            stackIn_206_0 = 1;
+          }
+          sa.b(stackIn_206_0 != 0);
         }
     }
 

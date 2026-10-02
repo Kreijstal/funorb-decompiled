@@ -117,17 +117,16 @@ final class bm {
                     }
                   }
                   break L5;
-                } else {
-                  for (var10 = 0; this.field_h > var10; var10++) {
-                    dupTemp$1 = var8 + var18.b(true);
-                    var8 = dupTemp$1;
-                    this.field_i[var10] = dupTemp$1;
-                    if (var9 < this.field_i[var10]) {
-                      var9 = this.field_i[var10];
-                    }
-                  }
-                  break L5;
                 }
+                for (var10 = 0; this.field_h > var10; var10++) {
+                  dupTemp$1 = var8 + var18.b(true);
+                  var8 = dupTemp$1;
+                  this.field_i[var10] = dupTemp$1;
+                  if (var9 < this.field_i[var10]) {
+                    var9 = this.field_i[var10];
+                  }
+                }
+                break L5;
               }
               this.field_b = 1 + var9;
               if (var7 != 0) {
@@ -201,49 +200,34 @@ final class bm {
                     }
                   }
                   break L19;
-                } else {
-                  for (var10 = 0; this.field_h > var10; var10++) {
-                    this.field_a[this.field_i[var10]] = var18.b(true);
-                  }
-                  var10 = 0;
-                  L26: while (true) {
-                    if (var10 >= this.field_h) {
-                      break L19;
-                    } else {
-                      var11 = this.field_i[var10];
-                      var8 = 0;
-                      var12 = this.field_a[var11];
-                      array$5 = new int[var12];
-                      this.field_o[var11] = array$5;
-                      var13 = -1;
-                      var14 = 0;
-                      L27: while (true) {
-                        if (var12 <= var14) {
-                          this.field_k[var11] = var13 + 1;
-                          if (var12 == 1 + var13) {
-                            this.field_o[var11] = null;
-                          }
-                          var10++;
-                          continue L26;
-                        } else {
-                          dupTemp$6 = var8 + var18.b(true);
-                          var8 = dupTemp$6;
-                          dupTemp$7 = this.field_o[var11];
-                          dupTemp$7[var14] = dupTemp$6;
-                          var15 = dupTemp$6;
-                          if (~var13 > ~var15) {
-                            var13 = var15;
-                            var14++;
-                            continue L27;
-                          } else {
-                            var14++;
-                            continue L27;
-                          }
-                        }
-                      }
+                }
+                for (var10 = 0; this.field_h > var10; var10++) {
+                  this.field_a[this.field_i[var10]] = var18.b(true);
+                }
+                for (var10 = 0; var10 < this.field_h; var10++) {
+                  var11 = this.field_i[var10];
+                  var8 = 0;
+                  var12 = this.field_a[var11];
+                  array$5 = new int[var12];
+                  this.field_o[var11] = array$5;
+                  var13 = -1;
+                  L27: for (var14 = 0; var12 > var14; var14++) {
+                    dupTemp$6 = var8 + var18.b(true);
+                    var8 = dupTemp$6;
+                    dupTemp$7 = this.field_o[var11];
+                    dupTemp$7[var14] = dupTemp$6;
+                    var15 = dupTemp$6;
+                    if (~var13 <= ~var15) {
+                      continue L27;
                     }
+                    var13 = var15;
+                  }
+                  this.field_k[var11] = var13 + 1;
+                  if (var12 == 1 + var13) {
+                    this.field_o[var11] = null;
                   }
                 }
+                break L19;
               }
               L29: {
                 if (var6 != 0) {

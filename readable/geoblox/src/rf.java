@@ -32,7 +32,10 @@ final class rf extends IntrusiveNode {
         int[] var18;
         int[] var20;
         int[] var22;
-        if (this.field_g == null) {
+        if (this.field_g != null) {
+          return;
+        }
+        {
           this.field_g = new fi(16);
           var20 = new int[16];
           var17 = var20;
@@ -56,10 +59,19 @@ final class rf extends IntrusiveNode {
             L2: while (true) {
               if (var4.field_a[var6] != var7) {
                 continue L1;
-              } else {
+              }
+              {
                 var4.a(var6);
                 var8 = var4.e(var6);
-                if (var8 != 1) {
+                if (var8 == 1) {
+                  var4.d();
+                  var4.b(var6);
+                  if (var4.e()) {
+                    return;
+                  }
+                  continue L1;
+                }
+                {
                   var9 = var8 & 240;
                   if (var9 == 176) {
                     var10 = var8 & 15;
@@ -94,52 +106,42 @@ final class rf extends IntrusiveNode {
                   var4.f(var6);
                   var4.b(var6);
                   continue L2;
-                } else {
-                  var4.d();
-                  var4.b(var6);
-                  if (var4.e()) {
-                    return;
-                  } else {
-                    continue L1;
-                  }
                 }
               }
             }
           }
-        } else {
-          return;
         }
     }
 
     private rf(qc param0) {
         int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
-        int incrementValue$24 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
         int incrementValue$27 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$20 = 0;
         qc stackIn_66_0 = null;
         qc stackIn_67_0 = null;
         int stackIn_67_1 = 0;
@@ -224,7 +226,54 @@ final class rf extends IntrusiveNode {
         var12 = 0;
         var13 = 0;
         L0: while (true) {
-          if (var13 >= var2) {
+          if (var13 < var2) {
+            var14 = -1;
+            L19: while (true) {
+              var15 = param0.c((byte) 34);
+              if (var15 != var14) {
+                var4++;
+              }
+              var14 = var15 & 15;
+              if (var15 == 7) {
+                var13++;
+                continue L0;
+              }
+              if (var15 == 23) {
+                var5++;
+                continue L19;
+              }
+              if (var14 == 0) {
+                var7++;
+                continue L19;
+              }
+              if (var14 == 1) {
+                var8++;
+                continue L19;
+              }
+              if (var14 == 2) {
+                var6++;
+                continue L19;
+              }
+              if (var14 == 3) {
+                var9++;
+                continue L19;
+              }
+              if (var14 == 4) {
+                var10++;
+                continue L19;
+              }
+              if (var14 == 5) {
+                var11++;
+                continue L19;
+              }
+              if (var14 != 6) {
+                throw new RuntimeException();
+              }
+              var12++;
+              continue L19;
+            }
+          }
+          {
             var4 = var4 + 5 * var5;
             var4 = var4 + 2 * (var7 + var8 + var6 + var9 + var11);
             var4 = var4 + (var10 + var12);
@@ -248,487 +297,380 @@ final class rf extends IntrusiveNode {
             var26 = 0;
             var27 = 0;
             var28 = 0;
-            var29 = 0;
-            L2: while (true) {
-              if (var29 >= var6) {
-                var29 = 0;
-                var30 = param0.field_f;
-                param0.field_f = param0.field_f + var26;
-                var31 = param0.field_f;
-                param0.field_f = param0.field_f + var11;
-                var32 = param0.field_f;
-                param0.field_f = param0.field_f + var10;
-                var33 = param0.field_f;
-                param0.field_f = param0.field_f + var9;
-                var34 = param0.field_f;
-                param0.field_f = param0.field_f + var16;
-                var35 = param0.field_f;
-                param0.field_f = param0.field_f + var18;
-                var36 = param0.field_f;
-                param0.field_f = param0.field_f + var20;
-                var37 = param0.field_f;
-                param0.field_f = param0.field_f + (var7 + var8 + var11);
-                var38 = param0.field_f;
-                param0.field_f = param0.field_f + var7;
-                var39 = param0.field_f;
-                param0.field_f = param0.field_f + var27;
-                var40 = param0.field_f;
-                param0.field_f = param0.field_f + var8;
-                var41 = param0.field_f;
-                param0.field_f = param0.field_f + var17;
-                var42 = param0.field_f;
-                param0.field_f = param0.field_f + var19;
-                var43 = param0.field_f;
-                param0.field_f = param0.field_f + var21;
-                var44 = param0.field_f;
-                param0.field_f = param0.field_f + var12;
-                var45 = param0.field_f;
-                param0.field_f = param0.field_f + var9;
-                var46 = param0.field_f;
-                param0.field_f = param0.field_f + var22;
-                var47 = param0.field_f;
-                param0.field_f = param0.field_f + var23;
-                var48 = param0.field_f;
-                param0.field_f = param0.field_f + var24;
-                var49 = param0.field_f;
-                param0.field_f = param0.field_f + var25;
-                var50 = param0.field_f;
-                param0.field_f = param0.field_f + var5 * 3;
-                this.field_f = new byte[var4];
-                var51 = new qc(this.field_f);
-                var51.c((byte) 95, 1297377380);
-                var51.c((byte) 95, 6);
-                stackIn_66_0 = (qc) (var51);
-
-                if (var2 <= 1) {
-                  stackIn_67_0 = (qc) ((Object) stackIn_66_0);
-                  stackIn_67_1 = 0;
-                } else {
-                  stackIn_67_0 = (qc) ((Object) stackIn_66_0);
-                  stackIn_67_1 = 1;
-                }
-                ((qc) (Object) stackIn_67_0).e(stackIn_67_1, 28695);
-                var51.e(var2, 28695);
-                var51.e(var3, 28695);
-                param0.field_f = var13;
-                var52 = 0;
-                var53 = 0;
-                var54 = 0;
-                var55 = 0;
-                var56 = 0;
-                var57 = 0;
-                var58 = 0;
-                var70 = new int[128];
-                var28 = 0;
-                var60 = 0;
-                L4: while (true) {
-                  if (var60 >= var2) {
-                    return;
-                  } else {
-                    var51.c((byte) 95, 1297379947);
-                    var51.field_f = var51.field_f + 4;
-                    var61 = var51.field_f;
-                    var62 = -1;
-                    L5: while (true) {
-                      var63 = param0.g((byte) -125);
-                      var51.b((byte) -118, var63);
-                      incrementValue$0 = var29;
-                      var29++;
-                      var64 = param0.field_j[incrementValue$0] & 255;
-                      if (var64 == var62) {
-                        stackIn_73_0 = 0;
-                      } else {
-                        stackIn_73_0 = 1;
-                      }
-                      var65 = stackIn_73_0;
-                      var62 = var64 & 15;
-                      if (var64 != 7) {
-                        if (var64 != 23) {
-                          var52 = var52 ^ var64 >> 4;
-                          if (var62 != 0) {
-                            if (var62 != 1) {
-                              if (var62 != 2) {
-                                if (var62 != 3) {
-                                  if (var62 != 4) {
-                                    if (var62 != 5) {
-                                      if (var62 != 6) {
-                                        throw new RuntimeException();
-                                      } else {
-                                        if (var65 != 0) {
-                                          var51.d((byte) -54, 192 + var52);
-                                        }
-                                        incrementValue$1 = var44;
-                                        var44++;
-                                        var51.d((byte) 121, (int) param0.field_j[incrementValue$1]);
-                                        continue L5;
-                                      }
-                                    } else {
-                                      if (var65 != 0) {
-                                        var51.d((byte) 122, 160 + var52);
-                                      }
-                                      incrementValue$2 = var37;
-                                      var37++;
-                                      var53 = var53 + param0.field_j[incrementValue$2];
-                                      incrementValue$3 = var31;
-                                      var31++;
-                                      var58 = var58 + param0.field_j[incrementValue$3];
-                                      var51.d((byte) -18, var53 & 127);
-                                      var51.d((byte) 124, var58 & 127);
-                                      continue L5;
-                                    }
-                                  } else {
-                                    if (var65 != 0) {
-                                      var51.d((byte) 7, 208 + var52);
-                                    }
-                                    incrementValue$4 = var32;
-                                    var32++;
-                                    var57 = var57 + param0.field_j[incrementValue$4];
-                                    var51.d((byte) -44, var57 & 127);
-                                    continue L5;
-                                  }
-                                } else {
-                                  if (var65 != 0) {
-                                    var51.d((byte) -8, 224 + var52);
-                                  }
-                                  incrementValue$5 = var45;
-                                  var45++;
-                                  var56 = var56 + param0.field_j[incrementValue$5];
-                                  incrementValue$6 = var33;
-                                  var33++;
-                                  var56 = var56 + (param0.field_j[incrementValue$6] << 7);
-                                  var51.d((byte) -62, var56 & 127);
-                                  var51.d((byte) 122, var56 >> 7 & 127);
-                                  continue L5;
-                                }
-                              } else {
-                                if (var65 != 0) {
-                                  var51.d((byte) -19, 176 + var52);
-                                }
-                                L12: {
-                                  incrementValue$7 = var15;
-                                  var15++;
-                                  var28 = var28 + param0.field_j[incrementValue$7] & 127;
-                                  var51.d((byte) 126, var28);
-                                  if (var28 != 0) {
-                                    if (var28 != 32) {
-                                      if (var28 != 1) {
-                                        if (var28 != 33) {
-                                          if (var28 != 7) {
-                                            if (var28 != 39) {
-                                              if (var28 != 10) {
-                                                if (var28 != 42) {
-                                                  if (var28 != 99) {
-                                                    if (var28 != 98) {
-                                                      if (var28 != 101) {
-                                                        if (var28 != 100) {
-                                                          if (var28 != 64) {
-                                                            if (var28 != 65) {
-                                                              if (var28 != 120) {
-                                                                if (var28 != 121) {
-                                                                  if (var28 != 123) {
-                                                                    incrementValue$8 = var39;
-                                                                    var39++;
-                                                                    var66 = param0.field_j[incrementValue$8];
-                                                                    break L12;
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                          incrementValue$9 = var30;
-                                                          var30++;
-                                                          var66 = param0.field_j[incrementValue$9];
-                                                          break L12;
-                                                        } else {
-                                                          incrementValue$10 = var49;
-                                                          var49++;
-                                                          var66 = param0.field_j[incrementValue$10];
-                                                          break L12;
-                                                        }
-                                                      } else {
-                                                        incrementValue$11 = var48;
-                                                        var48++;
-                                                        var66 = param0.field_j[incrementValue$11];
-                                                        break L12;
-                                                      }
-                                                    } else {
-                                                      incrementValue$12 = var47;
-                                                      var47++;
-                                                      var66 = param0.field_j[incrementValue$12];
-                                                      break L12;
-                                                    }
-                                                  } else {
-                                                    incrementValue$13 = var46;
-                                                    var46++;
-                                                    var66 = param0.field_j[incrementValue$13];
-                                                    break L12;
-                                                  }
-                                                } else {
-                                                  incrementValue$14 = var43;
-                                                  var43++;
-                                                  var66 = param0.field_j[incrementValue$14];
-                                                  break L12;
-                                                }
-                                              } else {
-                                                incrementValue$15 = var36;
-                                                var36++;
-                                                var66 = param0.field_j[incrementValue$15];
-                                                break L12;
-                                              }
-                                            } else {
-                                              incrementValue$16 = var42;
-                                              var42++;
-                                              var66 = param0.field_j[incrementValue$16];
-                                              break L12;
-                                            }
-                                          } else {
-                                            incrementValue$17 = var35;
-                                            var35++;
-                                            var66 = param0.field_j[incrementValue$17];
-                                            break L12;
-                                          }
-                                        } else {
-                                          incrementValue$18 = var41;
-                                          var41++;
-                                          var66 = param0.field_j[incrementValue$18];
-                                          break L12;
-                                        }
-                                      } else {
-                                        incrementValue$19 = var34;
-                                        var34++;
-                                        var66 = param0.field_j[incrementValue$19];
-                                        break L12;
-                                      }
-                                    }
-                                  }
-                                  incrementValue$20 = var44;
-                                  var44++;
-                                  var66 = param0.field_j[incrementValue$20];
-                                }
-                                var66 = var66 + var70[var28];
-                                var70[var28] = var66;
-                                var51.d((byte) -10, var66 & 127);
-                                continue L5;
-                              }
-                            } else {
-                              if (var65 != 0) {
-                                var51.d((byte) 124, 128 + var52);
-                              }
-                              incrementValue$21 = var37;
-                              var37++;
-                              var53 = var53 + param0.field_j[incrementValue$21];
-                              incrementValue$22 = var40;
-                              var40++;
-                              var55 = var55 + param0.field_j[incrementValue$22];
-                              var51.d((byte) -63, var53 & 127);
-                              var51.d((byte) 125, var55 & 127);
-                              continue L5;
-                            }
-                          } else {
-                            if (var65 != 0) {
-                              var51.d((byte) -100, 144 + var52);
-                            }
-                            incrementValue$23 = var37;
-                            var37++;
-                            var53 = var53 + param0.field_j[incrementValue$23];
-                            incrementValue$24 = var38;
-                            var38++;
-                            var54 = var54 + param0.field_j[incrementValue$24];
-                            var51.d((byte) -97, var53 & 127);
-                            var51.d((byte) -56, var54 & 127);
-                            continue L5;
-                          }
-                        } else {
-                          if (var65 != 0) {
-                            var51.d((byte) 126, 255);
-                          }
-                          var51.d((byte) -22, 81);
-                          var51.d((byte) 121, 3);
-                          incrementValue$25 = var50;
-                          var50++;
-                          var51.d((byte) -79, (int) param0.field_j[incrementValue$25]);
-                          incrementValue$26 = var50;
-                          var50++;
-                          var51.d((byte) 125, (int) param0.field_j[incrementValue$26]);
-                          incrementValue$27 = var50;
-                          var50++;
-                          var51.d((byte) -75, (int) param0.field_j[incrementValue$27]);
-                          continue L5;
-                        }
-                      } else {
-                        if (var65 != 0) {
-                          var51.d((byte) 123, 255);
-                        }
-                        var51.d((byte) 124, 47);
-                        var51.d((byte) 125, 0);
-                        var51.g(var51.field_f - var61, 0);
-                        var60++;
-                        continue L4;
-                      }
-                    }
-                  }
-                }
-              } else {
-                var28 = var28 + param0.c((byte) 34) & 127;
-                if (var28 != 0) {
-                  if (var28 != 32) {
-                    if (var28 != 1) {
-                      if (var28 != 33) {
-                        if (var28 != 7) {
-                          if (var28 != 39) {
-                            if (var28 != 10) {
-                              if (var28 != 42) {
-                                if (var28 != 99) {
-                                  if (var28 != 98) {
-                                    if (var28 != 101) {
-                                      if (var28 != 100) {
-                                        if (var28 != 64) {
-                                          if (var28 != 65) {
-                                            if (var28 != 120) {
-                                              if (var28 != 121) {
-                                                if (var28 != 123) {
-                                                  var27++;
-                                                  var29++;
-                                                  continue L2;
-                                                } else {
-                                                  var26++;
-                                                  var29++;
-                                                  continue L2;
-                                                }
-                                              } else {
-                                                var26++;
-                                                var29++;
-                                                continue L2;
-                                              }
-                                            } else {
-                                              var26++;
-                                              var29++;
-                                              continue L2;
-                                            }
-                                          } else {
-                                            var26++;
-                                            var29++;
-                                            continue L2;
-                                          }
-                                        } else {
-                                          var26++;
-                                          var29++;
-                                          continue L2;
-                                        }
-                                      } else {
-                                        var25++;
-                                        var29++;
-                                        continue L2;
-                                      }
-                                    } else {
-                                      var24++;
-                                      var29++;
-                                      continue L2;
-                                    }
-                                  } else {
-                                    var23++;
-                                    var29++;
-                                    continue L2;
-                                  }
-                                } else {
-                                  var22++;
-                                  var29++;
-                                  continue L2;
-                                }
-                              } else {
-                                var21++;
-                                var29++;
-                                continue L2;
-                              }
-                            } else {
-                              var20++;
-                              var29++;
-                              continue L2;
-                            }
-                          } else {
-                            var19++;
-                            var29++;
-                            continue L2;
-                          }
-                        } else {
-                          var18++;
-                          var29++;
-                          continue L2;
-                        }
-                      } else {
-                        var17++;
-                        var29++;
-                        continue L2;
-                      }
-                    } else {
-                      var16++;
-                      var29++;
-                      continue L2;
-                    }
-                  } else {
-                    var12++;
-                    var29++;
-                    continue L2;
-                  }
-                } else {
-                  var12++;
-                  var29++;
-                  continue L2;
-                }
+            L2: for (var29 = 0; var29 < var6; var29++) {
+              var28 = var28 + param0.c((byte) 34) & 127;
+              if (var28 == 0) {
+                var12++;
+                continue L2;
               }
+              if (var28 == 32) {
+                var12++;
+                continue L2;
+              }
+              if (var28 == 1) {
+                var16++;
+                continue L2;
+              }
+              if (var28 == 33) {
+                var17++;
+                continue L2;
+              }
+              if (var28 == 7) {
+                var18++;
+                continue L2;
+              }
+              if (var28 == 39) {
+                var19++;
+                continue L2;
+              }
+              if (var28 == 10) {
+                var20++;
+                continue L2;
+              }
+              if (var28 == 42) {
+                var21++;
+                continue L2;
+              }
+              if (var28 == 99) {
+                var22++;
+                continue L2;
+              }
+              if (var28 == 98) {
+                var23++;
+                continue L2;
+              }
+              if (var28 == 101) {
+                var24++;
+                continue L2;
+              }
+              if (var28 == 100) {
+                var25++;
+                continue L2;
+              }
+              if (var28 == 64) {
+                var26++;
+                continue L2;
+              }
+              if (var28 == 65) {
+                var26++;
+                continue L2;
+              }
+              if (var28 == 120) {
+                var26++;
+                continue L2;
+              }
+              if (var28 == 121) {
+                var26++;
+                continue L2;
+              }
+              if (var28 != 123) {
+                var27++;
+                continue L2;
+              }
+              var26++;
             }
-          } else {
-            var14 = -1;
-            L19: while (true) {
-              var15 = param0.c((byte) 34);
-              if (var15 != var14) {
-                var4++;
+            var29 = 0;
+            var30 = param0.field_f;
+            param0.field_f = param0.field_f + var26;
+            var31 = param0.field_f;
+            param0.field_f = param0.field_f + var11;
+            var32 = param0.field_f;
+            param0.field_f = param0.field_f + var10;
+            var33 = param0.field_f;
+            param0.field_f = param0.field_f + var9;
+            var34 = param0.field_f;
+            param0.field_f = param0.field_f + var16;
+            var35 = param0.field_f;
+            param0.field_f = param0.field_f + var18;
+            var36 = param0.field_f;
+            param0.field_f = param0.field_f + var20;
+            var37 = param0.field_f;
+            param0.field_f = param0.field_f + (var7 + var8 + var11);
+            var38 = param0.field_f;
+            param0.field_f = param0.field_f + var7;
+            var39 = param0.field_f;
+            param0.field_f = param0.field_f + var27;
+            var40 = param0.field_f;
+            param0.field_f = param0.field_f + var8;
+            var41 = param0.field_f;
+            param0.field_f = param0.field_f + var17;
+            var42 = param0.field_f;
+            param0.field_f = param0.field_f + var19;
+            var43 = param0.field_f;
+            param0.field_f = param0.field_f + var21;
+            var44 = param0.field_f;
+            param0.field_f = param0.field_f + var12;
+            var45 = param0.field_f;
+            param0.field_f = param0.field_f + var9;
+            var46 = param0.field_f;
+            param0.field_f = param0.field_f + var22;
+            var47 = param0.field_f;
+            param0.field_f = param0.field_f + var23;
+            var48 = param0.field_f;
+            param0.field_f = param0.field_f + var24;
+            var49 = param0.field_f;
+            param0.field_f = param0.field_f + var25;
+            var50 = param0.field_f;
+            param0.field_f = param0.field_f + var5 * 3;
+            this.field_f = new byte[var4];
+            var51 = new qc(this.field_f);
+            var51.c((byte) 95, 1297377380);
+            var51.c((byte) 95, 6);
+            stackIn_66_0 = (qc) (var51);
+
+            if (var2 <= 1) {
+              stackIn_67_0 = (qc) ((Object) stackIn_66_0);
+              stackIn_67_1 = 0;
+            } else {
+              stackIn_67_0 = (qc) ((Object) stackIn_66_0);
+              stackIn_67_1 = 1;
+            }
+            ((qc) (Object) stackIn_67_0).e(stackIn_67_1, 28695);
+            var51.e(var2, 28695);
+            var51.e(var3, 28695);
+            param0.field_f = var13;
+            var52 = 0;
+            var53 = 0;
+            var54 = 0;
+            var55 = 0;
+            var56 = 0;
+            var57 = 0;
+            var58 = 0;
+            var70 = new int[128];
+            var28 = 0;
+            var60 = 0;
+            L4: while (true) {
+              if (var60 >= var2) {
+                return;
               }
-              var14 = var15 & 15;
-              if (var15 == 7) {
-                var13++;
-                continue L0;
-              } else {
-                if (var15 != 23) {
-                  if (var14 != 0) {
-                    if (var14 != 1) {
-                      if (var14 != 2) {
-                        if (var14 != 3) {
-                          if (var14 != 4) {
-                            if (var14 != 5) {
-                              if (var14 != 6) {
-                                throw new RuntimeException();
-                              } else {
-                                var12++;
-                                continue L19;
-                              }
-                            } else {
-                              var11++;
-                              continue L19;
-                            }
-                          } else {
-                            var10++;
-                            continue L19;
-                          }
-                        } else {
-                          var9++;
-                          continue L19;
-                        }
-                      } else {
-                        var6++;
-                        continue L19;
-                      }
-                    } else {
-                      var8++;
-                      continue L19;
-                    }
+              {
+                var51.c((byte) 95, 1297379947);
+                var51.field_f = var51.field_f + 4;
+                var61 = var51.field_f;
+                var62 = -1;
+                L5: while (true) {
+                  var63 = param0.g((byte) -125);
+                  var51.b((byte) -118, var63);
+                  incrementValue$0 = var29;
+                  var29++;
+                  var64 = param0.field_j[incrementValue$0] & 255;
+                  if (var64 == var62) {
+                    stackIn_73_0 = 0;
                   } else {
-                    var7++;
-                    continue L19;
+                    stackIn_73_0 = 1;
                   }
-                } else {
-                  var5++;
-                  continue L19;
+                  var65 = stackIn_73_0;
+                  var62 = var64 & 15;
+                  if (var64 == 7) {
+                    if (var65 != 0) {
+                      var51.d((byte) 123, 255);
+                    }
+                    var51.d((byte) 124, 47);
+                    var51.d((byte) 125, 0);
+                    var51.g(var51.field_f - var61, 0);
+                    var60++;
+                    continue L4;
+                  }
+                  if (var64 == 23) {
+                    if (var65 != 0) {
+                      var51.d((byte) 126, 255);
+                    }
+                    var51.d((byte) -22, 81);
+                    var51.d((byte) 121, 3);
+                    incrementValue$25 = var50;
+                    var50++;
+                    var51.d((byte) -79, (int) param0.field_j[incrementValue$25]);
+                    incrementValue$26 = var50;
+                    var50++;
+                    var51.d((byte) 125, (int) param0.field_j[incrementValue$26]);
+                    incrementValue$27 = var50;
+                    var50++;
+                    var51.d((byte) -75, (int) param0.field_j[incrementValue$27]);
+                    continue L5;
+                  }
+                  var52 = var52 ^ var64 >> 4;
+                  if (var62 == 0) {
+                    if (var65 != 0) {
+                      var51.d((byte) -100, 144 + var52);
+                    }
+                    incrementValue$23 = var37;
+                    var37++;
+                    var53 = var53 + param0.field_j[incrementValue$23];
+                    incrementValue$24 = var38;
+                    var38++;
+                    var54 = var54 + param0.field_j[incrementValue$24];
+                    var51.d((byte) -97, var53 & 127);
+                    var51.d((byte) -56, var54 & 127);
+                    continue L5;
+                  }
+                  if (var62 == 1) {
+                    if (var65 != 0) {
+                      var51.d((byte) 124, 128 + var52);
+                    }
+                    incrementValue$21 = var37;
+                    var37++;
+                    var53 = var53 + param0.field_j[incrementValue$21];
+                    incrementValue$22 = var40;
+                    var40++;
+                    var55 = var55 + param0.field_j[incrementValue$22];
+                    var51.d((byte) -63, var53 & 127);
+                    var51.d((byte) 125, var55 & 127);
+                    continue L5;
+                  }
+                  if (var62 != 2) {
+                    if (var62 == 3) {
+                      if (var65 != 0) {
+                        var51.d((byte) -8, 224 + var52);
+                      }
+                      incrementValue$5 = var45;
+                      var45++;
+                      var56 = var56 + param0.field_j[incrementValue$5];
+                      incrementValue$6 = var33;
+                      var33++;
+                      var56 = var56 + (param0.field_j[incrementValue$6] << 7);
+                      var51.d((byte) -62, var56 & 127);
+                      var51.d((byte) 122, var56 >> 7 & 127);
+                      continue L5;
+                    }
+                    if (var62 == 4) {
+                      if (var65 != 0) {
+                        var51.d((byte) 7, 208 + var52);
+                      }
+                      incrementValue$4 = var32;
+                      var32++;
+                      var57 = var57 + param0.field_j[incrementValue$4];
+                      var51.d((byte) -44, var57 & 127);
+                      continue L5;
+                    }
+                    if (var62 != 5) {
+                      if (var62 != 6) {
+                        throw new RuntimeException();
+                      }
+                      {
+                        if (var65 != 0) {
+                          var51.d((byte) -54, 192 + var52);
+                        }
+                        incrementValue$1 = var44;
+                        var44++;
+                        var51.d((byte) 121, (int) param0.field_j[incrementValue$1]);
+                        continue L5;
+                      }
+                    }
+                    {
+                      if (var65 != 0) {
+                        var51.d((byte) 122, 160 + var52);
+                      }
+                      incrementValue$2 = var37;
+                      var37++;
+                      var53 = var53 + param0.field_j[incrementValue$2];
+                      incrementValue$3 = var31;
+                      var31++;
+                      var58 = var58 + param0.field_j[incrementValue$3];
+                      var51.d((byte) -18, var53 & 127);
+                      var51.d((byte) 124, var58 & 127);
+                      continue L5;
+                    }
+                  }
+                  if (var65 != 0) {
+                    var51.d((byte) -19, 176 + var52);
+                  }
+                  L12: {
+                    incrementValue$7 = var15;
+                    var15++;
+                    var28 = var28 + param0.field_j[incrementValue$7] & 127;
+                    var51.d((byte) 126, var28);
+                    if (var28 != 0) {
+                      if (var28 != 32) {
+                        if (var28 == 1) {
+                          incrementValue$19 = var34;
+                          var34++;
+                          var66 = param0.field_j[incrementValue$19];
+                          break L12;
+                        }
+                        if (var28 == 33) {
+                          incrementValue$18 = var41;
+                          var41++;
+                          var66 = param0.field_j[incrementValue$18];
+                          break L12;
+                        }
+                        if (var28 == 7) {
+                          incrementValue$17 = var35;
+                          var35++;
+                          var66 = param0.field_j[incrementValue$17];
+                          break L12;
+                        }
+                        if (var28 == 39) {
+                          incrementValue$16 = var42;
+                          var42++;
+                          var66 = param0.field_j[incrementValue$16];
+                          break L12;
+                        }
+                        if (var28 == 10) {
+                          incrementValue$15 = var36;
+                          var36++;
+                          var66 = param0.field_j[incrementValue$15];
+                          break L12;
+                        }
+                        if (var28 == 42) {
+                          incrementValue$14 = var43;
+                          var43++;
+                          var66 = param0.field_j[incrementValue$14];
+                          break L12;
+                        }
+                        if (var28 == 99) {
+                          incrementValue$13 = var46;
+                          var46++;
+                          var66 = param0.field_j[incrementValue$13];
+                          break L12;
+                        }
+                        if (var28 == 98) {
+                          incrementValue$12 = var47;
+                          var47++;
+                          var66 = param0.field_j[incrementValue$12];
+                          break L12;
+                        }
+                        if (var28 == 101) {
+                          incrementValue$11 = var48;
+                          var48++;
+                          var66 = param0.field_j[incrementValue$11];
+                          break L12;
+                        }
+                        if (var28 == 100) {
+                          incrementValue$10 = var49;
+                          var49++;
+                          var66 = param0.field_j[incrementValue$10];
+                          break L12;
+                        }
+                        {
+                          if (var28 != 64) {
+                            if (var28 != 65) {
+                              if (var28 != 120) {
+                                if (var28 != 121) {
+                                  if (var28 != 123) {
+                                    incrementValue$8 = var39;
+                                    var39++;
+                                    var66 = param0.field_j[incrementValue$8];
+                                    break L12;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          incrementValue$9 = var30;
+                          var30++;
+                          var66 = param0.field_j[incrementValue$9];
+                          break L12;
+                        }
+                      }
+                    }
+                    incrementValue$20 = var44;
+                    var44++;
+                    var66 = param0.field_j[incrementValue$20];
+                  }
+                  var66 = var66 + var70[var28];
+                  var70[var28] = var66;
+                  var51.d((byte) -10, var66 & 127);
+                  continue L5;
                 }
               }
             }

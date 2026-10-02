@@ -20,10 +20,9 @@ final class nb {
           }
           if (null == vc.field_f) {
             return;
-          } else {
-            vc.field_f.a((java.awt.Component) ((Object) param1), (byte) 83);
-            return;
           }
+          vc.field_f.a((java.awt.Component) ((Object) param1), (byte) 83);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -76,139 +75,134 @@ final class nb {
         float stackIn_23_8 = 0.0f;
         float stackIn_23_9 = 0.0f;
         int stackIn_23_10 = 0;
-        if (param0 == -28195) {
-          var6 = (GameplayEntity) ((Object) ra.availableEntities.removeLast(1));
-          if (var6 != null) {
-            var7 = (double)(-320 + pointerX);
-            var9 = (double)(-240 + pointerY);
-            pointerX = (int)(320.0 + (var7 * Math.cos((double)(-el.gameplaySession.boardAngleRadians)) - var9 * Math.sin((double)(-el.gameplaySession.boardAngleRadians))));
-            pointerY = (int)(Math.sin((double)(-el.gameplaySession.boardAngleRadians)) * var7 + Math.cos((double)(-el.gameplaySession.boardAngleRadians)) * var9 + 240.0);
-            if (specialKinds) {
-              var11 = (variantId + categoryId) % 4;
-              var12 = 0;
-              if (var11 == 0) {
-                var12 = 2;
-              }
-              if (var11 == 1) {
-                var12 = 4;
-              }
-              if (var11 == 2) {
-                var12 = 3;
-              }
-              if (3 == var11) {
-                var12 = 1;
-              }
-              stackIn_17_0 = (GameplayEntity) (var6);
-
-              stackIn_17_1 = param0 + 28113;
-
-              stackIn_17_2 = (float)pointerX;
-
-              stackIn_17_3 = var12;
-
-              stackIn_17_4 = (float)(320 - pointerX);
-
-              if (var12 != 2) {
-                stackIn_18_0 = (GameplayEntity) ((Object) stackIn_17_0);
-                stackIn_18_1 = stackIn_17_1;
-                stackIn_18_2 = stackIn_17_2;
-                stackIn_18_3 = stackIn_17_3;
-                stackIn_18_4 = stackIn_17_4;
-                stackIn_18_5 = -1;
-              } else {
-                stackIn_18_0 = (GameplayEntity) ((Object) stackIn_17_0);
-                stackIn_18_1 = stackIn_17_1;
-                stackIn_18_2 = stackIn_17_2;
-                stackIn_18_3 = stackIn_17_3;
-                stackIn_18_4 = stackIn_17_4;
-                stackIn_18_5 = variantId;
-              }
-              L5: {
-                stackIn_18_0 = (GameplayEntity) ((Object) stackIn_18_0);
-
-                stackIn_21_6 = 0;
-
-                stackIn_21_7 = 0.0f;
-
-                stackIn_21_8 = (float)pointerY;
-
-                stackIn_21_9 = (float)(-pointerY + 240);
-
-                if (var12 != 2) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  if (1 != var12) {
-                    stackIn_23_0 = (GameplayEntity) ((Object) stackIn_18_0);
-                    stackIn_23_1 = stackIn_18_1;
-                    stackIn_23_2 = stackIn_18_2;
-                    stackIn_23_3 = stackIn_18_3;
-                    stackIn_23_4 = stackIn_18_4;
-                    stackIn_23_5 = stackIn_18_5;
-                    stackIn_23_6 = stackIn_21_6;
-                    stackIn_23_7 = stackIn_21_7;
-                    stackIn_23_8 = stackIn_21_8;
-                    stackIn_23_9 = stackIn_21_9;
-                    stackIn_23_10 = -1;
-                    break L5;
-                  } else {
-                    stackIn_18_0 = (GameplayEntity) ((Object) stackIn_18_0);
-
-
-
-
-
-
-
-
-
-                  }
-                }
-                stackIn_23_0 = (GameplayEntity) ((Object) stackIn_18_0);
-                stackIn_23_1 = stackIn_18_1;
-                stackIn_23_2 = stackIn_18_2;
-                stackIn_23_3 = stackIn_18_3;
-                stackIn_23_4 = stackIn_18_4;
-                stackIn_23_5 = stackIn_18_5;
-                stackIn_23_6 = stackIn_21_6;
-                stackIn_23_7 = stackIn_21_7;
-                stackIn_23_8 = stackIn_21_8;
-                stackIn_23_9 = stackIn_21_9;
-                stackIn_23_10 = categoryId;
-              }
-              ((GameplayEntity) (Object) stackIn_23_0).initializeEntityMotion(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, stackIn_23_8, stackIn_23_9, stackIn_23_10, 0.0f);
-              var6.entityQueue = null;
-              ji.movingEntities.addLast(param0 ^ 28286, var6);
-              return;
-            } else {
-              var6.initializeEntityMotion(-75, (float)pointerX, 0, (float)(-pointerX + 320), variantId, 0, 0.0f, (float)pointerY, (float)(-pointerY + 240), categoryId, 0.0f);
-              var6.entityQueue = null;
-              ji.movingEntities.addLast(param0 ^ 28286, var6);
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (param0 != -28195) {
           return;
         }
+        var6 = (GameplayEntity) ((Object) ra.availableEntities.removeLast(1));
+        if (var6 == null) {
+          return;
+        }
+        var7 = (double)(-320 + pointerX);
+        var9 = (double)(-240 + pointerY);
+        pointerX = (int)(320.0 + (var7 * Math.cos((double)(-el.gameplaySession.boardAngleRadians)) - var9 * Math.sin((double)(-el.gameplaySession.boardAngleRadians))));
+        pointerY = (int)(Math.sin((double)(-el.gameplaySession.boardAngleRadians)) * var7 + Math.cos((double)(-el.gameplaySession.boardAngleRadians)) * var9 + 240.0);
+        if (!specialKinds) {
+          var6.initializeEntityMotion(-75, (float)pointerX, 0, (float)(-pointerX + 320), variantId, 0, 0.0f, (float)pointerY, (float)(-pointerY + 240), categoryId, 0.0f);
+          var6.entityQueue = null;
+          ji.movingEntities.addLast(param0 ^ 28286, var6);
+          return;
+        }
+        var11 = (variantId + categoryId) % 4;
+        var12 = 0;
+        if (var11 == 0) {
+          var12 = 2;
+        }
+        if (var11 == 1) {
+          var12 = 4;
+        }
+        if (var11 == 2) {
+          var12 = 3;
+        }
+        if (3 == var11) {
+          var12 = 1;
+        }
+        stackIn_17_0 = (GameplayEntity) (var6);
+
+        stackIn_17_1 = param0 + 28113;
+
+        stackIn_17_2 = (float)pointerX;
+
+        stackIn_17_3 = var12;
+
+        stackIn_17_4 = (float)(320 - pointerX);
+
+        if (var12 != 2) {
+          stackIn_18_0 = (GameplayEntity) ((Object) stackIn_17_0);
+          stackIn_18_1 = stackIn_17_1;
+          stackIn_18_2 = stackIn_17_2;
+          stackIn_18_3 = stackIn_17_3;
+          stackIn_18_4 = stackIn_17_4;
+          stackIn_18_5 = -1;
+        } else {
+          stackIn_18_0 = (GameplayEntity) ((Object) stackIn_17_0);
+          stackIn_18_1 = stackIn_17_1;
+          stackIn_18_2 = stackIn_17_2;
+          stackIn_18_3 = stackIn_17_3;
+          stackIn_18_4 = stackIn_17_4;
+          stackIn_18_5 = variantId;
+        }
+        L5: {
+          stackIn_18_0 = (GameplayEntity) ((Object) stackIn_18_0);
+
+          stackIn_21_6 = 0;
+
+          stackIn_21_7 = 0.0f;
+
+          stackIn_21_8 = (float)pointerY;
+
+          stackIn_21_9 = (float)(-pointerY + 240);
+
+          if (var12 != 2) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            if (1 != var12) {
+              stackIn_23_0 = (GameplayEntity) ((Object) stackIn_18_0);
+              stackIn_23_1 = stackIn_18_1;
+              stackIn_23_2 = stackIn_18_2;
+              stackIn_23_3 = stackIn_18_3;
+              stackIn_23_4 = stackIn_18_4;
+              stackIn_23_5 = stackIn_18_5;
+              stackIn_23_6 = stackIn_21_6;
+              stackIn_23_7 = stackIn_21_7;
+              stackIn_23_8 = stackIn_21_8;
+              stackIn_23_9 = stackIn_21_9;
+              stackIn_23_10 = -1;
+              break L5;
+            }
+            stackIn_18_0 = (GameplayEntity) ((Object) stackIn_18_0);
+
+
+
+
+
+
+
+
+
+          }
+          stackIn_23_0 = (GameplayEntity) ((Object) stackIn_18_0);
+          stackIn_23_1 = stackIn_18_1;
+          stackIn_23_2 = stackIn_18_2;
+          stackIn_23_3 = stackIn_18_3;
+          stackIn_23_4 = stackIn_18_4;
+          stackIn_23_5 = stackIn_18_5;
+          stackIn_23_6 = stackIn_21_6;
+          stackIn_23_7 = stackIn_21_7;
+          stackIn_23_8 = stackIn_21_8;
+          stackIn_23_9 = stackIn_21_9;
+          stackIn_23_10 = categoryId;
+        }
+        ((GameplayEntity) (Object) stackIn_23_0).initializeEntityMotion(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, stackIn_23_8, stackIn_23_9, stackIn_23_10, 0.0f);
+        var6.entityQueue = null;
+        ji.movingEntities.addLast(param0 ^ 28286, var6);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {

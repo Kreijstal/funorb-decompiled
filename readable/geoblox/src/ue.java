@@ -70,7 +70,10 @@ final class ue {
         double var10;
         double var12;
         double var14;
-        if (param1 != param0) {
+        if (param1 == param0) {
+          return;
+        }
+        {
           var3 = ic.a(param0, param1, -126);
           param0 = param0 / var3;
           param1 = param1 / var3;
@@ -105,8 +108,6 @@ final class ue {
               var8++;
             }
           }
-          return;
-        } else {
           return;
         }
     }

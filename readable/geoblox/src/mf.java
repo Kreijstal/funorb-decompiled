@@ -44,19 +44,17 @@ final class mf {
         try {
           var5 = param3.a(param1, -28153, param0);
           var4 = var5;
-          if (param2 >= 102) {
-            if (var5 == null) {
-              stackIn_6_0 = 0;
-              return stackIn_6_0 != 0;
-            } else {
-              IntrusiveNode.a(true, var5);
-              stackIn_8_0 = 1;
-              return stackIn_8_0 != 0;
-            }
-          } else {
+          if (param2 < 102) {
             stackIn_2_0 = 0;
             return stackIn_2_0 != 0;
           }
+          if (var5 == null) {
+            stackIn_6_0 = 0;
+            return stackIn_6_0 != 0;
+          }
+          IntrusiveNode.a(true, var5);
+          stackIn_8_0 = 1;
+          return stackIn_8_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;

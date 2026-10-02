@@ -65,9 +65,8 @@ final class r extends f implements pl {
             if (param1.field_d) {
               this.b(new s((r) (this)), -111);
               return;
-            } else {
-              var5.a(-2, cl.continueText, (bb) (this));
             }
+            var5.a(-2, cl.continueText, (bb) (this));
           } else {
             if (!this.field_vb) {
               if (param1.field_j == 5) {
@@ -145,73 +144,68 @@ final class r extends f implements pl {
           if (var2_int == 0) {
             stackIn_4_0 = pj.field_f;
             return stackIn_4_0;
-          } else {
-            if (var2_int > 64) {
-              stackIn_8_0 = hk.field_x;
-              return stackIn_8_0;
-            } else {
-              if (34 != param0.charAt(0)) {
-                var3 = 0;
-                for (var4 = 0; var4 < var2_int; var4++) {
-                  L1: {
-                    var5 = param0.charAt(var4);
-                    if (var5 == 46) {
-                      if (0 != var4) {
-                        if (var4 != -1 + var2_int) {
-                          if (var3 == 0) {
-                            var3 = 1;
-                            break L1;
-                          }
-                        }
-                      }
-                      stackIn_41_0 = ii.field_h;
-                      return stackIn_41_0;
-                    } else {
-                      if (rd.field_w.indexOf(var5) == -1) {
-                        stackIn_46_0 = ii.field_h;
-                        return stackIn_46_0;
-                      } else {
-                        var3 = 0;
-                      }
-                    }
-                  }
-                }
-                if (!param1) {
-                  field_sb = (String) null;
-                  stackIn_52_0 = null;
-                  return (nd) ((Object) stackIn_52_0);
+          }
+          if (var2_int > 64) {
+            stackIn_8_0 = hk.field_x;
+            return stackIn_8_0;
+          }
+          if (34 == param0.charAt(0)) {
+            if (param0.charAt(var2_int - 1) != 34) {
+              stackIn_13_0 = ii.field_h;
+              return stackIn_13_0;
+            }
+            var3 = 0;
+            for (var4 = 1; var4 < -1 + var2_int; var4++) {
+              var5 = param0.charAt(var4);
+              if (var5 == 92) {
+                if (var3 != 0) {
+                  stackIn_22_0 = 0;
                 } else {
-                  return null;
+                  stackIn_22_0 = 1;
                 }
+                var3 = stackIn_22_0;
               } else {
-                if (param0.charAt(var2_int - 1) != 34) {
-                  stackIn_13_0 = ii.field_h;
-                  return stackIn_13_0;
-                } else {
-                  var3 = 0;
-                  for (var4 = 1; var4 < -1 + var2_int; var4++) {
-                    var5 = param0.charAt(var4);
-                    if (var5 == 92) {
-                      if (var3 != 0) {
-                        stackIn_22_0 = 0;
-                      } else {
-                        stackIn_22_0 = 1;
-                      }
-                      var3 = stackIn_22_0;
-                    } else {
-                      if (var5 == 34) {
-                        if (var3 == 0) {
-                          stackIn_27_0 = ii.field_h;
-                          return stackIn_27_0;
-                        }
-                      }
-                      var3 = 0;
-                    }
+                if (var5 == 34) {
+                  if (var3 == 0) {
+                    stackIn_27_0 = ii.field_h;
+                    return stackIn_27_0;
                   }
-                  return null;
                 }
+                var3 = 0;
               }
             }
+            return null;
+          }
+          {
+            var3 = 0;
+            for (var4 = 0; var4 < var2_int; var4++) {
+              L1: {
+                var5 = param0.charAt(var4);
+                if (var5 == 46) {
+                  if (0 != var4) {
+                    if (var4 != -1 + var2_int) {
+                      if (var3 == 0) {
+                        var3 = 1;
+                        break L1;
+                      }
+                    }
+                  }
+                  stackIn_41_0 = ii.field_h;
+                  return stackIn_41_0;
+                }
+                if (rd.field_w.indexOf(var5) == -1) {
+                  stackIn_46_0 = ii.field_h;
+                  return stackIn_46_0;
+                }
+                var3 = 0;
+              }
+            }
+            if (param1) {
+              return null;
+            }
+            field_sb = (String) null;
+            stackIn_52_0 = null;
+            return (nd) ((Object) stackIn_52_0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

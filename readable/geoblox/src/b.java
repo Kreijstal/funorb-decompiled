@@ -31,18 +31,13 @@ final class b {
         if (param0) {
           b.a(-38);
         }
-        L1: while (true) {
-          if (var3 < var2.length) {
-            if (param1 == var2[var3].field_b) {
-              return var2[var3];
-            } else {
-              var3++;
-              continue L1;
-            }
-          } else {
-            return null;
+        L1: while (var3 < var2.length) {
+          if (param1 == var2[var3].field_b) {
+            return var2[var3];
           }
+          var3++;
         }
+        return null;
     }
 
     static {

@@ -49,9 +49,8 @@ final class og extends DualLinkNode {
         }
         if (param0 == 55) {
           return var1;
-        } else {
-          return (String) null;
         }
+        return (String) null;
     }
 
     private final void a(int param0, qc param1, int param2) {
@@ -76,38 +75,36 @@ final class og extends DualLinkNode {
             if (1 == param0) {
               this.field_p = uj.a('<', true, param1.e((byte) 116));
             } else {
-              if (2 != param0) {
-                if (3 != param0) {
-                  if (param0 != 4) {
-                  }
-                } else {
-                  var4_int = param1.c((byte) 34);
-                  this.field_s = new int[var4_int][];
-                  this.field_o = new int[var4_int];
-                  for (var5 = 0; var4_int > var5; var5++) {
-                    L2: {
-                      var6 = param1.b(true);
-                      var7 = b.a(false, var6);
-                      if (var7 != null) {
-                        this.field_o[var5] = var6;
-                        array$0 = new int[var7.field_a];
-                        this.field_s[var5] = array$0;
-                        for (var8 = 0; var7.field_a > var8; var8++) {
-                          this.field_s[var5][var8] = param1.b(true);
-                        }
-                        break L2;
-                      }
-                    }
-                  }
-                  break L0;
-                }
-              } else {
+              if (2 == param0) {
                 var4_int = param1.c((byte) 34);
                 this.field_m = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
                   this.field_m[var5] = param1.b(true);
                 }
                 break L0;
+              }
+              if (3 == param0) {
+                var4_int = param1.c((byte) 34);
+                this.field_s = new int[var4_int][];
+                this.field_o = new int[var4_int];
+                for (var5 = 0; var4_int > var5; var5++) {
+                  L2: {
+                    var6 = param1.b(true);
+                    var7 = b.a(false, var6);
+                    if (var7 != null) {
+                      this.field_o[var5] = var6;
+                      array$0 = new int[var7.field_a];
+                      this.field_s[var5] = array$0;
+                      for (var8 = 0; var7.field_a > var8; var8++) {
+                        this.field_s[var5][var8] = param1.b(true);
+                      }
+                      break L2;
+                    }
+                  }
+                }
+                break L0;
+              }
+              if (param0 != 4) {
               }
             }
           }
@@ -207,18 +204,16 @@ final class og extends DualLinkNode {
         RuntimeException var3 = null;
         var4 = Geoblox.field_C;
         try {
-          if (param0 == 0) {
-            L0: while (true) {
-              var3_int = param1.c((byte) 34);
-              if (0 != var3_int) {
-                this.a(var3_int, param1, -26093);
-                continue L0;
-              } else {
-                return;
-              }
-            }
-          } else {
+          if (param0 != 0) {
             return;
+          }
+          L0: while (true) {
+            var3_int = param1.c((byte) 34);
+            if (0 == var3_int) {
+              return;
+            }
+            this.a(var3_int, param1, -26093);
+            continue L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

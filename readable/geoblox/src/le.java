@@ -38,12 +38,11 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.isPopupTrigger()) {
-            param0.consume();
-            return;
-          } else {
+          if (!param0.isPopupTrigger()) {
             return;
           }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -121,10 +120,9 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           if (!param0.isPopupTrigger()) {
             return;
-          } else {
-            param0.consume();
-            return;
           }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -174,15 +172,14 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != pg.field_c) {
-            GameplaySession.field_P = 0;
-            lj.field_b = -1;
-            eg.field_h = -1;
-            fc.field_f = true;
-            return;
-          } else {
+          if (null == pg.field_c) {
             return;
           }
+          GameplaySession.field_P = 0;
+          lj.field_b = -1;
+          eg.field_h = -1;
+          fc.field_f = true;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -234,12 +231,11 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             }
             fc.field_f = true;
           }
-          if (param0.isPopupTrigger()) {
-            param0.consume();
-            return;
-          } else {
+          if (!param0.isPopupTrigger()) {
             return;
           }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -269,12 +265,11 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != pg.field_c) {
-            s.field_I = 0;
-            return;
-          } else {
+          if (null == pg.field_c) {
             return;
           }
+          s.field_I = 0;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -304,15 +299,14 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != pg.field_c) {
-            GameplaySession.field_P = 0;
-            lj.field_b = param0.getX();
-            eg.field_h = param0.getY();
-            fc.field_f = true;
-            return;
-          } else {
+          if (null == pg.field_c) {
             return;
           }
+          GameplaySession.field_P = 0;
+          lj.field_b = param0.getX();
+          eg.field_h = param0.getY();
+          fc.field_f = true;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

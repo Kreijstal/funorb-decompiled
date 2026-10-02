@@ -30,24 +30,21 @@ public class aj {
             if (null != field_b) {
               field_e = true;
               return;
-            } else {
-              field_b = "~/";
-              field_e = true;
-              return;
             }
+            field_b = "~/";
+            field_e = true;
+            return;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (Exception) (Object) decompiledCaughtException;
         }
-        if (null == field_b) {
-          field_b = "~/";
-          field_e = true;
-          return;
-        } else {
+        if (null != field_b) {
           field_e = true;
           return;
         }
+        field_b = "~/";
+        field_e = true;
     }
 
     public static File a(String param0, int param1, String param2, int param3) {

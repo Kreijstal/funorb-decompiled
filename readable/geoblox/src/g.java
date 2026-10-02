@@ -42,56 +42,47 @@ final class g extends TextInputValidator {
         try {
           var6 = this.field_k.field_s.toLowerCase();
           var4 = candidateText.toLowerCase();
-          if (var4.length() != 0) {
-            var5 = var4;
-            if (em.a(var5, guard - 344)) {
-              stackIn_6_0 = ji.createPasswordLengthAlertText;
-              return stackIn_6_0;
-            } else {
-              if (ak.a(var5, (byte) -120)) {
-                stackIn_10_0 = ai.createPasswordCharacterAlertText;
-                return stackIn_10_0;
-              } else {
-                if (!ra.a(guard + 18303, var5)) {
-                  if (guard != 422) {
-                    g.g(119);
-                  }
-                  if (this.a(candidateText, -29267)) {
-                    stackIn_19_0 = uf.createPasswordContainsEmailAlertText;
-                    return stackIn_19_0;
-                  } else {
-                    if (0 < var6.length()) {
-                      if (ak.a(var5, var6, -98)) {
-                        stackIn_26_0 = gf.createPasswordContainsNameAlertText;
-                        return stackIn_26_0;
-                      } else {
-                        if (uk.a(8, var6, var5)) {
-                          stackIn_30_0 = gg.createPasswordContainsPartialNameAlertText;
-                          return stackIn_30_0;
-                        } else {
-                          if (wc.a(var5, var6, (byte) -96)) {
-                            stackIn_34_0 = gf.createPasswordContainsNameAlertText;
-                            return stackIn_34_0;
-                          } else {
-                            return ji.createPasswordLengthAlertText;
-                          }
-                        }
-                      }
-                    } else {
-                      stackIn_22_0 = ii.createPasswordValidText;
-                      return stackIn_22_0;
-                    }
-                  }
-                } else {
-                  stackIn_13_0 = gg.createRepeatedPasswordAlertText;
-                  return stackIn_13_0;
-                }
-              }
-            }
-          } else {
+          if (var4.length() == 0) {
             stackIn_2_0 = null;
             return (String) ((Object) stackIn_2_0);
           }
+          var5 = var4;
+          if (em.a(var5, guard - 344)) {
+            stackIn_6_0 = ji.createPasswordLengthAlertText;
+            return stackIn_6_0;
+          }
+          if (ak.a(var5, (byte) -120)) {
+            stackIn_10_0 = ai.createPasswordCharacterAlertText;
+            return stackIn_10_0;
+          }
+          if (ra.a(guard + 18303, var5)) {
+            stackIn_13_0 = gg.createRepeatedPasswordAlertText;
+            return stackIn_13_0;
+          }
+          if (guard != 422) {
+            g.g(119);
+          }
+          if (this.a(candidateText, -29267)) {
+            stackIn_19_0 = uf.createPasswordContainsEmailAlertText;
+            return stackIn_19_0;
+          }
+          if (0 >= var6.length()) {
+            stackIn_22_0 = ii.createPasswordValidText;
+            return stackIn_22_0;
+          }
+          if (ak.a(var5, var6, -98)) {
+            stackIn_26_0 = gf.createPasswordContainsNameAlertText;
+            return stackIn_26_0;
+          }
+          if (uk.a(8, var6, var5)) {
+            stackIn_30_0 = gg.createPasswordContainsPartialNameAlertText;
+            return stackIn_30_0;
+          }
+          if (!wc.a(var5, var6, (byte) -96)) {
+            return ji.createPasswordLengthAlertText;
+          }
+          stackIn_34_0 = gf.createPasswordContainsNameAlertText;
+          return stackIn_34_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -138,14 +129,13 @@ final class g extends TextInputValidator {
                 if (var3.length() - 1 > var5) {
                   var6 = var3.substring(0, var5);
                   var7 = var3.substring(var5 + 1);
-                  if (var4.indexOf(var6) < 0) {
-                    if (var4.indexOf(var7) >= 0) {
-                      stackIn_9_0 = 1;
-                      return stackIn_9_0 != 0;
-                    }
-                  } else {
+                  if (var4.indexOf(var6) >= 0) {
                     stackIn_6_0 = 1;
                     return stackIn_6_0 != 0;
+                  }
+                  if (var4.indexOf(var7) >= 0) {
+                    stackIn_9_0 = 1;
+                    return stackIn_9_0 != 0;
                   }
                 }
               }
@@ -154,10 +144,9 @@ final class g extends TextInputValidator {
           if (param1 == -29267) {
             stackIn_13_0 = 0;
             return stackIn_13_0 != 0;
-          } else {
-            serviceUnavailableText = (String) null;
-            return false;
           }
+          serviceUnavailableText = (String) null;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -201,20 +190,17 @@ final class g extends TextInputValidator {
           if (var4.length() == 0) {
             stackIn_5_0 = si.field_m;
             return stackIn_5_0;
-          } else {
-            if (dd.a(var4, var3, -25321)) {
-              if (!this.a(candidateText, -29267)) {
-                stackIn_13_0 = kk.field_w;
-                return stackIn_13_0;
-              } else {
-                stackIn_11_0 = si.field_m;
-                return stackIn_11_0;
-              }
-            } else {
-              stackIn_8_0 = si.field_m;
-              return stackIn_8_0;
-            }
           }
+          if (!dd.a(var4, var3, -25321)) {
+            stackIn_8_0 = si.field_m;
+            return stackIn_8_0;
+          }
+          if (!this.a(candidateText, -29267)) {
+            stackIn_13_0 = kk.field_w;
+            return stackIn_13_0;
+          }
+          stackIn_11_0 = si.field_m;
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

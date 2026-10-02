@@ -54,33 +54,31 @@ final class tg extends com.ms.dll.Callback {
           ((tg) (this)).field_e = stackIn_28_1 != 0;
           com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
           return;
-        } else {
-          if (0 != this.field_b) {
-            this.field_e = true;
-            com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
-            var6 = this;
-            synchronized (var6) {
-              com.ms.win32.User32.SetWindowLong(this.field_b, -4, this.field_c);
-            }
-          }
+        }
+        if (0 != this.field_b) {
+          this.field_e = true;
+          com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
           var6 = this;
           synchronized (var6) {
-            this.field_b = var5;
-            this.field_c = com.ms.win32.User32.SetWindowLong(this.field_b, -4, this);
+            com.ms.win32.User32.SetWindowLong(this.field_b, -4, this.field_c);
           }
-          stackIn_21_0 = this;
-
-          if (!param1) {
-            stackIn_22_0 = this;
-            stackIn_22_1 = 0;
-          } else {
-            stackIn_22_0 = this;
-            stackIn_22_1 = 1;
-          }
-          ((tg) (this)).field_e = stackIn_22_1 != 0;
-          com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
-          return;
         }
+        var6 = this;
+        synchronized (var6) {
+          this.field_b = var5;
+          this.field_c = com.ms.win32.User32.SetWindowLong(this.field_b, -4, this);
+        }
+        stackIn_21_0 = this;
+
+        if (!param1) {
+          stackIn_22_0 = this;
+          stackIn_22_1 = 0;
+        } else {
+          stackIn_22_0 = this;
+          stackIn_22_1 = 1;
+        }
+        ((tg) (this)).field_e = stackIn_22_1 != 0;
+        com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -96,58 +94,53 @@ final class tg extends com.ms.dll.Callback {
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
         int var5;
-        if (this.field_b == param0) {
-          if (32 == param1) {
-            var5 = 65535 & param3;
-            if (var5 != 1) {
-              if (param1 != 101024) {
-                if (1 == param1) {
-                  this.field_b = 0;
-                  this.field_e = true;
-                  return com.ms.win32.User32.CallWindowProc(this.field_c, param0, param1, param2, param3);
-                } else {
-                  return com.ms.win32.User32.CallWindowProc(this.field_c, param0, param1, param2, param3);
-                }
-              } else {
-                if (this.field_e) {
-                  stackIn_21_0 = this.field_a;
-                } else {
-                  stackIn_21_0 = 0;
-                }
-                com.ms.win32.User32.SetCursor(stackIn_21_0);
-                return 0;
-              }
-            } else {
-              if (!this.field_e) {
-                stackIn_16_0 = 0;
-              } else {
-                stackIn_16_0 = this.field_a;
-              }
-              com.ms.win32.User32.SetCursor(stackIn_16_0);
-              return 0;
-            }
-          } else {
-            if (param1 != 101024) {
-              if (1 == param1) {
-                this.field_b = 0;
-                this.field_e = true;
-                return com.ms.win32.User32.CallWindowProc(this.field_c, param0, param1, param2, param3);
-              } else {
-                return com.ms.win32.User32.CallWindowProc(this.field_c, param0, param1, param2, param3);
-              }
-            } else {
-              if (this.field_e) {
-                stackIn_7_0 = this.field_a;
-              } else {
-                stackIn_7_0 = 0;
-              }
-              com.ms.win32.User32.SetCursor(stackIn_7_0);
-              return 0;
-            }
-          }
-        } else {
+        if (this.field_b != param0) {
           var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
           return com.ms.win32.User32.CallWindowProc(var5, param0, param1, param2, param3);
+        }
+        if (32 != param1) {
+          if (param1 != 101024) {
+            if (1 != param1) {
+              return com.ms.win32.User32.CallWindowProc(this.field_c, param0, param1, param2, param3);
+            }
+            this.field_b = 0;
+            this.field_e = true;
+            return com.ms.win32.User32.CallWindowProc(this.field_c, param0, param1, param2, param3);
+          }
+          if (this.field_e) {
+            stackIn_7_0 = this.field_a;
+          } else {
+            stackIn_7_0 = 0;
+          }
+          com.ms.win32.User32.SetCursor(stackIn_7_0);
+          return 0;
+        }
+        {
+          var5 = 65535 & param3;
+          if (var5 == 1) {
+            if (!this.field_e) {
+              stackIn_16_0 = 0;
+            } else {
+              stackIn_16_0 = this.field_a;
+            }
+            com.ms.win32.User32.SetCursor(stackIn_16_0);
+            return 0;
+          }
+          if (param1 != 101024) {
+            if (1 != param1) {
+              return com.ms.win32.User32.CallWindowProc(this.field_c, param0, param1, param2, param3);
+            }
+            this.field_b = 0;
+            this.field_e = true;
+            return com.ms.win32.User32.CallWindowProc(this.field_c, param0, param1, param2, param3);
+          }
+          if (this.field_e) {
+            stackIn_21_0 = this.field_a;
+          } else {
+            stackIn_21_0 = 0;
+          }
+          com.ms.win32.User32.SetCursor(stackIn_21_0);
+          return 0;
         }
     }
 

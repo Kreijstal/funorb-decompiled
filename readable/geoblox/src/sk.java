@@ -114,7 +114,8 @@ final class sk {
           try {
             if (param1 + param2 > param0.length) {
               throw new ArrayIndexOutOfBoundsException(-param0.length + param2 + param1);
-            } else {
+            }
+            {
               if (-1L != this.field_c) {
                 if (this.field_f >= this.field_c) {
                   if ((long)this.field_d + this.field_c >= (long)param1 + this.field_f) {
@@ -143,37 +144,31 @@ final class sk {
                 }
               }
               L5: {
-                if (this.field_h.length >= param1) {
-                  if (param1 > 0) {
-                    this.a(true);
-                    var9_int = param1;
-                    if (this.field_i < var9_int) {
-                      var9_int = this.field_i;
-                    }
-                    sf.a(this.field_h, 0, param0, param2, var9_int);
-                    param1 = param1 - var9_int;
-                    param2 = param2 + var9_int;
-                    this.field_f = this.field_f + (long)var9_int;
-                  }
-                } else {
+                if (this.field_h.length < param1) {
                   this.field_a.a(this.field_f, true);
                   this.field_b = this.field_f;
-                  L7: while (true) {
-                    if (param1 <= 0) {
+                  L7: while (param1 > 0) {
+                    var9_int = this.field_a.a(param1, param0, param2, false);
+                    if (-1 == var9_int) {
                       break L5;
-                    } else {
-                      var9_int = this.field_a.a(param1, param0, param2, false);
-                      if (-1 != var9_int) {
-                        this.field_f = this.field_f + (long)var9_int;
-                        this.field_b = this.field_b + (long)var9_int;
-                        param1 = param1 - var9_int;
-                        param2 = param2 + var9_int;
-                        continue L7;
-                      } else {
-                        break L5;
-                      }
                     }
+                    this.field_f = this.field_f + (long)var9_int;
+                    this.field_b = this.field_b + (long)var9_int;
+                    param1 = param1 - var9_int;
+                    param2 = param2 + var9_int;
                   }
+                  break L5;
+                }
+                if (param1 > 0) {
+                  this.a(true);
+                  var9_int = param1;
+                  if (this.field_i < var9_int) {
+                    var9_int = this.field_i;
+                  }
+                  sf.a(this.field_h, 0, param0, param2, var9_int);
+                  param1 = param1 - var9_int;
+                  param2 = param2 + var9_int;
+                  this.field_f = this.field_f + (long)var9_int;
                 }
               }
               if (-1L != this.field_c) {
@@ -245,9 +240,8 @@ final class sk {
           }
           if (param1 > 0) {
             throw new EOFException();
-          } else {
-            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
@@ -313,84 +307,81 @@ final class sk {
                 this.b((byte) 127);
               }
             }
-            if (!param3) {
-              if (param0 > this.field_j.length) {
-                if (this.field_f != this.field_b) {
-                  stackIn_19_0 = this.field_a;
-
-                  stackIn_19_1 = this.field_f;
-
-                  if (param3) {
-                    stackIn_20_0 = (pa) ((Object) stackIn_19_0);
-                    stackIn_20_1 = stackIn_19_1;
-                    stackIn_20_2 = 0;
-                  } else {
-                    stackIn_20_0 = (pa) ((Object) stackIn_19_0);
-                    stackIn_20_1 = stackIn_19_1;
-                    stackIn_20_2 = 1;
-                  }
-                  ((pa) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_20_2 != 0);
-                  this.field_b = this.field_f;
-                }
-                this.field_a.a(param2, param1, 90, param0);
-                this.field_b = this.field_b + (long)param0;
-                if (~this.field_b < ~this.field_e) {
-                  this.field_e = this.field_b;
-                }
-                L6: {
-                  var5_long = -1L;
-                  var7 = -1L;
-                  if (~this.field_g >= ~this.field_f) {
-                    if (~this.field_f > ~(this.field_g + (long)this.field_i)) {
-                      var5_long = this.field_f;
-                      break L6;
-                    }
-                  }
-                  if (~this.field_g <= ~this.field_f) {
-                    if (~this.field_g > ~(this.field_f + (long)param0)) {
-                      var5_long = this.field_g;
-                    }
-                  }
-                }
-                L8: {
-                  if (~this.field_g > ~((long)param0 + this.field_f)) {
-                    if (~((long)this.field_i + this.field_g) <= ~(this.field_f + (long)param0)) {
-                      var7 = this.field_f + (long)param0;
-                      break L8;
-                    }
-                  }
-                  if (this.field_f < this.field_g + (long)this.field_i) {
-                    if (~(this.field_g + (long)this.field_i) >= ~(this.field_f + (long)param0)) {
-                      var7 = (long)this.field_i + this.field_g;
-                    }
-                  }
-                }
-                if (var5_long > -1L) {
-                  if (~var5_long > ~var7) {
-                    var9 = (int)(-var5_long + var7);
-                    sf.a(param2, (int)(var5_long + ((long)param1 - this.field_f)), this.field_h, (int)(var5_long - this.field_g), var9);
-                  }
-                }
-                this.field_f = this.field_f + (long)param0;
-                return;
-              } else {
-                if (param0 <= 0) {
-                  return;
-                } else {
-                  if (this.field_c == -1L) {
-                    this.field_c = this.field_f;
-                  }
-                  sf.a(param2, param1, this.field_j, (int)(-this.field_c + this.field_f), param0);
-                  this.field_f = this.field_f + (long)param0;
-                  if (~(long)this.field_d > ~(-this.field_c + this.field_f)) {
-                    this.field_d = (int)(this.field_f - this.field_c);
-                  }
-                  return;
-                }
-              }
-            } else {
+            if (param3) {
               return;
             }
+            if (param0 <= this.field_j.length) {
+              if (param0 <= 0) {
+                return;
+              }
+              if (this.field_c == -1L) {
+                this.field_c = this.field_f;
+              }
+              sf.a(param2, param1, this.field_j, (int)(-this.field_c + this.field_f), param0);
+              this.field_f = this.field_f + (long)param0;
+              if (~(long)this.field_d > ~(-this.field_c + this.field_f)) {
+                this.field_d = (int)(this.field_f - this.field_c);
+              }
+              return;
+            }
+            if (this.field_f != this.field_b) {
+              stackIn_19_0 = this.field_a;
+
+              stackIn_19_1 = this.field_f;
+
+              if (param3) {
+                stackIn_20_0 = (pa) ((Object) stackIn_19_0);
+                stackIn_20_1 = stackIn_19_1;
+                stackIn_20_2 = 0;
+              } else {
+                stackIn_20_0 = (pa) ((Object) stackIn_19_0);
+                stackIn_20_1 = stackIn_19_1;
+                stackIn_20_2 = 1;
+              }
+              ((pa) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_20_2 != 0);
+              this.field_b = this.field_f;
+            }
+            this.field_a.a(param2, param1, 90, param0);
+            this.field_b = this.field_b + (long)param0;
+            if (~this.field_b < ~this.field_e) {
+              this.field_e = this.field_b;
+            }
+            L6: {
+              var5_long = -1L;
+              var7 = -1L;
+              if (~this.field_g >= ~this.field_f) {
+                if (~this.field_f > ~(this.field_g + (long)this.field_i)) {
+                  var5_long = this.field_f;
+                  break L6;
+                }
+              }
+              if (~this.field_g <= ~this.field_f) {
+                if (~this.field_g > ~(this.field_f + (long)param0)) {
+                  var5_long = this.field_g;
+                }
+              }
+            }
+            L8: {
+              if (~this.field_g > ~((long)param0 + this.field_f)) {
+                if (~((long)this.field_i + this.field_g) <= ~(this.field_f + (long)param0)) {
+                  var7 = this.field_f + (long)param0;
+                  break L8;
+                }
+              }
+              if (this.field_f < this.field_g + (long)this.field_i) {
+                if (~(this.field_g + (long)this.field_i) >= ~(this.field_f + (long)param0)) {
+                  var7 = (long)this.field_i + this.field_g;
+                }
+              }
+            }
+            if (var5_long > -1L) {
+              if (~var5_long > ~var7) {
+                var9 = (int)(-var5_long + var7);
+                sf.a(param2, (int)(var5_long + ((long)param1 - this.field_f)), this.field_h, (int)(var5_long - this.field_g), var9);
+              }
+            }
+            this.field_f = this.field_f + (long)param0;
+            return;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var5 = (IOException) (Object) decompiledCaughtException;
@@ -431,29 +422,27 @@ final class sk {
         int var3;
         int var4;
         var4 = Geoblox.field_C;
-        if (param0) {
-          this.field_i = 0;
-          if (~this.field_b != ~this.field_f) {
-            this.field_a.a(this.field_f, true);
-            this.field_b = this.field_f;
-          }
-          this.field_g = this.field_f;
-          L1: while (this.field_i < this.field_h.length) {
-            var2 = -this.field_i + this.field_h.length;
-            if (var2 > 200000000) {
-              var2 = 200000000;
-            }
-            var3 = this.field_a.a(var2, this.field_h, this.field_i, false);
-            if (var3 != -1) {
-              this.field_i = this.field_i + var3;
-              this.field_b = this.field_b + (long)var3;
-              continue L1;
-            }
-            break;
-          }
+        if (!param0) {
           return;
-        } else {
-          return;
+        }
+        this.field_i = 0;
+        if (~this.field_b != ~this.field_f) {
+          this.field_a.a(this.field_f, true);
+          this.field_b = this.field_f;
+        }
+        this.field_g = this.field_f;
+        L1: while (this.field_i < this.field_h.length) {
+          var2 = -this.field_i + this.field_h.length;
+          if (var2 > 200000000) {
+            var2 = 200000000;
+          }
+          var3 = this.field_a.a(var2, this.field_h, this.field_i, false);
+          if (var3 != -1) {
+            this.field_i = this.field_i + var3;
+            this.field_b = this.field_b + (long)var3;
+            continue L1;
+          }
+          break;
         }
     }
 
@@ -488,82 +477,78 @@ final class sk {
           if (param0 != -1) {
             sk.checkBoundaryLossAndStartCascade(3);
           }
-          if (!el.gameplaySession.sceneTransitionRequested) {
-            bk.boardOwnershipRaster.e();
-            if (ld.hasPixelsAtPlayfieldBoundary(-61)) {
-              el.gameplaySession.startSessionEndSequence((byte) 116);
-              sh.field_y.a(255);
-              seedEntity = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
-              farthestEntity = seedEntity;
-              farthestRadiusSquared = (-320.0f + seedEntity.positionX) * (-320.0f + seedEntity.positionX) + (seedEntity.positionY - 240.0f) * (seedEntity.positionY - 240.0f);
-              candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
-              L1: while (candidateEntity != null) {
-                if (farthestRadiusSquared < (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f) + (-240.0f + candidateEntity.positionY) * (-240.0f + candidateEntity.positionY)) {
-                  farthestRadiusSquared = (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f) + (candidateEntity.positionY - 240.0f) * (-240.0f + candidateEntity.positionY);
-                  farthestEntity = candidateEntity;
-                }
-                candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.previousForIteration(0));
+          if (el.gameplaySession.sceneTransitionRequested) {
+            stackIn_5_0 = 0;
+            return stackIn_5_0 != 0;
+          }
+          bk.boardOwnershipRaster.e();
+          if (!ld.hasPixelsAtPlayfieldBoundary(-61)) {
+            sh.field_y.a(255);
+            stackIn_33_0 = 0;
+            return stackIn_33_0 != 0;
+          }
+          {
+            el.gameplaySession.startSessionEndSequence((byte) 116);
+            sh.field_y.a(255);
+            seedEntity = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
+            farthestEntity = seedEntity;
+            farthestRadiusSquared = (-320.0f + seedEntity.positionX) * (-320.0f + seedEntity.positionX) + (seedEntity.positionY - 240.0f) * (seedEntity.positionY - 240.0f);
+            candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.lastForIteration(false));
+            L1: while (candidateEntity != null) {
+              if (farthestRadiusSquared < (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f) + (-240.0f + candidateEntity.positionY) * (-240.0f + candidateEntity.positionY)) {
+                farthestRadiusSquared = (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f) + (candidateEntity.positionY - 240.0f) * (-240.0f + candidateEntity.positionY);
+                farthestEntity = candidateEntity;
               }
-              cascadeFrontier = new SecondaryDeque();
-              visitedCascadeEntities = new SecondaryDeque();
-              staggeredLifetime = 0;
-              cascadeFrontier.addFirst(farthestEntity, false);
-              L2: while (true) {
-                cascadeEntity = (GameplayEntity) ((Object) cascadeFrontier.removeFirst(true));
-                if (cascadeEntity == null) {
-                  stackIn_31_0 = 1;
-                  return stackIn_31_0 != 0;
-                } else {
-                  cascadeEntity.entitySpriteKindId = 6;
-                  cascadeEntity.remainingLifetimeTicks = staggeredLifetime;
-                  staggeredLifetime += 50;
-                  visitedCascadeEntities.addFirst(cascadeEntity, false);
-                  neighborIndex = 0;
-                  L3: while (true) {
-                    if (neighborIndex >= cascadeEntity.relatedEntityCount) {
-                      continue L2;
-                    } else {
-                      neighborEntity = cascadeEntity.relatedEntities[neighborIndex];
-                      searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.firstForIteration((byte) 121));
-                      L4: while (true) {
-                        L5: {
-                          if (searchedEntity == null) {
-                            searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.firstForIteration((byte) 121));
-                            L6: while (true) {
-                              if (searchedEntity == null) {
-                                cascadeFrontier.addLast(-82, neighborEntity);
-                                break L5;
-                              } else {
-                                if (searchedEntity != neighborEntity) {
-                                  searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.nextForIteration(69));
-                                  continue L6;
-                                } else {
-                                  break L5;
-                                }
-                              }
+              candidateEntity = (GameplayEntity) ((Object) a.attachedEntities.previousForIteration(0));
+            }
+            cascadeFrontier = new SecondaryDeque();
+            visitedCascadeEntities = new SecondaryDeque();
+            staggeredLifetime = 0;
+            cascadeFrontier.addFirst(farthestEntity, false);
+            L2: while (true) {
+              cascadeEntity = (GameplayEntity) ((Object) cascadeFrontier.removeFirst(true));
+              if (cascadeEntity == null) {
+                stackIn_31_0 = 1;
+                return stackIn_31_0 != 0;
+              }
+              {
+                cascadeEntity.entitySpriteKindId = 6;
+                cascadeEntity.remainingLifetimeTicks = staggeredLifetime;
+                staggeredLifetime += 50;
+                visitedCascadeEntities.addFirst(cascadeEntity, false);
+                neighborIndex = 0;
+                L3: while (true) {
+                  if (neighborIndex >= cascadeEntity.relatedEntityCount) {
+                    continue L2;
+                  }
+                  {
+                    neighborEntity = cascadeEntity.relatedEntities[neighborIndex];
+                    searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.firstForIteration((byte) 121));
+                    L4: while (true) {
+                      L5: {
+                        if (searchedEntity == null) {
+                          searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.firstForIteration((byte) 121));
+                          L6: while (searchedEntity != null) {
+                            if (searchedEntity == neighborEntity) {
+                              break L5;
                             }
-                          } else {
-                            if (searchedEntity != neighborEntity) {
-                              searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.nextForIteration(param0 ^ 24));
-                              continue L4;
-                            }
+                            searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.nextForIteration(69));
                           }
+                          cascadeFrontier.addLast(-82, neighborEntity);
+                          break L5;
                         }
-                        neighborIndex++;
-                        continue L3;
+                        if (searchedEntity != neighborEntity) {
+                          searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.nextForIteration(param0 ^ 24));
+                          continue L4;
+                        }
                       }
+                      neighborIndex++;
+                      continue L3;
                     }
                   }
                 }
               }
-            } else {
-              sh.field_y.a(255);
-              stackIn_33_0 = 0;
-              return stackIn_33_0 != 0;
             }
-          } else {
-            stackIn_5_0 = 0;
-            return stackIn_5_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -29,16 +29,14 @@ final class am {
         var4 = var3 & param1;
         L1: while (true) {
           var5 = this.field_c[1 + var4 + var4];
-          if (-1 != var5) {
-            if (this.field_c[var4 + var4] != param1) {
-              var4 = var4 + 1 & var3;
-              continue L1;
-            } else {
-              return var5;
-            }
-          } else {
+          if (-1 == var5) {
             return -1;
           }
+          if (this.field_c[var4 + var4] == param1) {
+            return var5;
+          }
+          var4 = var4 + 1 & var3;
+          continue L1;
         }
     }
 
@@ -51,34 +49,33 @@ final class am {
             rh stackIn_15_0 = null;
             Throwable decompiledCaughtException = null;
             try {
-              if (param0 <= -49) {
-                var6 = null;
-                if (ph.field_i.field_j != null) {
-                  af.field_d = new sk(ph.field_i.field_j, 5200, 0);
-                  ph.field_i.field_j = null;
-                  var6 = new jh(255, af.field_d, new sk(ph.field_i.field_s, 12000, 0), 2097152);
-                }
-                var7 = null;
-                if (af.field_d != null) {
-                  if (je.field_h == null) {
-                    je.field_h = new sk[ph.field_i.field_r.length];
-                  }
-                  if (je.field_h[param1] == null) {
-                    je.field_h[param1] = new sk(ph.field_i.field_r[param1], 12000, 0);
-                    ph.field_i.field_r[param1] = null;
-                  }
-                  var7 = new jh(param1, af.field_d, je.field_h[param1], 2097152);
-                }
-                var8 = gb.field_b.a(param1, (byte) -9, param5, (jh) (var6), (jh) (var7));
-                if (param2) {
-                  var8.b(92);
-                }
-                stackIn_15_0 = new rh(var8, param4, param3);
-                return stackIn_15_0;
-              } else {
+              if (param0 > -49) {
                 stackIn_2_0 = (rh) null;
                 return stackIn_2_0;
               }
+              var6 = null;
+              if (ph.field_i.field_j != null) {
+                af.field_d = new sk(ph.field_i.field_j, 5200, 0);
+                ph.field_i.field_j = null;
+                var6 = new jh(255, af.field_d, new sk(ph.field_i.field_s, 12000, 0), 2097152);
+              }
+              var7 = null;
+              if (af.field_d != null) {
+                if (je.field_h == null) {
+                  je.field_h = new sk[ph.field_i.field_r.length];
+                }
+                if (je.field_h[param1] == null) {
+                  je.field_h[param1] = new sk(ph.field_i.field_r[param1], 12000, 0);
+                  ph.field_i.field_r[param1] = null;
+                }
+                var7 = new jh(param1, af.field_d, je.field_h[param1], 2097152);
+              }
+              var8 = gb.field_b.a(param1, (byte) -9, param5, (jh) (var6), (jh) (var7));
+              if (param2) {
+                var8.b(92);
+              }
+              stackIn_15_0 = new rh(var8, param4, param3);
+              return stackIn_15_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (IOException) (Object) decompiledCaughtException;

@@ -6,6 +6,8 @@ final class aa {
     static int field_b;
 
     final static boolean a(Sprite param0, int param1, int param2, Sprite param3, int param4, int param5) {
+        int var22 = 0;
+        int var23 = 0;
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
         int var6;
@@ -22,8 +24,6 @@ final class aa {
         int var17;
         int var18;
         int var19;
-        int var22;
-        int var23;
         int[] var30;
         int[] var31;
         param1 = param1 + param0.trimX;
@@ -68,40 +68,25 @@ final class aa {
                 var19 = var8 - var13;
                 var30 = param0.pixels;
                 var31 = param3.pixels;
-                var22 = var15;
-                L6: while (true) {
-                  if (var22 > 0) {
-                    var23 = var13;
-                    L7: while (true) {
-                      if (var23 <= 0) {
-                        var16 = var16 + var17;
-                        var18 = var18 + var19;
-                        var22--;
-                        continue L6;
-                      } else {
-                        if (var30[var16] != 0) {
-                          if (var31[var18] != 0) {
-                            field_a = param1 + var12 + var13 - var23;
-                            field_b = param2 + var14 + var15 - var22;
-                            return true;
-                          } else {
-                            var16++;
-                            var18++;
-                            var23--;
-                            continue L7;
-                          }
-                        } else {
-                          var16++;
-                          var18++;
-                          var23--;
-                          continue L7;
-                        }
-                      }
+                for (var22 = var15; var22 > 0; var22--) {
+                  L7: for (var23 = var13; var23 > 0; var23--) {
+                    if (var30[var16] == 0) {
+                      var16++;
+                      var18++;
+                      continue L7;
                     }
-                  } else {
-                    return false;
+                    if (var31[var18] != 0) {
+                      field_a = param1 + var12 + var13 - var23;
+                      field_b = param2 + var14 + var15 - var22;
+                      return true;
+                    }
+                    var16++;
+                    var18++;
                   }
+                  var16 = var16 + var17;
+                  var18 = var18 + var19;
                 }
+                return false;
               }
             }
             return false;

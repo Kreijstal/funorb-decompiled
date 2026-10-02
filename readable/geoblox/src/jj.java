@@ -105,12 +105,11 @@ final class jj {
           var3_int = -56 % ((61 - param0) / 42);
           if (param1 == null) {
             return;
-          } else {
-            param1.unlinkNode(false);
-            param1.unlinkSecondaryNode((byte) 75);
-            this.field_d = this.field_d + param1.field_n;
-            return;
           }
+          param1.unlinkNode(false);
+          param1.unlinkSecondaryNode((byte) 75);
+          this.field_d = this.field_d + param1.field_n;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

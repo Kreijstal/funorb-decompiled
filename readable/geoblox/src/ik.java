@@ -92,173 +92,166 @@ final class ik {
         int var7 = 0;
         var7 = Geoblox.field_C;
         try {
-          neighborIndexThenDetachSecond = 0;
-          L0: while (true) {
-            if (neighborIndexThenDetachSecond >= secondEntity.relatedEntityCount) {
-              L1: {
-                neighborIndexThenDetachSecond = forceDetachSecond ? 1 : 0;
-                detachFirst = 0;
-                secondNeighborInsertionIndex = secondEntity.relatedEntityCount;
-                secondEntity.relatedEntityCount = secondEntity.relatedEntityCount + 1;
-                secondEntity.relatedEntities[secondNeighborInsertionIndex] = firstEntity;
-                firstNeighborInsertionIndex = firstEntity.relatedEntityCount;
-                firstEntity.relatedEntityCount = firstEntity.relatedEntityCount + 1;
-                firstEntity.relatedEntities[firstNeighborInsertionIndex] = secondEntity;
-                if (secondEntity.entitySpriteKindId == 0) {
-                  if (firstEntity.entitySpriteKindId == 0) {
-                    break L1;
-                  }
-                }
-                variantPropagationThenNeighborIndex = 0;
-                propagateCategory = 0;
-                if (secondEntity.entitySpriteKindId != 1) {
-                  secondIsKindOne = 0;
-                } else {
-                  secondIsKindOne = 1;
-                }
+          for (neighborIndexThenDetachSecond = 0; neighborIndexThenDetachSecond < secondEntity.relatedEntityCount; neighborIndexThenDetachSecond++) {
+            if (secondEntity.relatedEntities[neighborIndexThenDetachSecond] == firstEntity) {
+              duplicateContactReturnValue = 0;
+              return duplicateContactReturnValue != 0;
+            }
+          }
+          L1: {
+            neighborIndexThenDetachSecond = forceDetachSecond ? 1 : 0;
+            detachFirst = 0;
+            secondNeighborInsertionIndex = secondEntity.relatedEntityCount;
+            secondEntity.relatedEntityCount = secondEntity.relatedEntityCount + 1;
+            secondEntity.relatedEntities[secondNeighborInsertionIndex] = firstEntity;
+            firstNeighborInsertionIndex = firstEntity.relatedEntityCount;
+            firstEntity.relatedEntityCount = firstEntity.relatedEntityCount + 1;
+            firstEntity.relatedEntities[firstNeighborInsertionIndex] = secondEntity;
+            if (secondEntity.entitySpriteKindId == 0) {
+              if (firstEntity.entitySpriteKindId == 0) {
+                break L1;
+              }
+            }
+            variantPropagationThenNeighborIndex = 0;
+            propagateCategory = 0;
+            if (secondEntity.entitySpriteKindId != 1) {
+              secondIsKindOne = 0;
+            } else {
+              secondIsKindOne = 1;
+            }
 
 
-                if (firstEntity.entitySpriteKindId != 1) {
+            if (firstEntity.entitySpriteKindId != 1) {
 
-                  firstIsKindOne = 0;
-                } else {
+              firstIsKindOne = 0;
+            } else {
 
-                  firstIsKindOne = 1;
-                }
-                L5: {
-                  if ((secondIsKindOne ^ firstIsKindOne) != 0) {
-                    if (secondEntity.entitySpriteKindId == 1) {
-                      if (firstEntity.entitySpriteKindId == 0) {
-                        secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
-                        break L5;
-                      }
-                    }
-                    if (secondEntity.entitySpriteKindId == 0) {
-                      if (firstEntity.entitySpriteKindId == 1) {
-                        variantPropagationThenNeighborIndex = 1;
-                        break L5;
-                      }
-                    }
-                    if (firstEntity.entitySpriteKindId == 2) {
-                      if (secondEntity.entitySpriteKindId == 1) {
-                        neighborIndexThenDetachSecond = 1;
-                        detachFirst = 1;
-                        propagateCategory = 1;
-                        secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
-                        break L5;
-                      }
-                    }
-                    if (1 == firstEntity.entitySpriteKindId) {
-                      if (secondEntity.entitySpriteKindId == 2) {
-                        secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, 0);
-                        variantPropagationThenNeighborIndex = 1;
-                        neighborIndexThenDetachSecond = 1;
-                      }
-                    }
-                  } else {
-                    if (2 != secondEntity.entitySpriteKindId) {
-                      if (firstEntity.entitySpriteKindId != 2) {
-                        break L5;
-                      }
-                    }
-                    if (secondEntity.entitySpriteKindId == 2) {
-                      if (2 != firstEntity.entitySpriteKindId) {
-                        secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
-                        neighborIndexThenDetachSecond = 1;
-                        break L5;
-                      }
-                    }
-                    if (firstEntity.entitySpriteKindId == 2) {
-                      if (2 != secondEntity.entitySpriteKindId) {
-                        detachFirst = 1;
-                        propagateCategory = 1;
-                        neighborIndexThenDetachSecond = 1;
-                        firstEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, secondEntity.entitySpriteKindId);
-                      }
-                    }
-                  }
-                }
-                L11: {
-                  if (variantPropagationThenNeighborIndex == 0) {
-                    if (propagateCategory == 0) {
-                      break L11;
-                    }
-                  }
-                  bh.propagateContactConversion(propagateCategory != 0, secondEntity, 1, firstEntity, variantPropagationThenNeighborIndex != 0);
-                }
+              firstIsKindOne = 1;
+            }
+            L5: {
+              if ((secondIsKindOne ^ firstIsKindOne) != 0) {
                 if (secondEntity.entitySpriteKindId == 1) {
+                  if (firstEntity.entitySpriteKindId == 0) {
+                    secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
+                    break L5;
+                  }
+                }
+                if (secondEntity.entitySpriteKindId == 0) {
                   if (firstEntity.entitySpriteKindId == 1) {
-                    if (firstEntity.entityCategoryKey == secondEntity.entityCategoryKey) {
-                      secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
-                      firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;
-                      break L1;
-                    }
+                    variantPropagationThenNeighborIndex = 1;
+                    break L5;
+                  }
+                }
+                if (firstEntity.entitySpriteKindId == 2) {
+                  if (secondEntity.entitySpriteKindId == 1) {
+                    neighborIndexThenDetachSecond = 1;
+                    detachFirst = 1;
+                    propagateCategory = 1;
+                    secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
+                    break L5;
+                  }
+                }
+                if (1 == firstEntity.entitySpriteKindId) {
+                  if (secondEntity.entitySpriteKindId == 2) {
+                    secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, 0);
+                    variantPropagationThenNeighborIndex = 1;
+                    neighborIndexThenDetachSecond = 1;
+                  }
+                }
+              } else {
+                if (2 != secondEntity.entitySpriteKindId) {
+                  if (firstEntity.entitySpriteKindId != 2) {
+                    break L5;
                   }
                 }
                 if (secondEntity.entitySpriteKindId == 2) {
-                  if (firstEntity.entitySpriteKindId == 2) {
-                    if (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex) {
-                      secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
-                      firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
-                    }
+                  if (2 != firstEntity.entitySpriteKindId) {
+                    secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
+                    neighborIndexThenDetachSecond = 1;
+                    break L5;
+                  }
+                }
+                if (firstEntity.entitySpriteKindId == 2) {
+                  if (2 != secondEntity.entitySpriteKindId) {
+                    detachFirst = 1;
+                    propagateCategory = 1;
+                    neighborIndexThenDetachSecond = 1;
+                    firstEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, secondEntity.entitySpriteKindId);
                   }
                 }
               }
-              if (secondEntity.entitySpriteKindId == 0) {
-                if (firstEntity.entitySpriteKindId == 0) {
-                  if (secondEntity.entityCategoryKey == firstEntity.entityCategoryKey) {
-                    secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
-                    firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;
-                  }
-                  if (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex) {
-                    secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
-                    firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
-                  }
+            }
+            L11: {
+              if (variantPropagationThenNeighborIndex == 0) {
+                if (propagateCategory == 0) {
+                  break L11;
                 }
               }
-              L16: {
-                if (neighborIndexThenDetachSecond != 0) {
-                  for (variantPropagationThenNeighborIndex = 0; secondEntity.relatedEntityCount > variantPropagationThenNeighborIndex; variantPropagationThenNeighborIndex++) {
-                    secondEntity.relatedEntities[variantPropagationThenNeighborIndex].removeRelatedEntity(secondEntity, 0);
-                  }
-                  entityForNeighborCountReset = secondEntity;
-                  secondEntity.sameCategoryEntityCount = 0;
-                  entityForVariantCountReset = secondEntity;
-                  entityForVariantCountReset.sameVariantEntityCount = 0;
-                  entityForNeighborCountReset.relatedEntityCount = 0;
-                  secondEntity.entityQueue = ji.movingEntities;
-                  secondEntity.detachedFromBoard = true;
-                  break L16;
+              bh.propagateContactConversion(propagateCategory != 0, secondEntity, 1, firstEntity, variantPropagationThenNeighborIndex != 0);
+            }
+            if (secondEntity.entitySpriteKindId == 1) {
+              if (firstEntity.entitySpriteKindId == 1) {
+                if (firstEntity.entityCategoryKey == secondEntity.entityCategoryKey) {
+                  secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
+                  firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;
+                  break L1;
                 }
               }
-              L18: {
-                if (detachFirst != 0) {
-                  for (variantPropagationThenNeighborIndex = 0; firstEntity.relatedEntityCount > variantPropagationThenNeighborIndex; variantPropagationThenNeighborIndex++) {
-                    firstEntity.relatedEntities[variantPropagationThenNeighborIndex].removeRelatedEntity(firstEntity, 0);
-                  }
-                  entityForNeighborCountReset = firstEntity;
-                  firstEntity.sameCategoryEntityCount = 0;
-                  entityForVariantCountReset = firstEntity;
-                  entityForNeighborCountReset.relatedEntityCount = 0;
-                  firstEntity.touchesAvatar = false;
-                  firstEntity.detachedFromBoard = true;
-                  firstEntity.entityQueue = ji.movingEntities;
-                  entityForVariantCountReset.sameVariantEntityCount = 0;
-                  break L18;
+            }
+            if (secondEntity.entitySpriteKindId == 2) {
+              if (firstEntity.entitySpriteKindId == 2) {
+                if (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex) {
+                  secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
+                  firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
                 }
-              }
-              secondDetachmentReturnValue = neighborIndexThenDetachSecond;
-              return secondDetachmentReturnValue != 0;
-            } else {
-              if (secondEntity.relatedEntities[neighborIndexThenDetachSecond] == firstEntity) {
-                duplicateContactReturnValue = 0;
-                return duplicateContactReturnValue != 0;
-              } else {
-                neighborIndexThenDetachSecond++;
-                continue L0;
               }
             }
           }
+          if (secondEntity.entitySpriteKindId == 0) {
+            if (firstEntity.entitySpriteKindId == 0) {
+              if (secondEntity.entityCategoryKey == firstEntity.entityCategoryKey) {
+                secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
+                firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;
+              }
+              if (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex) {
+                secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
+                firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
+              }
+            }
+          }
+          L16: {
+            if (neighborIndexThenDetachSecond != 0) {
+              for (variantPropagationThenNeighborIndex = 0; secondEntity.relatedEntityCount > variantPropagationThenNeighborIndex; variantPropagationThenNeighborIndex++) {
+                secondEntity.relatedEntities[variantPropagationThenNeighborIndex].removeRelatedEntity(secondEntity, 0);
+              }
+              entityForNeighborCountReset = secondEntity;
+              secondEntity.sameCategoryEntityCount = 0;
+              entityForVariantCountReset = secondEntity;
+              entityForVariantCountReset.sameVariantEntityCount = 0;
+              entityForNeighborCountReset.relatedEntityCount = 0;
+              secondEntity.entityQueue = ji.movingEntities;
+              secondEntity.detachedFromBoard = true;
+              break L16;
+            }
+          }
+          L18: {
+            if (detachFirst != 0) {
+              for (variantPropagationThenNeighborIndex = 0; firstEntity.relatedEntityCount > variantPropagationThenNeighborIndex; variantPropagationThenNeighborIndex++) {
+                firstEntity.relatedEntities[variantPropagationThenNeighborIndex].removeRelatedEntity(firstEntity, 0);
+              }
+              entityForNeighborCountReset = firstEntity;
+              firstEntity.sameCategoryEntityCount = 0;
+              entityForVariantCountReset = firstEntity;
+              entityForNeighborCountReset.relatedEntityCount = 0;
+              firstEntity.touchesAvatar = false;
+              firstEntity.detachedFromBoard = true;
+              firstEntity.entityQueue = ji.movingEntities;
+              entityForVariantCountReset.sameVariantEntityCount = 0;
+              break L18;
+            }
+          }
+          secondDetachmentReturnValue = neighborIndexThenDetachSecond;
+          return secondDetachmentReturnValue != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

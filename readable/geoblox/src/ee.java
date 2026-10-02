@@ -33,10 +33,9 @@ class ee extends el implements ql {
               if (var9_ref_el.a(param0 + this.field_m, 60, this.field_v + param2, param3, param4, param5, param6)) {
                 stackIn_7_0 = 1;
                 return stackIn_7_0 != 0;
-              } else {
-                var9_ref_el = (el) ((Object) var8.a((byte) 109));
-                continue L0;
               }
+              var9_ref_el = (el) ((Object) var8.a((byte) 109));
+              continue L0;
             }
             break;
           }
@@ -77,17 +76,16 @@ class ee extends el implements ql {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == 0) {
-            if (this.a(param1, param3, 10095, param2)) {
-              this.a(param3, param2, 34, param1);
-              this.a(param2, param1, -3188, param3);
-            }
-            stackIn_7_0 = (StringBuilder) (param1);
-            return stackIn_7_0;
-          } else {
+          if (param0 != 0) {
             stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
+          if (this.a(param1, param3, 10095, param2)) {
+            this.a(param3, param2, 34, param1);
+            this.a(param2, param1, -3188, param3);
+          }
+          stackIn_7_0 = (StringBuilder) (param1);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -166,41 +164,38 @@ class ee extends el implements ql {
         RuntimeException decompiledCaughtException = null;
         var7 = Geoblox.field_C;
         try {
-          if (!this.field_z.isEmpty(13519)) {
-            var8 = new gb(this.field_z);
-            var4 = (el) ((Object) var8.d(1));
-            if (param0 != 7305) {
-              field_B = (int[]) null;
-            }
-            L1: while (var4 != null) {
-              L2: {
-                if (var4.e((byte) 54)) {
-                  var5 = new gb(this.field_z);
-                  var5.a(var4, (byte) 123);
-                  var6 = (el) ((Object) var5.c(26));
-                  L3: while (true) {
-                    if (var6 == null) {
-                      break L2;
-                    } else {
-                      if (!var6.a((byte) -39, param1)) {
-                        var6 = (el) ((Object) var5.c(26));
-                        continue L3;
-                      } else {
-                        stackIn_13_0 = 1;
-                        return stackIn_13_0 != 0;
-                      }
-                    }
-                  }
-                }
-              }
-              var4 = (el) ((Object) var8.c(26));
-            }
-            stackIn_17_0 = 0;
-            return stackIn_17_0 != 0;
-          } else {
+          if (this.field_z.isEmpty(13519)) {
             stackIn_3_0 = 0;
             return stackIn_3_0 != 0;
           }
+          var8 = new gb(this.field_z);
+          var4 = (el) ((Object) var8.d(1));
+          if (param0 != 7305) {
+            field_B = (int[]) null;
+          }
+          L1: while (var4 != null) {
+            L2: {
+              if (var4.e((byte) 54)) {
+                var5 = new gb(this.field_z);
+                var5.a(var4, (byte) 123);
+                var6 = (el) ((Object) var5.c(26));
+                L3: while (true) {
+                  if (var6 == null) {
+                    break L2;
+                  }
+                  if (!var6.a((byte) -39, param1)) {
+                    var6 = (el) ((Object) var5.c(26));
+                    continue L3;
+                  }
+                  stackIn_13_0 = 1;
+                  return stackIn_13_0 != 0;
+                }
+              }
+            }
+            var4 = (el) ((Object) var8.c(26));
+          }
+          stackIn_17_0 = 0;
+          return stackIn_17_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -301,19 +296,14 @@ class ee extends el implements ql {
           field_A = (Sprite) null;
         }
         var3 = (el) ((Object) var2.c((byte) 88));
-        L1: while (true) {
-          if (var3 != null) {
-            var4 = var3.c((byte) 69);
-            if (var4 != null) {
-              return var4;
-            } else {
-              var3 = (el) ((Object) var2.a((byte) 111));
-              continue L1;
-            }
-          } else {
-            return null;
+        L1: while (var3 != null) {
+          var4 = var3.c((byte) 69);
+          if (var4 != null) {
+            return var4;
           }
+          var3 = (el) ((Object) var2.a((byte) 111));
         }
+        return null;
     }
 
     private final void g(byte param0) {
@@ -345,43 +335,39 @@ class ee extends el implements ql {
         RuntimeException decompiledCaughtException = null;
         var7 = Geoblox.field_C;
         try {
-          if (!this.field_z.isEmpty(13519)) {
-            var3 = new gb(this.field_z);
-            if (param1 <= -75) {
-              var4 = (el) ((Object) var3.c((byte) 88));
-              L0: while (var4 != null) {
-                L1: {
-                  if (var4.e((byte) 54)) {
-                    var5 = new gb(this.field_z);
-                    var5.a((byte) 56, var4);
-                    var6 = (el) ((Object) var5.a((byte) 114));
-                    L2: while (true) {
-                      if (var6 == null) {
-                        break L1;
-                      } else {
-                        if (!var6.a((byte) -56, param0)) {
-                          var6 = (el) ((Object) var5.a((byte) 114));
-                          continue L2;
-                        } else {
-                          stackIn_15_0 = 1;
-                          return stackIn_15_0 != 0;
-                        }
-                      }
-                    }
-                  }
-                }
-                var4 = (el) ((Object) var3.a((byte) 109));
-              }
-              stackIn_19_0 = 0;
-              return stackIn_19_0 != 0;
-            } else {
-              stackIn_6_0 = 1;
-              return stackIn_6_0 != 0;
-            }
-          } else {
+          if (this.field_z.isEmpty(13519)) {
             stackIn_3_0 = 0;
             return stackIn_3_0 != 0;
           }
+          var3 = new gb(this.field_z);
+          if (param1 > -75) {
+            stackIn_6_0 = 1;
+            return stackIn_6_0 != 0;
+          }
+          var4 = (el) ((Object) var3.c((byte) 88));
+          L0: while (var4 != null) {
+            L1: {
+              if (var4.e((byte) 54)) {
+                var5 = new gb(this.field_z);
+                var5.a((byte) 56, var4);
+                var6 = (el) ((Object) var5.a((byte) 114));
+                L2: while (true) {
+                  if (var6 == null) {
+                    break L1;
+                  }
+                  if (!var6.a((byte) -56, param0)) {
+                    var6 = (el) ((Object) var5.a((byte) 114));
+                    continue L2;
+                  }
+                  stackIn_15_0 = 1;
+                  return stackIn_15_0 != 0;
+                }
+              }
+            }
+            var4 = (el) ((Object) var3.a((byte) 109));
+          }
+          stackIn_19_0 = 0;
+          return stackIn_19_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -437,25 +423,22 @@ class ee extends el implements ql {
         var5 = Geoblox.field_C;
         try {
           var3 = new gb(this.field_z);
-          if (param0 < -30) {
-            var4 = (el) ((Object) var3.c((byte) 88));
-            L0: while (true) {
-              if (var4 == null) {
-                stackIn_11_0 = 0;
-                return stackIn_11_0 != 0;
-              } else {
-                if (!var4.a((byte) -123, param1)) {
-                  var4 = (el) ((Object) var3.a((byte) 125));
-                  continue L0;
-                } else {
-                  stackIn_8_0 = 1;
-                  return stackIn_8_0 != 0;
-                }
-              }
-            }
-          } else {
+          if (param0 >= -30) {
             stackIn_3_0 = 0;
             return stackIn_3_0 != 0;
+          }
+          var4 = (el) ((Object) var3.c((byte) 88));
+          L0: while (true) {
+            if (var4 == null) {
+              stackIn_11_0 = 0;
+              return stackIn_11_0 != 0;
+            }
+            if (!var4.a((byte) -123, param1)) {
+              var4 = (el) ((Object) var3.a((byte) 125));
+              continue L0;
+            }
+            stackIn_8_0 = 1;
+            return stackIn_8_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -567,16 +550,15 @@ class ee extends el implements ql {
             break;
           }
           var6 = param0;
-          if (var6 == 80) {
-            if (!kj.field_o[81]) {
-              stackIn_17_0 = this.a(param3, -96);
-            } else {
-              stackIn_17_0 = this.a(7305, param3);
-            }
-            return stackIn_17_0;
-          } else {
+          if (var6 != 80) {
             return false;
           }
+          if (!kj.field_o[81]) {
+            stackIn_17_0 = this.a(param3, -96);
+          } else {
+            stackIn_17_0 = this.a(7305, param3);
+          }
+          return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -675,18 +657,13 @@ class ee extends el implements ql {
         }
         var2 = new gb(this.field_z);
         var3 = (el) ((Object) var2.c((byte) 88));
-        L1: while (true) {
-          if (var3 != null) {
-            if (var3.e((byte) 54)) {
-              return var3;
-            } else {
-              var3 = (el) ((Object) var2.a((byte) 121));
-              continue L1;
-            }
-          } else {
-            return null;
+        L1: while (var3 != null) {
+          if (var3.e((byte) 54)) {
+            return var3;
           }
+          var3 = (el) ((Object) var2.a((byte) 121));
         }
+        return null;
     }
 
     final void b(byte param0, el param1) {

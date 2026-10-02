@@ -63,30 +63,26 @@ class IntrusiveNode {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 <= -102) {
-            if (param1 != null) {
-              if (param1.length <= 136) {
-                if (param2) {
-                  stackIn_13_0 = nk.a(param1, 0);
-                  return stackIn_13_0;
-                } else {
-                  stackIn_11_0 = (byte[]) (param1);
-                  return stackIn_11_0;
-                }
-              } else {
-                var3 = new l();
-                ((oj) ((Object) var3)).a(param1, true);
-                stackIn_8_0 = (l) (var3);
-                return stackIn_8_0;
-              }
-            } else {
-              stackIn_5_0 = null;
-              return stackIn_5_0;
-            }
-          } else {
+          if (param0 > -102) {
             stackIn_2_0 = (Object) null;
             return stackIn_2_0;
           }
+          if (param1 == null) {
+            stackIn_5_0 = null;
+            return stackIn_5_0;
+          }
+          if (param1.length > 136) {
+            var3 = new l();
+            ((oj) ((Object) var3)).a(param1, true);
+            stackIn_8_0 = (l) (var3);
+            return stackIn_8_0;
+          }
+          if (param2) {
+            stackIn_13_0 = nk.a(param1, 0);
+            return stackIn_13_0;
+          }
+          stackIn_11_0 = (byte[]) (param1);
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -121,8 +117,8 @@ class IntrusiveNode {
     }
 
     final static void a(boolean param0, byte[] param1) {
-        byte dupTemp$0 = 0;
         byte dupTemp$1 = 0;
+        byte dupTemp$0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_29_1 = 0;
@@ -206,58 +202,57 @@ class IntrusiveNode {
               vf.field_E[var4] = var20;
               var10 = 0;
               var11 = var16.c((byte) 34);
-              if ((var11 & 1) != 0) {
-                for (var12 = 0; var5 > var12; var12++) {
-                  for (var13 = 0; var6 > var13; var13++) {
-                    var8[var13 * var5 + var12] = var15.f((byte) 90);
-                  }
-                }
-                if (0 != (2 & var11)) {
-                  for (var12 = 0; var5 > var12; var12++) {
-                    for (var13 = 0; var6 > var13; var13++) {
-                      dupTemp$0 = var15.f((byte) 78);
-                      var9[var12 + var5 * var13] = dupTemp$0;
-                      var14 = dupTemp$0;
-                      stackIn_44_0 = var10;
-
-                      if (var14 == -1) {
-                        stackIn_45_0 = stackIn_44_0;
-                        stackIn_45_1 = 0;
-                      } else {
-                        stackIn_45_0 = stackIn_44_0;
-                        stackIn_45_1 = 1;
-                      }
-                      var10 = stackIn_45_0 | stackIn_45_1;
-                    }
-                  }
-                  break L6;
-                } else {
-                  break L6;
-                }
-              } else {
+              if ((var11 & 1) == 0) {
                 for (var12 = 0; var12 < var7; var12++) {
                   var8[var12] = var15.f((byte) 90);
                 }
                 if ((var11 & 2) == 0) {
                   break L6;
-                } else {
-                  for (var12 = 0; var7 > var12; var12++) {
-                    dupTemp$1 = var15.f((byte) 95);
-                    var9[var12] = dupTemp$1;
-                    var13 = dupTemp$1;
-                    stackIn_28_0 = var10;
+                }
+                for (var12 = 0; var7 > var12; var12++) {
+                  dupTemp$1 = var15.f((byte) 95);
+                  var9[var12] = dupTemp$1;
+                  var13 = dupTemp$1;
+                  stackIn_28_0 = var10;
 
-                    if (var13 == -1) {
-                      stackIn_29_0 = stackIn_28_0;
-                      stackIn_29_1 = 0;
-                    } else {
-                      stackIn_29_0 = stackIn_28_0;
-                      stackIn_29_1 = 1;
-                    }
-                    var10 = stackIn_29_0 | stackIn_29_1;
+                  if (var13 == -1) {
+                    stackIn_29_0 = stackIn_28_0;
+                    stackIn_29_1 = 0;
+                  } else {
+                    stackIn_29_0 = stackIn_28_0;
+                    stackIn_29_1 = 1;
                   }
+                  var10 = stackIn_29_0 | stackIn_29_1;
+                }
+                break L6;
+              }
+              {
+                for (var12 = 0; var5 > var12; var12++) {
+                  for (var13 = 0; var6 > var13; var13++) {
+                    var8[var13 * var5 + var12] = var15.f((byte) 90);
+                  }
+                }
+                if (0 == (2 & var11)) {
                   break L6;
                 }
+                for (var12 = 0; var5 > var12; var12++) {
+                  for (var13 = 0; var6 > var13; var13++) {
+                    dupTemp$0 = var15.f((byte) 78);
+                    var9[var12 + var5 * var13] = dupTemp$0;
+                    var14 = dupTemp$0;
+                    stackIn_44_0 = var10;
+
+                    if (var14 == -1) {
+                      stackIn_45_0 = stackIn_44_0;
+                      stackIn_45_1 = 0;
+                    } else {
+                      stackIn_45_0 = stackIn_44_0;
+                      stackIn_45_1 = 1;
+                    }
+                    var10 = stackIn_45_0 | stackIn_45_1;
+                  }
+                }
+                break L6;
               }
             }
             ng.field_E[var4] = var10 != 0;

@@ -33,9 +33,9 @@ final class wj extends sh {
     }
 
     final static String a(String param0, String[] param1, byte param2) {
+        StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
-        StringBuilder discarded$2 = null;
         String stackIn_12_0 = null;
         String stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
@@ -64,50 +64,7 @@ final class wj extends sh {
           var5 = 0;
           L0: while (true) {
             var6_int = param0.indexOf("<%", var5);
-            if (0 > var6_int) {
-              var6 = new StringBuilder(var4);
-              var7 = 0;
-              var5 = 0;
-              if (param2 < -12) {
-                L1: while (true) {
-                  var8 = param0.indexOf("<%", var5);
-                  if (0 <= var8) {
-                    L2: for (var5 = var8 + 2; var5 < var3_int; var5++) {
-                      if (DualLinkNode.a(-58, param0.charAt(var5))) {
-                        continue L2;
-                      }
-                      break;
-                    }
-                    var9 = param0.substring(2 + var8, var5);
-                    if (f.b((byte) -125, (CharSequence) ((Object) var9))) {
-                      if (var3_int <= var5) {
-                        continue L1;
-                      } else {
-                        if (param0.charAt(var5) != 62) {
-                          continue L1;
-                        } else {
-                          var5++;
-                          var10 = ol.a(false, (CharSequence) ((Object) var9));
-                          discarded$0 = var6.append(param0.substring(var7, var8));
-                          var7 = var5;
-                          discarded$1 = var6.append(param1[var10]);
-                          continue L1;
-                        }
-                      }
-                    } else {
-                      continue L1;
-                    }
-                  } else {
-                    discarded$2 = var6.append(param0.substring(var7));
-                    stackIn_25_0 = var6.toString();
-                    return stackIn_25_0;
-                  }
-                }
-              } else {
-                stackIn_12_0 = (String) null;
-                return stackIn_12_0;
-              }
-            } else {
+            if (0 <= var6_int) {
               L4: for (var5 = var6_int + 2; var3_int > var5; var5++) {
                 if (DualLinkNode.a(-58, param0.charAt(var5))) {
                   continue L4;
@@ -117,17 +74,57 @@ final class wj extends sh {
               var7_ref_String = param0.substring(var6_int + 2, var5);
               if (!f.b((byte) -123, (CharSequence) ((Object) var7_ref_String))) {
                 continue L0;
-              } else {
-                if (var5 >= var3_int) {
-                  continue L0;
-                } else {
+              }
+              if (var5 >= var3_int) {
+                continue L0;
+              }
+              if (param0.charAt(var5) != 62) {
+                continue L0;
+              }
+              var5++;
+              var8 = ol.a(false, (CharSequence) ((Object) var7_ref_String));
+              var4 = var4 + (-var5 + (var6_int + param1[var8].length()));
+              continue L0;
+            }
+            {
+              var6 = new StringBuilder(var4);
+              var7 = 0;
+              var5 = 0;
+              if (param2 >= -12) {
+                stackIn_12_0 = (String) null;
+                return stackIn_12_0;
+              }
+              L1: while (true) {
+                var8 = param0.indexOf("<%", var5);
+                if (0 > var8) {
+                  discarded$2 = var6.append(param0.substring(var7));
+                  stackIn_25_0 = var6.toString();
+                  return stackIn_25_0;
+                }
+                {
+                  L2: for (var5 = var8 + 2; var5 < var3_int; var5++) {
+                    if (DualLinkNode.a(-58, param0.charAt(var5))) {
+                      continue L2;
+                    }
+                    break;
+                  }
+                  var9 = param0.substring(2 + var8, var5);
+                  if (!f.b((byte) -125, (CharSequence) ((Object) var9))) {
+                    continue L1;
+                  }
+                  if (var3_int <= var5) {
+                    continue L1;
+                  }
                   if (param0.charAt(var5) != 62) {
-                    continue L0;
-                  } else {
+                    continue L1;
+                  }
+                  {
                     var5++;
-                    var8 = ol.a(false, (CharSequence) ((Object) var7_ref_String));
-                    var4 = var4 + (-var5 + (var6_int + param1[var8].length()));
-                    continue L0;
+                    var10 = ol.a(false, (CharSequence) ((Object) var9));
+                    discarded$0 = var6.append(param0.substring(var7, var8));
+                    var7 = var5;
+                    discarded$1 = var6.append(param1[var10]);
+                    continue L1;
                   }
                 }
               }
@@ -218,7 +215,8 @@ final class wj extends sh {
         try {
           if (param0.field_q == null) {
             return;
-          } else {
+          }
+          {
             L0: for (var3_int = 0; var3_int < 50; var3_int++) {
               if (null != param0.field_q.peekEvent()) {
                 bc.a(0, 1L);

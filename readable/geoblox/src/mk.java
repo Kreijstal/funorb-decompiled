@@ -42,27 +42,25 @@ final class mk extends TextInputValidator {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_m.validationStateForText(guard, candidateText) != si.field_m) {
-            if (!candidateText.equals(this.field_j)) {
-              var3 = ci.a(-1, candidateText);
-              if (!var3.a(-76)) {
-                stackIn_8_0 = si.field_n;
-                return stackIn_8_0;
-              } else {
-                this.field_j = candidateText;
-                this.field_i = var3.a((byte) -52);
-              }
-            }
-            if (!this.field_i) {
-              stackIn_13_0 = si.field_m;
-            } else {
-              stackIn_13_0 = kk.field_w;
-            }
-            return stackIn_13_0;
-          } else {
+          if (this.field_m.validationStateForText(guard, candidateText) == si.field_m) {
             stackIn_2_0 = si.field_m;
             return stackIn_2_0;
           }
+          if (!candidateText.equals(this.field_j)) {
+            var3 = ci.a(-1, candidateText);
+            if (!var3.a(-76)) {
+              stackIn_8_0 = si.field_n;
+              return stackIn_8_0;
+            }
+            this.field_j = candidateText;
+            this.field_i = var3.a((byte) -52);
+          }
+          if (!this.field_i) {
+            stackIn_13_0 = si.field_m;
+          } else {
+            stackIn_13_0 = kk.field_w;
+          }
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -100,14 +98,12 @@ final class mk extends TextInputValidator {
           if (this.field_m.validationStateForText(-257, candidateText) == si.field_m) {
             stackIn_5_0 = this.field_m.validationMessageForText(422, candidateText);
             return stackIn_5_0;
-          } else {
-            if (this.validationStateForText(-257, candidateText) == si.field_m) {
-              stackIn_9_0 = g.createEmailUnavailableAlertText;
-              return stackIn_9_0;
-            } else {
-              return da.createEmailValidText;
-            }
           }
+          if (this.validationStateForText(-257, candidateText) != si.field_m) {
+            return da.createEmailValidText;
+          }
+          stackIn_9_0 = g.createEmailUnavailableAlertText;
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

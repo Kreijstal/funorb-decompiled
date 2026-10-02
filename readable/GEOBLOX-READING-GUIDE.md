@@ -496,9 +496,10 @@ declarations, 209 parameters and 382 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The latest source migration
-moves 46 named local ordinals by unique method/original-spelling identity and
-removes only the vanished boundary selector. Every remaining semantic name is
-retained.
+moves 35 named local ordinals by unique method/original-spelling identity.
+All 1,170 semantic naming rules are retained. The preceding pass removed the
+vanished boundary selector; the current pass flattens proven early-exit arms.
+Complete parsing and preserved declaration scopes keep this reproducible.
 
 The decompiler now checks explicit exception-region exit contracts, preserves
 ordinary empty branches as no-ops, requires explicit loop exit targets and
@@ -576,3 +577,18 @@ without crediting it. The old relational spelling changed that behavior.
 The raw and renamed code now match native traces for 708 controlled scenarios,
 including successful matches, pool overflow, cooldowns, duplicates and tutorial
 scoring. Full contact physics and asset-dependent transitions remain unverified.
+
+## Sequential early-exit guards
+
+The current decompiler pass removes an else wrapper when the preceding arm
+leaves on every path. When both arms leave, the shorter arm becomes the guard.
+`hasPixelsAtPlayfieldBoundary` now reads as sequential cardinal checks followed
+by sequential perimeter checks inside its loop. The original read order,
+integer division guard, 13 result carriers and exception context remain.
+Nested branches with normally completing paths or consumed inner breaks keep
+their control flow; blocks that declare locals keep their scopes.
+
+Across GeoBlox this removes 2,128 else wrappers and 2,213 source lines in 208
+files. Native boundary probes still verify the independent lattice oracle,
+425,042 pixel checks, 18 guard cases and five invalid-raster cases per variant.
+These controlled probes do not establish whole-game equivalence or phone FPS.

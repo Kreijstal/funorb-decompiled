@@ -36,10 +36,9 @@ final class pi extends vf {
           if (mf.a(param4, param1, 116, param3)) {
             stackIn_4_0 = ni.a(param0.a(param1, -28153, param4), -108);
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = null;
-            return (nc) ((Object) stackIn_2_0);
           }
+          stackIn_2_0 = null;
+          return (nc) ((Object) stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -119,10 +118,9 @@ final class pi extends vf {
           if (param0 <= -30) {
             stackIn_3_0 = 0;
             return stackIn_3_0 != 0;
-          } else {
-            this.field_P = 97;
-            return false;
           }
+          this.field_P = 97;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -164,12 +162,11 @@ final class pi extends vf {
           if (var6 != bf.field_g) {
             if (var6 != si.field_n) {
               var5 = this.field_M.c(-21666);
-              if (var5 == null) {
-                var5 = this.field_N;
-                break L0;
-              } else {
+              if (var5 != null) {
                 break L0;
               }
+              var5 = this.field_N;
+              break L0;
             }
           }
           var5 = cm.checkingText;
@@ -188,32 +185,7 @@ final class pi extends vf {
           var19 = oa.field_e[0];
           var12 = var19.field_s << 1;
           var13 = var19.field_o << 1;
-          if (this.field_Q != null) {
-            if (this.field_Q.width >= var12) {
-              if (this.field_Q.height < var13) {
-                this.field_Q = new Sprite(var12, var13);
-                Geoblox.setRasterTarget(1, this.field_Q);
-                var19.rotateSmooth(112, 144, var19.field_s << 4, var19.field_o << 4, -this.field_P << 10, 4096);
-                id.a(true);
-                this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
-                return;
-              } else {
-                Geoblox.setRasterTarget(1, this.field_Q);
-                SoftwareRasterizer.c();
-                var19.rotateSmooth(112, 144, var19.field_s << 4, var19.field_o << 4, -this.field_P << 10, 4096);
-                id.a(true);
-                this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
-                return;
-              }
-            } else {
-              this.field_Q = new Sprite(var12, var13);
-              Geoblox.setRasterTarget(1, this.field_Q);
-              var19.rotateSmooth(112, 144, var19.field_s << 4, var19.field_o << 4, -this.field_P << 10, 4096);
-              id.a(true);
-              this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
-              return;
-            }
-          } else {
+          if (this.field_Q == null) {
             this.field_Q = new Sprite(var12, var13);
             Geoblox.setRasterTarget(1, this.field_Q);
             var19.rotateSmooth(112, 144, var19.field_s << 4, var19.field_o << 4, -this.field_P << 10, 4096);
@@ -221,60 +193,79 @@ final class pi extends vf {
             this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
             return;
           }
-        } else {
-          if (var6 != si.field_n) {
-            if (si.field_m != var6) {
-              if (kk.field_w == var6) {
-                var16 = oa.field_e[1];
-                var16.c(var9, var10 - (var16.height >> 1), 256);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              var17 = oa.field_e[2];
-              var17.c(var9, var10 - (var17.height >> 1), 256);
-              return;
-            }
-          } else {
-            var18 = oa.field_e[0];
-            var15 = var18;
-            var12 = var18.field_s << 1;
-            var13 = var18.field_o << 1;
-            if (this.field_Q != null) {
-              if (this.field_Q.width >= var12) {
-                if (this.field_Q.height < var13) {
-                  this.field_Q = new Sprite(var12, var13);
-                  Geoblox.setRasterTarget(1, this.field_Q);
-                  var18.rotateSmooth(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
-                  id.a(true);
-                  this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
-                  return;
-                } else {
-                  Geoblox.setRasterTarget(1, this.field_Q);
-                  SoftwareRasterizer.c();
-                  var18.rotateSmooth(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
-                  id.a(true);
-                  this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
-                  return;
-                }
-              } else {
-                this.field_Q = new Sprite(var12, var13);
-                Geoblox.setRasterTarget(1, this.field_Q);
-                var18.rotateSmooth(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
-                id.a(true);
-                this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
-                return;
-              }
-            } else {
-              this.field_Q = new Sprite(var12, var13);
-              Geoblox.setRasterTarget(1, this.field_Q);
-              var18.rotateSmooth(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
-              id.a(true);
-              this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
-              return;
-            }
+          if (this.field_Q.width < var12) {
+            this.field_Q = new Sprite(var12, var13);
+            Geoblox.setRasterTarget(1, this.field_Q);
+            var19.rotateSmooth(112, 144, var19.field_s << 4, var19.field_o << 4, -this.field_P << 10, 4096);
+            id.a(true);
+            this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
+            return;
           }
+          if (this.field_Q.height < var13) {
+            this.field_Q = new Sprite(var12, var13);
+            Geoblox.setRasterTarget(1, this.field_Q);
+            var19.rotateSmooth(112, 144, var19.field_s << 4, var19.field_o << 4, -this.field_P << 10, 4096);
+            id.a(true);
+            this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
+            return;
+          }
+          Geoblox.setRasterTarget(1, this.field_Q);
+          SoftwareRasterizer.c();
+          var19.rotateSmooth(112, 144, var19.field_s << 4, var19.field_o << 4, -this.field_P << 10, 4096);
+          id.a(true);
+          this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
+          return;
+        }
+        if (var6 != si.field_n) {
+          if (si.field_m == var6) {
+            var17 = oa.field_e[2];
+            var17.c(var9, var10 - (var17.height >> 1), 256);
+            return;
+          }
+          if (kk.field_w != var6) {
+            return;
+          }
+          {
+            var16 = oa.field_e[1];
+            var16.c(var9, var10 - (var16.height >> 1), 256);
+            return;
+          }
+        }
+        {
+          var18 = oa.field_e[0];
+          var15 = var18;
+          var12 = var18.field_s << 1;
+          var13 = var18.field_o << 1;
+          if (this.field_Q == null) {
+            this.field_Q = new Sprite(var12, var13);
+            Geoblox.setRasterTarget(1, this.field_Q);
+            var18.rotateSmooth(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
+            id.a(true);
+            this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
+            return;
+          }
+          if (this.field_Q.width < var12) {
+            this.field_Q = new Sprite(var12, var13);
+            Geoblox.setRasterTarget(1, this.field_Q);
+            var18.rotateSmooth(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
+            id.a(true);
+            this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
+            return;
+          }
+          if (this.field_Q.height < var13) {
+            this.field_Q = new Sprite(var12, var13);
+            Geoblox.setRasterTarget(1, this.field_Q);
+            var18.rotateSmooth(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
+            id.a(true);
+            this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
+            return;
+          }
+          Geoblox.setRasterTarget(1, this.field_Q);
+          SoftwareRasterizer.c();
+          var18.rotateSmooth(112, 144, var18.field_s << 4, var18.field_o << 4, -this.field_P << 10, 4096);
+          id.a(true);
+          this.field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
+          return;
         }
     }
 

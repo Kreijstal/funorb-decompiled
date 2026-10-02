@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "a298f846c1824a1e88dd6c63674bbe81e67152e1",
+    "commit": "589c78257fcea469a48c6a3f2eba15cf77fb7e1a",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "0ce7d77ce24b5c74be0439d9d363ac7fb407bf949c9385ecc5f7e4cbcfe48f0f",
+  "inputTreeSha256": "baeae8c226093d2a14392d9994aa74ddd4c735009a09e713af1b7cf39f202029",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -2838,15 +2838,15 @@
     },
     {
       "symbol": "L:dm.b(IIIIII)V#0",
-      "to": "writeIndexForwardXForwardY",
-      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-      "originalName": "incrementValue$0"
+      "to": "writeIndexFixedXFixedY",
+      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+      "originalName": "incrementValue$8"
     },
     {
       "symbol": "L:dm.b(IIIIII)V#1",
-      "to": "writeIndexForwardXReverseY",
-      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-      "originalName": "incrementValue$1"
+      "to": "writeIndexFixedXForwardY",
+      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+      "originalName": "incrementValue$6"
     },
     {
       "symbol": "L:dm.b(IIIIII)V#10",
@@ -2910,9 +2910,9 @@
     },
     {
       "symbol": "L:dm.b(IIIIII)V#2",
-      "to": "writeIndexForwardXFixedY",
-      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-      "originalName": "incrementValue$2"
+      "to": "writeIndexFixedXReverseY",
+      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+      "originalName": "incrementValue$7"
     },
     {
       "symbol": "L:dm.b(IIIIII)V#20",
@@ -2976,9 +2976,9 @@
     },
     {
       "symbol": "L:dm.b(IIIIII)V#3",
-      "to": "writeIndexReverseXForwardY",
-      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-      "originalName": "incrementValue$3"
+      "to": "writeIndexForwardXFixedY",
+      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+      "originalName": "incrementValue$2"
     },
     {
       "symbol": "L:dm.b(IIIIII)V#30",
@@ -3036,33 +3036,33 @@
     },
     {
       "symbol": "L:dm.b(IIIIII)V#4",
-      "to": "writeIndexReverseXReverseY",
-      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-      "originalName": "incrementValue$4"
+      "to": "writeIndexForwardXForwardY",
+      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+      "originalName": "incrementValue$0"
     },
     {
       "symbol": "L:dm.b(IIIIII)V#5",
+      "to": "writeIndexForwardXReverseY",
+      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+      "originalName": "incrementValue$1"
+    },
+    {
+      "symbol": "L:dm.b(IIIIII)V#6",
       "to": "writeIndexReverseXFixedY",
       "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
       "originalName": "incrementValue$5"
     },
     {
-      "symbol": "L:dm.b(IIIIII)V#6",
-      "to": "writeIndexFixedXForwardY",
-      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-      "originalName": "incrementValue$6"
-    },
-    {
       "symbol": "L:dm.b(IIIIII)V#7",
-      "to": "writeIndexFixedXReverseY",
-      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-      "originalName": "incrementValue$7"
+      "to": "writeIndexReverseXForwardY",
+      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+      "originalName": "incrementValue$3"
     },
     {
       "symbol": "L:dm.b(IIIIII)V#8",
-      "to": "writeIndexFixedXFixedY",
-      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
-      "originalName": "incrementValue$8"
+      "to": "writeIndexReverseXReverseY",
+      "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+      "originalName": "incrementValue$4"
     },
     {
       "symbol": "L:dm.b(IIIIII)V#9",
@@ -3594,45 +3594,45 @@
     },
     {
       "symbol": "L:ja.f(I)V#1",
+      "originalName": "var9",
+      "to": "negativeColumnCounter",
+      "evidence": "ja.java starts var9 at negative clipped width and increments it through each pixel in a row."
+    },
+    {
+      "symbol": "L:ja.f(I)V#2",
       "originalName": "var2",
       "to": "clipLeftX",
       "evidence": "ja.java begins with the sprite's left edge relative to field_o, then clips it at zero and adjusts the clipped width."
     },
     {
-      "symbol": "L:ja.f(I)V#2",
+      "symbol": "L:ja.f(I)V#3",
       "originalName": "var3",
       "to": "clipTopY",
       "evidence": "ja.java begins with the sprite's top edge relative to field_v, clips it at zero and adjusts the clipped height."
     },
     {
-      "symbol": "L:ja.f(I)V#3",
+      "symbol": "L:ja.f(I)V#4",
       "originalName": "var4",
       "to": "clippedWidth",
       "evidence": "ja.java initializes the sprite rectangle width and shortens it against bk.field_a.field_r after left clipping."
     },
     {
-      "symbol": "L:ja.f(I)V#4",
+      "symbol": "L:ja.f(I)V#5",
       "originalName": "var5",
       "to": "clippedHeight",
       "evidence": "ja.java initializes the sprite rectangle height and shortens it against bk.field_a.field_m after top clipping."
     },
     {
-      "symbol": "L:ja.f(I)V#5",
+      "symbol": "L:ja.f(I)V#6",
       "originalName": "var6",
       "to": "framebufferIndex",
       "evidence": "ja.java starts var6 at clipLeft+stride*clipTop and advances it through framebuffer writes."
     },
     {
-      "symbol": "L:ja.f(I)V#6",
+      "symbol": "L:ja.f(I)V#7",
       "originalName": "var7",
       "to": "rowSkip",
       "evidence": "ja.java assigns stride-clippedWidth to var7 and adds it after finishing each row."
-    },
-    {
-      "symbol": "L:ja.f(I)V#7",
-      "originalName": "var9",
-      "to": "negativeColumnCounter",
-      "evidence": "ja.java starts var9 at negative clipped width and increments it through each pixel in a row."
     },
     {
       "symbol": "L:ja.f(I)V#8",
@@ -3672,21 +3672,21 @@
     },
     {
       "symbol": "L:ja.j(I)V#1",
-      "originalName": "var2",
-      "to": "entityOffsetX",
-      "evidence": "ja.java computes field_o-320 and uses this X offset in board-angle projection."
-    },
-    {
-      "symbol": "L:ja.j(I)V#10",
-      "originalName": "var11",
-      "to": "framebufferRowSkip",
-      "evidence": "ja.java computes stride-clippedWidth into var11 and adds it after completing each row."
-    },
-    {
-      "symbol": "L:ja.j(I)V#11",
       "originalName": "var13",
       "to": "negativeColumnCounter",
       "evidence": "ja.java initializes var13 to negative clipped width and increments it across pixels in the inner row loop."
+    },
+    {
+      "symbol": "L:ja.j(I)V#10",
+      "originalName": "var10",
+      "to": "framebufferIndex",
+      "evidence": "ja.java initializes var10 as wd.field_b.field_r*clipTopY+clipLeftX, then advances it over the clipped rectangle."
+    },
+    {
+      "symbol": "L:ja.j(I)V#11",
+      "originalName": "var11",
+      "to": "framebufferRowSkip",
+      "evidence": "ja.java computes stride-clippedWidth into var11 and adds it after completing each row."
     },
     {
       "symbol": "L:ja.j(I)V#13",
@@ -3696,51 +3696,51 @@
     },
     {
       "symbol": "L:ja.j(I)V#2",
+      "originalName": "var2",
+      "to": "entityOffsetX",
+      "evidence": "ja.java computes field_o-320 and uses this X offset in board-angle projection."
+    },
+    {
+      "symbol": "L:ja.j(I)V#3",
       "originalName": "var3",
       "to": "entityOffsetY",
       "evidence": "ja.java computes field_v-240 and uses this Y offset in board-angle projection."
     },
     {
-      "symbol": "L:ja.j(I)V#3",
+      "symbol": "L:ja.j(I)V#4",
       "originalName": "var4",
       "to": "rotatedEntityX",
       "evidence": "ja.java rotates var2/var3 with board angle and adds 320 to produce the clipped sprite's screen X."
     },
     {
-      "symbol": "L:ja.j(I)V#4",
+      "symbol": "L:ja.j(I)V#5",
       "originalName": "var5",
       "to": "rotatedEntityY",
       "evidence": "ja.java rotates var2/var3 with board angle and adds 240 to produce the clipped sprite's screen Y."
     },
     {
-      "symbol": "L:ja.j(I)V#5",
+      "symbol": "L:ja.j(I)V#6",
       "originalName": "var6",
       "to": "clipLeftX",
       "evidence": "ja.java derives var6 from projected entity X, sprite half-width and wd.field_a, then clips its lower bound to zero."
     },
     {
-      "symbol": "L:ja.j(I)V#6",
+      "symbol": "L:ja.j(I)V#7",
       "originalName": "var7",
       "to": "clipTopY",
       "evidence": "ja.java derives var7 from projected entity Y, sprite half-height and wd.field_d, then clips its lower bound to zero."
     },
     {
-      "symbol": "L:ja.j(I)V#7",
+      "symbol": "L:ja.j(I)V#8",
       "originalName": "var8",
       "to": "clippedSpriteWidth",
       "evidence": "ja.java starts var8 at offscreen sprite width plus eight and reduces it against wd.field_b.field_r."
     },
     {
-      "symbol": "L:ja.j(I)V#8",
+      "symbol": "L:ja.j(I)V#9",
       "originalName": "var9",
       "to": "clippedSpriteHeight",
       "evidence": "ja.java starts var9 at offscreen sprite height plus eight and reduces it against wd.field_b.field_m."
-    },
-    {
-      "symbol": "L:ja.j(I)V#9",
-      "originalName": "var10",
-      "to": "framebufferIndex",
-      "evidence": "ja.java initializes var10 as wd.field_b.field_r*clipTopY+clipLeftX, then advances it over the clipped rectangle."
     },
     {
       "symbol": "L:ja.n(I)V#0",
@@ -4565,52 +4565,52 @@
       "evidence": "Index into centralEntity.relatedEntities in the outer pair-enumeration loop; secondNeighborIndex starts at this index plus one."
     },
     {
-      "symbol": "L:ul.b(I)V#20",
+      "symbol": "L:ul.b(I)V#1",
+      "to": "secondNeighborIndex",
+      "originalName": "var9",
+      "evidence": "Second index into centralEntity.relatedEntities, strictly greater than firstNeighborIndex, so each pair is visited once per central entity."
+    },
+    {
+      "symbol": "L:ul.b(I)V#21",
       "to": "eligibleNeighborhoodVisited",
       "originalName": "var1_int",
       "evidence": "Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag."
     },
     {
-      "symbol": "L:ul.b(I)V#22",
+      "symbol": "L:ul.b(I)V#23",
       "to": "dualMatchFound",
       "originalName": "var2",
       "evidence": "Set when a candidate triple shares both category and sprite variant; chooses feedback mode 5 instead of mode 4 after traversal."
     },
     {
-      "symbol": "L:ul.b(I)V#23",
+      "symbol": "L:ul.b(I)V#24",
       "to": "centralEntity",
       "originalName": "var3",
       "evidence": "Current attached entity from the deque. Its matching counts gate neighborhood traversal and its neighbor pairs form candidate triples."
     },
     {
-      "symbol": "L:ul.b(I)V#24",
+      "symbol": "L:ul.b(I)V#25",
       "to": "variantMatchingAllowed",
       "originalName": "var4",
       "evidence": "Integer boolean for centralEntity.sameVariantEntityCount > 1; gates both subsequent spriteVariantIndex comparisons."
     },
     {
-      "symbol": "L:ul.b(I)V#25",
+      "symbol": "L:ul.b(I)V#26",
       "to": "categoryMatchingAllowed",
       "originalName": "var5",
       "evidence": "Integer boolean for centralEntity.sameCategoryEntityCount > 1; gates both subsequent entityCategoryKey comparisons."
     },
     {
-      "symbol": "L:ul.b(I)V#26",
+      "symbol": "L:ul.b(I)V#27",
       "to": "firstNeighborSharesVariant",
       "originalName": "var7",
       "evidence": "Gated equality of the central and first-neighbor spriteVariantIndex values; combines with the second neighbor to form tripleSharesVariant."
     },
     {
-      "symbol": "L:ul.b(I)V#27",
+      "symbol": "L:ul.b(I)V#28",
       "to": "firstNeighborSharesCategory",
       "originalName": "var8",
       "evidence": "Gated equality of the central and first-neighbor entityCategoryKey values; combines with the second neighbor to form tripleSharesCategory."
-    },
-    {
-      "symbol": "L:ul.b(I)V#28",
-      "to": "secondNeighborIndex",
-      "originalName": "var9",
-      "evidence": "Second index into centralEntity.relatedEntities, strictly greater than firstNeighborIndex, so each pair is visited once per central entity."
     },
     {
       "symbol": "L:ul.b(I)V#29",
@@ -7032,18 +7032,18 @@
     }
   ],
   "revision": 4,
-  "version": 30,
+  "version": 31,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "2f75cefb09f32e164f77b7f4adc6fd011d922f43",
+      "commit": "44435d91c3e1f48530c0f2462caa3874968993bc",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "8e6ff3d4a6c5439128cbbad964491358c73c92c2e6e0a0ff82edadda478a612e",
-        "reproduce": "git archive --format=tar 2f75cefb09f32e164f77b7f4adc6fd011d922f43 | sha256sum",
+        "sha256": "91f00d39ebbcdeff76e1c4d507ba69839a1f5fe3573499906040ac6f712a63c1",
+        "reproduce": "git archive --format=tar 44435d91c3e1f48530c0f2462caa3874968993bc | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -7052,949 +7052,544 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "e6f3bda07aba672669d4281953824f5e37f7af88",
+      "commit": "62138e59462ef61e57813073ab6e6679a95c0071",
       "path": "readable/geoblox-rules.json",
-      "sha256": "b6c312be17b74553051633fa94547a7b2dac97d92e97fd3e47904b218b20c60b"
+      "sha256": "fce35beb82bf8a01334362e607d81876fbcf0b20134765884e84ce2e28d78433"
     },
     "ruleChanges": [
       {
-        "symbol": "L:c.a(ZBII)V#10",
-        "before": null,
+        "symbol": "L:dm.b(IIIIII)V#0",
+        "before": {
+          "symbol": "L:dm.b(IIIIII)V#0",
+          "to": "writeIndexForwardXForwardY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$0"
+        },
         "after": {
-          "symbol": "L:c.a(ZBII)V#10",
-          "originalName": "var6",
-          "to": "actionId",
-          "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
+          "symbol": "L:dm.b(IIIIII)V#0",
+          "to": "writeIndexFixedXFixedY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$8"
         }
       },
       {
-        "symbol": "L:c.a(ZBII)V#11",
+        "symbol": "L:dm.b(IIIIII)V#1",
         "before": {
-          "symbol": "L:c.a(ZBII)V#11",
-          "originalName": "var6",
-          "to": "actionId",
-          "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
+          "symbol": "L:dm.b(IIIIII)V#1",
+          "to": "writeIndexForwardXReverseY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$1"
         },
-        "after": null
-      },
-      {
-        "symbol": "L:c.b(IB)V#5",
-        "before": null,
         "after": {
-          "symbol": "L:c.b(IB)V#5",
-          "originalName": "var5",
-          "to": "actionId",
-          "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
+          "symbol": "L:dm.b(IIIIII)V#1",
+          "to": "writeIndexFixedXForwardY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$6"
         }
       },
       {
-        "symbol": "L:c.b(IB)V#6",
+        "symbol": "L:dm.b(IIIIII)V#2",
         "before": {
-          "symbol": "L:c.b(IB)V#6",
-          "originalName": "var5",
-          "to": "actionId",
-          "evidence": "Value read from per-screen action ID array using item index; drives action-specific branches."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ec.b(I)Z#10",
-        "before": {
-          "symbol": "L:ec.b(I)Z#10",
-          "to": "firstMatchedEntity",
-          "originalName": "var5",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+          "symbol": "L:dm.b(IIIIII)V#2",
+          "to": "writeIndexForwardXFixedY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$2"
         },
         "after": {
-          "symbol": "L:ec.b(I)Z#10",
-          "to": "secondMatchedEntity",
-          "originalName": "var6",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+          "symbol": "L:dm.b(IIIIII)V#2",
+          "to": "writeIndexFixedXReverseY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$7"
         }
       },
       {
-        "symbol": "L:ec.b(I)Z#11",
+        "symbol": "L:dm.b(IIIIII)V#3",
         "before": {
-          "symbol": "L:ec.b(I)Z#11",
-          "to": "secondMatchedEntity",
-          "originalName": "var6",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+          "symbol": "L:dm.b(IIIIII)V#3",
+          "to": "writeIndexReverseXForwardY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$3"
         },
         "after": {
-          "symbol": "L:ec.b(I)Z#11",
-          "to": "thirdMatchedEntity",
-          "originalName": "var7",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+          "symbol": "L:dm.b(IIIIII)V#3",
+          "to": "writeIndexForwardXFixedY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$2"
         }
       },
       {
-        "symbol": "L:ec.b(I)Z#12",
+        "symbol": "L:dm.b(IIIIII)V#4",
         "before": {
-          "symbol": "L:ec.b(I)Z#12",
-          "to": "thirdMatchedEntity",
-          "originalName": "var7",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+          "symbol": "L:dm.b(IIIIII)V#4",
+          "to": "writeIndexReverseXReverseY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$4"
         },
         "after": {
-          "symbol": "L:ec.b(I)Z#12",
-          "to": "awardedPoints",
-          "originalName": "var8",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+          "symbol": "L:dm.b(IIIIII)V#4",
+          "to": "writeIndexForwardXForwardY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$0"
         }
       },
       {
-        "symbol": "L:ec.b(I)Z#13",
+        "symbol": "L:dm.b(IIIIII)V#5",
         "before": {
-          "symbol": "L:ec.b(I)Z#13",
-          "to": "awardedPoints",
-          "originalName": "var8",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+          "symbol": "L:dm.b(IIIIII)V#5",
+          "to": "writeIndexReverseXFixedY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$5"
         },
         "after": {
-          "symbol": "L:ec.b(I)Z#13",
-          "to": "firstBlockedEntity",
-          "originalName": "var8_ref_ja",
-          "evidence": "Alias of firstMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
+          "symbol": "L:dm.b(IIIIII)V#5",
+          "to": "writeIndexForwardXReverseY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$1"
         }
       },
       {
-        "symbol": "L:ec.b(I)Z#14",
+        "symbol": "L:dm.b(IIIIII)V#6",
         "before": {
-          "symbol": "L:ec.b(I)Z#14",
-          "to": "firstBlockedEntity",
-          "originalName": "var8_ref_ja",
-          "evidence": "Alias of firstMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
+          "symbol": "L:dm.b(IIIIII)V#6",
+          "to": "writeIndexFixedXForwardY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$6"
         },
         "after": {
-          "symbol": "L:ec.b(I)Z#14",
-          "to": "popupX",
+          "symbol": "L:dm.b(IIIIII)V#6",
+          "to": "writeIndexReverseXFixedY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$5"
+        }
+      },
+      {
+        "symbol": "L:dm.b(IIIIII)V#7",
+        "before": {
+          "symbol": "L:dm.b(IIIIII)V#7",
+          "to": "writeIndexFixedXReverseY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$7"
+        },
+        "after": {
+          "symbol": "L:dm.b(IIIIII)V#7",
+          "to": "writeIndexReverseXForwardY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$3"
+        }
+      },
+      {
+        "symbol": "L:dm.b(IIIIII)V#8",
+        "before": {
+          "symbol": "L:dm.b(IIIIII)V#8",
+          "to": "writeIndexFixedXFixedY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$8"
+        },
+        "after": {
+          "symbol": "L:dm.b(IIIIII)V#8",
+          "to": "writeIndexReverseXReverseY",
+          "evidence": "Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches.",
+          "originalName": "incrementValue$4"
+        }
+      },
+      {
+        "symbol": "L:ja.f(I)V#1",
+        "before": {
+          "symbol": "L:ja.f(I)V#1",
+          "originalName": "var2",
+          "to": "clipLeftX",
+          "evidence": "ja.java begins with the sprite's left edge relative to field_o, then clips it at zero and adjusts the clipped width."
+        },
+        "after": {
+          "symbol": "L:ja.f(I)V#1",
           "originalName": "var9",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+          "to": "negativeColumnCounter",
+          "evidence": "ja.java starts var9 at negative clipped width and increments it through each pixel in a row."
         }
       },
       {
-        "symbol": "L:ec.b(I)Z#15",
+        "symbol": "L:ja.f(I)V#2",
         "before": {
-          "symbol": "L:ec.b(I)Z#15",
-          "to": "popupX",
+          "symbol": "L:ja.f(I)V#2",
+          "originalName": "var3",
+          "to": "clipTopY",
+          "evidence": "ja.java begins with the sprite's top edge relative to field_v, clips it at zero and adjusts the clipped height."
+        },
+        "after": {
+          "symbol": "L:ja.f(I)V#2",
+          "originalName": "var2",
+          "to": "clipLeftX",
+          "evidence": "ja.java begins with the sprite's left edge relative to field_o, then clips it at zero and adjusts the clipped width."
+        }
+      },
+      {
+        "symbol": "L:ja.f(I)V#3",
+        "before": {
+          "symbol": "L:ja.f(I)V#3",
+          "originalName": "var4",
+          "to": "clippedWidth",
+          "evidence": "ja.java initializes the sprite rectangle width and shortens it against bk.field_a.field_r after left clipping."
+        },
+        "after": {
+          "symbol": "L:ja.f(I)V#3",
+          "originalName": "var3",
+          "to": "clipTopY",
+          "evidence": "ja.java begins with the sprite's top edge relative to field_v, clips it at zero and adjusts the clipped height."
+        }
+      },
+      {
+        "symbol": "L:ja.f(I)V#4",
+        "before": {
+          "symbol": "L:ja.f(I)V#4",
+          "originalName": "var5",
+          "to": "clippedHeight",
+          "evidence": "ja.java initializes the sprite rectangle height and shortens it against bk.field_a.field_m after top clipping."
+        },
+        "after": {
+          "symbol": "L:ja.f(I)V#4",
+          "originalName": "var4",
+          "to": "clippedWidth",
+          "evidence": "ja.java initializes the sprite rectangle width and shortens it against bk.field_a.field_r after left clipping."
+        }
+      },
+      {
+        "symbol": "L:ja.f(I)V#5",
+        "before": {
+          "symbol": "L:ja.f(I)V#5",
+          "originalName": "var6",
+          "to": "framebufferIndex",
+          "evidence": "ja.java starts var6 at clipLeft+stride*clipTop and advances it through framebuffer writes."
+        },
+        "after": {
+          "symbol": "L:ja.f(I)V#5",
+          "originalName": "var5",
+          "to": "clippedHeight",
+          "evidence": "ja.java initializes the sprite rectangle height and shortens it against bk.field_a.field_m after top clipping."
+        }
+      },
+      {
+        "symbol": "L:ja.f(I)V#6",
+        "before": {
+          "symbol": "L:ja.f(I)V#6",
+          "originalName": "var7",
+          "to": "rowSkip",
+          "evidence": "ja.java assigns stride-clippedWidth to var7 and adds it after finishing each row."
+        },
+        "after": {
+          "symbol": "L:ja.f(I)V#6",
+          "originalName": "var6",
+          "to": "framebufferIndex",
+          "evidence": "ja.java starts var6 at clipLeft+stride*clipTop and advances it through framebuffer writes."
+        }
+      },
+      {
+        "symbol": "L:ja.f(I)V#7",
+        "before": {
+          "symbol": "L:ja.f(I)V#7",
           "originalName": "var9",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+          "to": "negativeColumnCounter",
+          "evidence": "ja.java starts var9 at negative clipped width and increments it through each pixel in a row."
         },
         "after": {
-          "symbol": "L:ec.b(I)Z#15",
-          "to": "secondBlockedEntity",
-          "originalName": "var9_ref_ja",
-          "evidence": "Alias of secondMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
+          "symbol": "L:ja.f(I)V#7",
+          "originalName": "var7",
+          "to": "rowSkip",
+          "evidence": "ja.java assigns stride-clippedWidth to var7 and adds it after finishing each row."
         }
       },
       {
-        "symbol": "L:ec.b(I)Z#16",
+        "symbol": "L:ja.j(I)V#1",
         "before": {
-          "symbol": "L:ec.b(I)Z#16",
-          "to": "secondBlockedEntity",
-          "originalName": "var9_ref_ja",
-          "evidence": "Alias of secondMatchedEntity on the cooldown-blocked path, immediately before its entityQueue marker is cleared."
+          "symbol": "L:ja.j(I)V#1",
+          "originalName": "var2",
+          "to": "entityOffsetX",
+          "evidence": "ja.java computes field_o-320 and uses this X offset in board-angle projection."
         },
         "after": {
-          "symbol": "L:ec.b(I)Z#16",
-          "to": "popupY",
-          "originalName": "var10",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
+          "symbol": "L:ja.j(I)V#1",
+          "originalName": "var13",
+          "to": "negativeColumnCounter",
+          "evidence": "ja.java initializes var13 to negative clipped width and increments it across pixels in the inner row loop."
         }
       },
       {
-        "symbol": "L:ec.b(I)Z#17",
+        "symbol": "L:ja.j(I)V#10",
         "before": {
-          "symbol": "L:ec.b(I)Z#17",
-          "to": "popupY",
-          "originalName": "var10",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#17",
-          "to": "controlFlowGuard",
+          "symbol": "L:ja.j(I)V#10",
           "originalName": "var11",
-          "evidence": "Retained entry snapshot of Geoblox.field_C; unused in the generated processMatchCandidates body."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#18",
-        "before": {
-          "symbol": "L:ec.b(I)Z#18",
-          "to": "controlFlowGuard",
-          "originalName": "var11",
-          "evidence": "Retained entry snapshot of Geoblox.field_C; unused in the generated processMatchCandidates body."
+          "to": "framebufferRowSkip",
+          "evidence": "ja.java computes stride-clippedWidth into var11 and adds it after completing each row."
         },
         "after": {
-          "symbol": "L:ec.b(I)Z#18",
-          "to": "candidateIndex",
-          "originalName": "var12",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#19",
-        "before": {
-          "symbol": "L:ec.b(I)Z#19",
-          "to": "candidateIndex",
-          "originalName": "var12",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ec.b(I)Z#4",
-        "before": null,
-        "after": {
-          "symbol": "L:ec.b(I)Z#4",
-          "to": "sortInsertionIndex",
-          "originalName": "var1_int",
-          "evidence": "Outer insertion-sort cursor starting at one. Later receives candidateIndex zero before candidate traversal; it is not the traversal cursor."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#5",
-        "before": {
-          "symbol": "L:ec.b(I)Z#5",
-          "to": "sortInsertionIndex",
-          "originalName": "var1_int",
-          "evidence": "Outer insertion-sort cursor starting at one. Later receives candidateIndex zero before candidate traversal; it is not the traversal cursor."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ec.b(I)Z#6",
-        "before": null,
-        "after": {
-          "symbol": "L:ec.b(I)Z#6",
-          "to": "sortCursorThenFirstEntityId",
-          "originalName": "var2",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#7",
-        "before": {
-          "symbol": "L:ec.b(I)Z#7",
-          "to": "sortCursorThenFirstEntityId",
-          "originalName": "var2",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#7",
-          "to": "packedCandidateThenSecondEntityId",
-          "originalName": "var3",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#8",
-        "before": {
-          "symbol": "L:ec.b(I)Z#8",
-          "to": "packedCandidateThenSecondEntityId",
-          "originalName": "var3",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#8",
-          "to": "thirdEntityId",
-          "originalName": "var4",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ec.b(I)Z#9",
-        "before": {
-          "symbol": "L:ec.b(I)Z#9",
-          "to": "thirdEntityId",
-          "originalName": "var4",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        },
-        "after": {
-          "symbol": "L:ec.b(I)Z#9",
-          "to": "firstMatchedEntity",
-          "originalName": "var5",
-          "evidence": "Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#15",
-        "before": null,
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#15",
-          "originalName": "var3_int",
-          "to": "neighborIndexThenDetachSecond",
-          "evidence": "First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
-          "originalName": "var3_int",
-          "to": "neighborIndexThenDetachSecond",
-          "evidence": "First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#17",
-        "before": null,
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#17",
-          "originalName": "var4",
-          "to": "detachFirst",
-          "evidence": "Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
-          "originalName": "var4",
-          "to": "detachFirst",
-          "evidence": "Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities."
-        },
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
-          "originalName": "var5_int",
-          "to": "variantPropagationThenNeighborIndex",
-          "evidence": "Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
-          "originalName": "var5_int",
-          "to": "variantPropagationThenNeighborIndex",
-          "evidence": "Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity."
-        },
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
-          "originalName": "var5",
-          "to": "entityForNeighborCountReset",
-          "evidence": "Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
-          "originalName": "var5",
-          "to": "entityForNeighborCountReset",
-          "evidence": "Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second."
-        },
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
-          "originalName": "var6_int",
-          "to": "propagateCategory",
-          "evidence": "Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
-          "originalName": "var6_int",
-          "to": "propagateCategory",
-          "evidence": "Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts."
-        },
-        "after": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
-          "originalName": "var6",
-          "to": "entityForVariantCountReset",
-          "evidence": "Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second."
-        }
-      },
-      {
-        "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
-        "before": {
-          "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
-          "originalName": "var6",
-          "to": "entityForVariantCountReset",
-          "evidence": "Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#1",
-        "before": {
-          "symbol": "L:ld.a(I)Z#1",
-          "to": "leftCardinalHit",
-          "originalName": "stackIn_4_0",
-          "evidence": "Carries integer true from the first nonzero pixel at (90,240) to result arm zero."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#1",
-          "to": "leftCardinalHit",
-          "originalName": "stackIn_4_0",
-          "evidence": "Carries integer true from the first nonzero pixel at (90,240) to the immediate return on this path inside the try."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#10",
-        "before": {
-          "symbol": "L:ld.a(I)Z#10",
-          "to": "lowerNearRightHit",
-          "originalName": "stackIn_37_0",
-          "evidence": "Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to result arm nine."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#10",
-          "to": "lowerNearRightHit",
-          "originalName": "stackIn_37_0",
-          "evidence": "Carries integer true from lowerNearRowCenterIndex plus circleHorizontalOffset to the immediate return on this path inside the try."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#11",
-        "before": {
-          "symbol": "L:ld.a(I)Z#11",
-          "to": "lowerFarLeftHit",
-          "originalName": "stackIn_41_0",
-          "evidence": "Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to result arm ten."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#11",
-          "to": "lowerFarLeftHit",
-          "originalName": "stackIn_41_0",
-          "evidence": "Carries integer true from lowerFarRowCenterIndex minus circleVerticalOffset to the immediate return on this path inside the try."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#12",
-        "before": {
-          "symbol": "L:ld.a(I)Z#12",
-          "to": "lowerFarRightHit",
-          "originalName": "stackIn_45_0",
-          "evidence": "Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to result arm eleven."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#12",
-          "to": "lowerFarRightHit",
-          "originalName": "stackIn_45_0",
-          "evidence": "Carries integer true from lowerFarRowCenterIndex plus circleVerticalOffset to the immediate return on this path inside the try."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#13",
-        "before": {
-          "symbol": "L:ld.a(I)Z#13",
-          "to": "boundaryScanMissResult",
-          "originalName": "stackIn_47_0",
-          "evidence": "Carries integer false when the vertical octant offset passes the horizontal offset; result arm twelve returns it. It is not a flag set true on a miss."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#13",
-          "to": "boundaryScanMissResult",
-          "originalName": "stackIn_47_0",
-          "evidence": "Carries integer false when the vertical octant offset passes the horizontal offset; the immediate return ends the scan. It is not a flag set true on a miss."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#14",
-        "before": {
-          "symbol": "L:ld.a(I)Z#14",
-          "to": "boundaryResultArmId",
-          "originalName": "decompiledRegionSelector0",
-          "evidence": "Selects the retained post-try result arm, zero through twelve; the twelve hit arms return integer true and the final miss arm returns false. No dispatch loop or enum is introduced."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#14",
-          "to": "caughtBoundaryScanFailure",
-          "originalName": "decompiledCaughtException",
-          "evidence": "Stores the caught RuntimeException before passing it through the retained alias to t.a."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#15",
-        "before": {
-          "symbol": "L:ld.a(I)Z#15",
-          "to": "caughtBoundaryScanFailure",
-          "originalName": "decompiledCaughtException",
-          "evidence": "Stores the caught RuntimeException before passing it through the retained alias to t.a."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#15",
-          "to": "upperNearRowCenterIndex",
-          "originalName": "var1_int",
-          "evidence": "Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#16",
-        "before": {
-          "symbol": "L:ld.a(I)Z#16",
-          "to": "upperNearRowCenterIndex",
-          "originalName": "var1_int",
-          "evidence": "Starts at (320,240) and subtracts one framebuffer stride each vertical step, representing the center-column address on row 240-circleVerticalOffset."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#16",
-          "to": "boundaryScanFailureForContext",
-          "originalName": "var1",
-          "evidence": "Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#17",
-        "before": {
-          "symbol": "L:ld.a(I)Z#17",
-          "to": "boundaryScanFailureForContext",
-          "originalName": "var1",
-          "evidence": "Aliases caughtBoundaryScanFailure for the retained ld.B exception-context wrapper."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#17",
-          "to": "lowerNearRowCenterIndex",
-          "originalName": "var2",
-          "evidence": "Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#18",
-        "before": {
-          "symbol": "L:ld.a(I)Z#18",
-          "to": "lowerNearRowCenterIndex",
-          "originalName": "var2",
-          "evidence": "Starts at (320,240) and adds one stride each vertical step, representing row 240+circleVerticalOffset at column 320."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#18",
-          "to": "upperFarRowCenterIndex",
-          "originalName": "var3",
-          "evidence": "Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#19",
-        "before": {
-          "symbol": "L:ld.a(I)Z#19",
-          "to": "upperFarRowCenterIndex",
-          "originalName": "var3",
-          "evidence": "Starts at (320,10) and adds a stride when circleHorizontalOffset decreases, representing row 240-circleHorizontalOffset at column 320."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#19",
-          "to": "lowerFarRowCenterIndex",
-          "originalName": "var4",
-          "evidence": "Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#2",
-        "before": {
-          "symbol": "L:ld.a(I)Z#2",
-          "to": "rightCardinalHit",
-          "originalName": "stackIn_7_0",
-          "evidence": "Carries integer true from the nonzero pixel at (550,240) to result arm one."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#2",
-          "to": "rightCardinalHit",
-          "originalName": "stackIn_7_0",
-          "evidence": "Carries integer true from the nonzero pixel at (550,240) to the immediate return on this path inside the try."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#20",
-        "before": {
-          "symbol": "L:ld.a(I)Z#20",
-          "to": "lowerFarRowCenterIndex",
-          "originalName": "var4",
-          "evidence": "Starts at (320,470) and subtracts a stride when circleHorizontalOffset decreases, representing row 240+circleHorizontalOffset at column 320."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#20",
-          "to": "circleHorizontalOffset",
-          "originalName": "var5",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#21",
-        "before": {
-          "symbol": "L:ld.a(I)Z#21",
-          "to": "circleHorizontalOffset",
-          "originalName": "var5",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#21",
-          "to": "circleVerticalOffset",
-          "originalName": "var6",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#22",
-        "before": {
-          "symbol": "L:ld.a(I)Z#22",
-          "to": "circleVerticalOffset",
-          "originalName": "var6",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#22",
-          "to": "playfieldRadiusSquared",
-          "originalName": "var7",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#23",
-        "before": {
-          "symbol": "L:ld.a(I)Z#23",
-          "to": "playfieldRadiusSquared",
-          "originalName": "var7",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#23",
-          "to": "guardDivisionResult",
-          "originalName": "var8",
-          "evidence": "Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#24",
-        "before": {
-          "symbol": "L:ld.a(I)Z#24",
-          "to": "guardDivisionResult",
-          "originalName": "var8",
-          "evidence": "Retains the otherwise unused 64/((methodGuard-32)/34) computation before any framebuffer read. Native guard cases verify ArithmeticException precedence and context."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#24",
-          "to": "circleError",
-          "originalName": "var9",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#25",
-        "before": {
-          "symbol": "L:ld.a(I)Z#25",
-          "to": "circleError",
-          "originalName": "var9",
-          "evidence": "The boundary scan starts at horizontal offset 230 and vertical offset zero with radius squared 52900, updating the circle error and probing eight symmetric positions."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#25",
-          "to": "clientControlFlowGuard",
+          "symbol": "L:ja.j(I)V#10",
           "originalName": "var10",
-          "evidence": "Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read."
+          "to": "framebufferIndex",
+          "evidence": "ja.java initializes var10 as wd.field_b.field_r*clipTopY+clipLeftX, then advances it over the clipped rectangle."
         }
       },
       {
-        "symbol": "L:ld.a(I)Z#26",
+        "symbol": "L:ja.j(I)V#11",
         "before": {
-          "symbol": "L:ld.a(I)Z#26",
-          "to": "clientControlFlowGuard",
+          "symbol": "L:ja.j(I)V#11",
+          "originalName": "var13",
+          "to": "negativeColumnCounter",
+          "evidence": "ja.java initializes var13 to negative clipped width and increments it across pixels in the inner row loop."
+        },
+        "after": {
+          "symbol": "L:ja.j(I)V#11",
+          "originalName": "var11",
+          "to": "framebufferRowSkip",
+          "evidence": "ja.java computes stride-clippedWidth into var11 and adds it after completing each row."
+        }
+      },
+      {
+        "symbol": "L:ja.j(I)V#2",
+        "before": {
+          "symbol": "L:ja.j(I)V#2",
+          "originalName": "var3",
+          "to": "entityOffsetY",
+          "evidence": "ja.java computes field_v-240 and uses this Y offset in board-angle projection."
+        },
+        "after": {
+          "symbol": "L:ja.j(I)V#2",
+          "originalName": "var2",
+          "to": "entityOffsetX",
+          "evidence": "ja.java computes field_o-320 and uses this X offset in board-angle projection."
+        }
+      },
+      {
+        "symbol": "L:ja.j(I)V#3",
+        "before": {
+          "symbol": "L:ja.j(I)V#3",
+          "originalName": "var4",
+          "to": "rotatedEntityX",
+          "evidence": "ja.java rotates var2/var3 with board angle and adds 320 to produce the clipped sprite's screen X."
+        },
+        "after": {
+          "symbol": "L:ja.j(I)V#3",
+          "originalName": "var3",
+          "to": "entityOffsetY",
+          "evidence": "ja.java computes field_v-240 and uses this Y offset in board-angle projection."
+        }
+      },
+      {
+        "symbol": "L:ja.j(I)V#4",
+        "before": {
+          "symbol": "L:ja.j(I)V#4",
+          "originalName": "var5",
+          "to": "rotatedEntityY",
+          "evidence": "ja.java rotates var2/var3 with board angle and adds 240 to produce the clipped sprite's screen Y."
+        },
+        "after": {
+          "symbol": "L:ja.j(I)V#4",
+          "originalName": "var4",
+          "to": "rotatedEntityX",
+          "evidence": "ja.java rotates var2/var3 with board angle and adds 320 to produce the clipped sprite's screen X."
+        }
+      },
+      {
+        "symbol": "L:ja.j(I)V#5",
+        "before": {
+          "symbol": "L:ja.j(I)V#5",
+          "originalName": "var6",
+          "to": "clipLeftX",
+          "evidence": "ja.java derives var6 from projected entity X, sprite half-width and wd.field_a, then clips its lower bound to zero."
+        },
+        "after": {
+          "symbol": "L:ja.j(I)V#5",
+          "originalName": "var5",
+          "to": "rotatedEntityY",
+          "evidence": "ja.java rotates var2/var3 with board angle and adds 240 to produce the clipped sprite's screen Y."
+        }
+      },
+      {
+        "symbol": "L:ja.j(I)V#6",
+        "before": {
+          "symbol": "L:ja.j(I)V#6",
+          "originalName": "var7",
+          "to": "clipTopY",
+          "evidence": "ja.java derives var7 from projected entity Y, sprite half-height and wd.field_d, then clips its lower bound to zero."
+        },
+        "after": {
+          "symbol": "L:ja.j(I)V#6",
+          "originalName": "var6",
+          "to": "clipLeftX",
+          "evidence": "ja.java derives var6 from projected entity X, sprite half-width and wd.field_a, then clips its lower bound to zero."
+        }
+      },
+      {
+        "symbol": "L:ja.j(I)V#7",
+        "before": {
+          "symbol": "L:ja.j(I)V#7",
+          "originalName": "var8",
+          "to": "clippedSpriteWidth",
+          "evidence": "ja.java starts var8 at offscreen sprite width plus eight and reduces it against wd.field_b.field_r."
+        },
+        "after": {
+          "symbol": "L:ja.j(I)V#7",
+          "originalName": "var7",
+          "to": "clipTopY",
+          "evidence": "ja.java derives var7 from projected entity Y, sprite half-height and wd.field_d, then clips its lower bound to zero."
+        }
+      },
+      {
+        "symbol": "L:ja.j(I)V#8",
+        "before": {
+          "symbol": "L:ja.j(I)V#8",
+          "originalName": "var9",
+          "to": "clippedSpriteHeight",
+          "evidence": "ja.java starts var9 at offscreen sprite height plus eight and reduces it against wd.field_b.field_m."
+        },
+        "after": {
+          "symbol": "L:ja.j(I)V#8",
+          "originalName": "var8",
+          "to": "clippedSpriteWidth",
+          "evidence": "ja.java starts var8 at offscreen sprite width plus eight and reduces it against wd.field_b.field_r."
+        }
+      },
+      {
+        "symbol": "L:ja.j(I)V#9",
+        "before": {
+          "symbol": "L:ja.j(I)V#9",
           "originalName": "var10",
-          "evidence": "Retains the initial Geoblox.field_C read; its stored value is unused in this method. Matrix checks run with zero and one without removing the read."
+          "to": "framebufferIndex",
+          "evidence": "ja.java initializes var10 as wd.field_b.field_r*clipTopY+clipLeftX, then advances it over the clipped rectangle."
         },
         "after": {
-          "symbol": "L:ld.a(I)Z#26",
-          "to": "boundaryScanFailure",
-          "originalName": "decompiledCaughtParameter0",
-          "evidence": "Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#27",
-        "before": {
-          "symbol": "L:ld.a(I)Z#27",
-          "to": "boundaryScanFailure",
-          "originalName": "decompiledCaughtParameter0",
-          "evidence": "Catch parameter for RuntimeException from guard arithmetic or framebuffer reads; transferred through two retained aliases before wrapping."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:ld.a(I)Z#3",
-        "before": {
-          "symbol": "L:ld.a(I)Z#3",
-          "to": "topCardinalHit",
-          "originalName": "stackIn_11_0",
-          "evidence": "Carries integer true from the nonzero pixel at (320,10) to result arm two."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#3",
-          "to": "topCardinalHit",
-          "originalName": "stackIn_11_0",
-          "evidence": "Carries integer true from the nonzero pixel at (320,10) to the immediate return on this path inside the try."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#4",
-        "before": {
-          "symbol": "L:ld.a(I)Z#4",
-          "to": "bottomCardinalHit",
-          "originalName": "stackIn_15_0",
-          "evidence": "Carries integer true from the nonzero pixel at (320,470) to result arm three."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#4",
-          "to": "bottomCardinalHit",
-          "originalName": "stackIn_15_0",
-          "evidence": "Carries integer true from the nonzero pixel at (320,470) to the immediate return on this path inside the try."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#5",
-        "before": {
-          "symbol": "L:ld.a(I)Z#5",
-          "to": "upperFarLeftHit",
-          "originalName": "stackIn_21_0",
-          "evidence": "Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to result arm four."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#5",
-          "to": "upperFarLeftHit",
-          "originalName": "stackIn_21_0",
-          "evidence": "Carries integer true from upperFarRowCenterIndex minus circleVerticalOffset to the immediate return on this path inside the try."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#6",
-        "before": {
-          "symbol": "L:ld.a(I)Z#6",
-          "to": "upperFarRightHit",
-          "originalName": "stackIn_24_0",
-          "evidence": "Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to result arm five."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#6",
-          "to": "upperFarRightHit",
-          "originalName": "stackIn_24_0",
-          "evidence": "Carries integer true from upperFarRowCenterIndex plus circleVerticalOffset to the immediate return on this path inside the try."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#7",
-        "before": {
-          "symbol": "L:ld.a(I)Z#7",
-          "to": "upperNearLeftHit",
-          "originalName": "stackIn_27_0",
-          "evidence": "Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to result arm six."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#7",
-          "to": "upperNearLeftHit",
-          "originalName": "stackIn_27_0",
-          "evidence": "Carries integer true from upperNearRowCenterIndex minus circleHorizontalOffset to the immediate return on this path inside the try."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#8",
-        "before": {
-          "symbol": "L:ld.a(I)Z#8",
-          "to": "upperNearRightHit",
-          "originalName": "stackIn_30_0",
-          "evidence": "Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to result arm seven."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#8",
-          "to": "upperNearRightHit",
-          "originalName": "stackIn_30_0",
-          "evidence": "Carries integer true from upperNearRowCenterIndex plus circleHorizontalOffset to the immediate return on this path inside the try."
-        }
-      },
-      {
-        "symbol": "L:ld.a(I)Z#9",
-        "before": {
-          "symbol": "L:ld.a(I)Z#9",
-          "to": "lowerNearLeftHit",
-          "originalName": "stackIn_34_0",
-          "evidence": "Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to result arm eight."
-        },
-        "after": {
-          "symbol": "L:ld.a(I)Z#9",
-          "to": "lowerNearLeftHit",
-          "originalName": "stackIn_34_0",
-          "evidence": "Carries integer true from lowerNearRowCenterIndex minus circleHorizontalOffset to the immediate return on this path inside the try."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#10",
-        "before": {
-          "symbol": "L:sk.a(I)Z#10",
-          "to": "staggeredLifetime",
-          "originalName": "var5",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#10",
-          "to": "cascadeEntity",
-          "originalName": "var6",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#11",
-        "before": {
-          "symbol": "L:sk.a(I)Z#11",
-          "to": "cascadeEntity",
-          "originalName": "var6",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#11",
-          "to": "neighborIndex",
-          "originalName": "var7",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#12",
-        "before": {
-          "symbol": "L:sk.a(I)Z#12",
-          "to": "neighborIndex",
-          "originalName": "var7",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#12",
-          "to": "neighborEntity",
-          "originalName": "var8",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#13",
-        "before": {
-          "symbol": "L:sk.a(I)Z#13",
-          "to": "neighborEntity",
-          "originalName": "var8",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#13",
-          "to": "searchedEntity",
+          "symbol": "L:ja.j(I)V#9",
           "originalName": "var9",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+          "to": "clippedSpriteHeight",
+          "evidence": "ja.java starts var9 at offscreen sprite height plus eight and reduces it against wd.field_b.field_m."
         }
       },
       {
-        "symbol": "L:sk.a(I)Z#14",
-        "before": {
-          "symbol": "L:sk.a(I)Z#14",
-          "to": "searchedEntity",
+        "symbol": "L:ul.b(I)V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:ul.b(I)V#1",
+          "to": "secondNeighborIndex",
           "originalName": "var9",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+          "evidence": "Second index into centralEntity.relatedEntities, strictly greater than firstNeighborIndex, so each pair is visited once per central entity."
+        }
+      },
+      {
+        "symbol": "L:ul.b(I)V#20",
+        "before": {
+          "symbol": "L:ul.b(I)V#20",
+          "to": "eligibleNeighborhoodVisited",
+          "originalName": "var1_int",
+          "evidence": "Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag."
         },
         "after": null
       },
       {
-        "symbol": "L:sk.a(I)Z#15",
+        "symbol": "L:ul.b(I)V#21",
         "before": null,
         "after": {
-          "symbol": "L:sk.a(I)Z#15",
-          "to": "seedEntity",
-          "originalName": "var11",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+          "symbol": "L:ul.b(I)V#21",
+          "to": "eligibleNeighborhoodVisited",
+          "originalName": "var1_int",
+          "evidence": "Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag."
         }
       },
       {
-        "symbol": "L:sk.a(I)Z#16",
+        "symbol": "L:ul.b(I)V#22",
         "before": {
-          "symbol": "L:sk.a(I)Z#16",
-          "to": "seedEntity",
-          "originalName": "var11",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#16",
-          "to": "cascadeFrontier",
-          "originalName": "var12",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#17",
-        "before": {
-          "symbol": "L:sk.a(I)Z#17",
-          "to": "cascadeFrontier",
-          "originalName": "var12",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:sk.a(I)Z#4",
-        "before": null,
-        "after": {
-          "symbol": "L:sk.a(I)Z#4",
-          "to": "farthestEntity",
-          "originalName": "var1",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
-      },
-      {
-        "symbol": "L:sk.a(I)Z#5",
-        "before": {
-          "symbol": "L:sk.a(I)Z#5",
-          "to": "farthestEntity",
-          "originalName": "var1",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": null
-      },
-      {
-        "symbol": "L:sk.a(I)Z#6",
-        "before": null,
-        "after": {
-          "symbol": "L:sk.a(I)Z#6",
-          "to": "farthestRadiusSquared",
+          "symbol": "L:ul.b(I)V#22",
+          "to": "dualMatchFound",
           "originalName": "var2",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        }
+          "evidence": "Set when a candidate triple shares both category and sprite variant; chooses feedback mode 5 instead of mode 4 after traversal."
+        },
+        "after": null
       },
       {
-        "symbol": "L:sk.a(I)Z#7",
+        "symbol": "L:ul.b(I)V#23",
         "before": {
-          "symbol": "L:sk.a(I)Z#7",
-          "to": "farthestRadiusSquared",
+          "symbol": "L:ul.b(I)V#23",
+          "to": "centralEntity",
+          "originalName": "var3",
+          "evidence": "Current attached entity from the deque. Its matching counts gate neighborhood traversal and its neighbor pairs form candidate triples."
+        },
+        "after": {
+          "symbol": "L:ul.b(I)V#23",
+          "to": "dualMatchFound",
           "originalName": "var2",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#7",
-          "to": "candidateEntity",
-          "originalName": "var3",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+          "evidence": "Set when a candidate triple shares both category and sprite variant; chooses feedback mode 5 instead of mode 4 after traversal."
         }
       },
       {
-        "symbol": "L:sk.a(I)Z#8",
+        "symbol": "L:ul.b(I)V#24",
         "before": {
-          "symbol": "L:sk.a(I)Z#8",
-          "to": "candidateEntity",
-          "originalName": "var3",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+          "symbol": "L:ul.b(I)V#24",
+          "to": "variantMatchingAllowed",
+          "originalName": "var4",
+          "evidence": "Integer boolean for centralEntity.sameVariantEntityCount > 1; gates both subsequent spriteVariantIndex comparisons."
         },
         "after": {
-          "symbol": "L:sk.a(I)Z#8",
-          "to": "visitedCascadeEntities",
-          "originalName": "var4",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+          "symbol": "L:ul.b(I)V#24",
+          "to": "centralEntity",
+          "originalName": "var3",
+          "evidence": "Current attached entity from the deque. Its matching counts gate neighborhood traversal and its neighbor pairs form candidate triples."
         }
       },
       {
-        "symbol": "L:sk.a(I)Z#9",
+        "symbol": "L:ul.b(I)V#25",
         "before": {
-          "symbol": "L:sk.a(I)Z#9",
-          "to": "visitedCascadeEntities",
-          "originalName": "var4",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
-        },
-        "after": {
-          "symbol": "L:sk.a(I)Z#9",
-          "to": "staggeredLifetime",
+          "symbol": "L:ul.b(I)V#25",
+          "to": "categoryMatchingAllowed",
           "originalName": "var5",
-          "evidence": "Boundary-loss handling searches for the farthest attached entity, then traverses relatedEntities using secondary-link frontier/visited queues and increments ending lifetimes by 50 for each visited entity."
+          "evidence": "Integer boolean for centralEntity.sameCategoryEntityCount > 1; gates both subsequent entityCategoryKey comparisons."
+        },
+        "after": {
+          "symbol": "L:ul.b(I)V#25",
+          "to": "variantMatchingAllowed",
+          "originalName": "var4",
+          "evidence": "Integer boolean for centralEntity.sameVariantEntityCount > 1; gates both subsequent spriteVariantIndex comparisons."
+        }
+      },
+      {
+        "symbol": "L:ul.b(I)V#26",
+        "before": {
+          "symbol": "L:ul.b(I)V#26",
+          "to": "firstNeighborSharesVariant",
+          "originalName": "var7",
+          "evidence": "Gated equality of the central and first-neighbor spriteVariantIndex values; combines with the second neighbor to form tripleSharesVariant."
+        },
+        "after": {
+          "symbol": "L:ul.b(I)V#26",
+          "to": "categoryMatchingAllowed",
+          "originalName": "var5",
+          "evidence": "Integer boolean for centralEntity.sameCategoryEntityCount > 1; gates both subsequent entityCategoryKey comparisons."
+        }
+      },
+      {
+        "symbol": "L:ul.b(I)V#27",
+        "before": {
+          "symbol": "L:ul.b(I)V#27",
+          "to": "firstNeighborSharesCategory",
+          "originalName": "var8",
+          "evidence": "Gated equality of the central and first-neighbor entityCategoryKey values; combines with the second neighbor to form tripleSharesCategory."
+        },
+        "after": {
+          "symbol": "L:ul.b(I)V#27",
+          "to": "firstNeighborSharesVariant",
+          "originalName": "var7",
+          "evidence": "Gated equality of the central and first-neighbor spriteVariantIndex values; combines with the second neighbor to form tripleSharesVariant."
+        }
+      },
+      {
+        "symbol": "L:ul.b(I)V#28",
+        "before": {
+          "symbol": "L:ul.b(I)V#28",
+          "to": "secondNeighborIndex",
+          "originalName": "var9",
+          "evidence": "Second index into centralEntity.relatedEntities, strictly greater than firstNeighborIndex, so each pair is visited once per central entity."
+        },
+        "after": {
+          "symbol": "L:ul.b(I)V#28",
+          "to": "firstNeighborSharesCategory",
+          "originalName": "var8",
+          "evidence": "Gated equality of the central and first-neighbor entityCategoryKey values; combines with the second neighbor to form tripleSharesCategory."
         }
       }
     ],
@@ -8002,7 +7597,7 @@
     "sourceEvidence": [
       {
         "file": "ab.java",
-        "sha256": "f7f077a93141d144ce5348b82e5d618765bc132c2059b813973cd1e1b952448a"
+        "sha256": "bb25bde0ac0dc65cbc8e6fed8c1ed7b1a5652ab8d97dc4f29a807afb3cccb876"
       },
       {
         "file": "af.java",
@@ -8010,31 +7605,31 @@
       },
       {
         "file": "bh.java",
-        "sha256": "6ff01864a302ed3ca10f9eb0356569f159a66eaa26832687bd26d33fd16209fb"
+        "sha256": "42c650cd7f3607fd6adacebc845caa07bcd8645d7e870a2549ad30b294f0a92c"
       },
       {
         "file": "c.java",
-        "sha256": "64e1d18a6d71b8af8aa5b85ed9a7c1be6b29230d7511589448053efd5e4d5328"
+        "sha256": "4902b3e8dbc184ef7e864332f4d9192eb675b6f71b666e0041b44b3ea012a1ad"
       },
       {
         "file": "cf.java",
-        "sha256": "240b7794220ba2278fbd2196c0c0cc2d6ed63a4e39f66c3e0b1da284be96e689"
+        "sha256": "4ddcf03bb9329cda53938e4cef4819f198ad4fdf5cddf4a6248b99656b453ecb"
       },
       {
         "file": "ch.java",
-        "sha256": "598da1e4863090b7c37cef646701841f5c9066c25c1d0c9d9c7eea93c895f9cb"
+        "sha256": "314e2e78a5c095b3112cb9a3651c44a9a627f83d57a2249481bf7b6b9084d5df"
       },
       {
         "file": "ec.java",
-        "sha256": "c64d6655c9c8d0b3d5abd411002317b13ffde4ae7e984bfc5e187bb8fa044ab5"
+        "sha256": "86c9dae5c80d0ad425d10f0f6990600ee5fd2a8d67c6ed6d3ac12c2bef3c0ac8"
       },
       {
         "file": "f.java",
-        "sha256": "7e943083cb56e22a424a2ff1161ed0c4d5a58d38c87cfe4d918dd4c7ea9d005e"
+        "sha256": "52839c8913bbae1490fb5eecbf65b68b89c7abd96e5652a85e8ad875dbfde40f"
       },
       {
         "file": "fe.java",
-        "sha256": "1a8f587f63ace4d2c6fecf34fe2839c4488f392f6c7ece4a4dda9518c1c78b21"
+        "sha256": "2e32ff8ed71a80c606c9535db544a2285e6d3789e2143d2c3f0167462a9ed9bc"
       },
       {
         "file": "gd.java",
@@ -8042,15 +7637,15 @@
       },
       {
         "file": "gh.java",
-        "sha256": "58fc27ad0d8a541cd13615e3b804fe78b922e3a68e495747f711a6bfd3adf13f"
+        "sha256": "ca3a868589ede4f465a54f5357a045f9b856f2f5dc9c8bba475bd0b4f1195cb3"
       },
       {
         "file": "gi.java",
-        "sha256": "c0b6ca5abad976379cb4176b5f2423e136bdabd69b4b08d0a4ed896f81d11b25"
+        "sha256": "329e10e0ea5e8b0ed0c8108a8b8c940667b58e6ec7345eeedc877022b0d9469b"
       },
       {
         "file": "ha.java",
-        "sha256": "eba0eeb9b75cc17396773f5a72233548109967d2aaa3c1b6572db94014b065cf"
+        "sha256": "879aa216f6a083fbfebb6552e651595fe94809ce822e151604d5d5e81afcec08"
       },
       {
         "file": "hl.java",
@@ -8058,59 +7653,59 @@
       },
       {
         "file": "i.java",
-        "sha256": "30c75d628e07f3a8b5351e99d1ea70e3cd90e03e8c8b131c6094be7143daed47"
+        "sha256": "eed169ae84e81465f187a766f32ba756d9fdcec9b967a1e7e1c82e7310ed3adf"
       },
       {
         "file": "ih.java",
-        "sha256": "4c6eaab60be488fefc40d77e44a251e38470672af1a8ee80643d4a16f75fcf8d"
+        "sha256": "c8b1ed5aa8a8fe0b42429fa077c3d9c5e345a3665ca0f6de763ab833fd2881d9"
       },
       {
         "file": "ij.java",
-        "sha256": "f662d69b6c2446e7f2918a9f830f0dc8132d84196e73080cbc3f9231c81d0336"
+        "sha256": "5f26f1e3454a76ee19aac856d4498ab9dbbe7582f0095bab53937ebe5f3ce39c"
       },
       {
         "file": "ik.java",
-        "sha256": "761f67253e043c44a9ae3f4883e25e6637b435fa162178bdf8f9683dec71a75c"
+        "sha256": "0ca6a4ac4f56b83cf15137d44779513b911ec9e415c9a9feaece2ced96449532"
       },
       {
         "file": "ja.java",
-        "sha256": "115cc3327cdcfdb65c4f9c45a9e96a5f01bc7b66f74d762d80d2998033a13118"
+        "sha256": "3975f9690db23159055e33d682b59b6607a4958177aeaec590d01d19961f6ad1"
       },
       {
         "file": "jc.java",
-        "sha256": "3a399644cb30bb386dad19157b24865098ad2b09e621fab0758d247dc8bf5b68"
+        "sha256": "ed79e12fede69e14e3e0b8d9faa2e23bad8b39282c61be74bd91f178f1513b37"
       },
       {
         "file": "jf.java",
-        "sha256": "da5d8af9baa87c4b17bdc390e67f6076eb5e6b7f11e9ec647a06698eb38534ae"
+        "sha256": "8214abfc65d6e112a3560c9da3c7cb3a6864f75f80e7d3ebe6f852099f998cd8"
       },
       {
         "file": "jg.java",
-        "sha256": "d49cc25d3a579b40db9d4bd4da8115a3dc01daec4860b310260cdc5deb4401a5"
+        "sha256": "809f8f1c342a411db1d0cc62825bd4ed7c18869d916fded371c307389053e389"
       },
       {
         "file": "jj.java",
-        "sha256": "a18f2a4e4679c15e734dc00653eeaa47521fef5cf3c40a0d78d9098015895994"
+        "sha256": "5001d7e26f32e08c5b572355e21680dd53fe2839378d00e6a31e4992ec1a1df7"
       },
       {
         "file": "jk.java",
-        "sha256": "de55810e00cda9af953e0f2f7e68580c7f5a3f765620e5e2fa879157fe059610"
+        "sha256": "03d7ef09781ab75b225f2d6007dd3af8f6e6ec9ab250cff286c45c34a102a579"
       },
       {
         "file": "kc.java",
-        "sha256": "9abe9ef2ce1fb40c302bdfcd0faecc487d53dbdfc2668634d22e99cbc7d6e393"
+        "sha256": "e97c90e0f68aa3aa26cc72f78e89e1dae648e07710ab8dd64d469b97ce76d2b5"
       },
       {
         "file": "kl.java",
-        "sha256": "a8f02728ece050bdec0ff83d12417f6b198ee16d4a9c3b43959d61a1a950c49d"
+        "sha256": "a75cfdd3309d25c4c36e8b7065b23c69f79133c220039ae034569998e3d360e5"
       },
       {
         "file": "ld.java",
-        "sha256": "3201417ff17809f8f9603f2e1276abddff434c8239a2e6c66b39589625097d92"
+        "sha256": "c1f72f38531bd56d74c162e7de60ff36cd49b67c79c33ba6efd3acb8784b8dd9"
       },
       {
         "file": "le.java",
-        "sha256": "7c17fab8de47cce7e763dfb50fef622eb2de48f89a1d53987b181dbc08f3b011"
+        "sha256": "81b6271630f20f9c8b49768999751b44e266eb59cdd9f2a5002c4ad7a5d62aea"
       },
       {
         "file": "md.java",
@@ -8122,31 +7717,31 @@
       },
       {
         "file": "oc.java",
-        "sha256": "1104bb3c18c94b11a9e64b0d363d79b680edbd7f42172600f2dd38a1904fd695"
+        "sha256": "aacf4c3882497080bf7f7e894e7cad6d3117625b01045cde06a39796a6973f2d"
       },
       {
         "file": "qa.java",
-        "sha256": "78ea21ae695f607ff26ca14eea21a987946c681bb46f2c106122a526f63ed6e7"
+        "sha256": "931cec972cf2f8e850ab7835be326aa605cd45bac42baf476b94046e49f923f3"
       },
       {
         "file": "qb.java",
-        "sha256": "113889d2ab6a1f363abe49bf0a664926543c65542fbfaf3077057434b8259e51"
+        "sha256": "1f3b636038a3d90ac3622c6249cb4b0169cba653eaa37003fb0db1aec358ffb0"
       },
       {
         "file": "qf.java",
-        "sha256": "b4c4db144addfc6db34e095f4d7cfed7cf3cd3bd1ca159c4f19f8c9e115312b6"
+        "sha256": "3146e75866c022fc4a3c6197f0349a42ef3e03c7bb47105471af9257af6e15c6"
       },
       {
         "file": "qk.java",
-        "sha256": "bec392e7a9a33894ba05fdfa2c861d5746b3f032ce860ff8ea8e3daf16e65106"
+        "sha256": "e223cd1322ba82fee109aa356fb943e42463923c0bc49f528444ae74074e9089"
       },
       {
         "file": "r.java",
-        "sha256": "f28c48508b8bab54fe920f5049741304695d73c1a2a0fe1cf4059e807f232fcd"
+        "sha256": "76b87dd7205976973d7628c7753d93f791a9862e10ded24d71c6f5251b5b251d"
       },
       {
         "file": "ra.java",
-        "sha256": "8dfe964cba4e047d37a4e5928c60b640f959b131662f84d9b6043c9e93c19c10"
+        "sha256": "efeaec61a1bd33e72c78d052faef6b4173a81913386824db93d36091aec6c01e"
       },
       {
         "file": "rc.java",
@@ -8154,11 +7749,11 @@
       },
       {
         "file": "rh.java",
-        "sha256": "2262a0da31d83d18d58efcc112ac8108600a0dae77d7985ae81e66e664595318"
+        "sha256": "849bf1cba76033fb1caa656976f9a9bae30fad63a30d10456b43abf49739f08b"
       },
       {
         "file": "ri.java",
-        "sha256": "929085eb06b32f785add998d564fb251e13b8dd752a4339a3eebe8ae4ca0fec2"
+        "sha256": "83865ad1e8b3dc193d80401459632fcb168ebacedb3b79918c1e2187ddc22a7c"
       },
       {
         "file": "rj.java",
@@ -8166,35 +7761,35 @@
       },
       {
         "file": "td.java",
-        "sha256": "9062853015ace0e4f13287c4884d8f7bde34f7ceca4b9a4976fca84e93b7ef31"
+        "sha256": "971650f37188307e165fe3a3a5f2688e3c111fbd262bc659b86ebda54367d4c8"
       },
       {
         "file": "ue.java",
-        "sha256": "6f5794dd4973794961896c1306a3a5c16ef8e28be0f46ec2fc91da9ed5c9d5bc"
+        "sha256": "f7cfc0774f5fa3628e3ee006bc34e4fccd4434303cd27d45264441a67b0bdef9"
       },
       {
         "file": "uf.java",
-        "sha256": "2f6d1ec66f1dc1486990f7252d16fb8b02ad0a8b2d0060130df52bd7e542c8bd"
+        "sha256": "04ed321bca2d00b53944e19b0c05b5dfa2d9e221339fd9dcee2632b1bc1afcee"
       },
       {
         "file": "ug.java",
-        "sha256": "faad60133463222a7b6e2d13425705e4486d293cdbb7363086c81a7b848aff13"
+        "sha256": "444c39890d67608597d1f34114bc5ad19f76b0fa5b423ca49df3eaac4f3df7a8"
       },
       {
         "file": "uk.java",
-        "sha256": "d5898592627895d1bc2e4a436dfa7fc05b60a618eb768a06bc376ec09933cb61"
+        "sha256": "e4fc0f09460288f9c7d566d8ce748d5e0cafa421119cfe6bf3cafac04641e0a6"
       },
       {
         "file": "ul.java",
-        "sha256": "5d01f9a7cb10d212591b32a8770f86135153e900d7ff9453500e869d9a081661"
+        "sha256": "6a1d1cf7a18123085fa676c2cb4bde5d8bc8fcc63a77849d55aa20e33366ed74"
       },
       {
         "file": "vd.java",
-        "sha256": "9e0a973ddcef92c1567e355da64f2f762c352606fbb4cca2414de1ed733e4b1d"
+        "sha256": "39eda8e79978a13caa10abd0c2f087011a759e5a5b5773a5d97154a41114f2b5"
       },
       {
         "file": "w.java",
-        "sha256": "ae0eaab1bfeb6b06cb3b360afb76c7da75470824df0b70a13ca031fe5af43ad5"
+        "sha256": "c6d775802d677cc07a55cd335a723b07aa2e3274bb792088976c3d6d8efa3b04"
       },
       {
         "file": "wb.java",
@@ -8206,11 +7801,11 @@
       },
       {
         "file": "wd.java",
-        "sha256": "ca934aa558cb4d977ea00614c55a20f80b65f2133c3a029206562292f798a2b8"
+        "sha256": "3d4d38f9b951d6416f8e1d351d185738a3bcdbaffff271e30f7d777d04583f68"
       },
       {
         "file": "wi.java",
-        "sha256": "011e8d19e6ed0a55d0f9e3ac1c6f53017f96510eda7b04331371713b49d456ed"
+        "sha256": "cf13c5aa0a7fc0971911d32b369010d3b50d03ea11302f7146d80626e9200d95"
       }
     ],
     "nativeEvidence": [
@@ -8235,7 +7830,7 @@
       }
     ],
     "textResources": {
-      "loaderSourceSha256": "011e8d19e6ed0a55d0f9e3ac1c6f53017f96510eda7b04331371713b49d456ed",
+      "loaderSourceSha256": "cf13c5aa0a7fc0971911d32b369010d3b50d03ea11302f7146d80626e9200d95",
       "review": {
         "allResourceReads": 744,
         "storedResourceReads": 218,
@@ -8249,22 +7844,22 @@
             {
               "key": "reconnect_lost_seq,0",
               "index": 0,
-              "line": 2747
+              "line": 2744
             },
             {
               "key": "reconnect_lost_seq,1",
               "index": 1,
-              "line": 2751
+              "line": 2748
             },
             {
               "key": "reconnect_lost_seq,2",
               "index": 2,
-              "line": 2755
+              "line": 2752
             },
             {
               "key": "reconnect_lost_seq,3",
               "index": 3,
-              "line": 2759
+              "line": 2756
             }
           ],
           "to": "reconnectMessages"
@@ -8276,7 +7871,7 @@
             {
               "key": "retry",
               "index": null,
-              "line": 1290
+              "line": 1287
             }
           ],
           "to": "retryText"
@@ -8288,7 +7883,7 @@
             {
               "key": "create_suggestions",
               "index": null,
-              "line": 1610
+              "line": 1607
             }
           ],
           "to": "createSuggestionsText"
@@ -8300,37 +7895,37 @@
             {
               "key": "mustlogin_alternate,1",
               "index": 1,
-              "line": 3103
+              "line": 3100
             },
             {
               "key": "mustlogin_alternate,2",
               "index": 2,
-              "line": 3107
+              "line": 3104
             },
             {
               "key": "mustlogin_alternate,3",
               "index": 3,
-              "line": 3111
+              "line": 3108
             },
             {
               "key": "mustlogin_alternate,4",
               "index": 4,
-              "line": 3115
+              "line": 3112
             },
             {
               "key": "mustlogin_alternate,5",
               "index": 5,
-              "line": 3119
+              "line": 3116
             },
             {
               "key": "mustlogin_alternate,6",
               "index": 6,
-              "line": 3123
+              "line": 3120
             },
             {
               "key": "mustlogin_alternate,7",
               "index": 7,
-              "line": 3127
+              "line": 3124
             }
           ],
           "to": "mustLoginAlternateTexts"
@@ -8342,7 +7937,7 @@
             {
               "key": "fs_focus_or_resolution",
               "index": null,
-              "line": 2863
+              "line": 2860
             }
           ],
           "to": "fullscreenFocusOrResolutionText"
@@ -8354,7 +7949,7 @@
             {
               "key": "connectionlost_reconnecting",
               "index": null,
-              "line": 1272
+              "line": 1269
             }
           ],
           "to": "connectionLostReconnectingText"
@@ -8366,7 +7961,7 @@
             {
               "key": "create_alert_passchars",
               "index": null,
-              "line": 1766
+              "line": 1763
             }
           ],
           "to": "createPasswordCharacterAlertText"
@@ -8378,37 +7973,37 @@
             {
               "key": "mustlogin3,1",
               "index": 1,
-              "line": 3039
+              "line": 3036
             },
             {
               "key": "mustlogin3,2",
               "index": 2,
-              "line": 3043
+              "line": 3040
             },
             {
               "key": "mustlogin3,3",
               "index": 3,
-              "line": 3047
+              "line": 3044
             },
             {
               "key": "mustlogin3,4",
               "index": 4,
-              "line": 3051
+              "line": 3048
             },
             {
               "key": "mustlogin3,5",
               "index": 5,
-              "line": 3055
+              "line": 3052
             },
             {
               "key": "mustlogin3,6",
               "index": 6,
-              "line": 3059
+              "line": 3056
             },
             {
               "key": "mustlogin3,7",
               "index": 7,
-              "line": 3063
+              "line": 3060
             }
           ],
           "to": "mustLogin3Texts"
@@ -8420,7 +8015,7 @@
             {
               "key": "login_username",
               "index": null,
-              "line": 1638
+              "line": 1635
             }
           ],
           "to": "loginUsernameText"
@@ -8432,7 +8027,7 @@
             {
               "key": "achievements",
               "index": null,
-              "line": 2081
+              "line": 2078
             }
           ],
           "to": "achievementsText"
@@ -8444,7 +8039,7 @@
             {
               "key": "create_agreeterms",
               "index": null,
-              "line": 1626
+              "line": 1623
             }
           ],
           "to": "createAgreeTermsText"
@@ -8456,32 +8051,32 @@
             {
               "key": "quickchat_shortcut_help,0",
               "index": 0,
-              "line": 2639
+              "line": 2636
             },
             {
               "key": "quickchat_shortcut_help,1",
               "index": 1,
-              "line": 2643
+              "line": 2640
             },
             {
               "key": "quickchat_shortcut_help,2",
               "index": 2,
-              "line": 2647
+              "line": 2644
             },
             {
               "key": "quickchat_shortcut_help,3",
               "index": 3,
-              "line": 2651
+              "line": 2648
             },
             {
               "key": "quickchat_shortcut_help,4",
               "index": 4,
-              "line": 2655
+              "line": 2652
             },
             {
               "key": "quickchat_shortcut_help,5",
               "index": 5,
-              "line": 2659
+              "line": 2656
             }
           ],
           "to": "quickChatShortcutHelpTexts"
@@ -8493,7 +8088,7 @@
             {
               "key": "create_alert_nameleadingspace",
               "index": null,
-              "line": 1758
+              "line": 1755
             }
           ],
           "to": "createNameLeadingSpaceAlertText"
@@ -8505,7 +8100,7 @@
             {
               "key": "unpacking_music",
               "index": null,
-              "line": 2025
+              "line": 2022
             }
           ],
           "to": "unpackingMusicText"
@@ -8517,7 +8112,7 @@
             {
               "key": "cancel",
               "index": null,
-              "line": 1168
+              "line": 1165
             }
           ],
           "to": "cancelText"
@@ -8529,7 +8124,7 @@
             {
               "key": "cont",
               "index": null,
-              "line": 2257
+              "line": 2254
             }
           ],
           "to": "continueText"
@@ -8541,7 +8136,7 @@
             {
               "key": "checking",
               "index": null,
-              "line": 1398
+              "line": 1395
             }
           ],
           "to": "checkingText"
@@ -8553,7 +8148,7 @@
             {
               "key": "create_emailvalid",
               "index": null,
-              "line": 1822
+              "line": 1819
             }
           ],
           "to": "createEmailValidText"
@@ -8565,7 +8160,7 @@
             {
               "key": "loading_music",
               "index": null,
-              "line": 1982
+              "line": 1979
             }
           ],
           "to": "loadingMusicText"
@@ -8577,7 +8172,7 @@
             {
               "key": "endgame",
               "index": null,
-              "line": 2181
+              "line": 2178
             }
           ],
           "to": "endGameText"
@@ -8589,7 +8184,7 @@
             {
               "key": "create",
               "index": null,
-              "line": 1454
+              "line": 1451
             }
           ],
           "to": "createText"
@@ -8601,7 +8196,7 @@
             {
               "key": "ok",
               "index": null,
-              "line": 2189
+              "line": 2186
             }
           ],
           "to": "okText"
@@ -8613,37 +8208,37 @@
             {
               "key": "mustlogin2,1",
               "index": 1,
-              "line": 3011
+              "line": 3008
             },
             {
               "key": "mustlogin2,2",
               "index": 2,
-              "line": 3015
+              "line": 3012
             },
             {
               "key": "mustlogin2,3",
               "index": 3,
-              "line": 3019
+              "line": 3016
             },
             {
               "key": "mustlogin2,4",
               "index": 4,
-              "line": 3023
+              "line": 3020
             },
             {
               "key": "mustlogin2,5",
               "index": 5,
-              "line": 3027
+              "line": 3024
             },
             {
               "key": "mustlogin2,6",
               "index": 6,
-              "line": 3031
+              "line": 3028
             },
             {
               "key": "mustlogin2,7",
               "index": 7,
-              "line": 3035
+              "line": 3032
             }
           ],
           "to": "mustLogin2Texts"
@@ -8655,7 +8250,7 @@
             {
               "key": "toserverlist",
               "index": null,
-              "line": 1204
+              "line": 1201
             }
           ],
           "to": "toServerListText"
@@ -8667,7 +8262,7 @@
             {
               "key": "instructions",
               "index": null,
-              "line": 2045
+              "line": 2042
             }
           ],
           "to": "instructionsText"
@@ -8679,7 +8274,7 @@
             {
               "key": "openinpopupwindow",
               "index": null,
-              "line": 1450
+              "line": 1447
             }
           ],
           "to": "openInPopupWindowText"
@@ -8691,7 +8286,7 @@
             {
               "key": "fs_unavailable_try_signed_applet",
               "index": null,
-              "line": 2855
+              "line": 2852
             }
           ],
           "to": "fullscreenUnavailableTrySignedAppletText"
@@ -8703,12 +8298,12 @@
             {
               "key": "rating_mode_name,0",
               "index": 0,
-              "line": 2935
+              "line": 2932
             },
             {
               "key": "rating_mode_name,1",
               "index": 1,
-              "line": 2939
+              "line": 2936
             }
           ],
           "to": "ratingModeNames"
@@ -8720,32 +8315,32 @@
             {
               "key": "quickchat_shortcut_keys,0",
               "index": 0,
-              "line": 2663
+              "line": 2660
             },
             {
               "key": "quickchat_shortcut_keys,1",
               "index": 1,
-              "line": 2667
+              "line": 2664
             },
             {
               "key": "quickchat_shortcut_keys,2",
               "index": 2,
-              "line": 2671
+              "line": 2668
             },
             {
               "key": "quickchat_shortcut_keys,3",
               "index": 3,
-              "line": 2675
+              "line": 2672
             },
             {
               "key": "quickchat_shortcut_keys,4",
               "index": 4,
-              "line": 2679
+              "line": 2676
             },
             {
               "key": "quickchat_shortcut_keys,5",
               "index": 5,
-              "line": 2683
+              "line": 2680
             }
           ],
           "to": "quickChatShortcutKeys"
@@ -8757,7 +8352,7 @@
             {
               "key": "fs_timeout",
               "index": null,
-              "line": 2867
+              "line": 2864
             }
           ],
           "to": "fullscreenTimeoutText"
@@ -8769,7 +8364,7 @@
             {
               "key": "idlemessage20min",
               "index": null,
-              "line": 216
+              "line": 213
             }
           ],
           "to": "idleMessage20MinText"
@@ -8781,17 +8376,17 @@
             {
               "key": "members_expansion_benefits,0",
               "index": 0,
-              "line": 2727
+              "line": 2724
             },
             {
               "key": "members_expansion_benefits,1",
               "index": 1,
-              "line": 2731
+              "line": 2728
             },
             {
               "key": "members_expansion_benefits,2",
               "index": 2,
-              "line": 2735
+              "line": 2732
             }
           ],
           "to": "membersExpansionBenefitTexts"
@@ -8803,7 +8398,7 @@
             {
               "key": "create_alert_doublespace",
               "index": null,
-              "line": 1762
+              "line": 1759
             }
           ],
           "to": "createDoubleSpaceAlertText"
@@ -8815,7 +8410,7 @@
             {
               "key": "music_colon",
               "index": null,
-              "line": 2061
+              "line": 2058
             }
           ],
           "to": "musicLabelText"
@@ -8827,7 +8422,7 @@
             {
               "key": "waitingfor_graphics",
               "index": null,
-              "line": 1922
+              "line": 1919
             }
           ],
           "to": "waitingForGraphicsText"
@@ -8839,7 +8434,7 @@
             {
               "key": "changedisplayname",
               "index": null,
-              "line": 1212
+              "line": 1209
             }
           ],
           "to": "changeDisplayNameText"
@@ -8851,7 +8446,7 @@
             {
               "key": "serviceunavailable",
               "index": null,
-              "line": 2987
+              "line": 2984
             }
           ],
           "to": "serviceUnavailableText"
@@ -8863,7 +8458,7 @@
             {
               "key": "create_alert_email_unavailable",
               "index": null,
-              "line": 1798
+              "line": 1795
             }
           ],
           "to": "createEmailUnavailableAlertText"
@@ -8875,7 +8470,7 @@
             {
               "key": "create_alert_passcontainsname",
               "index": null,
-              "line": 1778
+              "line": 1775
             }
           ],
           "to": "createPasswordContainsNameAlertText"
@@ -8887,7 +8482,7 @@
             {
               "key": "create_alert_passrepeated",
               "index": null,
-              "line": 1770
+              "line": 1767
             }
           ],
           "to": "createRepeatedPasswordAlertText"
@@ -8899,7 +8494,7 @@
             {
               "key": "create_alert_passcontainsname_partial",
               "index": null,
-              "line": 1786
+              "line": 1783
             }
           ],
           "to": "createPasswordContainsPartialNameAlertText"
@@ -8911,7 +8506,7 @@
             {
               "key": "create_alert_namelength",
               "index": null,
-              "line": 1750
+              "line": 1747
             }
           ],
           "to": "createNameLengthAlertText"
@@ -8923,7 +8518,7 @@
             {
               "key": "create_displayname_hint",
               "index": null,
-              "line": 1686
+              "line": 1683
             }
           ],
           "to": "createDisplayNameHintText"
@@ -8935,7 +8530,7 @@
             {
               "key": "playfreeversion",
               "index": null,
-              "line": 1196
+              "line": 1193
             }
           ],
           "to": "playFreeVersionText"
@@ -8947,7 +8542,7 @@
             {
               "key": "goback",
               "index": null,
-              "line": 1232
+              "line": 1229
             }
           ],
           "to": "goBackText"
@@ -8959,7 +8554,7 @@
             {
               "key": "loginm3",
               "index": null,
-              "line": 204
+              "line": 201
             }
           ],
           "to": "loginMessage3Text"
@@ -8971,7 +8566,7 @@
             {
               "key": "fs_button_close",
               "index": null,
-              "line": 2843
+              "line": 2840
             }
           ],
           "to": "fullscreenCloseButtonText"
@@ -8983,7 +8578,7 @@
             {
               "key": "create_ineligible",
               "index": null,
-              "line": 244
+              "line": 241
             }
           ],
           "to": "createIneligibleText"
@@ -8995,7 +8590,7 @@
             {
               "key": "login_create_tooltip",
               "index": null,
-              "line": 1658
+              "line": 1655
             }
           ],
           "to": "loginCreateTooltipText"
@@ -9007,7 +8602,7 @@
             {
               "key": "resumegame",
               "index": null,
-              "line": 2153
+              "line": 2150
             }
           ],
           "to": "resumeGameText"
@@ -9019,7 +8614,7 @@
             {
               "key": "ticketing_oneunread",
               "index": null,
-              "line": 268
+              "line": 265
             }
           ],
           "to": "ticketingOneUnreadText"
@@ -9031,7 +8626,7 @@
             {
               "key": "highscores",
               "index": null,
-              "line": 2073
+              "line": 2070
             }
           ],
           "to": "highscoresText"
@@ -9043,7 +8638,7 @@
             {
               "key": "create_passwordvalid",
               "index": null,
-              "line": 1818
+              "line": 1815
             }
           ],
           "to": "createPasswordValidText"
@@ -9055,7 +8650,7 @@
             {
               "key": "create_password_tooltip",
               "index": null,
-              "line": 1690
+              "line": 1687
             }
           ],
           "to": "createPasswordTooltipText"
@@ -9067,7 +8662,7 @@
             {
               "key": "menu",
               "index": null,
-              "line": 2133
+              "line": 2130
             }
           ],
           "to": "menuText"
@@ -9079,7 +8674,7 @@
             {
               "key": "waitingfor_fonts",
               "index": null,
-              "line": 1930
+              "line": 1927
             }
           ],
           "to": "waitingForFontsText"
@@ -9091,7 +8686,7 @@
             {
               "key": "warning_ifyouquit",
               "index": null,
-              "line": 1310
+              "line": 1307
             }
           ],
           "to": "quitWarningText"
@@ -9103,7 +8698,7 @@
             {
               "key": "tocustomersupport",
               "index": null,
-              "line": 1208
+              "line": 1205
             }
           ],
           "to": "toCustomerSupportText"
@@ -9115,7 +8710,7 @@
             {
               "key": "login_gameupdated",
               "index": null,
-              "line": 236
+              "line": 233
             }
           ],
           "to": "loginGameUpdatedText"
@@ -9127,7 +8722,7 @@
             {
               "key": "create_alert_passlength",
               "index": null,
-              "line": 1774
+              "line": 1771
             }
           ],
           "to": "createPasswordLengthAlertText"
@@ -9139,7 +8734,7 @@
             {
               "key": "create_welcome",
               "index": null,
-              "line": 1546
+              "line": 1543
             }
           ],
           "to": "createWelcomeText"
@@ -9151,7 +8746,7 @@
             {
               "key": "waitingfor_music",
               "index": null,
-              "line": 1938
+              "line": 1935
             }
           ],
           "to": "waitingForMusicText"
@@ -9163,12 +8758,12 @@
             {
               "key": "rating_mode_long_name,0",
               "index": 0,
-              "line": 2943
+              "line": 2940
             },
             {
               "key": "rating_mode_long_name,1",
               "index": 1,
-              "line": 2947
+              "line": 2944
             }
           ],
           "to": "ratingModeLongNames"
@@ -9180,7 +8775,7 @@
             {
               "key": "login_username_email",
               "index": null,
-              "line": 1634
+              "line": 1631
             }
           ],
           "to": "loginUsernameEmailText"
@@ -9192,7 +8787,7 @@
             {
               "key": "fs_accept_countdown_pl",
               "index": null,
-              "line": 2835
+              "line": 2832
             }
           ],
           "to": "fullscreenAcceptCountdownPluralText"
@@ -9204,7 +8799,7 @@
             {
               "key": "returntogame",
               "index": null,
-              "line": 2229
+              "line": 2226
             }
           ],
           "to": "returnToGameText"
@@ -9216,7 +8811,7 @@
             {
               "key": "fs_focus",
               "index": null,
-              "line": 2859
+              "line": 2856
             }
           ],
           "to": "fullscreenFocusText"
@@ -9228,7 +8823,7 @@
             {
               "key": "login",
               "index": null,
-              "line": 1228
+              "line": 1225
             }
           ],
           "to": "loginText"
@@ -9240,7 +8835,7 @@
             {
               "key": "create_alert_namechars",
               "index": null,
-              "line": 1754
+              "line": 1751
             }
           ],
           "to": "createNameCharacterAlertText"
@@ -9252,7 +8847,7 @@
             {
               "key": "achieved",
               "index": null,
-              "line": 2431
+              "line": 2428
             }
           ],
           "to": "achievedText"
@@ -9264,7 +8859,7 @@
             {
               "key": "pleasetryagain",
               "index": null,
-              "line": 1188
+              "line": 1185
             }
           ],
           "to": "pleaseTryAgainText"
@@ -9276,7 +8871,7 @@
             {
               "key": "fs_nonmember",
               "index": null,
-              "line": 2839
+              "line": 2836
             }
           ],
           "to": "fullscreenNonmemberText"
@@ -9288,7 +8883,7 @@
             {
               "key": "error_js5connect",
               "index": null,
-              "line": 232
+              "line": 229
             }
           ],
           "to": "js5ConnectErrorText"
@@ -9300,7 +8895,7 @@
             {
               "key": "login_username_tooltip",
               "index": null,
-              "line": 1646
+              "line": 1643
             }
           ],
           "to": "loginUsernameTooltipText"
@@ -9312,7 +8907,7 @@
             {
               "key": "next",
               "index": null,
-              "line": 2209
+              "line": 2206
             }
           ],
           "to": "nextText"
@@ -9324,7 +8919,7 @@
             {
               "key": "create_account_success",
               "index": null,
-              "line": 1826
+              "line": 1823
             }
           ],
           "to": "createAccountSuccessText"
@@ -9336,7 +8931,7 @@
             {
               "key": "create_more_suggestions",
               "index": null,
-              "line": 1614
+              "line": 1611
             }
           ],
           "to": "createMoreSuggestionsText"
@@ -9348,7 +8943,7 @@
             {
               "key": "back",
               "index": null,
-              "line": 1294
+              "line": 1291
             }
           ],
           "to": "backText"
@@ -9360,7 +8955,7 @@
             {
               "key": "create_email_tooltip",
               "index": null,
-              "line": 1702
+              "line": 1699
             }
           ],
           "to": "createEmailTooltipText"
@@ -9372,37 +8967,37 @@
             {
               "key": "mustlogin4,1",
               "index": 1,
-              "line": 3071
+              "line": 3068
             },
             {
               "key": "mustlogin4,2",
               "index": 2,
-              "line": 3075
+              "line": 3072
             },
             {
               "key": "mustlogin4,3",
               "index": 3,
-              "line": 3079
+              "line": 3076
             },
             {
               "key": "mustlogin4,4",
               "index": 4,
-              "line": 3083
+              "line": 3080
             },
             {
               "key": "mustlogin4,5",
               "index": 5,
-              "line": 3087
+              "line": 3084
             },
             {
               "key": "mustlogin4,6",
               "index": 6,
-              "line": 3091
+              "line": 3088
             },
             {
               "key": "mustlogin4,7",
               "index": 7,
-              "line": 3095
+              "line": 3092
             }
           ],
           "to": "mustLogin4Texts"
@@ -9414,7 +9009,7 @@
             {
               "key": "invaliduserorpass",
               "index": null,
-              "line": 1184
+              "line": 1181
             }
           ],
           "to": "invalidUserOrPasswordText"
@@ -9426,7 +9021,7 @@
             {
               "key": "connectionlost_withreason",
               "index": null,
-              "line": 1276
+              "line": 1273
             }
           ],
           "to": "connectionLostWithReasonText"
@@ -9438,7 +9033,7 @@
             {
               "key": "fs_accept_countdown_sing",
               "index": null,
-              "line": 2831
+              "line": 2828
             }
           ],
           "to": "fullscreenAcceptCountdownSingularText"
@@ -9450,7 +9045,7 @@
             {
               "key": "create_select_alternative",
               "index": null,
-              "line": 1618
+              "line": 1615
             }
           ],
           "to": "createSelectAlternativeText"
@@ -9462,7 +9057,7 @@
             {
               "key": "loading_fonts",
               "index": null,
-              "line": 1974
+              "line": 1971
             }
           ],
           "to": "loadingFontsText"
@@ -9474,7 +9069,7 @@
             {
               "key": "ticketing_gotowebsite",
               "index": null,
-              "line": 276
+              "line": 273
             }
           ],
           "to": "ticketingGoToWebsiteText"
@@ -9486,7 +9081,7 @@
             {
               "key": "reloadgame",
               "index": null,
-              "line": 1200
+              "line": 1197
             }
           ],
           "to": "reloadGameText"
@@ -9498,7 +9093,7 @@
             {
               "key": "loading",
               "index": null,
-              "line": 832
+              "line": 829
             }
           ],
           "to": "loadingText"
@@ -9510,7 +9105,7 @@
             {
               "key": "createtouse",
               "index": null,
-              "line": 2991
+              "line": 2988
             }
           ],
           "to": "createToUseText"
@@ -9522,7 +9117,7 @@
             {
               "key": "startgame",
               "index": null,
-              "line": 2145
+              "line": 2142
             }
           ],
           "to": "startGameText"
@@ -9534,7 +9129,7 @@
             {
               "key": "create_u13terms",
               "index": null,
-              "line": 1630
+              "line": 1627
             }
           ],
           "to": "createUnder13TermsText"
@@ -9546,67 +9141,67 @@
             {
               "key": "subscription_cost_monthly,0",
               "index": 0,
-              "line": 3131
+              "line": 3128
             },
             {
               "key": "subscription_cost_monthly,1",
               "index": 1,
-              "line": 3135
+              "line": 3132
             },
             {
               "key": "subscription_cost_monthly,2",
               "index": 2,
-              "line": 3139
+              "line": 3136
             },
             {
               "key": "subscription_cost_monthly,3",
               "index": 3,
-              "line": 3143
+              "line": 3140
             },
             {
               "key": "subscription_cost_monthly,4",
               "index": 4,
-              "line": 3147
+              "line": 3144
             },
             {
               "key": "subscription_cost_monthly,5",
               "index": 5,
-              "line": 3151
+              "line": 3148
             },
             {
               "key": "subscription_cost_monthly,6",
               "index": 6,
-              "line": 3155
+              "line": 3152
             },
             {
               "key": "subscription_cost_monthly,7",
               "index": 7,
-              "line": 3159
+              "line": 3156
             },
             {
               "key": "subscription_cost_monthly,8",
               "index": 8,
-              "line": 3163
+              "line": 3160
             },
             {
               "key": "subscription_cost_monthly,9",
               "index": 9,
-              "line": 3167
+              "line": 3164
             },
             {
               "key": "subscription_cost_monthly,10",
               "index": 10,
-              "line": 3171
+              "line": 3168
             },
             {
               "key": "subscription_cost_monthly,11",
               "index": 11,
-              "line": 3175
+              "line": 3172
             },
             {
               "key": "subscription_cost_monthly,12",
               "index": 12,
-              "line": 3179
+              "line": 3176
             }
           ],
           "to": "subscriptionMonthlyCostTexts"
@@ -9618,7 +9213,7 @@
             {
               "key": "connectionrestored",
               "index": null,
-              "line": 1306
+              "line": 1303
             }
           ],
           "to": "connectionRestoredText"
@@ -9630,7 +9225,7 @@
             {
               "key": "unpacking_graphics",
               "index": null,
-              "line": 2013
+              "line": 2010
             }
           ],
           "to": "unpackingGraphicsText"
@@ -9642,7 +9237,7 @@
             {
               "key": "create_password_confirm_tooltip",
               "index": null,
-              "line": 1698
+              "line": 1695
             }
           ],
           "to": "createPasswordConfirmationTooltipText"
@@ -9654,7 +9249,7 @@
             {
               "key": "loading_extradata",
               "index": null,
-              "line": 1997
+              "line": 1994
             }
           ],
           "to": "loadingExtraDataText"
@@ -9666,7 +9261,7 @@
             {
               "key": "justplay",
               "index": null,
-              "line": 1220
+              "line": 1217
             }
           ],
           "to": "justPlayText"
@@ -9678,7 +9273,7 @@
             {
               "key": "create_email_confirm",
               "index": null,
-              "line": 1578
+              "line": 1575
             }
           ],
           "to": "createEmailConfirmationText"
@@ -9690,7 +9285,7 @@
             {
               "key": "create_email_confirm_tooltip",
               "index": null,
-              "line": 1706
+              "line": 1703
             }
           ],
           "to": "createEmailConfirmationTooltipText"
@@ -9702,7 +9297,7 @@
             {
               "key": "waitingfor_soundeffects",
               "index": null,
-              "line": 1934
+              "line": 1931
             }
           ],
           "to": "waitingForSoundEffectsText"
@@ -9714,7 +9309,7 @@
             {
               "key": "create_age_tooltip",
               "index": null,
-              "line": 1710
+              "line": 1707
             }
           ],
           "to": "createAgeTooltipText"
@@ -9726,7 +9321,7 @@
             {
               "key": "fs_button_accept",
               "index": null,
-              "line": 2815
+              "line": 2812
             }
           ],
           "to": "fullscreenAcceptButtonText"
@@ -9738,7 +9333,7 @@
             {
               "key": "error_js5crc",
               "index": null,
-              "line": 220
+              "line": 217
             }
           ],
           "to": "js5CrcErrorText"
@@ -9750,7 +9345,7 @@
             {
               "key": "waitingfor_extradata",
               "index": null,
-              "line": 1950
+              "line": 1947
             }
           ],
           "to": "waitingForExtraDataText"
@@ -9762,7 +9357,7 @@
             {
               "key": "create_username_available",
               "index": null,
-              "line": 1746
+              "line": 1743
             }
           ],
           "to": "createUsernameAvailableText"
@@ -9774,7 +9369,7 @@
             {
               "key": "create_unable",
               "index": null,
-              "line": 240
+              "line": 237
             }
           ],
           "to": "createUnableText"
@@ -9786,7 +9381,7 @@
             {
               "key": "error_js5io",
               "index": null,
-              "line": 224
+              "line": 221
             }
           ],
           "to": "js5IoErrorText"
@@ -9798,7 +9393,7 @@
             {
               "key": "fs_button_members",
               "index": null,
-              "line": 2847
+              "line": 2844
             }
           ],
           "to": "fullscreenMembersButtonText"
@@ -9810,7 +9405,7 @@
             {
               "key": "create_password",
               "index": null,
-              "line": 1566
+              "line": 1563
             }
           ],
           "to": "createPasswordText"
@@ -9822,7 +9417,7 @@
             {
               "key": "create_password_hint",
               "index": null,
-              "line": 1694
+              "line": 1691
             }
           ],
           "to": "createPasswordHintText"
@@ -9834,7 +9429,7 @@
             {
               "key": "ticketing_xunread",
               "index": null,
-              "line": 272
+              "line": 269
             }
           ],
           "to": "ticketingUnreadCountText"
@@ -9846,7 +9441,7 @@
             {
               "key": "fs_button_cancel",
               "index": null,
-              "line": 2823
+              "line": 2820
             }
           ],
           "to": "fullscreenCancelButtonText"
@@ -9858,7 +9453,7 @@
             {
               "key": "invalidpass",
               "index": null,
-              "line": 1286
+              "line": 1283
             }
           ],
           "to": "invalidPasswordText"
@@ -9870,7 +9465,7 @@
             {
               "key": "error_js5connect_full",
               "index": null,
-              "line": 228
+              "line": 225
             }
           ],
           "to": "js5ConnectFullErrorText"
@@ -9882,7 +9477,7 @@
             {
               "key": "create_username_unavailable",
               "index": null,
-              "line": 1742
+              "line": 1739
             }
           ],
           "to": "createUsernameUnavailableText"
@@ -9894,7 +9489,7 @@
             {
               "key": "quittowebsite",
               "index": null,
-              "line": 1302
+              "line": 1299
             }
           ],
           "to": "quitToWebsiteText"
@@ -9906,7 +9501,7 @@
             {
               "key": "logging_in",
               "index": null,
-              "line": 1252
+              "line": 1249
             }
           ],
           "to": "loggingInText"
@@ -9918,7 +9513,7 @@
             {
               "key": "login_no_displayname",
               "index": null,
-              "line": 1670
+              "line": 1667
             }
           ],
           "to": "loginNoDisplayNameText"
@@ -9930,7 +9525,7 @@
             {
               "key": "no_highscores",
               "index": null,
-              "line": 2459
+              "line": 2456
             }
           ],
           "to": "noHighscoresText"
@@ -9942,7 +9537,7 @@
             {
               "key": "creatingyouraccount",
               "index": null,
-              "line": 1470
+              "line": 1467
             }
           ],
           "to": "creatingYourAccountText"
@@ -9954,7 +9549,7 @@
             {
               "key": "create_createanaccount",
               "index": null,
-              "line": 1554
+              "line": 1551
             }
           ],
           "to": "createAnAccountText"
@@ -9966,7 +9561,7 @@
             {
               "key": "create_alert_mismatch",
               "index": null,
-              "line": 1814
+              "line": 1811
             }
           ],
           "to": "createMismatchAlertText"
@@ -9978,7 +9573,7 @@
             {
               "key": "fs_unavailable",
               "index": null,
-              "line": 2851
+              "line": 2848
             }
           ],
           "to": "fullscreenUnavailableText"
@@ -9990,7 +9585,7 @@
             {
               "key": "login_email",
               "index": null,
-              "line": 1642
+              "line": 1639
             }
           ],
           "to": "loginEmailText"
@@ -10002,7 +9597,7 @@
             {
               "key": "orbpoints",
               "index": null,
-              "line": 2435
+              "line": 2432
             }
           ],
           "to": "orbPointsText"
@@ -10014,7 +9609,7 @@
             {
               "key": "create_alert_invalidage",
               "index": null,
-              "line": 1806
+              "line": 1803
             }
           ],
           "to": "createInvalidAgeAlertText"
@@ -10026,7 +9621,7 @@
             {
               "key": "quit",
               "index": null,
-              "line": 2097
+              "line": 2094
             }
           ],
           "to": "quitText"
@@ -10038,7 +9633,7 @@
             {
               "key": "DEFAULT_PLAYER_NAME",
               "index": null,
-              "line": 3003
+              "line": 3000
             }
           ],
           "to": "defaultPlayerNameText"
@@ -10050,7 +9645,7 @@
             {
               "key": "prev",
               "index": null,
-              "line": 2205
+              "line": 2202
             }
           ],
           "to": "previousText"
@@ -10062,7 +9657,7 @@
             {
               "key": "create_displayname_tooltip",
               "index": null,
-              "line": 1682
+              "line": 1679
             }
           ],
           "to": "createDisplayNameTooltipText"
@@ -10074,7 +9669,7 @@
             {
               "key": "loading_soundeffects",
               "index": null,
-              "line": 1978
+              "line": 1975
             }
           ],
           "to": "loadingSoundEffectsText"
@@ -10086,7 +9681,7 @@
             {
               "key": "hs_friend_tip",
               "index": null,
-              "line": 2915
+              "line": 2912
             }
           ],
           "to": "highscoreFriendTipText"
@@ -10098,7 +9693,7 @@
             {
               "key": "fs_accept_beforeaccept",
               "index": null,
-              "line": 2811
+              "line": 2808
             }
           ],
           "to": "fullscreenBeforeAcceptText"
@@ -10110,7 +9705,7 @@
             {
               "key": "create_optin_news",
               "index": null,
-              "line": 1622
+              "line": 1619
             }
           ],
           "to": "createNewsOptInText"
@@ -10122,7 +9717,7 @@
             {
               "key": "create_age",
               "index": null,
-              "line": 1582
+              "line": 1579
             }
           ],
           "to": "createAgeText"
@@ -10134,7 +9729,7 @@
             {
               "key": "create_alert_passcontainsemail",
               "index": null,
-              "line": 1782
+              "line": 1779
             }
           ],
           "to": "createPasswordContainsEmailAlertText"
@@ -10146,7 +9741,7 @@
             {
               "key": "create_email",
               "index": null,
-              "line": 1574
+              "line": 1571
             }
           ],
           "to": "createEmailText"
@@ -10158,7 +9753,7 @@
             {
               "key": "fs_accept_aftercancel",
               "index": null,
-              "line": 2827
+              "line": 2824
             }
           ],
           "to": "fullscreenAfterCancelText"
@@ -10170,7 +9765,7 @@
             {
               "key": "loginm2",
               "index": null,
-              "line": 208
+              "line": 205
             }
           ],
           "to": "loginMessage2Text"
@@ -10182,62 +9777,62 @@
             {
               "key": "monthnames,0",
               "index": 0,
-              "line": 1498
+              "line": 1495
             },
             {
               "key": "monthnames,1",
               "index": 1,
-              "line": 1502
+              "line": 1499
             },
             {
               "key": "monthnames,2",
               "index": 2,
-              "line": 1506
+              "line": 1503
             },
             {
               "key": "monthnames,3",
               "index": 3,
-              "line": 1510
+              "line": 1507
             },
             {
               "key": "monthnames,4",
               "index": 4,
-              "line": 1514
+              "line": 1511
             },
             {
               "key": "monthnames,5",
               "index": 5,
-              "line": 1518
+              "line": 1515
             },
             {
               "key": "monthnames,6",
               "index": 6,
-              "line": 1522
+              "line": 1519
             },
             {
               "key": "monthnames,7",
               "index": 7,
-              "line": 1526
+              "line": 1523
             },
             {
               "key": "monthnames,8",
               "index": 8,
-              "line": 1530
+              "line": 1527
             },
             {
               "key": "monthnames,9",
               "index": 9,
-              "line": 1534
+              "line": 1531
             },
             {
               "key": "monthnames,10",
               "index": 10,
-              "line": 1538
+              "line": 1535
             },
             {
               "key": "monthnames,11",
               "index": 11,
-              "line": 1542
+              "line": 1539
             }
           ],
           "to": "monthNames"
@@ -10249,7 +9844,7 @@
             {
               "key": "create_password_confirm",
               "index": null,
-              "line": 1570
+              "line": 1567
             }
           ],
           "to": "createPasswordConfirmationText"
@@ -10261,17 +9856,17 @@
             {
               "key": "hs_mode_name,0",
               "index": 0,
-              "line": 2923
+              "line": 2920
             },
             {
               "key": "hs_mode_name,1",
               "index": 1,
-              "line": 2927
+              "line": 2924
             },
             {
               "key": "hs_mode_name,2",
               "index": 2,
-              "line": 2931
+              "line": 2928
             }
           ],
           "to": "highscoreModeNames"
@@ -10283,7 +9878,7 @@
             {
               "key": "pleasewait_dotdotdot",
               "index": null,
-              "line": 2983
+              "line": 2980
             }
           ],
           "to": "pleaseWaitText"
@@ -10295,7 +9890,7 @@
             {
               "key": "login_justplay_tooltip",
               "index": null,
-              "line": 1662
+              "line": 1659
             }
           ],
           "to": "loginJustPlayTooltipText"
@@ -10307,7 +9902,7 @@
             {
               "key": "create_optin_news_tooltip",
               "index": null,
-              "line": 1714
+              "line": 1711
             }
           ],
           "to": "createNewsOptInTooltipText"
@@ -10319,7 +9914,7 @@
             {
               "key": "mouseoveranicon",
               "index": null,
-              "line": 2423
+              "line": 2420
             }
           ],
           "to": "mouseOverIconText"
@@ -10331,7 +9926,7 @@
             {
               "key": "sound_colon",
               "index": null,
-              "line": 2057
+              "line": 2054
             }
           ],
           "to": "soundLabelText"
@@ -10343,7 +9938,7 @@
             {
               "key": "fullscreen",
               "index": null,
-              "line": 2065
+              "line": 2062
             }
           ],
           "to": "fullscreenText"
@@ -10355,7 +9950,7 @@
             {
               "key": "loading_graphics",
               "index": null,
-              "line": 1966
+              "line": 1963
             }
           ],
           "to": "loadingGraphicsText"
@@ -10367,7 +9962,7 @@
             {
               "key": "create_alert_invalidemail",
               "index": null,
-              "line": 1794
+              "line": 1791
             }
           ],
           "to": "createInvalidEmailAlertText"
@@ -10379,7 +9974,7 @@
             {
               "key": "fs_accept_afteraccept",
               "index": null,
-              "line": 2819
+              "line": 2816
             }
           ],
           "to": "fullscreenAfterAcceptText"
@@ -10391,7 +9986,7 @@
             {
               "key": "create_displayname",
               "index": null,
-              "line": 1562
+              "line": 1559
             }
           ],
           "to": "createDisplayNameText"
@@ -10400,9 +9995,9 @@
     },
     "verification": {
       "sourceDeclarations": 20931,
-      "bindingsCompared": 152600,
+      "bindingsCompared": 152514,
       "overrideRelationships": 388,
-      "identifierEdits": 18714,
+      "identifierEdits": 18711,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -10454,13 +10049,12 @@
       "guardedNamingRules": 1170,
       "namedLocalDeclarations": 382,
       "nonselectorDeclarationsPreserved": 20920,
-      "nonselectorBindingsPreserved": 152549,
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 11,
       "generatedSelectorsRemoved": 254,
-      "rawSourceLinesRemoved": 3125,
+      "rawSourceLinesRemoved": 2213,
       "returnReconstructionChangedJavaFiles": 181,
-      "localOrdinalMigrations": 46,
+      "localOrdinalMigrations": 35,
       "obsoleteNamedSelectorsRemoved": 1,
       "genericRegionContractTestGroups": 36,
       "genericExceptionExitTestGroups": 6,
@@ -10468,33 +10062,16 @@
       "nativeSynchronizedReturnCases": 15,
       "nativeExistingLoopExitComparisons": 7200,
       "forcedExplicitMonitorsRefused": true,
-      "cleanDecompilerArchiveReproduction": true
+      "cleanDecompilerArchiveReproduction": true,
+      "earlyExitChangedJavaFiles": 208,
+      "elseWrappersRemoved": 2128,
+      "genericEarlyExitTestGroups": 11,
+      "nativeEmitterComparisons": 556,
+      "sourceReferenceOccurrencesRemoved": 87,
+      "sourceReferenceOccurrencesAdded": 1
     },
     "sourceChange": {
       "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "588ff14becf7fd429d53e929e85e073814c20259",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "67f22895e4161b3e81a7ceb93273b6680be7d2f0",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "ac8734ac19b0447c2aad49c20af07562f4e9d22c862c97c465b465b6e858a86f",
-              "reproduce": "git archive --format=tar 67f22895e4161b3e81a7ceb93273b6680be7d2f0 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "cdf74421a73a784554ef7946c2647fa0380f8a458a21e30e96ba951f4e650a97"
-      },
-      "after": {
         "source": {
           "repository": "Kreijstal/funorb-decompiled",
           "commit": "a298f846c1824a1e88dd6c63674bbe81e67152e1",
@@ -10516,6 +10093,29 @@
           }
         },
         "inputTreeSha256": "0ce7d77ce24b5c74be0439d9d363ac7fb407bf949c9385ecc5f7e4cbcfe48f0f"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "589c78257fcea469a48c6a3f2eba15cf77fb7e1a",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "44435d91c3e1f48530c0f2462caa3874968993bc",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "91f00d39ebbcdeff76e1c4d507ba69839a1f5fe3573499906040ac6f712a63c1",
+              "reproduce": "git archive --format=tar 44435d91c3e1f48530c0f2462caa3874968993bc | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "baeae8c226093d2a14392d9994aa74ddd4c735009a09e713af1b7cf39f202029"
       }
     }
   }

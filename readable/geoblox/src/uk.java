@@ -138,30 +138,26 @@ final class uk extends TextInputValidator {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != null) {
-            var3_int = -35 % ((44 - param1) / 57);
-            if (param2 instanceof byte[]) {
-              var4 = (byte[]) (param2);
-              if (!param0) {
-                stackIn_9_0 = (byte[]) (var4);
-                return stackIn_9_0;
-              } else {
-                stackIn_7_0 = nk.a(var4, 0);
-                return stackIn_7_0;
-              }
-            } else {
-              if (!(param2 instanceof oj)) {
-                throw new IllegalArgumentException();
-              } else {
-                var5 = (oj) (param2);
-                stackIn_12_0 = var5.a((byte) 65);
-                return stackIn_12_0;
-              }
-            }
-          } else {
+          if (param2 == null) {
             stackIn_2_0 = null;
             return (byte[]) ((Object) stackIn_2_0);
           }
+          var3_int = -35 % ((44 - param1) / 57);
+          if (!(param2 instanceof byte[])) {
+            if (!(param2 instanceof oj)) {
+              throw new IllegalArgumentException();
+            }
+            var5 = (oj) (param2);
+            stackIn_12_0 = var5.a((byte) 65);
+            return stackIn_12_0;
+          }
+          var4 = (byte[]) (param2);
+          if (!param0) {
+            stackIn_9_0 = (byte[]) (var4);
+            return stackIn_9_0;
+          }
+          stackIn_7_0 = nk.a(var4, 0);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -217,7 +213,10 @@ final class uk extends TextInputValidator {
           fj.field_q.c((byte) 95, f.field_ib);
           fj.field_q.b((byte) 116, lb.field_c);
           var6 = 0;
-          if (param0 > 20) {
+          if (param0 <= 20) {
+            return;
+          }
+          {
             if (rb.field_c) {
               var6 = var6 | 1;
             }
@@ -242,8 +241,6 @@ final class uk extends TextInputValidator {
             el.a(false, fc.field_d, fj.field_q, ld.field_c, vl.field_l);
             fj.field_q.a(-var5_int + fj.field_q.field_f, true);
             cm.a(-1, -1);
-            return;
-          } else {
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -284,35 +281,31 @@ final class uk extends TextInputValidator {
         try {
           var5 = (CharSequence) ((Object) candidateText);
           var3 = oe.a((byte) 44, var5);
-          if (var3 == null) {
-            if (!candidateText.equals(this.field_k)) {
-              var4 = cl.a((byte) 94, candidateText);
-              if (var4 != null) {
-                if (null == var4.field_e) {
-                  this.field_k = candidateText;
-                  this.field_n = var4.field_g;
-                } else {
-                  stackIn_8_0 = null;
-                  return (String) ((Object) stackIn_8_0);
-                }
-              } else {
-                return null;
-              }
-            }
-            if (guard != 422) {
-              avatarTintBlueDelta = -0.46423107385635376f;
-            }
-            if (this.field_n) {
-              stackIn_16_0 = ph.createUsernameAvailableText;
-              return stackIn_16_0;
-            } else {
-              stackIn_14_0 = rh.createUsernameUnavailableText;
-              return stackIn_14_0;
-            }
-          } else {
+          if (var3 != null) {
             stackIn_2_0 = (String) (var3);
             return stackIn_2_0;
           }
+          if (!candidateText.equals(this.field_k)) {
+            var4 = cl.a((byte) 94, candidateText);
+            if (var4 == null) {
+              return null;
+            }
+            if (null != var4.field_e) {
+              stackIn_8_0 = null;
+              return (String) ((Object) stackIn_8_0);
+            }
+            this.field_k = candidateText;
+            this.field_n = var4.field_g;
+          }
+          if (guard != 422) {
+            avatarTintBlueDelta = -0.46423107385635376f;
+          }
+          if (this.field_n) {
+            stackIn_16_0 = ph.createUsernameAvailableText;
+            return stackIn_16_0;
+          }
+          stackIn_14_0 = rh.createUsernameUnavailableText;
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -358,31 +351,30 @@ final class uk extends TextInputValidator {
             uk.a(false, (String) null);
           }
           var5 = (CharSequence) ((Object) candidateText);
-          if (hc.a((byte) 82, var5)) {
-            L1: {
-              if (!candidateText.equals(this.field_k)) {
-                var3 = cl.a((byte) 108, candidateText);
-                if (var3 != null) {
-                  if (var3.field_e == null) {
-                    this.field_n = var3.field_g;
-                    this.field_k = candidateText;
-                    break L1;
-                  }
-                }
-                stackIn_10_0 = si.field_n;
-                return stackIn_10_0;
-              }
-            }
-            if (this.field_n) {
-              stackIn_15_0 = kk.field_w;
-            } else {
-              stackIn_15_0 = si.field_m;
-            }
-            return stackIn_15_0;
-          } else {
+          if (!hc.a((byte) 82, var5)) {
             stackIn_4_0 = si.field_m;
             return stackIn_4_0;
           }
+          L1: {
+            if (!candidateText.equals(this.field_k)) {
+              var3 = cl.a((byte) 108, candidateText);
+              if (var3 != null) {
+                if (var3.field_e == null) {
+                  this.field_n = var3.field_g;
+                  this.field_k = candidateText;
+                  break L1;
+                }
+              }
+              stackIn_10_0 = si.field_n;
+              return stackIn_10_0;
+            }
+          }
+          if (this.field_n) {
+            stackIn_15_0 = kk.field_w;
+          } else {
+            stackIn_15_0 = si.field_m;
+          }
+          return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

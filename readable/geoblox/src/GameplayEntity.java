@@ -41,34 +41,32 @@ final class GameplayEntity extends DualLinkNode {
         entityOffsetX = this.positionX - 320.0f;
         entityOffsetY = this.positionY - 240.0f;
         rotatedEntityX = (int)((double)entityOffsetX * Math.cos((double)el.gameplaySession.boardAngleRadians) - (double)entityOffsetY * Math.sin((double)el.gameplaySession.boardAngleRadians) + 320.0);
-        if (param0 == -16096) {
-          L0: {
-            rotatedEntityY = (int)(Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
-            if (this.entitySpriteKindId != 2) {
-              if (1 != this.entitySpriteKindId) {
-                vf.spriteScratchRaster.e();
-                SoftwareRasterizer.c();
-                this.entitySprite.c(-this.entitySprite.field_s + vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o - this.entitySprite.field_o >> 1);
-                k.a(0, 0, vf.spriteScratchRaster.field_s, -27085, vf.spriteScratchRaster.field_o);
-                sh.field_y.a(param0 + 16351);
-                vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
-                break L0;
-              }
-            }
-            if (1 == this.entitySpriteKindId) {
+        if (param0 != -16096) {
+          return;
+        }
+        L0: {
+          rotatedEntityY = (int)(Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)entityOffsetX + (double)entityOffsetY * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
+          if (this.entitySpriteKindId != 2) {
+            if (1 != this.entitySpriteKindId) {
               vf.spriteScratchRaster.e();
               SoftwareRasterizer.c();
-              this.entitySprite.b(-this.entitySprite.field_s + vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o - this.entitySprite.field_o >> 1, this.interpolatedPaletteColor);
+              this.entitySprite.c(-this.entitySprite.field_s + vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o - this.entitySprite.field_o >> 1);
               k.a(0, 0, vf.spriteScratchRaster.field_s, -27085, vf.spriteScratchRaster.field_o);
               sh.field_y.a(param0 + 16351);
               vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
-            } else {
-              this.entitySprite.b(-(this.entitySprite.field_s >> 1) + rotatedEntityX, rotatedEntityY - (this.entitySprite.field_o >> 1));
+              break L0;
             }
           }
-          return;
-        } else {
-          return;
+          if (1 == this.entitySpriteKindId) {
+            vf.spriteScratchRaster.e();
+            SoftwareRasterizer.c();
+            this.entitySprite.b(-this.entitySprite.field_s + vf.spriteScratchRaster.field_s >> 1, vf.spriteScratchRaster.field_o - this.entitySprite.field_o >> 1, this.interpolatedPaletteColor);
+            k.a(0, 0, vf.spriteScratchRaster.field_s, -27085, vf.spriteScratchRaster.field_o);
+            sh.field_y.a(param0 + 16351);
+            vf.spriteScratchRaster.rotateSmooth(vf.spriteScratchRaster.field_s << 3, vf.spriteScratchRaster.field_o << 3, rotatedEntityX << 4, rotatedEntityY << 4, (int)(65535.0 * ((double)(-el.gameplaySession.boardAngleRadians + this.spriteAngleRadians) / 6.283185307179586)), 4096);
+          } else {
+            this.entitySprite.b(-(this.entitySprite.field_s >> 1) + rotatedEntityX, rotatedEntityY - (this.entitySprite.field_o >> 1));
+          }
         }
     }
 
@@ -169,13 +167,13 @@ final class GameplayEntity extends DualLinkNode {
 
     final void eraseEntityPixels(int param0) {
         int incrementValue$0 = 0;
+        int negativeColumnCounter = 0;
         int clipLeftX;
         int clipTopY;
         int clippedWidth;
         int clippedHeight;
         int framebufferIndex;
         int rowSkip;
-        int negativeColumnCounter;
         int controlFlowGuard;
         int[] framebufferPixels;
         controlFlowGuard = Geoblox.field_C;
@@ -197,7 +195,10 @@ final class GameplayEntity extends DualLinkNode {
         if (clippedHeight + clipTopY > bk.boardOwnershipRaster.height) {
           clippedHeight = bk.boardOwnershipRaster.height - clipTopY;
         }
-        if (param0 >= 78) {
+        if (param0 < 78) {
+          return;
+        }
+        {
           framebufferIndex = clipLeftX + bk.boardOwnershipRaster.width * clipTopY;
           rowSkip = -clippedWidth + bk.boardOwnershipRaster.width;
           framebufferPixels = bk.boardOwnershipRaster.pixels;
@@ -206,29 +207,20 @@ final class GameplayEntity extends DualLinkNode {
             clippedHeight--;
             if (incrementValue$0 <= 0) {
               return;
-            } else {
-              negativeColumnCounter = -clippedWidth;
-              L5: while (true) {
-                if (negativeColumnCounter >= 0) {
-                  framebufferIndex = framebufferIndex + rowSkip;
-                  continue L4;
-                } else {
-                  if (~framebufferPixels[framebufferIndex] == ~(this.entityId + 1)) {
-                    framebufferPixels[framebufferIndex] = 0;
-                    framebufferIndex++;
-                    negativeColumnCounter++;
-                    continue L5;
-                  } else {
-                    framebufferIndex++;
-                    negativeColumnCounter++;
-                    continue L5;
-                  }
+            }
+            {
+              L5: for (negativeColumnCounter = -clippedWidth; negativeColumnCounter < 0; negativeColumnCounter++) {
+                if (~framebufferPixels[framebufferIndex] != ~(this.entityId + 1)) {
+                  framebufferIndex++;
+                  continue L5;
                 }
+                framebufferPixels[framebufferIndex] = 0;
+                framebufferIndex++;
               }
+              framebufferIndex = framebufferIndex + rowSkip;
+              continue L4;
             }
           }
-        } else {
-          return;
         }
     }
 
@@ -455,22 +447,21 @@ final class GameplayEntity extends DualLinkNode {
         var4 = Geoblox.field_C;
         try {
           L0: for (relatedEntitySearchIndex = startingChildIndex; relatedEntitySearchIndex < this.relatedEntityCount; relatedEntitySearchIndex++) {
-            if (this.relatedEntities[relatedEntitySearchIndex] == relatedEntity) {
-              this.relatedEntities[relatedEntitySearchIndex] = null;
-              if (this.spriteVariantIndex == relatedEntity.spriteVariantIndex) {
-                this.sameVariantEntityCount = this.sameVariantEntityCount - 1;
-              }
-              this.relatedEntityCount = this.relatedEntityCount - 1;
-              if (relatedEntity.entityCategoryKey == this.entityCategoryKey) {
-                this.sameCategoryEntityCount = this.sameCategoryEntityCount - 1;
-              }
-              if (5 > relatedEntitySearchIndex) {
-                sf.a(this.relatedEntities, 1 + relatedEntitySearchIndex, this.relatedEntities, relatedEntitySearchIndex, this.relatedEntityCount - relatedEntitySearchIndex);
-              }
-              this.relatedEntities[this.relatedEntityCount] = null;
-            } else {
+            if (this.relatedEntities[relatedEntitySearchIndex] != relatedEntity) {
               continue L0;
             }
+            this.relatedEntities[relatedEntitySearchIndex] = null;
+            if (this.spriteVariantIndex == relatedEntity.spriteVariantIndex) {
+              this.sameVariantEntityCount = this.sameVariantEntityCount - 1;
+            }
+            this.relatedEntityCount = this.relatedEntityCount - 1;
+            if (relatedEntity.entityCategoryKey == this.entityCategoryKey) {
+              this.sameCategoryEntityCount = this.sameCategoryEntityCount - 1;
+            }
+            if (5 > relatedEntitySearchIndex) {
+              sf.a(this.relatedEntities, 1 + relatedEntitySearchIndex, this.relatedEntities, relatedEntitySearchIndex, this.relatedEntityCount - relatedEntitySearchIndex);
+            }
+            this.relatedEntities[this.relatedEntityCount] = null;
             break;
           }
           if (this.sameVariantEntityCount <= this.relatedEntityCount) {
@@ -501,6 +492,7 @@ final class GameplayEntity extends DualLinkNode {
 
     final void eraseEntityTrail(int param0) {
         int incrementValue$0 = 0;
+        int negativeColumnCounter = 0;
         float entityOffsetX;
         float entityOffsetY;
         int rotatedEntityX;
@@ -511,7 +503,6 @@ final class GameplayEntity extends DualLinkNode {
         int clippedSpriteHeight;
         int framebufferIndex;
         int framebufferRowSkip;
-        int negativeColumnCounter;
         int var14;
         int[] backgroundPixels;
         var14 = Geoblox.field_C;
@@ -548,25 +539,18 @@ final class GameplayEntity extends DualLinkNode {
           clippedSpriteHeight--;
           if (0 >= incrementValue$0) {
             return;
-          } else {
-            negativeColumnCounter = -clippedSpriteWidth;
-            L6: while (true) {
-              if (0 <= negativeColumnCounter) {
-                framebufferIndex = framebufferIndex + framebufferRowSkip;
-                continue L5;
-              } else {
-                if (~(this.entityId + 1) == ~backgroundPixels[framebufferIndex]) {
-                  backgroundPixels[framebufferIndex] = 0;
-                  framebufferIndex++;
-                  negativeColumnCounter++;
-                  continue L6;
-                } else {
-                  framebufferIndex++;
-                  negativeColumnCounter++;
-                  continue L6;
-                }
+          }
+          {
+            L6: for (negativeColumnCounter = -clippedSpriteWidth; 0 > negativeColumnCounter; negativeColumnCounter++) {
+              if (~(this.entityId + 1) != ~backgroundPixels[framebufferIndex]) {
+                framebufferIndex++;
+                continue L6;
               }
+              backgroundPixels[framebufferIndex] = 0;
+              framebufferIndex++;
             }
+            framebufferIndex = framebufferIndex + framebufferRowSkip;
+            continue L5;
           }
         }
     }

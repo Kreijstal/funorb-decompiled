@@ -48,7 +48,7 @@ test('retained names, evidence and original spelling need explicit changes', () 
 });
 test('explicit additions and replacements check their complete previous identity', () => {
   const add = data => {
-    const rule = {symbol: 'L:ul.b(I)V#21', originalName: 'var1', to: 'caughtRuntimeException', evidence: 'Fixture addition'};
+    const rule = {symbol: 'L:ul.b(I)V#2', originalName: 'stackIn_10_0', to: 'fixtureResult', evidence: 'Fixture addition'};
     data.renames.push(rule); data.publication.ruleChanges.push({symbol: rule.symbol, before: null, after: rule});
   };
   assert.equal(JSON.parse(fixture(add, false).stdout).rules, 1171);

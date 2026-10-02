@@ -21,36 +21,31 @@ final class gi implements Iterable {
         int var2;
         var2 = Geoblox.field_C;
         va.field_d = false;
-        if (param0 == -12618) {
-          ff.field_d = null;
-          if (!cf.field_i) {
-            var1 = ik.field_a;
-            if (var1 > 0) {
-              if (1 == var1) {
-                ff.field_d = ih.ticketingOneUnreadText;
-                ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.ticketingGoToWebsiteText)});
-                Geoblox.field_y.h((byte) -104);
-                rd.c(520);
-                return;
-              } else {
-                ff.field_d = wj.a(ra.ticketingUnreadCountText, new String[]{Integer.toString(var1)}, (byte) -124);
-                ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.ticketingGoToWebsiteText)});
-                Geoblox.field_y.h((byte) -104);
-                rd.c(520);
-                return;
-              }
-            } else {
-              Geoblox.field_y.h((byte) -104);
-              rd.c(520);
-              return;
-            }
-          } else {
-            Geoblox.field_y.c(false);
-            return;
-          }
-        } else {
+        if (param0 != -12618) {
           return;
         }
+        ff.field_d = null;
+        if (cf.field_i) {
+          Geoblox.field_y.c(false);
+          return;
+        }
+        var1 = ik.field_a;
+        if (var1 <= 0) {
+          Geoblox.field_y.h((byte) -104);
+          rd.c(520);
+          return;
+        }
+        if (1 == var1) {
+          ff.field_d = ih.ticketingOneUnreadText;
+          ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.ticketingGoToWebsiteText)});
+          Geoblox.field_y.h((byte) -104);
+          rd.c(520);
+          return;
+        }
+        ff.field_d = wj.a(ra.ticketingUnreadCountText, new String[]{Integer.toString(var1)}, (byte) -124);
+        ff.field_d = gg.a(-11455, new CharSequence[]{(CharSequence) ((Object) ff.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.ticketingGoToWebsiteText)});
+        Geoblox.field_y.h((byte) -104);
+        rd.c(520);
     }
 
     final void a(long param0, int param1, IntrusiveNode param2) {
@@ -166,60 +161,48 @@ final class gi implements Iterable {
         if (param6 >= param3) {
           if (param2 > param6) {
             sd.a(param5, param4, param7, 110, SoftwareRasterizer.framebuffer, param2, param0, param6, param3);
-            if (param1 >= -102) {
-              gi.a(-38);
-              return;
-            } else {
+            if (param1 < -102) {
               return;
             }
-          } else {
-            if (param3 < param2) {
-              sd.a(param0, param4, param7, 127, SoftwareRasterizer.framebuffer, param6, param5, param2, param3);
-              if (param1 >= -102) {
-                gi.a(-38);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              sd.a(param4, param0, param7, 120, SoftwareRasterizer.framebuffer, param6, param5, param3, param2);
-              if (param1 >= -102) {
-                gi.a(-38);
-                return;
-              } else {
-                return;
-              }
-            }
+            gi.a(-38);
+            return;
           }
-        } else {
-          if (param3 >= param2) {
-            if (param2 > param6) {
-              sd.a(param0, param5, param7, -110, SoftwareRasterizer.framebuffer, param3, param4, param2, param6);
-              if (param1 < -102) {
-                return;
-              } else {
-                gi.a(-38);
-                return;
-              }
-            } else {
-              sd.a(param5, param0, param7, -102, SoftwareRasterizer.framebuffer, param3, param4, param6, param2);
-              if (param1 < -102) {
-                return;
-              } else {
-                gi.a(-38);
-                return;
-              }
-            }
-          } else {
-            sd.a(param4, param5, param7, 116, SoftwareRasterizer.framebuffer, param2, param0, param3, param6);
-            if (param1 >= -102) {
-              gi.a(-38);
-              return;
-            } else {
+          if (param3 < param2) {
+            sd.a(param0, param4, param7, 127, SoftwareRasterizer.framebuffer, param6, param5, param2, param3);
+            if (param1 < -102) {
               return;
             }
+            gi.a(-38);
+            return;
           }
+          sd.a(param4, param0, param7, 120, SoftwareRasterizer.framebuffer, param6, param5, param3, param2);
+          if (param1 < -102) {
+            return;
+          }
+          gi.a(-38);
+          return;
         }
+        if (param3 < param2) {
+          sd.a(param4, param5, param7, 116, SoftwareRasterizer.framebuffer, param2, param0, param3, param6);
+          if (param1 < -102) {
+            return;
+          }
+          gi.a(-38);
+          return;
+        }
+        if (param2 > param6) {
+          sd.a(param0, param5, param7, -110, SoftwareRasterizer.framebuffer, param3, param4, param2, param6);
+          if (param1 < -102) {
+            return;
+          }
+          gi.a(-38);
+          return;
+        }
+        sd.a(param5, param0, param7, -102, SoftwareRasterizer.framebuffer, param3, param4, param6, param2);
+        if (param1 < -102) {
+          return;
+        }
+        gi.a(-38);
     }
 
     final static void a(Throwable param0, String param1, byte param2) {
@@ -265,7 +248,8 @@ final class gi implements Iterable {
                 var9 = og.a(var8, "%23", true, "#");
                 if (null == GameScreen.field_x) {
                   return;
-                } else {
+                }
+                {
                   stackIn_13_0 = ml.field_s;
 
                   stackIn_13_1 = -14;
@@ -311,12 +295,10 @@ final class gi implements Iterable {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (Exception) (Object) decompiledCaughtException;
             }
-            if (param2 != 125) {
-              gi.a(-109);
-              return;
-            } else {
+            if (param2 == 125) {
               return;
             }
+            gi.a(-109);
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -344,10 +326,9 @@ final class gi implements Iterable {
           if (param0 != 1) {
             stackIn_10_0 = var3_int;
             return stackIn_10_0;
-          } else {
-            stackIn_8_0 = param2 * var3_int;
-            return stackIn_8_0;
           }
+          stackIn_8_0 = param2 * var3_int;
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -377,19 +358,17 @@ final class gi implements Iterable {
         var5 = this.field_a[(int)((long)(-1 + this.field_c) & param0)];
         this.field_f = var5.nextNode;
         L0: while (true) {
-          if (this.field_f != var5) {
-            if (~this.field_f.field_a != ~param0) {
-              this.field_f = this.field_f.nextNode;
-              continue L0;
-            } else {
-              var6 = this.field_f;
-              this.field_f = this.field_f.nextNode;
-              return var6;
-            }
-          } else {
+          if (this.field_f == var5) {
             this.field_f = null;
             return null;
           }
+          if (~this.field_f.field_a != ~param0) {
+            this.field_f = this.field_f.nextNode;
+            continue L0;
+          }
+          var6 = this.field_f;
+          this.field_f = this.field_f.nextNode;
+          return var6;
         }
     }
 

@@ -72,27 +72,25 @@ final class ce extends AudioOutput {
             L1: while (true) {
               if (var4 >= var3.length) {
                 break L0;
-              } else {
-                var5 = var3[var4];
-                if (var5 != null) {
-                  var6 = var5.getName();
-                  if (var6 != null) {
-                    if (var6.toLowerCase().indexOf(field_A) >= 0) {
-                      this.field_v = true;
-                      var4++;
-                      continue L1;
-                    } else {
-                      var4++;
-                      continue L1;
-                    }
-                  } else {
-                    var4++;
-                    continue L1;
-                  }
-                } else {
+              }
+              var5 = var3[var4];
+              if (var5 == null) {
+                var4++;
+                continue L1;
+              }
+              {
+                var6 = var5.getName();
+                if (var6 == null) {
                   var4++;
                   continue L1;
                 }
+                if (var6.toLowerCase().indexOf(field_A) < 0) {
+                  var4++;
+                  continue L1;
+                }
+                this.field_v = true;
+                var4++;
+                continue L1;
               }
             }
           }

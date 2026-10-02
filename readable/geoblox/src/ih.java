@@ -27,24 +27,23 @@ final class ih {
 
     final static boolean areEntityQueuesSettled(int param0) {
         int stackIn_8_0 = 0;
-        if (param0 == 0) {
-          L0: {
-            if (ji.movingEntities.isEmpty(13519)) {
-              if (SecondaryDeque.spawnQueue.isEmpty(13519)) {
-                if (bh.field_c.isEmpty(param0 + 13519)) {
-                  if (!jl.avatarShockContactPending) {
-                    stackIn_8_0 = 1;
-                    break L0;
-                  }
+        if (param0 != 0) {
+          return true;
+        }
+        L0: {
+          if (ji.movingEntities.isEmpty(13519)) {
+            if (SecondaryDeque.spawnQueue.isEmpty(13519)) {
+              if (bh.field_c.isEmpty(param0 + 13519)) {
+                if (!jl.avatarShockContactPending) {
+                  stackIn_8_0 = 1;
+                  break L0;
                 }
               }
             }
-            stackIn_8_0 = 0;
           }
-          return stackIn_8_0 != 0;
-        } else {
-          return true;
+          stackIn_8_0 = 0;
         }
+        return stackIn_8_0 != 0;
     }
 
     public static void a(byte param0) {
@@ -238,10 +237,9 @@ final class ih {
           if (param0 > 119) {
             stackIn_4_0 = pf.field_O.a(0, param1, "");
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = (byte[]) null;
-            return stackIn_2_0;
           }
+          stackIn_2_0 = (byte[]) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

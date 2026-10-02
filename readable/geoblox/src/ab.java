@@ -71,7 +71,8 @@ final class ab {
           if (param2 == null) {
             stackIn_4_0 = gg.createNameLengthAlertText;
             return stackIn_4_0;
-          } else {
+          }
+          {
             var3_int = param2.length();
             if (var3_int >= 1) {
               if (var3_int <= 12) {
@@ -98,12 +99,11 @@ final class ab {
                             }
                           }
                         }
-                        if (var5 > 0) {
-                          stackIn_36_0 = GameScreen.createNameLeadingSpaceAlertText;
-                          return stackIn_36_0;
-                        } else {
+                        if (var5 <= 0) {
                           return null;
                         }
+                        stackIn_36_0 = GameScreen.createNameLeadingSpaceAlertText;
+                        return stackIn_36_0;
                       }
                     }
                     stackIn_21_0 = GameScreen.createNameLeadingSpaceAlertText;
@@ -228,76 +228,7 @@ final class ab {
                   var2.advanceEntityAnimation(true);
                 }
                 gf.a(var2, -1232328029, boardAngleRadians);
-                if (!uj.a(var2, boardAngleRadians, 0)) {
-                  if (ma.a(true, boardAngleRadians, var2)) {
-                    var3 = SecondaryDeque.contactProbeRaster.pixels[aa.field_a + SecondaryDeque.contactProbeRaster.field_s * aa.field_b] - 1;
-                    var4 = tl.entitiesById[var3];
-                    if (a.attachedEntities != var4.entityQueue) {
-                      var5 = 0.5f * (var4.velocityX + var2.velocityX);
-                      var6 = (var4.velocityY + var2.velocityY) * 0.5f;
-                      var7 = var6 * var6 + var5 * var5;
-                      var7 = og.entityMotionSpeed / (float)Math.sqrt((double)var7);
-                      var6 = var6 * var7;
-                      var5 = var5 * var7;
-                      var8 = -var4.positionX + 320.0f;
-                      var9 = 240.0f - var4.positionY;
-                      var10 = -var5 - var4.positionX + 320.0f;
-                      var11 = 240.0f - (var4.positionY + var6);
-                      var10 = var10 * var10;
-                      var11 = var11 * var11;
-                      if (!(var10 + var11 > var9 * var9 + var8 * var8)) {
-                        stackIn_36_0 = 0;
-                      } else {
-                        stackIn_36_0 = 1;
-                      }
-                      var12 = stackIn_36_0;
-                      var8 = 320.0f - var2.positionX;
-                      var11 = 240.0f - (var6 + var2.positionY);
-                      var10 = -var2.positionX - var5 + 320.0f;
-                      var9 = -var2.positionY + 240.0f;
-                      var10 = var10 * var10;
-                      var11 = var11 * var11;
-                      if (!(var9 * var9 + var8 * var8 < var11 + var10)) {
-                        stackIn_39_0 = 0;
-                      } else {
-                        stackIn_39_0 = 1;
-                      }
-                      var13 = stackIn_39_0;
-                      if (var12 != 0) {
-                        if (var13 != 0) {
-                          var8 = -((var2.positionX + var4.positionX) * 0.5f) + 320.0f;
-                          var9 = 240.0f - 0.5f * (var4.positionY + var2.positionY);
-                          var14 = og.entityMotionSpeed / (float)Math.sqrt((double)(var8 * var8 + var9 * var9));
-                          var5 = var8 * var14;
-                          var6 = var14 * var9;
-                        }
-                      }
-                      var2.velocityY = var2.velocityY * -1.0f;
-                      var2.velocityX = var2.velocityX * -1.0f;
-                      var2.integrateEntityVelocity((byte) -59);
-                      var4.velocityX = var5;
-                      var2.velocityX = var5;
-                      var4.velocityY = var6;
-                      var2.velocityY = var6;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    var3_float = 320.0f - var2.positionX;
-                    var4_float = 240.0f - var2.positionY;
-                    var5 = -(var4_float * var2.positionX) + var2.positionY * var3_float;
-                    if (var2.relatedEntityCount == 0) {
-                      if (var5 * var5 > 0.30000001192092896f) {
-                        var2.velocityX = var3_float;
-                        var2.velocityY = var4_float;
-                        var6 = og.entityMotionSpeed / (float)Math.sqrt((double)(var2.velocityX * var2.velocityX + var2.velocityY * var2.velocityY));
-                        var2.velocityX = var2.velocityX * var6;
-                        var2.velocityY = var2.velocityY * var6;
-                      }
-                    }
-                  }
-                  var2.drawEntityIdOnPointerMask((byte) 51);
-                } else {
+                if (uj.a(var2, boardAngleRadians, 0)) {
                   vf.spriteScratchRaster.g(1);
                   if (var2.matchCooldownTicks <= 0) {
                     al.a(9666, GameScreen.selectedThemeId);
@@ -331,11 +262,79 @@ final class ab {
                   if (!var2.detachedFromBoard) {
                     wb.newAttachmentCount = wb.newAttachmentCount + 1;
                     break L2;
-                  } else {
-                    var2 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
-                    continue L0;
+                  }
+                  var2 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+                  continue L0;
+                }
+                if (ma.a(true, boardAngleRadians, var2)) {
+                  var3 = SecondaryDeque.contactProbeRaster.pixels[aa.field_a + SecondaryDeque.contactProbeRaster.field_s * aa.field_b] - 1;
+                  var4 = tl.entitiesById[var3];
+                  if (a.attachedEntities == var4.entityQueue) {
+                    break L2;
+                  }
+                  {
+                    var5 = 0.5f * (var4.velocityX + var2.velocityX);
+                    var6 = (var4.velocityY + var2.velocityY) * 0.5f;
+                    var7 = var6 * var6 + var5 * var5;
+                    var7 = og.entityMotionSpeed / (float)Math.sqrt((double)var7);
+                    var6 = var6 * var7;
+                    var5 = var5 * var7;
+                    var8 = -var4.positionX + 320.0f;
+                    var9 = 240.0f - var4.positionY;
+                    var10 = -var5 - var4.positionX + 320.0f;
+                    var11 = 240.0f - (var4.positionY + var6);
+                    var10 = var10 * var10;
+                    var11 = var11 * var11;
+                    if (!(var10 + var11 > var9 * var9 + var8 * var8)) {
+                      stackIn_36_0 = 0;
+                    } else {
+                      stackIn_36_0 = 1;
+                    }
+                    var12 = stackIn_36_0;
+                    var8 = 320.0f - var2.positionX;
+                    var11 = 240.0f - (var6 + var2.positionY);
+                    var10 = -var2.positionX - var5 + 320.0f;
+                    var9 = -var2.positionY + 240.0f;
+                    var10 = var10 * var10;
+                    var11 = var11 * var11;
+                    if (!(var9 * var9 + var8 * var8 < var11 + var10)) {
+                      stackIn_39_0 = 0;
+                    } else {
+                      stackIn_39_0 = 1;
+                    }
+                    var13 = stackIn_39_0;
+                    if (var12 != 0) {
+                      if (var13 != 0) {
+                        var8 = -((var2.positionX + var4.positionX) * 0.5f) + 320.0f;
+                        var9 = 240.0f - 0.5f * (var4.positionY + var2.positionY);
+                        var14 = og.entityMotionSpeed / (float)Math.sqrt((double)(var8 * var8 + var9 * var9));
+                        var5 = var8 * var14;
+                        var6 = var14 * var9;
+                      }
+                    }
+                    var2.velocityY = var2.velocityY * -1.0f;
+                    var2.velocityX = var2.velocityX * -1.0f;
+                    var2.integrateEntityVelocity((byte) -59);
+                    var4.velocityX = var5;
+                    var2.velocityX = var5;
+                    var4.velocityY = var6;
+                    var2.velocityY = var6;
+                  }
+                } else {
+                  var3_float = 320.0f - var2.positionX;
+                  var4_float = 240.0f - var2.positionY;
+                  var5 = -(var4_float * var2.positionX) + var2.positionY * var3_float;
+                  if (var2.relatedEntityCount == 0) {
+                    if (var5 * var5 > 0.30000001192092896f) {
+                      var2.velocityX = var3_float;
+                      var2.velocityY = var4_float;
+                      var6 = og.entityMotionSpeed / (float)Math.sqrt((double)(var2.velocityX * var2.velocityX + var2.velocityY * var2.velocityY));
+                      var2.velocityX = var2.velocityX * var6;
+                      var2.velocityY = var2.velocityY * var6;
+                    }
                   }
                 }
+                var2.drawEntityIdOnPointerMask((byte) 51);
               }
             }
             var2 = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));

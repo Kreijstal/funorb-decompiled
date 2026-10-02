@@ -184,10 +184,9 @@ final class ij extends oe implements pl {
           }
           if (param1 == -20) {
             return;
-          } else {
-            field_W = -95;
-            return;
           }
+          field_W = -95;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

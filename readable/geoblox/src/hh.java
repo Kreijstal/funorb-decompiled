@@ -28,20 +28,18 @@ final class hh {
         Throwable decompiledCaughtException = null;
         var1_ref = je.field_j;
         synchronized (var1_ref) {
-          if (param0 > 41) {
-            if (vd.field_n == pc.field_p) {
-              stackIn_7_0 = 0;
-              return stackIn_7_0 != 0;
-            } else {
-              ki.field_d = kj.field_O[vd.field_n];
-              te.field_a = ai.field_n[vd.field_n];
-              vd.field_n = 1 + vd.field_n & 127;
-              stackIn_9_0 = 1;
-            }
-          } else {
+          if (param0 <= 41) {
             stackIn_3_0 = 0;
             return stackIn_3_0 != 0;
           }
+          if (vd.field_n == pc.field_p) {
+            stackIn_7_0 = 0;
+            return stackIn_7_0 != 0;
+          }
+          ki.field_d = kj.field_O[vd.field_n];
+          te.field_a = ai.field_n[vd.field_n];
+          vd.field_n = 1 + vd.field_n & 127;
+          stackIn_9_0 = 1;
         }
         return stackIn_9_0 != 0;
     }

@@ -84,15 +84,14 @@ abstract class nh {
             vf.field_I.c((byte) 95, var12[var10]);
             var10++;
           }
-          if (param6) {
-            vf.field_I.e(param5, 28695);
-            vf.field_I.a(0, param0, param1);
-            param3.a(vf.field_I.field_f, -97, vf.field_I.field_j, 0);
-            param3.a(fa.field_c.field_f, -97, fa.field_c.field_j, 0);
-            return;
-          } else {
+          if (!param6) {
             return;
           }
+          vf.field_I.e(param5, 28695);
+          vf.field_I.a(0, param0, param1);
+          param3.a(vf.field_I.field_f, -97, vf.field_I.field_j, 0);
+          param3.a(fa.field_c.field_f, -97, fa.field_c.field_j, 0);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;

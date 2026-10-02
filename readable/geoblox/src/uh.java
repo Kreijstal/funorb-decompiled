@@ -99,7 +99,8 @@ final class uh extends ac {
           var2_int = param0.e((byte) -17, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
-          } else {
+          }
+          {
             var3 = ac.a((byte) 81, param0) ? 1 : 0;
             var4 = ac.a((byte) 7, param0) ? 1 : 0;
             var5 = new nf();
@@ -146,10 +147,9 @@ final class uh extends ac {
                 if (var6 != 0) {
                   var5.field_v = (byte)(1 + var6);
                   break L4;
-                } else {
-                  var5.field_n = null;
-                  break L4;
                 }
+                var5.field_n = null;
+                break L4;
               }
             }
             stackIn_28_0 = (nf) (var5);
@@ -193,37 +193,35 @@ final class uh extends ac {
         RuntimeException var1 = null;
         var12 = Geoblox.field_C;
         try {
-          if (param0 == 4740) {
-            var14 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
-            if (var14 != null) {
-              var2 = -320.0f + var14.positionX;
-              var3 = -240.0f + var14.positionY;
-              var4 = (int)((double)var2 * Math.cos((double)el.gameplaySession.boardAngleRadians) - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)var3 + 320.0);
-              var5 = (int)((double)var2 * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)var3 * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
-              var6 = 0.01666666753590107f;
-              var7 = 16764416;
-              var8 = (float)el.gameplaySession.updateTick * 0.03999999910593033f;
-              SoftwareRasterizer.e(var4, var5, 16, 16777215, 100);
-              SoftwareRasterizer.f(var4, var5, 16, 0);
-              for (var9 = var8 + 3.1415927410125732f; var8 < var9; var9 = var9 - var6) {
-                var10 = (int)((double)var4 + 16.0 * Math.cos((double)var9));
-                var11 = (int)((double)var5 + Math.sin((double)var9) * 16.0);
-                SoftwareRasterizer.d(var10, var11, 2, var7);
-                var6 = var6 + var6 * 0.25f;
-                var7 += 778;
-              }
-              var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
-              L1: while (var13 != null) {
-                var13.drawFadingEntity(param0 - 4830);
-                var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
-              }
-              return;
-            } else {
-              return;
-            }
-          } else {
+          if (param0 != 4740) {
             return;
           }
+          var14 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
+          if (var14 == null) {
+            return;
+          }
+          var2 = -320.0f + var14.positionX;
+          var3 = -240.0f + var14.positionY;
+          var4 = (int)((double)var2 * Math.cos((double)el.gameplaySession.boardAngleRadians) - Math.sin((double)el.gameplaySession.boardAngleRadians) * (double)var3 + 320.0);
+          var5 = (int)((double)var2 * Math.sin((double)el.gameplaySession.boardAngleRadians) + (double)var3 * Math.cos((double)el.gameplaySession.boardAngleRadians) + 240.0);
+          var6 = 0.01666666753590107f;
+          var7 = 16764416;
+          var8 = (float)el.gameplaySession.updateTick * 0.03999999910593033f;
+          SoftwareRasterizer.e(var4, var5, 16, 16777215, 100);
+          SoftwareRasterizer.f(var4, var5, 16, 0);
+          for (var9 = var8 + 3.1415927410125732f; var8 < var9; var9 = var9 - var6) {
+            var10 = (int)((double)var4 + 16.0 * Math.cos((double)var9));
+            var11 = (int)((double)var5 + Math.sin((double)var9) * 16.0);
+            SoftwareRasterizer.d(var10, var11, 2, var7);
+            var6 = var6 + var6 * 0.25f;
+            var7 += 778;
+          }
+          var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
+          L1: while (var13 != null) {
+            var13.drawFadingEntity(param0 - 4830);
+            var13 = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

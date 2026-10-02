@@ -28,18 +28,17 @@ final class tl extends IntrusiveNode {
             String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
             try {
-              if (param1 == -91) {
-                try {
-                  var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-                  param0.getAppletContext().showDocument(wf.a(var2, 68, param0), "_top");
-                  return;
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = (Exception) (Object) decompiledCaughtException;
-                  var2_ref.printStackTrace();
-                  return;
-                }
-              } else {
+              if (param1 != -91) {
+                return;
+              }
+              try {
+                var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
+                param0.getAppletContext().showDocument(wf.a(var2, 68, param0), "_top");
+                return;
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
                 return;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

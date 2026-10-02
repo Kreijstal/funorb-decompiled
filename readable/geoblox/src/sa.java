@@ -94,10 +94,9 @@ final class sa extends RuntimeException {
           k.field_g = -1;
           if (param1 >= 69) {
             return;
-          } else {
-            sa.a(false);
-            return;
           }
+          sa.a(false);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

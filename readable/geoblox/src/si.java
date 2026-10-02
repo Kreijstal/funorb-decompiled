@@ -37,10 +37,9 @@ final class si {
           if (param3.a(param1 ^ param1)) {
             stackIn_4_0 = param2 + " - " + param3.b((byte) 110) + "%";
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = (String) (param0);
-            return stackIn_2_0;
           }
+          stackIn_2_0 = (String) (param0);
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -174,86 +173,85 @@ final class si {
           var6 = param0.c(120, param3);
           if (var6 != null) {
             if (null != param0.field_n) {
-              if (this.field_e >= 0) {
-                stackIn_20_0 = param0.field_n;
-
-                stackIn_20_1 = (String) (var6);
-
-                if (this.field_b != -2147483648) {
-                  stackIn_21_0 = (m) ((Object) stackIn_20_0);
-                  stackIn_21_1 = (String) ((Object) stackIn_20_1);
-                  stackIn_21_2 = this.field_b;
-                } else {
-                  stackIn_21_0 = (m) ((Object) stackIn_20_0);
-                  stackIn_21_1 = (String) ((Object) stackIn_20_1);
-                  stackIn_21_2 = 0;
-                }
-
-
-
-
-                stackIn_23_2 = stackIn_21_2 + param0.field_e + param3.field_v + param1;
-
-                stackIn_23_3 = param0.field_m;
-
-                stackIn_23_4 = param3.field_m + param2;
-
-                if (this.field_f == -2147483648) {
-                  stackIn_21_0 = (m) ((Object) stackIn_21_0);
-                  stackIn_21_1 = (String) ((Object) stackIn_21_1);
-                  stackIn_24_2 = stackIn_23_2;
-                  stackIn_24_3 = stackIn_23_3;
-                  stackIn_24_4 = stackIn_23_4;
-                  stackIn_24_5 = 0;
-                } else {
-                  stackIn_21_0 = (m) ((Object) stackIn_21_0);
-                  stackIn_21_1 = (String) ((Object) stackIn_21_1);
-                  stackIn_24_2 = stackIn_23_2;
-                  stackIn_24_3 = stackIn_23_3;
-                  stackIn_24_4 = stackIn_23_4;
-                  stackIn_24_5 = this.field_f;
-                }
-
-
-
-
-
-
-                stackIn_26_3 = stackIn_24_3 + (stackIn_24_4 + stackIn_24_5);
-
-                stackIn_26_4 = -param0.field_e + param3.field_r - param0.field_j;
-
-                stackIn_26_5 = -param0.field_b + (-param0.field_m + param3.field_h);
-
-                stackIn_26_6 = this.field_e;
-
-                stackIn_26_7 = this.field_d;
-
-                if (this.field_k != -2147483648) {
-                  stackIn_21_0 = (m) ((Object) stackIn_21_0);
-                  stackIn_21_1 = (String) ((Object) stackIn_21_1);
-
-                  stackIn_27_3 = stackIn_26_3;
-                  stackIn_27_4 = stackIn_26_4;
-                  stackIn_27_5 = stackIn_26_5;
-                  stackIn_27_6 = stackIn_26_6;
-                  stackIn_27_7 = stackIn_26_7;
-                  stackIn_27_8 = this.field_k;
-                } else {
-                  stackIn_21_0 = (m) ((Object) stackIn_21_0);
-                  stackIn_21_1 = (String) ((Object) stackIn_21_1);
-
-                  stackIn_27_3 = stackIn_26_3;
-                  stackIn_27_4 = stackIn_26_4;
-                  stackIn_27_5 = stackIn_26_5;
-                  stackIn_27_6 = stackIn_26_6;
-                  stackIn_27_7 = stackIn_26_7;
-                  stackIn_27_8 = 256;
-                }
-                ((m) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_27_8, param0.field_g, param0.field_i, param0.field_f);
-              } else {
+              if (this.field_e < 0) {
                 return;
               }
+              stackIn_20_0 = param0.field_n;
+
+              stackIn_20_1 = (String) (var6);
+
+              if (this.field_b != -2147483648) {
+                stackIn_21_0 = (m) ((Object) stackIn_20_0);
+                stackIn_21_1 = (String) ((Object) stackIn_20_1);
+                stackIn_21_2 = this.field_b;
+              } else {
+                stackIn_21_0 = (m) ((Object) stackIn_20_0);
+                stackIn_21_1 = (String) ((Object) stackIn_20_1);
+                stackIn_21_2 = 0;
+              }
+
+
+
+
+              stackIn_23_2 = stackIn_21_2 + param0.field_e + param3.field_v + param1;
+
+              stackIn_23_3 = param0.field_m;
+
+              stackIn_23_4 = param3.field_m + param2;
+
+              if (this.field_f == -2147483648) {
+                stackIn_21_0 = (m) ((Object) stackIn_21_0);
+                stackIn_21_1 = (String) ((Object) stackIn_21_1);
+                stackIn_24_2 = stackIn_23_2;
+                stackIn_24_3 = stackIn_23_3;
+                stackIn_24_4 = stackIn_23_4;
+                stackIn_24_5 = 0;
+              } else {
+                stackIn_21_0 = (m) ((Object) stackIn_21_0);
+                stackIn_21_1 = (String) ((Object) stackIn_21_1);
+                stackIn_24_2 = stackIn_23_2;
+                stackIn_24_3 = stackIn_23_3;
+                stackIn_24_4 = stackIn_23_4;
+                stackIn_24_5 = this.field_f;
+              }
+
+
+
+
+
+
+              stackIn_26_3 = stackIn_24_3 + (stackIn_24_4 + stackIn_24_5);
+
+              stackIn_26_4 = -param0.field_e + param3.field_r - param0.field_j;
+
+              stackIn_26_5 = -param0.field_b + (-param0.field_m + param3.field_h);
+
+              stackIn_26_6 = this.field_e;
+
+              stackIn_26_7 = this.field_d;
+
+              if (this.field_k != -2147483648) {
+                stackIn_21_0 = (m) ((Object) stackIn_21_0);
+                stackIn_21_1 = (String) ((Object) stackIn_21_1);
+
+                stackIn_27_3 = stackIn_26_3;
+                stackIn_27_4 = stackIn_26_4;
+                stackIn_27_5 = stackIn_26_5;
+                stackIn_27_6 = stackIn_26_6;
+                stackIn_27_7 = stackIn_26_7;
+                stackIn_27_8 = this.field_k;
+              } else {
+                stackIn_21_0 = (m) ((Object) stackIn_21_0);
+                stackIn_21_1 = (String) ((Object) stackIn_21_1);
+
+                stackIn_27_3 = stackIn_26_3;
+                stackIn_27_4 = stackIn_26_4;
+                stackIn_27_5 = stackIn_26_5;
+                stackIn_27_6 = stackIn_26_6;
+                stackIn_27_7 = stackIn_26_7;
+                stackIn_27_8 = 256;
+              }
+              ((m) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_27_8, param0.field_g, param0.field_i, param0.field_f);
             }
           }
           return;
@@ -338,34 +336,32 @@ final class si {
             param2.a(param3, param0, param1, param5, 0);
             param2.a((byte) -8);
           }
-          if (param4 == -16566) {
-            if (this.field_f != -2147483648) {
-              param2.field_f = this.field_f;
-            }
-            if (this.field_d >= -1) {
-              param2.field_d = this.field_d;
-            }
-            if (this.field_k != -2147483648) {
-              param2.field_k = this.field_k;
-            }
-            if (null != this.field_a) {
-              param2.field_a = this.field_a;
-            }
-            if (null != this.field_l) {
-              param2.field_l = this.field_l;
-            }
-            if (this.field_e >= -1) {
-              param2.field_e = this.field_e;
-            }
-            if (this.field_b == -2147483648) {
-              return;
-            } else {
-              param2.field_b = this.field_b;
-              return;
-            }
-          } else {
+          if (param4 != -16566) {
             return;
           }
+          if (this.field_f != -2147483648) {
+            param2.field_f = this.field_f;
+          }
+          if (this.field_d >= -1) {
+            param2.field_d = this.field_d;
+          }
+          if (this.field_k != -2147483648) {
+            param2.field_k = this.field_k;
+          }
+          if (null != this.field_a) {
+            param2.field_a = this.field_a;
+          }
+          if (null != this.field_l) {
+            param2.field_l = this.field_l;
+          }
+          if (this.field_e >= -1) {
+            param2.field_e = this.field_e;
+          }
+          if (this.field_b == -2147483648) {
+            return;
+          }
+          param2.field_b = this.field_b;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;

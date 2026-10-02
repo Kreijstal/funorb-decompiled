@@ -18,10 +18,9 @@ final class fk extends sh {
           if (readGuard == 2229) {
             stackIn_4_0 = bf.activeTextArchive.a(0, resourceKey, "");
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = (byte[]) null;
-            return stackIn_2_0;
           }
+          stackIn_2_0 = (byte[]) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -112,15 +111,14 @@ final class fk extends sh {
             try {
               try {
                 var4 = Class.forName("ve");
-                if (!param0) {
-                  var5 = (sc) (var4.newInstance());
-                  var5.a(param2, param1, param3, (byte) 127);
-                  stackIn_4_0 = (sc) (var5);
-                  return stackIn_4_0;
-                } else {
+                if (param0) {
                   stackIn_2_0 = (sc) null;
                   return stackIn_2_0;
                 }
+                var5 = (sc) (var4.newInstance());
+                var5.a(param2, param1, param3, (byte) 127);
+                stackIn_4_0 = (sc) (var5);
+                return stackIn_4_0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4_ref = decompiledCaughtException;

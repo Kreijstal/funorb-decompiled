@@ -475,8 +475,8 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:dm.a(IIIIII)V#7` | `corner2X` | Horizontal corner expression using height<<4, used in X bound reduction. |
 | `L:dm.a(IIIIII)V#8` | `corner2Y` | Vertical corner expression using height<<4, used in Y bound reduction; original pivot decrements remain intact. |
 | `L:dm.a(IIIIII)V#9` | `corner3X` | Horizontal corner expression using width and height, used in X bound reduction. |
-| `L:dm.b(IIIIII)V#0` | `writeIndexForwardXForwardY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
-| `L:dm.b(IIIIII)V#1` | `writeIndexForwardXReverseY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
+| `L:dm.b(IIIIII)V#0` | `writeIndexFixedXFixedY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
+| `L:dm.b(IIIIII)V#1` | `writeIndexFixedXForwardY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
 | `L:dm.b(IIIIII)V#10` | `scaledSin` | floor(sin(angleRadians) * scale + 0.5), used in forward corner transform. |
 | `L:dm.b(IIIIII)V#11` | `scaledCos` | floor(cos(angleRadians) * scale + 0.5), used in forward corner transform. |
 | `L:dm.b(IIIIII)V#12` | `corner0X` | First transformed horizontal corner expression, used by lower/upper X reduction. |
@@ -487,7 +487,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:dm.b(IIIIII)V#17` | `corner2Y` | Vertical corner expression using height<<4, used in Y bound reduction; original pivot decrements remain intact. |
 | `L:dm.b(IIIIII)V#18` | `corner3X` | Horizontal corner expression using width and height, used in X bound reduction. |
 | `L:dm.b(IIIIII)V#19` | `corner3Y` | Vertical corner expression using width and height, used in Y bound reduction. |
-| `L:dm.b(IIIIII)V#2` | `writeIndexForwardXFixedY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
+| `L:dm.b(IIIIII)V#2` | `writeIndexFixedXReverseY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
 | `L:dm.b(IIIIII)V#20` | `leftBound` | Minimum transformed X, converted to destination pixels and clipped against vb.field_e. |
 | `L:dm.b(IIIIII)V#21` | `rightThenNegativeWidth` | Initially maximum/right X; overwritten with left-right before negative pixel-count loops. |
 | `L:dm.b(IIIIII)V#22` | `topBound` | Minimum transformed Y, converted to destination pixels and clipped against vb.field_i. |
@@ -498,7 +498,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:dm.b(IIIIII)V#27` | `inverseCosStep` | floor(cos(angleRadians)*inverseScaleFactor+0.5); increments source X for each destination pixel. |
 | `L:dm.b(IIIIII)V#28` | `destinationOffsetX` | (leftBound<<4)+8-destinationX at the first destination pixel center. |
 | `L:dm.b(IIIIII)V#29` | `destinationOffsetY` | (topBound<<4)+8-destinationY at the first destination pixel center. |
-| `L:dm.b(IIIIII)V#3` | `writeIndexReverseXForwardY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
+| `L:dm.b(IIIIII)V#3` | `writeIndexForwardXFixedY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
 | `L:dm.b(IIIIII)V#30` | `rowSourceXQ12` | Source pivot shifted by eight minus row-offset sine; decreases by inverseSinStep per row. |
 | `L:dm.b(IIIIII)V#31` | `rowSourceYQ12` | Source pivot shifted by eight plus row-offset cosine; increases by inverseCosStep per row. |
 | `L:dm.b(IIIIII)V#32` | `clipPixelCount` | Division results used to skip or limit pixels when source coordinates cross boundaries. |
@@ -508,11 +508,11 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:dm.b(IIIIII)V#36` | `sourceYQ12` | Source Y accumulator indexed with >>12 and advanced by inverseSinStep. |
 | `L:dm.b(IIIIII)V#37` | `negativePixelCounter` | Starts at negative width, adjusted by source clipping and incremented until zero. |
 | `L:dm.b(IIIIII)V#38` | `sampledPixel` | Reads pixels[(sourceY>>12)*width+(sourceX>>12)], zero is transparent. |
-| `L:dm.b(IIIIII)V#4` | `writeIndexReverseXReverseY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
-| `L:dm.b(IIIIII)V#5` | `writeIndexReverseXFixedY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
-| `L:dm.b(IIIIII)V#6` | `writeIndexFixedXForwardY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
-| `L:dm.b(IIIIII)V#7` | `writeIndexFixedXReverseY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
-| `L:dm.b(IIIIII)V#8` | `writeIndexFixedXFixedY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has fixed source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
+| `L:dm.b(IIIIII)V#4` | `writeIndexForwardXForwardY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
+| `L:dm.b(IIIIII)V#5` | `writeIndexForwardXReverseY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has forward source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
+| `L:dm.b(IIIIII)V#6` | `writeIndexReverseXFixedY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and fixed source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
+| `L:dm.b(IIIIII)V#7` | `writeIndexReverseXForwardY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and forward source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
+| `L:dm.b(IIIIII)V#8` | `writeIndexReverseXReverseY` | Captured old destination index before increment, used for the corresponding framebuffer write. This branch has reverse source-x stepping (var27) and reverse source-y stepping (var26); the name distinguishes its captured destination index from the other eight branches. |
 | `L:dm.b(IIIIII)V#9` | `angleRadians` | Masked 16-bit angle multiplied by 2*pi/65536 before sin/cos. |
 | `L:ec.b(I)Z#10` | `secondMatchedEntity` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
 | `L:ec.b(I)Z#11` | `thirdMatchedEntity` | Match processing sorts packed candidates and decodes three 10-bit entity IDs; eligible triples receive 30 or 90 times chain length and a popup at the first decoded entity position. Reused sort/decode variables retain both roles. |
@@ -601,31 +601,31 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ja.b(Z)V#5` | `kind7AnimationFrame` | ja.java captures field_G before incrementing it, then indexes hg.field_b with that saved animation frame. Captured frame used in the entitySpriteKindId == 7 animation branch; the kind ID distinguishes it from the other frame captures without retaining the opaque variable spelling. |
 | `L:ja.b(Z)V#6` | `kind4AnimationFrame` | ja.java captures field_G before incrementing it, then indexes fc.field_g with that saved animation frame. Captured frame used in the entitySpriteKindId == 4 animation branch; the kind ID distinguishes it from the other frame captures without retaining the opaque variable spelling. |
 | `L:ja.b(Z)V#7` | `paletteBlendFraction` | ja.java derives var2 from field_I%50 times 0.02 and uses it to interpolate field_q from the current theme palette and RGB deltas. |
-| `L:ja.f(I)V#1` | `clipLeftX` | ja.java begins with the sprite's left edge relative to field_o, then clips it at zero and adjusts the clipped width. |
-| `L:ja.f(I)V#2` | `clipTopY` | ja.java begins with the sprite's top edge relative to field_v, clips it at zero and adjusts the clipped height. |
-| `L:ja.f(I)V#3` | `clippedWidth` | ja.java initializes the sprite rectangle width and shortens it against bk.field_a.field_r after left clipping. |
-| `L:ja.f(I)V#4` | `clippedHeight` | ja.java initializes the sprite rectangle height and shortens it against bk.field_a.field_m after top clipping. |
-| `L:ja.f(I)V#5` | `framebufferIndex` | ja.java starts var6 at clipLeft+stride*clipTop and advances it through framebuffer writes. |
-| `L:ja.f(I)V#6` | `rowSkip` | ja.java assigns stride-clippedWidth to var7 and adds it after finishing each row. |
-| `L:ja.f(I)V#7` | `negativeColumnCounter` | ja.java starts var9 at negative clipped width and increments it through each pixel in a row. |
+| `L:ja.f(I)V#1` | `negativeColumnCounter` | ja.java starts var9 at negative clipped width and increments it through each pixel in a row. |
+| `L:ja.f(I)V#2` | `clipLeftX` | ja.java begins with the sprite's left edge relative to field_o, then clips it at zero and adjusts the clipped width. |
+| `L:ja.f(I)V#3` | `clipTopY` | ja.java begins with the sprite's top edge relative to field_v, clips it at zero and adjusts the clipped height. |
+| `L:ja.f(I)V#4` | `clippedWidth` | ja.java initializes the sprite rectangle width and shortens it against bk.field_a.field_r after left clipping. |
+| `L:ja.f(I)V#5` | `clippedHeight` | ja.java initializes the sprite rectangle height and shortens it against bk.field_a.field_m after top clipping. |
+| `L:ja.f(I)V#6` | `framebufferIndex` | ja.java starts var6 at clipLeft+stride*clipTop and advances it through framebuffer writes. |
+| `L:ja.f(I)V#7` | `rowSkip` | ja.java assigns stride-clippedWidth to var7 and adds it after finishing each row. |
 | `L:ja.f(I)V#8` | `controlFlowGuard` | ja.java:204 assigns Geoblox.field_C to var10; it is the shared control-flow guard, not a raster address. The separate var6 holds the pixel cursor initialized at ja.java:243 and advanced by the scan loops. |
 | `L:ja.f(I)V#9` | `framebufferPixels` | ja.java assigns bk.field_a.field_v to var14 and reads/writes its pixel values while erasing keyed pixels. |
 | `L:ja.g(I)V#0` | `entityOffsetX` | ja.java computes field_o-320 into var2 and uses it as the X component of the board-angle cosine/sine transform. |
 | `L:ja.g(I)V#1` | `entityOffsetY` | ja.java computes field_v-240 into var3 and uses it as the Y component of the board-angle transform. |
 | `L:ja.g(I)V#2` | `rotatedEntityX` | ja.java computes var4 from var2*cos(boardAngle)-var3*sin(boardAngle)+320 and passes it to the sprite draw path. |
 | `L:ja.g(I)V#3` | `rotatedEntityY` | ja.java computes var5 from var2*sin(boardAngle)+var3*cos(boardAngle)+240 and passes it to the sprite draw path. |
-| `L:ja.j(I)V#1` | `entityOffsetX` | ja.java computes field_o-320 and uses this X offset in board-angle projection. |
-| `L:ja.j(I)V#10` | `framebufferRowSkip` | ja.java computes stride-clippedWidth into var11 and adds it after completing each row. |
-| `L:ja.j(I)V#11` | `negativeColumnCounter` | ja.java initializes var13 to negative clipped width and increments it across pixels in the inner row loop. |
+| `L:ja.j(I)V#1` | `negativeColumnCounter` | ja.java initializes var13 to negative clipped width and increments it across pixels in the inner row loop. |
+| `L:ja.j(I)V#10` | `framebufferIndex` | ja.java initializes var10 as wd.field_b.field_r*clipTopY+clipLeftX, then advances it over the clipped rectangle. |
+| `L:ja.j(I)V#11` | `framebufferRowSkip` | ja.java computes stride-clippedWidth into var11 and adds it after completing each row. |
 | `L:ja.j(I)V#13` | `backgroundPixels` | ja.java assigns wd.field_b.field_v to var18 and clears pixels matching field_H+1 in the clipped framebuffer region. |
-| `L:ja.j(I)V#2` | `entityOffsetY` | ja.java computes field_v-240 and uses this Y offset in board-angle projection. |
-| `L:ja.j(I)V#3` | `rotatedEntityX` | ja.java rotates var2/var3 with board angle and adds 320 to produce the clipped sprite's screen X. |
-| `L:ja.j(I)V#4` | `rotatedEntityY` | ja.java rotates var2/var3 with board angle and adds 240 to produce the clipped sprite's screen Y. |
-| `L:ja.j(I)V#5` | `clipLeftX` | ja.java derives var6 from projected entity X, sprite half-width and wd.field_a, then clips its lower bound to zero. |
-| `L:ja.j(I)V#6` | `clipTopY` | ja.java derives var7 from projected entity Y, sprite half-height and wd.field_d, then clips its lower bound to zero. |
-| `L:ja.j(I)V#7` | `clippedSpriteWidth` | ja.java starts var8 at offscreen sprite width plus eight and reduces it against wd.field_b.field_r. |
-| `L:ja.j(I)V#8` | `clippedSpriteHeight` | ja.java starts var9 at offscreen sprite height plus eight and reduces it against wd.field_b.field_m. |
-| `L:ja.j(I)V#9` | `framebufferIndex` | ja.java initializes var10 as wd.field_b.field_r*clipTopY+clipLeftX, then advances it over the clipped rectangle. |
+| `L:ja.j(I)V#2` | `entityOffsetX` | ja.java computes field_o-320 and uses this X offset in board-angle projection. |
+| `L:ja.j(I)V#3` | `entityOffsetY` | ja.java computes field_v-240 and uses this Y offset in board-angle projection. |
+| `L:ja.j(I)V#4` | `rotatedEntityX` | ja.java rotates var2/var3 with board angle and adds 320 to produce the clipped sprite's screen X. |
+| `L:ja.j(I)V#5` | `rotatedEntityY` | ja.java rotates var2/var3 with board angle and adds 240 to produce the clipped sprite's screen Y. |
+| `L:ja.j(I)V#6` | `clipLeftX` | ja.java derives var6 from projected entity X, sprite half-width and wd.field_a, then clips its lower bound to zero. |
+| `L:ja.j(I)V#7` | `clipTopY` | ja.java derives var7 from projected entity Y, sprite half-height and wd.field_d, then clips its lower bound to zero. |
+| `L:ja.j(I)V#8` | `clippedSpriteWidth` | ja.java starts var8 at offscreen sprite width plus eight and reduces it against wd.field_b.field_r. |
+| `L:ja.j(I)V#9` | `clippedSpriteHeight` | ja.java starts var9 at offscreen sprite height plus eight and reduces it against wd.field_b.field_m. |
 | `L:ja.n(I)V#0` | `entityOffsetX` | ja.java computes field_o-320 before rotating the entity center into board coordinates. |
 | `L:ja.n(I)V#1` | `entityOffsetY` | ja.java computes field_v-240 before rotating the entity center into board coordinates. |
 | `L:ja.n(I)V#2` | `boardAngle` | ja.java assigns el.field_o.field_J to var4 and uses its sine and cosine to transform the entity center. |
@@ -763,14 +763,14 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:ua.b(I)I#3` | `outputShift` | Total previously consumed bits; shifts each chunk into the result. |
 | `L:ug.a(IZIII)V#0` | `popup` | The factory reuses a pooled ScorePopup and fills its instance fields before inserting it into the active queue. |
 | `L:ul.b(I)V#0` | `firstNeighborIndex` | Index into centralEntity.relatedEntities in the outer pair-enumeration loop; secondNeighborIndex starts at this index plus one. |
-| `L:ul.b(I)V#20` | `eligibleNeighborhoodVisited` | Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag. |
-| `L:ul.b(I)V#22` | `dualMatchFound` | Set when a candidate triple shares both category and sprite variant; chooses feedback mode 5 instead of mode 4 after traversal. |
-| `L:ul.b(I)V#23` | `centralEntity` | Current attached entity from the deque. Its matching counts gate neighborhood traversal and its neighbor pairs form candidate triples. |
-| `L:ul.b(I)V#24` | `variantMatchingAllowed` | Integer boolean for centralEntity.sameVariantEntityCount > 1; gates both subsequent spriteVariantIndex comparisons. |
-| `L:ul.b(I)V#25` | `categoryMatchingAllowed` | Integer boolean for centralEntity.sameCategoryEntityCount > 1; gates both subsequent entityCategoryKey comparisons. |
-| `L:ul.b(I)V#26` | `firstNeighborSharesVariant` | Gated equality of the central and first-neighbor spriteVariantIndex values; combines with the second neighbor to form tripleSharesVariant. |
-| `L:ul.b(I)V#27` | `firstNeighborSharesCategory` | Gated equality of the central and first-neighbor entityCategoryKey values; combines with the second neighbor to form tripleSharesCategory. |
-| `L:ul.b(I)V#28` | `secondNeighborIndex` | Second index into centralEntity.relatedEntities, strictly greater than firstNeighborIndex, so each pair is visited once per central entity. |
+| `L:ul.b(I)V#1` | `secondNeighborIndex` | Second index into centralEntity.relatedEntities, strictly greater than firstNeighborIndex, so each pair is visited once per central entity. |
+| `L:ul.b(I)V#21` | `eligibleNeighborhoodVisited` | Integer flag set when an eligible central neighborhood visits a neighbor. It can enable feedback even when no three-entity match was emitted; it is not a successful-match flag. |
+| `L:ul.b(I)V#23` | `dualMatchFound` | Set when a candidate triple shares both category and sprite variant; chooses feedback mode 5 instead of mode 4 after traversal. |
+| `L:ul.b(I)V#24` | `centralEntity` | Current attached entity from the deque. Its matching counts gate neighborhood traversal and its neighbor pairs form candidate triples. |
+| `L:ul.b(I)V#25` | `variantMatchingAllowed` | Integer boolean for centralEntity.sameVariantEntityCount > 1; gates both subsequent spriteVariantIndex comparisons. |
+| `L:ul.b(I)V#26` | `categoryMatchingAllowed` | Integer boolean for centralEntity.sameCategoryEntityCount > 1; gates both subsequent entityCategoryKey comparisons. |
+| `L:ul.b(I)V#27` | `firstNeighborSharesVariant` | Gated equality of the central and first-neighbor spriteVariantIndex values; combines with the second neighbor to form tripleSharesVariant. |
+| `L:ul.b(I)V#28` | `firstNeighborSharesCategory` | Gated equality of the central and first-neighbor entityCategoryKey values; combines with the second neighbor to form tripleSharesCategory. |
 | `L:ul.b(I)V#29` | `tripleSharesCategory` | Integer boolean for the gated central/first/second category match. Increments the category-match counter and sets the packed sign bit. |
 | `L:ul.b(I)V#30` | `tripleSharesVariant` | Integer boolean for the gated central/first/second sprite-variant match. Increments the variant-match counter and sets packed bit 30. |
 | `L:ul.b(I)V#31` | `largestPackedEntityId` | Initially the central entity ID, then permuted by the three-way descending sort. The final largest ID occupies packed bits 20..29; this variable is not permanently the central entity ID. |

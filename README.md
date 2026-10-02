@@ -16,7 +16,7 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 152,600 bindings
+identities. Both 303-file Java corpora compile and retain all 152,514 bindings
 and 388 override relationships.
 
 The boundary scan now has guarded semantic names for every local and parameter.
@@ -35,21 +35,23 @@ prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-The latest owned decompiler reconstructs forward, nonthrowing terminal returns
-inside their original try paths. This removes 254 generated selectors and
-3,125 Java source lines across 181 GeoBlox files, including the boundary scan's
-13-arm post-try ladder. Shared joins, throwing continuations, handler entries,
-retreating edges and synchronized-region boundaries retain their existing routing.
-All original flow and exception-binding contracts remain checked.
+The latest owned decompiler flattens conditionals after proven early exits,
+removing 2,128 generated else wrappers and 2,213 Java source lines across 208
+GeoBlox files. The boundary scan now uses sequential pixel guards. Complete-arm
+parsing, original render order, exact condition inversion and retained declaration
+blocks protect scopes, effects, NaNs, labels, catches and lock release.
 
-All 303 sources compile. The fresh source audit matches 20,920 nonselector
-declarations, 152,549 nonselector declaration/reference occurrences and all 388
-override edges; remaining selectors account for the rest of the current 20,931
-declarations and 152,600 bindings. Generic tests pass 36 flow-contract groups,
-1,560 native return-tail comparisons in normal/forced output, 15 native lock-exit
-cases in normal reconstruction, and the retained 7,200 loop-exit comparisons.
-The forced dispatcher continues to refuse explicit monitors. Earlier integral
-sign and literal-shift normalization remains; transformed class inputs are unchanged.
+All 303 sources compile, preserving 20,931 declaration identities and 388
+override edges. Raw/readable rebinding compares 152,514 bindings. The readable
+manifest explicitly migrates 35 local ordinals while retaining all 1,170 names.
+The generic emitter passes 11 test groups and 556 native comparisons; floating,
+nested-cycle, exception-exit and catch regressions also pass. A clean committed
+source archive regenerates all raw Java and diagnostics byte-for-byte.
+
+The previous terminal-return reconstruction removed 254 selectors and the
+boundary scan's 13-arm post-try ladder. Shared joins and throwing continuations
+retain their routing; the forced dispatcher still refuses explicit monitors.
+Earlier numeric cleanup remains. Transformed class inputs are unchanged.
 
 A clean decompiler Git source archive reproduces all 303 Java files and current
 diagnostics byte-for-byte. Every source compiles and the export has no hard

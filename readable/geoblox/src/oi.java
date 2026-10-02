@@ -35,47 +35,45 @@ final class oi {
             return var2_ref_byte__;
           }
         }
-        if (!param0) {
-          if (param1 == 30000) {
-            if (ag.field_i > 0) {
-              fieldTemp$5 = ag.field_i - 1;
-              ag.field_i = ag.field_i - 1;
-              var2_ref_byte__ = sd.field_C[fieldTemp$5];
-              sd.field_C[ag.field_i] = null;
-              return var2_ref_byte__;
-            }
+        if (param0) {
+          return (byte[]) null;
+        }
+        if (param1 == 30000) {
+          if (ag.field_i > 0) {
+            fieldTemp$5 = ag.field_i - 1;
+            ag.field_i = ag.field_i - 1;
+            var2_ref_byte__ = sd.field_C[fieldTemp$5];
+            sd.field_C[ag.field_i] = null;
+            return var2_ref_byte__;
           }
-          L3: {
-            if (sg.field_c != null) {
-              var2 = 0;
-              L4: while (true) {
-                if (var2 >= nk.field_c.length) {
-                  break L3;
-                } else {
-                  if (nk.field_c[var2] == param1) {
-                    if (0 < oa.field_b[var2]) {
-                      dupTemp$6 = oa.field_b[var2] - 1;
-                      arrayValue$7 = sg.field_c[var2];
-                      oa.field_b[var2] = dupTemp$6;
-                      var3 = arrayValue$7[dupTemp$6];
-                      sg.field_c[var2][oa.field_b[var2]] = null;
-                      return var3;
-                    } else {
-                      var2++;
-                      continue L4;
-                    }
-                  } else {
-                    var2++;
-                    continue L4;
-                  }
-                }
+        }
+        L3: {
+          if (sg.field_c != null) {
+            var2 = 0;
+            L4: while (true) {
+              if (var2 >= nk.field_c.length) {
+                break L3;
+              }
+              if (nk.field_c[var2] != param1) {
+                var2++;
+                continue L4;
+              }
+              if (0 >= oa.field_b[var2]) {
+                var2++;
+                continue L4;
+              }
+              {
+                dupTemp$6 = oa.field_b[var2] - 1;
+                arrayValue$7 = sg.field_c[var2];
+                oa.field_b[var2] = dupTemp$6;
+                var3 = arrayValue$7[dupTemp$6];
+                sg.field_c[var2][oa.field_b[var2]] = null;
+                return var3;
               }
             }
           }
-          return new byte[param1];
-        } else {
-          return (byte[]) null;
         }
+        return new byte[param1];
     }
 
     final static void a(int param0, int param1) {

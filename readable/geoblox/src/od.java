@@ -39,10 +39,9 @@ final class od {
           if (param0 > 107) {
             stackIn_4_0 = this.field_a.equals(param1);
             return stackIn_4_0;
-          } else {
-            stackIn_2_0 = 0;
-            return stackIn_2_0 != 0;
           }
+          stackIn_2_0 = 0;
+          return stackIn_2_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -100,18 +99,17 @@ final class od {
           }
           var8 = qe.a(param2, -1, param0, param5, param4, param1);
           var6 = var8;
-          if (var8 != null) {
-            var7 = new he();
-            var7.field_b = var8;
-            var7.field_b.add((java.awt.Component) ((Object) var7));
-            var7.setBounds(0, 0, param5, param0);
-            var7.addFocusListener(var7);
-            var7.requestFocus();
-            stackIn_6_0 = (he) (var7);
-            return stackIn_6_0;
-          } else {
+          if (var8 == null) {
             return null;
           }
+          var7 = new he();
+          var7.field_b = var8;
+          var7.field_b.add((java.awt.Component) ((Object) var7));
+          var7.setBounds(0, 0, param5, param0);
+          var7.addFocusListener(var7);
+          var7.requestFocus();
+          stackIn_6_0 = (he) (var7);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
@@ -145,31 +143,23 @@ final class od {
         try {
           L0: {
             if (null != te.field_c) {
-              var1_int = 0;
-              L1: while (true) {
-                if (var1_int >= 7) {
-                  kf.field_c = null;
-                  sl.field_l = null;
-                  uh.field_y.c((byte) 83);
-                  te.field_c = null;
-                  break L0;
-                } else {
-                  if (!ag.field_j[var1_int]) {
-                    return;
-                  } else {
-                    var1_int++;
-                    continue L1;
-                  }
+              for (var1_int = 0; var1_int < 7; var1_int++) {
+                if (!ag.field_j[var1_int]) {
+                  return;
                 }
               }
+              kf.field_c = null;
+              sl.field_l = null;
+              uh.field_y.c((byte) 83);
+              te.field_c = null;
+              break L0;
             }
           }
           if (param0 == -24) {
             return;
-          } else {
-            od.b((byte) -35);
-            return;
           }
+          od.b((byte) -35);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

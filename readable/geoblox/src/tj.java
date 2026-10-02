@@ -93,101 +93,77 @@ final class tj {
         }
         if (mi.field_C < 2) {
           return 0;
-        } else {
-          if (va.field_a != 0) {
-            if (dd.field_J != null) {
-              if (!dd.field_J.a(0)) {
-                return 14;
-              } else {
-                if (dd.field_J.b((byte) -115, "")) {
-                  if (dd.field_J.a("", (byte) -124)) {
-                    if (l.field_h.a(param0 ^ 73)) {
-                      if (!l.field_h.a("commonui", (byte) -125)) {
-                        return 57;
-                      } else {
-                        if (!dc.field_c.a(0)) {
-                          return 71;
-                        } else {
-                          if (!dc.field_c.a("commonui", (byte) -128)) {
-                            return 80;
-                          } else {
-                            if (hb.field_n.a(param0 - 73)) {
-                              if (!hb.field_n.b(true)) {
-                                return 86;
-                              } else {
-                                return 100;
-                              }
-                            } else {
-                              return 82;
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      return 43;
-                    }
-                  } else {
-                    return 29;
-                  }
-                } else {
-                  return 29;
-                }
-              }
-            } else {
-              if (l.field_h.a(param0 ^ 73)) {
-                if (!l.field_h.a("commonui", (byte) -125)) {
-                  return 57;
-                } else {
-                  if (!dc.field_c.a(0)) {
-                    return 71;
-                  } else {
-                    if (!dc.field_c.a("commonui", (byte) -128)) {
-                      return 80;
-                    } else {
-                      if (hb.field_n.a(param0 - 73)) {
-                        if (!hb.field_n.b(true)) {
-                          return 86;
-                        } else {
-                          return 100;
-                        }
-                      } else {
-                        return 82;
-                      }
-                    }
-                  }
-                }
-              } else {
-                return 43;
-              }
-            }
-          } else {
-            if (l.field_h.a(0)) {
-              if (l.field_h.a("commonui", (byte) -127)) {
-                if (!dc.field_c.a(0)) {
-                  return 50;
-                } else {
-                  if (!dc.field_c.a("commonui", (byte) -127)) {
-                    return 60;
-                  } else {
-                    if (!hb.field_n.a(0)) {
-                      return 70;
-                    } else {
-                      if (hb.field_n.b(true)) {
-                        return 100;
-                      } else {
-                        return 80;
-                      }
-                    }
-                  }
-                }
-              } else {
-                return 40;
-              }
-            } else {
-              return 20;
-            }
-          }
         }
+        if (va.field_a == 0) {
+          if (!l.field_h.a(0)) {
+            return 20;
+          }
+          if (!l.field_h.a("commonui", (byte) -127)) {
+            return 40;
+          }
+          if (!dc.field_c.a(0)) {
+            return 50;
+          }
+          if (!dc.field_c.a("commonui", (byte) -127)) {
+            return 60;
+          }
+          if (!hb.field_n.a(0)) {
+            return 70;
+          }
+          if (hb.field_n.b(true)) {
+            return 100;
+          }
+          return 80;
+        }
+        if (dd.field_J == null) {
+          if (!l.field_h.a(param0 ^ 73)) {
+            return 43;
+          }
+          if (!l.field_h.a("commonui", (byte) -125)) {
+            return 57;
+          }
+          if (!dc.field_c.a(0)) {
+            return 71;
+          }
+          if (!dc.field_c.a("commonui", (byte) -128)) {
+            return 80;
+          }
+          if (!hb.field_n.a(param0 - 73)) {
+            return 82;
+          }
+          if (!hb.field_n.b(true)) {
+            return 86;
+          }
+          return 100;
+        }
+        if (!dd.field_J.a(0)) {
+          return 14;
+        }
+        if (!dd.field_J.b((byte) -115, "")) {
+          return 29;
+        }
+        if (!dd.field_J.a("", (byte) -124)) {
+          return 29;
+        }
+        if (!l.field_h.a(param0 ^ 73)) {
+          return 43;
+        }
+        if (!l.field_h.a("commonui", (byte) -125)) {
+          return 57;
+        }
+        if (!dc.field_c.a(0)) {
+          return 71;
+        }
+        if (!dc.field_c.a("commonui", (byte) -128)) {
+          return 80;
+        }
+        if (!hb.field_n.a(param0 - 73)) {
+          return 82;
+        }
+        if (!hb.field_n.b(true)) {
+          return 86;
+        }
+        return 100;
     }
 
     static {

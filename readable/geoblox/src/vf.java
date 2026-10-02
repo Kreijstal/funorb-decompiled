@@ -197,16 +197,15 @@ class vf extends hk {
         RuntimeException var1 = null;
         var3 = Geoblox.field_C;
         try {
-          if (param0 == 0) {
-            for (var1_int = 0; 1000 > var1_int; var1_int++) {
-              var2 = new GameplayEntity(0, 0, 0, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, var1_int);
-              ra.availableEntities.addLast(-117, var2);
-              tl.entitiesById[var1_int] = var2;
-            }
-            return;
-          } else {
+          if (param0 != 0) {
             return;
           }
+          for (var1_int = 0; 1000 > var1_int; var1_int++) {
+            var2 = new GameplayEntity(0, 0, 0, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, var1_int);
+            ra.availableEntities.addLast(-117, var2);
+            tl.entitiesById[var1_int] = var2;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -286,7 +285,8 @@ class vf extends hk {
           var6 = this.field_s.indexOf("<hotspot=", var3);
           if (-1 == var6) {
             return;
-          } else {
+          }
+          {
             var8 = this.field_s.indexOf(">", var6);
             var7 = this.field_s.substring(var6 + 9, var8);
             var8 = Integer.parseInt(var7);
