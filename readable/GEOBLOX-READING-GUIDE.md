@@ -208,10 +208,13 @@ caller resumes and re-reads an exhausted table; partial updates remain visible. 
 17 integer Boolean carriers are now eliminated, so the interval calls use
 `sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard)` directly. The proof
 requires a single adjacent use and a nonthrowing primitive condition whose
-inputs are unchanged. The generic tail pass reduces the method from 220 lines
-to 69. Most category, probability, rotation and interval updates now follow the
-branches. One nested return tail remains; no table read or recursive effect is
-moved ahead of the branch prefix. The 84,661-case difficulty matrix checks the
+inputs are unchanged. The local tail pass reduced the method from 220 lines
+to 69. The current nested-continuation pass reduces it to 56 lines and removes
+the remaining repeated probability/rotation/interval tail. Category and variant
+paths still read the shared flag table after any recursive advancement. No table
+read or recursive effect is moved ahead of its prefix. This game method requires
+no generated block label; exact terminal clones in more complex nested prefixes
+can use a deterministic plain-block break without duplicating effects. The 84,661-case difficulty matrix checks the
 resulting partial state and exceptions.
 
 | Flag bit | Observed effect |
@@ -559,11 +562,15 @@ folded 77 typed literal assignment branches. The subsequent proof removed 221
 generated locals, keeps 70 Boolean local snapshots and retypes one generated
 helper field. Fourteen obsolete names are explicitly removed, 61 surviving local
 ordinals migrate, and the helper field has an explicit type migration. All other
-semantic names remain. The current shared-tail pass removes 451 lines across
+semantic names remain. The previous local shared-tail pass removed 451 lines across
 16 files, retaining every declaration identity and all 1,194 naming rules without
 ordinal changes. It factors exact whole tails within a block scope after Boolean
-cleanup and preserves bare return guards. The difficulty method is now 69 lines;
-one nested difficulty tail and other carriers remain. The earlier terminal-return
+cleanup and preserves bare return guards. That pass left the difficulty method at 69 lines.
+The current nested pass removes another 21 lines across seven files and reduces
+it to 56 lines, coalescing its repeated probability/rotation/interval tail.
+Four unnamed snapshot ordinals reorder in v.a(B)V; method/original-spelling
+normalization preserves every declaration. No naming rules change. Category and
+variant paths, other carriers, shared joins and opaque names remain. The earlier terminal-return
 pass removed the vanished boundary selector;
 the current emitter also retains its proven early-exit reconstruction.
 Complete parsing and preserved declaration scopes keep this reproducible.

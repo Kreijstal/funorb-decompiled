@@ -16,7 +16,7 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 150,884 bindings
+identities. Both 303-file Java corpora compile and retain all 150,827 bindings
 and 388 override relationships.
 
 Difficulty and spawning now name the step flags, sprite-variant/category
@@ -45,28 +45,32 @@ prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-The latest owned decompiler factors identical whole branch tails after Boolean
-carrier cleanup. It removes 451 lines across 16 files and reduces
-`ld.advanceDifficulty` from 220 lines to 69. Most probability, rotation and
-interval updates now follow the branches; one nested return tail remains.
-Conditions still execute when both prefixes are empty. Scope changes refuse
-factoring, and nested exception, monitor, loop and labeled bodies stay whole.
-Bare return guard ladders retain their readable exits.
+The latest owned decompiler reconstructs nested terminal continuations after
+local tail factoring. It removes 21 lines across seven files and reduces
+`ld.advanceDifficulty` from 69 lines to 56. Its probability, rotation and
+interval updates now have one shared tail; category/variant paths remain explicit.
+The previous local pass removed 451 lines across 16 files and had reduced the
+same method from 220 lines to 69.
 
-The preceding pass removed 221 generated integer locals, retained 70 Boolean
-snapshots and retyped one generated helper field. All 17 difficulty carriers
-and 13 boundary result carriers remain eliminated, with direct interval Boolean
-arguments and original-path true/false returns.
+A continuation is copied into proven declaration-free if/block scopes only
+while constructing its equivalent control flow. The final source refuses
+repeated prefix statements or identifier occurrences. Exact return/throw clones
+can instead exit a new plain block through a deterministic label; existing
+identifiers are excluded from generated label names. Try, monitor, loop, switch
+and old-label regions retain their boundaries. GeoBlox needs no new block labels
+in this pass. The preceding Boolean pass still eliminates 221 integer locals,
+including all 17 difficulty and 13 boundary result carriers.
 
-All 303 sources compile with the same 20,710 declaration identities and 388
-override edges. Raw/readable rebinding compares 150,884 bindings. No guarded
-name, spelling, evidence, ordinal or descriptor changes in this pass; all 1,194
-rules are unchanged. The 890 removed reference occurrences come from duplicate
-tails, with none added. The emitter passes 19 groups and 2,329 native comparisons,
-including 819 shared-tail checks. Floating, nested-cycle, exception-exit and
-catch checks pass. All six GeoBlox native probes retain their traces across
-native, raw and readable variants. The clean committed decompiler archive
-reproduces all raw Java and diagnostics byte-for-byte.
+All 303 sources compile with 20,710 declarations and 388 override edges.
+Four unnamed snapshots in `v.a(B)V` have new declaration ordinals; matching by
+method and original spelling preserves every declaration and attributes all 57
+removed references, with none added. All 1,194 guarded names and evidence remain
+unchanged. The current mirror checks 150,827 bindings and makes 18,625 identifier
+edits. The emitter passes 21 groups and 4,849 native comparisons, including 2,520
+new nested-continuation checks. All six game probes retain their native traces.
+Clean committed decompiler source reproduces all raw Java and diagnostics;
+dictionary reversal restores all 303 raw files byte-for-byte. Whole-game
+behavior, other shared joins and unknown names remain unverified.
 
 The previous terminal-return reconstruction removed 254 selectors and the
 boundary scan's 13-arm post-try ladder. Shared joins and throwing continuations

@@ -139,22 +139,9 @@ final class ld {
                 ld.advanceDifficulty(true);
               }
               if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
-                if (f.availableEntityCategoryCount >= 7) {
-                  if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
-                    sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
-                  }
-                  if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
-                    DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
-                  }
-                  if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
-                    if (0.800000011920929f > ij.spawnIntervalScale) {
-                      ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
-                    }
-                    sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
-                  }
-                  return;
+                if (!(f.availableEntityCategoryCount >= 7)) {
+                  f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
                 }
-                f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
               }
             }
           }

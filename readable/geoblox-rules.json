@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "2814e2a8c367d698d4751d726745336ea37ab975",
+    "commit": "eae5126229130771e056e45992d5315b100babc3",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "d7bea0c5687e00ea49ab0d6f5b89aace3e2cca0067c862db74bd7ce881569adc",
+  "inputTreeSha256": "c1f3218a7a4e1ac693bea85f5c5806eb16859e8f6f99368a4c00b498cee74057",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -7176,18 +7176,18 @@
     }
   ],
   "revision": 4,
-  "version": 35,
+  "version": 36,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "a4cb12769e663bb0318f864ba63242eb769defd8",
+      "commit": "fb6ea7871e4f1657f678211830229997b4785e33",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "4a602f64863503fc42934d47c05b546784f7ebaee646a7c7ea7093b24bd5ee66",
-        "reproduce": "git archive --format=tar a4cb12769e663bb0318f864ba63242eb769defd8 | sha256sum",
+        "sha256": "5ad4b8f16b9b82c1a427d69119b4b673ba8bbf1987c85b5f1463f583ef0231c2",
+        "reproduce": "git archive --format=tar fb6ea7871e4f1657f678211830229997b4785e33 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -7196,9 +7196,9 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "1b729d7ef3781113c71537dc6964ab1133c8c168",
+      "commit": "e1f621ec026147bf83a77f98e91b25bbeb3b5eee",
       "path": "readable/geoblox-rules.json",
-      "sha256": "20def86dd0577417e251fbc02f3d1e56e68c52869cdc93954b4945137afdb0a5"
+      "sha256": "0b88ff1257c3f4da1726c391c5629fc3d932b7efbc1dcab5670503ebf0ea4c9e"
     },
     "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
@@ -7289,7 +7289,7 @@
       },
       {
         "file": "jc.java",
-        "sha256": "080f13b5917cbf9fb7693896114273a23c1dda4c1db4d1fa059057d57a8ac960"
+        "sha256": "d8b9fa586fc6ef3f1c21d446962f6f05f39c9f86447a39b4008ab6227e8ea64a"
       },
       {
         "file": "jf.java",
@@ -7321,7 +7321,7 @@
       },
       {
         "file": "kl.java",
-        "sha256": "c081e0ded9eee5661ee72eadceef767e270869c84c6ddd66f16c533490ea7c93"
+        "sha256": "151e073d3a21fd74b83a6f9eee68bbb02306073a288934a8f5b9300423a6c7f9"
       },
       {
         "file": "lc.java",
@@ -7329,7 +7329,7 @@
       },
       {
         "file": "ld.java",
-        "sha256": "037a7029574ed874fd70196714b5516cc5b77cbf33fc8df7c98a597d2f62e26a"
+        "sha256": "00b403c3c5ab86a0547b2262971e3a7f7d25f89573d686d9ec1b8e43bad511f2"
       },
       {
         "file": "le.java",
@@ -9682,9 +9682,9 @@
     },
     "verification": {
       "sourceDeclarations": 20710,
-      "bindingsCompared": 150884,
+      "bindingsCompared": 150827,
       "overrideRelationships": 388,
-      "identifierEdits": 18657,
+      "identifierEdits": 18625,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -9700,7 +9700,8 @@
         "Whole-game equivalence and FPS, heap and phone targets are not established.",
         "Spawn-queue angle/position locals and live special-kind selection remain supported by source inspection. The added selection probes test seeded category/variant RNG and closed special-kind gates; real spawn queue execution, live Math.random distribution and extreme quota-overflow loops remain unverified.",
         "Boolean carrier cleanup keeps effectful/nullable conditions as snapshots. Unknown syntax, shadowing, numeric uses and ambiguous offsets refuse the conversion. Repeated difficulty tails, opaque names and other shared joins remain.",
-        "Identical branch tails are factored after Boolean-carrier cleanup only within the same emitted block scope. Nested try, monitor, loop and labeled bodies stay whole. One nested difficulty tail remains, alongside unknown names and other shared joins."
+        "Identical branch tails are factored after Boolean-carrier cleanup only within the same emitted block scope. Nested try, monitor, loop and labeled bodies stay whole. Other shared joins and unknown names remain.",
+        "Nested terminal continuations cross only proven declaration-free if/block scopes. Straight factoring refuses repeated statements or identifier occurrences; exact return/throw clones can use deterministic plain-block breaks. Nested loop/switch/old-label completion is deliberately not assumed. GeoBlox needs no generated block labels in this pass; only its repeated probability/rotation/interval tail is fully coalesced, while category/variant paths and other joins remain."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -9742,7 +9743,7 @@
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 11,
       "generatedSelectorsRemoved": 254,
-      "rawSourceLinesRemoved": 451,
+      "rawSourceLinesRemoved": 21,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -9756,8 +9757,8 @@
       "earlyExitChangedJavaFiles": 208,
       "elseWrappersRemoved": 2128,
       "genericEarlyExitTestGroups": 11,
-      "nativeEmitterComparisons": 2329,
-      "sourceReferenceOccurrencesRemoved": 890,
+      "nativeEmitterComparisons": 4849,
+      "sourceReferenceOccurrencesRemoved": 57,
       "sourceReferenceOccurrencesAdded": 0,
       "nativeDifficultyFlagCases": 82944,
       "nativeDifficultyBoundsCases": 56,
@@ -9767,7 +9768,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 19,
+      "genericEmitterTestGroups": 21,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -9775,7 +9776,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Duplicate occurrences in identical whole tails; all declaration identities and override rows are unchanged, with no reference occurrences added.",
+      "referenceRemovalAttribution": "Nested terminal clone occurrences removed, after normalizing four generated local ordinal permutations in v.a(B)V by original spelling. No reference occurrences are added; all declaration inventories and override rows are preserved.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -9788,36 +9789,19 @@
       "genericSharedTailTestGroups": 2,
       "nativeSharedTailComparisons": 819,
       "sharedTailChangedJavaFiles": 16,
-      "difficultyMethodLinesBefore": 220,
-      "difficultyMethodLinesAfter": 69,
+      "difficultyMethodLinesBefore": 69,
+      "difficultyMethodLinesAfter": 56,
       "allGuardedNamesUnchanged": true,
-      "ruleChangesInCurrentPass": 0
+      "ruleChangesInCurrentPass": 0,
+      "genericNestedContinuationTestGroups": 2,
+      "nativeNestedContinuationComparisons": 2520,
+      "nestedContinuationChangedJavaFiles": 7,
+      "generatedLocalOrdinalsReordered": 4,
+      "allDeclarationsPreservedAfterOriginalSpellingNormalization": true,
+      "generatedBlockLabelsInGeoblox": 0
     },
     "sourceChange": {
       "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "c311d5adc1fe86b3d917967adc56c71803bcb77d",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "dc899ebfaed78111257c7cd7c9c647428a8207e9",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "ca1ac1f6748b27b17cbda6141556ee9b08faabb28cd68073f44a48c2ace8992e",
-              "reproduce": "git archive --format=tar dc899ebfaed78111257c7cd7c9c647428a8207e9 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "54a54b0e7576a6af94adb3b69987428f011658f7b2513f6de27ba0dd45fdd331"
-      },
-      "after": {
         "source": {
           "repository": "Kreijstal/funorb-decompiled",
           "commit": "2814e2a8c367d698d4751d726745336ea37ab975",
@@ -9839,6 +9823,29 @@
           }
         },
         "inputTreeSha256": "d7bea0c5687e00ea49ab0d6f5b89aace3e2cca0067c862db74bd7ce881569adc"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "eae5126229130771e056e45992d5315b100babc3",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "fb6ea7871e4f1657f678211830229997b4785e33",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "5ad4b8f16b9b82c1a427d69119b4b673ba8bbf1987c85b5f1463f583ef0231c2",
+              "reproduce": "git archive --format=tar fb6ea7871e4f1657f678211830229997b4785e33 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "c1f3218a7a4e1ac693bea85f5c5806eb16859e8f6f99368a4c00b498cee74057"
       }
     }
   }

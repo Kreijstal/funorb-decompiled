@@ -931,68 +931,68 @@ final class SoftwareRasterizer {
           } else {
             SoftwareRasterizer.c(param0, param1, param2 + 1, param4);
           }
-        } else {
-          if (param2 == 0) {
-            if (param3 < 0) {
-              SoftwareRasterizer.g(param0, param1 + param3, -param3 + 1, param4);
-            } else {
-              SoftwareRasterizer.g(param0, param1, param3 + 1, param4);
-            }
+          return;
+        }
+        if (param2 == 0) {
+          if (param3 < 0) {
+            SoftwareRasterizer.g(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            if (param2 + param3 < 0) {
-              param0 = param0 + param2;
-              param2 = -param2;
-              param1 = param1 + param3;
-              param3 = -param3;
-            }
-            if (param2 <= param3) {
-              param0 = param0 << 16;
-              param0 = param0 + 32768;
-              param2 = param2 << 16;
-              var5 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
-              param3 = param3 + param1;
-              if (param1 < clipTop) {
-                param0 = param0 + var5 * (clipTop - param1);
-                param1 = clipTop;
+            SoftwareRasterizer.g(param0, param1, param3 + 1, param4);
+          }
+          return;
+        }
+        if (param2 + param3 < 0) {
+          param0 = param0 + param2;
+          param2 = -param2;
+          param1 = param1 + param3;
+          param3 = -param3;
+        }
+        if (param2 <= param3) {
+          param0 = param0 << 16;
+          param0 = param0 + 32768;
+          param2 = param2 << 16;
+          var5 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
+          param3 = param3 + param1;
+          if (param1 < clipTop) {
+            param0 = param0 + var5 * (clipTop - param1);
+            param1 = clipTop;
+          }
+          if (param3 >= clipBottom) {
+            param3 = clipBottom - 1;
+          }
+          L3: while (param1 <= param3) {
+            var6 = param0 >> 16;
+            if (var6 >= clipLeft) {
+              if (var6 < clipRight) {
+                framebuffer[var6 + param1 * stride] = param4;
               }
-              if (param3 >= clipBottom) {
-                param3 = clipBottom - 1;
-              }
-              L3: while (param1 <= param3) {
-                var6 = param0 >> 16;
-                if (var6 >= clipLeft) {
-                  if (var6 < clipRight) {
-                    framebuffer[var6 + param1 * stride] = param4;
-                  }
-                }
-                param0 = param0 + var5;
-                param1++;
-              }
-              return;
             }
-            param1 = param1 << 16;
-            param1 = param1 + 32768;
-            param3 = param3 << 16;
-            var5 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
-            param2 = param2 + param0;
-            if (param0 < clipLeft) {
-              param1 = param1 + var5 * (clipLeft - param0);
-              param0 = clipLeft;
-            }
-            if (param2 >= clipRight) {
-              param2 = clipRight - 1;
-            }
-            L7: while (param0 <= param2) {
-              var6 = param1 >> 16;
-              if (var6 >= clipTop) {
-                if (var6 < clipBottom) {
-                  framebuffer[param0 + var6 * stride] = param4;
-                }
-              }
-              param1 = param1 + var5;
-              param0++;
+            param0 = param0 + var5;
+            param1++;
+          }
+          return;
+        }
+        param1 = param1 << 16;
+        param1 = param1 + 32768;
+        param3 = param3 << 16;
+        var5 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
+        param2 = param2 + param0;
+        if (param0 < clipLeft) {
+          param1 = param1 + var5 * (clipLeft - param0);
+          param0 = clipLeft;
+        }
+        if (param2 >= clipRight) {
+          param2 = clipRight - 1;
+        }
+        L7: while (param0 <= param2) {
+          var6 = param1 >> 16;
+          if (var6 >= clipTop) {
+            if (var6 < clipBottom) {
+              framebuffer[param0 + var6 * stride] = param4;
             }
           }
+          param1 = param1 + var5;
+          param0++;
         }
     }
 
@@ -1008,95 +1008,87 @@ final class SoftwareRasterizer {
         int var10;
         if (param2 == 0) {
           SoftwareRasterizer.a(param0, param1, param3);
-        } else {
-          if (param2 < 0) {
-            param2 = -param2;
+          return;
+        }
+        if (param2 < 0) {
+          param2 = -param2;
+        }
+        if (clipRight > clipLeft) {
+          if (clipBottom <= clipTop) {
+            return;
           }
-          if (clipRight > clipLeft) {
-            if (clipBottom <= clipTop) {
-              return;
-            }
-            if (param0 + param2 >= clipLeft) {
-              if (param0 - param2 < clipRight) {
-                if (param1 + param2 >= clipTop) {
-                  if (param1 - param2 < clipBottom) {
-                    L3: {
-                      var4 = param0 + param1 * stride;
-                      var5 = var4;
-                      var6 = var4 - param2 * stride;
-                      var7 = var4 + param2 * stride;
-                      var8 = param2;
-                      var9 = 0;
-                      param2 = param2 * param2;
-                      var10 = param2 - var8;
-                      if (param0 - var8 >= clipLeft) {
-                        if (param0 + var8 < clipRight) {
-                          if (param1 - var8 >= clipTop) {
-                            if (param1 + var8 < clipBottom) {
+          if (param0 + param2 >= clipLeft) {
+            if (param0 - param2 < clipRight) {
+              if (param1 + param2 >= clipTop) {
+                if (param1 - param2 < clipBottom) {
+                  L3: {
+                    var4 = param0 + param1 * stride;
+                    var5 = var4;
+                    var6 = var4 - param2 * stride;
+                    var7 = var4 + param2 * stride;
+                    var8 = param2;
+                    var9 = 0;
+                    param2 = param2 * param2;
+                    var10 = param2 - var8;
+                    if (param0 - var8 >= clipLeft) {
+                      if (param0 + var8 < clipRight) {
+                        if (param1 - var8 >= clipTop) {
+                          if (param1 + var8 < clipBottom) {
+                            framebuffer[var4 - var8] = param3;
+                            framebuffer[var4 + var8] = param3;
+                            framebuffer[var6] = param3;
+                            framebuffer[var7] = param3;
+                            L5: while (true) {
+                              incrementValue$0 = var9;
+                              var9++;
+                              var10 = var10 + (incrementValue$0 + var9);
+                              var4 = var4 - stride;
+                              var5 = var5 + stride;
+                              if (var10 > param2) {
+                                var8--;
+                                var10 = var10 - (var8 + var8);
+                                var6 = var6 + stride;
+                                var7 = var7 - stride;
+                              }
+                              if (var8 < var9) {
+                                break L3;
+                              }
+                              framebuffer[var6 - var9] = param3;
+                              framebuffer[var6 + var9] = param3;
                               framebuffer[var4 - var8] = param3;
                               framebuffer[var4 + var8] = param3;
-                              framebuffer[var6] = param3;
-                              framebuffer[var7] = param3;
-                              L5: while (true) {
-                                incrementValue$0 = var9;
-                                var9++;
-                                var10 = var10 + (incrementValue$0 + var9);
-                                var4 = var4 - stride;
-                                var5 = var5 + stride;
-                                if (var10 > param2) {
-                                  var8--;
-                                  var10 = var10 - (var8 + var8);
-                                  var6 = var6 + stride;
-                                  var7 = var7 - stride;
-                                }
-                                if (var8 < var9) {
-                                  break L3;
-                                }
-                                framebuffer[var6 - var9] = param3;
-                                framebuffer[var6 + var9] = param3;
-                                framebuffer[var4 - var8] = param3;
-                                framebuffer[var4 + var8] = param3;
-                                framebuffer[var5 - var8] = param3;
-                                framebuffer[var5 + var8] = param3;
-                                framebuffer[var7 - var9] = param3;
-                                framebuffer[var7 + var9] = param3;
-                                continue L5;
-                              }
+                              framebuffer[var5 - var8] = param3;
+                              framebuffer[var5 + var8] = param3;
+                              framebuffer[var7 - var9] = param3;
+                              framebuffer[var7 + var9] = param3;
+                              continue L5;
                             }
                           }
                         }
                       }
-                      if (param0 - var8 >= clipLeft) {
-                        if (param1 >= clipTop) {
-                          if (param1 < clipBottom) {
-                            framebuffer[var4 - var8] = param3;
-                          }
+                    }
+                    if (param0 - var8 >= clipLeft) {
+                      if (param1 >= clipTop) {
+                        if (param1 < clipBottom) {
+                          framebuffer[var4 - var8] = param3;
                         }
                       }
-                      if (param0 + var8 < clipRight) {
-                        if (param1 >= clipTop) {
-                          if (param1 < clipBottom) {
-                            framebuffer[var4 + var8] = param3;
-                          }
+                    }
+                    if (param0 + var8 < clipRight) {
+                      if (param1 >= clipTop) {
+                        if (param1 < clipBottom) {
+                          framebuffer[var4 + var8] = param3;
                         }
                       }
-                      if (param1 - var8 >= clipTop) {
-                        if (param0 >= clipLeft) {
-                          if (param0 < clipRight) {
-                            framebuffer[var6] = param3;
-                            if (param1 + var8 < clipBottom) {
-                              if (param0 >= clipLeft) {
-                                if (param0 < clipRight) {
-                                  framebuffer[var7] = param3;
-                                }
-                              }
-                            }
-                          } else {
-                            if (param1 + var8 < clipBottom) {
-                              if (param0 >= clipLeft) {
-                                if (param0 < clipRight) {
-                                  framebuffer[var7] = param3;
-                                }
+                    }
+                    if (param1 - var8 >= clipTop) {
+                      if (param0 >= clipLeft) {
+                        if (param0 < clipRight) {
+                          framebuffer[var6] = param3;
+                          if (param1 + var8 < clipBottom) {
+                            if (param0 >= clipLeft) {
+                              if (param0 < clipRight) {
+                                framebuffer[var7] = param3;
                               }
                             }
                           }
@@ -1118,90 +1110,98 @@ final class SoftwareRasterizer {
                           }
                         }
                       }
-                      L10: while (true) {
-                        incrementValue$1 = var9;
-                        var9++;
-                        var10 = var10 + (incrementValue$1 + var9);
-                        var4 = var4 - stride;
-                        var5 = var5 + stride;
-                        if (var10 > param2) {
-                          var8--;
-                          var10 = var10 - (var8 + var8);
-                          var6 = var6 + stride;
-                          var7 = var7 - stride;
-                        }
-                        if (var8 < var9) {
-                          break L3;
-                        }
-                        if (param1 - var8 >= clipTop) {
-                          if (param1 - var8 < clipBottom) {
-                            if (param0 - var9 >= clipLeft) {
-                              if (param0 - var9 < clipRight) {
-                                framebuffer[var6 - var9] = param3;
-                              }
-                            }
-                            if (param0 + var9 >= clipLeft) {
-                              if (param0 + var9 < clipRight) {
-                                framebuffer[var6 + var9] = param3;
-                              }
-                            }
+                    } else {
+                      if (param1 + var8 < clipBottom) {
+                        if (param0 >= clipLeft) {
+                          if (param0 < clipRight) {
+                            framebuffer[var7] = param3;
                           }
                         }
-                        if (param1 - var9 >= clipTop) {
-                          if (param1 - var9 < clipBottom) {
-                            if (param0 - var8 >= clipLeft) {
-                              if (param0 - var8 < clipRight) {
-                                framebuffer[var4 - var8] = param3;
-                              }
-                            }
-                            if (param0 + var8 >= clipLeft) {
-                              if (param0 + var8 < clipRight) {
-                                framebuffer[var4 + var8] = param3;
-                              }
-                            }
-                          }
-                        }
-                        if (param1 + var9 >= clipTop) {
-                          if (param1 + var9 < clipBottom) {
-                            if (param0 - var8 >= clipLeft) {
-                              if (param0 - var8 < clipRight) {
-                                framebuffer[var5 - var8] = param3;
-                              }
-                            }
-                            if (param0 + var8 >= clipLeft) {
-                              if (param0 + var8 < clipRight) {
-                                framebuffer[var5 + var8] = param3;
-                              }
-                            }
-                          }
-                        }
-                        if (param1 + var8 < clipTop) {
-                          continue L10;
-                        }
-                        if (param1 + var8 >= clipBottom) {
-                          continue L10;
-                        }
-                        if (param0 - var9 >= clipLeft) {
-                          if (param0 - var9 < clipRight) {
-                            framebuffer[var7 - var9] = param3;
-                          }
-                        }
-                        if (param0 + var9 < clipLeft) {
-                          continue L10;
-                        }
-                        if (param0 + var9 >= clipRight) {
-                          continue L10;
-                        }
-                        framebuffer[var7 + var9] = param3;
-                        continue L10;
                       }
                     }
-                    return;
+                    L10: while (true) {
+                      incrementValue$1 = var9;
+                      var9++;
+                      var10 = var10 + (incrementValue$1 + var9);
+                      var4 = var4 - stride;
+                      var5 = var5 + stride;
+                      if (var10 > param2) {
+                        var8--;
+                        var10 = var10 - (var8 + var8);
+                        var6 = var6 + stride;
+                        var7 = var7 - stride;
+                      }
+                      if (var8 < var9) {
+                        break L3;
+                      }
+                      if (param1 - var8 >= clipTop) {
+                        if (param1 - var8 < clipBottom) {
+                          if (param0 - var9 >= clipLeft) {
+                            if (param0 - var9 < clipRight) {
+                              framebuffer[var6 - var9] = param3;
+                            }
+                          }
+                          if (param0 + var9 >= clipLeft) {
+                            if (param0 + var9 < clipRight) {
+                              framebuffer[var6 + var9] = param3;
+                            }
+                          }
+                        }
+                      }
+                      if (param1 - var9 >= clipTop) {
+                        if (param1 - var9 < clipBottom) {
+                          if (param0 - var8 >= clipLeft) {
+                            if (param0 - var8 < clipRight) {
+                              framebuffer[var4 - var8] = param3;
+                            }
+                          }
+                          if (param0 + var8 >= clipLeft) {
+                            if (param0 + var8 < clipRight) {
+                              framebuffer[var4 + var8] = param3;
+                            }
+                          }
+                        }
+                      }
+                      if (param1 + var9 >= clipTop) {
+                        if (param1 + var9 < clipBottom) {
+                          if (param0 - var8 >= clipLeft) {
+                            if (param0 - var8 < clipRight) {
+                              framebuffer[var5 - var8] = param3;
+                            }
+                          }
+                          if (param0 + var8 >= clipLeft) {
+                            if (param0 + var8 < clipRight) {
+                              framebuffer[var5 + var8] = param3;
+                            }
+                          }
+                        }
+                      }
+                      if (param1 + var8 < clipTop) {
+                        continue L10;
+                      }
+                      if (param1 + var8 >= clipBottom) {
+                        continue L10;
+                      }
+                      if (param0 - var9 >= clipLeft) {
+                        if (param0 - var9 < clipRight) {
+                          framebuffer[var7 - var9] = param3;
+                        }
+                      }
+                      if (param0 + var9 < clipLeft) {
+                        continue L10;
+                      }
+                      if (param0 + var9 >= clipRight) {
+                        continue L10;
+                      }
+                      framebuffer[var7 + var9] = param3;
+                      continue L10;
+                    }
                   }
+                  return;
                 }
               }
-              return;
             }
+            return;
           }
         }
     }
