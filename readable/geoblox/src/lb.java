@@ -7,8 +7,8 @@ final class lb {
     static boolean field_a;
     static int field_b;
 
-    static int a(int param0, int param1) {
-        return param0 | param1;
+    static int orInt(int left, int right) {
+        return left | right;
     }
 
     public static void a(int param0) {

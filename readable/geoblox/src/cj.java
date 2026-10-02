@@ -5,8 +5,8 @@ abstract class cj {
     static int[] field_b;
     static String field_a;
 
-    static long a(long param0, long param1) {
-        return param0 & param1;
+    static long andLong(long left, long right) {
+        return left & right;
     }
 
     public static void b(int param0) {

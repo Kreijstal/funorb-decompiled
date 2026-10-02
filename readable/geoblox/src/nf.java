@@ -231,7 +231,7 @@ final class nf {
             paletteIndices = mj.decodedSpriteIndices[spriteIndex];
             rgbPixels = new int[pixelCount];
             for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
-                rgbPixels[pixelIndex] = cm.decodedSpritePalette[cd.a((int) paletteIndices[pixelIndex], 255)];
+                rgbPixels[pixelIndex] = cm.decodedSpritePalette[cd.andInt((int) paletteIndices[pixelIndex], 255)];
             }
             sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], rgbPixels);
         }

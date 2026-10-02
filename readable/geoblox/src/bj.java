@@ -194,9 +194,9 @@ final class bj extends nh {
             try {
               if (var5 != null) {
                 if (var18.length > 2) {
-                  ge.field_f.reset();
-                  ge.field_f.update(var5, 0, var18.length - 2);
-                  var6_int = (int)ge.field_f.getValue();
+                  WhirlpoolHash.field_f.reset();
+                  WhirlpoolHash.field_f.update(var5, 0, var18.length - 2);
+                  var6_int = (int)WhirlpoolHash.field_f.getValue();
                   if (var6_int != this.field_u.field_q[param2]) {
                     throw new RuntimeException();
                   }
@@ -253,9 +253,9 @@ final class bj extends nh {
             L4: {
               if (var5 != null) {
                 if (var18.length > 2) {
-                  ge.field_f.reset();
-                  ge.field_f.update(var5, 0, var18.length - 2);
-                  var6_int = (int)ge.field_f.getValue();
+                  WhirlpoolHash.field_f.reset();
+                  WhirlpoolHash.field_f.update(var5, 0, var18.length - 2);
+                  var6_int = (int)WhirlpoolHash.field_f.getValue();
                   if (var6_int != this.field_u.field_q[param2]) {
                     throw new RuntimeException();
                   }

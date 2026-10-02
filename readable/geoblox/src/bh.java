@@ -102,7 +102,7 @@ final class bh extends java.awt.Canvas {
                   var18[0][4 * var10 + 1] = fb.field_m[var11];
                   var18[0][4 * var10 + 2] = k.field_i[var11];
                   var18[0][4 * var10 + 3] = cj.field_b[var11];
-                  if (ge.a(oi.field_a[var11], (byte) 12)) {
+                  if (WhirlpoolHash.a(oi.field_a[var11], (byte) 12)) {
                     if (cj.field_b[var11] + (fb.field_m[var11] + k.field_i[var11]) == 0) {
                       var6[0][var10] = null;
                       var10--;
@@ -121,7 +121,7 @@ final class bh extends java.awt.Canvas {
                   var18[1][1 + 4 * var13] = fb.field_m[var11];
                   var18[1][var13 * 4 + 2] = k.field_i[var11];
                   var18[1][var13 * 4 + 3] = cj.field_b[var11];
-                  if (ge.a(oi.field_a[var11], (byte) 12)) {
+                  if (WhirlpoolHash.a(oi.field_a[var11], (byte) 12)) {
                     if (cj.field_b[var11] + k.field_i[var11] + fb.field_m[var11] == 0) {
                       var6[1][var13] = null;
                       var13--;

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ByteArrayBuffer extends IntrusiveNode {
-    static long[][] field_g;
-    static long[] field_h;
+    static long[][] whirlpoolTables;
+    static long[] whirlpoolRoundConstants;
     int position;
     byte[] bytes;
     static int field_i;
@@ -211,7 +211,7 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final void backpatchLengthShortBE(int length, boolean preserveHashTables) {
         if (!preserveHashTables) {
-            field_g = (long[][]) null;
+            whirlpoolTables = (long[][]) null;
         }
         this.bytes[this.position + (-length - 2)] = (byte)(length >> 8);
         this.bytes[this.position + (-length - 1)] = (byte)length;
@@ -275,7 +275,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             vg.field_i.a(param2, param1, param3 ^ -92, param0);
             SoftwareRasterizer.clearFramebuffer();
             if (param3 != -40) {
-                field_g = (long[][]) null;
+                whirlpoolTables = (long[][]) null;
             }
             pi.a(true, false);
         } catch (RuntimeException runtimeException) {
@@ -286,7 +286,7 @@ class ByteArrayBuffer extends IntrusiveNode {
     final long readLongBE(int methodGuard) {
         long highUnsignedWord = 4294967295L & (long)this.readIntBE((byte) -113);
         if (methodGuard != 2901) {
-            field_h = (long[]) null;
+            whirlpoolRoundConstants = (long[]) null;
         }
         long lowUnsignedWord = (long)this.readIntBE((byte) -113) & 4294967295L;
         return lowUnsignedWord + (highUnsignedWord << 32);
@@ -555,67 +555,67 @@ class ByteArrayBuffer extends IntrusiveNode {
         }
     }
 
-    final void a(int[] param0, byte param1) {
-        int incrementValue$0 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        mb var10 = null;
+    final void encryptXteaBlocks(int[] key, byte methodGuard) {
+        int cyclesBeforeDecrement = 0;
+        RuntimeException cryptoFailureBeforeDescription = null;
+        StringBuilder cryptoMessagePrefix = null;
+        String keyDescription = null;
+        RuntimeException caughtCryptoFailure = null;
+        int blockCount = 0;
+        RuntimeException cryptoFailureForContext = null;
+        int blockIndex = 0;
+        int leftWord = 0;
+        int rightWord = 0;
+        int cycleSum = 0;
+        int delta = 0;
+        int cyclesRemaining = 0;
+        mb unusedNullTextInputSnapshot = null;
         try {
-          var3_int = this.position / 8;
+          blockCount = this.position / 8;
           this.position = 0;
-          if (param1 != -33) {
-            var10 = (mb) null;
+          if (methodGuard != -33) {
+            unusedNullTextInputSnapshot = (mb) null;
             ByteArrayBuffer.a((mb) null, (mb) null, 109);
           }
-          var4 = 0;
+          blockIndex = 0;
           L1: while (true) {
-            if (var3_int <= var4) {
+            if (blockCount <= blockIndex) {
               return;
             }
             {
-              var5 = this.readIntBE((byte) -69);
-              var6 = this.readIntBE((byte) -34);
-              var7 = 0;
-              var8 = -1640531527;
-              var9 = 32;
+              leftWord = this.readIntBE((byte) -69);
+              rightWord = this.readIntBE((byte) -34);
+              cycleSum = 0;
+              delta = -1640531527;
+              cyclesRemaining = 32;
               L2: while (true) {
-                incrementValue$0 = var9;
-                var9--;
-                if (0 < incrementValue$0) {
-                  var5 = var5 + ((var6 >>> 5 ^ var6 << 4) + var6 ^ var7 + param0[3 & var7]);
-                  var7 = var7 + var8;
-                  var6 = var6 + (var5 + (var5 << 4 ^ var5 >>> 5) ^ var7 + param0[(var7 & 7480) >>> 11]);
+                cyclesBeforeDecrement = cyclesRemaining;
+                cyclesRemaining--;
+                if (0 < cyclesBeforeDecrement) {
+                  leftWord = leftWord + ((rightWord >>> 5 ^ rightWord << 4) + rightWord ^ cycleSum + key[3 & cycleSum]);
+                  cycleSum = cycleSum + delta;
+                  rightWord = rightWord + (leftWord + (leftWord << 4 ^ leftWord >>> 5) ^ cycleSum + key[(cycleSum & 7480) >>> 11]);
                   continue L2;
                 }
                 this.position = this.position - 8;
-                this.writeIntBE((byte) 95, var5);
-                this.writeIntBE((byte) 95, var6);
-                var4++;
+                this.writeIntBE((byte) 95, leftWord);
+                this.writeIntBE((byte) 95, rightWord);
+                blockIndex++;
                 continue L1;
               }
             }
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_11_0 = (RuntimeException) (var3);
-          stackIn_11_1 = new StringBuilder().append("qc.GA(");
-          if (param0 == null) {
-            stackIn_12_2 = "null";
+        } catch (java.lang.RuntimeException cryptoFailure) {
+          caughtCryptoFailure = cryptoFailure;
+          cryptoFailureForContext = caughtCryptoFailure;
+          cryptoFailureBeforeDescription = (RuntimeException) (cryptoFailureForContext);
+          cryptoMessagePrefix = new StringBuilder().append("qc.GA(");
+          if (key == null) {
+            keyDescription = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            keyDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) cryptoFailureBeforeDescription), ((StringBuilder) (Object) cryptoMessagePrefix).append(keyDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -637,76 +637,76 @@ class ByteArrayBuffer extends IntrusiveNode {
         return 2147483647 & this.readIntBE((byte) -114);
     }
 
-    final void a(byte param0, int[] param1, int param2, int param3) {
-        int incrementValue$0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+    final void decryptXteaRange(byte methodGuard, int[] key, int startPosition, int endPosition) {
+        int cyclesBeforeDecrement = 0;
+        RuntimeException cryptoFailureBeforeDescription = null;
+        StringBuilder cryptoMessagePrefix = null;
+        String keyDescription = null;
+        RuntimeException caughtCryptoFailure = null;
+        int savedPosition = 0;
+        RuntimeException cryptoFailureForContext = null;
+        int blockCount = 0;
+        int blockIndex = 0;
+        int leftWord = 0;
+        int rightWord = 0;
+        int cycleSum = 0;
+        int delta = 0;
+        int cyclesRemaining = 0;
         try {
-          var5_int = this.position;
-          if (param0 > -63) {
+          savedPosition = this.position;
+          if (methodGuard > -63) {
             this.readUnsignedMediumBE(3);
           }
-          this.position = param2;
-          var6 = (-param2 + param3) / 8;
-          var7 = 0;
+          this.position = startPosition;
+          blockCount = (-startPosition + endPosition) / 8;
+          blockIndex = 0;
           L1: while (true) {
-            if (var7 >= var6) {
-              this.position = var5_int;
+            if (blockIndex >= blockCount) {
+              this.position = savedPosition;
               return;
             }
             {
-              var8 = this.readIntBE((byte) -36);
-              var9 = this.readIntBE((byte) -103);
-              var10 = -957401312;
-              var11 = -1640531527;
-              var12 = 32;
+              leftWord = this.readIntBE((byte) -36);
+              rightWord = this.readIntBE((byte) -103);
+              cycleSum = -957401312;
+              delta = -1640531527;
+              cyclesRemaining = 32;
               L2: while (true) {
-                incrementValue$0 = var12;
-                var12--;
-                if (incrementValue$0 > 0) {
-                  var9 = var9 - (var10 + param1[(7701 & var10) >>> 11] ^ var8 + (var8 << 4 ^ var8 >>> 5));
-                  var10 = var10 - var11;
-                  var8 = var8 - (var10 + param1[var10 & 3] ^ (var9 >>> 5 ^ var9 << 4) + var9);
+                cyclesBeforeDecrement = cyclesRemaining;
+                cyclesRemaining--;
+                if (cyclesBeforeDecrement > 0) {
+                  rightWord = rightWord - (cycleSum + key[(7701 & cycleSum) >>> 11] ^ leftWord + (leftWord << 4 ^ leftWord >>> 5));
+                  cycleSum = cycleSum - delta;
+                  leftWord = leftWord - (cycleSum + key[cycleSum & 3] ^ (rightWord >>> 5 ^ rightWord << 4) + rightWord);
                   continue L2;
                 }
                 this.position = this.position - 8;
-                this.writeIntBE((byte) 95, var8);
-                this.writeIntBE((byte) 95, var9);
-                var7++;
+                this.writeIntBE((byte) 95, leftWord);
+                this.writeIntBE((byte) 95, rightWord);
+                blockIndex++;
                 continue L1;
               }
             }
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_12_0 = (RuntimeException) (var5);
-          stackIn_12_1 = new StringBuilder().append("qc.G(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_13_2 = "null";
+        } catch (java.lang.RuntimeException cryptoFailure) {
+          caughtCryptoFailure = cryptoFailure;
+          cryptoFailureForContext = caughtCryptoFailure;
+          cryptoFailureBeforeDescription = (RuntimeException) (cryptoFailureForContext);
+          cryptoMessagePrefix = new StringBuilder().append("qc.G(").append(methodGuard).append(',');
+          if (key == null) {
+            keyDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            keyDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) cryptoFailureBeforeDescription), ((StringBuilder) (Object) cryptoMessagePrefix).append(keyDescription).append(',').append(startPosition).append(',').append(endPosition).append(')').toString());
         }
     }
 
-    public static void d(int param0) {
-        field_h = null;
-        field_g = (long[][]) null;
-        if (param0 != 0) {
-            mb var2 = (mb) null;
+    public static void clearWhirlpoolTables(int methodGuard) {
+        whirlpoolRoundConstants = null;
+        whirlpoolTables = (long[][]) null;
+        if (methodGuard != 0) {
+            mb unusedNullTextInputSnapshot = (mb) null;
             ByteArrayBuffer.a((mb) null, (mb) null, -47);
         }
     }
@@ -750,7 +750,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.bytes[byte8Index] = (byte)(int)(value >> 8);
         if (methodGuard >= -41) {
-            field_g = (long[][]) null;
+            whirlpoolTables = (long[][]) null;
         }
         int byte0Index = this.position;
         this.position = this.position + 1;
@@ -778,7 +778,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         this.bytes[byte16Index] = (byte)(int)(value >> 16);
         if (methodGuard <= 57) {
             java.math.BigInteger unusedNullBigIntegerSnapshot = (java.math.BigInteger) null;
-            this.a(91, (java.math.BigInteger) null, (java.math.BigInteger) null);
+            this.replaceWithModPowResult(91, (java.math.BigInteger) null, (java.math.BigInteger) null);
         }
         int byte8Index = this.position;
         this.position = this.position + 1;
@@ -790,7 +790,7 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final int readUnsignedMediumBE(int methodGuard) {
         if (methodGuard <= 85) {
-            field_h = (long[]) null;
+            whirlpoolRoundConstants = (long[]) null;
         }
         this.position = this.position + 3;
         return (this.bytes[-1 + this.position] & 255) + (((this.bytes[this.position - 2] & 255) << 8) + ((this.bytes[this.position - 3] & 255) << 16));
@@ -888,7 +888,7 @@ class ByteArrayBuffer extends IntrusiveNode {
     final int readUnsignedByte(byte methodGuard) {
         if (methodGuard != 34) {
             java.math.BigInteger unusedNullBigIntegerSnapshot = (java.math.BigInteger) null;
-            this.a(31, (java.math.BigInteger) null, (java.math.BigInteger) null);
+            this.replaceWithModPowResult(31, (java.math.BigInteger) null, (java.math.BigInteger) null);
         }
         int byteIndex = this.position;
         this.position = this.position + 1;
@@ -975,25 +975,25 @@ class ByteArrayBuffer extends IntrusiveNode {
         return this.readUnsignedShortBE(true) - 32768;
     }
 
-    final void a(int param0, java.math.BigInteger param1, java.math.BigInteger param2) {
-        int var4_int = 0;
-        byte[] var5 = null;
-        java.math.BigInteger var6 = null;
-        java.math.BigInteger var7 = null;
-        byte[] var8 = null;
+    final void replaceWithModPowResult(int resultPositionGuard, java.math.BigInteger modulus, java.math.BigInteger exponent) {
+        int payloadLength = 0;
+        byte[] payload = null;
+        java.math.BigInteger signedPayloadInteger = null;
+        java.math.BigInteger transformedInteger = null;
+        byte[] transformedBytes = null;
         try {
-            var4_int = this.position;
+            payloadLength = this.position;
             this.position = 0;
-            var5 = new byte[var4_int];
-            this.readBytes(param0 ^ 29915, var4_int, var5, 0);
-            var6 = new java.math.BigInteger(var5);
-            var7 = var6.modPow(param2, param1);
-            var8 = var7.toByteArray();
-            this.position = param0;
-            this.writeShortBE(var8.length, 28695);
-            this.writeBytes(var8.length, -97, var8, 0);
-        } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "qc.CB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            payload = new byte[payloadLength];
+            this.readBytes(resultPositionGuard ^ 29915, payloadLength, payload, 0);
+            signedPayloadInteger = new java.math.BigInteger(payload);
+            transformedInteger = signedPayloadInteger.modPow(exponent, modulus);
+            transformedBytes = transformedInteger.toByteArray();
+            this.position = resultPositionGuard;
+            this.writeShortBE(transformedBytes.length, 28695);
+            this.writeBytes(transformedBytes.length, -97, transformedBytes, 0);
+        } catch (RuntimeException modPowFailure) {
+            throw t.a((Throwable) ((Object) modPowFailure), "qc.CB(" + resultPositionGuard + ',' + (modulus != null ? "{...}" : "null") + ',' + (exponent != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1012,51 +1012,51 @@ class ByteArrayBuffer extends IntrusiveNode {
     }
 
     static {
-        int var14 = 0;
-        long stackIn_5_0 = 0L;
-        int var0;
-        int var1;
-        long var2;
-        long var4;
-        long var6;
-        long var8;
-        long var10;
-        long var12;
-        field_g = new long[8][256];
-        field_h = new long[11];
-        var0 = 0;
-        L0: while (var0 < 256) {
-          var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-          if ((var0 & 1) != 0) {
-            stackIn_5_0 = (long)(var1 & 255);
+        int tableRotationIndex = 0;
+        long substitutionByteBeforeMerge = 0L;
+        int substitutionIndexOrRound;
+        int packedSubstitutionPairOrRoundByteOffset;
+        long substitutionByte;
+        long substitutionTimes2;
+        long substitutionTimes4;
+        long substitutionTimes5;
+        long substitutionTimes8;
+        long substitutionTimes9;
+        whirlpoolTables = new long[8][256];
+        whirlpoolRoundConstants = new long[11];
+        substitutionIndexOrRound = 0;
+        L0: while (substitutionIndexOrRound < 256) {
+          packedSubstitutionPairOrRoundByteOffset = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(substitutionIndexOrRound / 2);
+          if ((substitutionIndexOrRound & 1) != 0) {
+            substitutionByteBeforeMerge = (long)(packedSubstitutionPairOrRoundByteOffset & 255);
           } else {
-            stackIn_5_0 = (long)(var1 >>> 8);
+            substitutionByteBeforeMerge = (long)(packedSubstitutionPairOrRoundByteOffset >>> 8);
           }
-          var2 = stackIn_5_0;
-          var4 = var2 << 1;
-          if (var4 >= 256L) {
-            var4 = var4 ^ 285L;
+          substitutionByte = substitutionByteBeforeMerge;
+          substitutionTimes2 = substitutionByte << 1;
+          if (substitutionTimes2 >= 256L) {
+            substitutionTimes2 = substitutionTimes2 ^ 285L;
           }
-          var6 = var4 << 1;
-          if (var6 >= 256L) {
-            var6 = var6 ^ 285L;
+          substitutionTimes4 = substitutionTimes2 << 1;
+          if (substitutionTimes4 >= 256L) {
+            substitutionTimes4 = substitutionTimes4 ^ 285L;
           }
-          var8 = var6 ^ var2;
-          var10 = var6 << 1;
-          if (var10 >= 256L) {
-            var10 = var10 ^ 285L;
+          substitutionTimes5 = substitutionTimes4 ^ substitutionByte;
+          substitutionTimes8 = substitutionTimes4 << 1;
+          if (substitutionTimes8 >= 256L) {
+            substitutionTimes8 = substitutionTimes8 ^ 285L;
           }
-          var12 = var2 ^ var10;
-          field_g[0][var0] = ue.a(var12, ue.a(var4 << 8, ue.a(var8 << 16, ue.a(ue.a(ue.a(var6 << 40, ue.a(var2 << 56, var2 << 48)), var2 << 32), var10 << 24))));
-          for (var14 = 1; var14 < 8; var14++) {
-            field_g[var14][var0] = ue.a(field_g[var14 - 1][var0] >>> 8, field_g[-1 + var14][var0] << 56);
+          substitutionTimes9 = substitutionByte ^ substitutionTimes8;
+          whirlpoolTables[0][substitutionIndexOrRound] = ue.orLong(substitutionTimes9, ue.orLong(substitutionTimes2 << 8, ue.orLong(substitutionTimes5 << 16, ue.orLong(ue.orLong(ue.orLong(substitutionTimes4 << 40, ue.orLong(substitutionByte << 56, substitutionByte << 48)), substitutionByte << 32), substitutionTimes8 << 24))));
+          for (tableRotationIndex = 1; tableRotationIndex < 8; tableRotationIndex++) {
+            whirlpoolTables[tableRotationIndex][substitutionIndexOrRound] = ue.orLong(whirlpoolTables[tableRotationIndex - 1][substitutionIndexOrRound] >>> 8, whirlpoolTables[-1 + tableRotationIndex][substitutionIndexOrRound] << 56);
           }
-          var0++;
+          substitutionIndexOrRound++;
         }
-        field_h[0] = 0L;
-        for (var0 = 1; var0 <= 10; var0++) {
-          var1 = var0 * 8 - 8;
-          field_h[var0] = f.a(f.a(f.a(cj.a(16711680L, field_g[5][5 + var1]), f.a(cj.a(4278190080L, field_g[4][var1 + 4]), f.a(f.a(f.a(cj.a(field_g[0][var1], -72057594037927936L), cj.a(field_g[1][1 + var1], 71776119061217280L)), cj.a(280375465082880L, field_g[2][2 + var1])), cj.a(field_g[3][var1 + 3], 1095216660480L)))), cj.a(field_g[6][var1 + 6], 65280L)), cj.a(255L, field_g[7][var1 + 7]));
+        whirlpoolRoundConstants[0] = 0L;
+        for (substitutionIndexOrRound = 1; substitutionIndexOrRound <= 10; substitutionIndexOrRound++) {
+          packedSubstitutionPairOrRoundByteOffset = substitutionIndexOrRound * 8 - 8;
+          whirlpoolRoundConstants[substitutionIndexOrRound] = f.xorLong(f.xorLong(f.xorLong(cj.andLong(16711680L, whirlpoolTables[5][5 + packedSubstitutionPairOrRoundByteOffset]), f.xorLong(cj.andLong(4278190080L, whirlpoolTables[4][packedSubstitutionPairOrRoundByteOffset + 4]), f.xorLong(f.xorLong(f.xorLong(cj.andLong(whirlpoolTables[0][packedSubstitutionPairOrRoundByteOffset], -72057594037927936L), cj.andLong(whirlpoolTables[1][1 + packedSubstitutionPairOrRoundByteOffset], 71776119061217280L)), cj.andLong(280375465082880L, whirlpoolTables[2][2 + packedSubstitutionPairOrRoundByteOffset])), cj.andLong(whirlpoolTables[3][packedSubstitutionPairOrRoundByteOffset + 3], 1095216660480L)))), cj.andLong(whirlpoolTables[6][packedSubstitutionPairOrRoundByteOffset + 6], 65280L)), cj.andLong(255L, whirlpoolTables[7][packedSubstitutionPairOrRoundByteOffset + 7]));
         }
     }
 }

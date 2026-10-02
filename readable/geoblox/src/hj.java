@@ -82,7 +82,7 @@ final class hj {
               rgbPixelsForUpdates = new int[pixelCount];
               rgbPixelsSnapshot = rgbPixelsForUpdates;
               for (rgbPixelIndex = 0; pixelCount > rgbPixelIndex; rgbPixelIndex++) {
-                rgbPixelsForUpdates[rgbPixelIndex] = cm.decodedSpritePalette[cd.a((int) paletteIndices[rgbPixelIndex], 255)];
+                rgbPixelsForUpdates[rgbPixelIndex] = cm.decodedSpritePalette[cd.andInt((int) paletteIndices[rgbPixelIndex], 255)];
               }
               sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], rgbPixelsSnapshot);
               spriteIndex++;
@@ -97,7 +97,7 @@ final class hj {
               argbPixelsForwarded = argbPixelsSnapshot;
               argbPixelsForUpdates = argbPixelsForwarded;
               for (argbPixelIndex = 0; argbPixelIndex < pixelCount; argbPixelIndex++) {
-                argbPixelsForUpdates[argbPixelIndex] = lb.a(cd.a(alphaPlaneSnapshot[argbPixelIndex] << 24, -16777216), cm.decodedSpritePalette[cd.a((int) paletteIndices[argbPixelIndex], 255)]);
+                argbPixelsForUpdates[argbPixelIndex] = lb.orInt(cd.andInt(alphaPlaneSnapshot[argbPixelIndex] << 24, -16777216), cm.decodedSpritePalette[cd.andInt((int) paletteIndices[argbPixelIndex], 255)]);
               }
               sprites[spriteIndex] = (Sprite) ((Object) new ArgbSprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], argbPixelsSnapshot));
               spriteIndex++;

@@ -402,8 +402,8 @@ final class jh {
         }
         try {
             oh.field_a = AudioOutput.a(param1, param0, 1, 1000);
-            ge.field_d = new ob();
-            oh.field_a.b(ge.field_d);
+            WhirlpoolHash.field_d = new ob();
+            oh.field_a.b(WhirlpoolHash.field_d);
             uh.field_y = param3;
             wg.a(-15346, oc.field_c);
             ag.a(j.field_gb, (byte) -67);

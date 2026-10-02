@@ -155,7 +155,7 @@ final class ul {
                       } else {
                         stackIn_68_5 = 1073741824;
                       }
-                      stackIn_64_0[stackIn_64_1] = lb.a(stackIn_64_2, lb.a(stackIn_64_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), largestPackedEntityId << 20), middlePackedEntityId << 10)));
+                      stackIn_64_0[stackIn_64_1] = lb.orInt(stackIn_64_2, lb.orInt(stackIn_64_3, lb.orInt(lb.orInt(lb.orInt(stackIn_65_4, stackIn_68_5), largestPackedEntityId << 20), middlePackedEntityId << 10)));
                       h.matchCandidateCount = h.matchCandidateCount + 1;
                     }
                     if (tripleSharesCategory == 0) {

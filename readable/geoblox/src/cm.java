@@ -127,7 +127,7 @@ final class cm extends cj {
                       }
                       L9: {
                         if (var21 != null) {
-                          if (ge.a(var21, (byte) 12)) {
+                          if (WhirlpoolHash.a(var21, (byte) 12)) {
                             var8[1][var13] = SecondaryDeque.field_f;
                             var9[1][var13] = null;
                             var31[1][var13] = var22;

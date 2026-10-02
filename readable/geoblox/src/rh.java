@@ -431,7 +431,7 @@ final class rh {
                   var24 = var34;
                   var9 = var24;
                   var25 = new ByteArrayBuffer(var34);
-                  var25.a((byte) -125, param2, 5, var25.bytes.length);
+                  var25.decryptXteaRange((byte) -125, param2, 5, var25.bytes.length);
                   break L4;
                 }
               }

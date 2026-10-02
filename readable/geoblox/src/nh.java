@@ -63,7 +63,7 @@ abstract class nh {
             fa.field_c.position = 0;
             fa.field_c.writeBytes(param5, -97, param4, param2);
             fa.field_c.padZerosToPosition((byte) -84, var7_int);
-            fa.field_c.a(var12, (byte) -33);
+            fa.field_c.encryptXteaBlocks(var12, (byte) -33);
             if (vf.field_I != null) {
               if (vf.field_I.bytes.length >= 100) {
                 break L4;
@@ -83,7 +83,7 @@ abstract class nh {
             return;
           }
           vf.field_I.writeShortBE(param5, 28695);
-          vf.field_I.a(0, param0, param1);
+          vf.field_I.replaceWithModPowResult(0, param0, param1);
           param3.writeBytes(vf.field_I.position, -97, vf.field_I.bytes, 0);
           param3.writeBytes(fa.field_c.position, -97, fa.field_c.bytes, 0);
           return;

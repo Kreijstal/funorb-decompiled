@@ -353,7 +353,7 @@ public final class Geoblox extends wf {
         rh.b(30261);
         b.a(17062);
         kb.c(105);
-        ByteArrayBuffer.d(0);
+        ByteArrayBuffer.clearWhirlpoolTables(0);
         oa.b(8192);
         ab.a((byte) -60);
         gf.a(true);
@@ -496,7 +496,7 @@ public final class Geoblox extends wf {
         md.a((byte) 40);
         li.a(false);
         va.a(0);
-        ge.b(102);
+        WhirlpoolHash.b(102);
         ed.a();
         cg.c((byte) -120);
         hd.f((byte) -52);

@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 4,593 guarded naming rules: 39 classes, 605 fields,
-422 methods, 1,307 parameters and 2,220 local declarations. Both 303-file corpora
+The current export has 4,729 guarded naming rules: 40 classes, 616 fields,
+435 methods, 1,335 parameters and 2,303 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,35 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current packet bit access and byte cipher names
+## Current buffer crypto and Whirlpool names
+
+Pass 63 adds 136 guarded identities: one class, eleven fields, thirteen methods,
+28 parameters and 83 locals. The remaining three buffer instance APIs read as
+`encryptXteaBlocks`, `decryptXteaRange` and `replaceWithModPowResult`. Every
+buffer instance field/API/parameter/local now has a name. Shared
+`whirlpoolTables`, `whirlpoolRoundConstants`, their initializer and clear helper
+expose their setup and guard cleanup. `WhirlpoolHash` instance fields/APIs and
+locals have guarded names; unrelated static helpers retain their owner.
+
+XTEA keeps32 cycles, original masks, signed int overflow, partial blocks and
+success-only cursor restoration. The modular-power replacement keeps signed
+BigInteger conversion and its BE16 length plus result-byte encoding. Hash input
+retains bit-length carry/alignment, partial-byte state and512-bit block handling;
+padding/output keeps partial effects, reset guards and retained state. Five pure
+operator wrappers expose xor/or/and without inlining or changing call order.
+Algorithm identities are inferred from the source and checked against the
+[XTEA engine](https://github.com/bcgit/bc-java/blob/main/core/src/main/java/org/bouncycastle/crypto/engines/XTEAEngine.java)
+and [Whirlpool authors' specification](https://www.karljapetre.com/whirlpool/whirlpool.pdf).
+
+All 4,593 previous complete rules and source/generator pins stay unchanged.
+The 4,729 rules apply 41,043 edits; both 303-file corpora compile, preserving
+138,558 bindings and 388 overrides. Reproduction and dictionary reversal are
+byte-exact. Existing native pixel/transform fixtures retain their operator-
+consumer scope without new crypto/hash execution coverage. Unknown static
+helpers, real archives/packets, complete gameplay and phone/FPS/heap behavior
+remain unfinished or unverified.
+
+## Previous packet bit access and byte cipher names
 
 Pass 62 adds 77 guarded identities: two classes, nine fields, ten methods,
 19 parameters and 37 locals. Every instance field, API, constructor parameter
@@ -923,7 +951,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 77 additions in
+naming-only pass retains those source pins and records its 136 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -948,6 +976,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `73856fc866cda87152d66ec7060b75170ee9bb6e68c64407281309b6ffefc2af` |
+| Readable | `19746ae8b07d697e2983b9e013b437d1fbcf34ef7c6dad23b61c714434845023` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

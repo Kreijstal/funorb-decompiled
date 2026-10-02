@@ -584,7 +584,7 @@ final class GameplayEntity extends DualLinkNode {
     final static void registerAudioStream(boolean param0, PcmSampleStream param1) {
         try {
             qa.field_f.addLast(-74, new je(param1, param1));
-            ge.field_d.a(param1);
+            WhirlpoolHash.field_d.a(param1);
             if (param0) {
                 PcmSampleStream var3 = (PcmSampleStream) null;
                 GameplayEntity.registerAudioStream(false, (PcmSampleStream) null);

@@ -13,8 +13,8 @@ final class ue {
     private int field_h;
     static int field_j;
 
-    static long a(long param0, long param1) {
-        return param0 | param1;
+    static long orLong(long left, long right) {
+        return left | right;
     }
 
     final int b(int param0, int param1) {

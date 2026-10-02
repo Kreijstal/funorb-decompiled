@@ -308,7 +308,7 @@ final class IntrusiveDeque {
           if (var0 <= 2) {
             continue L0;
           }
-          field_b[var0] = lb.a(field_b[var0], (-2 + var0) * 22 << 16);
+          field_b[var0] = lb.orInt(field_b[var0], (-2 + var0) * 22 << 16);
         }
         IntrusiveDeque discarded$0 = new IntrusiveDeque();
     }

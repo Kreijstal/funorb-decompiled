@@ -19,21 +19,25 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 77 guarded identities for `PacketBuffer` and
-`PacketByteCipher`. Their instance fields, methods, constructor parameters and
-locals now have names, along with the bit-mask lookup. Packet byte adjustment,
-bit cursor movement, seeded mixing, batch generation and reverse result
-consumption expose their original state and operation order.
+The current naming pass adds 136 guarded identities for the remaining buffer
+crypto APIs, `WhirlpoolHash`, its shared tables and five bitwise operator
+helpers. Every buffer and hash instance field/API/parameter/local now has a
+name. XTEA cycles, signed `BigInteger` replacement, bit-oriented hash input,
+padding, table rounds and digest output expose the original state and ordering.
 
-The 4,593 rules apply 40,193 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 4,516 previous complete
-rules and raw source/decompiler pins are unchanged. Masks, shifts, overflow,
-cursor/cipher consumption order, guards and diagnostic strings remain.
-Source/binding and byte-exact reversal checks support the names. Existing
-native cache/result helpers retain their packet-type/storage scope without
-new bit-reader or cipher-generation execution coverage. Unrelated static
+The 4,729 rules apply 41,043 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 4,593 previous complete
+rules and raw source/decompiler pins are unchanged. Source/specification,
+binding and byte-exact reversal checks support the names. Masks, overflow,
+success-only cursor restoration, aliases, partial output, guards and literal
+diagnostics remain. Existing native sprite fixtures retain their operator-
+consumer scope without new crypto/hash execution coverage. Unknown static
 helpers, full assets/gameplay and device performance remain unfinished or
 unverified. One manifest holds current evidence, with Git for history.
+
+Pass 62 named `PacketBuffer` and `PacketByteCipher` instance fields/APIs,
+bit masks, seeded mixing, batch generation and reverse result consumption.
+Original cursor/cipher consumption order, guards and partial effects remain.
 
 Pass 61 named ordinary buffer writes, bulk copies, length backpatches, padding,
 packed base38 text and CRC32. Original byte order, partial writes, aliases,

@@ -358,8 +358,8 @@ final class cd extends jg {
         }
     }
 
-    static int a(int param0, int param1) {
-        return param0 & param1;
+    static int andInt(int left, int right) {
+        return left & right;
     }
 
     cd() {

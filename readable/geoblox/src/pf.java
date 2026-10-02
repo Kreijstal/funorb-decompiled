@@ -86,7 +86,7 @@ final class pf extends ee implements ga, pl {
                   var5_int = var11.length << 2;
                 }
                 for (var7 = 0; var5_int > var7; var7++) {
-                  var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 34) << cd.a(var7 << 8, 768));
+                  var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 34) << cd.andInt(var7 << 8, 768));
                 }
                 var4_ref_ea.unlinkNode(false);
                 break L0;

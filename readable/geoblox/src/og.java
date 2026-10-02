@@ -133,7 +133,7 @@ final class og extends DualLinkNode {
         }
         if (!(this.field_m == null)) {
             for (var2 = 0; this.field_m.length > var2; var2++) {
-                this.field_m[var2] = lb.a(this.field_m[var2], 32768);
+                this.field_m[var2] = lb.orInt(this.field_m[var2], 32768);
             }
         }
     }

@@ -45,7 +45,7 @@ final class fd {
             return;
         }
         try {
-            ge.field_d.a(var5);
+            WhirlpoolHash.field_d.a(var5);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "fd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

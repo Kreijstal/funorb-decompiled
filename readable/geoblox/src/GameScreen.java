@@ -1199,7 +1199,7 @@ final class GameScreen extends MenuScreen {
                               if (var7 == 0) {
                                 if (null != el.gameplaySession) {
                                   if (var5[var8_int] == Math.abs(el.gameplaySession.score)) {
-                                    if (ge.a(var9, (byte) 12)) {
+                                    if (WhirlpoolHash.a(var9, (byte) 12)) {
                                       var7 = 1;
                                       var4.drawRightAlignedText(1 + var8_int + ". ", 165, var6, 16610816, -1);
                                       var4.drawText(var9, 165, var6, 16610816, -1);

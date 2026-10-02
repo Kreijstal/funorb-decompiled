@@ -152,7 +152,7 @@ final class vd {
           if (var0 <= 2) {
             continue L0;
           }
-          field_b[var0] = lb.a(field_b[var0], (var0 - 2) * 22 << 8);
+          field_b[var0] = lb.orInt(field_b[var0], (var0 - 2) * 22 << 8);
         }
         tutorialShapeMatchMessage = "Excellent! Now try connecting three of a kind by shape.<br>Press <img=2> to continue.";
     }

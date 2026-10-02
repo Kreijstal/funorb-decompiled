@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 4,593 explicit guarded rules: 39 classes, 605 fields, 422 method
-declarations, 1,307 parameters and 2,220 locals. This is not full deobfuscation.
+There are 4,729 explicit guarded rules: 40 classes, 616 fields, 435 method
+declarations, 1,335 parameters and 2,303 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -1661,3 +1661,87 @@ reversal support this pass. Existing native cache/result fixtures use the
 packet type and inherited storage/cursor; they do not newly execute these bit
 or cipher routines. Static helpers, actual packet/server traffic, complete
 gameplay and phone/FPS/heap behavior remain unfinished or unverified.
+
+## Buffer crypto and Whirlpool state (pass 63)
+
+The remaining buffer instance APIs now have explicit roles. Their names identify
+source behavior; the pass changes neither algorithms nor error handling.
+
+| Buffer API | Existing behavior |
+| --- | --- |
+| `encryptXteaBlocks(key, methodGuard)` | Reset position0 and encrypt positionBeforeReset/8 complete blocks; finish at the processed length |
+| `decryptXteaRange(methodGuard, key, startPosition, endPosition)` | Decrypt complete blocks in the supplied range; restore the saved position only on successful loop exit |
+| `replaceWithModPowResult(resultPositionGuard, modulus, exponent)` | Read the current prefix as a signed BigInteger, apply modPow, then write BE16 result length and signed result bytes at the supplied output position |
+
+The XTEA identification follows the source's two-word shifts/additions, delta,
+32 cycles and key indices, compared with the primary
+[Bouncy Castle XTEA engine](https://github.com/bcgit/bc-java/blob/main/core/src/main/java/org/bouncycastle/crypto/engines/XTEAEngine.java).
+The original masks7480/7701 are retained: after unsigned shift11, only mask
+bits11/12 survive, selecting the same two key-index bits. Decryption starts at
+0xc6ef3720, which is32*delta modulo2^32. Both paths read BE32 pairs, execute
+cycles in locals, rewind8 and write the updated pair. Failed key access or a
+later block leaves prior writes and the current cursor; no finally restoration
+is added. Encryption leaves incomplete trailing bytes untouched and drops them
+from the final cursor length. Invalid guard calls and endpoint overflow remain.
+
+The modular-power method uses `new BigInteger(payload)` and `toByteArray()`
+with their original signed encodings. The output-position argument also selects
+the copy guard through xor29915; the ordinary caller supplies0. Empty/null
+payloads, invalid modulus/exponent, output length truncation, partial writes and
+wrapped failures retain the original behavior. No extra padding is inferred.
+
+`WhirlpoolHash` replaces `ge` for its instance digest role. Its field layout and
+table/compression structure match the
+[Whirlpool authors' specification](https://www.karljapetre.com/whirlpool/whirlpool.pdf).
+Static network, text and shared CRC helpers stay on the same owner with prior
+names. The instance state is now explicit:
+
+| State | Role |
+| --- | --- |
+| `hashWords` | Eight64-bit chaining words and final digest words |
+| `blockBuffer` |64-byte block buffer, including partial-bit input and padding |
+| `messageBitLength` |32-byte big-endian accumulated input bit length |
+| `bufferedBitCount` / `bufferBytePosition` | Current block bit count and byte index |
+| `messageWords` | Eight BE64 words loaded from the block |
+| `roundKey` / `cipherState` | Per-block key schedule and cipher state |
+| `roundScratch` | Reused temporary output for key and state transformations |
+
+The shared `ByteArrayBuffer.whirlpoolTables` initializer decodes alternating
+bytes from the original packed literal. It forms GF(256) multiples2/4/5/8/9
+with reduction xor285, assembles each diffusion word, then rotates right8 to
+create seven more tables. `whirlpoolRoundConstants` has a zero entry followed
+by ten entries built from consecutive substitution bytes. Initializer locals
+show the reused substitution-index/round and packed-pair/round-offset roles.
+`clearWhirlpoolTables` clears constants first, then tables, preserving its
+wrong-guard helper call. Other existing guards still clear either shared array.
+
+`processBlock` captures chaining/message words, initializes roundKey from the
+hash and cipherState from message xor key, then performs ten separate key/state
+rounds through the shared tables. Scratch copies, round-constant insertion,
+byte shifts and indirect masks remain. Chaining words become
+hash xor(cipherState xor messageWords). A guard below103 returns before this
+processing after the original client-guard capture.
+
+`updateBits` retains source alignment, partial destination-byte bits and the
+remainingBitCount parameter's mutation. Its methodGuard also seeds the message-
+length carry and selects a compression guard; the ordinary caller supplies0.
+Lookahead reads,512-bit block crossings, partial-byte storage, negative/zero
+counts and contextual failures remain.
+
+`finishDigest` appends a one bit, zero-pads, optionally processes an extra block,
+copies the32-byte length and writes64 digest bytes as BE64 words. False
+skipResetGuard calls `reset(-38)` before final padding, retaining its byte-index
+101 side effect. Normal reset52 zeroes the length and hash words, byte0 of the
+block and the cursors; it leaves the other block bytes and scratch arrays for
+later overwrite. Digest completion adds no automatic reset or new reuse policy.
+Aliases, partial output, original padding order and guard failures remain.
+
+Pure helpers now read `xorLong`, `orLong`, `andLong`, `andInt` and `orInt`.
+They still call the original owner and evaluate both arguments in the original
+order; no operator inlining is performed. Every buffer/hash instance declaration,
+table-initializer local and selected helper parameter has a guarded semantic
+name. Compilation, binding checks, byte-exact reproduction and reversal support
+these names. Existing native sprite/pixel/transform fixtures retain their prior
+operator-consumer scope without new crypto/hash execution coverage. Real
+archives/server traffic, full gameplay and device performance remain unfinished
+or unverified.

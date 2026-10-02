@@ -15,8 +15,8 @@ class f extends qf implements pl {
     static String[] quickChatShortcutKeys;
     private hl field_pb;
 
-    static long a(long param0, long param1) {
-        return param0 ^ param1;
+    static long xorLong(long left, long right) {
+        return left ^ right;
     }
 
     public void a(int param0, byte param1, int param2, int param3, hk param4) {

@@ -521,7 +521,7 @@ final class kj extends ia {
 
     private final void a(int param0, int param1, int param2) {
         this.field_F[param1] = param2;
-        this.field_K[param1] = cd.a(param2, -128);
+        this.field_K[param1] = cd.andInt(param2, -128);
         if (param0 != -8581) {
             this.field_z = (int[]) null;
         }
@@ -694,67 +694,67 @@ final class kj extends ia {
           var5 = (param0 & 32577) >> 8;
           var6 = param0 >> 16 & 127;
           if (0 == var5) {
-            this.field_K[var4] = (var6 << 14) + cd.a(this.field_K[var4], -2080769);
+            this.field_K[var4] = (var6 << 14) + cd.andInt(this.field_K[var4], -2080769);
           }
           if (var5 == 32) {
-            this.field_K[var4] = (var6 << 7) + cd.a(this.field_K[var4], -16257);
+            this.field_K[var4] = (var6 << 7) + cd.andInt(this.field_K[var4], -16257);
           }
           if (var5 == 1) {
-            this.field_s[var4] = (var6 << 7) + cd.a(this.field_s[var4], -16257);
+            this.field_s[var4] = (var6 << 7) + cd.andInt(this.field_s[var4], -16257);
           }
           if (33 == var5) {
-            this.field_s[var4] = var6 + cd.a(-128, this.field_s[var4]);
+            this.field_s[var4] = var6 + cd.andInt(-128, this.field_s[var4]);
           }
           if (var5 == 5) {
-            this.field_M[var4] = cd.a(-16257, this.field_M[var4]) + (var6 << 7);
+            this.field_M[var4] = cd.andInt(-16257, this.field_M[var4]) + (var6 << 7);
           }
           if (var5 == 37) {
-            this.field_M[var4] = cd.a(-128, this.field_M[var4]) + var6;
+            this.field_M[var4] = cd.andInt(-128, this.field_M[var4]) + var6;
           }
           if (var5 == 7) {
-            this.field_p[var4] = cd.a(this.field_p[var4], -16257) + (var6 << 7);
+            this.field_p[var4] = cd.andInt(this.field_p[var4], -16257) + (var6 << 7);
           }
           if (var5 == 39) {
-            this.field_p[var4] = cd.a(-128, this.field_p[var4]) + var6;
+            this.field_p[var4] = cd.andInt(-128, this.field_p[var4]) + var6;
           }
           if (var5 == 10) {
-            this.field_z[var4] = cd.a(-16257, this.field_z[var4]) + (var6 << 7);
+            this.field_z[var4] = cd.andInt(-16257, this.field_z[var4]) + (var6 << 7);
           }
           if (var5 == 42) {
-            this.field_z[var4] = var6 + cd.a(-128, this.field_z[var4]);
+            this.field_z[var4] = var6 + cd.andInt(-128, this.field_z[var4]);
           }
           if (var5 == 11) {
-            this.field_r[var4] = (var6 << 7) + cd.a(-16257, this.field_r[var4]);
+            this.field_r[var4] = (var6 << 7) + cd.andInt(-16257, this.field_r[var4]);
           }
           if (var5 == 43) {
-            this.field_r[var4] = cd.a(-128, this.field_r[var4]) + var6;
+            this.field_r[var4] = cd.andInt(-128, this.field_r[var4]) + var6;
           }
           if (var5 == 64) {
             if (var6 < 64) {
-              this.field_m[var4] = cd.a(this.field_m[var4], -2);
+              this.field_m[var4] = cd.andInt(this.field_m[var4], -2);
             } else {
-              this.field_m[var4] = lb.a(this.field_m[var4], 1);
+              this.field_m[var4] = lb.orInt(this.field_m[var4], 1);
             }
           }
           if (var5 == 65) {
             if (64 <= var6) {
-              this.field_m[var4] = lb.a(this.field_m[var4], 2);
+              this.field_m[var4] = lb.orInt(this.field_m[var4], 2);
             } else {
               this.a((byte) 39, var4);
-              this.field_m[var4] = cd.a(this.field_m[var4], -3);
+              this.field_m[var4] = cd.andInt(this.field_m[var4], -3);
             }
           }
           if (var5 == 99) {
-            this.field_w[var4] = cd.a(this.field_w[var4], 127) + (var6 << 7);
+            this.field_w[var4] = cd.andInt(this.field_w[var4], 127) + (var6 << 7);
           }
           if (var5 == 98) {
-            this.field_w[var4] = var6 + cd.a(16256, this.field_w[var4]);
+            this.field_w[var4] = var6 + cd.andInt(16256, this.field_w[var4]);
           }
           if (101 == var5) {
-            this.field_w[var4] = (var6 << 7) + (cd.a(this.field_w[var4], 127) + 16384);
+            this.field_w[var4] = (var6 << 7) + (cd.andInt(this.field_w[var4], 127) + 16384);
           }
           if (var5 == 100) {
-            this.field_w[var4] = 16384 + (cd.a(16256, this.field_w[var4]) + var6);
+            this.field_w[var4] = 16384 + (cd.andInt(16256, this.field_w[var4]) + var6);
           }
           if (120 == var5) {
             this.b(100, var4);
@@ -768,27 +768,27 @@ final class kj extends ia {
           if (var5 == 6) {
             var7 = this.field_w[var4];
             if (16384 == var7) {
-              this.field_v[var4] = cd.a(this.field_v[var4], -16257) + (var6 << 7);
+              this.field_v[var4] = cd.andInt(this.field_v[var4], -16257) + (var6 << 7);
             }
           }
           if (var5 == 38) {
             var7 = this.field_w[var4];
             if (var7 == 16384) {
-              this.field_v[var4] = cd.a(this.field_v[var4], -128) + var6;
+              this.field_v[var4] = cd.andInt(this.field_v[var4], -128) + var6;
             }
           }
           if (16 == var5) {
-            this.field_u[var4] = cd.a(-16257, this.field_u[var4]) + (var6 << 7);
+            this.field_u[var4] = cd.andInt(-16257, this.field_u[var4]) + (var6 << 7);
           }
           if (48 == var5) {
-            this.field_u[var4] = var6 + cd.a(this.field_u[var4], -128);
+            this.field_u[var4] = var6 + cd.andInt(this.field_u[var4], -128);
           }
           if (var5 == 81) {
             if (var6 >= 64) {
-              this.field_m[var4] = lb.a(this.field_m[var4], 4);
+              this.field_m[var4] = lb.orInt(this.field_m[var4], 4);
             } else {
               this.a(var4, (byte) 67);
-              this.field_m[var4] = cd.a(this.field_m[var4], -5);
+              this.field_m[var4] = cd.andInt(this.field_m[var4], -5);
             }
           }
           if (var5 == 17) {
@@ -1026,7 +1026,7 @@ final class kj extends ia {
         int var4 = 0;
         var3 = var4;
         while (var4 < 16) {
-            this.field_K[var4] = cd.a(this.field_F[var4], -128);
+            this.field_K[var4] = cd.andInt(this.field_F[var4], -128);
             var4++;
         }
     }

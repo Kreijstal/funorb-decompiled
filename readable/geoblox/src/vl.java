@@ -409,7 +409,7 @@ final class vl extends IntrusiveNode {
               }
               var22 = var38.readVariableIntBE((byte) -116);
             }
-            this.field_j[var23] = (short)(this.field_j[var23] + cd.a(-1 + var22 << 14, 32768));
+            this.field_j[var23] = (short)(this.field_j[var23] + cd.andInt(-1 + var22 << 14, 32768));
             this.field_h[var23] = var22;
             var20--;
           }

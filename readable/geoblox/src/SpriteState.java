@@ -391,7 +391,7 @@ abstract class SpriteState extends DualLinkNode {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
-        ge var5 = null;
+        WhirlpoolHash var5 = null;
         byte[] var6 = null;
         int var7 = 0;
         byte[] stackIn_11_0 = null;
@@ -425,11 +425,11 @@ abstract class SpriteState extends DualLinkNode {
             }
             var4 = param2;
           }
-          var5 = new ge();
-          var5.a(52);
-          var5.a(var4, (long)(param3 * param0), 0);
+          var5 = new WhirlpoolHash();
+          var5.reset(52);
+          var5.updateBits(var4, (long)(param3 * param0), 0);
           var6 = new byte[64];
-          var5.a(var6, 0, true);
+          var5.finishDigest(var6, 0, true);
           stackIn_11_0 = (byte[]) (var6);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

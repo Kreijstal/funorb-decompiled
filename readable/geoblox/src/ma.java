@@ -98,7 +98,7 @@ final class ma extends IntrusiveNode {
             return 61;
         }
         if (!wg.field_i.a((byte) 95)) {
-            return ge.a((byte) -74);
+            return WhirlpoolHash.a((byte) -74);
         }
         return 0;
     }

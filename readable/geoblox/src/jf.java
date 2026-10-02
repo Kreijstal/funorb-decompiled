@@ -123,7 +123,7 @@ final class jf implements dh {
             var13 = param5;
             var14 = param8;
             var15 = var17[var11] >> 1 & 8355711;
-            var10[var11] = cd.a(255, var14 >> 17) + ((cd.a(33423689, var13) >> 9) + (cd.a(33423360, var12) >> 1)) + var15;
+            var10[var11] = cd.andInt(255, var14 >> 17) + ((cd.andInt(33423689, var13) >> 9) + (cd.andInt(33423360, var12) >> 1)) + var15;
             param0++;
             param8 = param8 + param4;
             param3 = param3 + param1;

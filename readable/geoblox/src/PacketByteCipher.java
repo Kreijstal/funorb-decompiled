@@ -179,10 +179,10 @@ final class PacketByteCipher {
             }
           }
           this.accumulator = this.accumulator + this.stateWords[255 & 128 + wordIndex];
-          updatedStateWord = this.lastResult + (this.accumulator + this.stateWords[cd.a(255, previousStateWord >> 2)]);
+          updatedStateWord = this.lastResult + (this.accumulator + this.stateWords[cd.andInt(255, previousStateWord >> 2)]);
           stateWordForResultLookup = updatedStateWord;
           this.stateWords[wordIndex] = updatedStateWord;
-          generatedResult = previousStateWord + this.stateWords[cd.a(stateWordForResultLookup >> 8, 1020) >> 2];
+          generatedResult = previousStateWord + this.stateWords[cd.andInt(stateWordForResultLookup >> 8, 1020) >> 2];
           this.lastResult = generatedResult;
           this.results[wordIndex] = generatedResult;
           wordIndex++;
