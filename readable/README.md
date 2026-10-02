@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 1,017 guarded naming rules: 21 classes, 360 fields,
-164 methods, 185 parameters and 287 local declarations. Both 303-file corpora
+The current export has 1,032 guarded naming rules: 21 classes, 360 fields,
+164 methods, 188 parameters and 299 local declarations. Both 303-file corpora
 compile, preserving 154,117 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -64,6 +64,7 @@ For native behavior checks, supply the verified 303-class directory recorded in
 ```sh
 JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-match-scoring.mjs /path/to/verified-geoblox-classes
 JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-text-write.mjs /path/to/verified-geoblox-classes
+JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-gameplay.mjs /path/to/verified-geoblox-classes
 JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-sequence.mjs /path/to/verified-geoblox-classes
 JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-helpers.mjs /path/to/verified-geoblox-classes
 ```
@@ -75,6 +76,13 @@ writes, UTF-16, live aliasing, offsets, partial writes and throwable identity.
 characters after shorter writes. Result probes cover 27 scenarios/26,043 ticks,
 120 selector cases, 4,801 PCM factory cases, 9,000 bounds checks and six music
 returns. Native, raw and readable traces match within those controlled scopes.
+The gameplay probe checks 144 contact cases across kinds 0/1/2, equality keys,
+force flags and client guards; 32 neighbor removals; two forced neighborhood
+detachments; and the existing boundary, popup, cooldown and settling checks.
+Ordinary contacts use independent neighbor-order/count oracles. Duplicate
+contacts preserve state even when forced detachment is requested. One-pixel
+sprites and controlled palettes exercise actual constructors and conversions;
+multi-hop special conversion remains unverified.
 Contact-physics producers, actual asset loading, new unlock delivery, device
 audio and whole-game equivalence remain unverified. Text-writer guards <=23
 retain a PCM side effect outside the direct writer probe. These source checks
@@ -99,6 +107,6 @@ do not establish FPS, heap or phone acceptance.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `07610c2d655bf96e59584f07be867c62e47cf3b3c484063504d9958443e89da2` |
-| Readable | `2ee30741e787ab09b6e7c70bf4cad0c80c2b0390ab10c084b6b138fac4a2140d` |
+| Readable | `0b2f7b4f7b945ffa0f0abfc0c9168e08f664798570001ff0c5622bb5065abd09` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

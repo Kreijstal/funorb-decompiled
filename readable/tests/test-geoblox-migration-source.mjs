@@ -14,7 +14,7 @@ function rejection(change, message) {
     const directory = path.join(temporary, 'readable');
     for (const file of ['reproduce-geoblox.mjs', 'build-geoblox-rules.mjs', 'text-resource-evidence.mjs',
       'geoblox-rules.json', 'funorb-stubs.jar', 'tests/test-geoblox-match-scoring.mjs',
-      'tests/test-geoblox-text-write.mjs', 'tools/PIN.json', 'tools/readable-java.mjs',
+      'tests/test-geoblox-text-write.mjs', 'tests/test-geoblox-gameplay.mjs', 'tools/PIN.json', 'tools/readable-java.mjs',
       'tools/lib/ReadableJava.java', 'tools/lib/capture-process.mjs']) {
       const destination = path.join(directory, file);
       fs.mkdirSync(path.dirname(destination), {recursive: true});
@@ -45,6 +45,9 @@ test('wrapper rejects changed native probe bytes before compilation', () => {
   rejection(data => { data.publication.nativeEvidence[0].sha256 = '0'.repeat(64); }, /Reviewed native probe differs/);
   rejection((_data, directory) => {
     fs.appendFileSync(path.join(directory, 'tests/test-geoblox-text-write.mjs'), '\n');
+  }, /Reviewed native probe differs/);
+  rejection((_data, directory) => {
+    fs.appendFileSync(path.join(directory, 'tests/test-geoblox-gameplay.mjs'), '\n');
   }, /Reviewed native probe differs/);
 });
 test('wrapper verifies resource assignments against the actual current source', () => {

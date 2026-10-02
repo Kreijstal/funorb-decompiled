@@ -573,15 +573,15 @@ final class GameplayEntity extends DualLinkNode {
         }
     }
 
-    final void configureEntitySprite(int param0, int entityCategoryKey, int spriteVariantIndex, int param3) {
-        if (param0 != 320) {
+    final void configureEntitySprite(int methodGuard, int entityCategoryKey, int spriteVariantIndex, int entitySpriteKindId) {
+        if (methodGuard != 320) {
             this.spriteAngleRadians = -1.9950387477874756f;
         }
         if (!(this.entitySpriteKindId != 2)) {
             this.matchCooldownTicks = 60;
         }
         this.spriteVariantIndex = spriteVariantIndex;
-        this.entitySpriteKindId = param3;
+        this.entitySpriteKindId = entitySpriteKindId;
         this.entityCategoryKey = entityCategoryKey;
         this.selectEntitySprite((byte) 84);
     }

@@ -3707,6 +3707,90 @@
       "renamedSymbol": "L:i.findOutermostAttachedEntity(B)LGameplayEntity;#5"
     },
     {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#0",
+      "originalName": "fieldTemp$0",
+      "to": "secondNeighborInsertionIndex",
+      "evidence": "Captures the second entity neighbor count before increment, then indexes the reciprocal append.",
+      "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#0"
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#1",
+      "originalName": "fieldTemp$1",
+      "to": "firstNeighborInsertionIndex",
+      "evidence": "Captures the first entity neighbor count before increment, then indexes the reciprocal append.",
+      "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#1"
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+      "originalName": "var3_int",
+      "to": "neighborIndexThenDetachSecond",
+      "evidence": "First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained.",
+      "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#16"
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+      "originalName": "var4",
+      "to": "detachFirst",
+      "evidence": "Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities.",
+      "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#18"
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+      "originalName": "var5_int",
+      "to": "variantPropagationThenNeighborIndex",
+      "evidence": "Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity.",
+      "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#19"
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
+      "originalName": "stackIn_6_0",
+      "to": "duplicateContactReturnValue",
+      "evidence": "Zero-valued return carrier on an existing reciprocal contact; duplicate native cases verify no mutation even with forced detachment.",
+      "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#2"
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
+      "originalName": "var5",
+      "to": "entityForNeighborCountReset",
+      "evidence": "Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second.",
+      "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#20"
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+      "originalName": "var6_int",
+      "to": "propagateCategory",
+      "evidence": "Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts.",
+      "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#21"
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+      "originalName": "var6",
+      "to": "entityForVariantCountReset",
+      "evidence": "Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second.",
+      "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#22"
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
+      "originalName": "stackIn_14_0",
+      "to": "secondIsKindOne",
+      "evidence": "Integer Boolean carrier for second.entitySpriteKindId == 1, XORed with the first entity kind check.",
+      "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#3"
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
+      "originalName": "stackIn_17_1",
+      "to": "firstIsKindOne",
+      "evidence": "Integer Boolean carrier for first.entitySpriteKindId == 1, XORed with the second entity kind check.",
+      "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#4"
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#5",
+      "originalName": "stackIn_77_0",
+      "to": "secondDetachmentReturnValue",
+      "evidence": "Final return carrier copied from the second-entity detach flag; native kind/force matrix verifies the returned outcome.",
+      "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#5"
+    },
+    {
       "symbol": "L:ja.a(FI)V#0",
       "originalName": "var5",
       "to": "velocityNormalizationScale",
@@ -6381,6 +6465,13 @@
       "renamedSymbol": "P:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#1"
     },
     {
+      "symbol": "P:ik.a(Lja;Lja;Z)Z#2",
+      "originalName": "param2",
+      "to": "forceDetachSecond",
+      "evidence": "The incoming flag initializes the second-entity detach outcome only after duplicate suppression; verified native contact matrix covers both values.",
+      "renamedSymbol": "P:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#2"
+    },
+    {
       "symbol": "P:ja.a(FI)V#0",
       "to": "rotationDeltaRadians",
       "evidence": "ja.java applies param0 in sin/cos rotation of the position offset from (320,240), rotates velocity and adjusts the entity angle by the same delta.",
@@ -6437,6 +6528,13 @@
       "renamedSymbol": "P:GameplayEntity.initializeEntityMotion(IFIFIIFFFIF)V#9"
     },
     {
+      "symbol": "P:ja.a(IIII)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Normal value 320 preserves angle while selecting the new entity category, variant and sprite kind.",
+      "renamedSymbol": "P:GameplayEntity.configureEntitySprite(IIII)V#0"
+    },
+    {
       "symbol": "P:ja.a(IIII)V#1",
       "to": "entityCategoryKey",
       "evidence": "ja.java assigns param1 to field_C, which is compared against another entity's field_C when maintaining same-category membership counts.",
@@ -6449,6 +6547,13 @@
       "evidence": "ja.java assigns param2 to field_M; private g(byte) uses field_M to index the selected theme's sprite variants.",
       "originalName": "param2",
       "renamedSymbol": "P:GameplayEntity.configureEntitySprite(IIII)V#2"
+    },
+    {
+      "symbol": "P:ja.a(IIII)V#3",
+      "originalName": "param3",
+      "to": "entitySpriteKindId",
+      "evidence": "Assigned to the entity sprite-kind field before selecting its sprite; native contact matrix exercises kinds 0, 1 and 2.",
+      "renamedSymbol": "P:GameplayEntity.configureEntitySprite(IIII)V#3"
     },
     {
       "symbol": "P:ja.a(Lja;I)V#0",
@@ -83072,7 +83177,7 @@
       "symbol": "L:ik.a(Lja;Lja;Z)Z#0",
       "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#0",
       "originalName": "fieldTemp$0",
-      "renamedName": "fieldTemp$0",
+      "renamedName": "secondNeighborInsertionIndex",
       "declaration": {
         "file": "ik.java",
         "start": 2442,
@@ -83083,7 +83188,7 @@
       "symbol": "L:ik.a(Lja;Lja;Z)Z#1",
       "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#1",
       "originalName": "fieldTemp$1",
-      "renamedName": "fieldTemp$1",
+      "renamedName": "firstNeighborInsertionIndex",
       "declaration": {
         "file": "ik.java",
         "start": 2471,
@@ -83160,7 +83265,7 @@
       "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
       "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#16",
       "originalName": "var3_int",
-      "renamedName": "var3_int",
+      "renamedName": "neighborIndexThenDetachSecond",
       "declaration": {
         "file": "ik.java",
         "start": 3057,
@@ -83182,7 +83287,7 @@
       "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
       "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#18",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "detachFirst",
       "declaration": {
         "file": "ik.java",
         "start": 3121,
@@ -83193,7 +83298,7 @@
       "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
       "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#19",
       "originalName": "var5_int",
-      "renamedName": "var5_int",
+      "renamedName": "variantPropagationThenNeighborIndex",
       "declaration": {
         "file": "ik.java",
         "start": 3143,
@@ -83204,7 +83309,7 @@
       "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
       "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#2",
       "originalName": "stackIn_6_0",
-      "renamedName": "stackIn_6_0",
+      "renamedName": "duplicateContactReturnValue",
       "declaration": {
         "file": "ik.java",
         "start": 2500,
@@ -83215,7 +83320,7 @@
       "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
       "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#20",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "entityForNeighborCountReset",
       "declaration": {
         "file": "ik.java",
         "start": 3168,
@@ -83226,7 +83331,7 @@
       "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
       "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#21",
       "originalName": "var6_int",
-      "renamedName": "var6_int",
+      "renamedName": "propagateCategory",
       "declaration": {
         "file": "ik.java",
         "start": 3193,
@@ -83237,7 +83342,7 @@
       "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
       "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#22",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "entityForVariantCountReset",
       "declaration": {
         "file": "ik.java",
         "start": 3218,
@@ -83270,7 +83375,7 @@
       "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
       "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#3",
       "originalName": "stackIn_14_0",
-      "renamedName": "stackIn_14_0",
+      "renamedName": "secondIsKindOne",
       "declaration": {
         "file": "ik.java",
         "start": 2529,
@@ -83281,7 +83386,7 @@
       "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
       "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#4",
       "originalName": "stackIn_17_1",
-      "renamedName": "stackIn_17_1",
+      "renamedName": "firstIsKindOne",
       "declaration": {
         "file": "ik.java",
         "start": 2559,
@@ -83292,7 +83397,7 @@
       "symbol": "L:ik.a(Lja;Lja;Z)Z#5",
       "renamedSymbol": "L:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#5",
       "originalName": "stackIn_77_0",
-      "renamedName": "stackIn_77_0",
+      "renamedName": "secondDetachmentReturnValue",
       "declaration": {
         "file": "ik.java",
         "start": 2589,
@@ -205601,7 +205706,7 @@
       "symbol": "P:ik.a(Lja;Lja;Z)Z#2",
       "renamedSymbol": "P:ik.linkTouchingEntities(LGameplayEntity;LGameplayEntity;Z)Z#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "forceDetachSecond",
       "declaration": {
         "file": "ik.java",
         "start": 2420,
@@ -207284,7 +207389,7 @@
       "symbol": "P:ja.a(IIII)V#0",
       "renamedSymbol": "P:GameplayEntity.configureEntitySprite(IIII)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "methodGuard",
       "declaration": {
         "file": "ja.java",
         "start": 20749,
@@ -207317,7 +207422,7 @@
       "symbol": "P:ja.a(IIII)V#3",
       "renamedSymbol": "P:GameplayEntity.configureEntitySprite(IIII)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "entitySpriteKindId",
       "declaration": {
         "file": "ja.java",
         "start": 20785,
@@ -284713,7 +284818,7 @@
       "original": "ik.java",
       "renamed": "ik.java",
       "inputSha256": "01701988f4028781e1919a8afc711b6bb30c9a2f82449fae2aec76ab9875d8d2",
-      "outputSha256": "86a5d75d2e50d66552d34ec88e677ecae9288c499e32ba22384e1fb1644f5b0c",
+      "outputSha256": "3349ad4ac63689cbff6907f463408e68fa3fc9c81ad665e22b87048561d6add9",
       "edits": [
         {
           "start": 97,
@@ -284898,6 +285003,76 @@
           "renamed": "secondEntity"
         },
         {
+          "start": 2420,
+          "end": 2426,
+          "symbol": "P:ik.a(Lja;Lja;Z)Z#2",
+          "original": "param2",
+          "renamed": "forceDetachSecond"
+        },
+        {
+          "start": 2442,
+          "end": 2453,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#0",
+          "original": "fieldTemp$0",
+          "renamed": "secondNeighborInsertionIndex"
+        },
+        {
+          "start": 2471,
+          "end": 2482,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#1",
+          "original": "fieldTemp$1",
+          "renamed": "firstNeighborInsertionIndex"
+        },
+        {
+          "start": 2500,
+          "end": 2511,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
+          "original": "stackIn_6_0",
+          "renamed": "duplicateContactReturnValue"
+        },
+        {
+          "start": 2529,
+          "end": 2541,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
+          "original": "stackIn_14_0",
+          "renamed": "secondIsKindOne"
+        },
+        {
+          "start": 2559,
+          "end": 2571,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
+          "original": "stackIn_17_1",
+          "renamed": "firstIsKindOne"
+        },
+        {
+          "start": 2589,
+          "end": 2601,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#5",
+          "original": "stackIn_77_0",
+          "renamed": "secondDetachmentReturnValue"
+        },
+        {
+          "start": 3057,
+          "end": 3065,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "original": "var3_int",
+          "renamed": "neighborIndexThenDetachSecond"
+        },
+        {
+          "start": 3121,
+          "end": 3125,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+          "original": "var4",
+          "renamed": "detachFirst"
+        },
+        {
+          "start": 3143,
+          "end": 3151,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
+        },
+        {
           "start": 3165,
           "end": 3167,
           "symbol": "C:ja",
@@ -284905,11 +285080,46 @@
           "renamed": "GameplayEntity"
         },
         {
+          "start": 3168,
+          "end": 3172,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
+          "original": "var5",
+          "renamed": "entityForNeighborCountReset"
+        },
+        {
+          "start": 3193,
+          "end": 3201,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+          "original": "var6_int",
+          "renamed": "propagateCategory"
+        },
+        {
           "start": 3215,
           "end": 3217,
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "GameplayEntity"
+        },
+        {
+          "start": 3218,
+          "end": 3222,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+          "original": "var6",
+          "renamed": "entityForVariantCountReset"
+        },
+        {
+          "start": 3327,
+          "end": 3335,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "original": "var3_int",
+          "renamed": "neighborIndexThenDetachSecond"
+        },
+        {
+          "start": 3390,
+          "end": 3398,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "original": "var3_int",
+          "renamed": "neighborIndexThenDetachSecond"
         },
         {
           "start": 3402,
@@ -284924,6 +285134,34 @@
           "symbol": "F:ja.field_L:I",
           "original": "field_L",
           "renamed": "relatedEntityCount"
+        },
+        {
+          "start": 3460,
+          "end": 3468,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "original": "var3_int",
+          "renamed": "neighborIndexThenDetachSecond"
+        },
+        {
+          "start": 3471,
+          "end": 3477,
+          "symbol": "P:ik.a(Lja;Lja;Z)Z#2",
+          "original": "param2",
+          "renamed": "forceDetachSecond"
+        },
+        {
+          "start": 3505,
+          "end": 3509,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+          "original": "var4",
+          "renamed": "detachFirst"
+        },
+        {
+          "start": 3533,
+          "end": 3544,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#0",
+          "original": "fieldTemp$0",
+          "renamed": "secondNeighborInsertionIndex"
         },
         {
           "start": 3547,
@@ -284982,11 +285220,25 @@
           "renamed": "relatedEntities"
         },
         {
+          "start": 3651,
+          "end": 3662,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#0",
+          "original": "fieldTemp$0",
+          "renamed": "secondNeighborInsertionIndex"
+        },
+        {
           "start": 3666,
           "end": 3672,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#0",
           "original": "param0",
           "renamed": "firstEntity"
+        },
+        {
+          "start": 3692,
+          "end": 3703,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#1",
+          "original": "fieldTemp$1",
+          "renamed": "firstNeighborInsertionIndex"
         },
         {
           "start": 3706,
@@ -285045,6 +285297,13 @@
           "renamed": "relatedEntities"
         },
         {
+          "start": 3810,
+          "end": 3821,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#1",
+          "original": "fieldTemp$1",
+          "renamed": "firstNeighborInsertionIndex"
+        },
+        {
           "start": 3825,
           "end": 3831,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#1",
@@ -285080,6 +285339,20 @@
           "renamed": "entitySpriteKindId"
         },
         {
+          "start": 4017,
+          "end": 4025,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
+        },
+        {
+          "start": 4049,
+          "end": 4057,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+          "original": "var6_int",
+          "renamed": "propagateCategory"
+        },
+        {
           "start": 4085,
           "end": 4091,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#1",
@@ -285094,6 +285367,20 @@
           "renamed": "entitySpriteKindId"
         },
         {
+          "start": 4128,
+          "end": 4140,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
+          "original": "stackIn_14_0",
+          "renamed": "secondIsKindOne"
+        },
+        {
+          "start": 4193,
+          "end": 4205,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
+          "original": "stackIn_14_0",
+          "renamed": "secondIsKindOne"
+        },
+        {
           "start": 4255,
           "end": 4261,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#0",
@@ -285106,6 +285393,34 @@
           "symbol": "F:ja.field_z:I",
           "original": "field_z",
           "renamed": "entitySpriteKindId"
+        },
+        {
+          "start": 4299,
+          "end": 4311,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
+          "original": "stackIn_17_1",
+          "renamed": "firstIsKindOne"
+        },
+        {
+          "start": 4365,
+          "end": 4377,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
+          "original": "stackIn_17_1",
+          "renamed": "firstIsKindOne"
+        },
+        {
+          "start": 4452,
+          "end": 4464,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
+          "original": "stackIn_14_0",
+          "renamed": "secondIsKindOne"
+        },
+        {
+          "start": 4467,
+          "end": 4479,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
+          "original": "stackIn_17_1",
+          "renamed": "firstIsKindOne"
         },
         {
           "start": 4515,
@@ -285206,6 +285521,13 @@
           "renamed": "entitySpriteKindId"
         },
         {
+          "start": 4877,
+          "end": 4885,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
+        },
+        {
           "start": 5003,
           "end": 5009,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#0",
@@ -285232,6 +285554,27 @@
           "symbol": "F:ja.field_z:I",
           "original": "field_z",
           "renamed": "entitySpriteKindId"
+        },
+        {
+          "start": 5103,
+          "end": 5111,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "original": "var3_int",
+          "renamed": "neighborIndexThenDetachSecond"
+        },
+        {
+          "start": 5143,
+          "end": 5147,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+          "original": "var4",
+          "renamed": "detachFirst"
+        },
+        {
+          "start": 5179,
+          "end": 5187,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+          "original": "var6_int",
+          "renamed": "propagateCategory"
         },
         {
           "start": 5219,
@@ -285346,6 +285689,20 @@
           "renamed": "spriteVariantIndex"
         },
         {
+          "start": 5557,
+          "end": 5565,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
+        },
+        {
+          "start": 5597,
+          "end": 5605,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "original": "var3_int",
+          "renamed": "neighborIndexThenDetachSecond"
+        },
+        {
           "start": 5721,
           "end": 5727,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#1",
@@ -285458,6 +285815,13 @@
           "renamed": "entitySpriteKindId"
         },
         {
+          "start": 6091,
+          "end": 6099,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "original": "var3_int",
+          "renamed": "neighborIndexThenDetachSecond"
+        },
+        {
           "start": 6217,
           "end": 6223,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#0",
@@ -285484,6 +285848,27 @@
           "symbol": "F:ja.field_z:I",
           "original": "field_z",
           "renamed": "entitySpriteKindId"
+        },
+        {
+          "start": 6317,
+          "end": 6321,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+          "original": "var4",
+          "renamed": "detachFirst"
+        },
+        {
+          "start": 6353,
+          "end": 6361,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+          "original": "var6_int",
+          "renamed": "propagateCategory"
+        },
+        {
+          "start": 6393,
+          "end": 6401,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "original": "var3_int",
+          "renamed": "neighborIndexThenDetachSecond"
         },
         {
           "start": 6433,
@@ -285542,6 +285927,27 @@
           "renamed": "entitySpriteKindId"
         },
         {
+          "start": 6637,
+          "end": 6645,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
+        },
+        {
+          "start": 6680,
+          "end": 6688,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+          "original": "var6_int",
+          "renamed": "propagateCategory"
+        },
+        {
+          "start": 6803,
+          "end": 6811,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+          "original": "var6_int",
+          "renamed": "propagateCategory"
+        },
+        {
           "start": 6818,
           "end": 6824,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#1",
@@ -285554,6 +285960,13 @@
           "symbol": "P:ik.a(Lja;Lja;Z)Z#0",
           "original": "param0",
           "renamed": "firstEntity"
+        },
+        {
+          "start": 6837,
+          "end": 6845,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
         },
         {
           "start": 6895,
@@ -285976,6 +286389,20 @@
           "renamed": "sameVariantEntityCount"
         },
         {
+          "start": 8180,
+          "end": 8188,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "original": "var3_int",
+          "renamed": "neighborIndexThenDetachSecond"
+        },
+        {
+          "start": 8222,
+          "end": 8230,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
+        },
+        {
           "start": 8236,
           "end": 8242,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#1",
@@ -285988,6 +286415,20 @@
           "symbol": "F:ja.field_L:I",
           "original": "field_L",
           "renamed": "relatedEntityCount"
+        },
+        {
+          "start": 8253,
+          "end": 8261,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
+        },
+        {
+          "start": 8263,
+          "end": 8271,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
         },
         {
           "start": 8299,
@@ -286004,6 +286445,13 @@
           "renamed": "relatedEntities"
         },
         {
+          "start": 8314,
+          "end": 8322,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
+        },
+        {
           "start": 8324,
           "end": 8325,
           "symbol": "M:ja.a(Lja;I)V",
@@ -286016,6 +286464,13 @@
           "symbol": "P:ik.a(Lja;Lja;Z)Z#1",
           "original": "param1",
           "renamed": "secondEntity"
+        },
+        {
+          "start": 8380,
+          "end": 8384,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
+          "original": "var5",
+          "renamed": "entityForNeighborCountReset"
         },
         {
           "start": 8387,
@@ -286039,6 +286494,13 @@
           "renamed": "sameCategoryEntityCount"
         },
         {
+          "start": 8455,
+          "end": 8459,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+          "original": "var6",
+          "renamed": "entityForVariantCountReset"
+        },
+        {
           "start": 8462,
           "end": 8468,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#1",
@@ -286046,11 +286508,25 @@
           "renamed": "secondEntity"
         },
         {
+          "start": 8490,
+          "end": 8494,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+          "original": "var6",
+          "renamed": "entityForVariantCountReset"
+        },
+        {
           "start": 8495,
           "end": 8502,
           "symbol": "F:ja.field_m:I",
           "original": "field_m",
           "renamed": "sameVariantEntityCount"
+        },
+        {
+          "start": 8528,
+          "end": 8532,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
+          "original": "var5",
+          "renamed": "entityForNeighborCountReset"
         },
         {
           "start": 8533,
@@ -286095,6 +286571,20 @@
           "renamed": "detachedFromBoard"
         },
         {
+          "start": 8752,
+          "end": 8756,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+          "original": "var4",
+          "renamed": "detachFirst"
+        },
+        {
+          "start": 8790,
+          "end": 8798,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
+        },
+        {
           "start": 8804,
           "end": 8810,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#0",
@@ -286107,6 +286597,20 @@
           "symbol": "F:ja.field_L:I",
           "original": "field_L",
           "renamed": "relatedEntityCount"
+        },
+        {
+          "start": 8821,
+          "end": 8829,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
+        },
+        {
+          "start": 8831,
+          "end": 8839,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
         },
         {
           "start": 8867,
@@ -286123,6 +286627,13 @@
           "renamed": "relatedEntities"
         },
         {
+          "start": 8882,
+          "end": 8890,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "original": "var5_int",
+          "renamed": "variantPropagationThenNeighborIndex"
+        },
+        {
           "start": 8892,
           "end": 8893,
           "symbol": "M:ja.a(Lja;I)V",
@@ -286135,6 +286646,13 @@
           "symbol": "P:ik.a(Lja;Lja;Z)Z#0",
           "original": "param0",
           "renamed": "firstEntity"
+        },
+        {
+          "start": 8948,
+          "end": 8952,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
+          "original": "var5",
+          "renamed": "entityForNeighborCountReset"
         },
         {
           "start": 8955,
@@ -286158,11 +286676,25 @@
           "renamed": "sameCategoryEntityCount"
         },
         {
+          "start": 9023,
+          "end": 9027,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+          "original": "var6",
+          "renamed": "entityForVariantCountReset"
+        },
+        {
           "start": 9030,
           "end": 9036,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#0",
           "original": "param0",
           "renamed": "firstEntity"
+        },
+        {
+          "start": 9058,
+          "end": 9062,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
+          "original": "var5",
+          "renamed": "entityForNeighborCountReset"
         },
         {
           "start": 9063,
@@ -286221,11 +286753,32 @@
           "renamed": "movingEntities"
         },
         {
+          "start": 9232,
+          "end": 9236,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+          "original": "var6",
+          "renamed": "entityForVariantCountReset"
+        },
+        {
           "start": 9237,
           "end": 9244,
           "symbol": "F:ja.field_m:I",
           "original": "field_m",
           "renamed": "sameVariantEntityCount"
+        },
+        {
+          "start": 9335,
+          "end": 9347,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#5",
+          "original": "stackIn_77_0",
+          "renamed": "secondDetachmentReturnValue"
+        },
+        {
+          "start": 9350,
+          "end": 9358,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "original": "var3_int",
+          "renamed": "neighborIndexThenDetachSecond"
         },
         {
           "start": 9476,
@@ -286242,11 +286795,32 @@
           "renamed": "relatedEntities"
         },
         {
+          "start": 9491,
+          "end": 9499,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "original": "var3_int",
+          "renamed": "neighborIndexThenDetachSecond"
+        },
+        {
           "start": 9504,
           "end": 9510,
           "symbol": "P:ik.a(Lja;Lja;Z)Z#0",
           "original": "param0",
           "renamed": "firstEntity"
+        },
+        {
+          "start": 9532,
+          "end": 9543,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
+          "original": "stackIn_6_0",
+          "renamed": "duplicateContactReturnValue"
+        },
+        {
+          "start": 9669,
+          "end": 9677,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "original": "var3_int",
+          "renamed": "neighborIndexThenDetachSecond"
         },
         {
           "start": 10086,
@@ -286261,6 +286835,27 @@
           "symbol": "P:ik.a(Lja;Lja;Z)Z#1",
           "original": "param1",
           "renamed": "secondEntity"
+        },
+        {
+          "start": 11135,
+          "end": 11141,
+          "symbol": "P:ik.a(Lja;Lja;Z)Z#2",
+          "original": "param2",
+          "renamed": "forceDetachSecond"
+        },
+        {
+          "start": 11241,
+          "end": 11252,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
+          "original": "stackIn_6_0",
+          "renamed": "duplicateContactReturnValue"
+        },
+        {
+          "start": 11293,
+          "end": 11305,
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#5",
+          "original": "stackIn_77_0",
+          "renamed": "secondDetachmentReturnValue"
         },
         {
           "start": 11350,
@@ -289518,7 +290113,7 @@
       "original": "ja.java",
       "renamed": "GameplayEntity.java",
       "inputSha256": "963465f2c0be6200fb41f2c01bf08c33ee020986cbaf15ddde6ec081324545e2",
-      "outputSha256": "6053ba1ca40a7d8b4781338458a2b5125bd2c4738a255b06477f3f39e1199098",
+      "outputSha256": "5142b6928a0ad87753966491c10c87f0e6027cd84189eed05458d4f694583154",
       "edits": [
         {
           "start": 50,
@@ -294351,6 +294946,13 @@
           "renamed": "configureEntitySprite"
         },
         {
+          "start": 20749,
+          "end": 20755,
+          "symbol": "P:ja.a(IIII)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
+        },
+        {
           "start": 20761,
           "end": 20767,
           "symbol": "P:ja.a(IIII)V#1",
@@ -294363,6 +294965,20 @@
           "symbol": "P:ja.a(IIII)V#2",
           "original": "param2",
           "renamed": "spriteVariantIndex"
+        },
+        {
+          "start": 20785,
+          "end": 20791,
+          "symbol": "P:ja.a(IIII)V#3",
+          "original": "param3",
+          "renamed": "entitySpriteKindId"
+        },
+        {
+          "start": 20807,
+          "end": 20813,
+          "symbol": "P:ja.a(IIII)V#0",
+          "original": "param0",
+          "renamed": "methodGuard"
         },
         {
           "start": 20841,
@@ -294404,6 +295020,13 @@
           "end": 21011,
           "symbol": "F:ja.field_z:I",
           "original": "field_z",
+          "renamed": "entitySpriteKindId"
+        },
+        {
+          "start": 21014,
+          "end": 21020,
+          "symbol": "P:ja.a(IIII)V#3",
+          "original": "param3",
           "renamed": "entitySpriteKindId"
         },
         {

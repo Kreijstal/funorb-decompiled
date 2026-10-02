@@ -3185,6 +3185,78 @@
       "evidence": "Snapshot of Geoblox.field_C; nonzero terminates the walk after its first candidate."
     },
     {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#0",
+      "originalName": "fieldTemp$0",
+      "to": "secondNeighborInsertionIndex",
+      "evidence": "Captures the second entity neighbor count before increment, then indexes the reciprocal append."
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#1",
+      "originalName": "fieldTemp$1",
+      "to": "firstNeighborInsertionIndex",
+      "evidence": "Captures the first entity neighbor count before increment, then indexes the reciprocal append."
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+      "originalName": "var3_int",
+      "to": "neighborIndexThenDetachSecond",
+      "evidence": "First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained."
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+      "originalName": "var4",
+      "to": "detachFirst",
+      "evidence": "Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities."
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+      "originalName": "var5_int",
+      "to": "variantPropagationThenNeighborIndex",
+      "evidence": "Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity."
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
+      "originalName": "stackIn_6_0",
+      "to": "duplicateContactReturnValue",
+      "evidence": "Zero-valued return carrier on an existing reciprocal contact; duplicate native cases verify no mutation even with forced detachment."
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
+      "originalName": "var5",
+      "to": "entityForNeighborCountReset",
+      "evidence": "Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second."
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+      "originalName": "var6_int",
+      "to": "propagateCategory",
+      "evidence": "Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts."
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+      "originalName": "var6",
+      "to": "entityForVariantCountReset",
+      "evidence": "Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second."
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
+      "originalName": "stackIn_14_0",
+      "to": "secondIsKindOne",
+      "evidence": "Integer Boolean carrier for second.entitySpriteKindId == 1, XORed with the first entity kind check."
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
+      "originalName": "stackIn_17_1",
+      "to": "firstIsKindOne",
+      "evidence": "Integer Boolean carrier for first.entitySpriteKindId == 1, XORed with the second entity kind check."
+    },
+    {
+      "symbol": "L:ik.a(Lja;Lja;Z)Z#5",
+      "originalName": "stackIn_77_0",
+      "to": "secondDetachmentReturnValue",
+      "evidence": "Final return carrier copied from the second-entity detach flag; native kind/force matrix verifies the returned outcome."
+    },
+    {
       "symbol": "L:ja.a(FI)V#0",
       "originalName": "var5",
       "to": "velocityNormalizationScale",
@@ -5477,6 +5549,12 @@
       "evidence": "Second member of the touching pair whose reciprocal neighbor counts are updated."
     },
     {
+      "symbol": "P:ik.a(Lja;Lja;Z)Z#2",
+      "originalName": "param2",
+      "to": "forceDetachSecond",
+      "evidence": "The incoming flag initializes the second-entity detach outcome only after duplicate suppression; verified native contact matrix covers both values."
+    },
+    {
       "symbol": "P:ja.a(FI)V#0",
       "to": "rotationDeltaRadians",
       "evidence": "ja.java applies param0 in sin/cos rotation of the position offset from (320,240), rotates velocity and adjusts the entity angle by the same delta.",
@@ -5525,6 +5603,12 @@
       "originalName": "param9"
     },
     {
+      "symbol": "P:ja.a(IIII)V#0",
+      "originalName": "param0",
+      "to": "methodGuard",
+      "evidence": "Normal value 320 preserves angle while selecting the new entity category, variant and sprite kind."
+    },
+    {
       "symbol": "P:ja.a(IIII)V#1",
       "to": "entityCategoryKey",
       "evidence": "ja.java assigns param1 to field_C, which is compared against another entity's field_C when maintaining same-category membership counts.",
@@ -5535,6 +5619,12 @@
       "to": "spriteVariantIndex",
       "evidence": "ja.java assigns param2 to field_M; private g(byte) uses field_M to index the selected theme's sprite variants.",
       "originalName": "param2"
+    },
+    {
+      "symbol": "P:ja.a(IIII)V#3",
+      "originalName": "param3",
+      "to": "entitySpriteKindId",
+      "evidence": "Assigned to the entity sprite-kind field before selecting its sprite; native contact matrix exercises kinds 0, 1 and 2."
     },
     {
       "symbol": "P:ja.a(Lja;I)V#0",
@@ -6114,7 +6204,7 @@
     }
   ],
   "revision": 4,
-  "version": 21,
+  "version": 22,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
@@ -6134,16 +6224,171 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "29baf97271daba9862060eece24bc6e4cb0b11c0",
+      "commit": "64fda1c2261bb8ca03f2578e5a3fcb71e8bb12ac",
       "path": "readable/geoblox-rules.json",
-      "sha256": "832bbde444cdc6912c4c0694452cc3539bd0bd8e4df0fc6107e973e985f8c4c4"
+      "sha256": "8c319c2566e20ecc35a4cc84ddf977c03fb1e5ebed5acb3206c52ca5c8b9754b"
     },
-    "ruleChanges": [],
+    "ruleChanges": [
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#0",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#0",
+          "originalName": "fieldTemp$0",
+          "to": "secondNeighborInsertionIndex",
+          "evidence": "Captures the second entity neighbor count before increment, then indexes the reciprocal append."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#1",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#1",
+          "originalName": "fieldTemp$1",
+          "to": "firstNeighborInsertionIndex",
+          "evidence": "Captures the first entity neighbor count before increment, then indexes the reciprocal append."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#16",
+          "originalName": "var3_int",
+          "to": "neighborIndexThenDetachSecond",
+          "evidence": "First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#18",
+          "originalName": "var4",
+          "to": "detachFirst",
+          "evidence": "Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#19",
+          "originalName": "var5_int",
+          "to": "variantPropagationThenNeighborIndex",
+          "evidence": "Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#2",
+          "originalName": "stackIn_6_0",
+          "to": "duplicateContactReturnValue",
+          "evidence": "Zero-valued return carrier on an existing reciprocal contact; duplicate native cases verify no mutation even with forced detachment."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#20",
+          "originalName": "var5",
+          "to": "entityForNeighborCountReset",
+          "evidence": "Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#21",
+          "originalName": "var6_int",
+          "to": "propagateCategory",
+          "evidence": "Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#22",
+          "originalName": "var6",
+          "to": "entityForVariantCountReset",
+          "evidence": "Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#3",
+          "originalName": "stackIn_14_0",
+          "to": "secondIsKindOne",
+          "evidence": "Integer Boolean carrier for second.entitySpriteKindId == 1, XORed with the first entity kind check."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#4",
+          "originalName": "stackIn_17_1",
+          "to": "firstIsKindOne",
+          "evidence": "Integer Boolean carrier for first.entitySpriteKindId == 1, XORed with the second entity kind check."
+        }
+      },
+      {
+        "symbol": "L:ik.a(Lja;Lja;Z)Z#5",
+        "before": null,
+        "after": {
+          "symbol": "L:ik.a(Lja;Lja;Z)Z#5",
+          "originalName": "stackIn_77_0",
+          "to": "secondDetachmentReturnValue",
+          "evidence": "Final return carrier copied from the second-entity detach flag; native kind/force matrix verifies the returned outcome."
+        }
+      },
+      {
+        "symbol": "P:ik.a(Lja;Lja;Z)Z#2",
+        "before": null,
+        "after": {
+          "symbol": "P:ik.a(Lja;Lja;Z)Z#2",
+          "originalName": "param2",
+          "to": "forceDetachSecond",
+          "evidence": "The incoming flag initializes the second-entity detach outcome only after duplicate suppression; verified native contact matrix covers both values."
+        }
+      },
+      {
+        "symbol": "P:ja.a(IIII)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:ja.a(IIII)V#0",
+          "originalName": "param0",
+          "to": "methodGuard",
+          "evidence": "Normal value 320 preserves angle while selecting the new entity category, variant and sprite kind."
+        }
+      },
+      {
+        "symbol": "P:ja.a(IIII)V#3",
+        "before": null,
+        "after": {
+          "symbol": "P:ja.a(IIII)V#3",
+          "originalName": "param3",
+          "to": "entitySpriteKindId",
+          "evidence": "Assigned to the entity sprite-kind field before selecting its sprite; native contact matrix exercises kinds 0, 1 and 2."
+        }
+      }
+    ],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
         "file": "ab.java",
         "sha256": "b2329f260c1d16820fd0e7ec027269d13b2c37c72d101930590d7f79e1583f54"
+      },
+      {
+        "file": "bh.java",
+        "sha256": "b3332586ea45bbf96a0154ab01c1a9685c938817a81f9f71b285f1b9bd4d6e5c"
       },
       {
         "file": "cf.java",
@@ -6172,6 +6417,14 @@
       {
         "file": "i.java",
         "sha256": "73730baf4bec64e8d1d0380bebfd0e944bbba163f87819453166b38db1d67817"
+      },
+      {
+        "file": "ik.java",
+        "sha256": "01701988f4028781e1919a8afc711b6bb30c9a2f82449fae2aec76ab9875d8d2"
+      },
+      {
+        "file": "ja.java",
+        "sha256": "963465f2c0be6200fb41f2c01bf08c33ee020986cbaf15ddde6ec081324545e2"
       },
       {
         "file": "jg.java",
@@ -6263,6 +6516,12 @@
         "sha256": "7e8a05a19eb0c1651a1820ad2142c4decaed8754a80462fda13fe91dd45a5afa",
         "nativeOutputSha256": "c99483f76661e9d3866aab389d6bd640e45ab1ff3e1766ad6a8aa7d9f3214f31",
         "scenarios": 152
+      },
+      {
+        "file": "tests/test-geoblox-gameplay.mjs",
+        "sha256": "c4d966a3c89e8a9360d3c166edb2cb0a849f6ae51cbb9c28630173114b5d2561",
+        "nativeOutputSha256": "a8e61d1484fc78a02c67cc20a0832684c2c32fd7e474da7fd1f8cf42abc15d77",
+        "scenarios": 179
       }
     ],
     "textResources": {
@@ -8434,7 +8693,7 @@
       "sourceDeclarations": 21185,
       "bindingsCompared": 154117,
       "overrideRelationships": 388,
-      "identifierEdits": 16838,
+      "identifierEdits": 16912,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -8444,16 +8703,21 @@
         "Unknown names and shared joins remain.",
         "Attachment and shock producers are supported by source inspection; native scoring fixtures control their gates directly.",
         "Text-writer PCM side effects for guard <=23 are not tested.",
+        "Contact probe uses one-pixel sprites and controlled palettes for kinds 0, 1 and 2; mask collision producers and multi-hop special conversion remain unverified.",
         "Whole-game equivalence and FPS, heap and phone targets are not established."
       ],
       "checks": {
         "ruleBuilderTests": 9,
         "sourceRefusalGroups": 5,
-        "sourceRefusalScenarios": 10,
+        "sourceRefusalScenarios": 11,
         "textResourceTests": 6,
         "fullReproductionCheck": true,
         "dictionaryReversalByteExact": true
-      }
+      },
+      "nativeGameplayScenarios": 179,
+      "nativeContactScenarios": 144,
+      "nativeNeighborRemovalScenarios": 32,
+      "nativeForcedNeighborhoodDetachScenarios": 2
     }
   }
 }

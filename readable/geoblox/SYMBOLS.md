@@ -533,6 +533,18 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:i.a(B)Lja;#3` | `candidateEntity` | Entity obtained from the attached deque last/previous walk; its position supplies the radius comparison. |
 | `L:i.a(B)Lja;#4` | `candidateDistanceSquared` | Sum of squared x-320 and y-240 coordinate offsets for the current candidate. |
 | `L:i.a(B)Lja;#5` | `controlFlowGuard` | Snapshot of Geoblox.field_C; nonzero terminates the walk after its first candidate. |
+| `L:ik.a(Lja;Lja;Z)Z#0` | `secondNeighborInsertionIndex` | Captures the second entity neighbor count before increment, then indexes the reciprocal append. |
+| `L:ik.a(Lja;Lja;Z)Z#1` | `firstNeighborInsertionIndex` | Captures the first entity neighbor count before increment, then indexes the reciprocal append. |
+| `L:ik.a(Lja;Lja;Z)Z#16` | `neighborIndexThenDetachSecond` | First searches the second neighbor list; after no duplicate exists, becomes its Boolean detach flag and final return value. Both roles are retained. |
+| `L:ik.a(Lja;Lja;Z)Z#18` | `detachFirst` | Flags first-entity reciprocal unlink, count reset, avatar-contact clearing and transfer marker to moving entities. |
+| `L:ik.a(Lja;Lja;Z)Z#19` | `variantPropagationThenNeighborIndex` | Initially selects variant propagation through bh.a; later reuses the slot to walk neighbors while detaching either entity. |
+| `L:ik.a(Lja;Lja;Z)Z#2` | `duplicateContactReturnValue` | Zero-valued return carrier on an existing reciprocal contact; duplicate native cases verify no mutation even with forced detachment. |
+| `L:ik.a(Lja;Lja;Z)Z#20` | `entityForNeighborCountReset` | Aliases either detaching entity while zeroing its related-entity count; does not permanently identify first or second. |
+| `L:ik.a(Lja;Lja;Z)Z#21` | `propagateCategory` | Selects the category/kind propagation flag passed as bh.a first argument after special-kind contacts. |
+| `L:ik.a(Lja;Lja;Z)Z#22` | `entityForVariantCountReset` | Aliases either detaching entity while zeroing its same-variant neighbor count; does not permanently identify first or second. |
+| `L:ik.a(Lja;Lja;Z)Z#3` | `secondIsKindOne` | Integer Boolean carrier for second.entitySpriteKindId == 1, XORed with the first entity kind check. |
+| `L:ik.a(Lja;Lja;Z)Z#4` | `firstIsKindOne` | Integer Boolean carrier for first.entitySpriteKindId == 1, XORed with the second entity kind check. |
+| `L:ik.a(Lja;Lja;Z)Z#5` | `secondDetachmentReturnValue` | Final return carrier copied from the second-entity detach flag; native kind/force matrix verifies the returned outcome. |
 | `L:ja.a(FI)V#0` | `velocityNormalizationScale` | ja.java sets var5 to og.field_r divided by the magnitude of the rotated velocity vector and multiplies both velocity components by it. |
 | `L:ja.a(FI)V#1` | `positionOffsetX` | ja.java computes field_o-320 into var3 and uses it in the position rotation before restoring the center offset. |
 | `L:ja.a(FI)V#2` | `positionOffsetY` | ja.java computes field_v-240 into var4 and uses it in the position rotation before restoring the center offset. |
@@ -915,6 +927,7 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:ih.a(IILja;I)V#3` | `contactX` | X coordinate of the ownership-mask contact probe. |
 | `P:ik.a(Lja;Lja;Z)Z#0` | `firstEntity` | First member of the touching pair whose reciprocal neighbor counts are updated. |
 | `P:ik.a(Lja;Lja;Z)Z#1` | `secondEntity` | Second member of the touching pair whose reciprocal neighbor counts are updated. |
+| `P:ik.a(Lja;Lja;Z)Z#2` | `forceDetachSecond` | The incoming flag initializes the second-entity detach outcome only after duplicate suppression; verified native contact matrix covers both values. |
 | `P:ja.a(FI)V#0` | `rotationDeltaRadians` | ja.java applies param0 in sin/cos rotation of the position offset from (320,240), rotates velocity and adjusts the entity angle by the same delta. |
 | `P:ja.a(IFIFIIFFFIF)V#1` | `positionX` | ja.java assigns param1 directly to field_o, which is the horizontal position rotated around screen center and rendered by its sprite methods. |
 | `P:ja.a(IFIFIIFFFIF)V#3` | `velocityX` | ja.java assigns param3 to field_w, then scales it with param8 and the board radius; f(byte) integrates field_w into field_o. |
@@ -923,8 +936,10 @@ Generated from explicit rules; original names remain lookup identities.
 | `P:ja.a(IFIFIIFFFIF)V#7` | `positionY` | ja.java assigns param7 directly to field_v, used as vertical position in board rotation and sprite rendering. |
 | `P:ja.a(IFIFIIFFFIF)V#8` | `velocityY` | ja.java assigns param8 to field_F, normalizes it with param3 and later integrates field_F into field_v. |
 | `P:ja.a(IFIFIIFFFIF)V#9` | `entityCategoryKey` | ja.java assigns param9 to field_C, compared with related entities' field_C when updating category counts. |
+| `P:ja.a(IIII)V#0` | `methodGuard` | Normal value 320 preserves angle while selecting the new entity category, variant and sprite kind. |
 | `P:ja.a(IIII)V#1` | `entityCategoryKey` | ja.java assigns param1 to field_C, which is compared against another entity's field_C when maintaining same-category membership counts. |
 | `P:ja.a(IIII)V#2` | `spriteVariantIndex` | ja.java assigns param2 to field_M; private g(byte) uses field_M to index the selected theme's sprite variants. |
+| `P:ja.a(IIII)V#3` | `entitySpriteKindId` | Assigned to the entity sprite-kind field before selecting its sprite; native contact matrix exercises kinds 0, 1 and 2. |
 | `P:ja.a(Lja;I)V#0` | `relatedEntity` | ja.java searches field_n for object identity equal to param0 before removing that related entity; kc.java passes the parent whose child is being detached. |
 | `P:ja.a(Lja;I)V#1` | `startingChildIndex` | ja.java initializes its field_n search cursor directly from param1 and increments it until field_L. |
 | `P:ja.b(II)I#1` | `bitOffset` | ja.java masks param1 with 7 to calculate padding to the next byte-aligned bit offset, then returns param1 plus that padding. |

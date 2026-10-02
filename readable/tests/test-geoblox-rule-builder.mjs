@@ -14,6 +14,7 @@ function fixture(change, check = true) {
     const directory = path.join(temporary, 'readable');
     for (const file of ['build-geoblox-rules.mjs', 'geoblox-rules.json',
       'tests/test-geoblox-match-scoring.mjs', 'tests/test-geoblox-text-write.mjs',
+      'tests/test-geoblox-gameplay.mjs',
       'tools/PIN.json', 'tools/readable-java.mjs', 'tools/lib/ReadableJava.java', 'tools/lib/capture-process.mjs']) {
       const destination = path.join(directory, file);
       fs.mkdirSync(path.dirname(destination), {recursive: true});
@@ -30,7 +31,7 @@ function fixture(change, check = true) {
 }
 
 test('one current manifest reproduces all guarded rules using Git history', () => {
-  assert.equal(JSON.parse(fixture().stdout).rules, 1017);
+  assert.equal(JSON.parse(fixture().stdout).rules, 1032);
 });
 test('previous Git objects and their hash cannot change silently', () => {
   for (const change of [
@@ -50,7 +51,7 @@ test('explicit additions are checked against their complete previous identity', 
     const rule = {symbol: 'L:ul.b(I)V#21', originalName: 'var1', to: 'caughtRuntimeException', evidence: 'Fixture addition'};
     data.renames.push(rule); data.publication.ruleChanges.push({symbol: rule.symbol, before: null, after: rule});
   };
-  assert.equal(JSON.parse(fixture(add, false).stdout).rules, 1018);
+  assert.equal(JSON.parse(fixture(add, false).stdout).rules, 1033);
   assert.throws(() => fixture(data => { add(data); data.publication.ruleChanges[0].before = {}; }),
     /differs from the previous guarded identity/);
   assert.throws(() => fixture(data => { add(data); data.publication.ruleChanges.push(data.publication.ruleChanges[0]); }),
@@ -81,6 +82,7 @@ test('native evidence binds current probe bytes and its fixed native trace', () 
     data => { data.publication.nativeEvidence[0].sha256 = '0'.repeat(64); },
     data => { data.publication.nativeEvidence[0].nativeOutputSha256 = '0'.repeat(64); },
     (_data, directory) => { fs.appendFileSync(path.join(directory, 'tests/test-geoblox-text-write.mjs'), '\n'); },
+    (_data, directory) => { fs.appendFileSync(path.join(directory, 'tests/test-geoblox-gameplay.mjs'), '\n'); },
   ]) assert.throws(() => fixture(change), /Reviewed native probe differs/);
 });
 test('frozen tool bytes are still checked from the single current manifest workflow', () => {

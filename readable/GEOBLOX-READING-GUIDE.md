@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 21
+# Reading GeoBlox pass 22
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -97,6 +97,22 @@ the moving queue and set `fa.entitiesDetachedThisTick`.
 The session snapshots it as `boundaryCheckRequested` before advancing motion.
 `boardRasterDirty` requests a redraw of the attached scene raster; it is separate
 from both contact dirtiness and `connectivityRebuiltThisTick`.
+
+`linkTouchingEntities` rejects a duplicate before considering
+`forceDetachSecond`. Its return reports detachment of the second entity.
+Special-kind contacts can also set `detachFirst`. The second detach path
+preserves `touchesAvatar`, while the first clears it. Both reset neighbor
+counts and select `ji.movingEntities` as the queue marker; inactive array slots
+can still contain references.
+
+Two locals deliberately have combined names: `neighborIndexThenDetachSecond`
+first searches for duplicates, then holds the second detach flag;
+`variantPropagationThenNeighborIndex` first selects variant conversion, then
+walks neighbors during detachment. The generated source reuses these slots.
+`firstNeighborInsertionIndex` and `secondNeighborInsertionIndex` preserve
+the append positions before incrementing the counts. The native gameplay probe
+checks contact kinds 0/1/2, duplicate suppression, both force values, removal
+positions and detachment with existing neighbors using controlled sprites.
 
 ## Score popups and text writes
 
