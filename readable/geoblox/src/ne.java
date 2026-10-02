@@ -151,14 +151,14 @@ final class ne {
     }
 
     private final void a(int param0) {
+        int dupTemp$1 = 0;
         int dupTemp$2 = 0;
-        int dupTemp$3 = 0;
         int var2;
         int var3;
         int var4;
-        int fieldTemp$1 = this.field_h + 1;
+        int fieldTemp$0 = this.field_h + 1;
         this.field_h = this.field_h + 1;
-        this.field_f = this.field_f + fieldTemp$1;
+        this.field_f = this.field_f + fieldTemp$0;
         var2 = 0;
         if (param0 >= -10) {
           ne.a((byte) 89);
@@ -179,12 +179,12 @@ final class ne {
             }
           }
           this.field_g = this.field_g + this.field_a[255 & 128 + var2];
-          dupTemp$2 = this.field_f + (this.field_g + this.field_a[cd.a(255, var3 >> -2024261374)]);
-          var4 = dupTemp$2;
-          this.field_a[var2] = dupTemp$2;
-          dupTemp$3 = var3 + this.field_a[cd.a(var4 >> -1997213592, 1020) >> -1417268222];
-          this.field_f = dupTemp$3;
-          this.field_e[var2] = dupTemp$3;
+          dupTemp$1 = this.field_f + (this.field_g + this.field_a[cd.a(255, var3 >> -2024261374)]);
+          var4 = dupTemp$1;
+          this.field_a[var2] = dupTemp$1;
+          dupTemp$2 = var3 + this.field_a[cd.a(var4 >> -1997213592, 1020) >> -1417268222];
+          this.field_f = dupTemp$2;
+          this.field_e[var2] = dupTemp$2;
           var2++;
         }
     }

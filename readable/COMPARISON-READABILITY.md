@@ -1,5 +1,9 @@
 # GeoBlox pass 14 comparison readability
 
+This report records an earlier pass. The current export is pass 15; see
+[parallel-loop readability](PARALLEL-LOOP-READABILITY.md) for the remaining
+dispatchers recovered and the current pins.
+
 The renderer now removes the XOR-minus-one spelling of typed int/long
 complements and their comparisons against same-width literal constants.
 GeoBlox's fresh raw export changes 156 files. The previous source had 1,429

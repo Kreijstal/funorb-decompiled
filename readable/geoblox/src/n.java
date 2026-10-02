@@ -25,21 +25,13 @@ final class n extends q {
     }
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
-        int stackIn_3_0 = 0;
         int stackIn_11_0 = 0;
-        int stackIn_14_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_24_1 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_29_1 = 0;
         int stackIn_34_0 = 0;
-        int stackIn_37_0 = 0;
         int stackIn_45_0 = 0;
-        int stackIn_48_0 = 0;
         int stackIn_56_0 = 0;
-        int statePc = 0;
         int var9 = 0;
         Sprite[] var10 = null;
         Sprite[] var11_ref_dm__ = null;
@@ -48,421 +40,223 @@ final class n extends q {
         Sprite var13 = null;
         int var14 = 0;
         int var15 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var15 = Geoblox.field_C;
-                    var9 = param1 + param7 + param8;
-                    var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9), new Sprite(var9, param3), new Sprite(64, 64), new Sprite(var9, param3), new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9)};
-                    var11_ref_dm__ = var10;
-                    var12 = 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (var12 >= var11_ref_dm__.length) {
-                        statePc = 10;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 2. */
-                        {
-                            var13 = var11_ref_dm__[var12];
-                            stackIn_11_0 = 0;
-                            stackIn_3_0 = stackIn_11_0;
-                            if (var15 != 0) {
-                                statePc = 11;
-                            } else {
-                                statePc = 3;
-                            }
-                            continue stateLoop;
+        var15 = Geoblox.field_C;
+        var9 = param1 + param7 + param8;
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9), new Sprite(var9, param3), new Sprite(64, 64), new Sprite(var9, param3), new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9)};
+        var11_ref_dm__ = var10;
+        var12 = 0;
+        L0: while (true) {
+          L1: {
+            L2: {
+              if (var12 < var11_ref_dm__.length) {
+                var13 = var11_ref_dm__[var12];
+                stackIn_11_0 = 0;
+
+                if (var15 != 0) {
+                  break L1;
+                } else {
+                  var14 = stackIn_11_0;
+                  L3: while (true) {
+                    L4: {
+                      if (var13.pixels.length > var14) {
+                        var13.pixels[var14] = param5;
+                        var14++;
+                        if (var15 != 0) {
+                          break L4;
+                        } else {
+                          if (var15 == 0) {
+                            continue L3;
+                          }
                         }
+                      }
+                      var12++;
                     }
-                }
-                case 3: {
-                    var14 = stackIn_3_0;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (var13.pixels.length <= var14) {
-                        statePc = 8;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 5. */
-                        {
-                            var13.pixels[var14] = param5;
-                            var14++;
-                            if (var15 != 0) {
-                                statePc = 9;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 6. */
-                                {
-                                    if (var15 == 0) {
-                                        statePc = 4;
-                                    } else {
-                                        statePc = 8;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 8: {
-                    var12++;
-                    statePc = 9;
-                    continue stateLoop;
-                }
-                case 9: {
                     if (var15 == 0) {
-                        statePc = 1;
+                      continue L0;
                     } else {
-                        statePc = 10;
+                      break L2;
                     }
-                    continue stateLoop;
+                  }
                 }
-                case 10: {
-                    stackIn_11_0 = 0;
-                    statePc = 11;
-                    continue stateLoop;
-                }
-                case 11: {
-                    var11 = stackIn_11_0;
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 12: {
-                    if (var11 >= param8) {
-                        statePc = 21;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 13. */
-                        {
-                            stackIn_22_0 = 0;
-                            stackIn_14_0 = stackIn_22_0;
-                            if (var15 != 0) {
-                                statePc = 22;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 14. */
-                                {
-                                    var12 = stackIn_14_0;
-                                    statePc = 15;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 15: {
-                    if (var9 <= var12) {
-                        statePc = 19;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 16. */
-                        {
-                            var10[6].pixels[var12 + (var9 - var11 + -1) * var9] = param6;
-                            var10[8].pixels[var12 + (-1 + -var11 + var9) * var9] = param6;
-                            var10[2].pixels[var12 * var9 + -var11 + var9 + -1] = param6;
-                            var10[8].pixels[-var11 - 1 - (-var9 - var9 * var12)] = param6;
-                            var12++;
-                            if (var15 != 0) {
-                                statePc = 20;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 17. */
-                                {
-                                    if (var15 == 0) {
-                                        statePc = 15;
-                                    } else {
-                                        statePc = 19;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 19: {
-                    var11++;
-                    statePc = 20;
-                    continue stateLoop;
-                }
-                case 20: {
-                    if (var15 == 0) {
-                        statePc = 12;
-                    } else {
-                        statePc = 21;
-                    }
-                    continue stateLoop;
-                }
-                case 21: {
-                    stackIn_22_0 = 0;
-                    statePc = 22;
-                    continue stateLoop;
-                }
-                case 22: {
-                    var11 = stackIn_22_0;
-                    statePc = 23;
-                    continue stateLoop;
-                }
-                case 23: {
-                    stackIn_24_0 = var11;
-                    stackIn_24_1 = param8;
-                    statePc = 24;
-                    continue stateLoop;
-                }
-                case 24: {
-                    if (stackIn_24_0 >= stackIn_24_1) {
-                        statePc = 33;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 25. */
-                        {
-                            stackIn_34_0 = 0;
-                            stackIn_26_0 = stackIn_34_0;
-                            if (var15 != 0) {
-                                statePc = 34;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 26. */
-                                {
-                                    var12 = stackIn_26_0;
-                                    statePc = 27;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 27: {
-                    if (var9 <= var12) {
-                        statePc = 32;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 28. */
-                        {
-                            var10[0].pixels[var12 - -(var11 * var9)] = param2;
-                            var10[0].pixels[var11 + var12 * var9] = param2;
-                            stackIn_24_0 = ~(-var11 + var9);
-                            stackIn_29_0 = stackIn_24_0;
-                            stackIn_24_1 = ~var12;
-                            stackIn_29_1 = stackIn_24_1;
-                            if (var15 != 0) {
-                                statePc = 24;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 29. */
-                                {
-                                    if (stackIn_29_0 >= stackIn_29_1) {
-                                        statePc = 31;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 30. */
-                                        {
-                                            var10[2].pixels[var9 * var11 + var12] = param2;
-                                            var10[6].pixels[var11 + var12 * var9] = param2;
-                                            statePc = 31;
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 31: {
-                    var12++;
-                    if (var15 == 0) {
-                        statePc = 27;
-                    } else {
-                        statePc = 32;
-                    }
-                    continue stateLoop;
-                }
-                case 32: {
-                    var11++;
-                    if (var15 == 0) {
-                        statePc = 23;
-                    } else {
-                        statePc = 33;
-                    }
-                    continue stateLoop;
-                }
-                case 33: {
-                    stackIn_34_0 = 0;
-                    statePc = 34;
-                    continue stateLoop;
-                }
-                case 34: {
-                    var11 = stackIn_34_0;
-                    statePc = 35;
-                    continue stateLoop;
-                }
-                case 35: {
-                    if (var11 >= param3) {
-                        statePc = 44;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 36. */
-                        {
-                            stackIn_45_0 = 0;
-                            stackIn_37_0 = stackIn_45_0;
-                            if (var15 != 0) {
-                                statePc = 45;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 37. */
-                                {
-                                    var12 = stackIn_37_0;
-                                    statePc = 38;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 38: {
-                    if (param8 <= var12) {
-                        statePc = 42;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 39. */
-                        {
-                            var10[7].pixels[param3 * (var9 - var12 - 1) + var11] = param6;
-                            var10[5].pixels[-1 + (var9 - var12 + var11 * var9)] = param6;
-                            var10[1].pixels[param3 * var12 - -var11] = param2;
-                            var10[3].pixels[var12 + var9 * var11] = param2;
-                            var12++;
-                            if (var15 != 0) {
-                                statePc = 43;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 40. */
-                                {
-                                    if (var15 == 0) {
-                                        statePc = 38;
-                                    } else {
-                                        statePc = 42;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 42: {
-                    var11++;
-                    statePc = 43;
-                    continue stateLoop;
-                }
-                case 43: {
-                    if (var15 == 0) {
-                        statePc = 35;
-                    } else {
-                        statePc = 44;
-                    }
-                    continue stateLoop;
-                }
-                case 44: {
-                    stackIn_45_0 = 0;
-                    statePc = 45;
-                    continue stateLoop;
-                }
-                case 45: {
-                    var11 = stackIn_45_0;
-                    statePc = 46;
-                    continue stateLoop;
-                }
-                case 46: {
-                    if (var11 >= param3 >> 362369793) {
-                        statePc = 55;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 47. */
-                        {
-                            stackIn_56_0 = 0;
-                            stackIn_48_0 = stackIn_56_0;
-                            if (var15 != 0) {
-                                statePc = 56;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 48. */
-                                {
-                                    var12 = stackIn_48_0;
-                                    statePc = 49;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 49: {
-                    if (param1 <= var12) {
-                        statePc = 53;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 50. */
-                        {
-                            var10[1].pixels[param3 * (-1 + (-var12 + var9)) - -var11] = param0;
-                            var10[3].pixels[-1 - -var9 + (-var12 + var9 * var11)] = param0;
-                            var10[7].pixels[var11 + param3 * var12] = param0;
-                            var10[5].pixels[var9 * var11 - -var12] = param0;
-                            var12++;
-                            if (var15 != 0) {
-                                statePc = 54;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 51. */
-                                {
-                                    if (var15 == 0) {
-                                        statePc = 49;
-                                    } else {
-                                        statePc = 53;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 53: {
-                    var11++;
-                    statePc = 54;
-                    continue stateLoop;
-                }
-                case 54: {
-                    if (var15 == 0) {
-                        statePc = 46;
-                    } else {
-                        statePc = 55;
-                    }
-                    continue stateLoop;
-                }
-                case 55: {
-                    stackIn_56_0 = param4;
-                    statePc = 56;
-                    continue stateLoop;
-                }
-                case 56: {
-                    if (stackIn_56_0 == 1) {
-                        statePc = 58;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 57. */
-                        {
-                            n.g(5);
-                            statePc = 58;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 58: {
-                    return var10;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            stackIn_11_0 = 0;
+          }
+          var11 = stackIn_11_0;
+          L6: while (true) {
+            L7: {
+              L8: {
+                if (var11 < param8) {
+                  stackIn_22_0 = 0;
+
+                  if (var15 != 0) {
+                    break L7;
+                  } else {
+                    var12 = stackIn_22_0;
+                    L9: while (true) {
+                      L10: {
+                        if (var9 > var12) {
+                          var10[6].pixels[var12 + (var9 - var11 + -1) * var9] = param6;
+                          var10[8].pixels[var12 + (-1 + -var11 + var9) * var9] = param6;
+                          var10[2].pixels[var12 * var9 + -var11 + var9 + -1] = param6;
+                          var10[8].pixels[-var11 - 1 - (-var9 - var9 * var12)] = param6;
+                          var12++;
+                          if (var15 != 0) {
+                            break L10;
+                          } else {
+                            if (var15 == 0) {
+                              continue L9;
+                            }
+                          }
+                        }
+                        var11++;
+                      }
+                      if (var15 == 0) {
+                        continue L6;
+                      } else {
+                        break L8;
+                      }
+                    }
+                  }
+                }
+              }
+              stackIn_22_0 = 0;
+            }
+            var11 = stackIn_22_0;
+            L12: while (true) {
+              stackIn_24_0 = var11;
+              stackIn_24_1 = param8;
+              L13: while (true) {
+                L14: {
+                  L15: {
+                    if (stackIn_24_0 < stackIn_24_1) {
+                      stackIn_34_0 = 0;
+
+                      if (var15 != 0) {
+                        break L14;
+                      } else {
+                        var12 = stackIn_34_0;
+                        L16: while (var9 > var12) {
+                          var10[0].pixels[var12 - -(var11 * var9)] = param2;
+                          var10[0].pixels[var11 + var12 * var9] = param2;
+                          stackIn_24_0 = ~(-var11 + var9);
+
+                          stackIn_24_1 = ~var12;
+
+                          if (var15 != 0) {
+                            continue L13;
+                          } else {
+                            if (stackIn_24_0 < stackIn_24_1) {
+                              var10[2].pixels[var9 * var11 + var12] = param2;
+                              var10[6].pixels[var11 + var12 * var9] = param2;
+                            }
+                            var12++;
+                            if (var15 == 0) {
+                              continue L16;
+                            }
+                          }
+                          break;
+                        }
+                        var11++;
+                        if (var15 == 0) {
+                          continue L12;
+                        } else {
+                          break L15;
+                        }
+                      }
+                    }
+                  }
+                  stackIn_34_0 = 0;
+                }
+                var11 = stackIn_34_0;
+                L19: while (true) {
+                  L20: {
+                    L21: {
+                      if (var11 < param3) {
+                        stackIn_45_0 = 0;
+
+                        if (var15 != 0) {
+                          break L20;
+                        } else {
+                          var12 = stackIn_45_0;
+                          L22: while (true) {
+                            L23: {
+                              if (param8 > var12) {
+                                var10[7].pixels[param3 * (var9 - var12 - 1) + var11] = param6;
+                                var10[5].pixels[-1 + (var9 - var12 + var11 * var9)] = param6;
+                                var10[1].pixels[param3 * var12 - -var11] = param2;
+                                var10[3].pixels[var12 + var9 * var11] = param2;
+                                var12++;
+                                if (var15 != 0) {
+                                  break L23;
+                                } else {
+                                  if (var15 == 0) {
+                                    continue L22;
+                                  }
+                                }
+                              }
+                              var11++;
+                            }
+                            if (var15 == 0) {
+                              continue L19;
+                            } else {
+                              break L21;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    stackIn_45_0 = 0;
+                  }
+                  var11 = stackIn_45_0;
+                  L25: while (true) {
+                    L26: {
+                      L27: {
+                        if (var11 < param3 >> 362369793) {
+                          stackIn_56_0 = 0;
+
+                          if (var15 != 0) {
+                            break L26;
+                          } else {
+                            var12 = stackIn_56_0;
+                            L28: while (true) {
+                              L29: {
+                                if (param1 > var12) {
+                                  var10[1].pixels[param3 * (-1 + (-var12 + var9)) - -var11] = param0;
+                                  var10[3].pixels[-1 - -var9 + (-var12 + var9 * var11)] = param0;
+                                  var10[7].pixels[var11 + param3 * var12] = param0;
+                                  var10[5].pixels[var9 * var11 - -var12] = param0;
+                                  var12++;
+                                  if (var15 != 0) {
+                                    break L29;
+                                  } else {
+                                    if (var15 == 0) {
+                                      continue L28;
+                                    }
+                                  }
+                                }
+                                var11++;
+                              }
+                              if (var15 == 0) {
+                                continue L25;
+                              } else {
+                                break L27;
+                              }
+                            }
+                          }
+                        }
+                      }
+                      stackIn_56_0 = param4;
+                    }
+                    if (stackIn_56_0 != 1) {
+                      n.g(5);
+                    }
+                    return var10;
+                  }
+                }
+              }
+            }
+          }
         }
     }
 

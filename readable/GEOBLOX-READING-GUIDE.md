@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 14
+# Reading GeoBlox pass 15
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -246,8 +246,10 @@ reproduction commands and native probe scope.
 
 There are 841 explicit rules: 18 classes, 346 fields, 136 method declarations,
 103 parameters and 238 guarded local declarations. This is not full
-deobfuscation. Two bounded decompiler dispatchers, unknown flags, guard arguments
-and opaque shared helpers still need investigation. All 642 names from pass 6
+deobfuscation. Unknown flags, guard arguments and opaque shared helpers still
+need investigation. Pass 15 removes the last two dispatchers while preserving
+the reviewed names; ten result-sequence local ordinals move without changing
+their spelling, type or evidence. All 642 names from pass 6
 remain. Pass 10 migrates thirteen board-reconciliation local ordinals after
 dispatcher-only carriers disappear, retaining their types, spelling guards and
 semantic evidence. Pass 11 removes six unused exception locals without changing
@@ -262,9 +264,9 @@ retains the exception table in large-method fallbacks. It refuses internal catch
 would restart setup. Gameplay update, rendering, scene transition and screen
 update use labeled loops; board reconciliation now does too, with its runtime
 catch intact. Total
-cases drop from 3,051 to 61. Two original methods retain dispatchers (27 and
-34 cases); none has at least 50 cases. The initializer preserves its runtime
-catch and original resource order through shared helper fields. Unknown builder
+cases drop from 3,051 to zero. Result-sequence update and nine-slice sprite
+construction now use labeled loops too; shared joins remain. The initializer
+preserves its runtime catch and original resource order through shared helper fields. Unknown builder
 prefixes across joins no longer disappear from diagnostic contexts. See [the investigation](STATE-MACHINE-READABILITY.md)
 for refusal reasons, verification and the next structural steps.
 
@@ -276,3 +278,14 @@ conditions. Tutorial checks now show `tutorialStepId == 5` instead of
 0, 128 and 160 directly. Numeric thresholds remain unchanged in meaning;
 no gameplay enum or new state name is inferred by this renderer change.
 See [the comparison report](COMPARISON-READABILITY.md) for exact pins and limits.
+
+## Result-sequence loops
+
+Pass 15 reconstructs `GameplaySession.updateResultSequence` as 167 lines of
+structured control flow instead of a 27-case dispatcher. Its entity pixel scan
+retains `maxRadiusSquared`, `spriteColumn`, `spriteRow`, pixel offsets and
+`pixelRadiusSquared`. The source still preserves nonzero client-guard paths;
+they are not silently treated as normal-play zero flags. The nine-slice helper
+`n.a` also loses its 34-case dispatcher. See the
+[parallel-loop report](PARALLEL-LOOP-READABILITY.md) for the copy hazards found,
+exact reproduction and the native test scope.

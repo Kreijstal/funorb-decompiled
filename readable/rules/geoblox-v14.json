@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "3c6a8e65d4796deb631ed67773b67ef92501cbd9",
+    "commit": "63115c1bcb703200f2caf4048d2e0b7671b6aeb8",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "6b638e579bfeb73adbb6583b0581f4d6df93c9ca5930816ea81bf1a48aa3f015",
+  "inputTreeSha256": "8d838235da30d2e3ab0bfd2e79bf11900ff49f7fa0008b3c81d4554fac3bd168",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -2892,62 +2892,62 @@
     },
     {
       "symbol": "L:gh.f(I)V#10",
-      "to": "pixelOffsetFromCenterX",
-      "originalName": "var8",
-      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
-    },
-    {
-      "symbol": "L:gh.f(I)V#11",
-      "to": "pixelOffsetFromCenterY",
-      "originalName": "var9",
-      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
-    },
-    {
-      "symbol": "L:gh.f(I)V#12",
-      "to": "pixelRadiusSquared",
-      "originalName": "var10",
-      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
-    },
-    {
-      "symbol": "L:gh.f(I)V#14",
-      "to": "endingEntity",
-      "originalName": "var12",
-      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
-    },
-    {
-      "symbol": "L:gh.f(I)V#4",
-      "to": "resultProgressPercent",
-      "originalName": "var2",
-      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
-    },
-    {
-      "symbol": "L:gh.f(I)V#5",
-      "to": "maxRadiusSquared",
-      "originalName": "var3",
-      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
-    },
-    {
-      "symbol": "L:gh.f(I)V#6",
       "to": "spriteOffsetFromCenterX",
       "originalName": "var4",
       "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
     },
     {
-      "symbol": "L:gh.f(I)V#7",
+      "symbol": "L:gh.f(I)V#11",
       "to": "spriteOffsetFromCenterY",
       "originalName": "var5",
       "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
     },
     {
-      "symbol": "L:gh.f(I)V#8",
+      "symbol": "L:gh.f(I)V#12",
       "to": "spriteColumn",
       "originalName": "var6",
       "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
     },
     {
-      "symbol": "L:gh.f(I)V#9",
+      "symbol": "L:gh.f(I)V#13",
       "to": "spriteRow",
       "originalName": "var7",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#14",
+      "to": "pixelOffsetFromCenterX",
+      "originalName": "var8",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#15",
+      "to": "pixelOffsetFromCenterY",
+      "originalName": "var9",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#16",
+      "to": "pixelRadiusSquared",
+      "originalName": "var10",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#18",
+      "to": "endingEntity",
+      "originalName": "var12",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#8",
+      "to": "resultProgressPercent",
+      "originalName": "var2",
+      "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
+    },
+    {
+      "symbol": "L:gh.f(I)V#9",
+      "to": "maxRadiusSquared",
+      "originalName": "var3",
       "evidence": "Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio."
     },
     {
@@ -5058,23 +5058,23 @@
     }
   ],
   "revision": 4,
-  "previousRulesSha256": "40c019b8100ded83f7659271ce8b54da99b5bfd99f9f5186e96fafbf7ff07d4e",
-  "version": 15,
+  "previousRulesSha256": "ec4c7da745f4033966797a7ab9c4c8b87d2b740e268a48da9e18acfb0c30577c",
+  "version": 14,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "e3268884ffc81e43bc60694439a297603b68a2e4",
+      "commit": "cee965649f1f2afaf1c7a3efd1fdb826231f3d30",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "98369c043d012743adb1924409bb754781722f4c2d6c7c7ab082cce5a82aeb20",
-        "reproduce": "git archive --format=tar e3268884ffc81e43bc60694439a297603b68a2e4 | sha256sum",
+        "sha256": "6b29811f82c01f461281f30e92945601f5056632fa8338afdd2106ad6f840bc7",
+        "reproduce": "git archive --format=tar cee965649f1f2afaf1c7a3efd1fdb826231f3d30 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
   },
   "upstreamNamingGeneratorCommit": "d41315508e071f6bd672d65eb2f5a8d428648d6f",
-  "namingMigrationSha256": "135141cf27a4787b6ee7489a77948a4c6b72af10e7e8f325b728eb5bcf1b6b8e"
+  "namingMigrationSha256": "e9eff0860193769e211b66dd11078c3979869371aee6fe3ebf714e220e9a18e5"
 }

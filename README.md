@@ -11,11 +11,11 @@ over the obfuscated gamepacks by the pipeline in
 
 ## Readable GeoBlox export
 
-[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 14 with
+[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 15 with
 841 reviewed naming rules for gameplay, tutorial flow, interface text and
 resource decoding. Confirmed names omit opaque suffixes; the dictionary
 preserves original identities. Both 303-file Java corpora compile and preserve
-all 154,256 recorded bindings and 388 override relationships. The raw
+all 154,109 recorded bindings and 388 override relationships. The raw
 decompilation remains under `games/`.
 
 The [reproduction and update procedure](readable/README.md),
@@ -24,8 +24,9 @@ The [reproduction and update procedure](readable/README.md),
 [symbol map](readable/geoblox/SYMBOLS.md) and
 [provenance](readable/geoblox/provenance.json) describe the export.
 `node readable/reproduce-geoblox.mjs --check` verifies deterministic regeneration
-from the pinned input and bundled tool. Two original dispatcher methods remain,
-with 61 cases total. Typed complement comparisons now show direct conditions;
+from the pinned input and bundled tool. All original dispatcher methods now use
+structured control flow; see the [parallel-loop report](readable/PARALLEL-LOOP-READABILITY.md).
+Typed complement comparisons show direct conditions;
 see the [comparison report](readable/COMPARISON-READABILITY.md). Unknown
 identifiers and shared joins remain; the [state-machine report](readable/STATE-MACHINE-READABILITY.md)
 records the earlier structural recovery work.

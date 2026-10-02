@@ -57,27 +57,34 @@ final class k implements Iterator {
     }
 
     public final Object next() {
-        IntrusiveNode var4 = null;
         int fieldTemp$0 = 0;
-        IntrusiveNode var3_ref = null;
-        int var2 = Geoblox.field_C;
-        if (this.field_d.field_a[this.field_j + -1] != this.field_h) {
-            var4 = this.field_h;
-            this.field_h = var4.nextNode;
-            this.field_c = var4;
-            return var4;
-        }
-        do {
-            if (this.field_j >= this.field_d.field_c) {
-                return null;
+        int var2;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
+        var2 = Geoblox.field_C;
+        if (this.field_d.field_a[this.field_j + -1] == this.field_h) {
+          L0: while (true) {
+            if (this.field_j < this.field_d.field_c) {
+              fieldTemp$0 = this.field_j;
+              this.field_j = this.field_j + 1;
+              var3 = this.field_d.field_a[fieldTemp$0].nextNode;
+              if (var3 == this.field_d.field_a[this.field_j - 1]) {
+                continue L0;
+              } else {
+                this.field_h = var3.nextNode;
+                this.field_c = var3;
+                return var3;
+              }
+            } else {
+              return null;
             }
-            fieldTemp$0 = this.field_j;
-            this.field_j = this.field_j + 1;
-            var3_ref = this.field_d.field_a[fieldTemp$0].nextNode;
-        } while (var3_ref == this.field_d.field_a[this.field_j - 1]);
-        this.field_h = var3_ref.nextNode;
-        this.field_c = var3_ref;
-        return var3_ref;
+          }
+        } else {
+          var4 = this.field_h;
+          this.field_h = var4.nextNode;
+          this.field_c = var4;
+          return var4;
+        }
     }
 
     public static void b(int param0) {
@@ -103,15 +110,15 @@ final class k implements Iterator {
     }
 
     public final boolean hasNext() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
         var2 = Geoblox.field_C;
         if (this.field_d.field_a[this.field_j - 1] == this.field_h) {
           L0: while (true) {
             if (this.field_d.field_c > this.field_j) {
-              fieldTemp$1 = this.field_j;
+              fieldTemp$0 = this.field_j;
               this.field_j = this.field_j + 1;
-              if (this.field_d.field_a[fieldTemp$1].nextNode != this.field_d.field_a[this.field_j - 1]) {
+              if (this.field_d.field_a[fieldTemp$0].nextNode != this.field_d.field_a[this.field_j - 1]) {
                 this.field_h = this.field_d.field_a[-1 + this.field_j].nextNode;
                 return true;
               } else {

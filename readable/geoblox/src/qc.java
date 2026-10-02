@@ -175,47 +175,56 @@ class qc extends IntrusiveNode {
 
     final int g(byte param0) {
         int fieldTemp$1 = 0;
+        int var2;
+        int var3;
         if (param0 >= -107) {
-            this.i((byte) -107);
+          this.i((byte) -107);
         }
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
-        int var2 = this.field_j[fieldTemp$0];
-        int var3 = 0;
-        while (var2 < 0) {
-            var3 = (127 & var2 | var3) << 921688295;
-            fieldTemp$1 = this.field_f;
-            this.field_f = this.field_f + 1;
-            var2 = this.field_j[fieldTemp$1];
+        var2 = this.field_j[fieldTemp$0];
+        var3 = 0;
+        L1: while (var2 < 0) {
+          var3 = (127 & var2 | var3) << 921688295;
+          fieldTemp$1 = this.field_f;
+          this.field_f = this.field_f + 1;
+          var2 = this.field_j[fieldTemp$1];
         }
         return var3 | var2;
     }
 
     final String f(int param0) {
         int fieldTemp$1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        rh var5;
         if (param0 != 27425) {
-            rh var5 = (rh) null;
-            qc.a(-4, 95, -17, (rh) null);
+          var5 = (rh) null;
+          qc.a(-4, 95, -17, (rh) null);
         }
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
-        int var2 = this.field_j[fieldTemp$0];
-        if (!(var2 == 0)) {
-            throw new IllegalStateException("");
-        }
-        int var3 = this.field_f;
-        while (true) {
+        var2 = this.field_j[fieldTemp$0];
+        if (var2 != 0) {
+          throw new IllegalStateException("");
+        } else {
+          var3 = this.field_f;
+          L1: while (true) {
             fieldTemp$1 = this.field_f;
             this.field_f = this.field_f + 1;
             if (this.field_j[fieldTemp$1] == 0) {
-                break;
+              var4 = -var3 + (this.field_f + -1);
+              if (var4 != 0) {
+                return bc.decodeTextSlice(param0 ^ -27439, this.field_j, var3, var4);
+              } else {
+                return "";
+              }
+            } else {
+              continue L1;
             }
+          }
         }
-        int var4 = -var3 + (this.field_f + -1);
-        if (var4 == 0) {
-            return "";
-        }
-        return bc.decodeTextSlice(param0 ^ -27439, this.field_j, var3, var4);
     }
 
     final void a(int param0, boolean param1) {
@@ -346,16 +355,16 @@ class qc extends IntrusiveNode {
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) {
-        int fieldTemp$2 = 0;
-        int var5_int = 0;
-        String var6 = null;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
         RuntimeException var5 = null;
+        String var6 = null;
         try {
           L0: {
             var5_int = param3;
@@ -364,9 +373,9 @@ class qc extends IntrusiveNode {
               this.a((String) null, 75);
             }
             L2: while (var5_int < param3 + param0) {
-              fieldTemp$2 = this.field_f;
+              fieldTemp$0 = this.field_f;
               this.field_f = this.field_f + 1;
-              this.field_j[fieldTemp$2] = param2[var5_int];
+              this.field_j[fieldTemp$0] = param2[var5_int];
               var5_int++;
             }
             break L0;
@@ -562,16 +571,16 @@ class qc extends IntrusiveNode {
     }
 
     final void b(int param0, int param1, byte[] param2, int param3) {
-        int fieldTemp$2 = 0;
-        int var5_int = 0;
-        mb var6 = null;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
         RuntimeException var5 = null;
+        mb var6 = null;
         try {
           L0: {
             var5_int = param3;
@@ -580,9 +589,9 @@ class qc extends IntrusiveNode {
               qc.a((mb) null, (mb) null, 35);
             }
             L2: while (param3 - -param1 > var5_int) {
-              fieldTemp$2 = this.field_f;
+              fieldTemp$0 = this.field_f;
               this.field_f = this.field_f + 1;
-              param2[var5_int] = this.field_j[fieldTemp$2];
+              param2[var5_int] = this.field_j[fieldTemp$0];
               var5_int++;
             }
             break L0;
@@ -902,13 +911,13 @@ class qc extends IntrusiveNode {
 
     final void a(byte param0, int param1) {
         int fieldTemp$0 = 0;
-        while (this.field_f < param1) {
-            fieldTemp$0 = this.field_f;
-            this.field_f = this.field_f + 1;
-            this.field_j[fieldTemp$0] = (byte) 0;
+        L0: while (this.field_f < param1) {
+          fieldTemp$0 = this.field_f;
+          this.field_f = this.field_f + 1;
+          this.field_j[fieldTemp$0] = (byte) 0;
         }
         if (param0 > -45) {
-            this.e(93);
+          this.e(93);
         }
     }
 
@@ -976,22 +985,26 @@ class qc extends IntrusiveNode {
 
     final String e(byte param0) {
         int fieldTemp$0 = 0;
-        int var2 = this.field_f;
-        while (true) {
-            fieldTemp$0 = this.field_f;
-            this.field_f = this.field_f + 1;
-            if (0 == this.field_j[fieldTemp$0]) {
-                break;
+        int var2;
+        int var3;
+        var2 = this.field_f;
+        L0: while (true) {
+          fieldTemp$0 = this.field_f;
+          this.field_f = this.field_f + 1;
+          if (0 == this.field_j[fieldTemp$0]) {
+            var3 = this.field_f + (-var2 + -1);
+            if (var3 != 0) {
+              if (param0 < 94) {
+                field_i = 68;
+              }
+              return bc.decodeTextSlice(-45, this.field_j, var2, var3);
+            } else {
+              return "";
             }
+          } else {
+            continue L0;
+          }
         }
-        int var3 = this.field_f + (-var2 + -1);
-        if (var3 == 0) {
-            return "";
-        }
-        if (param0 < 94) {
-            field_i = 68;
-        }
-        return bc.decodeTextSlice(-45, this.field_j, var2, var3);
     }
 
     final int h(int param0) {

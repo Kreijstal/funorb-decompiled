@@ -24,13 +24,13 @@ abstract class ji {
     abstract void h(int param0);
 
     final static void f(int param0) {
-        int fieldTemp$2 = 0;
-        pk var1 = null;
-        int var2 = 0;
-        int var3 = 0;
+        int fieldTemp$0 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        pk var1 = null;
         RuntimeException var1_ref = null;
+        int var2 = 0;
+        int var3 = 0;
         var3 = Geoblox.field_C;
         try {
           L0: {
@@ -38,9 +38,9 @@ abstract class ji {
               var1 = fj.field_q;
               L1: while (cf.c((byte) -114)) {
                 var1.a(8, (byte) -71);
-                fieldTemp$2 = var1.field_f + 1;
+                fieldTemp$0 = var1.field_f + 1;
                 var1.field_f = var1.field_f + 1;
-                var2 = fieldTemp$2;
+                var2 = fieldTemp$0;
                 pf.a(46, var1);
                 fj.field_q.f(11700, var1.field_f + -var2);
               }

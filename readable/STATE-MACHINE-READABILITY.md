@@ -1,5 +1,9 @@
 # GeoBlox reconstruction: safe exception exits and bounded structured helpers
 
+This report records an earlier pass. The current export is pass 15; see
+[parallel-loop readability](PARALLEL-LOOP-READABILITY.md) for the remaining
+dispatchers recovered and the current pins.
+
 Pass 9 kept explicit exception-region exit identities and refused unsafe
 continuations. Pass 10 recovers nested cycles inside the board-entity protected
 region with bounded, deterministic copies. `kc.reconcileBoardEntities` now uses

@@ -7,7 +7,8 @@ import {fileURLToPath} from 'node:url';
 
 const source = fs.readFileSync(new URL('../../games/geoblox/wi.java', import.meta.url), 'utf8');
 const historical = JSON.parse(fs.readFileSync(new URL('../rules/geoblox-v13-text.json', import.meta.url)));
-const migration = JSON.parse(fs.readFileSync(new URL('../rules/geoblox-v14-migration.json', import.meta.url)));
+const pin = JSON.parse(fs.readFileSync(new URL('../geoblox-source-pin.json', import.meta.url)));
+const migration = JSON.parse(fs.readFileSync(new URL('../' + pin.namingMigration, import.meta.url)));
 const manifest = {...historical, ...migration.textEvidence};
 const retained = JSON.parse(fs.readFileSync(new URL('../rules/geoblox-v12.json', import.meta.url))).renames;
 const check = change => {

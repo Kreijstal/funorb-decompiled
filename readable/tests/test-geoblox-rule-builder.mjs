@@ -19,7 +19,8 @@ function fixture(change) {
       'rules/geoblox-v10.json', 'rules/geoblox-v11-migration.json',
       'rules/geoblox-v11.json', 'rules/geoblox-v12-migration.json',
       'rules/geoblox-v12.json', 'rules/geoblox-v13-text.json', 'rules/geoblox-v13.json',
-      'rules/geoblox-v14-migration.json', 'tools/PIN.json']) {
+      'rules/geoblox-v14-migration.json', 'rules/geoblox-v14.json',
+      'rules/geoblox-v15-migration.json', 'tools/PIN.json']) {
       fs.mkdirSync(path.dirname(path.join(temporary, file)), {recursive: true});
       fs.copyFileSync(path.join(root, file), path.join(temporary, file));
     }
@@ -44,12 +45,12 @@ test('reviewed lineage reproduces all 841 guarded rules', () => {
 test('a replacement input digest alone cannot migrate the export', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.inputTreeSha256 = '0'.repeat(64);
-  })), /reviewed pass-14 migration/);
+  })), /reviewed pass-15 migration/);
 });
 test('a different decompiler revision requires a new reviewed migration', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.generators.javaTools.commit = '0'.repeat(40);
-  })), /reviewed pass-14 migration/);
+  })), /reviewed pass-15 migration/);
 });
 test('previous names and migration identities cannot change silently', () => {
   assert.throws(() => fixture(edit => edit('rules/geoblox-v6.json', data => {
@@ -147,8 +148,8 @@ test('pass 13 retains its historical source commit, old manifest and resource co
 });
 
 test('pass 14 guards its source commit and retains every local identity', () => {
-  assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
-    data.commit = '0'.repeat(40);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v14.json', data => {
+    data.source.commit = '0'.repeat(40);
   })), /reviewed pass-14 migration/);
   assert.throws(() => fixture(edit => edit('rules/geoblox-v14-migration.json', data => {
     data.review.namedLocalDeclarationIdentitiesUnchanged--;
@@ -165,4 +166,44 @@ test('pass 14 cannot rewrite historical names or borrow a resource identity', ()
   assert.throws(() => fixture(edit => edit('rules/geoblox-v14-migration.json', data => {
     data.textEvidence.resourceAssignments[0].resources[0].key = 'different';
   })), /changes reviewed resource identities/);
+});
+
+test('pass 15 binds the new source commit and retains the complete pass-14 snapshot', () => {
+  assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
+    data.commit = '0'.repeat(40);
+  })), /reviewed pass-15 migration/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v14.json', data => {
+    data.renames[0].to = 'ChangedHistoricalName';
+  })), /reviewed rule lineage/);
+});
+
+test('pass 15 local moves preserve spelling, method, semantic name and evidence', () => {
+  for (const change of [
+    move => { move.originalName = 'wrongLocal'; },
+    move => { move.to = 'L:gh.a(I)V#6'; },
+    move => { move.readableName = 'wrongRole'; },
+    move => { move.evidence = 'unreviewed'; },
+  ]) assert.throws(() => fixture(edit => edit('rules/geoblox-v15-migration.json', data => {
+    change(data.identityChanges[0]);
+  })), /reviewed pass-15 migration/);
+});
+
+test('pass 15 moves cannot collide or omit a reviewed type/identity count', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v15-migration.json', data => {
+    data.identityChanges[0].to = data.identityChanges[1].to;
+  })), /duplicate identities/);
+  for (const key of ['namedLocalTypesMatched', 'namedLocalDeclarationIdentitiesUnchanged',
+    'namedLocalDeclarationIdentitiesMoved'])
+    assert.throws(() => fixture(edit => edit('rules/geoblox-v15-migration.json', data => {
+      data.review[key]--;
+    })), /reviewed pass-15 migration/);
+});
+
+test('pass 15 cannot change the retained loader source or resource evidence', () => {
+  for (const change of [
+    evidence => { evidence.loaderSourceSha256 = '0'.repeat(64); },
+    evidence => { evidence.resourceAssignments[0].resources[0].key = 'different'; },
+  ]) assert.throws(() => fixture(edit => edit('rules/geoblox-v15-migration.json', data => {
+    change(data.textEvidence);
+  })), /changes reviewed resource identities or unchanged loader source/);
 });

@@ -57,13 +57,10 @@ final class va {
     }
 
     final static void a(int param0, byte[] param1, int param2, int[] param3, byte param4) {
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        byte dupTemp$6 = 0;
-        int dupTemp$7 = 0;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        byte dupTemp$2 = 0;
+        int dupTemp$3 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -73,7 +70,10 @@ final class va {
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
         RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
         var7 = Geoblox.field_C;
         try {
           L0: {
@@ -88,19 +88,19 @@ final class va {
                 param2 = ch.field_d[var5_int];
                 var6 = var5_int << -1588670812;
                 L3: while (true) {
-                  incrementValue$4 = param2;
+                  incrementValue$0 = param2;
                   param2--;
-                  if (0 == incrementValue$4) {
+                  if (0 == incrementValue$0) {
                     var5_int++;
                     continue L1;
                   } else {
-                    incrementValue$5 = var6;
+                    incrementValue$1 = var6;
                     var6++;
-                    param0 = pj.field_i[incrementValue$5];
-                    dupTemp$6 = param1[param0];
-                    dupTemp$7 = param3[dupTemp$6];
-                    param3[dupTemp$6] = dupTemp$7 + 1;
-                    pj.field_i[dupTemp$7] = param0;
+                    param0 = pj.field_i[incrementValue$1];
+                    dupTemp$2 = param1[param0];
+                    dupTemp$3 = param3[dupTemp$2];
+                    param3[dupTemp$2] = dupTemp$3 + 1;
+                    pj.field_i[dupTemp$3] = param0;
                     continue L3;
                   }
                 }

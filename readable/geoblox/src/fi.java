@@ -155,10 +155,10 @@ final class fi {
     }
 
     final IntrusiveNode b(int param0) {
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        IntrusiveNode var3;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         int var2;
+        IntrusiveNode var3;
         IntrusiveNode var4;
         IntrusiveNode var7;
         if (this.field_f > 0) {
@@ -172,9 +172,9 @@ final class fi {
                 var2 = 47 % ((param0 - 28) / 38);
                 return null;
               } else {
-                fieldTemp$3 = this.field_f;
+                fieldTemp$0 = this.field_f;
                 this.field_f = this.field_f + 1;
-                var4 = this.field_e[fieldTemp$3].nextNode;
+                var4 = this.field_e[fieldTemp$0].nextNode;
                 if (this.field_e[-1 + this.field_f] != var4) {
                   this.field_a = var4.nextNode;
                   return var4;
@@ -190,9 +190,9 @@ final class fi {
               var2 = 47 % ((param0 - 28) / 38);
               return null;
             } else {
-              fieldTemp$4 = this.field_f;
+              fieldTemp$1 = this.field_f;
               this.field_f = this.field_f + 1;
-              var3 = this.field_e[fieldTemp$4].nextNode;
+              var3 = this.field_e[fieldTemp$1].nextNode;
               if (this.field_e[-1 + this.field_f] != var3) {
                 this.field_a = var3.nextNode;
                 return var3;

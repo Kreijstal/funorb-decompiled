@@ -484,16 +484,16 @@ Generated from explicit rules; original names remain lookup identities.
 | `L:gh.b(B)V#2` | `precedingThemeId` | Scene transition searches the theme list, wraps to the preceding entry and uses that ID for the existing action dispatch. The reused index later holds the theme ID. |
 | `L:gh.b(B)V#3` | `themeIndexThenId` | Scene transition searches the theme list, wraps to the preceding entry and uses that ID for the existing action dispatch. The reused index later holds the theme ID. |
 | `L:gh.e(I)V#0` | `remainingThemeReleases` | Normal HUD computes releasesPerTheme minus releasedInCurrentTheme. |
-| `L:gh.f(I)V#10` | `spriteOffsetFromCenterX` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
-| `L:gh.f(I)V#11` | `spriteOffsetFromCenterY` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
-| `L:gh.f(I)V#12` | `spriteColumn` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
-| `L:gh.f(I)V#13` | `spriteRow` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
-| `L:gh.f(I)V#14` | `pixelOffsetFromCenterX` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
-| `L:gh.f(I)V#15` | `pixelOffsetFromCenterY` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
-| `L:gh.f(I)V#16` | `pixelRadiusSquared` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
-| `L:gh.f(I)V#18` | `endingEntity` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
-| `L:gh.f(I)V#8` | `resultProgressPercent` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
-| `L:gh.f(I)V#9` | `maxRadiusSquared` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
+| `L:gh.f(I)V#10` | `pixelOffsetFromCenterX` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
+| `L:gh.f(I)V#11` | `pixelOffsetFromCenterY` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
+| `L:gh.f(I)V#12` | `pixelRadiusSquared` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
+| `L:gh.f(I)V#14` | `endingEntity` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
+| `L:gh.f(I)V#4` | `resultProgressPercent` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
+| `L:gh.f(I)V#5` | `maxRadiusSquared` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
+| `L:gh.f(I)V#6` | `spriteOffsetFromCenterX` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
+| `L:gh.f(I)V#7` | `spriteOffsetFromCenterY` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
+| `L:gh.f(I)V#8` | `spriteColumn` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
+| `L:gh.f(I)V#9` | `spriteRow` | Result initialization scans nonzero sprite pixels relative to (320,240) to find radius; the later progress value is sceneAnimationTick*100/460 for audio. |
 | `L:gh.g(I)V#0` | `lineSpacing` | Font field_o-field_q plus the method argument; passed as text line spacing and used for prompt height. |
 | `L:gh.g(I)V#1` | `promptWidthThenButtonX` | Set to 460, used for prompt line measurement and rendering; later also a button text x position. |
 | `L:gh.g(I)V#2` | `promptHeight` | Thirty pixels plus measured line count times line spacing; used for the background height with ten pixels padding. |
