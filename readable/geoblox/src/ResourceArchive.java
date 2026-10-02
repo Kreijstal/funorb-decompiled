@@ -5,11 +5,11 @@ final class ResourceArchive {
     static String field_i;
     private Object[][] decodedFiles;
     static IntrusiveDeque field_a;
-    private bm index;
+    private ArchiveIndex index;
     private boolean discardPackedGroups;
     private Object[] packedGroups;
     static IntrusiveDeque field_d;
-    private nh archiveSource;
+    private ArchiveSource archiveSource;
     private int fileRetentionPolicy;
     static String createUsernameUnavailableText;
 
@@ -20,7 +20,7 @@ final class ResourceArchive {
         if (returnGuardConstant) {
             return 84;
         }
-        return this.index.field_k.length;
+        return this.index.fileSlotCounts.length;
     }
 
     final static void updateAttachedEntities(byte methodGuard) {
@@ -83,15 +83,15 @@ final class ResourceArchive {
         if (methodGuard != -9467) {
             ResourceArchive.b(91);
         }
-        return this.index.field_k[groupId];
+        return this.index.fileSlotCounts[groupId];
     }
 
     private final synchronized void loadPackedGroup(int groupId, int methodGuard) {
         boolean unusedWrongGuardGroupValidation = false;
         if (!this.discardPackedGroups) {
-            this.packedGroups[groupId] = IntrusiveNode.a(-105, this.archiveSource.b(4, groupId), false);
+            this.packedGroups[groupId] = IntrusiveNode.a(-105, this.archiveSource.getPackedGroup(4, groupId), false);
         } else {
-            this.packedGroups[groupId] = this.archiveSource.b(4, groupId);
+            this.packedGroups[groupId] = this.archiveSource.getPackedGroup(4, groupId);
         }
         if (methodGuard >= -103) {
             unusedWrongGuardGroupValidation = this.isValidGroupId(((int[]) (this.packedGroups[5]))[9], 37);
@@ -122,7 +122,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.field_n.a(true, ab.hashEncodedText(94, groupNameCharacters));
+          groupId = this.index.groupNameLookup.findIndex(true, ab.hashEncodedText(94, groupNameCharacters));
           if (groupId >= 0) {
             return true;
           }
@@ -151,8 +151,8 @@ final class ResourceArchive {
           return false;
         }
         allGroupsLoaded = initialSuccess ? 1 : 0;
-        L0: for (groupListIndex = 0; this.index.field_i.length > groupListIndex; groupListIndex++) {
-          groupId = this.index.field_i[groupListIndex];
+        L0: for (groupListIndex = 0; this.index.groupIds.length > groupListIndex; groupListIndex++) {
+          groupId = this.index.groupIds[groupListIndex];
           if (this.packedGroups[groupId] != null) {
             continue L0;
           }
@@ -172,7 +172,7 @@ final class ResourceArchive {
         if (!(this.ensureIndexLoaded(0))) {
             return false;
         }
-        if (0 > groupId || fileId < 0 || this.index.field_k.length <= groupId || this.index.field_k[groupId] <= fileId) {
+        if (0 > groupId || fileId < 0 || this.index.fileSlotCounts.length <= groupId || this.index.fileSlotCounts[groupId] <= fileId) {
             if (!vf.field_K) {
                 return false;
             }
@@ -202,7 +202,7 @@ final class ResourceArchive {
           }
           fileName = fileName.toLowerCase();
           fileNameCharacters = (CharSequence) ((Object) fileName);
-          fileId = this.index.field_f[groupId].a(true, ab.hashEncodedText(99, fileNameCharacters));
+          fileId = this.index.fileNameLookups[groupId].findIndex(true, ab.hashEncodedText(99, fileNameCharacters));
           if (this.isValidFileId(fileId, -1, groupId)) {
             fileIdBeforeReturn = fileId;
             return fileIdBeforeReturn;
@@ -230,12 +230,12 @@ final class ResourceArchive {
         if (this.index != null) {
             return true;
         }
-        this.index = this.archiveSource.a((byte) 113);
+        this.index = this.archiveSource.getIndex((byte) 113);
         if (this.index == null) {
             return false;
         }
-        this.packedGroups = new Object[this.index.field_b];
-        this.decodedFiles = new Object[this.index.field_b][];
+        this.packedGroups = new Object[this.index.groupSlotCount];
+        this.decodedFiles = new Object[this.index.groupSlotCount][];
         return true;
     }
 
@@ -256,7 +256,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.field_n.a(true, ab.hashEncodedText(84, groupNameCharacters));
+          groupId = this.index.groupNameLookup.findIndex(true, ab.hashEncodedText(84, groupNameCharacters));
           groupProgressBeforeReturn = this.getGroupProgress((byte) 85, groupId);
           return groupProgressBeforeReturn;
         } catch (java.lang.RuntimeException progressFailure) {
@@ -280,7 +280,7 @@ final class ResourceArchive {
         if (methodGuard != 3) {
             createUsernameUnavailableText = (String) null;
         }
-        if (groupId >= 0 && groupId < this.index.field_k.length && this.index.field_k[groupId] != 0) {
+        if (groupId >= 0 && groupId < this.index.fileSlotCounts.length && this.index.fileSlotCounts[groupId] != 0) {
             return true;
         }
         if (vf.field_K) {
@@ -303,7 +303,7 @@ final class ResourceArchive {
         if (!this.ensureIndexLoaded(0)) {
             return null;
         }
-        if (!(this.index.field_k.length != 1)) {
+        if (!(this.index.fileSlotCounts.length != 1)) {
             return this.getFile(0, methodGuard - 56472, id);
         }
         if (methodGuard != 28319) {
@@ -312,7 +312,7 @@ final class ResourceArchive {
         if (!this.isValidGroupId(id, 3)) {
             return null;
         }
-        if (!(this.index.field_k[id] != 1)) {
+        if (!(this.index.fileSlotCounts[id] != 1)) {
             return this.getFile(id, methodGuard ^ -872, 0);
         }
         throw new RuntimeException();
@@ -390,12 +390,12 @@ final class ResourceArchive {
             return false;
           }
           {
-            actualFileCount = this.index.field_a[groupId];
-            mappedFileIds = this.index.field_o[groupId];
+            actualFileCount = this.index.fileCounts[groupId];
+            mappedFileIds = this.index.fileIds[groupId];
             fileIdsForEntryScan = mappedFileIds;
             fileIds = fileIdsForEntryScan;
             if (null == this.decodedFiles[groupId]) {
-              newGroupFileSlots = new Object[this.index.field_k[groupId]];
+              newGroupFileSlots = new Object[this.index.fileSlotCounts[groupId]];
               this.decodedFiles[groupId] = newGroupFileSlots;
             }
             groupFileSlots = this.decodedFiles[groupId];
@@ -455,7 +455,7 @@ final class ResourceArchive {
               } else {
                 keySuppliedForDiagnostic = true;
               }
-              throw t.a((Throwable) ((Object) decompressionFailureBeforeContext), ((StringBuilder) (Object) decompressionMessagePrefix).append(keySuppliedForDiagnostic).append(" ").append(groupId).append(" ").append(packedBytes.length).append(" ").append(gg.a(packedBytes, methodGuard + 95, packedBytes.length)).append(" ").append(gg.a(packedBytes, methodGuard ^ 73, packedBytes.length - 2)).append(" ").append(this.index.field_q[groupId]).append(" ").append(this.index.field_m).toString());
+              throw t.a((Throwable) ((Object) decompressionFailureBeforeContext), ((StringBuilder) (Object) decompressionMessagePrefix).append(keySuppliedForDiagnostic).append(" ").append(groupId).append(" ").append(packedBytes.length).append(" ").append(gg.computePrefixCrc32(packedBytes, methodGuard + 95, packedBytes.length)).append(" ").append(gg.computePrefixCrc32(packedBytes, methodGuard ^ 73, packedBytes.length - 2)).append(" ").append(this.index.groupCrc32[groupId]).append(" ").append(this.index.indexCrc32).toString());
             }
             if (this.discardPackedGroups) {
               this.packedGroups[groupId] = null;
@@ -660,7 +660,7 @@ final class ResourceArchive {
           if (fileBytesOrFailureForContext != null) {
             if (this.fileRetentionPolicy == 1) {
               this.decodedFiles[groupId][fileId] = null;
-              if (this.index.field_k[groupId] == 1) {
+              if (this.index.fileSlotCounts[groupId] == 1) {
                 this.decodedFiles[groupId] = null;
               }
             } else {
@@ -703,7 +703,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.field_n.a(true, ab.hashEncodedText(124, groupNameCharacters));
+          groupId = this.index.groupNameLookup.findIndex(true, ab.hashEncodedText(124, groupNameCharacters));
           if (!this.isValidGroupId(groupId, 3)) {
             invalidGroupIdBeforeReturn = -1;
             return invalidGroupIdBeforeReturn;
@@ -745,7 +745,7 @@ final class ResourceArchive {
             createUsernameUnavailableText = (String) null;
           }
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.field_n.a(true, ab.hashEncodedText(69, groupNameCharacters));
+          groupId = this.index.groupNameLookup.findIndex(true, ab.hashEncodedText(69, groupNameCharacters));
           groupLoadedBeforeReturn = this.loadGroupIfNeeded((byte) 102, groupId);
           return groupLoadedBeforeReturn;
         } catch (java.lang.RuntimeException groupFailure) {
@@ -777,7 +777,7 @@ final class ResourceArchive {
         possibleProgress = 0;
         loadedProgress = 0;
         L0: for (groupIndexThenPercentage = 0; this.packedGroups.length > groupIndexThenPercentage; groupIndexThenPercentage++) {
-          if (this.index.field_a[groupIndexThenPercentage] <= 0) {
+          if (this.index.fileCounts[groupIndexThenPercentage] <= 0) {
             continue L0;
           }
           loadedProgress = loadedProgress + this.getGroupProgress((byte) 59, groupIndexThenPercentage);
@@ -811,12 +811,12 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.field_n.a(true, ab.hashEncodedText(80, groupNameCharacters));
+          groupId = this.index.groupNameLookup.findIndex(true, ab.hashEncodedText(80, groupNameCharacters));
           if (!this.isValidGroupId(groupId, 3)) {
             return false;
           }
           fileNameCharacters = (CharSequence) ((Object) fileName);
-          fileId = this.index.field_f[groupId].a(true, ab.hashEncodedText(93, fileNameCharacters));
+          fileId = this.index.fileNameLookups[groupId].findIndex(true, ab.hashEncodedText(93, fileNameCharacters));
           if (methodGuard == 113) {
             fileAvailabilityBeforeReturn = this.isFileAvailable((byte) 37, groupId, fileId);
             return fileAvailabilityBeforeReturn;
@@ -843,7 +843,7 @@ final class ResourceArchive {
         }
     }
 
-    ResourceArchive(nh archiveSource, boolean discardPackedGroups, int fileRetentionPolicy) {
+    ResourceArchive(ArchiveSource archiveSource, boolean discardPackedGroups, int fileRetentionPolicy) {
         this.index = null;
         try {
             if (0 > fileRetentionPolicy || 2 < fileRetentionPolicy) {
@@ -879,12 +879,12 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
           groupNameCharacters = (CharSequence) ((Object) groupName);
-          groupId = this.index.field_n.a(true, ab.hashEncodedText(54, groupNameCharacters));
+          groupId = this.index.groupNameLookup.findIndex(true, ab.hashEncodedText(54, groupNameCharacters));
           if (!this.isValidGroupId(groupId, 3)) {
             return null;
           }
           fileNameCharacters = (CharSequence) ((Object) fileName);
-          fileId = this.index.field_f[groupId].a(true, ab.hashEncodedText(43, fileNameCharacters));
+          fileId = this.index.fileNameLookups[groupId].findIndex(true, ab.hashEncodedText(43, fileNameCharacters));
           fileBytesBeforeReturn = this.getFile(groupId, -28153, fileId);
           return fileBytesBeforeReturn;
         } catch (java.lang.RuntimeException fileFailure) {
@@ -918,7 +918,7 @@ final class ResourceArchive {
         if (methodGuard <= 31) {
             unusedWrongGuardGroupValidation = this.isValidGroupId(-88, ((int[]) (((Object[]) (this.packedGroups[0]))[2]))[7]);
         }
-        return this.archiveSource.a(126, groupId);
+        return this.archiveSource.getGroupProgress(126, groupId);
     }
 
     final static long a(CharSequence param0, int param1) {

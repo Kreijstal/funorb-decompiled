@@ -801,7 +801,7 @@ class el extends IntrusiveNode {
             if (param0) {
                 field_p = (IntrusiveDeque) null;
             }
-            nh.a(param4, param3, 0, param2, param1.bytes, param1.position, true);
+            ArchiveSource.a(param4, param3, 0, param2, param1.bytes, param1.position, true);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "el.WB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

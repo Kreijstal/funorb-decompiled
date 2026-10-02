@@ -183,7 +183,7 @@ class ac extends ff {
               if (param1) {
                 continue L7;
               }
-              am.unachievedSprite.drawQuarterSize(var3_int, var4);
+              IntKeyLookup.unachievedSprite.drawQuarterSize(var3_int, var4);
             } else {
               sl.achievementSprites[var10].drawQuarterSize(var3_int, var4);
             }
@@ -222,7 +222,7 @@ class ac extends ff {
                 var12 += 30;
                 dd.uiPaletteFont.drawText(kd.achievedText, 318, var12, 0, -1);
               } else {
-                am.unachievedSprite.draw(160, var12);
+                IntKeyLookup.unachievedSprite.draw(160, var12);
                 var12 += 30;
                 dd.uiPaletteFont.colorPalettes[0][wf.field_p] = 15488514;
                 dd.uiPaletteFont.drawText(ib.field_d, 318, var12, 0, -1);

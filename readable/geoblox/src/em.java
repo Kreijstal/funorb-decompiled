@@ -198,7 +198,7 @@ final class em {
           throw new RuntimeException();
         }
         {
-          var15 = SpriteState.a(-var13.length + var10.position - 5, 5, var10.bytes, 8);
+          var15 = SpriteState.computeWhirlpoolDigest(-var13.length + var10.position - 5, 5, var10.bytes, 8);
           for (var7 = 0; var7 < 64; var7++) {
             if (var15[var7] != var5[1 + var7]) {
               throw new RuntimeException();
@@ -275,7 +275,7 @@ final class em {
           }
           if (param0 != null) {
             if (param0.length() >= wg.field_m) {
-              if (param0.length() > bm.field_j) {
+              if (param0.length() > ArchiveIndex.field_j) {
                 return true;
               }
               return false;

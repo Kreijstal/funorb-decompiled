@@ -19,20 +19,24 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 228 guarded identities for `ResourceArchive`:
-all instance fields/APIs, constructor contracts and selected locals. Named paths
-cover lazy index/group loading, sparse file/name lookup, progress, keyed group
-unpacking and cache retention. Original monitors, guards, byte order, aliases,
-chunk tables, partial effects and diagnostic contexts remain.
+The current naming pass adds 136 guarded identities for `ArchiveIndex`,
+`IntKeyLookup`, `ArchiveSource`, matching provider contracts and checksum/digest
+helpers. Metadata now distinguishes sparse slots, actual counts, revisions,
+CRCs, optional Whirlpool digests and name hashes. Original format branches,
+probing, guards, aliasing, request ordering and diagnostic contexts remain.
 
-The 5,084 rules apply 43,242 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 4,856 previous complete rules
+The 5,220 rules apply 44,016 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 5,084 previous complete rules
 and raw source/decompiler pins are unchanged. Binding checks, reproduction and
 byte-exact reversal support the names. Existing native text fixtures retain
-their decoder/nested null-archive failure scope without new archive execution
-coverage. Archive metadata/providers/compression helpers, full assets/gameplay
-and device performance remain unfinished or unverified. One manifest holds
-current evidence, with Git for history.
+their decoder/failure-context scope without new metadata/lookup/digest/provider
+execution coverage. Private provider/storage/compression helpers, static names,
+full assets/gameplay and device performance remain unfinished or unverified.
+One manifest holds current evidence, with Git for history.
+
+Pass 66 named `ResourceArchive` instance fields/APIs, constructor contracts and
+locals, exposing index/group loading, file/name lookup, unpacking, progress and
+retention. Original monitors, byte order, chunk tables and partial effects remain.
 
 Pass 65 named `PrefixCodeDecoder`, its decode tree/shared decoder and compressed
 text reader. Its fixed source has no tree/shared-decoder initialization; names

@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 5,084 guarded naming rules: 42 classes, 624 fields,
-463 methods, 1,409 parameters and 2,546 local declarations. Both 303-file corpora
+The current export has 5,220 guarded naming rules: 45 classes, 641 fields,
+473 methods, 1,434 parameters and 2,627 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,36 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current resource archive names
+## Current archive-index, lookup and source contracts
+
+Pass 67 adds 136 guarded identities: three classes, seventeen fields,
+ten methods, 25 parameters and 81 locals. `ArchiveIndex`, `IntKeyLookup` and
+`ArchiveSource` expose metadata, integer-key lookup and provider contracts.
+Every index/lookup instance field/API/constructor parameter/local has a name;
+all three source APIs and matching `bj` overrides have named parameters/locals.
+Private provider fields/helpers and unrelated static helpers retain their
+previous identities.
+
+Metadata distinguishes actual group/file counts from sparse slot capacities,
+index/group revisions, packed-byte CRCs, optional 64-byte Whirlpool digests and
+name hashes. Formats 5..7 preserve their width branches and delta-ID arithmetic.
+Contiguous file-ID lists still become null. Integer lookup keeps interleaved
+key/index storage, linear probing, first matching duplicate and key -1 support.
+`computePrefixCrc32` and `computeWhirlpoolDigest` expose validation helpers;
+the digest's bitsPerByte argument normally supplies 8, with int multiplication
+before widening to long. Source contracts retain request retries, disk-only
+expected-revision checks, writes, unlinking and original guards.
+
+All 5,084 previous complete rules and source/generator pins stay unchanged.
+The 5,220 rules apply 44,016 identifier edits; both 303-file corpora compile,
+preserving 138,558 bindings and 388 overrides. Reproduction and dictionary
+reversal are byte-exact. Existing native text fixtures retain their prior
+byte/slice/guard/nested-failure scope without new index/lookup/digest/provider
+execution coverage. Private provider/storage/compression helpers, static shared
+names, actual assets/server traffic, complete gameplay and phone/FPS/heap
+behavior remain unfinished or unverified.
+
+## Previous resource archive names
 
 Pass 66 adds 228 guarded identities: one class, six fields, 22 methods,
 53 parameters and 146 locals. `ResourceArchive` names the instance role of `rh`.
@@ -1037,7 +1066,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 228 additions in
+naming-only pass retains those source pins and records its 136 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -1062,6 +1091,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `31a6288c4c9bfd4ec10c5e8ec37b0be91b103e56b7dab7acc1c5e8278c519c23` |
+| Readable | `8499dc7b63bf17733ecf91feac9079017b39453c54ff46628bc8e0024da356cd` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

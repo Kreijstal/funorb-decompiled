@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 5,084 explicit guarded rules: 42 classes, 624 fields, 463 method
-declarations, 1,409 parameters and 2,546 locals. This is not full deobfuscation.
+There are 5,220 explicit guarded rules: 45 classes, 641 fields, 473 method
+declarations, 1,434 parameters and 2,627 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -1886,3 +1886,86 @@ its decoder and nested null-archive diagnostic scope; it does not execute group
 unpacking, source concurrency, storage wrappers or real assets. Archive-index,
 provider and compression helpers, static shared names, full gameplay and device
 performance remain unfinished or unverified.
+
+## Archive metadata and integer lookup (pass 67)
+
+`ArchiveIndex` names `bm` for its instance metadata role. Shared static UI,
+transform and packet helpers remain on that owner. Its constructor receives
+packedIndexBytes, expectedCrc32 and optional expectedWhirlpoolDigest. It computes
+and stores CRC before comparing; a supplied digest must have 64 bytes and is
+then computed/stored/compared in ascending byte order. Only then does it parse
+the compressed metadata with guard 119. Invalid inputs retain their original
+partial field assignments and literal constructor diagnostics.
+
+| Metadata | Meaning |
+| --- | --- |
+| groupCount / groupIds | Actual listed groups and delta-reconstructed IDs |
+| groupSlotCount | Maximum group ID plus 1, including sparse holes |
+| fileCounts / fileIds | Actual listed files and optional sparse ID lists |
+| fileSlotCounts | Per-group maximum file ID plus 1, including holes |
+| indexRevision / groupRevisions | Index and per-group revision words |
+| indexCrc32 / groupCrc32 | Packed index and per-group payload checksums |
+| indexWhirlpoolDigest / groupWhirlpoolDigests | Computed index digest and optional per-group 64-byte digests |
+| groupNameHashes / fileNameHashes | Optional name hashes indexed by sparse IDs, with -1 holes |
+| groupNameLookup / fileNameLookups | Integer-key tables mapping hashes back to slot IDs |
+
+`decodeIndex(methodGuard, packedIndexBytes)` decompresses, accepts format 5..7,
+reads revision 0 for format 5 or BE32 for 6/7, then reads flags. Bit 0 enables
+name hashes; bit 1 enables group digests. Other bits remain unchecked. Formats
+5/6 use unsigned BE16 counts and ID deltas; format 7 uses short-or-int. Metadata
+arrays allocate in the original order. File-ID lists become null when the
+actual count equals maximum ID+1, leaving ordinal IDs implicit. Wrong guard
+below 109 retains the recursive null-input call after digests and before group
+revisions. Integer overflow, partial arrays and repeated-parse behavior remain.
+
+`IntKeyLookup` names `am` for its instance integer-key mapping. `keyIndexPairs`
+stores keys in even positions and original input indices in odd positions.
+The constructor grows a power-of-two bucket count strictly beyond
+keys.length+(keys.length>>1), fills every position with -1, then inserts keys
+in input order using linear probing. Lookup tests the index position for an
+empty bucket, so key -1 is valid. Duplicate keys return the first matching
+inserted entry. The table retains key/index values rather than the input array;
+source-read order and sizing overflow are unchanged.
+
+`findIndex(preserveUnachievedSprite, key)` starts at key&bucketMask, returns -1
+at an empty index, matches the key or advances (bucket+1)&bucketMask. False
+first clears the existing unachievedSprite global. Other static archive
+creation/raster/UI helpers remain on the same owner with their previous names.
+The complete sparse name-hash arrays, including -1 holes, still feed this table.
+
+`ArchiveSource` names `nh` for its abstract provider role. All three contracts
+match `bj` overrides and keep their existing guards:
+
+| Source API | Existing provider behavior |
+| --- | --- |
+| getIndex(methodGuard) | Return cached metadata or poll an index request; validate, retry and optionally persist bytes |
+| getPackedGroup(methodGuard, groupId) | Obtain a group request, read its bytes and unlink it before wrong-guard background work |
+| getGroupProgress(methodGuard, groupId) | Query the request cache before guard checking; return request progress or 0, with guard <125 returning -119 |
+
+Disk index requests compare indexRevision to the expected revision after
+constructor CRC/digest validation. Network index requests retain CRC/digest
+validation and their original retry/reset and queued disk-write paths; this
+method adds no expected-revision comparison to that branch. Incomplete requests
+return null. Clearing the completed request and allocating group-state storage
+retain their original order. Private provider fields/requests/helpers remain
+opaque pending the next pass.
+
+`gg.computePrefixCrc32(bytes, methodGuard, length)` delegates to the existing
+CRC helper at start position 0; guard below 56 retains recursive null-input
+behavior. `SpriteState.computeWhirlpoolDigest(length, sourceOffset, source, bitsPerByte)`
+uses the existing hash instance with reset 52 and a 64-byte result. Positive
+offsets first copy length bytes; offset <=0 uses the original source. A nonzero
+client guard preserves the original early-copy/alias branches. The bit count
+is (long)(bitsPerByte*length), with signed int multiplication before widening.
+The ordinary caller supplies 8. No overflow fix, bounds validation or new
+alias policy is introduced; partial effects and literal gg.C/wh.MA contexts
+remain.
+
+Every index/lookup instance declaration and constructor contract, selected hash
+helper parameter/local, and source/override API parameter/local has a guarded
+name. All previous complete rules and source/generator pins remain. Compilation,
+binding checks, reproduction and reversal support this pass. Existing native
+text fixtures retain their decoder/guard/nested-failure scope without new
+metadata/lookup/hash/provider execution. Private provider/storage/compression
+helpers, static shared names, real assets/server traffic, complete gameplay and
+device performance remain unfinished or unverified.

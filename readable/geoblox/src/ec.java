@@ -20,7 +20,7 @@ final class ec {
           var3 = 57 % ((param0 - 57) / 46);
           var5 = (ai) ((Object) nf.field_j.firstForIteration(0));
           L0: while (var5 != null) {
-            bm.a(var5, param1, -127);
+            ArchiveIndex.a(var5, param1, -127);
             var5 = (ai) ((Object) nf.field_j.nextForIteration(1));
           }
           var6 = (mg) ((Object) ResourceArchive.field_d.firstForIteration(0));

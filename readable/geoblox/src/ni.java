@@ -53,16 +53,16 @@ final class ni extends ee implements pl {
           var3 = var10.readUnsignedByte((byte) 34);
           var10.beginBitAccess(param1 + 8);
           l.field_i = jc.a(var10, true);
-          bm.field_l = new nf[var3];
+          ArchiveIndex.field_l = new nf[var3];
           pi.field_R = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
-            bm.field_l[var4] = uh.a(var8, (byte) 113);
+            ArchiveIndex.field_l[var4] = uh.a(var8, (byte) 113);
           }
           var10.endBitAccess(-16989);
           var9 = 0;
           var4 = var9;
           L1: while (var3 > var9) {
-            var5 = bm.field_l[var9];
+            var5 = ArchiveIndex.field_l[var9];
             var5.a(6, 1, (byte) 89, 6, 6);
             var5.a((byte) -99);
             var6 = new int[]{var5.field_Q + var5.field_I >> 1, var5.field_H + var5.field_s >> 1, var5.field_N + var5.field_F >> 1};

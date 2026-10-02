@@ -54,7 +54,7 @@ final class bk {
         gj.field_u = var3 & 127;
         stackIn_3_0 = !((param1 & var3) == 0);
         vd.field_l = stackIn_3_0;
-        bm.field_s = var8.readUnsignedByte((byte) 34);
+        ArchiveIndex.field_s = var8.readUnsignedByte((byte) 34);
         uf.field_c = var8.readLongBE(2901);
         if (gj.field_u != 2) {
           uk.field_o = 0;

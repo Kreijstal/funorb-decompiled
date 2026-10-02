@@ -218,7 +218,7 @@ public final class Geoblox extends wf {
             }
             qh.introGeometryFrames = wj.loadSpriteFrames("intro_geoms", "", ll.gameGraphicsArchive, 0);
             sl.achievementSprites = wj.loadSpriteFrames("achievements", "", ll.gameGraphicsArchive, 0);
-            am.unachievedSprite = ug.loadSprite("unachieved", ki.basicUiGraphicsArchive, (byte) -78, "basic");
+            IntKeyLookup.unachievedSprite = ug.loadSprite("unachieved", ki.basicUiGraphicsArchive, (byte) -78, "basic");
             ug.loadSprite("locked", ki.basicUiGraphicsArchive, (byte) -78, "basic");
             uk.orbCoinSprite = ug.loadSprite("orbcoin", ki.basicUiGraphicsArchive, (byte) -78, "basic");
             GameScreen.selectedThemeId = 1;
@@ -386,9 +386,9 @@ public final class Geoblox extends wf {
         tj.a(param0 + 154);
         ud.a(0);
         da.a(50);
-        bm.a(114);
+        ArchiveIndex.a(114);
         fe.c(-127);
-        nh.a(true);
+        ArchiveSource.a(true);
         eh.a(-6910);
         ld.a(true);
         fa.a(30970);
@@ -458,7 +458,7 @@ public final class Geoblox extends wf {
         tc.a(true);
         mi.b(false);
         vg.a(true);
-        am.a((byte) 49);
+        IntKeyLookup.a((byte) 49);
         oj.a(-87);
         tb.a();
         eg.b(false);
@@ -1056,7 +1056,7 @@ public final class Geoblox extends wf {
           var4 = 1;
           var5 = 1;
         }
-        lk.field_f = bm.a(var2 * var4, param0, var5 * var2);
+        lk.field_f = ArchiveIndex.a(var2 * var4, param0, var5 * var2);
     }
 
     private final void initializeScreens(int param0) {

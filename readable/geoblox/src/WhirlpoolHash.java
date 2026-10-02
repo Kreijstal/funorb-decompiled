@@ -312,7 +312,7 @@ final class WhirlpoolHash {
               if (2 == qh.field_J) {
                 li.field_a = new BufferedSocket((java.net.Socket) (gj.field_s.result), ph.field_i);
                 var3 = new ByteArrayBuffer(13);
-                ke.a(pc.field_C, true, hc.field_T, bm.field_u, var3);
+                ke.a(pc.field_C, true, hc.field_T, ArchiveIndex.field_u, var3);
                 var3.writeByte((byte) -54, 15);
                 var3.writeIntBE((byte) 95, ag.field_l);
                 li.field_a.enqueueWrite(100, 0, 13, var3.bytes);

@@ -421,7 +421,7 @@ abstract class wf extends ch {
               L22: {
                 tj.c((byte) -105);
                 ke.b((byte) 120);
-                oi.field_e = nh.loadingText;
+                oi.field_e = ArchiveSource.loadingText;
                 kf.field_e = false;
                 fj.a((byte) 114, hb.field_n, rb.field_c, dc.field_c, l.field_h);
                 if (!ri.field_a) {

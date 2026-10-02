@@ -133,7 +133,7 @@ final class vd {
             this.field_g = null;
         }
         this.field_o = tj.field_b;
-        this.field_c = bm.field_s;
+        this.field_c = ArchiveIndex.field_s;
     }
 
     static {

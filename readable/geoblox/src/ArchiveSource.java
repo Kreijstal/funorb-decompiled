@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nh {
+abstract class ArchiveSource {
     static String loadingText;
     static char[] field_b;
     static vg field_a;
 
-    abstract int a(int param0, int param1);
+    abstract int getGroupProgress(int methodGuard, int groupId);
 
     public static void a(boolean param0) {
         if (!param0) {
             byte[] var2 = (byte[]) null;
-            nh.a((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (ByteArrayBuffer) null, (byte[]) null, -60, false);
+            ArchiveSource.a((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (ByteArrayBuffer) null, (byte[]) null, -60, false);
         }
         field_b = null;
         field_a = null;
         loadingText = null;
     }
 
-    abstract bm a(byte param0);
+    abstract ArchiveIndex getIndex(byte methodGuard);
 
-    abstract byte[] b(int param0, int param1);
+    abstract byte[] getPackedGroup(int methodGuard, int groupId);
 
     final static void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2, ByteArrayBuffer param3, byte[] param4, int param5, boolean param6) {
         RuntimeException stackIn_23_0 = null;

@@ -31,7 +31,7 @@ final class rj {
         if (param1 >= -13) {
             return (ResourceArchive) null;
         }
-        return am.a(-90, param0, param3, param4, param2, false);
+        return IntKeyLookup.a(-90, param0, param3, param4, param2, false);
     }
 
     final static boolean a(byte param0, ResourceArchive param1) {

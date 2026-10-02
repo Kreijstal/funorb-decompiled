@@ -146,7 +146,7 @@ final class qh extends ee implements pe, pl, ta {
         uh dupTemp$1 = new uh(10000536);
         this.field_N.field_q = (dh) ((Object) dupTemp$1);
         this.field_M.field_q = (dh) ((Object) dupTemp$1);
-        String var2 = wj.a(bm.createAgreeTermsText, new String[]{this.b(false), this.c(false)}, (byte) -72);
+        String var2 = wj.a(ArchiveIndex.createAgreeTermsText, new String[]{this.b(false), this.c(false)}, (byte) -72);
         int var3 = 20;
         var3 = var3 + this.a(var3, ug.createEmailText, 170, this.field_I, 5);
         var3 = var3 + (5 + this.a(this.field_G, 170, ok.createEmailConfirmationText, 20, "", var3, (byte) -65));

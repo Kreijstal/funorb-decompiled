@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bj extends nh {
+final class bj extends ArchiveSource {
     private fi field_g;
     static boolean field_s;
     private int field_h;
@@ -15,7 +15,7 @@ final class bj extends nh {
     static IndexedSprite jewelsBackgroundSprite;
     private byte[] field_k;
     private byte[] field_x;
-    private bm field_u;
+    private ArchiveIndex field_u;
     private jh field_e;
     private int field_o;
     private boolean field_v;
@@ -25,17 +25,17 @@ final class bj extends nh {
     private boolean field_w;
     private long field_n;
 
-    final bm a(byte param0) {
-        RuntimeException decompiledCaughtException = null;
-        byte[] var2 = null;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        byte[] var5 = null;
-        byte[] var6 = null;
-        byte[] var7 = null;
-        byte[] var8 = null;
-        byte[] var9 = null;
-        var4 = Geoblox.field_C;
+    final ArchiveIndex getIndex(byte methodGuard) {
+        RuntimeException caughtIndexFailure = null;
+        byte[] indexBytesForValidation = null;
+        RuntimeException indexFailureForRetry = null;
+        int unusedClientGuardSnapshot = 0;
+        byte[] indexBytesForNullCheck = null;
+        byte[] indexBytesFromRequest = null;
+        byte[] indexBytesBeforeValidation = null;
+        byte[] indexBytesAfterRequest = null;
+        byte[] indexBytesForDiskValidation = null;
+        unusedClientGuardSnapshot = Geoblox.field_C;
         if (null != this.field_u) {
           return this.field_u;
         }
@@ -45,31 +45,31 @@ final class bj extends nh {
           }
           this.field_l = (pb) ((Object) this.field_f.a((byte) 0, 255, -21, this.field_p, true));
         }
-        if (param0 <= 111) {
+        if (methodGuard <= 111) {
           this.b((byte) 65);
         }
         if (this.field_l.field_u) {
           return null;
         }
         {
-          var8 = this.field_l.e(397);
-          var6 = var8;
-          var5 = var6;
-          var9 = var5;
-          var7 = var9;
-          var2 = var7;
+          indexBytesAfterRequest = this.field_l.e(397);
+          indexBytesFromRequest = indexBytesAfterRequest;
+          indexBytesForNullCheck = indexBytesFromRequest;
+          indexBytesForDiskValidation = indexBytesForNullCheck;
+          indexBytesBeforeValidation = indexBytesForDiskValidation;
+          indexBytesForValidation = indexBytesBeforeValidation;
           if (this.field_l instanceof o) {
             try {
-              if (var2 == null) {
+              if (indexBytesForValidation == null) {
                 throw new RuntimeException();
               }
-              this.field_u = new bm(var9, this.field_m, this.field_x);
-              if (this.field_u.field_g != this.field_h) {
+              this.field_u = new ArchiveIndex(indexBytesForDiskValidation, this.field_m, this.field_x);
+              if (this.field_u.indexRevision != this.field_h) {
                 throw new RuntimeException();
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = decompiledCaughtException;
+            } catch (java.lang.RuntimeException diskIndexFailure) {
+              caughtIndexFailure = diskIndexFailure;
+              indexFailureForRetry = caughtIndexFailure;
               this.field_u = null;
               if (!this.field_f.g(20)) {
                 this.field_l = (pb) ((Object) this.field_f.a((byte) 0, 255, -21, this.field_p, true));
@@ -80,13 +80,13 @@ final class bj extends nh {
             }
           } else {
             try {
-              if (var5 == null) {
+              if (indexBytesForNullCheck == null) {
                 throw new RuntimeException();
               }
-              this.field_u = new bm(var8, this.field_m, this.field_x);
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var3 = decompiledCaughtException;
+              this.field_u = new ArchiveIndex(indexBytesAfterRequest, this.field_m, this.field_x);
+            } catch (java.lang.RuntimeException networkIndexFailure) {
+              caughtIndexFailure = networkIndexFailure;
+              indexFailureForRetry = caughtIndexFailure;
               this.field_f.e(20);
               this.field_u = null;
               if (this.field_f.g(20)) {
@@ -97,12 +97,12 @@ final class bj extends nh {
               return null;
             }
             if (null != this.field_y) {
-              this.field_i.a((byte) 88, this.field_p, this.field_y, var8);
+              this.field_i.a((byte) 88, this.field_p, this.field_y, indexBytesAfterRequest);
             }
           }
           this.field_l = null;
           if (this.field_e != null) {
-            this.field_k = new byte[this.field_u.field_b];
+            this.field_k = new byte[this.field_u.groupSlotCount];
           }
           return this.field_u;
         }
@@ -197,15 +197,15 @@ final class bj extends nh {
                   WhirlpoolHash.field_f.reset();
                   WhirlpoolHash.field_f.update(var5, 0, var18.length - 2);
                   var6_int = (int)WhirlpoolHash.field_f.getValue();
-                  if (var6_int != this.field_u.field_q[param2]) {
+                  if (var6_int != this.field_u.groupCrc32[param2]) {
                     throw new RuntimeException();
                   }
                   {
                     L12: {
-                      if (this.field_u.field_r != null) {
-                        if (null != this.field_u.field_r[param2]) {
-                          var27 = this.field_u.field_r[param2];
-                          var28 = SpriteState.a(-2 + var18.length, 0, var18, 8);
+                      if (this.field_u.groupWhirlpoolDigests != null) {
+                        if (null != this.field_u.groupWhirlpoolDigests[param2]) {
+                          var27 = this.field_u.groupWhirlpoolDigests[param2];
+                          var28 = SpriteState.computeWhirlpoolDigest(-2 + var18.length, 0, var18, 8);
                           for (var9 = 0; var9 < 64; var9++) {
                             if (~var27[var9] != ~var28[var9]) {
                               throw new RuntimeException();
@@ -216,7 +216,7 @@ final class bj extends nh {
                       }
                     }
                     var7 = (var5[-2 + var18.length] << 8 & 65280) + (var5[var18.length - 1] & 255);
-                    if ((65535 & this.field_u.field_t[param2]) != var7) {
+                    if ((65535 & this.field_u.groupRevisions[param2]) != var7) {
                       throw new RuntimeException();
                     }
                     if (this.field_k[param2] != 1) {
@@ -256,14 +256,14 @@ final class bj extends nh {
                   WhirlpoolHash.field_f.reset();
                   WhirlpoolHash.field_f.update(var5, 0, var18.length - 2);
                   var6_int = (int)WhirlpoolHash.field_f.getValue();
-                  if (var6_int != this.field_u.field_q[param2]) {
+                  if (var6_int != this.field_u.groupCrc32[param2]) {
                     throw new RuntimeException();
                   }
                   L6: {
-                    if (null != this.field_u.field_r) {
-                      if (null != this.field_u.field_r[param2]) {
-                        var30 = this.field_u.field_r[param2];
-                        var29 = SpriteState.a(-2 + var18.length, 0, var18, 8);
+                    if (null != this.field_u.groupWhirlpoolDigests) {
+                      if (null != this.field_u.groupWhirlpoolDigests[param2]) {
+                        var30 = this.field_u.groupWhirlpoolDigests[param2];
+                        var29 = SpriteState.computeWhirlpoolDigest(-2 + var18.length, 0, var18, 8);
                         var11 = 0;
                         var9 = var11;
                         L7: while (var11 < 64) {
@@ -296,8 +296,8 @@ final class bj extends nh {
             }
             return null;
           }
-          var5[var18.length - 2] = (byte)(this.field_u.field_t[param2] >>> 8);
-          var5[-1 + var18.length] = (byte)this.field_u.field_t[param2];
+          var5[var18.length - 2] = (byte)(this.field_u.groupRevisions[param2] >>> 8);
+          var5[-1 + var18.length] = (byte)this.field_u.groupRevisions[param2];
           if (null != this.field_e) {
             this.field_i.a((byte) 66, param2, this.field_e, var18);
             stackIn_85_0 = ~this.field_k[param2];
@@ -352,26 +352,26 @@ final class bj extends nh {
         }
     }
 
-    final byte[] b(int param0, int param1) {
-        pb var3 = this.a((byte) -71, 0, param1);
-        if (var3 == null) {
+    final byte[] getPackedGroup(int methodGuard, int groupId) {
+        pb groupRequest = this.a((byte) -71, 0, groupId);
+        if (groupRequest == null) {
             return null;
         }
-        byte[] var4 = var3.e(397);
-        var3.unlinkNode(false);
-        if (param0 != 4) {
+        byte[] packedBytes = groupRequest.e(397);
+        groupRequest.unlinkNode(false);
+        if (methodGuard != 4) {
             this.b(49);
         }
-        return var4;
+        return packedBytes;
     }
 
-    final int a(int param0, int param1) {
-        pb var3 = (pb) ((Object) this.field_g.a((long)param1, (byte) -102));
-        if (param0 < 125) {
+    final int getGroupProgress(int methodGuard, int groupId) {
+        pb groupRequest = (pb) ((Object) this.field_g.a((long)groupId, (byte) -102));
+        if (methodGuard < 125) {
             return -119;
         }
-        if (var3 != null) {
-            return var3.g(0);
+        if (groupRequest != null) {
+            return groupRequest.g(0);
         }
         return 0;
     }
@@ -408,7 +408,7 @@ final class bj extends nh {
         if (!(this.field_d != null)) {
             return;
         }
-        if (!(null != this.a((byte) 126))) {
+        if (!(null != this.getIndex((byte) 126))) {
             return;
         }
         IntrusiveNode var2 = this.field_t.firstForIteration(0);
@@ -417,10 +417,10 @@ final class bj extends nh {
             if (var3 < 0) {
                 var2.unlinkNode(false);
             } else {
-                if (var3 >= this.field_u.field_b) {
+                if (var3 >= this.field_u.groupSlotCount) {
                     var2.unlinkNode(false);
                 } else {
-                    if (this.field_u.field_a[var3] == 0) {
+                    if (this.field_u.fileCounts[var3] == 0) {
                         var2.unlinkNode(false);
                     } else {
                         if (this.field_k[var3] == 0) {
@@ -457,7 +457,7 @@ final class bj extends nh {
               L3: {
                 var5 = Geoblox.field_C;
                 if (this.field_d != null) {
-                  if (null == this.a((byte) 118)) {
+                  if (null == this.getIndex((byte) 118)) {
                     return;
                   }
                   if (this.field_q) {
@@ -475,8 +475,8 @@ final class bj extends nh {
                       }
                       var3 = this.field_d.nextForIteration(1);
                     }
-                    L5: while (this.field_o < this.field_u.field_a.length) {
-                      if (0 == this.field_u.field_a[this.field_o]) {
+                    L5: while (this.field_o < this.field_u.fileCounts.length) {
+                      if (0 == this.field_u.fileCounts[this.field_o]) {
                         this.field_o = this.field_o + 1;
                         continue L5;
                       }
@@ -520,8 +520,8 @@ final class bj extends nh {
                     }
                     L12: while (true) {
                       L13: {
-                        if (this.field_o < this.field_u.field_a.length) {
-                          if (this.field_u.field_a[this.field_o] != 0) {
+                        if (this.field_o < this.field_u.fileCounts.length) {
+                          if (this.field_u.fileCounts[this.field_o] != 0) {
                             if (this.field_f.b(-21)) {
                               var2_int = 0;
                               break L13;
@@ -546,7 +546,7 @@ final class bj extends nh {
                         break L3;
                       }
                       if (param0 != -38) {
-                        this.b(25, 41);
+                        this.getPackedGroup(25, 41);
                       }
                       if (!this.field_w) {
                         break L0;
@@ -577,7 +577,7 @@ final class bj extends nh {
                 }
               }
               if (param0 != -38) {
-                this.b(25, 41);
+                this.getPackedGroup(25, 41);
               }
               if (!this.field_w) {
                 break L0;

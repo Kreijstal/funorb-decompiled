@@ -322,7 +322,7 @@ final class kk extends ji {
         if (param1 != -62) {
             kk.i(118);
         }
-        return am.a(param1 - 10, param0, false, 1, true, false);
+        return IntKeyLookup.a(param1 - 10, param0, false, 1, true, false);
     }
 
     public kk() {

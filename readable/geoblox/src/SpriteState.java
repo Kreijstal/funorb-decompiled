@@ -387,62 +387,62 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final static byte[] a(int param0, int param1, byte[] param2, int param3) {
-        byte[] var4 = null;
-        RuntimeException var4_ref = null;
-        int var5_int = 0;
-        WhirlpoolHash var5 = null;
-        byte[] var6 = null;
-        int var7 = 0;
-        byte[] stackIn_11_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = Geoblox.field_C;
+    final static byte[] computeWhirlpoolDigest(int length, int sourceOffset, byte[] source, int bitsPerByte) {
+        byte[] digestInput = null;
+        RuntimeException digestFailureForContext = null;
+        int copiedByteIndex = 0;
+        WhirlpoolHash hash = null;
+        byte[] digest = null;
+        int clientControlFlowGuard = 0;
+        byte[] digestBeforeReturn = null;
+        RuntimeException digestFailureBeforeContext = null;
+        StringBuilder digestMessagePrefix = null;
+        String sourceDescription = null;
+        RuntimeException caughtDigestFailure = null;
+        clientControlFlowGuard = Geoblox.field_C;
         try {
           L0: {
             L1: {
-              if (param1 > 0) {
-                var4 = new byte[param0];
-                var5_int = 0;
-                L2: while (~param0 < ~var5_int) {
-                  var4[var5_int] = param2[param1 + var5_int];
-                  var5_int++;
-                  if (var7 != 0) {
+              if (sourceOffset > 0) {
+                digestInput = new byte[length];
+                copiedByteIndex = 0;
+                L2: while (~length < ~copiedByteIndex) {
+                  digestInput[copiedByteIndex] = source[sourceOffset + copiedByteIndex];
+                  copiedByteIndex++;
+                  if (clientControlFlowGuard != 0) {
                     break L0;
                   }
-                  if (var7 == 0) {
+                  if (clientControlFlowGuard == 0) {
                     continue L2;
                   }
                   break;
                 }
-                if (var7 == 0) {
+                if (clientControlFlowGuard == 0) {
                   break L0;
                 }
                 break L1;
               }
             }
-            var4 = param2;
+            digestInput = source;
           }
-          var5 = new WhirlpoolHash();
-          var5.reset(52);
-          var5.updateBits(var4, (long)(param3 * param0), 0);
-          var6 = new byte[64];
-          var5.finishDigest(var6, 0, true);
-          stackIn_11_0 = (byte[]) (var6);
-          return stackIn_11_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_15_0 = (RuntimeException) (var4_ref);
-          stackIn_15_1 = new StringBuilder().append("wh.MA(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_16_2 = "null";
+          hash = new WhirlpoolHash();
+          hash.reset(52);
+          hash.updateBits(digestInput, (long)(bitsPerByte * length), 0);
+          digest = new byte[64];
+          hash.finishDigest(digest, 0, true);
+          digestBeforeReturn = (byte[]) (digest);
+          return digestBeforeReturn;
+        } catch (java.lang.RuntimeException digestFailure) {
+          caughtDigestFailure = digestFailure;
+          digestFailureForContext = caughtDigestFailure;
+          digestFailureBeforeContext = (RuntimeException) (digestFailureForContext);
+          digestMessagePrefix = new StringBuilder().append("wh.MA(").append(length).append(',').append(sourceOffset).append(',');
+          if (source == null) {
+            sourceDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            sourceDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) digestFailureBeforeContext), ((StringBuilder) (Object) digestMessagePrefix).append(sourceDescription).append(',').append(bitsPerByte).append(')').toString());
         }
     }
 

@@ -386,8 +386,8 @@ final class lc {
             }
           }
           {
-            if (nh.field_a == null) {
-              nh.field_a = new vg(128);
+            if (ArchiveSource.field_a == null) {
+              ArchiveSource.field_a = new vg(128);
               mg.field_g = 0;
             }
             var3 = var1.readNullTerminatedText((byte) 108);
@@ -400,12 +400,12 @@ final class lc {
             if (null == var6_ref) {
               var6_ref = jg.a((byte) -62, var5_ref);
               if (null != var6_ref) {
-                nh.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_String), 12).hashCode(), -63, var6_ref);
+                ArchiveSource.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_String), 12).hashCode(), -63, var6_ref);
               }
             }
             if (null == var6_ref) {
               var6_ref = new j();
-              nh.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_String), param0 ^ 100).hashCode(), 110, var6_ref);
+              ArchiveSource.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_String), param0 ^ 100).hashCode(), 110, var6_ref);
               fieldTemp$1 = mg.field_g;
               mg.field_g = mg.field_g + 1;
               var6_ref.field_kb = fieldTemp$1;

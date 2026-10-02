@@ -78,7 +78,7 @@ abstract class TextInputValidator extends ib implements ga {
     final static void a(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5, String param6, int param7, int param8) {
         try {
             ag.field_l = param7;
-            bm.field_u = param3;
+            ArchiveIndex.field_u = param3;
             GameplaySession.field_z = param6;
             hc.field_T = param0;
             pc.field_C = param1;

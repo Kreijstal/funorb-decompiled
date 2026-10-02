@@ -24,32 +24,32 @@ final class gg {
         return true;
     }
 
-    final static int a(byte[] param0, int param1, int param2) {
-        RuntimeException var3 = null;
-        byte[] var4 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int computePrefixCrc32(byte[] bytes, int methodGuard, int length) {
+        RuntimeException checksumFailureForContext = null;
+        byte[] unusedNullBytesSnapshot = null;
+        int checksumBeforeReturn = 0;
+        RuntimeException checksumFailureBeforeContext = null;
+        StringBuilder checksumMessagePrefix = null;
+        String bytesDescription = null;
+        RuntimeException caughtChecksumFailure = null;
         try {
-          if (param1 < 56) {
-            var4 = (byte[]) null;
-            gg.a((byte[]) null, -123, -57);
+          if (methodGuard < 56) {
+            unusedNullBytesSnapshot = (byte[]) null;
+            gg.computePrefixCrc32((byte[]) null, -123, -57);
           }
-          stackIn_3_0 = oe.computeCrc32(param2, param0, -40, 0);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var3);
-          stackIn_6_1 = new StringBuilder().append("gg.C(");
-          if (param0 == null) {
-            stackIn_7_2 = "null";
+          checksumBeforeReturn = oe.computeCrc32(length, bytes, -40, 0);
+          return checksumBeforeReturn;
+        } catch (java.lang.RuntimeException checksumFailure) {
+          caughtChecksumFailure = checksumFailure;
+          checksumFailureForContext = caughtChecksumFailure;
+          checksumFailureBeforeContext = (RuntimeException) (checksumFailureForContext);
+          checksumMessagePrefix = new StringBuilder().append("gg.C(");
+          if (bytes == null) {
+            bytesDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            bytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) checksumFailureBeforeContext), ((StringBuilder) (Object) checksumMessagePrefix).append(bytesDescription).append(',').append(methodGuard).append(',').append(length).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ final class gg {
             return;
         }
         byte[] var2 = (byte[]) null;
-        gg.a((byte[]) null, 124, 46);
+        gg.computePrefixCrc32((byte[]) null, 124, 46);
         createRepeatedPasswordAlertText = null;
         createNameLengthAlertText = null;
         createPasswordContainsPartialNameAlertText = null;

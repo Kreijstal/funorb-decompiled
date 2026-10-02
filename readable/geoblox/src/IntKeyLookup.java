@@ -3,39 +3,39 @@
  */
 import java.io.*;
 
-final class am {
+final class IntKeyLookup {
     static Sprite unachievedSprite;
     static ck field_d;
-    private int[] field_c;
+    private int[] keyIndexPairs;
     static int[] field_a;
 
     public static void a(byte param0) {
         unachievedSprite = null;
         field_d = null;
         if (param0 != 49) {
-            am.a((byte) 72);
+            IntKeyLookup.a((byte) 72);
         }
         field_a = null;
     }
 
-    final int a(boolean param0, int param1) {
-        int var3;
-        int var4;
-        int var5;
-        if (!param0) {
+    final int findIndex(boolean preserveUnachievedSprite, int key) {
+        int bucketMask;
+        int bucket;
+        int storedIndex;
+        if (!preserveUnachievedSprite) {
           unachievedSprite = (Sprite) null;
         }
-        var3 = (this.field_c.length >> 1) - 1;
-        var4 = var3 & param1;
+        bucketMask = (this.keyIndexPairs.length >> 1) - 1;
+        bucket = bucketMask & key;
         L1: while (true) {
-          var5 = this.field_c[1 + var4 + var4];
-          if (-1 == var5) {
+          storedIndex = this.keyIndexPairs[1 + bucket + bucket];
+          if (-1 == storedIndex) {
             return -1;
           }
-          if (this.field_c[var4 + var4] == param1) {
-            return var5;
+          if (this.keyIndexPairs[bucket + bucket] == key) {
+            return storedIndex;
           }
-          var4 = var4 + 1 & var3;
+          bucket = bucket + 1 & bucketMask;
           continue L1;
         }
     }
@@ -88,42 +88,42 @@ final class am {
         }
     }
 
-    am(int[] param0) {
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
+    IntKeyLookup(int[] keys) {
+        int bucketCount = 0;
+        int arraySlotThenKeyIndex = 0;
+        int bucket = 0;
+        RuntimeException constructionFailureBeforeContext = null;
+        StringBuilder constructionMessagePrefix = null;
+        String keysDescription = null;
+        RuntimeException caughtConstructionFailure = null;
+        RuntimeException constructionFailureForContext = null;
         try {
-          var2_int = 1;
-          L0: while (param0.length + (param0.length >> 1) >= var2_int) {
-            var2_int = var2_int << 1;
+          bucketCount = 1;
+          L0: while (keys.length + (keys.length >> 1) >= bucketCount) {
+            bucketCount = bucketCount << 1;
           }
-          this.field_c = new int[var2_int + var2_int];
-          for (var3 = 0; var3 < var2_int + var2_int; var3++) {
-            this.field_c[var3] = -1;
+          this.keyIndexPairs = new int[bucketCount + bucketCount];
+          for (arraySlotThenKeyIndex = 0; arraySlotThenKeyIndex < bucketCount + bucketCount; arraySlotThenKeyIndex++) {
+            this.keyIndexPairs[arraySlotThenKeyIndex] = -1;
           }
-          for (var3 = 0; var3 < param0.length; var3++) {
-            for (var4 = param0[var3] & var2_int - 1; this.field_c[var4 + var4 + 1] != -1; var4 = var4 + 1 & -1 + var2_int) {
+          for (arraySlotThenKeyIndex = 0; arraySlotThenKeyIndex < keys.length; arraySlotThenKeyIndex++) {
+            for (bucket = keys[arraySlotThenKeyIndex] & bucketCount - 1; this.keyIndexPairs[bucket + bucket + 1] != -1; bucket = bucket + 1 & -1 + bucketCount) {
             }
-            this.field_c[var4 + var4] = param0[var3];
-            this.field_c[1 + var4 + var4] = var3;
+            this.keyIndexPairs[bucket + bucket] = keys[arraySlotThenKeyIndex];
+            this.keyIndexPairs[1 + bucket + bucket] = arraySlotThenKeyIndex;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_16_0 = (RuntimeException) (var2);
-          stackIn_16_1 = new StringBuilder().append("am.<init>(");
-          if (param0 == null) {
-            stackIn_17_2 = "null";
+        } catch (java.lang.RuntimeException constructionFailure) {
+          caughtConstructionFailure = constructionFailure;
+          constructionFailureForContext = caughtConstructionFailure;
+          constructionFailureBeforeContext = (RuntimeException) (constructionFailureForContext);
+          constructionMessagePrefix = new StringBuilder().append("am.<init>(");
+          if (keys == null) {
+            keysDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            keysDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw t.a((Throwable) ((Object) constructionFailureBeforeContext), ((StringBuilder) (Object) constructionMessagePrefix).append(keysDescription).append(')').toString());
         }
     }
 

@@ -804,7 +804,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "loading");
                 if (null != textResourceBytes) {
-                  nh.loadingText = ag.decodeTextBytes(1, textResourceBytes);
+                  ArchiveSource.loadingText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "offline");
                 if (null != textResourceBytes) {
@@ -1598,7 +1598,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_agreeterms");
                 if (null != textResourceBytes) {
-                  bm.createAgreeTermsText = ag.decodeTextBytes(1, textResourceBytes);
+                  ArchiveIndex.createAgreeTermsText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_u13terms");
                 if (null != textResourceBytes) {
