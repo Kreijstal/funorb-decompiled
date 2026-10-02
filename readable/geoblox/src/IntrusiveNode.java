@@ -108,149 +108,149 @@ class IntrusiveNode {
         this.nextNode = null;
     }
 
-    final static void a(boolean param0, byte[] param1) {
-        byte dupTemp$1 = 0;
-        byte dupTemp$0 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_29_1 = 0;
-        int stackIn_44_0 = 0;
-        int stackIn_45_1 = 0;
-        RuntimeException stackIn_51_0 = null;
-        StringBuilder stackIn_51_1 = null;
-        String stackIn_52_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        byte[] var8 = null;
-        byte[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        qc var15 = null;
-        qc var16 = null;
-        byte[] var17 = null;
-        byte[] var18 = null;
-        byte[] var19 = null;
-        byte[] var20 = null;
+    final static void decodeSpriteSheet(boolean readGuard, byte[] spriteBytes) {
+        byte rowMajorAlphaByte = 0;
+        byte columnMajorAlphaByte = 0;
+        int rowMajorOpacityFlagBeforeMerge = 0;
+        int rowMajorNonOpaqueFlag = 0;
+        int columnMajorOpacityFlagBeforeMerge = 0;
+        int columnMajorNonOpaqueFlag = 0;
+        RuntimeException decodeFailureBeforeDescription = null;
+        StringBuilder decodeMessagePrefix = null;
+        String spriteBytesDescription = null;
+        RuntimeException caughtDecodeFailure = null;
+        RuntimeException decodeFailureForContext = null;
+        int paletteSize = 0;
+        int spriteIndex = 0;
+        int spriteWidth = 0;
+        int spriteHeight = 0;
+        int pixelCount = 0;
+        byte[] paletteIndicesForUpdates = null;
+        byte[] alphaPlaneForUpdates = null;
+        int hasNonOpaqueAlphaFlag = 0;
+        int storageFlags = 0;
+        int pixelIndexOrColumn = 0;
+        int alphaByteOrRow = 0;
+        int columnAlphaValue = 0;
+        qc spriteDataBuffer = null;
+        qc spriteDataBufferAlias = null;
+        byte[] paletteIndicesForwarded = null;
+        byte[] alphaPlaneForwarded = null;
+        byte[] allocatedPaletteIndices = null;
+        byte[] allocatedAlphaPlane = null;
         try {
-          var15 = new qc(param1);
-          var16 = var15;
-          var16.field_f = param1.length - 2;
-          sb.field_a = var16.b(param0);
-          DualLinkNode.field_j = new int[sb.field_a];
-          hl.field_K = new int[sb.field_a];
-          ng.field_E = new boolean[sb.field_a];
-          vf.field_E = new byte[sb.field_a][];
-          GameplaySession.field_m = new int[sb.field_a];
-          mj.field_a = new byte[sb.field_a][];
-          md.field_e = new int[sb.field_a];
-          var16.field_f = -7 + param1.length - sb.field_a * 8;
-          pg.field_b = var16.b(true);
-          dd.field_C = var16.b(true);
-          var3 = (255 & var16.c((byte) 34)) + 1;
-          for (var4 = 0; var4 < sb.field_a; var4++) {
-            GameplaySession.field_m[var4] = var15.b(param0);
+          spriteDataBuffer = new qc(spriteBytes);
+          spriteDataBufferAlias = spriteDataBuffer;
+          spriteDataBufferAlias.field_f = spriteBytes.length - 2;
+          sb.decodedSpriteCount = spriteDataBufferAlias.b(readGuard);
+          DualLinkNode.decodedSpriteWidths = new int[sb.decodedSpriteCount];
+          hl.decodedSpriteHeights = new int[sb.decodedSpriteCount];
+          ng.decodedSpriteHasNonOpaqueAlpha = new boolean[sb.decodedSpriteCount];
+          vf.decodedSpriteAlpha = new byte[sb.decodedSpriteCount][];
+          GameplaySession.decodedSpriteXOffsets = new int[sb.decodedSpriteCount];
+          mj.decodedSpriteIndices = new byte[sb.decodedSpriteCount][];
+          md.decodedSpriteYOffsets = new int[sb.decodedSpriteCount];
+          spriteDataBufferAlias.field_f = -7 + spriteBytes.length - sb.decodedSpriteCount * 8;
+          pg.decodedSpriteCanvasWidth = spriteDataBufferAlias.b(true);
+          dd.decodedSpriteCanvasHeight = spriteDataBufferAlias.b(true);
+          paletteSize = (255 & spriteDataBufferAlias.c((byte) 34)) + 1;
+          for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
+            GameplaySession.decodedSpriteXOffsets[spriteIndex] = spriteDataBuffer.b(readGuard);
           }
-          for (var4 = 0; var4 < sb.field_a; var4++) {
-            md.field_e[var4] = var15.b(true);
+          for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
+            md.decodedSpriteYOffsets[spriteIndex] = spriteDataBuffer.b(true);
           }
-          for (var4 = 0; sb.field_a > var4; var4++) {
-            DualLinkNode.field_j[var4] = var15.b(true);
+          for (spriteIndex = 0; sb.decodedSpriteCount > spriteIndex; spriteIndex++) {
+            DualLinkNode.decodedSpriteWidths[spriteIndex] = spriteDataBuffer.b(true);
           }
-          for (var4 = 0; var4 < sb.field_a; var4++) {
-            hl.field_K[var4] = var15.b(true);
+          for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
+            hl.decodedSpriteHeights[spriteIndex] = spriteDataBuffer.b(true);
           }
-          var16.field_f = -(var3 * 3) + 3 - 8 * sb.field_a - 7 + param1.length;
-          cm.field_j = new int[var3];
-          for (var4 = 1; var4 < var3; var4++) {
-            cm.field_j[var4] = var15.e(108);
-            if (cm.field_j[var4] == 0) {
-              cm.field_j[var4] = 1;
+          spriteDataBufferAlias.field_f = -(paletteSize * 3) + 3 - 8 * sb.decodedSpriteCount - 7 + spriteBytes.length;
+          cm.decodedSpritePalette = new int[paletteSize];
+          for (spriteIndex = 1; spriteIndex < paletteSize; spriteIndex++) {
+            cm.decodedSpritePalette[spriteIndex] = spriteDataBuffer.e(108);
+            if (cm.decodedSpritePalette[spriteIndex] == 0) {
+              cm.decodedSpritePalette[spriteIndex] = 1;
             }
           }
-          var16.field_f = 0;
-          for (var4 = 0; var4 < sb.field_a; var4++) {
+          spriteDataBufferAlias.field_f = 0;
+          for (spriteIndex = 0; spriteIndex < sb.decodedSpriteCount; spriteIndex++) {
             L6: {
-              var5 = DualLinkNode.field_j[var4];
-              var6 = hl.field_K[var4];
-              var7 = var5 * var6;
-              var19 = new byte[var7];
-              var17 = var19;
-              var8 = var17;
-              mj.field_a[var4] = var19;
-              var20 = new byte[var7];
-              var18 = var20;
-              var9 = var18;
-              vf.field_E[var4] = var20;
-              var10 = 0;
-              var11 = var16.c((byte) 34);
-              if ((var11 & 1) == 0) {
-                for (var12 = 0; var12 < var7; var12++) {
-                  var8[var12] = var15.f((byte) 90);
+              spriteWidth = DualLinkNode.decodedSpriteWidths[spriteIndex];
+              spriteHeight = hl.decodedSpriteHeights[spriteIndex];
+              pixelCount = spriteWidth * spriteHeight;
+              allocatedPaletteIndices = new byte[pixelCount];
+              paletteIndicesForwarded = allocatedPaletteIndices;
+              paletteIndicesForUpdates = paletteIndicesForwarded;
+              mj.decodedSpriteIndices[spriteIndex] = allocatedPaletteIndices;
+              allocatedAlphaPlane = new byte[pixelCount];
+              alphaPlaneForwarded = allocatedAlphaPlane;
+              alphaPlaneForUpdates = alphaPlaneForwarded;
+              vf.decodedSpriteAlpha[spriteIndex] = allocatedAlphaPlane;
+              hasNonOpaqueAlphaFlag = 0;
+              storageFlags = spriteDataBufferAlias.c((byte) 34);
+              if ((storageFlags & 1) == 0) {
+                for (pixelIndexOrColumn = 0; pixelIndexOrColumn < pixelCount; pixelIndexOrColumn++) {
+                  paletteIndicesForUpdates[pixelIndexOrColumn] = spriteDataBuffer.f((byte) 90);
                 }
-                if ((var11 & 2) == 0) {
+                if ((storageFlags & 2) == 0) {
                   break L6;
                 }
-                for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$1 = var15.f((byte) 95);
-                  var9[var12] = dupTemp$1;
-                  var13 = dupTemp$1;
-                  stackIn_28_0 = var10;
-                  if (var13 == -1) {
-                    stackIn_29_1 = 0;
+                for (pixelIndexOrColumn = 0; pixelCount > pixelIndexOrColumn; pixelIndexOrColumn++) {
+                  rowMajorAlphaByte = spriteDataBuffer.f((byte) 95);
+                  alphaPlaneForUpdates[pixelIndexOrColumn] = rowMajorAlphaByte;
+                  alphaByteOrRow = rowMajorAlphaByte;
+                  rowMajorOpacityFlagBeforeMerge = hasNonOpaqueAlphaFlag;
+                  if (alphaByteOrRow == -1) {
+                    rowMajorNonOpaqueFlag = 0;
                   } else {
-                    stackIn_29_1 = 1;
+                    rowMajorNonOpaqueFlag = 1;
                   }
-                  var10 = stackIn_28_0 | stackIn_29_1;
+                  hasNonOpaqueAlphaFlag = rowMajorOpacityFlagBeforeMerge | rowMajorNonOpaqueFlag;
                 }
                 break L6;
               }
               {
-                for (var12 = 0; var5 > var12; var12++) {
-                  for (var13 = 0; var6 > var13; var13++) {
-                    var8[var13 * var5 + var12] = var15.f((byte) 90);
+                for (pixelIndexOrColumn = 0; spriteWidth > pixelIndexOrColumn; pixelIndexOrColumn++) {
+                  for (alphaByteOrRow = 0; spriteHeight > alphaByteOrRow; alphaByteOrRow++) {
+                    paletteIndicesForUpdates[alphaByteOrRow * spriteWidth + pixelIndexOrColumn] = spriteDataBuffer.f((byte) 90);
                   }
                 }
-                if (0 == (2 & var11)) {
+                if (0 == (2 & storageFlags)) {
                   break L6;
                 }
-                for (var12 = 0; var5 > var12; var12++) {
-                  for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$0 = var15.f((byte) 78);
-                    var9[var12 + var5 * var13] = dupTemp$0;
-                    var14 = dupTemp$0;
-                    stackIn_44_0 = var10;
-                    if (var14 == -1) {
-                      stackIn_45_1 = 0;
+                for (pixelIndexOrColumn = 0; spriteWidth > pixelIndexOrColumn; pixelIndexOrColumn++) {
+                  for (alphaByteOrRow = 0; spriteHeight > alphaByteOrRow; alphaByteOrRow++) {
+                    columnMajorAlphaByte = spriteDataBuffer.f((byte) 78);
+                    alphaPlaneForUpdates[pixelIndexOrColumn + spriteWidth * alphaByteOrRow] = columnMajorAlphaByte;
+                    columnAlphaValue = columnMajorAlphaByte;
+                    columnMajorOpacityFlagBeforeMerge = hasNonOpaqueAlphaFlag;
+                    if (columnAlphaValue == -1) {
+                      columnMajorNonOpaqueFlag = 0;
                     } else {
-                      stackIn_45_1 = 1;
+                      columnMajorNonOpaqueFlag = 1;
                     }
-                    var10 = stackIn_44_0 | stackIn_45_1;
+                    hasNonOpaqueAlphaFlag = columnMajorOpacityFlagBeforeMerge | columnMajorNonOpaqueFlag;
                   }
                 }
                 break L6;
               }
             }
-            ng.field_E[var4] = var10 != 0;
+            ng.decodedSpriteHasNonOpaqueAlpha[spriteIndex] = hasNonOpaqueAlphaFlag != 0;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_51_0 = (RuntimeException) (var2);
-          stackIn_51_1 = new StringBuilder().append("hf.W(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_52_2 = "null";
+        } catch (java.lang.RuntimeException decodeFailure) {
+          caughtDecodeFailure = decodeFailure;
+          decodeFailureForContext = caughtDecodeFailure;
+          decodeFailureBeforeDescription = (RuntimeException) (decodeFailureForContext);
+          decodeMessagePrefix = new StringBuilder().append("hf.W(").append(readGuard).append(',');
+          if (spriteBytes == null) {
+            spriteBytesDescription = "null";
           } else {
-            stackIn_52_2 = "{...}";
+            spriteBytesDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw t.a((Throwable) ((Object) decodeFailureBeforeDescription), ((StringBuilder) (Object) decodeMessagePrefix).append(spriteBytesDescription).append(')').toString());
         }
     }
 

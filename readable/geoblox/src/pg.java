@@ -6,7 +6,7 @@ final class pg {
     static int[] field_d;
     static String[] achievementTitles;
     static boolean screenChangePending;
-    static int field_b;
+    static int decodedSpriteCanvasWidth;
 
     final static void resetGameplayDifficulty(int methodGuard) {
         og.entityMotionSpeed = 0.4000000059604645f;

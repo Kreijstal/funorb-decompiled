@@ -201,15 +201,15 @@ abstract class ji {
         return this.a(false) >= 20 ? true : false;
     }
 
-    final static IndexedSprite[] c(int param0) {
-        int var2 = 0;
-        int var3 = Geoblox.field_C;
-        IndexedSprite[] var1 = new IndexedSprite[sb.field_a];
-        for (var2 = param0; sb.field_a > var2; var2++) {
-            var1[var2] = new IndexedSprite(pg.field_b, dd.field_C, GameplaySession.field_m[var2], md.field_e[var2], DualLinkNode.field_j[var2], hl.field_K[var2], mj.field_a[var2], cm.field_j);
+    final static IndexedSprite[] buildIndexedSpritesFromDecodedSheet(int firstSpriteIndex) {
+        int spriteIndex = 0;
+        int unusedClientGuardSnapshot = Geoblox.field_C;
+        IndexedSprite[] sprites = new IndexedSprite[sb.decodedSpriteCount];
+        for (spriteIndex = firstSpriteIndex; sb.decodedSpriteCount > spriteIndex; spriteIndex++) {
+            sprites[spriteIndex] = new IndexedSprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], mj.decodedSpriteIndices[spriteIndex], cm.decodedSpritePalette);
         }
-        kj.c(true);
-        return var1;
+        kj.clearDecodedSpriteWorkingArrays(true);
+        return sprites;
     }
 
     public static void d(int param0) {

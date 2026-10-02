@@ -19,20 +19,25 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 125 guarded identities for `PaletteBitmapFont`
-and `CoverageBitmapFont`. Every field, method, parameter and local in the
-four-class font hierarchy now has a guarded semantic name. Palette selection,
-nearest-color search, grayscale conversion, glyph indices, packed blending and
-captured increments have explicit roles. Shared glyph contracts stay unchanged.
+The current naming pass adds 233 guarded identities for decoded sprite data
+and font/sprite loading. Shared count, canvas, offsets, dimensions, palette,
+index bytes and alpha planes have explicit names. The sheet decoder, archive
+acquisition, partial cleanup, font factories/loaders and five sprite builders
+now have named parameters and locals. RGB, ARGB and indexed construction retain
+their original data ownership and alpha choices.
 
-The 4,072 rules apply 36,705 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 3,947 previous complete
-rules and raw source/decompiler pins are unchanged. In-place palette/glyph
-conversion, signed constructor indexing, unsigned draw indexing, original red
-extraction and reused alpha weights remain. Existing native probes retain their
-original scopes and do not newly execute fonts. Full rendering/game/device
-execution remains unverified. The one manifest and dictionary preserve
-reproducibility and reversal.
+The 4,305 rules apply 37,675 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 4,072 previous complete
+rules and raw source/decompiler pins are unchanged. Guards, captured aliases,
+row/column-major reads, diagnostic strings and operation order remain. Cleanup
+retains the alpha arrays/flags and scalar count/canvas dimensions. Existing
+native probes retain their original scopes and do not newly exercise decoded
+sheet/archive/font loading. Full asset/rendering/game/device execution remains
+unverified. The one manifest and dictionary preserve reproducibility and reversal.
+
+Pass 58 completed guarded names for the four-class font hierarchy, including
+palette selection, nearest-color search, grayscale conversion, glyph indices,
+packed blending and captured increments. Shared glyph contracts stay unchanged.
 
 Pass 57 named `BitmapFont` and `MonochromeBitmapFont`, including metrics,
 kerning, markup wrapping, paragraph layout, shared text style, inline images and

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ng extends sh {
-    static boolean[] field_E;
+    static boolean[] decodedSpriteHasNonOpaqueAlpha;
     private IntrusiveDeque field_C;
     static int rotatedEntityScreenX;
     static BitmapFont field_F;
@@ -120,9 +120,9 @@ final class ng extends sh {
 
     public static void k(int param0) {
         field_F = null;
-        field_E = null;
+        decodedSpriteHasNonOpaqueAlpha = null;
         if (param0 >= -53) {
-            field_E = (boolean[]) null;
+            decodedSpriteHasNonOpaqueAlpha = (boolean[]) null;
         }
     }
 

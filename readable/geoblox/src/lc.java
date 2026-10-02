@@ -262,38 +262,38 @@ final class lc {
         }
     }
 
-    final static MonochromeBitmapFont a(int param0, byte[] param1) {
-        MonochromeBitmapFont var2 = null;
-        RuntimeException var2_ref = null;
-        Object stackIn_4_0 = null;
-        MonochromeBitmapFont stackIn_9_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static MonochromeBitmapFont buildMonochromeFontFromDecodedSprites(int methodGuard, byte[] metrics) {
+        MonochromeBitmapFont font = null;
+        RuntimeException fontFailureForContext = null;
+        Object nullFontBeforeReturn = null;
+        MonochromeBitmapFont fontBeforeReturn = null;
+        RuntimeException fontFailureBeforeMetricsDescription = null;
+        StringBuilder fontMessagePrefix = null;
+        String metricsDescription = null;
+        RuntimeException caughtFontFailure = null;
         try {
-          if (null == param1) {
-            stackIn_4_0 = null;
-            return (MonochromeBitmapFont) ((Object) stackIn_4_0);
+          if (null == metrics) {
+            nullFontBeforeReturn = null;
+            return (MonochromeBitmapFont) ((Object) nullFontBeforeReturn);
           }
-          if (param0 != 4520) {
+          if (methodGuard != 4520) {
             lc.blendScaledDebugOverviewPixels(-56, -44, (int[]) null, 118, 4, -55, 25, -98, -82, -78, (byte) -35, (int[]) null, -116);
           }
-          var2 = new MonochromeBitmapFont(param1, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, mj.field_a);
-          kj.c(true);
-          stackIn_9_0 = (MonochromeBitmapFont) (var2);
-          return stackIn_9_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_13_0 = (RuntimeException) (var2_ref);
-          stackIn_13_1 = new StringBuilder().append("lc.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_14_2 = "null";
+          font = new MonochromeBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, hl.decodedSpriteHeights, mj.decodedSpriteIndices);
+          kj.clearDecodedSpriteWorkingArrays(true);
+          fontBeforeReturn = (MonochromeBitmapFont) (font);
+          return fontBeforeReturn;
+        } catch (java.lang.RuntimeException fontFailure) {
+          caughtFontFailure = fontFailure;
+          fontFailureForContext = caughtFontFailure;
+          fontFailureBeforeMetricsDescription = (RuntimeException) (fontFailureForContext);
+          fontMessagePrefix = new StringBuilder().append("lc.B(").append(methodGuard).append(',');
+          if (metrics == null) {
+            metricsDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            metricsDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw t.a((Throwable) ((Object) fontFailureBeforeMetricsDescription), ((StringBuilder) (Object) fontMessagePrefix).append(metricsDescription).append(')').toString());
         }
     }
 

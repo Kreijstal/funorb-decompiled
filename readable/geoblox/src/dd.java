@@ -8,7 +8,7 @@ abstract class dd extends ee {
     static int variantMatchCandidateCount;
     static rh field_J;
     private int field_H;
-    static int field_C;
+    static int decodedSpriteCanvasHeight;
     static String loadingMusicText;
     static String[] field_E;
 

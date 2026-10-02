@@ -5,7 +5,7 @@ import java.util.*;
 
 final class md {
     static String[] mustLogin4Texts;
-    static int[] field_e;
+    static int[] decodedSpriteYOffsets;
     static IntrusiveDeque activeScorePopups;
     static float avatarTintRedDelta;
     static int field_c;
@@ -40,7 +40,7 @@ final class md {
 
     public static void a(byte param0) {
         mustLogin4Texts = null;
-        field_e = null;
+        decodedSpriteYOffsets = null;
         activeScorePopups = null;
         if (param0 != 40) {
             md.a((byte) 23);

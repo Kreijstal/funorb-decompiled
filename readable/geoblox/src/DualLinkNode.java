@@ -5,7 +5,7 @@ class DualLinkNode extends IntrusiveNode {
     DualLinkNode nextSecondaryNode;
     static String invalidPasswordText;
     static float rotationStepRadians;
-    static int[] field_j;
+    static int[] decodedSpriteWidths;
     static String js5ConnectFullErrorText;
     DualLinkNode previousSecondaryNode;
     long field_i;
@@ -16,7 +16,7 @@ class DualLinkNode extends IntrusiveNode {
 
     public static void c(byte param0) {
         invalidPasswordText = null;
-        field_j = null;
+        decodedSpriteWidths = null;
         int var1 = -128 / ((param0 + 33) / 50);
         js5ConnectFullErrorText = null;
     }

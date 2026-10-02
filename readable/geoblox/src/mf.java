@@ -28,36 +28,36 @@ final class mf {
         selectedThemeBackground = null;
     }
 
-    final static boolean a(int param0, int param1, int param2, rh param3) {
-        byte[] var4 = null;
-        RuntimeException var4_ref = null;
-        byte[] var5 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean decodeSpritesFromArchive(int fileId, int groupId, int methodGuard, rh graphicsArchive) {
+        byte[] unusedSpriteBytesSnapshot = null;
+        RuntimeException decodeFailureForContext = null;
+        byte[] spriteBytes = null;
+        RuntimeException decodeFailureBeforeArchiveDescription = null;
+        StringBuilder decodeMessagePrefix = null;
+        String graphicsArchiveDescription = null;
+        RuntimeException caughtDecodeFailure = null;
         try {
-          var5 = param3.a(param1, -28153, param0);
-          var4 = var5;
-          if (param2 < 102) {
+          spriteBytes = graphicsArchive.a(groupId, -28153, fileId);
+          unusedSpriteBytesSnapshot = spriteBytes;
+          if (methodGuard < 102) {
             return false;
           }
-          if (var5 == null) {
+          if (spriteBytes == null) {
             return false;
           }
-          IntrusiveNode.a(true, var5);
+          IntrusiveNode.decodeSpriteSheet(true, spriteBytes);
           return true;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_11_0 = (RuntimeException) (var4_ref);
-          stackIn_11_1 = new StringBuilder().append("mf.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_12_2 = "null";
+        } catch (java.lang.RuntimeException decodeFailure) {
+          caughtDecodeFailure = decodeFailure;
+          decodeFailureForContext = caughtDecodeFailure;
+          decodeFailureBeforeArchiveDescription = (RuntimeException) (decodeFailureForContext);
+          decodeMessagePrefix = new StringBuilder().append("mf.A(").append(fileId).append(',').append(groupId).append(',').append(methodGuard).append(',');
+          if (graphicsArchive == null) {
+            graphicsArchiveDescription = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            graphicsArchiveDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw t.a((Throwable) ((Object) decodeFailureBeforeArchiveDescription), ((StringBuilder) (Object) decodeMessagePrefix).append(graphicsArchiveDescription).append(')').toString());
         }
     }
 

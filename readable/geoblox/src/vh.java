@@ -20,7 +20,7 @@ final class vh extends ee implements pl {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!mf.a(param0, param2, 123, param1)) {
+          if (!mf.decodeSpritesFromArchive(param0, param2, 123, param1)) {
             stackIn_2_0 = null;
             return (IndexedSprite) ((Object) stackIn_2_0);
           }
@@ -28,7 +28,7 @@ final class vh extends ee implements pl {
             var5 = (rh) null;
             vh.a(110, (rh) null, -39, true);
           }
-          stackIn_6_0 = ab.a(104);
+          stackIn_6_0 = ab.buildFirstIndexedSpriteFromDecodedSheet(104);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

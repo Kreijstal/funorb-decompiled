@@ -1421,3 +1421,70 @@ Source inspection, complete binding checks and byte-exact dictionary reversal
 support this naming pass. Existing native probes retain their original scopes
 and do not newly execute the fonts. Actual palette/font assets, image tags,
 whole-game rendering and device performance remain unverified.
+
+## Decoded sprite ownership and font factories (pass 59)
+
+The graphics loading path uses shared working fields whose original holders
+are spread across unrelated classes. Their names now expose the data rather
+than implying that they belong to gameplay or UI state.
+
+| Shared field | Meaning |
+| --- | --- |
+| `decodedSpriteCount` | Number of entries in the decoded sheet |
+| `decodedSpriteCanvasWidth` / `decodedSpriteCanvasHeight` | Logical canvas dimensions shared by the sheet |
+| `decodedSpriteXOffsets` / `decodedSpriteYOffsets` | Per-entry crop offsets |
+| `decodedSpriteWidths` / `decodedSpriteHeights` | Per-entry stored pixel dimensions |
+| `decodedSpritePalette` | RGB palette, with index0 left zero and nonzero entries decoding to black changed to1 |
+| `decodedSpriteIndices` | Per-entry palette-index planes |
+| `decodedSpriteAlpha` | Per-entry allocated alpha planes |
+| `decodedSpriteHasNonOpaqueAlpha` | True when an explicit alpha plane has at least one byte other than255 |
+
+`IntrusiveNode.decodeSpriteSheet` reads the sprite count at the end, then canvas
+and crop metadata preceding it and the palette before that. It resets the
+buffer cursor to0 for pixel data. `spriteDataBufferAlias` is the same object as
+`spriteDataBuffer`, so metadata and pixel reads share its mutable cursor.
+Storage flag bit0 selects column-major rather than linear row-major order;
+bit1 adds alpha reads. The column-major path writes into row-major pixel
+indices. Captured alpha bytes and flag-merging carriers remain explicit.
+An alpha plane is allocated even without alpha data, but absent alpha leaves
+the nonopaque flag false.
+
+`mf.decodeSpritesFromArchive` reads the graphics file before its guard check,
+returns false for a guard below102 or missing bytes, and otherwise decodes with
+readGuard=true. `loadPaletteFontById`, `loadCoverageFontById` and
+`loadMonochromeFontById` decode glyph graphics before obtaining metric bytes
+using the same group/file IDs in the other archive. Named loaders resolve IDs
+through the graphics archive first. Existing `loadPaletteFont`/`loadBitmapFont`
+APIs stay unchanged; `TextInputValidator.loadCoverageFont` names the equivalent
+coverage lookup. Guards, sentinel arithmetic and failure descriptions retain
+their original order.
+
+The three `build*FontFromDecodedSprites` factories return null for missing
+metric bytes without clearing decoded working arrays. Successful constructors
+keep the arrays they need, then call `kj.clearDecodedSpriteWorkingArrays(true)`.
+Coverage construction still mutates the supplied palette/index data in place.
+Constructor failures retain the original partially populated/retained state;
+this pass adds no finally cleanup. The coverage factory's optional null-metrics
+recursive guard call remains explicit.
+
+`clearDecodedSpriteWorkingArrays` always clears Y offsets. With a true argument
+it also clears heights, index planes, widths, X offsets and palette. It does
+**not** clear decoded alpha planes, nonopaque flags, count or canvas dimensions.
+The names describe the existing ownership and partial cleanup; no memory-release
+change or complete decoded-state release is claimed.
+
+| Builder | Output behavior |
+| --- | --- |
+| `buildSpritesWithDecodedAlpha` | RGB Sprite when the nonopaque flag is false; ARGB Sprite otherwise, combining decoded alpha shifted24 with palette RGB |
+| `buildRgbSpritesFromDecodedSheet` | Convert all palette-index planes to RGB, ignoring alpha |
+| `buildIndexedSpritesFromDecodedSheet` | Retain index/palette references; begin at the supplied firstSpriteIndex and leave earlier output entries null |
+| `buildFirstRgbSpriteFromDecodedSheet` | Convert only entry0 to RGB |
+| `buildFirstIndexedSpriteFromDecodedSheet` | Retain entry0's index/palette references |
+
+Each builder preserves its original guard effects and cleanup point. The ARGB
+path retains unused/forwarded alpha aliases and pixel-array snapshots; entry
+guard reads remain even when their captured value is unused. Source inspection,
+complete binding checks and byte-exact reversal support the names. Existing
+native probes retain their original scopes and do not newly execute this sheet,
+archive, font-factory or sprite-builder path. Actual assets, whole rendering/
+gameplay and device performance remain unverified.

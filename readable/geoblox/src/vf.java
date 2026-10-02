@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class vf extends hk {
-    static byte[][] field_E;
+    static byte[][] decodedSpriteAlpha;
     static Sprite spriteScratchRaster;
     static qc field_I;
     private fb field_G;
@@ -74,7 +74,7 @@ class vf extends hk {
         spriteScratchRaster = null;
         field_I = null;
         avatarCryBeginFrames = null;
-        field_E = (byte[][]) null;
+        decodedSpriteAlpha = (byte[][]) null;
     }
 
     vf(String param0, dh param1) {
@@ -345,7 +345,7 @@ class vf extends hk {
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 > -6) {
-            field_E = (byte[][]) null;
+            decodedSpriteAlpha = (byte[][]) null;
         }
         super.a(param0, param1, (byte) -123, param3, param4);
         this.g(-96);

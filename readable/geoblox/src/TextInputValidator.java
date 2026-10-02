@@ -189,60 +189,60 @@ abstract class TextInputValidator extends ib implements ga {
         }
     }
 
-    final static CoverageBitmapFont a(rh param0, int param1, String param2, String param3, rh param4) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        String var7 = null;
-        CoverageBitmapFont stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static CoverageBitmapFont loadCoverageFont(rh fontMetricsArchive, int methodGuard, String resourceName, String groupName, rh glyphGraphicsArchive) {
+        int archiveGroupId = 0;
+        RuntimeException fontFailureForContext = null;
+        int archiveFileId = 0;
+        String unusedNullTextSnapshot = null;
+        CoverageBitmapFont fontBeforeReturn = null;
+        RuntimeException fontFailureBeforeDescriptions = null;
+        StringBuilder fontMessagePrefix = null;
+        String metricsArchiveDescription = null;
+        StringBuilder fontMessageBeforeResourceName = null;
+        String resourceNameDescription = null;
+        StringBuilder fontMessageBeforeGroupName = null;
+        String groupNameDescription = null;
+        StringBuilder fontMessageBeforeGlyphArchive = null;
+        String glyphArchiveDescription = null;
+        RuntimeException caughtFontFailure = null;
         try {
-          if (param1 != 1) {
-            var7 = (String) null;
+          if (methodGuard != 1) {
+            unusedNullTextSnapshot = (String) null;
             TextInputValidator.a((byte) 108, 111, (String) null);
           }
-          var5_int = param4.a((byte) 126, param3);
-          var6 = param4.a(param2, param1 - 69, var5_int);
-          stackIn_3_0 = ea.a(param4, (byte) -127, param0, var6, var5_int);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var5);
-          stackIn_6_1 = new StringBuilder().append("q.R(");
-          if (param0 == null) {
-            stackIn_7_2 = "null";
+          archiveGroupId = glyphGraphicsArchive.a((byte) 126, groupName);
+          archiveFileId = glyphGraphicsArchive.a(resourceName, methodGuard - 69, archiveGroupId);
+          fontBeforeReturn = ea.loadCoverageFontById(glyphGraphicsArchive, (byte) -127, fontMetricsArchive, archiveFileId, archiveGroupId);
+          return fontBeforeReturn;
+        } catch (java.lang.RuntimeException fontFailure) {
+          caughtFontFailure = fontFailure;
+          fontFailureForContext = caughtFontFailure;
+          fontFailureBeforeDescriptions = (RuntimeException) (fontFailureForContext);
+          fontMessagePrefix = new StringBuilder().append("q.R(");
+          if (fontMetricsArchive == null) {
+            metricsArchiveDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            metricsArchiveDescription = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_10_2 = "null";
+          fontMessageBeforeResourceName = ((StringBuilder) (Object) fontMessagePrefix).append(metricsArchiveDescription).append(',').append(methodGuard).append(',');
+          if (resourceName == null) {
+            resourceNameDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            resourceNameDescription = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param3 == null) {
-            stackIn_13_2 = "null";
+          fontMessageBeforeGroupName = ((StringBuilder) (Object) fontMessageBeforeResourceName).append(resourceNameDescription).append(',');
+          if (groupName == null) {
+            groupNameDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            groupNameDescription = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param4 == null) {
-            stackIn_16_2 = "null";
+          fontMessageBeforeGlyphArchive = ((StringBuilder) (Object) fontMessageBeforeGroupName).append(groupNameDescription).append(',');
+          if (glyphGraphicsArchive == null) {
+            glyphArchiveDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            glyphArchiveDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw t.a((Throwable) ((Object) fontFailureBeforeDescriptions), ((StringBuilder) (Object) fontMessageBeforeGlyphArchive).append(glyphArchiveDescription).append(')').toString());
         }
     }
 

@@ -83,9 +83,9 @@ abstract class IndexedSpriteState {
             jc.field_a = ug.loadSprite("jagex_logo_grey", param2, (byte) -78, "commonui");
             vk.field_e = wj.loadSpriteFrames("button", "commonui", param2, 0);
             oa.field_e = oi.a((byte) -39, "validation", "commonui", param2);
-            hh.field_d = (BitmapFont) ((Object) TextInputValidator.a(param3, 1, "arezzo12", "commonui", param2));
-            ng.field_F = (BitmapFont) ((Object) TextInputValidator.a(param3, 1, "arezzo14", "commonui", param2));
-            hh.field_c = (BitmapFont) ((Object) TextInputValidator.a(param3, 1, "arezzo14bold", "commonui", param2));
+            hh.field_d = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo12", "commonui", param2));
+            ng.field_F = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14", "commonui", param2));
+            hh.field_c = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(param3, 1, "arezzo14bold", "commonui", param2));
             var18 = new Sprite(param1.a(0, "", "button.gif"), (java.awt.Component) ((Object) f.field_kb));
             jg.loadIndexedSprite(param2, 1, "commonui", "dropdown");
             var5 = MenuScreen.a("commonui", "screen_options", true, param2);

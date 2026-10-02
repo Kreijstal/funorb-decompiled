@@ -121,11 +121,11 @@ final class ab {
         }
     }
 
-    final static IndexedSprite a(int param0) {
-        IndexedSprite var1 = new IndexedSprite(pg.field_b, dd.field_C, GameplaySession.field_m[0], md.field_e[0], DualLinkNode.field_j[0], hl.field_K[0], mj.field_a[0], cm.field_j);
-        int var2 = -128 / ((param0 - 52) / 49);
-        kj.c(true);
-        return var1;
+    final static IndexedSprite buildFirstIndexedSpriteFromDecodedSheet(int methodGuard) {
+        IndexedSprite sprite = new IndexedSprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], hl.decodedSpriteHeights[0], mj.decodedSpriteIndices[0], cm.decodedSpritePalette);
+        int sentinelDivision = -128 / ((methodGuard - 52) / 49);
+        kj.clearDecodedSpriteWorkingArrays(true);
+        return sprite;
     }
 
     final static int a(int param0, CharSequence param1) {

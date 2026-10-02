@@ -7,41 +7,41 @@ final class rb {
     static int kindFourRemovalCount;
     static v field_d;
 
-    final static MonochromeBitmapFont a(int param0, int param1, rh param2, int param3, rh param4) {
-        RuntimeException var5 = null;
-        MonochromeBitmapFont stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static MonochromeBitmapFont loadMonochromeFontById(int fileId, int methodGuard, rh glyphGraphicsArchive, int groupId, rh fontMetricsArchive) {
+        RuntimeException fontFailureForContext = null;
+        MonochromeBitmapFont fontBeforeReturn = null;
+        RuntimeException fontFailureBeforeArchiveDescriptions = null;
+        StringBuilder fontMessagePrefix = null;
+        String glyphArchiveDescription = null;
+        StringBuilder fontMessageBeforeMetricsArchive = null;
+        String metricsArchiveDescription = null;
+        RuntimeException caughtFontFailure = null;
         try {
-          if (param1 != 0) {
+          if (methodGuard != 0) {
             rb.a((byte) -35);
           }
-          if (!mf.a(param0, param3, 107, param2)) {
+          if (!mf.decodeSpritesFromArchive(fileId, groupId, 107, glyphGraphicsArchive)) {
             return null;
           }
-          stackIn_6_0 = lc.a(4520, param4.a(param3, -28153, param0));
-          return stackIn_6_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var5);
-          stackIn_9_1 = new StringBuilder().append("rb.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_10_2 = "null";
+          fontBeforeReturn = lc.buildMonochromeFontFromDecodedSprites(4520, fontMetricsArchive.a(groupId, -28153, fileId));
+          return fontBeforeReturn;
+        } catch (java.lang.RuntimeException fontFailure) {
+          caughtFontFailure = fontFailure;
+          fontFailureForContext = caughtFontFailure;
+          fontFailureBeforeArchiveDescriptions = (RuntimeException) (fontFailureForContext);
+          fontMessagePrefix = new StringBuilder().append("rb.B(").append(fileId).append(',').append(methodGuard).append(',');
+          if (glyphGraphicsArchive == null) {
+            glyphArchiveDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            glyphArchiveDescription = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_13_2 = "null";
+          fontMessageBeforeMetricsArchive = ((StringBuilder) (Object) fontMessagePrefix).append(glyphArchiveDescription).append(',').append(groupId).append(',');
+          if (fontMetricsArchive == null) {
+            metricsArchiveDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            metricsArchiveDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw t.a((Throwable) ((Object) fontFailureBeforeArchiveDescriptions), ((StringBuilder) (Object) fontMessageBeforeMetricsArchive).append(metricsArchiveDescription).append(')').toString());
         }
     }
 

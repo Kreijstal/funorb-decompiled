@@ -64,56 +64,56 @@ final class gi implements Iterable {
 
     final static MonochromeBitmapFont loadBitmapFont(rh fontMetricsArchive, int methodGuard, rh glyphGraphicsArchive, String resourceName, String groupName) {
         int archiveGroupId = 0;
-        RuntimeException var5 = null;
+        RuntimeException fontFailureForContext = null;
         int archiveFileId = 0;
-        MonochromeBitmapFont stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        MonochromeBitmapFont fontBeforeReturn = null;
+        RuntimeException fontFailureBeforeDescriptions = null;
+        StringBuilder fontMessagePrefix = null;
+        String metricsArchiveDescription = null;
+        StringBuilder fontMessageAfterFirstDescription = null;
+        String glyphArchiveDescription = null;
+        StringBuilder fontMessageAfterSecondDescription = null;
+        String resourceNameDescription = null;
+        StringBuilder fontMessageAfterThirdDescription = null;
+        String groupNameDescription = null;
+        RuntimeException caughtFontFailure = null;
         try {
           archiveGroupId = glyphGraphicsArchive.a((byte) 126, groupName);
           if (methodGuard != 1) {
             field_b = (int[]) null;
           }
           archiveFileId = glyphGraphicsArchive.a(resourceName, methodGuard ^ -82, archiveGroupId);
-          stackIn_3_0 = rb.a(archiveFileId, 0, glyphGraphicsArchive, archiveGroupId, fontMetricsArchive);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_6_0 = (RuntimeException) (var5);
-          stackIn_6_1 = new StringBuilder().append("gi.E(");
+          fontBeforeReturn = rb.loadMonochromeFontById(archiveFileId, 0, glyphGraphicsArchive, archiveGroupId, fontMetricsArchive);
+          return fontBeforeReturn;
+        } catch (java.lang.RuntimeException fontFailure) {
+          caughtFontFailure = fontFailure;
+          fontFailureForContext = caughtFontFailure;
+          fontFailureBeforeDescriptions = (RuntimeException) (fontFailureForContext);
+          fontMessagePrefix = new StringBuilder().append("gi.E(");
           if (fontMetricsArchive == null) {
-            stackIn_7_2 = "null";
+            metricsArchiveDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            metricsArchiveDescription = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(methodGuard).append(',');
+          fontMessageAfterFirstDescription = ((StringBuilder) (Object) fontMessagePrefix).append(metricsArchiveDescription).append(',').append(methodGuard).append(',');
           if (glyphGraphicsArchive == null) {
-            stackIn_10_2 = "null";
+            glyphArchiveDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            glyphArchiveDescription = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          fontMessageAfterSecondDescription = ((StringBuilder) (Object) fontMessageAfterFirstDescription).append(glyphArchiveDescription).append(',');
           if (resourceName == null) {
-            stackIn_13_2 = "null";
+            resourceNameDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            resourceNameDescription = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          fontMessageAfterThirdDescription = ((StringBuilder) (Object) fontMessageAfterSecondDescription).append(resourceNameDescription).append(',');
           if (groupName == null) {
-            stackIn_16_2 = "null";
+            groupNameDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            groupNameDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw t.a((Throwable) ((Object) fontFailureBeforeDescriptions), ((StringBuilder) (Object) fontMessageAfterThirdDescription).append(groupNameDescription).append(')').toString());
         }
     }
 

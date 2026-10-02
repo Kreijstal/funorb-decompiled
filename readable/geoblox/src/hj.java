@@ -47,60 +47,60 @@ final class hj {
         }
     }
 
-    final static Sprite[] a(int param0) {
-        int var6 = 0;
-        int var7 = 0;
-        Sprite[] var1;
-        int var2;
-        int var3;
-        byte[] var5;
-        int[] var6_ref_int__;
-        int var8;
-        byte[] var9;
-        int[] var10;
-        byte[] var11;
-        int[] var13;
-        byte[] var15;
-        int[] var17;
-        byte[] var21;
-        int[] var22;
-        var8 = Geoblox.field_C;
-        var1 = new Sprite[sb.field_a];
-        if (param0 <= 60) {
+    final static Sprite[] buildSpritesWithDecodedAlpha(int methodGuard) {
+        int rgbPixelIndex = 0;
+        int argbPixelIndex = 0;
+        Sprite[] sprites;
+        int spriteIndex;
+        int pixelCount;
+        byte[] unusedAlphaPlaneAlias;
+        int[] argbPixelsForUpdates;
+        int unusedClientGuardSnapshot;
+        byte[] alphaPlaneAlias;
+        int[] rgbPixelsForUpdates;
+        byte[] alphaPlaneForwarded;
+        int[] argbPixelsForwarded;
+        byte[] alphaPlaneSnapshot;
+        int[] argbPixelsSnapshot;
+        byte[] paletteIndices;
+        int[] rgbPixelsSnapshot;
+        unusedClientGuardSnapshot = Geoblox.field_C;
+        sprites = new Sprite[sb.decodedSpriteCount];
+        if (methodGuard <= 60) {
           field_a = 2;
         }
-        var2 = 0;
+        spriteIndex = 0;
         L1: while (true) {
-          if (sb.field_a <= var2) {
-            kj.c(true);
-            return var1;
+          if (sb.decodedSpriteCount <= spriteIndex) {
+            kj.clearDecodedSpriteWorkingArrays(true);
+            return sprites;
           }
           {
-            var3 = hl.field_K[var2] * DualLinkNode.field_j[var2];
-            var21 = mj.field_a[var2];
-            if (!ng.field_E[var2]) {
-              var10 = new int[var3];
-              var22 = var10;
-              for (var6 = 0; var3 > var6; var6++) {
-                var10[var6] = cm.field_j[cd.a((int) var21[var6], 255)];
+            pixelCount = hl.decodedSpriteHeights[spriteIndex] * DualLinkNode.decodedSpriteWidths[spriteIndex];
+            paletteIndices = mj.decodedSpriteIndices[spriteIndex];
+            if (!ng.decodedSpriteHasNonOpaqueAlpha[spriteIndex]) {
+              rgbPixelsForUpdates = new int[pixelCount];
+              rgbPixelsSnapshot = rgbPixelsForUpdates;
+              for (rgbPixelIndex = 0; pixelCount > rgbPixelIndex; rgbPixelIndex++) {
+                rgbPixelsForUpdates[rgbPixelIndex] = cm.decodedSpritePalette[cd.a((int) paletteIndices[rgbPixelIndex], 255)];
               }
-              var1[var2] = new Sprite(pg.field_b, dd.field_C, GameplaySession.field_m[var2], md.field_e[var2], DualLinkNode.field_j[var2], hl.field_K[var2], var22);
-              var2++;
+              sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], rgbPixelsSnapshot);
+              spriteIndex++;
               continue L1;
             }
             {
-              var15 = vf.field_E[var2];
-              var11 = var15;
-              var9 = var11;
-              var5 = var9;
-              var17 = new int[var3];
-              var13 = var17;
-              var6_ref_int__ = var13;
-              for (var7 = 0; var7 < var3; var7++) {
-                var6_ref_int__[var7] = lb.a(cd.a(var15[var7] << 24, -16777216), cm.field_j[cd.a((int) var21[var7], 255)]);
+              alphaPlaneSnapshot = vf.decodedSpriteAlpha[spriteIndex];
+              alphaPlaneForwarded = alphaPlaneSnapshot;
+              alphaPlaneAlias = alphaPlaneForwarded;
+              unusedAlphaPlaneAlias = alphaPlaneAlias;
+              argbPixelsSnapshot = new int[pixelCount];
+              argbPixelsForwarded = argbPixelsSnapshot;
+              argbPixelsForUpdates = argbPixelsForwarded;
+              for (argbPixelIndex = 0; argbPixelIndex < pixelCount; argbPixelIndex++) {
+                argbPixelsForUpdates[argbPixelIndex] = lb.a(cd.a(alphaPlaneSnapshot[argbPixelIndex] << 24, -16777216), cm.decodedSpritePalette[cd.a((int) paletteIndices[argbPixelIndex], 255)]);
               }
-              var1[var2] = (Sprite) ((Object) new ArgbSprite(pg.field_b, dd.field_C, GameplaySession.field_m[var2], md.field_e[var2], DualLinkNode.field_j[var2], hl.field_K[var2], var17));
-              var2++;
+              sprites[spriteIndex] = (Sprite) ((Object) new ArgbSprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], argbPixelsSnapshot));
+              spriteIndex++;
               continue L1;
             }
           }

@@ -222,16 +222,16 @@ final class kj extends ia {
         }
     }
 
-    final static void c(boolean param0) {
-        md.field_e = null;
-        if (!param0) {
+    final static void clearDecodedSpriteWorkingArrays(boolean clearRemainingArrays) {
+        md.decodedSpriteYOffsets = null;
+        if (!clearRemainingArrays) {
             return;
         }
-        hl.field_K = null;
-        mj.field_a = (byte[][]) null;
-        DualLinkNode.field_j = null;
-        GameplaySession.field_m = null;
-        cm.field_j = null;
+        hl.decodedSpriteHeights = null;
+        mj.decodedSpriteIndices = (byte[][]) null;
+        DualLinkNode.decodedSpriteWidths = null;
+        GameplaySession.decodedSpriteXOffsets = null;
+        cm.decodedSpritePalette = null;
     }
 
     private final void a(byte param0, int param1) {

@@ -52,38 +52,38 @@ final class qa {
         }
     }
 
-    final static CoverageBitmapFont a(byte[] param0, boolean param1) {
-        CoverageBitmapFont var2 = null;
-        RuntimeException var2_ref = null;
-        byte[] var3 = null;
-        CoverageBitmapFont stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static CoverageBitmapFont buildCoverageFontFromDecodedSprites(byte[] metrics, boolean runNullMetricsGuardCall) {
+        CoverageBitmapFont font = null;
+        RuntimeException fontFailureForContext = null;
+        byte[] unusedNullMetricsSnapshot = null;
+        CoverageBitmapFont fontBeforeReturn = null;
+        RuntimeException fontFailureBeforeMetricsDescription = null;
+        StringBuilder fontMessagePrefix = null;
+        String metricsDescription = null;
+        RuntimeException caughtFontFailure = null;
         try {
-          if (param1) {
-            var3 = (byte[]) null;
-            qa.a((byte[]) null, false);
+          if (runNullMetricsGuardCall) {
+            unusedNullMetricsSnapshot = (byte[]) null;
+            qa.buildCoverageFontFromDecodedSprites((byte[]) null, false);
           }
-          if (param0 == null) {
+          if (metrics == null) {
             return null;
           }
-          var2 = new CoverageBitmapFont(param0, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, cm.field_j, mj.field_a);
-          kj.c(true);
-          stackIn_6_0 = (CoverageBitmapFont) (var2);
-          return stackIn_6_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var2_ref);
-          stackIn_9_1 = new StringBuilder().append("qa.D(");
-          if (param0 == null) {
-            stackIn_10_2 = "null";
+          font = new CoverageBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, hl.decodedSpriteHeights, cm.decodedSpritePalette, mj.decodedSpriteIndices);
+          kj.clearDecodedSpriteWorkingArrays(true);
+          fontBeforeReturn = (CoverageBitmapFont) (font);
+          return fontBeforeReturn;
+        } catch (java.lang.RuntimeException fontFailure) {
+          caughtFontFailure = fontFailure;
+          fontFailureForContext = caughtFontFailure;
+          fontFailureBeforeMetricsDescription = (RuntimeException) (fontFailureForContext);
+          fontMessagePrefix = new StringBuilder().append("qa.D(");
+          if (metrics == null) {
+            metricsDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            metricsDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) fontFailureBeforeMetricsDescription), ((StringBuilder) (Object) fontMessagePrefix).append(metricsDescription).append(',').append(runNullMetricsGuardCall).append(')').toString());
         }
     }
 

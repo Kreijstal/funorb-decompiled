@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 4,072 guarded naming rules: 36 classes, 582 fields,
-363 methods, 1,188 parameters and 1,903 local declarations. Both 303-file corpora
+The current export has 4,305 guarded naming rules: 36 classes, 593 fields,
+378 methods, 1,226 parameters and 2,072 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,35 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current palette and coverage font names
+## Current decoded sprite and font loading names
+
+Pass 59 adds 233 guarded identities: 11 fields, 15 methods, 38 parameters and
+169 locals. Shared decoded sprite count/canvas/offset/dimension/palette/index/
+alpha state is named. `decodeSpriteSheet`, `decodeSpritesFromArchive` and
+`clearDecodedSpriteWorkingArrays` expose the original producer and partial
+cleanup. Three font factories, named/ID loaders and five decoded-sheet sprite
+builders have named parameters and locals. Previously named palette/bitmap
+font APIs and group/file locals remain unchanged.
+
+The decoder reads metadata and palette near the tail, then row- or column-major
+index bytes and optional alpha planes from the front. Builders make RGB, ARGB
+or indexed sprites with the original geometry. Font constructors keep the
+required arrays; coverage conversion retains in-place palette/index mutation.
+The cleanup always clears Y offsets and conditionally the other color/geometry
+arrays. It retains decoded alpha arrays/flags and scalar count/canvas state.
+Null metrics and constructor failures retain their original cleanup behavior.
+
+All 4,072 previous complete rules, raw source and generator pins remain unchanged.
+The 4,305 rules apply 37,675 edits; all 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 override relationships. Guard side effects,
+aliased buffer cursors, captured arrays, alpha flags, diagnostic construction,
+read/write order and arithmetic remain. Source/binding and byte-exact reversal
+checks support these names. Existing native fixtures retain their original
+scopes and do not newly execute sheet/archive/font loading or these builders.
+Actual assets/archives, full rendering/gameplay and phone/FPS/heap behavior
+remain unverified.
+
+## Previous palette and coverage font names
 
 Pass 58 adds 125 guarded identities: two classes, two fields, seven methods,
 59 parameters and 55 locals. Every field, method, parameter and local in the
@@ -823,7 +851,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 125 additions in
+naming-only pass retains those source pins and records its 233 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -848,6 +876,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `6df95c7c28a45f0b2be73cde5a987051bdc5ebcc03b4e3d0c61168069eb7abc1` |
+| Readable | `82fe4c130272980e6e466a14162639552544f2dc4ccd145c97b95142f5c8c54e` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

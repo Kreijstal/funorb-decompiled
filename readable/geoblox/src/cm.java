@@ -10,7 +10,7 @@ final class cm extends cj {
     private int field_g;
     private long[] field_f;
     private int field_d;
-    static int[] field_j;
+    static int[] decodedSpritePalette;
     private long field_c;
 
     final static void c(int param0) {
@@ -199,7 +199,7 @@ final class cm extends cj {
     }
 
     public static void a(boolean param0) {
-        field_j = null;
+        decodedSpritePalette = null;
         if (param0) {
             cm.a(false);
         }

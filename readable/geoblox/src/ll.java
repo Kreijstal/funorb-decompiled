@@ -29,12 +29,12 @@ final class ll {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!mf.a(param2, param0, 117, param3)) {
+          if (!mf.decodeSpritesFromArchive(param2, param0, 117, param3)) {
             stackIn_2_0 = null;
             return (Sprite[]) ((Object) stackIn_2_0);
           }
           if (param1 == -81) {
-            stackIn_7_0 = nf.b(255);
+            stackIn_7_0 = nf.buildRgbSpritesFromDecodedSheet(255);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite[]) null;

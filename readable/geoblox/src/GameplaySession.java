@@ -32,7 +32,7 @@ final class GameplaySession {
     private int debugSpawnCategoryId;
     private boolean boardClearBonusEligible;
     private int tutorialStepPhase;
-    static int[] field_m;
+    static int[] decodedSpriteXOffsets;
     private Geoblox gameApplet;
     private int tutorialStepId;
     static String field_z;
@@ -1374,7 +1374,7 @@ final class GameplaySession {
     }
 
     public static void i(int param0) {
-        field_m = null;
+        decodedSpriteXOffsets = null;
         field_z = null;
         if (param0 != -17199) {
           pointerIdleTicks = 53;

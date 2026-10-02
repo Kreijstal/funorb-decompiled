@@ -14,7 +14,7 @@ final class hl extends el {
     int field_x;
     private Sprite field_M;
     private int field_I;
-    static int[] field_K;
+    static int[] decodedSpriteHeights;
     static boolean field_G;
     boolean field_C;
     static IntrusiveDeque field_B;
@@ -198,7 +198,7 @@ final class hl extends el {
             hl.f(93);
         }
         field_B = null;
-        field_K = null;
+        decodedSpriteHeights = null;
         field_D = null;
     }
 

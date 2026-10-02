@@ -85,40 +85,40 @@ final class ea extends IntrusiveNode {
         }
     }
 
-    final static CoverageBitmapFont a(rh param0, byte param1, rh param2, int param3, int param4) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        CoverageBitmapFont stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static CoverageBitmapFont loadCoverageFontById(rh glyphGraphicsArchive, byte methodGuard, rh fontMetricsArchive, int fileId, int groupId) {
+        int sentinelRemainder = 0;
+        RuntimeException fontFailureForContext = null;
+        CoverageBitmapFont fontBeforeReturn = null;
+        RuntimeException fontFailureBeforeArchiveDescriptions = null;
+        StringBuilder fontMessagePrefix = null;
+        String glyphArchiveDescription = null;
+        StringBuilder fontMessageBeforeMetricsArchive = null;
+        String metricsArchiveDescription = null;
+        RuntimeException caughtFontFailure = null;
         try {
-          if (!mf.a(param3, param4, 117, param0)) {
+          if (!mf.decodeSpritesFromArchive(fileId, groupId, 117, glyphGraphicsArchive)) {
             return null;
           }
-          var5_int = 8 % ((-50 - param1) / 51);
-          stackIn_4_0 = qa.a(param2.a(param4, -28153, param3), false);
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var5);
-          stackIn_7_1 = new StringBuilder().append("ea.C(");
-          if (param0 == null) {
-            stackIn_8_2 = "null";
+          sentinelRemainder = 8 % ((-50 - methodGuard) / 51);
+          fontBeforeReturn = qa.buildCoverageFontFromDecodedSprites(fontMetricsArchive.a(groupId, -28153, fileId), false);
+          return fontBeforeReturn;
+        } catch (java.lang.RuntimeException fontFailure) {
+          caughtFontFailure = fontFailure;
+          fontFailureForContext = caughtFontFailure;
+          fontFailureBeforeArchiveDescriptions = (RuntimeException) (fontFailureForContext);
+          fontMessagePrefix = new StringBuilder().append("ea.C(");
+          if (glyphGraphicsArchive == null) {
+            glyphArchiveDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            glyphArchiveDescription = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_11_2 = "null";
+          fontMessageBeforeMetricsArchive = ((StringBuilder) (Object) fontMessagePrefix).append(glyphArchiveDescription).append(',').append(methodGuard).append(',');
+          if (fontMetricsArchive == null) {
+            metricsArchiveDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            metricsArchiveDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) fontFailureBeforeArchiveDescriptions), ((StringBuilder) (Object) fontMessageBeforeMetricsArchive).append(metricsArchiveDescription).append(',').append(fileId).append(',').append(groupId).append(')').toString());
         }
     }
 

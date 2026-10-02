@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mj {
-    static byte[][] field_a;
+    static byte[][] decodedSpriteIndices;
     static int field_b;
     static String fullscreenAcceptCountdownSingularText;
 
@@ -128,7 +128,7 @@ final class mj {
 
     public static void a(int param0) {
         fullscreenAcceptCountdownSingularText = null;
-        field_a = (byte[][]) null;
+        decodedSpriteIndices = (byte[][]) null;
         if (param0 < 66) {
             field_b = 91;
         }

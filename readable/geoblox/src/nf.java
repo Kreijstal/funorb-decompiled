@@ -219,27 +219,27 @@ final class nf {
         qg.field_a = param0;
     }
 
-    final static Sprite[] b(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var4 = null;
-        int[] var5 = null;
-        int var6 = 0;
-        Sprite[] var1 = new Sprite[sb.field_a];
-        for (var2 = 0; sb.field_a > var2; var2++) {
-            var3 = hl.field_K[var2] * DualLinkNode.field_j[var2];
-            var4 = mj.field_a[var2];
-            var5 = new int[var3];
-            for (var6 = 0; var6 < var3; var6++) {
-                var5[var6] = cm.field_j[cd.a((int) var4[var6], 255)];
+    final static Sprite[] buildRgbSpritesFromDecodedSheet(int methodGuard) {
+        int spriteIndex = 0;
+        int pixelCount = 0;
+        byte[] paletteIndices = null;
+        int[] rgbPixels = null;
+        int pixelIndex = 0;
+        Sprite[] sprites = new Sprite[sb.decodedSpriteCount];
+        for (spriteIndex = 0; sb.decodedSpriteCount > spriteIndex; spriteIndex++) {
+            pixelCount = hl.decodedSpriteHeights[spriteIndex] * DualLinkNode.decodedSpriteWidths[spriteIndex];
+            paletteIndices = mj.decodedSpriteIndices[spriteIndex];
+            rgbPixels = new int[pixelCount];
+            for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
+                rgbPixels[pixelIndex] = cm.decodedSpritePalette[cd.a((int) paletteIndices[pixelIndex], 255)];
             }
-            var1[var2] = new Sprite(pg.field_b, dd.field_C, GameplaySession.field_m[var2], md.field_e[var2], DualLinkNode.field_j[var2], hl.field_K[var2], var5);
+            sprites[spriteIndex] = new Sprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], md.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], hl.decodedSpriteHeights[spriteIndex], rgbPixels);
         }
-        if (param0 != 255) {
+        if (methodGuard != 255) {
             screenTransitionTick = 40;
         }
-        kj.c(true);
-        return var1;
+        kj.clearDecodedSpriteWorkingArrays(true);
+        return sprites;
     }
 
     final static boolean a(boolean param0) {

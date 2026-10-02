@@ -17,42 +17,42 @@ final class pi extends vf {
         return (String) null;
     }
 
-    final static PaletteBitmapFont a(rh param0, int param1, int param2, rh param3, int param4) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        Object stackIn_2_0 = null;
-        PaletteBitmapFont stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static PaletteBitmapFont loadPaletteFontById(rh fontMetricsArchive, int groupId, int methodGuard, rh glyphGraphicsArchive, int fileId) {
+        int sentinelRemainder = 0;
+        RuntimeException fontFailureForContext = null;
+        Object nullFontBeforeReturn = null;
+        PaletteBitmapFont fontBeforeReturn = null;
+        RuntimeException fontFailureBeforeArchiveDescriptions = null;
+        StringBuilder fontMessagePrefix = null;
+        String metricsArchiveDescription = null;
+        StringBuilder fontMessageBeforeGlyphArchive = null;
+        String glyphArchiveDescription = null;
+        RuntimeException caughtFontFailure = null;
         try {
-          var5_int = -107 % ((-62 - param2) / 58);
-          if (mf.a(param4, param1, 116, param3)) {
-            stackIn_4_0 = ni.a(param0.a(param1, -28153, param4), -108);
-            return stackIn_4_0;
+          sentinelRemainder = -107 % ((-62 - methodGuard) / 58);
+          if (mf.decodeSpritesFromArchive(fileId, groupId, 116, glyphGraphicsArchive)) {
+            fontBeforeReturn = ni.buildPaletteFontFromDecodedSprites(fontMetricsArchive.a(groupId, -28153, fileId), -108);
+            return fontBeforeReturn;
           }
-          stackIn_2_0 = null;
-          return (PaletteBitmapFont) ((Object) stackIn_2_0);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_7_0 = (RuntimeException) (var5);
-          stackIn_7_1 = new StringBuilder().append("pi.O(");
-          if (param0 == null) {
-            stackIn_8_2 = "null";
+          nullFontBeforeReturn = null;
+          return (PaletteBitmapFont) ((Object) nullFontBeforeReturn);
+        } catch (java.lang.RuntimeException fontFailure) {
+          caughtFontFailure = fontFailure;
+          fontFailureForContext = caughtFontFailure;
+          fontFailureBeforeArchiveDescriptions = (RuntimeException) (fontFailureForContext);
+          fontMessagePrefix = new StringBuilder().append("pi.O(");
+          if (fontMetricsArchive == null) {
+            metricsArchiveDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            metricsArchiveDescription = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_11_2 = "null";
+          fontMessageBeforeGlyphArchive = ((StringBuilder) (Object) fontMessagePrefix).append(metricsArchiveDescription).append(',').append(groupId).append(',').append(methodGuard).append(',');
+          if (glyphGraphicsArchive == null) {
+            glyphArchiveDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            glyphArchiveDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw t.a((Throwable) ((Object) fontFailureBeforeArchiveDescriptions), ((StringBuilder) (Object) fontMessageBeforeGlyphArchive).append(glyphArchiveDescription).append(',').append(fileId).append(')').toString());
         }
     }
 

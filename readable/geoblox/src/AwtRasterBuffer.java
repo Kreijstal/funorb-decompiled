@@ -15,21 +15,21 @@ abstract class AwtRasterBuffer {
 
     abstract void initialize(int height, java.awt.Component component, int width, byte methodGuard);
 
-    final static Sprite a(byte param0) {
-        int var4_int = 0;
-        int var1 = DualLinkNode.field_j[0] * hl.field_K[0];
-        byte[] var2 = mj.field_a[0];
-        int[] var3 = new int[var1];
-        if (param0 != -60) {
-            Random var5 = (Random) null;
+    final static Sprite buildFirstRgbSpriteFromDecodedSheet(byte methodGuard) {
+        int pixelIndex = 0;
+        int pixelCount = DualLinkNode.decodedSpriteWidths[0] * hl.decodedSpriteHeights[0];
+        byte[] paletteIndices = mj.decodedSpriteIndices[0];
+        int[] rgbPixels = new int[pixelCount];
+        if (methodGuard != -60) {
+            Random unusedNullRandomSnapshot = (Random) null;
             AwtRasterBuffer.a((byte) 50, (Random) null, 37);
         }
-        for (var4_int = 0; var4_int < var1; var4_int++) {
-            var3[var4_int] = cm.field_j[cd.a(255, (int) var2[var4_int])];
+        for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
+            rgbPixels[pixelIndex] = cm.decodedSpritePalette[cd.a(255, (int) paletteIndices[pixelIndex])];
         }
-        Sprite var4 = new Sprite(pg.field_b, dd.field_C, GameplaySession.field_m[0], md.field_e[0], DualLinkNode.field_j[0], hl.field_K[0], var3);
-        kj.c(true);
-        return var4;
+        Sprite sprite = new Sprite(pg.decodedSpriteCanvasWidth, dd.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], md.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], hl.decodedSpriteHeights[0], rgbPixels);
+        kj.clearDecodedSpriteWorkingArrays(true);
+        return sprite;
     }
 
     public static void b(byte param0) {

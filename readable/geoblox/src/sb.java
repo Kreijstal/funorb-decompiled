@@ -4,7 +4,7 @@
 final class sb {
     static String noHighscoresText;
     static int[] field_b;
-    static int field_a;
+    static int decodedSpriteCount;
     static String loginNoDisplayNameText;
     static IndexedSprite[] field_e;
     static int field_d;
@@ -13,7 +13,7 @@ final class sb {
         field_e = null;
         loginNoDisplayNameText = null;
         if (param0) {
-            field_a = 105;
+            decodedSpriteCount = 105;
         }
         field_b = null;
         noHighscoresText = null;
@@ -29,7 +29,7 @@ final class sb {
     final static boolean a(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 <= 46) {
-          field_a = -60;
+          decodedSpriteCount = -60;
         }
         L1: {
           if (hj.field_a >= 10) {

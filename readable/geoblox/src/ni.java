@@ -229,36 +229,36 @@ final class ni extends ee implements pl {
         }
     }
 
-    final static PaletteBitmapFont a(byte[] param0, int param1) {
-        PaletteBitmapFont var2 = null;
-        RuntimeException var2_ref = null;
-        PaletteBitmapFont stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static PaletteBitmapFont buildPaletteFontFromDecodedSprites(byte[] metrics, int methodGuard) {
+        PaletteBitmapFont font = null;
+        RuntimeException fontFailureForContext = null;
+        PaletteBitmapFont fontBeforeReturn = null;
+        RuntimeException fontFailureBeforeMetricsDescription = null;
+        StringBuilder fontMessagePrefix = null;
+        String metricsDescription = null;
+        RuntimeException caughtFontFailure = null;
         try {
-          if (param0 == null) {
+          if (metrics == null) {
             return null;
           }
-          var2 = new PaletteBitmapFont(param0, GameplaySession.field_m, md.field_e, DualLinkNode.field_j, hl.field_K, cm.field_j, mj.field_a);
-          kj.c(true);
-          if (param1 >= -107) {
+          font = new PaletteBitmapFont(metrics, GameplaySession.decodedSpriteXOffsets, md.decodedSpriteYOffsets, DualLinkNode.decodedSpriteWidths, hl.decodedSpriteHeights, cm.decodedSpritePalette, mj.decodedSpriteIndices);
+          kj.clearDecodedSpriteWorkingArrays(true);
+          if (methodGuard >= -107) {
             createToUseText = (String) null;
           }
-          stackIn_6_0 = (PaletteBitmapFont) (var2);
-          return stackIn_6_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_9_0 = (RuntimeException) (var2_ref);
-          stackIn_9_1 = new StringBuilder().append("ni.MA(");
-          if (param0 == null) {
-            stackIn_10_2 = "null";
+          fontBeforeReturn = (PaletteBitmapFont) (font);
+          return fontBeforeReturn;
+        } catch (java.lang.RuntimeException fontFailure) {
+          caughtFontFailure = fontFailure;
+          fontFailureForContext = caughtFontFailure;
+          fontFailureBeforeMetricsDescription = (RuntimeException) (fontFailureForContext);
+          fontMessagePrefix = new StringBuilder().append("ni.MA(");
+          if (metrics == null) {
+            metricsDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            metricsDescription = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) fontFailureBeforeMetricsDescription), ((StringBuilder) (Object) fontMessagePrefix).append(metricsDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
