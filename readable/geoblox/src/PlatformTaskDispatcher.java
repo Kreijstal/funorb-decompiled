@@ -4,20 +4,20 @@
 import java.io.*;
 
 final class PlatformTaskDispatcher implements Runnable {
-    private static String field_x;
+    private static String userHomeDirectory;
     static java.lang.reflect.Method field_v;
-    pa field_s;
+    pa masterCacheIndexFile;
     private PlatformTask taskQueueHead;
     java.awt.EventQueue field_q;
     static String field_t;
     private PlatformTask taskQueueTail;
-    pa field_n;
+    pa randomSeedFile;
     private static volatile long field_m;
     private Object field_u;
     private ie field_w;
-    private static int field_f;
-    pa field_j;
-    pa[] field_r;
+    private static int cacheVariant;
+    pa cacheDataFile;
+    pa[] cacheIndexFiles;
     private Thread workerThread;
     static String field_b;
     private boolean field_h;
@@ -26,13 +26,13 @@ final class PlatformTaskDispatcher implements Runnable {
     private tg field_a;
     private boolean field_l;
     private boolean shutdownRequested;
-    private static String field_p;
+    private static String gameCacheName;
     private static String field_k;
 
     final PlatformTask a(int param0) {
         if (param0 != 34) {
             String var3 = (String) null;
-            PlatformTaskDispatcher.a((byte) 23, 7, (String) null, (String) null);
+            PlatformTaskDispatcher.openPreferencesFile((byte) 23, 7, (String) null, (String) null);
         }
         return this.enqueueTask(1, (Object) null, 0, 5, 0);
     }
@@ -59,7 +59,6 @@ final class PlatformTaskDispatcher implements Runnable {
 
     public final void run() {
         try {
-            int var5 = 0;
             int stackIn_76_0 = 0;
             Throwable decompiledCaughtException = null;
             Object var2 = null;
@@ -73,6 +72,7 @@ final class PlatformTaskDispatcher implements Runnable {
             bd var3_ref3 = null;
             int var4_int = 0;
             String var4 = null;
+            int var5 = 0;
             java.awt.datatransfer.Transferable var7 = null;
             String var8 = null;
             PlatformTask var9 = null;
@@ -184,11 +184,11 @@ final class PlatformTaskDispatcher implements Runnable {
                                             }
                                           } else {
                                             if (12 == var2_int) {
-                                              var3_ref = PlatformTaskDispatcher.a((byte) -103, field_f, field_p, (String) (var9.input));
+                                              var3_ref = PlatformTaskDispatcher.openPreferencesFile((byte) -103, cacheVariant, gameCacheName, (String) (var9.input));
                                               var9.result = var3_ref;
                                             } else {
                                               if (var2_int == 13) {
-                                                var3_ref = PlatformTaskDispatcher.a((byte) 19, field_f, "", (String) (var9.input));
+                                                var3_ref = PlatformTaskDispatcher.openPreferencesFile((byte) 19, cacheVariant, "", (String) (var9.input));
                                                 var9.result = var3_ref;
                                               } else {
                                                 if (this.field_h) {
@@ -239,10 +239,12 @@ final class PlatformTaskDispatcher implements Runnable {
                                                         }
                                                       }
                                                       var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                      for (var5 = 0; var5 < var8.length(); var5++) {
+                                                      var5 = 0;
+                                                      L16: while (var5 < var8.length()) {
                                                         if (-1 == var4.indexOf((int) var8.charAt(var5))) {
                                                           throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                         }
+                                                        var5++;
                                                       }
                                                       Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
                                                       var9.result = null;
@@ -326,7 +328,7 @@ final class PlatformTaskDispatcher implements Runnable {
 
     private final PlatformTask a(int param0, int param1, boolean param2, String param3) {
         if (param0 != 0) {
-            this.field_j = (pa) null;
+            this.cacheDataFile = (pa) null;
         }
         return this.enqueueTask(1, param3, param1, param2 ? 22 : 1, 0);
     }
@@ -338,124 +340,128 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(guard + 1, runnable, priority, 2, 0);
     }
 
-    private final static pa a(byte param0, int param1, String param2, String param3) {
+    private final static pa openPreferencesFile(byte guard, int cacheVariant, String gameName, String preferenceSuffix) {
         try {
-            int var6 = 0;
-            pa stackIn_13_0 = null;
-            Throwable decompiledCaughtException = null;
-            String var4 = null;
-            String[] var5 = null;
-            int var7 = 0;
-            String var8 = null;
-            pa var9 = null;
-            Exception var9_ref = null;
-            if (33 == param1) {
-              var4 = "jagex_" + param2 + "_preferences" + param3 + "_rc.dat";
+            pa preferencesFileAtReturn = null;
+            Throwable caughtPreferencesThrowable = null;
+            String preferencesFilename = null;
+            String[] searchDirectories = null;
+            int directoryIndex = 0;
+            int guardDivisionValue = 0;
+            String searchDirectory = null;
+            pa preferencesFile = null;
+            Exception ignoredOpenFailure = null;
+            if (33 == cacheVariant) {
+              preferencesFilename = "jagex_" + gameName + "_preferences" + preferenceSuffix + "_rc.dat";
             } else {
-              if (34 != param1) {
-                var4 = "jagex_" + param2 + "_preferences" + param3 + ".dat";
+              if (34 != cacheVariant) {
+                preferencesFilename = "jagex_" + gameName + "_preferences" + preferenceSuffix + ".dat";
               } else {
-                var4 = "jagex_" + param2 + "_preferences" + param3 + "_wip.dat";
+                preferencesFilename = "jagex_" + gameName + "_preferences" + preferenceSuffix + "_wip.dat";
               }
             }
-            var5 = new String[]{"c:/rscache/", "/rscache/", field_x, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
-            var7 = -95 % ((-46 - param0) / 35);
-            L1: for (var6 = 0; var6 < var5.length; var6++) {
-              var8 = var5[var6];
-              if (0 < var8.length()) {
-                if (!new File(var8).exists()) {
+            searchDirectories = new String[]{"c:/rscache/", "/rscache/", userHomeDirectory, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
+            guardDivisionValue = -95 % ((-46 - guard) / 35);
+            directoryIndex = 0;
+            L1: while (directoryIndex < searchDirectories.length) {
+              searchDirectory = searchDirectories[directoryIndex];
+              if (0 < searchDirectory.length()) {
+                if (!new File(searchDirectory).exists()) {
+                  directoryIndex++;
                   continue L1;
                 }
               }
               try {
-                var9 = new pa(new File(var8, var4), "rw", 10000L);
-                stackIn_13_0 = (pa) (var9);
-                return stackIn_13_0;
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var9_ref = (Exception) (Object) decompiledCaughtException;
-                var6++;
+                preferencesFile = new pa(new File(searchDirectory, preferencesFilename), "rw", 10000L);
+                preferencesFileAtReturn = (pa) (preferencesFile);
+                return preferencesFileAtReturn;
+              } catch (java.lang.Exception openFailure) {
+                caughtPreferencesThrowable = openFailure;
+                ignoredOpenFailure = (Exception) (Object) caughtPreferencesThrowable;
+                directoryIndex++;
               }
             }
             return null;
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedPreferencesFailure) {
+            throw uncheckedPreferencesFailure;
+        } catch (Throwable checkedPreferencesFailure) {
+            throw new RuntimeException(checkedPreferencesFailure);
         }
     }
 
-    final void a(byte param0) {
+    final void shutdown(byte guard) {
         try {
-            PlatformTask discarded$0 = null;
-            int var2_int = 0;
-            Throwable decompiledCaughtException = null;
-            Object var2 = null;
-            InterruptedException var2_ref = null;
-            IOException var2_ref2 = null;
-            IOException var3 = null;
-            String var4 = null;
-            var2 = this;
-            synchronized (var2) {
+            PlatformTask ignoredGuardSocketTask = null;
+            Throwable caughtShutdownThrowable = null;
+            Object shutdownMonitor = null;
+            InterruptedException ignoredWorkerJoinInterruption = null;
+            IOException ignoredCacheCloseFailure = null;
+            int cacheIndex = 0;
+            IOException ignoredIndexCloseFailure = null;
+            String unusedGuardHost = null;
+            shutdownMonitor = this;
+            synchronized (shutdownMonitor) {
               this.shutdownRequested = true;
-              if (param0 != 13) {
-                var4 = (String) null;
-                discarded$0 = this.a(-99, 45, true, (String) null);
+              if (guard != 13) {
+                unusedGuardHost = (String) null;
+                ignoredGuardSocketTask = this.a(-99, 45, true, (String) null);
               }
               this.notifyAll();
             }
             try {
               this.workerThread.join();
-            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (InterruptedException) (Object) decompiledCaughtException;
+            } catch (java.lang.InterruptedException workerJoinInterruption) {
+              caughtShutdownThrowable = workerJoinInterruption;
+              ignoredWorkerJoinInterruption = (InterruptedException) (Object) caughtShutdownThrowable;
             }
-            if (this.field_j != null) {
+            if (this.cacheDataFile != null) {
               try {
-                this.field_j.a((byte) -5);
-              } catch (java.io.IOException decompiledCaughtParameter1) {
-                decompiledCaughtException = decompiledCaughtParameter1;
-                var2_ref2 = (IOException) (Object) decompiledCaughtException;
+                this.cacheDataFile.a((byte) -5);
+              } catch (java.io.IOException dataCloseFailure) {
+                caughtShutdownThrowable = dataCloseFailure;
+                ignoredCacheCloseFailure = (IOException) (Object) caughtShutdownThrowable;
               }
             }
-            if (null != this.field_s) {
+            if (null != this.masterCacheIndexFile) {
               try {
-                this.field_s.a((byte) -5);
-              } catch (java.io.IOException decompiledCaughtParameter2) {
-                decompiledCaughtException = decompiledCaughtParameter2;
-                var2_ref2 = (IOException) (Object) decompiledCaughtException;
+                this.masterCacheIndexFile.a((byte) -5);
+              } catch (java.io.IOException masterIndexCloseFailure) {
+                caughtShutdownThrowable = masterIndexCloseFailure;
+                ignoredCacheCloseFailure = (IOException) (Object) caughtShutdownThrowable;
               }
             }
             L10: {
-              if (null != this.field_r) {
-                L11: for (var2_int = 0; var2_int < this.field_r.length; var2_int++) {
-                  if (this.field_r[var2_int] == null) {
+              if (null != this.cacheIndexFiles) {
+                cacheIndex = 0;
+                L11: while (cacheIndex < this.cacheIndexFiles.length) {
+                  if (this.cacheIndexFiles[cacheIndex] == null) {
+                    cacheIndex++;
                     continue L11;
                   }
                   try {
-                    this.field_r[var2_int].a((byte) -5);
-                    var2_int++;
-                  } catch (java.io.IOException decompiledCaughtParameter3) {
-                    decompiledCaughtException = decompiledCaughtParameter3;
-                    var3 = (IOException) (Object) decompiledCaughtException;
-                    var2_int++;
+                    this.cacheIndexFiles[cacheIndex].a((byte) -5);
+                    cacheIndex++;
+                  } catch (java.io.IOException indexCloseFailure) {
+                    caughtShutdownThrowable = indexCloseFailure;
+                    ignoredIndexCloseFailure = (IOException) (Object) caughtShutdownThrowable;
+                    cacheIndex++;
                   }
                 }
                 break L10;
               }
             }
-            if (null != this.field_n) {
+            if (null != this.randomSeedFile) {
               try {
-                this.field_n.a((byte) -5);
-              } catch (java.io.IOException decompiledCaughtParameter4) {
-                decompiledCaughtException = decompiledCaughtParameter4;
-                var2_ref2 = (IOException) (Object) decompiledCaughtException;
+                this.randomSeedFile.a((byte) -5);
+              } catch (java.io.IOException seedCloseFailure) {
+                caughtShutdownThrowable = seedCloseFailure;
+                ignoredCacheCloseFailure = (IOException) (Object) caughtShutdownThrowable;
               }
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedShutdownFailure) {
+            throw uncheckedShutdownFailure;
+        } catch (Throwable checkedShutdownFailure) {
+            throw new RuntimeException(checkedShutdownFailure);
         }
     }
 
@@ -532,14 +538,14 @@ final class PlatformTaskDispatcher implements Runnable {
         Throwable decompiledCaughtException = null;
         ie var6 = null;
         this.taskQueueHead = null;
-        this.field_n = null;
-        this.field_j = null;
+        this.randomSeedFile = null;
+        this.cacheDataFile = null;
         this.taskQueueTail = null;
-        this.field_s = null;
+        this.masterCacheIndexFile = null;
         this.field_l = false;
         this.field_h = false;
         this.shutdownRequested = false;
-        field_p = param1;
+        gameCacheName = param1;
         stackIn_2_0 = this;
 
         if (!param3) {
@@ -552,7 +558,7 @@ final class PlatformTaskDispatcher implements Runnable {
         ((PlatformTaskDispatcher) (this)).field_h = stackIn_3_1;
         field_o = "Unknown";
         field_t = "1.1";
-        field_f = param0;
+        cacheVariant = param0;
         try {
           field_o = System.getProperty("java.vendor");
           field_t = System.getProperty("java.version");
@@ -584,16 +590,16 @@ final class PlatformTaskDispatcher implements Runnable {
           exception = (Exception) (Object) decompiledCaughtException;
         }
         try {
-          field_x = System.getProperty("user.home");
-          if (field_x != null) {
-            field_x = field_x + "/";
+          userHomeDirectory = System.getProperty("user.home");
+          if (userHomeDirectory != null) {
+            userHomeDirectory = userHomeDirectory + "/";
           }
         } catch (java.lang.Exception decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           exception = (Exception) (Object) decompiledCaughtException;
         }
-        if (null == field_x) {
-          field_x = "~/";
+        if (null == userHomeDirectory) {
+          userHomeDirectory = "~/";
         }
         try {
           this.field_q = java.awt.Toolkit.getDefaultToolkit().getSystemEventQueue();
@@ -616,14 +622,14 @@ final class PlatformTaskDispatcher implements Runnable {
           }
         }
         L21: {
-          aj.a((byte) 66, field_p, field_f);
+          aj.a((byte) 66, gameCacheName, cacheVariant);
           if (this.field_h) {
-            this.field_n = new pa(aj.a((String) null, -27533, "random.dat", field_f), "rw", 25L);
-            this.field_j = new pa(aj.a("main_file_cache.dat2", (byte) -116), "rw", 314572800L);
-            this.field_s = new pa(aj.a("main_file_cache.idx255", (byte) -77), "rw", 1048576L);
-            this.field_r = new pa[param2];
+            this.randomSeedFile = new pa(aj.a((String) null, -27533, "random.dat", cacheVariant), "rw", 25L);
+            this.cacheDataFile = new pa(aj.a("main_file_cache.dat2", (byte) -116), "rw", 314572800L);
+            this.masterCacheIndexFile = new pa(aj.a("main_file_cache.idx255", (byte) -77), "rw", 1048576L);
+            this.cacheIndexFiles = new pa[param2];
             for (var5_int = 0; var5_int < param2; var5_int++) {
-              this.field_r[var5_int] = new pa(aj.a("main_file_cache.idx" + var5_int, (byte) -104), "rw", 1048576L);
+              this.cacheIndexFiles[var5_int] = new pa(aj.a("main_file_cache.idx" + var5_int, (byte) -104), "rw", 1048576L);
             }
             if (this.field_l) {
               try {

@@ -19,14 +19,22 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 150,387 bindings
 and 388 override relationships.
 
-The current naming pass adds 114 rules on unchanged raw sources and retains all
-2,404 prior names. `BufferedSocket`, `PlatformTask` and `PlatformTaskDispatcher`
-now describe the socket ring writer and asynchronous platform-task queue.
-Every socket parameter/nonselector local is named. The current 2,518 rules
-apply 27,837 identifier edits. An existing probe independently verifies 308
-constructor/read/ring/drain/failure cases against native, raw and readable Java,
-retaining the earlier shutdown/cache/helper traces. Actual network traffic and
-open-writer concurrency remain unverified; no new JSON snapshots are created.
+The current refresh fixes a decompiler loop-update bug: exported dispatcher
+shutdown skipped alternating cache entries while native bytecode visited every
+entry. For recovery now proves one update per backedge and keeps uncertain
+protected bodies as explicit while loops. The existing probe adds 96 native
+null-entry/close-failure cases; the generic suite adds 1,200 counter comparisons.
+The two-file raw refresh preserves all declarations/references after normalizing
+24 unguarded local-order changes. This pass adds 41 shutdown/preferences names,
+retains all 2,518 prior spellings/names and corrects one task-type evidence note.
+Current 2,559 rules apply 27,995 edits. Native counter/closure checks establish
+these scopes; whole-game and real-device behavior remain unverified. No new
+JSON snapshots are created.
+
+The previous naming pass added 114 rules for `BufferedSocket`, `PlatformTask`
+and `PlatformTaskDispatcher`, including every socket parameter/nonselector
+local. Its 308 constructor/read/ring/drain/failure cases remain unchanged,
+alongside the earlier shutdown/cache/helper traces.
 
 Difficulty and spawning now name the step flags, sprite-variant/category
 bounds, special-kind probability, release interval and queue geometry.

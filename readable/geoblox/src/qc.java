@@ -1088,7 +1088,8 @@ class qc extends IntrusiveNode {
         long var12;
         field_g = new long[8][256];
         field_h = new long[11];
-        for (var0 = 0; var0 < 256; var0++) {
+        var0 = 0;
+        L0: while (var0 < 256) {
           var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
           if ((var0 & 1) != 0) {
             stackIn_5_0 = (long)(var1 & 255);
@@ -1114,6 +1115,7 @@ class qc extends IntrusiveNode {
           for (var14 = 1; var14 < 8; var14++) {
             field_g[var14][var0] = ue.a(field_g[var14 - 1][var0] >>> 8, field_g[-1 + var14][var0] << 56);
           }
+          var0++;
         }
         field_h[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {

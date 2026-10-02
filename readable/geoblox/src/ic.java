@@ -72,9 +72,9 @@ final class ic {
               ol.field_I = param9;
               ll.field_e = param5;
               qe.field_b = param6;
-              if (GameplayEntity.field_D.field_n != null) {
+              if (GameplayEntity.field_D.randomSeedFile != null) {
                 try {
-                  af.field_b = new sk(GameplayEntity.field_D.field_n, 64, 0);
+                  af.field_b = new sk(GameplayEntity.field_D.randomSeedFile, 64, 0);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var15 = (IOException) (Object) decompiledCaughtException;

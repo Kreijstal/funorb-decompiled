@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 2,518 guarded naming rules: 27 classes, 481 fields,
-281 methods, 740 parameters and 989 local declarations. Both 303-file corpora
+The current export has 2,559 guarded naming rules: 27 classes, 488 fields,
+283 methods, 745 parameters and 1,016 local declarations. Both 303-file corpora
 compile, preserving 150,387 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`de1fa91e8e6d6ce11229380bbc05b0e343bf5082`. It comes from java-tools
-`3564f5d1f8ec3e288a80decab1b1815cc675c3fa` and Deko
+`f1fc0338feac7c9140bbdab315b770c17478d822`. It comes from java-tools
+`f9f0838416053d3f6189ae5990365d73b7be6596` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`93e62046b7f1e880f3f7c28449d89b90e64b92c34d7dcdbb8dade76e9e86913f`:
+`4812cac052bc37ad4cf1a36f907bff3dce8a86535f2379f7d7cf2b60bb9f1053`:
 
 ```sh
-git archive --format=tar 3564f5d1f8ec3e288a80decab1b1815cc675c3fa | sha256sum
+git archive --format=tar f9f0838416053d3f6189ae5990365d73b7be6596 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -54,7 +54,41 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current socket/task naming
+## Current protected-counter recovery
+
+A native shutdown fixture exposed a correctness bug in the previous Java export:
+a for-header update was inferred from the null-entry continue while explicit
+success/catch updates remained. A five-entry cache array closed only indices
+0, 2 and 4; native bytecode closes all five. Preferences search has the same
+continue/caught-failure shape. Recovery now requires exactly one selected update
+on every normal/own-continue backedge and zero on other exits. Other counter
+writes, shadowing, unsupported syntax/Unicode and protected/monitor/nested-loop
+update movement refuse conversion. Eligible ordinary counting loops still
+become for loops; uncertain bodies retain explicit while paths.
+
+The raw refresh changes only d.java and qc.java, adding eight lines. All 20,708
+declarations, 129,679 reference occurrences and 388 override rows remain after
+normalizing 24 unguarded local-order changes. No existing guarded identity needs
+migration. Compilation and unchanged reference counts alone did not reveal
+the bug; native visitation checks do.
+
+This pass adds 41 guarded names for dispatcher shutdown, cache handles and
+preferences search. It retains every previous spelling/name and corrects one
+evidence note: URL-stream task type is 4; reverse DNS is 3. Current 2,559 rules
+apply 27,995 identifier edits and preserve all 150,387 bindings.
+
+The generic exception-loop suite passes eight groups, including 600 native
+protected-counter cases compared with both structured and forced-dispatcher
+Java (1,200 comparisons); additional-feature assertions pass 77/77 and nested
+exception-cycle groups pass 3/3. The existing game helper probe adds 96 shutdown
+cases with independent complete cache-close order and failure/null-entry checks:
+`86554dba87ac6740912bf88fcd328c871758629250b6277e4223e4955bfcfb29`.
+Previous helper/cache/socket traces remain unchanged. The decompiler source
+archive reproduces all 303 Java files and diagnostics byte for byte.
+Preferences filesystem search, Windows URL launch, invalid shutdown guards,
+live worker joining and real-device cache concurrency remain unverified.
+
+## Previous socket/task naming
 
 This naming pass adds 114 guarded identities: three classes, 24 fields,
 11 methods, 29 parameters and 47 locals. It preserves all 2,404 prior rules,
@@ -174,7 +208,8 @@ characters after shorter writes. Result probes cover 27 scenarios/26,043 ticks,
 120 selector cases, 4,801 PCM factory cases, 9,000 bounds checks and six music
 returns. The same result-helper probe also covers 140 cache-write cases with
 independent file-byte, offset and guard checks, plus 84 controlled shutdown
-and 308 controlled socket I/O cases. Native, raw and readable traces
+and 308 controlled socket I/O cases, plus 96 dispatcher shutdown cases.
+Native, raw and readable traces
 match within those controlled scopes.
 The gameplay probe checks 144 contact cases across kinds 0/1/2, equality keys,
 force flags and client guards; 32 neighbor removals; two forced neighborhood
@@ -441,7 +476,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `084346454dabfd60bbdcd5e9edfa05ac3786798eee83a6ce673176cfca80e8af` |
-| Readable | `2ba5683f2e76d59cfc517bbe5e76764b9410de42e99b9de919f0d113c3057e3e` |
+| Raw | `e9497d12a451095457234cd1abee1018e845505bf5901b14c7f0eb36988c6c49` |
+| Readable | `febf42223dd4379b143ba418e5d4ab77a45c1c31fc3f5d952dc271eebe3f2575` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

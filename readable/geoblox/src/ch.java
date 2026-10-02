@@ -140,7 +140,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           }
           if (MenuScreen.field_i != null) {
             try {
-              MenuScreen.field_i.a((byte) 13);
+              MenuScreen.field_i.shutdown((byte) 13);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;

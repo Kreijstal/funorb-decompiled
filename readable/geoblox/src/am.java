@@ -54,19 +54,19 @@ final class am {
                 return stackIn_2_0;
               }
               var6 = null;
-              if (ph.field_i.field_j != null) {
-                af.field_d = new sk(ph.field_i.field_j, 5200, 0);
-                ph.field_i.field_j = null;
-                var6 = new jh(255, af.field_d, new sk(ph.field_i.field_s, 12000, 0), 2097152);
+              if (ph.field_i.cacheDataFile != null) {
+                af.field_d = new sk(ph.field_i.cacheDataFile, 5200, 0);
+                ph.field_i.cacheDataFile = null;
+                var6 = new jh(255, af.field_d, new sk(ph.field_i.masterCacheIndexFile, 12000, 0), 2097152);
               }
               var7 = null;
               if (af.field_d != null) {
                 if (je.field_h == null) {
-                  je.field_h = new sk[ph.field_i.field_r.length];
+                  je.field_h = new sk[ph.field_i.cacheIndexFiles.length];
                 }
                 if (je.field_h[param1] == null) {
-                  je.field_h[param1] = new sk(ph.field_i.field_r[param1], 12000, 0);
-                  ph.field_i.field_r[param1] = null;
+                  je.field_h[param1] = new sk(ph.field_i.cacheIndexFiles[param1], 12000, 0);
+                  ph.field_i.cacheIndexFiles[param1] = null;
                 }
                 var7 = new jh(param1, af.field_d, je.field_h[param1], 2097152);
               }

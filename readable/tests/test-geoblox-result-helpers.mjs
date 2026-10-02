@@ -15,6 +15,7 @@ const expectedNativeSha256 = 'ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e
 const expectedCacheWriteSha256 = 'e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d';
 const expectedShutdownSha256 = '2fec6ee86681993c79d39ef1e57026f31fd9b0a87b7d7f94a5bddf5af83d6335';
 const expectedSocketIoSha256 = 'ed8f7d5f5438f4fb39cb3bceca82a861d01f4e08502ca73ba7af8ca475b6292b';
+const expectedDispatcherShutdownSha256 = '86554dba87ac6740912bf88fcd328c871758629250b6277e4223e4955bfcfb29';
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-result-helpers-'));
 try {
   if (nativeInput) {
@@ -445,6 +446,54 @@ try {
           }
           check(cases==308,"socket I/O case count");System.out.println("socket-io-complete:"+cases);
         }
+      }
+      class DispatcherShutdownBehavior extends ResultHelperBehavior {
+        static final StringBuilder trace=new StringBuilder();
+        static class RecordingFile extends java.io.RandomAccessFile {
+          final String id;final boolean fails;boolean tracing=true;
+          RecordingFile(java.io.File path,String id,boolean fails)throws java.io.IOException {super(path,"rw");this.id=id;this.fails=fails;}
+          public void close()throws java.io.IOException {if(tracing)trace.append(id).append(',');super.close();if(fails&&tracing)throw new java.io.IOException(id);}
+          void forceClose()throws java.io.IOException {tracing=false;super.close();}
+        }
+        static Object file(java.nio.file.Path directory,String id,boolean failure,java.util.List<Object> holders,
+            java.util.List<RecordingFile> files)throws Exception {
+          Object holder=allocate("${type('pa')}");RecordingFile file=new RecordingFile(directory.resolve(id).toFile(),id,failure);
+          ${set('pa','field_d','Ljava/io/RandomAccessFile;','holder','file')}
+          holders.add(holder);files.add(file);return holder;
+        }
+        public static void main(String[] args)throws Exception {
+          Method shutdown=method("${type('d')}","${method('d','a(B)V')}",byte.class);int cases=0;
+          for(int nullMask=0;nullMask<32;nullMask++)for(int failMask:new int[]{0,21,31}) {
+            java.nio.file.Path directory=java.nio.file.Files.createTempDirectory("geoblox-dispatcher-close-");
+            java.util.List<Object> holders=new ArrayList<>();java.util.List<RecordingFile> files=new ArrayList<>();
+            try {
+              Object dispatcher=allocate("${type('d')}");Object indices=java.lang.reflect.Array.newInstance(Class.forName("${type('pa')}"),5);
+              ${set('d','field_i','Ljava/lang/Thread;','dispatcher','new Thread()')}
+              ${set('d','field_j','Lpa;','dispatcher','file(directory,"data",false,holders,files)')}
+              ${set('d','field_s','Lpa;','dispatcher','file(directory,"master",false,holders,files)')}
+              String expected="data,master,";
+              for(int index=0;index<5;index++)if((nullMask&(1<<index))==0) {
+                java.lang.reflect.Array.set(indices,index,file(directory,"index"+index,(failMask&(1<<index))!=0,holders,files));
+                expected+="index"+index+",";
+              }
+              ${set('d','field_r','[Lpa;','dispatcher','indices')}
+              ${set('d','field_n','Lpa;','dispatcher','file(directory,"seed",false,holders,files)')}
+              expected+="seed,";trace.setLength(0);shutdown.invoke(dispatcher,(byte)13);
+              check(trace.toString().equals(expected),"cache shutdown order: "+trace+" != "+expected);
+              for(int i=0;i<holders.size();i++)check((${get('pa','field_d','Ljava/io/RandomAccessFile;','holders.get(i)')}!=null)==files.get(i).fails,"close success/failure retention");
+              check((Boolean)${get('d','field_c','Z','dispatcher')} && !Thread.holdsLock(dispatcher),"dispatcher flag/monitor");
+              check(${get('d','field_d','Lcb;','dispatcher')}==null && ${get('d','field_g','Lcb;','dispatcher')}==null,"no shutdown task for valid guard");
+              System.out.println("dispatcher-close:"+nullMask+":"+failMask+":"+trace);cases++;
+            } finally {
+              for(int i=0;i<holders.size();i++) {files.get(i).forceClose();${set('pa','field_d','Ljava/io/RandomAccessFile;','holders.get(i)','null')}}
+              try(java.util.stream.Stream<java.nio.file.Path> children=java.nio.file.Files.list(directory)) {
+                for(java.nio.file.Path child:(Iterable<java.nio.file.Path>)children::iterator)java.nio.file.Files.delete(child);
+              }
+              java.nio.file.Files.delete(directory);
+            }
+          }
+          check(cases==96,"dispatcher shutdown case count");System.out.println("dispatcher-shutdown-complete:"+cases);
+        }
       }`;
     const directory = path.join(temporary, variant), classes = path.join(directory, 'classes');
     fs.mkdirSync(classes, {recursive: true});
@@ -479,6 +528,11 @@ try {
     const socketIoSha256 = crypto.createHash('sha256').update(socketIoOutput).digest('hex');
     console.log(JSON.stringify({variant, socketIoSha256, completion: socketIoOutput.toString().trim().split('\n').at(-1)}));
     assert.equal(socketIoSha256, expectedSocketIoSha256, variant);
+    const dispatcherShutdownOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
+      'DispatcherShutdownBehavior']).stdout;
+    const dispatcherShutdownSha256 = crypto.createHash('sha256').update(dispatcherShutdownOutput).digest('hex');
+    console.log(JSON.stringify({variant, dispatcherShutdownSha256, completion: dispatcherShutdownOutput.toString().trim().split('\n').at(-1)}));
+    assert.equal(dispatcherShutdownSha256, expectedDispatcherShutdownSha256, variant);
   }
 } catch (error) {
   if (error.stderr) process.stderr.write(error.stderr);

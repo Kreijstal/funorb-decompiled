@@ -877,6 +877,41 @@ readable traces match. Normal open-writer blocking/concurrency, real sockets,
 dispatcher services, browser navigation, guard-triggered run and whole-game
 behavior remain unverified. Nine routing selectors remain across the game.
 
+## Dispatcher shutdown and preferences iteration
+
+`PlatformTaskDispatcher.shutdown(guard)` requests worker shutdown under its
+monitor and notifies, joins `workerThread`, then closes `cacheDataFile`,
+`masterCacheIndexFile`, each non-null `cacheIndexFiles` entry, and `randomSeedFile`.
+Each IOException is swallowed. The named `cacheIndex` advances exactly once
+on null, successful-close and caught-failure paths; no update crosses a handler.
+The loop remains an explicit while. Every shutdown parameter and local is named,
+including the ignored failures, monitor snapshot and invalid-guard task carrier.
+
+The previous exported for loop had both a header update and updates inside
+success/catch arms, incorrectly skipping cache entries. The new native probe
+checks 96 combinations: all 32 five-entry null masks and three failure masks.
+Instrumented file closes prove complete order and successful-handle release;
+failed close retains its holder reference. Native bytecode, refreshed raw Java
+and readable Java match. The worker is unstarted; invalid guards, live worker
+joins and concurrent real cache access remain outside this probe.
+
+`openPreferencesFile(guard, cacheVariant, gameName, preferenceSuffix)` builds the
+jagex preferences filename, using _rc for variant 33 and _wip for 34. Its named
+`searchDirectories`, `directoryIndex` and `searchDirectory` describe the fixed
+path search. Absent directories and caught open failures each advance once;
+first successful open returns a limited pa holder, and exhausting search
+returns null. This loop also retains while paths. Original guard division,
+paths, catch carriers and filename spellings remain. Filesystem search behavior
+is supported by source/native counter-shape inspection, not a new live-path test.
+
+For-header recovery now parses and checks all paths, instead of choosing an
+update from the first continue. One selected update must reach every normal or
+own-continue backedge, and none may reach other exits. Additional counter writes,
+shadowing, unsupported lexical/syntax cases, and updates/own continues inside
+nested loops, labels, try/finally or monitor bodies refuse recovery. Unknown
+completion stays explicit. All 303 files compile and all guarded bindings are
+checked, but those checks alone cannot establish execution equivalence.
+
 ## Sequential early-exit guards
 
 The earlier early-exit pass removed an else wrapper when the preceding arm

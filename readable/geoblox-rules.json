@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "de1fa91e8e6d6ce11229380bbc05b0e343bf5082",
+    "commit": "f1fc0338feac7c9140bbdab315b770c17478d822",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "084346454dabfd60bbdcd5e9edfa05ac3786798eee83a6ce673176cfca80e8af",
+  "inputTreeSha256": "e9497d12a451095457234cd1abee1018e845505bf5901b14c7f0eb36988c6c49",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -464,7 +464,7 @@
       "symbol": "F:cb.field_d:I",
       "originalName": "field_d",
       "to": "taskType",
-      "evidence": "enqueuePlatformTask stores the dispatch type; worker branches on it, including 1 socket, 2 thread and 3 URL stream. Numeric IDs remain unchanged."
+      "evidence": "enqueuePlatformTask stores the dispatch type; worker branches on it, including 1 socket, 2 thread and 4 URL stream. Numeric IDs remain unchanged."
     },
     {
       "symbol": "F:cb.field_e:Lcb;",
@@ -521,6 +521,12 @@
       "evidence": "Dispatcher worker removes this record under its monitor and advances through next; enqueue sets head for an empty queue."
     },
     {
+      "symbol": "F:d.field_f:I",
+      "originalName": "field_f",
+      "to": "cacheVariant",
+      "evidence": "Constructor captures cache variant integer passed to aj; preferences filename uses _rc for33 and _wip for34, default otherwise."
+    },
+    {
       "symbol": "F:d.field_g:Lcb;",
       "originalName": "field_g",
       "to": "taskQueueTail",
@@ -531,6 +537,42 @@
       "originalName": "field_i",
       "to": "workerThread",
       "evidence": "Dispatcher constructor creates daemon Thread(this), priority 10, and starts it; dispatcher shutdown joins the same thread."
+    },
+    {
+      "symbol": "F:d.field_j:Lpa;",
+      "originalName": "field_j",
+      "to": "cacheDataFile",
+      "evidence": "Dispatcher constructor opens main_file_cache.dat2 with 314572800-byte limit; shutdown closes it before master/index/seed files. Invalid shutdown guard deliberately clears it before closing."
+    },
+    {
+      "symbol": "F:d.field_n:Lpa;",
+      "originalName": "field_n",
+      "to": "randomSeedFile",
+      "evidence": "Dispatcher constructor opens random.dat with a 25-byte limit; shutdown closes this holder last."
+    },
+    {
+      "symbol": "F:d.field_p:Ljava/lang/String;",
+      "originalName": "field_p",
+      "to": "gameCacheName",
+      "evidence": "Constructor captures game-name argument for aj cache lookup and type12 preference filename prefix jagex_<name>_preferences."
+    },
+    {
+      "symbol": "F:d.field_r:[Lpa;",
+      "originalName": "field_r",
+      "to": "cacheIndexFiles",
+      "evidence": "Dispatcher constructor opens main_file_cache.idxN into this array; shutdown visits all non-null entries and continues after caught IOException. Native96-case fixture exposes prior doubled for-update bug."
+    },
+    {
+      "symbol": "F:d.field_s:Lpa;",
+      "originalName": "field_s",
+      "to": "masterCacheIndexFile",
+      "evidence": "Dispatcher constructor opens main_file_cache.idx255; shutdown closes it after data and before per-archive indices."
+    },
+    {
+      "symbol": "F:d.field_x:Ljava/lang/String;",
+      "originalName": "field_x",
+      "to": "userHomeDirectory",
+      "evidence": "Constructor captures user.home with trailing slash or ~/ fallback; preference search includes this path among its directories."
     },
     {
       "symbol": "F:da.field_e:Ljava/lang/String;",
@@ -3639,6 +3681,168 @@
       "to": "controlFlowGuard",
       "originalName": "var2",
       "evidence": "Retained entry snapshot of Geoblox.field_C; popup advancement still uses the exact floating comparison, including NaN behavior."
+    },
+    {
+      "symbol": "L:d.a(B)V#0",
+      "originalName": "discarded$0",
+      "to": "ignoredGuardSocketTask",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#1",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtShutdownThrowable",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#10",
+      "originalName": "decompiledCaughtParameter2",
+      "to": "masterIndexCloseFailure",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#11",
+      "originalName": "decompiledCaughtParameter3",
+      "to": "indexCloseFailure",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#12",
+      "originalName": "decompiledCaughtParameter4",
+      "to": "seedCloseFailure",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#13",
+      "originalName": "decompiledUncheckedException",
+      "to": "uncheckedShutdownFailure",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#14",
+      "originalName": "decompiledCheckedException",
+      "to": "checkedShutdownFailure",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#2",
+      "originalName": "var2",
+      "to": "shutdownMonitor",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#3",
+      "originalName": "var2_ref",
+      "to": "ignoredWorkerJoinInterruption",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#4",
+      "originalName": "var2_ref2",
+      "to": "ignoredCacheCloseFailure",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#5",
+      "originalName": "var2_int",
+      "to": "cacheIndex",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#6",
+      "originalName": "var3",
+      "to": "ignoredIndexCloseFailure",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#7",
+      "originalName": "var4",
+      "to": "unusedGuardHost",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#8",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "workerJoinInterruption",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(B)V#9",
+      "originalName": "decompiledCaughtParameter1",
+      "to": "dataCloseFailure",
+      "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
+      "originalName": "stackIn_13_0",
+      "to": "preferencesFileAtReturn",
+      "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtPreferencesThrowable",
+      "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#10",
+      "originalName": "decompiledUncheckedException",
+      "to": "uncheckedPreferencesFailure",
+      "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#11",
+      "originalName": "decompiledCheckedException",
+      "to": "checkedPreferencesFailure",
+      "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
+      "originalName": "var4",
+      "to": "preferencesFilename",
+      "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
+      "originalName": "var5",
+      "to": "searchDirectories",
+      "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#4",
+      "originalName": "var6",
+      "to": "directoryIndex",
+      "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#5",
+      "originalName": "var7",
+      "to": "guardDivisionValue",
+      "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#6",
+      "originalName": "var8",
+      "to": "searchDirectory",
+      "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#7",
+      "originalName": "var9",
+      "to": "preferencesFile",
+      "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#8",
+      "originalName": "var9_ref",
+      "to": "ignoredOpenFailure",
+      "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+    },
+    {
+      "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#9",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "openFailure",
+      "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
     },
     {
       "symbol": "L:d.a(ILjava/lang/Object;III)Lcb;#0",
@@ -9323,6 +9527,18 @@
       "originalName": "c"
     },
     {
+      "symbol": "M:d.a(B)V",
+      "originalName": "a",
+      "to": "shutdown",
+      "evidence": "Sets shutdownRequested under dispatcher monitor and notifies, joins worker, then closes data/master/per-index/seed files while swallowing InterruptedException/IOException. Guard13 is validated by96 independent native closure-order/failure cases; invalid guard preserves original extra-task/data-field effects."
+    },
+    {
+      "symbol": "M:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;",
+      "originalName": "a",
+      "to": "openPreferencesFile",
+      "evidence": "Builds jagex_<game>_preferences<suffix>[_rc|_wip].dat according to variant; searches fixed directories, skips absent directories, catches each file-open exception and advances exactly once, returning first pa or null. Guard division and all original path/exception effects remain; actual directory search unverified."
+    },
+    {
       "symbol": "M:d.a(ILjava/lang/Object;III)Lcb;",
       "originalName": "a",
       "to": "enqueueTask",
@@ -11037,6 +11253,36 @@
       "to": "methodGuard",
       "originalName": "param0",
       "evidence": "Normal callers pass 27. Values below 8 retain cf.c((byte)121) before popup advancement; the guard is not removed."
+    },
+    {
+      "symbol": "P:d.a(B)V#0",
+      "originalName": "param0",
+      "to": "guard",
+      "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
+    },
+    {
+      "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
+      "originalName": "param0",
+      "to": "guard",
+      "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
+    },
+    {
+      "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
+      "originalName": "param1",
+      "to": "cacheVariant",
+      "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
+    },
+    {
+      "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
+      "originalName": "param2",
+      "to": "gameName",
+      "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
+    },
+    {
+      "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
+      "originalName": "param3",
+      "to": "preferenceSuffix",
+      "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
     },
     {
       "symbol": "P:d.a(ILjava/lang/Object;III)Lcb;#0",
@@ -15120,18 +15366,18 @@
     }
   ],
   "revision": 4,
-  "version": 44,
+  "version": 45,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "3564f5d1f8ec3e288a80decab1b1815cc675c3fa",
+      "commit": "f9f0838416053d3f6189ae5990365d73b7be6596",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "93e62046b7f1e880f3f7c28449d89b90e64b92c34d7dcdbb8dade76e9e86913f",
-        "reproduce": "git archive --format=tar 3564f5d1f8ec3e288a80decab1b1815cc675c3fa | sha256sum",
+        "sha256": "4812cac052bc37ad4cf1a36f907bff3dce8a86535f2379f7d7cf2b60bb9f1053",
+        "reproduce": "git archive --format=tar f9f0838416053d3f6189ae5990365d73b7be6596 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -15140,1149 +15386,434 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "e5e21fd61a0b24b73dc3d7aab13fa4298bd95753",
+      "commit": "d8c22177ddabfdec736d7912f5e0e7b02967f497",
       "path": "readable/geoblox-rules.json",
-      "sha256": "3b1b78c8bcc3b2863269d9bf6ffb0c88af5554fcd5e89a9e0992dca9524a3404"
+      "sha256": "63dd52c3627a6d9516e2ca3585d57d4ded083b71c65ff6434d40629c1bb30ba3"
     },
     "ruleChanges": [
       {
-        "symbol": "C:ba",
-        "before": null,
-        "after": {
-          "symbol": "C:ba",
-          "originalName": "ba",
-          "to": "BufferedSocket",
-          "evidence": "Owns a Socket, synchronous InputStream reads and a lazily allocated ring buffer drained to OutputStream by Runnable.run. Close waits for its platform writer task; 84 shutdown and 308 controlled stream/ring cases independently verify state and effects."
-        }
-      },
-      {
-        "symbol": "C:cb",
-        "before": null,
-        "after": {
-          "symbol": "C:cb",
-          "originalName": "cb",
-          "to": "PlatformTask",
-          "evidence": "Queue record allocated by d.a(ILjava/lang/Object;III)Lcb; worker dispatches its type/input/int arguments, writes a result, then volatile status 1 for success or 2 for failure; initial status is 0. Next links the dispatcher FIFO."
-        }
-      },
-      {
-        "symbol": "C:d",
-        "before": null,
-        "after": {
-          "symbol": "C:d",
-          "originalName": "d",
-          "to": "PlatformTaskDispatcher",
-          "evidence": "Runnable worker owns a synchronized cb FIFO; dispatches socket, thread, URL, DNS, reflection and desktop-service requests and publishes their completion status/result. Unrelated static helpers retain their owner."
-        }
-      },
-      {
-        "symbol": "F:ba.field_a:Ljava/io/OutputStream;",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_a:Ljava/io/OutputStream;",
-          "originalName": "field_a",
-          "to": "outputStream",
-          "evidence": "Retrieved from Socket.getOutputStream; background worker writes contiguous ring segments and flushes once empty; wrong enqueue guard deliberately nulls it."
-        }
-      },
-      {
-        "symbol": "F:ba.field_b:I",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_b:I",
-          "originalName": "field_b",
-          "to": "bufferCapacity",
-          "evidence": "Constructor stores requested ring capacity; default overload passes 5000. Buffer allocation and both modulo indices use it."
-        }
-      },
-      {
-        "symbol": "F:ba.field_c:I",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_c:I",
-          "originalName": "field_c",
-          "to": "keyEventWriteIndex",
-          "evidence": "wl.keyPressed/keyTyped append key codes/characters at this circular 128-entry index and advance it unless the next index reaches the read cursor; unrelated to socket instances."
-        }
-      },
-      {
-        "symbol": "F:ba.field_d:[B",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_d:[B",
-          "originalName": "field_d",
-          "to": "writeBuffer",
-          "evidence": "Lazy byte ring allocated on enqueue and read by writer OutputStream.write; cleared after writer shutdown cleanup."
-        }
-      },
-      {
-        "symbol": "F:ba.field_e:I",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_e:I",
-          "originalName": "field_e",
-          "to": "writeInsertIndex",
-          "evidence": "Enqueue stores each byte here and advances modulo capacity; writer snapshots pending contiguous data between this and writeReadIndex."
-        }
-      },
-      {
-        "symbol": "F:ba.field_f:Z",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_f:Z",
-          "originalName": "field_f",
-          "to": "closeRequested",
-          "evidence": "Close sets it while holding the holder monitor and notifies the writer; reads/enqueues stop, but run drains queued data until both indices agree before closing streams/socket."
-        }
-      },
-      {
-        "symbol": "F:ba.field_g:Ljava/io/InputStream;",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_g:Ljava/io/InputStream;",
-          "originalName": "field_g",
-          "to": "inputStream",
-          "evidence": "Retrieved from Socket.getInputStream; available, readByte and readFully consume it; worker closes it on shutdown."
-        }
-      },
-      {
-        "symbol": "F:ba.field_h:[I",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_h:[I",
-          "originalName": "field_h",
-          "to": "thirdVertexTransformedY",
-          "evidence": "p rendering transform writes the third auxiliary vertex Y coordinate using row (var13,var16,var19) plus var10, parallel to third-vertex X in qe.field_c and Z in hg.field_c; unrelated static rendering scratch."
-        }
-      },
-      {
-        "symbol": "F:ba.field_i:Z",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_i:Z",
-          "originalName": "field_i",
-          "to": "writeFailurePending",
-          "evidence": "Caught writer write/flush IOException sets this flag; enqueue or checkWriteFailure consumes it and throws IOException unless the holder is already closing."
-        }
-      },
-      {
-        "symbol": "F:ba.field_j:Ljava/net/Socket;",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_j:Ljava/net/Socket;",
-          "originalName": "field_j",
-          "to": "socket",
-          "evidence": "Constructor sets timeout/TCP no delay and obtains streams from this exact Socket; writer closes it after the two stream closes."
-        }
-      },
-      {
-        "symbol": "F:ba.field_k:I",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_k:I",
-          "originalName": "field_k",
-          "to": "writeReadIndex",
-          "evidence": "Writer consumes bytes beginning here, advances modulo bufferCapacity even after a caught write failure; enqueue keeps a 100-byte reserve from this index."
-        }
-      },
-      {
-        "symbol": "F:ba.field_l:Ld;",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_l:Ld;",
-          "originalName": "field_l",
-          "to": "taskDispatcher",
-          "evidence": "Constructor captures dispatcher; first enqueue requests writer thread with this Runnable and priority 3."
-        }
-      },
-      {
-        "symbol": "F:ba.field_m:Lcb;",
-        "before": null,
-        "after": {
-          "symbol": "F:ba.field_m:Lcb;",
-          "originalName": "field_m",
-          "to": "writerTask",
-          "evidence": "Lazily assigned by dispatcher thread-start request with this Runnable and priority 3; close waits for task status and joins its Thread result before releasing the reference."
-        }
-      },
-      {
-        "symbol": "F:cb.field_a:I",
-        "before": null,
-        "after": {
-          "symbol": "F:cb.field_a:I",
-          "originalName": "field_a",
-          "to": "status",
-          "evidence": "Volatile completion: cb constructor initializes 0; dispatcher worker sets 1 after dispatch or 2 after caught Throwable; socket shutdown waits for nonzero and joins result only for 1."
-        }
-      },
-      {
-        "symbol": "F:cb.field_b:Ljava/lang/Object;",
-        "before": null,
-        "after": {
-          "symbol": "F:cb.field_b:Ljava/lang/Object;",
-          "originalName": "field_b",
-          "to": "result",
-          "evidence": "Volatile dispatch result including Thread/Socket/URL stream/reflection/DNS/desktop outputs; worker publishes it before success status, and socket shutdown casts it to Thread for joining."
-        }
-      },
-      {
-        "symbol": "F:cb.field_c:I",
-        "before": null,
-        "after": {
-          "symbol": "F:cb.field_c:I",
-          "originalName": "field_c",
-          "to": "firstIntArgument",
-          "evidence": "enqueuePlatformTask stores its first integer argument here; worker uses it as thread priority, port, packed address or desktop dimensions according to task type."
-        }
-      },
-      {
         "symbol": "F:cb.field_d:I",
-        "before": null,
-        "after": {
+        "before": {
           "symbol": "F:cb.field_d:I",
           "originalName": "field_d",
           "to": "taskType",
           "evidence": "enqueuePlatformTask stores the dispatch type; worker branches on it, including 1 socket, 2 thread and 3 URL stream. Numeric IDs remain unchanged."
-        }
-      },
-      {
-        "symbol": "F:cb.field_e:Lcb;",
-        "before": null,
+        },
         "after": {
-          "symbol": "F:cb.field_e:Lcb;",
-          "originalName": "field_e",
-          "to": "next",
-          "evidence": "Dispatcher appends through tail.next, dequeues head.next and clears tail on an empty queue; this record field is the FIFO link."
-        }
-      },
-      {
-        "symbol": "F:cb.field_f:Ljava/lang/Object;",
-        "before": null,
-        "after": {
-          "symbol": "F:cb.field_f:Ljava/lang/Object;",
-          "originalName": "field_f",
-          "to": "input",
-          "evidence": "enqueuePlatformTask stores its Object input here; worker interprets it according to taskType (Runnable, host, URL, class/reflection tuple or desktop arguments)."
-        }
-      },
-      {
-        "symbol": "F:cb.field_g:I",
-        "before": null,
-        "after": {
-          "symbol": "F:cb.field_g:I",
-          "originalName": "field_g",
-          "to": "secondIntArgument",
-          "evidence": "enqueuePlatformTask stores its second integer argument here; fullscreen and cursor dispatch split/use it for dimensions. No task-specific reinterpretation of the stored value."
-        }
-      },
-      {
-        "symbol": "F:d.field_c:Z",
-        "before": null,
-        "after": {
-          "symbol": "F:d.field_c:Z",
-          "originalName": "field_c",
-          "to": "shutdownRequested",
-          "evidence": "Dispatcher shutdown sets this under its monitor and notifies; run returns when the flag becomes true in the task wait loop."
-        }
-      },
-      {
-        "symbol": "F:d.field_d:Lcb;",
-        "before": null,
-        "after": {
-          "symbol": "F:d.field_d:Lcb;",
+          "symbol": "F:cb.field_d:I",
           "originalName": "field_d",
-          "to": "taskQueueHead",
-          "evidence": "Dispatcher worker removes this record under its monitor and advances through next; enqueue sets head for an empty queue."
-        }
-      },
-      {
-        "symbol": "F:d.field_g:Lcb;",
-        "before": null,
-        "after": {
-          "symbol": "F:d.field_g:Lcb;",
-          "originalName": "field_g",
-          "to": "taskQueueTail",
-          "evidence": "enqueue appends via tail.next and updates this; worker clears it when the last queued record is removed."
-        }
-      },
-      {
-        "symbol": "F:d.field_i:Ljava/lang/Thread;",
-        "before": null,
-        "after": {
-          "symbol": "F:d.field_i:Ljava/lang/Thread;",
-          "originalName": "field_i",
-          "to": "workerThread",
-          "evidence": "Dispatcher constructor creates daemon Thread(this), priority 10, and starts it; dispatcher shutdown joins the same thread."
-        }
-      },
-      {
-        "symbol": "L:ba.<init>(Ljava/net/Socket;Ld;I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.<init>(Ljava/net/Socket;Ld;I)V#0",
-          "originalName": "runtimeException",
-          "to": "socketConfigurationFailure",
-          "evidence": "Resolved declaration in <init>(Ljava/net/Socket;Ld;I)V; socketConfigurationFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a(BLjava/applet/Applet;)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a(BLjava/applet/Applet;)V#0",
-          "originalName": "var3",
-          "to": "unusedApplet",
-          "evidence": "Resolved declaration in a(BLjava/applet/Applet;)V; unusedApplet names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a(BLjava/applet/Applet;)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a(BLjava/applet/Applet;)V#1",
-          "originalName": "runtimeException",
-          "to": "reloadFailure",
-          "evidence": "Resolved declaration in a(BLjava/applet/Applet;)V; reloadFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a(III[B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a(III[B)V#0",
-          "originalName": "var6",
-          "to": "sourceIndex",
-          "evidence": "Resolved declaration in a(III[B)V; sourceIndex names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a(III[B)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a(III[B)V#1",
-          "originalName": "stackIn_26_0",
-          "to": "enqueueFailureForMessage",
-          "evidence": "Resolved declaration in a(III[B)V; enqueueFailureForMessage names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a(III[B)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a(III[B)V#2",
-          "originalName": "stackIn_26_1",
-          "to": "enqueueMessagePrefix",
-          "evidence": "Resolved declaration in a(III[B)V; enqueueMessagePrefix names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a(III[B)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a(III[B)V#3",
-          "originalName": "stackIn_27_0",
-          "to": "enqueueFailureAtJoin",
-          "evidence": "Resolved declaration in a(III[B)V; enqueueFailureAtJoin names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a(III[B)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a(III[B)V#4",
-          "originalName": "stackIn_27_1",
-          "to": "enqueueMessageAtJoin",
-          "evidence": "Resolved declaration in a(III[B)V; enqueueMessageAtJoin names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a(III[B)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a(III[B)V#5",
-          "originalName": "stackIn_27_2",
-          "to": "sourceDescription",
-          "evidence": "Resolved declaration in a(III[B)V; sourceDescription names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a(III[B)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a(III[B)V#6",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtEnqueueFailure",
-          "evidence": "Resolved declaration in a(III[B)V; caughtEnqueueFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a(III[B)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a(III[B)V#7",
-          "originalName": "var5",
-          "to": "enqueueMonitor",
-          "evidence": "Resolved declaration in a(III[B)V; enqueueMonitor names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a(III[B)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a(III[B)V#8",
-          "originalName": "var5_ref",
-          "to": "enqueueFailure",
-          "evidence": "Resolved declaration in a(III[B)V; enqueueFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a(III[B)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a(III[B)V#9",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "enqueueRuntimeFailure",
-          "evidence": "Resolved declaration in a(III[B)V; enqueueRuntimeFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a([BBII)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a([BBII)V#0",
-          "originalName": "var5_int",
-          "to": "bytesRead",
-          "evidence": "Resolved declaration in a([BBII)V; bytesRead names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a([BBII)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a([BBII)V#1",
-          "originalName": "stackIn_12_0",
-          "to": "readFailureForMessage",
-          "evidence": "Resolved declaration in a([BBII)V; readFailureForMessage names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a([BBII)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a([BBII)V#2",
-          "originalName": "stackIn_12_1",
-          "to": "readMessagePrefix",
-          "evidence": "Resolved declaration in a([BBII)V; readMessagePrefix names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a([BBII)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a([BBII)V#3",
-          "originalName": "stackIn_13_0",
-          "to": "readFailureAtJoin",
-          "evidence": "Resolved declaration in a([BBII)V; readFailureAtJoin names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a([BBII)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a([BBII)V#4",
-          "originalName": "stackIn_13_1",
-          "to": "readMessageAtJoin",
-          "evidence": "Resolved declaration in a([BBII)V; readMessageAtJoin names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a([BBII)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a([BBII)V#5",
-          "originalName": "stackIn_13_2",
-          "to": "destinationDescription",
-          "evidence": "Resolved declaration in a([BBII)V; destinationDescription names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a([BBII)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a([BBII)V#6",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtReadFailure",
-          "evidence": "Resolved declaration in a([BBII)V; caughtReadFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a([BBII)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a([BBII)V#7",
-          "originalName": "var5",
-          "to": "readFailure",
-          "evidence": "Resolved declaration in a([BBII)V; readFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.a([BBII)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.a([BBII)V#8",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "readRuntimeFailure",
-          "evidence": "Resolved declaration in a([BBII)V; readRuntimeFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.b(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.b(I)V#0",
-          "originalName": "var2",
-          "to": "ignoredJoinInterruption",
-          "evidence": "Resolved declaration in b(I)V; ignoredJoinInterruption names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.b(I)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.b(I)V#1",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtThrowable",
-          "evidence": "Resolved declaration in b(I)V; caughtThrowable names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.b(I)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.b(I)V#2",
-          "originalName": "var2_ref",
-          "to": "closeMonitor",
-          "evidence": "Resolved declaration in b(I)V; closeMonitor names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.b(I)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.b(I)V#3",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "joinInterruption",
-          "evidence": "Resolved declaration in b(I)V; joinInterruption names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.b(I)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.b(I)V#4",
-          "originalName": "decompiledUncheckedException",
-          "to": "uncheckedFailure",
-          "evidence": "Resolved declaration in b(I)V; uncheckedFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.b(I)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.b(I)V#5",
-          "originalName": "decompiledCheckedException",
-          "to": "checkedFailure",
-          "evidence": "Resolved declaration in b(I)V; checkedFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#0",
-          "originalName": "var1_int",
-          "to": "contiguousWriteLength",
-          "evidence": "Resolved declaration in run()V; contiguousWriteLength names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#1",
-          "originalName": "var3",
-          "to": "writerMonitor",
-          "evidence": "Resolved declaration in run()V; writerMonitor names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#10",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "waitInterruption",
-          "evidence": "Resolved declaration in run()V; waitInterruption names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#11",
-          "originalName": "decompiledCaughtParameter1",
-          "to": "closeFailure",
-          "evidence": "Resolved declaration in run()V; closeFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#12",
-          "originalName": "decompiledCaughtParameter2",
-          "to": "writeFailure",
-          "evidence": "Resolved declaration in run()V; writeFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#13",
-          "originalName": "decompiledCaughtParameter3",
-          "to": "flushFailure",
-          "evidence": "Resolved declaration in run()V; flushFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#14",
-          "originalName": "decompiledCaughtParameter4",
-          "to": "unexpectedWorkerFailure",
-          "evidence": "Resolved declaration in run()V; unexpectedWorkerFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#15",
-          "originalName": "decompiledUncheckedException",
-          "to": "uncheckedFailure",
-          "evidence": "Resolved declaration in run()V; uncheckedFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#16",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#16",
-          "originalName": "decompiledCheckedException",
-          "to": "checkedFailure",
-          "evidence": "Resolved declaration in run()V; checkedFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#3",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtWriterThrowable",
-          "evidence": "Resolved declaration in run()V; caughtWriterThrowable names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#4",
-          "originalName": "var1",
-          "to": "ignoredCloseFailure",
-          "evidence": "Resolved declaration in run()V; ignoredCloseFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#5",
-          "originalName": "var1_ref",
-          "to": "workerFailure",
-          "evidence": "Resolved declaration in run()V; workerFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#6",
-          "originalName": "var2",
-          "to": "contiguousWriteOffset",
-          "evidence": "Resolved declaration in run()V; contiguousWriteOffset names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#7",
-          "originalName": "var3_ref",
-          "to": "ignoredWriteOrFlushFailure",
-          "evidence": "Resolved declaration in run()V; ignoredWriteOrFlushFailure names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#8",
-          "originalName": "var4",
-          "to": "ignoredWaitInterruption",
-          "evidence": "Resolved declaration in run()V; ignoredWaitInterruption names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:ba.run()V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:ba.run()V#9",
-          "originalName": "var6",
-          "to": "unusedReportMessage",
-          "evidence": "Resolved declaration in run()V; unusedReportMessage names its observed stream, monitor, exception/catch, diagnostic-message or loop role. Existing catch carriers and error-message string literals are preserved."
-        }
-      },
-      {
-        "symbol": "L:d.a(ILjava/lang/Object;III)Lcb;#0",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(ILjava/lang/Object;III)Lcb;#0",
-          "originalName": "var6",
-          "to": "task",
-          "evidence": "enqueueTask allocates task, copies input/arguments and synchronizes on this via queueMonitor; unused generated Throwable carrier remains as-is except name."
-        }
-      },
-      {
-        "symbol": "L:d.a(ILjava/lang/Object;III)Lcb;#1",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(ILjava/lang/Object;III)Lcb;#1",
-          "originalName": "decompiledCaughtException",
-          "to": "unusedCaughtThrowable",
-          "evidence": "enqueueTask allocates task, copies input/arguments and synchronizes on this via queueMonitor; unused generated Throwable carrier remains as-is except name."
-        }
-      },
-      {
-        "symbol": "L:d.a(ILjava/lang/Object;III)Lcb;#2",
-        "before": null,
-        "after": {
-          "symbol": "L:d.a(ILjava/lang/Object;III)Lcb;#2",
-          "originalName": "var7",
-          "to": "queueMonitor",
-          "evidence": "enqueueTask allocates task, copies input/arguments and synchronizes on this via queueMonitor; unused generated Throwable carrier remains as-is except name."
-        }
-      },
-      {
-        "symbol": "M:ba.a(B)I",
-        "before": null,
-        "after": {
-          "symbol": "M:ba.a(B)I",
-          "originalName": "a",
-          "to": "available",
-          "evidence": "Returns inputStream.available for open holder or zero after close requested; guard <=71 deliberately nulls the input before checking close state."
-        }
-      },
-      {
-        "symbol": "M:ba.a(BLjava/applet/Applet;)V",
-        "before": null,
-        "after": {
-          "symbol": "M:ba.a(BLjava/applet/Applet;)V",
-          "originalName": "a",
-          "to": "clearSessionAndReload",
-          "evidence": "Valid guard 116 calls va session-cookie helper with empty text then h reload.ws navigation; wrong guard recursively calls itself. Native I/O probe does not exercise browser navigation."
-        }
-      },
-      {
-        "symbol": "M:ba.a(I)Lcj;",
-        "before": null,
-        "after": {
-          "symbol": "M:ba.a(I)Lcj;",
-          "originalName": "a",
-          "to": "createFrameClock",
-          "evidence": "Returns new cm, whose instance uses System.nanoTime, recent tick intervals, pending sleep and capped catch-up steps. Guard !=5000 calls scratch-release helper with its no-op guard before constructing the same clock."
-        }
-      },
-      {
-        "symbol": "M:ba.a(III[B)V",
-        "before": null,
-        "after": {
-          "symbol": "M:ba.a(III[B)V",
-          "originalName": "a",
-          "to": "enqueueWrite",
-          "evidence": "Copies source segment into lazy byte ring, throws at the 100-byte reserve boundary, starts writer task once, and notifies; consumes pending IOException first. Guard !=100 nulls output only after successful copy."
-        }
-      },
-      {
-        "symbol": "M:ba.a([BBII)V",
-        "before": null,
-        "after": {
-          "symbol": "M:ba.a([BBII)V",
-          "originalName": "a",
-          "to": "readFully",
-          "evidence": "Repeatedly reads into destination at offset until remaining length is exhausted, throws EOFException for zero/negative read; closed holder or guard !=-97 returns without reading."
-        }
-      },
-      {
-        "symbol": "M:ba.b(I)V",
-        "before": null,
-        "after": {
-          "symbol": "M:ba.b(I)V",
-          "originalName": "b",
-          "to": "close",
-          "evidence": "Sets closeRequested and notifies under the holder monitor, waits for writerTask status, joins its Thread for success and releases task on normal/interrupted completion. Guards >=-117 deliberately run the writer first."
-        }
-      },
-      {
-        "symbol": "M:ba.c(I)I",
-        "before": null,
-        "after": {
-          "symbol": "M:ba.c(I)I",
-          "originalName": "c",
-          "to": "readByte",
-          "evidence": "Returns zero after close requested, -104 for wrong guard or inputStream.read for guard -17422."
-        }
-      },
-      {
-        "symbol": "M:ba.d(I)V",
-        "before": null,
-        "after": {
-          "symbol": "M:ba.d(I)V",
-          "originalName": "d",
-          "to": "checkWriteFailure",
-          "evidence": "For valid guard <-79 and an open holder, consumes writeFailurePending and throws IOException; otherwise returns."
-        }
-      },
-      {
-        "symbol": "M:ba.e(I)V",
-        "before": null,
-        "after": {
-          "symbol": "M:ba.e(I)V",
-          "originalName": "e",
-          "to": "releaseTransformedVertexScratch",
-          "evidence": "Valid guard 21888 clears the static third-vertex transformed-Y int array; other guards return."
-        }
-      },
-      {
-        "symbol": "M:d.a(ILjava/lang/Object;III)Lcb;",
-        "before": null,
-        "after": {
-          "symbol": "M:d.a(ILjava/lang/Object;III)Lcb;",
-          "originalName": "a",
-          "to": "enqueueTask",
-          "evidence": "Allocates task, stores input and integer arguments, then for guard 1 stores taskType, appends under dispatcher monitor and notifies; other guards return null."
-        }
-      },
-      {
-        "symbol": "M:d.a(Ljava/lang/Runnable;II)Lcb;",
-        "before": null,
-        "after": {
-          "symbol": "M:d.a(Ljava/lang/Runnable;II)Lcb;",
-          "originalName": "a",
-          "to": "startThread",
-          "evidence": "Valid guard 0 queues task type 2 with Runnable input and requested priority; worker makes daemon Thread(input), starts it, sets priority and publishes it as result."
-        }
-      },
-      {
-        "symbol": "P:ba.<init>(Ljava/net/Socket;Ld;)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.<init>(Ljava/net/Socket;Ld;)V#0",
-          "originalName": "param0",
-          "to": "socket",
-          "evidence": "Parameter role follows exact guarded method body: captures socket/dispatcher/capacity and configures streams"
-        }
-      },
-      {
-        "symbol": "P:ba.<init>(Ljava/net/Socket;Ld;)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.<init>(Ljava/net/Socket;Ld;)V#1",
-          "originalName": "param1",
-          "to": "taskDispatcher",
-          "evidence": "Parameter role follows exact guarded method body: captures socket/dispatcher/capacity and configures streams"
-        }
-      },
-      {
-        "symbol": "P:ba.<init>(Ljava/net/Socket;Ld;I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.<init>(Ljava/net/Socket;Ld;I)V#0",
-          "originalName": "param0",
-          "to": "socket",
-          "evidence": "Parameter role follows exact guarded method body: captures socket/dispatcher/capacity and configures streams"
-        }
-      },
-      {
-        "symbol": "P:ba.<init>(Ljava/net/Socket;Ld;I)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.<init>(Ljava/net/Socket;Ld;I)V#1",
-          "originalName": "param1",
-          "to": "taskDispatcher",
-          "evidence": "Parameter role follows exact guarded method body: captures socket/dispatcher/capacity and configures streams"
-        }
-      },
-      {
-        "symbol": "P:ba.<init>(Ljava/net/Socket;Ld;I)V#2",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.<init>(Ljava/net/Socket;Ld;I)V#2",
-          "originalName": "param2",
-          "to": "bufferCapacity",
-          "evidence": "Parameter role follows exact guarded method body: captures socket/dispatcher/capacity and configures streams"
-        }
-      },
-      {
-        "symbol": "P:ba.a(B)I#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.a(B)I#0",
-          "originalName": "param0",
-          "to": "guard",
-          "evidence": "Parameter role follows exact guarded method body: Returns inputStream.available for open holder or zero after close requested; guard <=71 deliberately nulls the input before checking close state."
-        }
-      },
-      {
-        "symbol": "P:ba.a(BLjava/applet/Applet;)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.a(BLjava/applet/Applet;)V#0",
-          "originalName": "param0",
-          "to": "guard",
-          "evidence": "Parameter role follows exact guarded method body: Valid guard 116 calls va session-cookie helper with empty text then h reload.ws navigation; wrong guard recursively calls itself. Native I/O probe does not exercise browser navigation."
-        }
-      },
-      {
-        "symbol": "P:ba.a(BLjava/applet/Applet;)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.a(BLjava/applet/Applet;)V#1",
-          "originalName": "param1",
-          "to": "applet",
-          "evidence": "Parameter role follows exact guarded method body: Valid guard 116 calls va session-cookie helper with empty text then h reload.ws navigation; wrong guard recursively calls itself. Native I/O probe does not exercise browser navigation."
-        }
-      },
-      {
-        "symbol": "P:ba.a(I)Lcj;#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.a(I)Lcj;#0",
-          "originalName": "param0",
-          "to": "guard",
-          "evidence": "Parameter role follows exact guarded method body: Returns new cm, whose instance uses System.nanoTime, recent tick intervals, pending sleep and capped catch-up steps. Guard !=5000 calls scratch-release helper with its no-op guard before constructing the same clock."
-        }
-      },
-      {
-        "symbol": "P:ba.a(III[B)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.a(III[B)V#0",
-          "originalName": "param0",
-          "to": "guard",
-          "evidence": "Parameter role follows exact guarded method body: Copies source segment into lazy byte ring, throws at the 100-byte reserve boundary, starts writer task once, and notifies; consumes pending IOException first. Guard !=100 nulls output only after successful copy."
-        }
-      },
-      {
-        "symbol": "P:ba.a(III[B)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.a(III[B)V#1",
-          "originalName": "param1",
-          "to": "sourceOffset",
-          "evidence": "Parameter role follows exact guarded method body: Copies source segment into lazy byte ring, throws at the 100-byte reserve boundary, starts writer task once, and notifies; consumes pending IOException first. Guard !=100 nulls output only after successful copy."
-        }
-      },
-      {
-        "symbol": "P:ba.a(III[B)V#2",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.a(III[B)V#2",
-          "originalName": "param2",
-          "to": "length",
-          "evidence": "Parameter role follows exact guarded method body: Copies source segment into lazy byte ring, throws at the 100-byte reserve boundary, starts writer task once, and notifies; consumes pending IOException first. Guard !=100 nulls output only after successful copy."
-        }
-      },
-      {
-        "symbol": "P:ba.a(III[B)V#3",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.a(III[B)V#3",
-          "originalName": "param3",
-          "to": "source",
-          "evidence": "Parameter role follows exact guarded method body: Copies source segment into lazy byte ring, throws at the 100-byte reserve boundary, starts writer task once, and notifies; consumes pending IOException first. Guard !=100 nulls output only after successful copy."
-        }
-      },
-      {
-        "symbol": "P:ba.a([BBII)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.a([BBII)V#0",
-          "originalName": "param0",
-          "to": "destination",
-          "evidence": "Parameter role follows exact guarded method body: Repeatedly reads into destination at offset until remaining length is exhausted, throws EOFException for zero/negative read; closed holder or guard !=-97 returns without reading."
-        }
-      },
-      {
-        "symbol": "P:ba.a([BBII)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.a([BBII)V#1",
-          "originalName": "param1",
-          "to": "guard",
-          "evidence": "Parameter role follows exact guarded method body: Repeatedly reads into destination at offset until remaining length is exhausted, throws EOFException for zero/negative read; closed holder or guard !=-97 returns without reading."
-        }
-      },
-      {
-        "symbol": "P:ba.a([BBII)V#2",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.a([BBII)V#2",
-          "originalName": "param2",
-          "to": "destinationOffset",
-          "evidence": "Parameter role follows exact guarded method body: Repeatedly reads into destination at offset until remaining length is exhausted, throws EOFException for zero/negative read; closed holder or guard !=-97 returns without reading."
-        }
-      },
-      {
-        "symbol": "P:ba.a([BBII)V#3",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.a([BBII)V#3",
-          "originalName": "param3",
-          "to": "remainingLength",
-          "evidence": "Parameter role follows exact guarded method body: Repeatedly reads into destination at offset until remaining length is exhausted, throws EOFException for zero/negative read; closed holder or guard !=-97 returns without reading."
-        }
-      },
-      {
-        "symbol": "P:ba.b(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.b(I)V#0",
-          "originalName": "param0",
-          "to": "guard",
-          "evidence": "Parameter role follows exact guarded method body: Sets closeRequested and notifies under the holder monitor, waits for writerTask status, joins its Thread for success and releases task on normal/interrupted completion. Guards >=-117 deliberately run the writer first."
-        }
-      },
-      {
-        "symbol": "P:ba.c(I)I#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.c(I)I#0",
-          "originalName": "param0",
-          "to": "guard",
-          "evidence": "Parameter role follows exact guarded method body: Returns zero after close requested, -104 for wrong guard or inputStream.read for guard -17422."
-        }
-      },
-      {
-        "symbol": "P:ba.d(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.d(I)V#0",
-          "originalName": "param0",
-          "to": "guard",
-          "evidence": "Parameter role follows exact guarded method body: For valid guard <-79 and an open holder, consumes writeFailurePending and throws IOException; otherwise returns."
-        }
-      },
-      {
-        "symbol": "P:ba.e(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:ba.e(I)V#0",
-          "originalName": "param0",
-          "to": "guard",
-          "evidence": "Parameter role follows exact guarded method body: Valid guard 21888 clears the static third-vertex transformed-Y int array; other guards return."
-        }
-      },
-      {
-        "symbol": "P:d.a(ILjava/lang/Object;III)Lcb;#0",
-        "before": null,
-        "after": {
-          "symbol": "P:d.a(ILjava/lang/Object;III)Lcb;#0",
-          "originalName": "param0",
-          "to": "guard",
-          "evidence": "Dispatcher queue/thread-start parameter role proven by stored task fields and type-2 worker branch; original numeric guards and dispatch IDs remain."
-        }
-      },
-      {
-        "symbol": "P:d.a(ILjava/lang/Object;III)Lcb;#1",
-        "before": null,
-        "after": {
-          "symbol": "P:d.a(ILjava/lang/Object;III)Lcb;#1",
-          "originalName": "param1",
-          "to": "input",
-          "evidence": "Dispatcher queue/thread-start parameter role proven by stored task fields and type-2 worker branch; original numeric guards and dispatch IDs remain."
-        }
-      },
-      {
-        "symbol": "P:d.a(ILjava/lang/Object;III)Lcb;#2",
-        "before": null,
-        "after": {
-          "symbol": "P:d.a(ILjava/lang/Object;III)Lcb;#2",
-          "originalName": "param2",
-          "to": "firstIntArgument",
-          "evidence": "Dispatcher queue/thread-start parameter role proven by stored task fields and type-2 worker branch; original numeric guards and dispatch IDs remain."
-        }
-      },
-      {
-        "symbol": "P:d.a(ILjava/lang/Object;III)Lcb;#3",
-        "before": null,
-        "after": {
-          "symbol": "P:d.a(ILjava/lang/Object;III)Lcb;#3",
-          "originalName": "param3",
           "to": "taskType",
-          "evidence": "Dispatcher queue/thread-start parameter role proven by stored task fields and type-2 worker branch; original numeric guards and dispatch IDs remain."
+          "evidence": "enqueuePlatformTask stores the dispatch type; worker branches on it, including 1 socket, 2 thread and 4 URL stream. Numeric IDs remain unchanged."
         }
       },
       {
-        "symbol": "P:d.a(ILjava/lang/Object;III)Lcb;#4",
+        "symbol": "F:d.field_f:I",
         "before": null,
         "after": {
-          "symbol": "P:d.a(ILjava/lang/Object;III)Lcb;#4",
-          "originalName": "param4",
-          "to": "secondIntArgument",
-          "evidence": "Dispatcher queue/thread-start parameter role proven by stored task fields and type-2 worker branch; original numeric guards and dispatch IDs remain."
+          "symbol": "F:d.field_f:I",
+          "originalName": "field_f",
+          "to": "cacheVariant",
+          "evidence": "Constructor captures cache variant integer passed to aj; preferences filename uses _rc for33 and _wip for34, default otherwise."
         }
       },
       {
-        "symbol": "P:d.a(Ljava/lang/Runnable;II)Lcb;#0",
+        "symbol": "F:d.field_j:Lpa;",
         "before": null,
         "after": {
-          "symbol": "P:d.a(Ljava/lang/Runnable;II)Lcb;#0",
+          "symbol": "F:d.field_j:Lpa;",
+          "originalName": "field_j",
+          "to": "cacheDataFile",
+          "evidence": "Dispatcher constructor opens main_file_cache.dat2 with 314572800-byte limit; shutdown closes it before master/index/seed files. Invalid shutdown guard deliberately clears it before closing."
+        }
+      },
+      {
+        "symbol": "F:d.field_n:Lpa;",
+        "before": null,
+        "after": {
+          "symbol": "F:d.field_n:Lpa;",
+          "originalName": "field_n",
+          "to": "randomSeedFile",
+          "evidence": "Dispatcher constructor opens random.dat with a 25-byte limit; shutdown closes this holder last."
+        }
+      },
+      {
+        "symbol": "F:d.field_p:Ljava/lang/String;",
+        "before": null,
+        "after": {
+          "symbol": "F:d.field_p:Ljava/lang/String;",
+          "originalName": "field_p",
+          "to": "gameCacheName",
+          "evidence": "Constructor captures game-name argument for aj cache lookup and type12 preference filename prefix jagex_<name>_preferences."
+        }
+      },
+      {
+        "symbol": "F:d.field_r:[Lpa;",
+        "before": null,
+        "after": {
+          "symbol": "F:d.field_r:[Lpa;",
+          "originalName": "field_r",
+          "to": "cacheIndexFiles",
+          "evidence": "Dispatcher constructor opens main_file_cache.idxN into this array; shutdown visits all non-null entries and continues after caught IOException. Native96-case fixture exposes prior doubled for-update bug."
+        }
+      },
+      {
+        "symbol": "F:d.field_s:Lpa;",
+        "before": null,
+        "after": {
+          "symbol": "F:d.field_s:Lpa;",
+          "originalName": "field_s",
+          "to": "masterCacheIndexFile",
+          "evidence": "Dispatcher constructor opens main_file_cache.idx255; shutdown closes it after data and before per-archive indices."
+        }
+      },
+      {
+        "symbol": "F:d.field_x:Ljava/lang/String;",
+        "before": null,
+        "after": {
+          "symbol": "F:d.field_x:Ljava/lang/String;",
+          "originalName": "field_x",
+          "to": "userHomeDirectory",
+          "evidence": "Constructor captures user.home with trailing slash or ~/ fallback; preference search includes this path among its directories."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#0",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#0",
+          "originalName": "discarded$0",
+          "to": "ignoredGuardSocketTask",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#1",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#1",
+          "originalName": "decompiledCaughtException",
+          "to": "caughtShutdownThrowable",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#10",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#10",
+          "originalName": "decompiledCaughtParameter2",
+          "to": "masterIndexCloseFailure",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#11",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#11",
+          "originalName": "decompiledCaughtParameter3",
+          "to": "indexCloseFailure",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#12",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#12",
+          "originalName": "decompiledCaughtParameter4",
+          "to": "seedCloseFailure",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#13",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#13",
+          "originalName": "decompiledUncheckedException",
+          "to": "uncheckedShutdownFailure",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#14",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#14",
+          "originalName": "decompiledCheckedException",
+          "to": "checkedShutdownFailure",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#2",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#2",
+          "originalName": "var2",
+          "to": "shutdownMonitor",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#3",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#3",
+          "originalName": "var2_ref",
+          "to": "ignoredWorkerJoinInterruption",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#4",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#4",
+          "originalName": "var2_ref2",
+          "to": "ignoredCacheCloseFailure",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#5",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#5",
+          "originalName": "var2_int",
+          "to": "cacheIndex",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#6",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#6",
+          "originalName": "var3",
+          "to": "ignoredIndexCloseFailure",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#7",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#7",
+          "originalName": "var4",
+          "to": "unusedGuardHost",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#8",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#8",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "workerJoinInterruption",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(B)V#9",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(B)V#9",
+          "originalName": "decompiledCaughtParameter1",
+          "to": "dataCloseFailure",
+          "evidence": "Resolved current declaration in a(B)V; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
+          "originalName": "stackIn_13_0",
+          "to": "preferencesFileAtReturn",
+          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
+          "originalName": "decompiledCaughtException",
+          "to": "caughtPreferencesThrowable",
+          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#10",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#10",
+          "originalName": "decompiledUncheckedException",
+          "to": "uncheckedPreferencesFailure",
+          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#11",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#11",
+          "originalName": "decompiledCheckedException",
+          "to": "checkedPreferencesFailure",
+          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
+          "originalName": "var4",
+          "to": "preferencesFilename",
+          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
+          "originalName": "var5",
+          "to": "searchDirectories",
+          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#4",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#4",
+          "originalName": "var6",
+          "to": "directoryIndex",
+          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#5",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#5",
+          "originalName": "var7",
+          "to": "guardDivisionValue",
+          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#6",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#6",
+          "originalName": "var8",
+          "to": "searchDirectory",
+          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#7",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#7",
+          "originalName": "var9",
+          "to": "preferencesFile",
+          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#8",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#8",
+          "originalName": "var9_ref",
+          "to": "ignoredOpenFailure",
+          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#9",
+        "before": null,
+        "after": {
+          "symbol": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#9",
+          "originalName": "decompiledCaughtParameter0",
+          "to": "openFailure",
+          "evidence": "Resolved current declaration in a(BILjava/lang/String;Ljava/lang/String;)Lpa;; names its cache iteration, monitor, ignored/caught failure, path search or diagnostic carrier role. Protected boundaries and original increments are kept; shutdown roles are checked by native closure-order fixtures."
+        }
+      },
+      {
+        "symbol": "M:d.a(B)V",
+        "before": null,
+        "after": {
+          "symbol": "M:d.a(B)V",
+          "originalName": "a",
+          "to": "shutdown",
+          "evidence": "Sets shutdownRequested under dispatcher monitor and notifies, joins worker, then closes data/master/per-index/seed files while swallowing InterruptedException/IOException. Guard13 is validated by96 independent native closure-order/failure cases; invalid guard preserves original extra-task/data-field effects."
+        }
+      },
+      {
+        "symbol": "M:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;",
+        "before": null,
+        "after": {
+          "symbol": "M:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;",
+          "originalName": "a",
+          "to": "openPreferencesFile",
+          "evidence": "Builds jagex_<game>_preferences<suffix>[_rc|_wip].dat according to variant; searches fixed directories, skips absent directories, catches each file-open exception and advances exactly once, returning first pa or null. Guard division and all original path/exception effects remain; actual directory search unverified."
+        }
+      },
+      {
+        "symbol": "P:d.a(B)V#0",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(B)V#0",
           "originalName": "param0",
-          "to": "runnable",
-          "evidence": "Dispatcher queue/thread-start parameter role proven by stored task fields and type-2 worker branch; original numeric guards and dispatch IDs remain."
-        }
-      },
-      {
-        "symbol": "P:d.a(Ljava/lang/Runnable;II)Lcb;#1",
-        "before": null,
-        "after": {
-          "symbol": "P:d.a(Ljava/lang/Runnable;II)Lcb;#1",
-          "originalName": "param1",
           "to": "guard",
-          "evidence": "Dispatcher queue/thread-start parameter role proven by stored task fields and type-2 worker branch; original numeric guards and dispatch IDs remain."
+          "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
         }
       },
       {
-        "symbol": "P:d.a(Ljava/lang/Runnable;II)Lcb;#2",
+        "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
         "before": null,
         "after": {
-          "symbol": "P:d.a(Ljava/lang/Runnable;II)Lcb;#2",
+          "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
+          "originalName": "param0",
+          "to": "guard",
+          "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
+        }
+      },
+      {
+        "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
+          "originalName": "param1",
+          "to": "cacheVariant",
+          "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
+        }
+      },
+      {
+        "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
           "originalName": "param2",
-          "to": "priority",
-          "evidence": "Dispatcher queue/thread-start parameter role proven by stored task fields and type-2 worker branch; original numeric guards and dispatch IDs remain."
+          "to": "gameName",
+          "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
+        }
+      },
+      {
+        "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
+        "before": null,
+        "after": {
+          "symbol": "P:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
+          "originalName": "param3",
+          "to": "preferenceSuffix",
+          "evidence": "Exact shutdown guard13 or preferences filename/variant/guard-arithmetic parameter role in current dispatcher source; numeric values unchanged."
         }
       }
     ],
@@ -16303,6 +15834,10 @@
       {
         "file": "ag.java",
         "sha256": "1564ffa14191072983fe1a7f94502569a5d4729d3a4636e0bc3d63948f67ebb2"
+      },
+      {
+        "file": "aj.java",
+        "sha256": "eccbd8f4d576afaa941247c9145374f6ac06338d5b6ad4bc80e03c67e3316805"
       },
       {
         "file": "am.java",
@@ -16354,7 +15889,7 @@
       },
       {
         "file": "d.java",
-        "sha256": "1b930b194f725a9470821357614d61d2b30c584fc7347ae5fd7904969ffc1d6a"
+        "sha256": "bdabb082f252343afb6ebb738865afb06f83e12045eaf67f15cd1dc19a080286"
       },
       {
         "file": "dd.java",
@@ -16613,6 +16148,10 @@
         "sha256": "c0948a54551bb70d86affa492ea330f80d61bc4fd771e856807b149d79a780a5"
       },
       {
+        "file": "oa.java",
+        "sha256": "94b8b8c9879e8ba2e6173c8b51c3570249db30499b7e58fb55366c200acefb6e"
+      },
+      {
         "file": "oc.java",
         "sha256": "aacf4c3882497080bf7f7e894e7cad6d3117625b01045cde06a39796a6973f2d"
       },
@@ -16623,6 +16162,10 @@
       {
         "file": "p.java",
         "sha256": "a639457cff135969b128ece7f6386a40cb07bb8565b2c7818fa7daf377bd5dc9"
+      },
+      {
+        "file": "pa.java",
+        "sha256": "7e181db4bb5f9cbc4aa2e5504109cadfe8aaf7ff201825f68305d4e1549d4257"
       },
       {
         "file": "pg.java",
@@ -16643,6 +16186,10 @@
       {
         "file": "qb.java",
         "sha256": "dc34421af0bbca87a24c419e650854bde6ec26778bb3c3a55ebcdb094bd605be"
+      },
+      {
+        "file": "qc.java",
+        "sha256": "8c80fe7758ce0c8182d01b1e4aa19ed88d6fefe608b082e1adea3a4056fb2e09"
       },
       {
         "file": "qe.java",
@@ -16887,7 +16434,7 @@
       },
       {
         "file": "tests/test-geoblox-result-helpers.mjs",
-        "sha256": "3439278132e5d4e81701cd03f2b4264d584f487dbd09a06d6493221282b2dd30",
+        "sha256": "dc6b3de45bef038fcadc139cf6b36081426140354b3d57195b32c0439fbfc750",
         "nativeOutputSha256": "ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e8a5e510872ace6",
         "scenarios": 13927,
         "scope": "120 selectors, 4801 popup factories, 9000 position checks and six music cases; controlled globals.",
@@ -16907,6 +16454,12 @@
             "sha256": "ed8f7d5f5438f4fb39cb3bceca82a861d01f4e08502ca73ba7af8ca475b6292b",
             "scenarios": 308,
             "scope": "Two fake-socket constructor cases, 8 available, 6 read-byte, 48 partial/zero/failing readFully, 12 pending-error, 160 enqueue/reserve/wrap/guard and 72 deterministic preclosed writer drain/write/flush/close-failure cases. Independent byte/state/effect oracles; no real socket/network/browser/dispatcher service execution."
+          },
+          {
+            "constant": "expectedDispatcherShutdownSha256",
+            "sha256": "86554dba87ac6740912bf88fcd328c871758629250b6277e4223e4955bfcfb29",
+            "scenarios": 96,
+            "scope": "Constructor-free dispatcher with unstarted worker and instrumented RandomAccessFiles:32 null-entry masks times3 failure masks. Independent complete cache-close order, per-holder success/failure retention, shutdown flag, monitor release and valid-guard task queue checks. Prior raw export fails first all-present case by visiting only indices0,2,4; native bytecode visits all. Invalid shutdown guards, live worker join, real cache/device concurrency and preference search remain unverified."
           }
         ]
       }
@@ -19079,7 +18632,7 @@
       "sourceDeclarations": 20708,
       "bindingsCompared": 150387,
       "overrideRelationships": 388,
-      "identifierEdits": 27837,
+      "identifierEdits": 27995,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -19102,7 +18655,8 @@
         "All parameters/local declarations in Sprite, ArgbSprite and IndexedSprite are named; other classes and shared joins still have opaque identifiers. The retained 45074-case pixel matrix has 43750 independent oracle cases. The additional 33168-case transform matrix has 23340 independent cardinal-rotation/bilinear/reduction/mutation cases and 9828 general-angle/extreme-scale trace-only cases. Bilinear coverage below 128 skips writes; surviving zero RGB becomes one. ArgbSprite inherits RGB smooth rotation and returns RGB copies. Arbitrary malformed geometry, AWT image loading/interruption, real assets and whole-game equivalence remain unverified.",
         "Dead selector cleanup only removes allocated int locals whose complete parsed/token-accounted body occurrences are literal stores or empty pure comparisons. The remaining nine selectors retain observable continuation routing. The independent 140-case cache probe covers null/closed/limited caches, payload bounds, null packets/buffers, guard side effects and integer offset overflow; it does not validate live cache concurrency, device timing or whole-game behavior.",
         "Plain-block tail recovery preserves existing braces, declaration scopes and opaque loop/label/try/monitor bodies. Exact terminal clones can skip intact prefixes without assuming loop completion; only terminal breaks to a newly introduced block can be trimmed, and retained new labels have a 512-token prefix cap. The 84-case native shutdown probe uses constructor-free sockets, controlled task statuses and valid close guards below -117; it verifies interrupt consumption, task retention/release, notification and monitor release, but not guard-triggered run(), stream/device I/O, normal blocking live joins or real network operation.",
-        "Socket/task names follow current source dispatch and 308 independent fake-stream/ring fixtures, retaining 84 shutdown cases. PlatformTaskDispatcher service branches, actual socket traffic, browser reload/cookies, static keyboard/rendering helpers and normal open-writer waiting/concurrency remain supported by source inspection only; no multiplayer server or whole-game equivalence claim."
+        "Socket/task names follow current source dispatch and 308 independent fake-stream/ring fixtures, retaining 84 shutdown cases. PlatformTaskDispatcher service branches, actual socket traffic, browser reload/cookies, static keyboard/rendering helpers and normal open-writer waiting/concurrency remain supported by source inspection only; no multiplayer server or whole-game equivalence claim.",
+        "Loop update recovery requires exactly one selected update on every normal/own-continue backedge and none on other exits. Other counter writes, shadows, unsupported syntax/Unicode and selected updates/own continues in protected/monitor/nested-loop bodies refuse lifting. Shutdown and preferences search retain while paths;96 actual native cache-close fixtures expose/correct earlier skip-entry behavior. Cache fixture worker is unstarted, close failures are instrumented; wrong guards, live worker joining, preference search, Windows URL launch and whole-game behavior remain unverified."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -19138,8 +18692,8 @@
         641
       ],
       "nativeBoundaryIndependentOracle": true,
-      "guardedNamingRules": 2518,
-      "namedLocalDeclarations": 989,
+      "guardedNamingRules": 2559,
+      "namedLocalDeclarations": 1016,
       "nonselectorDeclarationsPreserved": 20699,
       "generatedSelectorsBefore": 265,
       "generatedSelectorsAfter": 9,
@@ -19149,7 +18703,7 @@
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
       "genericRegionContractTestGroups": 36,
-      "genericExceptionExitTestGroups": 6,
+      "genericExceptionExitTestGroups": 8,
       "nativeReturnTailComparisons": 1560,
       "nativeSynchronizedReturnCases": 15,
       "nativeExistingLoopExitComparisons": 7200,
@@ -19177,7 +18731,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Naming-only pass on unchanged raw303 source. All 20708 original declarations, 129679 references and 388 override rows remain; earlier structural changes are retained in Git history. All 2404 prior guarded rules are byte-identical.",
+      "referenceRemovalAttribution": "All 20708 declaration identities are preserved after normalizing24 unguarded dispatcher-local ordinal permutations by unique original spelling;129679 references and388 override rows are unchanged. Moving old for-header updates back to their original while paths fixes visitation despite unchanged reference counts. Every2518 prior spelling/name is retained; one task-type evidence string is corrected (URL is4, reverse DNS3).",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -19193,30 +18747,30 @@
       "difficultyMethodLinesBefore": 38,
       "difficultyMethodLinesAfter": 38,
       "allGuardedNamesUnchanged": true,
-      "ruleChangesInCurrentPass": 114,
+      "ruleChangesInCurrentPass": 42,
       "genericNestedContinuationTestGroups": 2,
       "nativeNestedContinuationComparisons": 2520,
       "nestedContinuationChangedJavaFiles": 7,
-      "generatedLocalOrdinalsReordered": 0,
+      "generatedLocalOrdinalsReordered": 24,
       "allDeclarationsPreservedAfterOriginalSpellingNormalization": true,
       "generatedBlockLabelsInGeoblox": 0,
       "genericIntegralTailGuardTestGroups": 2,
       "nativeIntegralTailGuardComparisons": 35280,
       "integralTailGuardChangedJavaFiles": 4,
-      "allDeclarationIdentitiesAndSpellingsUnchanged": true,
+      "allDeclarationIdentitiesAndSpellingsUnchanged": false,
       "cachedJvmOperandsNotReevaluated": true,
       "ambiguousPredicateComplementsRefused": true,
       "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true,
       "allPriorGuardedNamesPreserved": true,
-      "namingRulesAddedInCurrentPass": 114,
-      "sourceInputChangedInCurrentPass": false,
+      "namingRulesAddedInCurrentPass": 41,
+      "sourceInputChangedInCurrentPass": true,
       "namedVisualAssetFieldsAdded": 59,
       "namedAssetLoadingMethodsAdded": 6,
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
-      "identifierEditsAddedInCurrentPass": 665,
-      "lastStructuralPassVersion": 43,
-      "namingRulesRefinedInCurrentPass": 0,
+      "identifierEditsAddedInCurrentPass": 158,
+      "lastStructuralPassVersion": 45,
+      "namingRulesRefinedInCurrentPass": 1,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
       "namedRenderingMethodRulesAdded": 0,
@@ -19248,7 +18802,128 @@
       "nativeCacheWriteTraceSha256": "e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d",
       "protectedTerminalArmNativeComparisons": 2240,
       "protectedTerminalArmTestGroups": 3,
-      "sourceDeclarationOrdinalMigrations": [],
+      "sourceDeclarationOrdinalMigrations": [
+        {
+          "before": "L:d.run()V#1",
+          "after": "L:d.run()V#0",
+          "originalName": "stackIn_76_0"
+        },
+        {
+          "before": "L:d.run()V#2",
+          "after": "L:d.run()V#1",
+          "originalName": "decompiledCaughtException"
+        },
+        {
+          "before": "L:d.run()V#3",
+          "after": "L:d.run()V#2",
+          "originalName": "var2"
+        },
+        {
+          "before": "L:d.run()V#4",
+          "after": "L:d.run()V#3",
+          "originalName": "var2_int"
+        },
+        {
+          "before": "L:d.run()V#5",
+          "after": "L:d.run()V#4",
+          "originalName": "var2_ref"
+        },
+        {
+          "before": "L:d.run()V#6",
+          "after": "L:d.run()V#5",
+          "originalName": "var2_ref2"
+        },
+        {
+          "before": "L:d.run()V#7",
+          "after": "L:d.run()V#6",
+          "originalName": "var3"
+        },
+        {
+          "before": "L:d.run()V#8",
+          "after": "L:d.run()V#7",
+          "originalName": "var3_ref"
+        },
+        {
+          "before": "L:d.run()V#9",
+          "after": "L:d.run()V#8",
+          "originalName": "var3_int"
+        },
+        {
+          "before": "L:d.run()V#10",
+          "after": "L:d.run()V#9",
+          "originalName": "var3_ref2"
+        },
+        {
+          "before": "L:d.run()V#11",
+          "after": "L:d.run()V#10",
+          "originalName": "var3_ref3"
+        },
+        {
+          "before": "L:d.run()V#12",
+          "after": "L:d.run()V#11",
+          "originalName": "var4_int"
+        },
+        {
+          "before": "L:d.run()V#13",
+          "after": "L:d.run()V#12",
+          "originalName": "var4"
+        },
+        {
+          "before": "L:d.run()V#0",
+          "after": "L:d.run()V#13",
+          "originalName": "var5"
+        },
+        {
+          "before": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
+          "after": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
+          "originalName": "stackIn_13_0"
+        },
+        {
+          "before": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
+          "after": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#1",
+          "originalName": "decompiledCaughtException"
+        },
+        {
+          "before": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
+          "after": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#2",
+          "originalName": "var4"
+        },
+        {
+          "before": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#4",
+          "after": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#3",
+          "originalName": "var5"
+        },
+        {
+          "before": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#0",
+          "after": "L:d.a(BILjava/lang/String;Ljava/lang/String;)Lpa;#4",
+          "originalName": "var6"
+        },
+        {
+          "before": "L:d.a(B)V#2",
+          "after": "L:d.a(B)V#1",
+          "originalName": "decompiledCaughtException"
+        },
+        {
+          "before": "L:d.a(B)V#3",
+          "after": "L:d.a(B)V#2",
+          "originalName": "var2"
+        },
+        {
+          "before": "L:d.a(B)V#4",
+          "after": "L:d.a(B)V#3",
+          "originalName": "var2_ref"
+        },
+        {
+          "before": "L:d.a(B)V#5",
+          "after": "L:d.a(B)V#4",
+          "originalName": "var2_ref2"
+        },
+        {
+          "before": "L:d.a(B)V#1",
+          "after": "L:d.a(B)V#5",
+          "originalName": "var2_int"
+        }
+      ],
       "nativeShutdownCases": 84,
       "nativeShutdownTraceSha256": "2fec6ee86681993c79d39ef1e57026f31fd9b0a87b7d7f94a5bddf5af83d6335",
       "genericPlainBlockTailTestGroups": 2,
@@ -19265,7 +18940,70 @@
       },
       "nativeSocketIoCases": 308,
       "nativeSocketIoTraceSha256": "ed8f7d5f5438f4fb39cb3bceca82a861d01f4e08502ca73ba7af8ca475b6292b",
-      "allBufferedSocketParametersAndNonselectorLocalsNamed": true
+      "allBufferedSocketParametersAndNonselectorLocalsNamed": true,
+      "rawSourceLinesAdded": 8,
+      "namedDispatcherCleanupRulesAdded": {
+        "C": 0,
+        "F": 7,
+        "M": 2,
+        "P": 5,
+        "L": 27
+      },
+      "nativeDispatcherShutdownCases": 96,
+      "nativeDispatcherShutdownTraceSha256": "86554dba87ac6740912bf88fcd328c871758629250b6277e4223e4955bfcfb29",
+      "loopUpdateRecoveryTestGroups": 2,
+      "nativeProtectedCounterCases": 600,
+      "nativeProtectedCounterComparisons": 1200,
+      "allDispatcherShutdownAndPreferencesParametersAndLocalsNamed": true,
+      "ruleEvidenceRefinementsInCurrentPass": 1
+    },
+    "sourceChange": {
+      "before": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "de1fa91e8e6d6ce11229380bbc05b0e343bf5082",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "3564f5d1f8ec3e288a80decab1b1815cc675c3fa",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "93e62046b7f1e880f3f7c28449d89b90e64b92c34d7dcdbb8dade76e9e86913f",
+              "reproduce": "git archive --format=tar 3564f5d1f8ec3e288a80decab1b1815cc675c3fa | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "084346454dabfd60bbdcd5e9edfa05ac3786798eee83a6ce673176cfca80e8af"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "f1fc0338feac7c9140bbdab315b770c17478d822",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "f9f0838416053d3f6189ae5990365d73b7be6596",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "4812cac052bc37ad4cf1a36f907bff3dce8a86535f2379f7d7cf2b60bb9f1053",
+              "reproduce": "git archive --format=tar f9f0838416053d3f6189ae5990365d73b7be6596 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "e9497d12a451095457234cd1abee1018e845505bf5901b14c7f0eb36988c6c49"
+      }
     }
   }
 }
