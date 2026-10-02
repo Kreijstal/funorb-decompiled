@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "fb6ea7871e4f1657f678211830229997b4785e33",
+      "commit": "1fa1f5ca8db58810744ef29e04bcf31c74e81805",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "5ad4b8f16b9b82c1a427d69119b4b673ba8bbf1987c85b5f1463f583ef0231c2",
-        "reproduce": "git archive --format=tar fb6ea7871e4f1657f678211830229997b4785e33 | sha256sum",
+        "sha256": "80101c5837724ddef2f706256e25320fdf76a57642d7c9b9de64fcf131f229c4",
+        "reproduce": "git archive --format=tar 1fa1f5ca8db58810744ef29e04bcf31c74e81805 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "c1f3218a7a4e1ac693bea85f5c5806eb16859e8f6f99368a4c00b498cee74057",
-  "previousSourceTreeSha256": "d7bea0c5687e00ea49ab0d6f5b89aace3e2cca0067c862db74bd7ce881569adc",
-  "changedJavaFiles": 7,
+  "sourceTreeSha256": "cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d",
+  "previousSourceTreeSha256": "c1f3218a7a4e1ac693bea85f5c5806eb16859e8f6f99368a4c00b498cee74057",
+  "changedJavaFiles": 4,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -1396,6 +1396,52 @@
     "nativeNestedContinuationComparisons": 2520,
     "cleanSourceArchiveByteExact": true,
     "diagnosticsUnchanged": true,
-    "scope": "Prior branchTailFactoring proof describes the previous export. Current native generic fixtures cover multiple enclosing exits, skipped prefix effects, nullable unboxing, signed zero/NaNs, partial writes, receiver/call failures, sentinel throwable identity, handler/monitor tails and deterministic label collision avoidance. The six current game probe scopes and reproducible naming mirror remain in the current readable manifest. Other shared joins, opaque names and whole-game equivalence remain unverified."
+    "scope": "Historical pass-36 export and proof. Current cached integral-predicate refinements are recorded in integralTailGuards. The six current game probe scopes and reproducible naming mirror remain in the current readable manifest. Other shared joins, opaque names and whole-game equivalence remain unverified."
+  },
+  "integralTailGuards": {
+    "javaToolsCommit": "1fa1f5ca8db58810744ef29e04bcf31c74e81805",
+    "sourceArchiveSha256": "80101c5837724ddef2f706256e25320fdf76a57642d7c9b9de64fcf131f229c4",
+    "defaultEnabled": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "usesCachedJvmOperandsWithoutReevaluation": true,
+    "relationalComplementsRequireIntegralPredicateEvidence": true,
+    "ambiguousPredicateAndComplementSpellingsRefused": true,
+    "floatingUnknownAndNullablePredicatesKeepLogicalNegation": true,
+    "originalOperandBytesAndEvaluationOrderPreserved": true,
+    "branchLocalScopeChangesRefused": true,
+    "handlerAndMonitorBoundariesUnchanged": true,
+    "sourceStatementsAndIdentifierOccurrencesNotDuplicated": true,
+    "sourceLinesBefore": 85983,
+    "sourceLinesAfter": 85965,
+    "changedJavaFiles": [
+      "gi.java",
+      "hd.java",
+      "ld.java",
+      "v.java"
+    ],
+    "difficultyMethodLinesBefore": 56,
+    "difficultyMethodLinesAfter": 38,
+    "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true,
+    "recursiveAdvanceReadAfterCallPreserved": true,
+    "sourceDeclarationsBefore": 20710,
+    "sourceDeclarationsAfter": 20710,
+    "allDeclarationIdentitiesAndSpellingsUnchanged": true,
+    "namedLocalOrdinalMigrations": 0,
+    "generatedLocalOrdinalsReordered": 0,
+    "overrideRelationshipsPreserved": 388,
+    "sourceReferenceOccurrencesBefore": 130117,
+    "sourceReferenceOccurrencesAfter": 130091,
+    "sourceReferenceOccurrencesRemoved": 26,
+    "sourceReferenceOccurrencesAdded": 0,
+    "referenceRemovalAttribution": "Two category-update clones and two recursive-advance clones in ld.b(Z)V; every declaration key/spelling and override row is unchanged. Other changed predicates alter operators only.",
+    "duplicateLocalMethodWgFinalizeFileByteExact": true,
+    "guardedRulesUnchanged": 1194,
+    "genericEmitterTestGroups": 23,
+    "nativeEmitterComparisons": 40129,
+    "nativeIntegralTailGuardComparisons": 35280,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "scope": "Generic native fixtures cover all integral relational complements with signed long/int boundaries, operand failures and evaluation order; untyped floating/nullable predicates preserve NaNs, signed zero and unboxing failure. Already-rendered cache operands remain unchanged; ambiguous evidence invalidates both complements. The six game probe scopes and naming mirror are in the single current readable manifest. Other joins, opaque names and whole-game equivalence remain unverified."
   }
 }

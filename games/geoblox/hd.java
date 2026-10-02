@@ -40,7 +40,7 @@ final class hd extends sh {
         di.field_g = di.field_g + 1;
         ul.field_b = ul.field_b + 1;
         if (sa.field_b == di.field_g) {
-          if (!(gb.field_c >= 2)) {
+          if (gb.field_c < 2) {
             di.field_g = 0;
             ld.b(false);
             gb.field_c = gb.field_c + 1;
