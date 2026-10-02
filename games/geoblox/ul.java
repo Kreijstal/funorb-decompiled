@@ -30,10 +30,6 @@ final class ul {
         int stackIn_64_1;
         int stackIn_64_2;
         int stackIn_64_3;
-        int[] stackIn_65_0 = null;
-        int stackIn_65_1 = 0;
-        int stackIn_65_2 = 0;
-        int stackIn_65_3 = 0;
         int stackIn_65_4 = 0;
         int stackIn_68_5;
         int stackIn_82_0 = 0;
@@ -146,52 +142,20 @@ final class ul {
                         var12 = var15;
                       }
                       stackIn_64_0 = nk.field_f;
-
                       stackIn_64_1 = h.field_a;
-
                       stackIn_64_2 = nk.field_f[h.field_a];
-
                       stackIn_64_3 = var14;
-
                       if (var10 == 0) {
-                        stackIn_65_0 = (int[]) ((Object) stackIn_64_0);
-                        stackIn_65_1 = stackIn_64_1;
-                        stackIn_65_2 = stackIn_64_2;
-                        stackIn_65_3 = stackIn_64_3;
                         stackIn_65_4 = 0;
                       } else {
-                        stackIn_65_0 = (int[]) ((Object) stackIn_64_0);
-                        stackIn_65_1 = stackIn_64_1;
-                        stackIn_65_2 = stackIn_64_2;
-                        stackIn_65_3 = stackIn_64_3;
                         stackIn_65_4 = -2147483648;
                       }
-
-
-
-
-
-
-
-
-
-
                       if (var11 == 0) {
-                        stackIn_65_0 = (int[]) ((Object) stackIn_65_0);
-
-
-
-
                         stackIn_68_5 = 0;
                       } else {
-                        stackIn_65_0 = (int[]) ((Object) stackIn_65_0);
-
-
-
-
                         stackIn_68_5 = 1073741824;
                       }
-                      stackIn_65_0[stackIn_65_1] = lb.a(stackIn_65_2, lb.a(stackIn_65_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), var12 << 20), var13 << 10)));
+                      stackIn_64_0[stackIn_64_1] = lb.a(stackIn_64_2, lb.a(stackIn_64_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), var12 << 20), var13 << 10)));
                       h.field_a = h.field_a + 1;
                     }
                     if (var10 == 0) {
@@ -230,11 +194,8 @@ final class ul {
         int var4 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
@@ -262,32 +223,19 @@ final class ul {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_18_0 = (RuntimeException) (var3);
-
           stackIn_18_1 = new StringBuilder().append("ul.D(");
-
           if (param0 == null) {
-            stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-            stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
             stackIn_19_2 = "null";
           } else {
-            stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-            stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
             stackIn_19_2 = "{...}";
           }
-
-
-          stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
-
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
           if (param1 == null) {
-            stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
             stackIn_22_2 = "null";
           } else {
-            stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
             stackIn_22_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 

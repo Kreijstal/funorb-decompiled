@@ -250,8 +250,6 @@ final class kk extends ji {
         int var6 = 0;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
         String stackIn_40_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -310,19 +308,13 @@ final class kk extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_39_0 = (RuntimeException) (var3);
-
           stackIn_39_1 = new StringBuilder().append("kk.O(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
-            stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
             stackIn_40_2 = "null";
           } else {
-            stackIn_40_0 = (RuntimeException) ((Object) stackIn_39_0);
-            stackIn_40_1 = (StringBuilder) ((Object) stackIn_39_1);
             stackIn_40_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -340,8 +332,6 @@ final class kk extends ji {
         try {
             RuntimeException stackIn_27_0 = null;
             StringBuilder stackIn_27_1 = null;
-            RuntimeException stackIn_28_0 = null;
-            StringBuilder stackIn_28_1 = null;
             String stackIn_28_2 = null;
             Throwable decompiledCaughtException = null;
             Exception var4 = null;
@@ -411,19 +401,13 @@ final class kk extends ji {
               decompiledCaughtException = decompiledCaughtParameter3;
               var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_27_0 = (RuntimeException) (var4_ref3);
-
               stackIn_27_1 = new StringBuilder().append("kk.C(");
-
               if (param0 == null) {
-                stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-                stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
                 stackIn_28_2 = "null";
               } else {
-                stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-                stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
                 stackIn_28_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -496,8 +480,6 @@ final class kk extends ji {
         try {
             qc stackIn_5_0 = null;
             int stackIn_5_1 = 0;
-            qc stackIn_6_0 = null;
-            int stackIn_6_1 = 0;
             int stackIn_6_2 = 0;
             Throwable decompiledCaughtException = null;
             IOException var3 = null;
@@ -508,19 +490,13 @@ final class kk extends ji {
             try {
               this.field_m.field_f = 0;
               stackIn_5_0 = this.field_m;
-
               stackIn_5_1 = 124;
-
               if (param1) {
-                stackIn_6_0 = (qc) ((Object) stackIn_5_0);
-                stackIn_6_1 = stackIn_5_1;
                 stackIn_6_2 = 2;
               } else {
-                stackIn_6_0 = (qc) ((Object) stackIn_5_0);
-                stackIn_6_1 = stackIn_5_1;
                 stackIn_6_2 = 3;
               }
-              ((qc) (Object) stackIn_6_0).d((byte) stackIn_6_1, stackIn_6_2);
+              ((qc) (Object) stackIn_5_0).d((byte) stackIn_5_1, stackIn_6_2);
               this.field_m.a((byte) -127, 0L);
               this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
               if (param0) {

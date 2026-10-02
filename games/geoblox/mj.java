@@ -17,8 +17,6 @@ final class mj {
         String stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         CharSequence var4 = null;
@@ -76,19 +74,13 @@ final class mj {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_30_0 = (RuntimeException) (var4_ref);
-
           stackIn_30_1 = new StringBuilder().append("mj.A(").append(param0).append(',').append(param1).append(',');
-
           if (param2 == null) {
-            stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
-            stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
             stackIn_31_2 = "null";
           } else {
-            stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
-            stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
             stackIn_31_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -101,8 +93,6 @@ final class mj {
         nd stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
@@ -126,19 +116,13 @@ final class mj {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_15_0 = (RuntimeException) (var2);
-
           stackIn_15_1 = new StringBuilder().append("mj.C(");
-
           if (param0 == null) {
-            stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "null";
           } else {
-            stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

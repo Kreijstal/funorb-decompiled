@@ -10,11 +10,8 @@ final class ak {
         boolean stackIn_15_0 = false;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
@@ -46,32 +43,19 @@ final class ak {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_18_0 = (RuntimeException) (var3_ref);
-
           stackIn_18_1 = new StringBuilder().append("ak.A(");
-
           if (param0 == null) {
-            stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-            stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
             stackIn_19_2 = "null";
           } else {
-            stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-            stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
             stackIn_19_2 = "{...}";
           }
-
-
-          stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
-
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
           if (param1 == null) {
-            stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
             stackIn_22_2 = "null";
           } else {
-            stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
             stackIn_22_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -89,8 +73,6 @@ final class ak {
         int var4 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
@@ -112,19 +94,13 @@ final class ak {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_15_0 = (RuntimeException) (var2);
-
           stackIn_15_1 = new StringBuilder().append("ak.B(");
-
           if (param0 == null) {
-            stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "null";
           } else {
-            stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

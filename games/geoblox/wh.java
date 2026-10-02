@@ -17,8 +17,6 @@ abstract class wh extends rc {
     final static void a(boolean param0, rh param1) {
         RuntimeException stackIn_310_0 = null;
         StringBuilder stackIn_310_1 = null;
-        RuntimeException stackIn_311_0 = null;
-        StringBuilder stackIn_311_1 = null;
         String stackIn_311_2 = null;
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
@@ -375,19 +373,13 @@ abstract class wh extends rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_310_0 = (RuntimeException) (var2_ref);
-
           stackIn_310_1 = new StringBuilder().append("wh.JA(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_311_0 = (RuntimeException) ((Object) stackIn_310_0);
-            stackIn_311_1 = (StringBuilder) ((Object) stackIn_310_1);
             stackIn_311_2 = "null";
           } else {
-            stackIn_311_0 = (RuntimeException) ((Object) stackIn_310_0);
-            stackIn_311_1 = (StringBuilder) ((Object) stackIn_310_1);
             stackIn_311_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_311_0), ((StringBuilder) (Object) stackIn_311_1).append(stackIn_311_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_310_0), ((StringBuilder) (Object) stackIn_310_1).append(stackIn_311_2).append(')').toString());
         }
         if (ch.field_h) {
           var3++;
@@ -405,8 +397,6 @@ abstract class wh extends rc {
         byte[] stackIn_11_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = Geoblox.field_C;
@@ -446,19 +436,13 @@ abstract class wh extends rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_15_0 = (RuntimeException) (var4_ref);
-
           stackIn_15_1 = new StringBuilder().append("wh.MA(").append(param0).append(',').append(param1).append(',');
-
           if (param2 == null) {
-            stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "null";
           } else {
-            stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -467,8 +451,6 @@ abstract class wh extends rc {
         int stackIn_73_1 = 0;
         RuntimeException stackIn_113_0 = null;
         StringBuilder stackIn_113_1 = null;
-        RuntimeException stackIn_114_0 = null;
-        StringBuilder stackIn_114_1 = null;
         String stackIn_114_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var17_int = 0;
@@ -678,9 +660,7 @@ abstract class wh extends rc {
                       {
                         var37 = var17_int >> 16;
                         stackIn_73_0 = ~mh.field_c;
-
                         stackIn_73_1 = ~var37;
-
                         if (var42 != 0) {
                           break L10;
                         }
@@ -856,19 +836,13 @@ abstract class wh extends rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           var17 = decompiledCaughtException;
           stackIn_113_0 = (RuntimeException) (var17);
-
           stackIn_113_1 = new StringBuilder().append("wh.KA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
-
           if (param11 == null) {
-            stackIn_114_0 = (RuntimeException) ((Object) stackIn_113_0);
-            stackIn_114_1 = (StringBuilder) ((Object) stackIn_113_1);
             stackIn_114_2 = "null";
           } else {
-            stackIn_114_0 = (RuntimeException) ((Object) stackIn_113_0);
-            stackIn_114_1 = (StringBuilder) ((Object) stackIn_113_1);
             stackIn_114_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_114_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_114_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -881,8 +855,6 @@ abstract class wh extends rc {
             int stackIn_17_1 = 0;
             RuntimeException stackIn_35_0 = null;
             StringBuilder stackIn_35_1 = null;
-            RuntimeException stackIn_36_0 = null;
-            StringBuilder stackIn_36_1 = null;
             String stackIn_36_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
@@ -904,9 +876,7 @@ abstract class wh extends rc {
                           L5: {
                             if (var3_int < 24) {
                               stackIn_17_0 = ~var2[var3_int];
-
                               stackIn_17_1 = -1;
-
                               if (var5 != 0) {
                                 break L4;
                               }
@@ -966,19 +936,13 @@ abstract class wh extends rc {
               decompiledCaughtException = decompiledCaughtParameter1;
               runtimeException = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_35_0 = (RuntimeException) (runtimeException);
-
               stackIn_35_1 = new StringBuilder().append("wh.IA(");
-
               if (param0 == null) {
-                stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
-                stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
                 stackIn_36_2 = "null";
               } else {
-                stackIn_36_0 = (RuntimeException) ((Object) stackIn_35_0);
-                stackIn_36_1 = (StringBuilder) ((Object) stackIn_35_1);
                 stackIn_36_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

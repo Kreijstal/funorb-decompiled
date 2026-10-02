@@ -8,8 +8,6 @@ final class nb {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -27,19 +25,13 @@ final class nb {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_7_0 = (RuntimeException) (var2);
-
           stackIn_7_1 = new StringBuilder().append("nb.B(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "null";
           } else {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -54,26 +46,11 @@ final class nb {
         float stackIn_17_2;
         int stackIn_17_3;
         float stackIn_17_4;
-        ja stackIn_18_0 = null;
-        int stackIn_18_1 = 0;
-        float stackIn_18_2 = 0.0f;
-        int stackIn_18_3 = 0;
-        float stackIn_18_4 = 0.0f;
         int stackIn_18_5 = 0;
         int stackIn_21_6;
         float stackIn_21_7;
         float stackIn_21_8;
         float stackIn_21_9;
-        ja stackIn_23_0 = null;
-        int stackIn_23_1 = 0;
-        float stackIn_23_2 = 0.0f;
-        int stackIn_23_3 = 0;
-        float stackIn_23_4 = 0.0f;
-        int stackIn_23_5 = 0;
-        int stackIn_23_6 = 0;
-        float stackIn_23_7 = 0.0f;
-        float stackIn_23_8 = 0.0f;
-        float stackIn_23_9 = 0.0f;
         int stackIn_23_10 = 0;
         if (param0 != -28195) {
           return;
@@ -109,90 +86,24 @@ final class nb {
           stackIn_17_3 = var12;
           stackIn_17_4 = (float)(320 - param1);
           if (var12 != 2) {
-            stackIn_18_0 = (ja) ((Object) stackIn_17_0);
-            stackIn_18_1 = stackIn_17_1;
-            stackIn_18_2 = stackIn_17_2;
-            stackIn_18_3 = stackIn_17_3;
-            stackIn_18_4 = stackIn_17_4;
             stackIn_18_5 = -1;
           } else {
-            stackIn_18_0 = (ja) ((Object) stackIn_17_0);
-            stackIn_18_1 = stackIn_17_1;
-            stackIn_18_2 = stackIn_17_2;
-            stackIn_18_3 = stackIn_17_3;
-            stackIn_18_4 = stackIn_17_4;
             stackIn_18_5 = param4;
           }
           L5: {
-            stackIn_18_0 = (ja) ((Object) stackIn_18_0);
-
             stackIn_21_6 = 0;
-
             stackIn_21_7 = 0.0f;
-
             stackIn_21_8 = (float)param3;
-
             stackIn_21_9 = (float)(-param3 + 240);
-
             if (var12 != 2) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
               if (1 != var12) {
-                stackIn_23_0 = (ja) ((Object) stackIn_18_0);
-                stackIn_23_1 = stackIn_18_1;
-                stackIn_23_2 = stackIn_18_2;
-                stackIn_23_3 = stackIn_18_3;
-                stackIn_23_4 = stackIn_18_4;
-                stackIn_23_5 = stackIn_18_5;
-                stackIn_23_6 = stackIn_21_6;
-                stackIn_23_7 = stackIn_21_7;
-                stackIn_23_8 = stackIn_21_8;
-                stackIn_23_9 = stackIn_21_9;
                 stackIn_23_10 = -1;
                 break L5;
               }
-              stackIn_18_0 = (ja) ((Object) stackIn_18_0);
-
-
-
-
-
-
-
-
-
             }
-            stackIn_23_0 = (ja) ((Object) stackIn_18_0);
-            stackIn_23_1 = stackIn_18_1;
-            stackIn_23_2 = stackIn_18_2;
-            stackIn_23_3 = stackIn_18_3;
-            stackIn_23_4 = stackIn_18_4;
-            stackIn_23_5 = stackIn_18_5;
-            stackIn_23_6 = stackIn_21_6;
-            stackIn_23_7 = stackIn_21_7;
-            stackIn_23_8 = stackIn_21_8;
-            stackIn_23_9 = stackIn_21_9;
             stackIn_23_10 = param2;
           }
-          ((ja) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, stackIn_23_8, stackIn_23_9, stackIn_23_10, 0.0f);
+          ((ja) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5, stackIn_21_6, stackIn_21_7, stackIn_21_8, stackIn_21_9, stackIn_23_10, 0.0f);
         }
         var6.field_K = null;
         ji.field_r.a(param0 ^ 28286, var6);

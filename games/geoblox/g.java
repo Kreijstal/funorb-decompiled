@@ -35,8 +35,6 @@ final class g extends q {
         String stackIn_34_0 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
         String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -87,19 +85,13 @@ final class g extends q {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_37_0 = (RuntimeException) (var3);
-
           stackIn_37_1 = new StringBuilder().append("g.A(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
-            stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
             stackIn_38_2 = "null";
           } else {
-            stackIn_38_0 = (RuntimeException) ((Object) stackIn_37_0);
-            stackIn_38_1 = (StringBuilder) ((Object) stackIn_37_1);
             stackIn_38_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -112,8 +104,6 @@ final class g extends q {
         String var7 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -145,19 +135,13 @@ final class g extends q {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = (RuntimeException) (var3_ref);
-
           stackIn_16_1 = new StringBuilder().append("g.B(");
-
           if (param0 == null) {
-            stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "null";
           } else {
-            stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -171,8 +155,6 @@ final class g extends q {
         lh stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -199,19 +181,13 @@ final class g extends q {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = (RuntimeException) (var3_ref);
-
           stackIn_16_1 = new StringBuilder().append("g.D(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "null";
           } else {
-            stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

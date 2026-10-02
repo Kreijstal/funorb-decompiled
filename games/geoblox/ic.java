@@ -49,11 +49,8 @@ final class ic {
         try {
             RuntimeException stackIn_16_0 = null;
             StringBuilder stackIn_16_1 = null;
-            RuntimeException stackIn_17_0 = null;
-            StringBuilder stackIn_17_1 = null;
             String stackIn_17_2 = null;
             StringBuilder stackIn_19_1 = null;
-            StringBuilder stackIn_20_1 = null;
             String stackIn_20_2 = null;
             Throwable decompiledCaughtException = null;
             IOException var15 = null;
@@ -90,32 +87,19 @@ final class ic {
               decompiledCaughtException = decompiledCaughtParameter1;
               var15_ref = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_16_0 = (RuntimeException) (var15_ref);
-
               stackIn_16_1 = new StringBuilder().append("ic.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
-
               if (param9 == null) {
-                stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-                stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
                 stackIn_17_2 = "null";
               } else {
-                stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-                stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
                 stackIn_17_2 = "{...}";
               }
-
-
-              stackIn_19_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param10).append(',');
-
+              stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param10).append(',');
               if (param11 == null) {
-                stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-                stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
                 stackIn_20_2 = "null";
               } else {
-                stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-                stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
                 stackIn_20_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

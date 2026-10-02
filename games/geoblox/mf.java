@@ -34,8 +34,6 @@ final class mf {
         byte[] var5 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -53,19 +51,13 @@ final class mf {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_11_0 = (RuntimeException) (var4_ref);
-
           stackIn_11_1 = new StringBuilder().append("mf.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
           if (param3 == null) {
-            stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-            stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
             stackIn_12_2 = "null";
           } else {
-            stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-            stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
             stackIn_12_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

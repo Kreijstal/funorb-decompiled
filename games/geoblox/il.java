@@ -905,8 +905,6 @@ final class il extends dm {
         int stackIn_12_0 = 0;
         int[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
-        int[] stackIn_21_0 = null;
-        int stackIn_21_1 = 0;
         int stackIn_21_2 = 0;
         int var3;
         int var4;
@@ -978,19 +976,13 @@ final class il extends dm {
                 var18 = 0;
                 for (var19 = 0; var19 < 4; var19++) {
                   stackIn_20_0 = this.field_v;
-
                   stackIn_20_1 = var10 + (var19 & 1);
-
                   if ((var19 & 2) != 0) {
-                    stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
-                    stackIn_21_1 = stackIn_20_1;
                     stackIn_21_2 = 0;
                   } else {
-                    stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
-                    stackIn_21_1 = stackIn_20_1;
                     stackIn_21_2 = this.field_r;
                   }
-                  var13 = stackIn_21_0[stackIn_21_1 + stackIn_21_2];
+                  var13 = stackIn_20_0[stackIn_20_1 + stackIn_21_2];
                   var14 = var13 >>> 24;
                   var18 = var18 + var14;
                   var15 = var15 + var14 * (var13 >> 16 & 255);

@@ -277,8 +277,6 @@ final class ua extends hf {
         int stackIn_5_0 = 0;
         boolean[] stackIn_39_0 = null;
         int stackIn_39_1 = 0;
-        boolean[] stackIn_40_0 = null;
-        int stackIn_40_1 = 0;
         boolean stackIn_40_2 = false;
         int var1;
         int var2;
@@ -365,19 +363,13 @@ final class ua extends hf {
         field_D = new int[var5];
         for (var6 = 0; var6 < var5; var6++) {
           stackIn_39_0 = (boolean[]) (field_o);
-
           stackIn_39_1 = var6;
-
           if (ua.b() == 0) {
-            stackIn_40_0 = (boolean[]) ((Object) stackIn_39_0);
-            stackIn_40_1 = stackIn_39_1;
             stackIn_40_2 = false;
           } else {
-            stackIn_40_0 = (boolean[]) ((Object) stackIn_39_0);
-            stackIn_40_1 = stackIn_39_1;
             stackIn_40_2 = true;
           }
-          stackIn_40_0[stackIn_40_1] = stackIn_40_2;
+          stackIn_39_0[stackIn_39_1] = stackIn_40_2;
           ua.b(16);
           ua.b(16);
           field_D[var6] = ua.b(8);
@@ -735,7 +727,6 @@ final class ua extends hf {
         field_B = var18;
         this.field_M = var4;
         this.field_m = var12 - (var4 >> 1);
-
         if (var15 == 0) {
           stackIn_111_1 = false;
         } else {

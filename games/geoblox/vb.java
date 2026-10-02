@@ -1483,18 +1483,12 @@ final class vb {
         int incrementValue$0 = 0;
         int[] stackIn_38_0 = null;
         int stackIn_38_1 = 0;
-        int[] stackIn_39_0 = null;
-        int stackIn_39_1 = 0;
         int stackIn_39_2 = 0;
         int[] stackIn_41_0 = null;
         int stackIn_41_1 = 0;
-        int[] stackIn_42_0 = null;
-        int stackIn_42_1 = 0;
         int stackIn_42_2 = 0;
         int[] stackIn_44_0 = null;
         int stackIn_44_1 = 0;
-        int[] stackIn_45_0 = null;
-        int stackIn_45_1 = 0;
         int stackIn_45_2 = 0;
         int[] var9;
         int[] var10;
@@ -1619,49 +1613,31 @@ final class vb {
             param1 = param0[incrementValue$4];
             var21 = var27[var20] - (param1 >> 16 & 255);
             stackIn_38_0 = (int[]) (var9);
-
             stackIn_38_1 = var20;
-
             if (var21 >= 0) {
-              stackIn_39_0 = (int[]) ((Object) stackIn_38_0);
-              stackIn_39_1 = stackIn_38_1;
               stackIn_39_2 = var21;
             } else {
-              stackIn_39_0 = (int[]) ((Object) stackIn_38_0);
-              stackIn_39_1 = stackIn_38_1;
               stackIn_39_2 = 0;
             }
-            stackIn_39_0[stackIn_39_1] = stackIn_39_2;
+            stackIn_38_0[stackIn_38_1] = stackIn_39_2;
             var21 = var28[var20] - (param1 >> 8 & 255);
             stackIn_41_0 = (int[]) (var10);
-
             stackIn_41_1 = var20;
-
             if (var21 >= 0) {
-              stackIn_42_0 = (int[]) ((Object) stackIn_41_0);
-              stackIn_42_1 = stackIn_41_1;
               stackIn_42_2 = var21;
             } else {
-              stackIn_42_0 = (int[]) ((Object) stackIn_41_0);
-              stackIn_42_1 = stackIn_41_1;
               stackIn_42_2 = 0;
             }
-            stackIn_42_0[stackIn_42_1] = stackIn_42_2;
+            stackIn_41_0[stackIn_41_1] = stackIn_42_2;
             var21 = var29[var20] - (param1 & 255);
             stackIn_44_0 = (int[]) (var11);
-
             stackIn_44_1 = var20;
-
             if (var21 >= 0) {
-              stackIn_45_0 = (int[]) ((Object) stackIn_44_0);
-              stackIn_45_1 = stackIn_44_1;
               stackIn_45_2 = var21;
             } else {
-              stackIn_45_0 = (int[]) ((Object) stackIn_44_0);
-              stackIn_45_1 = stackIn_44_1;
               stackIn_45_2 = 0;
             }
-            stackIn_45_0[stackIn_45_1] = stackIn_45_2;
+            stackIn_44_0[stackIn_44_1] = stackIn_45_2;
           }
           var19 = var19 + param6;
           for (var20 = 0; var20 < param8; var20++) {

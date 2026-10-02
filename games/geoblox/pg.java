@@ -36,11 +36,8 @@ final class pg {
             byte[] array$0 = null;
             RuntimeException stackIn_41_0 = null;
             StringBuilder stackIn_41_1 = null;
-            RuntimeException stackIn_42_0 = null;
-            StringBuilder stackIn_42_1 = null;
             String stackIn_42_2 = null;
             StringBuilder stackIn_44_1 = null;
-            StringBuilder stackIn_45_1 = null;
             String stackIn_45_2 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
@@ -185,32 +182,19 @@ final class pg {
               decompiledCaughtException = decompiledCaughtParameter5;
               var4 = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_41_0 = (RuntimeException) (var4);
-
               stackIn_41_1 = new StringBuilder().append("pg.C(").append(param0).append(',');
-
               if (param1 == null) {
-                stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
-                stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
                 stackIn_42_2 = "null";
               } else {
-                stackIn_42_0 = (RuntimeException) ((Object) stackIn_41_0);
-                stackIn_42_1 = (StringBuilder) ((Object) stackIn_41_1);
                 stackIn_42_2 = "{...}";
               }
-
-
-              stackIn_44_1 = ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(',').append(param2).append(',');
-
+              stackIn_44_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(',');
               if (param3 == null) {
-                stackIn_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-                stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
                 stackIn_45_2 = "null";
               } else {
-                stackIn_42_0 = (RuntimeException) ((Object) stackIn_42_0);
-                stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
                 stackIn_45_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_45_2).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

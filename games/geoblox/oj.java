@@ -12,8 +12,6 @@ abstract class oj {
         try {
             RuntimeException stackIn_8_0 = null;
             StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
             Throwable var2 = null;
@@ -43,19 +41,13 @@ abstract class oj {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_8_0 = (RuntimeException) (var2_ref);
-
               stackIn_8_1 = new StringBuilder().append("oj.F(");
-
               if (param0 == null) {
-                stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
                 stackIn_9_2 = "null";
               } else {
-                stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
                 stackIn_9_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

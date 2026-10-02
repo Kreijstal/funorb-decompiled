@@ -190,8 +190,6 @@ abstract class m extends rc {
         StringBuilder discarded$3 = null;
         int stackIn_67_0 = 0;
         int[] stackIn_67_1 = null;
-        int stackIn_68_0 = 0;
-        int[] stackIn_68_1 = null;
         int stackIn_68_2 = 0;
         Throwable decompiledCaughtException = null;
         int var4 = 0;
@@ -361,19 +359,13 @@ abstract class m extends rc {
             }
             if (param1 != null) {
               stackIn_67_0 = var4;
-
               stackIn_67_1 = (int[]) (param1);
-
               if (var11 >= param1.length) {
-                stackIn_68_0 = stackIn_67_0;
-                stackIn_68_1 = (int[]) ((Object) stackIn_67_1);
                 stackIn_68_2 = param1.length - 1;
               } else {
-                stackIn_68_0 = stackIn_67_0;
-                stackIn_68_1 = (int[]) ((Object) stackIn_67_1);
                 stackIn_68_2 = var11;
               }
-              if (stackIn_68_0 > stackIn_68_1[stackIn_68_2]) {
+              if (stackIn_67_0 > stackIn_67_1[stackIn_68_2]) {
                 if (var6 >= 0) {
                   param2[var11] = field_r.toString().substring(var5, var6 - var8);
                   var11++;

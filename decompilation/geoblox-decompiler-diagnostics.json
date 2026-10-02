@@ -20,7 +20,7 @@
       "methodName": "a",
       "descriptor": "(BLrh;)V",
       "helpers": 3,
-      "sharedLocals": 10
+      "sharedLocals": 8
     }
   ]
 }

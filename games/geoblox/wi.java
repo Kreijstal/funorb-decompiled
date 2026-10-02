@@ -46,8 +46,6 @@ final class wi extends ee implements pl {
         boolean stackIn_13_0 = false;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -70,19 +68,13 @@ final class wi extends ee implements pl {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_19_0 = (RuntimeException) (var5);
-
           stackIn_19_1 = new StringBuilder().append("wi.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
           if (param3 == null) {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "null";
           } else {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -104,8 +96,6 @@ final class wi extends ee implements pl {
         int var7 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
@@ -136,19 +126,13 @@ final class wi extends ee implements pl {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_23_0 = (RuntimeException) (var6);
-
           stackIn_23_1 = new StringBuilder().append("wi.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
           if (param4 == null) {
-            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
             stackIn_24_2 = "null";
           } else {
-            stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-            stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
             stackIn_24_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -167,8 +151,6 @@ final class wi extends ee implements pl {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2616_0;
             StringBuilder stackIn_2616_1;
-            RuntimeException stackIn_2617_0;
-            StringBuilder stackIn_2617_1;
             String stackIn_2617_2;
             boolean stackIn_2625_0;
             RuntimeException decompiledCaughtException;
@@ -183,8 +165,6 @@ final class wi extends ee implements pl {
                 this.param1 = initialParam1;
                 this.stackIn_2616_0 = null;
                 this.stackIn_2616_1 = null;
-                this.stackIn_2617_0 = null;
-                this.stackIn_2617_1 = null;
                 this.stackIn_2617_2 = null;
                 this.stackIn_2625_0 = false;
                 this.decompiledCaughtException = null;
@@ -3192,19 +3172,13 @@ final class wi extends ee implements pl {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2_ref = decompiledCaughtException;
                   stackIn_2616_0 = (RuntimeException) (var2_ref);
-
                   stackIn_2616_1 = new StringBuilder().append("wi.A(").append(param0).append(',');
-
                   if (param1 == null) {
-                    stackIn_2617_0 = (RuntimeException) ((Object) stackIn_2616_0);
-                    stackIn_2617_1 = (StringBuilder) ((Object) stackIn_2616_1);
                     stackIn_2617_2 = "null";
                   } else {
-                    stackIn_2617_0 = (RuntimeException) ((Object) stackIn_2616_0);
-                    stackIn_2617_1 = (StringBuilder) ((Object) stackIn_2616_1);
                     stackIn_2617_2 = "{...}";
                   }
-                  throw t.a((Throwable) ((Object) stackIn_2617_0), ((StringBuilder) (Object) stackIn_2617_1).append(stackIn_2617_2).append(')').toString());
+                  throw t.a((Throwable) ((Object) stackIn_2616_0), ((StringBuilder) (Object) stackIn_2616_1).append(stackIn_2617_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2625_0 = (!ch.field_h);

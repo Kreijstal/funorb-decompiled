@@ -81,8 +81,6 @@ final class fh implements dh {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -137,19 +135,13 @@ final class fh implements dh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_22_0 = (RuntimeException) (var6);
-
           stackIn_22_1 = new StringBuilder().append("fh.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
           if (param4 == null) {
-            stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-            stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
             stackIn_23_2 = "null";
           } else {
-            stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-            stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

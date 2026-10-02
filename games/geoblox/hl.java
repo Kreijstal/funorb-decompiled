@@ -93,8 +93,6 @@ final class hl extends el {
         dm discarded$0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -138,19 +136,13 @@ final class hl extends el {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_17_0 = (RuntimeException) (var5);
-
           stackIn_17_1 = new StringBuilder().append("hl.G(");
-
           if (param0 == null) {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "null";
           } else {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -213,8 +205,6 @@ final class hl extends el {
     final void a(boolean param0, int param1, el param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
@@ -233,19 +223,13 @@ final class hl extends el {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_8_0 = (RuntimeException) (var5);
-
           stackIn_8_1 = new StringBuilder().append("hl.H(").append(param0).append(',').append(param1).append(',');
-
           if (param2 == null) {
-            stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
             stackIn_9_2 = "null";
           } else {
-            stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-            stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
             stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 

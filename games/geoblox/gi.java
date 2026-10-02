@@ -69,17 +69,12 @@ final class gi implements Iterable {
         bg stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         StringBuilder stackIn_12_1 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         StringBuilder stackIn_15_1 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -94,58 +89,31 @@ final class gi implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_6_0 = (RuntimeException) (var5);
-
           stackIn_6_1 = new StringBuilder().append("gi.E(");
-
           if (param0 == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-            stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
             stackIn_7_2 = "{...}";
           }
-
-
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
-
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
           if (param2 == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
             stackIn_10_2 = "{...}";
           }
-
-
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
           if (param3 == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "{...}";
           }
-
-
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
-
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
           if (param4 == null) {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "null";
           } else {
-            stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -187,12 +155,8 @@ final class gi implements Iterable {
             java.net.URL stackIn_13_3;
             java.net.URL stackIn_13_4;
             StringBuilder stackIn_13_5;
-            d stackIn_14_0;
-            int stackIn_14_1;
             java.net.URL stackIn_14_2;
             java.net.URL stackIn_14_3;
-            java.net.URL stackIn_14_4;
-            StringBuilder stackIn_14_5;
             String stackIn_14_6;
             Throwable decompiledCaughtException = null;
             String var3 = null;
@@ -225,35 +189,21 @@ final class gi implements Iterable {
                 }
                 {
                   stackIn_13_0 = ml.field_s;
-
                   stackIn_13_1 = -14;
-
                   stackIn_13_2 = null;
-
                   stackIn_13_3 = null;
-
                   stackIn_13_4 = c.field_x.getCodeBase();
-
                   stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(kk.field_t).append("&u=");
-
                   if (null == uk.field_p) {
-                    stackIn_14_0 = (d) ((Object) stackIn_13_0);
-                    stackIn_14_1 = stackIn_13_1;
                     stackIn_14_2 = null;
                     stackIn_14_3 = null;
-                    stackIn_14_4 = (java.net.URL) ((Object) stackIn_13_4);
-                    stackIn_14_5 = (StringBuilder) ((Object) stackIn_13_5);
                     stackIn_14_6 = "" + vi.field_H;
                   } else {
-                    stackIn_14_0 = (d) ((Object) stackIn_13_0);
-                    stackIn_14_1 = stackIn_13_1;
                     stackIn_14_2 = null;
                     stackIn_14_3 = null;
-                    stackIn_14_4 = (java.net.URL) ((Object) stackIn_13_4);
-                    stackIn_14_5 = (StringBuilder) ((Object) stackIn_13_5);
                     stackIn_14_6 = uk.field_p;
                   }
-                  var4 = ((d) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_14_6).append("&v1=").append(d.field_o).append("&v2=").append(d.field_t).append("&e=").append(var9).toString()));
+                  var4 = ((d) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(d.field_o).append("&v2=").append(d.field_t).append("&e=").append(var9).toString()));
                   L5: while (var4.field_a == 0) {
                     bc.a(param2 - 125, 1L);
                   }

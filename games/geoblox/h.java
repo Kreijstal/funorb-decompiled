@@ -31,8 +31,6 @@ final class h {
             java.net.URL var5 = null;
             RuntimeException stackIn_11_0 = null;
             StringBuilder stackIn_11_1 = null;
-            RuntimeException stackIn_12_0 = null;
-            StringBuilder stackIn_12_1 = null;
             String stackIn_12_2 = null;
             Throwable decompiledCaughtException = null;
             try {
@@ -59,19 +57,13 @@ final class h {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_11_0 = (RuntimeException) (var2_ref2);
-
               stackIn_11_1 = new StringBuilder().append("h.A(");
-
               if (param0 == null) {
-                stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
                 stackIn_12_2 = "null";
               } else {
-                stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
                 stackIn_12_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -323,8 +323,6 @@ final class bj extends nh {
         String stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
@@ -344,19 +342,13 @@ final class bj extends nh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_10_0 = (RuntimeException) (var2);
-
           stackIn_10_1 = new StringBuilder().append("bj.A(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "null";
           } else {
-            stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -618,20 +610,14 @@ final class bj extends nh {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         StringBuilder stackIn_15_1 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         StringBuilder stackIn_18_1 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         StringBuilder stackIn_24_1 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
@@ -650,7 +636,6 @@ final class bj extends nh {
           }
           this.field_i = param4;
           this.field_y = param2;
-
           if (!param8) {
             stackIn_7_1 = false;
           } else {
@@ -669,71 +654,37 @@ final class bj extends nh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
           stackIn_12_0 = (RuntimeException) (var10);
-
           stackIn_12_1 = new StringBuilder().append("bj.<init>(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";
           } else {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "{...}";
           }
-
-
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
-
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
           if (param2 == null) {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "null";
           } else {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
             stackIn_16_2 = "{...}";
           }
-
-
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
-
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
           if (param3 == null) {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
             stackIn_19_2 = "null";
           } else {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
             stackIn_19_2 = "{...}";
           }
-
-
-          stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
-
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
           if (param4 == null) {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
             stackIn_22_2 = "null";
           } else {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
             stackIn_22_2 = "{...}";
           }
-
-
-          stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param5).append(',');
-
+          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',');
           if (param6 == null) {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
             stackIn_25_2 = "null";
           } else {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
             stackIn_25_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

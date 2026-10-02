@@ -136,11 +136,8 @@ abstract class ji {
         short[] stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         StringBuilder stackIn_22_1 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -178,32 +175,19 @@ abstract class ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_19_0 = (RuntimeException) (var4);
-
           stackIn_19_1 = new StringBuilder().append("ji.J(");
-
           if (param0 == null) {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "null";
           } else {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-            stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
             stackIn_20_2 = "{...}";
           }
-
-
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',');
-
+          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
             stackIn_23_2 = "null";
           } else {
-            stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-            stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
             stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

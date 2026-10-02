@@ -45,8 +45,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -56,19 +54,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_5_0 = (RuntimeException) (runtimeException);
-
           stackIn_5_1 = new StringBuilder().append("ch.provideLoaderApplet(");
-
           if (param0 == null) {
-            stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "null";
           } else {
-            stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -76,8 +68,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -87,19 +77,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_5_0 = (RuntimeException) (runtimeException);
-
           stackIn_5_1 = new StringBuilder().append("ch.windowClosing(");
-
           if (param0 == null) {
-            stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "null";
           } else {
-            stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -171,8 +155,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -182,19 +164,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_5_0 = (RuntimeException) (runtimeException);
-
           stackIn_5_1 = new StringBuilder().append("ch.update(");
-
           if (param0 == null) {
-            stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "null";
           } else {
-            stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -214,8 +190,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -226,19 +200,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_5_0 = (RuntimeException) (runtimeException);
-
           stackIn_5_1 = new StringBuilder().append("ch.focusGained(");
-
           if (param0 == null) {
-            stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "null";
           } else {
-            stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -246,8 +214,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         try {
             RuntimeException stackIn_15_0 = null;
             StringBuilder stackIn_15_1 = null;
-            RuntimeException stackIn_16_0 = null;
-            StringBuilder stackIn_16_1 = null;
             String stackIn_16_2 = null;
             Throwable decompiledCaughtException = null;
             Throwable var3 = null;
@@ -279,19 +245,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
               decompiledCaughtException = decompiledCaughtParameter2;
               var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_15_0 = (RuntimeException) (var3_ref2);
-
               stackIn_15_1 = new StringBuilder().append("ch.A(").append(param0).append(',');
-
               if (param1 == null) {
-                stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-                stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
                 stackIn_16_2 = "null";
               } else {
-                stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-                stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
                 stackIn_16_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -364,7 +324,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                             var3 = 6;
                             L8: while (var2.length() > var3) {
                               stackIn_66_0 = rc.a(-58, var2.charAt(var3));
-
                               if (var5 != 0) {
                                 break L3;
                               }
@@ -404,9 +363,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           if (~d.field_t.length() < ~var1_int) {
                             var3 = d.field_t.charAt(var1_int);
                             stackIn_78_0 = var3;
-
                             stackIn_78_1 = 48;
-
                             if (var5 != 0) {
                               break L11;
                             }
@@ -453,7 +410,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     L18: {
                       if (0L != ka.field_a) {
                         stackIn_99_0 = $cfr$lcmp(~ka.field_a, ~oa.a(-12520));
-
                         if (var5 != 0) {
                           break L18;
                         }
@@ -709,8 +665,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -720,19 +674,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_5_0 = (RuntimeException) (runtimeException);
-
           stackIn_5_1 = new StringBuilder().append("ch.focusLost(");
-
           if (param0 == null) {
-            stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "null";
           } else {
-            stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-            stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
             stackIn_6_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -777,8 +725,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         java.awt.Rectangle var2 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
@@ -810,19 +756,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_25_0 = (RuntimeException) (var2_ref);
-
           stackIn_25_1 = new StringBuilder().append("ch.paint(");
-
           if (param0 == null) {
-            stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-            stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "null";
           } else {
-            stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-            stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -847,8 +787,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             d dupTemp$0 = null;
             RuntimeException stackIn_23_0 = null;
             StringBuilder stackIn_23_1 = null;
-            RuntimeException stackIn_24_0 = null;
-            StringBuilder stackIn_24_1 = null;
             String stackIn_24_2 = null;
             Throwable decompiledCaughtException = null;
             cb var8 = null;
@@ -912,19 +850,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
               decompiledCaughtException = decompiledCaughtParameter1;
               var8_ref2 = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_23_0 = (RuntimeException) (var8_ref2);
-
               stackIn_23_1 = new StringBuilder().append("ch.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
               if (param5 == null) {
-                stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-                stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
                 stackIn_24_2 = "null";
               } else {
-                stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-                stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
                 stackIn_24_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param6).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param6).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -940,8 +872,6 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         String stackIn_12_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -961,19 +891,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_16_0 = (RuntimeException) (var2);
-
           stackIn_16_1 = new StringBuilder().append("ch.getParameter(");
-
           if (param0 == null) {
-            stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "null";
           } else {
-            stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-            stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
             stackIn_17_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

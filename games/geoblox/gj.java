@@ -25,15 +25,11 @@ final class gj extends fj {
         RuntimeException var4 = null;
         int var5 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         StringBuilder stackIn_20_1 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = Geoblox.field_C;
@@ -55,46 +51,30 @@ final class gj extends fj {
             return;
           }
           stackIn_6_0 = -106;
-
           if (rd.field_u >= 13) {
-            stackIn_7_0 = stackIn_6_0;
             stackIn_7_1 = false;
           } else {
-            stackIn_7_0 = stackIn_6_0;
             stackIn_7_1 = true;
           }
-          dl.field_a = hh.a(stackIn_7_0, stackIn_7_1);
+          dl.field_a = hh.a(stackIn_6_0, stackIn_7_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_17_0 = (RuntimeException) (var4);
-
           stackIn_17_1 = new StringBuilder().append("gj.A(");
-
           if (param0 == null) {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "null";
           } else {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-            stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
             stackIn_18_2 = "{...}";
           }
-
-
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',');
-
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
             stackIn_21_2 = "null";
           } else {
-            stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-            stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
             stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

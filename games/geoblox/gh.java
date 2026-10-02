@@ -156,8 +156,6 @@ final class gh {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         Throwable decompiledCaughtException = null;
         var4 = Geoblox.field_C;
@@ -180,7 +178,6 @@ final class gh {
               L2: {
                 if (param0.length() > var3) {
                   stackIn_20_0 = var2.indexOf((int) param0.charAt(var3));
-
                   if (var4 != 0) {
                     break L2;
                   }
@@ -206,19 +203,13 @@ final class gh {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_25_0 = (RuntimeException) (var2_ref2);
-
           stackIn_25_1 = new StringBuilder().append("gh.U(");
-
           if (param0 == null) {
-            stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-            stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "null";
           } else {
-            stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-            stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
             stackIn_26_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -464,9 +455,7 @@ final class gh {
                   var12 = (int)(240.0 + ((double)var9_float * Math.sin((double)el.field_o.field_J) + (double)var10_float * Math.cos((double)el.field_o.field_J)));
                   var13 = 255 - var8_ref_ja.field_r * 255 / var8_ref_ja.field_p;
                   stackIn_168_0 = 11;
-
                   stackIn_168_1 = var13;
-
                   if (var14 != 0) {
                     break L32;
                   }
@@ -961,7 +950,6 @@ final class gh {
                         break L45;
                       }
                       stackIn_233_0 = var4.field_B;
-
                       if (var5 != 0) {
                         break L44;
                       }
@@ -993,11 +981,8 @@ final class gh {
               ld.a(310, 320, 123, 100 + 100 * ji.field_h);
             }
             L50: {
-
               if (!fa.field_a) {
-
                 if (a.field_d.c(13519)) {
-
                   if (0 < ul.field_b) {
                     stackIn_252_1 = true;
                     break L50;
@@ -1065,7 +1050,6 @@ final class gh {
               if (te.field_a > 0) {
                 pk.field_r = pk.field_r.substring(1) + te.field_a;
                 if (pk.field_r.equalsIgnoreCase("fog")) {
-
                   if (this.field_s) {
                     stackIn_304_1 = false;
                   } else {
@@ -1129,7 +1113,6 @@ final class gh {
                 }
               }
               if (jg.field_g == ki.field_d) {
-
                 if (this.field_E) {
                   stackIn_359_1 = false;
                 } else {
@@ -1142,9 +1125,7 @@ final class gh {
                 continue L60;
               }
               stackIn_464_0 = ki.field_d;
-
               stackIn_464_1 = 48;
-
               if (var5 != 0) {
                 break L61;
               }
@@ -1167,7 +1148,6 @@ final class gh {
                 }
               }
               if (32 == ki.field_d) {
-
                 if (this.field_Q) {
                   stackIn_388_1 = false;
                 } else {
@@ -1190,7 +1170,6 @@ final class gh {
               }
               if (ki.field_d == 1) {
                 this.field_K = true;
-
                 if (this.field_j) {
                   stackIn_408_1 = false;
                 } else {
@@ -1199,7 +1178,6 @@ final class gh {
                 ((gh) (this)).field_j = stackIn_408_1;
               }
               if (2 == ki.field_d) {
-
                 if (this.field_N) {
                   stackIn_416_1 = false;
                 } else {
@@ -1252,7 +1230,6 @@ final class gh {
                 cd.a((byte) 82);
               }
               if (ki.field_d == 12) {
-
                 if (this.field_V) {
                   stackIn_455_1 = false;
                 } else {
@@ -1537,9 +1514,7 @@ final class gh {
                   L7: {
                     if (7 > var3) {
                       stackIn_27_0 = ~c.field_ab;
-
                       stackIn_27_1 = ~ee.field_B[var3];
-
                       if (var4 != 0) {
                         break L6;
                       }
@@ -1756,7 +1731,6 @@ final class gh {
                   L6: {
                     if (stackIn_11_0 < stackIn_11_1) {
                       stackIn_23_0 = 0;
-
                       if (var11 != 0) {
                         break L1;
                       }
@@ -1764,9 +1738,7 @@ final class gh {
                         var7 = stackIn_23_0;
                         L7: while (vf.field_L.field_m > var7) {
                           stackIn_11_0 = 0;
-
                           stackIn_11_1 = vf.field_L.field_v[vf.field_L.field_r * var7 + var6];
-
                           if (var11 != 0) {
                             continue L5;
                           }
@@ -2046,8 +2018,6 @@ final class gh {
     gh(Geoblox param0, boolean param1) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -2137,19 +2107,13 @@ final class gh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_12_0 = (RuntimeException) (var3);
-
           stackIn_12_1 = new StringBuilder().append("gh.<init>(");
-
           if (param0 == null) {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "null";
           } else {
-            stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-            stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
             stackIn_13_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

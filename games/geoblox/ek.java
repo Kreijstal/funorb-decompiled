@@ -14,8 +14,6 @@ final class ek {
     final static void a(int param0, boolean param1, dm param2, int param3, int param4, int param5) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -89,19 +87,13 @@ final class ek {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_26_0 = (RuntimeException) (var6);
-
           stackIn_26_1 = new StringBuilder().append("ek.A(").append(param0).append(',').append(param1).append(',');
-
           if (param2 == null) {
-            stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-            stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
             stackIn_27_2 = "null";
           } else {
-            stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-            stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
             stackIn_27_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -18,8 +18,6 @@ final class jh {
         int stackIn_9_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         Throwable decompiledCaughtException = null;
         try {
@@ -48,19 +46,13 @@ final class jh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_14_0 = (RuntimeException) (var5_ref);
-
           stackIn_14_1 = new StringBuilder().append("jh.A(");
-
           if (param0 == null) {
-            stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-            stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
             stackIn_15_2 = "null";
           } else {
-            stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-            stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
             stackIn_15_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -95,7 +87,6 @@ final class jh {
               try {
                 if (~this.field_c.a((byte) 46) > ~(long)(param0 * 6 + 6)) {
                   stackIn_3_0 = null;
-
                   return (byte[]) ((Object) stackIn_3_0);
                 }
                 {
@@ -111,7 +102,6 @@ final class jh {
                   }
                   if (this.field_a < var4_int) {
                     stackIn_11_0 = null;
-
                     return (byte[]) ((Object) stackIn_11_0);
                   }
                   if (var5 <= 0) {
@@ -127,12 +117,10 @@ final class jh {
                     L1: while (true) {
                       if (var7 >= var4_int) {
                         stackIn_53_0 = (byte[]) (var6);
-
                         return stackIn_53_0;
                       }
                       if (var5 == 0) {
                         stackIn_23_0 = null;
-
                         return (byte[]) ((Object) stackIn_23_0);
                       }
                       {
@@ -207,8 +195,6 @@ final class jh {
         try {
             RuntimeException stackIn_71_0 = null;
             StringBuilder stackIn_71_1 = null;
-            RuntimeException stackIn_72_0 = null;
-            StringBuilder stackIn_72_1 = null;
             String stackIn_72_2 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
@@ -233,7 +219,6 @@ final class jh {
                   L0: {
                     if (param4) {
                       if (this.field_c.a((byte) 46) < (long)(6 + param2 * 6)) {
-
                         return false;
                       }
                       this.field_c.a(param0 - 228, (long)(param2 * 6));
@@ -244,7 +229,6 @@ final class jh {
                           break L0;
                         }
                       }
-
                       return false;
                     }
                     {
@@ -317,12 +301,10 @@ final class jh {
                                       break L5;
                                     }
                                   }
-
                                   return false;
                                 }
                               }
                             }
-
                             return false;
                           }
                         }
@@ -381,7 +363,6 @@ final class jh {
                         continue L3;
                       }
                     }
-
                     return true;
                   }
                 } catch (java.io.IOException decompiledCaughtParameter2) {
@@ -394,19 +375,13 @@ final class jh {
               decompiledCaughtException = decompiledCaughtParameter3;
               var6_ref = (RuntimeException) (Object) decompiledCaughtException;
               stackIn_71_0 = (RuntimeException) (var6_ref);
-
               stackIn_71_1 = new StringBuilder().append("jh.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
               if (param3 == null) {
-                stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
-                stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
                 stackIn_72_2 = "null";
               } else {
-                stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
-                stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
                 stackIn_72_2 = "{...}";
               }
-              throw t.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_72_2).append(',').append(param4).append(')').toString());
+              throw t.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param4).append(')').toString());
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

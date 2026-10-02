@@ -74,12 +74,8 @@ final class kc {
         int stackIn_88_0 = 0;
         int stackIn_88_1 = 0;
         int stackIn_88_2 = 0;
-        int stackIn_90_0;
-        int stackIn_90_1;
-        int stackIn_90_2;
         int stackIn_90_3;
         gh stackIn_110_0 = null;
-        gh stackIn_112_0 = null;
         boolean stackIn_112_1 = false;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_14_0;
@@ -117,7 +113,6 @@ final class kc {
                 L3: {
                   if (var1 != null) {
                     stackIn_12_0 = var1.field_K;
-
                     if (var9 != 0) {
                       break L3;
                     }
@@ -199,7 +194,6 @@ final class kc {
                                         if (var6_int < var12.field_L) {
                                           var7 = var10.field_n[var6_int];
                                           stackIn_20_0 = (ja) ((Object) var13.c((byte) 121));
-
                                           if (var9 != 0) {
                                             continue L13;
                                           }
@@ -210,9 +204,7 @@ final class kc {
                                                 L21: {
                                                   if (var8 != null) {
                                                     stackIn_51_0 = (ja) (var8);
-
                                                     stackIn_51_1 = (ja) (var7);
-
                                                     if (var9 != 0) {
                                                       break L21;
                                                     }
@@ -229,9 +221,7 @@ final class kc {
                                                   var8 = (ja) ((Object) var11.c((byte) 121));
                                                   L24: while (var8 != null) {
                                                     stackIn_51_0 = (ja) (var8);
-
                                                     stackIn_51_1 = (ja) (var7);
-
                                                     if (var9 != 0) {
                                                       break L21;
                                                     }
@@ -261,7 +251,6 @@ final class kc {
                                                         var5_ref_ja.field_B = true;
                                                         fa.field_a = true;
                                                         stackIn_56_0 = 0;
-
                                                         if (var9 != 0) {
                                                           break L8;
                                                         }
@@ -302,7 +291,6 @@ final class kc {
                                                         var5_ref_ja.field_B = true;
                                                         fa.field_a = true;
                                                         stackIn_56_0 = 0;
-
                                                         if (var9 != 0) {
                                                           break L8;
                                                         }
@@ -328,7 +316,6 @@ final class kc {
                                                       var5_ref_ja.field_B = true;
                                                       fa.field_a = true;
                                                       stackIn_56_0 = 0;
-
                                                       if (var9 != 0) {
                                                         break L8;
                                                       }
@@ -376,7 +363,6 @@ final class kc {
                               var5_ref_ja.field_B = true;
                               fa.field_a = true;
                               stackIn_56_0 = 0;
-
                               if (var9 != 0) {
                                 break L8;
                               }
@@ -520,35 +506,17 @@ final class kc {
                       if (w.field_f) {
                         L48: {
                           stackIn_88_0 = (int)var2_ref_ja.field_v;
-
                           stackIn_88_1 = (int)var2_ref_ja.field_o;
-
                           stackIn_88_2 = 117;
-
                           if (var2_ref_ja.field_z != 4) {
-
-
-
-
-
-
                             if (var2_ref_ja.field_z != 3) {
-                              stackIn_90_0 = stackIn_88_0;
-                              stackIn_90_1 = stackIn_88_1;
-                              stackIn_90_2 = stackIn_88_2;
                               stackIn_90_3 = 10;
                               break L48;
                             }
-
-
-
                           }
-                          stackIn_90_0 = stackIn_88_0;
-                          stackIn_90_1 = stackIn_88_1;
-                          stackIn_90_2 = stackIn_88_2;
                           stackIn_90_3 = 100;
                         }
-                        ld.a(stackIn_90_0, stackIn_90_1, stackIn_90_2, stackIn_90_3);
+                        ld.a(stackIn_88_0, stackIn_88_1, stackIn_88_2, stackIn_90_3);
                       }
                     }
                     if (4 != var2_ref_ja.field_z) {
@@ -598,25 +566,17 @@ final class kc {
               }
               L55: {
                 stackIn_110_0 = el.field_o;
-
                 if (!el.field_o.field_F) {
-                  stackIn_110_0 = (gh) ((Object) stackIn_110_0);
-
                   if (!ab.field_f) {
-
-
                     if (!w.field_f) {
-                      stackIn_112_0 = (gh) ((Object) stackIn_110_0);
                       stackIn_112_1 = false;
                       break L55;
                     }
-                    stackIn_110_0 = (gh) ((Object) stackIn_110_0);
                   }
                 }
-                stackIn_112_0 = (gh) ((Object) stackIn_110_0);
                 stackIn_112_1 = true;
               }
-              stackIn_112_0.field_F = stackIn_112_1;
+              stackIn_110_0.field_F = stackIn_112_1;
               w.field_f = false;
               if (var1_int >= 3) {
                 ra.a(255 ^ fe.field_f, -88, fe.field_f);

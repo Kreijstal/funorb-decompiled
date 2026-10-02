@@ -27,8 +27,6 @@ final class r extends f implements pl {
     private final void a(boolean param0, sl param1, byte param2) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
@@ -92,19 +90,13 @@ final class r extends f implements pl {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_32_0 = (RuntimeException) (var4_ref);
-
           stackIn_32_1 = new StringBuilder().append("r.G(").append(param0).append(',');
-
           if (param1 == null) {
-            stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-            stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
             stackIn_33_2 = "null";
           } else {
-            stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-            stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
             stackIn_33_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -128,8 +120,6 @@ final class r extends f implements pl {
         Object stackIn_52_0 = null;
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
-        RuntimeException stackIn_56_0 = null;
-        StringBuilder stackIn_56_1 = null;
         String stackIn_56_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -207,19 +197,13 @@ final class r extends f implements pl {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_55_0 = (RuntimeException) (var2);
-
           stackIn_55_1 = new StringBuilder().append("r.B(");
-
           if (param0 == null) {
-            stackIn_56_0 = (RuntimeException) ((Object) stackIn_55_0);
-            stackIn_56_1 = (StringBuilder) ((Object) stackIn_55_1);
             stackIn_56_2 = "null";
           } else {
-            stackIn_56_0 = (RuntimeException) ((Object) stackIn_55_0);
-            stackIn_56_1 = (StringBuilder) ((Object) stackIn_55_1);
             stackIn_56_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -24,14 +24,10 @@ abstract class ka {
         na[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         StringBuilder stackIn_10_1 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         StringBuilder stackIn_13_1 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -47,45 +43,25 @@ abstract class ka {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_7_0 = (RuntimeException) (var4);
-
           stackIn_7_1 = new StringBuilder().append("ka.W(");
-
           if (param0 == null) {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "null";
           } else {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-            stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
             stackIn_8_2 = "{...}";
           }
-
-
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
-
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
           if (param1 == null) {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "null";
           } else {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-            stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
             stackIn_11_2 = "{...}";
           }
-
-
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param2).append(',');
-
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',');
           if (param3 == null) {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-            stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
             stackIn_14_2 = "null";
           } else {
-            stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-            stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
             stackIn_14_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -175,8 +151,6 @@ abstract class ka {
         int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
         Object stackIn_17_0;
-        int stackIn_17_1;
-        int stackIn_17_2;
         boolean stackIn_17_3;
         L0: {
           var3 = Geoblox.field_C;
@@ -185,23 +159,16 @@ abstract class ka {
             this.field_b = var2;
             if (var2 != -1) {
               this.field_g = true;
-
               stackIn_16_1 = var2;
-
               stackIn_16_2 = mc.field_a;
-
               if (param0) {
                 stackIn_17_0 = this;
-                stackIn_17_1 = stackIn_16_1;
-                stackIn_17_2 = stackIn_16_2;
                 stackIn_17_3 = false;
               } else {
                 stackIn_17_0 = this;
-                stackIn_17_1 = stackIn_16_1;
-                stackIn_17_2 = stackIn_16_2;
                 stackIn_17_3 = true;
               }
-              this.a(stackIn_17_1, stackIn_17_2, stackIn_17_3, -(var2 * this.field_d) - this.field_k + he.field_d, false, bi.field_g);
+              this.a(stackIn_16_1, stackIn_16_2, stackIn_17_3, -(var2 * this.field_d) - this.field_k + he.field_d, false, bi.field_g);
             } else {
               this.field_g = false;
             }

@@ -143,7 +143,6 @@ final class rf extends hf {
         int incrementValue$9 = 0;
         int incrementValue$20 = 0;
         qc stackIn_66_0 = null;
-        qc stackIn_67_0 = null;
         int stackIn_67_1 = 0;
         int stackIn_73_0 = 0;
         int var2;
@@ -417,15 +416,12 @@ final class rf extends hf {
             var51.c((byte) 95, 1297377380);
             var51.c((byte) 95, 6);
             stackIn_66_0 = (qc) (var51);
-
             if (var2 <= 1) {
-              stackIn_67_0 = (qc) ((Object) stackIn_66_0);
               stackIn_67_1 = 0;
             } else {
-              stackIn_67_0 = (qc) ((Object) stackIn_66_0);
               stackIn_67_1 = 1;
             }
-            ((qc) (Object) stackIn_67_0).e(stackIn_67_1, 28695);
+            ((qc) (Object) stackIn_66_0).e(stackIn_67_1, 28695);
             var51.e(var2, 28695);
             var51.e(var3, 28695);
             param0.field_f = var13;

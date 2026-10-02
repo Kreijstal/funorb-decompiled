@@ -34,8 +34,6 @@ class qk {
             ce var5 = null;
             ce stackIn_10_0 = null;
             int stackIn_10_1 = 0;
-            ce stackIn_11_0 = null;
-            int stackIn_11_1 = 0;
             int stackIn_11_2 = 0;
             ce stackIn_21_0 = null;
             Throwable decompiledCaughtException = null;
@@ -51,19 +49,13 @@ class qk {
                   var5 = new ce();
                   var4 = var5;
                   stackIn_10_0 = (ce) (var4);
-
                   stackIn_10_1 = 256;
-
                   if (!field_q) {
-                    stackIn_11_0 = (ce) ((Object) stackIn_10_0);
-                    stackIn_11_1 = stackIn_10_1;
                     stackIn_11_2 = 1;
                   } else {
-                    stackIn_11_0 = (ce) ((Object) stackIn_10_0);
-                    stackIn_11_1 = stackIn_10_1;
                     stackIn_11_2 = 2;
                   }
-                  ((qk) ((Object) stackIn_11_0)).field_c = new int[stackIn_11_1 * stackIn_11_2];
+                  ((qk) ((Object) stackIn_10_0)).field_c = new int[stackIn_10_1 * stackIn_11_2];
                   ((qk) ((Object) var4)).field_i = param3;
                   ((qk) ((Object) var4)).a(param1);
                   ((qk) ((Object) var4)).field_g = (param3 & -1024) + 1024;
