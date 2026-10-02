@@ -221,7 +221,7 @@ final class ul {
 
                             stackIn_68_5 = 1073741824;
                           }
-                          stackIn_65_0[stackIn_65_1] = lb.a(stackIn_65_2, lb.a(stackIn_65_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), var12 << -1372000780), var13 << 147551786)));
+                          stackIn_65_0[stackIn_65_1] = lb.a(stackIn_65_2, lb.a(stackIn_65_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), var12 << 20), var13 << 10)));
                           h.field_a = h.field_a + 1;
                         }
                         if (var10 != 0) {

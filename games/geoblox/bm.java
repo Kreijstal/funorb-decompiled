@@ -29,10 +29,10 @@ final class bm {
         int var4 = fi.a(param0, 2048);
         int var5 = bh.a((byte) 101, param2);
         int var6 = fi.a(param2, 2048);
-        int var7 = (int)((long)var3 * (long)var5 >> -758261296);
-        int var8 = (int)((long)var6 * (long)var3 >> 1699857424);
-        int var9 = (int)((long)var4 * (long)var5 >> -962179184);
-        int var10 = (int)((long)var6 * (long)var4 >> 582575632);
+        int var7 = (int)((long)var3 * (long)var5 >> 16);
+        int var8 = (int)((long)var6 * (long)var3 >> 16);
+        int var9 = (int)((long)var4 * (long)var5 >> 16);
+        int var10 = (int)((long)var6 * (long)var4 >> 16);
         if (param1 > -65) {
             return (int[]) null;
         }

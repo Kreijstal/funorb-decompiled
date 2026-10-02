@@ -72,7 +72,7 @@ abstract class sh extends el implements ql {
               if (param5 > param0 + 1) {
                 if (param0 - -5 < param5) {
                   if (param3 != param2) {
-                    var7_int = (1 & (param3 & param2)) + (param2 >> 1184836673) + (param3 >> -826575679);
+                    var7_int = (1 & (param3 & param2)) + (param2 >> 1) + (param3 >> 1);
                     var8 = param0;
                     var9 = param3;
                     if (param4 >= 106) {

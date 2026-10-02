@@ -212,7 +212,7 @@ final class n extends q {
                   L25: while (true) {
                     L26: {
                       L27: {
-                        if (var11 < param3 >> 362369793) {
+                        if (var11 < param3 >> 1) {
                           stackIn_56_0 = 0;
 
                           if (var15 != 0) {

@@ -37,7 +37,7 @@ final class ge {
           var2 = 0;
           var3 = 0;
           L0: while (var2 < 8) {
-            this.field_g[var2] = f.a(cj.a((long)this.field_i[7 + var3], 255L), f.a(f.a(f.a(f.a(cj.a(1095216660480L, (long)this.field_i[var3 - -3] << 2028813600), f.a(cj.a(255L, (long)this.field_i[var3 - -2]) << 500873448, f.a(cj.a((long)this.field_i[var3 + 1] << 1835312432, 71776119061217280L), (long)this.field_i[var3] << -1648548680))), cj.a((long)this.field_i[4 + var3] << -1312887208, 4278190080L)), cj.a(16711680L, (long)this.field_i[var3 + 5] << -1498542512)), cj.a((long)this.field_i[var3 - -6] << -1331544312, 65280L)));
+            this.field_g[var2] = f.a(cj.a((long)this.field_i[7 + var3], 255L), f.a(f.a(f.a(f.a(cj.a(1095216660480L, (long)this.field_i[var3 - -3] << 32), f.a(cj.a(255L, (long)this.field_i[var3 - -2]) << 40, f.a(cj.a((long)this.field_i[var3 + 1] << 48, 71776119061217280L), (long)this.field_i[var3] << 56))), cj.a((long)this.field_i[4 + var3] << 24, 4278190080L)), cj.a(16711680L, (long)this.field_i[var3 + 5] << 16)), cj.a((long)this.field_i[var3 - -6] << 8, 65280L)));
             var3 += 8;
             var2++;
           }
@@ -266,13 +266,13 @@ final class ge {
             var5 = param1;
             L5: while (var4_int < 8) {
               var6 = this.field_c[var4_int];
-              param0[var5] = (byte)(int)(var6 >>> -462128648);
-              param0[1 + var5] = (byte)(int)(var6 >>> 2049056944);
-              param0[2 + var5] = (byte)(int)(var6 >>> -537680344);
-              param0[var5 + 3] = (byte)(int)(var6 >>> -1996870816);
-              param0[var5 - -4] = (byte)(int)(var6 >>> -1477542184);
-              param0[var5 - -5] = (byte)(int)(var6 >>> 1023994704);
-              param0[6 + var5] = (byte)(int)(var6 >>> 182120456);
+              param0[var5] = (byte)(int)(var6 >>> 56);
+              param0[1 + var5] = (byte)(int)(var6 >>> 48);
+              param0[2 + var5] = (byte)(int)(var6 >>> 40);
+              param0[var5 + 3] = (byte)(int)(var6 >>> 32);
+              param0[var5 - -4] = (byte)(int)(var6 >>> 24);
+              param0[var5 - -5] = (byte)(int)(var6 >>> 16);
+              param0[6 + var5] = (byte)(int)(var6 >>> 8);
               param0[var5 - -7] = (byte)(int)var6;
               var4_int++;
               var5 += 8;

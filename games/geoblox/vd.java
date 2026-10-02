@@ -218,12 +218,12 @@ final class vd {
                 break $cfr$clinit;
               } else {
                 if (var0 != 0) {
-                  field_b[var0] = (1 + var0) * 51 << -874678192;
+                  field_b[var0] = (1 + var0) * 51 << 16;
                 } else {
-                  field_b[var0] = (var0 - -1) * 20 << 741924304;
+                  field_b[var0] = (var0 - -1) * 20 << 16;
                 }
                 if (var0 > 2) {
-                  field_b[var0] = lb.a(field_b[var0], (var0 + -2) * 22 << 1940867656);
+                  field_b[var0] = lb.a(field_b[var0], (var0 + -2) * 22 << 8);
                   var0++;
                   continue L0;
                 } else {

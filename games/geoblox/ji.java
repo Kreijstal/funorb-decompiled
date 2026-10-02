@@ -65,7 +65,7 @@ abstract class ji {
     abstract void a(Object param0, boolean param1, boolean param2);
 
     final sd a(byte param0, int param1, int param2, int param3, boolean param4) {
-        long var6 = ((long)param1 << 1984104992) - -(long)param3;
+        long var6 = ((long)param1 << 32) - -(long)param3;
         sd var8 = new sd();
         var8.field_i = var6;
         var8.field_q = param4 ? true : false;

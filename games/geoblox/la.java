@@ -80,7 +80,7 @@ final class la extends sh {
                 if (Math.abs(var5_int) > 2) {
                   stackIn_18_0 = this;
                   stackIn_18_1 = stackIn_17_1;
-                  stackIn_18_2 = var5_int >> -218590175;
+                  stackIn_18_2 = var5_int >> 1;
                 } else {
                   stackIn_16_0 = this;
 
@@ -117,7 +117,7 @@ final class la extends sh {
                 } else {
                   stackIn_26_0 = this;
                   stackIn_26_1 = stackIn_23_1;
-                  stackIn_26_2 = var5_int >> 866046689;
+                  stackIn_26_2 = var5_int >> 1;
                 }
                 ((la) (this)).field_m = stackIn_26_1 + stackIn_26_2;
               }

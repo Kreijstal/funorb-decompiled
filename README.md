@@ -11,59 +11,41 @@ over the obfuscated gamepacks by the pipeline in
 
 ## Readable GeoBlox export
 
-[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 21 with
-1,017 reviewed naming rules for gameplay, tutorial flow, interface text,
-resource decoding, text validation, nine-slice sprite construction, result
-selection and PCM samples.
-Confirmed names omit opaque suffixes; the dictionary
-preserves original identities. Both 303-file Java corpora compile and preserve
-all 154,117 recorded bindings and 388 override relationships. The raw
-decompilation remains under `games/`.
+[`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
+mirror. The current [manifest](readable/geoblox-rules.json) records its exact
+input, guarded names and evidence; the [reproduction procedure](readable/README.md)
+and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
+current export. Names omit opaque suffixes and the dictionary preserves original
+identities. Both 303-file Java corpora compile and retain all 154,117 bindings
+and 388 override relationships.
 
-The [reproduction and update procedure](readable/README.md),
-[gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md),
-[current manifest](readable/geoblox-rules.json),
-[symbol map](readable/geoblox/SYMBOLS.md) and
-[provenance](readable/geoblox/provenance.json) describe the export.
 `node readable/reproduce-geoblox.mjs --check` verifies deterministic regeneration
-from the pinned input and bundled tool. All original dispatcher methods now use
-structured control flow; see the [parallel-loop report](readable/PARALLEL-LOOP-READABILITY.md).
-The [border and validation report](readable/BORDER-VALIDATION-READABILITY.md)
-records pass 16 naming evidence. The [result-helper report](readable/RESULT-HELPER-READABILITY.md)
-records pass 18 names and native selector/PCM checks. The [numeric-negation report](readable/NUMERIC-NEGATION-READABILITY.md)
-records the corrected sprite pivots and native result-sequence comparison.
-The [exception-continuation report](readable/EXCEPTION-CONTINUATION-READABILITY.md)
-records pass 19's handler boundaries and reviewed generated-local changes. [Floating comparison verification](readable/FLOAT-COMPARISON-READABILITY.md) records pass 20's native scoring proof and guarded source migration.
-Pass 21 names the remaining match-neighborhood roles, cooldown-blocked entities,
-attachment/shock gates and score-text writes through the same guarded pipeline.
-Its direct text-writer probe matches native bytecode in 152 offset, aliasing and
-failure scenarios. The single current manifest holds pins, rules and verification
-evidence; prior snapshots live in Git. Shorter writes retain the old suffix; the helper is named
-`writeTextAtOffset` to reflect that behavior.
-Typed complement comparisons show direct conditions;
-see the [comparison report](readable/COMPARISON-READABILITY.md). Unknown
-identifiers and shared joins remain; the [state-machine report](readable/STATE-MACHINE-READABILITY.md)
-records the earlier structural recovery work.
+from the pinned input and bundled naming tool. All original dispatcher methods
+use structured control flow, but opaque names, generated carriers and shared
+joins remain. Earlier structural and native-behavior investigations are recorded
+in the readable reports; they describe their individual historical passes. The
+single current manifest holds current naming pins and verification limits, with
+prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-GeoBlox has a newer 303-file source export from a pinned owned-decompiler
-revision. It reuses the unchanged transformed bytecode whose previous fresh ASM
-check covered 2,427 methods with zero failures. All regenerated sources compile.
-The other 43 games retain the previous full-catalog export.
-The pass-20 renderer preserves exact floating-comparison behavior and evaluates
-stored comparison operands once. Ten files change; all 972 reviewed names and
-255 named local identities remain unchanged. One comparison helper and its two
-parameters are added. The new matching/scoring probe matches native bytecode
-across 708 controlled scenarios and 55,728 ticks, including NaN popup progress.
-The prior exception-boundary and sprite-negation corrections remain in this
-export. Generic comparison fixtures add 75,000 native comparisons.
+The latest owned decompiler replaces 972 obfuscated literal shift counts in
+90 GeoBlox Java files with their JVM-effective distances. Int shifts use five
+bits and long shifts six; nonliteral computations retain their evaluation and
+exception behavior. For example, `<< -449443480` becomes `<< 8`. All other Java
+tokens, 21,185 declaration identities and original transformed class bytes are
+unchanged. Generic fixtures verify 24,324 native shift comparisons, including
+normal and forced-dispatcher output. The original-table exception-priority
+checks also pass, covering 7,200 native loop-exit comparisons.
 
-[GeoBlox provenance](decompilation/geoblox-provenance.json) records the exact
-Deko and java-tools Git commits, input identities, reused pipeline proof and
-fresh checks. This refresh reuses the verified transformed bytecode; it does
-not claim that the full 44-game pipeline was rerun or that fresh whole-game
-runtime equivalence was established.
+A clean decompiler Git source archive reproduces all 303 Java files and current
+diagnostics byte-for-byte. Every source compiles and the export has no hard
+failures or dispatchers. The [GeoBlox provenance](decompilation/geoblox-provenance.json)
+records the exact generator source commit and SHA-256, unchanged class inputs
+and verification scope. The readable mirror's explicit input pin is maintained
+through its guarded update procedure. The other 43 games retain the prior
+full-catalog export. Whole-game behavior, FPS, heap and phone targets are not
+established by these source checks.
 
 ## Previous full-catalog regeneration
 

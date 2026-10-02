@@ -39,23 +39,23 @@ final class ek {
           if (param1) {
             var10 = param2.field_s;
             var11 = param2.field_o;
-            var12 = (var10 << 1780073008) / param4;
-            var13 = (var11 << -1191763856) / param0;
+            var12 = (var10 << 16) / param4;
+            var13 = (var11 << 16) / param0;
             if (param2.field_u > 0) {
-              var14 = ((param2.field_u << 536850224) + (var12 + -1)) / var12;
-              var8 = var8 + (-(param2.field_u << -815064720) + var12 * var14);
+              var14 = ((param2.field_u << 16) + (var12 + -1)) / var12;
+              var8 = var8 + (-(param2.field_u << 16) + var12 * var14);
               param5 = param5 + var14;
             }
             if (var6_int < var10) {
-              param4 = (var12 + ((var6_int << 1238097680) + (-var8 - 1))) / var12;
+              param4 = (var12 + ((var6_int << 16) + (-var8 - 1))) / var12;
             }
             if (param2.field_p > 0) {
-              var14 = ((param2.field_p << -93118640) + var13 - 1) / var13;
-              var9 = var9 + (var14 * var13 - (param2.field_p << -1049630416));
+              var14 = ((param2.field_p << 16) + var13 - 1) / var13;
+              var9 = var9 + (var14 * var13 - (param2.field_p << 16));
               param3 = param3 + var14;
             }
             if (var11 > var7) {
-              param0 = (var13 + (-var9 + (var7 << 1965432400)) - 1) / var13;
+              param0 = (var13 + (-var9 + (var7 << 16)) - 1) / var13;
             }
             var14 = param5 - -(vb.field_f * param3);
             var15 = vb.field_f - param4;

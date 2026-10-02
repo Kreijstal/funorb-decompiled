@@ -1097,7 +1097,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           if (0L != var4) {
             if (var4 < var2_long) {
               var6_int = (int)(-var4 + var2_long);
-              ec.field_b = (32000 - -(var6_int >> 41624225)) / var6_int;
+              ec.field_b = (32000 - -(var6_int >> 1)) / var6_int;
             }
           }
           L3: {

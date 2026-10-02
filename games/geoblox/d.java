@@ -160,7 +160,7 @@ final class d implements Runnable {
                                       if (~oa.a(-12520) > ~field_m) {
                                         throw new IOException();
                                       } else {
-                                        var14 = (255 & var9.field_c >> -411661352) + "." + ((var9.field_c & 16718053) >> -1690845136) + "." + (var9.field_c >> -2059917432 & 255) + "." + (255 & var9.field_c);
+                                        var14 = (255 & var9.field_c >> 24) + "." + ((var9.field_c & 16718053) >> 16) + "." + (var9.field_c >> 8 & 255) + "." + (255 & var9.field_c);
                                         var9.field_b = java.net.InetAddress.getByName(var14).getHostName();
                                       }
                                     } else {
@@ -177,9 +177,9 @@ final class d implements Runnable {
                                             var9.field_b = var13;
                                             var13.setResizable(false);
                                             if (this.field_l) {
-                                              this.field_w.a(8, var9.field_c >>> 1309967216, var13, var9.field_g >> 1043765136, var9.field_c & 65535, var9.field_g & 65535);
+                                              this.field_w.a(8, var9.field_c >>> 16, var13, var9.field_g >> 16, var9.field_c & 65535, var9.field_g & 65535);
                                             } else {
-                                              Class.forName("pd").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_e, new Object[]{var13, new Integer(var9.field_c >>> 711185008), new Integer(var9.field_c & 65535), new Integer(var9.field_g >> 2054285520), new Integer(var9.field_g & 65535)});
+                                              Class.forName("pd").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_e, new Object[]{var13, new Integer(var9.field_c >>> 16), new Integer(var9.field_c & 65535), new Integer(var9.field_g >> 16), new Integer(var9.field_g & 65535)});
                                             }
                                           } else {
                                             if (var2_int == 7) {
@@ -511,7 +511,7 @@ final class d implements Runnable {
         if (param1 != -1743550128) {
             return (cb) null;
         }
-        return this.a(param1 ^ -1743550127, (Object) null, param0 + (param4 << -1333938256), 6, (param3 << -1743550128) + param2);
+        return this.a(param1 ^ -1743550127, (Object) null, param0 + (param4 << 16), 6, (param3 << 16) + param2);
     }
 
     final cb a(Class param0, int param1, String param2) {

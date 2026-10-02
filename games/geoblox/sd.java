@@ -121,20 +121,20 @@ final class sd extends pb {
                   if (param8 != param5) {
                     var15 = -param7 + param5;
                     if (param0 > param1) {
-                      var10 = param0 << 563576176;
-                      var11 = (-param1 + param6 << -1553445200) / var14;
-                      var9_int = param1 << 2050032944;
-                      var12 = (param6 + -param0 << -270184496) / var15;
+                      var10 = param0 << 16;
+                      var11 = (-param1 + param6 << 16) / var14;
+                      var9_int = param1 << 16;
+                      var12 = (param6 + -param0 << 16) / var15;
                     } else {
-                      var10 = param1 << -1300931760;
-                      var11 = (param6 + -param0 << 1611829680) / var15;
-                      var9_int = param0 << 1690626512;
-                      var12 = (-param1 + param6 << 432247536) / var14;
+                      var10 = param1 << 16;
+                      var11 = (param6 + -param0 << 16) / var15;
+                      var9_int = param0 << 16;
+                      var12 = (-param1 + param6 << 16) / var14;
                     }
                   } else {
                     var11 = 0;
-                    var10 = param0 << 876887888;
-                    var9_int = param1 << 56769648;
+                    var10 = param0 << 16;
+                    var9_int = param1 << 16;
                     var12 = 0;
                   }
                   var13 = 0;
@@ -145,11 +145,11 @@ final class sd extends pb {
                     param8 = 0;
                   }
                 } else {
-                  var10 = param1 << 1281253328;
-                  var9_int = param1 << 1281253328;
+                  var10 = param1 << 16;
+                  var9_int = param1 << 16;
                   var15 = -param8 + param7;
-                  var11 = (-param1 + param0 << -410776048) / var15;
-                  var12 = (param6 + -param1 << -1794392336) / var14;
+                  var11 = (-param1 + param0 << 16) / var15;
+                  var12 = (param6 + -param1 << 16) / var14;
                   if (var12 > var11) {
                     var13 = 0;
                   } else {
@@ -178,9 +178,9 @@ final class sd extends pb {
                       if (param8 >= param7) {
                         break L7;
                       } else {
-                        var17 = var9_int >> 1475495536;
+                        var17 = var9_int >> 16;
                         if (mh.field_c > var17) {
-                          var18 = (var10 >> 1486250608) - (var9_int >> -1222284624);
+                          var18 = (var10 >> 16) - (var9_int >> 16);
                           if (var18 != 0) {
                             if (var17 - -var18 >= mh.field_c) {
                               var18 = -1 + (-var17 + mh.field_c);
@@ -216,11 +216,11 @@ final class sd extends pb {
                     var12 = 0;
                     var11 = 0;
                   } else {
-                    var17 = param6 << -903778992;
+                    var17 = param6 << 16;
                     if (var13 == 0) {
-                      var9_int = param0 << 1096001584;
+                      var9_int = param0 << 16;
                     } else {
-                      var10 = param0 << 1370743920;
+                      var10 = param0 << 16;
                     }
                     var11 = (var17 + -var9_int) / var16;
                     var12 = (var17 - var10) / var16;
@@ -239,9 +239,9 @@ final class sd extends pb {
                     decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
-                    var17 = var9_int >> -1016334288;
+                    var17 = var9_int >> 16;
                     if (mh.field_c > var17) {
-                      var18 = (var10 >> -963505040) + -(var9_int >> -130429392);
+                      var18 = (var10 >> 16) + -(var9_int >> 16);
                       if (var18 == 0) {
                         if (var17 >= 0) {
                           if (mh.field_c > var17) {

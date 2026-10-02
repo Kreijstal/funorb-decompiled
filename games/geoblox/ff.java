@@ -85,7 +85,7 @@ class ff implements dh, cc {
                     if (var12 != 1) {
                     }
                   }
-                  var11 = (-this.field_n.field_o + (var10 - this.field_n.field_q) >> -2022025759) + this.field_n.field_o;
+                  var11 = (-this.field_n.field_o + (var10 - this.field_n.field_q) >> 1) + this.field_n.field_o;
                 } else {
                   var11 = var10 - this.field_n.field_q;
                 }
@@ -103,7 +103,7 @@ class ff implements dh, cc {
                       break L1;
                     }
                   } else {
-                    this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> -1144554239), this.b(param2, param0, 1674, param4) - -var11, param5, param1);
+                    this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) - -var11, param5, param1);
                     break L1;
                   }
                 }
@@ -178,7 +178,7 @@ class ff implements dh, cc {
                   if (var6 == 1) {
                   }
                 }
-                var5 = (var4 - (this.field_n.field_o + this.field_n.field_q) >> 307249633) + this.field_n.field_o;
+                var5 = (var4 - (this.field_n.field_o + this.field_n.field_q) >> 1) + this.field_n.field_o;
               } else {
                 var5 = var4 + -this.field_n.field_q;
               }
@@ -205,7 +205,7 @@ class ff implements dh, cc {
                       if (!(param1.field_w instanceof vc)) {
                         break L5;
                       } else {
-                        ((vc) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 289769985, (byte) 58, this.field_n);
+                        ((vc) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
                         break L4;
                       }
                     }
@@ -837,7 +837,7 @@ class ff implements dh, cc {
                     stackIn_20_0 = var19.a(var9, 124);
                   }
                   var15 = stackIn_20_0;
-                  hb.field_j.a(var13.field_d + (param2 + param5.field_m - -this.field_m - -param5.field_n), var13.field_a, -var14 + var15, this.field_h >>> -650721736, param1 ^ 15658734, this.field_h, this.a(param5, param3, 11875, var14));
+                  hb.field_j.a(var13.field_d + (param2 + param5.field_m - -this.field_m - -param5.field_n), var13.field_a, -var14 + var15, this.field_h >>> 24, param1 ^ 15658734, this.field_h, this.a(param5, param3, 11875, var14));
                 }
                 id.a(true);
                 break L2;

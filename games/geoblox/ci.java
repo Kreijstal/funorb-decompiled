@@ -400,8 +400,8 @@ final class ci {
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3 ^ (65533 & param2 << 356185060 | param2 >>> 1491735340);
-          var5_int = var5_int | param2 << -1345231792;
+          var5_int = param3 ^ (65533 & param2 << 4 | param2 >>> 12);
+          var5_int = var5_int | param2 << 16;
           var6 = (long)var5_int;
           var8 = (gd) ((Object) this.field_b.a(var6, (byte) -74));
           if (param1 <= 19) {
@@ -476,8 +476,8 @@ final class ci {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            var5_int = ((param1 & -1879044097) << 139467780 | param1 >>> 416577356) ^ param2;
-            var5_int = var5_int | param1 << 187785136;
+            var5_int = ((param1 & -1879044097) << 4 | param1 >>> 12) ^ param2;
+            var5_int = var5_int | param1 << 16;
             var6 = (long)var5_int ^ 4294967296L;
             var8 = (gd) ((Object) this.field_b.a(var6, (byte) -115));
             if (param3 == 14) {

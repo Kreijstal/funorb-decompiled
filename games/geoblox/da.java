@@ -25,12 +25,12 @@ final class da {
 
     final static int a(byte param0, int param1) {
         param1--;
-        param1 = param1 | param1 >>> 987210721;
-        param1 = param1 | param1 >>> -1646334462;
+        param1 = param1 | param1 >>> 1;
+        param1 = param1 | param1 >>> 2;
         if (param0 > 88) {
-            param1 = param1 | param1 >>> 635733380;
-            param1 = param1 | param1 >>> 573600264;
-            param1 = param1 | param1 >>> -415367664;
+            param1 = param1 | param1 >>> 4;
+            param1 = param1 | param1 >>> 8;
+            param1 = param1 | param1 >>> 16;
             return param1 - -1;
         }
         return -15;

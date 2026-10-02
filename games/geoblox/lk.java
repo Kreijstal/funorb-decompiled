@@ -38,7 +38,7 @@ final class lk {
             var3 = 1;
             L0: while (true) {
               if (this.field_c.length > var3) {
-                if (this.field_c[var3] + this.field_c[-1 + var3] >> 505852993 <= param1) {
+                if (this.field_c[var3] + this.field_c[-1 + var3] >> 1 <= param1) {
                   var3++;
                   continue L0;
                 } else {

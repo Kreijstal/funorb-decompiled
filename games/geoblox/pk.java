@@ -56,7 +56,7 @@ final class pk extends qc {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = param2 >>> 2037282111;
+        int var3 = param2 >>> 31;
         if (param1 != -6) {
             pk.k((byte) 101);
         }
@@ -176,7 +176,7 @@ final class pk extends qc {
     final int e(byte param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = Geoblox.field_C;
-        int var3 = this.field_s >> 2101762179;
+        int var3 = this.field_s >> 3;
         if (param0 != -17) {
             return -69;
         }

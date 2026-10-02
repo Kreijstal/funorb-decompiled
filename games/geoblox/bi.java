@@ -138,7 +138,7 @@ final class bi implements dh {
           }
           if (null != this.field_b) {
             var10 = this.field_m + this.field_n + this.field_k;
-            this.field_b.a(param4.field_s, var10 + param4.field_v + param0, param4.field_m + param2 - -this.field_i, param4.field_r + (-this.field_m + -var10), -(this.field_m << -221141407) + param4.field_h, this.field_e, this.field_f, this.field_a, this.field_l, 0);
+            this.field_b.a(param4.field_s, var10 + param4.field_v + param0, param4.field_m + param2 - -this.field_i, param4.field_r + (-this.field_m + -var10), -(this.field_m << 1) + param4.field_h, this.field_e, this.field_f, this.field_a, this.field_l, 0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

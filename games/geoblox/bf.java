@@ -201,7 +201,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               if (param4 >= vb.field_e) {
                 if (param4 < vb.field_k) {
                   var11 = param4 + var8 * vb.field_f;
-                  var12 = var10 + 1 + -var8 >> 158912129;
+                  var12 = var10 + 1 + -var8 >> 1;
                   L6: while (true) {
                     var12--;
                     if (0 > var12) {
@@ -219,7 +219,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               if (param0 >= vb.field_i) {
                 if (vb.field_d > var6) {
                   var11 = var7 + vb.field_f * param0;
-                  var12 = -var7 + 1 + var9 >> -2109860607;
+                  var12 = -var7 + 1 + var9 >> 1;
                   L8: while (true) {
                     var12--;
                     if (var12 < 0) {
@@ -237,7 +237,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               if (var5_int >= vb.field_e) {
                 if (vb.field_k > var5_int) {
                   var11 = var5_int + ((1 & -param4 + var5_int) + var8) * vb.field_f;
-                  var12 = -var8 + 1 + var10 >> -161751903;
+                  var12 = -var8 + 1 + var10 >> 1;
                   L10: while (true) {
                     var12--;
                     if (0 > var12) {
@@ -255,7 +255,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
               if (vb.field_i <= param0) {
                 if (vb.field_d > var6) {
                   var11 = vb.field_f * var6 + (var7 - -(1 & -param0 + var6));
-                  var12 = 1 - (-var9 + var7) >> 880243777;
+                  var12 = 1 - (-var9 + var7) >> 1;
                   L12: while (true) {
                     var12--;
                     if (var12 < 0) {

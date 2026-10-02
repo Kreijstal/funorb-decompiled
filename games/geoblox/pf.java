@@ -109,11 +109,11 @@ final class pf extends ee implements ga, pl {
                   var11 = var4_ref_ea.field_h;
                   var10 = var11;
                   var6 = var10;
-                  if (var5_int > var11.length << -2069078526) {
-                    var5_int = var11.length << -652131070;
+                  if (var5_int > var11.length << 2) {
+                    var5_int = var11.length << 2;
                   }
                   for (var7 = 0; var5_int > var7; var7++) {
-                    var6[var7 >> 166716578] = var6[var7 >> 166716578] + (var9.c((byte) 34) << cd.a(var7 << 901222056, 768));
+                    var6[var7 >> 2] = var6[var7 >> 2] + (var9.c((byte) 34) << cd.a(var7 << 8, 768));
                   }
                   var4_ref_ea.a(false);
                   break L1;

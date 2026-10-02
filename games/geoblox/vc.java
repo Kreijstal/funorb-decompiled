@@ -31,7 +31,7 @@ final class vc extends dk {
               var1_int = ch.field_d[0];
               for (var2 = 1; var2 < ch.field_d.length; var2++) {
                 var3 = ch.field_d[var2];
-                sf.a(pj.field_i, var2 << -48027036, pj.field_i, var1_int, var3);
+                sf.a(pj.field_i, var2 << 4, pj.field_i, var1_int, var3);
                 var1_int = var1_int + var3;
               }
               decompiledRegionSelector0 = 1;
@@ -162,8 +162,8 @@ final class vc extends dk {
             this.field_p = param4;
             var8 = this.a(-1, param1, param4, param0);
             var7 = param4.a(param0);
-            var8.field_c[0] = param2 - (var7 >> -1193764287);
-            var8.field_c[param0.length()] = (var7 >> 1641559585) + param2;
+            var8.field_c[0] = param2 - (var7 >> 1);
+            var8.field_c[param0.length()] = (var7 >> 1) + param2;
             qb.a(0, var8, param0, 60, param4);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "vc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -287,7 +287,7 @@ final class vc extends dk {
                     var11 = param4.field_o - -var12;
                   }
                 } else {
-                  var11 = param4.field_o + (this.field_o - this.field_e * var10 >> 802420961);
+                  var11 = param4.field_o + (this.field_o - this.field_e * var10 >> 1);
                 }
               } else {
                 var11 = param4.field_o;

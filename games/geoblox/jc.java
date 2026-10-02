@@ -335,8 +335,8 @@ final class jc {
     final static int a(int param0, int param1, int param2) {
         int var3 = 0;
         if (param2 <= -33) {
-            var3 = param0 >> -669770945 & param1 - 1;
-            return var3 + ((param0 >>> -980898849) + param0) % param1;
+            var3 = param0 >> 31 & param1 - 1;
+            return var3 + ((param0 >>> 31) + param0) % param1;
         }
         return 80;
     }

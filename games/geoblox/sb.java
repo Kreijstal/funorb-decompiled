@@ -71,7 +71,7 @@ final class sb {
                       var2++;
                       continue L1;
                     } else {
-                      var0 = -306674912 ^ var0 >>> 1592307073;
+                      var0 = -306674912 ^ var0 >>> 1;
                       var2++;
                       continue L1;
                     }

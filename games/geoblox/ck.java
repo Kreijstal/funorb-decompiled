@@ -55,24 +55,24 @@ final class ck {
               var4_ref_nf = bm.field_l[var3];
               var4_ref_nf.a((byte) -99);
               Geoblox.a((byte) -112, var3);
-              var5 = var4_ref_nf.field_Q + var4_ref_nf.field_I >> -1398741823;
-              var6 = var4_ref_nf.field_s + var4_ref_nf.field_H >> 730124801;
-              var7 = var4_ref_nf.field_N + var4_ref_nf.field_F >> 831573057;
-              var8 = am.field_a[9] >> 1756971586;
-              var9 = am.field_a[10] >> -1495577214;
-              var10_int = am.field_a[11] >> 165915330;
-              var11 = var10_int * lk.field_f[5] + var8 * lk.field_f[3] + lk.field_f[4] * var9 >> 2146802510;
-              var12 = var9 * lk.field_f[7] + (var8 * lk.field_f[6] + lk.field_f[8] * var10_int) >> 360761134;
-              var13 = var10_int * lk.field_f[11] + (var8 * lk.field_f[9] - -(lk.field_f[10] * var9)) >> 1103653550;
-              var2[var3] = var5 * var11 - -(var12 * var6) + var13 * var7 >> -577632368;
+              var5 = var4_ref_nf.field_Q + var4_ref_nf.field_I >> 1;
+              var6 = var4_ref_nf.field_s + var4_ref_nf.field_H >> 1;
+              var7 = var4_ref_nf.field_N + var4_ref_nf.field_F >> 1;
+              var8 = am.field_a[9] >> 2;
+              var9 = am.field_a[10] >> 2;
+              var10_int = am.field_a[11] >> 2;
+              var11 = var10_int * lk.field_f[5] + var8 * lk.field_f[3] + lk.field_f[4] * var9 >> 14;
+              var12 = var9 * lk.field_f[7] + (var8 * lk.field_f[6] + lk.field_f[8] * var10_int) >> 14;
+              var13 = var10_int * lk.field_f[11] + (var8 * lk.field_f[9] - -(lk.field_f[10] * var9)) >> 14;
+              var2[var3] = var5 * var11 - -(var12 * var6) + var13 * var7 >> 16;
             }
-            var3 = am.field_a[9] >> 626407784;
-            var4 = am.field_a[10] >> -1109088696;
-            var5 = am.field_a[11] >> 2065796680;
-            var6 = gb.field_f << 542980804;
+            var3 = am.field_a[9] >> 8;
+            var4 = am.field_a[10] >> 8;
+            var5 = am.field_a[11] >> 8;
+            var6 = gb.field_f << 4;
             var7 = 0;
-            var8 = bh.a((byte) 81, var6) >> 1093818120;
-            var9 = fi.a(var6, 2048) >> 1214701736;
+            var8 = bh.a((byte) 81, var6) >> 8;
+            var9 = fi.a(var6, 2048) >> 8;
             if (qa.field_a != -1) {
               if (ue.field_e != -1) {
                 var7 = -320 + qa.field_a;

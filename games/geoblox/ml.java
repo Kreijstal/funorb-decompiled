@@ -56,7 +56,7 @@ final class ml extends ff {
             stackIn_16_0 = this.field_v;
           }
           var7 = stackIn_16_0;
-          jf.a(this.field_y, var7, param0 + param4.field_v, param4.field_r, (-this.field_y[0].field_o + param4.field_h >> 1553840577) + (param2 + param4.field_m), -17154);
+          jf.a(this.field_y, var7, param0 + param4.field_v, param4.field_r, (-this.field_y[0].field_o + param4.field_h >> 1) + (param2 + param4.field_m), -17154);
           if (param3) {
             stackIn_19_0 = 16777215;
           } else {

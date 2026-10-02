@@ -47,7 +47,7 @@ final class ik {
             }
             L4: while (var7 < var6) {
               var8 = 152 - -(48 * var7 / param1);
-              var9 = var8 << -1623895256 | var8 << -1540604944 | var8;
+              var9 = var8 << 8 | var8 << 16 | var8;
               vb.field_c[param0 + vb.field_f * (var7 + param2)] = var9;
               vb.field_c[param3 + (param2 + var7) * vb.field_f + param0] = var9;
               var7++;

@@ -324,12 +324,12 @@ final class tf {
                 break $cfr$clinit;
               } else {
                 if (var0 == 0) {
-                  field_b[var0] = (1 + var0) * 20 << -1110765784;
+                  field_b[var0] = (1 + var0) * 20 << 8;
                 } else {
-                  field_b[var0] = (1 + var0) * 51 << 1294033512;
+                  field_b[var0] = (1 + var0) * 51 << 8;
                 }
                 if (var0 > 2) {
-                  field_b[var0] = lb.a(field_b[var0], (-2 + var0) * 22 << 316724240);
+                  field_b[var0] = lb.a(field_b[var0], (-2 + var0) * 22 << 16);
                   var0++;
                   continue L0;
                 } else {

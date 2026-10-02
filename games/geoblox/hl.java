@@ -30,19 +30,19 @@ final class hl extends el {
         int var13 = Geoblox.field_C;
         dm var14 = new dm(this.field_H * 2, this.field_h);
         Geoblox.a(1, var14);
-        int var5 = this.field_h >> -1499813087;
+        int var5 = this.field_h >> 1;
         for (var6 = 0; this.field_h > var6; var6++) {
-            var7 = (var6 >> 303611585) * (-1 + this.field_H * 2) % (this.field_H * 2);
+            var7 = (var6 >> 1) * (-1 + this.field_H * 2) % (this.field_H * 2);
             var8 = 16711935 & param2;
             var9 = 65280 & param2;
             var10 = -var5 + var6;
             var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
-            var12 = var11 >= 256 ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> -259500472;
+            var12 = var11 >= 256 ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> 8;
             vb.c(var7, var6, this.field_H, var12);
             vb.c(-(2 * this.field_H) + var7, var6, this.field_H, var12);
             var9 = param0 & 65280;
             var8 = param0 & 16711935;
-            var12 = 256 > var11 ? (16711680 & var9 * var11 | -16711936 & var11 * var8) >>> -1261115064 : var9 | var8;
+            var12 = 256 > var11 ? (16711680 & var9 * var11 | -16711936 & var11 * var8) >>> 8 : var9 | var8;
             vb.c(this.field_H + var7, var6, this.field_H, var12);
             vb.c(-this.field_H + var7, var6, this.field_H, var12);
         }
@@ -51,9 +51,9 @@ final class hl extends el {
     }
 
     final void a(int param0, int param1, byte param2) {
-        this.field_A = 8355711 & param0 >> 1658526497;
+        this.field_A = 8355711 & param0 >> 1;
         this.field_E = param1;
-        this.field_J = param1 >> -1908051263 & 8355711;
+        this.field_J = param1 >> 1 & 8355711;
         if (param2 != -103) {
             this.e(-107);
         }
@@ -67,7 +67,7 @@ final class hl extends el {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Geoblox.field_C;
-        int var2 = this.field_h >> 1430525217;
+        int var2 = this.field_h >> 1;
         dm var3 = new dm(var2, this.field_h);
         if (param0 != 255) {
             return (dm) null;
@@ -81,7 +81,7 @@ final class hl extends el {
                     var6 = Math.sqrt(1.0 - var6);
                     var8 = var6 >= 1.0 ? 255 : (int)(var6 * 255.0);
                 }
-                vb.a(var5, var4, var8 << 2019007536 | (var8 | var8 << 407213000));
+                vb.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
             }
         }
         id.a(true);
@@ -165,7 +165,7 @@ final class hl extends el {
         int var7 = param1 - -this.field_m;
         this.a(this.field_F[0], var7, var6, -12276);
         if (this.field_x < 65536) {
-            uh.a(var7, var6 - -(this.field_r * this.field_x >> 1475207664), -14045, var7 + this.field_h, this.field_r + var6);
+            uh.a(var7, var6 - -(this.field_r * this.field_x >> 16), -14045, var7 + this.field_h, this.field_r + var6);
             this.a(this.field_F[1], var7, var6, -12276);
             id.a(true);
         }
@@ -187,7 +187,7 @@ final class hl extends el {
             return;
         }
         this.field_y = this.field_M.c();
-        this.field_z = new dm(this.field_h >> -1326628703, this.field_h);
+        this.field_z = new dm(this.field_h >> 1, this.field_h);
     }
 
     private hl(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -200,7 +200,7 @@ final class hl extends el {
     }
 
     hl(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this(param0, param1, param2, param3, param4, param5, param6, param5 >> -1450193727 & 8355711, param6 >> -1873287327 & 8355711);
+        this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
     }
 
     public static void f(int param0) {

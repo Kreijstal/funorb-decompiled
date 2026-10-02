@@ -71,7 +71,7 @@ abstract class sc {
                     }
                   }
                 } else {
-                  stackIn_7_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> -1102483296);
+                  stackIn_7_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> 32);
                   decompiledRegionSelector0 = 1;
                 }
               } else {

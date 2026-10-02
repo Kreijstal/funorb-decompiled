@@ -114,8 +114,8 @@ final class ec {
                       break L9;
                     }
                   }
-                  var2 = (nk.field_f[var12] & 1072693248) >> -844054220;
-                  var3 = nk.field_f[var12] >> -1979164054 & 1023;
+                  var2 = (nk.field_f[var12] & 1072693248) >> 20;
+                  var3 = nk.field_f[var12] >> 10 & 1023;
                   var4 = 1023 & nk.field_f[var12];
                   var5 = tl.field_g[var2];
                   var6 = tl.field_g[var3];

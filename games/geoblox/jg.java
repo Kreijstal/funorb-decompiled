@@ -363,8 +363,8 @@ abstract class jg {
         for (var1 = 0; var1 < 7; var1++) {
           for (var2 = 0; 7 > var2; var2++) {
             L6: {
-              var3_float = (float)((field_f[var1][var2] & 16776188) >> -1813215184) / 255.0f;
-              var4_float = (float)((field_f[var1][var2] & 65454) >> 358527304) / 255.0f;
+              var3_float = (float)((field_f[var1][var2] & 16776188) >> 16) / 255.0f;
+              var4_float = (float)((field_f[var1][var2] & 65454) >> 8) / 255.0f;
               var5_float = (float)(255 & field_f[var1][var2]) / 255.0f;
               var9 = 0;
               if (var3_float > var4_float) {

@@ -22,11 +22,11 @@ abstract class dd extends ee {
 
     final void c(int param0, int param1, int param2) {
         if (param1 > 95) {
-            this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1769189185, kb.field_b - param2 >> 1470837729);
+            this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1, kb.field_b - param2 >> 1);
             return;
         }
         field_G = (nc) null;
-        this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1769189185, kb.field_b - param2 >> 1470837729);
+        this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1, kb.field_b - param2 >> 1);
     }
 
     private final int g(int param0) {
@@ -62,7 +62,7 @@ abstract class dd extends ee {
     }
 
     dd(ng param0, int param1, int param2) {
-        super(kb.field_b - param1 >> -1982522751, -param2 + fa.field_i >> 1166494081, param1, param2, (dh) null);
+        super(kb.field_b - param1 >> 1, -param2 + fa.field_i >> 1, param1, param2, (dh) null);
         try {
             this.field_K = param0;
             this.field_H = 0;

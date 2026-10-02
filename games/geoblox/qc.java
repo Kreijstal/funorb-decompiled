@@ -11,10 +11,10 @@ class qc extends hf {
     final void b(int param0, int param1) {
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$0] = (byte)(param1 >> -1961698512);
+        this.field_j[fieldTemp$0] = (byte)(param1 >> 16);
         int fieldTemp$1 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$1] = (byte)(param1 >> -1473186264);
+        this.field_j[fieldTemp$1] = (byte)(param1 >> 8);
         int fieldTemp$2 = this.field_f;
         this.field_f = this.field_f + 1;
         this.field_j[fieldTemp$2] = (byte)param1;
@@ -164,12 +164,12 @@ class qc extends hf {
     }
 
     final void g(int param0, int param1) {
-        this.field_j[-4 + (this.field_f - param0)] = (byte)(param0 >> 2117206328);
+        this.field_j[-4 + (this.field_f - param0)] = (byte)(param0 >> 24);
         if (param1 != 0) {
             this.d(13, 61);
         }
-        this.field_j[-param0 + (this.field_f + -3)] = (byte)(param0 >> -2140579216);
-        this.field_j[this.field_f + (-param0 + -2)] = (byte)(param0 >> 1652585768);
+        this.field_j[-param0 + (this.field_f + -3)] = (byte)(param0 >> 16);
+        this.field_j[this.field_f + (-param0 + -2)] = (byte)(param0 >> 8);
         this.field_j[-param0 + (this.field_f - 1)] = (byte)param0;
     }
 
@@ -185,7 +185,7 @@ class qc extends hf {
         var2 = this.field_j[fieldTemp$0];
         var3 = 0;
         L1: while (var2 < 0) {
-          var3 = (127 & var2 | var3) << 921688295;
+          var3 = (127 & var2 | var3) << 7;
           fieldTemp$1 = this.field_f;
           this.field_f = this.field_f + 1;
           var2 = this.field_j[fieldTemp$1];
@@ -231,14 +231,14 @@ class qc extends hf {
         if (!param1) {
             field_g = (long[][]) null;
         }
-        this.field_j[this.field_f + (-param0 - 2)] = (byte)(param0 >> -1669828344);
+        this.field_j[this.field_f + (-param0 - 2)] = (byte)(param0 >> 8);
         this.field_j[this.field_f + (-param0 + -1)] = (byte)param0;
     }
 
     final void e(int param0, int param1) {
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$0] = (byte)(param0 >> 1869284328);
+        this.field_j[fieldTemp$0] = (byte)(param0 >> 8);
         if (param1 != 28695) {
             qc.a(true, 22);
         }
@@ -307,22 +307,22 @@ class qc extends hf {
             field_h = (long[]) null;
         }
         long var4 = (long)this.a((byte) -113) & 4294967295L;
-        return var4 + (var2 << 1413639648);
+        return var4 + (var2 << 32);
     }
 
     final void a(byte param0, long param1) {
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$0] = (byte)(int)(param1 >> -685345632);
+        this.field_j[fieldTemp$0] = (byte)(int)(param1 >> 32);
         int fieldTemp$1 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$1] = (byte)(int)(param1 >> 1710063192);
+        this.field_j[fieldTemp$1] = (byte)(int)(param1 >> 24);
         int fieldTemp$2 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$2] = (byte)(int)(param1 >> 328259472);
+        this.field_j[fieldTemp$2] = (byte)(int)(param1 >> 16);
         int fieldTemp$3 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$3] = (byte)(int)(param1 >> 1743415112);
+        this.field_j[fieldTemp$3] = (byte)(int)(param1 >> 8);
         int fieldTemp$4 = this.field_f;
         this.field_f = this.field_f + 1;
         this.field_j[fieldTemp$4] = (byte)(int)param1;
@@ -668,9 +668,9 @@ class qc extends hf {
                     var4++;
                     continue L2;
                   } else {
-                    var5 = var5 + ((var6 >>> 2141084517 ^ var6 << -702376060) + var6 ^ var7 - -param0[3 & var7]);
+                    var5 = var5 + ((var6 >>> 5 ^ var6 << 4) + var6 ^ var7 - -param0[3 & var7]);
                     var7 = var7 + var8;
-                    var6 = var6 + (var5 + (var5 << -560946012 ^ var5 >>> -29661051) ^ var7 + param0[(var7 & 7480) >>> 2037282571]);
+                    var6 = var6 + (var5 + (var5 << 4 ^ var5 >>> 5) ^ var7 + param0[(var7 & 7480) >>> 11]);
                     continue L3;
                   }
                 }
@@ -702,7 +702,7 @@ class qc extends hf {
         if (!param0) {
             return 58;
         }
-        return (this.field_j[-2 + this.field_f] << -245067320 & 65280) + (255 & this.field_j[-1 + this.field_f]);
+        return (this.field_j[-2 + this.field_f] << 8 & 65280) + (255 & this.field_j[-1 + this.field_f]);
     }
 
     final int d(byte param0) {
@@ -761,9 +761,9 @@ class qc extends hf {
                     var7++;
                     continue L2;
                   } else {
-                    var9 = var9 - (var10 - -param1[(7701 & var10) >>> -539173493] ^ var8 + (var8 << -1713699036 ^ var8 >>> 679481477));
+                    var9 = var9 - (var10 - -param1[(7701 & var10) >>> 11] ^ var8 + (var8 << 4 ^ var8 >>> 5));
                     var10 = var10 - var11;
-                    var8 = var8 - (var10 + param1[var10 & 3] ^ (var9 >>> -1752448443 ^ var9 << 2000154948) - -var9);
+                    var8 = var8 - (var10 + param1[var10 & 3] ^ (var9 >>> 5 ^ var9 << 4) - -var9);
                     continue L3;
                   }
                 }
@@ -804,13 +804,13 @@ class qc extends hf {
             if ((-16384 & param1) != 0) {
                 if (0 != (param1 & -2097152)) {
                     if (!((-268435456 & param1) == 0)) {
-                        this.d((byte) 126, param1 >>> -524339972 | 128);
+                        this.d((byte) 126, param1 >>> 28 | 128);
                     }
-                    this.d((byte) -96, 128 | param1 >>> -2066119883);
+                    this.d((byte) -96, 128 | param1 >>> 21);
                 }
-                this.d((byte) 127, (param1 | 2097436) >>> -783809586);
+                this.d((byte) 127, (param1 | 2097436) >>> 14);
             }
-            this.d((byte) -121, param1 >>> -369731481 | 128);
+            this.d((byte) -121, param1 >>> 7 | 128);
         }
         this.d((byte) 124, 127 & param1);
         if (param0 >= -95) {
@@ -821,22 +821,22 @@ class qc extends hf {
     private final void a(int param0, long param1) {
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$0] = (byte)(int)(param1 >> 565315696);
+        this.field_j[fieldTemp$0] = (byte)(int)(param1 >> 48);
         int fieldTemp$1 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$1] = (byte)(int)(param1 >> -1483650776);
+        this.field_j[fieldTemp$1] = (byte)(int)(param1 >> 40);
         int fieldTemp$2 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$2] = (byte)(int)(param1 >> -668030240);
+        this.field_j[fieldTemp$2] = (byte)(int)(param1 >> 32);
         int fieldTemp$3 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$3] = (byte)(int)(param1 >> -916902888);
+        this.field_j[fieldTemp$3] = (byte)(int)(param1 >> 24);
         int fieldTemp$4 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$4] = (byte)(int)(param1 >> -1939543856);
+        this.field_j[fieldTemp$4] = (byte)(int)(param1 >> 16);
         int fieldTemp$5 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$5] = (byte)(int)(param1 >> 365815368);
+        this.field_j[fieldTemp$5] = (byte)(int)(param1 >> 8);
         if (param0 >= -41) {
             field_g = (long[][]) null;
         }
@@ -848,29 +848,29 @@ class qc extends hf {
     final void b(byte param0, long param1) {
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$0] = (byte)(int)(param1 >> 736504);
+        this.field_j[fieldTemp$0] = (byte)(int)(param1 >> 56);
         int fieldTemp$1 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$1] = (byte)(int)(param1 >> 1765889776);
+        this.field_j[fieldTemp$1] = (byte)(int)(param1 >> 48);
         int fieldTemp$2 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$2] = (byte)(int)(param1 >> 289715752);
+        this.field_j[fieldTemp$2] = (byte)(int)(param1 >> 40);
         int fieldTemp$3 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$3] = (byte)(int)(param1 >> -891151584);
+        this.field_j[fieldTemp$3] = (byte)(int)(param1 >> 32);
         int fieldTemp$4 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$4] = (byte)(int)(param1 >> -1332272744);
+        this.field_j[fieldTemp$4] = (byte)(int)(param1 >> 24);
         int fieldTemp$5 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$5] = (byte)(int)(param1 >> -1096549232);
+        this.field_j[fieldTemp$5] = (byte)(int)(param1 >> 16);
         if (param0 <= 57) {
             java.math.BigInteger var5 = (java.math.BigInteger) null;
             this.a(91, (java.math.BigInteger) null, (java.math.BigInteger) null);
         }
         int fieldTemp$6 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$6] = (byte)(int)(param1 >> 993515080);
+        this.field_j[fieldTemp$6] = (byte)(int)(param1 >> 8);
         int fieldTemp$7 = this.field_f;
         this.field_f = this.field_f + 1;
         this.field_j[fieldTemp$7] = (byte)(int)param1;
@@ -881,7 +881,7 @@ class qc extends hf {
             field_h = (long[]) null;
         }
         this.field_f = this.field_f + 3;
-        return (this.field_j[-1 + this.field_f] & 255) + (((this.field_j[this.field_f + -2] & 255) << 377893928) + ((this.field_j[this.field_f + -3] & 255) << -1069757584));
+        return (this.field_j[-1 + this.field_f] & 255) + (((this.field_j[this.field_f + -2] & 255) << 8) + ((this.field_j[this.field_f + -3] & 255) << 16));
     }
 
     final void a(String param0, byte param1) {
@@ -950,13 +950,13 @@ class qc extends hf {
     final void c(byte param0, int param1) {
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$0] = (byte)(param1 >> -39364232);
+        this.field_j[fieldTemp$0] = (byte)(param1 >> 24);
         int fieldTemp$1 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$1] = (byte)(param1 >> -1123854608);
+        this.field_j[fieldTemp$1] = (byte)(param1 >> 16);
         int fieldTemp$2 = this.field_f;
         this.field_f = this.field_f + 1;
-        this.field_j[fieldTemp$2] = (byte)(param1 >> -1065819544);
+        this.field_j[fieldTemp$2] = (byte)(param1 >> 8);
         if (param0 != 95) {
             this.h(-7);
         }
@@ -970,7 +970,7 @@ class qc extends hf {
         if (param0 >= -25) {
             return 62;
         }
-        return (65280 & this.field_j[-2 + this.field_f] << 903894824) + (-16777216 & this.field_j[-4 + this.field_f] << 548681176) - (-((255 & this.field_j[-3 + this.field_f]) << 1668208528) + -(this.field_j[this.field_f - 1] & 255));
+        return (65280 & this.field_j[-2 + this.field_f] << 8) + (-16777216 & this.field_j[-4 + this.field_f] << 24) - (-((255 & this.field_j[-3 + this.field_f]) << 16) + -(this.field_j[this.field_f - 1] & 255));
     }
 
     final int c(byte param0) {
@@ -1133,26 +1133,26 @@ class qc extends hf {
           if ((var0 & 1) != 0) {
             stackIn_5_0 = (long)(var1 & 255);
           } else {
-            stackIn_5_0 = (long)(var1 >>> 519504488);
+            stackIn_5_0 = (long)(var1 >>> 8);
           }
           var2 = stackIn_5_0;
-          var4 = var2 << -450517119;
+          var4 = var2 << 1;
           if (var4 >= 256L) {
             var4 = var4 ^ 285L;
           }
-          var6 = var4 << -2043762559;
+          var6 = var4 << 1;
           if (var6 >= 256L) {
             var6 = var6 ^ 285L;
           }
           var8 = var6 ^ var2;
-          var10 = var6 << 15491329;
+          var10 = var6 << 1;
           if (var10 >= 256L) {
             var10 = var10 ^ 285L;
           }
           var12 = var2 ^ var10;
-          field_g[0][var0] = ue.a(var12, ue.a(var4 << 1188556040, ue.a(var8 << -1215576688, ue.a(ue.a(ue.a(var6 << -1127942744, ue.a(var2 << 1497812920, var2 << 1952716464)), var2 << 999498720), var10 << -91537704))));
+          field_g[0][var0] = ue.a(var12, ue.a(var4 << 8, ue.a(var8 << 16, ue.a(ue.a(ue.a(var6 << 40, ue.a(var2 << 56, var2 << 48)), var2 << 32), var10 << 24))));
           for (var14 = 1; var14 < 8; var14++) {
-            field_g[var14][var0] = ue.a(field_g[var14 + -1][var0] >>> 621788616, field_g[-1 + var14][var0] << -25809544);
+            field_g[var14][var0] = ue.a(field_g[var14 + -1][var0] >>> 8, field_g[-1 + var14][var0] << 56);
           }
         }
         field_h[0] = 0L;

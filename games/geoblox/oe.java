@@ -193,7 +193,7 @@ abstract class oe extends dd {
             }
             var4_int = -1;
             for (var5 = param3; var5 < param0; var5++) {
-              var4_int = sb.field_b[(var4_int ^ param1[var5]) & 255] ^ var4_int >>> 1495180680;
+              var4_int = sb.field_b[(var4_int ^ param1[var5]) & 255] ^ var4_int >>> 8;
             }
             var4_int = ~var4_int;
             stackIn_6_0 = var4_int;
@@ -544,7 +544,7 @@ abstract class oe extends dd {
             var8 = 35 + param2;
             L1: while (var7 < var4) {
               var9 = var5 + (-var5 + var6) * var7 / var4;
-              var9 = var9 | (var9 << 712590696 | var9 << 386207504);
+              var9 = var9 | (var9 << 8 | var9 << 16);
               vb.c(param0, var8, 6, var9);
               vb.c(this.field_r + param0 + -6, var8, 6, var9);
               var7++;
@@ -563,7 +563,7 @@ abstract class oe extends dd {
             var8 = param2 - -57;
             L3: while (var7 < var4) {
               var9 = var7 * (var6 - var5) / var4 + var5;
-              var9 = var9 | (var9 << -367904048 | var9 << -1047298264);
+              var9 = var9 | (var9 << 16 | var9 << 8);
               vb.c(param0, var8, 6, var9);
               vb.c(-6 + (this.field_r + param0), var8, 6, var9);
               var8++;
@@ -588,7 +588,7 @@ abstract class oe extends dd {
                             break L4;
                           } else {
                             var13 = (-var12 + 462) * var9 / 42;
-                            var13 = var13 | (var13 << -340900600 | var13 << 756381136);
+                            var13 = var13 | (var13 << 8 | var13 << 16);
                             vb.field_c[var8 * vb.field_f - -param0 - -var10] = var13;
                             var10++;
                             continue L5;
@@ -614,7 +614,7 @@ abstract class oe extends dd {
                           continue L7;
                         } else {
                           var15 = var9 * (462 + -var14) / 42;
-                          var15 = var15 | (var15 << -321143672 | var15 << -1775523120);
+                          var15 = var15 | (var15 << 8 | var15 << 16);
                           vb.field_c[var11 + param0 + vb.field_f * var8] = var15;
                           var11++;
                           continue L7;
@@ -626,7 +626,7 @@ abstract class oe extends dd {
                     break L6;
                   }
                 }
-                var9 = var9 | (var9 << -1618164592 | var9 << -946803448);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 vb.c(var10 - -param0, var8, var11 + -var10, var9);
                 var8++;
                 var7++;

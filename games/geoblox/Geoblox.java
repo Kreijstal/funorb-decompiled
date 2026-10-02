@@ -886,7 +886,7 @@ public final class Geoblox extends wf {
               if (sb.a(54)) {
                 var2 = this.d((byte) -67);
                 if (var2 == 2) {
-                  oh.a(320, 240, fi.field_d, fi.field_d.field_o * 3 >> 1516183521, -128, fi.field_d.field_o);
+                  oh.a(320, 240, fi.field_d, fi.field_d.field_o * 3 >> 1, -128, fi.field_d.field_o);
                 } else {
                   break L5;
                 }

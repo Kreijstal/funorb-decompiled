@@ -116,7 +116,7 @@ final class fh implements dh {
               var9 = var9 + (-var7 + param4.field_r);
             } else {
               if (this.field_b == 1) {
-                var9 = var9 + (-var7 + param4.field_r >> -1257061119);
+                var9 = var9 + (-var7 + param4.field_r >> 1);
               }
             }
             var10 = param2 - -param4.field_m;
@@ -124,7 +124,7 @@ final class fh implements dh {
               var10 = var10 + (param4.field_h - var8);
             } else {
               if (this.field_a == 1) {
-                var10 = var10 + (param4.field_h - var8 >> 1292510401);
+                var10 = var10 + (param4.field_h - var8 >> 1);
               }
             }
             bf.a(var10 - -2, 4 + var7, 14164, var8, -2 + var9);

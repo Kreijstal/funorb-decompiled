@@ -306,11 +306,11 @@ final class ri {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 2 + (i.field_a.field_s >> 1411036417);
+        int var3 = 2 + (i.field_a.field_s >> 1);
         if (param2 != 29497) {
             return;
         }
-        int var4 = (i.field_a.field_o >> -1165451615) - -2;
+        int var4 = (i.field_a.field_o >> 1) - -2;
         fc.field_b[uf.field_b].b(param0 + -var3, param1 + -var4, rj.field_c);
         vh.field_H[nd.field_a].b(-var3 + param0, -var4 + param1, rj.field_c);
     }

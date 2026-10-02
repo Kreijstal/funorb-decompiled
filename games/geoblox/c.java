@@ -552,9 +552,9 @@ final class c extends ka {
                             var6 = 170;
                             fi.field_d.a(ki.field_a, 160, var6, 320, 300, 0, -1, 1, 0, 16);
                             var7 = 100;
-                            var8 = -(20 + var7 >> 374422529) + 410;
+                            var8 = -(20 + var7 >> 1) + 410;
                             var6 = 265;
-                            var9 = var8 - (-(var7 >> -1761100895) - 10);
+                            var9 = var8 - (-(var7 >> 1) - 10);
                             ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.field_g);
                             if (1 != this.field_o) {
                               if (this.field_o >= 0) {
@@ -581,10 +581,10 @@ final class c extends ka {
                           }
                           L20: {
                             dd.field_G.b(hh.field_b, var9, 30 + var6, 0, -1);
-                            var8 = 320 - (20 + var7 >> -708984479) - 90;
+                            var8 = 320 - (20 + var7 >> 1) - 90;
                             dd.field_G.field_K[0][wf.field_p] = 16689938;
                             var6 = 265;
-                            var9 = 10 + (var7 >> -733174591) + var8;
+                            var9 = 10 + (var7 >> 1) + var8;
                             ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.field_g);
                             if (this.field_o != 0) {
                               if (0 <= this.field_o) {
@@ -630,8 +630,8 @@ final class c extends ka {
                               var6 = var6 + 16 * fi.field_d.a(sj.field_e, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                               var6 += 40;
                               var7 = 100;
-                              var8 = 320 + -(var7 + 20 >> 1183785761);
-                              var9 = (var7 >> 360391297) + (var8 + 10);
+                              var8 = 320 + -(var7 + 20 >> 1);
+                              var9 = (var7 >> 1) + (var8 + 10);
                               ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.field_g);
                               if (0 != this.field_o) {
                                 if (260 >= qa.field_a) {
@@ -683,9 +683,9 @@ final class c extends ka {
                           L30: {
                             var6 += 40;
                             var9 = 100;
-                            var10 = -(20 + var9 >> -968821055) + 320 - -90;
+                            var10 = -(20 + var9 >> 1) + 320 - -90;
                             ma.a(var6, var10, 36, (byte) -92, var9 - -20, eb.field_g);
-                            var11 = 10 + ((var9 >> 1030901409) + var10);
+                            var11 = 10 + ((var9 >> 1) + var10);
                             if (this.field_o != 1) {
                               if (0 <= this.field_o) {
                                 break L30;
@@ -712,8 +712,8 @@ final class c extends ka {
                           L32: {
                             dd.field_G.b(rb.field_a, var11, 30 + var6, 0, -1);
                             dd.field_G.field_K[0][wf.field_p] = 16689938;
-                            var10 = 320 + -(20 + var9 >> -1873231487) - 90;
-                            var11 = 10 + (var9 >> 687806689) + var10;
+                            var10 = 320 + -(20 + var9 >> 1) - 90;
+                            var11 = 10 + (var9 >> 1) + var10;
                             ma.a(var6, var10, 36, (byte) -92, 20 + var9, eb.field_g);
                             if (this.field_o != 0) {
                               if (this.field_o >= 0) {
@@ -756,8 +756,8 @@ final class c extends ka {
                           var6 = 180;
                           fi.field_d.a(ki.field_a, 170, var6, 300, 300, 0, -1, 1, 0, 16);
                           var7 = 242;
-                          var8 = 320 - (var7 + 20 >> -1731032895);
-                          var9 = 10 + (var8 + (var7 >> -1298819903));
+                          var8 = 320 - (var7 + 20 >> 1);
+                          var9 = 10 + (var8 + (var7 >> 1));
                           var6 = 265;
                           ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.field_g);
                           if (this.field_o != 0) {
@@ -808,7 +808,7 @@ final class c extends ka {
                         this.b(param0 ^ 28757, this.field_q);
                         super.a(-28750);
                         vb.e(0, 0, 640, 480);
-                        qj.field_c.b((qj.field_c.field_o >> -182880703) + var5, 240, -49150, 4096);
+                        qj.field_c.b((qj.field_c.field_o >> 1) + var5, 240, -49150, 4096);
                         if (var12 == 0) {
                           break L38;
                         }
@@ -822,7 +822,7 @@ final class c extends ka {
                       this.b(-48, this.field_q);
                       super.a(-28750);
                       vb.e(0, 0, 640, 480);
-                      qj.field_c.b(-(qj.field_c.field_o >> 1729526785) + var5, 240, -16383, 4096);
+                      qj.field_c.b(-(qj.field_c.field_o >> 1) + var5, 240, -16383, 4096);
                     }
                     if (var12 == 0) {
                       break L8;
@@ -1517,7 +1517,7 @@ final class c extends ka {
                   L8: {
                     if (0 == (1 & this.field_D)) {
                       this.field_z = this.field_z + 1;
-                      this.field_Z = -(this.field_z >> -137754207) + 60;
+                      this.field_Z = -(this.field_z >> 1) + 60;
                       if (this.field_Z < 15) {
                         this.field_Z = 15;
                         if (var3 == 0) {
@@ -1572,12 +1572,12 @@ final class c extends ka {
                       }
                     }
                     var2_float = 0.019999999552965164f * (float)(this.field_D % 50);
-                    this.field_N = ((int)(var2_float * (float)this.field_t) << -1025150840) + (jg.field_h[field_ab][this.field_B] - -((int)(var2_float * (float)this.field_V) << -774715792) + (int)((float)this.field_M * var2_float));
+                    this.field_N = ((int)(var2_float * (float)this.field_t) << 8) + (jg.field_h[field_ab][this.field_B] - -((int)(var2_float * (float)this.field_V) << 16) + (int)((float)this.field_M * var2_float));
                     if (this.field_D % 50 == 49) {
                       this.field_B = this.field_B + 1;
                       this.field_B = this.field_B % 7;
-                      this.field_V = -((16751678 & jg.field_h[field_ab][this.field_B]) >> -1539020080) + ((jg.field_h[field_ab][(1 + this.field_B) % 7] & 16754682) >> -580890576);
-                      this.field_t = (255 & jg.field_h[field_ab][(this.field_B + 1) % 7] >> -1088551928) - ((jg.field_h[field_ab][this.field_B] & 65438) >> 2029681544);
+                      this.field_V = -((16751678 & jg.field_h[field_ab][this.field_B]) >> 16) + ((jg.field_h[field_ab][(1 + this.field_B) % 7] & 16754682) >> 16);
+                      this.field_t = (255 & jg.field_h[field_ab][(this.field_B + 1) % 7] >> 8) - ((jg.field_h[field_ab][this.field_B] & 65438) >> 8);
                       this.field_M = (255 & jg.field_h[field_ab][(1 + this.field_B) % 7]) + -(255 & jg.field_h[field_ab][this.field_B]);
                     }
                   }
@@ -1813,7 +1813,7 @@ final class c extends ka {
                         break L39;
                       }
                     }
-                    dc.field_a = dc.field_a | lb.field_b + el.field_g << 595332241;
+                    dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
                   }
                 }
                 decompiledRegionSelector0 = 1;
@@ -1871,7 +1871,7 @@ final class c extends ka {
               ri.a(70, 180, 29497);
               vf.field_L.e();
               vb.c();
-              ke.field_a[1][this.field_X][this.field_L].b((vf.field_L.field_s >> 1398463873) + -(ke.field_a[1][this.field_X][this.field_L].field_s >> -2119905215), (vf.field_L.field_o >> -1954799455) + -(ke.field_a[1][this.field_X][this.field_L].field_o >> 112423521));
+              ke.field_a[1][this.field_X][this.field_L].b((vf.field_L.field_s >> 1) + -(ke.field_a[1][this.field_X][this.field_L].field_s >> 1), (vf.field_L.field_o >> 1) + -(ke.field_a[1][this.field_X][this.field_L].field_o >> 1));
               sh.field_y.a(255);
               vb.b(this.field_P);
               vb.b(50, 250, 90, 310);
@@ -1888,67 +1888,67 @@ final class c extends ka {
               if (this.field_Z != 15) {
                 vf.field_L.e();
                 vb.c();
-                ke.field_a[1][this.field_X][this.field_L].b(vf.field_L.field_s >> -1401802047, vf.field_L.field_o >> 1779537697, var8, 3072);
+                ke.field_a[1][this.field_X][this.field_L].b(vf.field_L.field_s >> 1, vf.field_L.field_o >> 1, var8, 3072);
                 sh.field_y.a(255);
                 vb.b(this.field_P);
                 vb.b(40, 355, 103, 415);
                 vf.field_L.g(1);
-                vf.field_L.b(var6 - (vf.field_L.field_s >> 1920897793), var7 - (vf.field_L.field_o >> 21057857));
+                vf.field_L.b(var6 - (vf.field_L.field_s >> 1), var7 - (vf.field_L.field_o >> 1));
                 var8 = (int)(0.5 + 65535.0 * ((this.field_A + var9) / 6.283185307179586));
                 var6 = var4_int - -(int)(0.5 + -Math.sin(this.field_A + var9) * (double)this.field_Z);
                 var7 = (int)(0.5 + Math.cos(this.field_A + var9) * (double)this.field_Z) + var5;
                 vf.field_L.e();
                 vb.c();
-                ke.field_a[1][this.field_X][this.field_L].b(vf.field_L.field_s >> -487715007, vf.field_L.field_o >> 278492609, var8, 3072);
+                ke.field_a[1][this.field_X][this.field_L].b(vf.field_L.field_s >> 1, vf.field_L.field_o >> 1, var8, 3072);
                 sh.field_y.a(255);
                 vb.b(this.field_P);
                 vb.b(40, 355, 103, 415);
                 vf.field_L.g(1);
-                vf.field_L.b(var6 + -(vf.field_L.field_s >> -635951327), -(vf.field_L.field_o >> -1258578751) + var7);
+                vf.field_L.b(var6 + -(vf.field_L.field_s >> 1), -(vf.field_L.field_o >> 1) + var7);
                 var9 = var9 * 2.0;
                 var8 = (int)(0.5 + 65535.0 * ((var9 + this.field_A) / 6.283185307179586));
                 var6 = (int)(-Math.sin(var9 + this.field_A) * (double)this.field_Z + 0.5) + var4_int;
                 var7 = var5 + (int)(Math.cos(var9 + this.field_A) * (double)this.field_Z + 0.5);
                 vf.field_L.e();
                 vb.c();
-                ke.field_a[1][this.field_X][this.field_L].b(vf.field_L.field_s >> -856243103, vf.field_L.field_o >> -2039870623, var8, 3072);
+                ke.field_a[1][this.field_X][this.field_L].b(vf.field_L.field_s >> 1, vf.field_L.field_o >> 1, var8, 3072);
                 sh.field_y.a(255);
                 vb.b(this.field_P);
                 vb.b(40, 355, 103, 415);
                 vf.field_L.g(1);
-                vf.field_L.b(var6 + -(vf.field_L.field_s >> 105570977), var7 - (vf.field_L.field_o >> -1265029599));
+                vf.field_L.b(var6 + -(vf.field_L.field_s >> 1), var7 - (vf.field_L.field_o >> 1));
                 if (var11 == 0) {
                   break L3;
                 }
               }
               wl.field_a.e();
               vb.c();
-              mi.field_B[this.field_w].a(-10 + (wl.field_a.field_s >> 984917473), (wl.field_a.field_o >> 1405073313) - 10, 20, 20);
+              mi.field_B[this.field_w].a(-10 + (wl.field_a.field_s >> 1), (wl.field_a.field_o >> 1) - 10, 20, 20);
               sh.field_y.a(255);
               vb.b(this.field_P);
               vb.b(40, 355, 103, 415);
-              wl.field_a.b(var6 - (wl.field_a.field_s >> -1019060543), var7 - (wl.field_a.field_s >> 394487777));
+              wl.field_a.b(var6 - (wl.field_a.field_s >> 1), var7 - (wl.field_a.field_s >> 1));
               var8 = (int)((this.field_A + var9) / 6.283185307179586 * 65535.0 + 0.5);
               var6 = (int)(-Math.sin(var9 + this.field_A) * (double)this.field_Z + 0.5) + var4_int;
               var7 = var5 - -(int)(0.5 + Math.cos(var9 + this.field_A) * (double)this.field_Z);
               wl.field_a.e();
               vb.c();
-              mi.field_B[this.field_w].a((wl.field_a.field_s >> -1422082207) + -10, (wl.field_a.field_o >> -2056657503) - 10, 20, 20);
+              mi.field_B[this.field_w].a((wl.field_a.field_s >> 1) + -10, (wl.field_a.field_o >> 1) - 10, 20, 20);
               sh.field_y.a(255);
               vb.b(this.field_P);
               vb.b(40, 355, 103, 415);
-              wl.field_a.b(var6 - (wl.field_a.field_s >> 430711393), -(wl.field_a.field_s >> -1508571071) + var7);
+              wl.field_a.b(var6 - (wl.field_a.field_s >> 1), -(wl.field_a.field_s >> 1) + var7);
               var9 = var9 * 2.0;
               var8 = (int)(0.5 + (this.field_A + var9) / 6.283185307179586 * 65535.0);
               var6 = (int)(0.5 + -Math.sin(var9 + this.field_A) * (double)this.field_Z) + var4_int;
               var7 = var5 + (int)(Math.cos(this.field_A + var9) * (double)this.field_Z + 0.5);
               wl.field_a.e();
               vb.c();
-              mi.field_B[this.field_w].a((wl.field_a.field_s >> 758393505) + -10, -10 + (wl.field_a.field_o >> 1705859041), 20, 20);
+              mi.field_B[this.field_w].a((wl.field_a.field_s >> 1) + -10, -10 + (wl.field_a.field_o >> 1), 20, 20);
               sh.field_y.a(255);
               vb.b(this.field_P);
               vb.b(40, 355, 103, 415);
-              wl.field_a.b(var6 - (wl.field_a.field_s >> -343158815), var7 + -(wl.field_a.field_s >> -1289823679));
+              wl.field_a.b(var6 - (wl.field_a.field_s >> 1), var7 + -(wl.field_a.field_s >> 1));
             }
             vb.b(this.field_P);
           }
@@ -1977,38 +1977,38 @@ final class c extends ka {
                 if (var6 == 3) {
                   vf.field_L.e();
                   vb.c();
-                  ka.field_m[1][this.field_L][this.field_w].b(-(ka.field_m[1][this.field_L][this.field_w].field_s >> 987161601) + (vf.field_L.field_s >> -1269651263), (vf.field_L.field_o >> 2090103937) - (ka.field_m[1][this.field_L][this.field_w].field_o >> 1687650273));
+                  ka.field_m[1][this.field_L][this.field_w].b(-(ka.field_m[1][this.field_L][this.field_w].field_s >> 1) + (vf.field_L.field_s >> 1), (vf.field_L.field_o >> 1) - (ka.field_m[1][this.field_L][this.field_w].field_o >> 1));
                   sh.field_y.a(255);
                   vb.b(this.field_P);
-                  vf.field_L.b(70 + -(vf.field_L.field_s >> -389511871), -(vf.field_L.field_o >> 1896871265) + 180);
+                  vf.field_L.b(70 + -(vf.field_L.field_s >> 1), -(vf.field_L.field_o >> 1) + 180);
                   vf.field_L.e();
                   vb.c();
-                  s.field_G[1][this.field_X].b((vf.field_L.field_s >> 58463713) - (s.field_G[1][this.field_X].field_s >> -1377280415), (vf.field_L.field_o >> -516762015) + -(s.field_G[1][this.field_X].field_o >> 2065312449), this.field_N);
+                  s.field_G[1][this.field_X].b((vf.field_L.field_s >> 1) - (s.field_G[1][this.field_X].field_s >> 1), (vf.field_L.field_o >> 1) + -(s.field_G[1][this.field_X].field_o >> 1), this.field_N);
                   sh.field_y.a(255);
                   vb.b(this.field_P);
                   vf.field_L.g(1);
-                  vf.field_L.b(70 - (vf.field_L.field_s >> -431583199), 282 - (vf.field_L.field_o >> -1230674015));
+                  vf.field_L.b(70 - (vf.field_L.field_s >> 1), 282 - (vf.field_L.field_o >> 1));
                   dd.field_G.a(a.field_a[4], var5, var3_int, 0, -1);
                   var4 = ec.field_e[3];
                 } else {
                   if (4 == var6) {
                     vf.field_L.e();
                     vb.c();
-                    fc.field_g[this.field_w].b(-(fc.field_g[this.field_w].field_s >> -1837581887) + (vf.field_L.field_s >> 1490350017), -(fc.field_g[this.field_w].field_o >> -1811742495) + (vf.field_L.field_o >> 1651106433));
+                    fc.field_g[this.field_w].b(-(fc.field_g[this.field_w].field_s >> 1) + (vf.field_L.field_s >> 1), -(fc.field_g[this.field_w].field_o >> 1) + (vf.field_L.field_o >> 1));
                     k.a(0, 0, vf.field_L.field_s, -27085, vf.field_L.field_o);
                     sh.field_y.a(255);
                     vb.b(this.field_P);
-                    vf.field_L.b(70 - (vf.field_L.field_s >> -502406015), 180 + -(vf.field_L.field_o >> 842923649));
+                    vf.field_L.b(70 - (vf.field_L.field_s >> 1), 180 + -(vf.field_L.field_o >> 1));
                     vf.field_L.e();
                     vb.c();
                     if (this.field_B >= 4) {
                       this.field_B = 0;
                     }
-                    hb.field_d[this.field_B].b(-(hb.field_d[this.field_B].field_s >> 1267431681) + (vf.field_L.field_s >> 992034401), (vf.field_L.field_o >> 1607733665) - (hb.field_d[this.field_B].field_o >> 707716161));
+                    hb.field_d[this.field_B].b(-(hb.field_d[this.field_B].field_s >> 1) + (vf.field_L.field_s >> 1), (vf.field_L.field_o >> 1) - (hb.field_d[this.field_B].field_o >> 1));
                     k.a(0, 0, vf.field_L.field_s, -27085, vf.field_L.field_o);
                     sh.field_y.a(255);
                     vb.b(this.field_P);
-                    vf.field_L.b(70 + -(vf.field_L.field_s >> 1189368705), -(vf.field_L.field_o >> -1499046271) + 282);
+                    vf.field_L.b(70 + -(vf.field_L.field_s >> 1), -(vf.field_L.field_o >> 1) + 282);
                     dd.field_G.a(a.field_a[5], var5, var3_int, 0, -1);
                     var4 = ec.field_e[4];
                   }
@@ -2926,7 +2926,7 @@ final class c extends ka {
                               var10 = var10 + this.field_T;
                               param3 = param3 - this.field_T;
                             }
-                            var10 = 320 + -(var11 - -20 >> -1545798207);
+                            var10 = 320 + -(var11 - -20 >> 1);
                             stackIn_98_0 = param3;
 
                             stackIn_98_1 = var10;
@@ -2947,7 +2947,7 @@ final class c extends ka {
                           }
                           L21: {
                             var11 = 278;
-                            var10 = 320 - (var11 - -20 >> -228174143);
+                            var10 = 320 - (var11 - -20 >> 1);
                             if (var6 != 13) {
                               param3 = 395;
                               if (var14 == 0) {
@@ -2956,7 +2956,7 @@ final class c extends ka {
                             }
                             param3 = 265;
                           }
-                          var9 = 10 + (var11 >> 102536641) + var10;
+                          var9 = 10 + (var11 >> 1) + var10;
                           if (param0) {
                             var10 = var10 + this.field_T;
                             param3 = param3 - this.field_T;
@@ -2972,13 +2972,13 @@ final class c extends ka {
                         param3 = 437;
                         if (var6 == 13) {
                           var10 = 121;
-                          var9 = (var11 >> -568798911) + var10 + 10;
+                          var9 = (var11 >> 1) + var10 + 10;
                           if (var14 == 0) {
                             break L24;
                           }
                         }
                         var10 = 436;
-                        var9 = (var11 >> -1065471359) + var10 + 10;
+                        var9 = (var11 >> 1) + var10 + 10;
                       }
                       if (param0) {
                         var9 = var9 + this.field_T;
@@ -3004,7 +3004,7 @@ final class c extends ka {
                 L29: {
                   var12 = (param3 + (-280 - this.field_k)) / this.field_d;
                   var9 = 320 + (var11 - -20) * (var12 + -1);
-                  var10 = -(var11 >> -507344063) + var9;
+                  var10 = -(var11 >> 1) + var9;
                   if (6 == this.field_K) {
                     var9 += 86;
                     param3 = 430;
@@ -3016,11 +3016,11 @@ final class c extends ka {
                   if (this.field_K == 3) {
                     var9 = 9 + (320 + (15 + var11) * (var12 - 1));
                     param3 = 430;
-                    var10 = var9 + -(var11 >> -789315295);
+                    var10 = var9 + -(var11 >> 1);
                     if (15 == var6) {
                       var10 -= 138;
                       var11 = 229;
-                      var9 = (var11 >> 1525654369) + var10;
+                      var9 = (var11 >> 1) + var10;
                       if (var14 == 0) {
                         break L29;
                       }
@@ -3033,7 +3033,7 @@ final class c extends ka {
                     var11 = 83;
                     var9 = 320;
                     param3 += 50;
-                    var10 = var9 + -(var11 >> 761927361);
+                    var10 = var9 + -(var11 >> 1);
                   }
                 }
                 L32: {

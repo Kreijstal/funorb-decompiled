@@ -42,7 +42,7 @@ final class hi extends ee implements ta, pl {
         this.b((byte) -110, var2);
         var3 += 50;
         var3 = var3 + (5 + this.a(var3, -12037, 170, this.field_E, gk.field_c, wj.field_E));
-        this.field_H.a(40, var5, (byte) -23, var3, -var5 + 496 >> 1828675425);
+        this.field_H.a(40, var5, (byte) -23, var3, -var5 + 496 >> 1);
         this.field_J.a(40, 60, (byte) -85, var3 - -15, 3 + var4);
         this.field_J.field_u = (bb) (this);
         this.field_H.field_u = (bb) (this);
@@ -208,7 +208,7 @@ final class hi extends ee implements ta, pl {
               var61 = oa.field_f;
               var63 = gi.field_b;
               for (var13 = 0; param5.field_m > var13; var13++) {
-                var14 = var61[var13] * param7 + param4 * var62[var13] - -(var63[var13] * param1) >> -1846498232;
+                var14 = var61[var13] * param7 + param4 * var62[var13] - -(var63[var13] * param1) >> 8;
                 if (0 > var14) {
                   var14 = -var14;
                 }
@@ -222,7 +222,7 @@ final class hi extends ee implements ta, pl {
                   stackIn_18_0 = 128;
                 }
                 var14 = stackIn_18_0;
-                var15 = param0 * var63[var13] + (param2 * var62[var13] + param6 * var61[var13]) >> -1093387128;
+                var15 = param0 * var63[var13] + (param2 * var62[var13] + param6 * var61[var13]) >> 8;
                 stackIn_20_0 = jf.field_b;
 
                 if (var15 < 0) {
@@ -233,7 +233,7 @@ final class hi extends ee implements ta, pl {
                   stackIn_21_1 = var15;
                 }
                 var15 = stackIn_21_0[stackIn_21_1];
-                var14 = var14 * (256 + -var15) >>> 1405589960;
+                var14 = var14 * (256 + -var15) >>> 8;
                 var54[var13] = var14;
                 var64[var13] = var15;
               }
@@ -295,9 +295,9 @@ final class hi extends ee implements ta, pl {
                       var30 = stackIn_45_0;
                       var31 = var30 & 16711935;
                       var32 = 65280 & var30;
-                      var33 = (-16711703 & var31 * var28) >>> 1087510824 | -285147392 & var32 * var28 >>> -1091139000;
+                      var33 = (-16711703 & var31 * var28) >>> 8 | -285147392 & var32 * var28 >>> 8;
                       var33 = var33 + var29 * 65793;
-                      gi.a(var26, -122, var27, var25, var24, var22, var23, 8355711 & var33 >> -906591487);
+                      gi.a(var26, -122, var27, var25, var24, var22, var23, 8355711 & var33 >> 1);
                       break L10;
                     }
                   }
@@ -315,13 +315,13 @@ final class hi extends ee implements ta, pl {
                   var34 = stackIn_49_0;
                   var35 = var34 & 16711935;
                   var36 = 65280 & var34;
-                  var37 = (var28 * var36 & 16711921) >>> -932940408 | -822148865 & var28 * var35 >>> 1822318632;
-                  var38 = (var36 * var29 & 16711688) >>> 1466976808 | (var29 * var35 & -16711783) >>> 1474249800;
+                  var37 = (var28 * var36 & 16711921) >>> 8 | -822148865 & var28 * var35 >>> 8;
+                  var38 = (var36 * var29 & 16711688) >>> 8 | (var29 * var35 & -16711783) >>> 8;
                   var38 = var38 + 65793 * var32;
                   var37 = var37 + 65793 * var31;
-                  var39 = var30 * var36 >>> -1415641368 & 1543569152 | var30 * var35 >>> -1297425400 & -536936193;
+                  var39 = var30 * var36 >>> 8 & 1543569152 | var30 * var35 >>> 8 & -536936193;
                   var39 = var39 + var33 * 65793;
-                  nb.a(255 & var37, 255 & var37 >> 752032680, var39 >> -30653808, var39 >> 1208420200 & 255, var25, 255 & var38, var37 >> 567486192, var23, var26, 255 & var39, -2, var38 >> 637744048, 255 & var38 >> 1425466440, var24, var22, var27);
+                  nb.a(255 & var37, 255 & var37 >> 8, var39 >> 16, var39 >> 8 & 255, var25, 255 & var38, var37 >> 16, var23, var26, 255 & var39, -2, var38 >> 16, 255 & var38 >> 8, var24, var22, var27);
                 }
               }
               decompiledRegionSelector0 = 1;

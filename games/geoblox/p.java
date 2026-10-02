@@ -58,30 +58,30 @@ final class p extends hf {
           L0: {
             var7_int = 2147483647;
             var8 = -2147483648;
-            var21 = param0[3] >> 1604177954;
-            var22 = param0[4] >> -601843294;
-            var23 = param0[5] >> 1561916130;
-            var24 = param0[6] >> 1828652418;
-            var25 = param0[7] >> 1034390082;
-            var26 = param0[8] >> 1374033378;
-            var27 = param0[9] >> -300988766;
-            var28 = param0[10] >> 1540449442;
-            var13 = var25 * param1[4] + (param1[3] * var24 + var26 * param1[5]) >> 189687758;
-            var29 = param0[11] >> -813805182;
-            var12 = param1[3] * var21 + var22 * param1[4] + var23 * param1[5] >> 831938606;
-            var18 = param1[11] * var23 + (param1[10] * var22 + param1[9] * var21) >> -332276338;
-            var15 = param1[6] * var21 - (-(param1[7] * var22) - param1[8] * var23) >> -1094580338;
-            var16 = var25 * param1[7] + (var24 * param1[6] - -(var26 * param1[8])) >> -1328139538;
-            var14 = var29 * param1[5] + param1[3] * var27 - -(param1[4] * var28) >> -621399346;
-            var19 = param1[10] * var25 + var24 * param1[9] - -(param1[11] * var26) >> 1136247918;
-            var20 = var27 * param1[9] + var28 * param1[10] + param1[11] * var29 >> 567641038;
-            var17 = param1[8] * var29 + param1[6] * var27 + var28 * param1[7] >> -1243864626;
+            var21 = param0[3] >> 2;
+            var22 = param0[4] >> 2;
+            var23 = param0[5] >> 2;
+            var24 = param0[6] >> 2;
+            var25 = param0[7] >> 2;
+            var26 = param0[8] >> 2;
+            var27 = param0[9] >> 2;
+            var28 = param0[10] >> 2;
+            var13 = var25 * param1[4] + (param1[3] * var24 + var26 * param1[5]) >> 14;
+            var29 = param0[11] >> 2;
+            var12 = param1[3] * var21 + var22 * param1[4] + var23 * param1[5] >> 14;
+            var18 = param1[11] * var23 + (param1[10] * var22 + param1[9] * var21) >> 14;
+            var15 = param1[6] * var21 - (-(param1[7] * var22) - param1[8] * var23) >> 14;
+            var16 = var25 * param1[7] + (var24 * param1[6] - -(var26 * param1[8])) >> 14;
+            var14 = var29 * param1[5] + param1[3] * var27 - -(param1[4] * var28) >> 14;
+            var19 = param1[10] * var25 + var24 * param1[9] - -(param1[11] * var26) >> 14;
+            var20 = var27 * param1[9] + var28 * param1[10] + param1[11] * var29 >> 14;
+            var17 = param1[8] * var29 + param1[6] * var27 + var28 * param1[7] >> 14;
             var21 = param1[0] - param0[0];
             var22 = -param0[1] + param1[1];
             var23 = param1[2] + -param0[2];
             var9 = param0[3] * var21 - (-(var22 * param0[4]) - param0[5] * var23) >> -ok.field_g + 16;
             var10 = var23 * param0[8] + (var21 * param0[6] + var22 * param0[7]) >> 16 - ok.field_g;
-            var11 = param0[11] * var23 + var21 * param0[9] - -(var22 * param0[10]) >> -733721424;
+            var11 = param0[11] * var23 + var21 * param0[9] - -(var22 * param0[10]) >> 16;
             if (!param3) {
               p.b(-2);
             }
@@ -97,7 +97,7 @@ final class p extends hf {
                     var26 = param2.field_K[var23];
                     var27 = (var24 * var12 + var25 * var15 - -(var18 * var26) >> -ok.field_g + 16) + var9;
                     var28 = var10 + (var13 * var24 + var25 * var16 + var26 * var19 >> 16 - ok.field_g);
-                    var29 = var11 + (var26 * var20 + var14 * var24 + var17 * var25 >> -405245680);
+                    var29 = var11 + (var26 * var20 + var14 * var24 + var17 * var25 >> 16);
                     stackIn_66_0 = -51;
 
                     stackIn_66_1 = ~var29;
@@ -151,21 +151,21 @@ final class p extends hf {
                                           var24 = param2.field_L[var23];
                                           var25 = param2.field_d[var23];
                                           var26 = param2.field_C[var23];
-                                          ii.field_d[var23] = (var12 * var24 - (-(var15 * var25) - var18 * var26) >> -1375996560) + var9;
-                                          pg.field_d[var23] = var10 - -(var26 * var19 + var16 * var25 + var24 * var13 >> -1919419088);
-                                          kf.field_a[var23] = (var26 * var20 + (var17 * var25 + var14 * var24) >> -221692912) + var11;
+                                          ii.field_d[var23] = (var12 * var24 - (-(var15 * var25) - var18 * var26) >> 16) + var9;
+                                          pg.field_d[var23] = var10 - -(var26 * var19 + var16 * var25 + var24 * var13 >> 16);
+                                          kf.field_a[var23] = (var26 * var20 + (var17 * var25 + var14 * var24) >> 16) + var11;
                                           var24 = param2.field_x[var23];
                                           var25 = param2.field_a[var23];
                                           var26 = param2.field_y[var23];
-                                          qf.field_Y[var23] = (var15 * var25 + var12 * var24 + var26 * var18 >> 1214427504) + var9;
-                                          ac.field_w[var23] = var10 + (var19 * var26 + var25 * var16 + var13 * var24 >> -1193027216);
-                                          vk.field_c[var23] = (var26 * var20 + var24 * var14 + var17 * var25 >> 310379984) + var11;
+                                          qf.field_Y[var23] = (var15 * var25 + var12 * var24 + var26 * var18 >> 16) + var9;
+                                          ac.field_w[var23] = var10 + (var19 * var26 + var25 * var16 + var13 * var24 >> 16);
+                                          vk.field_c[var23] = (var26 * var20 + var24 * var14 + var17 * var25 >> 16) + var11;
                                           var24 = param2.field_l[var23];
                                           var25 = param2.field_p[var23];
                                           var26 = param2.field_b[var23];
-                                          qe.field_c[var23] = (var25 * var15 + (var12 * var24 + var26 * var18) >> 354874064) + var9;
-                                          ba.field_h[var23] = var10 - -(var24 * var13 + (var16 * var25 + var19 * var26) >> 37747088);
-                                          hg.field_c[var23] = var11 + (var26 * var20 + var25 * var17 + var14 * var24 >> -990149552);
+                                          qe.field_c[var23] = (var25 * var15 + (var12 * var24 + var26 * var18) >> 16) + var9;
+                                          ba.field_h[var23] = var10 - -(var24 * var13 + (var16 * var25 + var19 * var26) >> 16);
+                                          hg.field_c[var23] = var11 + (var26 * var20 + var25 * var17 + var14 * var24 >> 16);
                                           var23++;
                                           if (var30 != 0) {
                                             break L3;
@@ -217,9 +217,9 @@ final class p extends hf {
                               var19 = param2.field_M[var18];
                               var20 = param2.field_t[var18];
                               var21 = param2.field_i[var18];
-                              ok.field_h[var18] = var21 * var15 + (var12 * var20 + var19 * var9) >> -1454237424;
-                              oa.field_f[var18] = var16 * var21 + (var19 * var10 - -(var20 * var13)) >> 1561811952;
-                              gi.field_b[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> -765753584;
+                              ok.field_h[var18] = var21 * var15 + (var12 * var20 + var19 * var9) >> 16;
+                              oa.field_f[var18] = var16 * var21 + (var19 * var10 - -(var20 * var13)) >> 16;
+                              gi.field_b[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
                               var18++;
                               if (var30 == 0) {
                                 continue L14;
