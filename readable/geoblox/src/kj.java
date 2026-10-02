@@ -206,11 +206,7 @@ final class kj extends ia {
             return stackIn_10_0;
           }
           var5 = (int)((double)(256 * param1.field_i.sampleRateHz) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.sampleRateHz + 0.5);
-          if (var5 < 1) {
-            stackIn_14_0 = 1;
-          } else {
-            stackIn_14_0 = var5;
-          }
+          stackIn_14_0 = (var5 < 1) ? 1 : var5;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

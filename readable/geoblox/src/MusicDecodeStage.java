@@ -173,11 +173,7 @@ final class MusicDecodeStage {
             var10 = field_g[var6];
             var11 = var4 - var9;
             var12 = var9;
-            if (var11 >= var12) {
-              stackIn_5_0 = var12;
-            } else {
-              stackIn_5_0 = var11;
-            }
+            stackIn_5_0 = (var11 >= var12) ? var12 : var11;
             var13 = stackIn_5_0 << 1;
             if (var10 == 0) {
               field_e[var6] = false;

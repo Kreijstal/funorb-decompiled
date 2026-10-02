@@ -85,11 +85,7 @@ final class nb {
           boardXBeforeVariantSelection = (float)pointerX;
           kindBeforeVariantSelection = spriteKindId;
           inwardVelocityXBeforeVariantSelection = (float)(320 - pointerX);
-          if (spriteKindId != 2) {
-            selectedVariantId = -1;
-          } else {
-            selectedVariantId = variantId;
-          }
+          selectedVariantId = (spriteKindId != 2) ? -1 : variantId;
           L5: {
             zeroLifetimeTicks = 0;
             unusedMotionFloat = 0.0f;

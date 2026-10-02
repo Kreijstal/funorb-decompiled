@@ -258,11 +258,7 @@ public final class Geoblox extends wf {
           if (wj.field_F.b(true)) {
             if (ah.field_c.a(0)) {
               stackIn_10_0 = ah.field_c;
-              if (param0) {
-                stackIn_11_1 = false;
-              } else {
-                stackIn_11_1 = true;
-              }
+              stackIn_11_1 = (param0) ? false : true;
               if (((rh) (Object) stackIn_10_0).b(stackIn_11_1)) {
                 if (fe.field_a.a(0)) {
                   if (fe.field_a.b(true)) {
@@ -301,11 +297,7 @@ public final class Geoblox extends wf {
                                     stackIn_47_1 = ki.basicUiGraphicsArchive;
                                     stackIn_47_2 = "basic";
                                     stackIn_47_3 = AccountWelcomePanel.loadingGraphicsText;
-                                    if (param0) {
-                                      stackIn_48_4 = false;
-                                    } else {
-                                      stackIn_48_4 = true;
-                                    }
+                                    stackIn_48_4 = (param0) ? false : true;
                                     lc.a(gf.a(stackIn_47_0, stackIn_47_1, stackIn_47_2, stackIn_47_3, stackIn_48_4), -2, 50.0f);
                                     return false;
                                   }
@@ -322,11 +314,7 @@ public final class Geoblox extends wf {
                         stackIn_27_1 = ii.fontMetricsArchive;
                         stackIn_27_2 = "";
                         stackIn_27_3 = nb.loadingFontsText;
-                        if (param0) {
-                          stackIn_28_4 = false;
-                        } else {
-                          stackIn_28_4 = true;
-                        }
+                        stackIn_28_4 = (param0) ? false : true;
                         lc.a(gf.a(stackIn_27_0, stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_28_4), -2, 35.0f);
                         return false;
                       }

@@ -1107,3 +1107,26 @@ This removes 1,075 generated declarations and 5,071 lines across 176 raw files;
 reverse dictionary records every surviving original identity. Unknown names,
 shared joins with different values and large structured methods remain. The
 native matrices cover their controlled scopes, not complete gameplay/assets.
+
+## Primitive selections and safe alias substitution (pass 52)
+
+`nb.spawnEntityAtPointer` now expresses kind-dependent variant selection as
+`selectedVariantId = (spriteKindId != 2) ? -1 : variantId;`. The selected kind,
+board coordinates and velocities are still captured at their original points.
+The genuinely different category join stays explicit. `PixelOverlapProbe`
+selects positive clipping offsets in two conditional assignments. All original
+numeric guards and first-overlap ordering remain.
+
+The generic parser recognizes explicit qualified type arguments, allowing
+`PlatformTaskDispatcher.run` to use a `for` loop for its allowed URL characters.
+It preserves the generic failure call, catch boundary and counter observations.
+The improved parser also preserves the socket method's existing carrier cleanup.
+Alias substitution now edits identifier tokens only after complete scope checks;
+literal diagnostic strings and member/method/type names are preserved.
+
+This pass simplifies 12 primitive selections, removes 50 source lines across
+eight raw files, and retains all declarations. Fourteen naming-map ordinals
+migrate without changing semantic names. Native fixtures and reproducible source
+checks cover their stated scopes; full URL-launch services, successful archive
+loading, live contact production, full gameplay and device performance remain
+unverified.

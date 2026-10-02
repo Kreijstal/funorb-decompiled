@@ -2,7 +2,7 @@
 
 The current export has 2,994 guarded naming rules: 30 classes, 533 fields,
 303 methods, 857 parameters and 1,271 local declarations. Both 303-file corpora
-compile, preserving 138,570 bindings and 388 override relationships. Unknown
+compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`c7f41a649e135a12a85ac26c7aa4bc83a46b4372`. It comes from java-tools
-`66a3906a001061462f5bc154fc3fd119f2dcb60c` and Deko
+`2fc0a44e10f161f82554e2652b0f4e025c997c34`. It comes from java-tools
+`57969c34c9be16cd7dfaaa691774b95dbeaa2c5b` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`c75448fa88956a0653c2120eaebc737cbbfd2168656b13a1620ff238d290b6ca`:
+`8c17ad8f1c1eedc51941af4d35064fed2c7b1f8bb73a8c4909a2744fb923e1ce`:
 
 ```sh
-git archive --format=tar 66a3906a001061462f5bc154fc3fd119f2dcb60c | sha256sum
+git archive --format=tar 57969c34c9be16cd7dfaaa691774b95dbeaa2c5b | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -54,7 +54,41 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current equivalent stack-join reconstruction
+## Current primitive-value reconstruction and alias safety
+
+Pass 52 simplifies 12 same-type primitive local/literal selections. Pointer
+spawning now reads `selectedVariantId = (spriteKindId != 2) ? -1 : variantId;`;
+pixel clipping and other value selections retain their original conditions.
+No boxing, narrowing, mixed-type, reference or effectful value rewrite is
+allowed. Floating comparison negations preserve their NaN behavior. The later
+cleanup uses final Boolean-promoted types and refuses inline shadowing.
+
+A demonstrated alias bug changed a diagnostic string from `stackIn_3_0` to
+`stackIn_2_0`. Complete lexical/scope checks and identifier-token edits now
+preserve literals, comments, members and method names. Unsupported syntax,
+shadowed declarations, types, labels and Unicode escapes retain the original
+carriers. Qualified generic invocations are represented explicitly rather than
+weakening that proof. This also lets the existing URL validation loop become
+an ordinary `for` loop; original generic throwing calls and exception scopes remain.
+
+The pass removes 50 lines across eight files (80,520 to 80,470), preserves all
+19,558 declarations and 388 overrides, and removes 12 destination-write reference
+occurrences without adding any. Fourteen guarded local ordinals migrate in the
+dispatcher; all surviving semantic names, original spellings and evidence stay
+unchanged. The 2,994 rules apply 30,216 edits and compare 138,558 bindings.
+The existing initializer stays at three helpers and eight shared locals.
+
+The generic carrier suite covers 18 groups and 8,210 native comparisons,
+including diagnostic-string preservation and 120 generic-call loop cases.
+The emitter suite passes 36 groups and 54,549 native comparisons; 11,556 new
+comparisons cover all eight primitive types, raw floating bits, condition effects,
+unboxing failures, exceptions and finally observations. Parser coverage passes
+248 assertions. The six existing GeoBlox native probes retain their pinned traces
+and documented scopes. A clean tracked-source archive reproduces all 303 raw
+files and diagnostics byte-exact. Full gameplay, asset loading, platform services
+and browser/phone targets remain unverified.
+
+## Previous equivalent stack-join reconstruction
 
 The pinned owned decompiler resolves complete same-type incoming carrier proofs
 to a fixed point. Different carrier names can now share one value after earlier
@@ -648,7 +682,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `c8eb52af8caa07a9151dfca4c412f4b2fac7ef15e6e260c9413bc0708d83775a` |
-| Readable | `e8906bf13fc6dd45f3654ec7da8f22d84372d780bba3fac0ecb7485d49dd902c` |
+| Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
+| Readable | `40d111d929a3712a6bad691381f73341fe4f796495d119e7fcd2f1007a04f21d` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

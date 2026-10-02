@@ -16,23 +16,28 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 138,570 remaining bindings
+identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current structural pass resolves equivalent operand-stack joins in the
-owned decompiler. It removes 1,075 generated carriers and 5,071 raw source lines
-across 176 files. Pointer spawning loses 15 intermediate locals. Different
-variant/category values, snapshots and exception/monitor boundaries remain
-explicit. Helper packing now budgets expanded return stores, fixing a reproduced
-pre-existing dispatcher fallback in the generic partition regression.
+The current structural pass simplifies 12 primitive value selections and an
+existing URL-validation loop, removing 50 lines across eight files. Pointer
+spawning now selects its variant in one conditional assignment. All 19,558
+declarations and 388 overrides remain; 14 guarded local ordinals migrate in the
+dispatcher. The 2,994 naming rules apply 30,216 edits without changing any
+surviving semantic name, spelling or evidence.
 
-The current 2,994 rules apply 30,219 edits. All surviving names/evidence are
-preserved through 132 guarded ordinal migrations; 53 rules for deleted carriers
-are retired. The previous collision/spawn/steering and input native traces remain
-pinned. The decompiler revision and its tracked-source archive SHA-256 are in the
-single current manifest. Full-game and real-device behavior remain unverified.
-One current manifest and generated export are maintained, with Git history
-for previous passes.
+The decompiler also fixes demonstrated diagnostic-string corruption during
+carrier substitution. Complete lexical/scope checks restrict edits to identifier
+tokens, and qualified generic calls retain explicit type arguments. The generic
+emitter passes 36 groups and 54,549 native comparisons. All six existing GeoBlox
+native probes preserve their recorded scopes and traces. A clean decompiler
+source archive reproduces all 303 raw files and diagnostics byte-exact.
+
+The previous equivalent-join pass removed 1,075 generated carriers and 5,071
+lines across 176 files. Its partition-budget fix and scope proofs remain.
+Current source pins, decompiler-source archive SHA-256, naming migrations and
+verification limits live in the single manifest. Full gameplay, assets and
+browser/phone targets remain unverified. Git preserves previous passes.
 
 The previous naming pass added 114 rules for `BufferedSocket`, `PlatformTask`
 and `PlatformTaskDispatcher`, including every socket parameter/nonselector

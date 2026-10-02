@@ -40,21 +40,13 @@ final class PixelOverlapProbe {
             if (secondRasterOffsetY < firstRaster.height) {
               secondRasterHeight = secondRaster.height;
               if (secondRasterOffsetY > -secondRaster.height) {
-                if (secondRasterOffsetX > 0) {
-                  positiveHorizontalOffset = secondRasterOffsetX;
-                } else {
-                  positiveHorizontalOffset = 0;
-                }
+                positiveHorizontalOffset = (secondRasterOffsetX > 0) ? secondRasterOffsetX : 0;
                 overlapLeftInFirst = positiveHorizontalOffset;
                 overlapRightThenWidth = secondRasterOffsetX + secondRasterWidth;
                 if (overlapRightThenWidth > firstRasterWidth) {
                   overlapRightThenWidth = firstRasterWidth;
                 }
-                if (secondRasterOffsetY > 0) {
-                  positiveVerticalOffset = secondRasterOffsetY;
-                } else {
-                  positiveVerticalOffset = 0;
-                }
+                positiveVerticalOffset = (secondRasterOffsetY > 0) ? secondRasterOffsetY : 0;
                 overlapTopInFirst = positiveVerticalOffset;
                 overlapBottomThenHeight = secondRasterOffsetY + secondRasterHeight;
                 if (overlapBottomThenHeight > firstRasterHeight) {

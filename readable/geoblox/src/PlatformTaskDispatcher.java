@@ -59,6 +59,7 @@ final class PlatformTaskDispatcher implements Runnable {
 
     public final void run() {
         try {
+            int urlCharacterIndex = 0;
             int cursorVisibleInt = 0;
             Throwable caughtTaskThrowable = null;
             Object dispatcherOrTaskMonitor = null;
@@ -72,7 +73,6 @@ final class PlatformTaskDispatcher implements Runnable {
             bd proxyConnectionFailure = null;
             int cursorY = 0;
             String allowedUrlCharacters = null;
-            int urlCharacterIndex = 0;
             java.awt.datatransfer.Transferable clipboardContents = null;
             String urlToLaunch = null;
             PlatformTask task = null;
@@ -239,12 +239,10 @@ final class PlatformTaskDispatcher implements Runnable {
                                                         }
                                                       }
                                                       allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                      urlCharacterIndex = 0;
-                                                      L16: while (urlCharacterIndex < urlToLaunch.length()) {
+                                                      for (urlCharacterIndex = 0; urlCharacterIndex < urlToLaunch.length(); urlCharacterIndex++) {
                                                         if (-1 == allowedUrlCharacters.indexOf((int) urlToLaunch.charAt(urlCharacterIndex))) {
                                                           throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                         }
-                                                        urlCharacterIndex++;
                                                       }
                                                       Runtime.getRuntime().exec("cmd /c start \"j\" \"" + urlToLaunch + "\"");
                                                       task.result = null;
