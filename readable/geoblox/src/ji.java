@@ -26,7 +26,7 @@ abstract class ji {
     final static void f(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        pk var1 = null;
+        PacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -38,7 +38,7 @@ abstract class ji {
           {
             var1 = fj.field_q;
             L0: while (cf.c((byte) -114)) {
-              var1.a(8, (byte) -71);
+              var1.writeCipherByte(8, (byte) -71);
               fieldTemp$0 = var1.position + 1;
               var1.position = var1.position + 1;
               var2 = fieldTemp$0;
@@ -127,7 +127,7 @@ abstract class ji {
         return this.field_p.countNodes((byte) 67) + this.field_c.countNodes((byte) 67);
     }
 
-    final static short[] a(short[] param0, int param1, int param2, pk param3) {
+    final static short[] a(short[] param0, int param1, int param2, PacketBuffer param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -143,7 +143,7 @@ abstract class ji {
         RuntimeException var4 = null;
         var8 = Geoblox.field_C;
         try {
-          var4_int = param3.e((byte) -17, param1);
+          var4_int = param3.readBits((byte) -17, param1);
           if (var4_int == param2) {
             return null;
           }
@@ -156,8 +156,8 @@ abstract class ji {
             param0 = new short[var4_int];
           }
           L2: {
-            var5 = param3.e((byte) -17, 4);
-            var6 = (short)param3.e((byte) -17, 16);
+            var5 = param3.readBits((byte) -17, 4);
+            var6 = (short)param3.readBits((byte) -17, 16);
             if (var5 <= 0) {
               for (var7 = 0; var4_int > var7; var7++) {
                 param0[var7] = (short)var6;
@@ -165,7 +165,7 @@ abstract class ji {
               break L2;
             }
             for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (short)(var6 + param3.e((byte) -17, var5));
+              param0[var7] = (short)(var6 + param3.readBits((byte) -17, var5));
             }
             break L2;
           }

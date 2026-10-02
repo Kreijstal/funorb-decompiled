@@ -50,7 +50,7 @@ final class bh extends java.awt.Canvas {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        pk var14 = null;
+        PacketBuffer var14 = null;
         int[][] var18 = null;
         var12 = Geoblox.field_C;
         try {

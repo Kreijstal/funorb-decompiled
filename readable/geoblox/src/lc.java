@@ -303,7 +303,7 @@ final class lc {
         int stackIn_15_0 = 0;
         j stackIn_61_0 = null;
         RuntimeException decompiledCaughtException = null;
-        pk var1 = null;
+        PacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;

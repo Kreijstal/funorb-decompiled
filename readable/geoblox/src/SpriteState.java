@@ -282,7 +282,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var2 = ih.a(125, "discardResults");
           if (var2 != null) {
-            ne.field_c = ag.decodeTextBytes(1, var2);
+            PacketByteCipher.field_c = ag.decodeTextBytes(1, var2);
           }
           var2 = ih.a(124, "replayTutorial");
           if (null != var2) {

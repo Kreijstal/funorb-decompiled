@@ -8,10 +8,10 @@ final class gj extends fj {
     private Object field_r;
 
     final static void a(byte param0, int param1, ea param2) {
-        pk var3 = null;
+        PacketBuffer var3 = null;
         try {
             var3 = fj.field_q;
-            var3.a(param1, (byte) -80);
+            var3.writeCipherByte(param1, (byte) -80);
             int var4 = 66 % ((param0 - 23) / 51);
             var3.writeByte((byte) 122, 2);
             var3.writeByte((byte) 125, 0);

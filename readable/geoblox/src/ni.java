@@ -38,9 +38,9 @@ final class ni extends ee implements pl {
         nf var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        pk var8 = null;
+        PacketBuffer var8 = null;
         int var9 = 0;
-        pk var10 = null;
+        PacketBuffer var10 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -48,17 +48,17 @@ final class ni extends ee implements pl {
         RuntimeException var2 = null;
         var7 = Geoblox.field_C;
         try {
-          var8 = new pk(param0.a(param1 + param1, "", "logo.fo3d"));
+          var8 = new PacketBuffer(param0.a(param1 + param1, "", "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) 34);
-          var10.k(param1 + 8);
+          var10.beginBitAccess(param1 + 8);
           l.field_i = jc.a(var10, true);
           bm.field_l = new nf[var3];
           pi.field_R = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
             bm.field_l[var4] = uh.a(var8, (byte) 113);
           }
-          var10.i(-16989);
+          var10.endBitAccess(-16989);
           var9 = 0;
           var4 = var9;
           L1: while (var3 > var9) {

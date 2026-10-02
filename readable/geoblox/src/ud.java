@@ -105,13 +105,13 @@ final class ud {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        pk var5 = null;
+        PacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         p var11 = null;
-        pk var12 = null;
+        PacketBuffer var12 = null;
         int[] var13 = null;
         qi var14 = null;
         qi var15 = null;

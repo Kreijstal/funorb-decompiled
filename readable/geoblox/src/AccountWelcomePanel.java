@@ -248,7 +248,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "ticketing_gotowebsite");
                 if (null != textResourceBytes) {
-                  ne.ticketingGoToWebsiteText = ag.decodeTextBytes(1, textResourceBytes);
+                  PacketByteCipher.ticketingGoToWebsiteText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "ticketing_waitingformessages");
                 if (null != textResourceBytes) {

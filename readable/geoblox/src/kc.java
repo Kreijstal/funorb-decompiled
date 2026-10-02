@@ -148,7 +148,7 @@ final class kc {
                 L7: while (true) {
                   L8: {
                     if (activeEntity != null) {
-                      visitedByEntityIdValue = pk.connectivityVisitedByEntityId[activeEntity.entityId];
+                      visitedByEntityIdValue = PacketBuffer.connectivityVisitedByEntityId[activeEntity.entityId];
                       visitedFlagThenResetIndex = visitedByEntityIdValue ? 1 : 0;
                       alreadyVisited = visitedByEntityIdValue;
                       if (clientControlSnapshot != 0) {
@@ -173,7 +173,7 @@ final class kc {
                                 currentConnectivityEntityAlias = currentConnectivityEntity;
                                 connectivityAliasThenDetachingEntity = currentConnectivityEntityAlias;
                                 if (currentConnectivityEntityAlias != null) {
-                                  pk.connectivityVisitedByEntityId[currentConnectivityEntity.entityId] = true;
+                                  PacketBuffer.connectivityVisitedByEntityId[currentConnectivityEntity.entityId] = true;
                                   directAvatarContactValue = currentConnectivityEntityAlias.touchesAvatar;
                                   avatarContactThenDetachDecision = directAvatarContactValue ? 1 : 0;
                                   poppedEntityTouchesAvatar = directAvatarContactValue;
@@ -410,7 +410,7 @@ final class kc {
                     if (1000 <= visitedResetIndexThenKindFourCount) {
                       break L2;
                     }
-                    pk.connectivityVisitedByEntityId[visitedResetIndexThenKindFourCount] = false;
+                    PacketBuffer.connectivityVisitedByEntityId[visitedResetIndexThenKindFourCount] = false;
                     visitedResetIndexThenKindFourCount++;
                     if (clientControlSnapshot != 0) {
                       break L1;

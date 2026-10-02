@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 4,516 guarded naming rules: 37 classes, 596 fields,
-412 methods, 1,288 parameters and 2,183 local declarations. Both 303-file corpora
+The current export has 4,593 guarded naming rules: 39 classes, 605 fields,
+422 methods, 1,307 parameters and 2,220 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,32 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current buffer write, copy and checksum names
+## Current packet bit access and byte cipher names
+
+Pass 62 adds 77 guarded identities: two classes, nine fields, ten methods,
+19 parameters and 37 locals. Every instance field, API, constructor parameter
+and local in `PacketBuffer` and `PacketByteCipher` has a guarded semantic name.
+`lowBitMasks` exposes the33-entry lookup used by packet bit reads. Existing
+static music, UI, graphics and text helpers retain their owners and prior names.
+
+`beginBitAccess`, `readBits` and `endBitAccess` expose a cursor separate from
+byte position. Cipher byte writes add generator output; reads subtract it.
+`initializeCipher` retains the optional bit-access exit that immediately clears
+the new cipher through its guard. Cipher storage, eight mixing words, two-pass
+initialization, batch counter, accumulator and last-result updates are named.
+`nextInt` consumes descending result slots and regenerates at the supplied
+remaining-count threshold, normally0. Original masks/shifts, overflow, partial
+failures, cursor movement, guard calls and diagnostic strings remain.
+
+All 4,516 previous complete rules and source/generator pins stay unchanged.
+The 4,593 rules apply 40,193 edits; both 303-file corpora compile, preserving
+138,558 bindings and 388 overrides. Reproduction and dictionary reversal are
+byte-exact. Existing native cache/result helpers retain their packet-type/storage
+scope without new bit-reader or cipher-generation coverage. Other static helper
+names, buffer crypto/hash algorithms, real archives/packets, complete gameplay
+and phone/FPS/heap behavior remain unfinished or unverified.
+
+## Previous buffer write, copy and checksum names
 
 Pass 61 adds 158 guarded identities: one field, 21 methods, 47 parameters and
 89 locals. Twenty `ByteArrayBuffer` write/copy/backpatch/checksum APIs and the
@@ -898,7 +923,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 158 additions in
+naming-only pass retains those source pins and records its 77 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -923,6 +948,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `b8cb6fe1dd67decf630620ea38017e8eb7d8ddc48a529fe3c86094bfd7314a47` |
+| Readable | `73856fc866cda87152d66ec7060b75170ee9bb6e68c64407281309b6ffefc2af` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

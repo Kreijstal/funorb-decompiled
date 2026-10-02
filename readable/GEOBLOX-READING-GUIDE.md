@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 4,516 explicit guarded rules: 37 classes, 596 fields, 412 method
-declarations, 1,288 parameters and 2,183 locals. This is not full deobfuscation.
+There are 4,593 explicit guarded rules: 39 classes, 605 fields, 422 method
+declarations, 1,307 parameters and 2,220 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -1601,3 +1601,63 @@ reproduction and reversal support this pass; existing native fixtures retain
 their original scope without new writer/CRC execution coverage. Buffer crypto,
 unrelated static helpers, actual asset loading, full gameplay and device
 performance remain unfinished or unverified.
+
+## Packet bit access and byte cipher (pass 62)
+
+`PacketBuffer` extends `ByteArrayBuffer` with private `bitPosition` and `cipher`.
+Its constructors delegate the supplied storage/capacity without changing
+ownership. These fields start at Java's default0/null. Unrelated static music,
+connectivity and UI helpers remain on the original class; the names describe
+the instance packet role.
+
+| Packet API | Existing behavior |
+| --- | --- |
+| `beginBitAccess(bitsPerByte)` | Set bitPosition=bitsPerByte*position, normally using8; preserve arbitrary scale and overflow |
+| `readBits(methodGuard, remainingBitCount)` | Advance bitPosition by the requested count, then collect groups MSB-first through lowBitMasks; mutate remainingBitCount as groups are exhausted |
+| `endBitAccess(methodGuard)` | Set position=(bitPosition+7)/8, then clear cipher for guard!=-16989 |
+| `initializeCipher(seed, finishBitAccess)` | Construct/assign the generator; true calls endBitAccess(-68), changing position and clearing the new cipher |
+| `writeCipherByte(value, methodGuard)` | Store low8 bits of value+nextInt(0), then retain the guard-triggered static helper |
+| `readCipherByte(methodGuard)` | Read the signed stored byte, subtract nextInt(0), mask with255; guard!=122 first sets bitPosition=-51*position |
+| `readCipherBytes(methodGuard, destinationOffset, destination, length)` | Sequential subtraction/truncation, with original sentinel remainder before copying and contextual catch |
+
+`readBits` captures the client guard and derives its byte index before testing
+the method guard. Guard!=-17 returns -69 without advancing bitPosition. Valid
+guard advances the bit cursor before any array read. `lowBitMasks` contains0,
+low-n-bit masks for1..31, and -1 for32. Signed byte shifts, zero/invalid counts,
+mask-index errors, endpoint arithmetic and partial failures remain. Ending bit
+access retains signed int division rather than adding validation or replacing
+negative/overflow behavior with a new rounding policy.
+
+Cipher byte APIs advance byte position before array access and generator
+consumption. This ordering matters when backing storage, destination or cipher
+is invalid; aliases and partial writes remain. Wrong guards can adjust the bit
+cursor, clear the cipher or call unrelated static helpers at their original
+points. Literal diagnostics retain the old `pk` spelling.
+
+`PacketByteCipher` owns separate256-word `stateWords` and `results` arrays.
+The constructor copies every supplied seed word into results, then initializes;
+null or seeds longer than256 keep their original partial allocation/copy failure
+and wrapped diagnostics. Initialization starts eight mixing words at
+-1640531527, runs four preliminary rounds, adds seed words while filling state
+in eight-word blocks, then performs a second state-based mixing pass. It
+produces a batch and sets `remainingResults` to256.
+
+`generateResults` increments `generationCounter` and adds the new count to
+`lastResult` before its guard call. For each state word, it xor-shifts
+`accumulator` according to the low index bits, adds the128-offset state word,
+then updates state and output through the original shifted/masked indirect
+lookups. Updated state is visible to subsequent iterations. The method retains
+all wraparound, signed/unsigned shifts, lookup masks and guard calls.
+
+`nextInt(regenerateAtRemaining)` regenerates when remainingResults equals the
+supplied threshold, normally0. It snapshots oldRemaining-1 and decrements
+before reading that result slot. Results therefore come out in descending
+indices; nonzero thresholds and invalid remaining counts retain their original
+behavior. Constructor and other literal diagnostics keep the `ne` spelling.
+
+Every instance declaration and constructor contract in both classes now has a
+guarded semantic name. Source/binding checks, byte-exact reproduction and
+reversal support this pass. Existing native cache/result fixtures use the
+packet type and inherited storage/cursor; they do not newly execute these bit
+or cipher routines. Static helpers, actual packet/server traffic, complete
+gameplay and phone/FPS/heap behavior remain unfinished or unverified.

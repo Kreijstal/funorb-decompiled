@@ -573,7 +573,7 @@ final class vl extends IntrusiveNode {
                 var31 = var15[1 + var29];
                 var32 = var28 * (var30 - var27) + (-var27 + var30) / 2;
                 for (var33 = var27; var30 > var33; var33++) {
-                  var34 = pk.a(var30 - var27, (byte) -6, var32);
+                  var34 = PacketBuffer.a(var30 - var27, (byte) -6, var32);
                   this.field_o[var33] = (byte)(32 + this.field_o[var33] * var34 >> 6);
                   var32 = var32 + (var31 - var28);
                 }
@@ -615,7 +615,7 @@ final class vl extends IntrusiveNode {
                 var37 = var27;
                 var33 = var37;
                 L42: while (var30 > var37) {
-                  var34 = pk.a(var30 - var27, (byte) -6, var32);
+                  var34 = PacketBuffer.a(var30 - var27, (byte) -6, var32);
                   var35 = (this.field_m[var37] & 255) + var34;
                   if (var35 < 0) {
                     var35 = 0;

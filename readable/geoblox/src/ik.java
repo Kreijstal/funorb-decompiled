@@ -6,8 +6,8 @@ final class ik {
     static String waitingForFontsText;
 
     final static void a(re param0, int param1, byte param2) {
-        pk var3 = fj.field_q;
-        var3.a(param1, (byte) -77);
+        PacketBuffer var3 = fj.field_q;
+        var3.writeCipherByte(param1, (byte) -77);
         var3.writeByte((byte) 123, param0.field_k);
         if (param2 < 80) {
             return;

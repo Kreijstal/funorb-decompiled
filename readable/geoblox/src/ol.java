@@ -9,8 +9,8 @@ final class ol extends hk {
     static String field_I;
 
     final static void a(int param0, p param1, int param2) {
-        pk var5 = fj.field_q;
-        var5.a(param0, (byte) -88);
+        PacketBuffer var5 = fj.field_q;
+        var5.writeCipherByte(param0, (byte) -88);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         var5.writeByte((byte) -55, 1);

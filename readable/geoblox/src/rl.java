@@ -72,7 +72,7 @@ final class rl extends oe {
     }
 
     final static void a(int param0, int param1, ph param2) {
-        pk var3 = null;
+        PacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -80,7 +80,7 @@ final class rl extends oe {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = fj.field_q;
-          var3.a(param0, (byte) -85);
+          var3.writeCipherByte(param0, (byte) -85);
           var3.writeByte((byte) 123, param2.field_f);
           var3.writeShortBE(param2.field_h, param1 + 28161);
           if (param1 == 534) {

@@ -41,7 +41,7 @@ final class ri {
                   return stackIn_5_0;
                 }
               }
-              if (pk.field_l == gi.field_d) {
+              if (PacketBuffer.field_l == gi.field_d) {
                 if (!param0) {
                   ih.field_a = vf.a(false, param1, param4, false);
                 } else {
@@ -52,27 +52,27 @@ final class ri {
                 fj.field_q.writeByte((byte) -102, 14);
                 fj.field_q.writeByte((byte) -78, ih.field_a.a((byte) -32).field_c);
                 cm.a(-1, -1);
-                pk.field_l = oe.field_T;
+                PacketBuffer.field_l = oe.field_T;
               }
-              if (oe.field_T == pk.field_l) {
+              if (oe.field_T == PacketBuffer.field_l) {
                 if (el.b(30000, 1)) {
                   var6_int = eh.field_d.readUnsignedByte((byte) 34);
                   eh.field_d.position = 0;
                   if (var6_int != 0) {
                     p.field_k = -1;
-                    pk.field_l = ac.field_v;
+                    PacketBuffer.field_l = ac.field_v;
                     ScorePopup.field_l = var6_int;
                   } else {
-                    pk.field_l = f.field_hb;
+                    PacketBuffer.field_l = f.field_hb;
                   }
                 }
               }
-              if (f.field_hb == pk.field_l) {
+              if (f.field_hb == PacketBuffer.field_l) {
                 if (el.b(30000, 8)) {
                   ak.field_a = eh.field_d.readLongBE(2901);
                   eh.field_d.position = 0;
                   uk.a(26, param2, param0, ih.field_a, param3);
-                  pk.field_l = da.field_g;
+                  PacketBuffer.field_l = da.field_g;
                 }
               }
               if (param5 != 0) {
@@ -80,7 +80,7 @@ final class ri {
                 ri.a(false, (String) null, 95, false, (String) null, 13);
               }
               L6: {
-                if (da.field_g == pk.field_l) {
+                if (da.field_g == PacketBuffer.field_l) {
                   if (el.b(30000, 1)) {
                     var6_int = eh.field_d.readUnsignedByte((byte) 34);
                     eh.field_d.position = 0;
@@ -89,7 +89,7 @@ final class ri {
                     if (var6_int != 0) {
                       if (var6_int != 1) {
                         if (var6_int != 8) {
-                          pk.field_l = ac.field_v;
+                          PacketBuffer.field_l = ac.field_v;
                           p.field_k = -1;
                           break L6;
                         }
@@ -100,11 +100,11 @@ final class ri {
                       }
                     }
                     p.field_k = -1;
-                    pk.field_l = da.field_f;
+                    PacketBuffer.field_l = da.field_f;
                   }
                 }
               }
-              if (da.field_f == pk.field_l) {
+              if (da.field_f == PacketBuffer.field_l) {
                 if (nf.a(false)) {
                   oa.field_c = eh.field_d.readLongBE(2901);
                   oc.field_f = eh.field_d.readUnsignedByte((byte) 34);
@@ -128,9 +128,9 @@ final class ri {
                       eh.field_d.readUnsignedByte((byte) 34);
                       eh.field_d.readUnsignedByte((byte) 34);
                       eh.field_d.readIntBE((byte) -48);
-                      pk.field_n = eh.field_d.readUnsignedShortBE(true);
-                      hc.field_K = new byte[pk.field_n];
-                      for (var8 = 0; pk.field_n > var8; var8++) {
+                      PacketBuffer.field_n = eh.field_d.readUnsignedShortBE(true);
+                      hc.field_K = new byte[PacketBuffer.field_n];
+                      for (var8 = 0; PacketBuffer.field_n > var8; var8++) {
                         hc.field_K[var8] = eh.field_d.readSignedByte((byte) 72);
                       }
                       break L13;
@@ -140,7 +140,7 @@ final class ri {
                   var12 = (CharSequence) ((Object) SecondaryDeque.field_f);
                   vg.field_b = oe.a(var12, 12);
                   ik.field_a = eh.field_d.readUnsignedByte((byte) 34);
-                  pk.field_l = eh.field_b;
+                  PacketBuffer.field_l = eh.field_b;
                   if (ih.field_a.a((byte) -32) != ej.field_b) {
                     if (ih.field_a.a((byte) -32) == Geoblox.field_B) {
                       rl.field_W.a(k.c(108), 0);
@@ -174,16 +174,16 @@ final class ri {
                   if (og.field_n > 0) {
                     rb.field_c = true;
                   }
-                  fj.field_q.a(hl.field_D, false);
+                  fj.field_q.initializeCipher(hl.field_D, false);
                   for (var8 = 0; var8 < 4; var8++) {
                     hl.field_D[var8] = hl.field_D[var8] + 50;
                   }
-                  eh.field_d.a(hl.field_D, false);
+                  eh.field_d.initializeCipher(hl.field_D, false);
                   stackIn_78_0 = ScorePopup.field_l;
                   return stackIn_78_0;
                 }
               }
-              if (pk.field_l == ac.field_v) {
+              if (PacketBuffer.field_l == ac.field_v) {
                 if (nf.a(false)) {
                   jl.a((byte) -118);
                   if (ScorePopup.field_l == 7) {

@@ -1048,8 +1048,8 @@ final class GameplaySession {
           L61: {
             if (hh.pollKeyboardEvent(111)) {
               if (te.currentKeyboardEventCharacter > 0) {
-                pk.field_r = pk.field_r.substring(1) + te.currentKeyboardEventCharacter;
-                if (pk.field_r.equalsIgnoreCase("fog")) {
+                PacketBuffer.field_r = PacketBuffer.field_r.substring(1) + te.currentKeyboardEventCharacter;
+                if (PacketBuffer.field_r.equalsIgnoreCase("fog")) {
                   if (this.showDebugOverview) {
                     toggledDebugOverview = false;
                   } else {
@@ -1058,7 +1058,7 @@ final class GameplaySession {
                   ((GameplaySession) (this)).showDebugOverview = toggledDebugOverview;
                 }
                 if (oc.field_f >= 2) {
-                  if (pk.field_r.equalsIgnoreCase("brk")) {
+                  if (PacketBuffer.field_r.equalsIgnoreCase("brk")) {
                     this.gameApplet.h((byte) 41);
                   }
                 }
@@ -1650,7 +1650,7 @@ final class GameplaySession {
         }
         L1: {
           if (2 == this.sessionPhase) {
-            pk.resultBubbleSprite.drawScaledAlpha(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
+            PacketBuffer.resultBubbleSprite.drawScaledAlpha(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
             lj.smallBoxSprite.draw(this.resultPanelX, -(lj.smallBoxSprite.fullHeight >> 1) + 240 + 60);
             dd.uiPaletteFont.drawText(sg.field_f, 15 + this.resultPanelX, 312, 0, -1);
             if (clientControlFlowGuard == 0) {
@@ -1659,7 +1659,7 @@ final class GameplaySession {
           }
           shrinkingDiameter = -this.sceneAnimationTick + 460 + 460;
           if (this.sessionPhase == 3) {
-            pk.resultBubbleSprite.drawScaledAlpha(-(shrinkingDiameter >> 1) + 320, 240 - (shrinkingDiameter >> 1), shrinkingDiameter, shrinkingDiameter, 150);
+            PacketBuffer.resultBubbleSprite.drawScaledAlpha(-(shrinkingDiameter >> 1) + 320, 240 - (shrinkingDiameter >> 1), shrinkingDiameter, shrinkingDiameter, 150);
             lj.smallBoxSprite.draw(-(lj.smallBoxSprite.fullWidth >> 1) + 320, -(lj.smallBoxSprite.fullHeight >> 1) + 240 + 60);
             shrinkingBonusText = Integer.toString(this.resultBonusPoints);
             dd.uiPaletteFont.drawCenteredText(shrinkingBonusText, 320, 312, 0, -1);
@@ -1995,7 +1995,7 @@ final class GameplaySession {
             this.renderTutorialPrompt(20);
         }
         if (ji.difficultyStep >= 41) {
-            ra.a(255 ^ pk.field_m, -103, pk.field_m);
+            ra.a(255 ^ PacketBuffer.field_m, -103, PacketBuffer.field_m);
         }
         int nextThemeId = uh.b(16);
         GameScreen.selectedThemeId = nextThemeId;

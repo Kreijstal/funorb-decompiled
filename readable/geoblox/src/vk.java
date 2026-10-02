@@ -14,7 +14,7 @@ abstract class vk {
 
     abstract int a(boolean param0);
 
-    final static byte[] a(byte[] param0, pk param1, int param2, int param3) {
+    final static byte[] a(byte[] param0, PacketBuffer param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -31,7 +31,7 @@ abstract class vk {
         RuntimeException var4 = null;
         var8 = Geoblox.field_C;
         try {
-          var4_int = param1.e((byte) -17, param2);
+          var4_int = param1.readBits((byte) -17, param2);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (byte[]) ((Object) stackIn_3_0);
@@ -45,8 +45,8 @@ abstract class vk {
             param0 = new byte[var4_int];
           }
           L2: {
-            var5 = param1.e((byte) -17, 3);
-            var6 = (byte)param1.e((byte) -17, param3);
+            var5 = param1.readBits((byte) -17, 3);
+            var6 = (byte)param1.readBits((byte) -17, param3);
             if (0 >= var5) {
               for (var7 = 0; var4_int > var7; var7++) {
                 param0[var7] = (byte)var6;
@@ -54,7 +54,7 @@ abstract class vk {
               break L2;
             }
             for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (byte)(param1.e((byte) -17, var5) + var6);
+              param0[var7] = (byte)(param1.readBits((byte) -17, var5) + var6);
             }
             break L2;
           }

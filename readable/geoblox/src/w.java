@@ -137,8 +137,8 @@ final class w {
 
     final static boolean a(boolean param0, int param1) {
         try {
-            pk var4 = null;
-            pk var5 = null;
+            PacketBuffer var4 = null;
+            PacketBuffer var5 = null;
             if (null == sd.field_B) {
                 sd.field_B = GameplayEntity.field_D.requestSocket(sd.field_x, ol.field_I, false);
             }
@@ -152,7 +152,7 @@ final class w {
             v.field_r = dupTemp$0;
             kh.field_e = dupTemp$0;
             if (1 != sd.field_B.status) {
-                pk.field_l = qi.field_h;
+                PacketBuffer.field_l = qi.field_h;
             } else {
                 try {
                     oc.field_e = new BufferedSocket((java.net.Socket) (sd.field_B.result), GameplayEntity.field_D);
@@ -163,11 +163,11 @@ final class w {
                     ad.field_o = param0 ? -2 : -1;
                     dc.field_b = param0 ? -2 : -1;
                     kg.field_n = param0 ? -2 : -1;
-                    pk.field_l = gi.field_d;
+                    PacketBuffer.field_l = gi.field_d;
                     ke.a(qe.field_b, true, ok.field_f, mk.field_l, fj.field_q);
                     cm.a(param1 ^ -53, -1);
                 } catch (IOException iOException) {
-                    pk.field_l = qi.field_h;
+                    PacketBuffer.field_l = qi.field_h;
                 }
             }
             sd.field_B = null;

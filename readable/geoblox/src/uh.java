@@ -70,7 +70,7 @@ final class uh extends ac {
         uh.b(-111);
     }
 
-    final static nf a(pk param0, byte param1) {
+    final static nf a(PacketBuffer param0, byte param1) {
         int var7 = 0;
         nf stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
@@ -86,7 +86,7 @@ final class uh extends ac {
         int var8 = 0;
         var8 = Geoblox.field_C;
         try {
-          var2_int = param0.e((byte) -17, 8);
+          var2_int = param0.readBits((byte) -17, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -94,11 +94,11 @@ final class uh extends ac {
             var3 = ac.a((byte) 81, param0) ? 1 : 0;
             var4 = ac.a((byte) 7, param0) ? 1 : 0;
             var5 = new nf();
-            var5.field_o = (short)param0.e((byte) -17, 16);
+            var5.field_o = (short)param0.readBits((byte) -17, 16);
             var5.field_O = ji.a(var5.field_O, 16, 0, param0);
             var5.field_q = ji.a(var5.field_q, 16, 0, param0);
             var5.field_K = ji.a(var5.field_K, 16, 0, param0);
-            var5.field_f = (short)param0.e((byte) -17, 16);
+            var5.field_f = (short)param0.readBits((byte) -17, 16);
             var5.field_r = ji.a(var5.field_r, 16, 0, param0);
             if (param1 < 111) {
               field_y = (kj) null;
@@ -106,7 +106,7 @@ final class uh extends ac {
             var5.field_B = ji.a(var5.field_B, 16, 0, param0);
             var5.field_c = ji.a(var5.field_c, 16, 0, param0);
             if (var3 != 0) {
-              var5.field_m = (short)param0.e((byte) -17, 16);
+              var5.field_m = (short)param0.readBits((byte) -17, 16);
               var5.field_M = ji.a(var5.field_M, 16, 0, param0);
               var5.field_t = ji.a(var5.field_t, 16, 0, param0);
               var5.field_i = ji.a(var5.field_i, 16, 0, param0);
@@ -115,7 +115,7 @@ final class uh extends ac {
               var5.field_e = ji.a(var5.field_e, 16, 0, param0);
             }
             if (var4 != 0) {
-              param0.e((byte) -17, 16);
+              param0.readBits((byte) -17, 16);
               var5.field_J = ji.a(var5.field_J, 16, 0, param0);
               var5.field_z = ji.a(var5.field_z, 16, 0, param0);
               var5.field_h = ji.a(var5.field_h, 16, 0, param0);

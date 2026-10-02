@@ -21,12 +21,12 @@ final class o extends pb {
     }
 
     final static void a(int param0, wc param1, int param2) {
-        pk var5 = null;
+        PacketBuffer var5 = null;
         int var4 = 0;
         try {
             var5 = fj.field_q;
-            pk var3 = var5;
-            var5.a(param0, (byte) -107);
+            PacketBuffer var3 = var5;
+            var5.writeCipherByte(param0, (byte) -107);
             var5.position = var5.position + 1;
             var4 = var5.position;
             var5.writeByte((byte) 127, 1);

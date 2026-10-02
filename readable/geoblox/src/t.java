@@ -31,7 +31,7 @@ final class t {
             if (oc.field_e == null) {
                 return false;
             }
-            if (pk.field_l == eh.field_b) {
+            if (PacketBuffer.field_l == eh.field_b) {
                 return true;
             }
             return false;
@@ -39,7 +39,7 @@ final class t {
         if (oc.field_e == null) {
             return false;
         }
-        if (pk.field_l == eh.field_b) {
+        if (PacketBuffer.field_l == eh.field_b) {
             return true;
         }
         return false;

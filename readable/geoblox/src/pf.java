@@ -19,11 +19,11 @@ final class pf extends ee implements ga, pl {
     private boolean field_N;
 
     final static boolean a(int param0, char param1) {
-        pk var3;
+        PacketBuffer var3;
         boolean stackIn_13_0 = false;
         if (param0 != -123) {
-          var3 = (pk) null;
-          pf.a(-108, (pk) null);
+          var3 = (PacketBuffer) null;
+          pf.a(-108, (PacketBuffer) null);
         }
         L1: {
           L2: {
@@ -62,7 +62,7 @@ final class pf extends ee implements ga, pl {
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
-        pk var9 = null;
+        PacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = Geoblox.field_C;
@@ -290,7 +290,7 @@ final class pf extends ee implements ga, pl {
               return stackIn_4_0;
             }
           }
-          if (gi.field_d == pk.field_l) {
+          if (gi.field_d == PacketBuffer.field_l) {
             fj.field_q.position = 0;
             fi.field_b = null;
             if (param4 != null) {
@@ -343,16 +343,16 @@ final class pf extends ee implements ga, pl {
               fj.field_q.backpatchLengthByte(11700, fj.field_q.position - var9);
             }
             cm.a(-1, -1);
-            pk.field_l = field_K;
+            PacketBuffer.field_l = field_K;
           }
           L7: {
-            if (field_K == pk.field_l) {
+            if (field_K == PacketBuffer.field_l) {
               if (el.b(30000, 1)) {
                 var9 = eh.field_d.readUnsignedByte((byte) 34);
                 eh.field_d.position = 0;
                 if (var9 >= 100) {
                   if (var9 <= 105) {
-                    pk.field_l = v.field_l;
+                    PacketBuffer.field_l = v.field_l;
                     si.field_i = new String[var9 - 100];
                     break L7;
                   }
@@ -366,7 +366,7 @@ final class pf extends ee implements ga, pl {
                   return stackIn_31_0;
                 }
                 if (99 != var9) {
-                  pk.field_l = qh.field_F;
+                  PacketBuffer.field_l = qh.field_F;
                   p.field_k = -1;
                   ScorePopup.field_l = var9;
                 } else {
@@ -377,7 +377,7 @@ final class pf extends ee implements ga, pl {
               }
             }
           }
-          if (pk.field_l == v.field_l) {
+          if (PacketBuffer.field_l == v.field_l) {
             var9 = 2;
             if (el.b(30000, var9)) {
               var10 = eh.field_d.readUnsignedShortBE(true);
@@ -394,7 +394,7 @@ final class pf extends ee implements ga, pl {
               }
             }
           }
-          if (pk.field_l == qh.field_F) {
+          if (PacketBuffer.field_l == qh.field_F) {
             if (nf.a(false)) {
               if (ScorePopup.field_l != 255) {
                 kh.field_a = eh.field_d.readNullTerminatedText((byte) 98);
@@ -503,7 +503,7 @@ final class pf extends ee implements ga, pl {
         }
     }
 
-    final static void a(int param0, pk param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
             int var6 = 0;
             int var11_int = 0;

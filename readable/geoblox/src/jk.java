@@ -121,7 +121,7 @@ final class jk {
                 stackIn_18_0 = ii.field_h;
                 return stackIn_18_0;
               }
-              if (pk.field_q.indexOf(var4) == -1) {
+              if (PacketBuffer.field_q.indexOf(var4) == -1) {
                 stackIn_21_0 = ii.field_h;
                 return stackIn_21_0;
               }

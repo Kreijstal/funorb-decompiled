@@ -124,7 +124,7 @@ abstract class wf extends ch {
             sb.field_d = param3;
             ah.field_a = param1;
             this.e(123);
-            pk.k((byte) -13);
+            PacketBuffer.k((byte) -13);
             return;
         }
     }
@@ -642,7 +642,7 @@ abstract class wf extends ch {
               tl.a(k.c(115), (byte) -91);
             }
             if (var4 == 10) {
-              fj.field_q.a(17, (byte) -21);
+              fj.field_q.writeCipherByte(17, (byte) -21);
             }
             if (var4 == 11) {
               h.a(k.c(110), false);
@@ -873,7 +873,7 @@ abstract class wf extends ch {
         }
         int var4 = -1 + p.field_k;
         byte[] var5 = new byte[var4];
-        eh.field_d.c(96, 0, var5, var4);
+        eh.field_d.readCipherBytes(96, 0, var5, var4);
         pa.a(ag.decodeTextBytes(1, var5), (byte) -128, var3 != 0, k.c(112));
     }
 

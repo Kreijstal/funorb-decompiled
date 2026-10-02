@@ -104,17 +104,17 @@ final class gf {
     }
 
     final static void a(int param0, int param1) {
-        pk var2 = null;
+        PacketBuffer var2 = null;
         if (param1 >= 28) {
             var2 = fj.field_q;
-            var2.a(param0, (byte) -103);
+            var2.writeCipherByte(param0, (byte) -103);
             var2.writeByte((byte) 127, 1);
             var2.writeByte((byte) -20, 0);
             return;
         }
         createPasswordContainsNameAlertText = (String) null;
         var2 = fj.field_q;
-        var2.a(param0, (byte) -103);
+        var2.writeCipherByte(param0, (byte) -103);
         var2.writeByte((byte) 127, 1);
         var2.writeByte((byte) -20, 0);
     }

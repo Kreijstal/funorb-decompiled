@@ -145,7 +145,7 @@ public final class Geoblox extends wf {
             }
             sh.mainRasterBuffer.setAsRasterTarget(255);
             fe.sunBackgroundSprite = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "sun", "sky_background");
-            ne.sunForegroundSprite = ug.loadSprite("sky_foreground", ll.gameGraphicsArchive, (byte) -78, "sun");
+            PacketByteCipher.sunForegroundSprite = ug.loadSprite("sky_foreground", ll.gameGraphicsArchive, (byte) -78, "sun");
             ll.themesLoaded[1] = true;
             ee.menuBackgroundSprite = ug.loadSprite("menu_background", ll.gameGraphicsArchive, (byte) -78, "");
             vc.menuForegroundSprite = ug.loadSprite("menu_foreground", ll.gameGraphicsArchive, (byte) -78, "");
@@ -157,7 +157,7 @@ public final class Geoblox extends wf {
             }
             vj.bangFrames = wj.loadSpriteFrames("bang", "", ll.gameGraphicsArchive, 0);
             eg.pointsPanelGlowFrames = wj.loadSpriteFrames("bonus_glow", "", ll.gameGraphicsArchive, 0);
-            pk.resultBubbleSprite = ug.loadSprite("bubble", ll.gameGraphicsArchive, (byte) -78, "");
+            PacketBuffer.resultBubbleSprite = ug.loadSprite("bubble", ll.gameGraphicsArchive, (byte) -78, "");
             k.popSprite = ug.loadSprite("pop", ll.gameGraphicsArchive, (byte) -78, "");
             eb.mouseBoxFrames = wj.loadSpriteFrames("box_mouse", "", ll.gameGraphicsArchive, 0);
             vf.avatarCryBeginFrames = wj.loadSpriteFrames("cry_begin", "", ll.gameGraphicsArchive, 0);
@@ -417,7 +417,7 @@ public final class Geoblox extends wf {
         qe.a(-8616);
         qg.a(85);
         df.a(param0 + 64);
-        pk.j(param0 ^ -64);
+        PacketBuffer.j(param0 ^ -64);
         ki.a((byte) -64);
         MenuScreen.a((byte) 26);
         oh.a((byte) -88);
@@ -436,7 +436,7 @@ public final class Geoblox extends wf {
         vl.b(true);
         t.a(17348);
         kh.a(104);
-        ne.b((byte) -125);
+        PacketByteCipher.b((byte) -125);
         kk.i(-84);
         sd.e((byte) 118);
         bj.b(true);
@@ -1071,7 +1071,7 @@ public final class Geoblox extends wf {
         ai.requestedScreenId = -1;
         tc.currentScreenId = -1;
         vf.f(0);
-        ne.a((byte) -74);
+        PacketByteCipher.a((byte) -74);
         gb.field_g = 5997;
         oa.field_a = 4703;
         kb.field_d = 275;

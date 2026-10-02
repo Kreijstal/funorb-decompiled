@@ -46,7 +46,7 @@ final class cm extends cj {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        pk var27 = null;
+        PacketBuffer var27 = null;
         long[][] var31 = null;
         var26 = Geoblox.field_C;
         try {
@@ -213,13 +213,13 @@ final class cm extends cj {
             L0: {
               if (null != oc.field_e) {
                 if (param1 >= 0) {
-                  if (pk.field_l != eh.field_b) {
+                  if (PacketBuffer.field_l != eh.field_b) {
                     break L0;
                   }
                 }
                 if (0 == fj.field_q.position) {
                   if (~oa.a(-12520) < ~(10000L + v.field_r)) {
-                    fj.field_q.a(param1, (byte) -76);
+                    fj.field_q.writeCipherByte(param1, (byte) -76);
                   }
                 }
                 if (param0 > ~fj.field_q.position) {

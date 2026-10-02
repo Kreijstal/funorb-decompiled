@@ -56,8 +56,8 @@ final class ic {
             IOException var15 = null;
             RuntimeException var15_ref = null;
             try {
-              eh.field_d = new pk(param8);
-              fj.field_q = new pk(param2);
+              eh.field_d = new PacketBuffer(param8);
+              fj.field_q = new PacketBuffer(param2);
               GameplayEntity.field_D = param11;
               ok.field_f = param3;
               lb.field_c = param1;

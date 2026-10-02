@@ -62,10 +62,10 @@ abstract class ib implements dg {
     }
 
     final static void a(int param0, int param1, mg param2) {
-        pk var3 = null;
+        PacketBuffer var3 = null;
         try {
             var3 = fj.field_q;
-            var3.a(param0, (byte) -82);
+            var3.writeCipherByte(param0, (byte) -82);
             var3.writeByte((byte) 124, param1);
             var3.writeByte((byte) -66, 0);
             var3.writeShortBE(param2.field_i, 28695);

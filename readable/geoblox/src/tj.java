@@ -6,11 +6,11 @@ final class tj {
     static String field_a;
 
     final static void a(int param0, int param1, se param2) {
-        pk var6 = null;
+        PacketBuffer var6 = null;
         int var4 = 0;
         try {
             var6 = fj.field_q;
-            var6.a(param0, (byte) -63);
+            var6.writeCipherByte(param0, (byte) -63);
             var6.position = var6.position + 1;
             if (param1 != 86) {
                 se var5 = (se) null;

@@ -7,7 +7,7 @@ final class al {
         int var3 = 0;
         wc var4_ref_wc = null;
         int var6 = 0;
-        pk var9 = null;
+        PacketBuffer var9 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var4 = 0;

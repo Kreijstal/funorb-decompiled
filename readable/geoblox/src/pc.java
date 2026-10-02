@@ -37,7 +37,7 @@ final class pc extends IntrusiveNode {
             hc.b(true);
             dk.a((byte) -121);
             if (vh.g(-88)) {
-                fj.field_q.a(1, (byte) -27);
+                fj.field_q.writeCipherByte(1, (byte) -27);
                 cm.a(-1, 0);
                 jl.a((byte) -126);
                 return;
@@ -52,7 +52,7 @@ final class pc extends IntrusiveNode {
             jl.a((byte) -126);
             return;
         }
-        fj.field_q.a(1, (byte) -27);
+        fj.field_q.writeCipherByte(1, (byte) -27);
         cm.a(-1, 0);
         jl.a((byte) -126);
     }

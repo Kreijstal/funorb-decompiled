@@ -14,7 +14,7 @@ final class oc implements dh {
         int var3 = 0;
         int var4 = Geoblox.field_C;
         fe.sunBackgroundSprite.drawRunEncoded(0, 0);
-        ne.sunForegroundSprite.draw(320 - (ne.sunForegroundSprite.fullWidth >> 1), param0 - (ne.sunForegroundSprite.fullHeight >> 1));
+        PacketByteCipher.sunForegroundSprite.draw(320 - (PacketByteCipher.sunForegroundSprite.fullWidth >> 1), param0 - (PacketByteCipher.sunForegroundSprite.fullHeight >> 1));
         kh.screenTitleSprites[0].draw(0, 20);
         int var1 = -70 + MatchingTextValidator.field_j;
         if (var1 >= 0) {

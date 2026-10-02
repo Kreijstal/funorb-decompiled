@@ -51,7 +51,7 @@ final class vh extends ee implements pl {
         }
         L1: {
           if (oc.field_e != null) {
-            if (pk.field_l.a(true)) {
+            if (PacketBuffer.field_l.a(true)) {
               stackIn_6_0 = true;
               break L1;
             }

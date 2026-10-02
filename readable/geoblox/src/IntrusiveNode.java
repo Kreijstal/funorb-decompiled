@@ -13,7 +13,7 @@ class IntrusiveNode {
         int var3;
         var3 = Geoblox.field_C;
         IntrusiveDeque.a(111, param1);
-        pk.h(-120, param1);
+        PacketBuffer.h(-120, param1);
         od.b((byte) -24);
         if (param0 > -90) {
           loginMessage3Text = (String) null;

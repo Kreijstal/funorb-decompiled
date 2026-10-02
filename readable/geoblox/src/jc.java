@@ -137,7 +137,7 @@ final class jc {
         }
     }
 
-    final static fd[] a(pk param0, boolean param1) {
+    final static fd[] a(PacketBuffer param0, boolean param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -155,7 +155,7 @@ final class jc {
         RuntimeException decompiledCaughtException = null;
         var7 = Geoblox.field_C;
         try {
-          var2_int = param0.e((byte) -17, 8);
+          var2_int = param0.readBits((byte) -17, 8);
           if (!param1) {
             stackIn_3_0 = (fd[]) null;
             return stackIn_3_0;
@@ -164,21 +164,21 @@ final class jc {
             stackIn_6_0 = null;
             return (fd[]) ((Object) stackIn_6_0);
           }
-          var3 = param0.e((byte) -17, 12);
+          var3 = param0.readBits((byte) -17, 12);
           var4 = new fd[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!ac.a((byte) 71, param0)) {
-              var6 = param0.e((byte) -17, td.a(var5 - 1, (byte) 66));
+              var6 = param0.readBits((byte) -17, td.a(var5 - 1, (byte) 66));
               var4[var5] = var4[var6];
             } else {
               var6_ref_fd = new fd();
-              param0.e((byte) -17, 24);
-              param0.e((byte) -17, 24);
-              var6_ref_fd.field_a = param0.e((byte) -17, 24);
-              param0.e((byte) -17, 9);
-              param0.e((byte) -17, 12);
-              param0.e((byte) -17, 12);
-              param0.e((byte) -17, 12);
+              param0.readBits((byte) -17, 24);
+              param0.readBits((byte) -17, 24);
+              var6_ref_fd.field_a = param0.readBits((byte) -17, 24);
+              param0.readBits((byte) -17, 9);
+              param0.readBits((byte) -17, 12);
+              param0.readBits((byte) -17, 12);
+              param0.readBits((byte) -17, 12);
               var4[var5] = var6_ref_fd;
             }
           }

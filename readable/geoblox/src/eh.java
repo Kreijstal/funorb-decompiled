@@ -5,7 +5,7 @@ final class eh {
     static int pendingActionPanelTop;
     static String openInPopupWindowText;
     static gk field_b;
-    static pk field_d;
+    static PacketBuffer field_d;
 
     final static void a(int param0, int param1, int param2) {
         int var3;

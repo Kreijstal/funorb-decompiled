@@ -263,15 +263,15 @@ final class bm {
     }
 
     final static void a(ai param0, int param1, int param2) {
-        pk var7 = null;
-        pk var8 = null;
+        PacketBuffer var7 = null;
+        PacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = Geoblox.field_C;
         try {
             var7 = fj.field_q;
             var8 = var7;
-            var8.a(param1, (byte) -125);
+            var8.writeCipherByte(param1, (byte) -125);
             var8.position = var8.position + 1;
             var4 = var8.position;
             var8.writeByte((byte) 122, 1);

@@ -19,21 +19,25 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 158 guarded identities for buffer writes,
-bulk copies, length backpatches, padding, packed text and CRC32. Twenty buffer
-APIs, the shared checksum helper and its reflected lookup table/initializer now
-have named parameters and locals. Original partial writes and cursor effects
-remain explicit.
+The current naming pass adds 77 guarded identities for `PacketBuffer` and
+`PacketByteCipher`. Their instance fields, methods, constructor parameters and
+locals now have names, along with the bit-mask lookup. Packet byte adjustment,
+bit cursor movement, seeded mixing, batch generation and reverse result
+consumption expose their original state and operation order.
 
-The 4,516 rules apply 39,453 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 4,358 previous complete
-rules and raw source/decompiler pins are unchanged. Byte order/truncation,
-seven-bit masks, base38 chunk order, text offsets, aliased copies, guards,
-diagnostic strings and exception scopes remain. Source/binding and byte-exact
-reversal checks support the names. Existing native probes retain their prior
-scopes without new writer/CRC execution coverage. Real assets, full gameplay
-and device performance remain unverified. One manifest holds current names
-and evidence, with Git for history.
+The 4,593 rules apply 40,193 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 4,516 previous complete
+rules and raw source/decompiler pins are unchanged. Masks, shifts, overflow,
+cursor/cipher consumption order, guards and diagnostic strings remain.
+Source/binding and byte-exact reversal checks support the names. Existing
+native cache/result helpers retain their packet-type/storage scope without
+new bit-reader or cipher-generation execution coverage. Unrelated static
+helpers, full assets/gameplay and device performance remain unfinished or
+unverified. One manifest holds current evidence, with Git for history.
+
+Pass 61 named ordinary buffer writes, bulk copies, length backpatches, padding,
+packed base38 text and CRC32. Original byte order, partial writes, aliases,
+character start offsets, guard effects and exception scopes remain explicit.
 
 Pass 60 named `ByteArrayBuffer`, its shared `bytes`/`position`, both constructors
 and thirteen integer, smart and text readers. Consumers now expose the storage,

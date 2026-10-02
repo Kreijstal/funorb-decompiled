@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class fj extends DualLinkNode {
-    static pk field_q;
+    static PacketBuffer field_q;
     static int field_m;
     int field_n;
     static AudioOutput field_p;
@@ -18,7 +18,7 @@ abstract class fj extends DualLinkNode {
 
     final static boolean f(int param0) {
         if (param0 != -31456) {
-            field_q = (pk) null;
+            field_q = (PacketBuffer) null;
             if (hj.field_a < 10) {
                 return false;
             }

@@ -162,7 +162,7 @@ final class ec {
             jl.a((byte) -122);
             return;
         }
-        pk var2 = eh.field_d;
+        PacketBuffer var2 = eh.field_d;
         var2.readIntBE((byte) -102);
         var2.readIntBE((byte) -108);
         var2.readIntBE((byte) -71);

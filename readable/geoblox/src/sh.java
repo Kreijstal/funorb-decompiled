@@ -177,7 +177,7 @@ abstract class sh extends el implements ql {
         var8 = Geoblox.field_C;
         try {
           var2_int = -108 / ((-71 - param0) / 45);
-          if (eh.field_b != pk.field_l) {
+          if (eh.field_b != PacketBuffer.field_l) {
             return false;
           }
           {
@@ -208,7 +208,7 @@ abstract class sh extends el implements ql {
                 if (!el.b(30000, 1)) {
                   return false;
                 }
-                pc.field_f = eh.field_d.j((byte) 122);
+                pc.field_f = eh.field_d.readCipherByte((byte) 122);
                 eh.field_d.position = 0;
                 p.field_k = param1[pc.field_f];
               }

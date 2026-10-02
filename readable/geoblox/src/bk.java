@@ -46,7 +46,7 @@ final class bk {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        pk var8 = null;
+        PacketBuffer var8 = null;
         og var9 = null;
         var7 = Geoblox.field_C;
         var8 = eh.field_d;

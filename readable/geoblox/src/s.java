@@ -20,7 +20,7 @@ final class s extends ee implements pe, pl {
             tl.field_f[7] = tc.quitText;
             tl.field_f[6] = df.endGameText;
             tl.field_f[8] = wb.soundLabelText;
-            tl.field_f[14] = ne.field_c;
+            tl.field_f[14] = PacketByteCipher.field_c;
             tl.field_f[5] = ij.menuText;
             tl.field_f[0] = nk.startGameText;
             tl.field_f[4] = wf.fullscreenText;
