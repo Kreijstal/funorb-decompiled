@@ -95,48 +95,27 @@ final class ra implements Iterable {
                 vl.field_p = vl.field_p | var3;
                 stackIn_35_0 = (!pb.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
                 var4 = stackIn_35_0;
-                pb.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
-                if (var4 != 0) {
-                  gf.a((byte) -122);
-                }
-                if (!el.gameplaySession.submissionBlocked) {
-                  GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
-                }
-                return;
+              } else {
+                dc.field_a = dc.field_a | 1 << var4;
+                el.field_g = el.field_g - (1 << var4);
+                vl.field_p = vl.field_p | var3;
+                stackIn_45_0 = (!pb.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+                var4 = stackIn_45_0;
               }
-              dc.field_a = dc.field_a | 1 << var4;
-              el.field_g = el.field_g - (1 << var4);
-              vl.field_p = vl.field_p | var3;
-              stackIn_45_0 = (!pb.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
-              var4 = stackIn_45_0;
-              pb.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
-              if (var4 != 0) {
-                gf.a((byte) -122);
+            } else {
+              ticketingUnreadCountText = (String) null;
+              if (var5 != 0) {
+                vl.field_p = vl.field_p | var3;
+                stackIn_23_0 = (!pb.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+                var4 = stackIn_23_0;
+              } else {
+                dc.field_a = dc.field_a | 1 << var4;
+                el.field_g = el.field_g - (1 << var4);
+                vl.field_p = vl.field_p | var3;
+                stackIn_13_0 = (!pb.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
+                var4 = stackIn_13_0;
               }
-              if (!el.gameplaySession.submissionBlocked) {
-                GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
-              }
-              return;
             }
-            ticketingUnreadCountText = (String) null;
-            if (var5 != 0) {
-              vl.field_p = vl.field_p | var3;
-              stackIn_23_0 = (!pb.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
-              var4 = stackIn_23_0;
-              pb.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
-              if (var4 != 0) {
-                gf.a((byte) -122);
-              }
-              if (!el.gameplaySession.submissionBlocked) {
-                GameplayEntity.field_A.addLast(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
-              }
-              return;
-            }
-            dc.field_a = dc.field_a | 1 << var4;
-            el.field_g = el.field_g - (1 << var4);
-            vl.field_p = vl.field_p | var3;
-            stackIn_13_0 = (!pb.pendingActionMarkers.isEmpty(13519)) ? 0 : 1;
-            var4 = stackIn_13_0;
             pb.pendingActionMarkers.addLast(-35, new PendingActionMarker(param2));
             if (var4 != 0) {
               gf.a((byte) -122);

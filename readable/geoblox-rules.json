@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "3b5b290598078b2e3473c601b6cc342f2961ce5c",
+    "commit": "de1fa91e8e6d6ce11229380bbc05b0e343bf5082",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "97e83f6dc8cd521730af2d3f19096f4a24fb00d4c6ea45ba341caf11ed6ab2b0",
+  "inputTreeSha256": "084346454dabfd60bbdcd5e9edfa05ac3786798eee83a6ce673176cfca80e8af",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -14436,18 +14436,18 @@
     }
   ],
   "revision": 4,
-  "version": 42,
+  "version": 43,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "b0593cb3fba9e3316c7915bd3039a9872ecbd6e6",
+      "commit": "3564f5d1f8ec3e288a80decab1b1815cc675c3fa",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "da07e440f2a1886da40e4d7abb6e2e733afe50a92eeb13e0f21d243a6c9ee69e",
-        "reproduce": "git archive --format=tar b0593cb3fba9e3316c7915bd3039a9872ecbd6e6 | sha256sum",
+        "sha256": "93e62046b7f1e880f3f7c28449d89b90e64b92c34d7dcdbb8dade76e9e86913f",
+        "reproduce": "git archive --format=tar 3564f5d1f8ec3e288a80decab1b1815cc675c3fa | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -14456,9 +14456,9 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "3d26180adcafde4b2ec68af3a3aedb69c4f75b93",
+      "commit": "eb44759844a1a7085936fc291b59cfdcf376e927",
       "path": "readable/geoblox-rules.json",
-      "sha256": "652e96e37d9914deb639340f9e222427e32df85dcf75fc329bcbb5073252f36a"
+      "sha256": "71e1967f117861a3d6d2cab5c1a93be799cafb264948676d9e39f0d8de8f0361"
     },
     "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
@@ -14482,6 +14482,10 @@
       {
         "file": "am.java",
         "sha256": "f7ce486409e5497d533f546e1e7c0971183a236a67a4241e26c92ed80700967c"
+      },
+      {
+        "file": "ba.java",
+        "sha256": "e9d85d0ccc64f3bfa42d52291d3a66d96c30fbbeb0d9b6909c19ec7f80673f24"
       },
       {
         "file": "bg.java",
@@ -14544,8 +14548,16 @@
         "sha256": "a9ddb5cd05d453bca412b954a6bb863cf130ed8ca1bd63838596149083c90764"
       },
       {
+        "file": "eh.java",
+        "sha256": "f9d66c4327719ddf279a2d9876669ad3b353816a5161b86f0298528e39d0ab26"
+      },
+      {
         "file": "ej.java",
         "sha256": "58ee0f07b5c9ef36c7fe9460815ded3282baae37baf29e94c14fe373bf6182dd"
+      },
+      {
+        "file": "el.java",
+        "sha256": "ab4e1c836bf897fab3a64ec4f61e88a66e80427cab1301bba1970d65166553da"
       },
       {
         "file": "f.java",
@@ -14773,7 +14785,7 @@
       },
       {
         "file": "pi.java",
-        "sha256": "dc2e31bba729defaeacdd343bc14c184170f21a9fe26b6d5d71019d9e1df4bf5"
+        "sha256": "4f05c7e32f12c0eeaf985bdba69197e2c7164122d6d4f41fb971260c0146c30b"
       },
       {
         "file": "pk.java",
@@ -14813,7 +14825,7 @@
       },
       {
         "file": "ra.java",
-        "sha256": "f5b2f5ccdb45bb52c06e6e4e0fe86c135e059824769a24aba2260f5d27eff198"
+        "sha256": "5ef1065ff9177c02d665f15b0d83a1f91f2c9dd86bdd885984efdb3a7f5dbb28"
       },
       {
         "file": "rb.java",
@@ -14896,6 +14908,10 @@
         "sha256": "febed41373244449a3fad6c87c6870041d7daf7126605a6bed2c8d3281e1a15b"
       },
       {
+        "file": "v.java",
+        "sha256": "1e41f9e4f2dba6ae53264fff67889738a6ca1c8c2e058e4d676809eb79dc7655"
+      },
+      {
         "file": "vb.java",
         "sha256": "31bb434a979322faa277a18183eaf21265e1f670a147a4c34d9d82a395d3dd54"
       },
@@ -14941,7 +14957,7 @@
       },
       {
         "file": "wf.java",
-        "sha256": "959da38804a4ca3a6a95121296131ddb3c12c4c8da5fda11ee884a4319be8cee"
+        "sha256": "dc713e3c9cbd0c9e33c473815ae7e3bc778b16a66d02764b58afce1a2104936e"
       },
       {
         "file": "wh.java",
@@ -15018,7 +15034,7 @@
       },
       {
         "file": "tests/test-geoblox-result-helpers.mjs",
-        "sha256": "82d6e77514635ab1025299a1aa6c618afb77d76b9287e5f26a88bf9309c77207",
+        "sha256": "61d18668562b8ee9889bb4cf45a259b0a05ed2bc10cd59389a243b35e475817d",
         "nativeOutputSha256": "ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e8a5e510872ace6",
         "scenarios": 13927,
         "scope": "120 selectors, 4801 popup factories, 9000 position checks and six music cases; controlled globals.",
@@ -15027,6 +15043,11 @@
             "constant": "expectedCacheWriteSha256",
             "sha256": "e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d",
             "scenarios": 140
+          },
+          {
+            "constant": "expectedShutdownSha256",
+            "sha256": "2fec6ee86681993c79d39ef1e57026f31fd9b0a87b7d7f94a5bddf5af83d6335",
+            "scenarios": 84
           }
         ]
       }
@@ -17196,10 +17217,10 @@
       ]
     },
     "verification": {
-      "sourceDeclarations": 20709,
-      "bindingsCompared": 150797,
+      "sourceDeclarations": 20708,
+      "bindingsCompared": 150387,
       "overrideRelationships": 388,
-      "identifierEdits": 27222,
+      "identifierEdits": 27172,
       "dictionaryRestorationFiles": 303,
       "wholeGameEquivalenceVerified": false,
       "nativeMatchingScenarios": 708,
@@ -17220,7 +17241,8 @@
         "Relational inversions use exact cached JVM integral-predicate spellings only when all matching occurrences have integral evidence. Unknown, floating and conflicting predicates keep logical negation; cached operands are never rendered again. This validates the recorded native fixture scopes, not whole-game equivalence.",
         "Visual asset names use fixed resource keys, loader assignments and actual selectors. Complete successful archive loading and real-asset rendering remain outside the native fixtures. Keyboard/screen/theme indexes, misspelled resource keys and guard side effects are unchanged.",
         "All parameters/local declarations in Sprite, ArgbSprite and IndexedSprite are named; other classes and shared joins still have opaque identifiers. The retained 45074-case pixel matrix has 43750 independent oracle cases. The additional 33168-case transform matrix has 23340 independent cardinal-rotation/bilinear/reduction/mutation cases and 9828 general-angle/extreme-scale trace-only cases. Bilinear coverage below 128 skips writes; surviving zero RGB becomes one. ArgbSprite inherits RGB smooth rotation and returns RGB copies. Arbitrary malformed geometry, AWT image loading/interruption, real assets and whole-game equivalence remain unverified.",
-        "Dead selector cleanup only removes allocated int locals whose complete parsed/token-accounted body occurrences are literal stores or empty pure comparisons. The remaining ten selectors retain observable continuation routing. The independent 140-case cache probe covers null/closed/limited caches, payload bounds, null packets/buffers, guard side effects and integer offset overflow; it does not validate live cache concurrency, device timing or whole-game behavior."
+        "Dead selector cleanup only removes allocated int locals whose complete parsed/token-accounted body occurrences are literal stores or empty pure comparisons. The remaining nine selectors retain observable continuation routing. The independent 140-case cache probe covers null/closed/limited caches, payload bounds, null packets/buffers, guard side effects and integer offset overflow; it does not validate live cache concurrency, device timing or whole-game behavior.",
+        "Plain-block tail recovery preserves existing braces, declaration scopes and opaque loop/label/try/monitor bodies. Exact terminal clones can skip intact prefixes without assuming loop completion; only terminal breaks to a newly introduced block can be trimmed, and retained new labels have a 512-token prefix cap. The 84-case native shutdown probe uses constructor-free sockets, controlled task statuses and valid close guards below -117; it verifies interrupt consumption, task retention/release, notification and monitor release, but not guard-triggered run(), stream/device I/O, normal blocking live joins or real network operation."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -17260,9 +17282,9 @@
       "namedLocalDeclarations": 942,
       "nonselectorDeclarationsPreserved": 20699,
       "generatedSelectorsBefore": 265,
-      "generatedSelectorsAfter": 10,
-      "generatedSelectorsRemoved": 255,
-      "rawSourceLinesRemoved": 5,
+      "generatedSelectorsAfter": 9,
+      "generatedSelectorsRemoved": 256,
+      "rawSourceLinesRemoved": 189,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -17276,8 +17298,8 @@
       "earlyExitChangedJavaFiles": 208,
       "elseWrappersRemoved": 2128,
       "genericEarlyExitTestGroups": 11,
-      "nativeEmitterComparisons": 42465,
-      "sourceReferenceOccurrencesRemoved": 3,
+      "nativeEmitterComparisons": 42897,
+      "sourceReferenceOccurrencesRemoved": 409,
       "sourceReferenceOccurrencesAdded": 0,
       "nativeDifficultyFlagCases": 82944,
       "nativeDifficultyBoundsCases": 56,
@@ -17287,7 +17309,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 29,
+      "genericEmitterTestGroups": 31,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -17295,7 +17317,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Only the dead L:ic.a(B)V#1 selector declaration and its two stores/one empty-guard read are removed. All other normalized declarations and references, all 388 override relationships and all 2404 guarded naming rules are preserved. Four subsequent unguarded local ordinals shift down by one; no guarded ordinal migration is needed.",
+      "referenceRemovalAttribution": "One dead ba.b(I)V selector declaration and 409 original references are removed, with no added reference identities or occurrences. Five later unguarded ba.b(I)V local ordinals shift down by one; every other normalized declaration, all 388 override rows and all 2404 guarded rules are unchanged. Reference removals by file: ba5, eh145, el88, pi51, ra75, v36, wf9. Coalescing duplicates reduces identifier edits by50; no named ordinal migration is needed.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -17315,7 +17337,7 @@
       "genericNestedContinuationTestGroups": 2,
       "nativeNestedContinuationComparisons": 2520,
       "nestedContinuationChangedJavaFiles": 7,
-      "generatedLocalOrdinalsReordered": 4,
+      "generatedLocalOrdinalsReordered": 5,
       "allDeclarationsPreservedAfterOriginalSpellingNormalization": false,
       "generatedBlockLabelsInGeoblox": 0,
       "genericIntegralTailGuardTestGroups": 2,
@@ -17333,7 +17355,7 @@
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
       "identifierEditsAddedInCurrentPass": 0,
-      "lastStructuralPassVersion": 42,
+      "lastStructuralPassVersion": 43,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
@@ -17366,55 +17388,44 @@
       "nativeCacheWriteTraceSha256": "e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d",
       "protectedTerminalArmNativeComparisons": 2240,
       "protectedTerminalArmTestGroups": 3,
-      "removedGeneratedDeclaration": "L:ic.a(B)V#1",
+      "removedGeneratedDeclaration": "L:ba.b(I)V#1",
       "sourceDeclarationOrdinalMigrations": [
         {
-          "before": "L:ic.a(B)V#2",
-          "after": "L:ic.a(B)V#1",
+          "before": "L:ba.b(I)V#2",
+          "after": "L:ba.b(I)V#1",
           "originalName": "decompiledCaughtException"
         },
         {
-          "before": "L:ic.a(B)V#3",
-          "after": "L:ic.a(B)V#2",
+          "before": "L:ba.b(I)V#3",
+          "after": "L:ba.b(I)V#2",
+          "originalName": "var2_ref"
+        },
+        {
+          "before": "L:ba.b(I)V#4",
+          "after": "L:ba.b(I)V#3",
           "originalName": "decompiledCaughtParameter0"
         },
         {
-          "before": "L:ic.a(B)V#4",
-          "after": "L:ic.a(B)V#3",
+          "before": "L:ba.b(I)V#5",
+          "after": "L:ba.b(I)V#4",
           "originalName": "decompiledUncheckedException"
         },
         {
-          "before": "L:ic.a(B)V#5",
-          "after": "L:ic.a(B)V#4",
+          "before": "L:ba.b(I)V#6",
+          "after": "L:ba.b(I)V#5",
           "originalName": "decompiledCheckedException"
         }
-      ]
+      ],
+      "nativeShutdownCases": 84,
+      "nativeShutdownTraceSha256": "2fec6ee86681993c79d39ef1e57026f31fd9b0a87b7d7f94a5bddf5af83d6335",
+      "genericPlainBlockTailTestGroups": 2,
+      "nativePlainBlockTailComparisons": 432,
+      "plainBlockTailChangedJavaFiles": 7,
+      "retainedNewTailLabelPrefixTokenBudget": 512,
+      "identifierEditsRemovedInCurrentPass": 50
     },
     "sourceChange": {
       "before": {
-        "source": {
-          "repository": "Kreijstal/funorb-decompiled",
-          "commit": "dcd9609f476b0225c9e29821bec50439bb8a2be3",
-          "subdirectory": "games/geoblox"
-        },
-        "generators": {
-          "dekoblokoWork": {
-            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
-            "trackedClean": true
-          },
-          "javaTools": {
-            "commit": "1fa1f5ca8db58810744ef29e04bcf31c74e81805",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "80101c5837724ddef2f706256e25320fdf76a57642d7c9b9de64fcf131f229c4",
-              "reproduce": "git archive --format=tar 1fa1f5ca8db58810744ef29e04bcf31c74e81805 | sha256sum",
-              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-            }
-          }
-        },
-        "inputTreeSha256": "cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d"
-      },
-      "after": {
         "source": {
           "repository": "Kreijstal/funorb-decompiled",
           "commit": "3b5b290598078b2e3473c601b6cc342f2961ce5c",
@@ -17436,6 +17447,29 @@
           }
         },
         "inputTreeSha256": "97e83f6dc8cd521730af2d3f19096f4a24fb00d4c6ea45ba341caf11ed6ab2b0"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "de1fa91e8e6d6ce11229380bbc05b0e343bf5082",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "3564f5d1f8ec3e288a80decab1b1815cc675c3fa",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "93e62046b7f1e880f3f7c28449d89b90e64b92c34d7dcdbb8dade76e9e86913f",
+              "reproduce": "git archive --format=tar 3564f5d1f8ec3e288a80decab1b1815cc675c3fa | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "084346454dabfd60bbdcd5e9edfa05ac3786798eee83a6ce673176cfca80e8af"
       }
     }
   }

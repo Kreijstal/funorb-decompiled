@@ -13,6 +13,7 @@ const aliases = new Map(JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rule
   .renames.map(rule => [rule.symbol, rule.to]));
 const expectedNativeSha256 = 'ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e8a5e510872ace6';
 const expectedCacheWriteSha256 = 'e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d';
+const expectedShutdownSha256 = '2fec6ee86681993c79d39ef1e57026f31fd9b0a87b7d7f94a5bddf5af83d6335';
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-result-helpers-'));
 try {
   if (nativeInput) {
@@ -243,6 +244,60 @@ try {
           } finally {java.nio.file.Files.deleteIfExists(path);}
           check(cases==140,"cache case count");System.out.println("cache-complete:"+cases);
         }
+      }
+      class ShutdownBehavior extends ResultHelperBehavior {
+        public static void main(String[] args) throws Exception {
+          Method close=method("${type('ba')}","${method('ba','b(I)V')}",int.class);
+          Thread terminated=new Thread(()->{});terminated.start();terminated.join();int cases=0;
+          for(int guard:new int[]{-124,-118,Integer.MIN_VALUE})for(int state=0;state<8;state++)
+          for(boolean initialClosed:new boolean[]{false,true})for(boolean interrupted:new boolean[]{false,true}) {
+            if(state==6 && !initialClosed && !interrupted || state==7 && (initialClosed || interrupted))continue;
+            Object socket=allocate("${type('ba')}");Object task=state==0?null:allocate("${type('cb')}");
+            java.util.concurrent.CountDownLatch ready=new java.util.concurrent.CountDownLatch(1);
+            java.util.concurrent.CountDownLatch release=new java.util.concurrent.CountDownLatch(1);
+            Thread worker=null,publisher=null;
+            if(task!=null) {
+              ${set('cb','field_a','I','task','state==1?2:state==7?0:1')}
+              Object payload=state==2?terminated:state==3?new Thread(()->{}):state==4?null:"wrong-type";
+              if(state==6) {
+                worker=new Thread(()->{ready.countDown();try {release.await();}catch(InterruptedException ignored){}});
+                worker.start();check(ready.await(3,java.util.concurrent.TimeUnit.SECONDS),"worker started");payload=worker;
+              }
+              ${set('cb','field_b','Ljava/lang/Object;','task','payload')}
+            }
+            ${set('ba','field_m','Lcb;','socket','task')}
+            ${set('ba','field_f','Z','socket','initialClosed')}
+            if(state==7) {
+              publisher=new Thread(()->{try {synchronized(socket) {
+                ready.countDown();while(!(Boolean)${get('ba','field_f','Z','socket')})socket.wait();
+                ${set('cb','field_a','I','task','2')}
+              }}catch(Exception failure){throw new AssertionError(failure);}});
+              publisher.start();check(ready.await(3,java.util.concurrent.TimeUnit.SECONDS),"publisher waiting");
+            }
+            try {
+              if(interrupted)Thread.currentThread().interrupt();String completion="ok";
+              try {close.invoke(socket,guard);}catch(InvocationTargetException error) {
+                check(!initialClosed && (state==4 && error.getCause() instanceof NullPointerException
+                  || state==5 && error.getCause() instanceof ClassCastException),"unmatched join failure");
+                completion=error.getCause().getClass().getName();
+              }
+              check(completion.equals("ok")== (initialClosed || state!=4 && state!=5),"completion kind");
+              boolean closed=(Boolean)${get('ba','field_f','Z','socket')};check(closed,"closed flag");
+              Object after=${get('ba','field_m','Lcb;','socket')};
+              check(initialClosed || !completion.equals("ok")?after==task:after==null,"task release/failure retention");
+              boolean afterInterrupt=Thread.currentThread().isInterrupted();
+              check(afterInterrupt==(interrupted && (initialClosed || state!=6)),"interrupt consumption");
+              check(!Thread.holdsLock(socket),"monitor released");
+              System.out.println("shutdown:"+guard+":"+state+":"+initialClosed+":"+interrupted+":"+completion+
+                ":"+closed+":"+(after==task)+":"+afterInterrupt);cases++;
+            } finally {
+              Thread.interrupted();release.countDown();
+              if(worker!=null) {worker.join(3000L);check(!worker.isAlive(),"worker stopped");}
+              if(publisher!=null) {publisher.join(3000L);check(!publisher.isAlive(),"publisher stopped");}
+            }
+          }
+          check(cases==84,"shutdown case count");System.out.println("shutdown-complete:"+cases);
+        }
       }`;
     const directory = path.join(temporary, variant), classes = path.join(directory, 'classes');
     fs.mkdirSync(classes, {recursive: true});
@@ -267,6 +322,11 @@ try {
     const cacheSha256 = crypto.createHash('sha256').update(cacheOutput).digest('hex');
     console.log(JSON.stringify({variant, cacheSha256, completion: cacheOutput.toString().trim().split('\n').at(-1)}));
     assert.equal(cacheSha256, expectedCacheWriteSha256, variant);
+    const shutdownOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
+      'ShutdownBehavior']).stdout;
+    const shutdownSha256 = crypto.createHash('sha256').update(shutdownOutput).digest('hex');
+    console.log(JSON.stringify({variant, shutdownSha256, completion: shutdownOutput.toString().trim().split('\n').at(-1)}));
+    assert.equal(shutdownSha256, expectedShutdownSha256, variant);
   }
 } catch (error) {
   if (error.stderr) process.stderr.write(error.stderr);

@@ -262,17 +262,11 @@ class el extends IntrusiveNode {
           this.a(false, param3, (el) (this), param2);
           var5 = this.e((byte) 54) ? 1 : 0;
           if (!param0) {
-            if (var5 == 0) {
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
+            if (var5 != 0) {
+              if (bi.field_g != 0) {
+                this.d(-126);
+              }
             }
-            if (bi.field_g == 0) {
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
-            }
-            this.d(-126);
             ij.field_X = gf.field_a;
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
@@ -354,22 +348,13 @@ class el extends IntrusiveNode {
                 }
                 lh.field_b = null;
               }
-              if (var7 == 0) {
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
+              if (var7 != 0) {
+                if (var5 != 0) {
+                  if (bi.field_g != 0) {
+                    this.d(-126);
+                  }
+                }
               }
-              if (var5 == 0) {
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
-              }
-              if (bi.field_g == 0) {
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
-              }
-              this.d(-126);
               ij.field_X = gf.field_a;
               sa.a(this.c((byte) 69), (byte) 72);
               return param0;
@@ -456,22 +441,13 @@ class el extends IntrusiveNode {
                 }
                 lh.field_b = null;
               }
-              if (var7 == 0) {
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
+              if (var7 != 0) {
+                if (var5 != 0) {
+                  if (bi.field_g != 0) {
+                    this.d(-126);
+                  }
+                }
               }
-              if (var5 == 0) {
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
-              }
-              if (bi.field_g == 0) {
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
-              }
-              this.d(-126);
               ij.field_X = gf.field_a;
               sa.a(this.c((byte) 69), (byte) 72);
               return param0;
@@ -571,22 +547,13 @@ class el extends IntrusiveNode {
               }
               lh.field_b = null;
             }
-            if (var7 == 0) {
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
+            if (var7 != 0) {
+              if (var5 != 0) {
+                if (bi.field_g != 0) {
+                  this.d(-126);
+                }
+              }
             }
-            if (var5 == 0) {
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
-            }
-            if (bi.field_g == 0) {
-              ij.field_X = gf.field_a;
-              sa.a(this.c((byte) 69), (byte) 72);
-              return param0;
-            }
-            this.d(-126);
             ij.field_X = gf.field_a;
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;

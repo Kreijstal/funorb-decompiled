@@ -228,29 +228,20 @@ final class pi extends vf {
           if (this.field_Q == null) {
             this.field_Q = new Sprite(var12, var13);
             Geoblox.setRasterTarget(1, this.field_Q);
-            var18.rotateSmooth(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_P << 10, 4096);
-            id.a(true);
-            this.field_Q.drawAdditive(-(var18.fullWidth >> 1) + var9, var10 - var18.fullHeight, 256);
-            return;
+          } else {
+            if (this.field_Q.width < var12) {
+              this.field_Q = new Sprite(var12, var13);
+              Geoblox.setRasterTarget(1, this.field_Q);
+            } else {
+              if (this.field_Q.height < var13) {
+                this.field_Q = new Sprite(var12, var13);
+                Geoblox.setRasterTarget(1, this.field_Q);
+              } else {
+                Geoblox.setRasterTarget(1, this.field_Q);
+                SoftwareRasterizer.clearFramebuffer();
+              }
+            }
           }
-          if (this.field_Q.width < var12) {
-            this.field_Q = new Sprite(var12, var13);
-            Geoblox.setRasterTarget(1, this.field_Q);
-            var18.rotateSmooth(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_P << 10, 4096);
-            id.a(true);
-            this.field_Q.drawAdditive(-(var18.fullWidth >> 1) + var9, var10 - var18.fullHeight, 256);
-            return;
-          }
-          if (this.field_Q.height < var13) {
-            this.field_Q = new Sprite(var12, var13);
-            Geoblox.setRasterTarget(1, this.field_Q);
-            var18.rotateSmooth(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_P << 10, 4096);
-            id.a(true);
-            this.field_Q.drawAdditive(-(var18.fullWidth >> 1) + var9, var10 - var18.fullHeight, 256);
-            return;
-          }
-          Geoblox.setRasterTarget(1, this.field_Q);
-          SoftwareRasterizer.clearFramebuffer();
           var18.rotateSmooth(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_P << 10, 4096);
           id.a(true);
           this.field_Q.drawAdditive(-(var18.fullWidth >> 1) + var9, var10 - var18.fullHeight, 256);

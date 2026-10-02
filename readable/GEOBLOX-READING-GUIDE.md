@@ -816,9 +816,31 @@ by the offset update. No throwing expression crosses a protected boundary.
 The existing result-helper probe independently checks file bytes, offset wrap
 and guard effects in 140 native/raw/readable cases. Closed and limited files,
 invalid payload offsets, null buffers, absent caches and null packets retain
-their completion behavior. The ten remaining selectors route work or transfers
+their completion behavior. The nine remaining selectors route work or transfers
 and still need review. Concurrent cache use, real device behavior and whole-game
 behavior remain outside this probe.
+
+## Socket shutdown continuation
+
+`ba.b(int)` sets `field_f` while holding its own monitor and calls `notifyAll`.
+It waits for a nonzero volatile task status when `field_m` exists, and joins the
+thread payload only for status 1. An InterruptedException from that join is
+swallowed; the interrupted flag is consumed by the live join. Null/wrong-type
+payload failures escape that inner catch and retain the task reference.
+An already-closed socket returns before the notification and task cleanup.
+
+The task reference is now cleared once after the normal/null/failed-status and
+interrupted-join paths. The old selector chose between identical cleanup tails;
+it and the empty test are gone. No join, throwing cast or monitor expression
+moves across a handler boundary. The original volatile wait label is retained.
+
+The existing result-helper probe checks 84 controlled cases with an independent
+state/interrupt/task oracle: absent and pending tasks, failed statuses,
+terminated and unstarted threads, interrupted live joins, invalid thread
+payloads, already-closed holders and three valid guards below -117. Worker and
+publisher threads are bounded and checked for termination. Constructors are
+bypassed; socket/stream I/O, normal blocking live joins and the guard-triggered
+`run()` path remain outside the probe. Nine other routing selectors remain.
 
 ## Sequential early-exit guards
 

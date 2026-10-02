@@ -2,7 +2,7 @@
 
 The current export has 2,404 guarded naming rules: 24 classes, 457 fields,
 270 methods, 711 parameters and 942 local declarations. Both 303-file corpora
-compile, preserving 150,797 bindings and 388 override relationships. Unknown
+compile, preserving 150,387 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,17 +21,17 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`3b5b290598078b2e3473c601b6cc342f2961ce5c`. It comes from java-tools
-`b0593cb3fba9e3316c7915bd3039a9872ecbd6e6` and Deko
+`de1fa91e8e6d6ce11229380bbc05b0e343bf5082`. It comes from java-tools
+`3564f5d1f8ec3e288a80decab1b1815cc675c3fa` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`da07e440f2a1886da40e4d7abb6e2e733afe50a92eeb13e0f21d243a6c9ee69e`:
+`93e62046b7f1e880f3f7c28449d89b90e64b92c34d7dcdbb8dade76e9e86913f`:
 
 ```sh
-git archive --format=tar b0593cb3fba9e3316c7915bd3039a9872ecbd6e6 | sha256sum
+git archive --format=tar 3564f5d1f8ec3e288a80decab1b1815cc675c3fa | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
@@ -44,7 +44,7 @@ the ARGB nearest-rotation geometry, bilinear weight/channel arithmetic,
 half/quarter reductions, copying, outlining, cropping and image-loading names.
 That naming pass preserved its raw source and generator pins along with all
 2,233 prior rules. The current structural refresh retains all 2,404 rules and
-27,222 identifier edits, comparing 150,797 bindings and 388 override edges.
+27,172 identifier edits, comparing 150,387 bindings and 388 override edges.
 
 The existing drawing probe retains its previous nine-slice and pixel traces.
 A separate 33,168-case transform trace adds 23,340 independent oracle cases for
@@ -54,29 +54,33 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current protected-routing cleanup
+## Current scoped-tail cleanup
 
-The decompiler removes one dead selector from `ic.a(B)V`, reducing retained
-selectors from 11 to 10 and removing five source lines. Its only read was
-an empty comparison after the cache-write catch. The two cache calls, catch
-assignments and following packet-offset update retain their original scopes
-and order. One declaration and three references disappear; four following
-unguarded local ordinals shift down. No guarded name needs migration.
+The decompiler coalesces terminal work inside existing plain blocks, removing
+189 lines across seven files. Each block retains its braces and declaration
+scope. Loop, label, try and monitor bodies remain intact. If ordinary factoring
+cannot prove a continuation past an opaque prefix, an exact terminal clone can
+skip that prefix through a new plain-block label. Only a terminal break to that
+new block can disappear; conditions still evaluate. Retained new labels are
+bounded to 512-token prefixes. No new exit label remains in this game export.
 
-The allocator identity, exact initialized int declaration, complete parsing
-and every identifier token must agree. Live reads, effectful stores or tests,
-shadowing, unsupported syntax and scalar bodies refuse cleanup. The native
-cache probe checks 140 combinations of guards, valid/invalid/overflowing packet
-offsets, absent/closed/limited cache files, null payloads and null packets.
-It preserves the previous result-helper trace and pins its additional trace to
-`e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d`.
+`ba.b(I)V` now clears its task reference once after the null-task/status/join
+paths. The synchronized close/notification, volatile wait and InterruptedException
+handler remain in place. The resulting dead selector and empty test disappear,
+reducing selectors from ten to nine. One declaration and 409 references vanish;
+no references are added. Five unguarded shutdown local ordinals shift down, with
+no guarded migration. All 2,404 naming rules and 388 overrides are retained.
+Duplicate coalescing reduces identifier edits by 50, to 27,172.
 
-The generic emitter passes 29 groups, including 96 new dead-routing comparisons
-and 2,240 protected-arm rotation comparisons. Intact terminal try/catch and
-monitor arms can rotate only when all paths leave and no transfer targets the
-rotated loop. This extension alone does not simplify GeoBlox. The remaining ten
-selectors route work or transfers and still need review. Live cache concurrency,
-device behavior and whole-game equivalence remain unverified.
+The generic emitter passes 31 groups, including 432 new native plain-block
+comparisons of scopes, loop skips, nullable conditions, checked/fatal failures,
+finally effects and monitor release. The existing result-helper probe adds an
+84-case shutdown trace with independent state/interrupt/task/monitor checks:
+`2fec6ee86681993c79d39ef1e57026f31fd9b0a87b7d7f94a5bddf5af83d6335`.
+The previous result-helper and 140-case cache traces are unchanged. Shutdown
+holders bypass constructors; valid close guards below -117 are exercised.
+Guard-triggered `run()`, stream I/O, ordinary live blocking joins and real
+network/device behavior remain unverified, as does whole-game equivalence.
 
 ## Reproduce and check
 
@@ -144,7 +148,8 @@ writes, UTF-16, live aliasing, offsets, partial writes and throwable identity.
 characters after shorter writes. Result probes cover 27 scenarios/26,043 ticks,
 120 selector cases, 4,801 PCM factory cases, 9,000 bounds checks and six music
 returns. The same result-helper probe also covers 140 cache-write cases with
-independent file-byte, offset and guard checks. Native, raw and readable traces
+independent file-byte, offset and guard checks, plus 84 controlled shutdown
+cases. Native, raw and readable traces
 match within those controlled scopes.
 The gameplay probe checks 144 contact cases across kinds 0/1/2, equality keys,
 force flags and client guards; 32 neighbor removals; two forced neighborhood
@@ -246,7 +251,7 @@ and synchronized bodies retain their destinations and scopes.
 The previous early-exit pass removed 2,128 generated else wrappers (3,481 to 1,353) and 2,213 raw source
 lines across 208 files. That pass preserved all 20,931
 declaration identities and 388 override edges. The only duplicate-name method,
-`wg.finalize`, is byte-identical. Current raw/readable comparison checks 150,797
+`wg.finalize`, is byte-identical. Current raw/readable comparison checks 150,387
 bindings. The structural update migrated 35 named local ordinals. The following
 naming pass added 38 guarded identities with the raw input unchanged, retaining all
 1,170 prior semantic names. Reference inventory changes comprise 86 merged
@@ -411,7 +416,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `97e83f6dc8cd521730af2d3f19096f4a24fb00d4c6ea45ba341caf11ed6ab2b0` |
-| Readable | `67f5574bc56feb73f2f4153f3700a8a61bef1e487bbb07b4ffad12c22f0b3575` |
+| Raw | `084346454dabfd60bbdcd5e9edfa05ac3786798eee83a6ce673176cfca80e8af` |
+| Readable | `72a371a2fb5f5f247432cbb6a57cdd51a0e3537b0b540ef6f9acef072e629b6b` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

@@ -16,7 +16,7 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 150,797 bindings
+identities. Both 303-file Java corpora compile and retain all 150,387 bindings
 and 388 override relationships.
 
 Difficulty and spawning now name the step flags, sprite-variant/category
@@ -29,7 +29,7 @@ preceding naming pass added 171 rules and completed every parameter/local name i
 `Sprite`, `ArgbSprite` and `IndexedSprite`, including ARGB rotation, bilinear
 weights, reductions and sprite mutations. All 2,233 prior rules and the raw
 input remained unchanged in that naming pass. The current structural refresh
-preserves every one of the 2,404 rules, applying 27,222 identifier edits. An
+preserves every one of the 2,404 rules, applying 27,172 identifier edits. An
 expanded existing native drawing probe adds 33,168 transform cases, including
 23,340 independent pixel/geometry oracles, while preserving its previous
 traces. Original shifts, transparency, inherited smooth rotation and RGB copy
@@ -55,20 +55,23 @@ prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-The current refresh removes the dead cache-write selector in `ic.a(byte)`:
-11 retained selectors become 10. Two literal stores and an empty post-catch
-test disappear; the cache calls, exception regions and offset update stay in
-place. All 2,404 guarded rules and 388 override relationships are preserved.
-Only one declaration and three references are removed, with no named ordinal
-migration. An existing native probe adds 140 independent cache-file/offset
-cases, including caught write failures and null packet failures outside the
-inner catch. All six game probes match their native traces.
+The current refresh shares terminal work inside existing plain blocks, removing
+189 lines across seven files. Shutdown in `ba.b(int)` now clears its task once
+after the status/join paths. The close/notification monitor, volatile task wait
+and interruption catch retain their scope; the redundant selector disappears.
+Ten retained selectors become nine. All 2,404 guarded rules and 388 override
+relationships are preserved. One declaration and 409 references disappear, with
+no named ordinal migration or added reference occurrences.
 
-The generic emitter passes 29 groups, including 96 new dead-routing comparisons
-and 2,240 terminal protected-arm comparisons. Complete parsing and token
-accounting restrict cleanup to allocated int selectors with literal stores
-and empty pure comparisons; observable continuations keep their routing.
-No source bodies are edited by hand and no new JSON snapshots are created.
+The generic emitter passes 31 groups, including 432 new native scoped-tail
+comparisons. Existing loop, label, try and monitor bodies remain opaque. Exact
+terminal clones can skip intact prefixes without assuming loop completion;
+retained new labels have a 512-token prefix cap. No new label remains in GeoBlox.
+The existing result-helper probe adds 84 controlled native shutdown cases for
+interrupt consumption, task release/retention, notification and monitor release,
+while retaining its previous helper and cache traces. Real network/device I/O
+and guard-triggered `run()` remain unverified. No source bodies are edited by
+hand and no new JSON snapshots are created.
 
 The earlier integral-guard pass reused cached JVM integral-predicate evidence to
 simplify relational inversions during nested-tail reconstruction. It removes
