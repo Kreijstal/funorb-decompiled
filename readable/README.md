@@ -2,7 +2,7 @@
 
 The current export has 2,404 guarded naming rules: 24 classes, 457 fields,
 270 methods, 711 parameters and 942 local declarations. Both 303-file corpora
-compile, preserving 150,801 bindings and 388 override relationships. Unknown
+compile, preserving 150,797 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
 ## One current manifest
@@ -21,30 +21,30 @@ tool bytes; `funorb-stubs.jar` is the frozen compilation dependency. The
 [reading guide](GEOBLOX-READING-GUIDE.md) explains the named gameplay flow.
 
 The raw input is `games/geoblox` at
-`dcd9609f476b0225c9e29821bec50439bb8a2be3`. It comes from java-tools
-`1fa1f5ca8db58810744ef29e04bcf31c74e81805` and Deko
+`3b5b290598078b2e3473c601b6cc342f2961ce5c`. It comes from java-tools
+`b0593cb3fba9e3316c7915bd3039a9872ecbd6e6` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `a0bc835957148b9b1e1f8221c59b79d899d22738`; its source archive SHA-256 is
 `cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c`.
 
 The **decompiler repository source** SHA-256 is
-`80101c5837724ddef2f706256e25320fdf76a57642d7c9b9de64fcf131f229c4`:
+`da07e440f2a1886da40e4d7abb6e2e733afe50a92eeb13e0f21d243a6c9ee69e`:
 
 ```sh
-git archive --format=tar 1fa1f5ca8db58810744ef29e04bcf31c74e81805 | sha256sum
+git archive --format=tar b0593cb3fba9e3316c7915bd3039a9872ecbd6e6 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or the Java source-tree hashes below.
 
-The current naming pass adds 171 guarded identities: two image-constructor
+The preceding naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,
 `ArgbSprite` and `IndexedSprite` now has a guarded semantic name. This completes
 the ARGB nearest-rotation geometry, bilinear weight/channel arithmetic,
 half/quarter reductions, copying, outlining, cropping and image-loading names.
-The mirror applies 27,222 identifier edits while preserving all 150,801 bindings
-and 388 override edges. Raw source, generator pins and all 2,233 prior rules
-are unchanged.
+That naming pass preserved its raw source and generator pins along with all
+2,233 prior rules. The current structural refresh retains all 2,404 rules and
+27,222 identifier edits, comparing 150,797 bindings and 388 override edges.
 
 The existing drawing probe retains its previous nine-slice and pixel traces.
 A separate 33,168-case transform trace adds 23,340 independent oracle cases for
@@ -53,6 +53,30 @@ Another 9,828 cases preserve native general-angle/extreme-scale traces. ARGB
 smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
+
+## Current protected-routing cleanup
+
+The decompiler removes one dead selector from `ic.a(B)V`, reducing retained
+selectors from 11 to 10 and removing five source lines. Its only read was
+an empty comparison after the cache-write catch. The two cache calls, catch
+assignments and following packet-offset update retain their original scopes
+and order. One declaration and three references disappear; four following
+unguarded local ordinals shift down. No guarded name needs migration.
+
+The allocator identity, exact initialized int declaration, complete parsing
+and every identifier token must agree. Live reads, effectful stores or tests,
+shadowing, unsupported syntax and scalar bodies refuse cleanup. The native
+cache probe checks 140 combinations of guards, valid/invalid/overflowing packet
+offsets, absent/closed/limited cache files, null payloads and null packets.
+It preserves the previous result-helper trace and pins its additional trace to
+`e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d`.
+
+The generic emitter passes 29 groups, including 96 new dead-routing comparisons
+and 2,240 protected-arm rotation comparisons. Intact terminal try/catch and
+monitor arms can rotate only when all paths leave and no transfer targets the
+rotated loop. This extension alone does not simplify GeoBlox. The remaining ten
+selectors route work or transfers and still need review. Live cache concurrency,
+device behavior and whole-game equivalence remain unverified.
 
 ## Reproduce and check
 
@@ -119,7 +143,9 @@ writes, UTF-16, live aliasing, offsets, partial writes and throwable identity.
 `writeTextAtOffset` grows the builder when needed and preserves old trailing
 characters after shorter writes. Result probes cover 27 scenarios/26,043 ticks,
 120 selector cases, 4,801 PCM factory cases, 9,000 bounds checks and six music
-returns. Native, raw and readable traces match within those controlled scopes.
+returns. The same result-helper probe also covers 140 cache-write cases with
+independent file-byte, offset and guard checks. Native, raw and readable traces
+match within those controlled scopes.
 The gameplay probe checks 144 contact cases across kinds 0/1/2, equality keys,
 force flags and client guards; 32 neighbor removals; two forced neighborhood
 detachments; and the existing boundary, popup, cooldown and settling checks.
@@ -220,7 +246,7 @@ and synchronized bodies retain their destinations and scopes.
 The previous early-exit pass removed 2,128 generated else wrappers (3,481 to 1,353) and 2,213 raw source
 lines across 208 files. That pass preserved all 20,931
 declaration identities and 388 override edges. The only duplicate-name method,
-`wg.finalize`, is byte-identical. Current raw/readable comparison checks 150,801
+`wg.finalize`, is byte-identical. Current raw/readable comparison checks 150,797
 bindings. The structural update migrated 35 named local ordinals. The following
 naming pass added 38 guarded identities with the raw input unchanged, retaining all
 1,170 prior semantic names. Reference inventory changes comprise 86 merged
@@ -362,9 +388,8 @@ byte-for-byte. Previous integral-sign and literal-shift cleanup remains, with
 its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
-The last structural pass changed the input with an explicit source migration
-and zero naming changes. This naming pass retains that input, preserves every
-prior rule and records its 117 additions as exact before-null/after identities.
+The current structural pass records an explicit source migration and zero
+naming changes. Every prior guarded rule is retained; `ruleChanges` is empty.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
 
@@ -386,7 +411,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d` |
-| Readable | `b04e4d0b20a850f47638f25ed5621219c249081410a16c704be74973eafa4f84` |
+| Raw | `97e83f6dc8cd521730af2d3f19096f4a24fb00d4c6ea45ba341caf11ed6ab2b0` |
+| Readable | `67f5574bc56feb73f2f4153f3700a8a61bef1e487bbb07b4ffad12c22f0b3575` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

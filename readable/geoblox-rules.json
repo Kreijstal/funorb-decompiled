@@ -4,10 +4,10 @@
   "purpose": "Offline readable source mirror; not a runtime patch",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "dcd9609f476b0225c9e29821bec50439bb8a2be3",
+    "commit": "3b5b290598078b2e3473c601b6cc342f2961ce5c",
     "subdirectory": "games/geoblox"
   },
-  "inputTreeSha256": "cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d",
+  "inputTreeSha256": "97e83f6dc8cd521730af2d3f19096f4a24fb00d4c6ea45ba341caf11ed6ab2b0",
   "namingPolicy": "Confirmed semantic names without opaque suffixes; unknown symbols stay unchanged. Original spellings and JVM identities remain in the reverse symbol map. Every rule guards the original spelling. Local identities also use declaration ordinals; reused variables retain all supported roles. Numeric screen/action IDs and decompiler state remain unchanged.",
   "renames": [
     {
@@ -14436,18 +14436,18 @@
     }
   ],
   "revision": 4,
-  "version": 41,
+  "version": 42,
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "1fa1f5ca8db58810744ef29e04bcf31c74e81805",
+      "commit": "b0593cb3fba9e3316c7915bd3039a9872ecbd6e6",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "80101c5837724ddef2f706256e25320fdf76a57642d7c9b9de64fcf131f229c4",
-        "reproduce": "git archive --format=tar 1fa1f5ca8db58810744ef29e04bcf31c74e81805 | sha256sum",
+        "sha256": "da07e440f2a1886da40e4d7abb6e2e733afe50a92eeb13e0f21d243a6c9ee69e",
+        "reproduce": "git archive --format=tar b0593cb3fba9e3316c7915bd3039a9872ecbd6e6 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -14456,1722 +14456,11 @@
   "publication": {
     "format": 1,
     "previousRules": {
-      "commit": "78704a193d025f78845e65a0129f79b7844445d6",
+      "commit": "3d26180adcafde4b2ec68af3a3aedb69c4f75b93",
       "path": "readable/geoblox-rules.json",
-      "sha256": "6193024b81da935693eaf99ad3e446cbcefa5a956ec4e06050de45ea358a4408"
+      "sha256": "652e96e37d9914deb639340f9e222427e32df85dcf75fc329bcbb5073252f36a"
     },
-    "ruleChanges": [
-      {
-        "symbol": "L:dm.<init>([BLjava/awt/Component;)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.<init>([BLjava/awt/Component;)V#0",
-          "originalName": "decompiledCaughtException",
-          "to": "caughtImageLoadError",
-          "evidence": "The image constructor creates a Toolkit image, waits with MediaTracker, obtains dimensions and grabs pixels. The original InterruptedException catch only captures the error and keeps its existing partial initialization behavior; no AWT or interruption equivalence is claimed by the rendering probe. Original local decompiledCaughtException retains its storage/reuse as caughtImageLoadError."
-        }
-      },
-      {
-        "symbol": "L:dm.<init>([BLjava/awt/Component;)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.<init>([BLjava/awt/Component;)V#1",
-          "originalName": "var3",
-          "to": "decodedImage",
-          "evidence": "The image constructor creates a Toolkit image, waits with MediaTracker, obtains dimensions and grabs pixels. The original InterruptedException catch only captures the error and keeps its existing partial initialization behavior; no AWT or interruption equivalence is claimed by the rendering probe. Original local var3 retains its storage/reuse as decodedImage."
-        }
-      },
-      {
-        "symbol": "L:dm.<init>([BLjava/awt/Component;)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.<init>([BLjava/awt/Component;)V#2",
-          "originalName": "var3_ref",
-          "to": "interruptedImageLoadError",
-          "evidence": "The image constructor creates a Toolkit image, waits with MediaTracker, obtains dimensions and grabs pixels. The original InterruptedException catch only captures the error and keeps its existing partial initialization behavior; no AWT or interruption equivalence is claimed by the rendering probe. Original local var3_ref retains its storage/reuse as interruptedImageLoadError."
-        }
-      },
-      {
-        "symbol": "L:dm.<init>([BLjava/awt/Component;)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.<init>([BLjava/awt/Component;)V#3",
-          "originalName": "var4",
-          "to": "imageLoadTracker",
-          "evidence": "The image constructor creates a Toolkit image, waits with MediaTracker, obtains dimensions and grabs pixels. The original InterruptedException catch only captures the error and keeps its existing partial initialization behavior; no AWT or interruption equivalence is claimed by the rendering probe. Original local var4 retains its storage/reuse as imageLoadTracker."
-        }
-      },
-      {
-        "symbol": "L:dm.<init>([BLjava/awt/Component;)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.<init>([BLjava/awt/Component;)V#4",
-          "originalName": "var5",
-          "to": "pixelGrabber",
-          "evidence": "The image constructor creates a Toolkit image, waits with MediaTracker, obtains dimensions and grabs pixels. The original InterruptedException catch only captures the error and keeps its existing partial initialization behavior; no AWT or interruption equivalence is claimed by the rendering probe. Original local var5 retains its storage/reuse as pixelGrabber."
-        }
-      },
-      {
-        "symbol": "L:dm.<init>([BLjava/awt/Component;)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.<init>([BLjava/awt/Component;)V#5",
-          "originalName": "decompiledCaughtParameter0",
-          "to": "imageLoadInterrupted",
-          "evidence": "The image constructor creates a Toolkit image, waits with MediaTracker, obtains dimensions and grabs pixels. The original InterruptedException catch only captures the error and keeps its existing partial initialization behavior; no AWT or interruption equivalence is claimed by the rendering probe. Original local decompiledCaughtParameter0 retains its storage/reuse as imageLoadInterrupted."
-        }
-      },
-      {
-        "symbol": "L:dm.a()V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.a()V#0",
-          "originalName": "var4",
-          "to": "sourceRow",
-          "evidence": "rotateClockwise copies source columns bottom-to-top, then reuses the column scratch when exchanging trim, pixel dimensions and full canvas dimensions. Independent quarter-turn pixel/geometry oracles preserve the swapped storage. Original local var4 retains its storage/reuse as sourceRow."
-        }
-      },
-      {
-        "symbol": "L:dm.a()V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.a()V#1",
-          "originalName": "incrementValue$0",
-          "to": "destinationWriteIndex",
-          "evidence": "rotateClockwise copies source columns bottom-to-top, then reuses the column scratch when exchanging trim, pixel dimensions and full canvas dimensions. Independent quarter-turn pixel/geometry oracles preserve the swapped storage. Original local incrementValue$0 retains its storage/reuse as destinationWriteIndex."
-        }
-      },
-      {
-        "symbol": "L:dm.a()V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.a()V#2",
-          "originalName": "var3",
-          "to": "sourceColumnThenGeometrySwap",
-          "evidence": "rotateClockwise copies source columns bottom-to-top, then reuses the column scratch when exchanging trim, pixel dimensions and full canvas dimensions. Independent quarter-turn pixel/geometry oracles preserve the swapped storage. Original local var3 retains its storage/reuse as sourceColumnThenGeometrySwap."
-        }
-      },
-      {
-        "symbol": "L:dm.a()V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.a()V#3",
-          "originalName": "var1",
-          "to": "rotatedPixels",
-          "evidence": "rotateClockwise copies source columns bottom-to-top, then reuses the column scratch when exchanging trim, pixel dimensions and full canvas dimensions. Independent quarter-turn pixel/geometry oracles preserve the swapped storage. Original local var1 retains its storage/reuse as rotatedPixels."
-        }
-      },
-      {
-        "symbol": "L:dm.a()V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.a()V#4",
-          "originalName": "var2",
-          "to": "destinationIndex",
-          "evidence": "rotateClockwise copies source columns bottom-to-top, then reuses the column scratch when exchanging trim, pixel dimensions and full canvas dimensions. Independent quarter-turn pixel/geometry oracles preserve the swapped storage. Original local var2 retains its storage/reuse as destinationIndex."
-        }
-      },
-      {
-        "symbol": "L:dm.b()Ldm;#0",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.b()Ldm;#0",
-          "originalName": "var3",
-          "to": "copyIndex",
-          "evidence": "copy allocates a new RGB Sprite and independent pixel array, carries the original dimensions/trims, and copies every pixel. This remains an RGB return even when inherited by ArgbSprite; native fixtures verify class and independence. Original local var3 retains its storage/reuse as copyIndex."
-        }
-      },
-      {
-        "symbol": "L:dm.b()Ldm;#1",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.b()Ldm;#1",
-          "originalName": "var1",
-          "to": "copiedSprite",
-          "evidence": "copy allocates a new RGB Sprite and independent pixel array, carries the original dimensions/trims, and copies every pixel. This remains an RGB return even when inherited by ArgbSprite; native fixtures verify class and independence. Original local var1 retains its storage/reuse as copiedSprite."
-        }
-      },
-      {
-        "symbol": "L:dm.b()Ldm;#2",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.b()Ldm;#2",
-          "originalName": "var2",
-          "to": "pixelCount",
-          "evidence": "copy allocates a new RGB Sprite and independent pixel array, carries the original dimensions/trims, and copies every pixel. This remains an RGB return even when inherited by ArgbSprite; native fixtures verify class and independence. Original local var2 retains its storage/reuse as pixelCount."
-        }
-      },
-      {
-        "symbol": "L:dm.b(IIII)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.b(IIII)V#0",
-          "originalName": "var5",
-          "to": "sourcePivotXQ4",
-          "evidence": "drawRotatedCentered uses full canvas dimensions times eight as Q4 source pivots, adjusts the destination fractional center and calls rotateSmooth. It retains the RGB bilinear contract even when inherited by ArgbSprite. Original local var5 retains its storage/reuse as sourcePivotXQ4."
-        }
-      },
-      {
-        "symbol": "L:dm.b(IIII)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.b(IIII)V#1",
-          "originalName": "var6",
-          "to": "sourcePivotYQ4",
-          "evidence": "drawRotatedCentered uses full canvas dimensions times eight as Q4 source pivots, adjusts the destination fractional center and calls rotateSmooth. It retains the RGB bilinear contract even when inherited by ArgbSprite. Original local var6 retains its storage/reuse as sourcePivotYQ4."
-        }
-      },
-      {
-        "symbol": "L:dm.c()Ldm;#0",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c()Ldm;#0",
-          "originalName": "var2",
-          "to": "copyRow",
-          "evidence": "copyMirroredHorizontally allocates a new RGB Sprite, copies each row in reverse column order and reflects trimX within the unchanged full canvas. Native fixtures verify copied pixels, dimensions, return class and nonaliasing. Original local var2 retains its storage/reuse as copyRow."
-        }
-      },
-      {
-        "symbol": "L:dm.c()Ldm;#1",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c()Ldm;#1",
-          "originalName": "var3",
-          "to": "copyColumn",
-          "evidence": "copyMirroredHorizontally allocates a new RGB Sprite, copies each row in reverse column order and reflects trimX within the unchanged full canvas. Native fixtures verify copied pixels, dimensions, return class and nonaliasing. Original local var3 retains its storage/reuse as copyColumn."
-        }
-      },
-      {
-        "symbol": "L:dm.c()Ldm;#2",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c()Ldm;#2",
-          "originalName": "var1",
-          "to": "mirroredSprite",
-          "evidence": "copyMirroredHorizontally allocates a new RGB Sprite, copies each row in reverse column order and reflects trimX within the unchanged full canvas. Native fixtures verify copied pixels, dimensions, return class and nonaliasing. Original local var1 retains its storage/reuse as mirroredSprite."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#0",
-          "originalName": "stackIn_5_0",
-          "to": "topLeftWeightCandidateQ24",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local stackIn_5_0 retains its storage/reuse as topLeftWeightCandidateQ24."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#1",
-          "originalName": "stackIn_11_0",
-          "to": "topRightWeightCandidateQ24",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local stackIn_11_0 retains its storage/reuse as topRightWeightCandidateQ24."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#10",
-          "originalName": "var12",
-          "to": "topRightWeightQ24ThenQ8",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var12 retains its storage/reuse as topRightWeightQ24ThenQ8."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#11",
-          "originalName": "var13",
-          "to": "bottomLeftWeightQ24ThenQ8",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var13 retains its storage/reuse as bottomLeftWeightQ24ThenQ8."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#12",
-          "originalName": "var14",
-          "to": "bottomRightWeightQ24ThenQ8",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var14 retains its storage/reuse as bottomRightWeightQ24ThenQ8."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#13",
-          "originalName": "var15",
-          "to": "totalWeightQ8",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var15 retains its storage/reuse as totalWeightQ8."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#14",
-          "originalName": "var16",
-          "to": "weightedRedBlue",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var16 retains its storage/reuse as weightedRedBlue."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#15",
-          "originalName": "var17",
-          "to": "weightedGreen",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var17 retains its storage/reuse as weightedGreen."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#16",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#16",
-          "originalName": "var18",
-          "to": "filteredPixel",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var18 retains its storage/reuse as filteredPixel."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#2",
-          "originalName": "stackIn_19_0",
-          "to": "bottomLeftWeightCandidateQ24",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local stackIn_19_0 retains its storage/reuse as bottomLeftWeightCandidateQ24."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#3",
-          "originalName": "stackIn_25_0",
-          "to": "bottomRightWeightCandidateQ24",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local stackIn_25_0 retains its storage/reuse as bottomRightWeightCandidateQ24."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#4",
-          "originalName": "var6",
-          "to": "sourceIndex",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var6 retains its storage/reuse as sourceIndex."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#5",
-          "originalName": "var7",
-          "to": "topLeftPixel",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var7 retains its storage/reuse as topLeftPixel."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#6",
-          "originalName": "var8",
-          "to": "topRightPixel",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var8 retains its storage/reuse as topRightPixel."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#7",
-          "originalName": "var9",
-          "to": "bottomLeftPixel",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var9 retains its storage/reuse as bottomLeftPixel."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#8",
-          "originalName": "var10",
-          "to": "bottomRightPixel",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var10 retains its storage/reuse as bottomRightPixel."
-        }
-      },
-      {
-        "symbol": "L:dm.c(IIIII)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.c(IIIII)V#9",
-          "originalName": "var11",
-          "to": "topLeftWeightQ24ThenQ8",
-          "evidence": "sampleBilinear combines nonzero in-bounds neighbors with Q24 bilinear weights truncated to Q8, rejects total coverage below 128, normalizes surviving channels and forces a zero result to one. Independent native neighbor/channel oracles cover fractional and source-edge boundaries. Original local var11 retains its storage/reuse as topLeftWeightQ24ThenQ8."
-        }
-      },
-      {
-        "symbol": "L:dm.d()V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d()V#0",
-          "originalName": "var8",
-          "to": "copyRow",
-          "evidence": "trimTransparentBorders finds the nonzero-pixel bounding box in bottom/top/right/left order, reuses its scan scratches, copies the surviving rectangle and adjusts trim offsets while preserving full canvas dimensions. Independent bounding-box fixtures verify nonempty and empty sprites. Original local var8 retains its storage/reuse as copyRow."
-        }
-      },
-      {
-        "symbol": "L:dm.d()V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d()V#1",
-          "originalName": "var9",
-          "to": "copyColumn",
-          "evidence": "trimTransparentBorders finds the nonzero-pixel bounding box in bottom/top/right/left order, reuses its scan scratches, copies the surviving rectangle and adjusts trim offsets while preserving full canvas dimensions. Independent bounding-box fixtures verify nonempty and empty sprites. Original local var9 retains its storage/reuse as copyColumn."
-        }
-      },
-      {
-        "symbol": "L:dm.d()V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d()V#2",
-          "originalName": "var1",
-          "to": "bottomEdge",
-          "evidence": "trimTransparentBorders finds the nonzero-pixel bounding box in bottom/top/right/left order, reuses its scan scratches, copies the surviving rectangle and adjusts trim offsets while preserving full canvas dimensions. Independent bounding-box fixtures verify nonempty and empty sprites. Original local var1 retains its storage/reuse as bottomEdge."
-        }
-      },
-      {
-        "symbol": "L:dm.d()V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d()V#3",
-          "originalName": "var2",
-          "to": "rowOffsetThenTopEdge",
-          "evidence": "trimTransparentBorders finds the nonzero-pixel bounding box in bottom/top/right/left order, reuses its scan scratches, copies the surviving rectangle and adjusts trim offsets while preserving full canvas dimensions. Independent bounding-box fixtures verify nonempty and empty sprites. Original local var2 retains its storage/reuse as rowOffsetThenTopEdge."
-        }
-      },
-      {
-        "symbol": "L:dm.d()V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d()V#4",
-          "originalName": "var3",
-          "to": "scanThenRightEdge",
-          "evidence": "trimTransparentBorders finds the nonzero-pixel bounding box in bottom/top/right/left order, reuses its scan scratches, copies the surviving rectangle and adjusts trim offsets while preserving full canvas dimensions. Independent bounding-box fixtures verify nonempty and empty sprites. Original local var3 retains its storage/reuse as scanThenRightEdge."
-        }
-      },
-      {
-        "symbol": "L:dm.d()V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d()V#5",
-          "originalName": "var4",
-          "to": "scanThenLeftEdge",
-          "evidence": "trimTransparentBorders finds the nonzero-pixel bounding box in bottom/top/right/left order, reuses its scan scratches, copies the surviving rectangle and adjusts trim offsets while preserving full canvas dimensions. Independent bounding-box fixtures verify nonempty and empty sprites. Original local var4 retains its storage/reuse as scanThenLeftEdge."
-        }
-      },
-      {
-        "symbol": "L:dm.d()V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d()V#6",
-          "originalName": "var5",
-          "to": "scanRowThenCroppedWidth",
-          "evidence": "trimTransparentBorders finds the nonzero-pixel bounding box in bottom/top/right/left order, reuses its scan scratches, copies the surviving rectangle and adjusts trim offsets while preserving full canvas dimensions. Independent bounding-box fixtures verify nonempty and empty sprites. Original local var5 retains its storage/reuse as scanRowThenCroppedWidth."
-        }
-      },
-      {
-        "symbol": "L:dm.d()V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d()V#7",
-          "originalName": "var6",
-          "to": "croppedHeight",
-          "evidence": "trimTransparentBorders finds the nonzero-pixel bounding box in bottom/top/right/left order, reuses its scan scratches, copies the surviving rectangle and adjusts trim offsets while preserving full canvas dimensions. Independent bounding-box fixtures verify nonempty and empty sprites. Original local var6 retains its storage/reuse as croppedHeight."
-        }
-      },
-      {
-        "symbol": "L:dm.d()V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d()V#8",
-          "originalName": "var7",
-          "to": "croppedPixels",
-          "evidence": "trimTransparentBorders finds the nonzero-pixel bounding box in bottom/top/right/left order, reuses its scan scratches, copies the surviving rectangle and adjusts trim offsets while preserving full canvas dimensions. Independent bounding-box fixtures verify nonempty and empty sprites. Original local var7 retains its storage/reuse as croppedPixels."
-        }
-      },
-      {
-        "symbol": "L:dm.d(II)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d(II)V#0",
-          "originalName": "var3",
-          "to": "firstSourceX",
-          "evidence": "RGB drawHalfSize halves trim offsets with arithmetic shifts, converts clipped destination edges into source coordinates, and supplies the 2-by-2 kernel bounds and row skips. Original local var3 retains its storage/reuse as firstSourceX."
-        }
-      },
-      {
-        "symbol": "L:dm.d(II)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d(II)V#1",
-          "originalName": "var4",
-          "to": "sourceRightExclusive",
-          "evidence": "RGB drawHalfSize halves trim offsets with arithmetic shifts, converts clipped destination edges into source coordinates, and supplies the 2-by-2 kernel bounds and row skips. Original local var4 retains its storage/reuse as sourceRightExclusive."
-        }
-      },
-      {
-        "symbol": "L:dm.d(II)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d(II)V#2",
-          "originalName": "var5",
-          "to": "firstSourceY",
-          "evidence": "RGB drawHalfSize halves trim offsets with arithmetic shifts, converts clipped destination edges into source coordinates, and supplies the 2-by-2 kernel bounds and row skips. Original local var5 retains its storage/reuse as firstSourceY."
-        }
-      },
-      {
-        "symbol": "L:dm.d(II)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.d(II)V#3",
-          "originalName": "var6",
-          "to": "sourceBottomExclusive",
-          "evidence": "RGB drawHalfSize halves trim offsets with arithmetic shifts, converts clipped destination edges into source coordinates, and supplies the 2-by-2 kernel bounds and row skips. Original local var6 retains its storage/reuse as sourceBottomExclusive."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#0",
-          "originalName": "var9",
-          "to": "sourceBlockY",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var9 retains its storage/reuse as sourceBlockY."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#1",
-          "originalName": "var16",
-          "to": "sampleRow",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var16 retains its storage/reuse as sampleRow."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#10",
-          "originalName": "var6",
-          "to": "lastBlockSourceX",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var6 retains its storage/reuse as lastBlockSourceX."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#11",
-          "originalName": "var7",
-          "to": "firstSourceY",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var7 retains its storage/reuse as firstSourceY."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#12",
-          "originalName": "var8",
-          "to": "lastBlockSourceY",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var8 retains its storage/reuse as lastBlockSourceY."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#13",
-          "originalName": "var10",
-          "to": "sourceIndex",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var10 retains its storage/reuse as sourceIndex."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#14",
-          "originalName": "var11",
-          "to": "destinationIndex",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var11 retains its storage/reuse as destinationIndex."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#15",
-          "originalName": "var12",
-          "to": "sourceBlockX",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var12 retains its storage/reuse as sourceBlockX."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#16",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#16",
-          "originalName": "var13",
-          "to": "sourcePixelOrDestination",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var13 retains its storage/reuse as sourcePixelOrDestination."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#17",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#17",
-          "originalName": "var14",
-          "to": "sumRedBlue",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var14 retains its storage/reuse as sumRedBlue."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#18",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#18",
-          "originalName": "var15",
-          "to": "sumGreen",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var15 retains its storage/reuse as sumGreen."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#2",
-          "originalName": "var17",
-          "to": "sampleColumn",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var17 retains its storage/reuse as sampleColumn."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#3",
-          "originalName": "stackIn_3_0",
-          "to": "firstSourceXCandidate",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local stackIn_3_0 retains its storage/reuse as firstSourceXCandidate."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#4",
-          "originalName": "stackIn_6_0",
-          "to": "lastBlockSourceXCandidate",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local stackIn_6_0 retains its storage/reuse as lastBlockSourceXCandidate."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#5",
-          "originalName": "stackIn_9_0",
-          "to": "firstSourceYCandidate",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local stackIn_9_0 retains its storage/reuse as firstSourceYCandidate."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#6",
-          "originalName": "stackIn_12_0",
-          "to": "lastBlockSourceYCandidate",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local stackIn_12_0 retains its storage/reuse as lastBlockSourceYCandidate."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#7",
-          "originalName": "var3",
-          "to": "reducedWidth",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var3 retains its storage/reuse as reducedWidth."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#8",
-          "originalName": "var4",
-          "to": "reducedHeight",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var4 retains its storage/reuse as reducedHeight."
-        }
-      },
-      {
-        "symbol": "L:dm.f(II)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.f(II)V#9",
-          "originalName": "var5",
-          "to": "firstSourceX",
-          "evidence": "RGB drawQuarterSize traverses clipped complete 4-by-4 source blocks. Zero samples contribute destination channels; packed channel sums are divided by sixteen without changing read/order or trim behavior. Native reduction oracles compute the channels independently. Original local var5 retains its storage/reuse as firstSourceX."
-        }
-      },
-      {
-        "symbol": "L:dm.g(I)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.g(I)V#0",
-          "originalName": "var4",
-          "to": "row",
-          "evidence": "addOutline allocates a separate output array and fills original zero pixels adjacent to a nonzero left/top/right/bottom neighbor. Existing pixels and dimensions stay intact; native four-neighbor oracles preserve this read order. Original local var4 retains its storage/reuse as row."
-        }
-      },
-      {
-        "symbol": "L:dm.g(I)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.g(I)V#1",
-          "originalName": "var5",
-          "to": "column",
-          "evidence": "addOutline allocates a separate output array and fills original zero pixels adjacent to a nonzero left/top/right/bottom neighbor. Existing pixels and dimensions stay intact; native four-neighbor oracles preserve this read order. Original local var5 retains its storage/reuse as column."
-        }
-      },
-      {
-        "symbol": "L:dm.g(I)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.g(I)V#2",
-          "originalName": "incrementValue$1",
-          "to": "destinationWriteIndex",
-          "evidence": "addOutline allocates a separate output array and fills original zero pixels adjacent to a nonzero left/top/right/bottom neighbor. Existing pixels and dimensions stay intact; native four-neighbor oracles preserve this read order. Original local incrementValue$1 retains its storage/reuse as destinationWriteIndex."
-        }
-      },
-      {
-        "symbol": "L:dm.g(I)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.g(I)V#3",
-          "originalName": "var2",
-          "to": "outlinedPixels",
-          "evidence": "addOutline allocates a separate output array and fills original zero pixels adjacent to a nonzero left/top/right/bottom neighbor. Existing pixels and dimensions stay intact; native four-neighbor oracles preserve this read order. Original local var2 retains its storage/reuse as outlinedPixels."
-        }
-      },
-      {
-        "symbol": "L:dm.g(I)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.g(I)V#4",
-          "originalName": "var3",
-          "to": "pixelIndex",
-          "evidence": "addOutline allocates a separate output array and fills original zero pixels adjacent to a nonzero left/top/right/bottom neighbor. Existing pixels and dimensions stay intact; native four-neighbor oracles preserve this read order. Original local var3 retains its storage/reuse as pixelIndex."
-        }
-      },
-      {
-        "symbol": "L:dm.g(I)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:dm.g(I)V#5",
-          "originalName": "var6",
-          "to": "pixelOrOutlineColor",
-          "evidence": "addOutline allocates a separate output array and fills original zero pixels adjacent to a nonzero left/top/right/bottom neighbor. Existing pixels and dimensions stay intact; native four-neighbor oracles preserve this read order. Original local var6 retains its storage/reuse as pixelOrOutlineColor."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#0",
-          "originalName": "incrementValue$8",
-          "to": "writeIndexFixedXFixedY",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: writeIndexFixedXFixedY."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#1",
-          "originalName": "incrementValue$6",
-          "to": "writeIndexFixedXForwardY",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: writeIndexFixedXForwardY."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#10",
-          "originalName": "var9",
-          "to": "scaledSin",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: scaledSin."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#11",
-          "originalName": "var10",
-          "to": "scaledCos",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: scaledCos."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#12",
-          "originalName": "var11",
-          "to": "corner0X",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: corner0X."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#13",
-          "originalName": "var12",
-          "to": "corner0Y",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: corner0Y."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#14",
-          "originalName": "var13",
-          "to": "corner1X",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: corner1X."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#15",
-          "originalName": "var14",
-          "to": "corner1Y",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: corner1Y."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#16",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#16",
-          "originalName": "var15",
-          "to": "corner2X",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: corner2X."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#17",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#17",
-          "originalName": "var16",
-          "to": "corner2Y",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: corner2Y."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#18",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#18",
-          "originalName": "var17",
-          "to": "corner3X",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: corner3X."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#19",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#19",
-          "originalName": "var18",
-          "to": "corner3Y",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: corner3Y."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#2",
-          "originalName": "incrementValue$7",
-          "to": "writeIndexFixedXReverseY",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: writeIndexFixedXReverseY."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#20",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#20",
-          "originalName": "var19",
-          "to": "leftBound",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: leftBound."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#21",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#21",
-          "originalName": "var20",
-          "to": "rightThenNegativeWidth",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: rightThenNegativeWidth."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#22",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#22",
-          "originalName": "var21",
-          "to": "topBound",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: topBound."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#23",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#23",
-          "originalName": "var22",
-          "to": "bottomThenNegativeHeight",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: bottomThenNegativeHeight."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#24",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#24",
-          "originalName": "var23",
-          "to": "rowDestinationIndex",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: rowDestinationIndex."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#25",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#25",
-          "originalName": "var24",
-          "to": "inverseScaleFactor",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: inverseScaleFactor."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#26",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#26",
-          "originalName": "var26",
-          "to": "inverseSinStep",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: inverseSinStep."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#27",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#27",
-          "originalName": "var27",
-          "to": "inverseCosStep",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: inverseCosStep."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#28",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#28",
-          "originalName": "var28",
-          "to": "destinationOffsetX",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: destinationOffsetX."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#29",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#29",
-          "originalName": "var29",
-          "to": "destinationOffsetY",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: destinationOffsetY."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#3",
-          "originalName": "incrementValue$2",
-          "to": "writeIndexForwardXFixedY",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: writeIndexForwardXFixedY."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#30",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#30",
-          "originalName": "var30",
-          "to": "rowSourceXQ12",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: rowSourceXQ12."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#31",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#31",
-          "originalName": "var31",
-          "to": "rowSourceYQ12",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: rowSourceYQ12."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#32",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#32",
-          "originalName": "var32",
-          "to": "clipPixelCount",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: clipPixelCount."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#33",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#33",
-          "originalName": "var33",
-          "to": "negativeRowCounter",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: negativeRowCounter."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#34",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#34",
-          "originalName": "var34",
-          "to": "destinationIndex",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: destinationIndex."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#35",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#35",
-          "originalName": "var35",
-          "to": "sourceXQ12",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: sourceXQ12."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#36",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#36",
-          "originalName": "var36",
-          "to": "sourceYQ12",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: sourceYQ12."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#37",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#37",
-          "originalName": "var37",
-          "to": "negativePixelCounter",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: negativePixelCounter."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#38",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#38",
-          "originalName": "var38",
-          "to": "sampledPixel",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: sampledPixel."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#39",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#39",
-          "originalName": "var39",
-          "to": "destinationPixel",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: destinationPixel."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#4",
-          "originalName": "incrementValue$0",
-          "to": "writeIndexForwardXForwardY",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: writeIndexForwardXForwardY."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#40",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#40",
-          "originalName": "var40",
-          "to": "storedAlpha",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: storedAlpha."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#41",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#41",
-          "originalName": "var41",
-          "to": "inverseAlpha256",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: inverseAlpha256."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#5",
-          "originalName": "incrementValue$1",
-          "to": "writeIndexForwardXReverseY",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: writeIndexForwardXReverseY."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#6",
-          "originalName": "incrementValue$5",
-          "to": "writeIndexReverseXFixedY",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: writeIndexReverseXFixedY."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#7",
-          "originalName": "incrementValue$3",
-          "to": "writeIndexReverseXForwardY",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: writeIndexReverseXForwardY."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#8",
-          "originalName": "incrementValue$4",
-          "to": "writeIndexReverseXReverseY",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: writeIndexReverseXReverseY."
-        }
-      },
-      {
-        "symbol": "L:il.b(IIIIII)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:il.b(IIIIII)V#9",
-          "originalName": "var7",
-          "to": "angleRadians",
-          "evidence": "ARGB rotateNearest uses the same reviewed Q4 pivots, transformed corner bounds, Q12 inverse source steps and nine step-direction clipping branches as RGB dm.b(IIIIII)V. It adds destination/stored-alpha/inverse-alpha values for unsigned blending. Cardinal and general-angle native pixel fixtures preserve this role: angleRadians."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#0",
-          "originalName": "stackIn_3_0",
-          "to": "firstSourceXCandidate",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local stackIn_3_0 retains its storage/reuse as firstSourceXCandidate."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#1",
-          "originalName": "stackIn_6_0",
-          "to": "lastBlockSourceXCandidate",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local stackIn_6_0 retains its storage/reuse as lastBlockSourceXCandidate."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#10",
-          "originalName": "var4",
-          "to": "reducedHeight",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var4 retains its storage/reuse as reducedHeight."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#11",
-          "originalName": "var5",
-          "to": "firstSourceX",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var5 retains its storage/reuse as firstSourceX."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#12",
-          "originalName": "var6",
-          "to": "lastBlockSourceX",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var6 retains its storage/reuse as lastBlockSourceX."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#13",
-          "originalName": "var7",
-          "to": "firstSourceY",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var7 retains its storage/reuse as firstSourceY."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#14",
-          "originalName": "var8",
-          "to": "lastBlockSourceY",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var8 retains its storage/reuse as lastBlockSourceY."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#15",
-          "originalName": "var9",
-          "to": "sourceBlockY",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var9 retains its storage/reuse as sourceBlockY."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#16",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#16",
-          "originalName": "var10",
-          "to": "sourceIndex",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var10 retains its storage/reuse as sourceIndex."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#17",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#17",
-          "originalName": "var11",
-          "to": "destinationIndex",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var11 retains its storage/reuse as destinationIndex."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#18",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#18",
-          "originalName": "var12",
-          "to": "sourceBlockX",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var12 retains its storage/reuse as sourceBlockX."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#19",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#19",
-          "originalName": "var13",
-          "to": "samplePixel",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var13 retains its storage/reuse as samplePixel."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#2",
-          "originalName": "stackIn_9_0",
-          "to": "firstSourceYCandidate",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local stackIn_9_0 retains its storage/reuse as firstSourceYCandidate."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#20",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#20",
-          "originalName": "var14",
-          "to": "sampleAlpha",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var14 retains its storage/reuse as sampleAlpha."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#21",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#21",
-          "originalName": "var15",
-          "to": "weightedRedThenRedBlue",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var15 retains its storage/reuse as weightedRedThenRedBlue."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#22",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#22",
-          "originalName": "var16",
-          "to": "weightedGreenThenPackedGreen",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var16 retains its storage/reuse as weightedGreenThenPackedGreen."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#23",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#23",
-          "originalName": "var17",
-          "to": "weightedBlue",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var17 retains its storage/reuse as weightedBlue."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#24",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#24",
-          "originalName": "var18",
-          "to": "alphaSum",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var18 retains its storage/reuse as alphaSum."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#25",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#25",
-          "originalName": "var19",
-          "to": "sampleIndexThenAverageAlpha",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var19 retains its storage/reuse as sampleIndexThenAverageAlpha."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#26",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#26",
-          "originalName": "var20",
-          "to": "inverseAlpha256",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var20 retains its storage/reuse as inverseAlpha256."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#27",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#27",
-          "originalName": "var21",
-          "to": "destinationPixel",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var21 retains its storage/reuse as destinationPixel."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#3",
-          "originalName": "stackIn_12_0",
-          "to": "lastBlockSourceYCandidate",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local stackIn_12_0 retains its storage/reuse as lastBlockSourceYCandidate."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#4",
-          "originalName": "stackIn_20_0",
-          "to": "samplePixelBuffer",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local stackIn_20_0 retains its storage/reuse as samplePixelBuffer."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#5",
-          "originalName": "stackIn_20_1",
-          "to": "sampleBaseIndex",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local stackIn_20_1 retains its storage/reuse as sampleBaseIndex."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#6",
-          "originalName": "stackIn_21_0",
-          "to": "samplePixelBufferAlias",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local stackIn_21_0 retains its storage/reuse as samplePixelBufferAlias."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#7",
-          "originalName": "stackIn_21_1",
-          "to": "sampleBaseIndexAlias",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local stackIn_21_1 retains its storage/reuse as sampleBaseIndexAlias."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#8",
-          "originalName": "stackIn_21_2",
-          "to": "sampleRowOffset",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local stackIn_21_2 retains its storage/reuse as sampleRowOffset."
-        }
-      },
-      {
-        "symbol": "L:il.d(II)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:il.d(II)V#9",
-          "originalName": "var3",
-          "to": "reducedWidth",
-          "evidence": "ARGB drawHalfSize averages four samples weighted by stored alpha, divides channel sums by alphaSum, then blends with alphaSum/4. Empty-alpha blocks skip writes. Stack carriers preserve the original pixel-buffer/base-index/row-offset selection; loop indexes and channel sums retain their later reuse. Native reduction oracles verify these roles. Original local var3 retains its storage/reuse as reducedWidth."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#0",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#0",
-          "originalName": "stackIn_3_0",
-          "to": "firstSourceXCandidate",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local stackIn_3_0 retains its storage/reuse as firstSourceXCandidate."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#1",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#1",
-          "originalName": "stackIn_6_0",
-          "to": "lastBlockSourceXCandidate",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local stackIn_6_0 retains its storage/reuse as lastBlockSourceXCandidate."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#10",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#10",
-          "originalName": "var9",
-          "to": "sampleBlockAlias",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var9 retains its storage/reuse as sampleBlockAlias."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#11",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#11",
-          "originalName": "var10",
-          "to": "sourceBlockY",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var10 retains its storage/reuse as sourceBlockY."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#12",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#12",
-          "originalName": "var11",
-          "to": "sourceBlockX",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var11 retains its storage/reuse as sourceBlockX."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#13",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#13",
-          "originalName": "var12",
-          "to": "sourceIndex",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var12 retains its storage/reuse as sourceIndex."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#14",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#14",
-          "originalName": "var13",
-          "to": "destinationIndex",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var13 retains its storage/reuse as destinationIndex."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#15",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#15",
-          "originalName": "var14",
-          "to": "sampleRowThenAlpha",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var14 retains its storage/reuse as sampleRowThenAlpha."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#16",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#16",
-          "originalName": "var15",
-          "to": "sampleColumnThenAlphaSum",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var15 retains its storage/reuse as sampleColumnThenAlphaSum."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#17",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#17",
-          "originalName": "var16",
-          "to": "weightedRedThenRedBlue",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var16 retains its storage/reuse as weightedRedThenRedBlue."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#18",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#18",
-          "originalName": "var17",
-          "to": "weightedGreenThenPackedGreen",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var17 retains its storage/reuse as weightedGreenThenPackedGreen."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#19",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#19",
-          "originalName": "var18",
-          "to": "weightedBlue",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var18 retains its storage/reuse as weightedBlue."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#2",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#2",
-          "originalName": "stackIn_9_0",
-          "to": "firstSourceYCandidate",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local stackIn_9_0 retains its storage/reuse as firstSourceYCandidate."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#20",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#20",
-          "originalName": "var19",
-          "to": "sampleIndexThenAverageAlpha",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var19 retains its storage/reuse as sampleIndexThenAverageAlpha."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#21",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#21",
-          "originalName": "var20",
-          "to": "inverseAlpha256",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var20 retains its storage/reuse as inverseAlpha256."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#22",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#22",
-          "originalName": "var21",
-          "to": "destinationPixel",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var21 retains its storage/reuse as destinationPixel."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#23",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#23",
-          "originalName": "var22",
-          "to": "sampleBlockStorage",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var22 retains its storage/reuse as sampleBlockStorage."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#24",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#24",
-          "originalName": "var23",
-          "to": "sampleBlockAllocationThenReadAlias",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var23 retains its storage/reuse as sampleBlockAllocationThenReadAlias."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#3",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#3",
-          "originalName": "stackIn_12_0",
-          "to": "lastBlockSourceYCandidate",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local stackIn_12_0 retains its storage/reuse as lastBlockSourceYCandidate."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#4",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#4",
-          "originalName": "var3",
-          "to": "reducedWidth",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var3 retains its storage/reuse as reducedWidth."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#5",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#5",
-          "originalName": "var4",
-          "to": "reducedHeight",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var4 retains its storage/reuse as reducedHeight."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#6",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#6",
-          "originalName": "var5",
-          "to": "firstSourceX",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var5 retains its storage/reuse as firstSourceX."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#7",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#7",
-          "originalName": "var6",
-          "to": "lastBlockSourceX",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var6 retains its storage/reuse as lastBlockSourceX."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#8",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#8",
-          "originalName": "var7",
-          "to": "firstSourceY",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var7 retains its storage/reuse as firstSourceY."
-        }
-      },
-      {
-        "symbol": "L:il.f(II)V#9",
-        "before": null,
-        "after": {
-          "symbol": "L:il.f(II)V#9",
-          "originalName": "var8",
-          "to": "lastBlockSourceY",
-          "evidence": "ARGB drawQuarterSize copies each 4-by-4 sample block into a retained local array and computes stored-alpha-weighted channel averages, blending with alphaSum/16. Row/column/index scratches are later reused for alpha/alphaSum/blend weight, and array aliases are retained. Native reduction oracles verify actual pixels. Original local var8 retains its storage/reuse as lastBlockSourceY."
-        }
-      },
-      {
-        "symbol": "P:dm.<init>([BLjava/awt/Component;)V#0",
-        "before": null,
-        "after": {
-          "symbol": "P:dm.<init>([BLjava/awt/Component;)V#0",
-          "originalName": "param0",
-          "to": "encodedImageBytes",
-          "evidence": "The image constructor passes encoded bytes to Toolkit.createImage and the supplied Component to MediaTracker/image size lookups. AWT loading, interruption and device behavior are source-inspected and not covered by the native drawing fixtures."
-        }
-      },
-      {
-        "symbol": "P:dm.<init>([BLjava/awt/Component;)V#1",
-        "before": null,
-        "after": {
-          "symbol": "P:dm.<init>([BLjava/awt/Component;)V#1",
-          "originalName": "param1",
-          "to": "imageObserverComponent",
-          "evidence": "The image constructor passes encoded bytes to Toolkit.createImage and the supplied Component to MediaTracker/image size lookups. AWT loading, interruption and device behavior are source-inspected and not covered by the native drawing fixtures."
-        }
-      }
-    ],
+    "ruleChanges": [],
     "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
     "sourceEvidence": [
       {
@@ -16325,6 +14614,10 @@
       {
         "file": "i.java",
         "sha256": "eed169ae84e81465f187a766f32ba756d9fdcec9b967a1e7e1c82e7310ed3adf"
+      },
+      {
+        "file": "ic.java",
+        "sha256": "fb9712b34bdf72f5b957fef362d91543e733ac9dab7ba2db0ac02b4b4338640b"
       },
       {
         "file": "ih.java",
@@ -16725,10 +15018,17 @@
       },
       {
         "file": "tests/test-geoblox-result-helpers.mjs",
-        "sha256": "5fcfb59b2937813ed532a021c11c1248c3567d89e493c10db01da3ed2ee64a0e",
+        "sha256": "82d6e77514635ab1025299a1aa6c618afb77d76b9287e5f26a88bf9309c77207",
         "nativeOutputSha256": "ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e8a5e510872ace6",
         "scenarios": 13927,
-        "scope": "120 selectors, 4801 popup factories, 9000 position checks and six music cases; controlled globals."
+        "scope": "120 selectors, 4801 popup factories, 9000 position checks and six music cases; controlled globals.",
+        "additionalTraces": [
+          {
+            "constant": "expectedCacheWriteSha256",
+            "sha256": "e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d",
+            "scenarios": 140
+          }
+        ]
       }
     ],
     "textResources": {
@@ -18896,8 +17196,8 @@
       ]
     },
     "verification": {
-      "sourceDeclarations": 20710,
-      "bindingsCompared": 150801,
+      "sourceDeclarations": 20709,
+      "bindingsCompared": 150797,
       "overrideRelationships": 388,
       "identifierEdits": 27222,
       "dictionaryRestorationFiles": 303,
@@ -18919,7 +17219,8 @@
         "Nested terminal continuations cross only proven declaration-free if/block scopes. Straight factoring refuses repeated statements or identifier occurrences; exact return/throw clones can use deterministic plain-block breaks. Nested loop/switch/old-label completion is deliberately not assumed. GeoBlox needs no generated block labels in this pass; its difficulty tails are now coalesced, while other joins remain.",
         "Relational inversions use exact cached JVM integral-predicate spellings only when all matching occurrences have integral evidence. Unknown, floating and conflicting predicates keep logical negation; cached operands are never rendered again. This validates the recorded native fixture scopes, not whole-game equivalence.",
         "Visual asset names use fixed resource keys, loader assignments and actual selectors. Complete successful archive loading and real-asset rendering remain outside the native fixtures. Keyboard/screen/theme indexes, misspelled resource keys and guard side effects are unchanged.",
-        "All parameters/local declarations in Sprite, ArgbSprite and IndexedSprite are named; other classes and shared joins still have opaque identifiers. The retained 45074-case pixel matrix has 43750 independent oracle cases. The additional 33168-case transform matrix has 23340 independent cardinal-rotation/bilinear/reduction/mutation cases and 9828 general-angle/extreme-scale trace-only cases. Bilinear coverage below 128 skips writes; surviving zero RGB becomes one. ArgbSprite inherits RGB smooth rotation and returns RGB copies. Arbitrary malformed geometry, AWT image loading/interruption, real assets and whole-game equivalence remain unverified."
+        "All parameters/local declarations in Sprite, ArgbSprite and IndexedSprite are named; other classes and shared joins still have opaque identifiers. The retained 45074-case pixel matrix has 43750 independent oracle cases. The additional 33168-case transform matrix has 23340 independent cardinal-rotation/bilinear/reduction/mutation cases and 9828 general-angle/extreme-scale trace-only cases. Bilinear coverage below 128 skips writes; surviving zero RGB becomes one. ArgbSprite inherits RGB smooth rotation and returns RGB copies. Arbitrary malformed geometry, AWT image loading/interruption, real assets and whole-game equivalence remain unverified.",
+        "Dead selector cleanup only removes allocated int locals whose complete parsed/token-accounted body occurrences are literal stores or empty pure comparisons. The remaining ten selectors retain observable continuation routing. The independent 140-case cache probe covers null/closed/limited caches, payload bounds, null packets/buffers, guard side effects and integer offset overflow; it does not validate live cache concurrency, device timing or whole-game behavior."
       ],
       "checks": {
         "ruleBuilderTests": 9,
@@ -18959,9 +17260,9 @@
       "namedLocalDeclarations": 942,
       "nonselectorDeclarationsPreserved": 20699,
       "generatedSelectorsBefore": 265,
-      "generatedSelectorsAfter": 11,
-      "generatedSelectorsRemoved": 254,
-      "rawSourceLinesRemoved": 0,
+      "generatedSelectorsAfter": 10,
+      "generatedSelectorsRemoved": 255,
+      "rawSourceLinesRemoved": 5,
       "returnReconstructionChangedJavaFiles": 181,
       "localOrdinalMigrations": 0,
       "obsoleteNamedSelectorsRemoved": 1,
@@ -18975,8 +17276,8 @@
       "earlyExitChangedJavaFiles": 208,
       "elseWrappersRemoved": 2128,
       "genericEarlyExitTestGroups": 11,
-      "nativeEmitterComparisons": 40129,
-      "sourceReferenceOccurrencesRemoved": 0,
+      "nativeEmitterComparisons": 42465,
+      "sourceReferenceOccurrencesRemoved": 3,
       "sourceReferenceOccurrencesAdded": 0,
       "nativeDifficultyFlagCases": 82944,
       "nativeDifficultyBoundsCases": 56,
@@ -18986,7 +17287,7 @@
       "nativeDifficultyResetCases": 7,
       "nativeSpawnSelectionCases": 1332,
       "nativeDifficultyTraceSha256": "8c66899b5955eac3380cc3aefd3cbe17a5063cc68f98cd507ff406cea4ae587b",
-      "genericEmitterTestGroups": 23,
+      "genericEmitterTestGroups": 29,
       "genericTypedAssignmentTestGroups": 3,
       "typedLiteralAssignmentsFolded": 77,
       "difficultyAssignmentsFolded": 17,
@@ -18994,7 +17295,7 @@
       "typedAssignmentElseWrappersRemoved": 77,
       "nativeComparatorCases": 32768,
       "nativeComparatorTraceSha256": "9be228f7421970f2214c74e8890327f8592f706dc90ccd0d0933e6f2fbe0a604",
-      "referenceRemovalAttribution": "Naming-only pass: raw source, generators and all 2233 prior guarded rules are unchanged. Remaining parameter/local declarations in dm, il and na are now named. Independent native rotation, bilinear, reduction and mutation fixtures expand the existing drawing probe.",
+      "referenceRemovalAttribution": "Only the dead L:ic.a(B)V#1 selector declaration and its two stores/one empty-guard read are removed. All other normalized declarations and references, all 388 override relationships and all 2404 guarded naming rules are preserved. Four subsequent unguarded local ordinals shift down by one; no guarded ordinal migration is needed.",
       "genericBooleanCarrierTestGroups": 3,
       "localBooleanCarriersEliminated": 221,
       "localBooleanSnapshotsRetyped": 70,
@@ -19009,45 +17310,45 @@
       "sharedTailChangedJavaFiles": 16,
       "difficultyMethodLinesBefore": 38,
       "difficultyMethodLinesAfter": 38,
-      "allGuardedNamesUnchanged": false,
-      "ruleChangesInCurrentPass": 171,
+      "allGuardedNamesUnchanged": true,
+      "ruleChangesInCurrentPass": 0,
       "genericNestedContinuationTestGroups": 2,
       "nativeNestedContinuationComparisons": 2520,
       "nestedContinuationChangedJavaFiles": 7,
-      "generatedLocalOrdinalsReordered": 0,
-      "allDeclarationsPreservedAfterOriginalSpellingNormalization": true,
+      "generatedLocalOrdinalsReordered": 4,
+      "allDeclarationsPreservedAfterOriginalSpellingNormalization": false,
       "generatedBlockLabelsInGeoblox": 0,
       "genericIntegralTailGuardTestGroups": 2,
       "nativeIntegralTailGuardComparisons": 35280,
       "integralTailGuardChangedJavaFiles": 4,
-      "allDeclarationIdentitiesAndSpellingsUnchanged": true,
+      "allDeclarationIdentitiesAndSpellingsUnchanged": false,
       "cachedJvmOperandsNotReevaluated": true,
       "ambiguousPredicateComplementsRefused": true,
       "difficultyCategoryAndRecursiveAdvanceClonesEliminated": true,
       "allPriorGuardedNamesPreserved": true,
-      "namingRulesAddedInCurrentPass": 171,
-      "sourceInputChangedInCurrentPass": false,
+      "namingRulesAddedInCurrentPass": 0,
+      "sourceInputChangedInCurrentPass": true,
       "namedVisualAssetFieldsAdded": 59,
       "namedAssetLoadingMethodsAdded": 6,
       "namedAssetLoadingParametersAdded": 24,
       "namedAssetPreparationAndLookupLocalsAdded": 28,
-      "identifierEditsAddedInCurrentPass": 1695,
-      "lastStructuralPassVersion": 37,
+      "identifierEditsAddedInCurrentPass": 0,
+      "lastStructuralPassVersion": 42,
       "namingRulesRefinedInCurrentPass": 0,
       "allUnaffectedPriorRulesPreserved": true,
       "namedRenderingClassRulesAdded": 0,
       "namedRenderingMethodRulesAdded": 0,
       "namedRenderingFieldRulesAdded": 0,
-      "namedRenderingParameterRulesAdded": 2,
-      "namedRenderingLocalRulesAdded": 169,
+      "namedRenderingParameterRulesAdded": 0,
+      "namedRenderingLocalRulesAdded": 0,
       "nativeSpritePixelCases": 45074,
       "nativeSpritePixelOracleCases": 43750,
       "nativeSpritePixelTraceOnlyCases": 1324,
       "nativeSpritePixelTraceSha256": "c986ff493508bf516e6bd33e187ee51ed478a012dfebf467a8b76e00f78a1f09",
-      "namedRotationLocalRulesAdded": 42,
-      "namedBilinearLocalRulesAdded": 17,
-      "namedReductionLocalRulesAdded": 76,
-      "namedSpriteTransformAndImageLocalsAdded": 34,
+      "namedRotationLocalRulesAdded": 0,
+      "namedBilinearLocalRulesAdded": 0,
+      "namedReductionLocalRulesAdded": 0,
+      "namedSpriteTransformAndImageLocalsAdded": 0,
       "allSpriteParametersAndLocalsNamed": true,
       "nativeSpriteTransformCases": 33168,
       "nativeSpriteTransformOracleCases": 23340,
@@ -19056,7 +17357,86 @@
       "nativeBilinearCases": 4860,
       "nativeReductionOracleCases": 216,
       "nativeSpriteMutationOracleCases": 120,
-      "nativeSpriteTransformTraceSha256": "dd7445f0f6dc8c030467f58606545b95ee42afc9846ccaeebc79107f353583c1"
+      "nativeSpriteTransformTraceSha256": "dd7445f0f6dc8c030467f58606545b95ee42afc9846ccaeebc79107f353583c1",
+      "deadRegionSelectorsRemovedInCurrentPass": 1,
+      "emptySelectorGuardsRemovedInCurrentPass": 1,
+      "genericDeadSelectorTestGroups": 3,
+      "nativeDeadSelectorComparisons": 96,
+      "nativeCacheWriteCases": 140,
+      "nativeCacheWriteTraceSha256": "e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d",
+      "protectedTerminalArmNativeComparisons": 2240,
+      "protectedTerminalArmTestGroups": 3,
+      "removedGeneratedDeclaration": "L:ic.a(B)V#1",
+      "sourceDeclarationOrdinalMigrations": [
+        {
+          "before": "L:ic.a(B)V#2",
+          "after": "L:ic.a(B)V#1",
+          "originalName": "decompiledCaughtException"
+        },
+        {
+          "before": "L:ic.a(B)V#3",
+          "after": "L:ic.a(B)V#2",
+          "originalName": "decompiledCaughtParameter0"
+        },
+        {
+          "before": "L:ic.a(B)V#4",
+          "after": "L:ic.a(B)V#3",
+          "originalName": "decompiledUncheckedException"
+        },
+        {
+          "before": "L:ic.a(B)V#5",
+          "after": "L:ic.a(B)V#4",
+          "originalName": "decompiledCheckedException"
+        }
+      ]
+    },
+    "sourceChange": {
+      "before": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "dcd9609f476b0225c9e29821bec50439bb8a2be3",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "1fa1f5ca8db58810744ef29e04bcf31c74e81805",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "80101c5837724ddef2f706256e25320fdf76a57642d7c9b9de64fcf131f229c4",
+              "reproduce": "git archive --format=tar 1fa1f5ca8db58810744ef29e04bcf31c74e81805 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d"
+      },
+      "after": {
+        "source": {
+          "repository": "Kreijstal/funorb-decompiled",
+          "commit": "3b5b290598078b2e3473c601b6cc342f2961ce5c",
+          "subdirectory": "games/geoblox"
+        },
+        "generators": {
+          "dekoblokoWork": {
+            "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
+            "trackedClean": true
+          },
+          "javaTools": {
+            "commit": "b0593cb3fba9e3316c7915bd3039a9872ecbd6e6",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "da07e440f2a1886da40e4d7abb6e2e733afe50a92eeb13e0f21d243a6c9ee69e",
+              "reproduce": "git archive --format=tar b0593cb3fba9e3316c7915bd3039a9872ecbd6e6 | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            }
+          }
+        },
+        "inputTreeSha256": "97e83f6dc8cd521730af2d3f19096f4a24fb00d4c6ea45ba341caf11ed6ab2b0"
+      }
     }
   }
 }

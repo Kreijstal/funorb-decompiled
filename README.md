@@ -16,7 +16,7 @@ mirror. The current [manifest](readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and retain all 150,801 bindings
+identities. Both 303-file Java corpora compile and retain all 150,797 bindings
 and 388 override relationships.
 
 Difficulty and spawning now name the step flags, sprite-variant/category
@@ -25,10 +25,11 @@ The previous naming pass added 38 rules. The Boolean-carrier pass removed
 14 obsolete names and migrated 61 local ordinals plus one generated field type.
 The preceding integral-guard pass preserved all 1,194 guarded rules unchanged.
 The previous naming pass covered all 23 private static sprite kernels. The
-current pass adds 171 rules and completes every parameter/local name in
+preceding naming pass added 171 rules and completed every parameter/local name in
 `Sprite`, `ArgbSprite` and `IndexedSprite`, including ARGB rotation, bilinear
 weights, reductions and sprite mutations. All 2,233 prior rules and the raw
-input remain unchanged. The 2,404 rules apply 27,222 identifier edits. An
+input remained unchanged in that naming pass. The current structural refresh
+preserves every one of the 2,404 rules, applying 27,222 identifier edits. An
 expanded existing native drawing probe adds 33,168 transform cases, including
 23,340 independent pixel/geometry oracles, while preserving its previous
 traces. Original shifts, transparency, inherited smooth rotation and RGB copy
@@ -54,7 +55,22 @@ prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-The latest structural decompiler pass reuses cached JVM integral-predicate evidence to
+The current refresh removes the dead cache-write selector in `ic.a(byte)`:
+11 retained selectors become 10. Two literal stores and an empty post-catch
+test disappear; the cache calls, exception regions and offset update stay in
+place. All 2,404 guarded rules and 388 override relationships are preserved.
+Only one declaration and three references are removed, with no named ordinal
+migration. An existing native probe adds 140 independent cache-file/offset
+cases, including caught write failures and null packet failures outside the
+inner catch. All six game probes match their native traces.
+
+The generic emitter passes 29 groups, including 96 new dead-routing comparisons
+and 2,240 terminal protected-arm comparisons. Complete parsing and token
+accounting restrict cleanup to allocated int selectors with literal stores
+and empty pure comparisons; observable continuations keep their routing.
+No source bodies are edited by hand and no new JSON snapshots are created.
+
+The earlier integral-guard pass reused cached JVM integral-predicate evidence to
 simplify relational inversions during nested-tail reconstruction. It removes
 18 lines across four files and reduces `ld.advanceDifficulty` from 56 lines to
 38. Variant, recursive-advance and category updates now each have one path;
@@ -74,7 +90,7 @@ In that structural pass, all 303 sources compiled with 20,710 unchanged
 declaration identities and 388 override edges. Exactly 26 references disappeared with the two category-update
 clones and two recursive-advance clones; none were added. All 1,194 guarded names
 and evidence remained unchanged, with no ordinal migrations. That mirror
-checked 150,801 bindings and made 18,611 identifier edits. The emitter passes
+checked 150,801 bindings and made 18,611 identifier edits. That emitter revision passed
 23 groups and 40,129 native comparisons, including 35,280 new integral-guard
 checks. All six game probes retain their native traces. Clean committed
 decompiler source reproduces all raw Java and diagnostics; dictionary reversal

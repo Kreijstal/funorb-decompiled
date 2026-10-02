@@ -715,9 +715,10 @@ normalization preserves every declaration. The preceding integral-guard pass
 removed 18 lines across four files,
 reducing the method to 38 lines and coalescing its recursive/category clones.
 Every declaration key and spelling is unchanged, with no ordinal migrations.
-All 1,194 rules survived that structural pass. The current naming pass adds
-117 asset/loading/overlay identities while retaining every prior rule and the
-same raw source. Other carriers, shared joins and opaque names remain. The earlier terminal-return
+All 1,194 rules survived that structural pass. Later naming passes added
+asset/loading/overlay and sprite identities while retaining prior rules and the
+same raw source. The current structural refresh preserves all 2,404 rules.
+Other carriers, shared joins and opaque names remain. The earlier terminal-return
 pass removed the vanished boundary selector;
 the current emitter also retains its proven early-exit reconstruction.
 Complete parsing and preserved declaration scopes keep this reproducible.
@@ -799,9 +800,29 @@ The raw and renamed code now match native traces for 708 controlled scenarios,
 including successful matches, pool overflow, cooldowns, duplicates and tutorial
 scoring. Full contact physics and asset-dependent transitions remain unverified.
 
+## Cache-write continuation
+
+`ic.a(byte)` seeks `af.field_b` to zero and writes 24 bytes from the packet
+buffer in `eh.field_d`, when the cache handle exists. It catches `Exception`
+from those two calls and their argument reads, then advances the packet offset
+by 24 regardless of whether the cache was absent or the write failed. The
+packet access in that following increment remains outside the inner catch;
+a null packet therefore still fails. A guard other than 65 also clears
+`ic.field_a` before any cache access.
+
+The previous generated selector merely tested whether an empty arm should run.
+It and its two stores are now gone, leaving the cache try/catch followed directly
+by the offset update. No throwing expression crosses a protected boundary.
+The existing result-helper probe independently checks file bytes, offset wrap
+and guard effects in 140 native/raw/readable cases. Closed and limited files,
+invalid payload offsets, null buffers, absent caches and null packets retain
+their completion behavior. The ten remaining selectors route work or transfers
+and still need review. Concurrent cache use, real device behavior and whole-game
+behavior remain outside this probe.
+
 ## Sequential early-exit guards
 
-The current decompiler pass removes an else wrapper when the preceding arm
+The earlier early-exit pass removed an else wrapper when the preceding arm
 leaves on every path. When both arms leave, the shorter arm becomes the guard.
 `hasPixelsAtPlayfieldBoundary` now reads as sequential cardinal checks followed
 by sequential perimeter checks inside its loop. The original read order,

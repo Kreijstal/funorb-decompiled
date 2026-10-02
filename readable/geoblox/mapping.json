@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "inputTreeSha256": "cf0cbc50ff6b23458db1a7beb4edb6829ab61e7e6ea3dc7d7d47f03e2492095d",
+  "inputTreeSha256": "97e83f6dc8cd521730af2d3f19096f4a24fb00d4c6ea45ba341caf11ed6ab2b0",
   "positionUnits": "UTF-16 code units in original source",
   "rules": [
     {
@@ -88721,56 +88721,45 @@
     {
       "symbol": "L:ic.a(B)V#1",
       "renamedSymbol": "L:ic.a(B)V#1",
-      "originalName": "decompiledRegionSelector0",
-      "renamedName": "decompiledRegionSelector0",
+      "originalName": "decompiledCaughtException",
+      "renamedName": "decompiledCaughtException",
       "declaration": {
         "file": "ic.java",
-        "start": 5315,
-        "end": 5340
+        "start": 5321,
+        "end": 5346
       }
     },
     {
       "symbol": "L:ic.a(B)V#2",
       "renamedSymbol": "L:ic.a(B)V#2",
-      "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "originalName": "decompiledCaughtParameter0",
+      "renamedName": "decompiledCaughtParameter0",
       "declaration": {
         "file": "ic.java",
-        "start": 5368,
-        "end": 5393
+        "start": 5660,
+        "end": 5686
       }
     },
     {
       "symbol": "L:ic.a(B)V#3",
       "renamedSymbol": "L:ic.a(B)V#3",
-      "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "originalName": "decompiledUncheckedException",
+      "renamedName": "decompiledUncheckedException",
       "declaration": {
         "file": "ic.java",
-        "start": 5754,
-        "end": 5780
+        "start": 5963,
+        "end": 5991
       }
     },
     {
       "symbol": "L:ic.a(B)V#4",
       "renamedSymbol": "L:ic.a(B)V#4",
-      "originalName": "decompiledUncheckedException",
-      "renamedName": "decompiledUncheckedException",
-      "declaration": {
-        "file": "ic.java",
-        "start": 6172,
-        "end": 6200
-      }
-    },
-    {
-      "symbol": "L:ic.a(B)V#5",
-      "renamedSymbol": "L:ic.a(B)V#5",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
         "file": "ic.java",
-        "start": 6279,
-        "end": 6305
+        "start": 6070,
+        "end": 6096
       }
     },
     {
@@ -319886,8 +319875,8 @@
     {
       "original": "ic.java",
       "renamed": "ic.java",
-      "inputSha256": "38ba1375518330bada0d22a853ffc2a6748ccf753ba52544f9596ca881e1e4a3",
-      "outputSha256": "e65e5329d0d0f5786416f78286b3b7ccd29293f5fcfe1102fc2e7986e87adf92",
+      "inputSha256": "fb9712b34bdf72f5b957fef362d91543e733ac9dab7ba2db0ac02b4b4338640b",
+      "outputSha256": "13d14cbb5c37cc316a05b481da0ad483721803376ea735b4f53daf508fac411b",
       "edits": [
         {
           "start": 92,
@@ -319932,8 +319921,8 @@
           "renamed": "loginCreateTooltipText"
         },
         {
-          "start": 6415,
-          "end": 6422,
+          "start": 6206,
+          "end": 6213,
           "symbol": "F:ic.field_b:Ljava/lang/String;",
           "original": "field_b",
           "renamed": "loginCreateTooltipText"

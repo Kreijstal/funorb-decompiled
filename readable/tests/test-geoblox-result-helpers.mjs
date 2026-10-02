@@ -12,6 +12,7 @@ const nativeInput = process.argv[2] && path.resolve(process.argv[2]);
 const aliases = new Map(JSON.parse(fs.readFileSync(path.join(root, 'geoblox-rules.json')))
   .renames.map(rule => [rule.symbol, rule.to]));
 const expectedNativeSha256 = 'ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e8a5e510872ace6';
+const expectedCacheWriteSha256 = 'e5d3ac6ab42a61da22e44337bc05b64e89e0360d4d51a94256fff69d3a37081d';
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'geoblox-result-helpers-'));
 try {
   if (nativeInput) {
@@ -190,6 +191,58 @@ try {
           check(selectorCases==120 && factoryCases==4801 && positionChecks==9000 && musicCases==6,"case counts");
           System.out.println("complete:"+selectorCases+":"+factoryCases+":"+positionChecks+":"+musicCases);
         }
+      }
+      class CacheWriteBehavior extends ResultHelperBehavior {
+        public static void main(String[] args) throws Exception {
+          Method write=method("${type('ic')}","${method('ic','a(B)V')}",byte.class);
+          java.nio.file.Path path=java.nio.file.Files.createTempFile("geoblox-cache-probe-",".bin");
+          int cases=0;
+          try {
+            for(byte guard:new byte[]{65,0,-128,127})for(int mode=0;mode<7;mode++)
+            for(int offset:new int[]{-1,0,8,40,Integer.MAX_VALUE-12}) {
+              java.nio.file.Files.write(path,new byte[0]);
+              Object file=construct("${type('pa')}",new Class<?>[]{java.io.File.class,String.class,long.class},
+                path.toFile(),"rw",mode==6?12L:1024L);
+              java.io.RandomAccessFile raw=(java.io.RandomAccessFile)${get('pa','field_d','Ljava/io/RandomAccessFile;','file')};
+              try {
+                byte[] before=new byte[mode==6?12:40]; Arrays.fill(before,(byte)99);raw.write(before);raw.seek(0L);
+                Object cache=construct("${type('sk')}",new Class<?>[]{Class.forName("${type('pa')}"),int.class,int.class},
+                  file,64,0);
+                Object packet=mode==4||mode==5?null:allocate("${type('pk')}");
+                byte[] payload=new byte[64];for(int index=0;index<payload.length;index++)payload[index]=(byte)(index*17-63);
+                if(packet!=null) {
+                  ${set('qc','field_f','I','packet','offset')}
+                  ${set('qc','field_j','[B','packet','mode==3?null:payload')}
+                }
+                ${set('Geoblox','field_C','I','null','0')}
+                ${set('af','field_b','Lsk;','null','mode==0||mode==5?null:cache')}
+                ${set('eh','field_d','Lpk;','null','packet')}
+                ${set('ic','field_a','Ljava/lang/String;','null','"guard-sentinel"')}
+                if(mode==2)raw.close(); // keep the closed handle to exercise IOException
+                String completion="ok";
+                try { write.invoke(null,guard); }
+                catch(InvocationTargetException error) {
+                  check(packet==null && error.getCause() instanceof NullPointerException,"outside null packet failure");
+                  completion=error.getCause().getClass().getName();
+                }
+                check(packet==null?!completion.equals("ok"):completion.equals("ok"),"completion kind");
+                int after=packet==null?offset:(Integer)${get('qc','field_f','I','packet')};
+                check(packet==null||after==offset+24,"offset advances after swallowed cache failure");
+                check(guard==65?"guard-sentinel".equals(${get('ic','field_a','Ljava/lang/String;')}):
+                  ${get('ic','field_a','Ljava/lang/String;')}==null,"guard side effect");
+                byte[] expected=before.clone();
+                if(mode==1 && offset>=0 && offset<=payload.length-24)System.arraycopy(payload,offset,expected,0,24);
+                if(mode==6) {expected=Arrays.copyOf(expected,13);expected[12]=1;}
+                byte[] actual=java.nio.file.Files.readAllBytes(path);
+                check(Arrays.equals(actual,expected),"cache file bytes");
+                for(int index=0;index<payload.length;index++)check(payload[index]==(byte)(index*17-63),"input bytes unchanged");
+                System.out.println("cache:"+guard+":"+mode+":"+offset+":"+after+":"+completion+":"+Arrays.toString(actual));
+                cases++;
+              } finally {raw.close();}
+            }
+          } finally {java.nio.file.Files.deleteIfExists(path);}
+          check(cases==140,"cache case count");System.out.println("cache-complete:"+cases);
+        }
       }`;
     const directory = path.join(temporary, variant), classes = path.join(directory, 'classes');
     fs.mkdirSync(classes, {recursive: true});
@@ -209,6 +262,11 @@ try {
     assert.equal(sha256, expectedNativeSha256, variant);
     if (expected === undefined) expected = output;
     else assert.equal(Buffer.compare(output, expected), 0, variant);
+    const cacheOutput = captureProcess('java', ['-Djava.awt.headless=true','-cp',classes + path.delimiter + cp,
+      'CacheWriteBehavior']).stdout;
+    const cacheSha256 = crypto.createHash('sha256').update(cacheOutput).digest('hex');
+    console.log(JSON.stringify({variant, cacheSha256, completion: cacheOutput.toString().trim().split('\n').at(-1)}));
+    assert.equal(cacheSha256, expectedCacheWriteSha256, variant);
   }
 } catch (error) {
   if (error.stderr) process.stderr.write(error.stderr);
