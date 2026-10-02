@@ -1,6 +1,6 @@
 # Readable source exports
 
-GeoBlox pass 16 has 926 reviewed naming rules: 20 classes, 348 fields,
+GeoBlox pass 17 has 926 reviewed naming rules: 20 classes, 348 fields,
 157 methods, 153 parameters and 248 guarded local declarations. It preserves strings and numeric IDs; typed XOR-minus-one expressions and
 comparisons now use equivalent signed integer/long conditions. The new decompiler renders proven
 single-entry branches as ordinary Java bodies and keeps verified exception-region
@@ -33,12 +33,13 @@ dispatchers, source-edge checks and native verification. The
   dependency and output hashes, JDK identity and binding checks.
 - [geoblox-source-pin.json](geoblox-source-pin.json): the exact source commit
   and dependency pin. The input is `games/geoblox` at commit
-  `3c6a8e65d4796deb631ed67773b67ef92501cbd9`.
+  `b140d3584574ef276694b8ad453cd05303b82c5d`.
 - [tools/PIN.json](tools/PIN.json): exact bundled naming-tool file digests.
 - [rules](rules): the retained 491-rule manifest, 151 gameplay additions,
-  complete pass-6 through pass-15 manifests, reviewed input migrations,
+  complete pass-6 through pass-16 manifests, reviewed input migrations,
   pass-13 text additions, the pass-14 comparison migration and the pass-15
-  local-identity migration and pass-16 border/validation additions.
+  local-identity migration, pass-16 border/validation additions and pass-17
+  numeric-negation input migration.
   Every previous manifest and the changed input are guarded by SHA-256.
 - `funorb-stubs.jar`: the frozen compilation dependency, included byte for byte.
 
@@ -47,22 +48,22 @@ The decompilation's tool revisions are separate from game-source hashes:
 | Tool | Git commit |
 | --- | --- |
 | Deko | `a572c4dd0f0174bfcd7777be53d7ceba2f970f18` |
-| java-tools | `e3268884ffc81e43bc60694439a297603b68a2e4` |
+| java-tools | `c739b6ca232040f7a7970b704214adbed573d10c` |
 | Upstream naming tool in Deko | `d41315508e071f6bd672d65eb2f5a8d428648d6f` |
 | Adapted naming tool | `a0bc835957148b9b1e1f8221c59b79d899d22738` in `geoblox-readable-text-tools.bundle` |
 
 The decompiler repository source archive has SHA-256
-`98369c043d012743adb1924409bb754781722f4c2d6c7c7ab082cce5a82aeb20`.
+`34f9012d4ba040344178d1a249469d9f5f8e25b015153f12335529b1feddfec5`.
 Recreate that identity in the java-tools checkout with:
 
 ```sh
-git archive --format=tar e3268884ffc81e43bc60694439a297603b68a2e4 | sha256sum
+git archive --format=tar c739b6ca232040f7a7970b704214adbed573d10c | sha256sum
 ```
 
 This hashes the tracked **decompiler repository source**, including its commit
 archive metadata. The game-source tree hashes at the end of this document are
 separate identities. The local revision is available in
-`java-tools-geoblox-v15.bundle` pending remote publication.
+`java-tools-geoblox-v17.bundle` pending remote publication.
 
 The generic naming tool belongs to Deko. `tools/` is a frozen publication copy,
 so this checkout can reproduce the export without depending on a mutable sibling
@@ -74,7 +75,7 @@ JavaScript validator; constructor method names still require a class rule. The
 Java resolver and binding/override checks are unchanged. The wrapper checks all
 three frozen tool digests before use.
 
-The pinned raw input was freshly decompiled in pass 15 from the unchanged
+The pinned raw input was freshly decompiled in pass 17 from the unchanged
 verified transformed bytecode: 303 sources, zero hard failures and zero dispatchers.
 Pass 15 changes ten source files through parallel operand-copy fixes and loop
 reconstruction, retaining all 841 reviewed names. Ten result-sequence local
@@ -83,6 +84,10 @@ Pass 16 keeps that raw input and the decompiler/tool pins unchanged. It retains
 every pass-15 rule and adds names for the nine-slice sprite geometry, the matching
 text validator and its complete state/message override families. No source body
 or local identity is migrated in this naming pass.
+Pass 17 corrects six numeric-negation expressions in two sprite files through
+the generic renderer. Every declaration and naming rule remains unchanged.
+The full controlled result-sequence probe now matches native bytecode through
+completion. See [the numeric-negation report](NUMERIC-NEGATION-READABILITY.md).
 The complete pass-14 rules remain frozen, and pass 15 binds the new source and
 decompiler identities. The previous ASM check covered
 2,427 methods with zero failures; those bytes have not changed. See
@@ -106,6 +111,7 @@ node readable/tests/test-geoblox-deque.mjs
 node readable/tests/test-geoblox-gameplay.mjs
 node readable/tests/test-geoblox-text.mjs
 node readable/tests/test-geoblox-nine-slice.mjs
+node readable/tests/test-geoblox-result-sequence.mjs
 ```
 
 The recorded environment is OpenJDK `11.0.32.1+1`, Node `22.23.2`, with Java
@@ -169,7 +175,9 @@ It does not read `games/geoblox` or extract an original input commit.
    Pass 16 retains all 841 rules and adds 85 guarded names on the unchanged input;
    its manifest guards the frozen pass-15 rules, tool identities and the borrowed
    pass-15 text-resource evidence. It checks all four validation override families
-   as complete sets.
+   as complete sets. Pass 17 reviews the two sprite source corrections against
+   all 926 guards and unchanged declaration identities, then pins the corrected
+   input and decompiler without adding or changing names.
 4. Pin the new source commit in `geoblox-source-pin.json`, retain the reviewed
    rule lineage and rebuild `geoblox-rules.json`. If updating the naming tool,
    import the reviewed tool and update `tools/PIN.json` deliberately.
@@ -201,7 +209,11 @@ repeats that native comparison after verifying the class-tree pin. Successful
 archive loading remains untested. The nine-slice probe checks every sprite
 buffer, dimensions and cleanup effects over 2,592 cases against the recorded
 native-bytecode output. It accepts the same optional verified-class-tree path.
-The gameplay harness does not cover popup crediting, successful
+The result-sequence probe covers 27 controlled scenarios through completion,
+including every tick of phase timing, bonus points, sprite pixels, audio
+registration and completion popups. Asset-dependent constructors are bypassed;
+boundary-loss detection, new unlock delivery and audible playback are not covered.
+The earlier gameplay harness does not cover popup crediting, successful
 match scoring, full contact physics or asset-dependent session transitions.
 
 The export reduces dispatcher cases from 3,051 to zero. All original methods
@@ -217,8 +229,8 @@ before treating the renamed export as a runnable replacement.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Original GeoBlox | `6b638e579bfeb73adbb6583b0581f4d6df93c9ca5930816ea81bf1a48aa3f015` |
-| Readable GeoBlox | `5051a73952b8ce3f709ed33dcaf16765a1db513d107dd533e6ee3b4c03a94200` |
+| Original GeoBlox | `21fdcc2b2150a6a7ce1bc46a14baaa3ecc2c15580495f5f0f1ec620be5de4d2e` |
+| Readable GeoBlox | `f48cde3a85458a31789af979c727e10945a87f4ebde3502b69f97237ff58ecd0` |
 
 These tree digests use `sourceIdentity(sourceInventory(root))` from the naming
 tool. They identify source bytes; the decompiler Git commits are listed above.

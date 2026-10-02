@@ -21,7 +21,8 @@ function fixture(change) {
       'rules/geoblox-v12.json', 'rules/geoblox-v13-text.json', 'rules/geoblox-v13.json',
       'rules/geoblox-v14-migration.json', 'rules/geoblox-v14.json',
       'rules/geoblox-v15-migration.json', 'rules/geoblox-v15.json',
-      'rules/geoblox-v16-border.json', 'tools/PIN.json']) {
+      'rules/geoblox-v16-border.json', 'rules/geoblox-v16.json',
+      'rules/geoblox-v17-migration.json', 'tools/PIN.json']) {
       fs.mkdirSync(path.dirname(path.join(temporary, file)), {recursive: true});
       fs.copyFileSync(path.join(root, file), path.join(temporary, file));
     }
@@ -46,12 +47,12 @@ test('reviewed lineage reproduces all 926 guarded rules', () => {
 test('a replacement input digest alone cannot migrate the export', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.inputTreeSha256 = '0'.repeat(64);
-  })), /reviewed pass-16 border manifest/);
+  })), /reviewed pass-17 migration/);
 });
 test('a different decompiler revision requires a new reviewed migration', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.generators.javaTools.commit = '0'.repeat(40);
-  })), /reviewed pass-16 border manifest/);
+  })), /reviewed pass-17 migration/);
 });
 test('previous names and migration identities cannot change silently', () => {
   assert.throws(() => fixture(edit => edit('rules/geoblox-v6.json', data => {
@@ -212,7 +213,7 @@ test('pass 15 cannot change the retained loader source or resource evidence', ()
 test('pass 16 additions retain their source and every pass-15 name', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.commit = '0'.repeat(40);
-  })), /reviewed pass-16 border manifest/);
+  })), /reviewed pass-17 migration/);
   assert.throws(() => fixture(edit => edit('rules/geoblox-v15.json', data => {
     data.renames[0].to = 'ChangedHistoricalName';
   })), /reviewed rule lineage/);
@@ -247,4 +248,38 @@ test('pass 16 cannot borrow another text-evidence revision', () => {
     assert.throws(() => fixture(edit => edit('rules/geoblox-v16-border.json', data => {
       data[key] = 'wrong';
     })), /reviewed pass-16 border manifest/);
+});
+
+
+test('pass 17 retains every declaration without silently migrating local identities', () => {
+  for (const change of [
+    data => { data.identityChanges.push({from: 'L:gh.f(I)V#4', to: 'L:gh.f(I)V#5'}); },
+    data => { data.review.namedLocalDeclarationIdentitiesUnchanged--; },
+    data => { data.review.sourceDeclarationIdentitiesUnchanged--; },
+    data => { data.review.originalSpellingGuardsMatched--; },
+  ]) assert.throws(() => fixture(edit => edit('rules/geoblox-v17-migration.json', change)),
+    /reviewed pass-17 migration/);
+});
+
+test('pass 17 cannot replace the frozen naming pass or claim hand-edited source', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v16.json', data => {
+    data.renames[0].to = 'ChangedHistoricalName';
+  })), /reviewed rule lineage/);
+  for (const change of [
+    data => { data.review.sourceBodyEditedByHand = true; },
+    data => { data.review.changedJavaFiles = ['gh.java']; },
+    data => { data.review.correctedNumericNegations = 5; },
+    data => { data.review.bytecodeUnchanged = false; },
+  ]) assert.throws(() => fixture(edit => edit('rules/geoblox-v17-migration.json', change)),
+    /reviewed pass-17 migration/);
+});
+
+test('pass 17 binds the decompiler source archive and retains original text evidence', () => {
+  for (const change of [
+    data => { data.decompilerSourceArchiveSha256 = '0'.repeat(64); },
+    data => { data.previousInputTreeSha256 = '0'.repeat(64); },
+    data => { data.textEvidenceMigration = 'rules/geoblox-v14-migration.json'; },
+    data => { data.textEvidenceMigrationSha256 = '0'.repeat(64); },
+  ]) assert.throws(() => fixture(edit => edit('rules/geoblox-v17-migration.json', change)),
+    /reviewed pass-17 migration/);
 });

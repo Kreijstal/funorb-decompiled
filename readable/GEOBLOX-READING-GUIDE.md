@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 16
+# Reading GeoBlox pass 17
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -312,3 +312,15 @@ they are not silently treated as normal-play zero flags. The nine-slice helper
 34-case dispatcher. See the
 [parallel-loop report](PARALLEL-LOOP-READABILITY.md) for the copy hazards found,
 exact reproduction and the native test scope.
+
+
+## Correct sprite pivots during result preparation
+
+Pass 17 fixes six numeric-negation expressions in `Sprite` and `il`.
+`-(-sourcePivotX)` preserves the pivot; the previous `--sourcePivotX` changed it
+because Java parses that spelling as pre-decrement. This changed sprite pixels
+and result-sequence radius/timing even though the source compiled. The
+[numeric-negation report](NUMERIC-NEGATION-READABILITY.md) records the failure,
+generic fix and 27 native result-sequence scenarios through completion. All
+926 naming rules and 248 local identities remain unchanged. Whole-game behavior
+and unknown names still need investigation.

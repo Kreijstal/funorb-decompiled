@@ -1,16 +1,16 @@
 {
   "schema": 1,
-  "version": 16,
+  "version": 17,
   "rules": 926,
   "files": 303,
-  "sourceCommit": "3c6a8e65d4796deb631ed67773b67ef92501cbd9",
-  "inputTreeSha256": "6b638e579bfeb73adbb6583b0581f4d6df93c9ca5930816ea81bf1a48aa3f015",
-  "outputTreeSha256": "5051a73952b8ce3f709ed33dcaf16765a1db513d107dd533e6ee3b4c03a94200",
+  "sourceCommit": "b140d3584574ef276694b8ad453cd05303b82c5d",
+  "inputTreeSha256": "21fdcc2b2150a6a7ce1bc46a14baaa3ecc2c15580495f5f0f1ec620be5de4d2e",
+  "outputTreeSha256": "f48cde3a85458a31789af979c727e10945a87f4ebde3502b69f97237ff58ecd0",
   "runtimeEquivalenceVerified": false,
   "previousValidation": {
-    "commit": "24544062d466be16f8d60a145f946f5b92f491f0",
+    "commit": "e250ceb4421dc231e60b347e1e0eadfc6cf7fc34",
     "path": "readable/validation.json",
-    "scope": "Immutable pass-15 decompiler and naming validation; unlisted historical checks are not claimed freshly rerun."
+    "scope": "Immutable pass-16 naming and helper validation; unlisted historical checks are not claimed freshly rerun."
   },
   "commands": [
     {
@@ -20,7 +20,7 @@
     {
       "command": "node readable/tests/test-geoblox-rule-builder.mjs",
       "result": "pass",
-      "tests": 24
+      "tests": 27
     },
     {
       "command": "node readable/tests/test-geoblox-text-rules.mjs",
@@ -39,7 +39,7 @@
       "originalAndRenamedFullCompilation": true
     },
     {
-      "command": "node readable/tools/restore-original.mjs readable/geoblox ../geoblox-border-v16/restored",
+      "command": "node readable/tools/restore-original.mjs readable/geoblox ../geoblox-numeric-v17/restored",
       "result": "pass",
       "restoredFiles": 303,
       "originalBytesRecovered": true,
@@ -90,47 +90,115 @@
       "nativeInputPinVerified": true,
       "outputSha256": "e2e462accb656ba5820c8a5f28b8a45f71a06b8a48045ba0dccbed73a0eedd1c",
       "scope": "Decoder arrays/slices, guard side effects and early null-archive failure context; not complete successful archive loading."
+    },
+    {
+      "command": "GEOBLOX_RESULT_PROBE_DIAGNOSTICS=/home/kreijstal/git/blank-github-cloner/.work/geoblox-result-v17/fixed JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-sequence.mjs /home/kreijstal/git/dekobloko-decompiled-pass/.work/games/geoblox/decompile-owned/out",
+      "result": "pass",
+      "variants": [
+        "native",
+        "original",
+        "renamed"
+      ],
+      "scenariosPerVariant": 27,
+      "ticksComparedPerVariant": 26043,
+      "nativeInputPinVerified": true,
+      "outputSha256": "7b5891a65a952e19dbf395fb064530df9386712028f2a90eaf2afa5fa22dbb18",
+      "scope": "Controlled gh.f execution through completion: zero client flag, guard 10, boundary detection bypassed on first tick, no music track, actions already unlocked, no audio device advancement and unrelated ambient animation skipped. Constructors needing assets bypassed; real sprites, deques, PCM samples, mixer and popups. Not whole-game equivalence."
+    },
+    {
+      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrNumericNegation.test.js",
+      "checkout": "java-tools c739b6ca232040f7a7970b704214adbed573d10c",
+      "result": "pass",
+      "tests": 1,
+      "nativeComparisons": 274
+    },
+    {
+      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrComplementComparisons.test.js",
+      "checkout": "java-tools c739b6ca232040f7a7970b704214adbed573d10c",
+      "result": "pass",
+      "tests": 3,
+      "nativeComparisons": 7040
+    },
+    {
+      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData node test/cfrParallelBackedges.test.js",
+      "checkout": "java-tools c739b6ca232040f7a7970b704214adbed573d10c",
+      "result": "pass",
+      "tests": 12,
+      "nativeComparisons": 6650
+    },
+    {
+      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrExceptionLoopExits.test.js",
+      "checkout": "java-tools c739b6ca232040f7a7970b704214adbed573d10c",
+      "result": "pass",
+      "tests": 1,
+      "nativeComparisons": 504
+    },
+    {
+      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules NODE_OPTIONS=--require=/tmp/cfr-file-stdio.cjs node /home/kreijstal/git/java-tools/node_modules/tape/bin/tape test/cfrStackOrdering.test.js",
+      "checkout": "java-tools c739b6ca232040f7a7970b704214adbed573d10c",
+      "result": "pass",
+      "assertions": 38
     }
   ],
   "stateMachineReadability": {
-    "javaToolsCommit": "e3268884ffc81e43bc60694439a297603b68a2e4",
-    "decompilerSourceArchiveSha256": "98369c043d012743adb1924409bb754781722f4c2d6c7c7ab082cce5a82aeb20",
+    "javaToolsCommit": "c739b6ca232040f7a7970b704214adbed573d10c",
+    "decompilerSourceArchiveSha256": "34f9012d4ba040344178d1a249469d9f5f8e25b015153f12335529b1feddfec5",
     "dispatcherCases": 0,
     "dispatcherMethods": 0,
-    "rawSourceTreeUnchanged": true,
-    "scope": "Pass-15 structured source is unchanged. Pass 16 changes identifier spellings only; native decompiler fixtures remain recorded in the previous validation."
+    "rawSourceTreeUnchanged": false,
+    "scope": "Two sprite files change only in six numeric-negation expressions. No new dispatchers; source-flow/exception reconstruction remains active. Whole-game equivalence is not established."
   },
   "namingReview": {
     "spellingGuardsMatched": 926,
-    "retainedRules": 841,
-    "addedRules": 85,
+    "retainedRules": 926,
+    "addedRules": 0,
     "classRules": 20,
     "fieldRules": 348,
     "methodRules": 157,
     "parameterRules": 153,
     "localRules": 248,
-    "previousNamedLocalIdentitiesUnchanged": 238,
-    "addedNamedLocals": 10,
+    "previousNamedLocalIdentitiesUnchanged": 248,
+    "addedNamedLocals": 0,
     "namedLocalOrdinalMigrations": 0,
     "previousPass15SnapshotFrozen": true,
-    "rawSourceTreeUnchanged": true,
-    "sourceBodyEdited": false,
+    "rawSourceTreeUnchanged": false,
     "completeValidationOverrideFamilies": 4,
     "bindingComparisonCount": 154109,
     "overrideRelationships": 388,
     "identifierEdits": 16050,
     "resourceFieldsRetained": 152,
     "resourceEvidenceTests": 8,
-    "ruleBuilderTests": 24,
+    "ruleBuilderTests": 27,
     "namingToolCommit": "a0bc835957148b9b1e1f8221c59b79d899d22738",
-    "namingToolSourceArchiveSha256": "cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c"
+    "namingToolSourceArchiveSha256": "cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c",
+    "previousPass16SnapshotFrozen": true,
+    "declarationIdentitiesUnchanged": 21181,
+    "sourceBodyEditedByHand": false
   },
   "limits": [
-    "Full gh.f result-sequence execution not differentially verified",
     "Complete successful archive loading not verified",
     "Whole-game runtime equivalence not verified",
     "Browser FPS, memory and phone acceptance not measured by this source-readability pass",
     "Unknown names, guard arguments and shared joins remain",
-    "Matching validator behavior is not covered by the static nine-slice native probe"
-  ]
+    "Matching validator behavior is not covered by the static nine-slice native probe",
+    "Controlled result-sequence proof excludes real asset construction, boundary loss, new action delivery, nonzero client flags and audible/advanced PCM playback"
+  ],
+  "controlledResultSequence": {
+    "method": "gh.f(I)V",
+    "scenariosPerVariant": 27,
+    "ticksPerVariant": 26043,
+    "nativeRawReadableByteExact": true,
+    "scope": "Controlled gh.f execution through completion: zero client flag, guard 10, boundary detection bypassed on first tick, no music track, actions already unlocked, no audio device advancement and unrelated ambient animation skipped. Constructors needing assets bypassed; real sprites, deques, PCM samples, mixer and popups. Not whole-game equivalence.",
+    "baseline": {
+      "rawSourceCommit": "3c6a8e65d4796deb631ed67773b67ef92501cbd9",
+      "oldRebuiltTicks": 26041,
+      "nativeTicks": 26043,
+      "firstPixelMismatchScenario": 15,
+      "firstRadiusMismatchScenario": 16,
+      "nativeRadius": 26,
+      "oldRadius": 27,
+      "nativeCompletionOffset": 809,
+      "oldCompletionOffset": 807
+    }
+  }
 }

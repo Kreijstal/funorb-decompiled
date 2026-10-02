@@ -210,11 +210,11 @@ class Sprite extends SpriteState {
           scaledSin = (int)Math.floor(Math.sin(angleRadians) * (double)scale + 0.5);
           scaledCos = (int)Math.floor(Math.cos(angleRadians) * (double)scale + 0.5);
           corner0X = -sourcePivotX * scaledCos + -sourcePivotY * scaledSin;
-          corner0Y = --sourcePivotX * scaledSin + -sourcePivotY * scaledCos;
+          corner0Y = -(-sourcePivotX) * scaledSin + -sourcePivotY * scaledCos;
           corner1X = ((this.width << 4) - sourcePivotX) * scaledCos + -sourcePivotY * scaledSin;
           corner1Y = -((this.width << 4) - sourcePivotX) * scaledSin + -sourcePivotY * scaledCos;
           corner2X = -sourcePivotX * scaledCos + ((this.height << 4) - sourcePivotY) * scaledSin;
-          corner2Y = --sourcePivotX * scaledSin + ((this.height << 4) - sourcePivotY) * scaledCos;
+          corner2Y = -(-sourcePivotX) * scaledSin + ((this.height << 4) - sourcePivotY) * scaledCos;
           corner3X = ((this.width << 4) - sourcePivotX) * scaledCos + ((this.height << 4) - sourcePivotY) * scaledSin;
           corner3Y = -((this.width << 4) - sourcePivotX) * scaledSin + ((this.height << 4) - sourcePivotY) * scaledCos;
           if (corner0X >= corner1X) {
@@ -2135,11 +2135,11 @@ class Sprite extends SpriteState {
           scaledSin = (int)Math.floor(Math.sin(angleRadians) * (double)scale + 0.5);
           scaledCos = (int)Math.floor(Math.cos(angleRadians) * (double)scale + 0.5);
           corner0X = -sourcePivotX * scaledCos + -sourcePivotY * scaledSin;
-          corner0Y = --sourcePivotX * scaledSin + -sourcePivotY * scaledCos;
+          corner0Y = -(-sourcePivotX) * scaledSin + -sourcePivotY * scaledCos;
           corner1X = ((this.width << 4) - sourcePivotX) * scaledCos + -sourcePivotY * scaledSin;
           corner1Y = -((this.width << 4) - sourcePivotX) * scaledSin + -sourcePivotY * scaledCos;
           corner2X = -sourcePivotX * scaledCos + ((this.height << 4) - sourcePivotY) * scaledSin;
-          corner2Y = --sourcePivotX * scaledSin + ((this.height << 4) - sourcePivotY) * scaledCos;
+          corner2Y = -(-sourcePivotX) * scaledSin + ((this.height << 4) - sourcePivotY) * scaledCos;
           corner3X = ((this.width << 4) - sourcePivotX) * scaledCos + ((this.height << 4) - sourcePivotY) * scaledSin;
           corner3Y = -((this.width << 4) - sourcePivotX) * scaledSin + ((this.height << 4) - sourcePivotY) * scaledCos;
           if (corner0X >= corner1X) {

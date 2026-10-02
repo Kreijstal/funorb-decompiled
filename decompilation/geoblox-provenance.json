@@ -251,5 +251,25 @@
     "overrideRelationshipsUnchanged": 388,
     "bytecodeUnchanged": true,
     "scope": "Generic numeric emission fixtures cover values, signed limits, floating-point bit patterns, input reuse, negative literals, effects, exceptions and real decrement semantics. Does not establish whole-game equivalence."
+  },
+  "controlledResultSequence": {
+    "method": "gh.f(I)V",
+    "scenariosPerVariant": 27,
+    "ticksPerVariant": 26043,
+    "nativeRawReadableByteExact": true,
+    "scope": "Controlled gh.f execution through completion: zero client flag, guard 10, boundary detection bypassed on first tick, no music track, actions already unlocked, no audio device advancement and unrelated ambient animation skipped. Constructors needing assets bypassed; real sprites, deques, PCM samples, mixer and popups. Not whole-game equivalence.",
+    "baseline": {
+      "rawSourceCommit": "3c6a8e65d4796deb631ed67773b67ef92501cbd9",
+      "oldRebuiltTicks": 26041,
+      "nativeTicks": 26043,
+      "firstPixelMismatchScenario": 15,
+      "firstRadiusMismatchScenario": 16,
+      "nativeRadius": 26,
+      "oldRadius": 27,
+      "nativeCompletionOffset": 809,
+      "oldCompletionOffset": 807
+    },
+    "test": "readable/tests/test-geoblox-result-sequence.mjs",
+    "outputSha256": "7b5891a65a952e19dbf395fb064530df9386712028f2a90eaf2afa5fa22dbb18"
   }
 }

@@ -365,11 +365,11 @@ final class il extends Sprite {
           var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
           var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
           var11 = -param0 * var10 + -param1 * var9;
-          var12 = --param0 * var9 + -param1 * var10;
+          var12 = -(-param0) * var9 + -param1 * var10;
           var13 = ((this.width << 4) - param0) * var10 + -param1 * var9;
           var14 = -((this.width << 4) - param0) * var9 + -param1 * var10;
           var15 = -param0 * var10 + ((this.height << 4) - param1) * var9;
-          var16 = --param0 * var9 + ((this.height << 4) - param1) * var10;
+          var16 = -(-param0) * var9 + ((this.height << 4) - param1) * var10;
           var17 = ((this.width << 4) - param0) * var10 + ((this.height << 4) - param1) * var9;
           var18 = -((this.width << 4) - param0) * var9 + ((this.height << 4) - param1) * var10;
           if (var11 >= var13) {
