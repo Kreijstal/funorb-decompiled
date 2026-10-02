@@ -95,35 +95,35 @@ final class uh extends ac {
             var4 = ac.a((byte) 7, param0) ? 1 : 0;
             var5 = new nf();
             var5.field_o = (short)param0.readBits((byte) -17, 16);
-            var5.field_O = ji.a(var5.field_O, 16, 0, param0);
-            var5.field_q = ji.a(var5.field_q, 16, 0, param0);
-            var5.field_K = ji.a(var5.field_K, 16, 0, param0);
+            var5.field_O = ArchiveNetworkClient.a(var5.field_O, 16, 0, param0);
+            var5.field_q = ArchiveNetworkClient.a(var5.field_q, 16, 0, param0);
+            var5.field_K = ArchiveNetworkClient.a(var5.field_K, 16, 0, param0);
             var5.field_f = (short)param0.readBits((byte) -17, 16);
-            var5.field_r = ji.a(var5.field_r, 16, 0, param0);
+            var5.field_r = ArchiveNetworkClient.a(var5.field_r, 16, 0, param0);
             if (param1 < 111) {
               field_y = (kj) null;
             }
-            var5.field_B = ji.a(var5.field_B, 16, 0, param0);
-            var5.field_c = ji.a(var5.field_c, 16, 0, param0);
+            var5.field_B = ArchiveNetworkClient.a(var5.field_B, 16, 0, param0);
+            var5.field_c = ArchiveNetworkClient.a(var5.field_c, 16, 0, param0);
             if (var3 != 0) {
               var5.field_m = (short)param0.readBits((byte) -17, 16);
-              var5.field_M = ji.a(var5.field_M, 16, 0, param0);
-              var5.field_t = ji.a(var5.field_t, 16, 0, param0);
-              var5.field_i = ji.a(var5.field_i, 16, 0, param0);
-              var5.field_P = ji.a(var5.field_P, 16, 0, param0);
-              var5.field_u = ji.a(var5.field_u, 16, 0, param0);
-              var5.field_e = ji.a(var5.field_e, 16, 0, param0);
+              var5.field_M = ArchiveNetworkClient.a(var5.field_M, 16, 0, param0);
+              var5.field_t = ArchiveNetworkClient.a(var5.field_t, 16, 0, param0);
+              var5.field_i = ArchiveNetworkClient.a(var5.field_i, 16, 0, param0);
+              var5.field_P = ArchiveNetworkClient.a(var5.field_P, 16, 0, param0);
+              var5.field_u = ArchiveNetworkClient.a(var5.field_u, 16, 0, param0);
+              var5.field_e = ArchiveNetworkClient.a(var5.field_e, 16, 0, param0);
             }
             if (var4 != 0) {
               param0.readBits((byte) -17, 16);
-              var5.field_J = ji.a(var5.field_J, 16, 0, param0);
-              var5.field_z = ji.a(var5.field_z, 16, 0, param0);
-              var5.field_h = ji.a(var5.field_h, 16, 0, param0);
-              var5.field_k = ji.a(var5.field_k, 16, 0, param0);
-              var5.field_g = ji.a(var5.field_g, 16, 0, param0);
+              var5.field_J = ArchiveNetworkClient.a(var5.field_J, 16, 0, param0);
+              var5.field_z = ArchiveNetworkClient.a(var5.field_z, 16, 0, param0);
+              var5.field_h = ArchiveNetworkClient.a(var5.field_h, 16, 0, param0);
+              var5.field_k = ArchiveNetworkClient.a(var5.field_k, 16, 0, param0);
+              var5.field_g = ArchiveNetworkClient.a(var5.field_g, 16, 0, param0);
             }
             if (ac.a((byte) 102, param0)) {
-              var5.field_G = ji.a(var5.field_G, 16, 0, param0);
+              var5.field_G = ArchiveNetworkClient.a(var5.field_G, 16, 0, param0);
             }
             L4: {
               if (ac.a((byte) 37, param0)) {

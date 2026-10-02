@@ -187,7 +187,7 @@ final class pi extends vf {
             var17.drawAdditive(var9, var10 - (var17.height >> 1), 256);
             return;
           }
-          if (kk.field_w != var6) {
+          if (SocketArchiveNetworkClient.field_w != var6) {
             return;
           }
           {

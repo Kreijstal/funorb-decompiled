@@ -41,7 +41,7 @@ final class BufferedSocket implements Runnable {
               }
               if (this.writerTask != null) {
                 L2: while (0 == this.writerTask.status) {
-                  bc.a(0, 1L);
+                  bc.sleepMillis(0, 1L);
                 }
                 if (1 == this.writerTask.status) {
                   try {

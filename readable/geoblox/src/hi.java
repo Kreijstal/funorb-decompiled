@@ -499,7 +499,7 @@ final class hi extends ee implements ta, pl {
           }
           var4 = 37 / ((-70 - param0) / 38);
           var5 = var3.a((byte) -105);
-          stackIn_7_0 = !(var5 != kk.field_w);
+          stackIn_7_0 = !(var5 != SocketArchiveNetworkClient.field_w);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -6,7 +6,7 @@ final class CachedArchiveSource extends ArchiveSource {
     static boolean field_s;
     private int expectedIndexRevision;
     static int[] field_j;
-    private ji networkClient;
+    private ArchiveNetworkClient networkClient;
     private ArchiveRequest indexRequest;
     private int archiveId;
     private DiskCacheWorker diskWorker;
@@ -40,10 +40,10 @@ final class CachedArchiveSource extends ArchiveSource {
           return this.index;
         }
         if (this.indexRequest == null) {
-          if (this.networkClient.g(20)) {
+          if (this.networkClient.isPriorityQueueFull(20)) {
             return null;
           }
-          this.indexRequest = (ArchiveRequest) ((Object) this.networkClient.a((byte) 0, 255, -21, this.archiveId, true));
+          this.indexRequest = (ArchiveRequest) ((Object) this.networkClient.queueRequest((byte) 0, 255, -21, this.archiveId, true));
         }
         if (methodGuard <= 111) {
           this.advanceBackgroundLoading((byte) 65);
@@ -71,8 +71,8 @@ final class CachedArchiveSource extends ArchiveSource {
               caughtIndexFailure = diskIndexFailure;
               indexFailureForRetry = caughtIndexFailure;
               this.index = null;
-              if (!this.networkClient.g(20)) {
-                this.indexRequest = (ArchiveRequest) ((Object) this.networkClient.a((byte) 0, 255, -21, this.archiveId, true));
+              if (!this.networkClient.isPriorityQueueFull(20)) {
+                this.indexRequest = (ArchiveRequest) ((Object) this.networkClient.queueRequest((byte) 0, 255, -21, this.archiveId, true));
               } else {
                 this.indexRequest = null;
               }
@@ -87,12 +87,12 @@ final class CachedArchiveSource extends ArchiveSource {
             } catch (java.lang.RuntimeException networkIndexFailure) {
               caughtIndexFailure = networkIndexFailure;
               indexFailureForRetry = caughtIndexFailure;
-              this.networkClient.e(20);
+              this.networkClient.resetAfterValidationFailure(20);
               this.index = null;
-              if (this.networkClient.g(20)) {
+              if (this.networkClient.isPriorityQueueFull(20)) {
                 this.indexRequest = null;
               } else {
-                this.indexRequest = (ArchiveRequest) ((Object) this.networkClient.a((byte) 0, 255, -21, this.archiveId, true));
+                this.indexRequest = (ArchiveRequest) ((Object) this.networkClient.queueRequest((byte) 0, 255, -21, this.archiveId, true));
               }
               return null;
             }
@@ -160,10 +160,10 @@ final class CachedArchiveSource extends ArchiveSource {
                 if (this.groupDiskStatus[groupId] != -1) {
                   throw new RuntimeException();
                 }
-                if (this.networkClient.b(-21)) {
+                if (this.networkClient.isBackgroundQueueFull(-21)) {
                   return null;
                 }
-                request = this.networkClient.a((byte) 2, this.archiveId, methodGuard + 50, groupId, false);
+                request = this.networkClient.queueRequest((byte) 2, this.archiveId, methodGuard + 50, groupId, false);
               }
             } else {
               if (null != this.groupDiskCache) {
@@ -172,10 +172,10 @@ final class CachedArchiveSource extends ArchiveSource {
                   break L2;
                 }
               }
-              if (this.networkClient.g(20)) {
+              if (this.networkClient.isPriorityQueueFull(20)) {
                 return null;
               }
-              request = this.networkClient.a((byte) 2, this.archiveId, -21, groupId, true);
+              request = this.networkClient.queueRequest((byte) 2, this.archiveId, -21, groupId, true);
             }
           }
           this.groupRequests.a((byte) 102, (IntrusiveNode) (request), (long)groupId);
@@ -241,10 +241,10 @@ final class CachedArchiveSource extends ArchiveSource {
               if (!((ArchiveRequest) (request)).priority) {
                 return null;
               }
-              if (this.networkClient.g(20)) {
+              if (this.networkClient.isPriorityQueueFull(20)) {
                 return null;
               }
-              request = this.networkClient.a((byte) 2, this.archiveId, -21, groupId, true);
+              request = this.networkClient.queueRequest((byte) 2, this.archiveId, -21, groupId, true);
               this.groupRequests.a((byte) 102, (IntrusiveNode) (request), (long)groupId);
               return null;
             }
@@ -276,8 +276,8 @@ final class CachedArchiveSource extends ArchiveSource {
                       }
                     }
                   }
-                  this.networkClient.field_b = 0;
-                  this.networkClient.field_q = 0;
+                  this.networkClient.failureCount = 0;
+                  this.networkClient.failureCode = 0;
                   break L4;
                 }
               }
@@ -286,11 +286,11 @@ final class CachedArchiveSource extends ArchiveSource {
           } catch (java.lang.RuntimeException networkFailure) {
             caughtValidationFailure = networkFailure;
             networkValidationFailure = (RuntimeException) (Object) caughtValidationFailure;
-            this.networkClient.e(20);
+            this.networkClient.resetAfterValidationFailure(20);
             ((ArchiveRequest) (request)).unlinkNode(false);
             if (((ArchiveRequest) (request)).priority) {
-              if (!this.networkClient.g(methodGuard ^ -83)) {
-                request = this.networkClient.a((byte) 2, this.archiveId, -21, groupId, true);
+              if (!this.networkClient.isPriorityQueueFull(methodGuard ^ -83)) {
+                request = this.networkClient.queueRequest((byte) 2, this.archiveId, -21, groupId, true);
                 this.groupRequests.a((byte) 102, (IntrusiveNode) (request), (long)groupId);
               }
             }
@@ -522,7 +522,7 @@ final class CachedArchiveSource extends ArchiveSource {
                       L13: {
                         if (this.backgroundGroupIndex < this.index.fileCounts.length) {
                           if (this.index.fileCounts[this.backgroundGroupIndex] != 0) {
-                            if (this.networkClient.b(-21)) {
+                            if (this.networkClient.isBackgroundQueueFull(-21)) {
                               phaseComplete = 0;
                               break L13;
                             }
@@ -606,7 +606,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
     }
 
-    CachedArchiveSource(int archiveId, jh groupDiskCache, jh indexDiskCache, ji networkClient, DiskCacheWorker diskWorker, int expectedIndexCrc32, byte[] expectedIndexWhirlpoolDigest, int expectedIndexRevision, boolean sweepCompletedRequests) {
+    CachedArchiveSource(int archiveId, jh groupDiskCache, jh indexDiskCache, ArchiveNetworkClient networkClient, DiskCacheWorker diskWorker, int expectedIndexCrc32, byte[] expectedIndexWhirlpoolDigest, int expectedIndexRevision, boolean sweepCompletedRequests) {
         boolean sweepOptionSnapshot = false;
         RuntimeException constructionFailureBeforeContext = null;
         StringBuilder constructionMessagePrefix = null;

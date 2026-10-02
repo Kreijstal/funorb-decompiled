@@ -231,7 +231,7 @@ class ac extends ff {
               var12 = var12 + (fi.smallFont.drawParagraph(ri.field_b[var7], 318, var12, 190, 200, 0, -1, 0, 0, 16) * var11 + var11);
               var12 += 10;
               fi.smallFont.drawText(wj.a(sl.orbPointsText, new String[]{Integer.toString(th.field_h[var7])}, (byte) -50), 318, 360, 0, -1);
-              for (var13 = 0; var13 < kk.field_s[var7]; var13++) {
+              for (var13 = 0; var13 < SocketArchiveNetworkClient.field_s[var7]; var13++) {
                 uk.orbCoinSprite.drawQuarterSize(318 + 10 * var13, 370);
               }
               var12 = var12 + var11;

@@ -97,7 +97,7 @@ final class ma extends IntrusiveNode {
         if (param0 != 15869) {
             return 61;
         }
-        if (!wg.field_i.a((byte) 95)) {
+        if (!wg.field_i.pollResponses((byte) 95)) {
             return WhirlpoolHash.a((byte) -74);
         }
         return 0;

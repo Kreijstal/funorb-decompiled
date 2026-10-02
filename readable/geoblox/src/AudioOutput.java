@@ -132,7 +132,7 @@ class AudioOutput {
             }
             field_r.field_f = true;
             L2: while (field_r.field_c) {
-              bc.a(0, 50L);
+              bc.sleepMillis(0, 50L);
             }
             field_r = null;
             break L0;

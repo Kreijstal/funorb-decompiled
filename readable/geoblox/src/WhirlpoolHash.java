@@ -282,11 +282,11 @@ final class WhirlpoolHash {
             IOException var1 = null;
             String var2 = null;
             ByteArrayBuffer var3 = null;
-            if (wg.field_i.field_b >= 4) {
-              if (wg.field_i.field_q == -1) {
+            if (wg.field_i.failureCount >= 4) {
+              if (wg.field_i.failureCode == -1) {
                 return 3;
               }
-              if (wg.field_i.field_q != -2) {
+              if (wg.field_i.failureCode != -2) {
                 return 1;
               }
               return 4;
@@ -337,7 +337,7 @@ final class WhirlpoolHash {
               if (4 != qh.field_J) {
                 return -1;
               }
-              wg.field_i.a(li.field_a, false, si.field_c);
+              wg.field_i.attachSocket(li.field_a, false, si.field_c);
               gj.field_s = null;
               qh.field_J = 0;
               li.field_a = null;

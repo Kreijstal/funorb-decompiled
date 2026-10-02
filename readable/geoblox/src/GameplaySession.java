@@ -471,7 +471,7 @@ final class GameplaySession {
                     continue L31;
                   }
                 }
-                debugMovingQueueSnapshot = ji.movingEntities;
+                debugMovingQueueSnapshot = ArchiveNetworkClient.movingEntities;
                 debugEntityQueue = debugMovingQueueSnapshot;
                 renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.firstForIteration(0));
                 L36: while (true) {
@@ -573,7 +573,7 @@ final class GameplaySession {
             }
             if (this.showSessionCounters) {
               dd.uiPaletteFont.drawText(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
-              dd.uiPaletteFont.drawText(wj.a(qg.field_e, new String[]{Integer.toString(ji.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
+              dd.uiPaletteFont.drawText(wj.a(qg.field_e, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
             }
             L53: {
               bd.drawScorePopups(-117);
@@ -944,7 +944,7 @@ final class GameplaySession {
               L45: {
                 if (kj.heldInternalKeys[99]) {
                   if (!this.tutorialPromptActive) {
-                    fastForwardEntity = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+                    fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
                     L46: while (true) {
                       if (null == fastForwardEntity) {
                         break L45;
@@ -960,7 +960,7 @@ final class GameplaySession {
                           break L45;
                         }
                       }
-                      fastForwardEntity = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+                      fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
                       if (clientControlFlowGuard == 0) {
                         continue L46;
                       }
@@ -978,7 +978,7 @@ final class GameplaySession {
             }
             this.delayedActionCountdown = this.delayedActionCountdown - 1;
             if (this.delayedActionCountdown == 0) {
-              ld.spawnPointsPopup(310, 320, 123, 100 + 100 * ji.difficultyStep);
+              ld.spawnPointsPopup(310, 320, 123, 100 + 100 * ArchiveNetworkClient.difficultyStep);
             }
             L50: {
               if (!fa.entitiesDetachedThisTick) {
@@ -1629,7 +1629,7 @@ final class GameplaySession {
           this.preserveScoreOnTransition = true;
           this.sceneTransitionRequested = false;
           this.sceneAnimationTick = 0;
-          if (ji.difficultyStep > 0) {
+          if (ArchiveNetworkClient.difficultyStep > 0) {
             qe.adjustThemeReleaseQuota(10);
             ld.advanceDifficulty(false);
           }
@@ -1994,7 +1994,7 @@ final class GameplaySession {
         if (methodGuard != 867) {
             this.renderTutorialPrompt(20);
         }
-        if (ji.difficultyStep >= 41) {
+        if (ArchiveNetworkClient.difficultyStep >= 41) {
             ra.a(255 ^ PacketBuffer.field_m, -103, PacketBuffer.field_m);
         }
         int nextThemeId = uh.b(16);

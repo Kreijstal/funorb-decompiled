@@ -31,7 +31,7 @@ final class ih {
           return true;
         }
         L0: {
-          if (ji.movingEntities.isEmpty(13519)) {
+          if (ArchiveNetworkClient.movingEntities.isEmpty(13519)) {
             if (SecondaryDeque.spawnQueue.isEmpty(13519)) {
               if (bh.transientEntities.isEmpty(param0 + 13519)) {
                 if (!jl.avatarShockContactPending) {

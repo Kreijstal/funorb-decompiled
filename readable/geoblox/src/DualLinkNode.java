@@ -8,7 +8,7 @@ class DualLinkNode extends IntrusiveNode {
     static int[] decodedSpriteWidths;
     static String js5ConnectFullErrorText;
     DualLinkNode previousSecondaryNode;
-    long field_i;
+    long secondaryKey;
 
     final static void c(int param0) {
         int var1 = -62 / ((-75 - param0) / 49);

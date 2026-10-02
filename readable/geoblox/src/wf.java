@@ -388,7 +388,7 @@ abstract class wf extends ch {
         }
         if (mi.field_C == 1) {
           if (va.field_a != 0) {
-            dd.field_J = kk.a(lk.field_e, (byte) -62);
+            dd.field_J = SocketArchiveNetworkClient.a(lk.field_e, (byte) -62);
           }
           l.field_h = rj.a(ib.field_c, (byte) -18, true, false, 1);
           dc.field_c = rj.a(ArchiveRequest.field_r, (byte) -124, true, false, 1);
@@ -462,7 +462,7 @@ abstract class wf extends ch {
         }
         if (10 == mi.field_C) {
           if (va.field_a != 0) {
-            ak.field_b = kk.a(ah.field_a, (byte) -62);
+            ak.field_b = SocketArchiveNetworkClient.a(ah.field_a, (byte) -62);
           }
           mi.field_C = 11;
         }
@@ -510,7 +510,7 @@ abstract class wf extends ch {
           }
         }
         if (wj.field_G[8]) {
-          ji.f(-102);
+          ArchiveNetworkClient.f(-102);
         }
     }
 

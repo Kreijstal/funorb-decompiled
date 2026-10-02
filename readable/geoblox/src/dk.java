@@ -140,7 +140,7 @@ abstract class dk {
             var3 = Geoblox.field_C;
             try {
               if (null != wg.field_i) {
-                wg.field_i.h(-70);
+                wg.field_i.closeSocket(-70);
               }
               if (param0 >= -65) {
                 categoryMatchCandidateCount = 18;

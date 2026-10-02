@@ -328,7 +328,7 @@ final class uk extends TextInputValidator {
             }
           }
           if (this.field_n) {
-            stackIn_15_0 = kk.field_w;
+            stackIn_15_0 = SocketArchiveNetworkClient.field_w;
           } else {
             stackIn_15_0 = si.field_m;
           }

@@ -818,7 +818,7 @@ final class pf extends ee implements ga, pl {
           if (this.field_M != null) {
             this.field_M.field_q = (dh) ((Object) var6);
           }
-          this.field_J.field_j = kk.loginUsernameTooltipText;
+          this.field_J.field_j = SocketArchiveNetworkClient.loginUsernameTooltipText;
           if (null != this.field_M) {
             this.field_M.field_j = ic.loginCreateTooltipText;
           }

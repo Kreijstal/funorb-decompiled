@@ -14,7 +14,7 @@ final class pg {
         ul.releasedInCurrentTheme = 0;
         ag.availableSpriteVariantCount = 3;
         fj.field_m = 0;
-        ji.difficultyStep = 0;
+        ArchiveNetworkClient.difficultyStep = 0;
         fa.releasesPerTheme = 40;
         f.availableEntityCategoryCount = 4;
         qe.adjustThemeReleaseQuota(10);

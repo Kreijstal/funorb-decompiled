@@ -19,21 +19,25 @@ current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and retain all 138,558 remaining bindings
 and 388 override relationships.
 
-The current naming pass adds 86 guarded identities for `DiskCacheWorker`
-and the remaining `SecondaryDeque` instance locals. Every worker instance
-field/API, constructor contract and local has a name. Queue operations,
-synchronous queued-write reuse, thread startup and shutdown expose their roles.
-Both worker continuation selectors, monitor boundaries, exception paths and
-original visibility semantics remain intact.
+The current naming pass adds 134 guarded identities for `ArchiveNetworkClient`,
+`SocketArchiveNetworkClient`, the shared secondary key and direct XOR/sleep
+helpers. Every network-client instance field/API, constructor contract and local
+has a name. Pending/sent priority/background queues, response parsing,
+socket attachment, requeueing and failure state expose their roles while
+retaining the original byte protocol, partial effects and exception paths.
 
-The 5,422 rules apply 45,284 edits. All 303 raw/readable sources compile,
-preserving 138,558 bindings and 388 overrides. All 5,336 previous complete rules
+The 5,556 rules apply 46,053 edits. All 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 overrides. All 5,422 previous complete rules
 and raw source/decompiler pins are unchanged. Binding checks, reproduction and
-byte-exact reversal support the names. Existing deque fixtures retain their
-primary-deque/dual-link scope without new live disk-worker or secondary-queue
-execution coverage. Network/storage/compression helpers, static names,
+byte-exact reversal support the names. Existing native helper/socket/cache/input
+fixtures retain their prior scope without new archive response/reconnect
+protocol coverage. Handshake/storage/compression helpers, static names,
 large labeled bodies, full assets/gameplay and device performance remain
 unfinished or unverified. One manifest holds current evidence, with Git for history.
+
+Pass 69 named `DiskCacheWorker` and the remaining `SecondaryDeque` instance
+locals. Queue operations, synchronous queued-write reuse, thread startup,
+shutdown and both retained worker continuation selectors expose their roles.
 
 Pass 68 named `CachedArchiveSource` and the three-class archive-request
 hierarchy. Every instance field/API, constructor contract and local has a name.

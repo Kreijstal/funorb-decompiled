@@ -24,7 +24,7 @@ final class vg {
             param2.nextSecondaryNode = var5;
             param2.previousSecondaryNode = var5.previousSecondaryNode;
             param2.previousSecondaryNode.nextSecondaryNode = param2;
-            param2.field_i = param0;
+            param2.secondaryKey = param0;
             param2.nextSecondaryNode.previousSecondaryNode = param2;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "vg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -46,7 +46,7 @@ final class vg {
               this.field_c = null;
               return null;
             }
-            if (this.field_e != this.field_c.field_i) {
+            if (this.field_e != this.field_c.secondaryKey) {
               this.field_c = this.field_c.nextSecondaryNode;
               continue L1;
             }
@@ -61,7 +61,7 @@ final class vg {
             this.field_c = null;
             return null;
           }
-          if (this.field_e != this.field_c.field_i) {
+          if (this.field_e != this.field_c.secondaryKey) {
             this.field_c = this.field_c.nextSecondaryNode;
             continue L0;
           }
@@ -84,7 +84,7 @@ final class vg {
             this.field_c = null;
             return null;
           }
-          if (param0 != this.field_c.field_i) {
+          if (param0 != this.field_c.secondaryKey) {
             this.field_c = this.field_c.nextSecondaryNode;
             continue L0;
           }

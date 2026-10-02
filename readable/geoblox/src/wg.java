@@ -10,7 +10,7 @@ final class wg implements Runnable {
     private int field_l;
     static int field_j;
     private ByteArrayBuffer field_n;
-    static ji field_i;
+    static ArchiveNetworkClient field_i;
     static int field_m;
     static ck field_d;
     private DataInputStream field_c;

@@ -39,7 +39,7 @@ final class jj {
                 jj.clearAvatarSteering(-85);
             }
             this.field_e.a(-1, var6_ref);
-            ((fj) ((Object) var6_ref)).field_i = 0L;
+            ((fj) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "jj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -62,13 +62,13 @@ final class jj {
         }
         if (!var7.g(13)) {
             this.field_e.a(-1, var7);
-            var7.field_i = 0L;
+            var7.secondaryKey = 0L;
             return var5;
         }
         gj var6 = new gj(var5, var7.field_n);
         this.field_f.a(var7.field_a, -81, var6);
         this.field_e.a(-1, var6);
-        ((fj) ((Object) var6)).field_i = 0L;
+        ((fj) ((Object) var6)).secondaryKey = 0L;
         var7.unlinkNode(false);
         var7.unlinkSecondaryNode((byte) 93);
         return var5;

@@ -106,7 +106,7 @@ final class kc {
         clientControlSnapshot = Geoblox.field_C;
         try {
           fa.entitiesDetachedThisTick = false;
-          activeEntity = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+          activeEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           L0: while (true) {
             L1: {
               L2: {
@@ -134,7 +134,7 @@ final class kc {
                       el.gameplaySession.boardRasterDirty = true;
                     }
                     activeEntity.entityQueue = null;
-                    activeEntity = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+                    activeEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
                     if (clientControlSnapshot == 0) {
                       continue L0;
                     }
@@ -246,7 +246,7 @@ final class kc {
                                                         if (connectivityAliasThenDetachingEntity == null) {
                                                           break L10;
                                                         }
-                                                        connectivityAliasThenDetachingEntity.entityQueue = ji.movingEntities;
+                                                        connectivityAliasThenDetachingEntity.entityQueue = ArchiveNetworkClient.movingEntities;
                                                         connectivityAliasThenDetachingEntity.touchesAvatar = false;
                                                         connectivityAliasThenDetachingEntity.detachedFromBoard = true;
                                                         fa.entitiesDetachedThisTick = true;
@@ -286,7 +286,7 @@ final class kc {
                                                         if (connectivityAliasThenDetachingEntity == null) {
                                                           break L10;
                                                         }
-                                                        connectivityAliasThenDetachingEntity.entityQueue = ji.movingEntities;
+                                                        connectivityAliasThenDetachingEntity.entityQueue = ArchiveNetworkClient.movingEntities;
                                                         connectivityAliasThenDetachingEntity.touchesAvatar = false;
                                                         connectivityAliasThenDetachingEntity.detachedFromBoard = true;
                                                         fa.entitiesDetachedThisTick = true;
@@ -311,7 +311,7 @@ final class kc {
                                                       if (connectivityAliasThenDetachingEntity == null) {
                                                         break L10;
                                                       }
-                                                      connectivityAliasThenDetachingEntity.entityQueue = ji.movingEntities;
+                                                      connectivityAliasThenDetachingEntity.entityQueue = ArchiveNetworkClient.movingEntities;
                                                       connectivityAliasThenDetachingEntity.touchesAvatar = false;
                                                       connectivityAliasThenDetachingEntity.detachedFromBoard = true;
                                                       fa.entitiesDetachedThisTick = true;
@@ -358,7 +358,7 @@ final class kc {
                               if (connectivityAliasThenDetachingEntity == null) {
                                 break L10;
                               }
-                              connectivityAliasThenDetachingEntity.entityQueue = ji.movingEntities;
+                              connectivityAliasThenDetachingEntity.entityQueue = ArchiveNetworkClient.movingEntities;
                               connectivityAliasThenDetachingEntity.touchesAvatar = false;
                               connectivityAliasThenDetachingEntity.detachedFromBoard = true;
                               fa.entitiesDetachedThisTick = true;
@@ -443,7 +443,7 @@ final class kc {
                       routedAttachedEntity.unlinkSecondaryNode((byte) 100);
                       el.gameplaySession.boardRasterDirty = true;
                       routedAttachedEntity.eraseEntityPixels(92);
-                      if (ji.movingEntities == routedAttachedEntity.entityQueue) {
+                      if (ArchiveNetworkClient.movingEntities == routedAttachedEntity.entityQueue) {
                         routedAttachedEntity.rotateEntityAroundBoard(-el.gameplaySession.boardAngleRadians, -117);
                         radialOffsetX = -routedAttachedEntity.positionX + 320.0f;
                         radialOffsetY = -routedAttachedEntity.positionY + 240.0f;
@@ -469,7 +469,7 @@ final class kc {
                         routedAttachedEntity.relatedEntityCount = 0;
                         neighborThenCountResetEntity.sameCategoryEntityCount = 0;
                         componentSearchThenVariantResetEntity.sameVariantEntityCount = 0;
-                        ji.movingEntities.addLast(-36, routedAttachedEntity);
+                        ArchiveNetworkClient.movingEntities.addLast(-36, routedAttachedEntity);
                         if (clientControlSnapshot == 0) {
                           break L40;
                         }

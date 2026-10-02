@@ -4,15 +4,15 @@
 final class bc {
     static int field_a;
 
-    final static void a(int param0, long param1) {
-        if (!(param1 > 0L)) {
+    final static void sleepMillis(int splitRemainder, long durationMillis) {
+        if (!(durationMillis > 0L)) {
             return;
         }
-        if (param1 % 10L == (long)param0) {
-            ji.a(-1L + param1, (byte) -33);
-            ji.a(1L, (byte) -33);
+        if (durationMillis % 10L == (long)splitRemainder) {
+            ArchiveNetworkClient.sleepIgnoringInterrupt(-1L + durationMillis, (byte) -33);
+            ArchiveNetworkClient.sleepIgnoringInterrupt(1L, (byte) -33);
         } else {
-            ji.a(param1, (byte) -33);
+            ArchiveNetworkClient.sleepIgnoringInterrupt(durationMillis, (byte) -33);
         }
     }
 

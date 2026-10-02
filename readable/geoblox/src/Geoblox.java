@@ -173,7 +173,7 @@ public final class Geoblox extends wf {
             keyboardIconSprites[1] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_right");
             keyboardIconSprites[2] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_enter");
             keyboardIconSprites[3] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_space");
-            keyboardIconSprites[4] = jg.loadIndexedSprite(ll.gameGraphicsArchive, h.a(methodGuard, 25868), "", "keyboard_esc");
+            keyboardIconSprites[4] = jg.loadIndexedSprite(ll.gameGraphicsArchive, h.xorInt(methodGuard, 25868), "", "keyboard_esc");
             keyboardIconSprites[5] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_backspace");
             keyboardIconSprites[6] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_down");
             keyboardIconSprites[7] = jg.loadIndexedSprite(ll.gameGraphicsArchive, 1, "", "keyboard_i");
@@ -323,7 +323,7 @@ public final class Geoblox extends wf {
                     return false;
                   }
                 }
-                lc.a(gf.formatArchiveGroupProgress(ji.waitingForMusicText, fe.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
+                lc.a(gf.formatArchiveGroupProgress(ArchiveNetworkClient.waitingForMusicText, fe.field_a, "", dd.loadingMusicText, true), -2, 15.0f);
                 return false;
               }
             }
@@ -372,7 +372,7 @@ public final class Geoblox extends wf {
         v.a(true);
         GameScreen.d((byte) 28);
         GameplaySession.i(-17199);
-        ji.d(-50);
+        ArchiveNetworkClient.d(-50);
         DiskCacheWorker.a(param0 ^ 74);
         em.a(86);
         BufferedSocket.releaseTransformedVertexScratch(21888);
@@ -437,7 +437,7 @@ public final class Geoblox extends wf {
         t.a(17348);
         kh.a(104);
         PacketByteCipher.b((byte) -125);
-        kk.i(-84);
+        SocketArchiveNetworkClient.i(-84);
         NetworkArchiveRequest.e((byte) 118);
         CachedArchiveSource.b(true);
         ArchiveRequest.f(31735);
@@ -979,11 +979,11 @@ public final class Geoblox extends wf {
             ih.b(-105);
         }
         ll.gameGraphicsArchive = je.a(1, true, param0, true, (byte) -111);
-        wj.field_F = kk.a(2, (byte) -62);
-        ah.field_c = kk.a(3, (byte) -62);
-        cd.field_m = kk.a(4, (byte) -62);
-        fe.field_a = kk.a(5, (byte) -62);
-        ii.fontMetricsArchive = kk.a(6, (byte) -62);
+        wj.field_F = SocketArchiveNetworkClient.a(2, (byte) -62);
+        ah.field_c = SocketArchiveNetworkClient.a(3, (byte) -62);
+        cd.field_m = SocketArchiveNetworkClient.a(4, (byte) -62);
+        fe.field_a = SocketArchiveNetworkClient.a(5, (byte) -62);
+        ii.fontMetricsArchive = SocketArchiveNetworkClient.a(6, (byte) -62);
         qe.a(ki.basicUiGraphicsArchive, re.field_i, -84);
     }
 

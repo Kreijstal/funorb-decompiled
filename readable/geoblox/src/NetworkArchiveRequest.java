@@ -48,7 +48,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             return stackIn_2_0;
           }
           if (mf.decodeSpritesFromArchive(param2, param3, 104, param1)) {
-            return ji.buildIndexedSpritesFromDecodedSheet(0);
+            return ArchiveNetworkClient.buildIndexedSpritesFromDecodedSheet(0);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

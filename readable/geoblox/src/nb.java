@@ -102,7 +102,7 @@ final class nb {
           ((GameplayEntity) (Object) entityBeforeVariantSelection).initializeEntityMotion(motionGuardBeforeVariantSelection, boardXBeforeVariantSelection, kindBeforeVariantSelection, inwardVelocityXBeforeVariantSelection, selectedVariantId, zeroLifetimeTicks, unusedMotionFloat, boardYForCategorySelection, inwardVelocityYForCategorySelection, initializationCategory, 0.0f);
         }
         pooledEntity.entityQueue = null;
-        ji.movingEntities.addLast(methodGuard ^ 28286, pooledEntity);
+        ArchiveNetworkClient.movingEntities.addLast(methodGuard ^ 28286, pooledEntity);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {

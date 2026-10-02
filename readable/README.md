@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 5,422 guarded naming rules: 50 classes, 673 fields,
-489 methods, 1,469 parameters and 2,741 local declarations. Both 303-file corpora
+The current export has 5,556 guarded naming rules: 52 classes, 687 fields,
+507 methods, 1,499 parameters and 2,811 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,42 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current disk-cache worker and secondary queue names
+## Current archive network client names
+
+Pass 70 adds 134 guarded identities: two classes, fourteen fields, eighteen
+methods, thirty parameters and seventy locals. `ArchiveNetworkClient` and
+`SocketArchiveNetworkClient` name every instance declaration, constructor
+contract and local. `secondaryKey` names the independent dual-link key shared
+by request records and secondary hash buckets. Direct `h.xorInt`,
+`ArchiveNetworkClient.sleepIgnoringInterrupt` and `bc.sleepMillis` contracts
+also have complete parameter/local names. Static gameplay/UI/sprite helpers
+remain on their existing owners.
+
+The four pending/sent priority/background queues expose the two independent
+20-request limits. Six-byte sends retain opcode 1/0 plus low-40-bit request key.
+`pollResponses` distinguishes 10-byte headers, one-byte continuation markers
+and body reads within 512-byte blocks; parsing retains signed lengths/keys,
+reserved tail storage and optional byte-XOR. Reused int locals explicitly name
+their elapsed/header/body/index roles instead of implying one meaning.
+
+`attachSocket`, `sendSetupPacket`, `sendControlPacket`, `closeSocket` and
+`resetAfterValidationFailure` expose reconnect and failure ordering. The
+control flag names only its proven opcode 2/3 effect. Requeueing keeps request
+buffers/pending state, and malformed markers retain their original partial
+header prefix and sent links. Volatile failureCount/failureCode and pending,
+socket close-reference differences, random byte narrowing, wrong guards,
+recursive control sends, sleep effects and original diagnostic strings remain.
+
+All 5,422 previous complete rules and source/generator pins stay unchanged.
+The 5,556 rules apply 46,053 identifier edits; both 303-file corpora compile,
+preserving 138,558 bindings and 388 overrides. Reproduction and dictionary
+reversal are byte-exact. Existing native helper, cache, shutdown, socket,
+dispatcher and input traces retain their prior scope; they do not newly execute
+the archive response/reconnect protocol or actual server/assets. Handshake,
+storage/compression, unknown static names, large labeled bodies, complete
+gameplay and phone/FPS/heap behavior remain unfinished or unverified.
+
+## Previous disk-cache worker and secondary queue names
 
 Pass 69 adds 86 guarded identities: one class, four fields, six methods,
 fourteen parameters and 61 locals. `DiskCacheWorker` names every instance
@@ -1126,7 +1161,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 86 additions in
+naming-only pass retains those source pins and records its 134 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -1151,6 +1186,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `8c7bd16d47e39f9caf56e7dd021c59aa5805fdc87e29fb536099e39fa0806888` |
+| Readable | `c9275d48d911d19f9dcbf3b713b98219139b4a5101ea5866f5cdce67bbe2e632` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

@@ -200,7 +200,7 @@ final class bh extends java.awt.Canvas {
               if (propagateCategoryAndKind) {
                 if (currentEntity.entitySpriteKindId == 2) {
                   currentEntity.detachedFromBoard = true;
-                  currentEntity.entityQueue = ji.movingEntities;
+                  currentEntity.entityQueue = ArchiveNetworkClient.movingEntities;
                 }
                 currentEntity.configureEntitySprite(320, templateCategoryKey, currentEntity.spriteVariantIndex, templateSpriteKindId);
               }

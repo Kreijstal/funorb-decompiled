@@ -56,7 +56,7 @@ final class mk extends TextInputValidator {
           if (!this.field_i) {
             stackIn_13_0 = si.field_m;
           } else {
-            stackIn_13_0 = kk.field_w;
+            stackIn_13_0 = SocketArchiveNetworkClient.field_w;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

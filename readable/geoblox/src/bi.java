@@ -27,7 +27,7 @@ final class bi implements dh {
         RuntimeException decompiledCaughtException = null;
         var4 = Geoblox.field_C;
         try {
-          if (!kk.a(param0, param1, (byte) 118)) {
+          if (!SocketArchiveNetworkClient.a(param0, param1, (byte) 118)) {
             return false;
           }
           if (param2 >= -32) {

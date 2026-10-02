@@ -104,17 +104,17 @@ final class ld {
     }
 
     final static void advanceDifficulty(boolean recursiveAdvanceGuard) {
-        ji.difficultyStep = ji.difficultyStep + 1;
-        if (ji.difficultyStep >= kd.difficultyStepFlags.length) {
+        ArchiveNetworkClient.difficultyStep = ArchiveNetworkClient.difficultyStep + 1;
+        if (ArchiveNetworkClient.difficultyStep >= kd.difficultyStepFlags.length) {
           if (sa.specialSpriteKindProbability > 0.15000000000000002) {
             sa.specialSpriteKindProbability = sa.specialSpriteKindProbability - 0.05;
           }
         } else {
-          if ((4 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
+          if ((4 & kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep]) != 0) {
             og.entityMotionSpeed = og.entityMotionSpeed + 0.055555559694767f;
             sa.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }
-          if ((kd.difficultyStepFlags[ji.difficultyStep] & 1) != 0) {
+          if ((kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 1) != 0) {
             if (ag.availableSpriteVariantCount < 7) {
               ag.availableSpriteVariantCount = ag.availableSpriteVariantCount + 1;
             }
@@ -122,18 +122,18 @@ final class ld {
           if (recursiveAdvanceGuard) {
             ld.advanceDifficulty(true);
           }
-          if ((kd.difficultyStepFlags[ji.difficultyStep] & 2) != 0) {
+          if ((kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 2) != 0) {
             if (f.availableEntityCategoryCount < 7) {
               f.availableEntityCategoryCount = f.availableEntityCategoryCount + 1;
             }
           }
-          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 16)) {
+          if (0 != (kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 16)) {
             sa.specialSpriteKindProbability = sa.specialSpriteKindProbability + 0.05;
           }
-          if ((8 & kd.difficultyStepFlags[ji.difficultyStep]) != 0) {
+          if ((8 & kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep]) != 0) {
             DualLinkNode.rotationStepRadians = DualLinkNode.rotationStepRadians * 1.100000023841858f;
           }
-          if (0 != (kd.difficultyStepFlags[ji.difficultyStep] & 128)) {
+          if (0 != (kd.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 128)) {
             if (0.800000011920929f > ij.spawnIntervalScale) {
               ij.spawnIntervalScale = ij.spawnIntervalScale + 0.02857142873108387f;
             }

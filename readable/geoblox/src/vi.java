@@ -65,7 +65,7 @@ final class vi extends hk {
           {
             var8 = param1.requestDisplayModes(34);
             L0: while (var8.status == 0) {
-              bc.a(0, 10L);
+              bc.sleepMillis(0, 10L);
             }
             if (var8.status == 2) {
               stackIn_9_0 = new rj[]{};

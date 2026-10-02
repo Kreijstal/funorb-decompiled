@@ -11,8 +11,8 @@ final class j extends mi {
     static String quitWarningText;
 
     final static void e(int param0) {
-        wg.field_i.field_b = 0;
-        wg.field_i.field_q = 0;
+        wg.field_i.failureCount = 0;
+        wg.field_i.failureCode = 0;
         if (param0 != -21754) {
             field_lb = (String) null;
         }

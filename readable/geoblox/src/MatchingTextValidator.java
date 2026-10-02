@@ -267,7 +267,7 @@ final class MatchingTextValidator extends TextInputValidator {
           if (this.referenceInput instanceof nl) {
             referenceValidation = ((nl) ((Object) this.referenceInput)).a((byte) -106);
             if (referenceValidation != null) {
-              if (referenceValidation.a((byte) -105) != kk.field_w) {
+              if (referenceValidation.a((byte) -105) != SocketArchiveNetworkClient.field_w) {
                 stackIn_9_0 = si.field_m;
                 return stackIn_9_0;
               }
@@ -276,7 +276,7 @@ final class MatchingTextValidator extends TextInputValidator {
           if (!candidateText.equals(this.referenceInput.field_s)) {
             stackIn_13_0 = si.field_m;
           } else {
-            stackIn_13_0 = kk.field_w;
+            stackIn_13_0 = SocketArchiveNetworkClient.field_w;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -310,7 +310,7 @@ final class MatchingTextValidator extends TextInputValidator {
           if (this.referenceInput instanceof nl) {
             referenceValidation = ((nl) ((Object) this.referenceInput)).a((byte) -118);
             if (referenceValidation != null) {
-              if (referenceValidation.a((byte) -105) == kk.field_w) {
+              if (referenceValidation.a((byte) -105) == SocketArchiveNetworkClient.field_w) {
                 if (!candidateText.equals(this.referenceInput.field_s)) {
                   stackIn_8_0 = sj.createMismatchAlertText;
                   return stackIn_8_0;

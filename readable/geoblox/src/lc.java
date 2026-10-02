@@ -40,7 +40,7 @@ final class lc {
             L3: {
               L4: {
                 if (kj.heldInternalKeys[99]) {
-                  if (ji.movingEntities.isEmpty(13519)) {
+                  if (ArchiveNetworkClient.movingEntities.isEmpty(13519)) {
                     break L4;
                   }
                 }
@@ -55,7 +55,7 @@ final class lc {
               }
               if (0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) {
                 if (!el.gameplaySession.spawnReleaseDisabled) {
-                  ji.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
+                  ArchiveNetworkClient.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
                   hd.recordEntityRelease(2);
                   kc.ticksSinceLastEntityRelease = 0;
                 }

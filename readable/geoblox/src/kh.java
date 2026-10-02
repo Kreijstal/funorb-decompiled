@@ -66,7 +66,7 @@ final class kh implements Runnable {
                         var2.b();
                     }
                 }
-                bc.a(0, 10L);
+                bc.sleepMillis(0, 10L);
                 Object var5 = (Object) null;
                 wj.a(this.field_b, (byte) 116, (Object) null);
             }

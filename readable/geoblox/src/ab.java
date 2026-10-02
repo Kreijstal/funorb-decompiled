@@ -195,7 +195,7 @@ final class ab {
           boardContactStateDirty = false;
           wb.newAttachmentCount = 0;
           sh.mainRasterBuffer.setAsRasterTarget(255);
-          movingEntity = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+          movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           L0: while (movingEntity != null) {
             L2: {
               if (a.attachedEntities != movingEntity.entityQueue) {
@@ -235,7 +235,7 @@ final class ab {
                     wb.newAttachmentCount = wb.newAttachmentCount + 1;
                     break L2;
                   }
-                  movingEntity = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+                  movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
                   continue L0;
                 }
                 if (ma.contactProbeOverlapsScratchSprite(true, boardAngleRadians, movingEntity)) {
@@ -301,13 +301,13 @@ final class ab {
                 movingEntity.drawEntityIdOnPointerMask((byte) 51);
               }
             }
-            movingEntity = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+            movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
           }
           neighborIndexOrKindFlagOrContactIdOrDivisionGuard = -125 % ((methodGuard - 35) / 49);
-          trailEntity = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+          trailEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           L1: while (trailEntity != null) {
             trailEntity.eraseEntityTrail(30383);
-            trailEntity = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+            trailEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException motionFailure) {

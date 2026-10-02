@@ -47,7 +47,7 @@ final class DiskCacheWorker implements Runnable {
           request = new DiskArchiveRequest();
           request.bytes = bytes;
           request.priority = false;
-          request.field_i = (long)groupId;
+          request.secondaryKey = (long)groupId;
           request.operationType = 2;
           request.diskCache = diskCache;
           if (methodGuard <= 41) {
@@ -101,7 +101,7 @@ final class DiskCacheWorker implements Runnable {
             L1: {
               queuedRequest = (DiskArchiveRequest) ((Object) this.requestQueue.firstForIteration((byte) 121));
               L2: while (queuedRequest != null) {
-                if ((long)groupId == queuedRequest.field_i) {
+                if ((long)groupId == queuedRequest.secondaryKey) {
                   if (queuedRequest.diskCache == diskCache) {
                     if (2 == queuedRequest.operationType) {
                       request.bytes = queuedRequest.bytes;
@@ -255,7 +255,7 @@ final class DiskCacheWorker implements Runnable {
           request.operationType = 3;
           request.diskCache = diskCache;
           request.priority = false;
-          request.field_i = (long)groupId;
+          request.secondaryKey = (long)groupId;
           if (methodGuard < 22) {
             DiskCacheWorker.a(70);
           }
@@ -312,13 +312,13 @@ final class DiskCacheWorker implements Runnable {
                 L4: {
                   if (request.operationType != 2) {
                     if (3 == request.operationType) {
-                      request.bytes = request.diskCache.a((int)request.field_i, (byte) -76);
+                      request.bytes = request.diskCache.a((int)request.secondaryKey, (byte) -76);
                       completeRequestAfterOperation = 1;
                       break L4;
                     }
                     request.pending = false;
                   } else {
-                    request.diskCache.a(request.bytes, (byte) -53, (int)request.field_i, request.bytes.length);
+                    request.diskCache.a(request.bytes, (byte) -53, (int)request.secondaryKey, request.bytes.length);
                     request.pending = false;
                   }
                   completeRequestAfterOperation = 0;
@@ -350,7 +350,7 @@ final class DiskCacheWorker implements Runnable {
         try {
             threadTask = taskDispatcher.startThread((Runnable) (this), 0, 5);
             while (threadTask.status == 0) {
-                bc.a(0, 10L);
+                bc.sleepMillis(0, 10L);
             }
             if (2 == threadTask.status) {
                 throw new RuntimeException();

@@ -17,8 +17,8 @@ final class h {
         this.field_f = true;
     }
 
-    static int a(int param0, int param1) {
-        return param0 ^ param1;
+    static int xorInt(int left, int right) {
+        return left ^ right;
     }
 
     final static void a(java.applet.Applet param0, boolean param1) {
@@ -87,10 +87,10 @@ final class h {
         RuntimeException caughtMovingDrawFailure = null;
         clientControlFlowGuardSnapshot = Geoblox.field_C;
         try {
-          movingEntityToDraw = (GameplayEntity) ((Object) ji.movingEntities.firstForIteration(0));
+          movingEntityToDraw = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           L0: while (movingEntityToDraw != null) {
             movingEntityToDraw.drawBoardRotatedEntity(-16096);
-            movingEntityToDraw = (GameplayEntity) ((Object) ji.movingEntities.nextForIteration(1));
+            movingEntityToDraw = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
           }
           if (methodGuard == -1) {
             return;

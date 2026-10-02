@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class em {
-    private ji field_g;
+    private ArchiveNetworkClient field_g;
     private DiskCacheWorker field_f;
     private NetworkArchiveRequest field_h;
     private java.math.BigInteger field_e;
@@ -56,7 +56,7 @@ final class em {
         field_a = null;
     }
 
-    em(ji param0, DiskCacheWorker param1) {
+    em(ArchiveNetworkClient param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -164,10 +164,10 @@ final class em {
           return true;
         }
         if (this.field_h == null) {
-          if (this.field_g.g(20)) {
+          if (this.field_g.isPriorityQueueFull(20)) {
             return false;
           }
-          this.field_h = this.field_g.a((byte) 0, 255, -21, 255, true);
+          this.field_h = this.field_g.queueRequest((byte) 0, 255, -21, 255, true);
         }
         if (param0 <= 121) {
           return false;
@@ -210,7 +210,7 @@ final class em {
         }
     }
 
-    private em(ji param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private em(ArchiveNetworkClient param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -227,8 +227,8 @@ final class em {
           this.field_e = param3;
           this.field_f = param1;
           this.field_g = param0;
-          if (!this.field_g.g(20)) {
-            this.field_h = this.field_g.a((byte) 0, 255, -21, 255, true);
+          if (!this.field_g.isPriorityQueueFull(20)) {
+            this.field_h = this.field_g.queueRequest((byte) 0, 255, -21, 255, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

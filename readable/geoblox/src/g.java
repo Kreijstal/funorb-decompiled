@@ -46,7 +46,7 @@ final class g extends TextInputValidator {
           }
           var5 = var4;
           if (em.a(var5, guard - 344)) {
-            stackIn_6_0 = ji.createPasswordLengthAlertText;
+            stackIn_6_0 = ArchiveNetworkClient.createPasswordLengthAlertText;
             return stackIn_6_0;
           }
           if (ak.a(var5, (byte) -120)) {
@@ -77,7 +77,7 @@ final class g extends TextInputValidator {
             return stackIn_30_0;
           }
           if (!wc.a(var5, var6, (byte) -96)) {
-            return ji.createPasswordLengthAlertText;
+            return ArchiveNetworkClient.createPasswordLengthAlertText;
           }
           stackIn_34_0 = gf.createPasswordContainsNameAlertText;
           return stackIn_34_0;
@@ -172,7 +172,7 @@ final class g extends TextInputValidator {
             return stackIn_8_0;
           }
           if (!this.a(candidateText, -29267)) {
-            stackIn_13_0 = kk.field_w;
+            stackIn_13_0 = SocketArchiveNetworkClient.field_w;
             return stackIn_13_0;
           }
           stackIn_11_0 = si.field_m;

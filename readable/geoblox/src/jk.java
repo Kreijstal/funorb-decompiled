@@ -157,10 +157,10 @@ final class jk {
           L0: while (true) {
             var3 = param2.requestExitFullscreen(param0, 0);
             L1: while (var3.status == 0) {
-              bc.a(0, 10L);
+              bc.sleepMillis(0, 10L);
             }
             if (var3.status != 1) {
-              bc.a(0, 100L);
+              bc.sleepMillis(0, 100L);
               continue L0;
             }
             param0.setVisible(false);

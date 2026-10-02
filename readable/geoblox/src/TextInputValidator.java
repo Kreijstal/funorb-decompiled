@@ -88,7 +88,7 @@ abstract class TextInputValidator extends ib implements ga {
                 field_f = -0.8279321027589008;
             }
             ij.field_W = param8;
-            wg.field_i = (ji) ((Object) new kk());
+            wg.field_i = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
             cl.field_c = new DiskCacheWorker(param5);
             gb.field_b = new em(wg.field_i, cl.field_c);
         } catch (RuntimeException runtimeException) {

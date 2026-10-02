@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ji {
-    SecondaryDeque field_g;
+abstract class ArchiveNetworkClient {
+    SecondaryDeque pendingPriorityRequests;
     static IntrusiveDeque movingEntities;
     static String createWelcomeText;
-    SecondaryDeque field_e;
+    SecondaryDeque sentPriorityRequests;
     static int difficultyStep;
-    SecondaryDeque field_p;
+    SecondaryDeque pendingBackgroundRequests;
     static String createPasswordLengthAlertText;
     static String[] field_a;
     static String waitingForMusicText;
-    SecondaryDeque field_c;
-    int field_o;
-    long field_k;
-    ByteArrayBuffer field_m;
-    volatile int field_b;
-    byte field_i;
-    volatile int field_q;
-    ByteArrayBuffer field_j;
-    NetworkArchiveRequest field_f;
+    SecondaryDeque sentBackgroundRequests;
+    int responseIdleMillis;
+    long lastPollMillis;
+    ByteArrayBuffer outboundPacketBuffer;
+    volatile int failureCount;
+    byte responseXorKey;
+    volatile int failureCode;
+    ByteArrayBuffer responseHeaderBuffer;
+    NetworkArchiveRequest currentResponseRequest;
 
-    abstract void h(int param0);
+    abstract void closeSocket(int methodGuard);
 
     final static void f(int param0) {
         int fieldTemp$0 = 0;
@@ -54,77 +54,77 @@ abstract class ji {
         }
     }
 
-    abstract void a(Object param0, boolean param1, boolean param2);
+    abstract void attachSocket(Object socketObject, boolean methodGuard, boolean useControlOpcode2);
 
-    final NetworkArchiveRequest a(byte param0, int param1, int param2, int param3, boolean param4) {
-        long var6 = ((long)param1 << 32) + (long)param3;
-        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
-        var8.field_i = var6;
-        var8.priority = param4 ? true : false;
-        var8.reservedTailBytes = param0;
-        if (!param4) {
-            if (this.a(false) >= 20) {
+    final NetworkArchiveRequest queueRequest(byte reservedTailBytes, int archiveId, int methodGuard, int groupId, boolean priority) {
+        long requestKey = ((long)archiveId << 32) + (long)groupId;
+        NetworkArchiveRequest request = new NetworkArchiveRequest();
+        request.secondaryKey = requestKey;
+        request.priority = priority ? true : false;
+        request.reservedTailBytes = reservedTailBytes;
+        if (!priority) {
+            if (this.countBackgroundRequests(false) >= 20) {
                 throw new RuntimeException();
             }
-            this.field_p.addLast(8, var8);
+            this.pendingBackgroundRequests.addLast(8, request);
         } else {
-            if (this.a(param2 ^ 108) >= 20) {
+            if (this.countPriorityRequests(methodGuard ^ 108) >= 20) {
                 throw new RuntimeException();
             }
-            this.field_g.addLast(param2 ^ -123, var8);
+            this.pendingPriorityRequests.addLast(methodGuard ^ -123, request);
         }
-        if (param2 == -21) {
-            return var8;
+        if (methodGuard == -21) {
+            return request;
         }
-        this.field_g = (SecondaryDeque) null;
-        return var8;
+        this.pendingPriorityRequests = (SecondaryDeque) null;
+        return request;
     }
 
-    final int a(int param0) {
-        if (param0 < -39) {
-            return this.field_g.countNodes((byte) 67) + this.field_e.countNodes((byte) 67);
+    final int countPriorityRequests(int methodGuard) {
+        if (methodGuard < -39) {
+            return this.pendingPriorityRequests.countNodes((byte) 67) + this.sentPriorityRequests.countNodes((byte) 67);
         }
-        ji.a(49L, (byte) 33);
-        return this.field_g.countNodes((byte) 67) + this.field_e.countNodes((byte) 67);
+        ArchiveNetworkClient.sleepIgnoringInterrupt(49L, (byte) 33);
+        return this.pendingPriorityRequests.countNodes((byte) 67) + this.sentPriorityRequests.countNodes((byte) 67);
     }
 
-    final static void a(long param0, byte param1) {
+    final static void sleepIgnoringInterrupt(long durationMillis, byte methodGuard) {
         try {
-            Throwable decompiledCaughtException = null;
-            InterruptedException var3 = null;
+            Throwable caughtSleepFailure = null;
+            InterruptedException ignoredSleepInterruption = null;
             try {
-              Thread.sleep(param0);
-              if (param1 != -33) {
+              Thread.sleep(durationMillis);
+              if (methodGuard != -33) {
                 field_a = (String[]) null;
                 return;
               }
-            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (InterruptedException) (Object) decompiledCaughtException;
+            } catch (java.lang.InterruptedException sleepInterruption) {
+              caughtSleepFailure = sleepInterruption;
+              ignoredSleepInterruption = (InterruptedException) (Object) caughtSleepFailure;
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedSleepFailure) {
+            throw uncheckedSleepFailure;
+        } catch (Throwable checkedSleepFailure) {
+            throw new RuntimeException(checkedSleepFailure);
         }
     }
 
-    final boolean g(int param0) {
-        if (param0 == 20) {
-            return this.a(-104) >= 20 ? true : false;
+    final boolean isPriorityQueueFull(int methodGuard) {
+        if (methodGuard == 20) {
+            return this.countPriorityRequests(-104) >= 20 ? true : false;
         }
         createWelcomeText = (String) null;
-        return this.a(-104) >= 20 ? true : false;
+        return this.countPriorityRequests(-104) >= 20 ? true : false;
     }
 
-    abstract void e(int param0);
+    abstract void resetAfterValidationFailure(int methodGuard);
 
-    final int a(boolean param0) {
-        if (!param0) {
-            return this.field_p.countNodes((byte) 67) + this.field_c.countNodes((byte) 67);
+    final int countBackgroundRequests(boolean methodGuard) {
+        if (!methodGuard) {
+            return this.pendingBackgroundRequests.countNodes((byte) 67) + this.sentBackgroundRequests.countNodes((byte) 67);
         }
-        this.field_o = -38;
-        return this.field_p.countNodes((byte) 67) + this.field_c.countNodes((byte) 67);
+        this.responseIdleMillis = -38;
+        return this.pendingBackgroundRequests.countNodes((byte) 67) + this.sentBackgroundRequests.countNodes((byte) 67);
     }
 
     final static short[] a(short[] param0, int param1, int param2, PacketBuffer param3) {
@@ -191,14 +191,14 @@ abstract class ji {
         }
     }
 
-    abstract boolean a(byte param0);
+    abstract boolean pollResponses(byte methodGuard);
 
-    final boolean b(int param0) {
-        if (param0 == -21) {
-            return this.a(false) >= 20 ? true : false;
+    final boolean isBackgroundQueueFull(int methodGuard) {
+        if (methodGuard == -21) {
+            return this.countBackgroundRequests(false) >= 20 ? true : false;
         }
-        this.a((byte) 74);
-        return this.a(false) >= 20 ? true : false;
+        this.pollResponses((byte) 74);
+        return this.countBackgroundRequests(false) >= 20 ? true : false;
     }
 
     final static IndexedSprite[] buildIndexedSpritesFromDecodedSheet(int firstSpriteIndex) {
@@ -221,16 +221,16 @@ abstract class ji {
         int var1 = 78 / ((15 - param0) / 56);
     }
 
-    ji() {
-        this.field_g = new SecondaryDeque();
-        this.field_e = new SecondaryDeque();
-        this.field_p = new SecondaryDeque();
-        this.field_c = new SecondaryDeque();
-        this.field_m = new ByteArrayBuffer(6);
-        this.field_b = 0;
-        this.field_i = (byte) 0;
-        this.field_q = 0;
-        this.field_j = new ByteArrayBuffer(10);
+    ArchiveNetworkClient() {
+        this.pendingPriorityRequests = new SecondaryDeque();
+        this.sentPriorityRequests = new SecondaryDeque();
+        this.pendingBackgroundRequests = new SecondaryDeque();
+        this.sentBackgroundRequests = new SecondaryDeque();
+        this.outboundPacketBuffer = new ByteArrayBuffer(6);
+        this.failureCount = 0;
+        this.responseXorKey = (byte) 0;
+        this.failureCode = 0;
+        this.responseHeaderBuffer = new ByteArrayBuffer(10);
     }
 
     static {

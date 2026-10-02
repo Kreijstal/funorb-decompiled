@@ -38,7 +38,7 @@ final class cf extends TextInputValidator {
           var3_int = ol.a(false, var5);
           if (var3_int > 0) {
             if (130 >= var3_int) {
-              stackIn_11_0 = kk.field_w;
+              stackIn_11_0 = SocketArchiveNetworkClient.field_w;
               return stackIn_11_0;
             }
           }

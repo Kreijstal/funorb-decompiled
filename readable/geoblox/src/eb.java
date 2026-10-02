@@ -92,20 +92,20 @@ final class eb {
         vg.field_a = ij.field_W;
         ij.field_W = var2;
         if (param0 == 51) {
-            wg.field_i.field_q = 2;
-            wg.field_i.field_b = wg.field_i.field_b + 1;
-            if (wg.field_i.field_b < 2) {
-                if (wg.field_i.field_b >= 2 && 50 == param0) {
+            wg.field_i.failureCode = 2;
+            wg.field_i.failureCount = wg.field_i.failureCount + 1;
+            if (wg.field_i.failureCount < 2) {
+                if (wg.field_i.failureCount >= 2 && 50 == param0) {
                     return 5;
                 }
                 if (param1 != 28625) {
                     field_i = -67;
-                    if (!(wg.field_i.field_b < 4)) {
+                    if (!(wg.field_i.failureCount < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(wg.field_i.field_b < 4)) {
+                if (!(wg.field_i.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
@@ -113,15 +113,15 @@ final class eb {
             if (!(param0 != 51)) {
                 return 2;
             }
-            if (wg.field_i.field_b < 2) {
+            if (wg.field_i.failureCount < 2) {
                 if (param1 != 28625) {
                     field_i = -67;
-                    if (!(wg.field_i.field_b < 4)) {
+                    if (!(wg.field_i.failureCount < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(wg.field_i.field_b < 4)) {
+                if (!(wg.field_i.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
@@ -131,68 +131,68 @@ final class eb {
             }
             if (param1 != 28625) {
                 field_i = -67;
-                if (!(wg.field_i.field_b < 4)) {
+                if (!(wg.field_i.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(wg.field_i.field_b < 4)) {
+            if (!(wg.field_i.failureCount < 4)) {
                 return 1;
             }
             return -1;
         }
         if (50 != param0) {
-            wg.field_i.field_q = 1;
-            wg.field_i.field_b = wg.field_i.field_b + 1;
-            if (wg.field_i.field_b >= 2) {
+            wg.field_i.failureCode = 1;
+            wg.field_i.failureCount = wg.field_i.failureCount + 1;
+            if (wg.field_i.failureCount >= 2) {
                 if (param0 == 51) {
                     return 2;
                 }
-                if (wg.field_i.field_b >= 2 && 50 == param0) {
+                if (wg.field_i.failureCount >= 2 && 50 == param0) {
                     return 5;
                 }
                 if (param1 != 28625) {
                     field_i = -67;
-                    if (!(wg.field_i.field_b < 4)) {
+                    if (!(wg.field_i.failureCount < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(wg.field_i.field_b < 4)) {
+                if (!(wg.field_i.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (wg.field_i.field_b >= 2 && 50 == param0) {
+            if (wg.field_i.failureCount >= 2 && 50 == param0) {
                 return 5;
             }
             if (param1 != 28625) {
                 field_i = -67;
-                if (!(wg.field_i.field_b < 4)) {
+                if (!(wg.field_i.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(wg.field_i.field_b < 4)) {
+            if (!(wg.field_i.failureCount < 4)) {
                 return 1;
             }
             return -1;
         }
-        wg.field_i.field_q = 5;
-        wg.field_i.field_b = wg.field_i.field_b + 1;
-        if (wg.field_i.field_b >= 2) {
+        wg.field_i.failureCode = 5;
+        wg.field_i.failureCount = wg.field_i.failureCount + 1;
+        if (wg.field_i.failureCount >= 2) {
             if (param0 == 51) {
                 return 2;
             }
-            if (wg.field_i.field_b < 2) {
+            if (wg.field_i.failureCount < 2) {
                 if (param1 != 28625) {
                     field_i = -67;
-                    if (!(wg.field_i.field_b < 4)) {
+                    if (!(wg.field_i.failureCount < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(wg.field_i.field_b < 4)) {
+                if (!(wg.field_i.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
@@ -202,27 +202,27 @@ final class eb {
             }
             if (param1 != 28625) {
                 field_i = -67;
-                if (!(wg.field_i.field_b < 4)) {
+                if (!(wg.field_i.failureCount < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(wg.field_i.field_b < 4)) {
+            if (!(wg.field_i.failureCount < 4)) {
                 return 1;
             }
             return -1;
         }
-        if (wg.field_i.field_b >= 2 && 50 == param0) {
+        if (wg.field_i.failureCount >= 2 && 50 == param0) {
             return 5;
         }
         if (param1 != 28625) {
             field_i = -67;
-            if (!(wg.field_i.field_b < 4)) {
+            if (!(wg.field_i.failureCount < 4)) {
                 return 1;
             }
             return -1;
         }
-        if (!(wg.field_i.field_b < 4)) {
+        if (!(wg.field_i.failureCount < 4)) {
             return 1;
         }
         return -1;

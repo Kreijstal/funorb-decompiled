@@ -692,8 +692,8 @@ the array indices, evidence, override families and remaining shared carriers.
 
 ## Remaining limitations
 
-There are 5,422 explicit guarded rules: 50 classes, 673 fields, 489 method
-declarations, 1,469 parameters and 2,741 locals. This is not full deobfuscation.
+There are 5,556 explicit guarded rules: 52 classes, 687 fields, 507 method
+declarations, 1,499 parameters and 2,811 locals. This is not full deobfuscation.
 Unknown flags, guard arguments and opaque shared helpers still need
 investigation. Current names and source identities live in the single manifest;
 previous naming and structural passes remain in Git. The earlier early-exit migration
@@ -2109,3 +2109,96 @@ they do not newly execute SecondaryDeque or live disk-worker storage/concurrency
 Unknown static helpers, network/storage/compression, large labeled bodies,
 real assets, full gameplay and phone/FPS/heap behavior remain unfinished or
 unverified.
+
+## Archive network queues and socket responses (pass 70)
+
+`ArchiveNetworkClient` names `ji`; `SocketArchiveNetworkClient` names `kk`.
+Every instance declaration, constructor contract and local is named. Static
+gameplay, account text, sprite and theme helpers remain on these owners. The
+base constructor builds four SecondaryDeque queues, a six-byte outbound buffer
+and a ten-byte response header buffer. Failure counters start at zero and the
+response XOR key starts at zero; untouched fields retain Java defaults.
+
+| Network member | Role |
+| --- | --- |
+| pendingPriorityRequests / sentPriorityRequests | Unsent/sent priority class, limited to 20 combined |
+| pendingBackgroundRequests / sentBackgroundRequests | Unsent/sent background class, separately limited to 20 combined |
+| outboundPacketBuffer | Six-byte scratch storage; sends use the entire backing length |
+| responseHeaderBuffer | Partial ten-byte header or one-byte continuation marker |
+| currentResponseRequest | Sent request receiving data; remains linked until completion |
+| responseIdleMillis / lastPollMillis | Signed elapsed accumulation capped at 200ms per poll; idle over 30000ms closes/clears socket |
+| responseXorKey | Optional incoming byte-XOR key, zero initially |
+| failureCount / failureCode | Volatile failure/escalation state; codes include -1 validation, -2 I/O and positive handshake classes |
+
+`queueRequest(reservedTailBytes, archiveId, methodGuard, groupId, priority)`
+sets the long secondaryKey to `(long archiveId << 32) + (long groupId)`, with
+signed addition and no new range check. It creates the request before testing
+the selected queue class's capacity, then inserts at the pending tail. The
+wrong guard clears pendingPriorityRequests after insertion. The generic
+DualLinkNode.secondaryKey is also used by disk requests and secondary hash
+buckets, independently of the primary node key.
+
+`pollResponses` checks socket write failure, queues opcode 1 for priority and
+opcode 0 for background, followed by the low 40 bits of secondaryKey. A
+successful enqueue moves each request from pending to sent via its secondary
+links. With no socket, the method returns true only if both queue classes are
+empty. With a socket, zero available input returns true even when work remains;
+the Boolean is not a completion percentage. It performs at most 100 receive
+iterations per call, resetting the idle count when input is available.
+
+The ten-byte response header is an unsigned archive byte, signed group int,
+compression/queue byte and signed packed-length int. Bit 128 selects the sent
+background queue; the low seven bits select compression. The client looks up
+the combined key in that sent queue and throws IOException if no request
+matches. It allocates `packedLength + (compressionType == 0 ? 5 : 9) +
+reservedTailBytes`, preserving signed arithmetic and allocation failures. It
+writes the five-byte archive prefix, clears the header cursor and sets the
+request blockPosition to 10.
+
+Body reads stop at available input, the non-tail end or the current 512-byte
+block boundary. Newly read header/body bytes are XORed through `h.xorInt` when
+the key is nonzero. Completing the non-tail portion unlinks secondary links,
+writes volatile pending false and clears currentResponseRequest. Reaching
+block position 512 instead resets it to zero so the next read expects a marker.
+A marker byte -1 clears the header cursor and sets block position 1. A different
+marker clears only currentResponseRequest: the one-byte prefix/cursor and sent
+request links remain. This unusual partial state is preserved explicitly.
+
+Several generated int slots serve different roles at different points.
+`elapsedMillisOrHeaderTargetBytes`, `responseLimitOrHeaderReadLength` and
+`bodyReadLengthOrHeaderXorIndexOrArchiveId` describe these reused slots.
+Large labeled parsing bodies and slot reuse still need structural work; the
+names do not imply that the decompiler has split their lifetimes.
+
+`attachSocket(socketObject, methodGuard, useControlOpcode2)` closes the old
+socket before casting/storing the new object. It sends the setup packet
+`[6, 0, 0, 3, 0, 0]`, then opcode 2 or 3 plus five zero bytes. The flag name
+records the opcode effect without asserting login semantics. True methodGuard
+retains its additional opcode-3 recursion and shared diagnostic field mutation.
+The header cursor/current response reset, and sent priority requests then sent
+background requests move to their pending tails. Requeueing retains partial
+response buffers and pending flags. A nonzero XOR key sends opcode 4, the key
+byte and a zero int, after which idle/time reset at their original points.
+
+I/O failure attempts close, increments failureCount, records code -2 and clears
+the socket; queues requeue later during attachment. Validation reset with guard
+20 records code -1 and chooses a nonzero 1..255 key narrowed to byte. Wrong
+validation guards retain only their attempted close. `closeSocket` closes but
+retains the socket reference and queues. No new retry, null handling, unsigned
+normalization or ownership/visibility changes are introduced.
+
+`bc.sleepMillis(splitRemainder, durationMillis)` returns for nonpositive duration.
+When duration modulo 10 equals splitRemainder, it sleeps duration minus one,
+then one; otherwise it sleeps once. The first argument is a real comparison
+operand, normally zero. `sleepIgnoringInterrupt` retains the ignored
+InterruptedException and clears its shared string array for the wrong guard
+only after a successful sleep. Negative durations and outer exception wrappers
+remain unchanged.
+
+All 5,422 previous complete rules and source/generator pins remain.
+Compilation, binding checks, reproduction and reversal support these names.
+Existing native helper/cache/shutdown/socket/dispatcher/input traces retain
+their previous scopes; they do not newly validate archive response parsing,
+reconnect traffic or actual server/assets. Handshake/storage/compression,
+unknown static names, large labeled bodies, full gameplay and device/FPS/heap
+behavior remain unfinished or unverified.

@@ -772,7 +772,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         }
         try {
             MenuScreen.field_a = oa.a(-12520);
-            bc.a(0, 5000L);
+            bc.sleepMillis(0, 5000L);
             ml.field_s = null;
             this.a((byte) 14, false);
         } catch (RuntimeException runtimeException) {
@@ -806,7 +806,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     this.a((byte) 79, "alreadyloaded");
                     return;
                   }
-                  kk.field_t = param2;
+                  SocketArchiveNetworkClient.field_t = param2;
                   ok.field_c = param3;
                   NetworkArchiveRequest.field_w = param3;
                   PrefixCodeDecoder.field_b = 0;
@@ -826,7 +826,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     L1: while (true) {
                       L2: {
                         if (var8.status == 0) {
-                          bc.a(0, 10L);
+                          bc.sleepMillis(0, 10L);
                           if (var9 != 0) {
                             break L2;
                           }

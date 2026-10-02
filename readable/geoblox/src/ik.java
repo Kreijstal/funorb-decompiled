@@ -216,7 +216,7 @@ final class ik {
               entityForVariantCountReset = secondEntity;
               entityForVariantCountReset.sameVariantEntityCount = 0;
               entityForNeighborCountReset.relatedEntityCount = 0;
-              secondEntity.entityQueue = ji.movingEntities;
+              secondEntity.entityQueue = ArchiveNetworkClient.movingEntities;
               secondEntity.detachedFromBoard = true;
               break L16;
             }
@@ -232,7 +232,7 @@ final class ik {
               entityForNeighborCountReset.relatedEntityCount = 0;
               firstEntity.touchesAvatar = false;
               firstEntity.detachedFromBoard = true;
-              firstEntity.entityQueue = ji.movingEntities;
+              firstEntity.entityQueue = ArchiveNetworkClient.movingEntities;
               entityForVariantCountReset.sameVariantEntityCount = 0;
               break L18;
             }

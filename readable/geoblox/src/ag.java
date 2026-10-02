@@ -156,7 +156,7 @@ final class ag extends TextInputValidator {
             var4 = (String) null;
             this.validationMessageForText(97, (String) null);
           }
-          stackIn_9_0 = kk.field_w;
+          stackIn_9_0 = SocketArchiveNetworkClient.field_w;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

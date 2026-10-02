@@ -193,7 +193,7 @@ final class gi implements Iterable {
                   stackIn_13_2 = null;
                   stackIn_13_3 = null;
                   stackIn_13_4 = GameScreen.field_x.getCodeBase();
-                  stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(kk.field_t).append("&u=");
+                  stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(SocketArchiveNetworkClient.field_t).append("&u=");
                   if (null == uk.field_p) {
                     stackIn_14_2 = null;
                     stackIn_14_3 = null;
@@ -205,7 +205,7 @@ final class gi implements Iterable {
                   }
                   var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrlStream(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.javaVendor).append("&v2=").append(PlatformTaskDispatcher.javaVersion).append("&e=").append(var9).toString()));
                   L5: while (var4.status == 0) {
-                    bc.a(param2 - 125, 1L);
+                    bc.sleepMillis(param2 - 125, 1L);
                   }
                   if (var4.status == 1) {
                     var5 = (DataInputStream) (var4.result);

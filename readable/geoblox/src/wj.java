@@ -200,7 +200,7 @@ final class wj extends sh {
           {
             L0: for (var3_int = 0; var3_int < 50; var3_int++) {
               if (null != param0.systemEventQueue.peekEvent()) {
-                bc.a(0, 1L);
+                bc.sleepMillis(0, 1L);
                 continue L0;
               }
               break;

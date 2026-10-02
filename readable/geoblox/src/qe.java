@@ -66,7 +66,7 @@ final class qe {
             }
             var11 = param4.requestEnterFullscreen(param2, param1 ^ 1743550127, param5, param0, param3);
             L5: while (var11.status == 0) {
-              bc.a(0, 10L);
+              bc.sleepMillis(0, 10L);
             }
             var7 = (java.awt.Frame) (var11.result);
             if (var7 == null) {
@@ -107,8 +107,8 @@ final class qe {
         RuntimeException quotaUpdateFailureForContext = null;
         clientControlFlowGuard = Geoblox.field_C;
         try {
-          if (ji.difficultyStep != 0) {
-            if (ji.difficultyStep < 21) {
+          if (ArchiveNetworkClient.difficultyStep != 0) {
+            if (ArchiveNetworkClient.difficultyStep < 21) {
               fa.releasesPerTheme = fa.releasesPerTheme + 10;
             }
           }

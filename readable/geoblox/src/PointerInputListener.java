@@ -6,7 +6,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
     static int field_a;
 
     final static void a(byte param0) {
-        ji.movingEntities.moveAllTo(ra.availableEntities, (byte) -70);
+        ArchiveNetworkClient.movingEntities.moveAllTo(ra.availableEntities, (byte) -70);
         a.attachedEntities.moveAllTo(ra.availableEntities, (byte) -70);
         SecondaryDeque.spawnQueue.moveAllTo(ra.availableEntities, (byte) -70);
         bh.transientEntities.moveAllTo(ra.availableEntities, (byte) -70);

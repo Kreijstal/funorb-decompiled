@@ -85,7 +85,7 @@ final class AccountWelcomePanel extends ee implements pl {
             int var5_int = 90 % ((1 - param2) / 43);
             var6 = param0 + this.field_v;
             var7 = param1 + this.field_m;
-            ng.field_F.drawParagraph(ji.createWelcomeText, var6 + 20, 20 + var7, -40 + this.field_r, this.field_h - 50, 16777215, -1, 1, 0, ng.field_F.maxAscent);
+            ng.field_F.drawParagraph(ArchiveNetworkClient.createWelcomeText, var6 + 20, 20 + var7, -40 + this.field_r, this.field_h - 50, 16777215, -1, 1, 0, ng.field_F.maxAscent);
             super.a(param0, param1, (byte) 63, param3);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "wi.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -1518,7 +1518,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_welcome");
                 if (textResourceBytes != null) {
-                  ji.createWelcomeText = ag.decodeTextBytes(1, textResourceBytes);
+                  ArchiveNetworkClient.createWelcomeText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_u13_welcome");
                 if (textResourceBytes != null) {
@@ -1618,7 +1618,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "login_username_tooltip");
                 if (null != textResourceBytes) {
-                  kk.loginUsernameTooltipText = ag.decodeTextBytes(1, textResourceBytes);
+                  SocketArchiveNetworkClient.loginUsernameTooltipText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "login_password_tooltip");
                 if (null != textResourceBytes) {
@@ -1746,7 +1746,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_alert_passlength");
                 if (textResourceBytes != null) {
-                  ji.createPasswordLengthAlertText = ag.decodeTextBytes(1, textResourceBytes);
+                  ArchiveNetworkClient.createPasswordLengthAlertText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "create_alert_passcontainsname");
                 if (textResourceBytes != null) {
@@ -1910,7 +1910,7 @@ final class AccountWelcomePanel extends ee implements pl {
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "waitingfor_music");
                 if (textResourceBytes != null) {
-                  ji.waitingForMusicText = ag.decodeTextBytes(1, textResourceBytes);
+                  ArchiveNetworkClient.waitingForMusicText = ag.decodeTextBytes(1, textResourceBytes);
                 }
                 textResourceBytes = fk.readTextResourceBytes(2229, "waitingfor_instruments");
                 if (textResourceBytes != null) {
