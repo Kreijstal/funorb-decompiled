@@ -39,13 +39,13 @@ final class fi {
             if (param0 >= 4096) {
                 return param0 >= 6144 ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
             }
-            return 2048 <= param0 ? -ai.field_l[param0 + -2048] : ai.field_l[-param0 + 2048];
+            return 2048 <= param0 ? -ai.field_l[param0 - 2048] : ai.field_l[-param0 + 2048];
         }
         param0 = param0 & 8191;
         if (param0 >= 4096) {
             return param0 >= 6144 ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
         }
-        return 2048 <= param0 ? -ai.field_l[param0 + -2048] : ai.field_l[-param0 + 2048];
+        return 2048 <= param0 ? -ai.field_l[param0 - 2048] : ai.field_l[-param0 + 2048];
     }
 
     final void a(byte param0, hf param1, long param2) {
@@ -54,7 +54,7 @@ final class fi {
             if (!(null == param1.field_c)) {
                 param1.a(false);
             }
-            var5 = this.field_e[(int)((long)(this.field_c + -1) & param2)];
+            var5 = this.field_e[(int)((long)(this.field_c - 1) & param2)];
             param1.field_b = var5;
             param1.field_c = var5.field_c;
             param1.field_c.field_b = param1;
@@ -123,10 +123,10 @@ final class fi {
         if (param0 != 125) {
             fi.a(103);
             this.field_f = 0;
-            return this.b(param0 + -195);
+            return this.b(param0 - 195);
         }
         this.field_f = 0;
-        return this.b(param0 + -195);
+        return this.b(param0 - 195);
     }
 
     public static void a(int param0) {
@@ -162,7 +162,7 @@ final class fi {
         hf var4;
         hf var7;
         if (this.field_f > 0) {
-          if (this.field_a != this.field_e[this.field_f + -1]) {
+          if (this.field_a != this.field_e[this.field_f - 1]) {
             var7 = this.field_a;
             this.field_a = var7.field_b;
             return var7;

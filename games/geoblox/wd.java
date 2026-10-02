@@ -254,7 +254,7 @@ final class wd {
     static {
         field_b = new dm(460, 460);
         field_d = (-field_b.field_o + 480) / 2;
-        field_a = (640 + -field_b.field_s) / 2;
+        field_a = (640 - field_b.field_s) / 2;
         field_e = new tf();
     }
 }

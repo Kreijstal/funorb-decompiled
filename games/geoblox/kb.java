@@ -54,7 +54,7 @@ final class kb {
                 } else {
                   var7 = param2;
                   ci.a(var7, 416577356);
-                  me.field_g = ac.a(param1 + -6540, param2);
+                  me.field_g = ac.a(param1 - 6540, param2);
                   return;
                 }
               }

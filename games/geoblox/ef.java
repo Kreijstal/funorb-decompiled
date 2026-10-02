@@ -43,7 +43,7 @@ final class ef implements Iterator {
         try {
           L0: {
             var1_float = el.field_o.field_J;
-            ab.a(param0 + -22, var1_float);
+            ab.a(param0 - 22, var1_float);
             rh.a((byte) 123);
             if (param0 != -15) {
               ef.a((byte) -11);

@@ -27,7 +27,7 @@ final class sl {
         try {
           hj.a((byte) -85, (java.awt.Component) ((Object) param0));
           if (param1 == 57) {
-            fk.a((java.awt.Component) ((Object) param0), param1 + -56);
+            fk.a((java.awt.Component) ((Object) param0), param1 - 56);
             if (null != vc.field_f) {
               vc.field_f.a(124, (java.awt.Component) ((Object) param0));
               decompiledRegionSelector0 = 1;
@@ -97,7 +97,7 @@ final class sl {
                 var5 = param0.charAt(var4);
                 if (var5 >= 65) {
                   if (var5 <= 90) {
-                    var3[var4] = (char)(-65 + (var5 - -97));
+                    var3[var4] = (char)(-65 + (var5 + 97));
                     break L4;
                   }
                 }

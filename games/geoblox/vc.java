@@ -279,12 +279,12 @@ final class vc extends dk {
                   if (this.field_m == 2) {
                     var11 = -param4.field_q + this.field_o - var10 * this.field_e;
                   } else {
-                    var12 = (-(this.field_e * var10) + this.field_o) / (var10 - -1);
+                    var12 = (-(this.field_e * var10) + this.field_o) / (var10 + 1);
                     if (var12 < 0) {
                       var12 = 0;
                     }
                     this.field_e = this.field_e + var12;
-                    var11 = param4.field_o - -var12;
+                    var11 = param4.field_o + var12;
                   }
                 } else {
                   var11 = param4.field_o + (this.field_o - this.field_e * var10 >> 1);
@@ -388,8 +388,8 @@ final class vc extends dk {
         if (var1 != null) {
             var2 = eh.field_c;
             ma.a(var2, 10, tl.field_h, (byte) -92, jf.field_c, ll.field_h);
-            sl.field_f[var3.field_h].f(25, var2 + (-32 + (tl.field_h + -15)) / 2);
-            dd.field_G.a(pg.field_a[var3.field_h], 67, 15 + var2, jf.field_c + -42 + -30, tl.field_h + -30, 0, -1, 1, 1, 30);
+            sl.field_f[var3.field_h].f(25, var2 + (-32 + (tl.field_h - 15)) / 2);
+            dd.field_G.a(pg.field_a[var3.field_h], 67, 15 + var2, jf.field_c - 42 - 30, tl.field_h - 30, 0, -1, 1, 1, 30);
         }
     }
 
@@ -409,7 +409,7 @@ final class vc extends dk {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new lk(param1 + -param2.field_o, param1 - -param2.field_q, param3.length());
+          var7 = new lk(param1 - param2.field_o, param1 + param2.field_q, param3.length());
           var5 = var7;
           if (param0 != -1) {
             var6 = (m) null;

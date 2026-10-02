@@ -89,7 +89,7 @@ final class ec {
                 ra.a(255 ^ tf.field_f, -97, tf.field_f);
               }
               for (var1_int = 1; var1_int < h.field_a; var1_int++) {
-                var2 = var1_int + -1;
+                var2 = var1_int - 1;
                 var3 = nk.field_f[var1_int];
                 L14: while (var2 >= 0) {
                   if (~nk.field_f[var2] < ~var3) {
@@ -109,7 +109,7 @@ final class ec {
               L8: while (var12 < h.field_a) {
                 L9: {
                   if (-1 + h.field_a > var12) {
-                    if (nk.field_f[var12] == nk.field_f[var12 - -1]) {
+                    if (nk.field_f[var12] == nk.field_f[var12 + 1]) {
                       nk.field_f[var12] = 0;
                       break L9;
                     }

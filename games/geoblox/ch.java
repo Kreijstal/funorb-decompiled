@@ -434,7 +434,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                             } else {
                               if (stackIn_78_0 >= stackIn_78_1) {
                                 if (var3 <= 57) {
-                                  var2_int = 10 * var2_int - 48 - -var3;
+                                  var2_int = 10 * var2_int - 48 + var3;
                                   var1_int++;
                                   if (var5 == 0) {
                                     continue L11;
@@ -625,7 +625,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
               }
             }
             var3 = sg.field_a.getInsets();
-            f.field_kb.setLocation(var3.left + qa.field_b, var3.top - -hk.field_B);
+            f.field_kb.setLocation(var3.left + qa.field_b, var3.top + hk.field_B);
           }
           f.field_kb.addFocusListener((java.awt.event.FocusListener) (this));
           f.field_kb.requestFocus();
@@ -1090,14 +1090,14 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           if (param0 != 32000) {
             this.windowActivated((java.awt.event.WindowEvent) null);
           }
-          var2_long = oa.a(param0 + -44520);
+          var2_long = oa.a(param0 - 44520);
           var4 = pb.field_p[fe.field_k];
           pb.field_p[fe.field_k] = var2_long;
           fe.field_k = 31 & fe.field_k + 1;
           if (0L != var4) {
             if (var4 < var2_long) {
               var6_int = (int)(-var4 + var2_long);
-              ec.field_b = (32000 - -(var6_int >> 1)) / var6_int;
+              ec.field_b = (32000 + (var6_int >> 1)) / var6_int;
             }
           }
           L3: {

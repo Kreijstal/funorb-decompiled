@@ -77,7 +77,7 @@ final class wc extends hf {
         float var2 = param0 / 52900.0f;
         int var4 = (int)(0.5f + 4.0f * var2);
         md.field_b = (float)(-(rj.field_c >> 16 & 255) + ((uf.field_h[var4] & 16722826) >> 16));
-        fe.field_c = (float)((uf.field_h[var4] >> 8 & 255) + -(rj.field_c >> 8 & 255));
+        fe.field_c = (float)((uf.field_h[var4] >> 8 & 255) - (rj.field_c >> 8 & 255));
         uk.field_j = (float)(-(255 & rj.field_c) + (255 & uf.field_h[var4]));
         jf.field_j = 50;
     }

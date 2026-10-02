@@ -12,9 +12,9 @@ final class pd {
         int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var3 < var4.length; var3++) {
             var2[var3 << 2] = var4[var3].getWidth();
-            var2[(var3 << 2) - -1] = var4[var3].getHeight();
+            var2[(var3 << 2) + 1] = var4[var3].getHeight();
             var2[2 + (var3 << 2)] = var4[var3].getBitDepth();
-            var2[(var3 << 2) - -3] = var4[var3].getRefreshRate();
+            var2[(var3 << 2) + 3] = var4[var3].getRefreshRate();
         }
         return var2;
     }

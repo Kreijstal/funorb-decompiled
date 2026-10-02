@@ -310,8 +310,8 @@ final class ri {
         if (param2 != 29497) {
             return;
         }
-        int var4 = (i.field_a.field_o >> 1) - -2;
-        fc.field_b[uf.field_b].b(param0 + -var3, param1 + -var4, rj.field_c);
+        int var4 = (i.field_a.field_o >> 1) + 2;
+        fc.field_b[uf.field_b].b(param0 - var3, param1 - var4, rj.field_c);
         vh.field_H[nd.field_a].b(-var3 + param0, -var4 + param1, rj.field_c);
     }
 

@@ -234,8 +234,8 @@ abstract class oe extends dd {
             if (fieldTemp$0 < this.field_U) {
                 var4 = (-this.field_Q + 2 * this.field_U) * this.field_Q;
                 var5 = this.field_U * this.field_U;
-                var2 = this.field_R + var4 * (this.field_N + -this.field_R) / var5;
-                var3 = var4 * (this.field_M + -this.field_L) / var5 + this.field_L;
+                var2 = this.field_R + var4 * (this.field_N - this.field_R) / var5;
+                var3 = var4 * (this.field_M - this.field_L) / var5 + this.field_L;
             } else {
                 this.field_U = 0;
                 this.k(-31);
@@ -301,7 +301,7 @@ abstract class oe extends dd {
                   for (var6 = var2_int; var6 < var3; var6++) {
                     var7 = param0.charAt(var6);
                     if (fb.a((char) var7, -47)) {
-                      var8 = hc.a((char) var7, param1 + -239);
+                      var8 = hc.a((char) var7, param1 - 239);
                       if (var8 != 0) {
                         discarded$0 = var5.append((char) var8);
                       }
@@ -410,9 +410,9 @@ abstract class oe extends dd {
                         }
                       }
                       if (mc.field_a >= var3_int) {
-                        if (mc.field_a <= var3_int - -32) {
+                        if (mc.field_a <= var3_int + 32) {
                           if (var4 <= he.field_d) {
-                            if (he.field_d <= var4 - -32) {
+                            if (he.field_d <= var4 + 32) {
                               if (a.field_e == var9) {
                                 a.field_e = -1;
                                 break L3;
@@ -462,9 +462,9 @@ abstract class oe extends dd {
                         }
                       }
                       if (mc.field_a >= var3_int) {
-                        if (mc.field_a <= var3_int - -32) {
+                        if (mc.field_a <= var3_int + 32) {
                           if (var4 <= he.field_d) {
-                            if (he.field_d <= var4 - -32) {
+                            if (he.field_d <= var4 + 32) {
                               if (a.field_e == var9) {
                                 a.field_e = -1;
                                 break L3;
@@ -529,7 +529,7 @@ abstract class oe extends dd {
         int var15;
         int var16;
         var16 = Geoblox.field_C;
-        vb.d(param0 - -6, param2 + 35, -12 + this.field_r, -40 + this.field_h, 2105376, 0);
+        vb.d(param0 + 6, param2 + 35, -12 + this.field_r, -40 + this.field_h, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -546,7 +546,7 @@ abstract class oe extends dd {
               var9 = var5 + (-var5 + var6) * var7 / var4;
               var9 = var9 | (var9 << 8 | var9 << 16);
               vb.c(param0, var8, 6, var9);
-              vb.c(this.field_r + param0 + -6, var8, 6, var9);
+              vb.c(this.field_r + param0 - 6, var8, 6, var9);
               var7++;
               var8++;
             }
@@ -556,11 +556,11 @@ abstract class oe extends dd {
             }
             vl.a(id.field_c, -10 + this.field_r, 35 + param2, 5 + param0, (byte) 107);
             vl.a(fh.field_e, this.field_r, -22 + (this.field_h + param2), param0, (byte) 107);
-            var4 = this.field_h + -79;
+            var4 = this.field_h - 79;
             var5 = 169;
             var6 = 127;
             var7 = 0;
-            var8 = param2 - -57;
+            var8 = param2 + 57;
             L3: while (var7 < var4) {
               var9 = var7 * (var6 - var5) / var4 + var5;
               var9 = var9 | (var9 << 16 | var9 << 8);
@@ -582,14 +582,14 @@ abstract class oe extends dd {
                       if (var10 > 20) {
                         break L4;
                       } else {
-                        var12 = (-var7 + 20) * (-var7 + 20) - -((-var10 + 20) * (20 - var10));
+                        var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
                         if (var12 <= 462) {
                           if (var12 < 420) {
                             break L4;
                           } else {
                             var13 = (-var12 + 462) * var9 / 42;
                             var13 = var13 | (var13 << 8 | var13 << 16);
-                            vb.field_c[var8 * vb.field_f - -param0 - -var10] = var13;
+                            vb.field_c[var8 * vb.field_f + param0 + var10] = var13;
                             var10++;
                             continue L5;
                           }
@@ -606,14 +606,14 @@ abstract class oe extends dd {
                     var12 = var11;
                     var11 -= 21;
                     L7: for (var13 = 0; var13 <= 20; var13++) {
-                      var14 = (-var7 + 20) * (-var7 + 20) - -(var13 * var13);
+                      var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
                       if (var14 <= 462) {
                         if (var14 < 420) {
                           var12 = var11 + 1;
                           var11++;
                           continue L7;
                         } else {
-                          var15 = var9 * (462 + -var14) / 42;
+                          var15 = var9 * (462 - var14) / 42;
                           var15 = var15 | (var15 << 8 | var15 << 16);
                           vb.field_c[var11 + param0 + vb.field_f * var8] = var15;
                           var11++;
@@ -627,7 +627,7 @@ abstract class oe extends dd {
                   }
                 }
                 var9 = var9 | (var9 << 16 | var9 << 8);
-                vb.c(var10 - -param0, var8, var11 + -var10, var9);
+                vb.c(var10 + param0, var8, var11 - var10, var9);
                 var8++;
                 var7++;
                 continue L0;

@@ -107,7 +107,7 @@ final class ol extends hk {
             stackIn_23_0 = 0;
             decompiledRegionSelector0 = 1;
           } else {
-            var9 = -param2 + param4 + -this.field_H;
+            var9 = -param2 + param4 - this.field_H;
             var10 = this.field_r - 2 * this.field_H;
             if (var10 < var9) {
               var9 = var10;
@@ -122,7 +122,7 @@ final class ol extends hk {
                   var11 = 2147483647;
                   var12 = -1;
                   for (var13 = 0; var13 < this.field_F.a((byte) 48); var13++) {
-                    var14 = this.field_F.a(var13, (byte) 94) + -var9;
+                    var14 = this.field_F.a(var13, (byte) 94) - var9;
                     var14 = var14 * var14;
                     if (~var11 < ~var14) {
                       var11 = var14;

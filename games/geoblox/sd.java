@@ -124,10 +124,10 @@ final class sd extends pb {
                       var10 = param0 << 16;
                       var11 = (-param1 + param6 << 16) / var14;
                       var9_int = param1 << 16;
-                      var12 = (param6 + -param0 << 16) / var15;
+                      var12 = (param6 - param0 << 16) / var15;
                     } else {
                       var10 = param1 << 16;
-                      var11 = (param6 + -param0 << 16) / var15;
+                      var11 = (param6 - param0 << 16) / var15;
                       var9_int = param0 << 16;
                       var12 = (-param1 + param6 << 16) / var14;
                     }
@@ -149,7 +149,7 @@ final class sd extends pb {
                   var9_int = param1 << 16;
                   var15 = -param8 + param7;
                   var11 = (-param1 + param0 << 16) / var15;
-                  var12 = (param6 + -param1 << 16) / var14;
+                  var12 = (param6 - param1 << 16) / var14;
                   if (var12 > var11) {
                     var13 = 0;
                   } else {
@@ -182,7 +182,7 @@ final class sd extends pb {
                         if (mh.field_c > var17) {
                           var18 = (var10 >> 16) - (var9_int >> 16);
                           if (var18 != 0) {
-                            if (var17 - -var18 >= mh.field_c) {
+                            if (var17 + var18 >= mh.field_c) {
                               var18 = -1 + (-var17 + mh.field_c);
                             }
                             if (0 <= var17) {
@@ -222,7 +222,7 @@ final class sd extends pb {
                     } else {
                       var10 = param0 << 16;
                     }
-                    var11 = (var17 + -var9_int) / var16;
+                    var11 = (var17 - var9_int) / var16;
                     var12 = (var17 - var10) / var16;
                   }
                 }
@@ -241,16 +241,16 @@ final class sd extends pb {
                   } else {
                     var17 = var9_int >> 16;
                     if (mh.field_c > var17) {
-                      var18 = (var10 >> 16) + -(var9_int >> 16);
+                      var18 = (var10 >> 16) - (var9_int >> 16);
                       if (var18 == 0) {
                         if (var17 >= 0) {
                           if (mh.field_c > var17) {
-                            ib.a(-67, param4, var17 - -var15, param2, var18);
+                            ib.a(-67, param4, var17 + var15, param2, var18);
                           }
                         }
                       } else {
                         if (mh.field_c <= var18 + var17) {
-                          var18 = -var17 + mh.field_c + -1;
+                          var18 = -var17 + mh.field_c - 1;
                         }
                         if (0 > var17) {
                           ib.a(127, param4, var15, param2, var17 + var18);
@@ -331,7 +331,7 @@ final class sd extends pb {
 
     final static void h(int param0) {
         pc.a(17, false);
-        int var1 = -24 / ((param0 - -4) / 34);
+        int var1 = -24 / ((param0 + 4) / 34);
     }
 
     static {

@@ -30,11 +30,11 @@ final class ij extends oe implements pl {
             field_X = 121;
           }
           var4.field_q = (dh) ((Object) new ml());
-          var5 = this.field_h + -6;
+          var5 = this.field_h - 6;
           this.field_h = this.field_h + 38;
-          var4.a(30, -14 + (this.field_r + -16), (byte) -111, var5, 15);
+          var4.a(30, -14 + (this.field_r - 16), (byte) -111, var5, 15);
           this.b((byte) -70, var4);
-          this.c(param1 + -198);
+          this.c(param1 - 198);
           stackIn_3_0 = (hk) (var4);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

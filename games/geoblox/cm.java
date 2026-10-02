@@ -263,7 +263,7 @@ final class cm extends cj {
 
     final void a(int param0) {
         if (~this.field_e > ~this.field_c) {
-            this.field_e = this.field_e + (this.field_c + -this.field_e);
+            this.field_e = this.field_e + (this.field_c - this.field_e);
         }
         if (param0 < 60) {
             return;
@@ -313,7 +313,7 @@ final class cm extends cj {
                 if (this.field_g < 1) {
                     this.field_g = this.field_g + 1;
                 }
-                this.field_d = (this.field_d - -1) % 10;
+                this.field_d = (this.field_d + 1) % 10;
             }
         }
         long var6 = (long)param0;
@@ -329,7 +329,7 @@ final class cm extends cj {
             this.a(false, 97L);
         }
         if (~this.field_c < ~this.field_e) {
-            return (this.field_c + -this.field_e) / 1000000L;
+            return (this.field_c - this.field_e) / 1000000L;
         }
         return 0L;
     }

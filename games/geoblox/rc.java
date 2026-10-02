@@ -17,7 +17,7 @@ class rc extends hf {
     public static void c(byte param0) {
         field_f = null;
         field_j = null;
-        int var1 = -128 / ((param0 - -33) / 50);
+        int var1 = -128 / ((param0 + 33) / 50);
         field_g = null;
     }
 

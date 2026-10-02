@@ -176,7 +176,7 @@ class hf {
           L0: {
             var15 = new qc(param1);
             var16 = var15;
-            var16.field_f = param1.length + -2;
+            var16.field_f = param1.length - 2;
             sb.field_a = var16.b(param0);
             rc.field_j = new int[sb.field_a];
             hl.field_K = new int[sb.field_a];
@@ -185,7 +185,7 @@ class hf {
             gh.field_m = new int[sb.field_a];
             mj.field_a = new byte[sb.field_a][];
             md.field_e = new int[sb.field_a];
-            var16.field_f = -7 + param1.length + -(sb.field_a * 8);
+            var16.field_f = -7 + param1.length - sb.field_a * 8;
             pg.field_b = var16.b(true);
             dd.field_C = var16.b(true);
             var3 = (255 & var16.c((byte) 34)) + 1;
@@ -201,7 +201,7 @@ class hf {
             for (var4 = 0; var4 < sb.field_a; var4++) {
               hl.field_K[var4] = var15.b(true);
             }
-            var16.field_f = -(var3 * 3) - -3 + -(8 * sb.field_a) + -7 + param1.length;
+            var16.field_f = -(var3 * 3) + 3 - 8 * sb.field_a - 7 + param1.length;
             cm.field_j = new int[var3];
             for (var4 = 1; var4 < var3; var4++) {
               cm.field_j[var4] = var15.e(108);
@@ -235,7 +235,7 @@ class hf {
                     for (var12 = 0; var5 > var12; var12++) {
                       for (var13 = 0; var6 > var13; var13++) {
                         dupTemp$0 = var15.f((byte) 78);
-                        var9[var12 - -(var5 * var13)] = dupTemp$0;
+                        var9[var12 + var5 * var13] = dupTemp$0;
                         var14 = dupTemp$0;
                         stackIn_44_0 = var10;
 

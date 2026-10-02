@@ -55,7 +55,7 @@ final class jk {
             mh.b();
             ok.field_g = 11;
             jf.field_b = new int[260];
-            var1_int = -29 / ((param0 - -40) / 45);
+            var1_int = -29 / ((param0 + 40) / 45);
             for (var2 = 0; 256 > var2; var2++) {
               var3 = 15.0;
               jf.field_b[var2] = (int)(255.0 * Math.pow((double)((float)var2 / 256.0f), var3));

@@ -62,7 +62,7 @@ final class ld {
               stackIn_4_0 = 1;
               decompiledRegionSelector0 = 0;
             } else {
-              if (0 == vb.field_c[var1_int - -var5]) {
+              if (0 == vb.field_c[var1_int + var5]) {
                 if (vb.field_c[var3] != 0) {
                   stackIn_11_0 = 1;
                   decompiledRegionSelector0 = 2;
@@ -74,7 +74,7 @@ final class ld {
                     L1: while (true) {
                       incrementValue$0 = var6;
                       var6++;
-                      var9 = var9 + (incrementValue$0 - -var6);
+                      var9 = var9 + (incrementValue$0 + var6);
                       var2 = var2 + vb.field_f;
                       var1_int = var1_int - vb.field_f;
                       if (var7 < var9) {
@@ -103,7 +103,7 @@ final class ld {
                                       decompiledRegionSelector0 = 10;
                                       break L0;
                                     } else {
-                                      if (vb.field_c[var4 - -var6] != 0) {
+                                      if (vb.field_c[var4 + var6] != 0) {
                                         stackIn_45_0 = 1;
                                         decompiledRegionSelector0 = 11;
                                         break L0;

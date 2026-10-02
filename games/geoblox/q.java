@@ -230,7 +230,7 @@ abstract class q extends ib implements ga {
             q.a((byte) 108, 111, (String) null);
           }
           var5_int = param4.a((byte) 126, param3);
-          var6 = param4.a(param2, param1 + -69, var5_int);
+          var6 = param4.a(param2, param1 - 69, var5_int);
           stackIn_3_0 = ea.a(param4, (byte) -127, param0, var6, var5_int);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

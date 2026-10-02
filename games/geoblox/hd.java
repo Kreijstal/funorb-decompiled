@@ -20,7 +20,7 @@ final class hd extends sh {
         if (!(param3 == 0)) {
             return;
         }
-        int var8 = !this.field_B ? 0 : -this.field_K + (this.field_r + -(this.field_C * 2));
+        int var8 = !this.field_B ? 0 : -this.field_K + (this.field_r - this.field_C * 2);
         this.field_F.a(this.field_J, this.field_C + (var8 + var5), this.field_C + var6, -this.field_C + this.field_K, -(this.field_C * 2) + this.field_h, this.field_G, -1, !this.field_B ? 2 : 0, 1, this.field_F.field_o);
     }
 
@@ -183,19 +183,19 @@ final class hd extends sh {
           this.field_K = param6;
           this.field_J = param10;
           var12_int = this.field_K - this.field_C;
-          var13 = this.field_F.b(param10, var12_int, this.field_F.field_o) - -(2 * this.field_C);
+          var13 = this.field_F.b(param10, var12_int, this.field_F.field_o) + 2 * this.field_C;
           if (var13 <= param3) {
             var13 = param3;
           } else {
             this.a(var13, param2, (byte) -74, param1, param0);
           }
           if (!this.field_B) {
-            stackIn_10_0 = this.field_K - -(this.field_C * 2);
+            stackIn_10_0 = this.field_K + this.field_C * 2;
           } else {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.field_A.a(-(2 * this.field_C) + param3, param2 + -this.field_K - this.field_C * 3, (byte) -105, (-param3 + var13 >> 1) + this.field_C, var14);
+          this.field_A.a(-(2 * this.field_C) + param3, param2 - this.field_K - this.field_C * 3, (byte) -105, (-param3 + var13 >> 1) + this.field_C, var14);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var12 = decompiledCaughtException;

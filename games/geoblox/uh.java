@@ -216,7 +216,7 @@ final class uh extends ac {
                 }
                 var13 = (ja) ((Object) wd.field_e.g(0));
                 L2: while (var13 != null) {
-                  var13.n(param0 + -4830);
+                  var13.n(param0 - 4830);
                   var13 = (ja) ((Object) wd.field_e.d(1));
                 }
                 decompiledRegionSelector0 = 1;

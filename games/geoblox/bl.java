@@ -45,14 +45,14 @@ final class bl {
     final static int a(int param0, byte param1) {
         param0 = (-715827883 & param0 >>> 1) + (1431655765 & param0);
         if (param1 == 70) {
-            param0 = (param0 & 858993459) - -(param0 >>> 2 & 858993459);
+            param0 = (param0 & 858993459) + (param0 >>> 2 & 858993459);
             param0 = param0 + (param0 >>> 4) & 252645135;
             param0 = param0 + (param0 >>> 8);
             param0 = param0 + (param0 >>> 16);
             return param0 & 255;
         }
         field_a = (String) null;
-        param0 = (param0 & 858993459) - -(param0 >>> 2 & 858993459);
+        param0 = (param0 & 858993459) + (param0 >>> 2 & 858993459);
         param0 = param0 + (param0 >>> 4) & 252645135;
         param0 = param0 + (param0 >>> 8);
         param0 = param0 + (param0 >>> 16);

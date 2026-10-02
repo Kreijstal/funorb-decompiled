@@ -220,7 +220,7 @@ final class bm {
                         var14 = 0;
                         L28: while (true) {
                           if (var12 <= var14) {
-                            this.field_k[var11] = var13 - -1;
+                            this.field_k[var11] = var13 + 1;
                             if (var12 == 1 + var13) {
                               this.field_o[var11] = null;
                             }
@@ -248,7 +248,7 @@ final class bm {
                 }
                 L30: {
                   if (var6 != 0) {
-                    this.field_e = new int[var9 - -1][];
+                    this.field_e = new int[var9 + 1][];
                     this.field_f = new am[1 + var9];
                     for (var10 = 0; var10 < this.field_h; var10++) {
                       var11 = this.field_i[var10];
@@ -333,7 +333,7 @@ final class bm {
     public static void a(int param0) {
         field_l = null;
         field_p = null;
-        int var1 = -24 % ((param0 - -88) / 36);
+        int var1 = -24 % ((param0 + 88) / 36);
     }
 
     bm(byte[] param0, int param1, byte[] param2) {

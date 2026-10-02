@@ -138,8 +138,8 @@ final class s extends ee implements pe, pl {
             this.field_J.a(0, -47, eh.field_a);
             this.field_J.a(1, 118, eh.field_a);
             this.field_J.field_u = (bb) (this);
-            this.field_J.field_r = this.field_r + -40;
-            this.field_J.b(26, 0, var3, this.field_r + -40);
+            this.field_J.field_r = this.field_r - 40;
+            this.field_J.b(26, 0, var3, this.field_r - 40);
             var3 = var3 + (this.field_J.field_h + 15);
             this.b((byte) -108, this.field_J);
             var5 = 4;

@@ -43,13 +43,13 @@ final class hi extends ee implements ta, pl {
         var3 += 50;
         var3 = var3 + (5 + this.a(var3, -12037, 170, this.field_E, gk.field_c, wj.field_E));
         this.field_H.a(40, var5, (byte) -23, var3, -var5 + 496 >> 1);
-        this.field_J.a(40, 60, (byte) -85, var3 - -15, 3 + var4);
+        this.field_J.a(40, 60, (byte) -85, var3 + 15, 3 + var4);
         this.field_J.field_u = (bb) (this);
         this.field_H.field_u = (bb) (this);
         this.b((byte) -102, this.field_H);
         this.b((byte) -105, this.field_J);
         this.field_D = new vh((ta) (this));
-        this.field_D.a(150, -60 + this.field_r + (-this.field_E.field_v - this.field_E.field_r), (byte) -54, 20, 60 + this.field_E.field_v - -this.field_E.field_r);
+        this.field_D.a(150, -60 + this.field_r + (-this.field_E.field_v - this.field_E.field_r), (byte) -54, 20, 60 + this.field_E.field_v + this.field_E.field_r);
         this.b((byte) -102, this.field_D);
         this.a(var4 + 55 + var3, 496, (byte) -55, 0, 0);
     }
@@ -76,7 +76,7 @@ final class hi extends ee implements ta, pl {
           var11 = new hd(20, param0, param5 + 120, 25, param6, false, 120, 3, ng.field_F, 16777215, param2);
           var10 = -110 / ((70 - param1) / 33);
           this.b((byte) -108, var11);
-          var9 = new pi(((nl) ((Object) param6)).a((byte) -113), param3, 126, param0 - -var11.field_h, 25 + param5, param4);
+          var9 = new pi(((nl) ((Object) param6)).a((byte) -113), param3, 126, param0 + var11.field_h, 25 + param5, param4);
           var9.field_u = (bb) (this);
           this.b((byte) -115, var9);
           stackIn_1_0 = var9.field_h + var11.field_h;
@@ -208,7 +208,7 @@ final class hi extends ee implements ta, pl {
               var61 = oa.field_f;
               var63 = gi.field_b;
               for (var13 = 0; param5.field_m > var13; var13++) {
-                var14 = var61[var13] * param7 + param4 * var62[var13] - -(var63[var13] * param1) >> 8;
+                var14 = var61[var13] * param7 + param4 * var62[var13] + var63[var13] * param1 >> 8;
                 if (0 > var14) {
                   var14 = -var14;
                 }
@@ -216,7 +216,7 @@ final class hi extends ee implements ta, pl {
                   if (128 <= var14) {
                     stackIn_18_0 = 256;
                   } else {
-                    stackIn_18_0 = 128 - -var14;
+                    stackIn_18_0 = 128 + var14;
                   }
                 } else {
                   stackIn_18_0 = 128;
@@ -233,7 +233,7 @@ final class hi extends ee implements ta, pl {
                   stackIn_21_1 = var15;
                 }
                 var15 = stackIn_21_0[stackIn_21_1];
-                var14 = var14 * (256 + -var15) >>> 8;
+                var14 = var14 * (256 - var15) >>> 8;
                 var54[var13] = var14;
                 var64[var13] = var15;
               }
@@ -413,7 +413,7 @@ final class hi extends ee implements ta, pl {
                                               break L2;
                                             } else {
                                               if (var8 == 8216) {
-                                                param1[param4 - -var7] = (byte)-111;
+                                                param1[param4 + var7] = (byte)-111;
                                                 break L2;
                                               } else {
                                                 if (var8 != 8217) {
@@ -424,7 +424,7 @@ final class hi extends ee implements ta, pl {
                                                           if (var8 != 8212) {
                                                             if (var8 != 732) {
                                                               if (var8 == 8482) {
-                                                                param1[param4 - -var7] = (byte)-103;
+                                                                param1[param4 + var7] = (byte)-103;
                                                                 break L2;
                                                               } else {
                                                                 if (var8 == 353) {
@@ -460,7 +460,7 @@ final class hi extends ee implements ta, pl {
                                                               break L2;
                                                             }
                                                           } else {
-                                                            param1[param4 - -var7] = (byte)-105;
+                                                            param1[param4 + var7] = (byte)-105;
                                                             break L2;
                                                           }
                                                         } else {
@@ -468,11 +468,11 @@ final class hi extends ee implements ta, pl {
                                                           break L2;
                                                         }
                                                       } else {
-                                                        param1[param4 - -var7] = (byte)-107;
+                                                        param1[param4 + var7] = (byte)-107;
                                                         break L2;
                                                       }
                                                     } else {
-                                                      param1[param4 - -var7] = (byte)-108;
+                                                      param1[param4 + var7] = (byte)-108;
                                                       break L2;
                                                     }
                                                   } else {
@@ -480,7 +480,7 @@ final class hi extends ee implements ta, pl {
                                                     break L2;
                                                   }
                                                 } else {
-                                                  param1[param4 - -var7] = (byte)-110;
+                                                  param1[param4 + var7] = (byte)-110;
                                                   break L2;
                                                 }
                                               }
@@ -504,7 +504,7 @@ final class hi extends ee implements ta, pl {
                                   }
                                 }
                               } else {
-                                param1[param4 - -var7] = (byte)-122;
+                                param1[param4 + var7] = (byte)-122;
                                 break L2;
                               }
                             } else {
@@ -516,7 +516,7 @@ final class hi extends ee implements ta, pl {
                             break L2;
                           }
                         } else {
-                          param1[param4 - -var7] = (byte)-125;
+                          param1[param4 + var7] = (byte)-125;
                           break L2;
                         }
                       } else {
@@ -682,7 +682,7 @@ final class hi extends ee implements ta, pl {
             }
             var3 = this.field_E;
             var4 = param0;
-            ((dj) ((Object) var3)).a(param1 + -136, var4, false);
+            ((dj) ((Object) var3)).a(param1 - 136, var4, false);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "hi.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

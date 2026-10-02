@@ -156,7 +156,7 @@ final class si {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          ma.a(param3.field_m + param2, param1 - -param3.field_v, param3.field_h, (byte) -92, param3.field_r, this.field_a);
+          ma.a(param3.field_m + param2, param1 + param3.field_v, param3.field_h, (byte) -92, param3.field_r, this.field_a);
           if (this.field_l != null) {
             var6_int = this.field_b + (param3.field_v + param1);
             var7 = this.field_f + param2 + param3.field_m;

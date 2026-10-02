@@ -48,7 +48,7 @@ final class ja extends rc {
               if (1 != this.field_z) {
                 vf.field_L.e();
                 vb.c();
-                this.field_J.c(-this.field_J.field_s + vf.field_L.field_s >> 1, vf.field_L.field_o + -this.field_J.field_o >> 1);
+                this.field_J.c(-this.field_J.field_s + vf.field_L.field_s >> 1, vf.field_L.field_o - this.field_J.field_o >> 1);
                 k.a(0, 0, vf.field_L.field_s, -27085, vf.field_L.field_o);
                 sh.field_y.a(param0 + 16351);
                 vf.field_L.a(vf.field_L.field_s << 3, vf.field_L.field_o << 3, var4 << 4, var5 << 4, (int)(65535.0 * ((double)(-el.field_o.field_J + this.field_u) / 6.283185307179586)), 4096);
@@ -63,7 +63,7 @@ final class ja extends rc {
               sh.field_y.a(param0 + 16351);
               vf.field_L.a(vf.field_L.field_s << 3, vf.field_L.field_o << 3, var4 << 4, var5 << 4, (int)(65535.0 * ((double)(-el.field_o.field_J + this.field_u) / 6.283185307179586)), 4096);
             } else {
-              this.field_J.b(-(this.field_J.field_s >> 1) + var4, var5 + -(this.field_J.field_o >> 1));
+              this.field_J.b(-(this.field_J.field_s >> 1) + var4, var5 - (this.field_J.field_o >> 1));
             }
           }
           return;
@@ -77,10 +77,10 @@ final class ja extends rc {
         vb.c();
         this.field_J.a(this.field_J.field_s << 3, this.field_J.field_o << 3, vf.field_L.field_s << 3, vf.field_L.field_o << 3, (int)(65535.0 * ((double)this.field_u / 6.283185307179586)), 4096);
         bk.field_a.e();
-        vf.field_L.a(-(vf.field_L.field_s / 2) + (int)this.field_o, (int)this.field_v + -(vf.field_L.field_o / param0), this.field_H - -1);
+        vf.field_L.a(-(vf.field_L.field_s / 2) + (int)this.field_o, (int)this.field_v - vf.field_L.field_o / param0, this.field_H + 1);
         sh.field_y.a(255);
         bk.field_a.e();
-        i.field_a.a(320 + el.field_o.field_w, 240 - -el.field_o.field_u, 16777215);
+        i.field_a.a(320 + el.field_o.field_w, 240 + el.field_o.field_u, 16777215);
         sh.field_y.a(param0 + 253);
     }
 
@@ -125,9 +125,9 @@ final class ja extends rc {
         }
         var7 = 2 % ((-23 - param0) / 60);
         sh.field_y.a(255);
-        var8 = var5 + -(vf.field_L.field_s >> 1);
+        var8 = var5 - (vf.field_L.field_s >> 1);
         var9 = var6 - (vf.field_L.field_o >> 1);
-        var10 = (int)(0.5 + Math.sin((double)(this.field_r + -this.field_p + this.field_p >> 4)) * (double)(100 * (this.field_p - this.field_r)) / (double)this.field_p) - (-(100 * (this.field_p - this.field_r) / this.field_p) - 56);
+        var10 = (int)(0.5 + Math.sin((double)(this.field_r - this.field_p + this.field_p >> 4)) * (double)(100 * (this.field_p - this.field_r)) / (double)this.field_p) - (-(100 * (this.field_p - this.field_r) / this.field_p) - 56);
         if (var10 > 256) {
           var10 = 256;
         } else {
@@ -179,8 +179,8 @@ final class ja extends rc {
         int var10;
         int[] var14;
         var10 = Geoblox.field_C;
-        var2 = (int)this.field_o - ((vf.field_L.field_s >> 1) - -4);
-        var3 = -4 + -(vf.field_L.field_o >> 1) + (int)this.field_v;
+        var2 = (int)this.field_o - ((vf.field_L.field_s >> 1) + 4);
+        var3 = -4 - (vf.field_L.field_o >> 1) + (int)this.field_v;
         var4 = 8 + vf.field_L.field_s;
         var5 = 8 + vf.field_L.field_o;
         if (var2 < 0) {
@@ -213,7 +213,7 @@ final class ja extends rc {
                   var6 = var6 + var7;
                   continue L4;
                 } else {
-                  if (~var14[var6] == ~(this.field_H - -1)) {
+                  if (~var14[var6] == ~(this.field_H + 1)) {
                     var14[var6] = 0;
                     var6++;
                     var9++;
@@ -300,9 +300,9 @@ final class ja extends rc {
         if (param0 <= 46) {
             this.field_y = 17;
         }
-        vf.field_L.g(this.field_H - -1);
+        vf.field_L.g(this.field_H + 1);
         wd.field_b.e();
-        vf.field_L.a(-wd.field_a + -(vf.field_L.field_s >> 1) + ng.field_G, -(vf.field_L.field_o >> 1) + (td.field_E + -wd.field_d), 1 + this.field_H);
+        vf.field_L.a(-wd.field_a - (vf.field_L.field_s >> 1) + ng.field_G, -(vf.field_L.field_o >> 1) + (td.field_E - wd.field_d), 1 + this.field_H);
         sh.field_y.a(255);
     }
 
@@ -466,7 +466,7 @@ final class ja extends rc {
                   this.field_N = this.field_N - 1;
                 }
                 if (5 > var3_int) {
-                  sf.a(this.field_n, 1 + var3_int, this.field_n, var3_int, this.field_L + -var3_int);
+                  sf.a(this.field_n, 1 + var3_int, this.field_n, var3_int, this.field_L - var3_int);
                 }
                 this.field_n[this.field_L] = null;
               } else {
@@ -521,9 +521,9 @@ final class ja extends rc {
         var3 = -240.0f + this.field_v;
         var4 = (int)(Math.cos((double)el.field_o.field_J) * (double)var2 - (double)var3 * Math.sin((double)el.field_o.field_J) + 320.0);
         var5 = (int)((double)var2 * Math.sin((double)el.field_o.field_J) + Math.cos((double)el.field_o.field_J) * (double)var3 + 240.0);
-        var6 = -(vf.field_L.field_s / 2) + (var4 - 4 + -wd.field_a);
-        var7 = -wd.field_d + -4 + (var5 - vf.field_L.field_o / 2);
-        var8 = vf.field_L.field_s - -8;
+        var6 = -(vf.field_L.field_s / 2) + (var4 - 4 - wd.field_a);
+        var7 = -wd.field_d - 4 + (var5 - vf.field_L.field_o / 2);
+        var8 = vf.field_L.field_s + 8;
         if (var6 < 0) {
           var8 = var8 + var6;
           var6 = 0;
@@ -557,7 +557,7 @@ final class ja extends rc {
                 var10 = var10 + var11;
                 continue L5;
               } else {
-                if (~(this.field_H - -1) == ~var18[var10]) {
+                if (~(this.field_H + 1) == ~var18[var10]) {
                   var18[var10] = 0;
                   var10++;
                   var13++;
@@ -599,7 +599,7 @@ final class ja extends rc {
         double var12 = (double)og.field_r / Math.sqrt((double)(param3 * param3 + param8 * param8));
         this.field_w = (float)((double)this.field_w * var12);
         this.field_F = (float)((double)this.field_F * var12);
-        int var14 = -96 / ((param0 - -19) / 53);
+        int var14 = -96 / ((param0 + 19) / 53);
         this.field_u = 0.0f;
         this.field_N = 0;
         this.field_m = 0;
@@ -627,7 +627,7 @@ final class ja extends rc {
         if (this.field_z == 1) {
             vf.field_L.e();
             vb.c();
-            this.field_J.b(vf.field_L.field_s + -this.field_J.field_s >> 1, -this.field_J.field_o + vf.field_L.field_o >> 1, this.field_q);
+            this.field_J.b(vf.field_L.field_s - this.field_J.field_s >> 1, -this.field_J.field_o + vf.field_L.field_o >> 1, this.field_q);
             oc.field_d.e();
             vf.field_L.a(vf.field_L.field_s << 3, vf.field_L.field_o << 3, (int)this.field_o << 4, (int)this.field_v << 4, (int)((double)this.field_u / 6.283185307179586 * 65535.0), 4096);
         } else {

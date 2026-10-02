@@ -82,7 +82,7 @@ final class nb {
             param1 = (int)(320.0 + (var7 * Math.cos((double)(-el.field_o.field_J)) - var9 * Math.sin((double)(-el.field_o.field_J))));
             param3 = (int)(Math.sin((double)(-el.field_o.field_J)) * var7 + Math.cos((double)(-el.field_o.field_J)) * var9 + 240.0);
             if (param5) {
-              var11 = (param4 - -param2) % 4;
+              var11 = (param4 + param2) % 4;
               var12 = 0;
               if (var11 == 0) {
                 var12 = 2;

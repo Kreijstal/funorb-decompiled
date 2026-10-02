@@ -134,7 +134,7 @@ final class ue {
         int[] var18 = null;
         try {
           L1: {
-            var3_int = -6 / ((param0 - -18) / 49);
+            var3_int = -6 / ((param0 + 18) / 49);
             if (this.field_a != null) {
               var4 = (int)((long)param1.length * (long)this.field_h / (long)this.field_i) + 14;
               var16 = new int[var4];
@@ -157,7 +157,7 @@ final class ue {
               var12 = 0;
               var8 = var12;
               L3: while (var12 < var4) {
-                var9 = var16[var12] - -32768 >> 16;
+                var9 = var16[var12] + 32768 >> 16;
                 if (-128 > var9) {
                   param1[var12] = (byte)-128;
                 } else {

@@ -23,7 +23,7 @@ final class eh {
             var5 = (gb.field_f << 8) / 75;
           }
           if (gb.field_f > 200) {
-            var5 = (250 + -gb.field_f << 8) / 50;
+            var5 = (250 - gb.field_f << 8) / 50;
           }
           Geoblox.a(1, ki.field_c);
           mh.b();
@@ -307,7 +307,7 @@ final class eh {
     final static void a(byte param0) {
         vl.field_q = false;
         tc.field_a = null;
-        int var1 = 46 / ((param0 - -64) / 39);
+        int var1 = 46 / ((param0 + 64) / 39);
         oe.field_V = 0;
         bc.field_a = -1;
         nj.field_g = -1;

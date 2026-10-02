@@ -63,8 +63,8 @@ final class ck {
               var10_int = am.field_a[11] >> 2;
               var11 = var10_int * lk.field_f[5] + var8 * lk.field_f[3] + lk.field_f[4] * var9 >> 14;
               var12 = var9 * lk.field_f[7] + (var8 * lk.field_f[6] + lk.field_f[8] * var10_int) >> 14;
-              var13 = var10_int * lk.field_f[11] + (var8 * lk.field_f[9] - -(lk.field_f[10] * var9)) >> 14;
-              var2[var3] = var5 * var11 - -(var12 * var6) + var13 * var7 >> 16;
+              var13 = var10_int * lk.field_f[11] + (var8 * lk.field_f[9] + lk.field_f[10] * var9) >> 14;
+              var2[var3] = var5 * var11 + var12 * var6 + var13 * var7 >> 16;
             }
             var3 = am.field_a[9] >> 8;
             var4 = am.field_a[10] >> 8;
@@ -84,7 +84,7 @@ final class ck {
             var8 = (int)((double)var8 * var10);
             var7 = (int)((double)var7 * var10);
             var9 = (int)((double)var9 * var10);
-            var12 = var7 + -var3;
+            var12 = var7 - var3;
             var13 = var8 - var4;
             var14 = -var5 + var9;
             var10 = 256.0 / Math.sqrt((double)(var14 * var14 + (var13 * var13 + var12 * var12)));
@@ -137,7 +137,7 @@ final class ck {
     }
 
     public static void a(int param0) {
-        int var1 = -55 % ((param0 - -80) / 32);
+        int var1 = -55 % ((param0 + 80) / 32);
         field_c = null;
         field_d = null;
     }

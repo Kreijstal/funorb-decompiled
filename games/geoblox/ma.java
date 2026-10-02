@@ -88,7 +88,7 @@ final class ma extends hf {
           if (!param0) {
             ma.b(-91);
           }
-          stackIn_3_0 = aa.a(wd.field_b, 0, 0, vf.field_L, -wd.field_a + ng.field_G + -(vf.field_L.field_s >> 1), -wd.field_d + -(vf.field_L.field_o >> 1) + td.field_E);
+          stackIn_3_0 = aa.a(wd.field_b, 0, 0, vf.field_L, -wd.field_a + ng.field_G - (vf.field_L.field_s >> 1), -wd.field_d - (vf.field_L.field_o >> 1) + td.field_E);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -191,13 +191,13 @@ final class ma extends hf {
                     var11 = param0 + param2;
                     var12 = param1 + var6_int;
                     var13 = var10 - var7;
-                    var14 = param0 - -var8;
+                    var14 = param0 + var8;
                     var15 = -var9 + var11;
                     var16 = var12;
                     var17 = var13;
                     if (var16 > var17) {
-                      var17 = var6_int * param4 / (var6_int - -var7) + param1;
-                      var16 = var6_int * param4 / (var6_int - -var7) + param1;
+                      var17 = var6_int * param4 / (var6_int + var7) + param1;
+                      var16 = var6_int * param4 / (var6_int + var7) + param1;
                     }
                     var18 = var14;
                     var19 = var15;

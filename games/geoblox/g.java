@@ -45,7 +45,7 @@ final class g extends q {
           var4 = param1.toLowerCase();
           if (var4.length() != 0) {
             var5 = var4;
-            if (em.a(var5, param0 + -344)) {
+            if (em.a(var5, param0 - 344)) {
               stackIn_6_0 = ji.field_d;
               decompiledRegionSelector0 = 1;
             } else {
@@ -171,7 +171,7 @@ final class g extends q {
               if (var4.length() > 0) {
                 var5 = var3.lastIndexOf("@");
                 if (0 <= var5) {
-                  if (var3.length() + -1 > var5) {
+                  if (var3.length() - 1 > var5) {
                     var6 = var3.substring(0, var5);
                     var7 = var3.substring(var5 + 1);
                     if (var4.indexOf(var6) < 0) {

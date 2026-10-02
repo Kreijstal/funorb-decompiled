@@ -50,7 +50,7 @@ final class di {
           L0: {
             var4 = (wc) ((Object) l.field_g.g(param1 ^ param1));
             L1: while (var4 != null) {
-              o.a(param0, var4, param1 + -21718);
+              o.a(param0, var4, param1 - 21718);
               var4 = (wc) ((Object) l.field_g.d(1));
             }
             var2 = qa.field_e.g(0);

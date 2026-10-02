@@ -181,7 +181,7 @@ final class td extends hk {
               if (var4_int >= param2) {
                 var5 = param0.length();
                 if (var5 != 0) {
-                  var6 = param2 - -var5;
+                  var6 = param2 + var5;
                   if (var4_int < var6) {
                     param1.setLength(var6);
                   }

@@ -83,7 +83,7 @@ final class ai extends hf {
                 L1: while (true) {
                   L2: {
                     if (var5.regionMatches(var6, "/l=", 0, 3)) {
-                      var7_int = var5.indexOf('/', var6 - -1);
+                      var7_int = var5.indexOf('/', var6 + 1);
                       if (var7_int >= 0) {
                         if (param3 < 0) {
                           break L2;

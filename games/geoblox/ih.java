@@ -100,7 +100,7 @@ final class ih {
         var27 = Geoblox.field_C;
         try {
           L0: {
-            var4_int = param3 + -(vf.field_L.field_s / 2);
+            var4_int = param3 - vf.field_L.field_s / 2;
             var4_int = var4_int + vf.field_L.field_u;
             var5 = -(vf.field_L.field_o / 2) + param1;
             var5 = var5 + vf.field_L.field_p;
@@ -132,7 +132,7 @@ final class ih {
               stackIn_13_0 = 0;
             }
             var13 = stackIn_13_0;
-            var14 = var6 - -var9;
+            var14 = var6 + var9;
             if (var14 > var8) {
               var14 = var8;
             }
@@ -142,7 +142,7 @@ final class ih {
             }
             var14 = var14 - var12;
             var15 = var15 - var13;
-            var16 = var8 * var13 - -var12;
+            var16 = var8 * var13 + var12;
             var17 = -var14 + var8;
             var18 = var12 + (-var6 + (-var7 + var13) * var9);
             var19 = -var14 + var9;

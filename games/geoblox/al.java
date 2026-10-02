@@ -128,7 +128,7 @@ final class al {
                   td.a(-348, fl.field_c[var2 + 1]);
                 }
               } else {
-                td.a(-348, fl.field_c[7 - -var2]);
+                td.a(-348, fl.field_c[7 + var2]);
               }
             }
           } else {

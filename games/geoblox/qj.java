@@ -56,7 +56,7 @@ final class qj {
             }
             L2: {
               var6 = var4_int;
-              var7 = var5 + -1;
+              var7 = var5 - 1;
               if (0 != var7) {
                 var8_int = 0;
                 L3: while (true) {

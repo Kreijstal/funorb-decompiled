@@ -42,11 +42,11 @@ final class lk {
                   var3++;
                   continue L0;
                 } else {
-                  return var3 + -1;
+                  return var3 - 1;
                 }
               } else {
-                var3 = 35 / ((param0 - -9) / 51);
-                return this.field_c.length + -1;
+                var3 = 35 / ((param0 + 9) / 51);
+                return this.field_c.length - 1;
               }
             }
           } else {

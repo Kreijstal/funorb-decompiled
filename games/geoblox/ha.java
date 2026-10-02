@@ -148,8 +148,8 @@ abstract class ha {
             var18.c(0, 0);
             var11 = new dm(var9, var9);
             var11.e();
-            var18.c(var9 + -var18.field_r, 0);
-            var12 = new dm(var18.field_r + -(2 * var9), var9);
+            var18.c(var9 - var18.field_r, 0);
+            var12 = new dm(var18.field_r - 2 * var9, var9);
             var12.e();
             var18.c(-var9, 0);
             id.a(true);
@@ -160,7 +160,7 @@ abstract class ha {
     }
 
     final static int a(int param0) {
-        int var1 = 77 / ((param0 - -17) / 52);
+        int var1 = 77 / ((param0 + 17) / 52);
         return nk.field_e;
     }
 

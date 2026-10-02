@@ -72,7 +72,7 @@ class qc extends hf {
         if (param0 != 20) {
             this.f(-46);
         }
-        int var2 = oe.a(this.field_f, this.field_j, param0 + -138, 0);
+        int var2 = oe.a(this.field_f, this.field_j, param0 - 138, 0);
         int var3 = this.a((byte) -85);
         if (var2 == var3) {
             return true;
@@ -168,8 +168,8 @@ class qc extends hf {
         if (param1 != 0) {
             this.d(13, 61);
         }
-        this.field_j[-param0 + (this.field_f + -3)] = (byte)(param0 >> 16);
-        this.field_j[this.field_f + (-param0 + -2)] = (byte)(param0 >> 8);
+        this.field_j[-param0 + (this.field_f - 3)] = (byte)(param0 >> 16);
+        this.field_j[this.field_f + (-param0 - 2)] = (byte)(param0 >> 8);
         this.field_j[-param0 + (this.field_f - 1)] = (byte)param0;
     }
 
@@ -214,7 +214,7 @@ class qc extends hf {
             fieldTemp$1 = this.field_f;
             this.field_f = this.field_f + 1;
             if (this.field_j[fieldTemp$1] == 0) {
-              var4 = -var3 + (this.field_f + -1);
+              var4 = -var3 + (this.field_f - 1);
               if (var4 != 0) {
                 return bc.a(param0 ^ -27439, this.field_j, var3, var4);
               } else {
@@ -232,7 +232,7 @@ class qc extends hf {
             field_g = (long[][]) null;
         }
         this.field_j[this.field_f + (-param0 - 2)] = (byte)(param0 >> 8);
-        this.field_j[this.field_f + (-param0 + -1)] = (byte)param0;
+        this.field_j[this.field_f + (-param0 - 1)] = (byte)param0;
     }
 
     final void e(int param0, int param1) {
@@ -251,7 +251,7 @@ class qc extends hf {
         if (param0 != 0) {
             return;
         }
-        hk.field_C.b(new wi(), param0 + -110);
+        hk.field_C.b(new wi(), param0 - 110);
     }
 
     final void a(String param0, int param1) {
@@ -588,7 +588,7 @@ class qc extends hf {
               var6 = (mb) null;
               qc.a((mb) null, (mb) null, 35);
             }
-            L2: while (param3 - -param1 > var5_int) {
+            L2: while (param3 + param1 > var5_int) {
               fieldTemp$0 = this.field_f;
               this.field_f = this.field_f + 1;
               param2[var5_int] = this.field_j[fieldTemp$0];
@@ -668,7 +668,7 @@ class qc extends hf {
                     var4++;
                     continue L2;
                   } else {
-                    var5 = var5 + ((var6 >>> 5 ^ var6 << 4) + var6 ^ var7 - -param0[3 & var7]);
+                    var5 = var5 + ((var6 >>> 5 ^ var6 << 4) + var6 ^ var7 + param0[3 & var7]);
                     var7 = var7 + var8;
                     var6 = var6 + (var5 + (var5 << 4 ^ var5 >>> 5) ^ var7 + param0[(var7 & 7480) >>> 11]);
                     continue L3;
@@ -761,9 +761,9 @@ class qc extends hf {
                     var7++;
                     continue L2;
                   } else {
-                    var9 = var9 - (var10 - -param1[(7701 & var10) >>> 11] ^ var8 + (var8 << 4 ^ var8 >>> 5));
+                    var9 = var9 - (var10 + param1[(7701 & var10) >>> 11] ^ var8 + (var8 << 4 ^ var8 >>> 5));
                     var10 = var10 - var11;
-                    var8 = var8 - (var10 + param1[var10 & 3] ^ (var9 >>> 5 ^ var9 << 4) - -var9);
+                    var8 = var8 - (var10 + param1[var10 & 3] ^ (var9 >>> 5 ^ var9 << 4) + var9);
                     continue L3;
                   }
                 }
@@ -881,7 +881,7 @@ class qc extends hf {
             field_h = (long[]) null;
         }
         this.field_f = this.field_f + 3;
-        return (this.field_j[-1 + this.field_f] & 255) + (((this.field_j[this.field_f + -2] & 255) << 8) + ((this.field_j[this.field_f + -3] & 255) << 16));
+        return (this.field_j[-1 + this.field_f] & 255) + (((this.field_j[this.field_f - 2] & 255) << 8) + ((this.field_j[this.field_f - 3] & 255) << 16));
     }
 
     final void a(String param0, byte param1) {
@@ -970,7 +970,7 @@ class qc extends hf {
         if (param0 >= -25) {
             return 62;
         }
-        return (65280 & this.field_j[-2 + this.field_f] << 8) + (-16777216 & this.field_j[-4 + this.field_f] << 24) - (-((255 & this.field_j[-3 + this.field_f]) << 16) + -(this.field_j[this.field_f - 1] & 255));
+        return (65280 & this.field_j[-2 + this.field_f] << 8) + (-16777216 & this.field_j[-4 + this.field_f] << 24) - (-((255 & this.field_j[-3 + this.field_f]) << 16) - (this.field_j[this.field_f - 1] & 255));
     }
 
     final int c(byte param0) {
@@ -992,7 +992,7 @@ class qc extends hf {
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
           if (0 == this.field_j[fieldTemp$0]) {
-            var3 = this.field_f + (-var2 + -1);
+            var3 = this.field_f + (-var2 - 1);
             if (var3 != 0) {
               if (param0 < 94) {
                 field_i = 68;
@@ -1031,7 +1031,7 @@ class qc extends hf {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = 2 / ((param2 - -41) / 54);
+          var3_int = 2 / ((param2 + 41) / 54);
           var4 = (String) null;
           stackIn_1_0 = pf.a(0, 0, param0, param1, (String) null, false, 94);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1076,7 +1076,7 @@ class qc extends hf {
         if (var2 < 128) {
             return this.c((byte) 34);
         }
-        return this.b(true) + -32768;
+        return this.b(true) - 32768;
     }
 
     final void a(int param0, java.math.BigInteger param1, java.math.BigInteger param2) {
@@ -1152,13 +1152,13 @@ class qc extends hf {
           var12 = var2 ^ var10;
           field_g[0][var0] = ue.a(var12, ue.a(var4 << 8, ue.a(var8 << 16, ue.a(ue.a(ue.a(var6 << 40, ue.a(var2 << 56, var2 << 48)), var2 << 32), var10 << 24))));
           for (var14 = 1; var14 < 8; var14++) {
-            field_g[var14][var0] = ue.a(field_g[var14 + -1][var0] >>> 8, field_g[-1 + var14][var0] << 56);
+            field_g[var14][var0] = ue.a(field_g[var14 - 1][var0] >>> 8, field_g[-1 + var14][var0] << 56);
           }
         }
         field_h[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
           var1 = var0 * 8 - 8;
-          field_h[var0] = f.a(f.a(f.a(cj.a(16711680L, field_g[5][5 + var1]), f.a(cj.a(4278190080L, field_g[4][var1 - -4]), f.a(f.a(f.a(cj.a(field_g[0][var1], -72057594037927936L), cj.a(field_g[1][1 + var1], 71776119061217280L)), cj.a(280375465082880L, field_g[2][2 + var1])), cj.a(field_g[3][var1 + 3], 1095216660480L)))), cj.a(field_g[6][var1 - -6], 65280L)), cj.a(255L, field_g[7][var1 - -7]));
+          field_h[var0] = f.a(f.a(f.a(cj.a(16711680L, field_g[5][5 + var1]), f.a(cj.a(4278190080L, field_g[4][var1 + 4]), f.a(f.a(f.a(cj.a(field_g[0][var1], -72057594037927936L), cj.a(field_g[1][1 + var1], 71776119061217280L)), cj.a(280375465082880L, field_g[2][2 + var1])), cj.a(field_g[3][var1 + 3], 1095216660480L)))), cj.a(field_g[6][var1 + 6], 65280L)), cj.a(255L, field_g[7][var1 + 7]));
         }
     }
 }

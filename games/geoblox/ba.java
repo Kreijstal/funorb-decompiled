@@ -207,7 +207,7 @@ final class ba implements Runnable {
                       break L2;
                     } else {
                       this.field_d[this.field_e] = param3[param1 + var6];
-                      this.field_e = (this.field_e - -1) % this.field_b;
+                      this.field_e = (this.field_e + 1) % this.field_b;
                       if (this.field_e == (this.field_b + (this.field_k - 100)) % this.field_b) {
                         throw new IOException();
                       } else {

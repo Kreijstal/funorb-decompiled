@@ -53,14 +53,14 @@ final class ne {
             var5 = var5 + var10;
         }
         for (var2 = 0; var2 < 256; var2 += 8) {
-            var8 = var8 + this.field_e[var2 - -5];
+            var8 = var8 + this.field_e[var2 + 5];
             var6 = var6 + this.field_e[3 + var2];
             var10 = var10 + this.field_e[7 + var2];
             var3 = var3 + this.field_e[var2];
             var5 = var5 + this.field_e[2 + var2];
             var7 = var7 + this.field_e[4 + var2];
             var4 = var4 + this.field_e[1 + var2];
-            var9 = var9 + this.field_e[var2 - -6];
+            var9 = var9 + this.field_e[var2 + 6];
             var3 = var3 ^ var4 << 11;
             var4 = var4 + var5;
             var6 = var6 + var3;
@@ -90,7 +90,7 @@ final class ne {
             this.field_a[2 + var2] = var5;
             this.field_a[3 + var2] = var6;
             this.field_a[var2 + 4] = var7;
-            this.field_a[var2 - -5] = var8;
+            this.field_a[var2 + 5] = var8;
             this.field_a[6 + var2] = var9;
             this.field_a[7 + var2] = var10;
         }
@@ -102,7 +102,7 @@ final class ne {
             var4 = var4 + this.field_a[1 + var2];
             var8 = var8 + this.field_a[5 + var2];
             var5 = var5 + this.field_a[var2 + 2];
-            var7 = var7 + this.field_a[var2 - -4];
+            var7 = var7 + this.field_a[var2 + 4];
             var3 = var3 ^ var4 << 11;
             var6 = var6 + var3;
             var4 = var4 + var5;
@@ -129,7 +129,7 @@ final class ne {
             var5 = var5 + var10;
             this.field_a[var2] = var3;
             this.field_a[1 + var2] = var4;
-            this.field_a[var2 - -2] = var5;
+            this.field_a[var2 + 2] = var5;
             this.field_a[3 + var2] = var6;
             this.field_a[4 + var2] = var7;
             this.field_a[5 + var2] = var8;

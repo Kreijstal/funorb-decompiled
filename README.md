@@ -29,14 +29,17 @@ prior snapshots in Git.
 
 ## GeoBlox source refresh
 
-The latest owned decompiler replaces 972 obfuscated literal shift counts in
-90 GeoBlox Java files with their JVM-effective distances. Int shifts use five
-bits and long shifts six; nonliteral computations retain their evaluation and
-exception behavior. For example, `<< -449443480` becomes `<< 8`. All other Java
-tokens, 21,185 declaration identities and original transformed class bytes are
-unchanged. Generic fixtures verify 24,324 native shift comparisons, including
-normal and forced-dispatcher output. The original-table exception-priority
-checks also pass, covering 7,200 native loop-exit comparisons.
+The latest owned decompiler removes 745 integral sign nodes across 132 GeoBlox
+Java files: `x + (-y)` becomes `x - y`, and `x - (-y)` becomes `x + y`.
+Opcode width, narrowing boundaries, operand order, floating arithmetic and
+string operations are preserved. Six focused test groups include 20,350 native
+signed-term comparisons and 24,324 retained shift comparisons. A complete typed
+Java-tree audit matches all 303 previous and current files modulo these integral
+sign rewrites and parentheses; all 21,185 declaration identities are unchanged.
+The prior shift cleanup remains: `<< -449443480` becomes `<< 8`, using five bits
+for int shifts and six for long shifts. Exception-priority tests also pass,
+covering 7,200 native loop-exit comparisons. Original transformed classes are
+unchanged.
 
 A clean decompiler Git source archive reproduces all 303 Java files and current
 diagnostics byte-for-byte. Every source compiles and the export has no hard

@@ -251,7 +251,7 @@ final class gi implements Iterable {
               L0: {
                 var3 = "";
                 if (param0 != null) {
-                  var3 = ch.a(param0, param2 + -124);
+                  var3 = ch.a(param0, param2 - 124);
                 }
                 if (param1 != null) {
                   if (param0 != null) {
@@ -298,7 +298,7 @@ final class gi implements Iterable {
                   }
                   var4 = ((d) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_14_6).append("&v1=").append(d.field_o).append("&v2=").append(d.field_t).append("&e=").append(var9).toString()));
                   L5: while (var4.field_a == 0) {
-                    bc.a(param2 + -125, 1L);
+                    bc.a(param2 - 125, 1L);
                   }
                   if (var4.field_a == 1) {
                     var5 = (DataInputStream) (var4.field_b);
@@ -390,7 +390,7 @@ final class gi implements Iterable {
         hf var6;
         int var7;
         var7 = Geoblox.field_C;
-        var4 = -95 / ((param1 - -9) / 43);
+        var4 = -95 / ((param1 + 9) / 43);
         var5 = this.field_a[(int)((long)(-1 + this.field_c) & param0)];
         this.field_f = var5.field_b;
         L0: while (true) {

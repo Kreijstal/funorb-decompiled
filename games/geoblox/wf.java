@@ -34,7 +34,7 @@ abstract class wf extends ch {
                   if (var2 == 1) {
                     if (hj.field_a == 11) {
                       if (ib.field_e == 0) {
-                        gi.b(param0 + -12617);
+                        gi.b(param0 - 12617);
                       } else {
                         return var2;
                       }
@@ -48,13 +48,13 @@ abstract class wf extends ch {
                     kd.b((byte) 103);
                     q.a((byte) 124, var2, kh.field_a);
                     ii.field_e = true;
-                    hi.field_G = oa.a(-12520) - -15000L;
+                    hi.field_G = oa.a(-12520) + 15000L;
                     return var2;
                   }
                 } else {
                   if (hj.field_a == 11) {
                     if (ib.field_e == 0) {
-                      gi.b(param0 + -12617);
+                      gi.b(param0 - 12617);
                     } else {
                       return var2;
                     }
@@ -86,7 +86,7 @@ abstract class wf extends ch {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = -16 / ((param1 - -4) / 62);
+          var4 = -16 / ((param1 + 4) / 62);
           var3 = null;
           var5 = null;
           if (null != sd.field_z) {
@@ -317,7 +317,7 @@ abstract class wf extends ch {
             q.a((byte) 124, 2, fa.field_d);
             bl.c(-113);
             ii.field_e = true;
-            hi.field_G = oa.a(-12520) - -15000L;
+            hi.field_G = oa.a(-12520) + 15000L;
           }
         }
         L6: {
@@ -400,11 +400,11 @@ abstract class wf extends ch {
                 break L13;
               }
             }
-            if (!sb.a(param1 + -19585)) {
+            if (!sb.a(param1 - 19585)) {
               break L12;
             }
           }
-          if (~hi.field_G >= ~oa.a(param1 + -32180)) {
+          if (~hi.field_G >= ~oa.a(param1 - 32180)) {
             ii.field_e = false;
             if (-1 != ib.field_e) {
               if (ib.field_e != 0) {

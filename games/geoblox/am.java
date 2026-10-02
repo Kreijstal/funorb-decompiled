@@ -30,8 +30,8 @@ final class am {
         L1: while (true) {
           var5 = this.field_c[1 + var4 + var4];
           if (-1 != var5) {
-            if (this.field_c[var4 - -var4] != param1) {
-              var4 = var4 - -1 & var3;
+            if (this.field_c[var4 + var4] != param1) {
+              var4 = var4 + 1 & var3;
               continue L1;
             } else {
               return var5;
@@ -111,7 +111,7 @@ final class am {
         try {
           L0: {
             var2_int = 1;
-            L1: while (param0.length - -(param0.length >> 1) >= var2_int) {
+            L1: while (param0.length + (param0.length >> 1) >= var2_int) {
               var2_int = var2_int << 1;
             }
             this.field_c = new int[var2_int + var2_int];
@@ -119,9 +119,9 @@ final class am {
               this.field_c[var3] = -1;
             }
             for (var3 = 0; var3 < param0.length; var3++) {
-              for (var4 = param0[var3] & var2_int + -1; this.field_c[var4 + var4 + 1] != -1; var4 = var4 - -1 & -1 + var2_int) {
+              for (var4 = param0[var3] & var2_int - 1; this.field_c[var4 + var4 + 1] != -1; var4 = var4 + 1 & -1 + var2_int) {
               }
-              this.field_c[var4 - -var4] = param0[var3];
+              this.field_c[var4 + var4] = param0[var3];
               this.field_c[1 + var4 + var4] = var3;
             }
             break L0;

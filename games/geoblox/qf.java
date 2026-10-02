@@ -53,7 +53,7 @@ abstract class qf extends oe {
                 this.field_W.field_D = 0;
                 return super.f(-1);
             }
-            this.field_W.field_D = 256 + -((this.field_X << 8) / this.field_fb);
+            this.field_W.field_D = 256 - (this.field_X << 8) / this.field_fb;
             return super.f(-1);
         }
         if (qb.field_N != this.field_Z) {
@@ -261,7 +261,7 @@ abstract class qf extends oe {
               this.field_X = 0;
             }
           } else {
-            this.a(this.field_ab + (12 - -this.field_eb.field_h), this.field_eb.field_r + 12, -5269, this.field_db);
+            this.a(this.field_ab + (12 + this.field_eb.field_h), this.field_eb.field_r + 12, -5269, this.field_db);
             this.field_X = 0;
           }
           if (param1 >= -10) {

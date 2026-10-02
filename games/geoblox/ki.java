@@ -104,7 +104,7 @@ final class ki {
 
     final static void a(int param0) {
         r.a(rh.field_i, (byte) -61, true, oj.field_a);
-        int var1 = -30 % ((param0 - -30) / 36);
+        int var1 = -30 % ((param0 + 30) / 36);
         mi.field_I = true;
     }
 

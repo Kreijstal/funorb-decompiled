@@ -442,7 +442,7 @@ abstract class jg {
               break;
             }
             var0[var3 + 1] = var4;
-            field_h[var1][var3 - -1] = var5;
+            field_h[var1][var3 + 1] = var5;
           }
         }
     }

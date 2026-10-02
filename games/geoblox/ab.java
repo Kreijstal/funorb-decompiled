@@ -261,7 +261,7 @@ final class ab {
                   gf.a(var2, -1232328029, param1);
                   if (!uj.a(var2, param1, 0)) {
                     if (ma.a(true, param1, var2)) {
-                      var3 = wd.field_b.field_v[aa.field_a + wd.field_b.field_s * aa.field_b] + -1;
+                      var3 = wd.field_b.field_v[aa.field_a + wd.field_b.field_s * aa.field_b] - 1;
                       var4 = tl.field_g[var3];
                       if (a.field_d != var4.field_K) {
                         var5 = 0.5f * (var4.field_w + var2.field_w);

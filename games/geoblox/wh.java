@@ -570,8 +570,8 @@ abstract class wh extends rc {
                             break L6;
                           }
                         }
-                        var28 = (param0 + -param3 << 16) / var35;
-                        var23 = (param6 + -param1 << 16) / var34;
+                        var28 = (param0 - param3 << 16) / var35;
+                        var23 = (param6 - param1 << 16) / var34;
                         var19 = (param13 - param2 << 16) / var34;
                         var25 = param12 << 16;
                         var22 = param10 << 16;
@@ -584,7 +584,7 @@ abstract class wh extends rc {
                         var18 = param9 << 16;
                         var20 = (param13 - param9 << 16) / var35;
                         var31 = (param5 - param14 << 16) / var34;
-                        var27 = (param0 + -param12 << 16) / var34;
+                        var27 = (param0 - param12 << 16) / var34;
                         var29 = param14 << 16;
                       }
                       var33 = 0;
@@ -615,9 +615,9 @@ abstract class wh extends rc {
                       var25 = param12 << 16;
                       var22 = param1 << 16;
                       var21 = param1 << 16;
-                      var35 = param15 + -param8;
+                      var35 = param15 - param8;
                       var20 = (-param2 + param13 << 16) / var34;
-                      var19 = (param9 + -param2 << 16) / var35;
+                      var19 = (param9 - param2 << 16) / var35;
                       if (var20 <= var19) {
                         var23 = (-param1 + param6 << 16) / var34;
                         var27 = (-param12 + param0 << 16) / var34;
@@ -637,7 +637,7 @@ abstract class wh extends rc {
                       var28 = (param0 - param12 << 16) / var34;
                       var23 = (param10 - param1 << 16) / var35;
                       var24 = (-param1 + param6 << 16) / var34;
-                      var31 = (param7 + -param14 << 16) / var35;
+                      var31 = (param7 - param14 << 16) / var35;
                       var27 = (-param12 + param3 << 16) / var35;
                       var33 = 0;
                     }
@@ -692,11 +692,11 @@ abstract class wh extends rc {
                                 if (stackIn_73_0 < stackIn_73_1) {
                                   var38 = (var18 >> 16) - (var17_int >> 16);
                                   if (var38 != 0) {
-                                    var39 = (var22 + -var21) / var38;
+                                    var39 = (var22 - var21) / var38;
                                     var40 = (-var25 + var26) / var38;
-                                    var41 = (var30 + -var29) / var38;
+                                    var41 = (var30 - var29) / var38;
                                     if (mh.field_c <= var38 + var37) {
-                                      var38 = -1 + (mh.field_c + -var37);
+                                      var38 = -1 + (mh.field_c - var37);
                                     }
                                     L19: {
                                       if (0 <= var37) {
@@ -705,7 +705,7 @@ abstract class wh extends rc {
                                           break L19;
                                         }
                                       }
-                                      jf.a(var36, var39, 33423689, -(var39 * var37) + var21, var41, var25 + -(var37 * var40), var40, var38 - -var37, -(var41 * var37) + var29, param11);
+                                      jf.a(var36, var39, 33423689, -(var39 * var37) + var21, var41, var25 - var37 * var40, var40, var38 + var37, -(var41 * var37) + var29, param11);
                                     }
                                     if (var42 == 0) {
                                       break L16;
@@ -713,7 +713,7 @@ abstract class wh extends rc {
                                   }
                                   if (var37 >= 0) {
                                     if (~var37 > ~mh.field_c) {
-                                      jf.a(var37 - -var36, 0, 33423689, var21, 0, var25, 0, var38, var29, param11);
+                                      jf.a(var37 + var36, 0, 33423689, var21, 0, var25, 0, var38, var29, param11);
                                     }
                                   }
                                 }
@@ -742,7 +742,7 @@ abstract class wh extends rc {
                           }
                         }
                       }
-                      var36 = param4 + -param15;
+                      var36 = param4 - param15;
                       stackIn_73_0 = ~var36;
                       stackIn_73_1 = -1;
                     }
@@ -778,12 +778,12 @@ abstract class wh extends rc {
                       var26 = param3 << 16;
                       var30 = param7 << 16;
                     }
-                    var28 = (var39 + -var26) / var36;
+                    var28 = (var39 - var26) / var36;
                     var31 = (-var29 + var40) / var36;
                     var19 = (var37 - var17_int) / var36;
                     var23 = (-var21 + var38) / var36;
-                    var27 = (var39 + -var25) / var36;
-                    var24 = (var38 + -var22) / var36;
+                    var27 = (var39 - var25) / var36;
+                    var24 = (var38 - var22) / var36;
                     var20 = (var37 - var18) / var36;
                     var32 = (-var30 + var40) / var36;
                   }
@@ -811,15 +811,15 @@ abstract class wh extends rc {
                             if (var36 < mh.field_c) {
                               var37 = -(var17_int >> 16) + (var18 >> 16);
                               if (var37 != 0) {
-                                var38 = (var22 + -var21) / var37;
-                                var39 = (var26 + -var25) / var37;
+                                var38 = (var22 - var21) / var37;
+                                var39 = (var26 - var25) / var37;
                                 var40 = (-var29 + var30) / var37;
                                 if (var37 + var36 >= mh.field_c) {
                                   var37 = mh.field_c - var36 - 1;
                                 }
                                 L31: {
                                   if (var36 < 0) {
-                                    jf.a(var35, var38, 33423689, var21 - var38 * var36, var40, var25 + -(var36 * var39), var39, var37 + var36, -(var36 * var40) + var29, param11);
+                                    jf.a(var35, var38, 33423689, var21 - var38 * var36, var40, var25 - var36 * var39, var39, var37 + var36, -(var36 * var40) + var29, param11);
                                     if (var42 == 0) {
                                       break L31;
                                     }

@@ -161,7 +161,7 @@ abstract class ka {
           if (param0 < this.field_f) {
             if (this.field_k <= param1) {
               if (param2 >= 20) {
-                var4 = (param1 + -this.field_k) / this.field_d;
+                var4 = (param1 - this.field_k) / this.field_d;
                 if (this.field_e > var4) {
                   return var4;
                 } else {
@@ -212,7 +212,7 @@ abstract class ka {
                 stackIn_17_2 = stackIn_16_2;
                 stackIn_17_3 = 1;
               }
-              this.a(stackIn_17_1, stackIn_17_2, stackIn_17_3 != 0, -(var2 * this.field_d) + -this.field_k + he.field_d, false, bi.field_g);
+              this.a(stackIn_17_1, stackIn_17_2, stackIn_17_3 != 0, -(var2 * this.field_d) - this.field_k + he.field_d, false, bi.field_g);
             } else {
               this.field_g = false;
             }

@@ -102,9 +102,9 @@ final class qh extends ee implements pe, pl, ta {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new hd(20, param5, 120 - -param1, 25, param0, false, 120, 3, ng.field_F, 16777215, param2);
+          var11 = new hd(20, param5, 120 + param1, 25, param0, false, 120, 3, ng.field_F, 16777215, param2);
           this.b((byte) -128, var11);
-          var9 = new pi(((nl) ((Object) param0)).a((byte) -101), param4, 126, param5 - -var11.field_h, param1 - -50, param3);
+          var9 = new pi(((nl) ((Object) param0)).a((byte) -101), param4, 126, param5 + var11.field_h, param1 + 50, param3);
           var9.field_u = (bb) (this);
           this.b((byte) -127, var9);
           var10 = 38 / ((-14 - param6) / 46);
@@ -201,7 +201,7 @@ final class qh extends ee implements pe, pl, ta {
         var3 = var3 + (this.a(-99, this.field_N, v.field_m, var3, 170, field_Q) + 5);
         var3 = var3 + (this.a(-103, this.field_H, wj.field_E, var3, 170, gk.field_c) + 5);
         var3 = var3 + this.a(var3, 170, this.field_R, ue.field_g, (byte) -127);
-        hd var4 = new hd(46, var3, this.field_r - 90, 25, this.field_P, true, this.field_r + -120, 5, hh.field_d, 11579568, ue.field_d);
+        hd var4 = new hd(46, var3, this.field_r - 90, 25, this.field_P, true, this.field_r - 120, 5, hh.field_d, 11579568, ue.field_d);
         this.b((byte) -106, var4);
         var3 = var3 + var4.field_h;
         ff var5 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 0, 0, ng.field_F.field_o, -1, 2147483647, true);
@@ -222,9 +222,9 @@ final class qh extends ee implements pe, pl, ta {
         this.b((byte) -83, this.field_D);
         this.b((byte) -108, this.field_L);
         this.field_K = new vh((ta) (this));
-        this.field_K.a(150, -this.field_H.field_v + this.field_r - this.field_H.field_r + -60, (byte) -13, 20 + this.field_H.field_m, 60 + (this.field_H.field_r + this.field_H.field_v));
+        this.field_K.a(150, -this.field_H.field_v + this.field_r - this.field_H.field_r - 60, (byte) -13, 20 + this.field_H.field_m, 60 + (this.field_H.field_r + this.field_H.field_v));
         this.b((byte) -113, this.field_K);
-        this.a(55 + var3 - -var6, 496, (byte) -65, 0, 0);
+        this.a(55 + var3 + var6, 496, (byte) -65, 0, 0);
     }
 
     private final boolean g(int param0) {

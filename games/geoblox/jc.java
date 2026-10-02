@@ -30,17 +30,17 @@ final class jc {
                         nd.field_a = 5;
                         ka.field_h = 30;
                         td.a(-348, fl.field_c[24]);
-                        uf.field_b = uf.field_b % 6 - -ka.field_h;
+                        uf.field_b = uf.field_b % 6 + ka.field_h;
                         return;
                       } else {
-                        uf.field_b = uf.field_b % 6 - -ka.field_h;
+                        uf.field_b = uf.field_b % 6 + ka.field_h;
                         return;
                       }
                     } else {
                       pa.field_g = 110;
                       ka.field_h = 24;
                       nd.field_a = 4;
-                      uf.field_b = uf.field_b % 6 - -ka.field_h;
+                      uf.field_b = uf.field_b % 6 + ka.field_h;
                       return;
                     }
                   } else {
@@ -49,7 +49,7 @@ final class jc {
                     pa.field_g = 110;
                     nd.field_a = 3;
                     td.a(-348, fl.field_c[27]);
-                    uf.field_b = uf.field_b % 6 - -ka.field_h;
+                    uf.field_b = uf.field_b % 6 + ka.field_h;
                     return;
                   }
                 } else {
@@ -60,37 +60,37 @@ final class jc {
                           td.a(-348, fl.field_c[26]);
                           nd.field_a = 2;
                           ka.field_h = 12;
-                          uf.field_b = uf.field_b % 6 - -ka.field_h;
+                          uf.field_b = uf.field_b % 6 + ka.field_h;
                           return;
                         } else {
                           nd.field_a = 2;
                           ka.field_h = 12;
-                          uf.field_b = uf.field_b % 6 - -ka.field_h;
+                          uf.field_b = uf.field_b % 6 + ka.field_h;
                           return;
                         }
                       } else {
                         nd.field_a = 2;
                         ka.field_h = 12;
-                        uf.field_b = uf.field_b % 6 - -ka.field_h;
+                        uf.field_b = uf.field_b % 6 + ka.field_h;
                         return;
                       }
                     } else {
                       nd.field_a = 2;
                       ka.field_h = 12;
-                      uf.field_b = uf.field_b % 6 - -ka.field_h;
+                      uf.field_b = uf.field_b % 6 + ka.field_h;
                       return;
                     }
                   } else {
                     nd.field_a = 2;
                     ka.field_h = 12;
-                    uf.field_b = uf.field_b % 6 - -ka.field_h;
+                    uf.field_b = uf.field_b % 6 + ka.field_h;
                     return;
                   }
                 }
               } else {
                 nd.field_a = 1;
                 ka.field_h = 6;
-                uf.field_b = uf.field_b % 6 - -ka.field_h;
+                uf.field_b = uf.field_b % 6 + ka.field_h;
                 return;
               }
             } else {
@@ -101,30 +101,30 @@ final class jc {
                       td.a(-348, fl.field_c[25]);
                       ka.field_h = 0;
                       nd.field_a = 0;
-                      uf.field_b = uf.field_b % 6 - -ka.field_h;
+                      uf.field_b = uf.field_b % 6 + ka.field_h;
                       return;
                     } else {
                       ka.field_h = 0;
                       nd.field_a = 0;
-                      uf.field_b = uf.field_b % 6 - -ka.field_h;
+                      uf.field_b = uf.field_b % 6 + ka.field_h;
                       return;
                     }
                   } else {
                     ka.field_h = 0;
                     nd.field_a = 0;
-                    uf.field_b = uf.field_b % 6 - -ka.field_h;
+                    uf.field_b = uf.field_b % 6 + ka.field_h;
                     return;
                   }
                 } else {
                   ka.field_h = 0;
                   nd.field_a = 0;
-                  uf.field_b = uf.field_b % 6 - -ka.field_h;
+                  uf.field_b = uf.field_b % 6 + ka.field_h;
                   return;
                 }
               } else {
                 ka.field_h = 0;
                 nd.field_a = 0;
-                uf.field_b = uf.field_b % 6 - -ka.field_h;
+                uf.field_b = uf.field_b % 6 + ka.field_h;
                 return;
               }
             }
@@ -135,21 +135,21 @@ final class jc {
                   if (3 != param0) {
                     if (param0 != 4) {
                       if (param0 != 5) {
-                        uf.field_b = uf.field_b % 6 - -ka.field_h;
+                        uf.field_b = uf.field_b % 6 + ka.field_h;
                         return;
                       } else {
                         pa.field_g = 110;
                         nd.field_a = 5;
                         ka.field_h = 30;
                         td.a(-348, fl.field_c[24]);
-                        uf.field_b = uf.field_b % 6 - -ka.field_h;
+                        uf.field_b = uf.field_b % 6 + ka.field_h;
                         return;
                       }
                     } else {
                       pa.field_g = 110;
                       ka.field_h = 24;
                       nd.field_a = 4;
-                      uf.field_b = uf.field_b % 6 - -ka.field_h;
+                      uf.field_b = uf.field_b % 6 + ka.field_h;
                       return;
                     }
                   } else {
@@ -158,7 +158,7 @@ final class jc {
                     pa.field_g = 110;
                     nd.field_a = 3;
                     td.a(-348, fl.field_c[27]);
-                    uf.field_b = uf.field_b % 6 - -ka.field_h;
+                    uf.field_b = uf.field_b % 6 + ka.field_h;
                     return;
                   }
                 } else {
@@ -172,24 +172,24 @@ final class jc {
                           td.a(-348, fl.field_c[26]);
                           nd.field_a = 2;
                           ka.field_h = 12;
-                          uf.field_b = uf.field_b % 6 - -ka.field_h;
+                          uf.field_b = uf.field_b % 6 + ka.field_h;
                           return;
                         } else {
                           nd.field_a = 2;
                           ka.field_h = 12;
-                          uf.field_b = uf.field_b % 6 - -ka.field_h;
+                          uf.field_b = uf.field_b % 6 + ka.field_h;
                           return;
                         }
                       } else {
                         nd.field_a = 2;
                         ka.field_h = 12;
-                        uf.field_b = uf.field_b % 6 - -ka.field_h;
+                        uf.field_b = uf.field_b % 6 + ka.field_h;
                         return;
                       }
                     } else {
                       nd.field_a = 2;
                       ka.field_h = 12;
-                      uf.field_b = uf.field_b % 6 - -ka.field_h;
+                      uf.field_b = uf.field_b % 6 + ka.field_h;
                       return;
                     }
                   }
@@ -197,7 +197,7 @@ final class jc {
               } else {
                 nd.field_a = 1;
                 ka.field_h = 6;
-                uf.field_b = uf.field_b % 6 - -ka.field_h;
+                uf.field_b = uf.field_b % 6 + ka.field_h;
                 return;
               }
             } else {
@@ -225,7 +225,7 @@ final class jc {
                 nd.field_a = 0;
               }
             }
-            uf.field_b = uf.field_b % 6 - -ka.field_h;
+            uf.field_b = uf.field_b % 6 + ka.field_h;
             return;
           }
         } else {
@@ -266,7 +266,7 @@ final class jc {
                 var4 = new fd[var3];
                 for (var5 = 0; var3 > var5; var5++) {
                   if (!ac.a((byte) 71, param0)) {
-                    var6 = param0.e((byte) -17, td.a(var5 + -1, (byte) 66));
+                    var6 = param0.e((byte) -17, td.a(var5 - 1, (byte) 66));
                     var4[var5] = var4[var6];
                   } else {
                     var6_ref_fd = new fd();

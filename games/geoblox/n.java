@@ -96,9 +96,9 @@ final class n extends q {
                     L9: while (true) {
                       L10: {
                         if (var9 > var12) {
-                          var10[6].field_v[var12 + (var9 - var11 + -1) * var9] = param6;
-                          var10[8].field_v[var12 + (-1 + -var11 + var9) * var9] = param6;
-                          var10[2].field_v[var12 * var9 + -var11 + var9 + -1] = param6;
+                          var10[6].field_v[var12 + (var9 - var11 - 1) * var9] = param6;
+                          var10[8].field_v[var12 + (-1 - var11 + var9) * var9] = param6;
+                          var10[2].field_v[var12 * var9 - var11 + var9 - 1] = param6;
                           var10[8].field_v[-var11 - 1 - (-var9 - var9 * var12)] = param6;
                           var12++;
                           if (var15 != 0) {
@@ -137,7 +137,7 @@ final class n extends q {
                       } else {
                         var12 = stackIn_34_0;
                         L16: while (var9 > var12) {
-                          var10[0].field_v[var12 - -(var11 * var9)] = param2;
+                          var10[0].field_v[var12 + var11 * var9] = param2;
                           var10[0].field_v[var11 + var12 * var9] = param2;
                           stackIn_24_0 = ~(-var11 + var9);
 
@@ -184,7 +184,7 @@ final class n extends q {
                               if (param8 > var12) {
                                 var10[7].field_v[param3 * (var9 - var12 - 1) + var11] = param6;
                                 var10[5].field_v[-1 + (var9 - var12 + var11 * var9)] = param6;
-                                var10[1].field_v[param3 * var12 - -var11] = param2;
+                                var10[1].field_v[param3 * var12 + var11] = param2;
                                 var10[3].field_v[var12 + var9 * var11] = param2;
                                 var12++;
                                 if (var15 != 0) {
@@ -222,10 +222,10 @@ final class n extends q {
                             L28: while (true) {
                               L29: {
                                 if (param1 > var12) {
-                                  var10[1].field_v[param3 * (-1 + (-var12 + var9)) - -var11] = param0;
-                                  var10[3].field_v[-1 - -var9 + (-var12 + var9 * var11)] = param0;
+                                  var10[1].field_v[param3 * (-1 + (-var12 + var9)) + var11] = param0;
+                                  var10[3].field_v[-1 + var9 + (-var12 + var9 * var11)] = param0;
                                   var10[7].field_v[var11 + param3 * var12] = param0;
-                                  var10[5].field_v[var9 * var11 - -var12] = param0;
+                                  var10[5].field_v[var9 * var11 + var12] = param0;
                                   var12++;
                                   if (var15 != 0) {
                                     break L29;

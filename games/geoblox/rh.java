@@ -381,7 +381,7 @@ final class rh {
             return null;
         }
         if (!(this.field_c.field_k.length != 1)) {
-            return this.a(0, param0 + -56472, param1);
+            return this.a(0, param0 - 56472, param1);
         }
         if (param0 != 28319) {
             return (byte[]) null;
@@ -524,7 +524,7 @@ final class rh {
                         break L5;
                       }
                     }
-                    var9 = uk.a(false, param1 + -90, this.field_f[param3]);
+                    var9 = uk.a(false, param1 - 90, this.field_f[param3]);
                   }
                   if (param1 == 4) {
                     try {
@@ -663,7 +663,7 @@ final class rh {
                             if (this.field_b != 0) {
                               var7[var18] = var38[var17];
                             } else {
-                              var7[var18] = hf.a(param1 + -126, var38[var17], false);
+                              var7[var18] = hf.a(param1 - 126, var38[var17], false);
                             }
                           }
                           break L11;
@@ -1224,7 +1224,7 @@ final class rh {
                 }
                 if (var6 >= 97) {
                   if (var6 <= 122) {
-                    var2_long = var2_long + (long)(-96 - -var6);
+                    var2_long = var2_long + (long)(-96 + var6);
                     break L4;
                   }
                 }

@@ -49,7 +49,7 @@ final class kc {
                       }
                     }
                   }
-                  sh.a(param0, param0 + param0, qg.field_a, va.field_b, (byte) 112, md.field_c - -param0, false);
+                  sh.a(param0, param0 + param0, qg.field_a, va.field_b, (byte) 112, md.field_c + param0, false);
                 }
                 if (param0 < md.field_c) {
                   md.field_c = param0;

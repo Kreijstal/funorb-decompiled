@@ -23,17 +23,17 @@ final class hb implements dh {
         int var11 = 0;
         int var12 = 0;
         qb var14 = param4 instanceof qb ? (qb) ((Object) param4) : null;
-        vb.a(param0 - -param4.field_v, param4.field_m + param2, param4.field_r, param4.field_h, this.field_f);
+        vb.a(param0 + param4.field_v, param4.field_m + param2, param4.field_r, param4.field_h, this.field_f);
         if (var14 != null) {
         }
-        int var7 = param4.field_v + param0 - -var14.field_E;
-        int var8 = param4.field_m + param2 - -var14.field_O;
+        int var7 = param4.field_v + param0 + var14.field_E;
+        int var8 = param4.field_m + param2 + var14.field_O;
         vb.d(var7, var8, var14.field_K, this.field_e);
         if (var14.field_J != -1) {
             var9 = (double)var14.field_J * 3.141592653589793 * 2.0 / (double)var14.field_H;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_K);
             var12 = (int)(Math.cos(var9) * (double)var14.field_K);
-            vb.d(var7 + var11, var8 - -var12, 1, this.field_g);
+            vb.d(var7 + var11, var8 + var12, 1, this.field_g);
         }
         vb.d(var7, var8, 2, 1);
         var9 = 2.0 * (3.141592653589793 * (double)var14.field_I) / (double)var14.field_H;
@@ -45,8 +45,8 @@ final class hb implements dh {
         try {
             vb.g(var7, var8, var11 + var7, var12 + var8, 1);
             if (this.field_a != null) {
-                var13 = this.field_c + (var14.field_E - -var14.field_K);
-                this.field_a.a(param4.field_s, var13 + (param0 + param4.field_v), param2 - -param4.field_m - -this.field_i, param4.field_r - (this.field_c + var13), -(this.field_c << 1) + param4.field_h, this.field_m, this.field_k, 1, 1, 0);
+                var13 = this.field_c + (var14.field_E + var14.field_K);
+                this.field_a.a(param4.field_s, var13 + (param0 + param4.field_v), param2 + param4.field_m + this.field_i, param4.field_r - (this.field_c + var13), -(this.field_c << 1) + param4.field_h, this.field_m, this.field_k, 1, 1, 0);
             }
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

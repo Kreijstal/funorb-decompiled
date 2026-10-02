@@ -19,7 +19,7 @@ final class qi extends hf {
     }
 
     final static boolean b(int param0) {
-        int var1 = -46 % ((param0 - -28) / 60);
+        int var1 = -46 % ((param0 + 28) / 60);
         return gb.field_b.b((byte) 126);
     }
 
@@ -69,7 +69,7 @@ final class qi extends hf {
             Throwable var4_ref = null;
             var8 = Geoblox.field_C;
             try {
-              var3_int = -105 / ((param2 - -33) / 57);
+              var3_int = -105 / ((param2 + 33) / 57);
               try {
                 L1: {
                   var4 = (String) (wk.a((byte) -6, param1, "getcookies"));

@@ -176,7 +176,7 @@ class dj extends hk {
           L0: {
             var3_int = -6 / ((param1 - 63) / 50);
             if (this.field_M != -1) {
-              var4 = this.field_M + -this.field_s.length();
+              var4 = this.field_M - this.field_s.length();
               if (var4 < 0) {
                 param0 = param0.substring(0, var4);
               } else {
@@ -287,7 +287,7 @@ class dj extends hk {
                   this.field_L = this.j((byte) 77);
                   this.field_H = this.h((byte) -57);
                   if (0 < this.field_H) {
-                    if (this.field_s.charAt(this.field_H + -1) == 32) {
+                    if (this.field_s.charAt(this.field_H - 1) == 32) {
                       this.field_H = this.field_H - 1;
                     }
                   }
@@ -299,7 +299,7 @@ class dj extends hk {
                 break L0;
               }
             }
-            var8_int = 70 / ((param1 - -3) / 38);
+            var8_int = 70 / ((param1 + 3) / 38);
             stackIn_17_0 = 0;
             decompiledRegionSelector0 = 1;
           }
@@ -388,7 +388,7 @@ class dj extends hk {
         var3 = Geoblox.field_C;
         if (0 != this.field_H) {
           if (param0 == 77) {
-            L0: for (var2 = this.field_H + -1; var2 > 0; var2--) {
+            L0: for (var2 = this.field_H - 1; var2 > 0; var2--) {
               if (this.field_s.charAt(var2 - 1) != 32) {
                 continue L0;
               }
@@ -496,7 +496,7 @@ class dj extends hk {
                   if (param0 == 85) {
                     if (this.field_H == this.field_L) {
                       if (0 < this.field_H) {
-                        this.field_L = this.field_H + -1;
+                        this.field_L = this.field_H - 1;
                         this.g(param1 ^ 13);
                         stackIn_65_0 = 1;
                         decompiledRegionSelector0 = 14;
@@ -539,7 +539,7 @@ class dj extends hk {
 
                               if (!kj.field_o[82]) {
                                 stackIn_48_0 = this;
-                                stackIn_48_1 = this.field_H - -1;
+                                stackIn_48_1 = this.field_H + 1;
                               } else {
                                 stackIn_48_0 = this;
                                 stackIn_48_1 = this.h((byte) -57);
@@ -606,7 +606,7 @@ class dj extends hk {
                         break L0;
                       } else {
                         if (this.field_H < this.field_s.length()) {
-                          this.field_L = this.field_H - -1;
+                          this.field_L = this.field_H + 1;
                           this.g(0);
                           stackIn_16_0 = 1;
                           decompiledRegionSelector0 = 2;
@@ -734,18 +734,18 @@ class dj extends hk {
               var4 = var3.a(96);
               var5 = var9.a((el) (this), -1);
               var6 = var9.a(1) >> 1;
-              if (var4 >= var5 + -var6) {
+              if (var4 >= var5 - var6) {
                 var7 = this.field_k + var3.a(this.field_H, 120);
                 if (var7 > var5 - var6) {
-                  this.field_k = this.field_k - (var7 - -var6 - var5);
+                  this.field_k = this.field_k - (var7 + var6 - var5);
                 } else {
                   if (var7 < var6) {
                     this.field_k = this.field_k - (-var6 + var7);
                   }
                 }
                 if (this.field_k <= 0) {
-                  if (var6 + -var5 > this.field_k) {
-                    this.field_k = var6 + -var5;
+                  if (var6 - var5 > this.field_k) {
+                    this.field_k = var6 - var5;
                   }
                 } else {
                   this.field_k = 0;
@@ -775,7 +775,7 @@ class dj extends hk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var4_int = 8 / ((param0 - -65) / 44);
+          var4_int = 8 / ((param0 + 65) / 44);
           if (param1 == null) {
             param1 = "";
           }

@@ -126,17 +126,17 @@ final class jh {
                                     }
                                     var14 = 10;
                                     this.field_d.a(dj.field_F, var9 + var14, 0, 9868);
-                                    var10 = (255 & dj.field_F[3]) + ((65280 & dj.field_F[2] << 8) + (-16777216 & dj.field_F[0] << 24) - -(16711680 & dj.field_F[1] << 16));
+                                    var10 = (255 & dj.field_F[3]) + ((65280 & dj.field_F[2] << 8) + (-16777216 & dj.field_F[0] << 24) + (16711680 & dj.field_F[1] << 16));
                                     var11 = (255 & dj.field_F[5]) + (65280 & dj.field_F[4] << 8);
                                     var13 = dj.field_F[9] & 255;
-                                    var12 = ((dj.field_F[7] & 255) << 8) + ((16711680 & dj.field_F[6] << 16) - -(dj.field_F[8] & 255));
+                                    var12 = ((dj.field_F[7] & 255) << 8) + ((16711680 & dj.field_F[6] << 16) + (dj.field_F[8] & 255));
                                   } else {
                                     var14 = 8;
                                     if (var9 > 512) {
                                       var9 = 512;
                                     }
-                                    this.field_d.a(dj.field_F, var9 - -var14, 0, 9868);
-                                    var12 = (255 & dj.field_F[6]) + (((dj.field_F[4] & 255) << 16) - -((255 & dj.field_F[5]) << 8));
+                                    this.field_d.a(dj.field_F, var9 + var14, 0, 9868);
+                                    var12 = (255 & dj.field_F[6]) + (((dj.field_F[4] & 255) << 16) + ((255 & dj.field_F[5]) << 8));
                                     var11 = (255 & dj.field_F[3]) + (dj.field_F[2] << 8 & 65280);
                                     var13 = 255 & dj.field_F[7];
                                     var10 = (dj.field_F[1] & 255) + ((dj.field_F[0] & 255) << 8);
@@ -262,7 +262,7 @@ final class jh {
                   L0: {
                     L1: {
                       if (!param4) {
-                        var7_int = (int)((this.field_d.a((byte) 46) - -519L) / 520L);
+                        var7_int = (int)((this.field_d.a((byte) 46) + 519L) / 520L);
                         if (var7_int == 0) {
                           var7_int = 1;
                         }
@@ -273,7 +273,7 @@ final class jh {
                           decompiledRegionSelector2 = 0;
                           break L0;
                         } else {
-                          this.field_c.a(param0 + -228, (long)(param2 * 6));
+                          this.field_c.a(param0 - 228, (long)(param2 * 6));
                           this.field_c.a(dj.field_F, 6, 0, 9868);
                           var7_int = (dj.field_F[5] & 255) + (((255 & dj.field_F[4]) << 8) + ((255 & dj.field_F[3]) << 16));
                           if (var7_int > 0) {
@@ -297,7 +297,7 @@ final class jh {
                     dj.field_F[4] = (byte)(var7_int >> 8);
                     dj.field_F[5] = (byte)var7_int;
                     dj.field_F[0] = (byte)(param1 >> 16);
-                    this.field_c.a(param0 + -380, (long)(param2 * 6));
+                    this.field_c.a(param0 - 380, (long)(param2 * 6));
                     this.field_c.a(6, 0, dj.field_F, false);
                     var8 = 0;
                     var9 = 0;
@@ -307,7 +307,7 @@ final class jh {
                           L6: {
                             var10 = 0;
                             if (param4) {
-                              this.field_d.a(param0 + -191, (long)(520 * var7_int));
+                              this.field_d.a(param0 - 191, (long)(520 * var7_int));
                               if (65535 >= param2) {
                                 try {
                                   this.field_d.a(dj.field_F, 8, 0, 9868);
@@ -318,7 +318,7 @@ final class jh {
                                   decompiledRegionSelector0 = 1;
                                 }
                                 if (decompiledRegionSelector0 == 0) {
-                                  var11 = ((255 & dj.field_F[0]) << 8) - -(255 & dj.field_F[1]);
+                                  var11 = ((255 & dj.field_F[0]) << 8) + (255 & dj.field_F[1]);
                                   var12 = (dj.field_F[3] & 255) + ((255 & dj.field_F[2]) << 8);
                                   var13 = 255 & dj.field_F[7];
                                   var10 = (dj.field_F[6] & 255) + ((65280 & dj.field_F[5] << 8) + (16711680 & dj.field_F[4] << 16));
@@ -337,7 +337,7 @@ final class jh {
                                 if (decompiledRegionSelector1 == 0) {
                                   var11 = (65280 & dj.field_F[2] << 8) + (((255 & dj.field_F[0]) << 24) + (((dj.field_F[1] & 255) << 16) + (255 & dj.field_F[3])));
                                   var13 = dj.field_F[9] & 255;
-                                  var10 = (dj.field_F[8] & 255) + ((255 & dj.field_F[6]) << 16) - -(65280 & dj.field_F[7] << 8);
+                                  var10 = (dj.field_F[8] & 255) + ((255 & dj.field_F[6]) << 16) + (65280 & dj.field_F[7] << 8);
                                   var12 = (dj.field_F[4] << 8 & 65280) + (255 & dj.field_F[5]);
                                 } else {
                                   break L5;
