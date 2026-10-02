@@ -73,7 +73,7 @@ class ac extends ff {
 
     final static boolean a(byte param0, pk param1) {
         RuntimeException var2 = null;
-        int stackIn_5_0 = 0;
+        boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -84,8 +84,8 @@ class ac extends ff {
           if (param0 < 6) {
             ac.a((byte) -125);
           }
-          stackIn_5_0 = (1 != param1.e((byte) -17, 1)) ? 0 : 1;
-          return stackIn_5_0 != 0;
+          stackIn_5_0 = !(1 != param1.e((byte) -17, 1));
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

@@ -7,9 +7,7 @@ final class ak {
 
     final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_15_0 = 0;
+        boolean stackIn_15_0 = false;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -22,8 +20,7 @@ final class ak {
         RuntimeException var3_ref = null;
         try {
           if (param2 > -67) {
-            stackIn_2_0 = 1;
-            return stackIn_2_0 != 0;
+            return true;
           }
           var3 = bj.a(32, param1);
           if (param0.indexOf(param1) == -1) {
@@ -33,19 +30,18 @@ final class ak {
                   if (!param0.startsWith(var3)) {
                     if (!param0.endsWith(param1)) {
                       if (!param0.endsWith(var3)) {
-                        stackIn_15_0 = 0;
+                        stackIn_15_0 = false;
                         break L1;
                       }
                     }
                   }
                 }
-                stackIn_15_0 = 1;
+                stackIn_15_0 = true;
               }
-              return stackIn_15_0 != 0;
+              return stackIn_15_0;
             }
           }
-          stackIn_7_0 = 1;
-          return stackIn_7_0 != 0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -91,8 +87,6 @@ final class ak {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -105,14 +99,12 @@ final class ak {
             var3 = param0.charAt(var2_int);
             if (!em.a((char) var3, 97)) {
               if (!rc.a(-58, (char) var3)) {
-                stackIn_7_0 = 1;
-                return stackIn_7_0 != 0;
+                return true;
               }
             }
           }
           if (param1 < -33) {
-            stackIn_12_0 = 0;
-            return stackIn_12_0 != 0;
+            return false;
           }
           field_a = -33L;
           return false;

@@ -80,7 +80,7 @@ final class kc {
         int stackIn_90_3;
         gh stackIn_110_0 = null;
         gh stackIn_112_0 = null;
-        int stackIn_112_1 = 0;
+        boolean stackIn_112_1 = false;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_14_0;
         boolean stackOut_21_0;
@@ -607,16 +607,16 @@ final class kc {
 
                     if (!w.field_f) {
                       stackIn_112_0 = (gh) ((Object) stackIn_110_0);
-                      stackIn_112_1 = 0;
+                      stackIn_112_1 = false;
                       break L55;
                     }
                     stackIn_110_0 = (gh) ((Object) stackIn_110_0);
                   }
                 }
                 stackIn_112_0 = (gh) ((Object) stackIn_110_0);
-                stackIn_112_1 = 1;
+                stackIn_112_1 = true;
               }
-              stackIn_112_0.field_F = stackIn_112_1 != 0;
+              stackIn_112_0.field_F = stackIn_112_1;
               w.field_f = false;
               if (var1_int >= 3) {
                 ra.a(255 ^ fe.field_f, -88, fe.field_f);

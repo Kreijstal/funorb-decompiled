@@ -83,8 +83,6 @@ final class ol extends hk {
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
         int var13 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_23_0 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -103,8 +101,7 @@ final class ol extends hk {
         try {
           var8_int = -89 % ((-3 - param1) / 38);
           if (!super.a(param0, 93, param2, param3, param4, param5, param6)) {
-            stackIn_23_0 = 0;
-            return stackIn_23_0 != 0;
+            return false;
           }
           {
             var9 = -param2 + param4 - this.field_H;
@@ -139,8 +136,7 @@ final class ol extends hk {
                 this.field_F.b(var9, (byte) -93);
               }
             }
-            stackIn_21_0 = 1;
-            return stackIn_21_0 != 0;
+            return true;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

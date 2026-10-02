@@ -37,7 +37,6 @@ final class ul {
         int stackIn_65_4 = 0;
         int stackIn_68_5;
         int stackIn_82_0 = 0;
-        int stackIn_82_1 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -212,8 +211,7 @@ final class ul {
           if (var1_int != 0) {
             if (var2 == 0) {
               stackIn_82_0 = 4;
-              stackIn_82_1 = 0;
-              jc.a(stackIn_82_0, stackIn_82_1 != 0);
+              jc.a(stackIn_82_0, false);
             } else {
               jc.a(5, false);
             }
@@ -230,8 +228,6 @@ final class ul {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_15_0 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
@@ -244,8 +240,7 @@ final class ul {
         var4 = Geoblox.field_C;
         try {
           if (param2 != 127) {
-            stackIn_3_0 = 0;
-            return stackIn_3_0 != 0;
+            return false;
           }
           var3_int = param0.field_kb - param1.field_kb;
           if (eg.field_l != param0.field_mb) {
@@ -262,8 +257,7 @@ final class ul {
               var3_int -= 200;
             }
           }
-          stackIn_15_0 = (0 >= var3_int) ? 0 : 1;
-          return stackIn_15_0 != 0;
+          return !(0 >= var3_int);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

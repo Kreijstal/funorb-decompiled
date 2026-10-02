@@ -53,20 +53,20 @@ final class vh extends ee implements pl {
     }
 
     final static boolean g(int param0) {
-        int stackIn_6_0 = 0;
+        boolean stackIn_6_0 = false;
         if (param0 > -68) {
           field_G = (dm) null;
         }
         L1: {
           if (oc.field_e != null) {
             if (pk.field_l.a(true)) {
-              stackIn_6_0 = 1;
+              stackIn_6_0 = true;
               break L1;
             }
           }
-          stackIn_6_0 = 0;
+          stackIn_6_0 = false;
         }
-        return stackIn_6_0 != 0;
+        return stackIn_6_0;
     }
 
     final static String f(int param0) {
@@ -118,10 +118,8 @@ final class vh extends ee implements pl {
 
     final boolean a(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
-        int stackIn_5_0 = 0;
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
-        int stackIn_13_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -133,16 +131,14 @@ final class vh extends ee implements pl {
             field_E = (String) null;
           }
           if (super.a(param0, param1 + 0, param2, param3)) {
-            stackIn_5_0 = 1;
-            return stackIn_5_0 != 0;
+            return true;
           }
           if (param0 == 98) {
             stackIn_8_0 = this.a(7305, param3);
             return stackIn_8_0;
           }
           if (99 != param0) {
-            stackIn_13_0 = 0;
-            return stackIn_13_0 != 0;
+            return false;
           }
           stackIn_11_0 = this.a(param3, -110);
           return stackIn_11_0;

@@ -267,7 +267,7 @@ final class sk {
         long stackIn_19_1 = 0L;
         pa stackIn_20_0 = null;
         long stackIn_20_1 = 0L;
-        int stackIn_20_2 = 0;
+        boolean stackIn_20_2 = false;
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
         RuntimeException stackIn_55_0 = null;
@@ -332,13 +332,13 @@ final class sk {
               if (param3) {
                 stackIn_20_0 = (pa) ((Object) stackIn_19_0);
                 stackIn_20_1 = stackIn_19_1;
-                stackIn_20_2 = 0;
+                stackIn_20_2 = false;
               } else {
                 stackIn_20_0 = (pa) ((Object) stackIn_19_0);
                 stackIn_20_1 = stackIn_19_1;
-                stackIn_20_2 = 1;
+                stackIn_20_2 = true;
               }
-              ((pa) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_20_2 != 0);
+              ((pa) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_20_2);
               this.field_b = this.field_f;
             }
             this.field_a.a(param2, param1, 90, param0);
@@ -455,9 +455,6 @@ final class sk {
     }
 
     final static boolean a(int param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_33_0 = 0;
         RuntimeException decompiledCaughtException = null;
         ja var1 = null;
         RuntimeException var1_ref = null;
@@ -478,14 +475,12 @@ final class sk {
             sk.a(3);
           }
           if (el.field_o.field_H) {
-            stackIn_5_0 = 0;
-            return stackIn_5_0 != 0;
+            return false;
           }
           bk.field_a.e();
           if (!ld.a(-61)) {
             sh.field_y.a(255);
-            stackIn_33_0 = 0;
-            return stackIn_33_0 != 0;
+            return false;
           }
           {
             el.field_o.d((byte) 116);
@@ -508,8 +503,7 @@ final class sk {
             L2: while (true) {
               var6 = (ja) ((Object) var12.a(true));
               if (var6 == null) {
-                stackIn_31_0 = 1;
-                return stackIn_31_0 != 0;
+                return true;
               }
               {
                 var6.field_z = 6;

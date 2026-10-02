@@ -240,7 +240,7 @@ public final class Geoblox extends wf {
     private final boolean g(boolean param0) {
         rh stackIn_10_0 = null;
         rh stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
+        boolean stackIn_11_1 = false;
         String stackIn_27_0;
         rh stackIn_27_1;
         String stackIn_27_2;
@@ -249,7 +249,7 @@ public final class Geoblox extends wf {
         rh stackIn_28_1 = null;
         String stackIn_28_2 = null;
         String stackIn_28_3 = null;
-        int stackIn_28_4 = 0;
+        boolean stackIn_28_4 = false;
         String stackIn_47_0;
         rh stackIn_47_1;
         String stackIn_47_2;
@@ -258,7 +258,7 @@ public final class Geoblox extends wf {
         rh stackIn_48_1 = null;
         String stackIn_48_2 = null;
         String stackIn_48_3 = null;
-        int stackIn_48_4 = 0;
+        boolean stackIn_48_4 = false;
         if (ef.field_e) {
           return true;
         }
@@ -270,12 +270,12 @@ public final class Geoblox extends wf {
 
               if (param0) {
                 stackIn_11_0 = (rh) ((Object) stackIn_10_0);
-                stackIn_11_1 = 0;
+                stackIn_11_1 = false;
               } else {
                 stackIn_11_0 = (rh) ((Object) stackIn_10_0);
-                stackIn_11_1 = 1;
+                stackIn_11_1 = true;
               }
-              if (((rh) (Object) stackIn_11_0).b(stackIn_11_1 != 0)) {
+              if (((rh) (Object) stackIn_11_0).b(stackIn_11_1)) {
                 if (fe.field_a.a(0)) {
                   if (fe.field_a.b(true)) {
                     if (cd.field_m.a(0)) {
@@ -322,15 +322,15 @@ public final class Geoblox extends wf {
                                       stackIn_48_1 = (rh) ((Object) stackIn_47_1);
                                       stackIn_48_2 = (String) ((Object) stackIn_47_2);
                                       stackIn_48_3 = (String) ((Object) stackIn_47_3);
-                                      stackIn_48_4 = 0;
+                                      stackIn_48_4 = false;
                                     } else {
                                       stackIn_48_0 = (String) ((Object) stackIn_47_0);
                                       stackIn_48_1 = (rh) ((Object) stackIn_47_1);
                                       stackIn_48_2 = (String) ((Object) stackIn_47_2);
                                       stackIn_48_3 = (String) ((Object) stackIn_47_3);
-                                      stackIn_48_4 = 1;
+                                      stackIn_48_4 = true;
                                     }
-                                    lc.a(gf.a(stackIn_48_0, stackIn_48_1, stackIn_48_2, stackIn_48_3, stackIn_48_4 != 0), -2, 50.0f);
+                                    lc.a(gf.a(stackIn_48_0, stackIn_48_1, stackIn_48_2, stackIn_48_3, stackIn_48_4), -2, 50.0f);
                                     return false;
                                   }
                                 }
@@ -355,15 +355,15 @@ public final class Geoblox extends wf {
                           stackIn_28_1 = (rh) ((Object) stackIn_27_1);
                           stackIn_28_2 = (String) ((Object) stackIn_27_2);
                           stackIn_28_3 = (String) ((Object) stackIn_27_3);
-                          stackIn_28_4 = 0;
+                          stackIn_28_4 = false;
                         } else {
                           stackIn_28_0 = (String) ((Object) stackIn_27_0);
                           stackIn_28_1 = (rh) ((Object) stackIn_27_1);
                           stackIn_28_2 = (String) ((Object) stackIn_27_2);
                           stackIn_28_3 = (String) ((Object) stackIn_27_3);
-                          stackIn_28_4 = 1;
+                          stackIn_28_4 = true;
                         }
-                        lc.a(gf.a(stackIn_28_0, stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4 != 0), -2, 35.0f);
+                        lc.a(gf.a(stackIn_28_0, stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4), -2, 35.0f);
                         return false;
                       }
                     }
@@ -665,12 +665,12 @@ public final class Geoblox extends wf {
         boolean discarded$1 = false;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
+        boolean stackIn_9_1 = false;
         Object stackIn_13_0 = null;
         Object stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
-        int stackIn_63_0 = 0;
-        int stackIn_91_0 = 0;
+        boolean stackIn_14_1 = false;
+        boolean stackIn_63_0 = false;
+        boolean stackIn_91_0 = false;
         int var2;
         int var3;
         var3 = field_C;
@@ -688,23 +688,23 @@ public final class Geoblox extends wf {
 
         if (null == vl.field_n) {
           stackIn_9_0 = this;
-          stackIn_9_1 = 0;
+          stackIn_9_1 = false;
         } else {
           stackIn_9_0 = this;
-          stackIn_9_1 = 1;
+          stackIn_9_1 = true;
         }
-        this.b(stackIn_9_1 != 0, 19660);
+        this.b(stackIn_9_1, 19660);
         if (cf.field_k) {
           stackIn_13_0 = this;
 
           if (param0) {
             stackIn_14_0 = this;
-            stackIn_14_1 = 0;
+            stackIn_14_1 = false;
           } else {
             stackIn_14_0 = this;
-            stackIn_14_1 = 1;
+            stackIn_14_1 = true;
           }
-          this.f(stackIn_14_1 != 0);
+          this.f(stackIn_14_1);
           cf.field_k = false;
         }
         L4: while (sh.a((byte) -118, pb.field_m)) {
@@ -730,9 +730,9 @@ public final class Geoblox extends wf {
               } else {
                 if (dd.a((byte) 47)) {
                   if (!jk.field_a) {
-                    stackIn_91_0 = (vl.field_n == null) ? 0 : 1;
+                    stackIn_91_0 = !(vl.field_n == null);
                     L10: {
-                      var2 = sl.a(stackIn_91_0 != 0, (wf) (this), false);
+                      var2 = sl.a(stackIn_91_0, (wf) (this), false);
                       if (var2 != 2364824) {
                         if (var2 != 1) {
                           if (2 != var2) {
@@ -856,9 +856,9 @@ public final class Geoblox extends wf {
                 } else {
                   if (tc.field_c == -1) {
                     if (dl.field_b) {
-                      stackIn_63_0 = (gb.b(1)) ? 0 : 1;
-                      dl.field_b = stackIn_63_0 != 0;
-                      if (stackIn_63_0 == 0) {
+                      stackIn_63_0 = !(gb.b(1));
+                      dl.field_b = stackIn_63_0;
+                      if (!stackIn_63_0) {
                         tc.field_c = -2;
                         ai.field_p = 0;
                       }
@@ -895,8 +895,8 @@ public final class Geoblox extends wf {
 
     final void a(int param0) {
         Object stackIn_3_0 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_42_0 = 0;
+        boolean stackIn_7_0 = false;
+        boolean stackIn_42_0 = false;
         Object var2;
         int var3;
         int var4;
@@ -909,11 +909,11 @@ public final class Geoblox extends wf {
         var2 = stackIn_3_0;
         if (bl.b(255)) {
           if (vl.field_n != null) {
-            stackIn_7_0 = 1;
+            stackIn_7_0 = true;
           } else {
-            stackIn_7_0 = lh.field_d ? 1 : 0;
+            stackIn_7_0 = lh.field_d;
           }
-          ei.a(stackIn_7_0 != 0, param0 - 25853, (java.awt.Canvas) (var2));
+          ei.a(stackIn_7_0, param0 - 25853, (java.awt.Canvas) (var2));
           return;
         }
         if (!ib.field_a) {
@@ -975,11 +975,11 @@ public final class Geoblox extends wf {
         }
         if (cg.b(true)) {
           if (null == vl.field_n) {
-            stackIn_42_0 = lh.field_d ? 1 : 0;
+            stackIn_42_0 = lh.field_d;
           } else {
-            stackIn_42_0 = 1;
+            stackIn_42_0 = true;
           }
-          kb.a(stackIn_42_0 != 0, false);
+          kb.a(stackIn_42_0, false);
         }
         i.a(0, (byte) 110, (java.awt.Canvas) (var2), 0);
         if (param0 != 25853) {

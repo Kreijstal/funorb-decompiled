@@ -25,7 +25,7 @@ final class em {
     }
 
     final static boolean a(char param0, int param1) {
-        int stackIn_10_0 = 0;
+        boolean stackIn_10_0 = false;
         if (param1 != 97) {
           field_a = (String) null;
         }
@@ -41,12 +41,12 @@ final class em {
                 break L2;
               }
             }
-            stackIn_10_0 = 0;
+            stackIn_10_0 = false;
             break L1;
           }
-          stackIn_10_0 = 1;
+          stackIn_10_0 = true;
         }
-        return stackIn_10_0 != 0;
+        return stackIn_10_0;
     }
 
     public static void a(int param0) {
@@ -313,8 +313,6 @@ final class em {
 
     final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_9_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -330,12 +328,10 @@ final class em {
               if (param0.length() > bm.field_j) {
                 return true;
               }
-              stackIn_9_0 = 0;
-              return stackIn_9_0 != 0;
+              return false;
             }
           }
-          stackIn_7_0 = 1;
-          return stackIn_7_0 != 0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

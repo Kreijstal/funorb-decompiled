@@ -8,7 +8,7 @@ final class wc extends hf {
 
     final static boolean a(String param0, String param1, byte param2) {
         String var3 = null;
-        int stackIn_7_0 = 0;
+        boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -28,13 +28,13 @@ final class wc extends hf {
           L1: {
             if (param0.indexOf(param1) == -1) {
               if (param0.indexOf(var3) == -1) {
-                stackIn_7_0 = 0;
+                stackIn_7_0 = false;
                 break L1;
               }
             }
-            stackIn_7_0 = 1;
+            stackIn_7_0 = true;
           }
-          return stackIn_7_0 != 0;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

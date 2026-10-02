@@ -10,8 +10,8 @@ final class ri {
         try {
             int stackIn_5_0 = 0;
             int stackIn_33_0 = 0;
-            int stackIn_45_0 = 0;
-            int stackIn_48_0 = 0;
+            boolean stackIn_45_0 = false;
+            boolean stackIn_48_0 = false;
             int stackIn_78_0 = 0;
             int stackIn_86_0 = 0;
             int stackIn_91_0 = 0;
@@ -119,10 +119,10 @@ final class ri {
                     ic.a((byte) 65);
                   }
                   if (!param0) {
-                    stackIn_45_0 = ((var7 & 4) == 0) ? 0 : 1;
-                    fe.field_b = stackIn_45_0 != 0;
-                    stackIn_48_0 = ((var7 & 8) == 0) ? 0 : 1;
-                    fb.field_l = stackIn_48_0 != 0;
+                    stackIn_45_0 = !((var7 & 4) == 0);
+                    fe.field_b = stackIn_45_0;
+                    stackIn_48_0 = !((var7 & 8) == 0);
+                    fb.field_l = stackIn_48_0;
                     if (!fb.field_l) {
                     }
                   }

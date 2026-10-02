@@ -160,40 +160,30 @@ final class cf extends q {
         RuntimeException var1_ref = null;
         int var3 = 0;
         eg var4 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.field_C;
         try {
           if (param0 != -114) {
-            stackIn_3_0 = 1;
-            return stackIn_3_0 != 0;
+            return true;
           }
           var4 = (eg) ((Object) sl.field_k.g(0));
           var1 = var4;
           if (var1 == null) {
-            stackIn_6_0 = 0;
-            return stackIn_6_0 != 0;
+            return false;
           }
           for (var2 = 0; var1.field_f > var2; var2++) {
             if (null != var4.field_n[var2]) {
               if (var4.field_n[var2].field_a == 0) {
-                stackIn_13_0 = 0;
-                return stackIn_13_0 != 0;
+                return false;
               }
             }
             if (var4.field_i[var2] != null) {
               if (var4.field_i[var2].field_a == 0) {
-                stackIn_18_0 = 0;
-                return stackIn_18_0 != 0;
+                return false;
               }
             }
           }
-          stackIn_21_0 = 1;
-          return stackIn_21_0 != 0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;

@@ -279,9 +279,6 @@ final class kj extends ia {
     }
 
     final boolean a(int param0, int param1, int[] param2, pc param3, boolean param4) {
-        int stackIn_8_0 = 0;
-        int stackIn_61_0 = 0;
-        int stackIn_63_0 = 0;
         RuntimeException stackIn_66_0 = null;
         StringBuilder stackIn_66_1 = null;
         RuntimeException stackIn_67_0 = null;
@@ -313,8 +310,7 @@ final class kj extends ia {
                   return true;
                 }
               }
-              stackIn_8_0 = 1;
-              return stackIn_8_0 != 0;
+              return true;
             }
           }
           var6_int = param3.field_s;
@@ -397,8 +393,7 @@ final class kj extends ia {
           }
           if (var8 == 0) {
             param3.field_u.a(param3.field_g, this.a((byte) -79, param3), this.a(param3, 761736646));
-            stackIn_63_0 = 0;
-            return stackIn_63_0 != 0;
+            return false;
           }
           param3.field_u.c(param3.field_g);
           if (param2 == null) {
@@ -418,8 +413,7 @@ final class kj extends ia {
               }
             }
           }
-          stackIn_61_0 = 1;
-          return stackIn_61_0 != 0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -1155,9 +1149,6 @@ final class kj extends ia {
 
     final boolean b(pc param0, int param1) {
         RuntimeException var3 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
@@ -1167,11 +1158,9 @@ final class kj extends ia {
         try {
           if (param0.field_u != null) {
             if (param1 == -1) {
-              stackIn_12_0 = 0;
-              return stackIn_12_0 != 0;
+              return false;
             }
-            stackIn_10_0 = 1;
-            return stackIn_10_0 != 0;
+            return true;
           }
           if (param0.field_y >= 0) {
             param0.a(false);
@@ -1182,8 +1171,7 @@ final class kj extends ia {
               }
             }
           }
-          stackIn_7_0 = 1;
-          return stackIn_7_0 != 0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -1220,7 +1208,7 @@ final class kj extends ia {
         Object stackIn_16_0;
         pc stackIn_16_1;
         int stackIn_16_2;
-        int stackIn_16_3;
+        boolean stackIn_16_3;
         pc var5;
         int var6_int;
         gd var6;
@@ -1290,14 +1278,14 @@ final class kj extends ia {
                 stackIn_16_0 = this;
                 stackIn_16_1 = (pc) ((Object) stackIn_15_1);
                 stackIn_16_2 = stackIn_15_2;
-                stackIn_16_3 = 0;
+                stackIn_16_3 = false;
               } else {
                 stackIn_16_0 = this;
                 stackIn_16_1 = (pc) ((Object) stackIn_15_1);
                 stackIn_16_2 = stackIn_15_2;
-                stackIn_16_3 = 1;
+                stackIn_16_3 = true;
               }
-              this.a(stackIn_16_1, (byte) stackIn_16_2, stackIn_16_3 != 0);
+              this.a(stackIn_16_1, (byte) stackIn_16_2, stackIn_16_3);
             }
             if (var9.field_j[param3] < 0) {
               var7.field_u.g(-1);

@@ -25,7 +25,6 @@ final class kk extends ji {
             int var2_int = 0;
             int stackIn_49_0 = 0;
             int stackIn_66_0 = 0;
-            int stackIn_86_0 = 0;
             Throwable decompiledCaughtException = null;
             long var2_long = 0L;
             sd var2 = null;
@@ -220,8 +219,7 @@ final class kk extends ji {
                   }
                 }
               }
-              stackIn_86_0 = 1;
-              return stackIn_86_0 != 0;
+              return true;
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (IOException) (Object) decompiledCaughtException;
@@ -250,13 +248,6 @@ final class kk extends ji {
 
     final static boolean a(boolean param0, CharSequence param1, byte param2) {
         int var6 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_36_0 = 0;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
@@ -272,8 +263,7 @@ final class kk extends ji {
         var8 = Geoblox.field_C;
         try {
           if (param1 == null) {
-            stackIn_4_0 = 0;
-            return stackIn_4_0 != 0;
+            return false;
           }
           {
             var3_int = param1.length();
@@ -281,8 +271,7 @@ final class kk extends ji {
               if (12 >= var3_int) {
                 var4 = oe.a(param1, param2 ^ 122);
                 if (var4 == null) {
-                  stackIn_14_0 = 0;
-                  return stackIn_14_0 != 0;
+                  return false;
                 }
                 if (var4.length() < 1) {
                   return false;
@@ -299,28 +288,23 @@ final class kk extends ji {
                       }
                       if (var5 >= 2) {
                         if (!param0) {
-                          stackIn_28_0 = 0;
-                          return stackIn_28_0 != 0;
+                          return false;
                         }
                       }
                     }
                     if (param2 != 118) {
-                      stackIn_32_0 = 0;
-                      return stackIn_32_0 != 0;
+                      return false;
                     }
                     if (var5 <= 0) {
                       return true;
                     }
-                    stackIn_36_0 = 0;
-                    return stackIn_36_0 != 0;
+                    return false;
                   }
                 }
-                stackIn_19_0 = 0;
-                return stackIn_19_0 != 0;
+                return false;
               }
             }
-            stackIn_9_0 = 0;
-            return stackIn_9_0 != 0;
+            return false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -228,8 +228,6 @@ final class la extends sh {
         int var8_int = 0;
         RuntimeException var8 = null;
         int var9 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_8_0 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -242,8 +240,7 @@ final class la extends sh {
           var9 = 5 % ((-3 - param1) / 38);
           if (var8_int != 0) {
             if (this.field_F) {
-              stackIn_3_0 = 1;
-              return stackIn_3_0 != 0;
+              return true;
             }
           }
           if (!this.a(param4, -1, param5, param0, param2)) {
@@ -252,8 +249,7 @@ final class la extends sh {
           }
           this.field_f = param3;
           if (param3 != 1) {
-            stackIn_8_0 = 1;
-            return stackIn_8_0 != 0;
+            return true;
           }
           this.field_H = -param0 + param5 - this.field_m;
           this.field_D = -param2 + (param4 - this.field_v);

@@ -37,7 +37,7 @@ final class bk {
     }
 
     final static vd a(boolean param0, int param1) {
-        int stackIn_3_0 = 0;
+        boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
@@ -52,8 +52,8 @@ final class bk {
         var8 = eh.field_d;
         var3 = var8.c((byte) 34);
         gj.field_u = var3 & 127;
-        stackIn_3_0 = ((param1 & var3) == 0) ? 0 : 1;
-        vd.field_l = stackIn_3_0 != 0;
+        stackIn_3_0 = !((param1 & var3) == 0);
+        vd.field_l = stackIn_3_0;
         bm.field_s = var8.c((byte) 34);
         uf.field_c = var8.b(2901);
         if (gj.field_u != 2) {

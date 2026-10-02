@@ -25,7 +25,6 @@ final class rh {
 
     final static void a(byte param0) {
         int stackIn_22_0 = 0;
-        int stackIn_22_1 = 0;
         RuntimeException decompiledCaughtException = null;
         float var1_float = 0.0f;
         RuntimeException var1 = null;
@@ -61,8 +60,7 @@ final class rh {
           wc.a(var1_float, (byte) 14);
           if (10000.0f > var1_float) {
             stackIn_22_0 = 0;
-            stackIn_22_1 = 0;
-            jc.a(stackIn_22_0, stackIn_22_1 != 0);
+            jc.a(stackIn_22_0, false);
           } else {
             if (!(25600.0f > var1_float)) {
               jc.a(2, false);
@@ -111,9 +109,6 @@ final class rh {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -122,12 +117,10 @@ final class rh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -87) {
-            stackIn_2_0 = 1;
-            return stackIn_2_0 != 0;
+            return true;
           }
           if (!this.a(0)) {
-            stackIn_5_0 = 0;
-            return stackIn_5_0 != 0;
+            return false;
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
@@ -135,8 +128,7 @@ final class rh {
           if (var3_int >= 0) {
             return true;
           }
-          stackIn_9_0 = 0;
-          return stackIn_9_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -372,17 +364,11 @@ final class rh {
         int var9_int = 0;
         int var20 = 0;
         byte[] array$1 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_33_0 = 0;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
-        int stackIn_39_2 = 0;
-        int stackIn_82_0 = 0;
-        int stackIn_102_0 = 0;
+        boolean stackIn_39_2 = false;
         RuntimeException stackIn_105_0 = null;
         StringBuilder stackIn_105_1 = null;
         RuntimeException stackIn_106_0 = null;
@@ -426,12 +412,10 @@ final class rh {
         byte[] var43 = null;
         try {
           if (!this.b(param3, 3)) {
-            stackIn_3_0 = 0;
-            return stackIn_3_0 != 0;
+            return false;
           }
           if (this.field_f[param3] == null) {
-            stackIn_7_0 = 0;
-            return stackIn_7_0 != 0;
+            return false;
           }
           {
             var5_int = this.field_c.field_a[param3];
@@ -457,8 +441,7 @@ final class rh {
               break;
             }
             if (var8 != 0) {
-              stackIn_22_0 = 1;
-              return stackIn_22_0 != 0;
+              return true;
             }
             L4: {
               L5: {
@@ -483,8 +466,7 @@ final class rh {
               var9 = uk.a(false, param1 - 90, this.field_f[param3]);
             }
             if (param1 != 4) {
-              stackIn_33_0 = 0;
-              return stackIn_33_0 != 0;
+              return false;
             }
             try {
               var35 = v.a(var9, -1);
@@ -501,13 +483,13 @@ final class rh {
               if (param2 == null) {
                 stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
                 stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
-                stackIn_39_2 = 0;
+                stackIn_39_2 = false;
               } else {
                 stackIn_39_0 = (RuntimeException) ((Object) stackIn_38_0);
                 stackIn_39_1 = (StringBuilder) ((Object) stackIn_38_1);
-                stackIn_39_2 = 1;
+                stackIn_39_2 = true;
               }
-              throw t.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2 != 0).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(gg.a(var9, param1 + 95, var9.length)).append(" ").append(gg.a(var9, param1 ^ 73, var9.length - 2)).append(" ").append(this.field_c.field_q[param3]).append(" ").append(this.field_c.field_m).toString());
+              throw t.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(gg.a(var9, param1 + 95, var9.length)).append(" ").append(gg.a(var9, param1 ^ 73, var9.length - 2)).append(" ").append(this.field_c.field_q[param3]).append(" ").append(this.field_c.field_m).toString());
             }
             if (this.field_h) {
               this.field_f[param3] = null;
@@ -539,8 +521,7 @@ final class rh {
                     }
                   }
                   if (var14 == 0) {
-                    stackIn_82_0 = 1;
-                    return stackIn_82_0 != 0;
+                    return true;
                   }
                   {
                     var43 = new byte[var14];
@@ -629,8 +610,7 @@ final class rh {
                 var7[var11] = hf.a(-113, var35, false);
               }
             }
-            stackIn_102_0 = 1;
-            return stackIn_102_0 != 0;
+            return true;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -807,7 +787,6 @@ final class rh {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
-        int stackIn_2_0 = 0;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -817,8 +796,7 @@ final class rh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!this.a(0)) {
-            stackIn_2_0 = 0;
-            return stackIn_2_0 != 0;
+            return false;
           }
           param0 = param0.toLowerCase();
           if (param1 > -123) {
@@ -882,8 +860,6 @@ final class rh {
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
         boolean stackIn_10_0 = false;
         boolean stackIn_12_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -897,16 +873,14 @@ final class rh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!this.a(0)) {
-            stackIn_3_0 = 0;
-            return stackIn_3_0 != 0;
+            return false;
           }
           param2 = param2.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
           var4_int = this.field_c.field_n.a(true, ab.a(80, var6));
           if (!this.b(var4_int, 3)) {
-            stackIn_7_0 = 0;
-            return stackIn_7_0 != 0;
+            return false;
           }
           var7 = (CharSequence) ((Object) param1);
           var5 = this.field_c.field_f[var4_int].a(true, ab.a(93, var7));

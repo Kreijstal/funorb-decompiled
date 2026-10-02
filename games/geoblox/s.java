@@ -192,7 +192,6 @@ final class s extends ee implements pe, pl {
 
     final boolean a(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
-        int stackIn_3_0 = 0;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
@@ -203,8 +202,7 @@ final class s extends ee implements pe, pl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(param0, param1, param2, param3)) {
-            stackIn_3_0 = 1;
-            return stackIn_3_0 != 0;
+            return true;
           }
           if (param0 == 98) {
             stackIn_6_0 = this.a(7305, param3);

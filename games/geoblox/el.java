@@ -82,7 +82,6 @@ class el extends hf {
 
     boolean a(int param0, int param1, char param2, el param3) {
         RuntimeException var5 = null;
-        int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -91,8 +90,7 @@ class el extends hf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 13) {
-            stackIn_3_0 = 0;
-            return stackIn_3_0 != 0;
+            return false;
           }
           this.field_u = (bb) null;
           return false;
@@ -123,7 +121,7 @@ class el extends hf {
         int stackIn_5_1 = 0;
         Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
+        boolean stackIn_10_1 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
@@ -151,12 +149,12 @@ class el extends hf {
 
               if (var5_int == 0) {
                 stackIn_10_0 = this;
-                stackIn_10_1 = 0;
+                stackIn_10_1 = false;
               } else {
                 stackIn_10_0 = this;
-                stackIn_10_1 = 1;
+                stackIn_10_1 = true;
               }
-              ((el) (this)).field_l = stackIn_10_1 != 0;
+              ((el) (this)).field_l = stackIn_10_1;
               if (this.field_u != null) {
                 if (!(this.field_u instanceof lg)) {
                   break L1;
@@ -211,7 +209,6 @@ class el extends hf {
 
     boolean a(byte param0, el param1) {
         RuntimeException var3 = null;
-        int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -220,8 +217,7 @@ class el extends hf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -30) {
-            stackIn_3_0 = 0;
-            return stackIn_3_0 != 0;
+            return false;
           }
           this.a(-77, -17, -47, -88, 79, (el) null, 49);
           return false;
@@ -692,7 +688,6 @@ class el extends hf {
     boolean a(int param0, int param1, int param2, int param3, int param4, int param5, el param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
-        int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -705,8 +700,7 @@ class el extends hf {
             return false;
           }
           this.field_f = param3;
-          stackIn_3_0 = 0;
-          return stackIn_3_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -729,7 +723,6 @@ class el extends hf {
 
     boolean a(int param0, int param1, int param2, int param3, int param4, el param5, int param6) {
         RuntimeException var8 = null;
-        int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -740,8 +733,7 @@ class el extends hf {
           if (param3 != -1) {
             this.a(false, 57, (el) null, -122);
           }
-          stackIn_3_0 = 0;
-          return stackIn_3_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -872,8 +864,6 @@ class el extends hf {
     final static boolean b(int param0, int param1) {
         try {
             int var2_int = 0;
-            int stackIn_14_0 = 0;
-            int stackIn_16_0 = 0;
             Throwable decompiledCaughtException = null;
             IOException var2 = null;
             if (eh.field_d.field_f >= param1) {
@@ -895,12 +885,10 @@ class el extends hf {
                 kh.field_e = oa.a(-12520);
                 eh.field_d.field_f = eh.field_d.field_f + var2_int;
                 if (param1 > eh.field_d.field_f) {
-                  stackIn_14_0 = 0;
-                  return stackIn_14_0 != 0;
+                  return false;
                 }
                 eh.field_d.field_f = 0;
-                stackIn_16_0 = 1;
-                return stackIn_16_0 != 0;
+                return true;
               }
               if (var2_int < 0) {
                 jl.a((byte) -127);
@@ -945,8 +933,6 @@ class el extends hf {
     final boolean a(StringBuilder param0, int param1, int param2, Hashtable param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -962,12 +948,10 @@ class el extends hf {
           }
           if (param3.containsKey(this)) {
             discarded$1 = param0.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
-            stackIn_6_0 = 0;
-            return stackIn_6_0 != 0;
+            return false;
           }
           param3.put(this, this);
-          stackIn_4_0 = 1;
-          return stackIn_4_0 != 0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

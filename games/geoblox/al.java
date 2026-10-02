@@ -121,9 +121,7 @@ final class al {
             int var6 = 0;
             int var7 = 0;
             String var8 = null;
-            int stackIn_4_0 = 0;
-            int stackIn_12_0 = 0;
-            int stackIn_21_0 = 0;
+            boolean stackIn_21_0 = false;
             RuntimeException stackIn_24_0 = null;
             StringBuilder stackIn_24_1 = null;
             RuntimeException stackIn_25_0 = null;
@@ -134,8 +132,7 @@ final class al {
             var7 = Geoblox.field_C;
             try {
               if (td.field_H) {
-                stackIn_4_0 = 1;
-                return stackIn_4_0 != 0;
+                return true;
               }
               try {
                 L0: {
@@ -146,8 +143,7 @@ final class al {
                     var6 = var4[var5].indexOf('=');
                     if (var6 >= 0) {
                       if (var4[var5].substring(0, var6).trim().equals(var8)) {
-                        stackIn_12_0 = 1;
-                        return stackIn_12_0 != 0;
+                        return true;
                       }
                     }
                   }
@@ -160,8 +156,8 @@ final class al {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = decompiledCaughtException;
               }
-              stackIn_21_0 = (null == param1.getParameter("tuhstatbut")) ? 0 : 1;
-              return stackIn_21_0 != 0;
+              stackIn_21_0 = !(null == param1.getParameter("tuhstatbut"));
+              return stackIn_21_0;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2 = (RuntimeException) (Object) decompiledCaughtException;

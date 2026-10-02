@@ -1006,7 +1006,6 @@ abstract class wh extends rc {
 
     final static boolean e(int param0) {
         RuntimeException var1 = null;
-        int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -1014,8 +1013,7 @@ abstract class wh extends rc {
             stackIn_4_0 = cf.field_i;
             return stackIn_4_0;
           }
-          stackIn_2_0 = 0;
-          return stackIn_2_0 != 0;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

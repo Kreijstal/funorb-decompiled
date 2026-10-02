@@ -110,9 +110,6 @@ final class g extends q {
         int var5 = 0;
         String var6 = null;
         String var7 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_13_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -130,20 +127,17 @@ final class g extends q {
                   var6 = var3.substring(0, var5);
                   var7 = var3.substring(var5 + 1);
                   if (var4.indexOf(var6) >= 0) {
-                    stackIn_6_0 = 1;
-                    return stackIn_6_0 != 0;
+                    return true;
                   }
                   if (var4.indexOf(var7) >= 0) {
-                    stackIn_9_0 = 1;
-                    return stackIn_9_0 != 0;
+                    return true;
                   }
                 }
               }
             }
           }
           if (param1 == -29267) {
-            stackIn_13_0 = 0;
-            return stackIn_13_0 != 0;
+            return false;
           }
           field_l = (String) null;
           return false;

@@ -22,26 +22,22 @@ final class hh {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_9_0 = 0;
+        boolean stackIn_9_0 = false;
         Throwable decompiledCaughtException = null;
         var1_ref = je.field_j;
         synchronized (var1_ref) {
           if (param0 <= 41) {
-            stackIn_3_0 = 0;
-            return stackIn_3_0 != 0;
+            return false;
           }
           if (vd.field_n == pc.field_p) {
-            stackIn_7_0 = 0;
-            return stackIn_7_0 != 0;
+            return false;
           }
           ki.field_d = kj.field_O[vd.field_n];
           te.field_a = ai.field_n[vd.field_n];
           vd.field_n = 1 + vd.field_n & 127;
-          stackIn_9_0 = 1;
+          stackIn_9_0 = true;
         }
-        return stackIn_9_0 != 0;
+        return stackIn_9_0;
     }
 
     public static void a(boolean param0) {

@@ -99,7 +99,6 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
-        int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -107,8 +106,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = 1;
-          return stackIn_1_0 != 0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;

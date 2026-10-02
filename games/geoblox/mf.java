@@ -32,9 +32,6 @@ final class mf {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_8_0 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -45,16 +42,13 @@ final class mf {
           var5 = param3.a(param1, -28153, param0);
           var4 = var5;
           if (param2 < 102) {
-            stackIn_2_0 = 0;
-            return stackIn_2_0 != 0;
+            return false;
           }
           if (var5 == null) {
-            stackIn_6_0 = 0;
-            return stackIn_6_0 != 0;
+            return false;
           }
           hf.a(true, var5);
-          stackIn_8_0 = 1;
-          return stackIn_8_0 != 0;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;

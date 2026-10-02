@@ -23,7 +23,7 @@ final class mb {
         RuntimeException var3 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
+        boolean stackIn_6_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -39,12 +39,12 @@ final class mb {
 
           if (!param1) {
             stackIn_6_0 = this;
-            stackIn_6_1 = 0;
+            stackIn_6_1 = false;
           } else {
             stackIn_6_0 = this;
-            stackIn_6_1 = 1;
+            stackIn_6_1 = true;
           }
-          ((mb) (this)).field_c = stackIn_6_1 != 0;
+          ((mb) (this)).field_c = stackIn_6_1;
           if (this.field_d.length() != 0) {
             return;
           }

@@ -69,7 +69,6 @@ final class ik {
     final static boolean a(ja param0, ja param1, boolean param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
-        int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_1 = 0;
         int stackIn_77_0 = 0;
@@ -94,8 +93,7 @@ final class ik {
         try {
           for (var3_int = 0; var3_int < param1.field_L; var3_int++) {
             if (param1.field_n[var3_int] == param0) {
-              stackIn_6_0 = 0;
-              return stackIn_6_0 != 0;
+              return false;
             }
           }
           L1: {

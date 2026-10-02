@@ -37,9 +37,6 @@ final class ec {
     }
 
     final static boolean b(int param0) {
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_49_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -68,13 +65,11 @@ final class ec {
                 el.field_o.field_y = 1;
                 el.field_o.c(false);
               }
-              stackIn_9_0 = 0;
-              return stackIn_9_0 != 0;
+              return false;
             }
           }
           if (h.field_a == 0) {
-            stackIn_12_0 = 0;
-            return stackIn_12_0 != 0;
+            return false;
           }
           {
             if (gf.field_f >= 5) {
@@ -152,8 +147,7 @@ final class ec {
               var12++;
             }
             h.field_a = 0;
-            stackIn_49_0 = 1;
-            return stackIn_49_0 != 0;
+            return true;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -11,8 +11,7 @@ final class gb {
     static int field_e;
 
     final static boolean b(int param0) {
-        int stackIn_7_0 = 0;
-        int stackIn_25_0 = 0;
+        boolean stackIn_25_0 = false;
         RuntimeException decompiledCaughtException = null;
         float var1_float = 0.0f;
         RuntimeException var1 = null;
@@ -30,8 +29,7 @@ final class gb {
               if (ki.field_d != 13) {
                 continue L1;
               }
-              stackIn_7_0 = 1;
-              return stackIn_7_0 != 0;
+              return true;
             }
             {
               if (0 == n.field_j % 40) {
@@ -61,8 +59,8 @@ final class gb {
                   ab.field_d = true;
                 }
               }
-              stackIn_25_0 = (494 > n.field_j) ? 0 : 1;
-              return stackIn_25_0 != 0;
+              stackIn_25_0 = !(494 > n.field_j);
+              return stackIn_25_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
