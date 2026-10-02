@@ -1,7 +1,7 @@
 # Readable GeoBlox
 
-The current export has 3,305 guarded naming rules: 32 classes, 550 fields,
-325 methods, 957 parameters and 1,441 local declarations. Both 303-file corpora
+The current export has 3,369 guarded naming rules: 32 classes, 553 fields,
+325 methods, 957 parameters and 1,502 local declarations. Both 303-file corpora
 compile, preserving 138,558 bindings and 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
@@ -54,7 +54,25 @@ smooth rotation inherits the RGB bilinear routine; inherited copies return RGB
 sprites. AWT image loading/interruption, arbitrary malformed geometry,
 real-asset rendering and whole-game equivalence remain unverified.
 
-## Current session renderer and draw pipeline
+## Current blur kernel naming
+
+Pass 55 adds 64 guarded identities: three reusable per-column channel caches
+and 61 row/column kernel locals. Every parameter and local in `blurRowsInPlace`
+and `blurColumnsInPlace` now has a guarded semantic name. Initial window bounds,
+growing/full/shrinking phases, actual edge sample counts and middle-window Q14
+reciprocal scaling are explicit. Reused slots retain both roles in their names.
+Column snapshots, forwarded aliases, update aliases and captured clamped stores
+remain separate declarations that refer to the same arrays.
+
+All 3,305 previous complete rules, raw source and generator pins remain unchanged.
+The 3,369 rules apply 32,528 edits; all 303 raw/readable sources compile,
+preserving 138,558 bindings and 388 override relationships. The original in-place
+read/write ordering, clip gates, cache allocation policy, clamps, overflow and
+division remain. These bodies are source-audited and binding-verified. Existing
+native fixtures do not execute blur; no new full-renderer, asset, gameplay or
+phone/FPS/heap coverage is claimed.
+
+## Previous session renderer and draw pipeline
 
 Pass 54 adds 193 guarded identities: eight fields, 12 methods, 53 parameters
 and 120 locals. Two earlier renderer-local rules are corrected: a rotated X
@@ -731,7 +749,7 @@ its historical proof recorded in the raw provenance. Current source/decompiler
 identity and naming migrations live in the single manifest. `ruleChanges`
 records naming changes; `sourceChange` is recorded when input identity changes.
 The latest structural pass records its source migration in Git. The current
-naming-only pass retains those source pins and records its 152 additions in
+naming-only pass retains those source pins and records its 64 additions in
 `ruleChanges`; every prior guarded rule is retained.
 All six native probe sources and their traces are pinned in
 the same manifest; no JSON snapshots are added.
@@ -756,6 +774,6 @@ the same manifest; no JSON snapshots are added.
 | Java source tree | SHA-256 |
 | --- | --- |
 | Raw | `39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe` |
-| Readable | `a1026ae777346471e155fa04f6ab4b3f30d6477d98809b4b5ce462d23b983898` |
+| Readable | `f557ae637b8d55d4955853332704048d56e6186eec89f8fce7096cff58139644` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

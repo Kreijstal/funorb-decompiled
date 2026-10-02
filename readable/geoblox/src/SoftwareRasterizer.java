@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoftwareRasterizer {
-    private static int[] field_g;
+    private static int[] blurColumnRedSums;
     static int[] field_l;
     static int clipBottom;
-    private static int[] field_j;
+    private static int[] blurColumnBlueSums;
     static int clipRight;
     static int[] field_a;
     static int clipTop;
@@ -13,7 +13,7 @@ final class SoftwareRasterizer {
     static int framebufferHeight;
     static int[] framebuffer;
     static int clipLeft;
-    private static int[] field_h;
+    private static int[] blurColumnGreenSums;
 
     final static void fillVerticalGradient(int x, int y, int width, int height, int topColor, int bottomColor) {
         int var10 = 0;
@@ -337,160 +337,160 @@ final class SoftwareRasterizer {
     }
 
     private final static void blurRowsInPlace(int[] pixels, int scratchPixel, int destinationIndex, int radius, int regionLeft, int regionWidth, int rowSkip, int regionHeight) {
-        int var13 = 0;
-        int incrementValue$0 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        int var19;
-        int var20;
-        int var21;
-        int var22;
-        int var23;
-        var8 = 16384 / (2 * radius + 1);
-        var9 = 1 + radius - regionWidth - regionLeft;
-        if (0 < var9) {
-          var9 = 0;
+        int negativeRowCounter = 0;
+        int initialDestinationIndexBeforeIncrement = 0;
+        int growingDestinationIndexBeforeIncrement = 0;
+        int fullWindowLeavingIndexBeforeIncrement = 0;
+        int fullWindowDestinationIndexBeforeIncrement = 0;
+        int shrinkingLeavingIndexBeforeIncrement = 0;
+        int shrinkingDestinationIndexBeforeIncrement = 0;
+        int reciprocalWindowScaleQ14;
+        int growingWindowEndCounter;
+        int fullWindowEndCounter;
+        int initialRightWindowOvershoot;
+        int initialWindowRight;
+        int runningRedSum;
+        int runningGreenSum;
+        int runningBlueSum;
+        int enteringPixelIndex;
+        int leavingPixelIndex;
+        int windowXOrNegativeOutputCounter;
+        int windowSampleCount;
+        int outputRed;
+        int outputGreen;
+        int outputBlue;
+        reciprocalWindowScaleQ14 = 16384 / (2 * radius + 1);
+        growingWindowEndCounter = 1 + radius - regionWidth - regionLeft;
+        if (0 < growingWindowEndCounter) {
+          growingWindowEndCounter = 0;
         }
-        var10 = stride - regionLeft - regionWidth - radius;
-        if (0 < var10) {
-          var10 = 0;
+        fullWindowEndCounter = stride - regionLeft - regionWidth - radius;
+        if (0 < fullWindowEndCounter) {
+          fullWindowEndCounter = 0;
         }
-        var11 = 0;
-        var12 = regionLeft + radius + 1;
-        if (stride < var12) {
-          var11 = var12 - stride;
-          var12 = stride;
+        initialRightWindowOvershoot = 0;
+        initialWindowRight = regionLeft + radius + 1;
+        if (stride < initialWindowRight) {
+          initialRightWindowOvershoot = initialWindowRight - stride;
+          initialWindowRight = stride;
         }
-        for (var13 = -regionHeight; var13 < 0; var13++) {
-          var14 = 0;
-          var15 = 0;
-          var16 = 0;
-          var17 = destinationIndex - radius;
-          var18 = var17 - (radius << 1) - 1;
-          var19 = regionLeft - radius;
-          if (var19 < 0) {
-            var17 = var17 - var19;
-            var18 = var18 - var19;
-            var19 = 0;
+        for (negativeRowCounter = -regionHeight; negativeRowCounter < 0; negativeRowCounter++) {
+          runningRedSum = 0;
+          runningGreenSum = 0;
+          runningBlueSum = 0;
+          enteringPixelIndex = destinationIndex - radius;
+          leavingPixelIndex = enteringPixelIndex - (radius << 1) - 1;
+          windowXOrNegativeOutputCounter = regionLeft - radius;
+          if (windowXOrNegativeOutputCounter < 0) {
+            enteringPixelIndex = enteringPixelIndex - windowXOrNegativeOutputCounter;
+            leavingPixelIndex = leavingPixelIndex - windowXOrNegativeOutputCounter;
+            windowXOrNegativeOutputCounter = 0;
           }
-          var20 = var12 - var19;
-          L5: while (var19 < var12) {
-            scratchPixel = pixels[var17];
-            var14 = var14 + (scratchPixel >> 16 & 255);
-            var15 = var15 + (scratchPixel >> 8 & 255);
-            var16 = var16 + (scratchPixel & 255);
-            var17++;
-            var18++;
-            var19++;
+          windowSampleCount = initialWindowRight - windowXOrNegativeOutputCounter;
+          L5: while (windowXOrNegativeOutputCounter < initialWindowRight) {
+            scratchPixel = pixels[enteringPixelIndex];
+            runningRedSum = runningRedSum + (scratchPixel >> 16 & 255);
+            runningGreenSum = runningGreenSum + (scratchPixel >> 8 & 255);
+            runningBlueSum = runningBlueSum + (scratchPixel & 255);
+            enteringPixelIndex++;
+            leavingPixelIndex++;
+            windowXOrNegativeOutputCounter++;
           }
-          var18 = var18 + var11;
-          incrementValue$0 = destinationIndex;
+          leavingPixelIndex = leavingPixelIndex + initialRightWindowOvershoot;
+          initialDestinationIndexBeforeIncrement = destinationIndex;
           destinationIndex++;
-          pixels[incrementValue$0] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
-          for (var19 = 1 - regionWidth; var19 < var9; var19++) {
-            var18++;
-            if (regionLeft + regionWidth + var19 + radius < clipRight) {
-              scratchPixel = pixels[var17];
-              var17++;
-              var14 = var14 + (scratchPixel >> 16 & 255);
-              var15 = var15 + (scratchPixel >> 8 & 255);
-              var16 = var16 + (scratchPixel & 255);
-              var20++;
+          pixels[initialDestinationIndexBeforeIncrement] = (runningRedSum / windowSampleCount << 16) + (runningGreenSum / windowSampleCount << 8) + runningBlueSum / windowSampleCount;
+          for (windowXOrNegativeOutputCounter = 1 - regionWidth; windowXOrNegativeOutputCounter < growingWindowEndCounter; windowXOrNegativeOutputCounter++) {
+            leavingPixelIndex++;
+            if (regionLeft + regionWidth + windowXOrNegativeOutputCounter + radius < clipRight) {
+              scratchPixel = pixels[enteringPixelIndex];
+              enteringPixelIndex++;
+              runningRedSum = runningRedSum + (scratchPixel >> 16 & 255);
+              runningGreenSum = runningGreenSum + (scratchPixel >> 8 & 255);
+              runningBlueSum = runningBlueSum + (scratchPixel & 255);
+              windowSampleCount++;
             }
-            var21 = var14 / var20;
-            var22 = var15 / var20;
-            var23 = var16 / var20;
-            incrementValue$5 = destinationIndex;
+            outputRed = runningRedSum / windowSampleCount;
+            outputGreen = runningGreenSum / windowSampleCount;
+            outputBlue = runningBlueSum / windowSampleCount;
+            growingDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[incrementValue$5] = (var21 << 16) + (var22 << 8) + var23;
+            pixels[growingDestinationIndexBeforeIncrement] = (outputRed << 16) + (outputGreen << 8) + outputBlue;
           }
-          L7: while (var19 < var10) {
-            incrementValue$3 = var18;
-            var18++;
-            scratchPixel = pixels[incrementValue$3];
-            var14 = var14 - (scratchPixel >> 16 & 255);
-            if (var14 < 0) {
-              var14 = 0;
+          L7: while (windowXOrNegativeOutputCounter < fullWindowEndCounter) {
+            fullWindowLeavingIndexBeforeIncrement = leavingPixelIndex;
+            leavingPixelIndex++;
+            scratchPixel = pixels[fullWindowLeavingIndexBeforeIncrement];
+            runningRedSum = runningRedSum - (scratchPixel >> 16 & 255);
+            if (runningRedSum < 0) {
+              runningRedSum = 0;
             }
-            var15 = var15 - (scratchPixel >> 8 & 255);
-            if (var15 < 0) {
-              var15 = 0;
+            runningGreenSum = runningGreenSum - (scratchPixel >> 8 & 255);
+            if (runningGreenSum < 0) {
+              runningGreenSum = 0;
             }
-            var16 = var16 - (scratchPixel & 255);
-            if (var16 < 0) {
-              var16 = 0;
+            runningBlueSum = runningBlueSum - (scratchPixel & 255);
+            if (runningBlueSum < 0) {
+              runningBlueSum = 0;
             }
-            scratchPixel = pixels[var17];
-            var17++;
-            var14 = var14 + (scratchPixel >> 16 & 255);
-            var15 = var15 + (scratchPixel >> 8 & 255);
-            var16 = var16 + (scratchPixel & 255);
-            var21 = var14 * var8 >> 14;
-            var22 = var15 * var8 >> 14;
-            var23 = var16 * var8 >> 14;
-            if (var21 > 255) {
-              var21 = 255;
+            scratchPixel = pixels[enteringPixelIndex];
+            enteringPixelIndex++;
+            runningRedSum = runningRedSum + (scratchPixel >> 16 & 255);
+            runningGreenSum = runningGreenSum + (scratchPixel >> 8 & 255);
+            runningBlueSum = runningBlueSum + (scratchPixel & 255);
+            outputRed = runningRedSum * reciprocalWindowScaleQ14 >> 14;
+            outputGreen = runningGreenSum * reciprocalWindowScaleQ14 >> 14;
+            outputBlue = runningBlueSum * reciprocalWindowScaleQ14 >> 14;
+            if (outputRed > 255) {
+              outputRed = 255;
             }
-            if (var22 > 255) {
-              var22 = 255;
+            if (outputGreen > 255) {
+              outputGreen = 255;
             }
-            if (var23 > 255) {
-              var23 = 255;
+            if (outputBlue > 255) {
+              outputBlue = 255;
             }
-            incrementValue$4 = destinationIndex;
+            fullWindowDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[incrementValue$4] = (var21 << 16) + (var22 << 8) + var23;
-            var19++;
+            pixels[fullWindowDestinationIndexBeforeIncrement] = (outputRed << 16) + (outputGreen << 8) + outputBlue;
+            windowXOrNegativeOutputCounter++;
           }
-          L8: while (var19 < 0) {
-            incrementValue$1 = var18;
-            var18++;
-            scratchPixel = pixels[incrementValue$1];
-            var14 = var14 - (scratchPixel >> 16 & 255);
-            var15 = var15 - (scratchPixel >> 8 & 255);
-            var16 = var16 - (scratchPixel & 255);
-            var20--;
-            var21 = var14 / var20;
-            var22 = var15 / var20;
-            var23 = var16 / var20;
-            if (var21 >= 0) {
-              if (var21 > 255) {
-                var21 = 255;
+          L8: while (windowXOrNegativeOutputCounter < 0) {
+            shrinkingLeavingIndexBeforeIncrement = leavingPixelIndex;
+            leavingPixelIndex++;
+            scratchPixel = pixels[shrinkingLeavingIndexBeforeIncrement];
+            runningRedSum = runningRedSum - (scratchPixel >> 16 & 255);
+            runningGreenSum = runningGreenSum - (scratchPixel >> 8 & 255);
+            runningBlueSum = runningBlueSum - (scratchPixel & 255);
+            windowSampleCount--;
+            outputRed = runningRedSum / windowSampleCount;
+            outputGreen = runningGreenSum / windowSampleCount;
+            outputBlue = runningBlueSum / windowSampleCount;
+            if (outputRed >= 0) {
+              if (outputRed > 255) {
+                outputRed = 255;
               }
             } else {
-              var21 = 0;
+              outputRed = 0;
             }
-            if (var22 >= 0) {
-              if (var22 > 255) {
-                var22 = 255;
+            if (outputGreen >= 0) {
+              if (outputGreen > 255) {
+                outputGreen = 255;
               }
             } else {
-              var22 = 0;
+              outputGreen = 0;
             }
-            if (var23 >= 0) {
-              if (var23 > 255) {
-                var23 = 255;
+            if (outputBlue >= 0) {
+              if (outputBlue > 255) {
+                outputBlue = 255;
               }
             } else {
-              var23 = 0;
+              outputBlue = 0;
             }
-            incrementValue$2 = destinationIndex;
+            shrinkingDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[incrementValue$2] = (var21 << 16) + (var22 << 8) + var23;
-            var19++;
+            pixels[shrinkingDestinationIndexBeforeIncrement] = (outputRed << 16) + (outputGreen << 8) + outputBlue;
+            windowXOrNegativeOutputCounter++;
           }
           destinationIndex = destinationIndex + rowSkip;
         }
@@ -580,9 +580,9 @@ final class SoftwareRasterizer {
         framebuffer = null;
         field_a = null;
         field_l = null;
-        field_g = null;
-        field_h = null;
-        field_j = null;
+        blurColumnRedSums = null;
+        blurColumnGreenSums = null;
+        blurColumnBlueSums = null;
     }
 
     final static void setPixel(int x, int y, int color) {
@@ -1472,245 +1472,245 @@ final class SoftwareRasterizer {
     }
 
     private final static void blurColumnsInPlace(int[] pixels, int scratchPixel, int destinationIndex, int radius, int regionTop, int regionHeight, int rowSkip, int regionLeft, int regionWidth) {
-        int incrementValue$8 = 0;
-        int incrementValue$7 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$0 = 0;
-        int[] stackIn_38_0 = null;
-        int stackIn_38_1 = 0;
-        int stackIn_39_2 = 0;
-        int[] stackIn_41_0 = null;
-        int stackIn_41_1 = 0;
-        int stackIn_42_2 = 0;
-        int[] stackIn_44_0 = null;
-        int stackIn_44_1 = 0;
-        int stackIn_45_2 = 0;
-        int[] var9;
-        int[] var10;
-        int[] var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        int var19;
-        int var20;
-        int var21;
-        int var22;
-        int var23;
-        int[] var24;
-        int[] var25;
-        int[] var26;
-        int[] var27;
-        int[] var28;
-        int[] var29;
+        int initialEnteringIndexBeforeIncrement = 0;
+        int initialDestinationIndexBeforeIncrement = 0;
+        int growingEnteringIndexBeforeIncrement = 0;
+        int growingDestinationIndexBeforeIncrement = 0;
+        int fullWindowLeavingIndexBeforeIncrement = 0;
+        int fullWindowEnteringIndexBeforeIncrement = 0;
+        int fullWindowDestinationIndexBeforeIncrement = 0;
+        int shrinkingLeavingIndexBeforeIncrement = 0;
+        int shrinkingDestinationIndexBeforeIncrement = 0;
+        int[] redSumsForClampedStore = null;
+        int redColumnForClampedStore = 0;
+        int nonnegativeRedSum = 0;
+        int[] greenSumsForClampedStore = null;
+        int greenColumnForClampedStore = 0;
+        int nonnegativeGreenSum = 0;
+        int[] blueSumsForClampedStore = null;
+        int blueColumnForClampedStore = 0;
+        int nonnegativeBlueSum = 0;
+        int[] redSumsForUpdates;
+        int[] greenSumsForUpdates;
+        int[] blueSumsForUpdates;
+        int reciprocalWindowScaleQ14;
+        int initialWindowRowOrNegativeOutputCounter;
+        int enteringPixelIndex;
+        int initialWindowBottom;
+        int initialBottomWindowOvershoot;
+        int windowSampleCount;
+        int columnIndexOrWindowEndCounter;
+        int leavingPixelIndex;
+        int columnIndex;
+        int channelSumAfterRemovalOrOutputRed;
+        int outputGreen;
+        int outputBlue;
+        int[] redSumsForwarded;
+        int[] greenSumsForwarded;
+        int[] blueSumsForwarded;
+        int[] redSumsSnapshot;
+        int[] greenSumsSnapshot;
+        int[] blueSumsSnapshot;
         L0: {
-          if (field_g != null) {
-            if (field_g.length >= regionWidth) {
+          if (blurColumnRedSums != null) {
+            if (blurColumnRedSums.length >= regionWidth) {
               break L0;
             }
           }
-          field_g = new int[regionWidth];
-          field_h = new int[regionWidth];
-          field_j = new int[regionWidth];
+          blurColumnRedSums = new int[regionWidth];
+          blurColumnGreenSums = new int[regionWidth];
+          blurColumnBlueSums = new int[regionWidth];
         }
-        var27 = field_g;
-        var24 = var27;
-        var9 = var24;
-        var28 = field_h;
-        var25 = var28;
-        var10 = var25;
-        var29 = field_j;
-        var26 = var29;
-        var11 = var26;
-        sf.a(var27, 0, regionWidth);
-        sf.a(var28, 0, regionWidth);
-        sf.a(var29, 0, regionWidth);
-        var12 = 16384 / (2 * radius + 1);
-        var13 = regionTop - radius;
-        if (var13 < 0) {
-          var13 = 0;
+        redSumsSnapshot = blurColumnRedSums;
+        redSumsForwarded = redSumsSnapshot;
+        redSumsForUpdates = redSumsForwarded;
+        greenSumsSnapshot = blurColumnGreenSums;
+        greenSumsForwarded = greenSumsSnapshot;
+        greenSumsForUpdates = greenSumsForwarded;
+        blueSumsSnapshot = blurColumnBlueSums;
+        blueSumsForwarded = blueSumsSnapshot;
+        blueSumsForUpdates = blueSumsForwarded;
+        sf.a(redSumsSnapshot, 0, regionWidth);
+        sf.a(greenSumsSnapshot, 0, regionWidth);
+        sf.a(blueSumsSnapshot, 0, regionWidth);
+        reciprocalWindowScaleQ14 = 16384 / (2 * radius + 1);
+        initialWindowRowOrNegativeOutputCounter = regionTop - radius;
+        if (initialWindowRowOrNegativeOutputCounter < 0) {
+          initialWindowRowOrNegativeOutputCounter = 0;
         }
-        var14 = regionLeft + var13 * stride;
-        var15 = regionTop + radius;
-        var16 = 0;
-        if (var15 >= framebufferHeight) {
-          var16 = var15 - framebufferHeight + 1;
-          var15 = framebufferHeight - 1;
+        enteringPixelIndex = regionLeft + initialWindowRowOrNegativeOutputCounter * stride;
+        initialWindowBottom = regionTop + radius;
+        initialBottomWindowOvershoot = 0;
+        if (initialWindowBottom >= framebufferHeight) {
+          initialBottomWindowOvershoot = initialWindowBottom - framebufferHeight + 1;
+          initialWindowBottom = framebufferHeight - 1;
         }
-        var17 = var15 - var13 + 1;
-        L4: while (var13 <= var15) {
-          for (var18 = 0; var18 < regionWidth; var18++) {
-            incrementValue$8 = var14;
-            var14++;
-            scratchPixel = pixels[incrementValue$8];
-            var9[var18] = var9[var18] + (scratchPixel >> 16 & 255);
-            var10[var18] = var10[var18] + (scratchPixel >> 8 & 255);
-            var11[var18] = var11[var18] + (scratchPixel & 255);
+        windowSampleCount = initialWindowBottom - initialWindowRowOrNegativeOutputCounter + 1;
+        L4: while (initialWindowRowOrNegativeOutputCounter <= initialWindowBottom) {
+          for (columnIndexOrWindowEndCounter = 0; columnIndexOrWindowEndCounter < regionWidth; columnIndexOrWindowEndCounter++) {
+            initialEnteringIndexBeforeIncrement = enteringPixelIndex;
+            enteringPixelIndex++;
+            scratchPixel = pixels[initialEnteringIndexBeforeIncrement];
+            redSumsForUpdates[columnIndexOrWindowEndCounter] = redSumsForUpdates[columnIndexOrWindowEndCounter] + (scratchPixel >> 16 & 255);
+            greenSumsForUpdates[columnIndexOrWindowEndCounter] = greenSumsForUpdates[columnIndexOrWindowEndCounter] + (scratchPixel >> 8 & 255);
+            blueSumsForUpdates[columnIndexOrWindowEndCounter] = blueSumsForUpdates[columnIndexOrWindowEndCounter] + (scratchPixel & 255);
           }
-          var14 = var14 + rowSkip;
-          var13++;
+          enteringPixelIndex = enteringPixelIndex + rowSkip;
+          initialWindowRowOrNegativeOutputCounter++;
         }
-        var14 = var14 + var16 * stride;
-        for (var18 = 0; var18 < regionWidth; var18++) {
-          incrementValue$7 = destinationIndex;
+        enteringPixelIndex = enteringPixelIndex + initialBottomWindowOvershoot * stride;
+        for (columnIndexOrWindowEndCounter = 0; columnIndexOrWindowEndCounter < regionWidth; columnIndexOrWindowEndCounter++) {
+          initialDestinationIndexBeforeIncrement = destinationIndex;
           destinationIndex++;
-          pixels[incrementValue$7] = (var27[var18] / var17 << 16) + (var28[var18] / var17 << 8) + var29[var18] / var17;
+          pixels[initialDestinationIndexBeforeIncrement] = (redSumsSnapshot[columnIndexOrWindowEndCounter] / windowSampleCount << 16) + (greenSumsSnapshot[columnIndexOrWindowEndCounter] / windowSampleCount << 8) + blueSumsSnapshot[columnIndexOrWindowEndCounter] / windowSampleCount;
         }
         destinationIndex = destinationIndex + rowSkip;
-        var13 = 1 - regionHeight;
-        var18 = 1 + radius - regionHeight - regionTop;
-        if (0 < var18) {
-          var18 = 0;
+        initialWindowRowOrNegativeOutputCounter = 1 - regionHeight;
+        columnIndexOrWindowEndCounter = 1 + radius - regionHeight - regionTop;
+        if (0 < columnIndexOrWindowEndCounter) {
+          columnIndexOrWindowEndCounter = 0;
         }
-        var19 = regionLeft + (regionTop - radius) * stride;
-        if (var13 < var18) {
-          var19 = var19 + (var18 - var13) * stride;
+        leavingPixelIndex = regionLeft + (regionTop - radius) * stride;
+        if (initialWindowRowOrNegativeOutputCounter < columnIndexOrWindowEndCounter) {
+          leavingPixelIndex = leavingPixelIndex + (columnIndexOrWindowEndCounter - initialWindowRowOrNegativeOutputCounter) * stride;
         }
-        L8: while (var13 < var18) {
+        L8: while (initialWindowRowOrNegativeOutputCounter < columnIndexOrWindowEndCounter) {
           L26: {
-            if (var13 + regionTop + regionHeight + radius < clipBottom) {
-              for (var20 = 0; var20 < regionWidth; var20++) {
-                incrementValue$5 = var14;
-                var14++;
-                scratchPixel = pixels[incrementValue$5];
-                var9[var20] = var9[var20] + (scratchPixel >> 16 & 255);
-                var10[var20] = var10[var20] + (scratchPixel >> 8 & 255);
-                var11[var20] = var11[var20] + (scratchPixel & 255);
+            if (initialWindowRowOrNegativeOutputCounter + regionTop + regionHeight + radius < clipBottom) {
+              for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
+                growingEnteringIndexBeforeIncrement = enteringPixelIndex;
+                enteringPixelIndex++;
+                scratchPixel = pixels[growingEnteringIndexBeforeIncrement];
+                redSumsForUpdates[columnIndex] = redSumsForUpdates[columnIndex] + (scratchPixel >> 16 & 255);
+                greenSumsForUpdates[columnIndex] = greenSumsForUpdates[columnIndex] + (scratchPixel >> 8 & 255);
+                blueSumsForUpdates[columnIndex] = blueSumsForUpdates[columnIndex] + (scratchPixel & 255);
               }
-              var14 = var14 + rowSkip;
-              var17++;
+              enteringPixelIndex = enteringPixelIndex + rowSkip;
+              windowSampleCount++;
               break L26;
             }
-            var14 = var14 + stride;
+            enteringPixelIndex = enteringPixelIndex + stride;
           }
-          for (var20 = 0; var20 < regionWidth; var20++) {
-            var21 = var27[var20] / var17;
-            var22 = var28[var20] / var17;
-            var23 = var29[var20] / var17;
-            incrementValue$6 = destinationIndex;
+          for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
+            channelSumAfterRemovalOrOutputRed = redSumsSnapshot[columnIndex] / windowSampleCount;
+            outputGreen = greenSumsSnapshot[columnIndex] / windowSampleCount;
+            outputBlue = blueSumsSnapshot[columnIndex] / windowSampleCount;
+            growingDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[incrementValue$6] = (var21 << 16) + (var22 << 8) + var23;
+            pixels[growingDestinationIndexBeforeIncrement] = (channelSumAfterRemovalOrOutputRed << 16) + (outputGreen << 8) + outputBlue;
           }
           destinationIndex = destinationIndex + rowSkip;
-          var13++;
+          initialWindowRowOrNegativeOutputCounter++;
         }
-        var18 = framebufferHeight - regionTop - regionHeight - radius;
-        if (0 < var18) {
-          var18 = 0;
+        columnIndexOrWindowEndCounter = framebufferHeight - regionTop - regionHeight - radius;
+        if (0 < columnIndexOrWindowEndCounter) {
+          columnIndexOrWindowEndCounter = 0;
         }
-        L10: while (var13 < var18) {
-          for (var20 = 0; var20 < regionWidth; var20++) {
-            incrementValue$4 = var19;
-            var19++;
-            scratchPixel = pixels[incrementValue$4];
-            var21 = var27[var20] - (scratchPixel >> 16 & 255);
-            stackIn_38_0 = (int[]) (var9);
-            stackIn_38_1 = var20;
-            if (var21 >= 0) {
-              stackIn_39_2 = var21;
+        L10: while (initialWindowRowOrNegativeOutputCounter < columnIndexOrWindowEndCounter) {
+          for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
+            fullWindowLeavingIndexBeforeIncrement = leavingPixelIndex;
+            leavingPixelIndex++;
+            scratchPixel = pixels[fullWindowLeavingIndexBeforeIncrement];
+            channelSumAfterRemovalOrOutputRed = redSumsSnapshot[columnIndex] - (scratchPixel >> 16 & 255);
+            redSumsForClampedStore = (int[]) (redSumsForUpdates);
+            redColumnForClampedStore = columnIndex;
+            if (channelSumAfterRemovalOrOutputRed >= 0) {
+              nonnegativeRedSum = channelSumAfterRemovalOrOutputRed;
             } else {
-              stackIn_39_2 = 0;
+              nonnegativeRedSum = 0;
             }
-            stackIn_38_0[stackIn_38_1] = stackIn_39_2;
-            var21 = var28[var20] - (scratchPixel >> 8 & 255);
-            stackIn_41_0 = (int[]) (var10);
-            stackIn_41_1 = var20;
-            if (var21 >= 0) {
-              stackIn_42_2 = var21;
+            redSumsForClampedStore[redColumnForClampedStore] = nonnegativeRedSum;
+            channelSumAfterRemovalOrOutputRed = greenSumsSnapshot[columnIndex] - (scratchPixel >> 8 & 255);
+            greenSumsForClampedStore = (int[]) (greenSumsForUpdates);
+            greenColumnForClampedStore = columnIndex;
+            if (channelSumAfterRemovalOrOutputRed >= 0) {
+              nonnegativeGreenSum = channelSumAfterRemovalOrOutputRed;
             } else {
-              stackIn_42_2 = 0;
+              nonnegativeGreenSum = 0;
             }
-            stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-            var21 = var29[var20] - (scratchPixel & 255);
-            stackIn_44_0 = (int[]) (var11);
-            stackIn_44_1 = var20;
-            if (var21 >= 0) {
-              stackIn_45_2 = var21;
+            greenSumsForClampedStore[greenColumnForClampedStore] = nonnegativeGreenSum;
+            channelSumAfterRemovalOrOutputRed = blueSumsSnapshot[columnIndex] - (scratchPixel & 255);
+            blueSumsForClampedStore = (int[]) (blueSumsForUpdates);
+            blueColumnForClampedStore = columnIndex;
+            if (channelSumAfterRemovalOrOutputRed >= 0) {
+              nonnegativeBlueSum = channelSumAfterRemovalOrOutputRed;
             } else {
-              stackIn_45_2 = 0;
+              nonnegativeBlueSum = 0;
             }
-            stackIn_44_0[stackIn_44_1] = stackIn_45_2;
+            blueSumsForClampedStore[blueColumnForClampedStore] = nonnegativeBlueSum;
           }
-          var19 = var19 + rowSkip;
-          for (var20 = 0; var20 < regionWidth; var20++) {
-            incrementValue$3 = var14;
-            var14++;
-            scratchPixel = pixels[incrementValue$3];
-            var9[var20] = var9[var20] + (scratchPixel >> 16 & 255);
-            var10[var20] = var10[var20] + (scratchPixel >> 8 & 255);
-            var11[var20] = var11[var20] + (scratchPixel & 255);
+          leavingPixelIndex = leavingPixelIndex + rowSkip;
+          for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
+            fullWindowEnteringIndexBeforeIncrement = enteringPixelIndex;
+            enteringPixelIndex++;
+            scratchPixel = pixels[fullWindowEnteringIndexBeforeIncrement];
+            redSumsForUpdates[columnIndex] = redSumsForUpdates[columnIndex] + (scratchPixel >> 16 & 255);
+            greenSumsForUpdates[columnIndex] = greenSumsForUpdates[columnIndex] + (scratchPixel >> 8 & 255);
+            blueSumsForUpdates[columnIndex] = blueSumsForUpdates[columnIndex] + (scratchPixel & 255);
           }
-          var14 = var14 + rowSkip;
-          for (var20 = 0; var20 < regionWidth; var20++) {
-            var21 = var27[var20] * var12 >> 14;
-            var22 = var28[var20] * var12 >> 14;
-            var23 = var29[var20] * var12 >> 14;
-            if (var21 > 255) {
-              var21 = 255;
+          enteringPixelIndex = enteringPixelIndex + rowSkip;
+          for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
+            channelSumAfterRemovalOrOutputRed = redSumsSnapshot[columnIndex] * reciprocalWindowScaleQ14 >> 14;
+            outputGreen = greenSumsSnapshot[columnIndex] * reciprocalWindowScaleQ14 >> 14;
+            outputBlue = blueSumsSnapshot[columnIndex] * reciprocalWindowScaleQ14 >> 14;
+            if (channelSumAfterRemovalOrOutputRed > 255) {
+              channelSumAfterRemovalOrOutputRed = 255;
             }
-            if (var22 > 255) {
-              var22 = 255;
+            if (outputGreen > 255) {
+              outputGreen = 255;
             }
-            if (var23 > 255) {
-              var23 = 255;
+            if (outputBlue > 255) {
+              outputBlue = 255;
             }
-            incrementValue$2 = destinationIndex;
+            fullWindowDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[incrementValue$2] = (var21 << 16) + (var22 << 8) + var23;
+            pixels[fullWindowDestinationIndexBeforeIncrement] = (channelSumAfterRemovalOrOutputRed << 16) + (outputGreen << 8) + outputBlue;
           }
           destinationIndex = destinationIndex + rowSkip;
-          var13++;
+          initialWindowRowOrNegativeOutputCounter++;
         }
-        L11: while (var13 < 0) {
-          for (var20 = 0; var20 < regionWidth; var20++) {
-            incrementValue$1 = var19;
-            var19++;
-            scratchPixel = pixels[incrementValue$1];
-            var9[var20] = var9[var20] - (scratchPixel >> 16 & 255);
-            var10[var20] = var10[var20] - (scratchPixel >> 8 & 255);
-            var11[var20] = var11[var20] - (scratchPixel & 255);
+        L11: while (initialWindowRowOrNegativeOutputCounter < 0) {
+          for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
+            shrinkingLeavingIndexBeforeIncrement = leavingPixelIndex;
+            leavingPixelIndex++;
+            scratchPixel = pixels[shrinkingLeavingIndexBeforeIncrement];
+            redSumsForUpdates[columnIndex] = redSumsForUpdates[columnIndex] - (scratchPixel >> 16 & 255);
+            greenSumsForUpdates[columnIndex] = greenSumsForUpdates[columnIndex] - (scratchPixel >> 8 & 255);
+            blueSumsForUpdates[columnIndex] = blueSumsForUpdates[columnIndex] - (scratchPixel & 255);
           }
-          var19 = var19 + rowSkip;
-          var17--;
-          for (var20 = 0; var20 < regionWidth; var20++) {
-            var21 = var27[var20] / var17;
-            var22 = var28[var20] / var17;
-            var23 = var29[var20] / var17;
-            if (var21 >= 0) {
-              if (var21 > 255) {
-                var21 = 255;
+          leavingPixelIndex = leavingPixelIndex + rowSkip;
+          windowSampleCount--;
+          for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
+            channelSumAfterRemovalOrOutputRed = redSumsSnapshot[columnIndex] / windowSampleCount;
+            outputGreen = greenSumsSnapshot[columnIndex] / windowSampleCount;
+            outputBlue = blueSumsSnapshot[columnIndex] / windowSampleCount;
+            if (channelSumAfterRemovalOrOutputRed >= 0) {
+              if (channelSumAfterRemovalOrOutputRed > 255) {
+                channelSumAfterRemovalOrOutputRed = 255;
               }
             } else {
-              var21 = 0;
+              channelSumAfterRemovalOrOutputRed = 0;
             }
-            if (var22 >= 0) {
-              if (var22 > 255) {
-                var22 = 255;
+            if (outputGreen >= 0) {
+              if (outputGreen > 255) {
+                outputGreen = 255;
               }
             } else {
-              var22 = 0;
+              outputGreen = 0;
             }
-            if (var23 >= 0) {
-              if (var23 > 255) {
-                var23 = 255;
+            if (outputBlue >= 0) {
+              if (outputBlue > 255) {
+                outputBlue = 255;
               }
             } else {
-              var23 = 0;
+              outputBlue = 0;
             }
-            incrementValue$0 = destinationIndex;
+            shrinkingDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[incrementValue$0] = (var21 << 16) + (var22 << 8) + var23;
+            pixels[shrinkingDestinationIndexBeforeIncrement] = (channelSumAfterRemovalOrOutputRed << 16) + (outputGreen << 8) + outputBlue;
           }
           destinationIndex = destinationIndex + rowSkip;
-          var13++;
+          initialWindowRowOrNegativeOutputCounter++;
         }
     }
 

@@ -1228,9 +1228,44 @@ The debug overview is a distinct composite, not an ordinary sprite copy.
 then mixes a0x112233 tint with per-channel products using source mean gray as
 weights. Its destination gray starts as `((2*red + blue)/3 + green) >> 1`.
 Packed masks, shifts, overflow and shared row-reset slots remain literal.
-The blur kernels' large local bodies still contain opaque names.
+Pass 55 names every blur-kernel parameter/local and the three channel caches.
+The kernels remain large, but their window phases and captured values now have
+explicit roles; the control flow is unchanged.
 
 These roles are supported by source and complete resolved-binding checks.
 Existing native fixtures retain their documented scopes; full renderSession,
 debug blending/blur, live panels/assets, AWT presentation, sustained gameplay
 and phone performance remain unverified.
+
+## In-place blur windows (pass 55)
+
+`SoftwareRasterizer.blurRasterRegion` runs `blurRowsInPlace` and then
+`blurColumnsInPlace` over the same pixels. Each kernel initializes a clipped
+window, writes its first output, grows the window at the leading edge, slides
+its full middle window, then shrinks the trailing edge. Edge outputs divide by
+`windowSampleCount`; middle outputs multiply by `reciprocalWindowScaleQ14`
+and shift by 14. Their truncation and clamp details remain literal.
+
+| Role | Row kernel | Column kernel |
+| --- | --- | --- |
+| Window cursor reused for output | `windowXOrNegativeOutputCounter` | `initialWindowRowOrNegativeOutputCounter` |
+| Phase limits | `growingWindowEndCounter`, `fullWindowEndCounter` | `columnIndexOrWindowEndCounter`, also reused as an initial column index |
+| Entering/leaving reads | `enteringPixelIndex`, `leavingPixelIndex` | Same names, with row skipping |
+| Accumulated channels | `runningRedSum`, `runningGreenSum`, `runningBlueSum` | `blurColumnRedSums`, `blurColumnGreenSums`, `blurColumnBlueSums` caches |
+| Reused channel slot | Separate sums and outputs | `channelSumAfterRemovalOrOutputRed` holds red, green and blue subtraction results before serving as output red |
+
+The column caches are allocated together when the red cache is absent or too
+short, then cleared over `regionWidth`. `redSumsSnapshot`, `redSumsForwarded`
+and `redSumsForUpdates` all refer to that same red array; the other channels have
+matching aliases. The `*ForClampedStore` arrays and columns capture store targets
+before the nonnegative channel result is selected. The aliases and captured
+indices remain separate because this pass changes names only.
+
+Entering and leaving reads use the pixel array that the kernels also overwrite.
+This is the original in-place algorithm; replacing it with a convolution over a
+separate source snapshot would require a behavior change. Initial overshoot,
+clipRight/clipBottom gates, asymmetric clamp locations, integer overflow,
+division and increment snapshots retain their original order. The source and
+complete binding checks support these roles. Existing native fixtures do not
+execute the blur kernels; live debug rendering and device behavior remain
+unverified.
