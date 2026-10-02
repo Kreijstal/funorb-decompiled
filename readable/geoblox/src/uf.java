@@ -385,7 +385,7 @@ final class uf implements Runnable {
                 } else {
                   try {
                     L4: {
-                      if ((var7.field_x ^ -1) != -3) {
+                      if (var7.field_x != 2) {
                         if (3 == var7.field_x) {
                           var7.field_y = var7.field_w.a((int)var7.field_i, (byte) -76);
                           decompiledRegionSelector1 = 1;

@@ -8,11 +8,11 @@ final class hj {
 
     final static int a(byte param0, int param1) {
         int var2 = 0;
-        if (0 > param1 || -65537 >= (param1 ^ -1)) {
+        if (0 > param1 || param1 >= 65536) {
             param1 = param1 >>> 16;
             var2 += 16;
         }
-        if (!(-257 < (param1 ^ -1))) {
+        if (!(param1 < 256)) {
             var2 += 8;
             param1 = param1 >>> 8;
         }
@@ -20,7 +20,7 @@ final class hj {
             var2 += 4;
             param1 = param1 >>> 4;
         }
-        if (-5 >= (param1 ^ -1)) {
+        if (param1 >= 4) {
             var2 += 2;
             param1 = param1 >>> 2;
         }

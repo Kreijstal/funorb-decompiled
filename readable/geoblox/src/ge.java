@@ -36,29 +36,29 @@ final class ge {
         if (param0 >= 103) {
           var2 = 0;
           var3 = 0;
-          L0: while ((var2 ^ -1) > -9) {
+          L0: while (var2 < 8) {
             this.field_g[var2] = f.a(cj.a((long)this.field_i[7 + var3], 255L), f.a(f.a(f.a(f.a(cj.a(1095216660480L, (long)this.field_i[var3 - -3] << 2028813600), f.a(cj.a(255L, (long)this.field_i[var3 - -2]) << 500873448, f.a(cj.a((long)this.field_i[var3 + 1] << 1835312432, 71776119061217280L), (long)this.field_i[var3] << -1648548680))), cj.a((long)this.field_i[4 + var3] << -1312887208, 4278190080L)), cj.a(16711680L, (long)this.field_i[var3 + 5] << -1498542512)), cj.a((long)this.field_i[var3 - -6] << -1331544312, 65280L)));
             var3 += 8;
             var2++;
           }
-          for (var2 = 0; (var2 ^ -1) > -9; var2++) {
+          for (var2 = 0; var2 < 8; var2++) {
             dupTemp$0 = this.field_c[var2];
             arrayValue$1 = this.field_g[var2];
             this.field_a[var2] = dupTemp$0;
             this.field_b[var2] = f.a(arrayValue$1, dupTemp$0);
           }
           for (var2 = 1; 10 >= var2; var2++) {
-            for (var3 = 0; (var3 ^ -1) > -9; var3++) {
+            for (var3 = 0; var3 < 8; var3++) {
               this.field_k[var3] = 0L;
               var4 = 0;
               var5 = 56;
-              L9: while ((var4 ^ -1) > -9) {
+              L9: while (var4 < 8) {
                 this.field_k[var3] = f.a(this.field_k[var3], qc.field_g[var4][cd.a(255, (int)(this.field_a[cd.a(7, var3 + -var4)] >>> var5))]);
                 var5 -= 8;
                 var4++;
               }
             }
-            for (var3 = 0; -9 < (var3 ^ -1); var3++) {
+            for (var3 = 0; var3 < 8; var3++) {
               this.field_a[var3] = this.field_k[var3];
             }
             this.field_a[0] = f.a(this.field_a[0], qc.field_h[var2]);
@@ -111,7 +111,7 @@ final class ge {
             var9 = param1;
             var11 = 31;
             var12 = param2;
-            L1: while (-1 >= (var11 ^ -1)) {
+            L1: while (var11 >= 0) {
               var12 = var12 + ((255 & (int)var9) + (this.field_j[var11] & 255));
               this.field_j[var11] = (byte)var12;
               var12 = var12 >>> 8;
@@ -120,7 +120,7 @@ final class ge {
             }
             L2: while (true) {
               if (8L >= param1) {
-                if ((param1 ^ -1L) >= -1L) {
+                if (param1 <= 0L) {
                   var8 = 0;
                 } else {
                   var8 = param0[var5_int] << var6 & 255;
@@ -132,7 +132,7 @@ final class ge {
                   param1 = param1 - (long)(8 + -var7);
                   this.field_e = this.field_e + 1;
                   this.field_h = this.field_h + (-var7 + 8);
-                  if ((this.field_h ^ -1) == -513) {
+                  if (this.field_h == 512) {
                     this.c(118);
                     this.field_h = 0;
                     this.field_e = 0;
@@ -143,7 +143,7 @@ final class ge {
                 break L0;
               } else {
                 var8 = 255 & param0[var5_int] << var6 | (param0[var5_int + 1] & 255) >>> -var6 + 8;
-                if (-1 >= (var8 ^ -1)) {
+                if (var8 >= 0) {
                   if (256 > var8) {
                     this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8 >>> var7);
                     this.field_h = this.field_h + (-var7 + 8);
@@ -241,7 +241,7 @@ final class ge {
             L1: {
               this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], 128 >>> cd.a(this.field_h, 7));
               this.field_e = this.field_e + 1;
-              if (-33 > (this.field_e ^ -1)) {
+              if (this.field_e > 32) {
                 L2: while (this.field_e < 64) {
                   fieldTemp$0 = this.field_e;
                   this.field_e = this.field_e + 1;
@@ -255,7 +255,7 @@ final class ge {
             if (!param2) {
               this.a(-38);
             }
-            L4: while ((this.field_e ^ -1) > -33) {
+            L4: while (this.field_e < 32) {
               fieldTemp$1 = this.field_e;
               this.field_e = this.field_e + 1;
               this.field_i[fieldTemp$1] = (byte) 0;
@@ -264,7 +264,7 @@ final class ge {
             this.c(117);
             var4_int = 0;
             var5 = param1;
-            L5: while (-9 < (var4_int ^ -1)) {
+            L5: while (var4_int < 8) {
               var6 = this.field_c[var4_int];
               param0[var5] = (byte)(int)(var6 >>> -462128648);
               param0[1 + var5] = (byte)(int)(var6 >>> 2049056944);
@@ -311,7 +311,7 @@ final class ge {
             IOException var1 = null;
             String var2 = null;
             qc var3 = null;
-            if (-5 < (wg.field_i.field_b ^ -1)) {
+            if (wg.field_i.field_b < 4) {
               try {
                 L0: {
                   if (qh.field_J == 0) {
@@ -343,10 +343,10 @@ final class ge {
                     qh.field_J = qh.field_J + 1;
                     eb.field_b = 30000L + oa.a(param0 + -12446);
                   }
-                  if (-4 == (qh.field_J ^ -1)) {
+                  if (qh.field_J == 3) {
                     if (0 < li.field_a.a((byte) 78)) {
                       var1_int = li.field_a.c(-17422);
-                      if (-1 == (var1_int ^ -1)) {
+                      if (var1_int == 0) {
                         qh.field_J = qh.field_J + 1;
                       } else {
                         stackIn_27_0 = eb.a(var1_int, 28625);
@@ -411,7 +411,7 @@ final class ge {
     final void a(int param0) {
         int var2 = 0;
         int var3 = Geoblox.field_C;
-        for (var2 = 0; -33 < (var2 ^ -1); var2++) {
+        for (var2 = 0; var2 < 32; var2++) {
             this.field_j[var2] = (byte) 0;
         }
         this.field_i[0] = (byte) 0;

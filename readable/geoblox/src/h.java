@@ -42,7 +42,7 @@ final class h {
                   var2 = param0.getDocumentBase().getFile();
                   var3 = var2.indexOf('?');
                   var4 = "reload.ws";
-                  if ((var3 ^ -1) <= -1) {
+                  if (var3 >= 0) {
                     var4 = var4 + var2.substring(var3);
                   }
                   var5 = new java.net.URL(param0.getCodeBase(), var4);

@@ -226,7 +226,7 @@ final class s extends ee implements pe, pl {
             decompiledRegionSelector0 = 0;
           } else {
             if (param0 != 98) {
-              if (-100 == (param0 ^ -1)) {
+              if (param0 == 99) {
                 stackIn_10_0 = this.a(param3, -104);
                 decompiledRegionSelector0 = 2;
               } else {
@@ -354,7 +354,7 @@ final class s extends ee implements pe, pl {
                   var5 = uj.a(';', true, var4);
                   for (var6 = 0; var5.length > var6; var6++) {
                     var7 = var5[var6].indexOf('=');
-                    if (-1 >= (var7 ^ -1)) {
+                    if (var7 >= 0) {
                       if (var5[var6].substring(0, var7).trim().equals(var3)) {
                         stackIn_5_0 = var5[var6].substring(var7 + 1).trim();
                         decompiledRegionSelector0 = 1;

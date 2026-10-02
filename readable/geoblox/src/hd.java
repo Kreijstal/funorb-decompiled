@@ -49,7 +49,7 @@ final class hd extends sh {
                   fj.field_m = 0;
                   el.gameplaySession.sessionPhase = 1;
                   di.releasedInDifficultyStep = 0;
-                  if (-3 < (gb.field_c ^ -1)) {
+                  if (gb.field_c < 2) {
                     ld.advanceDifficulty(false);
                   }
                   gb.field_c = 0;
@@ -62,7 +62,7 @@ final class hd extends sh {
                   fj.field_m = 0;
                   el.gameplaySession.sessionPhase = 1;
                   di.releasedInDifficultyStep = 0;
-                  if (-3 < (gb.field_c ^ -1)) {
+                  if (gb.field_c < 2) {
                     ld.advanceDifficulty(false);
                   }
                   gb.field_c = 0;
@@ -78,7 +78,7 @@ final class hd extends sh {
                   fj.field_m = 0;
                   el.gameplaySession.sessionPhase = 1;
                   di.releasedInDifficultyStep = 0;
-                  if (-3 < (gb.field_c ^ -1)) {
+                  if (gb.field_c < 2) {
                     ld.advanceDifficulty(false);
                   }
                   gb.field_c = 0;
@@ -91,7 +91,7 @@ final class hd extends sh {
                   fj.field_m = 0;
                   el.gameplaySession.sessionPhase = 1;
                   di.releasedInDifficultyStep = 0;
-                  if (-3 < (gb.field_c ^ -1)) {
+                  if (gb.field_c < 2) {
                     ld.advanceDifficulty(false);
                   }
                   gb.field_c = 0;
@@ -108,7 +108,7 @@ final class hd extends sh {
                 fj.field_m = 0;
                 el.gameplaySession.sessionPhase = 1;
                 di.releasedInDifficultyStep = 0;
-                if (-3 < (gb.field_c ^ -1)) {
+                if (gb.field_c < 2) {
                   ld.advanceDifficulty(false);
                 }
                 gb.field_c = 0;
@@ -121,7 +121,7 @@ final class hd extends sh {
                 fj.field_m = 0;
                 el.gameplaySession.sessionPhase = 1;
                 di.releasedInDifficultyStep = 0;
-                if (-3 < (gb.field_c ^ -1)) {
+                if (gb.field_c < 2) {
                   ld.advanceDifficulty(false);
                 }
                 gb.field_c = 0;

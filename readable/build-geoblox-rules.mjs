@@ -49,7 +49,7 @@ const rebuiltPassSeven = {...passSix, version: 7, previousRulesSha256: sha256(pa
   source: passSeven.source, generators: passSeven.generators, renames};
 if (passSevenBytes.toString() !== JSON.stringify(rebuiltPassSeven, null, 2) + '\n')
   throw new Error('Retained pass 7 does not match its reviewed rule lineage');
-if (pin.namingMigration !== 'rules/geoblox-v13-text.json')
+if (pin.namingMigration !== 'rules/geoblox-v14-migration.json')
   throw new Error('Changed input requires reviewed naming-rule migration');
 const passEightBytes = read('rules/geoblox-v8.json');
 const passEight = JSON.parse(passEightBytes);
@@ -194,17 +194,19 @@ const rebuiltPassTwelve = {...passEleven, version: 12, previousRulesSha256: sha2
   source: passTwelve.source, generators: passTwelve.generators, renames: currentRenames};
 if (passTwelveBytes.toString() !== JSON.stringify(rebuiltPassTwelve, null, 2) + '\n')
   throw new Error('Retained pass 12 does not match its reviewed rule lineage');
-const textBytes = read(pin.namingMigration);
+const passThirteenBytes = read('rules/geoblox-v13.json');
+const passThirteen = JSON.parse(passThirteenBytes);
+const textBytes = read('rules/geoblox-v13-text.json');
 const text = JSON.parse(textBytes);
 const toolPinBytes = read('tools/PIN.json');
 const toolPin = JSON.parse(toolPinBytes);
 if (text.schema !== 1 || text.version !== 13 ||
     text.previousRulesSha256 !== sha256(passTwelveBytes) ||
-    text.inputTreeSha256 !== pin.inputTreeSha256 ||
+    text.inputTreeSha256 !== passThirteen.inputTreeSha256 ||
     text.inputTreeSha256 !== passTwelve.inputTreeSha256 ||
-    text.javaToolsCommit !== pin.generators.javaTools.commit ||
+    text.javaToolsCommit !== passThirteen.generators.javaTools.commit ||
     text.javaToolsCommit !== passTwelve.generators.javaTools.commit ||
-    pin.commit !== passTwelve.source.commit ||
+    passThirteen.source.commit !== passTwelve.source.commit ||
     text.namingToolCommit !== toolPin.adaptedToolCommit ||
     text.namingToolPinSha256 !== sha256(toolPinBytes) ||
     !Array.isArray(text.renames) || text.renames.length !== 199 ||
@@ -229,8 +231,39 @@ const textRenames = [...currentRenames, ...text.renames]
   .sort((a, b) => a.symbol < b.symbol ? -1 : a.symbol > b.symbol ? 1 : 0);
 if (new Set(textRenames.map(rule => rule.symbol)).size !== textRenames.length)
   throw new Error('Text additions have duplicate naming identities');
-const rules = {...passTwelve, version: 13, previousRulesSha256: sha256(passTwelveBytes),
-  namingMigrationSha256: sha256(textBytes), inputTreeSha256: pin.inputTreeSha256,
+const rebuiltPassThirteen = {...passTwelve, version: 13,
+  previousRulesSha256: sha256(passTwelveBytes), namingMigrationSha256: sha256(textBytes),
+  inputTreeSha256: passThirteen.inputTreeSha256, source: passThirteen.source,
+  generators: passThirteen.generators, renames: textRenames};
+if (passThirteenBytes.toString() !== JSON.stringify(rebuiltPassThirteen, null, 2) + '\n')
+  throw new Error('Retained pass 13 does not match its reviewed rule lineage');
+const comparisonBytes = read(pin.namingMigration);
+const comparison = JSON.parse(comparisonBytes);
+const namedTextLocals = textRenames.filter(rule => rule.symbol.startsWith('L:')).length;
+if (comparison.schema !== 1 || comparison.version !== 14 ||
+    comparison.previousRulesSha256 !== sha256(passThirteenBytes) ||
+    comparison.previousInputTreeSha256 !== passThirteen.inputTreeSha256 ||
+    comparison.sourceCommit !== pin.commit ||
+    comparison.inputTreeSha256 !== pin.inputTreeSha256 ||
+    comparison.javaToolsCommit !== pin.generators.javaTools.commit ||
+    !Array.isArray(comparison.identityChanges) || comparison.identityChanges.length !== 0 ||
+    comparison.review.rulesRetained !== textRenames.length ||
+    comparison.review.originalSpellingGuardsMatched !== textRenames.length ||
+    comparison.review.namedLocals !== namedTextLocals ||
+    comparison.review.namedLocalDeclarationIdentitiesUnchanged !== namedTextLocals ||
+    comparison.review.namedLocalDeclarationIdentitiesMoved !== 0 ||
+    comparison.review.namedLocalsUniqueWithinMethodBeforeAndAfter !== true ||
+    comparison.review.classFieldMethodParameterIdentitiesUnchanged !== true ||
+    comparison.review.changedJavaFiles !== 156 ||
+    !/^[a-f0-9]{64}$/.test(comparison.textEvidence?.loaderSourceSha256 ?? ''))
+  throw new Error('Input or declaration identities differ from the reviewed pass-14 migration');
+const resourceIdentities = assignments => assignments?.map(binding => ({...binding,
+  resources: binding.resources.map(({line, ...resource}) => resource)}));
+if (JSON.stringify(resourceIdentities(comparison.textEvidence.resourceAssignments)) !==
+    JSON.stringify(resourceIdentities(text.resourceAssignments)))
+  throw new Error('Pass-14 text evidence changes reviewed resource identities');
+const rules = {...passThirteen, version: 14, previousRulesSha256: sha256(passThirteenBytes),
+  namingMigrationSha256: sha256(comparisonBytes), inputTreeSha256: pin.inputTreeSha256,
   source: {repository: pin.sourceRepository, commit: pin.commit, subdirectory: pin.subdirectory},
   generators: pin.generators, renames: textRenames};
 const output = JSON.stringify(rules, null, 2) + '\n';

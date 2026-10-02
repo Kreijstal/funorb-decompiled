@@ -117,7 +117,7 @@ final class MusicDecoder extends IntrusiveNode {
               for (sampleIndex = 0; sampleIndex < samplesToWrite; sampleIndex++) {
                 unsignedPcmSample = (int)(128.0f + decodedSamples[sampleIndex] * 128.0f);
                 if ((unsignedPcmSample & -256) != 0) {
-                  unsignedPcmSample = (unsignedPcmSample ^ -1) >> 31;
+                  unsignedPcmSample = ~unsignedPcmSample >> 31;
                 }
                 incrementValue$0 = writePosition;
                 writePosition++;
@@ -204,7 +204,7 @@ final class MusicDecoder extends IntrusiveNode {
         this.field_I = var2.a((byte) -128);
         this.field_n = var2.a((byte) -89);
         if (this.field_n < 0) {
-            this.field_n = this.field_n ^ -1;
+            this.field_n = ~this.field_n;
             this.field_A = true;
         }
         int var3 = var2.a((byte) -108);
@@ -252,7 +252,7 @@ final class MusicDecoder extends IntrusiveNode {
               for (var6 = 0; var6 < var5; var6++) {
                 var7 = (int)(128.0f + var4[var6] * 128.0f);
                 if ((var7 & -256) != 0) {
-                  var7 = (var7 ^ -1) >> 31;
+                  var7 = ~var7 >> 31;
                 }
                 incrementValue$0 = var2;
                 var2++;

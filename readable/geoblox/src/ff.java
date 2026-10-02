@@ -80,8 +80,8 @@ class ff implements dh, cc {
             if (!this.field_q) {
               var12 = this.field_i;
               if (var12 != 0) {
-                if (-3 != (var12 ^ -1)) {
-                  if (-4 != (var12 ^ -1)) {
+                if (var12 != 2) {
+                  if (var12 != 3) {
                     if (var12 != 1) {
                     }
                   }
@@ -93,10 +93,10 @@ class ff implements dh, cc {
                 var11 = this.field_n.field_o;
               }
               var12 = this.field_g;
-              if (-1 != (var12 ^ -1)) {
-                if ((var12 ^ -1) != -4) {
-                  if (-2 != (var12 ^ -1)) {
-                    if (-3 != (var12 ^ -1)) {
+              if (var12 != 0) {
+                if (var12 != 3) {
+                  if (var12 != 1) {
+                    if (var12 != 2) {
                       break L1;
                     } else {
                       this.field_n.c(this.c(112, param2), var9_int + this.a(param2, param7, param3 + 11875, param6), var11 + this.b(param2, param0, 1674, param4), param5, param1);
@@ -173,9 +173,9 @@ class ff implements dh, cc {
           if (param0 == 109) {
             var6 = this.field_i;
             if (var6 != 0) {
-              if (-3 != (var6 ^ -1)) {
+              if (var6 != 2) {
                 if (var6 != 3) {
-                  if (-2 == (var6 ^ -1)) {
+                  if (var6 == 1) {
                   }
                 }
                 var5 = (var4 - (this.field_n.field_o + this.field_n.field_q) >> 307249633) + this.field_n.field_o;
@@ -189,9 +189,9 @@ class ff implements dh, cc {
               L5: {
                 var6 = this.field_g;
                 if (var6 != 0) {
-                  if (-4 != (var6 ^ -1)) {
+                  if (var6 != 3) {
                     if (var6 != 1) {
-                      if (-3 != (var6 ^ -1)) {
+                      if (var6 != 2) {
                         break L5;
                       } else {
                         if (!(param1.field_w instanceof vc)) {

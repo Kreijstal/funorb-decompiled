@@ -72,7 +72,7 @@ abstract class nh {
               fa.field_c.a((byte) -84, var7_int);
               fa.field_c.a(var12, (byte) -33);
               if (vf.field_I != null) {
-                if ((vf.field_I.field_j.length ^ -1) <= -101) {
+                if (vf.field_I.field_j.length >= 100) {
                   break L5;
                 }
               }

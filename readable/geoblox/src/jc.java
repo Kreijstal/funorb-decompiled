@@ -10,7 +10,7 @@ final class jc {
         int var3;
         var3 = Geoblox.field_C;
         if (7 == param0) {
-          if ((MenuScreen.field_h ^ -1) != -37) {
+          if (MenuScreen.field_h != 36) {
             MenuScreen.field_h = 36;
             pa.field_g = 110;
             nd.field_a = 6;
@@ -20,12 +20,12 @@ final class jc {
         if (pa.field_g <= 0) {
           if (param1) {
             field_a = (Sprite) null;
-            if (-1 != (param0 ^ -1)) {
+            if (param0 != 0) {
               if (1 != param0) {
-                if (-3 != (param0 ^ -1)) {
+                if (param0 != 2) {
                   if (3 != param0) {
-                    if (-5 != (param0 ^ -1)) {
-                      if ((param0 ^ -1) == -6) {
+                    if (param0 != 4) {
+                      if (param0 == 5) {
                         pa.field_g = 110;
                         nd.field_a = 5;
                         MenuScreen.field_h = 30;
@@ -54,7 +54,7 @@ final class jc {
                   }
                 } else {
                   if (12 != MenuScreen.field_h) {
-                    if (-25 != (MenuScreen.field_h ^ -1)) {
+                    if (MenuScreen.field_h != 24) {
                       if (30 != MenuScreen.field_h) {
                         if (36 != MenuScreen.field_h) {
                           td.a(-348, fl.field_c[26]);
@@ -96,8 +96,8 @@ final class jc {
             } else {
               if (MenuScreen.field_h != 0) {
                 if (24 != MenuScreen.field_h) {
-                  if ((MenuScreen.field_h ^ -1) != -31) {
-                    if (-37 != (MenuScreen.field_h ^ -1)) {
+                  if (MenuScreen.field_h != 30) {
+                    if (MenuScreen.field_h != 36) {
                       td.a(-348, fl.field_c[25]);
                       MenuScreen.field_h = 0;
                       nd.field_a = 0;
@@ -129,12 +129,12 @@ final class jc {
               }
             }
           } else {
-            if (-1 != (param0 ^ -1)) {
+            if (param0 != 0) {
               if (1 != param0) {
-                if (-3 != (param0 ^ -1)) {
+                if (param0 != 2) {
                   if (3 != param0) {
-                    if (-5 != (param0 ^ -1)) {
-                      if ((param0 ^ -1) != -6) {
+                    if (param0 != 4) {
+                      if (param0 != 5) {
                         uf.field_b = uf.field_b % 6 - -MenuScreen.field_h;
                         return;
                       } else {
@@ -166,7 +166,7 @@ final class jc {
                     nd.field_a = 2;
                     MenuScreen.field_h = 12;
                   } else {
-                    if (-25 != (MenuScreen.field_h ^ -1)) {
+                    if (MenuScreen.field_h != 24) {
                       if (30 != MenuScreen.field_h) {
                         if (36 != MenuScreen.field_h) {
                           td.a(-348, fl.field_c[26]);
@@ -203,8 +203,8 @@ final class jc {
             } else {
               if (MenuScreen.field_h != 0) {
                 if (24 != MenuScreen.field_h) {
-                  if ((MenuScreen.field_h ^ -1) != -31) {
-                    if (-37 != (MenuScreen.field_h ^ -1)) {
+                  if (MenuScreen.field_h != 30) {
+                    if (MenuScreen.field_h != 36) {
                       td.a(-348, fl.field_c[25]);
                       MenuScreen.field_h = 0;
                       nd.field_a = 0;

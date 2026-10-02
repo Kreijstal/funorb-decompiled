@@ -58,7 +58,7 @@ final class AccountWelcomePanel extends ee implements pl {
             if (param1 != 13) {
               loadingGraphicsText = (String) null;
             }
-            if ((param0 ^ -1) != -99) {
+            if (param0 != 98) {
               if (99 == param0) {
                 stackIn_13_0 = this.a(param3, -119);
                 decompiledRegionSelector0 = 2;

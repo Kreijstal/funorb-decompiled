@@ -1,8 +1,8 @@
 # Readable source exports
 
-GeoBlox pass 13 has 841 reviewed naming rules: 18 classes, 346 fields,
-136 methods, 103 parameters and 238 guarded local declarations. It preserves
-original arithmetic, strings and numeric IDs. The new decompiler renders proven
+GeoBlox pass 14 has 841 reviewed naming rules: 18 classes, 346 fields,
+136 methods, 103 parameters and 238 guarded local declarations. It preserves strings and numeric IDs; typed XOR-minus-one expressions and
+comparisons now use equivalent signed integer/long conditions. The new decompiler renders proven
 single-entry branches as ordinary Java bodies and keeps verified exception-region
 loop fanouts structured. Nested exception cycles are recovered with bounded
 copies. Named text resources, loader flow and decoder variables now make
@@ -12,7 +12,8 @@ sharing mutable locals and preserving catch scopes. Builder chains with unknown
 receiver contents retain their operations and failure context. The reverse map
 keeps original JVM identities and exact edit information.
 
-Start with [GameplaySession.java](geoblox/src/GameplaySession.java),
+See [comparison readability](COMPARISON-READABILITY.md) for the rewrite and its
+native verification. Start with [GameplaySession.java](geoblox/src/GameplaySession.java),
 [GameplayEntity.java](geoblox/src/GameplayEntity.java),
 [ScorePopup.java](geoblox/src/ScorePopup.java),
 [AccountWelcomePanel.java](geoblox/src/AccountWelcomePanel.java) and the
@@ -29,11 +30,11 @@ Start with [GameplaySession.java](geoblox/src/GameplaySession.java),
   dependency and output hashes, JDK identity and binding checks.
 - [geoblox-source-pin.json](geoblox-source-pin.json): the exact source commit
   and dependency pin. The input is `games/geoblox` at commit
-  `844b92ec48a7bc48e18e7eb0aa5a2599e631e895`.
+  `63115c1bcb703200f2caf4048d2e0b7671b6aeb8`.
 - [tools/PIN.json](tools/PIN.json): exact bundled naming-tool file digests.
 - [rules](rules): the retained 491-rule manifest, 151 gameplay additions,
-  complete pass-6 through pass-12 manifests, explicit pass-7 through pass-12 input
-  migrations and the reviewed pass-13 text additions.
+  complete pass-6 through pass-13 manifests, reviewed input migrations,
+  pass-13 text additions and the pass-14 comparison migration.
   Every previous manifest and the changed input are guarded by SHA-256.
 - `funorb-stubs.jar`: the frozen compilation dependency, included byte for byte.
 
@@ -42,22 +43,22 @@ The decompilation's tool revisions are separate from game-source hashes:
 | Tool | Git commit |
 | --- | --- |
 | Deko | `a572c4dd0f0174bfcd7777be53d7ceba2f970f18` |
-| java-tools | `a6e20fcdc1471afd9190c3391c03d89147cf360b` |
+| java-tools | `cee965649f1f2afaf1c7a3efd1fdb826231f3d30` |
 | Upstream naming tool in Deko | `d41315508e071f6bd672d65eb2f5a8d428648d6f` |
 | Adapted naming tool | `a0bc835957148b9b1e1f8221c59b79d899d22738` in `geoblox-readable-text-tools.bundle` |
 
 The decompiler repository source archive has SHA-256
-`e6e46b1815a8ccc6867e742d0fb5d4411d3ceeb465648060a6786fec02b9101a`.
+`6b29811f82c01f461281f30e92945601f5056632fa8338afdd2106ad6f840bc7`.
 Recreate that identity in the java-tools checkout with:
 
 ```sh
-git archive --format=tar a6e20fcdc1471afd9190c3391c03d89147cf360b | sha256sum
+git archive --format=tar cee965649f1f2afaf1c7a3efd1fdb826231f3d30 | sha256sum
 ```
 
 This hashes the tracked **decompiler repository source**, including its commit
 archive metadata. The game-source tree hashes at the end of this document are
 separate identities. The local revision is available in
-`java-tools-safe-reconstruction.bundle` pending remote publication.
+`java-tools-comparison-v14.bundle` pending remote publication.
 
 The generic naming tool belongs to Deko. `tools/` is a frozen publication copy,
 so this checkout can reproduce the export without depending on a mutable sibling
@@ -69,9 +70,11 @@ JavaScript validator; constructor method names still require a class rule. The
 Java resolver and binding/override checks are unchanged. The wrapper checks all
 three frozen tool digests before use.
 
-The pinned raw input was freshly decompiled in pass 12 from the unchanged
-verified transformed bytecode: 303 sources and zero hard failures. Pass 13
-changes naming rules and the naming validator; that raw input remains unchanged. The previous ASM check covered
+The pinned raw input was freshly decompiled in pass 14 from the unchanged
+verified transformed bytecode: 303 sources and zero hard failures. Pass 14
+changes 156 source files through typed complement rendering and retains all
+841 reviewed names. The old pass-13 rule manifest and resource evidence remain
+frozen; the pass-14 migration binds the new source and decompiler identities. The previous ASM check covered
 2,427 methods with zero failures; those bytes have not changed. See
 [GeoBlox decompilation provenance](../decompilation/geoblox-provenance.json)
 for generator commits, input identities, reused pipeline proof and exact verifier
@@ -146,7 +149,9 @@ It does not read `games/geoblox` or extract an original input commit.
    match both javac audits. Pass 13 retains those rules and adds 199 guarded
    names from direct text-resource assignments, inspected loader/decoder flow
    and the welcome panel. Its 19 carrier-related names describe generated source
-   identities rather than original gamepack methods or fields. Future input or identity changes
+   identities rather than original gamepack methods or fields. Pass 14 reviews the
+   typed complement export against all 841 guards and all 238 named-local
+   identities, retaining every name unchanged. Future input or identity changes
    require another reviewed migration.
 4. Pin the new source commit in `geoblox-source-pin.json`, retain the reviewed
    rule lineage and rebuild `geoblox-rules.json`. If updating the naming tool,
@@ -190,8 +195,8 @@ before treating the renamed export as a runnable replacement.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Original GeoBlox | `2b5e8eca76820cb18760a231fc0825aded6e26972d646bfc3476d4f88d77147b` |
-| Readable GeoBlox | `3d37181ec5b830fb02a5c1bdfad1d70ba32c27555fce89369d698bb6ba8140d7` |
+| Original GeoBlox | `8d838235da30d2e3ab0bfd2e79bf11900ff49f7fa0008b3c81d4554fac3bd168` |
+| Readable GeoBlox | `d3e8f6e80c22928ce77269b774c9414e63d16516fcf1d67a8d6f399189bcbc4a` |
 
 These tree digests use `sourceIdentity(sourceInventory(root))` from the naming
 tool. They identify source bytes; the decompiler Git commits are listed above.

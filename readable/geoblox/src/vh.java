@@ -104,7 +104,7 @@ final class vh extends ee implements pl {
 
     final void a(int param0, int param1, byte param2, int param3) {
         super.a(param0, param1, (byte) 88, param3);
-        if (!(-1 == (param3 ^ -1))) {
+        if (!(param3 == 0)) {
             return;
         }
         m var5 = ng.field_F;
@@ -144,7 +144,7 @@ final class vh extends ee implements pl {
             stackIn_5_0 = 1;
             decompiledRegionSelector0 = 0;
           } else {
-            if ((param0 ^ -1) != -99) {
+            if (param0 != 98) {
               if (99 != param0) {
                 stackIn_13_0 = 0;
                 decompiledRegionSelector0 = 3;

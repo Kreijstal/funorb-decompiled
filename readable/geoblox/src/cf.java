@@ -37,7 +37,7 @@ final class cf extends q {
             if (f.b((byte) -123, var4)) {
               var5 = (CharSequence) ((Object) param1);
               var3_int = ol.a(false, var5);
-              if (-1 > (var3_int ^ -1)) {
+              if (var3_int > 0) {
                 if (130 >= var3_int) {
                   stackIn_11_0 = kk.field_w;
                   decompiledRegionSelector0 = 2;
@@ -159,7 +159,7 @@ final class cf extends q {
               if (popup.progress < 1.0f) {
                 popup.progress = popup.progress + (0.03999999910593033f * popup.progress + 0.00004999999873689376f);
               } else {
-                if ((popup.chainMultiplier ^ -1) != -2) {
+                if (popup.chainMultiplier != 1) {
                   el.gameplaySession.addPopupPoints(popup.points, -73);
                   ue.availableScorePopups.addLast(-35, popup);
                 } else {

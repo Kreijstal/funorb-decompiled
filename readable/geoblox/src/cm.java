@@ -58,7 +58,7 @@ final class cm extends cj {
             L2: {
               var27 = eh.field_d;
               var2 = var27.c((byte) 34);
-              if (-1 == (var2 ^ -1)) {
+              if (var2 == 0) {
                 var3 = var27.b(true);
                 var4 = (mg) ((Object) rh.field_d.firstForIteration(0));
                 L3: while (var4 != null) {
@@ -80,7 +80,7 @@ final class cm extends cj {
                       for (var8_int = 1; var5 > var8_int; var8_int++) {
                         id.field_b[var8_int].field_d = var27.e((byte) 104);
                         id.field_b[var8_int].field_c = false;
-                        if ((var27.c((byte) 34) ^ -1) == -2) {
+                        if (var27.c((byte) 34) == 1) {
                           id.field_b[var8_int].field_a = var27.e((byte) 122);
                         } else {
                           id.field_b[var8_int].field_a = null;
@@ -229,17 +229,17 @@ final class cm extends cj {
             Throwable decompiledCaughtException = null;
             L0: {
               if (null != oc.field_e) {
-                if ((param1 ^ -1) <= -1) {
+                if (param1 >= 0) {
                   if (pk.field_l != eh.field_b) {
                     break L0;
                   }
                 }
                 if (0 == fj.field_q.field_f) {
-                  if ((oa.a(-12520) ^ -1L) < (10000L + v.field_r ^ -1L)) {
+                  if (~oa.a(-12520) < ~(10000L + v.field_r)) {
                     fj.field_q.a(param1, (byte) -76);
                   }
                 }
-                if (param0 > (fj.field_q.field_f ^ -1)) {
+                if (param0 > ~fj.field_q.field_f) {
                   try {
                     oc.field_e.a(100, 0, fj.field_q.field_f, fj.field_q.field_j);
                     v.field_r = oa.a(-12520);
@@ -262,7 +262,7 @@ final class cm extends cj {
     }
 
     final void a(int param0) {
-        if ((this.field_e ^ -1L) > (this.field_c ^ -1L)) {
+        if (~this.field_e > ~this.field_c) {
             this.field_e = this.field_e + (this.field_c + -this.field_e);
         }
         if (param0 < 60) {
@@ -283,8 +283,8 @@ final class cm extends cj {
           L1: while (true) {
             var4++;
             this.field_c = this.field_c + param1;
-            if ((var4 ^ -1) > -11) {
-              if ((this.field_c ^ -1L) > (this.field_e ^ -1L)) {
+            if (var4 < 10) {
+              if (~this.field_c > ~this.field_e) {
                 continue L1;
               }
             }
@@ -328,7 +328,7 @@ final class cm extends cj {
         if (param0 != -49) {
             this.a(false, 97L);
         }
-        if ((this.field_c ^ -1L) < (this.field_e ^ -1L)) {
+        if (~this.field_c < ~this.field_e) {
             return (this.field_c + -this.field_e) / 1000000L;
         }
         return 0L;

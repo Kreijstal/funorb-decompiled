@@ -1,0 +1,2332 @@
+{
+  "schema": 1,
+  "version": 14,
+  "previousRulesSha256": "ec4c7da745f4033966797a7ab9c4c8b87d2b740e268a48da9e18acfb0c30577c",
+  "previousInputTreeSha256": "2b5e8eca76820cb18760a231fc0825aded6e26972d646bfc3476d4f88d77147b",
+  "inputTreeSha256": "8d838235da30d2e3ab0bfd2e79bf11900ff49f7fa0008b3c81d4554fac3bd168",
+  "javaToolsCommit": "cee965649f1f2afaf1c7a3efd1fdb826231f3d30",
+  "identityChanges": [],
+  "review": {
+    "rulesRetained": 841,
+    "originalSpellingGuardsMatched": 841,
+    "namedLocals": 238,
+    "namedLocalDeclarationIdentitiesUnchanged": 238,
+    "namedLocalDeclarationIdentitiesMoved": 0,
+    "namedLocalsUniqueWithinMethodBeforeAndAfter": true,
+    "classFieldMethodParameterIdentitiesUnchanged": true,
+    "changedJavaFiles": 156,
+    "evidence": "Compared all 841 declarations against both full javac Trees audits; all guards, JVM identities, local ordinals and reviewed names remain identical. 156 source files change through typed XOR-minus-one/complement comparison rendering. No game bytecode or naming rule is changed. All 303 files compile; focused 7,040 native complement comparisons passed."
+  },
+  "textEvidence": {
+    "loaderSourceSha256": "ea29d2d4e33fbc4afcb91cea0b33a3cfb9af58588c2811106c578f503f350407",
+    "resourceAssignments": [
+      {
+        "symbol": "F:Geoblox.field_z:[Ljava/lang/String;",
+        "originalName": "field_z",
+        "resources": [
+          {
+            "key": "reconnect_lost_seq,0",
+            "index": 0,
+            "line": 2760
+          },
+          {
+            "key": "reconnect_lost_seq,1",
+            "index": 1,
+            "line": 2764
+          },
+          {
+            "key": "reconnect_lost_seq,2",
+            "index": 2,
+            "line": 2768
+          },
+          {
+            "key": "reconnect_lost_seq,3",
+            "index": 3,
+            "line": 2772
+          }
+        ],
+        "to": "reconnectMessages",
+        "retainedRule": true
+      },
+      {
+        "symbol": "F:a.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "retry",
+            "index": null,
+            "line": 1303
+          }
+        ],
+        "to": "retryText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ab.field_e:Ljava/lang/String;",
+        "originalName": "field_e",
+        "resources": [
+          {
+            "key": "create_suggestions",
+            "index": null,
+            "line": 1623
+          }
+        ],
+        "to": "createSuggestionsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ac.field_r:[Ljava/lang/String;",
+        "originalName": "field_r",
+        "resources": [
+          {
+            "key": "mustlogin_alternate,1",
+            "index": 1,
+            "line": 3116
+          },
+          {
+            "key": "mustlogin_alternate,2",
+            "index": 2,
+            "line": 3120
+          },
+          {
+            "key": "mustlogin_alternate,3",
+            "index": 3,
+            "line": 3124
+          },
+          {
+            "key": "mustlogin_alternate,4",
+            "index": 4,
+            "line": 3128
+          },
+          {
+            "key": "mustlogin_alternate,5",
+            "index": 5,
+            "line": 3132
+          },
+          {
+            "key": "mustlogin_alternate,6",
+            "index": 6,
+            "line": 3136
+          },
+          {
+            "key": "mustlogin_alternate,7",
+            "index": 7,
+            "line": 3140
+          }
+        ],
+        "to": "mustLoginAlternateTexts",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ad.field_n:Ljava/lang/String;",
+        "originalName": "field_n",
+        "resources": [
+          {
+            "key": "fs_focus_or_resolution",
+            "index": null,
+            "line": 2876
+          }
+        ],
+        "to": "fullscreenFocusOrResolutionText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ah.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "connectionlost_reconnecting",
+            "index": null,
+            "line": 1285
+          }
+        ],
+        "to": "connectionLostReconnectingText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ai.field_h:Ljava/lang/String;",
+        "originalName": "field_h",
+        "resources": [
+          {
+            "key": "create_alert_passchars",
+            "index": null,
+            "line": 1779
+          }
+        ],
+        "to": "createPasswordCharacterAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:bi.field_c:[Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "mustlogin3,1",
+            "index": 1,
+            "line": 3052
+          },
+          {
+            "key": "mustlogin3,2",
+            "index": 2,
+            "line": 3056
+          },
+          {
+            "key": "mustlogin3,3",
+            "index": 3,
+            "line": 3060
+          },
+          {
+            "key": "mustlogin3,4",
+            "index": 4,
+            "line": 3064
+          },
+          {
+            "key": "mustlogin3,5",
+            "index": 5,
+            "line": 3068
+          },
+          {
+            "key": "mustlogin3,6",
+            "index": 6,
+            "line": 3072
+          },
+          {
+            "key": "mustlogin3,7",
+            "index": 7,
+            "line": 3076
+          }
+        ],
+        "to": "mustLogin3Texts",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:bk.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "login_username",
+            "index": null,
+            "line": 1651
+          }
+        ],
+        "to": "loginUsernameText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:bl.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "achievements",
+            "index": null,
+            "line": 2094
+          }
+        ],
+        "to": "achievementsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:bm.field_p:Ljava/lang/String;",
+        "originalName": "field_p",
+        "resources": [
+          {
+            "key": "create_agreeterms",
+            "index": null,
+            "line": 1639
+          }
+        ],
+        "to": "createAgreeTermsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:c.field_Q:[Ljava/lang/String;",
+        "originalName": "field_Q",
+        "resources": [
+          {
+            "key": "quickchat_shortcut_help,0",
+            "index": 0,
+            "line": 2652
+          },
+          {
+            "key": "quickchat_shortcut_help,1",
+            "index": 1,
+            "line": 2656
+          },
+          {
+            "key": "quickchat_shortcut_help,2",
+            "index": 2,
+            "line": 2660
+          },
+          {
+            "key": "quickchat_shortcut_help,3",
+            "index": 3,
+            "line": 2664
+          },
+          {
+            "key": "quickchat_shortcut_help,4",
+            "index": 4,
+            "line": 2668
+          },
+          {
+            "key": "quickchat_shortcut_help,5",
+            "index": 5,
+            "line": 2672
+          }
+        ],
+        "to": "quickChatShortcutHelpTexts",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:c.field_r:Ljava/lang/String;",
+        "originalName": "field_r",
+        "resources": [
+          {
+            "key": "create_alert_nameleadingspace",
+            "index": null,
+            "line": 1771
+          }
+        ],
+        "to": "createNameLeadingSpaceAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ca.field_h:Ljava/lang/String;",
+        "originalName": "field_h",
+        "resources": [
+          {
+            "key": "unpacking_music",
+            "index": null,
+            "line": 2038
+          }
+        ],
+        "to": "unpackingMusicText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ck.field_d:Ljava/lang/String;",
+        "originalName": "field_d",
+        "resources": [
+          {
+            "key": "cancel",
+            "index": null,
+            "line": 1181
+          }
+        ],
+        "to": "cancelText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:cl.field_d:Ljava/lang/String;",
+        "originalName": "field_d",
+        "resources": [
+          {
+            "key": "cont",
+            "index": null,
+            "line": 2270
+          }
+        ],
+        "to": "continueText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:cm.field_h:Ljava/lang/String;",
+        "originalName": "field_h",
+        "resources": [
+          {
+            "key": "checking",
+            "index": null,
+            "line": 1411
+          }
+        ],
+        "to": "checkingText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:da.field_e:Ljava/lang/String;",
+        "originalName": "field_e",
+        "resources": [
+          {
+            "key": "create_emailvalid",
+            "index": null,
+            "line": 1835
+          }
+        ],
+        "to": "createEmailValidText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:dd.field_F:Ljava/lang/String;",
+        "originalName": "field_F",
+        "resources": [
+          {
+            "key": "loading_music",
+            "index": null,
+            "line": 1995
+          }
+        ],
+        "to": "loadingMusicText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:df.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "endgame",
+            "index": null,
+            "line": 2194
+          }
+        ],
+        "to": "endGameText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:di.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "create",
+            "index": null,
+            "line": 1467
+          }
+        ],
+        "to": "createText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ec.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "ok",
+            "index": null,
+            "line": 2202
+          }
+        ],
+        "to": "okText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ee.field_x:[Ljava/lang/String;",
+        "originalName": "field_x",
+        "resources": [
+          {
+            "key": "mustlogin2,1",
+            "index": 1,
+            "line": 3024
+          },
+          {
+            "key": "mustlogin2,2",
+            "index": 2,
+            "line": 3028
+          },
+          {
+            "key": "mustlogin2,3",
+            "index": 3,
+            "line": 3032
+          },
+          {
+            "key": "mustlogin2,4",
+            "index": 4,
+            "line": 3036
+          },
+          {
+            "key": "mustlogin2,5",
+            "index": 5,
+            "line": 3040
+          },
+          {
+            "key": "mustlogin2,6",
+            "index": 6,
+            "line": 3044
+          },
+          {
+            "key": "mustlogin2,7",
+            "index": 7,
+            "line": 3048
+          }
+        ],
+        "to": "mustLogin2Texts",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ee.field_y:Ljava/lang/String;",
+        "originalName": "field_y",
+        "resources": [
+          {
+            "key": "toserverlist",
+            "index": null,
+            "line": 1217
+          }
+        ],
+        "to": "toServerListText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ef.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "instructions",
+            "index": null,
+            "line": 2058
+          }
+        ],
+        "to": "instructionsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:eh.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "openinpopupwindow",
+            "index": null,
+            "line": 1463
+          }
+        ],
+        "to": "openInPopupWindowText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ei.field_gb:Ljava/lang/String;",
+        "originalName": "field_gb",
+        "resources": [
+          {
+            "key": "fs_unavailable_try_signed_applet",
+            "index": null,
+            "line": 2868
+          }
+        ],
+        "to": "fullscreenUnavailableTrySignedAppletText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ej.field_c:[Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "rating_mode_name,0",
+            "index": 0,
+            "line": 2948
+          },
+          {
+            "key": "rating_mode_name,1",
+            "index": 1,
+            "line": 2952
+          }
+        ],
+        "to": "ratingModeNames",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:f.field_lb:[Ljava/lang/String;",
+        "originalName": "field_lb",
+        "resources": [
+          {
+            "key": "quickchat_shortcut_keys,0",
+            "index": 0,
+            "line": 2676
+          },
+          {
+            "key": "quickchat_shortcut_keys,1",
+            "index": 1,
+            "line": 2680
+          },
+          {
+            "key": "quickchat_shortcut_keys,2",
+            "index": 2,
+            "line": 2684
+          },
+          {
+            "key": "quickchat_shortcut_keys,3",
+            "index": 3,
+            "line": 2688
+          },
+          {
+            "key": "quickchat_shortcut_keys,4",
+            "index": 4,
+            "line": 2692
+          },
+          {
+            "key": "quickchat_shortcut_keys,5",
+            "index": 5,
+            "line": 2696
+          }
+        ],
+        "to": "quickChatShortcutKeys",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:f.field_nb:Ljava/lang/String;",
+        "originalName": "field_nb",
+        "resources": [
+          {
+            "key": "fs_timeout",
+            "index": null,
+            "line": 2880
+          }
+        ],
+        "to": "fullscreenTimeoutText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:fa.field_d:Ljava/lang/String;",
+        "originalName": "field_d",
+        "resources": [
+          {
+            "key": "idlemessage20min",
+            "index": null,
+            "line": 229
+          }
+        ],
+        "to": "idleMessage20MinText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:fa.field_g:[Ljava/lang/String;",
+        "originalName": "field_g",
+        "resources": [
+          {
+            "key": "members_expansion_benefits,0",
+            "index": 0,
+            "line": 2740
+          },
+          {
+            "key": "members_expansion_benefits,1",
+            "index": 1,
+            "line": 2744
+          },
+          {
+            "key": "members_expansion_benefits,2",
+            "index": 2,
+            "line": 2748
+          }
+        ],
+        "to": "membersExpansionBenefitTexts",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:fa.field_h:Ljava/lang/String;",
+        "originalName": "field_h",
+        "resources": [
+          {
+            "key": "create_alert_doublespace",
+            "index": null,
+            "line": 1775
+          }
+        ],
+        "to": "createDoubleSpaceAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:fc.field_e:Ljava/lang/String;",
+        "originalName": "field_e",
+        "resources": [
+          {
+            "key": "music_colon",
+            "index": null,
+            "line": 2074
+          }
+        ],
+        "to": "musicLabelText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ff.field_l:Ljava/lang/String;",
+        "originalName": "field_l",
+        "resources": [
+          {
+            "key": "waitingfor_graphics",
+            "index": null,
+            "line": 1935
+          }
+        ],
+        "to": "waitingForGraphicsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:fi.field_h:Ljava/lang/String;",
+        "originalName": "field_h",
+        "resources": [
+          {
+            "key": "changedisplayname",
+            "index": null,
+            "line": 1225
+          }
+        ],
+        "to": "changeDisplayNameText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:g.field_l:Ljava/lang/String;",
+        "originalName": "field_l",
+        "resources": [
+          {
+            "key": "serviceunavailable",
+            "index": null,
+            "line": 3000
+          }
+        ],
+        "to": "serviceUnavailableText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:g.field_m:Ljava/lang/String;",
+        "originalName": "field_m",
+        "resources": [
+          {
+            "key": "create_alert_email_unavailable",
+            "index": null,
+            "line": 1811
+          }
+        ],
+        "to": "createEmailUnavailableAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:gf.field_e:Ljava/lang/String;",
+        "originalName": "field_e",
+        "resources": [
+          {
+            "key": "create_alert_passcontainsname",
+            "index": null,
+            "line": 1791
+          }
+        ],
+        "to": "createPasswordContainsNameAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:gg.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "create_alert_passrepeated",
+            "index": null,
+            "line": 1783
+          }
+        ],
+        "to": "createRepeatedPasswordAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:gg.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "create_alert_passcontainsname_partial",
+            "index": null,
+            "line": 1799
+          }
+        ],
+        "to": "createPasswordContainsPartialNameAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:gg.field_d:Ljava/lang/String;",
+        "originalName": "field_d",
+        "resources": [
+          {
+            "key": "create_alert_namelength",
+            "index": null,
+            "line": 1763
+          }
+        ],
+        "to": "createNameLengthAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:gk.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "create_displayname_hint",
+            "index": null,
+            "line": 1699
+          }
+        ],
+        "to": "createDisplayNameHintText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:hb.field_h:Ljava/lang/String;",
+        "originalName": "field_h",
+        "resources": [
+          {
+            "key": "playfreeversion",
+            "index": null,
+            "line": 1209
+          }
+        ],
+        "to": "playFreeVersionText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:hc.field_U:Ljava/lang/String;",
+        "originalName": "field_U",
+        "resources": [
+          {
+            "key": "goback",
+            "index": null,
+            "line": 1245
+          }
+        ],
+        "to": "goBackText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:hf.field_e:Ljava/lang/String;",
+        "originalName": "field_e",
+        "resources": [
+          {
+            "key": "loginm3",
+            "index": null,
+            "line": 217
+          }
+        ],
+        "to": "loginMessage3Text",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:hh.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "fs_button_close",
+            "index": null,
+            "line": 2856
+          }
+        ],
+        "to": "fullscreenCloseButtonText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:hi.field_I:Ljava/lang/String;",
+        "originalName": "field_I",
+        "resources": [
+          {
+            "key": "create_ineligible",
+            "index": null,
+            "line": 257
+          }
+        ],
+        "to": "createIneligibleText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ic.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "login_create_tooltip",
+            "index": null,
+            "line": 1671
+          }
+        ],
+        "to": "loginCreateTooltipText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:id.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "resumegame",
+            "index": null,
+            "line": 2166
+          }
+        ],
+        "to": "resumeGameText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ih.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "ticketing_oneunread",
+            "index": null,
+            "line": 281
+          }
+        ],
+        "to": "ticketingOneUnreadText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ii.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "highscores",
+            "index": null,
+            "line": 2086
+          }
+        ],
+        "to": "highscoresText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ii.field_j:Ljava/lang/String;",
+        "originalName": "field_j",
+        "resources": [
+          {
+            "key": "create_passwordvalid",
+            "index": null,
+            "line": 1831
+          }
+        ],
+        "to": "createPasswordValidText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ij.field_Y:Ljava/lang/String;",
+        "originalName": "field_Y",
+        "resources": [
+          {
+            "key": "create_password_tooltip",
+            "index": null,
+            "line": 1703
+          }
+        ],
+        "to": "createPasswordTooltipText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ij.field_Z:Ljava/lang/String;",
+        "originalName": "field_Z",
+        "resources": [
+          {
+            "key": "menu",
+            "index": null,
+            "line": 2146
+          }
+        ],
+        "to": "menuText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ik.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "waitingfor_fonts",
+            "index": null,
+            "line": 1943
+          }
+        ],
+        "to": "waitingForFontsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:j.field_jb:Ljava/lang/String;",
+        "originalName": "field_jb",
+        "resources": [
+          {
+            "key": "warning_ifyouquit",
+            "index": null,
+            "line": 1323
+          }
+        ],
+        "to": "quitWarningText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:jc.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "tocustomersupport",
+            "index": null,
+            "line": 1221
+          }
+        ],
+        "to": "toCustomerSupportText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:jg.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "login_gameupdated",
+            "index": null,
+            "line": 249
+          }
+        ],
+        "to": "loginGameUpdatedText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ji.field_d:Ljava/lang/String;",
+        "originalName": "field_d",
+        "resources": [
+          {
+            "key": "create_alert_passlength",
+            "index": null,
+            "line": 1787
+          }
+        ],
+        "to": "createPasswordLengthAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ji.field_l:Ljava/lang/String;",
+        "originalName": "field_l",
+        "resources": [
+          {
+            "key": "create_welcome",
+            "index": null,
+            "line": 1559
+          }
+        ],
+        "to": "createWelcomeText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ji.field_n:Ljava/lang/String;",
+        "originalName": "field_n",
+        "resources": [
+          {
+            "key": "waitingfor_music",
+            "index": null,
+            "line": 1951
+          }
+        ],
+        "to": "waitingForMusicText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:jj.field_a:[Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "rating_mode_long_name,0",
+            "index": 0,
+            "line": 2956
+          },
+          {
+            "key": "rating_mode_long_name,1",
+            "index": 1,
+            "line": 2960
+          }
+        ],
+        "to": "ratingModeLongNames",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:jj.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "login_username_email",
+            "index": null,
+            "line": 1647
+          }
+        ],
+        "to": "loginUsernameEmailText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:jk.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "fs_accept_countdown_pl",
+            "index": null,
+            "line": 2848
+          }
+        ],
+        "to": "fullscreenAcceptCountdownPluralText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:jk.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "returntogame",
+            "index": null,
+            "line": 2242
+          }
+        ],
+        "to": "returnToGameText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:k.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "fs_focus",
+            "index": null,
+            "line": 2872
+          }
+        ],
+        "to": "fullscreenFocusText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:k.field_k:Ljava/lang/String;",
+        "originalName": "field_k",
+        "resources": [
+          {
+            "key": "login",
+            "index": null,
+            "line": 1241
+          }
+        ],
+        "to": "loginText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:kc.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "create_alert_namechars",
+            "index": null,
+            "line": 1767
+          }
+        ],
+        "to": "createNameCharacterAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:kd.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "achieved",
+            "index": null,
+            "line": 2444
+          }
+        ],
+        "to": "achievedText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:kf.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "pleasetryagain",
+            "index": null,
+            "line": 1201
+          }
+        ],
+        "to": "pleaseTryAgainText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ki.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "fs_nonmember",
+            "index": null,
+            "line": 2852
+          }
+        ],
+        "to": "fullscreenNonmemberText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ki.field_e:Ljava/lang/String;",
+        "originalName": "field_e",
+        "resources": [
+          {
+            "key": "error_js5connect",
+            "index": null,
+            "line": 245
+          }
+        ],
+        "to": "js5ConnectErrorText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:kk.field_v:Ljava/lang/String;",
+        "originalName": "field_v",
+        "resources": [
+          {
+            "key": "login_username_tooltip",
+            "index": null,
+            "line": 1659
+          }
+        ],
+        "to": "loginUsernameTooltipText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:lh.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "next",
+            "index": null,
+            "line": 2222
+          }
+        ],
+        "to": "nextText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:lh.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "create_account_success",
+            "index": null,
+            "line": 1839
+          }
+        ],
+        "to": "createAccountSuccessText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ll.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "create_more_suggestions",
+            "index": null,
+            "line": 1627
+          }
+        ],
+        "to": "createMoreSuggestionsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ll.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "back",
+            "index": null,
+            "line": 1307
+          }
+        ],
+        "to": "backText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ll.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "create_email_tooltip",
+            "index": null,
+            "line": 1715
+          }
+        ],
+        "to": "createEmailTooltipText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:md.field_d:[Ljava/lang/String;",
+        "originalName": "field_d",
+        "resources": [
+          {
+            "key": "mustlogin4,1",
+            "index": 1,
+            "line": 3084
+          },
+          {
+            "key": "mustlogin4,2",
+            "index": 2,
+            "line": 3088
+          },
+          {
+            "key": "mustlogin4,3",
+            "index": 3,
+            "line": 3092
+          },
+          {
+            "key": "mustlogin4,4",
+            "index": 4,
+            "line": 3096
+          },
+          {
+            "key": "mustlogin4,5",
+            "index": 5,
+            "line": 3100
+          },
+          {
+            "key": "mustlogin4,6",
+            "index": 6,
+            "line": 3104
+          },
+          {
+            "key": "mustlogin4,7",
+            "index": 7,
+            "line": 3108
+          }
+        ],
+        "to": "mustLogin4Texts",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:mi.field_E:Ljava/lang/String;",
+        "originalName": "field_E",
+        "resources": [
+          {
+            "key": "invaliduserorpass",
+            "index": null,
+            "line": 1197
+          }
+        ],
+        "to": "invalidUserOrPasswordText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:mi.field_R:Ljava/lang/String;",
+        "originalName": "field_R",
+        "resources": [
+          {
+            "key": "connectionlost_withreason",
+            "index": null,
+            "line": 1289
+          }
+        ],
+        "to": "connectionLostWithReasonText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:mj.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "fs_accept_countdown_sing",
+            "index": null,
+            "line": 2844
+          }
+        ],
+        "to": "fullscreenAcceptCountdownSingularText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ml.field_u:Ljava/lang/String;",
+        "originalName": "field_u",
+        "resources": [
+          {
+            "key": "create_select_alternative",
+            "index": null,
+            "line": 1631
+          }
+        ],
+        "to": "createSelectAlternativeText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:nb.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "loading_fonts",
+            "index": null,
+            "line": 1987
+          }
+        ],
+        "to": "loadingFontsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ne.field_d:Ljava/lang/String;",
+        "originalName": "field_d",
+        "resources": [
+          {
+            "key": "ticketing_gotowebsite",
+            "index": null,
+            "line": 289
+          }
+        ],
+        "to": "ticketingGoToWebsiteText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:nf.field_E:Ljava/lang/String;",
+        "originalName": "field_E",
+        "resources": [
+          {
+            "key": "reloadgame",
+            "index": null,
+            "line": 1213
+          }
+        ],
+        "to": "reloadGameText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:nh.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "loading",
+            "index": null,
+            "line": 845
+          }
+        ],
+        "to": "loadingText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ni.field_C:Ljava/lang/String;",
+        "originalName": "field_C",
+        "resources": [
+          {
+            "key": "createtouse",
+            "index": null,
+            "line": 3004
+          }
+        ],
+        "to": "createToUseText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:nk.field_g:Ljava/lang/String;",
+        "originalName": "field_g",
+        "resources": [
+          {
+            "key": "startgame",
+            "index": null,
+            "line": 2158
+          }
+        ],
+        "to": "startGameText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:nk.field_i:Ljava/lang/String;",
+        "originalName": "field_i",
+        "resources": [
+          {
+            "key": "create_u13terms",
+            "index": null,
+            "line": 1643
+          }
+        ],
+        "to": "createUnder13TermsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:oa.field_d:[Ljava/lang/String;",
+        "originalName": "field_d",
+        "resources": [
+          {
+            "key": "subscription_cost_monthly,0",
+            "index": 0,
+            "line": 3144
+          },
+          {
+            "key": "subscription_cost_monthly,1",
+            "index": 1,
+            "line": 3148
+          },
+          {
+            "key": "subscription_cost_monthly,2",
+            "index": 2,
+            "line": 3152
+          },
+          {
+            "key": "subscription_cost_monthly,3",
+            "index": 3,
+            "line": 3156
+          },
+          {
+            "key": "subscription_cost_monthly,4",
+            "index": 4,
+            "line": 3160
+          },
+          {
+            "key": "subscription_cost_monthly,5",
+            "index": 5,
+            "line": 3164
+          },
+          {
+            "key": "subscription_cost_monthly,6",
+            "index": 6,
+            "line": 3168
+          },
+          {
+            "key": "subscription_cost_monthly,7",
+            "index": 7,
+            "line": 3172
+          },
+          {
+            "key": "subscription_cost_monthly,8",
+            "index": 8,
+            "line": 3176
+          },
+          {
+            "key": "subscription_cost_monthly,9",
+            "index": 9,
+            "line": 3180
+          },
+          {
+            "key": "subscription_cost_monthly,10",
+            "index": 10,
+            "line": 3184
+          },
+          {
+            "key": "subscription_cost_monthly,11",
+            "index": 11,
+            "line": 3188
+          },
+          {
+            "key": "subscription_cost_monthly,12",
+            "index": 12,
+            "line": 3192
+          }
+        ],
+        "to": "subscriptionMonthlyCostTexts",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:oe.field_O:Ljava/lang/String;",
+        "originalName": "field_O",
+        "resources": [
+          {
+            "key": "connectionrestored",
+            "index": null,
+            "line": 1319
+          }
+        ],
+        "to": "connectionRestoredText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:oh.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "unpacking_graphics",
+            "index": null,
+            "line": 2026
+          }
+        ],
+        "to": "unpackingGraphicsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:oi.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "create_password_confirm_tooltip",
+            "index": null,
+            "line": 1711
+          }
+        ],
+        "to": "createPasswordConfirmationTooltipText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:oj.field_e:Ljava/lang/String;",
+        "originalName": "field_e",
+        "resources": [
+          {
+            "key": "loading_extradata",
+            "index": null,
+            "line": 2010
+          }
+        ],
+        "to": "loadingExtraDataText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ok.field_d:Ljava/lang/String;",
+        "originalName": "field_d",
+        "resources": [
+          {
+            "key": "justplay",
+            "index": null,
+            "line": 1233
+          }
+        ],
+        "to": "justPlayText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ok.field_e:Ljava/lang/String;",
+        "originalName": "field_e",
+        "resources": [
+          {
+            "key": "create_email_confirm",
+            "index": null,
+            "line": 1591
+          }
+        ],
+        "to": "createEmailConfirmationText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ok.field_i:Ljava/lang/String;",
+        "originalName": "field_i",
+        "resources": [
+          {
+            "key": "create_email_confirm_tooltip",
+            "index": null,
+            "line": 1719
+          }
+        ],
+        "to": "createEmailConfirmationTooltipText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:pa.field_e:Ljava/lang/String;",
+        "originalName": "field_e",
+        "resources": [
+          {
+            "key": "waitingfor_soundeffects",
+            "index": null,
+            "line": 1947
+          }
+        ],
+        "to": "waitingForSoundEffectsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:pb.field_o:Ljava/lang/String;",
+        "originalName": "field_o",
+        "resources": [
+          {
+            "key": "create_age_tooltip",
+            "index": null,
+            "line": 1723
+          }
+        ],
+        "to": "createAgeTooltipText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:pb.field_v:Ljava/lang/String;",
+        "originalName": "field_v",
+        "resources": [
+          {
+            "key": "fs_button_accept",
+            "index": null,
+            "line": 2828
+          }
+        ],
+        "to": "fullscreenAcceptButtonText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:pf.field_H:Ljava/lang/String;",
+        "originalName": "field_H",
+        "resources": [
+          {
+            "key": "error_js5crc",
+            "index": null,
+            "line": 233
+          }
+        ],
+        "to": "js5CrcErrorText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ph.field_g:Ljava/lang/String;",
+        "originalName": "field_g",
+        "resources": [
+          {
+            "key": "waitingfor_extradata",
+            "index": null,
+            "line": 1963
+          }
+        ],
+        "to": "waitingForExtraDataText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ph.field_j:Ljava/lang/String;",
+        "originalName": "field_j",
+        "resources": [
+          {
+            "key": "create_username_available",
+            "index": null,
+            "line": 1759
+          }
+        ],
+        "to": "createUsernameAvailableText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ph.field_k:Ljava/lang/String;",
+        "originalName": "field_k",
+        "resources": [
+          {
+            "key": "create_unable",
+            "index": null,
+            "line": 253
+          }
+        ],
+        "to": "createUnableText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:qb.field_F:Ljava/lang/String;",
+        "originalName": "field_F",
+        "resources": [
+          {
+            "key": "error_js5io",
+            "index": null,
+            "line": 237
+          }
+        ],
+        "to": "js5IoErrorText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:qb.field_L:Ljava/lang/String;",
+        "originalName": "field_L",
+        "resources": [
+          {
+            "key": "fs_button_members",
+            "index": null,
+            "line": 2860
+          }
+        ],
+        "to": "fullscreenMembersButtonText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:qg.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "create_password",
+            "index": null,
+            "line": 1579
+          }
+        ],
+        "to": "createPasswordText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:qh.field_Q:Ljava/lang/String;",
+        "originalName": "field_Q",
+        "resources": [
+          {
+            "key": "create_password_hint",
+            "index": null,
+            "line": 1707
+          }
+        ],
+        "to": "createPasswordHintText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ra.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "ticketing_xunread",
+            "index": null,
+            "line": 285
+          }
+        ],
+        "to": "ticketingUnreadCountText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:rb.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "fs_button_cancel",
+            "index": null,
+            "line": 2836
+          }
+        ],
+        "to": "fullscreenCancelButtonText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:rc.field_f:Ljava/lang/String;",
+        "originalName": "field_f",
+        "resources": [
+          {
+            "key": "invalidpass",
+            "index": null,
+            "line": 1299
+          }
+        ],
+        "to": "invalidPasswordText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:rc.field_g:Ljava/lang/String;",
+        "originalName": "field_g",
+        "resources": [
+          {
+            "key": "error_js5connect_full",
+            "index": null,
+            "line": 241
+          }
+        ],
+        "to": "js5ConnectFullErrorText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:rh.field_j:Ljava/lang/String;",
+        "originalName": "field_j",
+        "resources": [
+          {
+            "key": "create_username_unavailable",
+            "index": null,
+            "line": 1755
+          }
+        ],
+        "to": "createUsernameUnavailableText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:rj.field_e:Ljava/lang/String;",
+        "originalName": "field_e",
+        "resources": [
+          {
+            "key": "quittowebsite",
+            "index": null,
+            "line": 1315
+          }
+        ],
+        "to": "quitToWebsiteText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:rj.field_g:Ljava/lang/String;",
+        "originalName": "field_g",
+        "resources": [
+          {
+            "key": "logging_in",
+            "index": null,
+            "line": 1265
+          }
+        ],
+        "to": "loggingInText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:sb.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "login_no_displayname",
+            "index": null,
+            "line": 1683
+          }
+        ],
+        "to": "loginNoDisplayNameText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:sb.field_f:Ljava/lang/String;",
+        "originalName": "field_f",
+        "resources": [
+          {
+            "key": "no_highscores",
+            "index": null,
+            "line": 2472
+          }
+        ],
+        "to": "noHighscoresText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:se.field_i:Ljava/lang/String;",
+        "originalName": "field_i",
+        "resources": [
+          {
+            "key": "creatingyouraccount",
+            "index": null,
+            "line": 1483
+          }
+        ],
+        "to": "creatingYourAccountText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:se.field_m:Ljava/lang/String;",
+        "originalName": "field_m",
+        "resources": [
+          {
+            "key": "create_createanaccount",
+            "index": null,
+            "line": 1567
+          }
+        ],
+        "to": "createAnAccountText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:sj.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "create_alert_mismatch",
+            "index": null,
+            "line": 1827
+          }
+        ],
+        "to": "createMismatchAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:sj.field_e:Ljava/lang/String;",
+        "originalName": "field_e",
+        "resources": [
+          {
+            "key": "fs_unavailable",
+            "index": null,
+            "line": 2864
+          }
+        ],
+        "to": "fullscreenUnavailableText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:sl.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "login_email",
+            "index": null,
+            "line": 1655
+          }
+        ],
+        "to": "loginEmailText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:sl.field_h:Ljava/lang/String;",
+        "originalName": "field_h",
+        "resources": [
+          {
+            "key": "orbpoints",
+            "index": null,
+            "line": 2448
+          }
+        ],
+        "to": "orbPointsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:sl.field_i:Ljava/lang/String;",
+        "originalName": "field_i",
+        "resources": [
+          {
+            "key": "create_alert_invalidage",
+            "index": null,
+            "line": 1819
+          }
+        ],
+        "to": "createInvalidAgeAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:tc.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "quit",
+            "index": null,
+            "line": 2110
+          }
+        ],
+        "to": "quitText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:th.field_g:Ljava/lang/String;",
+        "originalName": "field_g",
+        "resources": [
+          {
+            "key": "DEFAULT_PLAYER_NAME",
+            "index": null,
+            "line": 3016
+          }
+        ],
+        "to": "defaultPlayerNameText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:tl.field_o:Ljava/lang/String;",
+        "originalName": "field_o",
+        "resources": [
+          {
+            "key": "prev",
+            "index": null,
+            "line": 2218
+          }
+        ],
+        "to": "previousText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ud.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "create_displayname_tooltip",
+            "index": null,
+            "line": 1695
+          }
+        ],
+        "to": "createDisplayNameTooltipText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ud.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "loading_soundeffects",
+            "index": null,
+            "line": 1991
+          }
+        ],
+        "to": "loadingSoundEffectsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ue.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "hs_friend_tip",
+            "index": null,
+            "line": 2928
+          }
+        ],
+        "to": "highscoreFriendTipText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ue.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "fs_accept_beforeaccept",
+            "index": null,
+            "line": 2824
+          }
+        ],
+        "to": "fullscreenBeforeAcceptText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ue.field_d:Ljava/lang/String;",
+        "originalName": "field_d",
+        "resources": [
+          {
+            "key": "create_optin_news",
+            "index": null,
+            "line": 1635
+          }
+        ],
+        "to": "createNewsOptInText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ue.field_g:Ljava/lang/String;",
+        "originalName": "field_g",
+        "resources": [
+          {
+            "key": "create_age",
+            "index": null,
+            "line": 1595
+          }
+        ],
+        "to": "createAgeText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:uf.field_i:Ljava/lang/String;",
+        "originalName": "field_i",
+        "resources": [
+          {
+            "key": "create_alert_passcontainsemail",
+            "index": null,
+            "line": 1795
+          }
+        ],
+        "to": "createPasswordContainsEmailAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:ug.field_b:Ljava/lang/String;",
+        "originalName": "field_b",
+        "resources": [
+          {
+            "key": "create_email",
+            "index": null,
+            "line": 1587
+          }
+        ],
+        "to": "createEmailText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:uj.field_d:Ljava/lang/String;",
+        "originalName": "field_d",
+        "resources": [
+          {
+            "key": "fs_accept_aftercancel",
+            "index": null,
+            "line": 2840
+          }
+        ],
+        "to": "fullscreenAfterCancelText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:uj.field_e:Ljava/lang/String;",
+        "originalName": "field_e",
+        "resources": [
+          {
+            "key": "loginm2",
+            "index": null,
+            "line": 221
+          }
+        ],
+        "to": "loginMessage2Text",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:uk.field_l:[Ljava/lang/String;",
+        "originalName": "field_l",
+        "resources": [
+          {
+            "key": "monthnames,0",
+            "index": 0,
+            "line": 1511
+          },
+          {
+            "key": "monthnames,1",
+            "index": 1,
+            "line": 1515
+          },
+          {
+            "key": "monthnames,2",
+            "index": 2,
+            "line": 1519
+          },
+          {
+            "key": "monthnames,3",
+            "index": 3,
+            "line": 1523
+          },
+          {
+            "key": "monthnames,4",
+            "index": 4,
+            "line": 1527
+          },
+          {
+            "key": "monthnames,5",
+            "index": 5,
+            "line": 1531
+          },
+          {
+            "key": "monthnames,6",
+            "index": 6,
+            "line": 1535
+          },
+          {
+            "key": "monthnames,7",
+            "index": 7,
+            "line": 1539
+          },
+          {
+            "key": "monthnames,8",
+            "index": 8,
+            "line": 1543
+          },
+          {
+            "key": "monthnames,9",
+            "index": 9,
+            "line": 1547
+          },
+          {
+            "key": "monthnames,10",
+            "index": 10,
+            "line": 1551
+          },
+          {
+            "key": "monthnames,11",
+            "index": 11,
+            "line": 1555
+          }
+        ],
+        "to": "monthNames",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:v.field_m:Ljava/lang/String;",
+        "originalName": "field_m",
+        "resources": [
+          {
+            "key": "create_password_confirm",
+            "index": null,
+            "line": 1583
+          }
+        ],
+        "to": "createPasswordConfirmationText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:vd.field_m:[Ljava/lang/String;",
+        "originalName": "field_m",
+        "resources": [
+          {
+            "key": "hs_mode_name,0",
+            "index": 0,
+            "line": 2936
+          },
+          {
+            "key": "hs_mode_name,1",
+            "index": 1,
+            "line": 2940
+          },
+          {
+            "key": "hs_mode_name,2",
+            "index": 2,
+            "line": 2944
+          }
+        ],
+        "to": "highscoreModeNames",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:vg.field_d:Ljava/lang/String;",
+        "originalName": "field_d",
+        "resources": [
+          {
+            "key": "pleasewait_dotdotdot",
+            "index": null,
+            "line": 2996
+          }
+        ],
+        "to": "pleaseWaitText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:vi.field_F:Ljava/lang/String;",
+        "originalName": "field_F",
+        "resources": [
+          {
+            "key": "login_justplay_tooltip",
+            "index": null,
+            "line": 1675
+          }
+        ],
+        "to": "loginJustPlayTooltipText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:vi.field_G:Ljava/lang/String;",
+        "originalName": "field_G",
+        "resources": [
+          {
+            "key": "create_optin_news_tooltip",
+            "index": null,
+            "line": 1727
+          }
+        ],
+        "to": "createNewsOptInTooltipText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:w.field_a:Ljava/lang/String;",
+        "originalName": "field_a",
+        "resources": [
+          {
+            "key": "mouseoveranicon",
+            "index": null,
+            "line": 2436
+          }
+        ],
+        "to": "mouseOverIconText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:wb.field_c:Ljava/lang/String;",
+        "originalName": "field_c",
+        "resources": [
+          {
+            "key": "sound_colon",
+            "index": null,
+            "line": 2070
+          }
+        ],
+        "to": "soundLabelText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:wf.field_q:Ljava/lang/String;",
+        "originalName": "field_q",
+        "resources": [
+          {
+            "key": "fullscreen",
+            "index": null,
+            "line": 2078
+          }
+        ],
+        "to": "fullscreenText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:wi.field_F:Ljava/lang/String;",
+        "originalName": "field_F",
+        "resources": [
+          {
+            "key": "loading_graphics",
+            "index": null,
+            "line": 1979
+          }
+        ],
+        "to": "loadingGraphicsText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:wj.field_B:Ljava/lang/String;",
+        "originalName": "field_B",
+        "resources": [
+          {
+            "key": "create_alert_invalidemail",
+            "index": null,
+            "line": 1807
+          }
+        ],
+        "to": "createInvalidEmailAlertText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:wj.field_C:Ljava/lang/String;",
+        "originalName": "field_C",
+        "resources": [
+          {
+            "key": "fs_accept_afteraccept",
+            "index": null,
+            "line": 2832
+          }
+        ],
+        "to": "fullscreenAfterAcceptText",
+        "retainedRule": false
+      },
+      {
+        "symbol": "F:wj.field_E:Ljava/lang/String;",
+        "originalName": "field_E",
+        "resources": [
+          {
+            "key": "create_displayname",
+            "index": null,
+            "line": 1575
+          }
+        ],
+        "to": "createDisplayNameText",
+        "retainedRule": false
+      }
+    ]
+  },
+  "sourceCommit": "63115c1bcb703200f2caf4048d2e0b7671b6aeb8"
+}

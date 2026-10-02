@@ -95,7 +95,7 @@ final class jh {
             synchronized (var3) {
               try {
                 L0: {
-                  if ((this.field_c.a((byte) 46) ^ -1L) <= ((long)(param0 * 6 + 6) ^ -1L)) {
+                  if (~this.field_c.a((byte) 46) <= ~(long)(param0 * 6 + 6)) {
                     if (param1 > -14) {
                       this.field_d = (sk) null;
                     }
@@ -103,7 +103,7 @@ final class jh {
                     this.field_c.a(dj.field_F, 6, 0, 9868);
                     var4_int = (dj.field_F[2] & 255) + (((255 & dj.field_F[0]) << 381092272) + (dj.field_F[1] << -50660216 & 65280));
                     var5 = (dj.field_F[3] << 1866970928 & 16711680) + (65280 & dj.field_F[4] << 1639129128) + (255 & dj.field_F[5]);
-                    if (-1 >= (var4_int ^ -1)) {
+                    if (var4_int >= 0) {
                       if (this.field_a >= var4_int) {
                         if (var5 > 0) {
                           if ((long)var5 <= this.field_d.a((byte) 46) / 520L) {
@@ -117,7 +117,7 @@ final class jh {
                                 decompiledRegionSelector0 = 3;
                                 break L0;
                               } else {
-                                if (-1 != (var5 ^ -1)) {
+                                if (var5 != 0) {
                                   this.field_d.a(0, (long)(520 * var5));
                                   var9 = -var7 + var4_int;
                                   if (65535 < param0) {
@@ -132,7 +132,7 @@ final class jh {
                                     var12 = ((dj.field_F[7] & 255) << -1445223224) + ((16711680 & dj.field_F[6] << -963100496) - -(dj.field_F[8] & 255));
                                   } else {
                                     var14 = 8;
-                                    if (-513 > (var9 ^ -1)) {
+                                    if (var9 > 512) {
                                       var9 = 512;
                                     }
                                     this.field_d.a(dj.field_F, var9 - -var14, 0, 9868);
@@ -144,7 +144,7 @@ final class jh {
                                   if (var10 == param0) {
                                     if (var11 == var8) {
                                       if (this.field_b == var13) {
-                                        if (-1 >= (var12 ^ -1)) {
+                                        if (var12 >= 0) {
                                           if (this.field_d.a((byte) 46) / 520L >= (long)var12) {
                                             var15 = var9 + var14;
                                             var8++;
@@ -346,8 +346,8 @@ final class jh {
                               if (var11 == param2) {
                                 if (var9 == var12) {
                                   if (var13 == this.field_b) {
-                                    if ((var10 ^ -1) <= -1) {
-                                      if ((this.field_d.a((byte) 46) / 520L ^ -1L) <= ((long)var10 ^ -1L)) {
+                                    if (var10 >= 0) {
+                                      if (~(this.field_d.a((byte) 46) / 520L) <= ~(long)var10) {
                                         break L6;
                                       }
                                     }
@@ -377,7 +377,7 @@ final class jh {
                           if (512 >= -var8 + param1) {
                             var10 = 0;
                           }
-                          if (-65536 <= (param2 ^ -1)) {
+                          if (param2 <= 65535) {
                             dj.field_F[4] = (byte)(var10 >> -1912263152);
                             dj.field_F[2] = (byte)(var9 >> -1443172216);
                             dj.field_F[0] = (byte)(param2 >> 1158595624);

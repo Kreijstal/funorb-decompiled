@@ -93,7 +93,7 @@ final class ri {
                       fl.field_b = null;
                       ScorePopup.field_l = var6_int;
                       if (var6_int != 0) {
-                        if (-2 != (var6_int ^ -1)) {
+                        if (var6_int != 1) {
                           if (var6_int != 8) {
                             pk.field_l = ac.field_v;
                             p.field_k = -1;
@@ -120,7 +120,7 @@ final class ri {
                     og.field_n = eh.field_d.b(true);
                     var6 = eh.field_d.i((byte) 53);
                     var7 = eh.field_d.c((byte) 34);
-                    if (-1 != (1 & var7 ^ -1)) {
+                    if ((1 & var7) != 0) {
                       ic.a((byte) 65);
                     }
                     if (!param0) {
@@ -130,7 +130,7 @@ final class ri {
                         stackIn_45_0 = 1;
                       }
                       fe.field_b = stackIn_45_0 != 0;
-                      if (-1 == (var7 & 8 ^ -1)) {
+                      if ((var7 & 8) == 0) {
                         stackIn_48_0 = 0;
                       } else {
                         stackIn_48_0 = 1;
@@ -187,7 +187,7 @@ final class ri {
                         var8_ref_Throwable = decompiledCaughtException;
                       }
                     }
-                    if ((og.field_n ^ -1) < -1) {
+                    if (og.field_n > 0) {
                       rb.field_c = true;
                     }
                     fj.field_q.a(hl.field_D, false);
@@ -203,7 +203,7 @@ final class ri {
                 if (pk.field_l == ac.field_v) {
                   if (nf.a(false)) {
                     jl.a((byte) -118);
-                    if (-8 == (ScorePopup.field_l ^ -1)) {
+                    if (ScorePopup.field_l == 7) {
                       if (!ck.field_e) {
                         ck.field_e = true;
                         stackIn_86_0 = -1;
@@ -211,7 +211,7 @@ final class ri {
                         break L0;
                       }
                     }
-                    if ((ScorePopup.field_l ^ -1) == -8) {
+                    if (ScorePopup.field_l == 7) {
                       ScorePopup.field_l = 3;
                     }
                     kh.field_a = eh.field_d.e((byte) 101);

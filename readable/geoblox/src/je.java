@@ -16,7 +16,7 @@ final class je extends IntrusiveNode {
                 if (!(!vk.field_b.field_f)) {
                     ra.field_d = vk.field_b.field_j;
                     hj.field_c = true;
-                    ug.field_c = ug.field_c & (ra.field_d ^ -1);
+                    ug.field_c = ug.field_c & ~ra.field_d;
                     vl.field_p = vl.field_p | ra.field_d;
                 }
             }

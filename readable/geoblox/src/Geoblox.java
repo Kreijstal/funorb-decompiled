@@ -86,24 +86,24 @@ public final class Geoblox extends wf {
             var4 = -1;
             for (var5_int = 0; var12.length > var5_int; var5_int++) {
                 var6_int = var5_int % 7;
-                if (!((var6_int ^ -1) != -1)) {
+                if (!(var6_int != 0)) {
                     var4++;
-                    if (-8 >= (var4 ^ -1)) {
+                    if (var4 >= 7) {
                         break;
                     }
                 }
                 var7_int = var12[var5_int].field_s;
                 var8_int = var12[var5_int].field_o;
                 s.field_G[var4][var6_int] = var12[var5_int];
-                for (var9 = 0; -8 < (var9 ^ -1); var9++) {
+                for (var9 = 0; var9 < 7; var9++) {
                     ke.field_a[var4][var6_int][var9] = new Sprite(var7_int, var8_int);
                     ke.field_a[var4][var6_int][var9].e();
                     var12[var5_int].b(0, 0, jg.field_f[var4][var9]);
                 }
             }
             var3 = wj.a("amorphic", "", ll.field_f, param0 ^ 25869);
-            for (var4 = 0; -8 < (var4 ^ -1); var4++) {
-                for (var5_int = 0; (var5_int ^ -1) > -8; var5_int++) {
+            for (var4 = 0; var4 < 7; var4++) {
+                for (var5_int = 0; var5_int < 7; var5_int++) {
                     for (var6_int = 0; var6_int < var3.length; var6_int++) {
                         MenuScreen.field_m[var4][var5_int][var6_int] = new Sprite(4 + var3[var6_int].field_s, 4 + var3[var6_int].field_o);
                         MenuScreen.field_m[var4][var5_int][var6_int].e();
@@ -737,7 +737,7 @@ public final class Geoblox extends wf {
                         }
                         L10: {
                           var2 = sl.a(stackIn_91_0 != 0, (wf) (this), false);
-                          if (-2364825 != (var2 ^ -1)) {
+                          if (var2 != 2364824) {
                             if (var2 != 1) {
                               if (2 != var2) {
                                 break L10;
@@ -747,7 +747,7 @@ public final class Geoblox extends wf {
                               vl.field_n.a(0, MenuScreen.field_i);
                               vl.field_n = null;
                             }
-                            if ((var2 ^ -1) == -3) {
+                            if (var2 == 2) {
                               gf.a(k.c(109), 62);
                             }
                           } else {
@@ -802,7 +802,7 @@ public final class Geoblox extends wf {
                           }
                         }
                         if (null != el.gameplaySession) {
-                          if ((el.gameplaySession.score ^ -1) < -1) {
+                          if (el.gameplaySession.score > 0) {
                             el.gameplaySession.submitScore((byte) -70);
                           }
                         }
@@ -823,7 +823,7 @@ public final class Geoblox extends wf {
                       if (-1 < tc.currentScreenId) {
                         og.screens[tc.currentScreenId].updateTransition(16405);
                       }
-                      if (0 != (ai.requestedScreenId ^ -1)) {
+                      if (ai.requestedScreenId != -1) {
                         og.screens[ai.requestedScreenId].updateTransition(16405);
                         og.screens[ai.requestedScreenId].field_q = 0;
                         if (ai.requestedScreenId != 3) {
@@ -859,7 +859,7 @@ public final class Geoblox extends wf {
                         qj.clearGameplayDuringTransition = false;
                       }
                     } else {
-                      if ((tc.currentScreenId ^ -1) == 0) {
+                      if (tc.currentScreenId == -1) {
                         if (dl.field_b) {
                           if (gb.b(1)) {
                             stackIn_63_0 = 0;
@@ -885,7 +885,7 @@ public final class Geoblox extends wf {
               cm.a(-1, 0);
               if (sb.a(54)) {
                 var2 = this.d((byte) -67);
-                if ((var2 ^ -1) == -3) {
+                if (var2 == 2) {
                   oh.a(320, 240, fi.field_d, fi.field_d.field_o * 3 >> 1516183521, -128, fi.field_d.field_o);
                 } else {
                   break L5;
@@ -936,7 +936,7 @@ public final class Geoblox extends wf {
                 sh.field_y.a(param0 + -25598);
                 SoftwareRasterizer.c();
                 if (tc.currentScreenId == ai.requestedScreenId) {
-                  if (0 == (el.gameplayReturnScreenId ^ -1)) {
+                  if (el.gameplayReturnScreenId == -1) {
                     if (tc.currentScreenId == -1) {
                       if (!dl.field_b) {
                         el.gameplaySession.renderSession((byte) -49);
@@ -953,9 +953,9 @@ public final class Geoblox extends wf {
                 }
                 L3: {
                   transitionSplitY = -480 + (nf.screenTransitionTick * 6 - -35);
-                  if ((el.gameplayReturnScreenId ^ -1) == 0) {
+                  if (el.gameplayReturnScreenId == -1) {
                     if (!qj.clearGameplayDuringTransition) {
-                      if (0 != (ai.requestedScreenId ^ -1)) {
+                      if (ai.requestedScreenId != -1) {
                         if (tc.currentScreenId == -1) {
                           el.gameplaySession.renderSession((byte) -68);
                           break L3;
@@ -970,15 +970,15 @@ public final class Geoblox extends wf {
                   }
                   SoftwareRasterizer.a(0, 0, 640, 480, 1);
                 }
-                if ((tc.currentScreenId ^ -1) == 1) {
+                if (tc.currentScreenId == -2) {
                   oc.c(param0 ^ 25613);
                 }
                 SoftwareRasterizer.e(0, 0, 640, transitionSplitY);
-                if ((ai.requestedScreenId ^ -1) != 0) {
+                if (ai.requestedScreenId != -1) {
                   og.screens[ai.requestedScreenId].renderScreen(-28750);
                 }
                 SoftwareRasterizer.e(0, transitionSplitY, 640, 480);
-                if ((tc.currentScreenId ^ -1) < 0) {
+                if (tc.currentScreenId > -1) {
                   og.screens[tc.currentScreenId].renderScreen(-28750);
                 }
                 SoftwareRasterizer.e(0, 0, 640, 480);
@@ -1080,7 +1080,7 @@ public final class Geoblox extends wf {
         var2 = 0;
         var3 = gb.field_f;
         if (var3 >= 5) {
-          if ((var3 ^ -1) > -106) {
+          if (var3 < 105) {
             var2 = (-40960 + 16384 * var3) / 220;
           } else {
             if (120 > var3) {
@@ -1093,7 +1093,7 @@ public final class Geoblox extends wf {
         }
         var4 = 1;
         var5 = 0;
-        if (-2 == (param1 ^ -1)) {
+        if (param1 == 1) {
           var5 = 1;
         }
         if (3 == param1) {
@@ -1103,7 +1103,7 @@ public final class Geoblox extends wf {
           var4 = 1;
           var5 = 1;
         }
-        if ((param1 ^ -1) == -6) {
+        if (param1 == 5) {
           var5 = 1;
           var4 = -1;
         }
@@ -1120,22 +1120,22 @@ public final class Geoblox extends wf {
           var5 = -1;
           var4 = -1;
         }
-        if (-12 == (param1 ^ -1)) {
+        if (param1 == 11) {
           var4 = -1;
         }
-        if ((param1 ^ -1) == -13) {
+        if (param1 == 12) {
           var5 = -1;
           var4 = -1;
         }
-        if ((param1 ^ -1) == -14) {
+        if (param1 == 13) {
           var5 = -1;
           var4 = 1;
         }
-        if (-15 == (param1 ^ -1)) {
+        if (param1 == 14) {
           var4 = -1;
           var5 = 1;
         }
-        if (-16 == (param1 ^ -1)) {
+        if (param1 == 15) {
           var4 = 1;
           var5 = 1;
         }

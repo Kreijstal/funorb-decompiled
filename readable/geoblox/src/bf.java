@@ -222,7 +222,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
                   var12 = -var7 + 1 + var9 >> -2109860607;
                   L8: while (true) {
                     var12--;
-                    if (-1 < (var12 ^ -1)) {
+                    if (var12 < 0) {
                       break L7;
                     } else {
                       SoftwareRasterizer.framebuffer[var11] = 16777215;

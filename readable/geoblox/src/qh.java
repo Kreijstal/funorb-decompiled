@@ -245,13 +245,13 @@ final class qh extends ee implements pe, pl, ta {
     final static mb i(int param0) {
         String var1 = al.b(0);
         if (param0 == 25) {
-            if (var1 != null && -1 >= (var1.indexOf('@') ^ -1)) {
+            if (var1 != null && var1.indexOf('@') >= 0) {
                 var1 = "";
             }
             return new mb(al.b(0), rl.n(-1071908447));
         }
         field_J = 84;
-        if (var1 != null && -1 >= (var1.indexOf('@') ^ -1)) {
+        if (var1 != null && var1.indexOf('@') >= 0) {
             var1 = "";
         }
         return new mb(al.b(0), rl.n(-1071908447));
@@ -328,7 +328,7 @@ final class qh extends ee implements pe, pl, ta {
         var6 = Geoblox.field_C;
         try {
           if (0 != param1) {
-            if ((param1 ^ -1) != -2) {
+            if (param1 != 1) {
               if (param1 == 2) {
                 uk.a(false, "conduct.ws");
               }

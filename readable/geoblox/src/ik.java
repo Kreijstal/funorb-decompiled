@@ -115,14 +115,14 @@ final class ik {
                   }
                   var5_int = 0;
                   var6_int = 0;
-                  if (-2 != (secondEntity.entitySpriteKindId ^ -1)) {
+                  if (secondEntity.entitySpriteKindId != 1) {
                     stackIn_14_0 = 0;
                   } else {
                     stackIn_14_0 = 1;
                   }
 
 
-                  if ((firstEntity.entitySpriteKindId ^ -1) != -2) {
+                  if (firstEntity.entitySpriteKindId != 1) {
 
                     stackIn_17_1 = 0;
                   } else {
@@ -131,7 +131,7 @@ final class ik {
                   }
                   L6: {
                     if ((stackIn_14_0 ^ stackIn_17_1) != 0) {
-                      if (-2 == (secondEntity.entitySpriteKindId ^ -1)) {
+                      if (secondEntity.entitySpriteKindId == 1) {
                         if (firstEntity.entitySpriteKindId == 0) {
                           secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
                           break L6;
@@ -144,7 +144,7 @@ final class ik {
                         }
                       }
                       if (firstEntity.entitySpriteKindId == 2) {
-                        if (-2 == (secondEntity.entitySpriteKindId ^ -1)) {
+                        if (secondEntity.entitySpriteKindId == 1) {
                           var3_int = 1;
                           var4 = 1;
                           var6_int = 1;
@@ -153,7 +153,7 @@ final class ik {
                         }
                       }
                       if (1 == firstEntity.entitySpriteKindId) {
-                        if (-3 == (secondEntity.entitySpriteKindId ^ -1)) {
+                        if (secondEntity.entitySpriteKindId == 2) {
                           secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, 0);
                           var5_int = 1;
                           var3_int = 1;
@@ -161,18 +161,18 @@ final class ik {
                       }
                     } else {
                       if (2 != secondEntity.entitySpriteKindId) {
-                        if ((firstEntity.entitySpriteKindId ^ -1) != -3) {
+                        if (firstEntity.entitySpriteKindId != 2) {
                           break L6;
                         }
                       }
-                      if ((secondEntity.entitySpriteKindId ^ -1) == -3) {
+                      if (secondEntity.entitySpriteKindId == 2) {
                         if (2 != firstEntity.entitySpriteKindId) {
                           secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
                           var3_int = 1;
                           break L6;
                         }
                       }
-                      if (-3 == (firstEntity.entitySpriteKindId ^ -1)) {
+                      if (firstEntity.entitySpriteKindId == 2) {
                         if (2 != secondEntity.entitySpriteKindId) {
                           var4 = 1;
                           var6_int = 1;
@@ -190,7 +190,7 @@ final class ik {
                     }
                     bh.a(var6_int != 0, secondEntity, 1, firstEntity, var5_int != 0);
                   }
-                  if (-2 == (secondEntity.entitySpriteKindId ^ -1)) {
+                  if (secondEntity.entitySpriteKindId == 1) {
                     if (firstEntity.entitySpriteKindId == 1) {
                       if (firstEntity.entityCategoryKey == secondEntity.entityCategoryKey) {
                         secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
@@ -209,7 +209,7 @@ final class ik {
                   }
                 }
                 if (secondEntity.entitySpriteKindId == 0) {
-                  if (-1 == (firstEntity.entitySpriteKindId ^ -1)) {
+                  if (firstEntity.entitySpriteKindId == 0) {
                     if (secondEntity.entityCategoryKey == firstEntity.entityCategoryKey) {
                       secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
                       firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;

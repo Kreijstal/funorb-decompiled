@@ -66,19 +66,19 @@ final class ul {
             }
             L2: while (var3 != null) {
               L4: {
-                if (-2 <= (var3.sameVariantEntityCount ^ -1)) {
+                if (var3.sameVariantEntityCount <= 1) {
                   if (var3.sameCategoryEntityCount <= 1) {
                     break L4;
                   }
                 }
                 var3.entityQueue = bh.field_c;
-                if ((var3.sameVariantEntityCount ^ -1) >= -2) {
+                if (var3.sameVariantEntityCount <= 1) {
                   stackIn_10_0 = 0;
                 } else {
                   stackIn_10_0 = 1;
                 }
                 var4 = stackIn_10_0;
-                if (-2 <= (var3.sameCategoryEntityCount ^ -1)) {
+                if (var3.sameCategoryEntityCount <= 1) {
                   stackIn_13_0 = 0;
                 } else {
                   stackIn_13_0 = 1;

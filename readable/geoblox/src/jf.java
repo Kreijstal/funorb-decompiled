@@ -58,7 +58,7 @@ final class jf implements dh {
               var8 = param0 - (-param4.field_v - var12.field_H);
               var9 = var12.field_G + param2 + param4.field_m;
               SoftwareRasterizer.g(var8, var9, var7 + var8, var9, this.field_d);
-              for (var10 = var12.a((byte) 86) - 1; (var10 ^ -1) <= -1; var10--) {
+              for (var10 = var12.a((byte) 86) - 1; var10 >= 0; var10--) {
                 SoftwareRasterizer.d(var7 * var12.c(-113, var10) / var12.g(-128) + var8, var9, this.field_i, this.field_e);
               }
               if (null == this.field_f) {
@@ -129,7 +129,7 @@ final class jf implements dh {
           L0: {
             L1: while (true) {
               param7--;
-              if ((param7 ^ -1) > -1) {
+              if (param7 < 0) {
                 if (param2 == 33423689) {
                   break L0;
                 } else {
@@ -199,7 +199,7 @@ final class jf implements dh {
         try {
           L0: {
             if (param0 != null) {
-              if (-1 > (param3 ^ -1)) {
+              if (param3 > 0) {
                 var6_int = param0[0].field_s;
                 var7 = param0[2].field_s;
                 var8 = param0[1].field_s;

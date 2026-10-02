@@ -28,7 +28,7 @@ final class ki {
         var5 = Geoblox.field_C;
         try {
           L0: {
-            for (var2_int = 0; -4 < (var2_int ^ -1); var2_int++) {
+            for (var2_int = 0; var2_int < 3; var2_int++) {
               p.field_o[var2_int] = 0;
             }
             for (var2_int = 0; var2_int < oj.field_b; var2_int++) {

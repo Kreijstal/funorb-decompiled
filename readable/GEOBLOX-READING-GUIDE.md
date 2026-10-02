@@ -1,4 +1,4 @@
-# Reading GeoBlox pass 10
+# Reading GeoBlox pass 14
 
 The readable tree uses semantic names without opaque suffixes. The symbol map
 keeps the original spelling and JVM identity of every declaration, so
@@ -267,3 +267,12 @@ cases drop from 3,051 to 61. Two original methods retain dispatchers (27 and
 catch and original resource order through shared helper fields. Unknown builder
 prefixes across joins no longer disappear from diagnostic contexts. See [the investigation](STATE-MACHINE-READABILITY.md)
 for refusal reasons, verification and the next structural steps.
+
+## Signed complement conditions
+
+Pass 14 replaces proven int/long XOR-minus-one comparisons with direct
+conditions. Tutorial checks now show `tutorialStepId == 5` instead of
+`-6 == (tutorialStepId ^ -1)`. Text decoding checks character values against
+0, 128 and 160 directly. Numeric thresholds remain unchanged in meaning;
+no gameplay enum or new state name is inferred by this renderer change.
+See [the comparison report](COMPARISON-READABILITY.md) for exact pins and limits.

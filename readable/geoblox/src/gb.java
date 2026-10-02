@@ -64,7 +64,7 @@ final class gb {
                 decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                if (-14 != (ki.field_d ^ -1)) {
+                if (ki.field_d != 13) {
                   continue L2;
                 } else {
                   stackIn_7_0 = 1;

@@ -44,7 +44,7 @@ final class fh implements dh {
         int var10 = 0;
         StringBuilder discarded$0 = null;
         int var11 = Geoblox.field_C;
-        if ((param0 ^ -1L) >= -1L) {
+        if (param0 <= 0L) {
             return null;
         }
         if (param0 >= 6582952005840035281L) {
@@ -58,7 +58,7 @@ final class fh implements dh {
                 var3++;
             }
             var6 = new StringBuilder(var3);
-            while (-1L != (param0 ^ -1L)) {
+            while (param0 != 0L) {
                 var7_long = param0;
                 param0 = param0 / 37L;
                 var9 = w.field_c[(int)(-(37L * param0) + var7_long)];
@@ -112,15 +112,15 @@ final class fh implements dh {
             var7 = this.field_d.a(param4.field_s);
             var8 = this.field_d.field_q + this.field_d.field_o;
             var9 = param4.field_v + param0;
-            if ((this.field_b ^ -1) == -3) {
+            if (this.field_b == 2) {
               var9 = var9 + (-var7 + param4.field_r);
             } else {
-              if (-2 == (this.field_b ^ -1)) {
+              if (this.field_b == 1) {
                 var9 = var9 + (-var7 + param4.field_r >> -1257061119);
               }
             }
             var10 = param2 - -param4.field_m;
-            if (-3 == (this.field_a ^ -1)) {
+            if (this.field_a == 2) {
               var10 = var10 + (param4.field_h - var8);
             } else {
               if (this.field_a == 1) {

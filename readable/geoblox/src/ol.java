@@ -124,7 +124,7 @@ final class ol extends hk {
                   for (var13 = 0; var13 < this.field_F.a((byte) 48); var13++) {
                     var14 = this.field_F.a(var13, (byte) 94) + -var9;
                     var14 = var14 * var14;
-                    if ((var11 ^ -1) < (var14 ^ -1)) {
+                    if (~var11 < ~var14) {
                       var11 = var14;
                       var12 = var13;
                     }

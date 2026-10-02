@@ -81,7 +81,7 @@ final class pi extends vf {
 
     final static void c(int param0, int param1) {
         wg.field_a = param0 >> -1651040092 & 3;
-        if (!(-3 <= (wg.field_a ^ -1))) {
+        if (!(wg.field_a <= 2)) {
             wg.field_a = 2;
         }
         qc.field_i = param0 >> 356020514 & 3;

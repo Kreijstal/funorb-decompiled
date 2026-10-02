@@ -18,7 +18,8 @@ function fixture(change) {
       'rules/geoblox-v9.json', 'rules/geoblox-v10-migration.json',
       'rules/geoblox-v10.json', 'rules/geoblox-v11-migration.json',
       'rules/geoblox-v11.json', 'rules/geoblox-v12-migration.json',
-      'rules/geoblox-v12.json', 'rules/geoblox-v13-text.json', 'tools/PIN.json']) {
+      'rules/geoblox-v12.json', 'rules/geoblox-v13-text.json', 'rules/geoblox-v13.json',
+      'rules/geoblox-v14-migration.json', 'tools/PIN.json']) {
       fs.mkdirSync(path.dirname(path.join(temporary, file)), {recursive: true});
       fs.copyFileSync(path.join(root, file), path.join(temporary, file));
     }
@@ -43,12 +44,12 @@ test('reviewed lineage reproduces all 841 guarded rules', () => {
 test('a replacement input digest alone cannot migrate the export', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.inputTreeSha256 = '0'.repeat(64);
-  })), /reviewed pass-13 text additions/);
+  })), /reviewed pass-14 migration/);
 });
 test('a different decompiler revision requires a new reviewed migration', () => {
   assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
     data.generators.javaTools.commit = '0'.repeat(40);
-  })), /reviewed pass-13 text additions/);
+  })), /reviewed pass-14 migration/);
 });
 test('previous names and migration identities cannot change silently', () => {
   assert.throws(() => fixture(edit => edit('rules/geoblox-v6.json', data => {
@@ -133,9 +134,9 @@ test('text additions retain spelling guards and the reviewed naming tool', () =>
     data.adaptedToolCommit = '0'.repeat(40);
   })), /reviewed pass-13 text additions/);
 });
-test('pass 13 refuses a changed source commit, old manifest or resource counts', () => {
-  assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
-    data.commit = '0'.repeat(40);
+test('pass 13 retains its historical source commit, old manifest and resource counts', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v13.json', data => {
+    data.source.commit = '0'.repeat(40);
   })), /reviewed pass-13 text additions/);
   assert.throws(() => fixture(edit => edit('rules/geoblox-v12.json', data => {
     data.renames[0].to = 'ChangedHistoricalName';
@@ -143,4 +144,25 @@ test('pass 13 refuses a changed source commit, old manifest or resource counts',
   assert.throws(() => fixture(edit => edit('rules/geoblox-v13-text.json', data => {
     data.review.discardedReadsUnnamed--;
   })), /reviewed pass-13 text additions/);
+});
+
+test('pass 14 guards its source commit and retains every local identity', () => {
+  assert.throws(() => fixture(edit => edit('geoblox-source-pin.json', data => {
+    data.commit = '0'.repeat(40);
+  })), /reviewed pass-14 migration/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v14-migration.json', data => {
+    data.review.namedLocalDeclarationIdentitiesUnchanged--;
+  })), /reviewed pass-14 migration/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v14-migration.json', data => {
+    data.identityChanges.push({from: 'L:bc.a(I[BII)Ljava/lang/String;#0', to: 'L:bc.a(I[BII)Ljava/lang/String;#1'});
+  })), /reviewed pass-14 migration/);
+});
+
+test('pass 14 cannot rewrite historical names or borrow a resource identity', () => {
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v13.json', data => {
+    data.renames[0].to = 'ChangedHistoricalName';
+  })), /reviewed rule lineage/);
+  assert.throws(() => fixture(edit => edit('rules/geoblox-v14-migration.json', data => {
+    data.textEvidence.resourceAssignments[0].resources[0].key = 'different';
+  })), /changes reviewed resource identities/);
 });

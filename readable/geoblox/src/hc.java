@@ -96,65 +96,65 @@ final class hc extends dj implements nl {
           hc.k(82);
           var2 = param0;
           if (32 != var2) {
-            if (-161 != (var2 ^ -1)) {
+            if (var2 != 160) {
               if (var2 != 95) {
-                if (-46 != (var2 ^ -1)) {
-                  if ((var2 ^ -1) != -92) {
+                if (var2 != 45) {
+                  if (var2 != 91) {
                     if (93 != var2) {
                       if (35 != var2) {
-                        if ((var2 ^ -1) != -225) {
+                        if (var2 != 224) {
                           if (var2 != 225) {
-                            if ((var2 ^ -1) != -227) {
-                              if (-229 != (var2 ^ -1)) {
-                                if ((var2 ^ -1) != -228) {
+                            if (var2 != 226) {
+                              if (var2 != 228) {
+                                if (var2 != 227) {
                                   if (var2 != 192) {
                                     if (var2 != 193) {
                                       if (var2 != 194) {
-                                        if ((var2 ^ -1) != -197) {
+                                        if (var2 != 196) {
                                           if (var2 != 195) {
-                                            if (-233 != (var2 ^ -1)) {
-                                              if ((var2 ^ -1) != -234) {
-                                                if (-235 != (var2 ^ -1)) {
-                                                  if ((var2 ^ -1) != -236) {
-                                                    if ((var2 ^ -1) != -201) {
+                                            if (var2 != 232) {
+                                              if (var2 != 233) {
+                                                if (var2 != 234) {
+                                                  if (var2 != 235) {
+                                                    if (var2 != 200) {
                                                       if (var2 != 201) {
-                                                        if ((var2 ^ -1) != -203) {
-                                                          if (-204 != (var2 ^ -1)) {
-                                                            if ((var2 ^ -1) != -238) {
-                                                              if ((var2 ^ -1) != -239) {
+                                                        if (var2 != 202) {
+                                                          if (var2 != 203) {
+                                                            if (var2 != 237) {
+                                                              if (var2 != 238) {
                                                                 if (239 != var2) {
-                                                                  if ((var2 ^ -1) != -206) {
-                                                                    if (-207 != (var2 ^ -1)) {
-                                                                      if ((var2 ^ -1) != -208) {
-                                                                        if ((var2 ^ -1) != -243) {
+                                                                  if (var2 != 205) {
+                                                                    if (var2 != 206) {
+                                                                      if (var2 != 207) {
+                                                                        if (var2 != 242) {
                                                                           if (243 != var2) {
-                                                                            if ((var2 ^ -1) != -245) {
+                                                                            if (var2 != 244) {
                                                                               if (var2 != 246) {
-                                                                                if (-246 != (var2 ^ -1)) {
-                                                                                  if (-211 != (var2 ^ -1)) {
-                                                                                    if (-212 != (var2 ^ -1)) {
-                                                                                      if (-213 != (var2 ^ -1)) {
+                                                                                if (var2 != 245) {
+                                                                                  if (var2 != 210) {
+                                                                                    if (var2 != 211) {
+                                                                                      if (var2 != 212) {
                                                                                         if (var2 != 214) {
-                                                                                          if (-214 != (var2 ^ -1)) {
+                                                                                          if (var2 != 213) {
                                                                                             if (249 != var2) {
                                                                                               if (250 != var2) {
-                                                                                                if ((var2 ^ -1) != -252) {
-                                                                                                  if (-253 != (var2 ^ -1)) {
-                                                                                                    if ((var2 ^ -1) != -218) {
+                                                                                                if (var2 != 251) {
+                                                                                                  if (var2 != 252) {
+                                                                                                    if (var2 != 217) {
                                                                                                       if (218 != var2) {
-                                                                                                        if (-220 != (var2 ^ -1)) {
+                                                                                                        if (var2 != 219) {
                                                                                                           if (var2 != 220) {
                                                                                                             if (var2 != 231) {
                                                                                                               if (var2 == 199) {
                                                                                                                 return 'c';
                                                                                                               } else {
-                                                                                                                if (-256 != (var2 ^ -1)) {
-                                                                                                                  if (-377 == (var2 ^ -1)) {
+                                                                                                                if (var2 != 255) {
+                                                                                                                  if (var2 == 376) {
                                                                                                                     return 'y';
                                                                                                                   } else {
-                                                                                                                    if (-242 != (var2 ^ -1)) {
+                                                                                                                    if (var2 != 241) {
                                                                                                                       if (var2 != 209) {
-                                                                                                                        if ((var2 ^ -1) == -224) {
+                                                                                                                        if (var2 == 223) {
                                                                                                                           return 'b';
                                                                                                                         } else {
                                                                                                                           return Character.toLowerCase(param0);
@@ -262,65 +262,65 @@ final class hc extends dj implements nl {
         } else {
           var2 = param0;
           if (32 != var2) {
-            if (-161 != (var2 ^ -1)) {
+            if (var2 != 160) {
               if (var2 != 95) {
-                if (-46 != (var2 ^ -1)) {
-                  if ((var2 ^ -1) != -92) {
+                if (var2 != 45) {
+                  if (var2 != 91) {
                     if (93 != var2) {
                       if (35 != var2) {
-                        if ((var2 ^ -1) != -225) {
+                        if (var2 != 224) {
                           if (var2 != 225) {
-                            if ((var2 ^ -1) != -227) {
-                              if (-229 != (var2 ^ -1)) {
-                                if ((var2 ^ -1) != -228) {
+                            if (var2 != 226) {
+                              if (var2 != 228) {
+                                if (var2 != 227) {
                                   if (var2 != 192) {
                                     if (var2 != 193) {
                                       if (var2 != 194) {
-                                        if ((var2 ^ -1) != -197) {
+                                        if (var2 != 196) {
                                           if (var2 != 195) {
-                                            if (-233 != (var2 ^ -1)) {
-                                              if ((var2 ^ -1) != -234) {
-                                                if (-235 != (var2 ^ -1)) {
-                                                  if ((var2 ^ -1) != -236) {
-                                                    if ((var2 ^ -1) != -201) {
+                                            if (var2 != 232) {
+                                              if (var2 != 233) {
+                                                if (var2 != 234) {
+                                                  if (var2 != 235) {
+                                                    if (var2 != 200) {
                                                       if (var2 != 201) {
-                                                        if ((var2 ^ -1) != -203) {
-                                                          if (-204 != (var2 ^ -1)) {
-                                                            if ((var2 ^ -1) != -238) {
-                                                              if ((var2 ^ -1) != -239) {
+                                                        if (var2 != 202) {
+                                                          if (var2 != 203) {
+                                                            if (var2 != 237) {
+                                                              if (var2 != 238) {
                                                                 if (239 != var2) {
-                                                                  if ((var2 ^ -1) != -206) {
-                                                                    if (-207 != (var2 ^ -1)) {
-                                                                      if ((var2 ^ -1) != -208) {
-                                                                        if ((var2 ^ -1) != -243) {
+                                                                  if (var2 != 205) {
+                                                                    if (var2 != 206) {
+                                                                      if (var2 != 207) {
+                                                                        if (var2 != 242) {
                                                                           if (243 != var2) {
-                                                                            if ((var2 ^ -1) != -245) {
+                                                                            if (var2 != 244) {
                                                                               if (var2 != 246) {
-                                                                                if (-246 != (var2 ^ -1)) {
-                                                                                  if (-211 != (var2 ^ -1)) {
-                                                                                    if (-212 != (var2 ^ -1)) {
-                                                                                      if (-213 != (var2 ^ -1)) {
+                                                                                if (var2 != 245) {
+                                                                                  if (var2 != 210) {
+                                                                                    if (var2 != 211) {
+                                                                                      if (var2 != 212) {
                                                                                         if (var2 != 214) {
-                                                                                          if (-214 != (var2 ^ -1)) {
+                                                                                          if (var2 != 213) {
                                                                                             if (249 != var2) {
                                                                                               if (250 != var2) {
-                                                                                                if ((var2 ^ -1) != -252) {
-                                                                                                  if (-253 != (var2 ^ -1)) {
-                                                                                                    if ((var2 ^ -1) != -218) {
+                                                                                                if (var2 != 251) {
+                                                                                                  if (var2 != 252) {
+                                                                                                    if (var2 != 217) {
                                                                                                       if (218 != var2) {
-                                                                                                        if (-220 != (var2 ^ -1)) {
+                                                                                                        if (var2 != 219) {
                                                                                                           if (var2 != 220) {
                                                                                                             if (var2 != 231) {
                                                                                                               if (var2 == 199) {
                                                                                                                 return 'c';
                                                                                                               } else {
-                                                                                                                if (-256 != (var2 ^ -1)) {
-                                                                                                                  if (-377 == (var2 ^ -1)) {
+                                                                                                                if (var2 != 255) {
+                                                                                                                  if (var2 == 376) {
                                                                                                                     return 'y';
                                                                                                                   } else {
-                                                                                                                    if (-242 != (var2 ^ -1)) {
+                                                                                                                    if (var2 != 241) {
                                                                                                                       if (var2 != 209) {
-                                                                                                                        if ((var2 ^ -1) == -224) {
+                                                                                                                        if (var2 == 223) {
                                                                                                                           return 'b';
                                                                                                                         } else {
                                                                                                                           return Character.toLowerCase(param0);

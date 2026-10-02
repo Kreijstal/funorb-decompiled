@@ -51,7 +51,7 @@ final class ef implements Iterator {
             var2 = (GameplayEntity) ((Object) bh.field_c.firstForIteration(0));
             L2: while (var2 != null) {
               var2.advanceEntityAnimation(true);
-              if ((var2.animationFrameIndex ^ -1) <= -4) {
+              if (var2.animationFrameIndex >= 3) {
                 var2.entityQueue = ra.availableEntities;
                 var2.animationFrameIndex = 0;
               }

@@ -107,12 +107,12 @@ final class al {
         var2 = qi.b(3, param0 ^ 9667);
         if (param0 == 9666) {
           var3 = param1;
-          if ((var3 ^ -1) != -5) {
+          if (var3 != 4) {
             if (var3 == 3) {
               td.a(-348, fl.field_c[var2 + 13]);
             } else {
-              if (-2 != (var3 ^ -1)) {
-                if (-1 != (var3 ^ -1)) {
+              if (var3 != 1) {
+                if (var3 != 0) {
                   if (var3 == 6) {
                     td.a(-348, fl.field_c[var2 + 4]);
                   } else {
@@ -174,7 +174,7 @@ final class al {
                     var4 = uj.a(';', true, var3);
                     for (var5 = 0; var5 < var4.length; var5++) {
                       var6 = var4[var5].indexOf('=');
-                      if (-1 >= (var6 ^ -1)) {
+                      if (var6 >= 0) {
                         if (var4[var5].substring(0, var6).trim().equals(var8)) {
                           stackIn_12_0 = 1;
                           decompiledRegionSelector0 = 0;

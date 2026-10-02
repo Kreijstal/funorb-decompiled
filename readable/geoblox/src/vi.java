@@ -64,10 +64,10 @@ final class vi extends hk {
           L0: {
             if (param1.b(-26098)) {
               var8 = param1.a(34);
-              L1: while (-1 == (var8.field_a ^ -1)) {
+              L1: while (var8.field_a == 0) {
                 bc.a(0, 10L);
               }
-              if ((var8.field_a ^ -1) != -3) {
+              if (var8.field_a != 2) {
                 var10 = (int[]) (var8.field_b);
                 var9 = var10;
                 var3 = var9;

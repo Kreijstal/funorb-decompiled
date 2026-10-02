@@ -74,14 +74,14 @@ final class ab {
               decompiledRegionSelector0 = 0;
             } else {
               var3_int = param2.length();
-              if ((var3_int ^ -1) <= -2) {
-                if ((var3_int ^ -1) >= -13) {
+              if (var3_int >= 1) {
+                if (var3_int <= 12) {
                   var4 = oe.a(param2, 12);
                   if (param1 != 2) {
                     ab.a((byte) 112);
                   }
                   if (var4 != null) {
-                    if ((var4.length() ^ -1) <= -2) {
+                    if (var4.length() >= 1) {
                       if (!gg.a((byte) -32, var4.charAt(0))) {
                         if (!gg.a((byte) -75, var4.charAt(-1 + var4.length()))) {
                           var5 = 0;
@@ -100,7 +100,7 @@ final class ab {
                               }
                             }
                           }
-                          if (-1 > (var5 ^ -1)) {
+                          if (var5 > 0) {
                             stackIn_36_0 = GameScreen.createNameLeadingSpaceAlertText;
                             decompiledRegionSelector0 = 5;
                             break L0;
@@ -317,7 +317,7 @@ final class ab {
                       var3_float = 320.0f - var2.positionX;
                       var4_float = 240.0f - var2.positionY;
                       var5 = -(var4_float * var2.positionX) + var2.positionY * var3_float;
-                      if (-1 == (var2.relatedEntityCount ^ -1)) {
+                      if (var2.relatedEntityCount == 0) {
                         if (var5 * var5 > 0.30000001192092896f) {
                           var2.velocityX = var3_float;
                           var2.velocityY = var4_float;
@@ -339,7 +339,7 @@ final class ab {
                       var2.relatedEntities[var3].removeRelatedEntity(var2, 0);
                     }
                     var2.relatedEntityCount = 0;
-                    if ((var2.entitySpriteKindId ^ -1) != -3) {
+                    if (var2.entitySpriteKindId != 2) {
                       stackIn_17_0 = 0;
                     } else {
                       stackIn_17_0 = 1;
@@ -352,7 +352,7 @@ final class ab {
                           break L12;
                         }
                       }
-                      if ((var2.entitySpriteKindId ^ -1) != -3) {
+                      if (var2.entitySpriteKindId != 2) {
                         var2.spriteAngleRadians = var2.spriteAngleRadians - boardAngleRadians;
                       }
                       var2.positionY = (float)td.field_E;

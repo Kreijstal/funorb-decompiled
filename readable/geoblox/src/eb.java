@@ -66,7 +66,7 @@ final class eb {
                   return false;
                 }
               }
-              if (-1 < (var5.field_l ^ -1)) {
+              if (var5.field_l < 0) {
                 if (var5.field_f == null) {
                   if (null != var5.field_m) {
                     if (!var5.field_i.b(true)) {
@@ -99,34 +99,34 @@ final class eb {
         if (param0 == 51) {
             wg.field_i.field_q = 2;
             wg.field_i.field_b = wg.field_i.field_b + 1;
-            if (-3 < (wg.field_i.field_b ^ -1)) {
-                if ((wg.field_i.field_b ^ -1) <= -3 && 50 == param0) {
+            if (wg.field_i.field_b < 2) {
+                if (wg.field_i.field_b >= 2 && 50 == param0) {
                     return 5;
                 }
                 if (param1 != 28625) {
                     field_i = -67;
-                    if (!(-5 < (wg.field_i.field_b ^ -1))) {
+                    if (!(wg.field_i.field_b < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(-5 < (wg.field_i.field_b ^ -1))) {
+                if (!(wg.field_i.field_b < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(-52 != (param0 ^ -1))) {
+            if (!(param0 != 51)) {
                 return 2;
             }
-            if ((wg.field_i.field_b ^ -1) > -3) {
+            if (wg.field_i.field_b < 2) {
                 if (param1 != 28625) {
                     field_i = -67;
-                    if (!(-5 < (wg.field_i.field_b ^ -1))) {
+                    if (!(wg.field_i.field_b < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(-5 < (wg.field_i.field_b ^ -1))) {
+                if (!(wg.field_i.field_b < 4)) {
                     return 1;
                 }
                 return -1;
@@ -136,12 +136,12 @@ final class eb {
             }
             if (param1 != 28625) {
                 field_i = -67;
-                if (!(-5 < (wg.field_i.field_b ^ -1))) {
+                if (!(wg.field_i.field_b < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(-5 < (wg.field_i.field_b ^ -1))) {
+            if (!(wg.field_i.field_b < 4)) {
                 return 1;
             }
             return -1;
@@ -149,55 +149,55 @@ final class eb {
         if (50 != param0) {
             wg.field_i.field_q = 1;
             wg.field_i.field_b = wg.field_i.field_b + 1;
-            if (-3 >= (wg.field_i.field_b ^ -1)) {
-                if (-52 == (param0 ^ -1)) {
+            if (wg.field_i.field_b >= 2) {
+                if (param0 == 51) {
                     return 2;
                 }
-                if ((wg.field_i.field_b ^ -1) <= -3 && 50 == param0) {
+                if (wg.field_i.field_b >= 2 && 50 == param0) {
                     return 5;
                 }
                 if (param1 != 28625) {
                     field_i = -67;
-                    if (!(-5 < (wg.field_i.field_b ^ -1))) {
+                    if (!(wg.field_i.field_b < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(-5 < (wg.field_i.field_b ^ -1))) {
+                if (!(wg.field_i.field_b < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if ((wg.field_i.field_b ^ -1) <= -3 && 50 == param0) {
+            if (wg.field_i.field_b >= 2 && 50 == param0) {
                 return 5;
             }
             if (param1 != 28625) {
                 field_i = -67;
-                if (!(-5 < (wg.field_i.field_b ^ -1))) {
+                if (!(wg.field_i.field_b < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(-5 < (wg.field_i.field_b ^ -1))) {
+            if (!(wg.field_i.field_b < 4)) {
                 return 1;
             }
             return -1;
         }
         wg.field_i.field_q = 5;
         wg.field_i.field_b = wg.field_i.field_b + 1;
-        if (-3 >= (wg.field_i.field_b ^ -1)) {
-            if (-52 == (param0 ^ -1)) {
+        if (wg.field_i.field_b >= 2) {
+            if (param0 == 51) {
                 return 2;
             }
-            if ((wg.field_i.field_b ^ -1) > -3) {
+            if (wg.field_i.field_b < 2) {
                 if (param1 != 28625) {
                     field_i = -67;
-                    if (!(-5 < (wg.field_i.field_b ^ -1))) {
+                    if (!(wg.field_i.field_b < 4)) {
                         return 1;
                     }
                     return -1;
                 }
-                if (!(-5 < (wg.field_i.field_b ^ -1))) {
+                if (!(wg.field_i.field_b < 4)) {
                     return 1;
                 }
                 return -1;
@@ -207,27 +207,27 @@ final class eb {
             }
             if (param1 != 28625) {
                 field_i = -67;
-                if (!(-5 < (wg.field_i.field_b ^ -1))) {
+                if (!(wg.field_i.field_b < 4)) {
                     return 1;
                 }
                 return -1;
             }
-            if (!(-5 < (wg.field_i.field_b ^ -1))) {
+            if (!(wg.field_i.field_b < 4)) {
                 return 1;
             }
             return -1;
         }
-        if ((wg.field_i.field_b ^ -1) <= -3 && 50 == param0) {
+        if (wg.field_i.field_b >= 2 && 50 == param0) {
             return 5;
         }
         if (param1 != 28625) {
             field_i = -67;
-            if (!(-5 < (wg.field_i.field_b ^ -1))) {
+            if (!(wg.field_i.field_b < 4)) {
                 return 1;
             }
             return -1;
         }
-        if (!(-5 < (wg.field_i.field_b ^ -1))) {
+        if (!(wg.field_i.field_b < 4)) {
             return 1;
         }
         return -1;

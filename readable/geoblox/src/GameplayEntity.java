@@ -102,7 +102,7 @@ final class GameplayEntity extends DualLinkNode {
           boardAngle = el.gameplaySession.boardAngleRadians;
           rotatedEntityX = (int)(320.0 + ((double)entityOffsetX * Math.cos((double)boardAngle) - Math.sin((double)boardAngle) * (double)entityOffsetY));
           rotatedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)boardAngle) + Math.cos((double)boardAngle) * (double)entityOffsetY));
-          if (-2 != (this.entitySpriteKindId ^ -1)) {
+          if (this.entitySpriteKindId != 1) {
             if (2 != this.entitySpriteKindId) {
               vf.spriteScratchRaster.e();
               SoftwareRasterizer.c();
@@ -128,7 +128,7 @@ final class GameplayEntity extends DualLinkNode {
         entityDrawX = rotatedEntityX + -(vf.spriteScratchRaster.field_s >> -2050048063);
         entityDrawY = rotatedEntityY - (vf.spriteScratchRaster.field_o >> -2142432031);
         fadeOpacity = (int)(0.5 + Math.sin((double)(this.remainingLifetimeTicks + -this.initialLifetimeTicks + this.initialLifetimeTicks >> 1305235300)) * (double)(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks)) / (double)this.initialLifetimeTicks) - (-(100 * (this.initialLifetimeTicks - this.remainingLifetimeTicks) / this.initialLifetimeTicks) - 56);
-        if (-257 > (fadeOpacity ^ -1)) {
+        if (fadeOpacity > 256) {
           fadeOpacity = 256;
         } else {
           if (fadeOpacity < 0) {
@@ -183,11 +183,11 @@ final class GameplayEntity extends DualLinkNode {
         clipTopY = -4 + -(vf.spriteScratchRaster.field_o >> -1594034399) + (int)this.positionY;
         clippedWidth = 8 + vf.spriteScratchRaster.field_s;
         clippedHeight = 8 + vf.spriteScratchRaster.field_o;
-        if (-1 < (clipLeftX ^ -1)) {
+        if (clipLeftX < 0) {
           clippedWidth = clippedWidth + clipLeftX;
           clipLeftX = 0;
         }
-        if ((clipTopY ^ -1) > -1) {
+        if (clipTopY < 0) {
           clippedHeight = clippedHeight + clipTopY;
           clipTopY = 0;
         }
@@ -204,16 +204,16 @@ final class GameplayEntity extends DualLinkNode {
           L4: while (true) {
             incrementValue$0 = clippedHeight;
             clippedHeight--;
-            if (-1 <= (incrementValue$0 ^ -1)) {
+            if (incrementValue$0 <= 0) {
               return;
             } else {
               negativeColumnCounter = -clippedWidth;
               L5: while (true) {
-                if ((negativeColumnCounter ^ -1) <= -1) {
+                if (negativeColumnCounter >= 0) {
                   framebufferIndex = framebufferIndex + rowSkip;
                   continue L4;
                 } else {
-                  if ((framebufferPixels[framebufferIndex] ^ -1) == (this.entityId - -1 ^ -1)) {
+                  if (~framebufferPixels[framebufferIndex] == ~(this.entityId - -1)) {
                     framebufferPixels[framebufferIndex] = 0;
                     framebufferIndex++;
                     negativeColumnCounter++;
@@ -248,7 +248,7 @@ final class GameplayEntity extends DualLinkNode {
             this.velocityX = (float)((double)this.velocityX * velocityNormalizationScale);
             this.velocityY = (float)((double)this.velocityY * velocityNormalizationScale);
         }
-        if (!((this.entitySpriteKindId ^ -1) == -3)) {
+        if (!(this.entitySpriteKindId == 2)) {
             this.spriteAngleRadians = this.spriteAngleRadians - rotationDeltaRadians;
         }
     }
@@ -262,7 +262,7 @@ final class GameplayEntity extends DualLinkNode {
         if (0 == this.entitySpriteKindId) {
           this.entitySprite = ke.field_a[GameScreen.selectedThemeId][this.entityCategoryKey][this.spriteVariantIndex];
         } else {
-          if (-5 == (this.entitySpriteKindId ^ -1)) {
+          if (this.entitySpriteKindId == 4) {
             this.spriteVariantIndex = -1;
             this.entitySprite = fc.field_g[0];
             this.entityCategoryKey = -1;
@@ -353,7 +353,7 @@ final class GameplayEntity extends DualLinkNode {
         if (!param0) {
           this.positionY = -0.09870309382677078f;
         }
-        if ((this.entitySpriteKindId ^ -1) != -6) {
+        if (this.entitySpriteKindId != 5) {
           if (this.entitySpriteKindId != 1) {
             if (this.entitySpriteKindId == 2) {
               if (this.entityUpdateTick % 24 == 0) {
@@ -375,7 +375,7 @@ final class GameplayEntity extends DualLinkNode {
           } else {
             paletteBlendFraction = 0.019999999552965164f * (float)(this.entityUpdateTick % 50);
             this.interpolatedPaletteColor = (int)((float)this.paletteBlueDelta * paletteBlendFraction) + jg.field_h[GameScreen.selectedThemeId][this.animationFrameIndex] + (((int)(paletteBlendFraction * (float)this.paletteRedDelta) << 1248854992) + ((int)((float)this.paletteGreenDelta * paletteBlendFraction) << 461902984));
-            if (-50 == (this.entityUpdateTick % 50 ^ -1)) {
+            if (this.entityUpdateTick % 50 == 49) {
               this.animationFrameIndex = this.animationFrameIndex + 1;
               this.animationFrameIndex = this.animationFrameIndex % 7;
               this.updatePaletteChannelDeltas(-107);
@@ -389,13 +389,13 @@ final class GameplayEntity extends DualLinkNode {
             this.animationFrameIndex = this.animationFrameIndex % 4;
           }
         }
-        if ((this.entitySpriteKindId ^ -1) != -5) {
+        if (this.entitySpriteKindId != 4) {
           if (7 != this.entitySpriteKindId) {
-            if ((this.entitySpriteKindId ^ -1) != -4) {
-              if (-7 == (this.entitySpriteKindId ^ -1)) {
+            if (this.entitySpriteKindId != 3) {
+              if (this.entitySpriteKindId == 6) {
                 this.remainingLifetimeTicks = this.remainingLifetimeTicks - 1;
-                if ((this.remainingLifetimeTicks ^ -1) > -1) {
-                  if (-1 == (this.entityUpdateTick % 24 ^ -1)) {
+                if (this.remainingLifetimeTicks < 0) {
+                  if (this.entityUpdateTick % 24 == 0) {
                     if (4 > this.animationFrameIndex) {
                       kind6AnimationFrame = this.animationFrameIndex;
                       this.animationFrameIndex = this.animationFrameIndex + 1;
@@ -405,14 +405,14 @@ final class GameplayEntity extends DualLinkNode {
                 }
               }
             } else {
-              if ((this.entityUpdateTick & 255 ^ -1) <= -50) {
+              if ((this.entityUpdateTick & 255) >= 49) {
                 this.animationFrameIndex = 0;
               } else {
                 if ((this.entityUpdateTick & 15) == 0) {
                   kind3AnimationFrame = this.animationFrameIndex;
                   this.animationFrameIndex = this.animationFrameIndex + 1;
                   this.entitySprite = hb.field_d[kind3AnimationFrame];
-                  if (-5 == (this.animationFrameIndex ^ -1)) {
+                  if (this.animationFrameIndex == 4) {
                     this.animationFrameIndex = 0;
                   }
                 }
@@ -432,7 +432,7 @@ final class GameplayEntity extends DualLinkNode {
               kind4AnimationFrame = this.animationFrameIndex;
               this.animationFrameIndex = this.animationFrameIndex + 1;
               this.entitySprite = fc.field_g[kind4AnimationFrame];
-              if ((this.animationFrameIndex ^ -1) == -5) {
+              if (this.animationFrameIndex == 4) {
                 this.animationFrameIndex = 0;
               }
             }
@@ -557,7 +557,7 @@ final class GameplayEntity extends DualLinkNode {
                 framebufferIndex = framebufferIndex + framebufferRowSkip;
                 continue L5;
               } else {
-                if ((this.entityId - -1 ^ -1) == (backgroundPixels[framebufferIndex] ^ -1)) {
+                if (~(this.entityId - -1) == ~backgroundPixels[framebufferIndex]) {
                   backgroundPixels[framebufferIndex] = 0;
                   framebufferIndex++;
                   negativeColumnCounter++;
@@ -577,7 +577,7 @@ final class GameplayEntity extends DualLinkNode {
         if (param0 != 320) {
             this.spriteAngleRadians = -1.9950387477874756f;
         }
-        if (!((this.entitySpriteKindId ^ -1) != -3)) {
+        if (!(this.entitySpriteKindId != 2)) {
             this.matchCooldownTicks = 60;
         }
         this.spriteVariantIndex = spriteVariantIndex;

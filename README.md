@@ -11,24 +11,24 @@ over the obfuscated gamepacks by the pipeline in
 
 ## Readable GeoBlox export
 
-[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 11 with
-642 reviewed naming rules, including gameplay state, contact/match processing,
-spawning, result sequences and score popups. Confirmed names omit opaque suffixes;
-the dictionary preserves original identities. Both 303-file Java corpora compile
-and preserve all 156,445 recorded bindings and 388 override relationships.
-The original decompilation remains under `games/`.
+[`readable/geoblox/src`](readable/geoblox/src) contains GeoBlox pass 14 with
+841 reviewed naming rules for gameplay, tutorial flow, interface text and
+resource decoding. Confirmed names omit opaque suffixes; the dictionary
+preserves original identities. Both 303-file Java corpora compile and preserve
+all 154,256 recorded bindings and 388 override relationships. The raw
+decompilation remains under `games/`.
 
 The [reproduction and update procedure](readable/README.md),
 [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md),
 [frozen rules](readable/geoblox-rules.json),
 [symbol map](readable/geoblox/SYMBOLS.md) and
 [provenance](readable/geoblox/provenance.json) describe the export.
-`node readable/reproduce-geoblox.mjs --check` verifies the pinned input and
-bundled tool and checks deterministic regeneration. The export retains pass 10’s
-reduction from 3,051 to 817 dispatcher cases. Pass 11 requires explicit loop exit
-targets and preserves handlers when structured recovery fails, including large
-methods. Unknown identifiers and shared joins remain;
-see the [state-machine report](readable/STATE-MACHINE-READABILITY.md).
+`node readable/reproduce-geoblox.mjs --check` verifies deterministic regeneration
+from the pinned input and bundled tool. Two original dispatcher methods remain,
+with 61 cases total. Typed complement comparisons now show direct conditions;
+see the [comparison report](readable/COMPARISON-READABILITY.md). Unknown
+identifiers and shared joins remain; the [state-machine report](readable/STATE-MACHINE-READABILITY.md)
+records the earlier structural recovery work.
 
 ## GeoBlox source refresh
 

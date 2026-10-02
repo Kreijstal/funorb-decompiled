@@ -122,7 +122,7 @@ final class ba implements Runnable {
             if (param1 == -97) {
               if (!this.field_f) {
                 L1: while (true) {
-                  if ((param3 ^ -1) >= -1) {
+                  if (param3 <= 0) {
                     decompiledRegionSelector0 = 2;
                     break L0;
                   } else {

@@ -22,45 +22,45 @@ final class sk {
         int var6;
         int var7;
         var7 = Geoblox.field_C;
-        if (0L != (this.field_c ^ -1L)) {
-          if ((this.field_b ^ -1L) != (this.field_c ^ -1L)) {
+        if (this.field_c != -1L) {
+          if (~this.field_b != ~this.field_c) {
             this.field_a.a(this.field_c, true);
             this.field_b = this.field_c;
           }
           this.field_a.a(this.field_j, 0, 90, this.field_d);
           this.field_b = this.field_b + (long)this.field_d;
-          if ((this.field_b ^ -1L) < (this.field_e ^ -1L)) {
+          if (~this.field_b < ~this.field_e) {
             this.field_e = this.field_b;
           }
           L3: {
             var2 = -1L;
             var4 = -1L;
             if (this.field_c >= this.field_g) {
-              if (((long)this.field_i + this.field_g ^ -1L) < (this.field_c ^ -1L)) {
+              if (~((long)this.field_i + this.field_g) < ~this.field_c) {
                 var2 = this.field_c;
                 break L3;
               }
             }
             if (this.field_c <= this.field_g) {
-              if ((this.field_g ^ -1L) > (this.field_c - -(long)this.field_d ^ -1L)) {
+              if (~this.field_g > ~(this.field_c - -(long)this.field_d)) {
                 var2 = this.field_g;
               }
             }
           }
           L5: {
-            if ((this.field_g ^ -1L) > (this.field_c + (long)this.field_d ^ -1L)) {
+            if (~this.field_g > ~(this.field_c + (long)this.field_d)) {
               if (this.field_g - -(long)this.field_i >= (long)this.field_d + this.field_c) {
                 var4 = (long)this.field_d + this.field_c;
                 break L5;
               }
             }
-            if (((long)this.field_i + this.field_g ^ -1L) < (this.field_c ^ -1L)) {
-              if ((this.field_c + (long)this.field_d ^ -1L) <= ((long)this.field_i + this.field_g ^ -1L)) {
+            if (~((long)this.field_i + this.field_g) < ~this.field_c) {
+              if (~(this.field_c + (long)this.field_d) <= ~((long)this.field_i + this.field_g)) {
                 var4 = this.field_g - -(long)this.field_i;
               }
             }
           }
-          if ((var2 ^ -1L) < 0L) {
+          if (var2 > -1L) {
             if (var4 > var2) {
               var6 = (int)(var4 + -var2);
               sf.a(this.field_j, (int)(-this.field_c + var2), this.field_h, (int)(-this.field_g + var2), var6);
@@ -134,8 +134,8 @@ final class sk {
                 if (param3 != 9868) {
                   sk.checkBoundaryLossAndStartCascade(-115);
                 }
-                if ((this.field_f ^ -1L) <= (this.field_g ^ -1L)) {
-                  if (((long)this.field_i + this.field_g ^ -1L) < (this.field_f ^ -1L)) {
+                if (~this.field_f <= ~this.field_g) {
+                  if (~((long)this.field_i + this.field_g) < ~this.field_f) {
                     var9_int = (int)((long)this.field_i - this.field_f - -this.field_g);
                     if (param1 < var9_int) {
                       var9_int = param1;
@@ -148,7 +148,7 @@ final class sk {
                 }
                 L6: {
                   if (this.field_h.length >= param1) {
-                    if ((param1 ^ -1) < -1) {
+                    if (param1 > 0) {
                       this.a(true);
                       var9_int = param1;
                       if (this.field_i < var9_int) {
@@ -163,7 +163,7 @@ final class sk {
                     this.field_a.a(this.field_f, true);
                     this.field_b = this.field_f;
                     L8: while (true) {
-                      if (-1 <= (param1 ^ -1)) {
+                      if (param1 <= 0) {
                         break L6;
                       } else {
                         var9_int = this.field_a.a(param1, param0, param2, false);
@@ -182,9 +182,9 @@ final class sk {
                 }
                 if (-1L != this.field_c) {
                   L10: {
-                    if ((this.field_c ^ -1L) < (this.field_f ^ -1L)) {
+                    if (~this.field_c < ~this.field_f) {
                       stackIn_32_0 = -1;
-                      stackIn_32_1 = param1 ^ -1;
+                      stackIn_32_1 = ~param1;
                       if (stackIn_32_0 > stackIn_32_1) {
                         var9_int = param2 + (int)(-this.field_f + this.field_c);
                         if (param2 + param1 < var9_int) {
@@ -203,13 +203,13 @@ final class sk {
                   }
                   L13: {
                     var9 = -1L;
-                    if ((this.field_c ^ -1L) <= (var5_long ^ -1L)) {
-                      if ((this.field_c ^ -1L) > ((long)var8 + var5_long ^ -1L)) {
+                    if (~this.field_c <= ~var5_long) {
+                      if (~this.field_c > ~((long)var8 + var5_long)) {
                         var9 = this.field_c;
                         break L13;
                       }
                     }
-                    if ((this.field_c ^ -1L) >= (var5_long ^ -1L)) {
+                    if (~this.field_c >= ~var5_long) {
                       if (var5_long < this.field_c - -(long)this.field_d) {
                         var9 = var5_long;
                       }
@@ -217,14 +217,14 @@ final class sk {
                   }
                   L15: {
                     var11 = -1L;
-                    if ((var5_long ^ -1L) > ((long)this.field_d + this.field_c ^ -1L)) {
+                    if (~var5_long > ~((long)this.field_d + this.field_c)) {
                       if ((long)var8 + var5_long >= (long)this.field_d + this.field_c) {
                         var11 = this.field_c + (long)this.field_d;
                         break L15;
                       }
                     }
                     if (this.field_c < var5_long - -(long)var8) {
-                      if ((var5_long + (long)var8 ^ -1L) >= (this.field_c - -(long)this.field_d ^ -1L)) {
+                      if (~(var5_long + (long)var8) >= ~(this.field_c - -(long)this.field_d)) {
                         var11 = (long)var8 + var5_long;
                       }
                     }
@@ -307,12 +307,12 @@ final class sk {
         var10 = Geoblox.field_C;
         try {
           try {
-            if ((this.field_k ^ -1L) > ((long)param0 + this.field_f ^ -1L)) {
+            if (~this.field_k > ~((long)param0 + this.field_f)) {
               this.field_k = (long)param0 + this.field_f;
             }
             if (-1L != this.field_c) {
-              if ((this.field_c ^ -1L) >= (this.field_f ^ -1L)) {
-                if ((this.field_f ^ -1L) < (this.field_c - -(long)this.field_d ^ -1L)) {
+              if (~this.field_c >= ~this.field_f) {
+                if (~this.field_f < ~(this.field_c - -(long)this.field_d)) {
                   this.b((byte) 99);
                 }
               } else {
@@ -351,39 +351,39 @@ final class sk {
                 }
                 this.field_a.a(param2, param1, 90, param0);
                 this.field_b = this.field_b + (long)param0;
-                if ((this.field_b ^ -1L) < (this.field_e ^ -1L)) {
+                if (~this.field_b < ~this.field_e) {
                   this.field_e = this.field_b;
                 }
                 L8: {
                   var5_long = -1L;
                   var7 = -1L;
-                  if ((this.field_g ^ -1L) >= (this.field_f ^ -1L)) {
-                    if ((this.field_f ^ -1L) > (this.field_g - -(long)this.field_i ^ -1L)) {
+                  if (~this.field_g >= ~this.field_f) {
+                    if (~this.field_f > ~(this.field_g - -(long)this.field_i)) {
                       var5_long = this.field_f;
                       break L8;
                     }
                   }
-                  if ((this.field_g ^ -1L) <= (this.field_f ^ -1L)) {
-                    if ((this.field_g ^ -1L) > (this.field_f - -(long)param0 ^ -1L)) {
+                  if (~this.field_g <= ~this.field_f) {
+                    if (~this.field_g > ~(this.field_f - -(long)param0)) {
                       var5_long = this.field_g;
                     }
                   }
                 }
                 L10: {
-                  if ((this.field_g ^ -1L) > ((long)param0 + this.field_f ^ -1L)) {
-                    if (((long)this.field_i + this.field_g ^ -1L) <= (this.field_f + (long)param0 ^ -1L)) {
+                  if (~this.field_g > ~((long)param0 + this.field_f)) {
+                    if (~((long)this.field_i + this.field_g) <= ~(this.field_f + (long)param0)) {
                       var7 = this.field_f - -(long)param0;
                       break L10;
                     }
                   }
                   if (this.field_f < this.field_g - -(long)this.field_i) {
-                    if ((this.field_g + (long)this.field_i ^ -1L) >= (this.field_f - -(long)param0 ^ -1L)) {
+                    if (~(this.field_g + (long)this.field_i) >= ~(this.field_f - -(long)param0)) {
                       var7 = (long)this.field_i + this.field_g;
                     }
                   }
                 }
-                if (0L > (var5_long ^ -1L)) {
-                  if ((var5_long ^ -1L) > (var7 ^ -1L)) {
+                if (var5_long > -1L) {
+                  if (~var5_long > ~var7) {
                     var9 = (int)(-var5_long + var7);
                     sf.a(param2, (int)(var5_long + ((long)param1 + -this.field_f)), this.field_h, (int)(var5_long + -this.field_g), var9);
                   }
@@ -399,7 +399,7 @@ final class sk {
                   }
                   sf.a(param2, param1, this.field_j, (int)(-this.field_c + this.field_f), param0);
                   this.field_f = this.field_f + (long)param0;
-                  if (((long)this.field_d ^ -1L) > (-this.field_c + this.field_f ^ -1L)) {
+                  if (~(long)this.field_d > ~(-this.field_c + this.field_f)) {
                     this.field_d = (int)(this.field_f + -this.field_c);
                   }
                   decompiledRegionSelector0 = 3;
@@ -476,18 +476,18 @@ final class sk {
         var4 = Geoblox.field_C;
         if (param0) {
           this.field_i = 0;
-          if ((this.field_b ^ -1L) != (this.field_f ^ -1L)) {
+          if (~this.field_b != ~this.field_f) {
             this.field_a.a(this.field_f, true);
             this.field_b = this.field_f;
           }
           this.field_g = this.field_f;
           L1: while (this.field_i < this.field_h.length) {
             var2 = -this.field_i + this.field_h.length;
-            if ((var2 ^ -1) < -200000001) {
+            if (var2 > 200000000) {
               var2 = 200000000;
             }
             var3 = this.field_a.a(var2, this.field_h, this.field_i, false);
-            if (0 != (var3 ^ -1)) {
+            if (var3 != -1) {
               this.field_i = this.field_i + var3;
               this.field_b = this.field_b + (long)var3;
               continue L1;

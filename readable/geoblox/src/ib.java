@@ -16,7 +16,7 @@ abstract class ib implements dg {
         try {
             while (true) {
                 param4--;
-                if (-1 < (param4 ^ -1)) {
+                if (param4 < 0) {
                     break;
                 }
                 var9 = param1;
@@ -82,7 +82,7 @@ abstract class ib implements dg {
             if (this.a(param0 ^ 26579)) {
                 return oj.field_d;
             }
-            if ((350L + this.field_b ^ -1L) >= (oa.a(-12520) ^ -1L)) {
+            if (~(350L + this.field_b) >= ~oa.a(-12520)) {
                 return this.e(32);
             }
             return bf.field_g;
@@ -90,7 +90,7 @@ abstract class ib implements dg {
         if (this.a(param0 ^ 26579)) {
             return oj.field_d;
         }
-        if ((350L + this.field_b ^ -1L) >= (oa.a(-12520) ^ -1L)) {
+        if (~(350L + this.field_b) >= ~oa.a(-12520)) {
             return this.e(32);
         }
         return bf.field_g;

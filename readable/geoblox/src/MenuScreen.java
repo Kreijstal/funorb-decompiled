@@ -105,12 +105,12 @@ abstract class MenuScreen {
           this.hitLeftX = 8;
         }
         L1: {
-          if (-97 != (ki.field_d ^ -1)) {
-            if (-98 == (ki.field_d ^ -1)) {
+          if (ki.field_d != 96) {
+            if (ki.field_d == 97) {
               this.increaseMenuValue((byte) 90, itemIndex);
             } else {
               if (ki.field_d != 84) {
-                if ((ki.field_d ^ -1) != -84) {
+                if (ki.field_d != 83) {
                   break L1;
                 }
               }
@@ -134,7 +134,7 @@ abstract class MenuScreen {
         } else {
             s.field_H = s.field_H - 1;
             if (s.field_H <= 0) {
-                if (-2 == (pointerButton ^ -1)) {
+                if (pointerButton == 1) {
                     this.activateMenuItem(itemIndex, (byte) -2);
                 } else {
                     this.decreaseMenuValue(itemIndex, (byte) 6);

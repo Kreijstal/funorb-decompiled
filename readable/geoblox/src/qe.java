@@ -30,7 +30,7 @@ final class qe {
           L0: {
             if (param4.b(-26098)) {
               L1: {
-                if (param1 == (param0 ^ -1)) {
+                if (param1 == ~param0) {
                   var10 = vi.a(param1 ^ -112, param4);
                   var6 = var10;
                   if (var6 != null) {
@@ -82,7 +82,7 @@ final class qe {
               }
               var7 = (java.awt.Frame) (var11.field_b);
               if (var7 != null) {
-                if (-3 != (var11.field_a ^ -1)) {
+                if (var11.field_a != 2) {
                   stackIn_37_0 = (java.awt.Frame) (var7);
                   decompiledRegionSelector0 = 2;
                   break L0;
@@ -143,7 +143,7 @@ final class qe {
         try {
           L0: {
             if (ji.difficultyStep != 0) {
-              if ((ji.difficultyStep ^ -1) > -22) {
+              if (ji.difficultyStep < 21) {
                 fa.releasesPerTheme = fa.releasesPerTheme + 10;
               }
             }

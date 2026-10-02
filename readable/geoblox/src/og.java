@@ -31,12 +31,12 @@ final class og extends DualLinkNode {
               var3 = 255 & eh.field_d.field_j[var2];
               var4 = var3 >> -88682940;
               var3 = var3 & 15;
-              if (-11 >= (var4 ^ -1)) {
+              if (var4 >= 10) {
                 var4 += 55;
               } else {
                 var4 += 48;
               }
-              if ((var3 ^ -1) > -11) {
+              if (var3 < 10) {
                 var3 += 48;
               } else {
                 var3 += 55;
@@ -78,7 +78,7 @@ final class og extends DualLinkNode {
             } else {
               if (2 != param0) {
                 if (3 != param0) {
-                  if (-5 != (param0 ^ -1)) {
+                  if (param0 != 4) {
                   }
                 } else {
                   var4_int = param1.c((byte) 34);

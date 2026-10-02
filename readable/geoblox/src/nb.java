@@ -84,10 +84,10 @@ final class nb {
             if (specialKinds) {
               var11 = (variantId - -categoryId) % 4;
               var12 = 0;
-              if (-1 == (var11 ^ -1)) {
+              if (var11 == 0) {
                 var12 = 2;
               }
-              if (-2 == (var11 ^ -1)) {
+              if (var11 == 1) {
                 var12 = 4;
               }
               if (var11 == 2) {
@@ -132,7 +132,7 @@ final class nb {
 
                 stackIn_21_9 = (float)(-pointerY + 240);
 
-                if ((var12 ^ -1) != -3) {
+                if (var12 != 2) {
 
 
 

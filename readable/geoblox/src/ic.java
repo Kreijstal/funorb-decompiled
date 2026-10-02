@@ -21,7 +21,7 @@ final class ic {
               param0 = param1;
               param1 = var3_int;
             }
-            L2: while (-1 != (param1 ^ -1)) {
+            L2: while (param1 != 0) {
               var3_int = param0 % param1;
               param0 = param1;
               param1 = var3_int;

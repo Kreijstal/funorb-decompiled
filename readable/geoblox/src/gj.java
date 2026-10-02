@@ -41,11 +41,11 @@ final class gj extends fj {
           kd.field_b = va.field_e;
           if (param2 == 30) {
             if (param1 != 255) {
-              if ((param1 ^ -1) > -101) {
+              if (param1 < 100) {
                 dl.field_a = ig.a(param0, param1, false);
                 return;
               } else {
-                if (-106 <= (param1 ^ -1)) {
+                if (param1 <= 105) {
                   dl.field_a = ac.a(28, param3);
                   return;
                 } else {
@@ -56,7 +56,7 @@ final class gj extends fj {
             } else {
               stackIn_6_0 = -106;
 
-              if ((rd.field_u ^ -1) <= -14) {
+              if (rd.field_u >= 13) {
                 stackIn_7_0 = stackIn_6_0;
                 stackIn_7_1 = 0;
               } else {
@@ -122,7 +122,7 @@ final class gj extends fj {
         try {
             var1 = (GameplayEntity) ((Object) a.attachedEntities.firstForIteration(0));
             while (var1 != null) {
-                if (-1 != (var1.entitySpriteKindId ^ -1)) {
+                if (var1.entitySpriteKindId != 0) {
                     var1.drawEntityAtPosition(1643839728);
                 }
                 var1 = (GameplayEntity) ((Object) a.attachedEntities.nextForIteration(1));

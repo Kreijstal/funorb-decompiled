@@ -52,7 +52,7 @@ final class ne {
             var3 = var3 + var4;
             var5 = var5 + var10;
         }
-        for (var2 = 0; -257 < (var2 ^ -1); var2 += 8) {
+        for (var2 = 0; var2 < 256; var2 += 8) {
             var8 = var8 + this.field_e[var2 - -5];
             var6 = var6 + this.field_e[3 + var2];
             var10 = var10 + this.field_e[7 + var2];
@@ -163,7 +163,7 @@ final class ne {
         if (param0 >= -10) {
           ne.a((byte) 89);
         }
-        L1: while (-257 < (var2 ^ -1)) {
+        L1: while (var2 < 256) {
           var3 = this.field_a[var2];
           if (0 == (2 & var2)) {
             if ((1 & var2) != 0) {

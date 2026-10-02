@@ -57,7 +57,7 @@ abstract class sc {
         try {
           L0: {
             if (param0 == -75) {
-              if (-1 > (param2 ^ -1)) {
+              if (param2 > 0) {
                 if (!uj.a(true, param2)) {
                   var3_int = -(int)(4294967296L % (long)param2) + -2147483648;
                   L1: while (true) {

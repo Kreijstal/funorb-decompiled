@@ -17,7 +17,7 @@ final class oc implements dh {
         ne.field_b.b(320 + -(ne.field_b.field_s >> -869072127), param0 + -(ne.field_b.field_o >> -2111513311));
         kh.field_h[0].b(0, 20);
         int var1 = -70 + n.field_j;
-        if ((var1 ^ -1) <= -1) {
+        if (var1 >= 0) {
             if ((double)var1 * 0.0174532925 >= 1.5707963267948966) {
                 var2 = tl.field_r[vc.field_h].field_s >> -1357649567;
                 if (vc.field_h >= 11) {

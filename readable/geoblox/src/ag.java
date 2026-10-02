@@ -337,7 +337,7 @@ final class ag extends q {
             field_m = new long[256];
             var2 = 0;
             L0: while (true) {
-              if (-257 >= (var2 ^ -1)) {
+              if (var2 >= 256) {
                 field_j = new boolean[7];
                 field_i = 0;
                 break $cfr$clinit;
@@ -345,7 +345,7 @@ final class ag extends q {
                 var0 = (long)var2;
                 var3 = 0;
                 L1: while (true) {
-                  if (-9 >= (var3 ^ -1)) {
+                  if (var3 >= 8) {
                     field_m[var2] = var0;
                     var2++;
                     continue L0;

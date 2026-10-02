@@ -13,13 +13,13 @@ final class bl {
     final static boolean b(int param0) {
         if (param0 != 255) {
             bl.a(-112, (byte) -119);
-            if (-21 < (mi.field_C ^ -1)) {
+            if (mi.field_C < 20) {
                 return true;
             }
             if (!fj.f(-31456)) {
                 return true;
             }
-            if ((ik.field_a ^ -1) >= -1) {
+            if (ik.field_a <= 0) {
                 return false;
             }
             if (!ck.b(0)) {
@@ -27,13 +27,13 @@ final class bl {
             }
             return false;
         }
-        if (-21 < (mi.field_C ^ -1)) {
+        if (mi.field_C < 20) {
             return true;
         }
         if (!fj.f(-31456)) {
             return true;
         }
-        if ((ik.field_a ^ -1) >= -1) {
+        if (ik.field_a <= 0) {
             return false;
         }
         if (!ck.b(0)) {

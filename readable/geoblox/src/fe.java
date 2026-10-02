@@ -146,13 +146,13 @@ final class fe {
           L0: {
             if (!param1) {
               var2_int = param0.length();
-              if (-1 != (var2_int ^ -1)) {
+              if (var2_int != 0) {
                 if (255 < var2_int) {
                   stackIn_10_0 = hk.field_x;
                   decompiledRegionSelector0 = 2;
                 } else {
                   var3 = uj.a('.', true, param0);
-                  if ((var3.length ^ -1) <= -3) {
+                  if (var3.length >= 2) {
                     var4 = var3;
                     var5 = 0;
                     L1: while (true) {

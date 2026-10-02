@@ -5,7 +5,7 @@ final class bc {
     static int field_a;
 
     final static void a(int param0, long param1) {
-        if (!(-1L > (param1 ^ -1L))) {
+        if (!(param1 > 0L)) {
             return;
         }
         if (param1 % 10L == (long)param0) {
@@ -46,9 +46,9 @@ final class bc {
             decodedLength = 0;
             for (byteIndex = 0; length > byteIndex; byteIndex++) {
               characterCode = textBytes[offset + byteIndex] & 255;
-              if (-1 != (characterCode ^ -1)) {
-                if ((characterCode ^ -1) <= -129) {
-                  if ((characterCode ^ -1) > -161) {
+              if (characterCode != 0) {
+                if (characterCode >= 128) {
+                  if (characterCode < 160) {
                     mappedCharacterCode = lf.extendedTextCharacters[-128 + characterCode];
                     if (mappedCharacterCode == 0) {
                       mappedCharacterCode = 63;

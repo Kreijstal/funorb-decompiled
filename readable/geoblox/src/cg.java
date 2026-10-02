@@ -61,7 +61,7 @@ final class cg extends ia {
     final static boolean b(boolean param0) {
         ff.field_k = param0 ? true : false;
         hi.field_G = 15000L + oa.a(-12520);
-        return -12 == (hj.field_a ^ -1) ? true : false;
+        return hj.field_a == 11 ? true : false;
     }
 
     final void b(int param0) {
@@ -131,7 +131,7 @@ final class cg extends ia {
             this.nextNode.previousNode = (IntrusiveNode) ((Object) this.field_l);
             this.previousNode = null;
             this.nextNode = null;
-            if (-1 > (param2 ^ -1)) {
+            if (param2 > 0) {
               this.field_l.a(param0, param1, param2);
             }
             decompiledRegionSelector0 = 1;

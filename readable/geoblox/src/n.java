@@ -245,9 +245,9 @@ final class n extends q {
                         {
                             var10[0].pixels[var12 - -(var11 * var9)] = param2;
                             var10[0].pixels[var11 + var12 * var9] = param2;
-                            stackIn_24_0 = -var11 + var9 ^ -1;
+                            stackIn_24_0 = ~(-var11 + var9);
                             stackIn_29_0 = stackIn_24_0;
-                            stackIn_24_1 = var12 ^ -1;
+                            stackIn_24_1 = ~var12;
                             stackIn_29_1 = stackIn_24_1;
                             if (var15 != 0) {
                                 statePc = 24;

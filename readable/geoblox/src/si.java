@@ -166,7 +166,7 @@ final class si {
             if (2 == param0.field_g) {
               var6_int = var6_int + (-this.field_l.field_s + param3.field_r);
             }
-            if (-2 == (param0.field_i ^ -1)) {
+            if (param0.field_i == 1) {
               var7 = var7 + (param3.field_h - this.field_l.field_o) / 2;
             }
             if (2 == param0.field_i) {
@@ -180,7 +180,7 @@ final class si {
           var6 = param0.c(120, param3);
           if (var6 != null) {
             if (null != param0.field_n) {
-              if (-1 >= (this.field_e ^ -1)) {
+              if (this.field_e >= 0) {
                 stackIn_20_0 = param0.field_n;
 
                 stackIn_20_1 = (String) (var6);
@@ -204,7 +204,7 @@ final class si {
 
                 stackIn_23_4 = param3.field_m + param2;
 
-                if (2147483647 == (this.field_f ^ -1)) {
+                if (this.field_f == -2147483648) {
                   stackIn_21_0 = (m) ((Object) stackIn_21_0);
                   stackIn_21_1 = (String) ((Object) stackIn_21_1);
                   stackIn_24_2 = stackIn_23_2;
@@ -351,7 +351,7 @@ final class si {
             if (this.field_d >= -1) {
               param2.field_d = this.field_d;
             }
-            if ((this.field_k ^ -1) != 2147483647) {
+            if (this.field_k != -2147483648) {
               param2.field_k = this.field_k;
             }
             if (null != this.field_a) {
@@ -360,7 +360,7 @@ final class si {
             if (null != this.field_l) {
               param2.field_l = this.field_l;
             }
-            if ((this.field_e ^ -1) <= 0) {
+            if (this.field_e >= -1) {
               param2.field_e = this.field_e;
             }
             if (this.field_b == -2147483648) {

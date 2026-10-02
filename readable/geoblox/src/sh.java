@@ -233,7 +233,7 @@ abstract class sh extends el implements ql {
             } else {
               var3 = oa.a(-12520);
               if (ab.field_b != 0) {
-                if (-1 < (pc.field_f ^ -1)) {
+                if (pc.field_f < 0) {
                   var5_ref_ma = (ma) ((Object) va.field_c.firstForIteration(0));
                   if (var5_ref_ma != null) {
                     if (var3 > var5_ref_ma.field_f) {
@@ -255,7 +255,7 @@ abstract class sh extends el implements ql {
                 }
               }
               L3: while (true) {
-                if (-1 < (pc.field_f ^ -1)) {
+                if (pc.field_f < 0) {
                   eh.field_d.field_f = 0;
                   if (el.b(30000, 1)) {
                     pc.field_f = eh.field_d.j((byte) 122);
@@ -281,7 +281,7 @@ abstract class sh extends el implements ql {
                     var5 = ab.field_b;
                     if (0.0 != fc.field_a) {
                       var5 = (int)((double)var5 + bh.field_d.nextGaussian() * fc.field_a);
-                      if (-1 < (var5 ^ -1)) {
+                      if (var5 < 0) {
                         var5 = 0;
                       }
                     }
@@ -731,7 +731,7 @@ abstract class sh extends el implements ql {
               field_y = (sc) null;
             }
             var5_int = param0;
-            if (-81 != (var5_int ^ -1)) {
+            if (var5_int != 80) {
               stackIn_13_0 = 0;
               decompiledRegionSelector0 = 2;
             } else {

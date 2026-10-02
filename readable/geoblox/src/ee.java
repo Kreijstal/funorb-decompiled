@@ -636,7 +636,7 @@ class ee extends el implements ql {
               break;
             }
             var6 = param0;
-            if (-81 == (var6 ^ -1)) {
+            if (var6 == 80) {
               if (!kj.field_o[81]) {
                 stackIn_17_0 = this.a(param3, -96);
               } else {

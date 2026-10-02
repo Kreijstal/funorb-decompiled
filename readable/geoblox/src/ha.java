@@ -127,7 +127,7 @@ abstract class ha {
             var20[2][var8] = 16777215;
             var20[1][var8] = 2394342;
             var20[3][var8] = 4767999;
-            for (var9 = 0; -4 < (var9 ^ -1); var9++) {
+            for (var9 = 0; var9 < 3; var9++) {
                 var15 = var6[var9];
                 IndexedSprite[] var10 = var15;
                 for (var11_int = 0; var11_int < var15.length; var11_int++) {

@@ -413,10 +413,10 @@ abstract class SpriteState extends DualLinkNode {
         try {
           L1: {
             L2: {
-              if ((param1 ^ -1) < -1) {
+              if (param1 > 0) {
                 var4 = new byte[param0];
                 var5_int = 0;
-                L3: while ((param0 ^ -1) < (var5_int ^ -1)) {
+                L3: while (~param0 < ~var5_int) {
                   var4[var5_int] = param2[param1 + var5_int];
                   var5_int++;
                   if (var7 != 0) {
@@ -504,18 +504,18 @@ abstract class SpriteState extends DualLinkNode {
         var42 = Geoblox.field_C;
         try {
           L0: {
-            if ((param4 ^ -1) <= -1) {
-              if ((mh.field_h ^ -1) < (param8 ^ -1)) {
-                if (-1 < (param2 ^ -1)) {
-                  if (-1 < (param9 ^ -1)) {
+            if (param4 >= 0) {
+              if (~mh.field_h < ~param8) {
+                if (param2 < 0) {
+                  if (param9 < 0) {
                     if (param13 < 0) {
                       decompiledRegionSelector0 = 1;
                       break L0;
                     }
                   }
                 }
-                if ((mh.field_c ^ -1) >= (param2 ^ -1)) {
-                  if ((mh.field_c ^ -1) >= (param9 ^ -1)) {
+                if (~mh.field_c >= ~param2) {
+                  if (~mh.field_c >= ~param9) {
                     if (param13 >= mh.field_c) {
                       decompiledRegionSelector0 = 2;
                       break L0;
@@ -527,7 +527,7 @@ abstract class SpriteState extends DualLinkNode {
                     var34 = -param8 + param4;
                     if (param8 == param15) {
                       L6: {
-                        if ((param4 ^ -1) == (param8 ^ -1)) {
+                        if (~param4 == ~param8) {
                           var29 = param14;
                           var17_int = param2 << 358182032;
                           var31 = 0;
@@ -644,7 +644,7 @@ abstract class SpriteState extends DualLinkNode {
                     L11: {
                       L12: {
                         L13: {
-                          if (-1 < (param8 ^ -1)) {
+                          if (param8 < 0) {
                             if (param15 >= 0) {
                               param8 = -param8;
                               var30 = var30 + var32 * param8;
@@ -677,13 +677,13 @@ abstract class SpriteState extends DualLinkNode {
                         }
                         var36 = mh.field_b[param8];
                         L15: while (true) {
-                          if ((param15 ^ -1) >= (param8 ^ -1)) {
+                          if (~param15 >= ~param8) {
                             break L12;
                           } else {
                             var37 = var17_int >> 433424592;
-                            stackIn_73_0 = mh.field_c ^ -1;
+                            stackIn_73_0 = ~mh.field_c;
 
-                            stackIn_73_1 = var37 ^ -1;
+                            stackIn_73_1 = ~var37;
 
                             if (var42 != 0) {
                               break L11;
@@ -691,7 +691,7 @@ abstract class SpriteState extends DualLinkNode {
                               L16: {
                                 if (stackIn_73_0 < stackIn_73_1) {
                                   var38 = (var18 >> 1802867664) - (var17_int >> 1124703984);
-                                  if (-1 != (var38 ^ -1)) {
+                                  if (var38 != 0) {
                                     var39 = (var22 + -var21) / var38;
                                     var40 = (-var25 + var26) / var38;
                                     var41 = (var30 + -var29) / var38;
@@ -711,15 +711,15 @@ abstract class SpriteState extends DualLinkNode {
                                       break L16;
                                     }
                                   }
-                                  if (-1 >= (var37 ^ -1)) {
-                                    if ((var37 ^ -1) > (mh.field_c ^ -1)) {
+                                  if (var37 >= 0) {
+                                    if (~var37 > ~mh.field_c) {
                                       jf.a(var37 - -var36, 0, 33423689, var21, 0, var25, 0, var38, var29, param11);
                                     }
                                   }
                                 }
                               }
                               param8++;
-                              if ((param8 ^ -1) > (mh.field_h ^ -1)) {
+                              if (~param8 > ~mh.field_h) {
                                 var18 = var18 + var20;
                                 var26 = var26 + var28;
                                 var22 = var22 + var24;
@@ -743,7 +743,7 @@ abstract class SpriteState extends DualLinkNode {
                         }
                       }
                       var36 = param4 + -param15;
-                      stackIn_73_0 = var36 ^ -1;
+                      stackIn_73_0 = ~var36;
                       stackIn_73_1 = -1;
                     }
                     if (stackIn_73_0 == stackIn_73_1) {
@@ -787,7 +787,7 @@ abstract class SpriteState extends DualLinkNode {
                     var20 = (var37 - var18) / var36;
                     var32 = (-var30 + var40) / var36;
                   }
-                  if (-1 < (param8 ^ -1)) {
+                  if (param8 < 0) {
                     param8 = -param8;
                     var18 = var18 + param8 * var20;
                     var17_int = var17_int + param8 * var19;
@@ -838,7 +838,7 @@ abstract class SpriteState extends DualLinkNode {
                             }
                           }
                           param8++;
-                          if ((mh.field_h ^ -1) < (param8 ^ -1)) {
+                          if (~mh.field_h < ~param8) {
                             var18 = var18 + var20;
                             var22 = var22 + var24;
                             var35 = var35 + SoftwareRasterizer.stride;
@@ -944,8 +944,8 @@ abstract class SpriteState extends DualLinkNode {
                       L4: while (true) {
                         L5: {
                           L6: {
-                            if (-25 < (var3_int ^ -1)) {
-                              stackIn_17_0 = var2[var3_int] ^ -1;
+                            if (var3_int < 24) {
+                              stackIn_17_0 = ~var2[var3_int];
 
                               stackIn_17_1 = -1;
 
@@ -980,7 +980,7 @@ abstract class SpriteState extends DualLinkNode {
                     L8: {
                       var3 = (Exception) (Object) decompiledCaughtException;
                       var4 = 0;
-                      L9: while (-25 < (var4 ^ -1)) {
+                      L9: while (var4 < 24) {
                         var2[var4] = (byte) -1;
                         var4++;
                         if (var5 != 0) {

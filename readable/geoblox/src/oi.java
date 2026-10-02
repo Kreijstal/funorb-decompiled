@@ -18,7 +18,7 @@ final class oi {
         int var2;
         byte[] var3;
         if (param1 == 100) {
-          if ((hb.field_b ^ -1) < -1) {
+          if (hb.field_b > 0) {
             fieldTemp$3 = hb.field_b - 1;
             hb.field_b = hb.field_b - 1;
             var2_ref_byte__ = dj.field_I[fieldTemp$3];
@@ -26,7 +26,7 @@ final class oi {
             return var2_ref_byte__;
           }
         }
-        if ((param1 ^ -1) == -5001) {
+        if (param1 == 5000) {
           if (0 < ah.field_d) {
             fieldTemp$4 = ah.field_d - 1;
             ah.field_d = ah.field_d - 1;
@@ -36,7 +36,7 @@ final class oi {
           }
         }
         if (!param0) {
-          if ((param1 ^ -1) == -30001) {
+          if (param1 == 30000) {
             if (ag.field_i > 0) {
               fieldTemp$5 = ag.field_i - 1;
               ag.field_i = ag.field_i - 1;

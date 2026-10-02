@@ -16,7 +16,7 @@ final class fi {
         IntrusiveNode var4 = this.field_e[(int)((long)(-1 + this.field_c) & param0)];
         this.field_g = var4.nextNode;
         while (var4 != this.field_g) {
-            if (!((this.field_g.field_a ^ -1L) != (param0 ^ -1L))) {
+            if (!(~this.field_g.field_a != ~param0)) {
                 var5 = this.field_g;
                 this.field_g = this.field_g.nextNode;
                 return var5;
@@ -36,14 +36,14 @@ final class fi {
         if (param1 != 2048) {
             changeDisplayNameText = (String) null;
             param0 = param0 & 8191;
-            if (-4097 >= (param0 ^ -1)) {
-                return -6145 >= (param0 ^ -1) ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
+            if (param0 >= 4096) {
+                return param0 >= 6144 ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
             }
             return 2048 <= param0 ? -ai.field_l[param0 + -2048] : ai.field_l[-param0 + 2048];
         }
         param0 = param0 & 8191;
-        if (-4097 >= (param0 ^ -1)) {
-            return -6145 >= (param0 ^ -1) ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
+        if (param0 >= 4096) {
+            return param0 >= 6144 ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
         }
         return 2048 <= param0 ? -ai.field_l[param0 + -2048] : ai.field_l[-param0 + 2048];
     }
@@ -161,7 +161,7 @@ final class fi {
         int var2;
         IntrusiveNode var4;
         IntrusiveNode var7;
-        if (-1 > (this.field_f ^ -1)) {
+        if (this.field_f > 0) {
           if (this.field_a != this.field_e[this.field_f + -1]) {
             var7 = this.field_a;
             this.field_a = var7.nextNode;

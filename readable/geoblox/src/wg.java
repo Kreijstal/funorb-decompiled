@@ -21,7 +21,7 @@ final class wg implements Runnable {
 
     final qc b(byte param0) {
         int var2 = 62 / ((param0 - 9) / 53);
-        if (!((this.field_l ^ -1) != -4)) {
+        if (!(this.field_l != 3)) {
             return this.field_n;
         }
         return null;
@@ -86,7 +86,7 @@ final class wg implements Runnable {
               }
             }
           }
-          if (-2 == (this.field_l ^ -1)) {
+          if (this.field_l == 1) {
             if (this.field_k == null) {
               this.field_k = this.field_b.a(443, this.field_h.getHost(), false);
             }
@@ -102,10 +102,10 @@ final class wg implements Runnable {
           }
           if (null == this.field_c) {
             try {
-              if (-1 == (this.field_l ^ -1)) {
+              if (this.field_l == 0) {
                 this.field_c = (DataInputStream) (this.field_f.field_b);
               }
-              if ((this.field_l ^ -1) == -2) {
+              if (this.field_l == 1) {
                 var4 = (java.net.Socket) (this.field_k.field_b);
                 var4.setSoTimeout(10000);
                 var3 = var4.getOutputStream();

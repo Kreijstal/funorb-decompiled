@@ -29,7 +29,7 @@ final class ca extends IntrusiveNode {
             if (param0 != null) {
               if (0 != param0.length()) {
                 var2_int = param0.indexOf('@');
-                if (0 != (var2_int ^ -1)) {
+                if (var2_int != -1) {
                   var3 = param0.substring(0, var2_int);
                   var4 = param0.substring(param1 + var2_int);
                   var5 = r.a(var3, true);

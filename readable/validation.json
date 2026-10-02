@@ -2,7 +2,7 @@
   "schema": 1,
   "rules": 841,
   "files": 303,
-  "sourceCommit": "844b92ec48a7bc48e18e7eb0aa5a2599e631e895",
+  "sourceCommit": "63115c1bcb703200f2caf4048d2e0b7671b6aeb8",
   "commands": [
     {
       "command": "node readable/build-geoblox-rules.mjs --check",
@@ -11,7 +11,7 @@
     {
       "command": "node readable/tests/test-geoblox-rule-builder.mjs",
       "result": "pass",
-      "tests": 14
+      "tests": 16
     },
     {
       "command": "node readable/reproduce-geoblox.mjs --check",
@@ -41,7 +41,7 @@
       "command": "node readable/tools/test-readable-java.mjs",
       "result": "pass",
       "tests": 9,
-      "scope": "Fresh pass-13 run of the imported naming tool, including constructor-parameter behavior and exact reversal."
+      "scope": "Previously passed in pass 13; tool files unchanged and all frozen digests freshly verified during pass-14 generation."
     },
     {
       "command": "node readable/tools/test-capture-process.mjs",
@@ -50,7 +50,7 @@
       "scope": "Previously passed in pass 9; tool files remain byte-identical and their frozen hashes are rechecked in pass 12."
     },
     {
-      "command": "node readable/tools/restore-original.mjs readable/geoblox /tmp/funorb-geoblox-publication-restored-v13",
+      "command": "node readable/tools/restore-original.mjs readable/geoblox ../geoblox-comparison-v14/restored",
       "result": "pass",
       "restoredFiles": 303,
       "originalBytesRecovered": true,
@@ -75,19 +75,26 @@
     {
       "command": "node readable/tests/test-geoblox-text-rules.mjs",
       "result": "pass",
-      "tests": 7,
+      "tests": 8,
       "resourceFields": 152,
       "storedReads": 218,
       "discardedReadsUnnamed": 526
+    },
+    {
+      "command": "NODE_PATH=/home/kreijstal/git/java-tools/node_modules node test/cfrComplementComparisons.test.js",
+      "checkout": "java-tools cee965649f1f2afaf1c7a3efd1fdb826231f3d30",
+      "result": "pass",
+      "tests": 3,
+      "nativeComparisons": 7040
     }
   ],
-  "inputTreeSha256": "2b5e8eca76820cb18760a231fc0825aded6e26972d646bfc3476d4f88d77147b",
-  "outputTreeSha256": "3d37181ec5b830fb02a5c1bdfad1d70ba32c27555fce89369d698bb6ba8140d7",
+  "inputTreeSha256": "8d838235da30d2e3ab0bfd2e79bf11900ff49f7fa0008b3c81d4554fac3bd168",
+  "outputTreeSha256": "d3e8f6e80c22928ce77269b774c9414e63d16516fcf1d67a8d6f399189bcbc4a",
   "runtimeEquivalenceVerified": false,
-  "version": 13,
+  "version": 14,
   "stateMachineReadability": {
-    "javaToolsCommit": "a6e20fcdc1471afd9190c3391c03d89147cf360b",
-    "decompilerSourceArchiveSha256": "e6e46b1815a8ccc6867e742d0fb5d4411d3ceeb465648060a6786fec02b9101a",
+    "javaToolsCommit": "cee965649f1f2afaf1c7a3efd1fdb826231f3d30",
+    "decompilerSourceArchiveSha256": "6b29811f82c01f461281f30e92945601f5056632fa8338afdd2106ad6f840bc7",
     "dispatcherCasesBefore": 3051,
     "dispatcherCasesAfter": 61,
     "originalFallbackMethods": 2,
@@ -197,22 +204,22 @@
       "decoderInputs": 4,
       "scope": "Native probe matches unchanged transformed bytecode; does not establish whole-game equivalence."
     },
-    "validationScope": "Decompiler source and the raw 303-file Java tree remain unchanged from pass 12. Decompiler regression results below are retained pass-12 checks, not newly rerun in this naming-only pass."
+    "validationScope": "Pass 14 freshly reruns the additional-feature (77), stack-ordering (38) and structured-feature (26) assertions plus 7,040 native complement comparisons. Other structural checks below retain their recorded earlier results; dispatcher inventory is freshly measured."
   },
   "textReadability": {
-    "rulesBefore": 642,
+    "rulesBefore": 841,
     "rulesAfter": 841,
-    "rulesAdded": 199,
+    "rulesAdded": 0,
     "classes": 18,
     "fields": 346,
     "methods": 136,
     "parameters": 103,
     "locals": 238,
     "resourceFieldsObserved": 152,
-    "resourceFieldsRetained": 1,
-    "resourceFieldsAdded": 151,
+    "resourceFieldsRetained": 152,
+    "resourceFieldsAdded": 0,
     "sourceGeneratedCarrierRules": 19,
-    "rawSourceTreeUnchanged": true,
+    "rawSourceTreeUnchanged": false,
     "namingToolCommit": "a0bc835957148b9b1e1f8221c59b79d899d22738",
     "namingToolSourceArchiveSha256": "cb10756aa3ecb28159c9b81f2fb78bf559b4111d9ad203819458b30d0d84cf8c",
     "namingToolNativeTests": 9,
@@ -221,9 +228,28 @@
     "overrideRelationships": 388,
     "identifierEdits": 15595,
     "spellingGuardsMatched": 841,
-    "previousRulesRetainedExactly": 642,
-    "resourceEvidenceTests": 7,
-    "ruleBuilderTests": 14,
-    "scope": "Explicit resource assignments and inspected text/constructor flow; unknown client flags and unrelated helpers remain unnamed."
+    "previousRulesRetainedExactly": 841,
+    "resourceEvidenceTests": 8,
+    "ruleBuilderTests": 16,
+    "scope": "Explicit resource assignments and inspected text/constructor flow; unknown client flags and unrelated helpers remain unnamed.",
+    "namingToolNativeTestsScope": "Nine tests retained from pass 13; unchanged tool pins freshly checked.",
+    "historicalPass13Additions": {
+      "namingRules": 199,
+      "resourceFieldNames": 151
+    }
+  },
+  "comparisonReadability": {
+    "sourceFilesChanged": 156,
+    "xorMinusOneTextOccurrencesBefore": 1429,
+    "xorMinusOneTextOccurrencesAfter": 0,
+    "defaultRewriteEnabled": true,
+    "experimentalDceEnabled": false,
+    "tests": 3,
+    "nativeComparisons": 7040,
+    "cleanDecompilerArchiveReproducesRawSourcesAndDiagnostics": true,
+    "guardedDeclarationsMatched": 841,
+    "namedLocalIdentitiesUnchanged": 238,
+    "rawAndRenamedFullCompilation": true,
+    "fullGameRuntimeEquivalenceVerified": false
   }
 }

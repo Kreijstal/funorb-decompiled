@@ -97,7 +97,7 @@ final class uh extends ac {
         var8 = Geoblox.field_C;
         try {
           var2_int = param0.e((byte) -17, 8);
-          if ((var2_int ^ -1) < -1) {
+          if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           } else {
             var3 = ac.a((byte) 81, param0) ? 1 : 0;
@@ -139,11 +139,11 @@ final class uh extends ac {
                 var5.field_n = vk.a(var5.field_n, param0, 16, 8);
                 var6 = 0;
                 for (var7 = 0; var5.field_n.length > var7; var7++) {
-                  if ((255 & var5.field_n[var7] ^ -1) < (var6 ^ -1)) {
+                  if (~(255 & var5.field_n[var7]) < ~var6) {
                     var6 = 255 & var5.field_n[var7];
                   }
                 }
-                if (-1 != (var6 ^ -1)) {
+                if (var6 != 0) {
                   var5.field_v = (byte)(1 + var6);
                   break L5;
                 } else {

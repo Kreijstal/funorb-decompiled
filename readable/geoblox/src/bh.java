@@ -15,7 +15,7 @@ final class bh extends java.awt.Canvas {
         }
         param1 = param1 & 8191;
         if (param1 < 4096) {
-            return (param1 ^ -1) > -2049 ? ai.field_l[param1] : ai.field_l[4096 - param1];
+            return param1 < 2048 ? ai.field_l[param1] : ai.field_l[4096 - param1];
         }
         return param1 >= 6144 ? -ai.field_l[-param1 + 8192] : -ai.field_l[param1 + -4096];
     }
@@ -83,7 +83,7 @@ final class bh extends java.awt.Canvas {
                     nf.a(2147483647, var5, var4);
                     for (var6_int = 0; var4 > var6_int; var6_int++) {
                       ScorePopup.a(116, var14);
-                      if ((var6_int ^ -1) != -1) {
+                      if (var6_int != 0) {
                         nd.a(fe.field_g, var6_int, (byte) 123, rd.field_v, h.field_b, lc.field_b);
                       } else {
                         nd.a(fe.field_g, var6_int, (byte) -97, rd.field_v, h.field_b, lc.field_b);
@@ -103,7 +103,7 @@ final class bh extends java.awt.Canvas {
                       var18[0][4 * var10 - -2] = k.field_i[var11];
                       var18[0][4 * var10 + 3] = cj.field_b[var11];
                       if (ge.a(oi.field_a[var11], (byte) 12)) {
-                        if (-1 == (cj.field_b[var11] + (fb.field_m[var11] + k.field_i[var11]) ^ -1)) {
+                        if (cj.field_b[var11] + (fb.field_m[var11] + k.field_i[var11]) == 0) {
                           var6[0][var10] = null;
                           var10--;
                         }
@@ -216,7 +216,7 @@ final class bh extends java.awt.Canvas {
                   var10.configureEntitySprite(param2 + 319, var10.entityCategoryKey, var7, 0);
                 }
                 if (param0) {
-                  if ((var10.entitySpriteKindId ^ -1) == -3) {
+                  if (var10.entitySpriteKindId == 2) {
                     var10.detachedFromBoard = true;
                     var10.entityQueue = ji.movingEntities;
                   }
@@ -229,7 +229,7 @@ final class bh extends java.awt.Canvas {
                     continue L1;
                   } else {
                     L7: {
-                      if ((var10.relatedEntities[var11].entitySpriteKindId ^ -1) == -2) {
+                      if (var10.relatedEntities[var11].entitySpriteKindId == 1) {
                         if (param4) {
                           break L7;
                         }

@@ -244,15 +244,15 @@ abstract class jg {
               var8 = (String) null;
               jg.a((byte) 74, (String) null);
             }
-            L2: while (-34 < (var5_int ^ -1)) {
-              if (-1 > (ck.field_c[var5_int] ^ -1)) {
-                if ((ck.field_c[var5_int] ^ -1) != -2) {
+            L2: while (var5_int < 33) {
+              if (ck.field_c[var5_int] > 0) {
+                if (ck.field_c[var5_int] != 1) {
                   var5_int++;
                   continue L2;
                 }
               }
               L4: {
-                if (-11 >= (var5_int ^ -1)) {
+                if (var5_int >= 10) {
                   if (26 >= var5_int) {
                     var6 = te.field_c.c(-1879044097, w.field_b[var5_int]);
                     break L4;
@@ -413,7 +413,7 @@ abstract class jg {
             if (var9 == 0) {
               var12 = -var15 + var16;
             } else {
-              if ((var9 ^ -1) == -2) {
+              if (var9 == 1) {
                 var12 = -var16 + (0.3333333432674408f + var14);
               } else {
                 var12 = -var14 + (0.6666666865348816f + var15);

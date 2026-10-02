@@ -187,7 +187,7 @@ final class wj extends sh {
         if (this.field_D == 0) {
             return;
         }
-        if ((this.field_D ^ -1) == -257) {
+        if (this.field_D == 256) {
             this.field_A.a(param0 - -this.field_v, param1 - -this.field_m, (byte) 83, param3);
             return;
         }

@@ -49,9 +49,9 @@ final class IntrusiveDeque {
         if (null != kf.field_c) {
           if (!ag.field_j[param1]) {
             var2 = param1;
-            if (-5 != (var2 ^ -1)) {
+            if (var2 != 4) {
               if (3 != var2) {
-                if (-1 != (var2 ^ -1)) {
+                if (var2 != 0) {
                   if (6 != var2) {
                     if (5 == var2) {
                       k.field_f = rf.a(kf.field_c, "", "sport");

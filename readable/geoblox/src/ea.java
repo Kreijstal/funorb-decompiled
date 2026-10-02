@@ -46,7 +46,7 @@ final class ea extends IntrusiveNode {
                 var10 = param3 + "=" + param4 + "; version=1; path=/; domain=" + var9;
                 var7 = var10;
                 var7 = var10;
-                if (-1L < (param1 ^ -1L)) {
+                if (param1 < 0L) {
                   var7 = var10 + "; Discard;";
                 } else {
                   var7 = var10 + "; Expires=" + md.a((byte) -79, 1000L * param1 + oa.a(-12520)) + "; Max-Age=" + param1;

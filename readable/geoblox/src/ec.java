@@ -78,11 +78,11 @@ final class ec {
                 }
               }
             }
-            if (-1 != (h.matchCandidateCount ^ -1)) {
-              if (-6 >= (gf.matchChainLength ^ -1)) {
+            if (h.matchCandidateCount != 0) {
+              if (gf.matchChainLength >= 5) {
                 ra.a(jf.field_g ^ 255, -99, jf.field_g);
               }
-              if ((gf.matchChainLength ^ -1) <= -7) {
+              if (gf.matchChainLength >= 6) {
                 ra.a(qg.field_d ^ 255, -57, qg.field_d);
               }
               if (gf.matchChainLength >= 7) {
@@ -91,8 +91,8 @@ final class ec {
               for (var1_int = 1; var1_int < h.matchCandidateCount; var1_int++) {
                 sortCursorThenFirstEntityId = var1_int + -1;
                 packedCandidateThenSecondEntityId = nk.packedMatchCandidates[var1_int];
-                L14: while (-1 >= (sortCursorThenFirstEntityId ^ -1)) {
-                  if ((nk.packedMatchCandidates[sortCursorThenFirstEntityId] ^ -1) < (packedCandidateThenSecondEntityId ^ -1)) {
+                L14: while (sortCursorThenFirstEntityId >= 0) {
+                  if (~nk.packedMatchCandidates[sortCursorThenFirstEntityId] < ~packedCandidateThenSecondEntityId) {
                     nk.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = nk.packedMatchCandidates[sortCursorThenFirstEntityId];
                     sortCursorThenFirstEntityId--;
                     continue L14;
@@ -120,12 +120,12 @@ final class ec {
                   firstMatchedEntity = tl.entitiesById[sortCursorThenFirstEntityId];
                   secondMatchedEntity = tl.entitiesById[packedCandidateThenSecondEntityId];
                   thirdMatchedEntity = tl.entitiesById[thirdEntityId];
-                  if ((firstMatchedEntity.matchCooldownTicks ^ -1) >= -1) {
-                    if (-1 <= (secondMatchedEntity.matchCooldownTicks ^ -1)) {
-                      if (-1 <= (thirdMatchedEntity.matchCooldownTicks ^ -1)) {
+                  if (firstMatchedEntity.matchCooldownTicks <= 0) {
+                    if (secondMatchedEntity.matchCooldownTicks <= 0) {
+                      if (thirdMatchedEntity.matchCooldownTicks <= 0) {
                         td.a(-348, fl.field_c[31]);
                         gf.matchChainLength = gf.matchChainLength + 1;
-                        if (-2 > (gf.matchChainLength ^ -1)) {
+                        if (gf.matchChainLength > 1) {
                           el.gameplaySession.pointsPanelSlideDirection = -1;
                         }
                         if (-1073741824 == (-1073741824 & nk.packedMatchCandidates[candidateIndex])) {

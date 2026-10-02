@@ -1,19 +1,19 @@
 {
   "schema": 1,
-  "commit": "844b92ec48a7bc48e18e7eb0aa5a2599e631e895",
+  "commit": "63115c1bcb703200f2caf4048d2e0b7671b6aeb8",
   "subdirectory": "games/geoblox",
-  "inputTreeSha256": "2b5e8eca76820cb18760a231fc0825aded6e26972d646bfc3476d4f88d77147b",
+  "inputTreeSha256": "8d838235da30d2e3ab0bfd2e79bf11900ff49f7fa0008b3c81d4554fac3bd168",
   "generators": {
     "dekoblokoWork": {
       "commit": "a572c4dd0f0174bfcd7777be53d7ceba2f970f18",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "a6e20fcdc1471afd9190c3391c03d89147cf360b",
+      "commit": "cee965649f1f2afaf1c7a3efd1fdb826231f3d30",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "e6e46b1815a8ccc6867e742d0fb5d4411d3ceeb465648060a6786fec02b9101a",
-        "reproduce": "git archive --format=tar a6e20fcdc1471afd9190c3391c03d89147cf360b | sha256sum",
+        "sha256": "6b29811f82c01f461281f30e92945601f5056632fa8338afdd2106ad6f840bc7",
+        "reproduce": "git archive --format=tar cee965649f1f2afaf1c7a3efd1fdb826231f3d30 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -21,7 +21,7 @@
   "originalPublicationCommit": "3230e3092c687d210ba068bdfd7667a5213d22fb",
   "upstreamNamingGeneratorCommit": "d41315508e071f6bd672d65eb2f5a8d428648d6f",
   "sourceRepository": "Kreijstal/funorb-decompiled",
-  "reviewedRulesCommit": "be977995f8cab122441ee772881c29c6c8b9cab7",
+  "reviewedRulesCommit": "9ab82326ab59531d94cf591340b2bb0955456a63",
   "stubJarSha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2",
-  "namingMigration": "rules/geoblox-v13-text.json"
+  "namingMigration": "rules/geoblox-v14-migration.json"
 }

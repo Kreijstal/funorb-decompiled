@@ -83,7 +83,7 @@ final class em {
             if (this.field_b == null) {
               throw new RuntimeException();
             } else {
-              if ((param0 ^ -1) <= -1) {
+              if (param0 >= 0) {
                 if (this.field_d.length > param0) {
                   if (null == this.field_d[param0]) {
                     this.field_b.field_f = 6 + 72 * param0;
@@ -237,13 +237,13 @@ final class em {
                 }
                 var5 = var4;
               }
-              if (-66 != (var5.length ^ -1)) {
+              if (var5.length != 65) {
                 throw new RuntimeException();
               } else {
                 var15 = SpriteState.a(-var13.length + var10.field_f - 5, 5, var10.field_j, 8);
                 var7 = 0;
                 L3: while (true) {
-                  if ((var7 ^ -1) <= -65) {
+                  if (var7 >= 64) {
                     this.field_b = var10;
                     this.field_d = new bj[var3];
                     return true;

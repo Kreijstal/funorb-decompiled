@@ -29,7 +29,7 @@ final class qi extends IntrusiveNode {
           field_h = (gk) null;
         }
         L1: {
-          if ((ra.field_d ^ -1) < -1) {
+          if (ra.field_d > 0) {
             if ((65536 & ra.field_d) != 0) {
               stackIn_6_0 = 1;
               break L1;
@@ -76,7 +76,7 @@ final class qi extends IntrusiveNode {
                   var5 = uj.a(';', true, var4);
                   for (var6 = 0; var6 < var5.length; var6++) {
                     var7 = var5[var6].indexOf('=');
-                    if ((var7 ^ -1) <= -1) {
+                    if (var7 >= 0) {
                       if (var5[var6].substring(0, var7).trim().equals(param0)) {
                         stackIn_7_0 = var5[var6].substring(1 + var7).trim();
                         decompiledRegionSelector0 = 1;

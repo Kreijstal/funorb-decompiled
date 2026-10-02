@@ -10,16 +10,16 @@ final class td extends hk {
 
     final static int a(int param0, byte param1) {
         int var2;
-        if (-1 == (param0 ^ -1)) {
+        if (param0 == 0) {
           return 0;
         } else {
-          if ((param0 ^ -1) < -1) {
+          if (param0 > 0) {
             var2 = 1;
             if (param0 > 65535) {
               param0 = param0 >> 16;
               var2 += 16;
             }
-            if (-256 > (param0 ^ -1)) {
+            if (param0 > 255) {
               var2 += 8;
               param0 = param0 >> 8;
             }
@@ -27,22 +27,22 @@ final class td extends hk {
               var2 += 4;
               param0 = param0 >> 4;
             }
-            if (-4 > (param0 ^ -1)) {
+            if (param0 > 3) {
               var2 += 2;
               param0 = param0 >> 2;
             }
-            if (-2 > (param0 ^ -1)) {
+            if (param0 > 1) {
               param0 = param0 >> 1;
               var2++;
             }
             return var2;
           } else {
             var2 = 2;
-            if ((param0 ^ -1) > 65535) {
+            if (param0 < -65536) {
               var2 += 16;
               param0 = param0 >> 16;
             }
-            if ((param0 ^ -1) > 255) {
+            if (param0 < -256) {
               param0 = param0 >> 8;
               var2 += 8;
             }
@@ -177,10 +177,10 @@ final class td extends hk {
               td.a(-80, (gd) null);
             }
             var4_int = param1.length();
-            if ((param2 ^ -1) <= -1) {
+            if (param2 >= 0) {
               if (var4_int >= param2) {
                 var5 = param0.length();
-                if (-1 != (var5 ^ -1)) {
+                if (var5 != 0) {
                   var6 = param2 - -var5;
                   if (var4_int < var6) {
                     param1.setLength(var6);

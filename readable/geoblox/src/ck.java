@@ -73,8 +73,8 @@ final class ck {
             var7 = 0;
             var8 = bh.a((byte) 81, var6) >> 1093818120;
             var9 = fi.a(var6, 2048) >> 1214701736;
-            if (0 != (qa.field_a ^ -1)) {
-              if ((ue.field_e ^ -1) != 0) {
+            if (qa.field_a != -1) {
+              if (ue.field_e != -1) {
                 var7 = -320 + qa.field_a;
                 var9 = -128;
                 var8 = -ue.field_e + 240;
@@ -192,7 +192,7 @@ final class ck {
         int var0 = 0;
         cancelText = "Cancel";
         field_c = new int[33];
-        for (var0 = 0; -4 < (var0 ^ -1); var0++) {
+        for (var0 = 0; var0 < 3; var0++) {
             field_c[var0 + 10] = 4;
             field_c[13 + var0] = 3;
             field_c[7 + var0] = 1;

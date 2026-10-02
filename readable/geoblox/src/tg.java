@@ -99,7 +99,7 @@ final class tg extends com.ms.dll.Callback {
         if (this.field_b == param0) {
           if (32 == param1) {
             var5 = 65535 & param3;
-            if ((var5 ^ -1) != -2) {
+            if (var5 != 1) {
               if (param1 != 101024) {
                 if (1 == param1) {
                   this.field_b = 0;

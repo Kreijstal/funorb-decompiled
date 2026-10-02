@@ -19,7 +19,7 @@ abstract class fj extends DualLinkNode {
     final static boolean f(int param0) {
         if (param0 != -31456) {
             field_q = (pk) null;
-            if ((hj.field_a ^ -1) > -11) {
+            if (hj.field_a < 10) {
                 return false;
             }
             if (mi.field_C >= 13) {
@@ -27,7 +27,7 @@ abstract class fj extends DualLinkNode {
             }
             return false;
         }
-        if ((hj.field_a ^ -1) > -11) {
+        if (hj.field_a < 10) {
             return false;
         }
         if (mi.field_C >= 13) {
