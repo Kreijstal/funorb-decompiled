@@ -40,21 +40,13 @@ final class aa {
             if (var9 < param0.field_m) {
               var11 = param3.field_m;
               if (var9 > -param3.field_m) {
-                if (var6 > 0) {
-                  stackIn_9_0 = var6;
-                } else {
-                  stackIn_9_0 = 0;
-                }
+                stackIn_9_0 = (var6 > 0) ? var6 : 0;
                 var12 = stackIn_9_0;
                 var13 = var6 + var8;
                 if (var13 > var7) {
                   var13 = var7;
                 }
-                if (var9 > 0) {
-                  stackIn_14_0 = var9;
-                } else {
-                  stackIn_14_0 = 0;
-                }
+                stackIn_14_0 = (var9 > 0) ? var9 : 0;
                 var14 = stackIn_14_0;
                 var15 = var9 + var11;
                 if (var15 > var10) {

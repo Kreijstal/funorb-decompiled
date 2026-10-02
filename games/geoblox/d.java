@@ -59,6 +59,7 @@ final class d implements Runnable {
 
     public final void run() {
         try {
+            int var5 = 0;
             int stackIn_76_0 = 0;
             Throwable decompiledCaughtException = null;
             Object var2 = null;
@@ -72,7 +73,6 @@ final class d implements Runnable {
             bd var3_ref3 = null;
             int var4_int = 0;
             String var4 = null;
-            int var5 = 0;
             java.awt.datatransfer.Transferable var7 = null;
             String var8 = null;
             cb var9 = null;
@@ -239,12 +239,10 @@ final class d implements Runnable {
                                                         }
                                                       }
                                                       var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                      var5 = 0;
-                                                      L16: while (var5 < var8.length()) {
+                                                      for (var5 = 0; var5 < var8.length(); var5++) {
                                                         if (-1 == var4.indexOf((int) var8.charAt(var5))) {
                                                           throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                         }
-                                                        var5++;
                                                       }
                                                       Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
                                                       var9.field_b = null;

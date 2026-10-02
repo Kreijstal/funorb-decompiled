@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "66a3906a001061462f5bc154fc3fd119f2dcb60c",
+      "commit": "57969c34c9be16cd7dfaaa691774b95dbeaa2c5b",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "c75448fa88956a0653c2120eaebc737cbbfd2168656b13a1620ff238d290b6ca",
-        "reproduce": "git archive --format=tar 66a3906a001061462f5bc154fc3fd119f2dcb60c | sha256sum",
+        "sha256": "8c17ad8f1c1eedc51941af4d35064fed2c7b1f8bb73a8c4909a2744fb923e1ce",
+        "reproduce": "git archive --format=tar 57969c34c9be16cd7dfaaa691774b95dbeaa2c5b | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -93,9 +93,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "c8eb52af8caa07a9151dfca4c412f4b2fac7ef15e6e260c9413bc0708d83775a",
-  "previousSourceTreeSha256": "b18afdee6bf7d59ae30800e398696f8f0319943a75296c5608fe7708968c7bf1",
-  "changedJavaFiles": 176,
+  "sourceTreeSha256": "39be3539b43d7acc9540acca49e7b6378cdb233908092706646df4c2cdc6a8fe",
+  "previousSourceTreeSha256": "c8eb52af8caa07a9151dfca4c412f4b2fac7ef15e6e260c9413bc0708d83775a",
+  "changedJavaFiles": 8,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -1749,5 +1749,63 @@
     "cleanSourceArchiveByteExact": true,
     "diagnosticChange": "Only wi structured partition sharedLocals10 to8; helpers remain3 and all fallback/hard-failure counters remain0.",
     "scope": "Only same-type equivalent operand joins are forwarded. Genuinely different values, snapshots and exception/monitor boundaries remain. All1075 removed declarations are allocator-generated stackIn slots; no declaration is added. Current native game evidence is in the single readable manifest. Complete archive loading, whole-game equivalence and browser performance remain unverified."
+  },
+  "primitiveValueJoins": {
+    "historicalPassVersion": 52,
+    "javaToolsCommit": "57969c34c9be16cd7dfaaa691774b95dbeaa2c5b",
+    "sourceArchiveSha256": "8c17ad8f1c1eedc51941af4d35064fed2c7b1f8bb73a8c4909a2744fb923e1ce",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "samePrimitiveTypeRequired": true,
+    "finalBooleanPromotedDeclarationsUsed": true,
+    "inlineShadowingRefused": true,
+    "effectsBoxingMixedTypesAndReferencesRefused": true,
+    "originalConditionEvaluationPreserved": true,
+    "changedJavaFiles": [
+      "Geoblox.java",
+      "aa.java",
+      "d.java",
+      "ih.java",
+      "jg.java",
+      "kj.java",
+      "nb.java",
+      "u.java"
+    ],
+    "sourceLinesBefore": 80520,
+    "sourceLinesAfter": 80470,
+    "primitiveBranchesFolded": 12,
+    "genericCallLoopRecovered": "d.run()V URL-character validation loop",
+    "sourceDeclarationsBefore": 19558,
+    "sourceDeclarationsAfter": 19558,
+    "sourceDeclarationsAdded": 0,
+    "sourceReferenceOccurrencesBefore": 119012,
+    "sourceReferenceOccurrencesAfter": 119000,
+    "overrideRelationshipsPreserved": 388,
+    "declarationOrdinalMigrations": 14,
+    "genericEmitterGroups": 36,
+    "nativeEmitterComparisons": 54549,
+    "newNativePrimitiveJoinComparisons": 11556,
+    "genericJoinGroups": 18,
+    "nativeJoinComparisons": 8210,
+    "nativeGenericLoopComparisons": 120,
+    "genericParserAssertions": 248,
+    "genericPartitionGroups": 6,
+    "genericExceptionExitGroups": 8,
+    "genericAdditionalFeatureAssertions": 77,
+    "genericStackOrderingAssertions": 38,
+    "genericStringBuilderGroups": 2,
+    "cleanSourceArchiveByteExact": true,
+    "diagnosticsUnchanged": true,
+    "scope": "Twelve primitive value selections and one proven loop recovery; every declaration/spelling remains after ordinal normalization. Native tests cover their stated controlled scopes, not full game assets, platform services, gameplay or browser/phone performance."
+  },
+  "carrierAliasNamespace": {
+    "literalCorruptionReproducedAt": "66a3906a001061462f5bc154fc3fd119f2dcb60c",
+    "before": "Original diagnostic string stackIn_3_0 changed to stackIn_2_0 in protected and unprotected typed join fixtures.",
+    "identifierTokensOnly": true,
+    "completeLexicalAndScopeProofRequired": true,
+    "literalCommentMemberAndMethodNamesPreserved": true,
+    "typesLabelsShadowingUnicodeAndUnsupportedSyntaxRefused": true,
+    "forwardedAndAliasedCarriersRetainedTogetherOnRefusal": true,
+    "qualifiedGenericInvocationsStructured": true
   }
 }

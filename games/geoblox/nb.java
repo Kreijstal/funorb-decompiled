@@ -85,11 +85,7 @@ final class nb {
           stackIn_17_2 = (float)param1;
           stackIn_17_3 = var12;
           stackIn_17_4 = (float)(320 - param1);
-          if (var12 != 2) {
-            stackIn_18_5 = -1;
-          } else {
-            stackIn_18_5 = param4;
-          }
+          stackIn_18_5 = (var12 != 2) ? -1 : param4;
           L5: {
             stackIn_21_6 = 0;
             stackIn_21_7 = 0.0f;

@@ -115,17 +115,9 @@ final class ih {
             stackIn_7_0 = bk.field_a.field_m;
           }
           var11 = stackIn_7_0;
-          if (~var6 >= param0) {
-            stackIn_10_0 = 0;
-          } else {
-            stackIn_10_0 = var6;
-          }
+          stackIn_10_0 = (~var6 >= param0) ? 0 : var6;
           var12 = stackIn_10_0;
-          if (var7 > 0) {
-            stackIn_13_0 = var7;
-          } else {
-            stackIn_13_0 = 0;
-          }
+          stackIn_13_0 = (var7 > 0) ? var7 : 0;
           var13 = stackIn_13_0;
           var14 = var6 + var9;
           if (var14 > var8) {

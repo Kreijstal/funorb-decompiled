@@ -291,11 +291,7 @@ abstract class jg {
               }
               if (var4_float > var3_float) {
                 if (var4_float > var5_float) {
-                  if (!(var3_float > var5_float)) {
-                    var6 = var3_float;
-                  } else {
-                    var6 = var5_float;
-                  }
+                  var6 = (!(var3_float > var5_float)) ? var3_float : var5_float;
                   var9 = 1;
                   var7 = var4_float;
                   break L6;
@@ -303,11 +299,7 @@ abstract class jg {
               }
               var7 = var5_float;
               var9 = 2;
-              if (!(var4_float < var3_float)) {
-                var6 = var3_float;
-              } else {
-                var6 = var4_float;
-              }
+              var6 = (!(var4_float < var3_float)) ? var3_float : var4_float;
             }
             var8 = var7 - var6;
             var10 = (var7 + var6) / 2.0f;
